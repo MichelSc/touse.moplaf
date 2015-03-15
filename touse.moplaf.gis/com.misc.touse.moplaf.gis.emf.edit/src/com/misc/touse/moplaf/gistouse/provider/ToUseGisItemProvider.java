@@ -82,6 +82,7 @@ public class ToUseGisItemProvider
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(GistousePackage.Literals.TO_USE_GIS__CALCULATORS);
 			childrenFeatures.add(GistousePackage.Literals.TO_USE_GIS__LOCATIONS);
+			childrenFeatures.add(GistousePackage.Literals.TO_USE_GIS__MATRICES);
 		}
 		return childrenFeatures;
 	}
@@ -136,6 +137,7 @@ public class ToUseGisItemProvider
 		switch (notification.getFeatureID(ToUseGis.class)) {
 			case GistousePackage.TO_USE_GIS__CALCULATORS:
 			case GistousePackage.TO_USE_GIS__LOCATIONS:
+			case GistousePackage.TO_USE_GIS__MATRICES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -167,6 +169,11 @@ public class ToUseGisItemProvider
 			(createChildParameter
 				(GistousePackage.Literals.TO_USE_GIS__LOCATIONS,
 				 GisFactory.eINSTANCE.createGisAddressGeocoded()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(GistousePackage.Literals.TO_USE_GIS__MATRICES,
+				 GisFactory.eINSTANCE.createGisDistanceMatrix()));
 	}
 
 	/**

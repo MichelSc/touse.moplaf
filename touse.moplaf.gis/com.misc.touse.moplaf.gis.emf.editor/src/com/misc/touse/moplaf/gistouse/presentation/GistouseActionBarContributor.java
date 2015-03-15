@@ -116,6 +116,8 @@ public class GistouseActionBarContributor
 	 * @generated
 	 */
 	protected Collection<IAction> createChildActions;
+	
+	protected RefreshAction refreshAction = new RefreshAction();
 
 	/**
 	 * This is the menu manager into which menu contribution items should be added for CreateChild actions.
@@ -244,7 +246,6 @@ public class GistouseActionBarContributor
 	 * that can be added to the selected object and updating the menus accordingly.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	public void selectionChanged(SelectionChangedEvent event) {
 		// Remove any menu items for old selection.
@@ -284,6 +285,8 @@ public class GistouseActionBarContributor
 			populateManager(createSiblingMenuManager, createSiblingActions, null);
 			createSiblingMenuManager.update(true);
 		}
+		
+		this.refreshAction.selectionChanged(activeEditorPart, selection);
 	}
 
 	/**
@@ -376,7 +379,6 @@ public class GistouseActionBarContributor
 	 * This populates the pop-up menu before it appears.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	@Override
 	public void menuAboutToShow(IMenuManager menuManager) {
@@ -390,6 +392,11 @@ public class GistouseActionBarContributor
 		submenuManager = new MenuManager(TousegisEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
 		populateManager(submenuManager, createSiblingActions, null);
 		menuManager.insertBefore("edit", submenuManager);
+
+		submenuManager = new MenuManager("ToUse");
+		menuManager.insertBefore("edit", submenuManager);
+		
+		submenuManager.add(this.refreshAction);
 	}
 
 	/**

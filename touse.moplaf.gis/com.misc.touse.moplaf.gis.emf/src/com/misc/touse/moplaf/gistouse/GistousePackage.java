@@ -84,13 +84,22 @@ public interface GistousePackage extends EPackage {
 	int TO_USE_GIS__LOCATIONS = 1;
 
 	/**
+	 * The feature id for the '<em><b>Matrices</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_GIS__MATRICES = 2;
+
+	/**
 	 * The number of structural features of the '<em>To Use Gis</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_GIS_FEATURE_COUNT = 2;
+	int TO_USE_GIS_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>To Use Gis</em>' class.
@@ -133,6 +142,17 @@ public interface GistousePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getToUseGis_Locations();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.gistouse.ToUseGis#getMatrices <em>Matrices</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Matrices</em>'.
+	 * @see com.misc.touse.moplaf.gistouse.ToUseGis#getMatrices()
+	 * @see #getToUseGis()
+	 * @generated
+	 */
+	EReference getToUseGis_Matrices();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -182,6 +202,14 @@ public interface GistousePackage extends EPackage {
 		 * @generated
 		 */
 		EReference TO_USE_GIS__LOCATIONS = eINSTANCE.getToUseGis_Locations();
+
+		/**
+		 * The meta object literal for the '<em><b>Matrices</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TO_USE_GIS__MATRICES = eINSTANCE.getToUseGis_Matrices();
 
 	}
 

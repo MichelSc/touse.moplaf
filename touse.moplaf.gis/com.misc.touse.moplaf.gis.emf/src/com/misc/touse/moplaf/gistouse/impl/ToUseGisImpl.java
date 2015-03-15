@@ -6,6 +6,7 @@ import GisGoogle.GisDistanceMatrixCalculatorGoogleWS;
 
 import com.misc.common.moplaf.gis.GisCoordinates;
 
+import com.misc.common.moplaf.gis.GisDistanceMatrix;
 import com.misc.touse.moplaf.gistouse.GistousePackage;
 import com.misc.touse.moplaf.gistouse.ToUseGis;
 
@@ -32,6 +33,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.gistouse.impl.ToUseGisImpl#getCalculators <em>Calculators</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.gistouse.impl.ToUseGisImpl#getLocations <em>Locations</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.gistouse.impl.ToUseGisImpl#getMatrices <em>Matrices</em>}</li>
  * </ul>
  * </p>
  *
@@ -57,6 +59,16 @@ public class ToUseGisImpl extends MinimalEObjectImpl.Container implements ToUseG
 	 * @ordered
 	 */
 	protected EList<GisCoordinates> locations;
+
+	/**
+	 * The cached value of the '{@link #getMatrices() <em>Matrices</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMatrices()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<GisDistanceMatrix> matrices;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -106,6 +118,18 @@ public class ToUseGisImpl extends MinimalEObjectImpl.Container implements ToUseG
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<GisDistanceMatrix> getMatrices() {
+		if (matrices == null) {
+			matrices = new EObjectContainmentEList<GisDistanceMatrix>(GisDistanceMatrix.class, this, GistousePackage.TO_USE_GIS__MATRICES);
+		}
+		return matrices;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -113,6 +137,8 @@ public class ToUseGisImpl extends MinimalEObjectImpl.Container implements ToUseG
 				return ((InternalEList<?>)getCalculators()).basicRemove(otherEnd, msgs);
 			case GistousePackage.TO_USE_GIS__LOCATIONS:
 				return ((InternalEList<?>)getLocations()).basicRemove(otherEnd, msgs);
+			case GistousePackage.TO_USE_GIS__MATRICES:
+				return ((InternalEList<?>)getMatrices()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -129,6 +155,8 @@ public class ToUseGisImpl extends MinimalEObjectImpl.Container implements ToUseG
 				return getCalculators();
 			case GistousePackage.TO_USE_GIS__LOCATIONS:
 				return getLocations();
+			case GistousePackage.TO_USE_GIS__MATRICES:
+				return getMatrices();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -150,6 +178,10 @@ public class ToUseGisImpl extends MinimalEObjectImpl.Container implements ToUseG
 				getLocations().clear();
 				getLocations().addAll((Collection<? extends GisCoordinates>)newValue);
 				return;
+			case GistousePackage.TO_USE_GIS__MATRICES:
+				getMatrices().clear();
+				getMatrices().addAll((Collection<? extends GisDistanceMatrix>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -168,6 +200,9 @@ public class ToUseGisImpl extends MinimalEObjectImpl.Container implements ToUseG
 			case GistousePackage.TO_USE_GIS__LOCATIONS:
 				getLocations().clear();
 				return;
+			case GistousePackage.TO_USE_GIS__MATRICES:
+				getMatrices().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -184,6 +219,8 @@ public class ToUseGisImpl extends MinimalEObjectImpl.Container implements ToUseG
 				return calculators != null && !calculators.isEmpty();
 			case GistousePackage.TO_USE_GIS__LOCATIONS:
 				return locations != null && !locations.isEmpty();
+			case GistousePackage.TO_USE_GIS__MATRICES:
+				return matrices != null && !matrices.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
