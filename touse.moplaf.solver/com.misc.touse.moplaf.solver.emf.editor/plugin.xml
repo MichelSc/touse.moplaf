@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated ToUserSolver -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="com.misc.touse.moplaf.solver.tousesolver.presentation.TousesolverModelWizardID"
+            name="%_UI_TousesolverModelWizard_label"
+            class="com.misc.touse.moplaf.solver.tousesolver.presentation.TousesolverModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/TousesolverModelFile.gif">
+         <description>%_UI_TousesolverModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated ToUserSolver -->
+      <editor
+            id="com.misc.touse.moplaf.solver.tousesolver.presentation.TousesolverEditorID"
+            name="%_UI_TousesolverEditor_label"
+            icon="icons/full/obj16/TousesolverModelFile.gif"
+            extensions="tousesolver"
+            class="com.misc.touse.moplaf.solver.tousesolver.presentation.TousesolverEditor"
+            contributorClass="com.misc.touse.moplaf.solver.tousesolver.presentation.TousesolverActionBarContributor">
+      </editor>
+   </extension>
+
+null
+null
+</plugin>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.misc.touse.moplaf.timeline.emf/src" modelPluginID="com.misc.touse.moplaf.timeline.emf"
+    modelName="ToUseTimeLine" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0" copyrightFields="false"
+    usedGenPackages="../../com.misc.common.moplaf.timeline.emf/model/timeline.genmodel#//time ../../com.misc.common.moplaf.propagator/model/propagator.genmodel#//propagator"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>ToUseTimeLine.ecore</foreignModel>
+  <genPackages prefix="Tousetimeline" basePackage="com.misc.touse.moplaf.timeline"
+      disposableProviderFactory="true" ecorePackage="ToUseTimeLine.ecore#/">
+    <genClasses ecoreClass="ToUseTimeLine.ecore#//Domain">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseTimeLine.ecore#//Domain/TimeLine"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseTimeLine.ecore#//Domain/TimeLineMerge"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseTimeLine.ecore#//Domain/AmountImpulsion"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseTimeLine.ecore#//Domain/AmountAbsolute"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseTimeLine.ecore#//Domain/SlopeAbsolute"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseTimeLine.ecore#//Domain/SlopeImpulsion"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseTimeLine.ecore#//Domain/CapacityChange"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseTimeLine.ecore#//Domain/StockChange"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseTimeLine.ecore#//Domain/Distribution"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseTimeLine.ecore#//Domain/Name"/>
+    </genClasses>
+    <genClasses ecoreClass="ToUseTimeLine.ecore#//DomainTimeLine" labelFeature="../../com.misc.common.moplaf.timeline.emf/model/timeline.genmodel#//time/discrete/TimeLine/Description"/>
+    <genClasses ecoreClass="ToUseTimeLine.ecore#//DomainTimeBucket" labelFeature="../../com.misc.common.moplaf.timeline.emf/model/timeline.genmodel#//time/discrete/TimeBucket/Description"/>
+    <genClasses ecoreClass="ToUseTimeLine.ecore#//ToUseAmountImpulsion"/>
+    <genClasses ecoreClass="ToUseTimeLine.ecore#//ToUseAmountAbsolute"/>
+    <genClasses ecoreClass="ToUseTimeLine.ecore#//ToUseSlopeAbsolute"/>
+    <genClasses ecoreClass="ToUseTimeLine.ecore#//ToUseSlopeImpulsion"/>
+    <genClasses ecoreClass="ToUseTimeLine.ecore#//DomainDistribution">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseTimeLine.ecore#//DomainDistribution/Name"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

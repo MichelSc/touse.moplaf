@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.misc.touse.moplaf.flock.emf/src" modelPluginID="com.misc.touse.moplaf.flock.emf"
+    modelName="Touseflock" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0" copyrightFields="false"
+    usedGenPackages="../../com.misc.common.moplaf.flock.emf/model/flock.genmodel#//flock ../../com.misc.common.moplaf.propagator/model/propagator.genmodel#//propagator"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>touseflock.ecore</foreignModel>
+  <genPackages prefix="Touseflock" basePackage="com.misc.touse.moplaf" disposableProviderFactory="true"
+      ecorePackage="touseflock.ecore#/">
+    <genClasses ecoreClass="touseflock.ecore#//ToUseDomain">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference touseflock.ecore#//ToUseDomain/Location"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference touseflock.ecore#//ToUseDomain/Resource"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference touseflock.ecore#//ToUseDomain/FlockScope"/>
+      <genOperations ecoreOperation="touseflock.ecore#//ToUseDomain/refresh"/>
+    </genClasses>
+    <genClasses ecoreClass="touseflock.ecore#//ToUseResource">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference touseflock.ecore#//ToUseResource/Domain"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touseflock.ecore#//ToUseResource/Name"/>
+      <genFeatures property="Readonly" children="true" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference touseflock.ecore#//ToUseResource/Chain"/>
+      <genOperations ecoreOperation="touseflock.ecore#//ToUseResource/refreshChain"/>
+    </genClasses>
+    <genClasses ecoreClass="touseflock.ecore#//ToUseResourceTransition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touseflock.ecore#//ToUseResourceTransition/Comments"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference touseflock.ecore#//ToUseResourceTransition/Resource"/>
+      <genOperations ecoreOperation="touseflock.ecore#//ToUseResourceTransition/refreshResource"/>
+    </genClasses>
+    <genClasses ecoreClass="touseflock.ecore#//ToUseResourceConfiguration">
+      <genFeatures property="Readonly" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference touseflock.ecore#//ToUseResourceConfiguration/ChainConfiguration"/>
+      <genOperations ecoreOperation="touseflock.ecore#//ToUseResourceConfiguration/refreshChainConfiguration"/>
+    </genClasses>
+    <genClasses ecoreClass="touseflock.ecore#//ToUseResourceMount">
+      <genFeatures property="Readonly" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference touseflock.ecore#//ToUseResourceMount/ChainMount"/>
+      <genOperations ecoreOperation="touseflock.ecore#//ToUseResourceMount/refreshChainMount"/>
+    </genClasses>
+    <genClasses ecoreClass="touseflock.ecore#//Tractor">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference touseflock.ecore#//Tractor/Configuration"/>
+    </genClasses>
+    <genClasses ecoreClass="touseflock.ecore#//Trailer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference touseflock.ecore#//Trailer/Detach"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference touseflock.ecore#//Trailer/Attach"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference touseflock.ecore#//Trailer/Configuration"/>
+    </genClasses>
+    <genClasses ecoreClass="touseflock.ecore#//Shipment">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference touseflock.ecore#//Shipment/Load"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference touseflock.ecore#//Shipment/Unload"/>
+    </genClasses>
+    <genClasses ecoreClass="touseflock.ecore#//TractorConfiguration">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference touseflock.ecore#//TractorConfiguration/Tractor"/>
+    </genClasses>
+    <genClasses ecoreClass="touseflock.ecore#//AttachTrailer">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference touseflock.ecore#//AttachTrailer/Trailer"/>
+    </genClasses>
+    <genClasses ecoreClass="touseflock.ecore#//DetachTrailer">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference touseflock.ecore#//DetachTrailer/Trailer"/>
+    </genClasses>
+    <genClasses ecoreClass="touseflock.ecore#//TrailerConfiguration">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference touseflock.ecore#//TrailerConfiguration/Trailer"/>
+    </genClasses>
+    <genClasses ecoreClass="touseflock.ecore#//LoadShipment">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference touseflock.ecore#//LoadShipment/Shipment"/>
+    </genClasses>
+    <genClasses ecoreClass="touseflock.ecore#//UnloadShipment">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference touseflock.ecore#//UnloadShipment/Shipment"/>
+    </genClasses>
+    <genClasses ecoreClass="touseflock.ecore#//ToUseLocation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touseflock.ecore#//ToUseLocation/Name"/>
+    </genClasses>
+    <genClasses ecoreClass="touseflock.ecore#//FlockScopeToUse">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference touseflock.ecore#//FlockScopeToUse/ToUseDomain"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

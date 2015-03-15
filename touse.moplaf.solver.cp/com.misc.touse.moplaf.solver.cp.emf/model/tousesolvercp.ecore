@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="tousesolvercp" nsURI="http://www.misc.com/touse.moplaf.solver.cp.emf"
+    nsPrefix="tsocp">
+  <eClassifiers xsi:type="ecore:EClass" name="ToUseSolverCpFolder">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SubFolders" upperBound="-1"
+        eType="#//ToUseSolverCpFolder" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ToUseGenerators" upperBound="-1"
+        eType="#//ToUseSolverCpGenerator" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ToUseSolverCpGenerator" eSuperTypes="../../com.misc.common.moplaf.solver.emf/model/solver.ecore#//Generator">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Solver" upperBound="-1"
+        eType="ecore:EClass ../../com.misc.common.moplaf.solver.jacop.emf/model/solverjacop.ecore#//SolverJacop"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ToUseTuples" upperBound="-1"
+        eType="#//ToUseSolverCpTuple" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ToUseSolverCpTuple" eSuperTypes="../../com.misc.common.moplaf.solver.emf/model/solver.ecore#//GeneratorTuple">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ToUseLinears" upperBound="-1"
+        eType="ecore:EClass ../../com.misc.common.moplaf.solver.emf/model/solver.ecore#//GeneratorCpLinear"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ToUseVars" upperBound="-1"
+        eType="ecore:EClass ../../com.misc.common.moplaf.solver.emf/model/solver.ecore#//GeneratorCpVarAtomic"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ToUseLogicals" upperBound="-1"
+        eType="ecore:EClass ../../com.misc.common.moplaf.solver.emf/model/solver.ecore#//GeneratorCpLogical"
+        containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>

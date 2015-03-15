@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated touseflock -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="com.misc.touse.moplaf.touseflock.presentation.TouseflockModelWizardID"
+            name="%_UI_TouseflockModelWizard_label"
+            class="com.misc.touse.moplaf.touseflock.presentation.TouseflockModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/TouseflockModelFile.gif">
+         <description>%_UI_TouseflockModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated touseflock -->
+      <editor
+            id="com.misc.touse.moplaf.touseflock.presentation.TouseflockEditorID"
+            name="%_UI_TouseflockEditor_label"
+            icon="icons/full/obj16/TouseflockModelFile.gif"
+            extensions="touseflock"
+            class="com.misc.touse.moplaf.touseflock.presentation.TouseflockEditor"
+            contributorClass="com.misc.touse.moplaf.touseflock.presentation.TouseflockActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

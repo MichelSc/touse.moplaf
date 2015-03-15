@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="touseflock" nsURI="http://com.misc.touse.moplaf.flock.emf" nsPrefix="tufl">
+  <eClassifiers xsi:type="ecore:EClass" name="ToUseDomain" eSuperTypes="../../com.misc.common.moplaf.propagator/model/propagator.ecore#//ObjectWithPropagatorFunctionAdapter ../../com.misc.common.moplaf.propagator/model/propagator.ecore#//ObjectWithPropagatorFunctionAdapterScope">
+    <eOperations name="refresh"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Location" upperBound="-1"
+        eType="#//ToUseLocation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Resource" upperBound="-1"
+        eType="#//ToUseResource" containment="true" eOpposite="#//ToUseResource/Domain"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="FlockScope" eType="#//FlockScopeToUse"
+        containment="true" eOpposite="#//FlockScopeToUse/ToUseDomain"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ToUseResource" abstract="true">
+    <eOperations name="refreshChain"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Domain" lowerBound="1"
+        eType="#//ToUseDomain" eOpposite="#//ToUseDomain/Resource"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Chain" eType="ecore:EClass ../../com.misc.common.moplaf.flock.emf/model/flock.ecore#//Chain"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ToUseResourceTransition">
+    <eOperations name="refreshResource"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Comments" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Resource" lowerBound="1"
+        eType="#//ToUseResource"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ToUseResourceConfiguration" eSuperTypes="#//ToUseResourceTransition">
+    <eOperations name="refreshChainConfiguration"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ChainConfiguration" eType="ecore:EClass ../../com.misc.common.moplaf.flock.emf/model/flock.ecore#//ChainConfiguration"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ToUseResourceMount" eSuperTypes="#//ToUseResourceTransition">
+    <eOperations name="refreshChainMount"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ChainMount" eType="ecore:EClass ../../com.misc.common.moplaf.flock.emf/model/flock.ecore#//ChainMount"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Tractor" eSuperTypes="#//ToUseResource">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Configuration" upperBound="-1"
+        eType="#//TractorConfiguration" containment="true" eOpposite="#//TractorConfiguration/Tractor"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Trailer" eSuperTypes="#//ToUseResource">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Detach" upperBound="-1"
+        eType="#//DetachTrailer" containment="true" eOpposite="#//DetachTrailer/Trailer"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Attach" upperBound="-1"
+        eType="#//AttachTrailer" containment="true" eOpposite="#//AttachTrailer/Trailer"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Configuration" upperBound="-1"
+        eType="#//TrailerConfiguration" containment="true" eOpposite="#//TrailerConfiguration/Trailer"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Shipment" eSuperTypes="#//ToUseResource">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Load" upperBound="-1" eType="#//LoadShipment"
+        containment="true" eOpposite="#//LoadShipment/Shipment"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Unload" upperBound="-1"
+        eType="#//UnloadShipment" containment="true" eOpposite="#//UnloadShipment/Shipment"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TractorConfiguration" eSuperTypes="#//ToUseResourceConfiguration">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Tractor" lowerBound="1"
+        eType="#//Tractor" eOpposite="#//Tractor/Configuration"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttachTrailer" eSuperTypes="#//ToUseResourceMount">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Trailer" lowerBound="1"
+        eType="#//Trailer" eOpposite="#//Trailer/Attach"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DetachTrailer" eSuperTypes="#//ToUseResourceMount">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Trailer" lowerBound="1"
+        eType="#//Trailer" eOpposite="#//Trailer/Detach"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TrailerConfiguration" eSuperTypes="#//ToUseResourceConfiguration">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Trailer" lowerBound="1"
+        eType="#//Trailer" eOpposite="#//Trailer/Configuration"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LoadShipment" eSuperTypes="#//ToUseResourceMount">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Shipment" lowerBound="1"
+        eType="#//Shipment" eOpposite="#//Shipment/Load"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UnloadShipment" eSuperTypes="#//ToUseResourceMount">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Shipment" lowerBound="1"
+        eType="#//Shipment" eOpposite="#//Shipment/Unload"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ToUseLocation" eSuperTypes="../../com.misc.common.moplaf.flock.emf/model/flock.ecore#//Location">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FlockScopeToUse" eSuperTypes="../../com.misc.common.moplaf.flock.emf/model/flock.ecore#//FlockScope">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ToUseDomain" eType="#//ToUseDomain"
+        eOpposite="#//ToUseDomain/FlockScope"/>
+  </eClassifiers>
+</ecore:EPackage>

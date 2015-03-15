@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.misc.touse.moplaf.datasetload.emf/src" modelPluginID="com.misc.touse.moplaf.datasetload.emf"
+    modelName="Tousedatasetload" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0" copyrightFields="false"
+    usedGenPackages="../../com.misc.common.moplaf.datasetload.emf/model/datasetload.genmodel#//datasetload ../../com.misc.common.moplaf.datasetload.derby.emf/model/datasetloadderby.genmodel#//DatasetLoadDerby ../../com.misc.common.moplaf.datasetload.mariadb.emf/model/datasetloadmariadb.genmodel#//DatasetLoadMariaDb"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>tousedatasetload.ecore</foreignModel>
+  <genPackages prefix="Tousedatasetload" basePackage="com.misc.touse.moplaf" disposableProviderFactory="true"
+      ecorePackage="tousedatasetload.ecore#/">
+    <genClasses ecoreClass="tousedatasetload.ecore#//FPD">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousedatasetload.ecore#//FPD/SortingPlansSet"/>
+    </genClasses>
+    <genClasses ecoreClass="tousedatasetload.ecore#//GroupSortingPlan">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousedatasetload.ecore#//GroupSortingPlan/FromDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousedatasetload.ecore#//GroupSortingPlan/ToDate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousedatasetload.ecore#//GroupSortingPlan/SortingPlansTable"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousedatasetload.ecore#//GroupSortingPlan/SortingPlanInputsTable"/>
+    </genClasses>
+    <genClasses ecoreClass="tousedatasetload.ecore#//FPDSortingPlans">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousedatasetload.ecore#//FPDSortingPlans/SortingPlans"/>
+    </genClasses>
+    <genClasses ecoreClass="tousedatasetload.ecore#//FPDSortingPlanInputs">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousedatasetload.ecore#//FPDSortingPlanInputs/SortingPlanInputs"/>
+    </genClasses>
+    <genClasses ecoreClass="tousedatasetload.ecore#//FPDSortingPlan">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousedatasetload.ecore#//FPDSortingPlan/SortingPlanID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousedatasetload.ecore#//FPDSortingPlan/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousedatasetload.ecore#//FPDSortingPlan/ValidFrom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousedatasetload.ecore#//FPDSortingPlan/ValidTo"/>
+    </genClasses>
+    <genClasses ecoreClass="tousedatasetload.ecore#//FPDSortingPlanInput">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousedatasetload.ecore#//FPDSortingPlanInput/ProductID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousedatasetload.ecore#//FPDSortingPlanInput/SortingPlanID"/>
+    </genClasses>
+    <genClasses ecoreClass="tousedatasetload.ecore#//tousemariadb/MariaDbTestDatabase">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousedatasetload.ecore#//tousemariadb/MariaDbTestDatabase/TableSets"/>
+    </genClasses>
+    <genClasses ecoreClass="tousedatasetload.ecore#//tousemariadb/MariaDbTestGroupTables">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousedatasetload.ecore#//tousemariadb/MariaDbTestGroupTables/MariaTables"/>
+    </genClasses>
+    <genClasses ecoreClass="tousedatasetload.ecore#//tousemariadb/MariaDbTestTable">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousedatasetload.ecore#//tousemariadb/MariaDbTestTable/MariaRows"/>
+    </genClasses>
+    <genClasses ecoreClass="tousedatasetload.ecore#//tousemariadb/MariaDbTestRow">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousedatasetload.ecore#//tousemariadb/MariaDbTestRow/Col1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousedatasetload.ecore#//tousemariadb/MariaDbTestRow/Col2"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

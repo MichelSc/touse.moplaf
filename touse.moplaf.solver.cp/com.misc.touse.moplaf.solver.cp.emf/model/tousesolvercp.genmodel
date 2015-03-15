@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.misc.touse.moplaf.solver.cp.emf/src" modelPluginID="com.misc.touse.moplaf.solver.cp.emf"
+    modelName="Tousesolvercp" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0" copyrightFields="false"
+    usedGenPackages="../../com.misc.common.moplaf.solver.emf/model/solver.genmodel#//solver ../../com.misc.common.moplaf.solver.jacop.emf/model/solverjacop.genmodel#//solverjacop"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>tousesolvercp.ecore</foreignModel>
+  <genPackages prefix="Tousesolvercp" disposableProviderFactory="true" ecorePackage="tousesolvercp.ecore#/">
+    <genClasses ecoreClass="tousesolvercp.ecore#//ToUseSolverCpFolder">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousesolvercp.ecore#//ToUseSolverCpFolder/SubFolders"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousesolvercp.ecore#//ToUseSolverCpFolder/Name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousesolvercp.ecore#//ToUseSolverCpFolder/ToUseGenerators"/>
+    </genClasses>
+    <genClasses ecoreClass="tousesolvercp.ecore#//ToUseSolverCpGenerator" labelFeature="../../com.misc.common.moplaf.solver.emf/model/solver.genmodel#//solver/Generator/Code">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousesolvercp.ecore#//ToUseSolverCpGenerator/Solver"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousesolvercp.ecore#//ToUseSolverCpGenerator/ToUseTuples"/>
+    </genClasses>
+    <genClasses ecoreClass="tousesolvercp.ecore#//ToUseSolverCpTuple">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousesolvercp.ecore#//ToUseSolverCpTuple/ToUseLinears"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousesolvercp.ecore#//ToUseSolverCpTuple/ToUseVars"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

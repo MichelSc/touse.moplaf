@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="tousesolver" nsURI="http://www.misc.com/touse.moplaf.solver.emf"
+    nsPrefix="tos">
+  <eClassifiers xsi:type="ecore:EClass" name="Domain">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="RootFolder" upperBound="-1"
+        eType="#//DomainObjectFolder" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Knapsack" eSuperTypes="#//DomainObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Capacity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Item" eSuperTypes="#//DomainObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Weight" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DomainObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ShortName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DomainObjectFolder">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Object" upperBound="-1"
+        eType="#//DomainObject" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SubFolder" upperBound="-1"
+        eType="#//DomainObjectFolder" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Scenario" upperBound="-1"
+        eType="#//Scenario" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Scenario">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Knapsack" lowerBound="1"
+        eType="#//Knapsack"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Item" lowerBound="1" upperBound="-1"
+        eType="#//Item"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="LP" upperBound="-1" eType="#//KnapsackLp"
+        containment="true" eOpposite="#//KnapsackLp/Scenario"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Sol" upperBound="-1" eType="#//KnapsackSol"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Remarks" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="KnapsackSol">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="TotalValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="TotalWeight" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Solver" eType="ecore:EClass ../../com.misc.common.moplaf.solver.emf/model/solver.ecore#//Solution"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Item" upperBound="-1" eType="#//Item"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Lp" eType="#//KnapsackLp"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="KnapsackLp" eSuperTypes="../../com.misc.common.moplaf.solver.emf/model/solver.ecore#//Generator">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Root" lowerBound="1" eType="#//LpRoot"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Scenario" lowerBound="1"
+        eType="#//Scenario" eOpposite="#//Scenario/LP"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="GLPK" upperBound="-1" eType="#//SolverToUseGLPK"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="JavaILP" upperBound="-1"
+        eType="#//SolverToUseJavaILP" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Neos" upperBound="-1" eType="#//SolverToUseNeos"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Reader" upperBound="-1"
+        eType="#//SolutionReaderToUse" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Cplex" upperBound="-1"
+        eType="#//SolverToUserCplex" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LpRoot" eSuperTypes="../../com.misc.common.moplaf.solver.emf/model/solver.ecore#//GeneratorTuple">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Item" upperBound="-1" eType="#//LpItem"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Knapsack" lowerBound="1"
+        eType="#//LpKnapsack" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LpKnapsack" eSuperTypes="../../com.misc.common.moplaf.solver.emf/model/solver.ecore#//GeneratorTuple">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Knapsack" lowerBound="1"
+        eType="#//Knapsack"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ConsCapacity" lowerBound="1"
+        eType="#//ConsKnapsackCapacity" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LpItem" eSuperTypes="../../com.misc.common.moplaf.solver.emf/model/solver.ecore#//GeneratorTuple">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Item" lowerBound="1" eType="#//Item"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="VarInKnapsack" lowerBound="1"
+        eType="#//VarItemInKnapsack" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VarItemInKnapsack" eSuperTypes="../../com.misc.common.moplaf.solver.emf/model/solver.ecore#//GeneratorLpVar"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ConsKnapsackCapacity" eSuperTypes="../../com.misc.common.moplaf.solver.emf/model/solver.ecore#//GeneratorLpCons"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SolverToUseGLPK" eSuperTypes="../../com.misc.common.moplaf.solver.glpk.emf/model/solverglpk.ecore#//SolverGLPK"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SolverToUseJavaILP" eSuperTypes="../../com.misc.common.moplaf.solver.javailp.emf/model/solverjavailp.ecore#//SolverJavaILP"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SolverToUseNeos" eSuperTypes="../../com.misc.common.moplaf.solver.neos.emf/model/solverneos.ecore#//SolverNeos"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SolutionReaderToUse" eSuperTypes="../../com.misc.common.moplaf.solver.emf/model/solver.ecore#//SolutionReader"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SolverToUserCplex" eSuperTypes="../../com.misc.common.moplaf.solver.cplex.emf/model/solvercplex.ecore#//SolverCplex"/>
+</ecore:EPackage>

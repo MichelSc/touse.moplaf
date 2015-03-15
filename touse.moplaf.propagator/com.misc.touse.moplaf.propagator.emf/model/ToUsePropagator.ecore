@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="tousepropagator" nsURI="http://com.misc.touse.moplaf.propagator.emf"
+    nsPrefix="top">
+  <eClassifiers xsi:type="ecore:EClass" name="Project" eSuperTypes="../../com.misc.common.moplaf.propagator/model/propagator.ecore#//ObjectWithPropagatorFunctionAdapter ../../com.misc.common.moplaf.propagator/model/propagator.ecore#//ObjectWithPropagatorFunctionAdapterScope">
+    <eOperations name="refreshEnd"/>
+    <eOperations name="refresh"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Tasks" upperBound="-1"
+        eType="#//Task" containment="true" eOpposite="#//Task/Project"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Dependences" upperBound="-1"
+        eType="#//Dependence" containment="true" eOpposite="#//Dependence/Project"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="NofRes" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        transient="true" defaultValueLiteral="1"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Start" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"
+        defaultValueLiteral="2001-01-01"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="End" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"
+        defaultValueLiteral="2001-01-01">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="suppressedSetVisibility" value="true"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ProjectName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Task" eSuperTypes="../../com.misc.common.moplaf.propagator/model/propagator.ecore#//ObjectWithPropagatorFunctionAdapter">
+    <eOperations name="refreshStart"/>
+    <eOperations name="refreshEnd"/>
+    <eOperations name="refreshHours"/>
+    <eOperations name="refreshHoursItem"/>
+    <eOperations name="refreshHoursVar"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Start" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"
+        defaultValueLiteral="2001-01-01">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="suppressedSetVisibility" value="true"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="End" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"
+        defaultValueLiteral="2001-01-01">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="suppressedSetVisibility" value="true"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Hours" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
+        defaultValueLiteral="1.0">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="suppressedSetVisibility" value="true"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="HoursItems" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
+        defaultValueLiteral="1.0">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="suppressedSetVisibility" value="true"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="HoursVar" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
+        defaultValueLiteral="0.0">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="suppressedSetVisibility" value="true"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="HoursVarPerRes" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
+        defaultValueLiteral="0.0"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="DependencesAfter" upperBound="-1"
+        eType="#//Dependence" eOpposite="#//Dependence/TaskBefore"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="DependencesBefore" upperBound="-1"
+        eType="#//Dependence" eOpposite="#//Dependence/TaskAfter"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="TaskName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Items" upperBound="-1"
+        eType="#//TaskItem" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Project" lowerBound="1"
+        eType="#//Project" eOpposite="#//Project/Tasks"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Dependence">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="TaskBefore" lowerBound="1"
+        eType="#//Task" eOpposite="#//Task/DependencesAfter"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="TaskAfter" lowerBound="1"
+        eType="#//Task" eOpposite="#//Task/DependencesBefore"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Hours" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
+        defaultValueLiteral="1.0"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Project" lowerBound="1"
+        eType="#//Project" eOpposite="#//Project/Dependences"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TaskItem">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Hours" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+  </eClassifiers>
+</ecore:EPackage>

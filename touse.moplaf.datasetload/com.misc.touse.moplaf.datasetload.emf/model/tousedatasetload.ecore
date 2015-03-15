@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="tousedatasetload" nsURI="http://com.misc.touse.moplaf.datasetload.emf"
+    nsPrefix="tuload">
+  <eClassifiers xsi:type="ecore:EClass" name="FPD" eSuperTypes="../../com.misc.common.moplaf.datasetload.derby.emf/model/datasetloadderby.ecore#//DataSourceJdbDerbyEmbedded">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SortingPlansSet" eType="#//FPDGroupSortingPlan"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FPDGroupSortingPlan" eSuperTypes="../../com.misc.common.moplaf.datasetload.emf/model/datasetload.ecore#//TableGroup">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="FromDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ToDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SortingPlansTable" eType="#//FPDSortingPlans"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SortingPlanInputsTable"
+        eType="#//FPDSortingPlanInputs" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FPDSortingPlans" eSuperTypes="../../com.misc.common.moplaf.datasetload.emf/model/datasetload.ecore#//Table">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SortingPlans" upperBound="-1"
+        eType="#//FPDSortingPlan" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FPDSortingPlanInputs" eSuperTypes="../../com.misc.common.moplaf.datasetload.emf/model/datasetload.ecore#//Table">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SortingPlanInputs" upperBound="-1"
+        eType="#//FPDSortingPlanInput" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FPDSortingPlan" eSuperTypes="../../com.misc.common.moplaf.datasetload.emf/model/datasetload.ecore#//TableRow">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="SortingPlanID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ValidFrom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ValidTo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FPDSortingPlanInput" eSuperTypes="../../com.misc.common.moplaf.datasetload.emf/model/datasetload.ecore#//TableRow">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ProductID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="SortingPlanID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MariaDbTestDatabase" eSuperTypes="../../com.misc.common.moplaf.datasetload.mariadb.emf/model/datasetloadmariadb.ecore#//DatasetLoadJdbcMariaDb">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="TableSets" upperBound="-1"
+        eType="#//MariaDbTestGroupTables" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MariaDbTestGroupTables" eSuperTypes="../../com.misc.common.moplaf.datasetload.emf/model/datasetload.ecore#//TableGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="MariaTables" upperBound="-1"
+        eType="#//MariaDbTestTable" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MariaDbTestTable" eSuperTypes="../../com.misc.common.moplaf.datasetload.emf/model/datasetload.ecore#//Table">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="MariaRows" upperBound="-1"
+        eType="#//MariaDbTestRow" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MariaDbTestRow" eSuperTypes="../../com.misc.common.moplaf.datasetload.emf/model/datasetload.ecore#//TableRow">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Col1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Col2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+  </eClassifiers>
+</ecore:EPackage>

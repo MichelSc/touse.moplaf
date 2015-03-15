@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.misc.touse.moplaf.propagator.emf/src" modelPluginID="com.misc.touse.moplaf.propagator.emf"
+    modelName="ToUsePropagator" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0" copyrightFields="false"
+    usedGenPackages="../../com.misc.common.moplaf.propagator/model/propagator.genmodel#//propagator"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>ToUsePropagator.ecore</foreignModel>
+  <genPackages prefix="ToUsePropagator" basePackage="com.misc.touse.moplaf" disposableProviderFactory="true"
+      ecorePackage="ToUsePropagator.ecore#/">
+    <genClasses ecoreClass="ToUsePropagator.ecore#//Project">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//Project/Tasks"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//Project/Dependences"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUsePropagator.ecore#//Project/NofRes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUsePropagator.ecore#//Project/Start"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute ToUsePropagator.ecore#//Project/End"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUsePropagator.ecore#//Project/ProjectName"/>
+      <genOperations ecoreOperation="ToUsePropagator.ecore#//Project/refreshEnd"/>
+      <genOperations ecoreOperation="ToUsePropagator.ecore#//Project/refresh"/>
+      <genOperations ecoreOperation="ToUsePropagator.ecore#//Project/activate"/>
+    </genClasses>
+    <genClasses ecoreClass="ToUsePropagator.ecore#//Task">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute ToUsePropagator.ecore#//Task/Start"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute ToUsePropagator.ecore#//Task/End"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute ToUsePropagator.ecore#//Task/Hours"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute ToUsePropagator.ecore#//Task/HoursItems"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute ToUsePropagator.ecore#//Task/HoursVar"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUsePropagator.ecore#//Task/HoursVarPerRes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//Task/DependencesAfter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//Task/DependencesBefore"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUsePropagator.ecore#//Task/TaskName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//Task/Items"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//Task/Project"/>
+      <genOperations ecoreOperation="ToUsePropagator.ecore#//Task/refreshStart"/>
+      <genOperations ecoreOperation="ToUsePropagator.ecore#//Task/refreshEnd"/>
+      <genOperations ecoreOperation="ToUsePropagator.ecore#//Task/refreshHours"/>
+      <genOperations ecoreOperation="ToUsePropagator.ecore#//Task/refreshHoursItem"/>
+      <genOperations ecoreOperation="ToUsePropagator.ecore#//Task/refreshHoursVar"/>
+    </genClasses>
+    <genClasses ecoreClass="ToUsePropagator.ecore#//Dependence">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//Dependence/TaskBefore"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//Dependence/TaskAfter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUsePropagator.ecore#//Dependence/Hours"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//Dependence/Project"/>
+    </genClasses>
+    <genClasses ecoreClass="ToUsePropagator.ecore#//TaskItem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUsePropagator.ecore#//TaskItem/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUsePropagator.ecore#//TaskItem/Hours"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

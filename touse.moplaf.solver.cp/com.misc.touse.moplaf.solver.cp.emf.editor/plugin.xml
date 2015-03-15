@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated tousesolvercp -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="tousesolvercp.presentation.TousesolvercpModelWizardID"
+            name="%_UI_TousesolvercpModelWizard_label"
+            class="tousesolvercp.presentation.TousesolvercpModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/TousesolvercpModelFile.gif">
+         <description>%_UI_TousesolvercpModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated tousesolvercp -->
+      <editor
+            id="tousesolvercp.presentation.TousesolvercpEditorID"
+            name="%_UI_TousesolvercpEditor_label"
+            icon="icons/full/obj16/TousesolvercpModelFile.gif"
+            extensions="tousesolvercp"
+            class="tousesolvercp.presentation.TousesolvercpEditor"
+            contributorClass="tousesolvercp.presentation.TousesolvercpActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
