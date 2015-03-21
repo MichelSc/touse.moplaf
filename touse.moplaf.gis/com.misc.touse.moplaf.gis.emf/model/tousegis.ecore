@@ -6,11 +6,14 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="calculators" upperBound="-1"
         eType="ecore:EClass ../../com.misc.common.moplaf.gis.google.emf/model/gisgoogle.ecore#//GisDistanceMatrixCalculatorGoogleWS"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="locations" upperBound="-1"
-        eType="ecore:EClass ../../com.misc.common.moplaf.gis.emf/model/gis.ecore#//GisCoordinates"
-        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="matrices" upperBound="-1"
         eType="ecore:EClass ../../com.misc.common.moplaf.gis.emf/model/gis.ecore#//GisDistanceMatrix"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="locations" upperBound="-1"
+        eType="ecore:EClass ../../com.misc.common.moplaf.gis.emf/model/gis.ecore#//GisLocation"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="geocoders" upperBound="-1"
+        eType="ecore:EClass ../../com.misc.common.moplaf.gis.google.emf/model/gisgoogle.ecore#//GisAddressGeocoderGoogleWS"
         containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

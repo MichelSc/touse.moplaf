@@ -75,22 +75,31 @@ public interface GistousePackage extends EPackage {
 	int TO_USE_GIS__CALCULATORS = 0;
 
 	/**
-	 * The feature id for the '<em><b>Locations</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_GIS__LOCATIONS = 1;
-
-	/**
 	 * The feature id for the '<em><b>Matrices</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_GIS__MATRICES = 2;
+	int TO_USE_GIS__MATRICES = 1;
+
+	/**
+	 * The feature id for the '<em><b>Locations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_GIS__LOCATIONS = 2;
+
+	/**
+	 * The feature id for the '<em><b>Geocoders</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_GIS__GEOCODERS = 3;
 
 	/**
 	 * The number of structural features of the '<em>To Use Gis</em>' class.
@@ -99,7 +108,7 @@ public interface GistousePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_GIS_FEATURE_COUNT = 3;
+	int TO_USE_GIS_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>To Use Gis</em>' class.
@@ -142,6 +151,17 @@ public interface GistousePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getToUseGis_Locations();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.gistouse.ToUseGis#getGeocoders <em>Geocoders</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Geocoders</em>'.
+	 * @see com.misc.touse.moplaf.gistouse.ToUseGis#getGeocoders()
+	 * @see #getToUseGis()
+	 * @generated
+	 */
+	EReference getToUseGis_Geocoders();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.gistouse.ToUseGis#getMatrices <em>Matrices</em>}'.
@@ -202,6 +222,14 @@ public interface GistousePackage extends EPackage {
 		 * @generated
 		 */
 		EReference TO_USE_GIS__LOCATIONS = eINSTANCE.getToUseGis_Locations();
+
+		/**
+		 * The meta object literal for the '<em><b>Geocoders</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TO_USE_GIS__GEOCODERS = eINSTANCE.getToUseGis_Geocoders();
 
 		/**
 		 * The meta object literal for the '<em><b>Matrices</b></em>' containment reference list feature.

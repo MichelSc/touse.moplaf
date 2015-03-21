@@ -74,8 +74,9 @@ public class ToUseGisItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(GistousePackage.Literals.TO_USE_GIS__CALCULATORS);
-			childrenFeatures.add(GistousePackage.Literals.TO_USE_GIS__LOCATIONS);
 			childrenFeatures.add(GistousePackage.Literals.TO_USE_GIS__MATRICES);
+			childrenFeatures.add(GistousePackage.Literals.TO_USE_GIS__LOCATIONS);
+			childrenFeatures.add(GistousePackage.Literals.TO_USE_GIS__GEOCODERS);
 		}
 		return childrenFeatures;
 	}
@@ -129,8 +130,9 @@ public class ToUseGisItemProvider
 
 		switch (notification.getFeatureID(ToUseGis.class)) {
 			case GistousePackage.TO_USE_GIS__CALCULATORS:
-			case GistousePackage.TO_USE_GIS__LOCATIONS:
 			case GistousePackage.TO_USE_GIS__MATRICES:
+			case GistousePackage.TO_USE_GIS__LOCATIONS:
+			case GistousePackage.TO_USE_GIS__GEOCODERS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -155,8 +157,18 @@ public class ToUseGisItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
+				(GistousePackage.Literals.TO_USE_GIS__MATRICES,
+				 GisFactory.eINSTANCE.createGisDistanceMatrix()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(GistousePackage.Literals.TO_USE_GIS__LOCATIONS,
 				 GisFactory.eINSTANCE.createGisCoordinates()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(GistousePackage.Literals.TO_USE_GIS__LOCATIONS,
+				 GisFactory.eINSTANCE.createGisAddress()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -165,8 +177,18 @@ public class ToUseGisItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(GistousePackage.Literals.TO_USE_GIS__MATRICES,
-				 GisFactory.eINSTANCE.createGisDistanceMatrix()));
+				(GistousePackage.Literals.TO_USE_GIS__LOCATIONS,
+				 GisFactory.eINSTANCE.createGisAddressStructured()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(GistousePackage.Literals.TO_USE_GIS__LOCATIONS,
+				 GisFactory.eINSTANCE.createGisAddressUnstructured()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(GistousePackage.Literals.TO_USE_GIS__GEOCODERS,
+				 GisGoogleFactory.eINSTANCE.createGisAddressGeocoderGoogleWS()));
 	}
 
 	/**
