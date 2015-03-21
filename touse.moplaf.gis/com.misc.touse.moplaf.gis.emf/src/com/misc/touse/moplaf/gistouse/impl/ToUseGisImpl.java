@@ -2,25 +2,17 @@
  */
 package com.misc.touse.moplaf.gistouse.impl;
 
-import GisGoogle.GisDistanceMatrixCalculatorGoogleWS;
-
 import com.misc.common.moplaf.gis.GisCoordinates;
-
 import com.misc.common.moplaf.gis.GisDistanceMatrix;
+import com.misc.common.moplaf.gis.GisGoogle.GisDistanceMatrixCalculatorGoogleWS;
 import com.misc.touse.moplaf.gistouse.GistousePackage;
 import com.misc.touse.moplaf.gistouse.ToUseGis;
-
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 

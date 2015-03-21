@@ -2,18 +2,14 @@
  */
 package com.misc.touse.moplaf.gistouse.impl;
 
-import GisGoogle.GisGooglePackage;
-
+import com.misc.common.moplaf.gis.GisGoogle.GisGooglePackage;
 import com.misc.common.moplaf.gis.GisPackage;
-
 import com.misc.touse.moplaf.gistouse.GistouseFactory;
 import com.misc.touse.moplaf.gistouse.GistousePackage;
 import com.misc.touse.moplaf.gistouse.ToUseGis;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 /**

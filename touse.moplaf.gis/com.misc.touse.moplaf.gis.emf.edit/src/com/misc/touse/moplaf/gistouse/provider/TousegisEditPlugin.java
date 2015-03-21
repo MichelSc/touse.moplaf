@@ -2,12 +2,9 @@
  */
 package com.misc.touse.moplaf.gistouse.provider;
 
-import GisGoogle.provider.GisgoogleEditPlugin;
-
+import com.misc.common.moplaf.gis.GisGoogle.provider.GisgoogleEditPlugin;
 import com.misc.common.moplaf.gis.provider.GisEditPlugin;
-
 import org.eclipse.emf.common.EMFPlugin;
-
 import org.eclipse.emf.common.util.ResourceLocator;
 
 /**

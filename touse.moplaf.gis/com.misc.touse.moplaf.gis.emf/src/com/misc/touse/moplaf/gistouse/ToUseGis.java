@@ -2,13 +2,10 @@
  */
 package com.misc.touse.moplaf.gistouse;
 
-import GisGoogle.GisDistanceMatrixCalculatorGoogleWS;
-
 import com.misc.common.moplaf.gis.GisCoordinates;
-
 import com.misc.common.moplaf.gis.GisDistanceMatrix;
+import com.misc.common.moplaf.gis.GisGoogle.GisDistanceMatrixCalculatorGoogleWS;
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -32,7 +29,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface ToUseGis extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Calculators</b></em>' containment reference list.
-	 * The list contents are of type {@link GisGoogle.GisDistanceMatrixCalculatorGoogleWS}.
+	 * The list contents are of type {@link com.misc.common.moplaf.gis.GisGoogle.GisDistanceMatrixCalculatorGoogleWS}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Calculators</em>' containment reference list isn't clear,
