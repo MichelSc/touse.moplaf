@@ -6,6 +6,7 @@ import com.misc.common.moplaf.gis.GisDistanceMatrix;
 import com.misc.common.moplaf.gis.GisGoogle.GisAddressGeocoderGoogleWS;
 import com.misc.common.moplaf.gis.GisGoogle.GisDistanceMatrixCalculatorGoogleWS;
 import com.misc.common.moplaf.gis.GisLocation;
+import com.misc.common.moplaf.gis.gisgisgraphy.GisAddressGeocoderGisgraphy;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
@@ -20,7 +21,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.misc.touse.moplaf.gistouse.ToUseGis#getCalculators <em>Calculators</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.gistouse.ToUseGis#getMatrices <em>Matrices</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.gistouse.ToUseGis#getLocations <em>Locations</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.gistouse.ToUseGis#getGeocoders <em>Geocoders</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.gistouse.ToUseGis#getGeocodersG <em>Geocoders G</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.gistouse.ToUseGis#getGeocodersGG <em>Geocoders GG</em>}</li>
  * </ul>
  * </p>
  *
@@ -62,20 +64,36 @@ public interface ToUseGis extends EObject {
 	EList<GisLocation> getLocations();
 
 	/**
-	 * Returns the value of the '<em><b>Geocoders</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Geocoders G</b></em>' containment reference list.
 	 * The list contents are of type {@link com.misc.common.moplaf.gis.GisGoogle.GisAddressGeocoderGoogleWS}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Geocoders</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Geocoders G</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Geocoders</em>' containment reference list.
-	 * @see com.misc.touse.moplaf.gistouse.GistousePackage#getToUseGis_Geocoders()
+	 * @return the value of the '<em>Geocoders G</em>' containment reference list.
+	 * @see com.misc.touse.moplaf.gistouse.GistousePackage#getToUseGis_GeocodersG()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<GisAddressGeocoderGoogleWS> getGeocoders();
+	EList<GisAddressGeocoderGoogleWS> getGeocodersG();
+
+	/**
+	 * Returns the value of the '<em><b>Geocoders GG</b></em>' containment reference list.
+	 * The list contents are of type {@link com.misc.common.moplaf.gis.gisgisgraphy.GisAddressGeocoderGisgraphy}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Geocoders GG</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Geocoders GG</em>' containment reference list.
+	 * @see com.misc.touse.moplaf.gistouse.GistousePackage#getToUseGis_GeocodersGG()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<GisAddressGeocoderGisgraphy> getGeocodersGG();
 
 	/**
 	 * Returns the value of the '<em><b>Matrices</b></em>' containment reference list.

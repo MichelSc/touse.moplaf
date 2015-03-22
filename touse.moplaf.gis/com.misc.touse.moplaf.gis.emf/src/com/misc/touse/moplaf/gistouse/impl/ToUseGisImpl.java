@@ -6,6 +6,7 @@ import com.misc.common.moplaf.gis.GisDistanceMatrix;
 import com.misc.common.moplaf.gis.GisGoogle.GisAddressGeocoderGoogleWS;
 import com.misc.common.moplaf.gis.GisGoogle.GisDistanceMatrixCalculatorGoogleWS;
 import com.misc.common.moplaf.gis.GisLocation;
+import com.misc.common.moplaf.gis.gisgisgraphy.GisAddressGeocoderGisgraphy;
 import com.misc.touse.moplaf.gistouse.GistousePackage;
 import com.misc.touse.moplaf.gistouse.ToUseGis;
 import java.util.Collection;
@@ -27,7 +28,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.misc.touse.moplaf.gistouse.impl.ToUseGisImpl#getCalculators <em>Calculators</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.gistouse.impl.ToUseGisImpl#getMatrices <em>Matrices</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.gistouse.impl.ToUseGisImpl#getLocations <em>Locations</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.gistouse.impl.ToUseGisImpl#getGeocoders <em>Geocoders</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.gistouse.impl.ToUseGisImpl#getGeocodersG <em>Geocoders G</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.gistouse.impl.ToUseGisImpl#getGeocodersGG <em>Geocoders GG</em>}</li>
  * </ul>
  * </p>
  *
@@ -65,14 +67,24 @@ public class ToUseGisImpl extends MinimalEObjectImpl.Container implements ToUseG
 	protected EList<GisLocation> locations;
 
 	/**
-	 * The cached value of the '{@link #getGeocoders() <em>Geocoders</em>}' containment reference list.
+	 * The cached value of the '{@link #getGeocodersG() <em>Geocoders G</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getGeocoders()
+	 * @see #getGeocodersG()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<GisAddressGeocoderGoogleWS> geocoders;
+	protected EList<GisAddressGeocoderGoogleWS> geocodersG;
+
+	/**
+	 * The cached value of the '{@link #getGeocodersGG() <em>Geocoders GG</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGeocodersGG()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<GisAddressGeocoderGisgraphy> geocodersGG;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -122,11 +134,23 @@ public class ToUseGisImpl extends MinimalEObjectImpl.Container implements ToUseG
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<GisAddressGeocoderGoogleWS> getGeocoders() {
-		if (geocoders == null) {
-			geocoders = new EObjectContainmentEList<GisAddressGeocoderGoogleWS>(GisAddressGeocoderGoogleWS.class, this, GistousePackage.TO_USE_GIS__GEOCODERS);
+	public EList<GisAddressGeocoderGoogleWS> getGeocodersG() {
+		if (geocodersG == null) {
+			geocodersG = new EObjectContainmentEList<GisAddressGeocoderGoogleWS>(GisAddressGeocoderGoogleWS.class, this, GistousePackage.TO_USE_GIS__GEOCODERS_G);
 		}
-		return geocoders;
+		return geocodersG;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<GisAddressGeocoderGisgraphy> getGeocodersGG() {
+		if (geocodersGG == null) {
+			geocodersGG = new EObjectContainmentEList<GisAddressGeocoderGisgraphy>(GisAddressGeocoderGisgraphy.class, this, GistousePackage.TO_USE_GIS__GEOCODERS_GG);
+		}
+		return geocodersGG;
 	}
 
 	/**
@@ -155,8 +179,10 @@ public class ToUseGisImpl extends MinimalEObjectImpl.Container implements ToUseG
 				return ((InternalEList<?>)getMatrices()).basicRemove(otherEnd, msgs);
 			case GistousePackage.TO_USE_GIS__LOCATIONS:
 				return ((InternalEList<?>)getLocations()).basicRemove(otherEnd, msgs);
-			case GistousePackage.TO_USE_GIS__GEOCODERS:
-				return ((InternalEList<?>)getGeocoders()).basicRemove(otherEnd, msgs);
+			case GistousePackage.TO_USE_GIS__GEOCODERS_G:
+				return ((InternalEList<?>)getGeocodersG()).basicRemove(otherEnd, msgs);
+			case GistousePackage.TO_USE_GIS__GEOCODERS_GG:
+				return ((InternalEList<?>)getGeocodersGG()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -175,8 +201,10 @@ public class ToUseGisImpl extends MinimalEObjectImpl.Container implements ToUseG
 				return getMatrices();
 			case GistousePackage.TO_USE_GIS__LOCATIONS:
 				return getLocations();
-			case GistousePackage.TO_USE_GIS__GEOCODERS:
-				return getGeocoders();
+			case GistousePackage.TO_USE_GIS__GEOCODERS_G:
+				return getGeocodersG();
+			case GistousePackage.TO_USE_GIS__GEOCODERS_GG:
+				return getGeocodersGG();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -202,9 +230,13 @@ public class ToUseGisImpl extends MinimalEObjectImpl.Container implements ToUseG
 				getLocations().clear();
 				getLocations().addAll((Collection<? extends GisLocation>)newValue);
 				return;
-			case GistousePackage.TO_USE_GIS__GEOCODERS:
-				getGeocoders().clear();
-				getGeocoders().addAll((Collection<? extends GisAddressGeocoderGoogleWS>)newValue);
+			case GistousePackage.TO_USE_GIS__GEOCODERS_G:
+				getGeocodersG().clear();
+				getGeocodersG().addAll((Collection<? extends GisAddressGeocoderGoogleWS>)newValue);
+				return;
+			case GistousePackage.TO_USE_GIS__GEOCODERS_GG:
+				getGeocodersGG().clear();
+				getGeocodersGG().addAll((Collection<? extends GisAddressGeocoderGisgraphy>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -227,8 +259,11 @@ public class ToUseGisImpl extends MinimalEObjectImpl.Container implements ToUseG
 			case GistousePackage.TO_USE_GIS__LOCATIONS:
 				getLocations().clear();
 				return;
-			case GistousePackage.TO_USE_GIS__GEOCODERS:
-				getGeocoders().clear();
+			case GistousePackage.TO_USE_GIS__GEOCODERS_G:
+				getGeocodersG().clear();
+				return;
+			case GistousePackage.TO_USE_GIS__GEOCODERS_GG:
+				getGeocodersGG().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -248,8 +283,10 @@ public class ToUseGisImpl extends MinimalEObjectImpl.Container implements ToUseG
 				return matrices != null && !matrices.isEmpty();
 			case GistousePackage.TO_USE_GIS__LOCATIONS:
 				return locations != null && !locations.isEmpty();
-			case GistousePackage.TO_USE_GIS__GEOCODERS:
-				return geocoders != null && !geocoders.isEmpty();
+			case GistousePackage.TO_USE_GIS__GEOCODERS_G:
+				return geocodersG != null && !geocodersG.isEmpty();
+			case GistousePackage.TO_USE_GIS__GEOCODERS_GG:
+				return geocodersGG != null && !geocodersGG.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

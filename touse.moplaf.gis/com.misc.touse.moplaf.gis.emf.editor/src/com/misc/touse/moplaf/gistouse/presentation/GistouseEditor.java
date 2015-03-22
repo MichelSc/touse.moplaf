@@ -117,6 +117,7 @@ import org.eclipse.emf.edit.ui.util.EditUIUtil;
 import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 import com.misc.touse.moplaf.gistouse.provider.GistouseItemProviderAdapterFactory;
 import com.misc.common.moplaf.gis.GisGoogle.provider.GisGoogleItemProviderAdapterFactory;
+import com.misc.common.moplaf.gis.gisgisgraphy.provider.GisgisgraphyItemProviderAdapterFactory;
 import com.misc.common.moplaf.gis.provider.GisItemProviderAdapterFactory;
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 
@@ -665,6 +666,7 @@ public class GistouseEditor
 		adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new GistouseItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new GisItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new GisgisgraphyItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new GisGoogleItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 

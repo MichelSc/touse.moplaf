@@ -16,5 +16,6 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.edit.ui;visibility:=reexport,
  org.eclipse.ui.ide;visibility:=reexport,
  com.misc.common.moplaf.gis.emf.edit;visibility:=reexport,
+ com.misc.common.moplaf.gis.gisgraphy.emf.edit;visibility:=reexport,
  com.misc.common.moplaf.gis.google.emf.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

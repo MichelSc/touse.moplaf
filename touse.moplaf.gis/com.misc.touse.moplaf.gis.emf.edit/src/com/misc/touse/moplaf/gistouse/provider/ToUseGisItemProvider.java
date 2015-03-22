@@ -5,6 +5,7 @@ package com.misc.touse.moplaf.gistouse.provider;
 
 import com.misc.common.moplaf.gis.GisFactory;
 import com.misc.common.moplaf.gis.GisGoogle.GisGoogleFactory;
+import com.misc.common.moplaf.gis.gisgisgraphy.GisgisgraphyFactory;
 import com.misc.touse.moplaf.gistouse.GistousePackage;
 import com.misc.touse.moplaf.gistouse.ToUseGis;
 import java.util.Collection;
@@ -76,7 +77,8 @@ public class ToUseGisItemProvider
 			childrenFeatures.add(GistousePackage.Literals.TO_USE_GIS__CALCULATORS);
 			childrenFeatures.add(GistousePackage.Literals.TO_USE_GIS__MATRICES);
 			childrenFeatures.add(GistousePackage.Literals.TO_USE_GIS__LOCATIONS);
-			childrenFeatures.add(GistousePackage.Literals.TO_USE_GIS__GEOCODERS);
+			childrenFeatures.add(GistousePackage.Literals.TO_USE_GIS__GEOCODERS_G);
+			childrenFeatures.add(GistousePackage.Literals.TO_USE_GIS__GEOCODERS_GG);
 		}
 		return childrenFeatures;
 	}
@@ -132,7 +134,8 @@ public class ToUseGisItemProvider
 			case GistousePackage.TO_USE_GIS__CALCULATORS:
 			case GistousePackage.TO_USE_GIS__MATRICES:
 			case GistousePackage.TO_USE_GIS__LOCATIONS:
-			case GistousePackage.TO_USE_GIS__GEOCODERS:
+			case GistousePackage.TO_USE_GIS__GEOCODERS_G:
+			case GistousePackage.TO_USE_GIS__GEOCODERS_GG:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -187,8 +190,13 @@ public class ToUseGisItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(GistousePackage.Literals.TO_USE_GIS__GEOCODERS,
+				(GistousePackage.Literals.TO_USE_GIS__GEOCODERS_G,
 				 GisGoogleFactory.eINSTANCE.createGisAddressGeocoderGoogleWS()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(GistousePackage.Literals.TO_USE_GIS__GEOCODERS_GG,
+				 GisgisgraphyFactory.eINSTANCE.createGisAddressGeocoderGisgraphy()));
 	}
 
 	/**

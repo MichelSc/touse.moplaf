@@ -3,6 +3,7 @@
 package com.misc.touse.moplaf.gistouse.provider;
 
 import com.misc.common.moplaf.gis.GisGoogle.provider.GisgoogleEditPlugin;
+import com.misc.common.moplaf.gis.gisgisgraphy.provider.GisgisgraphyEditPlugin;
 import com.misc.common.moplaf.gis.provider.GisEditPlugin;
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
@@ -40,6 +41,7 @@ public final class TousegisEditPlugin extends EMFPlugin {
 		super
 		  (new ResourceLocator [] {
 		     GisEditPlugin.INSTANCE,
+		     GisgisgraphyEditPlugin.INSTANCE,
 		     GisgoogleEditPlugin.INSTANCE,
 		   });
 	}
