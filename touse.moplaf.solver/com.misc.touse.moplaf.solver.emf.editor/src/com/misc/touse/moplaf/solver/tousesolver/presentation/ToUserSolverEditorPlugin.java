@@ -3,15 +3,8 @@
 package com.misc.touse.moplaf.solver.tousesolver.presentation;
 
 import com.misc.common.moplaf.solver.provider.SolverEditPlugin;
-
-import com.misc.common.moplaf.solver.solvercplex.provider.SolvercplexEditPlugin;
-import com.misc.common.moplaf.solver.solverglpk.provider.SolverglpkEditPlugin;
-import com.misc.common.moplaf.solver.solverjavailp.provider.SolverjavailpEditPlugin;
-import com.misc.common.moplaf.solver.solverneos.provider.SolverneosEditPlugin;
 import org.eclipse.emf.common.EMFPlugin;
-
 import org.eclipse.emf.common.ui.EclipseUIPlugin;
-
 import org.eclipse.emf.common.util.ResourceLocator;
 
 /**
@@ -47,10 +40,6 @@ public final class ToUserSolverEditorPlugin extends EMFPlugin {
 		super
 			(new ResourceLocator [] {
 				SolverEditPlugin.INSTANCE,
-				SolvercplexEditPlugin.INSTANCE,
-				SolverglpkEditPlugin.INSTANCE,
-				SolverjavailpEditPlugin.INSTANCE,
-				SolverneosEditPlugin.INSTANCE,
 			});
 	}
 

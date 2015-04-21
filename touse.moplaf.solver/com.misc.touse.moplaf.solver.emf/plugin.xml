@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated ToUserSolver -->
       <package
-            uri="http://com.misc.touse.moplaf.solver.emf"
+            uri="http://www.misc.com/touse/moplaf/solver/model/0.1"
             class="com.misc.touse.moplaf.solver.tousesolver.TousesolverPackage"
             genModel="model/ToUserSolver.genmodel"/>
    </extension>

@@ -3,22 +3,24 @@
 package com.misc.touse.moplaf.solver.tousesolver.provider;
 
 
+import com.misc.common.moplaf.solver.SolverPackage;
 import com.misc.common.moplaf.solver.provider.GeneratorItemProvider;
 import com.misc.touse.moplaf.solver.tousesolver.KnapsackLp;
 import com.misc.touse.moplaf.solver.tousesolver.TousesolverFactory;
 import com.misc.touse.moplaf.solver.tousesolver.TousesolverPackage;
 import java.util.Collection;
+import java.util.LinkedList;
 import java.util.List;
+import org.eclipse.emf.common.CommonPlugin;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EClassifier;
+import org.eclipse.emf.ecore.EFactory;
+import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
@@ -28,13 +30,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * @generated
  */
 public class KnapsackLpItemProvider
-	extends GeneratorItemProvider
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+	extends GeneratorItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -73,11 +69,8 @@ public class KnapsackLpItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(TousesolverPackage.Literals.KNAPSACK_LP__ROOT);
-			childrenFeatures.add(TousesolverPackage.Literals.KNAPSACK_LP__GLPK);
-			childrenFeatures.add(TousesolverPackage.Literals.KNAPSACK_LP__JAVA_ILP);
-			childrenFeatures.add(TousesolverPackage.Literals.KNAPSACK_LP__NEOS);
 			childrenFeatures.add(TousesolverPackage.Literals.KNAPSACK_LP__READER);
-			childrenFeatures.add(TousesolverPackage.Literals.KNAPSACK_LP__CPLEX);
+			childrenFeatures.add(TousesolverPackage.Literals.KNAPSACK_LP__SOLVER);
 		}
 		return childrenFeatures;
 	}
@@ -133,11 +126,8 @@ public class KnapsackLpItemProvider
 
 		switch (notification.getFeatureID(KnapsackLp.class)) {
 			case TousesolverPackage.KNAPSACK_LP__ROOT:
-			case TousesolverPackage.KNAPSACK_LP__GLPK:
-			case TousesolverPackage.KNAPSACK_LP__JAVA_ILP:
-			case TousesolverPackage.KNAPSACK_LP__NEOS:
 			case TousesolverPackage.KNAPSACK_LP__READER:
-			case TousesolverPackage.KNAPSACK_LP__CPLEX:
+			case TousesolverPackage.KNAPSACK_LP__SOLVER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -149,7 +139,6 @@ public class KnapsackLpItemProvider
 	 * that can be created under this object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
@@ -157,28 +146,34 @@ public class KnapsackLpItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TousesolverPackage.Literals.KNAPSACK_LP__GLPK,
-				 TousesolverFactory.eINSTANCE.createSolverToUseGLPK()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TousesolverPackage.Literals.KNAPSACK_LP__JAVA_ILP,
-				 TousesolverFactory.eINSTANCE.createSolverToUseJavaILP()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TousesolverPackage.Literals.KNAPSACK_LP__NEOS,
-				 TousesolverFactory.eINSTANCE.createSolverToUseNeos()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(TousesolverPackage.Literals.KNAPSACK_LP__READER,
 				 TousesolverFactory.eINSTANCE.createSolutionReaderToUse()));
 
-		newChildDescriptors.add
-			(createChildParameter
-				(TousesolverPackage.Literals.KNAPSACK_LP__CPLEX,
-				 TousesolverFactory.eINSTANCE.createSolverToUserCplex()));
+		EPackage.Registry registry = EPackage.Registry.INSTANCE;
+		EClass solverLpClass = SolverPackage.Literals.SOLVER_LP;
+		LinkedList<String> uriList = new LinkedList<String>(registry.keySet());
+		for ( String  uri : uriList){
+			EPackage aPackage = registry.getEPackage(uri);
+			EFactory aFactory = registry.getEFactory(uri);
+			for ( EClassifier aClassifier : aPackage.getEClassifiers()){
+				if ( aClassifier instanceof EClass ){
+					EClass aClass = (EClass)aClassifier;
+					if ( !aClass.isAbstract() && solverLpClass.isSuperTypeOf(aClass)){
+						CommonPlugin.INSTANCE.log( "  concrete candidate"
+					                             + aPackage.getClass().getName()
+					                             + " : "
+					                             + aClass.getName());
+						
+						newChildDescriptors.add
+						(createChildParameter
+							(TousesolverPackage.Literals.KNAPSACK_LP__SOLVER,
+							 aFactory.create(aClass)));
+					}  // if is solver
+				}  // if is class
+			}  // traverse classifiers
+		} // traverse the packages registered
+		
+
 	}
 
 	/**

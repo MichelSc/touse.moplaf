@@ -120,11 +120,18 @@ public class TousesolverActionBarContributor
 	protected WriteAction writeAction = new WriteAction();
 			
 	/**
-	 * This action runs the object
+	 * This action accpets the object
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 */
 	protected AcceptAction acceptAction = new AcceptAction();
+			
+	/**
+	 * This action tests the object
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	protected TestAction testAction = new TestAction();
 			
 	
 	/**
@@ -303,9 +310,10 @@ public class TousesolverActionBarContributor
 			createSiblingMenuManager.update(true);
 		}
 		
-		this.runAction  .selectionChanged(activeEditorPart, selection);
-		this.writeAction.selectionChanged(activeEditorPart, selection);
+		this.runAction   .selectionChanged(activeEditorPart, selection);
+		this.writeAction .selectionChanged(activeEditorPart, selection);
 		this.acceptAction.selectionChanged(activeEditorPart, selection);
+		this.testAction  .selectionChanged(activeEditorPart, selection);
 	}
 
 	/**
@@ -417,6 +425,7 @@ public class TousesolverActionBarContributor
 		submenuManager.add(this.runAction);
 		submenuManager.add(this.writeAction);
 		submenuManager.add(this.acceptAction);
+		submenuManager.add(this.testAction);
 }
 
 	/**

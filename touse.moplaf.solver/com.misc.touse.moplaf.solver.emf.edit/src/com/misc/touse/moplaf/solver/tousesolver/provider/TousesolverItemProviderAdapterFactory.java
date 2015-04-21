@@ -371,75 +371,6 @@ public class TousesolverItemProviderAdapterFactory extends TousesolverAdapterFac
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.solver.tousesolver.SolverToUseGLPK} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SolverToUseGLPKItemProvider solverToUseGLPKItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.misc.touse.moplaf.solver.tousesolver.SolverToUseGLPK}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSolverToUseGLPKAdapter() {
-		if (solverToUseGLPKItemProvider == null) {
-			solverToUseGLPKItemProvider = new SolverToUseGLPKItemProvider(this);
-		}
-
-		return solverToUseGLPKItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.solver.tousesolver.SolverToUseJavaILP} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SolverToUseJavaILPItemProvider solverToUseJavaILPItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.misc.touse.moplaf.solver.tousesolver.SolverToUseJavaILP}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSolverToUseJavaILPAdapter() {
-		if (solverToUseJavaILPItemProvider == null) {
-			solverToUseJavaILPItemProvider = new SolverToUseJavaILPItemProvider(this);
-		}
-
-		return solverToUseJavaILPItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.solver.tousesolver.SolverToUseNeos} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SolverToUseNeosItemProvider solverToUseNeosItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.misc.touse.moplaf.solver.tousesolver.SolverToUseNeos}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSolverToUseNeosAdapter() {
-		if (solverToUseNeosItemProvider == null) {
-			solverToUseNeosItemProvider = new SolverToUseNeosItemProvider(this);
-		}
-
-		return solverToUseNeosItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.solver.tousesolver.SolutionReaderToUse} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -460,29 +391,6 @@ public class TousesolverItemProviderAdapterFactory extends TousesolverAdapterFac
 		}
 
 		return solutionReaderToUseItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.solver.tousesolver.SolverToUserCplex} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SolverToUserCplexItemProvider solverToUserCplexItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.misc.touse.moplaf.solver.tousesolver.SolverToUserCplex}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSolverToUserCplexAdapter() {
-		if (solverToUserCplexItemProvider == null) {
-			solverToUserCplexItemProvider = new SolverToUserCplexItemProvider(this);
-		}
-
-		return solverToUserCplexItemProvider;
 	}
 
 	/**
@@ -597,11 +505,7 @@ public class TousesolverItemProviderAdapterFactory extends TousesolverAdapterFac
 		if (lpItemItemProvider != null) lpItemItemProvider.dispose();
 		if (varItemInKnapsackItemProvider != null) varItemInKnapsackItemProvider.dispose();
 		if (consKnapsackCapacityItemProvider != null) consKnapsackCapacityItemProvider.dispose();
-		if (solverToUseGLPKItemProvider != null) solverToUseGLPKItemProvider.dispose();
-		if (solverToUseJavaILPItemProvider != null) solverToUseJavaILPItemProvider.dispose();
-		if (solverToUseNeosItemProvider != null) solverToUseNeosItemProvider.dispose();
 		if (solutionReaderToUseItemProvider != null) solutionReaderToUseItemProvider.dispose();
-		if (solverToUserCplexItemProvider != null) solverToUserCplexItemProvider.dispose();
 	}
 
 }

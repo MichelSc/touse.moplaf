@@ -3,6 +3,7 @@
 package com.misc.touse.moplaf.solver.tousesolver;
 
 import com.misc.common.moplaf.solver.Generator;
+import com.misc.common.moplaf.solver.Solver;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -15,11 +16,8 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.KnapsackLp#getRoot <em>Root</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.KnapsackLp#getScenario <em>Scenario</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.KnapsackLp#getGLPK <em>GLPK</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.KnapsackLp#getJavaILP <em>Java ILP</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.KnapsackLp#getNeos <em>Neos</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.KnapsackLp#getReader <em>Reader</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.KnapsackLp#getCplex <em>Cplex</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.KnapsackLp#getSolver <em>Solver</em>}</li>
  * </ul>
  * </p>
  *
@@ -84,54 +82,6 @@ public interface KnapsackLp extends Generator {
 	void setScenario(Scenario value);
 
 	/**
-	 * Returns the value of the '<em><b>GLPK</b></em>' containment reference list.
-	 * The list contents are of type {@link com.misc.touse.moplaf.solver.tousesolver.SolverToUseGLPK}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>GLPK</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>GLPK</em>' containment reference list.
-	 * @see com.misc.touse.moplaf.solver.tousesolver.TousesolverPackage#getKnapsackLp_GLPK()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<SolverToUseGLPK> getGLPK();
-
-	/**
-	 * Returns the value of the '<em><b>Java ILP</b></em>' containment reference list.
-	 * The list contents are of type {@link com.misc.touse.moplaf.solver.tousesolver.SolverToUseJavaILP}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Java ILP</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Java ILP</em>' containment reference list.
-	 * @see com.misc.touse.moplaf.solver.tousesolver.TousesolverPackage#getKnapsackLp_JavaILP()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<SolverToUseJavaILP> getJavaILP();
-
-	/**
-	 * Returns the value of the '<em><b>Neos</b></em>' containment reference list.
-	 * The list contents are of type {@link com.misc.touse.moplaf.solver.tousesolver.SolverToUseNeos}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Neos</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Neos</em>' containment reference list.
-	 * @see com.misc.touse.moplaf.solver.tousesolver.TousesolverPackage#getKnapsackLp_Neos()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<SolverToUseNeos> getNeos();
-
-	/**
 	 * Returns the value of the '<em><b>Reader</b></em>' containment reference list.
 	 * The list contents are of type {@link com.misc.touse.moplaf.solver.tousesolver.SolutionReaderToUse}.
 	 * <!-- begin-user-doc -->
@@ -148,18 +98,18 @@ public interface KnapsackLp extends Generator {
 	EList<SolutionReaderToUse> getReader();
 
 	/**
-	 * Returns the value of the '<em><b>Cplex</b></em>' containment reference list.
-	 * The list contents are of type {@link com.misc.touse.moplaf.solver.tousesolver.SolverToUserCplex}.
+	 * Returns the value of the '<em><b>Solver</b></em>' containment reference list.
+	 * The list contents are of type {@link com.misc.common.moplaf.solver.Solver}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Cplex</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Solver</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Cplex</em>' containment reference list.
-	 * @see com.misc.touse.moplaf.solver.tousesolver.TousesolverPackage#getKnapsackLp_Cplex()
+	 * @return the value of the '<em>Solver</em>' containment reference list.
+	 * @see com.misc.touse.moplaf.solver.tousesolver.TousesolverPackage#getKnapsackLp_Solver()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<SolverToUserCplex> getCplex();
+	EList<Solver> getSolver();
 } // KnapsackLp

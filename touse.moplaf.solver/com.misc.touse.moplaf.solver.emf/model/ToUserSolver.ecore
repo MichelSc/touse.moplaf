@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="tousesolver" nsURI="http://www.misc.com/touse.moplaf.solver.emf"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="tousesolver" nsURI="http://www.misc.com/touse/moplaf/solver/model/0.1"
     nsPrefix="tos">
   <eClassifiers xsi:type="ecore:EClass" name="Domain">
     <eStructuralFeatures xsi:type="ecore:EReference" name="RootFolder" upperBound="-1"
@@ -50,16 +50,11 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Scenario" lowerBound="1"
         eType="#//Scenario" eOpposite="#//Scenario/LP"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="GLPK" upperBound="-1" eType="#//SolverToUseGLPK"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="JavaILP" upperBound="-1"
-        eType="#//SolverToUseJavaILP" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Neos" upperBound="-1" eType="#//SolverToUseNeos"
-        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Reader" upperBound="-1"
         eType="#//SolutionReaderToUse" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Cplex" upperBound="-1"
-        eType="#//SolverToUserCplex" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Solver" upperBound="-1"
+        eType="ecore:EClass ../../com.misc.common.moplaf.solver.emf/model/solver.ecore#//Solver"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LpRoot" eSuperTypes="../../com.misc.common.moplaf.solver.emf/model/solver.ecore#//GeneratorTuple">
     <eStructuralFeatures xsi:type="ecore:EReference" name="Item" upperBound="-1" eType="#//LpItem"
@@ -80,9 +75,5 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VarItemInKnapsack" eSuperTypes="../../com.misc.common.moplaf.solver.emf/model/solver.ecore#//GeneratorLpVar"/>
   <eClassifiers xsi:type="ecore:EClass" name="ConsKnapsackCapacity" eSuperTypes="../../com.misc.common.moplaf.solver.emf/model/solver.ecore#//GeneratorLpCons"/>
-  <eClassifiers xsi:type="ecore:EClass" name="SolverToUseGLPK" eSuperTypes="../../com.misc.common.moplaf.solver.glpk.emf/model/solverglpk.ecore#//SolverGLPK"/>
-  <eClassifiers xsi:type="ecore:EClass" name="SolverToUseJavaILP" eSuperTypes="../../com.misc.common.moplaf.solver.javailp.emf/model/solverjavailp.ecore#//SolverJavaILP"/>
-  <eClassifiers xsi:type="ecore:EClass" name="SolverToUseNeos" eSuperTypes="../../com.misc.common.moplaf.solver.neos.emf/model/solverneos.ecore#//SolverNeos"/>
   <eClassifiers xsi:type="ecore:EClass" name="SolutionReaderToUse" eSuperTypes="../../com.misc.common.moplaf.solver.emf/model/solver.ecore#//SolutionReader"/>
-  <eClassifiers xsi:type="ecore:EClass" name="SolverToUserCplex" eSuperTypes="../../com.misc.common.moplaf.solver.cplex.emf/model/solvercplex.ecore#//SolverCplex"/>
 </ecore:EPackage>

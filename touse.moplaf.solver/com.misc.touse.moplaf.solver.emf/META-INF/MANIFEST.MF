@@ -11,10 +11,10 @@ Export-Package: com.misc.touse.moplaf.solver.tousesolver,
  com.misc.touse.moplaf.solver.tousesolver.impl,
  com.misc.touse.moplaf.solver.tousesolver.util
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.emf.ecore,
+ org.eclipse.emf.ecore;visibility:=reexport,
  com.misc.common.moplaf.solver.emf;visibility:=reexport,
- com.misc.common.moplaf.solver.cplex.emf;visibility:=reexport,
- com.misc.common.moplaf.solver.glpk.emf;visibility:=reexport,
- com.misc.common.moplaf.solver.javailp.emf;bundle-version="0.1.0",
- com.misc.common.moplaf.solver.neos.emf;bundle-version="0.1.0"
+ com.misc.common.moplaf.solver.cplex.emf;resolution:=optional;visibility:=reexport,
+ com.misc.common.moplaf.solver.glpk.emf;resolution:=optional;visibility:=reexport,
+ com.misc.common.moplaf.solver.javailp.emf;bundle-version="0.1.0";resolution:=optional,
+ com.misc.common.moplaf.solver.neos.emf;bundle-version="0.1.0";resolution:=optional
 Bundle-ActivationPolicy: lazy

@@ -11,15 +11,8 @@ import com.misc.common.moplaf.solver.GeneratorTuple;
 import com.misc.common.moplaf.solver.GeneratorTupleElement;
 import com.misc.common.moplaf.solver.GeneratorVar;
 import com.misc.common.moplaf.solver.IGeneratorTool;
-import com.misc.common.moplaf.solver.ILpWriter;
 import com.misc.common.moplaf.solver.SolutionProvider;
 import com.misc.common.moplaf.solver.SolutionReader;
-import com.misc.common.moplaf.solver.Solver;
-import com.misc.common.moplaf.solver.SolverLp;
-import com.misc.common.moplaf.solver.solvercplex.SolverCplex;
-import com.misc.common.moplaf.solver.solverglpk.SolverGLPK;
-import com.misc.common.moplaf.solver.solverjavailp.SolverJavaILP;
-import com.misc.common.moplaf.solver.solverneos.SolverNeos;
 import com.misc.touse.moplaf.solver.tousesolver.*;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -177,59 +170,12 @@ public class TousesolverSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case TousesolverPackage.SOLVER_TO_USE_GLPK: {
-				SolverToUseGLPK solverToUseGLPK = (SolverToUseGLPK)theEObject;
-				T result = caseSolverToUseGLPK(solverToUseGLPK);
-				if (result == null) result = caseSolverGLPK(solverToUseGLPK);
-				if (result == null) result = caseSolverLp(solverToUseGLPK);
-				if (result == null) result = caseILpWriter(solverToUseGLPK);
-				if (result == null) result = caseSolver(solverToUseGLPK);
-				if (result == null) result = caseSolutionProvider(solverToUseGLPK);
-				if (result == null) result = caseIGeneratorTool(solverToUseGLPK);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case TousesolverPackage.SOLVER_TO_USE_JAVA_ILP: {
-				SolverToUseJavaILP solverToUseJavaILP = (SolverToUseJavaILP)theEObject;
-				T result = caseSolverToUseJavaILP(solverToUseJavaILP);
-				if (result == null) result = caseSolverJavaILP(solverToUseJavaILP);
-				if (result == null) result = caseSolverLp(solverToUseJavaILP);
-				if (result == null) result = caseILpWriter(solverToUseJavaILP);
-				if (result == null) result = caseSolver(solverToUseJavaILP);
-				if (result == null) result = caseSolutionProvider(solverToUseJavaILP);
-				if (result == null) result = caseIGeneratorTool(solverToUseJavaILP);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case TousesolverPackage.SOLVER_TO_USE_NEOS: {
-				SolverToUseNeos solverToUseNeos = (SolverToUseNeos)theEObject;
-				T result = caseSolverToUseNeos(solverToUseNeos);
-				if (result == null) result = caseSolverNeos(solverToUseNeos);
-				if (result == null) result = caseSolverLp(solverToUseNeos);
-				if (result == null) result = caseSolver(solverToUseNeos);
-				if (result == null) result = caseSolutionProvider(solverToUseNeos);
-				if (result == null) result = caseIGeneratorTool(solverToUseNeos);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case TousesolverPackage.SOLUTION_READER_TO_USE: {
 				SolutionReaderToUse solutionReaderToUse = (SolutionReaderToUse)theEObject;
 				T result = caseSolutionReaderToUse(solutionReaderToUse);
 				if (result == null) result = caseSolutionReader(solutionReaderToUse);
 				if (result == null) result = caseSolutionProvider(solutionReaderToUse);
 				if (result == null) result = caseIGeneratorTool(solutionReaderToUse);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case TousesolverPackage.SOLVER_TO_USER_CPLEX: {
-				SolverToUserCplex solverToUserCplex = (SolverToUserCplex)theEObject;
-				T result = caseSolverToUserCplex(solverToUserCplex);
-				if (result == null) result = caseSolverCplex(solverToUserCplex);
-				if (result == null) result = caseSolverLp(solverToUserCplex);
-				if (result == null) result = caseILpWriter(solverToUserCplex);
-				if (result == null) result = caseSolver(solverToUserCplex);
-				if (result == null) result = caseSolutionProvider(solverToUserCplex);
-				if (result == null) result = caseIGeneratorTool(solverToUserCplex);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -433,51 +379,6 @@ public class TousesolverSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Solver To Use GLPK</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Solver To Use GLPK</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSolverToUseGLPK(SolverToUseGLPK object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Solver To Use Java ILP</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Solver To Use Java ILP</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSolverToUseJavaILP(SolverToUseJavaILP object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Solver To Use Neos</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Solver To Use Neos</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSolverToUseNeos(SolverToUseNeos object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Solution Reader To Use</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -489,21 +390,6 @@ public class TousesolverSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSolutionReaderToUse(SolutionReaderToUse object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Solver To User Cplex</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Solver To User Cplex</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSolverToUserCplex(SolverToUserCplex object) {
 		return null;
 	}
 
@@ -658,96 +544,6 @@ public class TousesolverSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Solver</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Solver</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSolver(Solver object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Lp</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Lp</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSolverLp(SolverLp object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>ILp Writer</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>ILp Writer</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseILpWriter(ILpWriter object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Solver GLPK</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Solver GLPK</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSolverGLPK(SolverGLPK object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Solver Java ILP</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Solver Java ILP</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSolverJavaILP(SolverJavaILP object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Solver Neos</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Solver Neos</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSolverNeos(SolverNeos object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Solution Reader</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -759,21 +555,6 @@ public class TousesolverSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSolutionReader(SolutionReader object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Solver Cplex</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Solver Cplex</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSolverCplex(SolverCplex object) {
 		return null;
 	}
 

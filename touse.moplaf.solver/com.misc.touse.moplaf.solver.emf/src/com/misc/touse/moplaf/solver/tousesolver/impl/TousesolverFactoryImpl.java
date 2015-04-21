@@ -69,11 +69,7 @@ public class TousesolverFactoryImpl extends EFactoryImpl implements TousesolverF
 			case TousesolverPackage.LP_ITEM: return createLpItem();
 			case TousesolverPackage.VAR_ITEM_IN_KNAPSACK: return createVarItemInKnapsack();
 			case TousesolverPackage.CONS_KNAPSACK_CAPACITY: return createConsKnapsackCapacity();
-			case TousesolverPackage.SOLVER_TO_USE_GLPK: return createSolverToUseGLPK();
-			case TousesolverPackage.SOLVER_TO_USE_JAVA_ILP: return createSolverToUseJavaILP();
-			case TousesolverPackage.SOLVER_TO_USE_NEOS: return createSolverToUseNeos();
 			case TousesolverPackage.SOLUTION_READER_TO_USE: return createSolutionReaderToUse();
-			case TousesolverPackage.SOLVER_TO_USER_CPLEX: return createSolverToUserCplex();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -214,49 +210,9 @@ public class TousesolverFactoryImpl extends EFactoryImpl implements TousesolverF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SolverToUseGLPK createSolverToUseGLPK() {
-		SolverToUseGLPKImpl solverToUseGLPK = new SolverToUseGLPKImpl();
-		return solverToUseGLPK;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SolverToUseJavaILP createSolverToUseJavaILP() {
-		SolverToUseJavaILPImpl solverToUseJavaILP = new SolverToUseJavaILPImpl();
-		return solverToUseJavaILP;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SolverToUseNeos createSolverToUseNeos() {
-		SolverToUseNeosImpl solverToUseNeos = new SolverToUseNeosImpl();
-		return solverToUseNeos;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public SolutionReaderToUse createSolutionReaderToUse() {
 		SolutionReaderToUseImpl solutionReaderToUse = new SolutionReaderToUseImpl();
 		return solutionReaderToUse;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SolverToUserCplex createSolverToUserCplex() {
-		SolverToUserCplexImpl solverToUserCplex = new SolverToUserCplexImpl();
-		return solverToUserCplex;
 	}
 
 	/**

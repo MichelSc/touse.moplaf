@@ -4,9 +4,6 @@ package com.misc.touse.moplaf.solver.tousesolver.impl;
 
 import com.misc.common.moplaf.solver.SolverPackage;
 import com.misc.common.moplaf.solver.solvercplex.SolvercplexPackage;
-import com.misc.common.moplaf.solver.solverglpk.SolverglpkPackage;
-import com.misc.common.moplaf.solver.solverjavailp.SolverjavailpPackage;
-import com.misc.common.moplaf.solver.solverneos.SolverneosPackage;
 import com.misc.touse.moplaf.solver.tousesolver.ConsKnapsackCapacity;
 import com.misc.touse.moplaf.solver.tousesolver.Domain;
 import com.misc.touse.moplaf.solver.tousesolver.DomainObject;
@@ -20,10 +17,6 @@ import com.misc.touse.moplaf.solver.tousesolver.LpKnapsack;
 import com.misc.touse.moplaf.solver.tousesolver.LpRoot;
 import com.misc.touse.moplaf.solver.tousesolver.Scenario;
 import com.misc.touse.moplaf.solver.tousesolver.SolutionReaderToUse;
-import com.misc.touse.moplaf.solver.tousesolver.SolverToUseGLPK;
-import com.misc.touse.moplaf.solver.tousesolver.SolverToUseJavaILP;
-import com.misc.touse.moplaf.solver.tousesolver.SolverToUseNeos;
-import com.misc.touse.moplaf.solver.tousesolver.SolverToUserCplex;
 import com.misc.touse.moplaf.solver.tousesolver.TousesolverFactory;
 import com.misc.touse.moplaf.solver.tousesolver.TousesolverPackage;
 import com.misc.touse.moplaf.solver.tousesolver.VarItemInKnapsack;
@@ -136,35 +129,7 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass solverToUseGLPKEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass solverToUseJavaILPEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass solverToUseNeosEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass solutionReaderToUseEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass solverToUserCplexEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -214,9 +179,6 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 
 		// Initialize simple dependencies
 		SolvercplexPackage.eINSTANCE.eClass();
-		SolverglpkPackage.eINSTANCE.eClass();
-		SolverjavailpPackage.eINSTANCE.eClass();
-		SolverneosPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theTousesolverPackage.createPackageContents();
@@ -517,7 +479,7 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getKnapsackLp_GLPK() {
+	public EReference getKnapsackLp_Reader() {
 		return (EReference)knapsackLpEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -526,35 +488,8 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getKnapsackLp_JavaILP() {
+	public EReference getKnapsackLp_Solver() {
 		return (EReference)knapsackLpEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getKnapsackLp_Neos() {
-		return (EReference)knapsackLpEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getKnapsackLp_Reader() {
-		return (EReference)knapsackLpEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getKnapsackLp_Cplex() {
-		return (EReference)knapsackLpEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -661,44 +596,8 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSolverToUseGLPK() {
-		return solverToUseGLPKEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getSolverToUseJavaILP() {
-		return solverToUseJavaILPEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getSolverToUseNeos() {
-		return solverToUseNeosEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getSolutionReaderToUse() {
 		return solutionReaderToUseEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getSolverToUserCplex() {
-		return solverToUserCplexEClass;
 	}
 
 	/**
@@ -767,11 +666,8 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 		knapsackLpEClass = createEClass(KNAPSACK_LP);
 		createEReference(knapsackLpEClass, KNAPSACK_LP__ROOT);
 		createEReference(knapsackLpEClass, KNAPSACK_LP__SCENARIO);
-		createEReference(knapsackLpEClass, KNAPSACK_LP__GLPK);
-		createEReference(knapsackLpEClass, KNAPSACK_LP__JAVA_ILP);
-		createEReference(knapsackLpEClass, KNAPSACK_LP__NEOS);
 		createEReference(knapsackLpEClass, KNAPSACK_LP__READER);
-		createEReference(knapsackLpEClass, KNAPSACK_LP__CPLEX);
+		createEReference(knapsackLpEClass, KNAPSACK_LP__SOLVER);
 
 		lpRootEClass = createEClass(LP_ROOT);
 		createEReference(lpRootEClass, LP_ROOT__ITEM);
@@ -789,15 +685,7 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 
 		consKnapsackCapacityEClass = createEClass(CONS_KNAPSACK_CAPACITY);
 
-		solverToUseGLPKEClass = createEClass(SOLVER_TO_USE_GLPK);
-
-		solverToUseJavaILPEClass = createEClass(SOLVER_TO_USE_JAVA_ILP);
-
-		solverToUseNeosEClass = createEClass(SOLVER_TO_USE_NEOS);
-
 		solutionReaderToUseEClass = createEClass(SOLUTION_READER_TO_USE);
-
-		solverToUserCplexEClass = createEClass(SOLVER_TO_USER_CPLEX);
 	}
 
 	/**
@@ -825,10 +713,6 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 
 		// Obtain other dependent packages
 		SolverPackage theSolverPackage = (SolverPackage)EPackage.Registry.INSTANCE.getEPackage(SolverPackage.eNS_URI);
-		SolverglpkPackage theSolverglpkPackage = (SolverglpkPackage)EPackage.Registry.INSTANCE.getEPackage(SolverglpkPackage.eNS_URI);
-		SolverjavailpPackage theSolverjavailpPackage = (SolverjavailpPackage)EPackage.Registry.INSTANCE.getEPackage(SolverjavailpPackage.eNS_URI);
-		SolverneosPackage theSolverneosPackage = (SolverneosPackage)EPackage.Registry.INSTANCE.getEPackage(SolverneosPackage.eNS_URI);
-		SolvercplexPackage theSolvercplexPackage = (SolvercplexPackage)EPackage.Registry.INSTANCE.getEPackage(SolvercplexPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -843,11 +727,7 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 		lpItemEClass.getESuperTypes().add(theSolverPackage.getGeneratorTuple());
 		varItemInKnapsackEClass.getESuperTypes().add(theSolverPackage.getGeneratorLpVar());
 		consKnapsackCapacityEClass.getESuperTypes().add(theSolverPackage.getGeneratorLpCons());
-		solverToUseGLPKEClass.getESuperTypes().add(theSolverglpkPackage.getSolverGLPK());
-		solverToUseJavaILPEClass.getESuperTypes().add(theSolverjavailpPackage.getSolverJavaILP());
-		solverToUseNeosEClass.getESuperTypes().add(theSolverneosPackage.getSolverNeos());
 		solutionReaderToUseEClass.getESuperTypes().add(theSolverPackage.getSolutionReader());
-		solverToUserCplexEClass.getESuperTypes().add(theSolvercplexPackage.getSolverCplex());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -888,11 +768,8 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 		initEClass(knapsackLpEClass, KnapsackLp.class, "KnapsackLp", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getKnapsackLp_Root(), this.getLpRoot(), null, "Root", null, 1, 1, KnapsackLp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getKnapsackLp_Scenario(), this.getScenario(), this.getScenario_LP(), "Scenario", null, 1, 1, KnapsackLp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getKnapsackLp_GLPK(), this.getSolverToUseGLPK(), null, "GLPK", null, 0, -1, KnapsackLp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getKnapsackLp_JavaILP(), this.getSolverToUseJavaILP(), null, "JavaILP", null, 0, -1, KnapsackLp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getKnapsackLp_Neos(), this.getSolverToUseNeos(), null, "Neos", null, 0, -1, KnapsackLp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getKnapsackLp_Reader(), this.getSolutionReaderToUse(), null, "Reader", null, 0, -1, KnapsackLp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getKnapsackLp_Cplex(), this.getSolverToUserCplex(), null, "Cplex", null, 0, -1, KnapsackLp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getKnapsackLp_Solver(), theSolverPackage.getSolver(), null, "Solver", null, 0, -1, KnapsackLp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(lpRootEClass, LpRoot.class, "LpRoot", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLpRoot_Item(), this.getLpItem(), null, "Item", null, 0, -1, LpRoot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -910,15 +787,7 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 
 		initEClass(consKnapsackCapacityEClass, ConsKnapsackCapacity.class, "ConsKnapsackCapacity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(solverToUseGLPKEClass, SolverToUseGLPK.class, "SolverToUseGLPK", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(solverToUseJavaILPEClass, SolverToUseJavaILP.class, "SolverToUseJavaILP", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(solverToUseNeosEClass, SolverToUseNeos.class, "SolverToUseNeos", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(solutionReaderToUseEClass, SolutionReaderToUse.class, "SolutionReaderToUse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(solverToUserCplexEClass, SolverToUserCplex.class, "SolverToUserCplex", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

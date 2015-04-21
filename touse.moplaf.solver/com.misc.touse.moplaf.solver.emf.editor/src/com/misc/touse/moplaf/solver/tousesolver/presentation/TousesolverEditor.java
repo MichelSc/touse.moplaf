@@ -117,10 +117,6 @@ import org.eclipse.emf.edit.ui.util.EditUIUtil;
 import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 import com.misc.touse.moplaf.solver.tousesolver.provider.TousesolverItemProviderAdapterFactory;
 import com.misc.common.moplaf.solver.provider.SolverItemProviderAdapterFactory;
-import com.misc.common.moplaf.solver.solvercplex.provider.SolvercplexItemProviderAdapterFactory;
-import com.misc.common.moplaf.solver.solverglpk.provider.SolverglpkItemProviderAdapterFactory;
-import com.misc.common.moplaf.solver.solverjavailp.provider.SolverjavailpItemProviderAdapterFactory;
-import com.misc.common.moplaf.solver.solverneos.provider.SolverneosItemProviderAdapterFactory;
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 
 
@@ -668,10 +664,6 @@ public class TousesolverEditor
 		adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new TousesolverItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new SolverItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new SolvercplexItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new SolverglpkItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new SolverjavailpItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new SolverneosItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
 		// Create the command stack that will notify this editor as commands are executed.

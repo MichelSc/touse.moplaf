@@ -3,6 +3,7 @@
 package com.misc.touse.moplaf.solver.tousesolver.impl;
 
 import com.misc.common.moplaf.solver.Solution;
+import com.misc.common.moplaf.solver.Solver;
 import com.misc.common.moplaf.solver.impl.GeneratorImpl;
 import com.misc.touse.moplaf.solver.tousesolver.Item;
 import com.misc.touse.moplaf.solver.tousesolver.KnapsackLp;
@@ -11,10 +12,6 @@ import com.misc.touse.moplaf.solver.tousesolver.LpItem;
 import com.misc.touse.moplaf.solver.tousesolver.LpRoot;
 import com.misc.touse.moplaf.solver.tousesolver.Scenario;
 import com.misc.touse.moplaf.solver.tousesolver.SolutionReaderToUse;
-import com.misc.touse.moplaf.solver.tousesolver.SolverToUseGLPK;
-import com.misc.touse.moplaf.solver.tousesolver.SolverToUseJavaILP;
-import com.misc.touse.moplaf.solver.tousesolver.SolverToUseNeos;
-import com.misc.touse.moplaf.solver.tousesolver.SolverToUserCplex;
 import com.misc.touse.moplaf.solver.tousesolver.TousesolverFactory;
 import com.misc.touse.moplaf.solver.tousesolver.TousesolverPackage;
 import com.misc.touse.moplaf.solver.tousesolver.VarItemInKnapsack;
@@ -38,11 +35,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.KnapsackLpImpl#getRoot <em>Root</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.KnapsackLpImpl#getScenario <em>Scenario</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.KnapsackLpImpl#getGLPK <em>GLPK</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.KnapsackLpImpl#getJavaILP <em>Java ILP</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.KnapsackLpImpl#getNeos <em>Neos</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.KnapsackLpImpl#getReader <em>Reader</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.KnapsackLpImpl#getCplex <em>Cplex</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.KnapsackLpImpl#getSolver <em>Solver</em>}</li>
  * </ul>
  * </p>
  *
@@ -60,36 +54,6 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 	protected LpRoot root;
 
 	/**
-	 * The cached value of the '{@link #getGLPK() <em>GLPK</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getGLPK()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<SolverToUseGLPK> glpk;
-
-	/**
-	 * The cached value of the '{@link #getJavaILP() <em>Java ILP</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getJavaILP()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<SolverToUseJavaILP> javaILP;
-
-	/**
-	 * The cached value of the '{@link #getNeos() <em>Neos</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNeos()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<SolverToUseNeos> neos;
-
-	/**
 	 * The cached value of the '{@link #getReader() <em>Reader</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -100,14 +64,14 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 	protected EList<SolutionReaderToUse> reader;
 
 	/**
-	 * The cached value of the '{@link #getCplex() <em>Cplex</em>}' containment reference list.
+	 * The cached value of the '{@link #getSolver() <em>Solver</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCplex()
+	 * @see #getSolver()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<SolverToUserCplex> cplex;
+	protected EList<Solver> solver;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -217,42 +181,6 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<SolverToUseGLPK> getGLPK() {
-		if (glpk == null) {
-			glpk = new EObjectContainmentEList<SolverToUseGLPK>(SolverToUseGLPK.class, this, TousesolverPackage.KNAPSACK_LP__GLPK);
-		}
-		return glpk;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<SolverToUseJavaILP> getJavaILP() {
-		if (javaILP == null) {
-			javaILP = new EObjectContainmentEList<SolverToUseJavaILP>(SolverToUseJavaILP.class, this, TousesolverPackage.KNAPSACK_LP__JAVA_ILP);
-		}
-		return javaILP;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<SolverToUseNeos> getNeos() {
-		if (neos == null) {
-			neos = new EObjectContainmentEList<SolverToUseNeos>(SolverToUseNeos.class, this, TousesolverPackage.KNAPSACK_LP__NEOS);
-		}
-		return neos;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<SolutionReaderToUse> getReader() {
 		if (reader == null) {
 			reader = new EObjectContainmentEList<SolutionReaderToUse>(SolutionReaderToUse.class, this, TousesolverPackage.KNAPSACK_LP__READER);
@@ -265,11 +193,11 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<SolverToUserCplex> getCplex() {
-		if (cplex == null) {
-			cplex = new EObjectContainmentEList<SolverToUserCplex>(SolverToUserCplex.class, this, TousesolverPackage.KNAPSACK_LP__CPLEX);
+	public EList<Solver> getSolver() {
+		if (solver == null) {
+			solver = new EObjectContainmentEList<Solver>(Solver.class, this, TousesolverPackage.KNAPSACK_LP__SOLVER);
 		}
-		return cplex;
+		return solver;
 	}
 
 	/**
@@ -300,16 +228,10 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 				return basicSetRoot(null, msgs);
 			case TousesolverPackage.KNAPSACK_LP__SCENARIO:
 				return basicSetScenario(null, msgs);
-			case TousesolverPackage.KNAPSACK_LP__GLPK:
-				return ((InternalEList<?>)getGLPK()).basicRemove(otherEnd, msgs);
-			case TousesolverPackage.KNAPSACK_LP__JAVA_ILP:
-				return ((InternalEList<?>)getJavaILP()).basicRemove(otherEnd, msgs);
-			case TousesolverPackage.KNAPSACK_LP__NEOS:
-				return ((InternalEList<?>)getNeos()).basicRemove(otherEnd, msgs);
 			case TousesolverPackage.KNAPSACK_LP__READER:
 				return ((InternalEList<?>)getReader()).basicRemove(otherEnd, msgs);
-			case TousesolverPackage.KNAPSACK_LP__CPLEX:
-				return ((InternalEList<?>)getCplex()).basicRemove(otherEnd, msgs);
+			case TousesolverPackage.KNAPSACK_LP__SOLVER:
+				return ((InternalEList<?>)getSolver()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -340,16 +262,10 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 				return getRoot();
 			case TousesolverPackage.KNAPSACK_LP__SCENARIO:
 				return getScenario();
-			case TousesolverPackage.KNAPSACK_LP__GLPK:
-				return getGLPK();
-			case TousesolverPackage.KNAPSACK_LP__JAVA_ILP:
-				return getJavaILP();
-			case TousesolverPackage.KNAPSACK_LP__NEOS:
-				return getNeos();
 			case TousesolverPackage.KNAPSACK_LP__READER:
 				return getReader();
-			case TousesolverPackage.KNAPSACK_LP__CPLEX:
-				return getCplex();
+			case TousesolverPackage.KNAPSACK_LP__SOLVER:
+				return getSolver();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -369,25 +285,13 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 			case TousesolverPackage.KNAPSACK_LP__SCENARIO:
 				setScenario((Scenario)newValue);
 				return;
-			case TousesolverPackage.KNAPSACK_LP__GLPK:
-				getGLPK().clear();
-				getGLPK().addAll((Collection<? extends SolverToUseGLPK>)newValue);
-				return;
-			case TousesolverPackage.KNAPSACK_LP__JAVA_ILP:
-				getJavaILP().clear();
-				getJavaILP().addAll((Collection<? extends SolverToUseJavaILP>)newValue);
-				return;
-			case TousesolverPackage.KNAPSACK_LP__NEOS:
-				getNeos().clear();
-				getNeos().addAll((Collection<? extends SolverToUseNeos>)newValue);
-				return;
 			case TousesolverPackage.KNAPSACK_LP__READER:
 				getReader().clear();
 				getReader().addAll((Collection<? extends SolutionReaderToUse>)newValue);
 				return;
-			case TousesolverPackage.KNAPSACK_LP__CPLEX:
-				getCplex().clear();
-				getCplex().addAll((Collection<? extends SolverToUserCplex>)newValue);
+			case TousesolverPackage.KNAPSACK_LP__SOLVER:
+				getSolver().clear();
+				getSolver().addAll((Collection<? extends Solver>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -407,20 +311,11 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 			case TousesolverPackage.KNAPSACK_LP__SCENARIO:
 				setScenario((Scenario)null);
 				return;
-			case TousesolverPackage.KNAPSACK_LP__GLPK:
-				getGLPK().clear();
-				return;
-			case TousesolverPackage.KNAPSACK_LP__JAVA_ILP:
-				getJavaILP().clear();
-				return;
-			case TousesolverPackage.KNAPSACK_LP__NEOS:
-				getNeos().clear();
-				return;
 			case TousesolverPackage.KNAPSACK_LP__READER:
 				getReader().clear();
 				return;
-			case TousesolverPackage.KNAPSACK_LP__CPLEX:
-				getCplex().clear();
+			case TousesolverPackage.KNAPSACK_LP__SOLVER:
+				getSolver().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -438,16 +333,10 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 				return root != null;
 			case TousesolverPackage.KNAPSACK_LP__SCENARIO:
 				return getScenario() != null;
-			case TousesolverPackage.KNAPSACK_LP__GLPK:
-				return glpk != null && !glpk.isEmpty();
-			case TousesolverPackage.KNAPSACK_LP__JAVA_ILP:
-				return javaILP != null && !javaILP.isEmpty();
-			case TousesolverPackage.KNAPSACK_LP__NEOS:
-				return neos != null && !neos.isEmpty();
 			case TousesolverPackage.KNAPSACK_LP__READER:
 				return reader != null && !reader.isEmpty();
-			case TousesolverPackage.KNAPSACK_LP__CPLEX:
-				return cplex != null && !cplex.isEmpty();
+			case TousesolverPackage.KNAPSACK_LP__SOLVER:
+				return solver != null && !solver.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

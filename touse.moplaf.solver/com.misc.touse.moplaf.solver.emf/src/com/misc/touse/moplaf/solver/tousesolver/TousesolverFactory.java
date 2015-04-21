@@ -139,33 +139,6 @@ public interface TousesolverFactory extends EFactory {
 	ConsKnapsackCapacity createConsKnapsackCapacity();
 
 	/**
-	 * Returns a new object of class '<em>Solver To Use GLPK</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Solver To Use GLPK</em>'.
-	 * @generated
-	 */
-	SolverToUseGLPK createSolverToUseGLPK();
-
-	/**
-	 * Returns a new object of class '<em>Solver To Use Java ILP</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Solver To Use Java ILP</em>'.
-	 * @generated
-	 */
-	SolverToUseJavaILP createSolverToUseJavaILP();
-
-	/**
-	 * Returns a new object of class '<em>Solver To Use Neos</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Solver To Use Neos</em>'.
-	 * @generated
-	 */
-	SolverToUseNeos createSolverToUseNeos();
-
-	/**
 	 * Returns a new object of class '<em>Solution Reader To Use</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -173,15 +146,6 @@ public interface TousesolverFactory extends EFactory {
 	 * @generated
 	 */
 	SolutionReaderToUse createSolutionReaderToUse();
-
-	/**
-	 * Returns a new object of class '<em>Solver To User Cplex</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Solver To User Cplex</em>'.
-	 * @generated
-	 */
-	SolverToUserCplex createSolverToUserCplex();
 
 	/**
 	 * Returns the package supported by this factory.

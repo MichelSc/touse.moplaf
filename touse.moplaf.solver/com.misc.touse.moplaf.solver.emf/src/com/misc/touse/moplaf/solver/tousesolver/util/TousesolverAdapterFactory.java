@@ -11,15 +11,8 @@ import com.misc.common.moplaf.solver.GeneratorTuple;
 import com.misc.common.moplaf.solver.GeneratorTupleElement;
 import com.misc.common.moplaf.solver.GeneratorVar;
 import com.misc.common.moplaf.solver.IGeneratorTool;
-import com.misc.common.moplaf.solver.ILpWriter;
 import com.misc.common.moplaf.solver.SolutionProvider;
 import com.misc.common.moplaf.solver.SolutionReader;
-import com.misc.common.moplaf.solver.Solver;
-import com.misc.common.moplaf.solver.SolverLp;
-import com.misc.common.moplaf.solver.solvercplex.SolverCplex;
-import com.misc.common.moplaf.solver.solverglpk.SolverGLPK;
-import com.misc.common.moplaf.solver.solverjavailp.SolverJavaILP;
-import com.misc.common.moplaf.solver.solverneos.SolverNeos;
 import com.misc.touse.moplaf.solver.tousesolver.*;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -135,24 +128,8 @@ public class TousesolverAdapterFactory extends AdapterFactoryImpl {
 				return createConsKnapsackCapacityAdapter();
 			}
 			@Override
-			public Adapter caseSolverToUseGLPK(SolverToUseGLPK object) {
-				return createSolverToUseGLPKAdapter();
-			}
-			@Override
-			public Adapter caseSolverToUseJavaILP(SolverToUseJavaILP object) {
-				return createSolverToUseJavaILPAdapter();
-			}
-			@Override
-			public Adapter caseSolverToUseNeos(SolverToUseNeos object) {
-				return createSolverToUseNeosAdapter();
-			}
-			@Override
 			public Adapter caseSolutionReaderToUse(SolutionReaderToUse object) {
 				return createSolutionReaderToUseAdapter();
-			}
-			@Override
-			public Adapter caseSolverToUserCplex(SolverToUserCplex object) {
-				return createSolverToUserCplexAdapter();
 			}
 			@Override
 			public Adapter caseGenerator(Generator object) {
@@ -195,36 +172,8 @@ public class TousesolverAdapterFactory extends AdapterFactoryImpl {
 				return createSolutionProviderAdapter();
 			}
 			@Override
-			public Adapter caseSolver(Solver object) {
-				return createSolverAdapter();
-			}
-			@Override
-			public Adapter caseSolverLp(SolverLp object) {
-				return createSolverLpAdapter();
-			}
-			@Override
-			public Adapter caseILpWriter(ILpWriter object) {
-				return createILpWriterAdapter();
-			}
-			@Override
-			public Adapter caseSolverGLPK(SolverGLPK object) {
-				return createSolverGLPKAdapter();
-			}
-			@Override
-			public Adapter caseSolverJavaILP(SolverJavaILP object) {
-				return createSolverJavaILPAdapter();
-			}
-			@Override
-			public Adapter caseSolverNeos(SolverNeos object) {
-				return createSolverNeosAdapter();
-			}
-			@Override
 			public Adapter caseSolutionReader(SolutionReader object) {
 				return createSolutionReaderAdapter();
-			}
-			@Override
-			public Adapter caseSolverCplex(SolverCplex object) {
-				return createSolverCplexAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -429,48 +378,6 @@ public class TousesolverAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.solver.tousesolver.SolverToUseGLPK <em>Solver To Use GLPK</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.touse.moplaf.solver.tousesolver.SolverToUseGLPK
-	 * @generated
-	 */
-	public Adapter createSolverToUseGLPKAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.solver.tousesolver.SolverToUseJavaILP <em>Solver To Use Java ILP</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.touse.moplaf.solver.tousesolver.SolverToUseJavaILP
-	 * @generated
-	 */
-	public Adapter createSolverToUseJavaILPAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.solver.tousesolver.SolverToUseNeos <em>Solver To Use Neos</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.touse.moplaf.solver.tousesolver.SolverToUseNeos
-	 * @generated
-	 */
-	public Adapter createSolverToUseNeosAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.solver.tousesolver.SolutionReaderToUse <em>Solution Reader To Use</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -481,20 +388,6 @@ public class TousesolverAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSolutionReaderToUseAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.solver.tousesolver.SolverToUserCplex <em>Solver To User Cplex</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.touse.moplaf.solver.tousesolver.SolverToUserCplex
-	 * @generated
-	 */
-	public Adapter createSolverToUserCplexAdapter() {
 		return null;
 	}
 
@@ -639,90 +532,6 @@ public class TousesolverAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.solver.Solver <em>Solver</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.solver.Solver
-	 * @generated
-	 */
-	public Adapter createSolverAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.solver.SolverLp <em>Lp</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.solver.SolverLp
-	 * @generated
-	 */
-	public Adapter createSolverLpAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.solver.ILpWriter <em>ILp Writer</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.solver.ILpWriter
-	 * @generated
-	 */
-	public Adapter createILpWriterAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.solver.solverglpk.SolverGLPK <em>Solver GLPK</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.solver.solverglpk.SolverGLPK
-	 * @generated
-	 */
-	public Adapter createSolverGLPKAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.solver.solverjavailp.SolverJavaILP <em>Solver Java ILP</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.solver.solverjavailp.SolverJavaILP
-	 * @generated
-	 */
-	public Adapter createSolverJavaILPAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.solver.solverneos.SolverNeos <em>Solver Neos</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.solver.solverneos.SolverNeos
-	 * @generated
-	 */
-	public Adapter createSolverNeosAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.solver.SolutionReader <em>Solution Reader</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -733,20 +542,6 @@ public class TousesolverAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSolutionReaderAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.solver.solvercplex.SolverCplex <em>Solver Cplex</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.solver.solvercplex.SolverCplex
-	 * @generated
-	 */
-	public Adapter createSolverCplexAdapter() {
 		return null;
 	}
 

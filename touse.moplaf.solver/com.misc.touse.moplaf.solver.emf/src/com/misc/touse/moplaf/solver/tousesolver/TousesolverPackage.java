@@ -3,10 +3,6 @@
 package com.misc.touse.moplaf.solver.tousesolver;
 
 import com.misc.common.moplaf.solver.SolverPackage;
-import com.misc.common.moplaf.solver.solvercplex.SolvercplexPackage;
-import com.misc.common.moplaf.solver.solverglpk.SolverglpkPackage;
-import com.misc.common.moplaf.solver.solverjavailp.SolverjavailpPackage;
-import com.misc.common.moplaf.solver.solverneos.SolverneosPackage;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -43,7 +39,7 @@ public interface TousesolverPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://com.misc.touse.moplaf.solver.emf";
+	String eNS_URI = "http://www.misc.com/touse/moplaf/solver/model/0.1";
 
 	/**
 	 * The package namespace name.
@@ -637,49 +633,22 @@ public interface TousesolverPackage extends EPackage {
 	int KNAPSACK_LP__SCENARIO = SolverPackage.GENERATOR_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>GLPK</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KNAPSACK_LP__GLPK = SolverPackage.GENERATOR_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Java ILP</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KNAPSACK_LP__JAVA_ILP = SolverPackage.GENERATOR_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Neos</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KNAPSACK_LP__NEOS = SolverPackage.GENERATOR_FEATURE_COUNT + 4;
-
-	/**
 	 * The feature id for the '<em><b>Reader</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int KNAPSACK_LP__READER = SolverPackage.GENERATOR_FEATURE_COUNT + 5;
+	int KNAPSACK_LP__READER = SolverPackage.GENERATOR_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Cplex</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Solver</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int KNAPSACK_LP__CPLEX = SolverPackage.GENERATOR_FEATURE_COUNT + 6;
+	int KNAPSACK_LP__SOLVER = SolverPackage.GENERATOR_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Knapsack Lp</em>' class.
@@ -688,7 +657,7 @@ public interface TousesolverPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KNAPSACK_LP_FEATURE_COUNT = SolverPackage.GENERATOR_FEATURE_COUNT + 7;
+	int KNAPSACK_LP_FEATURE_COUNT = SolverPackage.GENERATOR_FEATURE_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Generate</em>' operation.
@@ -742,7 +711,7 @@ public interface TousesolverPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KNAPSACK_LP___ACCEPT_SOLUTION__SOLUTION_1 = SolverPackage.GENERATOR___ACCEPT_SOLUTION__SOLUTION;
+	int KNAPSACK_LP___ACCEPT_SOLUTION__SOLUTION = SolverPackage.GENERATOR___ACCEPT_SOLUTION__SOLUTION;
 
 	/**
 	 * The operation id for the '<em>Select Feature Mode</em>' operation.
@@ -751,7 +720,7 @@ public interface TousesolverPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KNAPSACK_LP___SELECT_FEATURE_MODE__GENERATORFEATUREMODE_GENERATORTUPLE_1 = SolverPackage.GENERATOR___SELECT_FEATURE_MODE__GENERATORFEATUREMODE_GENERATORTUPLE;
+	int KNAPSACK_LP___SELECT_FEATURE_MODE__GENERATORFEATUREMODE_GENERATORTUPLE = SolverPackage.GENERATOR___SELECT_FEATURE_MODE__GENERATORFEATUREMODE_GENERATORTUPLE;
 
 	/**
 	 * The operation id for the '<em>Visit Tuples</em>' operation.
@@ -760,7 +729,7 @@ public interface TousesolverPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KNAPSACK_LP___VISIT_TUPLES__ITUPLEVISITOR_1 = SolverPackage.GENERATOR___VISIT_TUPLES__ITUPLEVISITOR;
+	int KNAPSACK_LP___VISIT_TUPLES__ITUPLEVISITOR = SolverPackage.GENERATOR___VISIT_TUPLES__ITUPLEVISITOR;
 
 	/**
 	 * The number of operations of the '<em>Knapsack Lp</em>' class.
@@ -906,7 +875,7 @@ public interface TousesolverPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LP_ROOT___VISIT_TUPLES__ITUPLEVISITOR_1 = SolverPackage.GENERATOR_TUPLE___VISIT_TUPLES__ITUPLEVISITOR;
+	int LP_ROOT___VISIT_TUPLES__ITUPLEVISITOR = SolverPackage.GENERATOR_TUPLE___VISIT_TUPLES__ITUPLEVISITOR;
 
 	/**
 	 * The number of operations of the '<em>Lp Root</em>' class.
@@ -1051,7 +1020,7 @@ public interface TousesolverPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LP_KNAPSACK___VISIT_TUPLES__ITUPLEVISITOR_1 = SolverPackage.GENERATOR_TUPLE___VISIT_TUPLES__ITUPLEVISITOR;
+	int LP_KNAPSACK___VISIT_TUPLES__ITUPLEVISITOR = SolverPackage.GENERATOR_TUPLE___VISIT_TUPLES__ITUPLEVISITOR;
 
 	/**
 	 * The number of operations of the '<em>Lp Knapsack</em>' class.
@@ -1196,7 +1165,7 @@ public interface TousesolverPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LP_ITEM___VISIT_TUPLES__ITUPLEVISITOR_1 = SolverPackage.GENERATOR_TUPLE___VISIT_TUPLES__ITUPLEVISITOR;
+	int LP_ITEM___VISIT_TUPLES__ITUPLEVISITOR = SolverPackage.GENERATOR_TUPLE___VISIT_TUPLES__ITUPLEVISITOR;
 
 	/**
 	 * The number of operations of the '<em>Lp Item</em>' class.
@@ -1323,7 +1292,7 @@ public interface TousesolverPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VAR_ITEM_IN_KNAPSACK___GET_SOLUTION_VAR__SOLUTION_1 = SolverPackage.GENERATOR_LP_VAR___GET_SOLUTION_VAR__SOLUTION;
+	int VAR_ITEM_IN_KNAPSACK___GET_SOLUTION_VAR__SOLUTION = SolverPackage.GENERATOR_LP_VAR___GET_SOLUTION_VAR__SOLUTION;
 
 	/**
 	 * The operation id for the '<em>Is Solution One</em>' operation.
@@ -1332,7 +1301,7 @@ public interface TousesolverPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VAR_ITEM_IN_KNAPSACK___IS_SOLUTION_ONE__SOLUTION_1 = SolverPackage.GENERATOR_LP_VAR___IS_SOLUTION_ONE__SOLUTION;
+	int VAR_ITEM_IN_KNAPSACK___IS_SOLUTION_ONE__SOLUTION = SolverPackage.GENERATOR_LP_VAR___IS_SOLUTION_ONE__SOLUTION;
 
 	/**
 	 * The operation id for the '<em>Is Solution Zero</em>' operation.
@@ -1341,7 +1310,7 @@ public interface TousesolverPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VAR_ITEM_IN_KNAPSACK___IS_SOLUTION_ZERO__SOLUTION_1 = SolverPackage.GENERATOR_LP_VAR___IS_SOLUTION_ZERO__SOLUTION;
+	int VAR_ITEM_IN_KNAPSACK___IS_SOLUTION_ZERO__SOLUTION = SolverPackage.GENERATOR_LP_VAR___IS_SOLUTION_ZERO__SOLUTION;
 
 	/**
 	 * The operation id for the '<em>Get Solution Value</em>' operation.
@@ -1350,7 +1319,7 @@ public interface TousesolverPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VAR_ITEM_IN_KNAPSACK___GET_SOLUTION_VALUE__SOLUTION_1 = SolverPackage.GENERATOR_LP_VAR___GET_SOLUTION_VALUE__SOLUTION;
+	int VAR_ITEM_IN_KNAPSACK___GET_SOLUTION_VALUE__SOLUTION = SolverPackage.GENERATOR_LP_VAR___GET_SOLUTION_VALUE__SOLUTION;
 
 	/**
 	 * The number of operations of the '<em>Var Item In Knapsack</em>' class.
@@ -1468,7 +1437,7 @@ public interface TousesolverPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONS_KNAPSACK_CAPACITY___GET_SOLUTION__SOLUTION_1 = SolverPackage.GENERATOR_LP_CONS___GET_SOLUTION__SOLUTION;
+	int CONS_KNAPSACK_CAPACITY___GET_SOLUTION__SOLUTION = SolverPackage.GENERATOR_LP_CONS___GET_SOLUTION__SOLUTION;
 
 	/**
 	 * The operation id for the '<em>Construct Term</em>' operation.
@@ -1477,7 +1446,7 @@ public interface TousesolverPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONS_KNAPSACK_CAPACITY___CONSTRUCT_TERM__GENERATORLPVAR_FLOAT_1 = SolverPackage.GENERATOR_LP_CONS___CONSTRUCT_TERM__GENERATORLPVAR_FLOAT;
+	int CONS_KNAPSACK_CAPACITY___CONSTRUCT_TERM__GENERATORLPVAR_FLOAT = SolverPackage.GENERATOR_LP_CONS___CONSTRUCT_TERM__GENERATORLPVAR_FLOAT;
 
 	/**
 	 * The number of operations of the '<em>Cons Knapsack Capacity</em>' class.
@@ -1490,1378 +1459,6 @@ public interface TousesolverPackage extends EPackage {
 
 
 	/**
-	 * The meta object id for the '{@link com.misc.touse.moplaf.solver.tousesolver.impl.SolverToUseGLPKImpl <em>Solver To Use GLPK</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.misc.touse.moplaf.solver.tousesolver.impl.SolverToUseGLPKImpl
-	 * @see com.misc.touse.moplaf.solver.tousesolver.impl.TousesolverPackageImpl#getSolverToUseGLPK()
-	 * @generated
-	 */
-	int SOLVER_TO_USE_GLPK = 13;
-
-	/**
-	 * The feature id for the '<em><b>Solution</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK__SOLUTION = SolverglpkPackage.SOLVER_GLPK__SOLUTION;
-
-	/**
-	 * The feature id for the '<em><b>Current Solution Nr</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK__CURRENT_SOLUTION_NR = SolverglpkPackage.SOLVER_GLPK__CURRENT_SOLUTION_NR;
-
-	/**
-	 * The feature id for the '<em><b>Code</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK__CODE = SolverglpkPackage.SOLVER_GLPK__CODE;
-
-	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK__REMARKS = SolverglpkPackage.SOLVER_GLPK__REMARKS;
-
-	/**
-	 * The feature id for the '<em><b>Status</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK__STATUS = SolverglpkPackage.SOLVER_GLPK__STATUS;
-
-	/**
-	 * The feature id for the '<em><b>Solver Max Duration</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK__SOLVER_MAX_DURATION = SolverglpkPackage.SOLVER_GLPK__SOLVER_MAX_DURATION;
-
-	/**
-	 * The feature id for the '<em><b>Solver Background</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK__SOLVER_BACKGROUND = SolverglpkPackage.SOLVER_GLPK__SOLVER_BACKGROUND;
-
-	/**
-	 * The feature id for the '<em><b>Sol Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK__SOL_VALUE = SolverglpkPackage.SOLVER_GLPK__SOL_VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Solver Log Level</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK__SOLVER_LOG_LEVEL = SolverglpkPackage.SOLVER_GLPK__SOLVER_LOG_LEVEL;
-
-	/**
-	 * The feature id for the '<em><b>Solver Dump</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK__SOLVER_DUMP = SolverglpkPackage.SOLVER_GLPK__SOLVER_DUMP;
-
-	/**
-	 * The feature id for the '<em><b>Run Started</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK__RUN_STARTED = SolverglpkPackage.SOLVER_GLPK__RUN_STARTED;
-
-	/**
-	 * The feature id for the '<em><b>Run Initialization Ended</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK__RUN_INITIALIZATION_ENDED = SolverglpkPackage.SOLVER_GLPK__RUN_INITIALIZATION_ENDED;
-
-	/**
-	 * The feature id for the '<em><b>Run Solving Ended</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK__RUN_SOLVING_ENDED = SolverglpkPackage.SOLVER_GLPK__RUN_SOLVING_ENDED;
-
-	/**
-	 * The feature id for the '<em><b>Run Finalization Ended</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK__RUN_FINALIZATION_ENDED = SolverglpkPackage.SOLVER_GLPK__RUN_FINALIZATION_ENDED;
-
-	/**
-	 * The feature id for the '<em><b>Run Duration Initialization</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK__RUN_DURATION_INITIALIZATION = SolverglpkPackage.SOLVER_GLPK__RUN_DURATION_INITIALIZATION;
-
-	/**
-	 * The feature id for the '<em><b>Run Duration Finalization</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK__RUN_DURATION_FINALIZATION = SolverglpkPackage.SOLVER_GLPK__RUN_DURATION_FINALIZATION;
-
-	/**
-	 * The feature id for the '<em><b>Run Duration Solving</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK__RUN_DURATION_SOLVING = SolverglpkPackage.SOLVER_GLPK__RUN_DURATION_SOLVING;
-
-	/**
-	 * The feature id for the '<em><b>Run Request Terminate</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK__RUN_REQUEST_TERMINATE = SolverglpkPackage.SOLVER_GLPK__RUN_REQUEST_TERMINATE;
-
-	/**
-	 * The feature id for the '<em><b>Sol Unfeasible</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK__SOL_UNFEASIBLE = SolverglpkPackage.SOLVER_GLPK__SOL_UNFEASIBLE;
-
-	/**
-	 * The feature id for the '<em><b>Sol Feasible</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK__SOL_FEASIBLE = SolverglpkPackage.SOLVER_GLPK__SOL_FEASIBLE;
-
-	/**
-	 * The feature id for the '<em><b>Sol Optimal</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK__SOL_OPTIMAL = SolverglpkPackage.SOLVER_GLPK__SOL_OPTIMAL;
-
-	/**
-	 * The feature id for the '<em><b>Run Interrupted</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK__RUN_INTERRUPTED = SolverglpkPackage.SOLVER_GLPK__RUN_INTERRUPTED;
-
-	/**
-	 * The feature id for the '<em><b>Solving</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK__SOLVING = SolverglpkPackage.SOLVER_GLPK__SOLVING;
-
-	/**
-	 * The feature id for the '<em><b>Finalizing</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK__FINALIZING = SolverglpkPackage.SOLVER_GLPK__FINALIZING;
-
-	/**
-	 * The feature id for the '<em><b>Finished</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK__FINISHED = SolverglpkPackage.SOLVER_GLPK__FINISHED;
-
-	/**
-	 * The feature id for the '<em><b>Run Time Out</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK__RUN_TIME_OUT = SolverglpkPackage.SOLVER_GLPK__RUN_TIME_OUT;
-
-	/**
-	 * The feature id for the '<em><b>Initializing</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK__INITIALIZING = SolverglpkPackage.SOLVER_GLPK__INITIALIZING;
-
-	/**
-	 * The feature id for the '<em><b>Solver Optimality Tolerance</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK__SOLVER_OPTIMALITY_TOLERANCE = SolverglpkPackage.SOLVER_GLPK__SOLVER_OPTIMALITY_TOLERANCE;
-
-	/**
-	 * The feature id for the '<em><b>Solver Linear Relaxation</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK__SOLVER_LINEAR_RELAXATION = SolverglpkPackage.SOLVER_GLPK__SOLVER_LINEAR_RELAXATION;
-
-	/**
-	 * The feature id for the '<em><b>Sol Optimality Gap</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK__SOL_OPTIMALITY_GAP = SolverglpkPackage.SOLVER_GLPK__SOL_OPTIMALITY_GAP;
-
-	/**
-	 * The feature id for the '<em><b>File Path</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK__FILE_PATH = SolverglpkPackage.SOLVER_GLPK__FILE_PATH;
-
-	/**
-	 * The feature id for the '<em><b>File Format</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK__FILE_FORMAT = SolverglpkPackage.SOLVER_GLPK__FILE_FORMAT;
-
-	/**
-	 * The feature id for the '<em><b>File Compressed</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK__FILE_COMPRESSED = SolverglpkPackage.SOLVER_GLPK__FILE_COMPRESSED;
-
-	/**
-	 * The feature id for the '<em><b>Enable Feasibility Pump</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK__ENABLE_FEASIBILITY_PUMP = SolverglpkPackage.SOLVER_GLPK__ENABLE_FEASIBILITY_PUMP;
-
-	/**
-	 * The feature id for the '<em><b>Enable Gomory Cuts</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK__ENABLE_GOMORY_CUTS = SolverglpkPackage.SOLVER_GLPK__ENABLE_GOMORY_CUTS;
-
-	/**
-	 * The feature id for the '<em><b>Enable Generating Mixed Cover Cuts</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK__ENABLE_GENERATING_MIXED_COVER_CUTS = SolverglpkPackage.SOLVER_GLPK__ENABLE_GENERATING_MIXED_COVER_CUTS;
-
-	/**
-	 * The feature id for the '<em><b>Enable Generating Clique Cuts</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK__ENABLE_GENERATING_CLIQUE_CUTS = SolverglpkPackage.SOLVER_GLPK__ENABLE_GENERATING_CLIQUE_CUTS;
-
-	/**
-	 * The feature id for the '<em><b>Enable Mixed Integer Rounding Cuts</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK__ENABLE_MIXED_INTEGER_ROUNDING_CUTS = SolverglpkPackage.SOLVER_GLPK__ENABLE_MIXED_INTEGER_ROUNDING_CUTS;
-
-	/**
-	 * The number of structural features of the '<em>Solver To Use GLPK</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK_FEATURE_COUNT = SolverglpkPackage.SOLVER_GLPK_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Get Parent Generator Tool</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK___GET_PARENT_GENERATOR_TOOL = SolverglpkPackage.SOLVER_GLPK___GET_PARENT_GENERATOR_TOOL;
-
-	/**
-	 * The operation id for the '<em>Get Generator</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK___GET_GENERATOR = SolverglpkPackage.SOLVER_GLPK___GET_GENERATOR;
-
-	/**
-	 * The operation id for the '<em>Solution Factory</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK___SOLUTION_FACTORY = SolverglpkPackage.SOLVER_GLPK___SOLUTION_FACTORY;
-
-	/**
-	 * The operation id for the '<em>Construct Solution</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK___CONSTRUCT_SOLUTION = SolverglpkPackage.SOLVER_GLPK___CONSTRUCT_SOLUTION;
-
-	/**
-	 * The operation id for the '<em>Solve</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK___SOLVE = SolverglpkPackage.SOLVER_GLPK___SOLVE;
-
-	/**
-	 * The operation id for the '<em>Write Lp To File</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK___WRITE_LP_TO_FILE = SolverglpkPackage.SOLVER_GLPK___WRITE_LP_TO_FILE;
-
-	/**
-	 * The operation id for the '<em>Get Lp As String</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK___GET_LP_AS_STRING = SolverglpkPackage.SOLVER_GLPK___GET_LP_AS_STRING;
-
-	/**
-	 * The number of operations of the '<em>Solver To Use GLPK</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_GLPK_OPERATION_COUNT = SolverglpkPackage.SOLVER_GLPK_OPERATION_COUNT + 0;
-
-
-	/**
-	 * The meta object id for the '{@link com.misc.touse.moplaf.solver.tousesolver.impl.SolverToUseJavaILPImpl <em>Solver To Use Java ILP</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.misc.touse.moplaf.solver.tousesolver.impl.SolverToUseJavaILPImpl
-	 * @see com.misc.touse.moplaf.solver.tousesolver.impl.TousesolverPackageImpl#getSolverToUseJavaILP()
-	 * @generated
-	 */
-	int SOLVER_TO_USE_JAVA_ILP = 14;
-
-	/**
-	 * The feature id for the '<em><b>Solution</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_JAVA_ILP__SOLUTION = SolverjavailpPackage.SOLVER_JAVA_ILP__SOLUTION;
-
-	/**
-	 * The feature id for the '<em><b>Current Solution Nr</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_JAVA_ILP__CURRENT_SOLUTION_NR = SolverjavailpPackage.SOLVER_JAVA_ILP__CURRENT_SOLUTION_NR;
-
-	/**
-	 * The feature id for the '<em><b>Code</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_JAVA_ILP__CODE = SolverjavailpPackage.SOLVER_JAVA_ILP__CODE;
-
-	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_JAVA_ILP__REMARKS = SolverjavailpPackage.SOLVER_JAVA_ILP__REMARKS;
-
-	/**
-	 * The feature id for the '<em><b>Status</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_JAVA_ILP__STATUS = SolverjavailpPackage.SOLVER_JAVA_ILP__STATUS;
-
-	/**
-	 * The feature id for the '<em><b>Solver Max Duration</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_JAVA_ILP__SOLVER_MAX_DURATION = SolverjavailpPackage.SOLVER_JAVA_ILP__SOLVER_MAX_DURATION;
-
-	/**
-	 * The feature id for the '<em><b>Solver Background</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_JAVA_ILP__SOLVER_BACKGROUND = SolverjavailpPackage.SOLVER_JAVA_ILP__SOLVER_BACKGROUND;
-
-	/**
-	 * The feature id for the '<em><b>Sol Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_JAVA_ILP__SOL_VALUE = SolverjavailpPackage.SOLVER_JAVA_ILP__SOL_VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Solver Log Level</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_JAVA_ILP__SOLVER_LOG_LEVEL = SolverjavailpPackage.SOLVER_JAVA_ILP__SOLVER_LOG_LEVEL;
-
-	/**
-	 * The feature id for the '<em><b>Solver Dump</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_JAVA_ILP__SOLVER_DUMP = SolverjavailpPackage.SOLVER_JAVA_ILP__SOLVER_DUMP;
-
-	/**
-	 * The feature id for the '<em><b>Run Started</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_JAVA_ILP__RUN_STARTED = SolverjavailpPackage.SOLVER_JAVA_ILP__RUN_STARTED;
-
-	/**
-	 * The feature id for the '<em><b>Run Initialization Ended</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_JAVA_ILP__RUN_INITIALIZATION_ENDED = SolverjavailpPackage.SOLVER_JAVA_ILP__RUN_INITIALIZATION_ENDED;
-
-	/**
-	 * The feature id for the '<em><b>Run Solving Ended</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_JAVA_ILP__RUN_SOLVING_ENDED = SolverjavailpPackage.SOLVER_JAVA_ILP__RUN_SOLVING_ENDED;
-
-	/**
-	 * The feature id for the '<em><b>Run Finalization Ended</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_JAVA_ILP__RUN_FINALIZATION_ENDED = SolverjavailpPackage.SOLVER_JAVA_ILP__RUN_FINALIZATION_ENDED;
-
-	/**
-	 * The feature id for the '<em><b>Run Duration Initialization</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_JAVA_ILP__RUN_DURATION_INITIALIZATION = SolverjavailpPackage.SOLVER_JAVA_ILP__RUN_DURATION_INITIALIZATION;
-
-	/**
-	 * The feature id for the '<em><b>Run Duration Finalization</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_JAVA_ILP__RUN_DURATION_FINALIZATION = SolverjavailpPackage.SOLVER_JAVA_ILP__RUN_DURATION_FINALIZATION;
-
-	/**
-	 * The feature id for the '<em><b>Run Duration Solving</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_JAVA_ILP__RUN_DURATION_SOLVING = SolverjavailpPackage.SOLVER_JAVA_ILP__RUN_DURATION_SOLVING;
-
-	/**
-	 * The feature id for the '<em><b>Run Request Terminate</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_JAVA_ILP__RUN_REQUEST_TERMINATE = SolverjavailpPackage.SOLVER_JAVA_ILP__RUN_REQUEST_TERMINATE;
-
-	/**
-	 * The feature id for the '<em><b>Sol Unfeasible</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_JAVA_ILP__SOL_UNFEASIBLE = SolverjavailpPackage.SOLVER_JAVA_ILP__SOL_UNFEASIBLE;
-
-	/**
-	 * The feature id for the '<em><b>Sol Feasible</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_JAVA_ILP__SOL_FEASIBLE = SolverjavailpPackage.SOLVER_JAVA_ILP__SOL_FEASIBLE;
-
-	/**
-	 * The feature id for the '<em><b>Sol Optimal</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_JAVA_ILP__SOL_OPTIMAL = SolverjavailpPackage.SOLVER_JAVA_ILP__SOL_OPTIMAL;
-
-	/**
-	 * The feature id for the '<em><b>Run Interrupted</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_JAVA_ILP__RUN_INTERRUPTED = SolverjavailpPackage.SOLVER_JAVA_ILP__RUN_INTERRUPTED;
-
-	/**
-	 * The feature id for the '<em><b>Solving</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_JAVA_ILP__SOLVING = SolverjavailpPackage.SOLVER_JAVA_ILP__SOLVING;
-
-	/**
-	 * The feature id for the '<em><b>Finalizing</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_JAVA_ILP__FINALIZING = SolverjavailpPackage.SOLVER_JAVA_ILP__FINALIZING;
-
-	/**
-	 * The feature id for the '<em><b>Finished</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_JAVA_ILP__FINISHED = SolverjavailpPackage.SOLVER_JAVA_ILP__FINISHED;
-
-	/**
-	 * The feature id for the '<em><b>Run Time Out</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_JAVA_ILP__RUN_TIME_OUT = SolverjavailpPackage.SOLVER_JAVA_ILP__RUN_TIME_OUT;
-
-	/**
-	 * The feature id for the '<em><b>Initializing</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_JAVA_ILP__INITIALIZING = SolverjavailpPackage.SOLVER_JAVA_ILP__INITIALIZING;
-
-	/**
-	 * The feature id for the '<em><b>Solver Optimality Tolerance</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_JAVA_ILP__SOLVER_OPTIMALITY_TOLERANCE = SolverjavailpPackage.SOLVER_JAVA_ILP__SOLVER_OPTIMALITY_TOLERANCE;
-
-	/**
-	 * The feature id for the '<em><b>Solver Linear Relaxation</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_JAVA_ILP__SOLVER_LINEAR_RELAXATION = SolverjavailpPackage.SOLVER_JAVA_ILP__SOLVER_LINEAR_RELAXATION;
-
-	/**
-	 * The feature id for the '<em><b>Sol Optimality Gap</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_JAVA_ILP__SOL_OPTIMALITY_GAP = SolverjavailpPackage.SOLVER_JAVA_ILP__SOL_OPTIMALITY_GAP;
-
-	/**
-	 * The feature id for the '<em><b>File Path</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_JAVA_ILP__FILE_PATH = SolverjavailpPackage.SOLVER_JAVA_ILP__FILE_PATH;
-
-	/**
-	 * The feature id for the '<em><b>File Format</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_JAVA_ILP__FILE_FORMAT = SolverjavailpPackage.SOLVER_JAVA_ILP__FILE_FORMAT;
-
-	/**
-	 * The feature id for the '<em><b>File Compressed</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_JAVA_ILP__FILE_COMPRESSED = SolverjavailpPackage.SOLVER_JAVA_ILP__FILE_COMPRESSED;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_JAVA_ILP__TYPE = SolverjavailpPackage.SOLVER_JAVA_ILP__TYPE;
-
-	/**
-	 * The number of structural features of the '<em>Solver To Use Java ILP</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_JAVA_ILP_FEATURE_COUNT = SolverjavailpPackage.SOLVER_JAVA_ILP_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Get Parent Generator Tool</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_JAVA_ILP___GET_PARENT_GENERATOR_TOOL = SolverjavailpPackage.SOLVER_JAVA_ILP___GET_PARENT_GENERATOR_TOOL;
-
-	/**
-	 * The operation id for the '<em>Get Generator</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_JAVA_ILP___GET_GENERATOR = SolverjavailpPackage.SOLVER_JAVA_ILP___GET_GENERATOR;
-
-	/**
-	 * The operation id for the '<em>Solution Factory</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_JAVA_ILP___SOLUTION_FACTORY = SolverjavailpPackage.SOLVER_JAVA_ILP___SOLUTION_FACTORY;
-
-	/**
-	 * The operation id for the '<em>Construct Solution</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_JAVA_ILP___CONSTRUCT_SOLUTION = SolverjavailpPackage.SOLVER_JAVA_ILP___CONSTRUCT_SOLUTION;
-
-	/**
-	 * The operation id for the '<em>Solve</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_JAVA_ILP___SOLVE = SolverjavailpPackage.SOLVER_JAVA_ILP___SOLVE;
-
-	/**
-	 * The operation id for the '<em>Write Lp To File</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_JAVA_ILP___WRITE_LP_TO_FILE = SolverjavailpPackage.SOLVER_JAVA_ILP___WRITE_LP_TO_FILE;
-
-	/**
-	 * The operation id for the '<em>Get Lp As String</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_JAVA_ILP___GET_LP_AS_STRING = SolverjavailpPackage.SOLVER_JAVA_ILP___GET_LP_AS_STRING;
-
-	/**
-	 * The number of operations of the '<em>Solver To Use Java ILP</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_JAVA_ILP_OPERATION_COUNT = SolverjavailpPackage.SOLVER_JAVA_ILP_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link com.misc.touse.moplaf.solver.tousesolver.impl.SolverToUseNeosImpl <em>Solver To Use Neos</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.misc.touse.moplaf.solver.tousesolver.impl.SolverToUseNeosImpl
-	 * @see com.misc.touse.moplaf.solver.tousesolver.impl.TousesolverPackageImpl#getSolverToUseNeos()
-	 * @generated
-	 */
-	int SOLVER_TO_USE_NEOS = 15;
-
-	/**
-	 * The feature id for the '<em><b>Solution</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__SOLUTION = SolverneosPackage.SOLVER_NEOS__SOLUTION;
-
-	/**
-	 * The feature id for the '<em><b>Current Solution Nr</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__CURRENT_SOLUTION_NR = SolverneosPackage.SOLVER_NEOS__CURRENT_SOLUTION_NR;
-
-	/**
-	 * The feature id for the '<em><b>Code</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__CODE = SolverneosPackage.SOLVER_NEOS__CODE;
-
-	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__REMARKS = SolverneosPackage.SOLVER_NEOS__REMARKS;
-
-	/**
-	 * The feature id for the '<em><b>Status</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__STATUS = SolverneosPackage.SOLVER_NEOS__STATUS;
-
-	/**
-	 * The feature id for the '<em><b>Solver Max Duration</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__SOLVER_MAX_DURATION = SolverneosPackage.SOLVER_NEOS__SOLVER_MAX_DURATION;
-
-	/**
-	 * The feature id for the '<em><b>Solver Background</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__SOLVER_BACKGROUND = SolverneosPackage.SOLVER_NEOS__SOLVER_BACKGROUND;
-
-	/**
-	 * The feature id for the '<em><b>Sol Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__SOL_VALUE = SolverneosPackage.SOLVER_NEOS__SOL_VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Solver Log Level</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__SOLVER_LOG_LEVEL = SolverneosPackage.SOLVER_NEOS__SOLVER_LOG_LEVEL;
-
-	/**
-	 * The feature id for the '<em><b>Solver Dump</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__SOLVER_DUMP = SolverneosPackage.SOLVER_NEOS__SOLVER_DUMP;
-
-	/**
-	 * The feature id for the '<em><b>Run Started</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__RUN_STARTED = SolverneosPackage.SOLVER_NEOS__RUN_STARTED;
-
-	/**
-	 * The feature id for the '<em><b>Run Initialization Ended</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__RUN_INITIALIZATION_ENDED = SolverneosPackage.SOLVER_NEOS__RUN_INITIALIZATION_ENDED;
-
-	/**
-	 * The feature id for the '<em><b>Run Solving Ended</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__RUN_SOLVING_ENDED = SolverneosPackage.SOLVER_NEOS__RUN_SOLVING_ENDED;
-
-	/**
-	 * The feature id for the '<em><b>Run Finalization Ended</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__RUN_FINALIZATION_ENDED = SolverneosPackage.SOLVER_NEOS__RUN_FINALIZATION_ENDED;
-
-	/**
-	 * The feature id for the '<em><b>Run Duration Initialization</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__RUN_DURATION_INITIALIZATION = SolverneosPackage.SOLVER_NEOS__RUN_DURATION_INITIALIZATION;
-
-	/**
-	 * The feature id for the '<em><b>Run Duration Finalization</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__RUN_DURATION_FINALIZATION = SolverneosPackage.SOLVER_NEOS__RUN_DURATION_FINALIZATION;
-
-	/**
-	 * The feature id for the '<em><b>Run Duration Solving</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__RUN_DURATION_SOLVING = SolverneosPackage.SOLVER_NEOS__RUN_DURATION_SOLVING;
-
-	/**
-	 * The feature id for the '<em><b>Run Request Terminate</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__RUN_REQUEST_TERMINATE = SolverneosPackage.SOLVER_NEOS__RUN_REQUEST_TERMINATE;
-
-	/**
-	 * The feature id for the '<em><b>Sol Unfeasible</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__SOL_UNFEASIBLE = SolverneosPackage.SOLVER_NEOS__SOL_UNFEASIBLE;
-
-	/**
-	 * The feature id for the '<em><b>Sol Feasible</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__SOL_FEASIBLE = SolverneosPackage.SOLVER_NEOS__SOL_FEASIBLE;
-
-	/**
-	 * The feature id for the '<em><b>Sol Optimal</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__SOL_OPTIMAL = SolverneosPackage.SOLVER_NEOS__SOL_OPTIMAL;
-
-	/**
-	 * The feature id for the '<em><b>Run Interrupted</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__RUN_INTERRUPTED = SolverneosPackage.SOLVER_NEOS__RUN_INTERRUPTED;
-
-	/**
-	 * The feature id for the '<em><b>Solving</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__SOLVING = SolverneosPackage.SOLVER_NEOS__SOLVING;
-
-	/**
-	 * The feature id for the '<em><b>Finalizing</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__FINALIZING = SolverneosPackage.SOLVER_NEOS__FINALIZING;
-
-	/**
-	 * The feature id for the '<em><b>Finished</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__FINISHED = SolverneosPackage.SOLVER_NEOS__FINISHED;
-
-	/**
-	 * The feature id for the '<em><b>Run Time Out</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__RUN_TIME_OUT = SolverneosPackage.SOLVER_NEOS__RUN_TIME_OUT;
-
-	/**
-	 * The feature id for the '<em><b>Initializing</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__INITIALIZING = SolverneosPackage.SOLVER_NEOS__INITIALIZING;
-
-	/**
-	 * The feature id for the '<em><b>Solver Optimality Tolerance</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__SOLVER_OPTIMALITY_TOLERANCE = SolverneosPackage.SOLVER_NEOS__SOLVER_OPTIMALITY_TOLERANCE;
-
-	/**
-	 * The feature id for the '<em><b>Solver Linear Relaxation</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__SOLVER_LINEAR_RELAXATION = SolverneosPackage.SOLVER_NEOS__SOLVER_LINEAR_RELAXATION;
-
-	/**
-	 * The feature id for the '<em><b>Sol Optimality Gap</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__SOL_OPTIMALITY_GAP = SolverneosPackage.SOLVER_NEOS__SOL_OPTIMALITY_GAP;
-
-	/**
-	 * The feature id for the '<em><b>Lp Writer</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__LP_WRITER = SolverneosPackage.SOLVER_NEOS__LP_WRITER;
-
-	/**
-	 * The feature id for the '<em><b>Sol Reader</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__SOL_READER = SolverneosPackage.SOLVER_NEOS__SOL_READER;
-
-	/**
-	 * The feature id for the '<em><b>Server Host</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__SERVER_HOST = SolverneosPackage.SOLVER_NEOS__SERVER_HOST;
-
-	/**
-	 * The feature id for the '<em><b>Server Port</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__SERVER_PORT = SolverneosPackage.SOLVER_NEOS__SERVER_PORT;
-
-	/**
-	 * The feature id for the '<em><b>Solver Category</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__SOLVER_CATEGORY = SolverneosPackage.SOLVER_NEOS__SOLVER_CATEGORY;
-
-	/**
-	 * The feature id for the '<em><b>Solver Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__SOLVER_NAME = SolverneosPackage.SOLVER_NEOS__SOLVER_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Solver Input</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__SOLVER_INPUT = SolverneosPackage.SOLVER_NEOS__SOLVER_INPUT;
-
-	/**
-	 * The feature id for the '<em><b>Solver Poll Duration</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__SOLVER_POLL_DURATION = SolverneosPackage.SOLVER_NEOS__SOLVER_POLL_DURATION;
-
-	/**
-	 * The feature id for the '<em><b>Job Submitted</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__JOB_SUBMITTED = SolverneosPackage.SOLVER_NEOS__JOB_SUBMITTED;
-
-	/**
-	 * The feature id for the '<em><b>Job Done</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__JOB_DONE = SolverneosPackage.SOLVER_NEOS__JOB_DONE;
-
-	/**
-	 * The feature id for the '<em><b>Job Result Retrieved</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__JOB_RESULT_RETRIEVED = SolverneosPackage.SOLVER_NEOS__JOB_RESULT_RETRIEVED;
-
-	/**
-	 * The feature id for the '<em><b>Job Number</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__JOB_NUMBER = SolverneosPackage.SOLVER_NEOS__JOB_NUMBER;
-
-	/**
-	 * The feature id for the '<em><b>Job Password</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__JOB_PASSWORD = SolverneosPackage.SOLVER_NEOS__JOB_PASSWORD;
-
-	/**
-	 * The feature id for the '<em><b>Job Status</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__JOB_STATUS = SolverneosPackage.SOLVER_NEOS__JOB_STATUS;
-
-	/**
-	 * The feature id for the '<em><b>Job Last Status</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__JOB_LAST_STATUS = SolverneosPackage.SOLVER_NEOS__JOB_LAST_STATUS;
-
-	/**
-	 * The feature id for the '<em><b>Job Neos Status</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__JOB_NEOS_STATUS = SolverneosPackage.SOLVER_NEOS__JOB_NEOS_STATUS;
-
-	/**
-	 * The feature id for the '<em><b>Job Submitter Email</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__JOB_SUBMITTER_EMAIL = SolverneosPackage.SOLVER_NEOS__JOB_SUBMITTER_EMAIL;
-
-	/**
-	 * The feature id for the '<em><b>Job Result</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS__JOB_RESULT = SolverneosPackage.SOLVER_NEOS__JOB_RESULT;
-
-	/**
-	 * The number of structural features of the '<em>Solver To Use Neos</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS_FEATURE_COUNT = SolverneosPackage.SOLVER_NEOS_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Get Parent Generator Tool</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS___GET_PARENT_GENERATOR_TOOL = SolverneosPackage.SOLVER_NEOS___GET_PARENT_GENERATOR_TOOL;
-
-	/**
-	 * The operation id for the '<em>Get Generator</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS___GET_GENERATOR = SolverneosPackage.SOLVER_NEOS___GET_GENERATOR;
-
-	/**
-	 * The operation id for the '<em>Solution Factory</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS___SOLUTION_FACTORY = SolverneosPackage.SOLVER_NEOS___SOLUTION_FACTORY;
-
-	/**
-	 * The operation id for the '<em>Construct Solution</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS___CONSTRUCT_SOLUTION = SolverneosPackage.SOLVER_NEOS___CONSTRUCT_SOLUTION;
-
-	/**
-	 * The operation id for the '<em>Solve</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS___SOLVE = SolverneosPackage.SOLVER_NEOS___SOLVE;
-
-	/**
-	 * The operation id for the '<em>Retrieve Job Status</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS___RETRIEVE_JOB_STATUS = SolverneosPackage.SOLVER_NEOS___RETRIEVE_JOB_STATUS;
-
-	/**
-	 * The operation id for the '<em>Retrieve Job Result</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS___RETRIEVE_JOB_RESULT = SolverneosPackage.SOLVER_NEOS___RETRIEVE_JOB_RESULT;
-
-	/**
-	 * The operation id for the '<em>Kill Job</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS___KILL_JOB = SolverneosPackage.SOLVER_NEOS___KILL_JOB;
-
-	/**
-	 * The operation id for the '<em>Submit Job</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS___SUBMIT_JOB = SolverneosPackage.SOLVER_NEOS___SUBMIT_JOB;
-
-	/**
-	 * The number of operations of the '<em>Solver To Use Neos</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USE_NEOS_OPERATION_COUNT = SolverneosPackage.SOLVER_NEOS_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.solver.tousesolver.impl.SolutionReaderToUseImpl <em>Solution Reader To Use</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2869,7 +1466,7 @@ public interface TousesolverPackage extends EPackage {
 	 * @see com.misc.touse.moplaf.solver.tousesolver.impl.TousesolverPackageImpl#getSolutionReaderToUse()
 	 * @generated
 	 */
-	int SOLUTION_READER_TO_USE = 16;
+	int SOLUTION_READER_TO_USE = 13;
 
 	/**
 	 * The feature id for the '<em><b>Solution</b></em>' containment reference list.
@@ -2968,7 +1565,7 @@ public interface TousesolverPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLUTION_READER_TO_USE___SET_SOL_AS_STRING__STRING_1 = SolverPackage.SOLUTION_READER___SET_SOL_AS_STRING__STRING;
+	int SOLUTION_READER_TO_USE___SET_SOL_AS_STRING__STRING = SolverPackage.SOLUTION_READER___SET_SOL_AS_STRING__STRING;
 
 	/**
 	 * The number of operations of the '<em>Solution Reader To Use</em>' class.
@@ -2978,394 +1575,6 @@ public interface TousesolverPackage extends EPackage {
 	 * @ordered
 	 */
 	int SOLUTION_READER_TO_USE_OPERATION_COUNT = SolverPackage.SOLUTION_READER_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link com.misc.touse.moplaf.solver.tousesolver.impl.SolverToUserCplexImpl <em>Solver To User Cplex</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.misc.touse.moplaf.solver.tousesolver.impl.SolverToUserCplexImpl
-	 * @see com.misc.touse.moplaf.solver.tousesolver.impl.TousesolverPackageImpl#getSolverToUserCplex()
-	 * @generated
-	 */
-	int SOLVER_TO_USER_CPLEX = 17;
-
-	/**
-	 * The feature id for the '<em><b>Solution</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USER_CPLEX__SOLUTION = SolvercplexPackage.SOLVER_CPLEX__SOLUTION;
-
-	/**
-	 * The feature id for the '<em><b>Current Solution Nr</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USER_CPLEX__CURRENT_SOLUTION_NR = SolvercplexPackage.SOLVER_CPLEX__CURRENT_SOLUTION_NR;
-
-	/**
-	 * The feature id for the '<em><b>Code</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USER_CPLEX__CODE = SolvercplexPackage.SOLVER_CPLEX__CODE;
-
-	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USER_CPLEX__REMARKS = SolvercplexPackage.SOLVER_CPLEX__REMARKS;
-
-	/**
-	 * The feature id for the '<em><b>Status</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USER_CPLEX__STATUS = SolvercplexPackage.SOLVER_CPLEX__STATUS;
-
-	/**
-	 * The feature id for the '<em><b>Solver Max Duration</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USER_CPLEX__SOLVER_MAX_DURATION = SolvercplexPackage.SOLVER_CPLEX__SOLVER_MAX_DURATION;
-
-	/**
-	 * The feature id for the '<em><b>Solver Background</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USER_CPLEX__SOLVER_BACKGROUND = SolvercplexPackage.SOLVER_CPLEX__SOLVER_BACKGROUND;
-
-	/**
-	 * The feature id for the '<em><b>Sol Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USER_CPLEX__SOL_VALUE = SolvercplexPackage.SOLVER_CPLEX__SOL_VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Solver Log Level</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USER_CPLEX__SOLVER_LOG_LEVEL = SolvercplexPackage.SOLVER_CPLEX__SOLVER_LOG_LEVEL;
-
-	/**
-	 * The feature id for the '<em><b>Solver Dump</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USER_CPLEX__SOLVER_DUMP = SolvercplexPackage.SOLVER_CPLEX__SOLVER_DUMP;
-
-	/**
-	 * The feature id for the '<em><b>Run Started</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USER_CPLEX__RUN_STARTED = SolvercplexPackage.SOLVER_CPLEX__RUN_STARTED;
-
-	/**
-	 * The feature id for the '<em><b>Run Initialization Ended</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USER_CPLEX__RUN_INITIALIZATION_ENDED = SolvercplexPackage.SOLVER_CPLEX__RUN_INITIALIZATION_ENDED;
-
-	/**
-	 * The feature id for the '<em><b>Run Solving Ended</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USER_CPLEX__RUN_SOLVING_ENDED = SolvercplexPackage.SOLVER_CPLEX__RUN_SOLVING_ENDED;
-
-	/**
-	 * The feature id for the '<em><b>Run Finalization Ended</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USER_CPLEX__RUN_FINALIZATION_ENDED = SolvercplexPackage.SOLVER_CPLEX__RUN_FINALIZATION_ENDED;
-
-	/**
-	 * The feature id for the '<em><b>Run Duration Initialization</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USER_CPLEX__RUN_DURATION_INITIALIZATION = SolvercplexPackage.SOLVER_CPLEX__RUN_DURATION_INITIALIZATION;
-
-	/**
-	 * The feature id for the '<em><b>Run Duration Finalization</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USER_CPLEX__RUN_DURATION_FINALIZATION = SolvercplexPackage.SOLVER_CPLEX__RUN_DURATION_FINALIZATION;
-
-	/**
-	 * The feature id for the '<em><b>Run Duration Solving</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USER_CPLEX__RUN_DURATION_SOLVING = SolvercplexPackage.SOLVER_CPLEX__RUN_DURATION_SOLVING;
-
-	/**
-	 * The feature id for the '<em><b>Run Request Terminate</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USER_CPLEX__RUN_REQUEST_TERMINATE = SolvercplexPackage.SOLVER_CPLEX__RUN_REQUEST_TERMINATE;
-
-	/**
-	 * The feature id for the '<em><b>Sol Unfeasible</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USER_CPLEX__SOL_UNFEASIBLE = SolvercplexPackage.SOLVER_CPLEX__SOL_UNFEASIBLE;
-
-	/**
-	 * The feature id for the '<em><b>Sol Feasible</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USER_CPLEX__SOL_FEASIBLE = SolvercplexPackage.SOLVER_CPLEX__SOL_FEASIBLE;
-
-	/**
-	 * The feature id for the '<em><b>Sol Optimal</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USER_CPLEX__SOL_OPTIMAL = SolvercplexPackage.SOLVER_CPLEX__SOL_OPTIMAL;
-
-	/**
-	 * The feature id for the '<em><b>Run Interrupted</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USER_CPLEX__RUN_INTERRUPTED = SolvercplexPackage.SOLVER_CPLEX__RUN_INTERRUPTED;
-
-	/**
-	 * The feature id for the '<em><b>Solving</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USER_CPLEX__SOLVING = SolvercplexPackage.SOLVER_CPLEX__SOLVING;
-
-	/**
-	 * The feature id for the '<em><b>Finalizing</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USER_CPLEX__FINALIZING = SolvercplexPackage.SOLVER_CPLEX__FINALIZING;
-
-	/**
-	 * The feature id for the '<em><b>Finished</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USER_CPLEX__FINISHED = SolvercplexPackage.SOLVER_CPLEX__FINISHED;
-
-	/**
-	 * The feature id for the '<em><b>Run Time Out</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USER_CPLEX__RUN_TIME_OUT = SolvercplexPackage.SOLVER_CPLEX__RUN_TIME_OUT;
-
-	/**
-	 * The feature id for the '<em><b>Initializing</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USER_CPLEX__INITIALIZING = SolvercplexPackage.SOLVER_CPLEX__INITIALIZING;
-
-	/**
-	 * The feature id for the '<em><b>Solver Optimality Tolerance</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USER_CPLEX__SOLVER_OPTIMALITY_TOLERANCE = SolvercplexPackage.SOLVER_CPLEX__SOLVER_OPTIMALITY_TOLERANCE;
-
-	/**
-	 * The feature id for the '<em><b>Solver Linear Relaxation</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USER_CPLEX__SOLVER_LINEAR_RELAXATION = SolvercplexPackage.SOLVER_CPLEX__SOLVER_LINEAR_RELAXATION;
-
-	/**
-	 * The feature id for the '<em><b>Sol Optimality Gap</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USER_CPLEX__SOL_OPTIMALITY_GAP = SolvercplexPackage.SOLVER_CPLEX__SOL_OPTIMALITY_GAP;
-
-	/**
-	 * The feature id for the '<em><b>File Path</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USER_CPLEX__FILE_PATH = SolvercplexPackage.SOLVER_CPLEX__FILE_PATH;
-
-	/**
-	 * The feature id for the '<em><b>File Format</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USER_CPLEX__FILE_FORMAT = SolvercplexPackage.SOLVER_CPLEX__FILE_FORMAT;
-
-	/**
-	 * The feature id for the '<em><b>File Compressed</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USER_CPLEX__FILE_COMPRESSED = SolvercplexPackage.SOLVER_CPLEX__FILE_COMPRESSED;
-
-	/**
-	 * The number of structural features of the '<em>Solver To User Cplex</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USER_CPLEX_FEATURE_COUNT = SolvercplexPackage.SOLVER_CPLEX_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Get Parent Generator Tool</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USER_CPLEX___GET_PARENT_GENERATOR_TOOL = SolvercplexPackage.SOLVER_CPLEX___GET_PARENT_GENERATOR_TOOL;
-
-	/**
-	 * The operation id for the '<em>Get Generator</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USER_CPLEX___GET_GENERATOR = SolvercplexPackage.SOLVER_CPLEX___GET_GENERATOR;
-
-	/**
-	 * The operation id for the '<em>Solution Factory</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USER_CPLEX___SOLUTION_FACTORY = SolvercplexPackage.SOLVER_CPLEX___SOLUTION_FACTORY;
-
-	/**
-	 * The operation id for the '<em>Construct Solution</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USER_CPLEX___CONSTRUCT_SOLUTION = SolvercplexPackage.SOLVER_CPLEX___CONSTRUCT_SOLUTION;
-
-	/**
-	 * The operation id for the '<em>Solve</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USER_CPLEX___SOLVE = SolvercplexPackage.SOLVER_CPLEX___SOLVE;
-
-	/**
-	 * The operation id for the '<em>Write Lp To File</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USER_CPLEX___WRITE_LP_TO_FILE = SolvercplexPackage.SOLVER_CPLEX___WRITE_LP_TO_FILE;
-
-	/**
-	 * The operation id for the '<em>Get Lp As String</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USER_CPLEX___GET_LP_AS_STRING = SolvercplexPackage.SOLVER_CPLEX___GET_LP_AS_STRING;
-
-	/**
-	 * The number of operations of the '<em>Solver To User Cplex</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVER_TO_USER_CPLEX_OPERATION_COUNT = SolvercplexPackage.SOLVER_CPLEX_OPERATION_COUNT + 0;
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.solver.tousesolver.Domain <em>Domain</em>}'.
@@ -3701,39 +1910,6 @@ public interface TousesolverPackage extends EPackage {
 	EReference getKnapsackLp_Scenario();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.solver.tousesolver.KnapsackLp#getGLPK <em>GLPK</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>GLPK</em>'.
-	 * @see com.misc.touse.moplaf.solver.tousesolver.KnapsackLp#getGLPK()
-	 * @see #getKnapsackLp()
-	 * @generated
-	 */
-	EReference getKnapsackLp_GLPK();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.solver.tousesolver.KnapsackLp#getJavaILP <em>Java ILP</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Java ILP</em>'.
-	 * @see com.misc.touse.moplaf.solver.tousesolver.KnapsackLp#getJavaILP()
-	 * @see #getKnapsackLp()
-	 * @generated
-	 */
-	EReference getKnapsackLp_JavaILP();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.solver.tousesolver.KnapsackLp#getNeos <em>Neos</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Neos</em>'.
-	 * @see com.misc.touse.moplaf.solver.tousesolver.KnapsackLp#getNeos()
-	 * @see #getKnapsackLp()
-	 * @generated
-	 */
-	EReference getKnapsackLp_Neos();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.solver.tousesolver.KnapsackLp#getReader <em>Reader</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3745,15 +1921,15 @@ public interface TousesolverPackage extends EPackage {
 	EReference getKnapsackLp_Reader();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.solver.tousesolver.KnapsackLp#getCplex <em>Cplex</em>}'.
+	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.solver.tousesolver.KnapsackLp#getSolver <em>Solver</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Cplex</em>'.
-	 * @see com.misc.touse.moplaf.solver.tousesolver.KnapsackLp#getCplex()
+	 * @return the meta object for the containment reference list '<em>Solver</em>'.
+	 * @see com.misc.touse.moplaf.solver.tousesolver.KnapsackLp#getSolver()
 	 * @see #getKnapsackLp()
 	 * @generated
 	 */
-	EReference getKnapsackLp_Cplex();
+	EReference getKnapsackLp_Solver();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.solver.tousesolver.LpRoot <em>Lp Root</em>}'.
@@ -3872,36 +2048,6 @@ public interface TousesolverPackage extends EPackage {
 	EClass getConsKnapsackCapacity();
 
 	/**
-	 * Returns the meta object for class '{@link com.misc.touse.moplaf.solver.tousesolver.SolverToUseGLPK <em>Solver To Use GLPK</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Solver To Use GLPK</em>'.
-	 * @see com.misc.touse.moplaf.solver.tousesolver.SolverToUseGLPK
-	 * @generated
-	 */
-	EClass getSolverToUseGLPK();
-
-	/**
-	 * Returns the meta object for class '{@link com.misc.touse.moplaf.solver.tousesolver.SolverToUseJavaILP <em>Solver To Use Java ILP</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Solver To Use Java ILP</em>'.
-	 * @see com.misc.touse.moplaf.solver.tousesolver.SolverToUseJavaILP
-	 * @generated
-	 */
-	EClass getSolverToUseJavaILP();
-
-	/**
-	 * Returns the meta object for class '{@link com.misc.touse.moplaf.solver.tousesolver.SolverToUseNeos <em>Solver To Use Neos</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Solver To Use Neos</em>'.
-	 * @see com.misc.touse.moplaf.solver.tousesolver.SolverToUseNeos
-	 * @generated
-	 */
-	EClass getSolverToUseNeos();
-
-	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.solver.tousesolver.SolutionReaderToUse <em>Solution Reader To Use</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3910,16 +2056,6 @@ public interface TousesolverPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getSolutionReaderToUse();
-
-	/**
-	 * Returns the meta object for class '{@link com.misc.touse.moplaf.solver.tousesolver.SolverToUserCplex <em>Solver To User Cplex</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Solver To User Cplex</em>'.
-	 * @see com.misc.touse.moplaf.solver.tousesolver.SolverToUserCplex
-	 * @generated
-	 */
-	EClass getSolverToUserCplex();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -4209,30 +2345,6 @@ public interface TousesolverPackage extends EPackage {
 		EReference KNAPSACK_LP__SCENARIO = eINSTANCE.getKnapsackLp_Scenario();
 
 		/**
-		 * The meta object literal for the '<em><b>GLPK</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference KNAPSACK_LP__GLPK = eINSTANCE.getKnapsackLp_GLPK();
-
-		/**
-		 * The meta object literal for the '<em><b>Java ILP</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference KNAPSACK_LP__JAVA_ILP = eINSTANCE.getKnapsackLp_JavaILP();
-
-		/**
-		 * The meta object literal for the '<em><b>Neos</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference KNAPSACK_LP__NEOS = eINSTANCE.getKnapsackLp_Neos();
-
-		/**
 		 * The meta object literal for the '<em><b>Reader</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4241,12 +2353,12 @@ public interface TousesolverPackage extends EPackage {
 		EReference KNAPSACK_LP__READER = eINSTANCE.getKnapsackLp_Reader();
 
 		/**
-		 * The meta object literal for the '<em><b>Cplex</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Solver</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference KNAPSACK_LP__CPLEX = eINSTANCE.getKnapsackLp_Cplex();
+		EReference KNAPSACK_LP__SOLVER = eINSTANCE.getKnapsackLp_Solver();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.solver.tousesolver.impl.LpRootImpl <em>Lp Root</em>}' class.
@@ -4347,36 +2459,6 @@ public interface TousesolverPackage extends EPackage {
 		EClass CONS_KNAPSACK_CAPACITY = eINSTANCE.getConsKnapsackCapacity();
 
 		/**
-		 * The meta object literal for the '{@link com.misc.touse.moplaf.solver.tousesolver.impl.SolverToUseGLPKImpl <em>Solver To Use GLPK</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see com.misc.touse.moplaf.solver.tousesolver.impl.SolverToUseGLPKImpl
-		 * @see com.misc.touse.moplaf.solver.tousesolver.impl.TousesolverPackageImpl#getSolverToUseGLPK()
-		 * @generated
-		 */
-		EClass SOLVER_TO_USE_GLPK = eINSTANCE.getSolverToUseGLPK();
-
-		/**
-		 * The meta object literal for the '{@link com.misc.touse.moplaf.solver.tousesolver.impl.SolverToUseJavaILPImpl <em>Solver To Use Java ILP</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see com.misc.touse.moplaf.solver.tousesolver.impl.SolverToUseJavaILPImpl
-		 * @see com.misc.touse.moplaf.solver.tousesolver.impl.TousesolverPackageImpl#getSolverToUseJavaILP()
-		 * @generated
-		 */
-		EClass SOLVER_TO_USE_JAVA_ILP = eINSTANCE.getSolverToUseJavaILP();
-
-		/**
-		 * The meta object literal for the '{@link com.misc.touse.moplaf.solver.tousesolver.impl.SolverToUseNeosImpl <em>Solver To Use Neos</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see com.misc.touse.moplaf.solver.tousesolver.impl.SolverToUseNeosImpl
-		 * @see com.misc.touse.moplaf.solver.tousesolver.impl.TousesolverPackageImpl#getSolverToUseNeos()
-		 * @generated
-		 */
-		EClass SOLVER_TO_USE_NEOS = eINSTANCE.getSolverToUseNeos();
-
-		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.solver.tousesolver.impl.SolutionReaderToUseImpl <em>Solution Reader To Use</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4385,16 +2467,6 @@ public interface TousesolverPackage extends EPackage {
 		 * @generated
 		 */
 		EClass SOLUTION_READER_TO_USE = eINSTANCE.getSolutionReaderToUse();
-
-		/**
-		 * The meta object literal for the '{@link com.misc.touse.moplaf.solver.tousesolver.impl.SolverToUserCplexImpl <em>Solver To User Cplex</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see com.misc.touse.moplaf.solver.tousesolver.impl.SolverToUserCplexImpl
-		 * @see com.misc.touse.moplaf.solver.tousesolver.impl.TousesolverPackageImpl#getSolverToUserCplex()
-		 * @generated
-		 */
-		EClass SOLVER_TO_USER_CPLEX = eINSTANCE.getSolverToUserCplex();
 
 	}
 
