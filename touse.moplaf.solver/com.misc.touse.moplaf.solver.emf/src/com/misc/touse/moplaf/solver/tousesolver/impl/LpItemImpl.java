@@ -3,12 +3,14 @@
 package com.misc.touse.moplaf.solver.tousesolver.impl;
 
 import com.misc.common.moplaf.solver.EnumLpVarType;
+import com.misc.common.moplaf.solver.GeneratorLpVar;
+import com.misc.common.moplaf.solver.SolverFactory;
 import com.misc.common.moplaf.solver.impl.GeneratorTupleImpl;
 import com.misc.touse.moplaf.solver.tousesolver.Item;
 import com.misc.touse.moplaf.solver.tousesolver.LpItem;
 import com.misc.touse.moplaf.solver.tousesolver.TousesolverFactory;
 import com.misc.touse.moplaf.solver.tousesolver.TousesolverPackage;
-import com.misc.touse.moplaf.solver.tousesolver.VarItemInKnapsack;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
@@ -48,7 +50,7 @@ public class LpItemImpl extends GeneratorTupleImpl implements LpItem {
 	 * @generated
 	 * @ordered
 	 */
-	protected VarItemInKnapsack varInKnapsack;
+	protected GeneratorLpVar varInKnapsack;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -112,7 +114,7 @@ public class LpItemImpl extends GeneratorTupleImpl implements LpItem {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VarItemInKnapsack getVarInKnapsack() {
+	public GeneratorLpVar getVarInKnapsack() {
 		return varInKnapsack;
 	}
 
@@ -121,8 +123,8 @@ public class LpItemImpl extends GeneratorTupleImpl implements LpItem {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetVarInKnapsack(VarItemInKnapsack newVarInKnapsack, NotificationChain msgs) {
-		VarItemInKnapsack oldVarInKnapsack = varInKnapsack;
+	public NotificationChain basicSetVarInKnapsack(GeneratorLpVar newVarInKnapsack, NotificationChain msgs) {
+		GeneratorLpVar oldVarInKnapsack = varInKnapsack;
 		varInKnapsack = newVarInKnapsack;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TousesolverPackage.LP_ITEM__VAR_IN_KNAPSACK, oldVarInKnapsack, newVarInKnapsack);
@@ -136,7 +138,7 @@ public class LpItemImpl extends GeneratorTupleImpl implements LpItem {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVarInKnapsack(VarItemInKnapsack newVarInKnapsack) {
+	public void setVarInKnapsack(GeneratorLpVar newVarInKnapsack) {
 		if (newVarInKnapsack != varInKnapsack) {
 			NotificationChain msgs = null;
 			if (varInKnapsack != null)
@@ -193,7 +195,7 @@ public class LpItemImpl extends GeneratorTupleImpl implements LpItem {
 				setItem((Item)newValue);
 				return;
 			case TousesolverPackage.LP_ITEM__VAR_IN_KNAPSACK:
-				setVarInKnapsack((VarItemInKnapsack)newValue);
+				setVarInKnapsack((GeneratorLpVar)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -211,7 +213,7 @@ public class LpItemImpl extends GeneratorTupleImpl implements LpItem {
 				setItem((Item)null);
 				return;
 			case TousesolverPackage.LP_ITEM__VAR_IN_KNAPSACK:
-				setVarInKnapsack((VarItemInKnapsack)null);
+				setVarInKnapsack((GeneratorLpVar)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -238,7 +240,7 @@ public class LpItemImpl extends GeneratorTupleImpl implements LpItem {
 		super.generateVars();
 		
 		Item lpitem = this.getItem();
-		VarItemInKnapsack var = TousesolverFactory.eINSTANCE.createVarItemInKnapsack();
+		GeneratorLpVar var = SolverFactory.eINSTANCE.createGeneratorLpVar();
     	var.setType(EnumLpVarType.ENUM_LITERAL_LP_VAR_INTEGER);;
     	var.setLowerBound(0.0f);
     	var.setUpperBound(1.0f);

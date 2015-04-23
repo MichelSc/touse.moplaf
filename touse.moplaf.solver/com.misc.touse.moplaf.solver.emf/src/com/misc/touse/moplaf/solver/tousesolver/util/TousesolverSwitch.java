@@ -3,13 +3,8 @@
 package com.misc.touse.moplaf.solver.tousesolver.util;
 
 import com.misc.common.moplaf.solver.Generator;
-import com.misc.common.moplaf.solver.GeneratorCons;
 import com.misc.common.moplaf.solver.GeneratorElement;
-import com.misc.common.moplaf.solver.GeneratorLpCons;
-import com.misc.common.moplaf.solver.GeneratorLpVar;
 import com.misc.common.moplaf.solver.GeneratorTuple;
-import com.misc.common.moplaf.solver.GeneratorTupleElement;
-import com.misc.common.moplaf.solver.GeneratorVar;
 import com.misc.common.moplaf.solver.IGeneratorTool;
 import com.misc.common.moplaf.solver.SolutionProvider;
 import com.misc.common.moplaf.solver.SolutionReader;
@@ -147,26 +142,6 @@ public class TousesolverSwitch<T> extends Switch<T> {
 				T result = caseLpItem(lpItem);
 				if (result == null) result = caseGeneratorTuple(lpItem);
 				if (result == null) result = caseGeneratorElement(lpItem);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case TousesolverPackage.VAR_ITEM_IN_KNAPSACK: {
-				VarItemInKnapsack varItemInKnapsack = (VarItemInKnapsack)theEObject;
-				T result = caseVarItemInKnapsack(varItemInKnapsack);
-				if (result == null) result = caseGeneratorLpVar(varItemInKnapsack);
-				if (result == null) result = caseGeneratorVar(varItemInKnapsack);
-				if (result == null) result = caseGeneratorTupleElement(varItemInKnapsack);
-				if (result == null) result = caseGeneratorElement(varItemInKnapsack);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case TousesolverPackage.CONS_KNAPSACK_CAPACITY: {
-				ConsKnapsackCapacity consKnapsackCapacity = (ConsKnapsackCapacity)theEObject;
-				T result = caseConsKnapsackCapacity(consKnapsackCapacity);
-				if (result == null) result = caseGeneratorLpCons(consKnapsackCapacity);
-				if (result == null) result = caseGeneratorCons(consKnapsackCapacity);
-				if (result == null) result = caseGeneratorTupleElement(consKnapsackCapacity);
-				if (result == null) result = caseGeneratorElement(consKnapsackCapacity);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -349,36 +324,6 @@ public class TousesolverSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Var Item In Knapsack</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Var Item In Knapsack</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseVarItemInKnapsack(VarItemInKnapsack object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Cons Knapsack Capacity</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Cons Knapsack Capacity</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseConsKnapsackCapacity(ConsKnapsackCapacity object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Solution Reader To Use</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -424,21 +369,6 @@ public class TousesolverSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Generator Tuple Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Generator Tuple Element</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGeneratorTupleElement(GeneratorTupleElement object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Generator Element</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -450,66 +380,6 @@ public class TousesolverSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGeneratorElement(GeneratorElement object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Generator Var</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Generator Var</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGeneratorVar(GeneratorVar object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Generator Lp Var</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Generator Lp Var</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGeneratorLpVar(GeneratorLpVar object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Generator Cons</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Generator Cons</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGeneratorCons(GeneratorCons object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Generator Lp Cons</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Generator Lp Cons</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGeneratorLpCons(GeneratorLpCons object) {
 		return null;
 	}
 

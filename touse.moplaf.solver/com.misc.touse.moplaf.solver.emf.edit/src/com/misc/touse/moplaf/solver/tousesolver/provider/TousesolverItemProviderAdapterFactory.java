@@ -325,52 +325,6 @@ public class TousesolverItemProviderAdapterFactory extends TousesolverAdapterFac
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.solver.tousesolver.VarItemInKnapsack} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected VarItemInKnapsackItemProvider varItemInKnapsackItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.misc.touse.moplaf.solver.tousesolver.VarItemInKnapsack}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createVarItemInKnapsackAdapter() {
-		if (varItemInKnapsackItemProvider == null) {
-			varItemInKnapsackItemProvider = new VarItemInKnapsackItemProvider(this);
-		}
-
-		return varItemInKnapsackItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.solver.tousesolver.ConsKnapsackCapacity} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ConsKnapsackCapacityItemProvider consKnapsackCapacityItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.misc.touse.moplaf.solver.tousesolver.ConsKnapsackCapacity}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createConsKnapsackCapacityAdapter() {
-		if (consKnapsackCapacityItemProvider == null) {
-			consKnapsackCapacityItemProvider = new ConsKnapsackCapacityItemProvider(this);
-		}
-
-		return consKnapsackCapacityItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.solver.tousesolver.SolutionReaderToUse} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -503,8 +457,6 @@ public class TousesolverItemProviderAdapterFactory extends TousesolverAdapterFac
 		if (lpRootItemProvider != null) lpRootItemProvider.dispose();
 		if (lpKnapsackItemProvider != null) lpKnapsackItemProvider.dispose();
 		if (lpItemItemProvider != null) lpItemItemProvider.dispose();
-		if (varItemInKnapsackItemProvider != null) varItemInKnapsackItemProvider.dispose();
-		if (consKnapsackCapacityItemProvider != null) consKnapsackCapacityItemProvider.dispose();
 		if (solutionReaderToUseItemProvider != null) solutionReaderToUseItemProvider.dispose();
 	}
 

@@ -66,14 +66,14 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="Knapsack" lowerBound="1"
         eType="#//Knapsack"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ConsCapacity" lowerBound="1"
-        eType="#//ConsKnapsackCapacity" containment="true"/>
+        eType="ecore:EClass ../../com.misc.common.moplaf.solver.emf/model/solver.ecore#//GeneratorLpCons"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LpItem" eSuperTypes="../../com.misc.common.moplaf.solver.emf/model/solver.ecore#//GeneratorTuple">
     <eStructuralFeatures xsi:type="ecore:EReference" name="Item" lowerBound="1" eType="#//Item"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="VarInKnapsack" lowerBound="1"
-        eType="#//VarItemInKnapsack" containment="true"/>
+        eType="ecore:EClass ../../com.misc.common.moplaf.solver.emf/model/solver.ecore#//GeneratorLpVar"
+        containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VarItemInKnapsack" eSuperTypes="../../com.misc.common.moplaf.solver.emf/model/solver.ecore#//GeneratorLpVar"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ConsKnapsackCapacity" eSuperTypes="../../com.misc.common.moplaf.solver.emf/model/solver.ecore#//GeneratorLpCons"/>
   <eClassifiers xsi:type="ecore:EClass" name="SolutionReaderToUse" eSuperTypes="../../com.misc.common.moplaf.solver.emf/model/solver.ecore#//SolutionReader"/>
 </ecore:EPackage>

@@ -2,6 +2,7 @@
  */
 package com.misc.touse.moplaf.solver.tousesolver;
 
+import com.misc.common.moplaf.solver.GeneratorLpVar;
 import com.misc.common.moplaf.solver.GeneratorTuple;
 
 /**
@@ -57,12 +58,12 @@ public interface LpItem extends GeneratorTuple {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Var In Knapsack</em>' containment reference.
-	 * @see #setVarInKnapsack(VarItemInKnapsack)
+	 * @see #setVarInKnapsack(GeneratorLpVar)
 	 * @see com.misc.touse.moplaf.solver.tousesolver.TousesolverPackage#getLpItem_VarInKnapsack()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	VarItemInKnapsack getVarInKnapsack();
+	GeneratorLpVar getVarInKnapsack();
 
 	/**
 	 * Sets the value of the '{@link com.misc.touse.moplaf.solver.tousesolver.LpItem#getVarInKnapsack <em>Var In Knapsack</em>}' containment reference.
@@ -72,6 +73,6 @@ public interface LpItem extends GeneratorTuple {
 	 * @see #getVarInKnapsack()
 	 * @generated
 	 */
-	void setVarInKnapsack(VarItemInKnapsack value);
+	void setVarInKnapsack(GeneratorLpVar value);
 
 } // LpItem

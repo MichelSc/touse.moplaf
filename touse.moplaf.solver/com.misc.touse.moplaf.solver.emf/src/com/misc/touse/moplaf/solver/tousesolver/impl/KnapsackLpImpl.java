@@ -2,6 +2,7 @@
  */
 package com.misc.touse.moplaf.solver.tousesolver.impl;
 
+import com.misc.common.moplaf.solver.GeneratorLpVar;
 import com.misc.common.moplaf.solver.Solution;
 import com.misc.common.moplaf.solver.Solver;
 import com.misc.common.moplaf.solver.impl.GeneratorImpl;
@@ -14,8 +15,9 @@ import com.misc.touse.moplaf.solver.tousesolver.Scenario;
 import com.misc.touse.moplaf.solver.tousesolver.SolutionReaderToUse;
 import com.misc.touse.moplaf.solver.tousesolver.TousesolverFactory;
 import com.misc.touse.moplaf.solver.tousesolver.TousesolverPackage;
-import com.misc.touse.moplaf.solver.tousesolver.VarItemInKnapsack;
+
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -362,7 +364,7 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 		float totalvalue = 0.0f;
 		float totalweight = 0.0f;
 		for ( LpItem lpitem : this.getRoot().getItem()){
-			VarItemInKnapsack var = lpitem.getVarInKnapsack();
+			GeneratorLpVar var = lpitem.getVarInKnapsack();
 			if ( var.isSolutionOne(solution)){
 				Item item = lpitem.getItem();
 				sol.getItem().add(item);

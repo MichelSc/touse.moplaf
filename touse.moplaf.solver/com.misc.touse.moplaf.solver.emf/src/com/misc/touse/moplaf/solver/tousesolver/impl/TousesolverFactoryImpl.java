@@ -67,8 +67,6 @@ public class TousesolverFactoryImpl extends EFactoryImpl implements TousesolverF
 			case TousesolverPackage.LP_ROOT: return createLpRoot();
 			case TousesolverPackage.LP_KNAPSACK: return createLpKnapsack();
 			case TousesolverPackage.LP_ITEM: return createLpItem();
-			case TousesolverPackage.VAR_ITEM_IN_KNAPSACK: return createVarItemInKnapsack();
-			case TousesolverPackage.CONS_KNAPSACK_CAPACITY: return createConsKnapsackCapacity();
 			case TousesolverPackage.SOLUTION_READER_TO_USE: return createSolutionReaderToUse();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -183,26 +181,6 @@ public class TousesolverFactoryImpl extends EFactoryImpl implements TousesolverF
 	public LpItem createLpItem() {
 		LpItemImpl lpItem = new LpItemImpl();
 		return lpItem;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public VarItemInKnapsack createVarItemInKnapsack() {
-		VarItemInKnapsackImpl varItemInKnapsack = new VarItemInKnapsackImpl();
-		return varItemInKnapsack;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ConsKnapsackCapacity createConsKnapsackCapacity() {
-		ConsKnapsackCapacityImpl consKnapsackCapacity = new ConsKnapsackCapacityImpl();
-		return consKnapsackCapacity;
 	}
 
 	/**

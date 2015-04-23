@@ -3,11 +3,13 @@
 package com.misc.touse.moplaf.solver.tousesolver.impl;
 
 import com.misc.common.moplaf.solver.EnumLpConsType;
+import com.misc.common.moplaf.solver.GeneratorLpCons;
+import com.misc.common.moplaf.solver.SolverFactory;
 import com.misc.common.moplaf.solver.impl.GeneratorTupleImpl;
-import com.misc.touse.moplaf.solver.tousesolver.ConsKnapsackCapacity;
 import com.misc.touse.moplaf.solver.tousesolver.Knapsack;
+import com.misc.touse.moplaf.solver.tousesolver.LpItem;
 import com.misc.touse.moplaf.solver.tousesolver.LpKnapsack;
-import com.misc.touse.moplaf.solver.tousesolver.TousesolverFactory;
+import com.misc.touse.moplaf.solver.tousesolver.LpRoot;
 import com.misc.touse.moplaf.solver.tousesolver.TousesolverPackage;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -48,7 +50,7 @@ public class LpKnapsackImpl extends GeneratorTupleImpl implements LpKnapsack {
 	 * @generated
 	 * @ordered
 	 */
-	protected ConsKnapsackCapacity consCapacity;
+	protected GeneratorLpCons consCapacity;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -112,7 +114,7 @@ public class LpKnapsackImpl extends GeneratorTupleImpl implements LpKnapsack {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ConsKnapsackCapacity getConsCapacity() {
+	public GeneratorLpCons getConsCapacity() {
 		return consCapacity;
 	}
 
@@ -121,8 +123,8 @@ public class LpKnapsackImpl extends GeneratorTupleImpl implements LpKnapsack {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetConsCapacity(ConsKnapsackCapacity newConsCapacity, NotificationChain msgs) {
-		ConsKnapsackCapacity oldConsCapacity = consCapacity;
+	public NotificationChain basicSetConsCapacity(GeneratorLpCons newConsCapacity, NotificationChain msgs) {
+		GeneratorLpCons oldConsCapacity = consCapacity;
 		consCapacity = newConsCapacity;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TousesolverPackage.LP_KNAPSACK__CONS_CAPACITY, oldConsCapacity, newConsCapacity);
@@ -136,7 +138,7 @@ public class LpKnapsackImpl extends GeneratorTupleImpl implements LpKnapsack {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setConsCapacity(ConsKnapsackCapacity newConsCapacity) {
+	public void setConsCapacity(GeneratorLpCons newConsCapacity) {
 		if (newConsCapacity != consCapacity) {
 			NotificationChain msgs = null;
 			if (consCapacity != null)
@@ -193,7 +195,7 @@ public class LpKnapsackImpl extends GeneratorTupleImpl implements LpKnapsack {
 				setKnapsack((Knapsack)newValue);
 				return;
 			case TousesolverPackage.LP_KNAPSACK__CONS_CAPACITY:
-				setConsCapacity((ConsKnapsackCapacity)newValue);
+				setConsCapacity((GeneratorLpCons)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -211,7 +213,7 @@ public class LpKnapsackImpl extends GeneratorTupleImpl implements LpKnapsack {
 				setKnapsack((Knapsack)null);
 				return;
 			case TousesolverPackage.LP_KNAPSACK__CONS_CAPACITY:
-				setConsCapacity((ConsKnapsackCapacity)null);
+				setConsCapacity((GeneratorLpCons)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -236,13 +238,21 @@ public class LpKnapsackImpl extends GeneratorTupleImpl implements LpKnapsack {
 	@Override
 	public void generateCons() {
 		super.generateLpCons();
+		this.generateLpConsCapacity();
 
+	}
+	
+	public void generateLpConsCapacity(){
 		Knapsack knapsack = this.getKnapsack();
-		ConsKnapsackCapacity cons = TousesolverFactory.eINSTANCE.createConsKnapsackCapacity();
+		GeneratorLpCons cons = SolverFactory.eINSTANCE.createGeneratorLpCons();
 		cons.setType(EnumLpConsType.ENUM_LITERAL_LP_CONS_SMALLER_OR_EQUAL);
 		cons.setRighHandSide(knapsack.getCapacity());
 		cons.setName("capac");
 		this.setConsCapacity(cons); //owning
+		LpRoot lproot = (LpRoot)this.getTupleContainer();
+		for (LpItem lpitem : lproot.getItem()){
+			cons.constructTerm(lpitem.getVarInKnapsack(), lpitem.getItem().getWeight());
+		}
 	}
 
 

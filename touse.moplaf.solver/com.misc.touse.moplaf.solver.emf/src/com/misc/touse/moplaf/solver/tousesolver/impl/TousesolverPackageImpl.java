@@ -3,8 +3,6 @@
 package com.misc.touse.moplaf.solver.tousesolver.impl;
 
 import com.misc.common.moplaf.solver.SolverPackage;
-import com.misc.common.moplaf.solver.solvercplex.SolvercplexPackage;
-import com.misc.touse.moplaf.solver.tousesolver.ConsKnapsackCapacity;
 import com.misc.touse.moplaf.solver.tousesolver.Domain;
 import com.misc.touse.moplaf.solver.tousesolver.DomainObject;
 import com.misc.touse.moplaf.solver.tousesolver.DomainObjectFolder;
@@ -19,7 +17,6 @@ import com.misc.touse.moplaf.solver.tousesolver.Scenario;
 import com.misc.touse.moplaf.solver.tousesolver.SolutionReaderToUse;
 import com.misc.touse.moplaf.solver.tousesolver.TousesolverFactory;
 import com.misc.touse.moplaf.solver.tousesolver.TousesolverPackage;
-import com.misc.touse.moplaf.solver.tousesolver.VarItemInKnapsack;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -115,20 +112,6 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass varItemInKnapsackEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass consKnapsackCapacityEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass solutionReaderToUseEClass = null;
 
 	/**
@@ -178,7 +161,7 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 		isInited = true;
 
 		// Initialize simple dependencies
-		SolvercplexPackage.eINSTANCE.eClass();
+		SolverPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theTousesolverPackage.createPackageContents();
@@ -578,24 +561,6 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getVarItemInKnapsack() {
-		return varItemInKnapsackEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getConsKnapsackCapacity() {
-		return consKnapsackCapacityEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getSolutionReaderToUse() {
 		return solutionReaderToUseEClass;
 	}
@@ -681,10 +646,6 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 		createEReference(lpItemEClass, LP_ITEM__ITEM);
 		createEReference(lpItemEClass, LP_ITEM__VAR_IN_KNAPSACK);
 
-		varItemInKnapsackEClass = createEClass(VAR_ITEM_IN_KNAPSACK);
-
-		consKnapsackCapacityEClass = createEClass(CONS_KNAPSACK_CAPACITY);
-
 		solutionReaderToUseEClass = createEClass(SOLUTION_READER_TO_USE);
 	}
 
@@ -725,8 +686,6 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 		lpRootEClass.getESuperTypes().add(theSolverPackage.getGeneratorTuple());
 		lpKnapsackEClass.getESuperTypes().add(theSolverPackage.getGeneratorTuple());
 		lpItemEClass.getESuperTypes().add(theSolverPackage.getGeneratorTuple());
-		varItemInKnapsackEClass.getESuperTypes().add(theSolverPackage.getGeneratorLpVar());
-		consKnapsackCapacityEClass.getESuperTypes().add(theSolverPackage.getGeneratorLpCons());
 		solutionReaderToUseEClass.getESuperTypes().add(theSolverPackage.getSolutionReader());
 
 		// Initialize classes, features, and operations; add parameters
@@ -777,15 +736,11 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 
 		initEClass(lpKnapsackEClass, LpKnapsack.class, "LpKnapsack", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLpKnapsack_Knapsack(), this.getKnapsack(), null, "Knapsack", null, 1, 1, LpKnapsack.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLpKnapsack_ConsCapacity(), this.getConsKnapsackCapacity(), null, "ConsCapacity", null, 1, 1, LpKnapsack.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLpKnapsack_ConsCapacity(), theSolverPackage.getGeneratorLpCons(), null, "ConsCapacity", null, 1, 1, LpKnapsack.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(lpItemEClass, LpItem.class, "LpItem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLpItem_Item(), this.getItem(), null, "Item", null, 1, 1, LpItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLpItem_VarInKnapsack(), this.getVarItemInKnapsack(), null, "VarInKnapsack", null, 1, 1, LpItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(varItemInKnapsackEClass, VarItemInKnapsack.class, "VarItemInKnapsack", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(consKnapsackCapacityEClass, ConsKnapsackCapacity.class, "ConsKnapsackCapacity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getLpItem_VarInKnapsack(), theSolverPackage.getGeneratorLpVar(), null, "VarInKnapsack", null, 1, 1, LpItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(solutionReaderToUseEClass, SolutionReaderToUse.class, "SolutionReaderToUse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

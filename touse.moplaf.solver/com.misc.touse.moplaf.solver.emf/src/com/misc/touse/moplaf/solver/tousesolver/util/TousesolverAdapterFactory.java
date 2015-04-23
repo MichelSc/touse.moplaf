@@ -3,13 +3,8 @@
 package com.misc.touse.moplaf.solver.tousesolver.util;
 
 import com.misc.common.moplaf.solver.Generator;
-import com.misc.common.moplaf.solver.GeneratorCons;
 import com.misc.common.moplaf.solver.GeneratorElement;
-import com.misc.common.moplaf.solver.GeneratorLpCons;
-import com.misc.common.moplaf.solver.GeneratorLpVar;
 import com.misc.common.moplaf.solver.GeneratorTuple;
-import com.misc.common.moplaf.solver.GeneratorTupleElement;
-import com.misc.common.moplaf.solver.GeneratorVar;
 import com.misc.common.moplaf.solver.IGeneratorTool;
 import com.misc.common.moplaf.solver.SolutionProvider;
 import com.misc.common.moplaf.solver.SolutionReader;
@@ -120,14 +115,6 @@ public class TousesolverAdapterFactory extends AdapterFactoryImpl {
 				return createLpItemAdapter();
 			}
 			@Override
-			public Adapter caseVarItemInKnapsack(VarItemInKnapsack object) {
-				return createVarItemInKnapsackAdapter();
-			}
-			@Override
-			public Adapter caseConsKnapsackCapacity(ConsKnapsackCapacity object) {
-				return createConsKnapsackCapacityAdapter();
-			}
-			@Override
 			public Adapter caseSolutionReaderToUse(SolutionReaderToUse object) {
 				return createSolutionReaderToUseAdapter();
 			}
@@ -142,26 +129,6 @@ public class TousesolverAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseGeneratorTuple(GeneratorTuple object) {
 				return createGeneratorTupleAdapter();
-			}
-			@Override
-			public Adapter caseGeneratorTupleElement(GeneratorTupleElement object) {
-				return createGeneratorTupleElementAdapter();
-			}
-			@Override
-			public Adapter caseGeneratorVar(GeneratorVar object) {
-				return createGeneratorVarAdapter();
-			}
-			@Override
-			public Adapter caseGeneratorLpVar(GeneratorLpVar object) {
-				return createGeneratorLpVarAdapter();
-			}
-			@Override
-			public Adapter caseGeneratorCons(GeneratorCons object) {
-				return createGeneratorConsAdapter();
-			}
-			@Override
-			public Adapter caseGeneratorLpCons(GeneratorLpCons object) {
-				return createGeneratorLpConsAdapter();
 			}
 			@Override
 			public Adapter caseIGeneratorTool(IGeneratorTool object) {
@@ -350,34 +317,6 @@ public class TousesolverAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.solver.tousesolver.VarItemInKnapsack <em>Var Item In Knapsack</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.touse.moplaf.solver.tousesolver.VarItemInKnapsack
-	 * @generated
-	 */
-	public Adapter createVarItemInKnapsackAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.solver.tousesolver.ConsKnapsackCapacity <em>Cons Knapsack Capacity</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.touse.moplaf.solver.tousesolver.ConsKnapsackCapacity
-	 * @generated
-	 */
-	public Adapter createConsKnapsackCapacityAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.solver.tousesolver.SolutionReaderToUse <em>Solution Reader To Use</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -420,20 +359,6 @@ public class TousesolverAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.solver.GeneratorTupleElement <em>Generator Tuple Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.solver.GeneratorTupleElement
-	 * @generated
-	 */
-	public Adapter createGeneratorTupleElementAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.solver.GeneratorElement <em>Generator Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -444,62 +369,6 @@ public class TousesolverAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGeneratorElementAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.solver.GeneratorVar <em>Generator Var</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.solver.GeneratorVar
-	 * @generated
-	 */
-	public Adapter createGeneratorVarAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.solver.GeneratorLpVar <em>Generator Lp Var</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.solver.GeneratorLpVar
-	 * @generated
-	 */
-	public Adapter createGeneratorLpVarAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.solver.GeneratorCons <em>Generator Cons</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.solver.GeneratorCons
-	 * @generated
-	 */
-	public Adapter createGeneratorConsAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.solver.GeneratorLpCons <em>Generator Lp Cons</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.solver.GeneratorLpCons
-	 * @generated
-	 */
-	public Adapter createGeneratorLpConsAdapter() {
 		return null;
 	}
 

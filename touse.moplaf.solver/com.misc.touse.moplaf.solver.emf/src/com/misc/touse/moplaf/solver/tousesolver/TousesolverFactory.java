@@ -121,24 +121,6 @@ public interface TousesolverFactory extends EFactory {
 	LpItem createLpItem();
 
 	/**
-	 * Returns a new object of class '<em>Var Item In Knapsack</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Var Item In Knapsack</em>'.
-	 * @generated
-	 */
-	VarItemInKnapsack createVarItemInKnapsack();
-
-	/**
-	 * Returns a new object of class '<em>Cons Knapsack Capacity</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Cons Knapsack Capacity</em>'.
-	 * @generated
-	 */
-	ConsKnapsackCapacity createConsKnapsackCapacity();
-
-	/**
 	 * Returns a new object of class '<em>Solution Reader To Use</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

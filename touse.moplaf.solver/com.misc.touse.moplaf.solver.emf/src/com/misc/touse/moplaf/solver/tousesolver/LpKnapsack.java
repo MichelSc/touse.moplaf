@@ -2,6 +2,7 @@
  */
 package com.misc.touse.moplaf.solver.tousesolver;
 
+import com.misc.common.moplaf.solver.GeneratorLpCons;
 import com.misc.common.moplaf.solver.GeneratorTuple;
 
 /**
@@ -57,12 +58,12 @@ public interface LpKnapsack extends GeneratorTuple {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Cons Capacity</em>' containment reference.
-	 * @see #setConsCapacity(ConsKnapsackCapacity)
+	 * @see #setConsCapacity(GeneratorLpCons)
 	 * @see com.misc.touse.moplaf.solver.tousesolver.TousesolverPackage#getLpKnapsack_ConsCapacity()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	ConsKnapsackCapacity getConsCapacity();
+	GeneratorLpCons getConsCapacity();
 
 	/**
 	 * Sets the value of the '{@link com.misc.touse.moplaf.solver.tousesolver.LpKnapsack#getConsCapacity <em>Cons Capacity</em>}' containment reference.
@@ -72,6 +73,6 @@ public interface LpKnapsack extends GeneratorTuple {
 	 * @see #getConsCapacity()
 	 * @generated
 	 */
-	void setConsCapacity(ConsKnapsackCapacity value);
+	void setConsCapacity(GeneratorLpCons value);
 
 } // LpKnapsack

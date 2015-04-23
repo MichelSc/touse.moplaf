@@ -35,8 +35,6 @@ public class TousesolverTests extends TestSuite {
 		suite.addTestSuite(LpRootTest.class);
 		suite.addTestSuite(LpKnapsackTest.class);
 		suite.addTestSuite(LpItemTest.class);
-		suite.addTestSuite(VarItemInKnapsackTest.class);
-		suite.addTestSuite(ConsKnapsackCapacityTest.class);
 		suite.addTestSuite(SolutionReaderToUseTest.class);
 		return suite;
 	}
