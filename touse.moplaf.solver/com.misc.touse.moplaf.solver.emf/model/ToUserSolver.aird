@@ -836,7 +836,7 @@
             <children xmi:type="notation:Node" xmi:id="_Y9_qwqR3EeSvgYcFJCUUvQ" type="6003">
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Y9_qw6R3EeSvgYcFJCUUvQ" y="10"/>
             </children>
-            <styles xmi:type="notation:ConnectorStyle" xmi:id="_Y9_DsaR3EeSvgYcFJCUUvQ" routing="Rectilinear" jumpLinkStatus="Above"/>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_Y9_DsaR3EeSvgYcFJCUUvQ" jumpLinkStatus="Above"/>
             <styles xmi:type="notation:FontStyle" xmi:id="_Y9_DsqR3EeSvgYcFJCUUvQ" fontName="Sans Serif" fontHeight="8"/>
             <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Y9_Ds6R3EeSvgYcFJCUUvQ" points="[179, 161, 179, 161]$[467, 173, 467, 173]"/>
             <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Y9_qxKR3EeSvgYcFJCUUvQ" id="(0.5,0.5)"/>
@@ -900,7 +900,7 @@
             <children xmi:type="notation:Node" xmi:id="_hD8HUOhIEeSJKYVzzspxSw" type="6003">
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hD8HUehIEeSJKYVzzspxSw" y="10"/>
             </children>
-            <styles xmi:type="notation:ConnectorStyle" xmi:id="_hD7gQehIEeSJKYVzzspxSw" routing="Rectilinear" jumpLinkStatus="Above"/>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_hD7gQehIEeSJKYVzzspxSw" jumpLinkStatus="Above"/>
             <styles xmi:type="notation:FontStyle" xmi:id="_hD7gQuhIEeSJKYVzzspxSw" fontColor="7490599" fontName="Sans Serif" fontHeight="8"/>
             <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_hD7gQ-hIEeSJKYVzzspxSw" points="[468, 144, 468, 144]$[842, 217, 842, 217]"/>
             <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_hD8HUuhIEeSJKYVzzspxSw" id="(0.5,0.5)"/>
@@ -916,7 +916,7 @@
             <children xmi:type="notation:Node" xmi:id="_dK3h4OnmEeSv1KnW97doOg" type="6003">
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dK3h4enmEeSv1KnW97doOg" y="10"/>
             </children>
-            <styles xmi:type="notation:ConnectorStyle" xmi:id="_dKz3genmEeSv1KnW97doOg" routing="Rectilinear" jumpLinkStatus="Above"/>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_dKz3genmEeSv1KnW97doOg" jumpLinkStatus="Above"/>
             <styles xmi:type="notation:FontStyle" xmi:id="_dKz3gunmEeSv1KnW97doOg" fontColor="7490599" fontName="Sans Serif" fontHeight="8"/>
             <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_dKz3g-nmEeSv1KnW97doOg" points="[607, 488, 607, 488]$[295, 643, 295, 643]"/>
             <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_dK8aYOnmEeSv1KnW97doOg" id="(0.5,0.5)"/>
@@ -932,7 +932,7 @@
             <children xmi:type="notation:Node" xmi:id="_fDrdqOnmEeSv1KnW97doOg" type="6003">
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fDrdqenmEeSv1KnW97doOg" y="10"/>
             </children>
-            <styles xmi:type="notation:ConnectorStyle" xmi:id="_fDrdoenmEeSv1KnW97doOg" routing="Rectilinear" jumpLinkStatus="Above"/>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_fDrdoenmEeSv1KnW97doOg" jumpLinkStatus="Above"/>
             <styles xmi:type="notation:FontStyle" xmi:id="_fDrdounmEeSv1KnW97doOg" fontColor="7490599" fontName="Sans Serif" fontHeight="8"/>
             <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_fDrdo-nmEeSv1KnW97doOg" points="[346, 484, 346, 484]$[318, 716, 318, 716]"/>
             <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fDsEsOnmEeSv1KnW97doOg" id="(0.5,0.5)"/>
@@ -948,7 +948,7 @@
             <children xmi:type="notation:Node" xmi:id="_-joyiOnoEeSv1KnW97doOg" type="6003">
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-joyienoEeSv1KnW97doOg" y="10"/>
             </children>
-            <styles xmi:type="notation:ConnectorStyle" xmi:id="_-joygenoEeSv1KnW97doOg" routing="Rectilinear" jumpLinkStatus="Above"/>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_-joygenoEeSv1KnW97doOg" jumpLinkStatus="Above"/>
             <styles xmi:type="notation:FontStyle" xmi:id="_-joygunoEeSv1KnW97doOg" fontColor="7490599" fontName="Sans Serif" fontHeight="8"/>
             <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_-joyg-noEeSv1KnW97doOg" points="[156, 732, 156, 732]$[549, 823, 549, 823]"/>
             <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-jpZkOnoEeSv1KnW97doOg" id="(0.5,0.5)"/>
@@ -964,7 +964,7 @@
             <children xmi:type="notation:Node" xmi:id="_-jqAoOnoEeSv1KnW97doOg" type="6003">
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-jqAoenoEeSv1KnW97doOg" y="10"/>
             </children>
-            <styles xmi:type="notation:ConnectorStyle" xmi:id="_-jpZk-noEeSv1KnW97doOg" routing="Rectilinear" jumpLinkStatus="Above"/>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_-jpZk-noEeSv1KnW97doOg" jumpLinkStatus="Above"/>
             <styles xmi:type="notation:FontStyle" xmi:id="_-jpZlOnoEeSv1KnW97doOg" fontColor="7490599" fontName="Sans Serif" fontHeight="8"/>
             <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_-jpZlenoEeSv1KnW97doOg" points="[549, 823, 549, 823]$[624, 744, 624, 744]"/>
             <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-jqAounoEeSv1KnW97doOg" id="(0.5,0.5)"/>
@@ -1246,7 +1246,8 @@
         <target xmi:type="ecore:EReference" href="ToUserSolver.ecore#//Scenario/LP"/>
         <semanticElements xmi:type="ecore:EReference" href="ToUserSolver.ecore#//Scenario/LP"/>
         <semanticElements xmi:type="ecore:EReference" href="ToUserSolver.ecore#//KnapsackLp/Scenario"/>
-        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_Nv4upuhGEeSJKYVzzspxSw" description="_Nv4uouhGEeSJKYVzzspxSw" sourceArrow="FillDiamond" routingStyle="manhattan">
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_Nv4upuhGEeSJKYVzzspxSw" description="_Nv4uouhGEeSJKYVzzspxSw" sourceArrow="FillDiamond">
+          <customFeatures>routingStyle</customFeatures>
           <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_Nv4up-hGEeSJKYVzzspxSw"/>
           <beginLabelStyle xmi:type="diagram:BeginLabelStyle" xmi:id="_Nv4uqOhGEeSJKYVzzspxSw" showIcon="false">
             <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_Nv4uqehGEeSJKYVzzspxSw"/>
@@ -1630,7 +1631,8 @@
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_hDvTAOhIEeSJKYVzzspxSw" name="[0..*] Solver" sourceNode="_Y9yPYKR3EeSvgYcFJCUUvQ" targetNode="_hDSnEOhIEeSJKYVzzspxSw">
         <target xmi:type="ecore:EReference" href="ToUserSolver.ecore#//KnapsackLp/Solver"/>
         <semanticElements xmi:type="ecore:EReference" href="ToUserSolver.ecore#//KnapsackLp/Solver"/>
-        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_hDv6FuhIEeSJKYVzzspxSw" description="_hDv6EuhIEeSJKYVzzspxSw" sourceArrow="FillDiamond" routingStyle="manhattan">
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_hDv6FuhIEeSJKYVzzspxSw" description="_hDv6EuhIEeSJKYVzzspxSw" sourceArrow="FillDiamond">
+          <customFeatures>routingStyle</customFeatures>
           <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_hDv6F-hIEeSJKYVzzspxSw"/>
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_hDv6GOhIEeSJKYVzzspxSw" showIcon="false">
             <customFeatures>labelSize</customFeatures>
@@ -1704,7 +1706,8 @@
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_dKJwMOnmEeSv1KnW97doOg" name="[1..1] VarInKnapsack" sourceNode="_bn8vkKR3EeSvgYcFJCUUvQ" targetNode="_dJdzsOnmEeSv1KnW97doOg">
         <target xmi:type="ecore:EReference" href="ToUserSolver.ecore#//LpItem/VarInKnapsack"/>
         <semanticElements xmi:type="ecore:EReference" href="ToUserSolver.ecore#//LpItem/VarInKnapsack"/>
-        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_dKK-VOnmEeSv1KnW97doOg" description="_dKK-UOnmEeSv1KnW97doOg" sourceArrow="FillDiamond" routingStyle="manhattan">
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_dKK-VOnmEeSv1KnW97doOg" description="_dKK-UOnmEeSv1KnW97doOg" sourceArrow="FillDiamond">
+          <customFeatures>routingStyle</customFeatures>
           <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_dKK-VenmEeSv1KnW97doOg"/>
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_dKK-VunmEeSv1KnW97doOg" labelFormat="bold" showIcon="false">
             <customFeatures>labelSize</customFeatures>
@@ -1773,7 +1776,8 @@
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_fDhsoOnmEeSv1KnW97doOg" name="[1..1] ConsCapacity" sourceNode="_bKdiUKR3EeSvgYcFJCUUvQ" targetNode="_fDEZoOnmEeSv1KnW97doOg">
         <target xmi:type="ecore:EReference" href="ToUserSolver.ecore#//LpKnapsack/ConsCapacity"/>
         <semanticElements xmi:type="ecore:EReference" href="ToUserSolver.ecore#//LpKnapsack/ConsCapacity"/>
-        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_fDiTtunmEeSv1KnW97doOg" description="_fDiTsunmEeSv1KnW97doOg" sourceArrow="FillDiamond" routingStyle="manhattan">
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_fDiTtunmEeSv1KnW97doOg" description="_fDiTsunmEeSv1KnW97doOg" sourceArrow="FillDiamond">
+          <customFeatures>routingStyle</customFeatures>
           <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_fDiTt-nmEeSv1KnW97doOg"/>
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_fDiTuOnmEeSv1KnW97doOg" labelFormat="bold" showIcon="false">
             <customFeatures>labelSize</customFeatures>
@@ -1818,7 +1822,8 @@
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_-jg2sOnoEeSv1KnW97doOg" name="[0..*] LpTerm" sourceNode="_fDEZoOnmEeSv1KnW97doOg" targetNode="_-jKRYOnoEeSv1KnW97doOg">
         <target xmi:type="ecore:EReference" href="platform:/resource/com.misc.common.moplaf.solver.emf/model/solver.ecore#//GeneratorLpCons/LpTerm"/>
         <semanticElements xmi:type="ecore:EReference" href="platform:/resource/com.misc.common.moplaf.solver.emf/model/solver.ecore#//GeneratorLpCons/LpTerm"/>
-        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_-jhdxunoEeSv1KnW97doOg" description="_-jhdwunoEeSv1KnW97doOg" sourceArrow="FillDiamond" routingStyle="manhattan">
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_-jhdxunoEeSv1KnW97doOg" description="_-jhdwunoEeSv1KnW97doOg" sourceArrow="FillDiamond">
+          <customFeatures>routingStyle</customFeatures>
           <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_-jhdx-noEeSv1KnW97doOg"/>
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_-jhdyOnoEeSv1KnW97doOg" showIcon="false">
             <customFeatures>labelSize</customFeatures>
@@ -1834,9 +1839,10 @@
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_-jiE0OnoEeSv1KnW97doOg" name="[1..1] LpVar" sourceNode="_-jKRYOnoEeSv1KnW97doOg" targetNode="_dJdzsOnmEeSv1KnW97doOg">
         <target xmi:type="ecore:EReference" href="platform:/resource/com.misc.common.moplaf.solver.emf/model/solver.ecore#//GeneratorLpTerm/LpVar"/>
         <semanticElements xmi:type="ecore:EReference" href="platform:/resource/com.misc.common.moplaf.solver.emf/model/solver.ecore#//GeneratorLpTerm/LpVar"/>
-        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_-jir4OnoEeSv1KnW97doOg" description="_-jiE0-noEeSv1KnW97doOg" routingStyle="manhattan">
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_-jir4OnoEeSv1KnW97doOg" description="_-jiE0-noEeSv1KnW97doOg">
+          <customFeatures>routingStyle</customFeatures>
           <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_-jir4enoEeSv1KnW97doOg"/>
-          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_-jir4unoEeSv1KnW97doOg" showIcon="false">
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_-jir4unoEeSv1KnW97doOg" labelFormat="bold" showIcon="false">
             <customFeatures>labelSize</customFeatures>
             <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_-jir4-noEeSv1KnW97doOg"/>
           </centerLabelStyle>
