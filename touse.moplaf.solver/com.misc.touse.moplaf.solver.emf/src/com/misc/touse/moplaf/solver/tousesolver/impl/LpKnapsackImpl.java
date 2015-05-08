@@ -237,7 +237,7 @@ public class LpKnapsackImpl extends GeneratorTupleImpl implements LpKnapsack {
 
 	@Override
 	public void generateCons() {
-		super.generateLpCons();
+		super.generateCons();
 		this.generateLpConsCapacity();
 
 	}

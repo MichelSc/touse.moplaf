@@ -8,7 +8,7 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.ui.IWorkbenchPart;
 
-import com.misc.common.moplaf.solver.provider.RunCommand;
+import com.misc.common.moplaf.emf.edit.command.RunCommand;
 
 
 public class RunAction extends Action {

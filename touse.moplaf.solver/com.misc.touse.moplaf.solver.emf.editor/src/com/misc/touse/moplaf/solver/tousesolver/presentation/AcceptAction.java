@@ -8,7 +8,8 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.ui.IWorkbenchPart;
 
-import com.misc.common.moplaf.solver.provider.AcceptCommand;
+import com.misc.common.moplaf.emf.edit.command.AcceptCommand;
+
 
 
 public class AcceptAction extends Action {
