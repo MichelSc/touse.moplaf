@@ -171,11 +171,6 @@ public class ToUseGisItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(GistousePackage.Literals.TO_USE_GIS__LOCATIONS,
-				 GisFactory.eINSTANCE.createGisAddress()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(GistousePackage.Literals.TO_USE_GIS__LOCATIONS,
 				 GisFactory.eINSTANCE.createGisAddressGeocoded()));
 
 		newChildDescriptors.add
