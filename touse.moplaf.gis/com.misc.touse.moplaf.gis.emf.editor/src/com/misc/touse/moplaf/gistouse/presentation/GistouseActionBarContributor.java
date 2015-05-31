@@ -118,6 +118,7 @@ public class GistouseActionBarContributor
 	protected Collection<IAction> createChildActions;
 	
 	protected RefreshAction refreshAction = new RefreshAction();
+	protected TestAction testAction = new TestAction();
 
 	/**
 	 * This is the menu manager into which menu contribution items should be added for CreateChild actions.
@@ -287,6 +288,7 @@ public class GistouseActionBarContributor
 		}
 		
 		this.refreshAction.selectionChanged(activeEditorPart, selection);
+		this.testAction.selectionChanged(activeEditorPart, selection);
 	}
 
 	/**
@@ -397,6 +399,7 @@ public class GistouseActionBarContributor
 		menuManager.insertBefore("edit", submenuManager);
 		
 		submenuManager.add(this.refreshAction);
+		submenuManager.add(this.testAction);
 	}
 
 	/**
