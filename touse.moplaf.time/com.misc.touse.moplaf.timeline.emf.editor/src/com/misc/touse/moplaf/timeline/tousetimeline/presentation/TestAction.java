@@ -15,6 +15,8 @@ import org.eclipse.ui.IWorkbenchPart;
 import com.misc.common.moplaf.time.RefreshCommand;
 import com.misc.common.moplaf.time.discrete.provider.DiscreteItemProviderAdapterFactory;
 import com.misc.common.moplaf.timeview.IIntervalEventProvider;
+import com.misc.common.moplaf.timeview.impl.IItemIntervalEventProvider;
+import com.misc.touse.moplaf.timeline.tousetimeline.provider.TousetimelineItemProviderAdapterFactory;
 
 
 public class TestAction extends Action {
@@ -55,21 +57,22 @@ public class TestAction extends Action {
 		
 		public void run()	{
 			CommonPlugin.INSTANCE.log("Test object "+ this.selectedObject.toString());
-			//DiscreteItemProviderAdapterFactory adapterFactory = new DiscreteItemProviderAdapterFactory();
-			ComposedAdapterFactory adapterFactory = new ComposedAdapterFactory(ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
+//			DiscreteItemProviderAdapterFactory adapterFactory = new DiscreteItemProviderAdapterFactory();
+			TousetimelineItemProviderAdapterFactory adapterFactory = new TousetimelineItemProviderAdapterFactory();
+			//ComposedAdapterFactory adapterFactory = new ComposedAdapterFactory(ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
 
-			IIntervalEventProvider event = (IIntervalEventProvider)adapterFactory.adapt(selectedObject, IIntervalEventProvider.class);
+			IItemIntervalEventProvider event = (IItemIntervalEventProvider)adapterFactory.adapt(selectedObject, IItemIntervalEventProvider.class);
 			if ( event == null ){
 				CommonPlugin.INSTANCE.log(".. no interval provider");
 			} else {
 				CommonPlugin.INSTANCE.log(".. interval ("+event.getIntervalEventStart(selectedObject)+","+event.getIntervalEventEnd(selectedObject)+")");
 			}
 
-			IItemLabelProvider label= (IItemLabelProvider)adapterFactory.adapt(selectedObject, IItemLabelProvider.class);
-			if ( label == null ){
-				CommonPlugin.INSTANCE.log(".. no label provider");
-			} else {
-				CommonPlugin.INSTANCE.log(".. label ("+label.getText(selectedObject)+")");
-			}
+//			IItemLabelProvider label= (IItemLabelProvider)adapterFactory.adapt(selectedObject, IItemLabelProvider.class);
+//			if ( label == null ){
+//				CommonPlugin.INSTANCE.log(".. no label provider");
+//			} else {
+//				CommonPlugin.INSTANCE.log(".. label ("+label.getText(selectedObject)+")");
+//			}
 		} // run method
 	}  // class RunAction
