@@ -287,6 +287,7 @@ public class TaskItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ToUsePropagatorPackage.Literals.TASK__ITEMS);
+			childrenFeatures.add(ToUsePropagatorPackage.Literals.TASK__RESOURCECANDIDATE);
 		}
 		return childrenFeatures;
 	}
@@ -351,6 +352,7 @@ public class TaskItemProvider
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case ToUsePropagatorPackage.TASK__ITEMS:
+			case ToUsePropagatorPackage.TASK__RESOURCECANDIDATE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -372,6 +374,11 @@ public class TaskItemProvider
 			(createChildParameter
 				(ToUsePropagatorPackage.Literals.TASK__ITEMS,
 				 ToUsePropagatorFactory.eINSTANCE.createTaskItem()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ToUsePropagatorPackage.Literals.TASK__RESOURCECANDIDATE,
+				 ToUsePropagatorFactory.eINSTANCE.createResourceCandidate()));
 	}
 
 	/**

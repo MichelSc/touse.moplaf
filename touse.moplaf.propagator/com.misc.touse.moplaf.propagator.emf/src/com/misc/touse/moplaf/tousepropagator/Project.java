@@ -14,6 +14,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.tousepropagator.Project#getTasks <em>Tasks</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousepropagator.Project#getDependences <em>Dependences</em>}</li>
@@ -21,8 +22,8 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link com.misc.touse.moplaf.tousepropagator.Project#getStart <em>Start</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousepropagator.Project#getEnd <em>End</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousepropagator.Project#getProjectName <em>Project Name</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousepropagator.Project#getResources <em>Resources</em>}</li>
  * </ul>
- * </p>
  *
  * @see com.misc.touse.moplaf.tousepropagator.ToUsePropagatorPackage#getProject()
  * @model
@@ -160,6 +161,24 @@ public interface Project extends ObjectWithPropagatorFunctionAdapter, ObjectWith
 	 * @generated
 	 */
 	void setProjectName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Resources</b></em>' containment reference list.
+	 * The list contents are of type {@link com.misc.touse.moplaf.tousepropagator.Resource}.
+	 * It is bidirectional and its opposite is '{@link com.misc.touse.moplaf.tousepropagator.Resource#getProject <em>Project</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Resources</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Resources</em>' containment reference list.
+	 * @see com.misc.touse.moplaf.tousepropagator.ToUsePropagatorPackage#getProject_Resources()
+	 * @see com.misc.touse.moplaf.tousepropagator.Resource#getProject
+	 * @model opposite="project" containment="true"
+	 * @generated
+	 */
+	EList<Resource> getResources();
 
 	/**
 	 * <!-- begin-user-doc -->

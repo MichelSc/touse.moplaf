@@ -24,13 +24,14 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.tousepropagator.impl.DependenceImpl#getTaskBefore <em>Task Before</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousepropagator.impl.DependenceImpl#getTaskAfter <em>Task After</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousepropagator.impl.DependenceImpl#getHours <em>Hours</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousepropagator.impl.DependenceImpl#getProject <em>Project</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousepropagator.impl.DependenceImpl#getNotes <em>Notes</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -74,6 +75,26 @@ public class DependenceImpl extends MinimalEObjectImpl.Container implements Depe
 	 * @ordered
 	 */
 	protected float hours = HOURS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getNotes() <em>Notes</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNotes()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NOTES_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getNotes() <em>Notes</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNotes()
+	 * @generated
+	 * @ordered
+	 */
+	protected String notes = NOTES_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -281,6 +302,27 @@ public class DependenceImpl extends MinimalEObjectImpl.Container implements Depe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getNotes() {
+		return notes;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNotes(String newNotes) {
+		String oldNotes = notes;
+		notes = newNotes;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUsePropagatorPackage.DEPENDENCE__NOTES, oldNotes, notes));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -350,6 +392,8 @@ public class DependenceImpl extends MinimalEObjectImpl.Container implements Depe
 				return getHours();
 			case ToUsePropagatorPackage.DEPENDENCE__PROJECT:
 				return getProject();
+			case ToUsePropagatorPackage.DEPENDENCE__NOTES:
+				return getNotes();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -373,6 +417,9 @@ public class DependenceImpl extends MinimalEObjectImpl.Container implements Depe
 				return;
 			case ToUsePropagatorPackage.DEPENDENCE__PROJECT:
 				setProject((Project)newValue);
+				return;
+			case ToUsePropagatorPackage.DEPENDENCE__NOTES:
+				setNotes((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -398,6 +445,9 @@ public class DependenceImpl extends MinimalEObjectImpl.Container implements Depe
 			case ToUsePropagatorPackage.DEPENDENCE__PROJECT:
 				setProject((Project)null);
 				return;
+			case ToUsePropagatorPackage.DEPENDENCE__NOTES:
+				setNotes(NOTES_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -418,6 +468,8 @@ public class DependenceImpl extends MinimalEObjectImpl.Container implements Depe
 				return hours != HOURS_EDEFAULT;
 			case ToUsePropagatorPackage.DEPENDENCE__PROJECT:
 				return getProject() != null;
+			case ToUsePropagatorPackage.DEPENDENCE__NOTES:
+				return NOTES_EDEFAULT == null ? notes != null : !NOTES_EDEFAULT.equals(notes);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -434,6 +486,8 @@ public class DependenceImpl extends MinimalEObjectImpl.Container implements Depe
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (Hours: ");
 		result.append(hours);
+		result.append(", Notes: ");
+		result.append(notes);
 		result.append(')');
 		return result.toString();
 	}

@@ -164,6 +164,52 @@ public class ToUsePropagatorItemProviderAdapterFactory extends ToUsePropagatorAd
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousepropagator.Resource} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ResourceItemProvider resourceItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousepropagator.Resource}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createResourceAdapter() {
+		if (resourceItemProvider == null) {
+			resourceItemProvider = new ResourceItemProvider(this);
+		}
+
+		return resourceItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousepropagator.ResourceCandidate} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ResourceCandidateItemProvider resourceCandidateItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousepropagator.ResourceCandidate}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createResourceCandidateAdapter() {
+		if (resourceCandidateItemProvider == null) {
+			resourceCandidateItemProvider = new ResourceCandidateItemProvider(this);
+		}
+
+		return resourceCandidateItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -266,6 +312,8 @@ public class ToUsePropagatorItemProviderAdapterFactory extends ToUsePropagatorAd
 		if (taskItemProvider != null) taskItemProvider.dispose();
 		if (dependenceItemProvider != null) dependenceItemProvider.dispose();
 		if (taskItemItemProvider != null) taskItemItemProvider.dispose();
+		if (resourceItemProvider != null) resourceItemProvider.dispose();
+		if (resourceCandidateItemProvider != null) resourceCandidateItemProvider.dispose();
 	}
 
 }

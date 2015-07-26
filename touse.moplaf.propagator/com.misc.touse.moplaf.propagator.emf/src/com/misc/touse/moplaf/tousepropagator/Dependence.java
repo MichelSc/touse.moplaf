@@ -11,13 +11,14 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.tousepropagator.Dependence#getTaskBefore <em>Task Before</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousepropagator.Dependence#getTaskAfter <em>Task After</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousepropagator.Dependence#getHours <em>Hours</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousepropagator.Dependence#getProject <em>Project</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousepropagator.Dependence#getNotes <em>Notes</em>}</li>
  * </ul>
- * </p>
  *
  * @see com.misc.touse.moplaf.tousepropagator.ToUsePropagatorPackage#getDependence()
  * @model
@@ -134,5 +135,31 @@ public interface Dependence extends EObject {
 	 * @generated
 	 */
 	void setProject(Project value);
+
+	/**
+	 * Returns the value of the '<em><b>Notes</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Notes</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Notes</em>' attribute.
+	 * @see #setNotes(String)
+	 * @see com.misc.touse.moplaf.tousepropagator.ToUsePropagatorPackage#getDependence_Notes()
+	 * @model
+	 * @generated
+	 */
+	String getNotes();
+
+	/**
+	 * Sets the value of the '{@link com.misc.touse.moplaf.tousepropagator.Dependence#getNotes <em>Notes</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Notes</em>' attribute.
+	 * @see #getNotes()
+	 * @generated
+	 */
+	void setNotes(String value);
 
 } // Dependence

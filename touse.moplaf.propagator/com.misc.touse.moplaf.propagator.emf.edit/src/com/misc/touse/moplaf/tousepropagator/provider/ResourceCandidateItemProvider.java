@@ -3,7 +3,7 @@
 package com.misc.touse.moplaf.tousepropagator.provider;
 
 
-import com.misc.touse.moplaf.tousepropagator.Dependence;
+import com.misc.touse.moplaf.tousepropagator.ResourceCandidate;
 import com.misc.touse.moplaf.tousepropagator.ToUsePropagatorPackage;
 
 import java.util.Collection;
@@ -26,12 +26,12 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link com.misc.touse.moplaf.tousepropagator.Dependence} object.
+ * This is the item provider adapter for a {@link com.misc.touse.moplaf.tousepropagator.ResourceCandidate} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class DependenceItemProvider
+public class ResourceCandidateItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -45,7 +45,7 @@ public class DependenceItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DependenceItemProvider(AdapterFactory adapterFactory) {
+	public ResourceCandidateItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -60,28 +60,26 @@ public class DependenceItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addTaskBeforePropertyDescriptor(object);
-			addTaskAfterPropertyDescriptor(object);
-			addHoursPropertyDescriptor(object);
-			addNotesPropertyDescriptor(object);
+			addResourcePropertyDescriptor(object);
+			addMatchPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Task Before feature.
+	 * This adds a property descriptor for the Resource feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addTaskBeforePropertyDescriptor(Object object) {
+	protected void addResourcePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Dependence_TaskBefore_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Dependence_TaskBefore_feature", "_UI_Dependence_type"),
-				 ToUsePropagatorPackage.Literals.DEPENDENCE__TASK_BEFORE,
+				 getString("_UI_ResourceCandidate_resource_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ResourceCandidate_resource_feature", "_UI_ResourceCandidate_type"),
+				 ToUsePropagatorPackage.Literals.RESOURCE_CANDIDATE__RESOURCE,
 				 true,
 				 false,
 				 true,
@@ -91,41 +89,19 @@ public class DependenceItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Task After feature.
+	 * This adds a property descriptor for the Match feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addTaskAfterPropertyDescriptor(Object object) {
+	protected void addMatchPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Dependence_TaskAfter_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Dependence_TaskAfter_feature", "_UI_Dependence_type"),
-				 ToUsePropagatorPackage.Literals.DEPENDENCE__TASK_AFTER,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Hours feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addHoursPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Dependence_Hours_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Dependence_Hours_feature", "_UI_Dependence_type"),
-				 ToUsePropagatorPackage.Literals.DEPENDENCE__HOURS,
+				 getString("_UI_ResourceCandidate_Match_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ResourceCandidate_Match_feature", "_UI_ResourceCandidate_type"),
+				 ToUsePropagatorPackage.Literals.RESOURCE_CANDIDATE__MATCH,
 				 true,
 				 false,
 				 false,
@@ -135,36 +111,14 @@ public class DependenceItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Notes feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNotesPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Dependence_Notes_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Dependence_Notes_feature", "_UI_Dependence_type"),
-				 ToUsePropagatorPackage.Literals.DEPENDENCE__NOTES,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This returns Dependence.gif.
+	 * This returns ResourceCandidate.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Dependence"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ResourceCandidate"));
 	}
 
 	/**
@@ -175,9 +129,10 @@ public class DependenceItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		Dependence dependence = (Dependence)object;
-		return getString("_UI_Dependence_type") + " " + dependence.getHours();
+		ResourceCandidate resourceCandidate = (ResourceCandidate)object;
+		return getString("_UI_ResourceCandidate_type") + " " + resourceCandidate.getMatch();
 	}
+	
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -190,9 +145,8 @@ public class DependenceItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Dependence.class)) {
-			case ToUsePropagatorPackage.DEPENDENCE__HOURS:
-			case ToUsePropagatorPackage.DEPENDENCE__NOTES:
+		switch (notification.getFeatureID(ResourceCandidate.class)) {
+			case ToUsePropagatorPackage.RESOURCE_CANDIDATE__MATCH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

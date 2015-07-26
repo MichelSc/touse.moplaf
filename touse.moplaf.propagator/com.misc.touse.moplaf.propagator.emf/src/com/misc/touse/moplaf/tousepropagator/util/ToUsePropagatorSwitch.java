@@ -47,7 +47,7 @@ public class ToUsePropagatorSwitch<T> extends Switch<T> {
 	 * Checks whether this is a switch for the given package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @parameter ePackage the package in question.
+	 * @param ePackage the package in question.
 	 * @return whether this is a switch for the given package.
 	 * @generated
 	 */
@@ -90,6 +90,18 @@ public class ToUsePropagatorSwitch<T> extends Switch<T> {
 			case ToUsePropagatorPackage.TASK_ITEM: {
 				TaskItem taskItem = (TaskItem)theEObject;
 				T result = caseTaskItem(taskItem);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ToUsePropagatorPackage.RESOURCE: {
+				Resource resource = (Resource)theEObject;
+				T result = caseResource(resource);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ToUsePropagatorPackage.RESOURCE_CANDIDATE: {
+				ResourceCandidate resourceCandidate = (ResourceCandidate)theEObject;
+				T result = caseResourceCandidate(resourceCandidate);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -154,6 +166,36 @@ public class ToUsePropagatorSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseTaskItem(TaskItem object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Resource</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Resource</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseResource(Resource object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Resource Candidate</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Resource Candidate</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseResourceCandidate(ResourceCandidate object) {
 		return null;
 	}
 

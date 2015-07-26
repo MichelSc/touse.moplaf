@@ -58,6 +58,24 @@ public interface ToUsePropagatorFactory extends EFactory {
 	TaskItem createTaskItem();
 
 	/**
+	 * Returns a new object of class '<em>Resource</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Resource</em>'.
+	 * @generated
+	 */
+	Resource createResource();
+
+	/**
+	 * Returns a new object of class '<em>Resource Candidate</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Resource Candidate</em>'.
+	 * @generated
+	 */
+	ResourceCandidate createResourceCandidate();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

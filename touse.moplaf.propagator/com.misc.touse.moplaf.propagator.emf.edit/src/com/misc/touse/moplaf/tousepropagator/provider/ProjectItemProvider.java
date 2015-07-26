@@ -173,6 +173,7 @@ public class ProjectItemProvider
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ToUsePropagatorPackage.Literals.PROJECT__TASKS);
 			childrenFeatures.add(ToUsePropagatorPackage.Literals.PROJECT__DEPENDENCES);
+			childrenFeatures.add(ToUsePropagatorPackage.Literals.PROJECT__RESOURCES);
 		}
 		return childrenFeatures;
 	}
@@ -235,6 +236,7 @@ public class ProjectItemProvider
 				return;
 			case ToUsePropagatorPackage.PROJECT__TASKS:
 			case ToUsePropagatorPackage.PROJECT__DEPENDENCES:
+			case ToUsePropagatorPackage.PROJECT__RESOURCES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -261,6 +263,11 @@ public class ProjectItemProvider
 			(createChildParameter
 				(ToUsePropagatorPackage.Literals.PROJECT__DEPENDENCES,
 				 ToUsePropagatorFactory.eINSTANCE.createDependence()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ToUsePropagatorPackage.Literals.PROJECT__RESOURCES,
+				 ToUsePropagatorFactory.eINSTANCE.createResource()));
 	}
 
 	/**

@@ -8,12 +8,14 @@ import com.misc.common.moplaf.propagator.PropagatorPackage;
 import com.misc.common.moplaf.propagator.Util;
 import com.misc.touse.moplaf.tousepropagator.Dependence;
 import com.misc.touse.moplaf.tousepropagator.Project;
+import com.misc.touse.moplaf.tousepropagator.Resource;
 import com.misc.touse.moplaf.tousepropagator.Task;
 import com.misc.touse.moplaf.tousepropagator.ToUsePropagatorPackage;
 import com.misc.touse.moplaf.tousepropagator.calc.PropagatorLayerProjectEnd;
 import com.misc.touse.moplaf.tousepropagator.calc.PropagatorLayerTaskHours;
 import com.misc.touse.moplaf.tousepropagator.calc.PropagatorLayerTaskHoursItems;
 import com.misc.touse.moplaf.tousepropagator.calc.PropagatorLayerTaskHoursVar;
+import com.misc.touse.moplaf.tousepropagator.calc.PropagatorLayerTaskResources;
 import com.misc.touse.moplaf.tousepropagator.calc.PropagatorLayerTaskTimes;
 import com.misc.touse.moplaf.tousepropagator.calc.PropagatorScopeProject;
 import java.lang.reflect.InvocationTargetException;
@@ -38,6 +40,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.tousepropagator.impl.ProjectImpl#getTasks <em>Tasks</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousepropagator.impl.ProjectImpl#getDependences <em>Dependences</em>}</li>
@@ -45,8 +48,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.misc.touse.moplaf.tousepropagator.impl.ProjectImpl#getStart <em>Start</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousepropagator.impl.ProjectImpl#getEnd <em>End</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousepropagator.impl.ProjectImpl#getProjectName <em>Project Name</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousepropagator.impl.ProjectImpl#getResources <em>Resources</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -150,6 +153,16 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
 	 * @ordered
 	 */
 	protected String projectName = PROJECT_NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getResources() <em>Resources</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getResources()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Resource> resources;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -281,6 +294,18 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Resource> getResources() {
+		if (resources == null) {
+			resources = new EObjectContainmentWithInverseEList<Resource>(Resource.class, this, ToUsePropagatorPackage.PROJECT__RESOURCES, ToUsePropagatorPackage.RESOURCE__PROJECT);
+		}
+		return resources;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 */
 	public void refreshEnd() {
 		Date end = new Date(Long.MIN_VALUE);
@@ -317,6 +342,7 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
 		Util.adapt(this, PropagatorLayerTaskHoursVar.class);
 		Util.adapt(this, PropagatorLayerTaskHours.class);
 		Util.adapt(this, PropagatorLayerTaskTimes.class);
+		Util.adapt(this, PropagatorLayerTaskResources.class);
 		Util.adapt(this, PropagatorLayerProjectEnd.class);
 		Util.adapt(this, PropagatorScopeProject.class);
 	}
@@ -334,6 +360,8 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getTasks()).basicAdd(otherEnd, msgs);
 			case ToUsePropagatorPackage.PROJECT__DEPENDENCES:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getDependences()).basicAdd(otherEnd, msgs);
+			case ToUsePropagatorPackage.PROJECT__RESOURCES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getResources()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -350,6 +378,8 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
 				return ((InternalEList<?>)getTasks()).basicRemove(otherEnd, msgs);
 			case ToUsePropagatorPackage.PROJECT__DEPENDENCES:
 				return ((InternalEList<?>)getDependences()).basicRemove(otherEnd, msgs);
+			case ToUsePropagatorPackage.PROJECT__RESOURCES:
+				return ((InternalEList<?>)getResources()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -374,6 +404,8 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
 				return getEnd();
 			case ToUsePropagatorPackage.PROJECT__PROJECT_NAME:
 				return getProjectName();
+			case ToUsePropagatorPackage.PROJECT__RESOURCES:
+				return getResources();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -407,6 +439,10 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
 			case ToUsePropagatorPackage.PROJECT__PROJECT_NAME:
 				setProjectName((String)newValue);
 				return;
+			case ToUsePropagatorPackage.PROJECT__RESOURCES:
+				getResources().clear();
+				getResources().addAll((Collection<? extends Resource>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -437,6 +473,9 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
 			case ToUsePropagatorPackage.PROJECT__PROJECT_NAME:
 				setProjectName(PROJECT_NAME_EDEFAULT);
 				return;
+			case ToUsePropagatorPackage.PROJECT__RESOURCES:
+				getResources().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -461,6 +500,8 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
 				return END_EDEFAULT == null ? end != null : !END_EDEFAULT.equals(end);
 			case ToUsePropagatorPackage.PROJECT__PROJECT_NAME:
 				return PROJECT_NAME_EDEFAULT == null ? projectName != null : !PROJECT_NAME_EDEFAULT.equals(projectName);
+			case ToUsePropagatorPackage.PROJECT__RESOURCES:
+				return resources != null && !resources.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

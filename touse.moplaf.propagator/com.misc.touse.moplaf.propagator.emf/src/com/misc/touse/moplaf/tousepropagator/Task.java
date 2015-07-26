@@ -13,6 +13,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.tousepropagator.Task#getStart <em>Start</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousepropagator.Task#getEnd <em>End</em>}</li>
@@ -25,8 +26,8 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link com.misc.touse.moplaf.tousepropagator.Task#getTaskName <em>Task Name</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousepropagator.Task#getItems <em>Items</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousepropagator.Task#getProject <em>Project</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousepropagator.Task#getResourcecandidate <em>Resourcecandidate</em>}</li>
  * </ul>
- * </p>
  *
  * @see com.misc.touse.moplaf.tousepropagator.ToUsePropagatorPackage#getTask()
  * @model
@@ -247,6 +248,22 @@ public interface Task extends ObjectWithPropagatorFunctionAdapter {
 	void setProject(Project value);
 
 	/**
+	 * Returns the value of the '<em><b>Resourcecandidate</b></em>' containment reference list.
+	 * The list contents are of type {@link com.misc.touse.moplaf.tousepropagator.ResourceCandidate}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Resourcecandidate</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Resourcecandidate</em>' containment reference list.
+	 * @see com.misc.touse.moplaf.tousepropagator.ToUsePropagatorPackage#getTask_Resourcecandidate()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<ResourceCandidate> getResourcecandidate();
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model
@@ -285,5 +302,13 @@ public interface Task extends ObjectWithPropagatorFunctionAdapter {
 	 * @generated
 	 */
 	void refreshHoursVar();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void refreshResourceCandidates(Resource resource);
 
 } // Task

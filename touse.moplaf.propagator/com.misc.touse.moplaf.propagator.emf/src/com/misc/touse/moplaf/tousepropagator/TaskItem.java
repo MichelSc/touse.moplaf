@@ -11,11 +11,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.tousepropagator.TaskItem#getName <em>Name</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousepropagator.TaskItem#getHours <em>Hours</em>}</li>
  * </ul>
- * </p>
  *
  * @see com.misc.touse.moplaf.tousepropagator.ToUsePropagatorPackage#getTaskItem()
  * @model

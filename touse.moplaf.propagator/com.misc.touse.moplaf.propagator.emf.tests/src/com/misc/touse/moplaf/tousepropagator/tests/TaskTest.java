@@ -21,6 +21,7 @@ import junit.textui.TestRunner;
  *   <li>{@link com.misc.touse.moplaf.tousepropagator.Task#refreshHours() <em>Refresh Hours</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousepropagator.Task#refreshHoursItem() <em>Refresh Hours Item</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousepropagator.Task#refreshHoursVar() <em>Refresh Hours Var</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousepropagator.Task#refreshResourceCandidates(com.misc.touse.moplaf.tousepropagator.Resource) <em>Refresh Resource Candidates</em>}</li>
  *   <li>{@link com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapter#addPropagatorFunctionAdapter() <em>Add Propagator Function Adapter</em>}</li>
  * </ul>
  * </p>
@@ -157,6 +158,19 @@ public class TaskTest extends TestCase {
 	 * @generated
 	 */
 	public void testRefreshHoursVar() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
+	}
+
+	/**
+	 * Tests the '{@link com.misc.touse.moplaf.tousepropagator.Task#refreshResourceCandidates(com.misc.touse.moplaf.tousepropagator.Resource) <em>Refresh Resource Candidates</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousepropagator.Task#refreshResourceCandidates(com.misc.touse.moplaf.tousepropagator.Resource)
+	 * @generated
+	 */
+	public void testRefreshResourceCandidates__Resource() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();

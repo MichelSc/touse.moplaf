@@ -5,13 +5,17 @@ package com.misc.touse.moplaf.tousepropagator.impl;
 import com.misc.common.moplaf.propagator.Util;
 import com.misc.touse.moplaf.tousepropagator.Dependence;
 import com.misc.touse.moplaf.tousepropagator.Project;
+import com.misc.touse.moplaf.tousepropagator.Resource;
+import com.misc.touse.moplaf.tousepropagator.ResourceCandidate;
 import com.misc.touse.moplaf.tousepropagator.Task;
 import com.misc.touse.moplaf.tousepropagator.TaskItem;
+import com.misc.touse.moplaf.tousepropagator.ToUsePropagatorFactory;
 import com.misc.touse.moplaf.tousepropagator.ToUsePropagatorPackage;
 import com.misc.touse.moplaf.tousepropagator.calc.PropagatorCalcTaskEnd;
 import com.misc.touse.moplaf.tousepropagator.calc.PropagatorCalcTaskHours;
 import com.misc.touse.moplaf.tousepropagator.calc.PropagatorCalcTaskHoursItems;
 import com.misc.touse.moplaf.tousepropagator.calc.PropagatorCalcTaskHoursVar;
+import com.misc.touse.moplaf.tousepropagator.calc.PropagatorCalcTaskResources;
 import com.misc.touse.moplaf.tousepropagator.calc.PropagatorCalcTaskStart;
 
 import java.lang.reflect.InvocationTargetException;
@@ -38,6 +42,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.tousepropagator.impl.TaskImpl#getStart <em>Start</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousepropagator.impl.TaskImpl#getEnd <em>End</em>}</li>
@@ -50,8 +55,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.misc.touse.moplaf.tousepropagator.impl.TaskImpl#getTaskName <em>Task Name</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousepropagator.impl.TaskImpl#getItems <em>Items</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousepropagator.impl.TaskImpl#getProject <em>Project</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousepropagator.impl.TaskImpl#getResourcecandidate <em>Resourcecandidate</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -225,6 +230,16 @@ public class TaskImpl extends MinimalEObjectImpl.Container implements Task {
 	 * @ordered
 	 */
 	protected EList<TaskItem> items;
+
+	/**
+	 * The cached value of the '{@link #getResourcecandidate() <em>Resourcecandidate</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getResourcecandidate()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ResourceCandidate> resourcecandidate;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -472,6 +487,18 @@ public class TaskImpl extends MinimalEObjectImpl.Container implements Task {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<ResourceCandidate> getResourcecandidate() {
+		if (resourcecandidate == null) {
+			resourcecandidate = new EObjectContainmentEList<ResourceCandidate>(ResourceCandidate.class, this, ToUsePropagatorPackage.TASK__RESOURCECANDIDATE);
+		}
+		return resourcecandidate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 */
 	public void refreshStart() {
 		Date start = new Date(Long.MAX_VALUE);
@@ -538,11 +565,71 @@ public class TaskImpl extends MinimalEObjectImpl.Container implements Task {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 */
+	public void refreshResourceCandidates(Resource resource) {
+		// get the asIs
+		ResourceCandidate resourceCandidateAsIs = null;
+		for ( ResourceCandidate resourceCandidate : this.getResourcecandidate()){
+			if ( resourceCandidate.getResource()==resource) {
+				resourceCandidateAsIs = resourceCandidate;
+			}
+		}
+		// calculate the toBe
+		boolean toBe = false;
+		float match = 0.0f;
+		Date resourceStart = resource.getStart();
+		Date resourceEnd = resource.getEnd();
+		Date taskStart = this.getStart();
+		Date taskEnd = this.getEnd();
+		if (   resourceStart != null 
+			&& resourceEnd != null 
+			&& taskStart != null
+			&& taskEnd != null
+			&& resourceStart.before(taskEnd)
+			&& taskStart.before(resourceEnd) ){
+			// there is an overlap
+			toBe = true;
+			Date overlapStart = taskStart; 
+			if ( resourceStart.after(overlapStart)){
+				overlapStart = resourceStart;
+			}
+			Date overlapEnd = taskEnd;
+			if ( resourceEnd.before(overlapEnd)){
+				overlapEnd = resourceEnd;
+			}
+			match = (float)(overlapEnd.getTime()-overlapStart.getTime())/(float)(taskEnd.getTime()-taskStart.getTime());
+		}
+		// create/update/delete
+		if ( toBe){
+			ResourceCandidate resourceCandidate = null;
+			if ( resourceCandidateAsIs == null ){
+				// create
+				resourceCandidate = ToUsePropagatorFactory.eINSTANCE.createResourceCandidate();
+				resourceCandidate.setResource(resource);
+				this.getResourcecandidate().add(resourceCandidate);
+			} else {
+				// update
+				resourceCandidate = resourceCandidateAsIs;
+			}
+			resourceCandidate.setMatch(match);
+		} else if ( !toBe){
+			if ( resourceCandidateAsIs!=null ){
+				// delete
+				this.getResourcecandidate().remove(resourceCandidateAsIs);
+				resourceCandidateAsIs.setResource(null);
+			}
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
 	public void addPropagatorFunctionAdapter() {
 		Util.adapt(this, PropagatorCalcTaskHoursItems.class);
 		Util.adapt(this, PropagatorCalcTaskHoursVar.class);
 		Util.adapt(this, PropagatorCalcTaskHours.class);
 		Util.adapt(this, PropagatorCalcTaskStart.class);
+		Util.adapt(this, PropagatorCalcTaskResources.class);
 		Util.adapt(this, PropagatorCalcTaskEnd.class);
 	}
 
@@ -583,6 +670,8 @@ public class TaskImpl extends MinimalEObjectImpl.Container implements Task {
 				return ((InternalEList<?>)getItems()).basicRemove(otherEnd, msgs);
 			case ToUsePropagatorPackage.TASK__PROJECT:
 				return basicSetProject(null, msgs);
+			case ToUsePropagatorPackage.TASK__RESOURCECANDIDATE:
+				return ((InternalEList<?>)getResourcecandidate()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -631,6 +720,8 @@ public class TaskImpl extends MinimalEObjectImpl.Container implements Task {
 				return getItems();
 			case ToUsePropagatorPackage.TASK__PROJECT:
 				return getProject();
+			case ToUsePropagatorPackage.TASK__RESOURCECANDIDATE:
+				return getResourcecandidate();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -680,6 +771,10 @@ public class TaskImpl extends MinimalEObjectImpl.Container implements Task {
 			case ToUsePropagatorPackage.TASK__PROJECT:
 				setProject((Project)newValue);
 				return;
+			case ToUsePropagatorPackage.TASK__RESOURCECANDIDATE:
+				getResourcecandidate().clear();
+				getResourcecandidate().addAll((Collection<? extends ResourceCandidate>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -725,6 +820,9 @@ public class TaskImpl extends MinimalEObjectImpl.Container implements Task {
 			case ToUsePropagatorPackage.TASK__PROJECT:
 				setProject((Project)null);
 				return;
+			case ToUsePropagatorPackage.TASK__RESOURCECANDIDATE:
+				getResourcecandidate().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -759,6 +857,8 @@ public class TaskImpl extends MinimalEObjectImpl.Container implements Task {
 				return items != null && !items.isEmpty();
 			case ToUsePropagatorPackage.TASK__PROJECT:
 				return getProject() != null;
+			case ToUsePropagatorPackage.TASK__RESOURCECANDIDATE:
+				return resourcecandidate != null && !resourcecandidate.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -785,6 +885,9 @@ public class TaskImpl extends MinimalEObjectImpl.Container implements Task {
 				return null;
 			case ToUsePropagatorPackage.TASK___REFRESH_HOURS_VAR:
 				refreshHoursVar();
+				return null;
+			case ToUsePropagatorPackage.TASK___REFRESH_RESOURCE_CANDIDATES__RESOURCE:
+				refreshResourceCandidates((Resource)arguments.get(0));
 				return null;
 			case ToUsePropagatorPackage.TASK___ADD_PROPAGATOR_FUNCTION_ADAPTER:
 				addPropagatorFunctionAdapter();

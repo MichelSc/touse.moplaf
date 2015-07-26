@@ -3,7 +3,7 @@
 package com.misc.touse.moplaf.tousepropagator.provider;
 
 
-import com.misc.touse.moplaf.tousepropagator.Dependence;
+import com.misc.touse.moplaf.tousepropagator.Resource;
 import com.misc.touse.moplaf.tousepropagator.ToUsePropagatorPackage;
 
 import java.util.Collection;
@@ -26,12 +26,12 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link com.misc.touse.moplaf.tousepropagator.Dependence} object.
+ * This is the item provider adapter for a {@link com.misc.touse.moplaf.tousepropagator.Resource} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class DependenceItemProvider
+public class ResourceItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -45,7 +45,7 @@ public class DependenceItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DependenceItemProvider(AdapterFactory adapterFactory) {
+	public ResourceItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -60,94 +60,27 @@ public class DependenceItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addTaskBeforePropertyDescriptor(object);
-			addTaskAfterPropertyDescriptor(object);
-			addHoursPropertyDescriptor(object);
-			addNotesPropertyDescriptor(object);
+			addStartPropertyDescriptor(object);
+			addEndPropertyDescriptor(object);
+			addResourceNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Task Before feature.
+	 * This adds a property descriptor for the Start feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addTaskBeforePropertyDescriptor(Object object) {
+	protected void addStartPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Dependence_TaskBefore_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Dependence_TaskBefore_feature", "_UI_Dependence_type"),
-				 ToUsePropagatorPackage.Literals.DEPENDENCE__TASK_BEFORE,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Task After feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTaskAfterPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Dependence_TaskAfter_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Dependence_TaskAfter_feature", "_UI_Dependence_type"),
-				 ToUsePropagatorPackage.Literals.DEPENDENCE__TASK_AFTER,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Hours feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addHoursPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Dependence_Hours_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Dependence_Hours_feature", "_UI_Dependence_type"),
-				 ToUsePropagatorPackage.Literals.DEPENDENCE__HOURS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Notes feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNotesPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Dependence_Notes_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Dependence_Notes_feature", "_UI_Dependence_type"),
-				 ToUsePropagatorPackage.Literals.DEPENDENCE__NOTES,
+				 getString("_UI_Resource_Start_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Resource_Start_feature", "_UI_Resource_type"),
+				 ToUsePropagatorPackage.Literals.RESOURCE__START,
 				 true,
 				 false,
 				 false,
@@ -157,14 +90,58 @@ public class DependenceItemProvider
 	}
 
 	/**
-	 * This returns Dependence.gif.
+	 * This adds a property descriptor for the End feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addEndPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Resource_End_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Resource_End_feature", "_UI_Resource_type"),
+				 ToUsePropagatorPackage.Literals.RESOURCE__END,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Resource Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addResourceNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Resource_ResourceName_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Resource_ResourceName_feature", "_UI_Resource_type"),
+				 ToUsePropagatorPackage.Literals.RESOURCE__RESOURCE_NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This returns Resource.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Dependence"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Resource"));
 	}
 
 	/**
@@ -175,9 +152,12 @@ public class DependenceItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		Dependence dependence = (Dependence)object;
-		return getString("_UI_Dependence_type") + " " + dependence.getHours();
+		String label = ((Resource)object).getResourceName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Resource_type") :
+			getString("_UI_Resource_type") + " " + label;
 	}
+	
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -190,9 +170,10 @@ public class DependenceItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Dependence.class)) {
-			case ToUsePropagatorPackage.DEPENDENCE__HOURS:
-			case ToUsePropagatorPackage.DEPENDENCE__NOTES:
+		switch (notification.getFeatureID(Resource.class)) {
+			case ToUsePropagatorPackage.RESOURCE__START:
+			case ToUsePropagatorPackage.RESOURCE__END:
+			case ToUsePropagatorPackage.RESOURCE__RESOURCE_NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

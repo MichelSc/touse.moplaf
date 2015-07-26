@@ -60,6 +60,8 @@ public class ToUsePropagatorFactoryImpl extends EFactoryImpl implements ToUsePro
 			case ToUsePropagatorPackage.TASK: return createTask();
 			case ToUsePropagatorPackage.DEPENDENCE: return createDependence();
 			case ToUsePropagatorPackage.TASK_ITEM: return createTaskItem();
+			case ToUsePropagatorPackage.RESOURCE: return createResource();
+			case ToUsePropagatorPackage.RESOURCE_CANDIDATE: return createResourceCandidate();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -103,6 +105,26 @@ public class ToUsePropagatorFactoryImpl extends EFactoryImpl implements ToUsePro
 	public TaskItem createTaskItem() {
 		TaskItemImpl taskItem = new TaskItemImpl();
 		return taskItem;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Resource createResource() {
+		ResourceImpl resource = new ResourceImpl();
+		return resource;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ResourceCandidate createResourceCandidate() {
+		ResourceCandidateImpl resourceCandidate = new ResourceCandidateImpl();
+		return resourceCandidate;
 	}
 
 	/**

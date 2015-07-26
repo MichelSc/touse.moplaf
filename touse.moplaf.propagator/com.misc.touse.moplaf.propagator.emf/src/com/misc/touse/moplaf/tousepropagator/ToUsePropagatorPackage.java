@@ -123,13 +123,22 @@ public interface ToUsePropagatorPackage extends EPackage {
 	int PROJECT__PROJECT_NAME = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 5;
 
 	/**
+	 * The feature id for the '<em><b>Resources</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT__RESOURCES = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 6;
+
+	/**
 	 * The number of structural features of the '<em>Project</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROJECT_FEATURE_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 6;
+	int PROJECT_FEATURE_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 7;
 
 	/**
 	 * The operation id for the '<em>Add Propagator Function Adapter</em>' operation.
@@ -277,13 +286,22 @@ public interface ToUsePropagatorPackage extends EPackage {
 	int TASK__PROJECT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 10;
 
 	/**
+	 * The feature id for the '<em><b>Resourcecandidate</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK__RESOURCECANDIDATE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 11;
+
+	/**
 	 * The number of structural features of the '<em>Task</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_FEATURE_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 11;
+	int TASK_FEATURE_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 12;
 
 	/**
 	 * The operation id for the '<em>Add Propagator Function Adapter</em>' operation.
@@ -340,13 +358,22 @@ public interface ToUsePropagatorPackage extends EPackage {
 	int TASK___REFRESH_HOURS_VAR = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_OPERATION_COUNT + 4;
 
 	/**
+	 * The operation id for the '<em>Refresh Resource Candidates</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK___REFRESH_RESOURCE_CANDIDATES__RESOURCE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_OPERATION_COUNT + 5;
+
+	/**
 	 * The number of operations of the '<em>Task</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_OPERATION_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_OPERATION_COUNT + 5;
+	int TASK_OPERATION_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_OPERATION_COUNT + 6;
 
 	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.tousepropagator.impl.DependenceImpl <em>Dependence</em>}' class.
@@ -395,13 +422,22 @@ public interface ToUsePropagatorPackage extends EPackage {
 	int DEPENDENCE__PROJECT = 3;
 
 	/**
+	 * The feature id for the '<em><b>Notes</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEPENDENCE__NOTES = 4;
+
+	/**
 	 * The number of structural features of the '<em>Dependence</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DEPENDENCE_FEATURE_COUNT = 4;
+	int DEPENDENCE_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Dependence</em>' class.
@@ -457,6 +493,117 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @ordered
 	 */
 	int TASK_ITEM_OPERATION_COUNT = 0;
+
+
+	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousepropagator.impl.ResourceImpl <em>Resource</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousepropagator.impl.ResourceImpl
+	 * @see com.misc.touse.moplaf.tousepropagator.impl.ToUsePropagatorPackageImpl#getResource()
+	 * @generated
+	 */
+	int RESOURCE = 4;
+
+	/**
+	 * The feature id for the '<em><b>Start</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE__START = 0;
+
+	/**
+	 * The feature id for the '<em><b>End</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE__END = 1;
+
+	/**
+	 * The feature id for the '<em><b>Project</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE__PROJECT = 2;
+
+	/**
+	 * The feature id for the '<em><b>Resource Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE__RESOURCE_NAME = 3;
+
+	/**
+	 * The number of structural features of the '<em>Resource</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Resource</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousepropagator.impl.ResourceCandidateImpl <em>Resource Candidate</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousepropagator.impl.ResourceCandidateImpl
+	 * @see com.misc.touse.moplaf.tousepropagator.impl.ToUsePropagatorPackageImpl#getResourceCandidate()
+	 * @generated
+	 */
+	int RESOURCE_CANDIDATE = 5;
+
+	/**
+	 * The feature id for the '<em><b>Resource</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_CANDIDATE__RESOURCE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Match</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_CANDIDATE__MATCH = 1;
+
+	/**
+	 * The number of structural features of the '<em>Resource Candidate</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_CANDIDATE_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Resource Candidate</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_CANDIDATE_OPERATION_COUNT = 0;
 
 
 	/**
@@ -534,6 +681,17 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getProject_ProjectName();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.tousepropagator.Project#getResources <em>Resources</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Resources</em>'.
+	 * @see com.misc.touse.moplaf.tousepropagator.Project#getResources()
+	 * @see #getProject()
+	 * @generated
+	 */
+	EReference getProject_Resources();
 
 	/**
 	 * Returns the meta object for the '{@link com.misc.touse.moplaf.tousepropagator.Project#refreshEnd() <em>Refresh End</em>}' operation.
@@ -687,6 +845,17 @@ public interface ToUsePropagatorPackage extends EPackage {
 	EReference getTask_Project();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.tousepropagator.Task#getResourcecandidate <em>Resourcecandidate</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Resourcecandidate</em>'.
+	 * @see com.misc.touse.moplaf.tousepropagator.Task#getResourcecandidate()
+	 * @see #getTask()
+	 * @generated
+	 */
+	EReference getTask_Resourcecandidate();
+
+	/**
 	 * Returns the meta object for the '{@link com.misc.touse.moplaf.tousepropagator.Task#refreshStart() <em>Refresh Start</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -735,6 +904,16 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getTask__RefreshHoursVar();
+
+	/**
+	 * Returns the meta object for the '{@link com.misc.touse.moplaf.tousepropagator.Task#refreshResourceCandidates(com.misc.touse.moplaf.tousepropagator.Resource) <em>Refresh Resource Candidates</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Refresh Resource Candidates</em>' operation.
+	 * @see com.misc.touse.moplaf.tousepropagator.Task#refreshResourceCandidates(com.misc.touse.moplaf.tousepropagator.Resource)
+	 * @generated
+	 */
+	EOperation getTask__RefreshResourceCandidates__Resource();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousepropagator.Dependence <em>Dependence</em>}'.
@@ -791,6 +970,17 @@ public interface ToUsePropagatorPackage extends EPackage {
 	EReference getDependence_Project();
 
 	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.tousepropagator.Dependence#getNotes <em>Notes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Notes</em>'.
+	 * @see com.misc.touse.moplaf.tousepropagator.Dependence#getNotes()
+	 * @see #getDependence()
+	 * @generated
+	 */
+	EAttribute getDependence_Notes();
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousepropagator.TaskItem <em>Task Item</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -821,6 +1011,92 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getTaskItem_Hours();
+
+	/**
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousepropagator.Resource <em>Resource</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Resource</em>'.
+	 * @see com.misc.touse.moplaf.tousepropagator.Resource
+	 * @generated
+	 */
+	EClass getResource();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.tousepropagator.Resource#getStart <em>Start</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Start</em>'.
+	 * @see com.misc.touse.moplaf.tousepropagator.Resource#getStart()
+	 * @see #getResource()
+	 * @generated
+	 */
+	EAttribute getResource_Start();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.tousepropagator.Resource#getEnd <em>End</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>End</em>'.
+	 * @see com.misc.touse.moplaf.tousepropagator.Resource#getEnd()
+	 * @see #getResource()
+	 * @generated
+	 */
+	EAttribute getResource_End();
+
+	/**
+	 * Returns the meta object for the container reference '{@link com.misc.touse.moplaf.tousepropagator.Resource#getProject <em>Project</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Project</em>'.
+	 * @see com.misc.touse.moplaf.tousepropagator.Resource#getProject()
+	 * @see #getResource()
+	 * @generated
+	 */
+	EReference getResource_Project();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.tousepropagator.Resource#getResourceName <em>Resource Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Resource Name</em>'.
+	 * @see com.misc.touse.moplaf.tousepropagator.Resource#getResourceName()
+	 * @see #getResource()
+	 * @generated
+	 */
+	EAttribute getResource_ResourceName();
+
+	/**
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousepropagator.ResourceCandidate <em>Resource Candidate</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Resource Candidate</em>'.
+	 * @see com.misc.touse.moplaf.tousepropagator.ResourceCandidate
+	 * @generated
+	 */
+	EClass getResourceCandidate();
+
+	/**
+	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.tousepropagator.ResourceCandidate#getResource <em>Resource</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Resource</em>'.
+	 * @see com.misc.touse.moplaf.tousepropagator.ResourceCandidate#getResource()
+	 * @see #getResourceCandidate()
+	 * @generated
+	 */
+	EReference getResourceCandidate_Resource();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.tousepropagator.ResourceCandidate#getMatch <em>Match</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Match</em>'.
+	 * @see com.misc.touse.moplaf.tousepropagator.ResourceCandidate#getMatch()
+	 * @see #getResourceCandidate()
+	 * @generated
+	 */
+	EAttribute getResourceCandidate_Match();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -902,6 +1178,14 @@ public interface ToUsePropagatorPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute PROJECT__PROJECT_NAME = eINSTANCE.getProject_ProjectName();
+
+		/**
+		 * The meta object literal for the '<em><b>Resources</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PROJECT__RESOURCES = eINSTANCE.getProject_Resources();
 
 		/**
 		 * The meta object literal for the '<em><b>Refresh End</b></em>' operation.
@@ -1018,6 +1302,14 @@ public interface ToUsePropagatorPackage extends EPackage {
 		EReference TASK__PROJECT = eINSTANCE.getTask_Project();
 
 		/**
+		 * The meta object literal for the '<em><b>Resourcecandidate</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TASK__RESOURCECANDIDATE = eINSTANCE.getTask_Resourcecandidate();
+
+		/**
 		 * The meta object literal for the '<em><b>Refresh Start</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1056,6 +1348,14 @@ public interface ToUsePropagatorPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation TASK___REFRESH_HOURS_VAR = eINSTANCE.getTask__RefreshHoursVar();
+
+		/**
+		 * The meta object literal for the '<em><b>Refresh Resource Candidates</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TASK___REFRESH_RESOURCE_CANDIDATES__RESOURCE = eINSTANCE.getTask__RefreshResourceCandidates__Resource();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousepropagator.impl.DependenceImpl <em>Dependence</em>}' class.
@@ -1100,6 +1400,14 @@ public interface ToUsePropagatorPackage extends EPackage {
 		EReference DEPENDENCE__PROJECT = eINSTANCE.getDependence_Project();
 
 		/**
+		 * The meta object literal for the '<em><b>Notes</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DEPENDENCE__NOTES = eINSTANCE.getDependence_Notes();
+
+		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousepropagator.impl.TaskItemImpl <em>Task Item</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1124,6 +1432,74 @@ public interface ToUsePropagatorPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TASK_ITEM__HOURS = eINSTANCE.getTaskItem_Hours();
+
+		/**
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousepropagator.impl.ResourceImpl <em>Resource</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.touse.moplaf.tousepropagator.impl.ResourceImpl
+		 * @see com.misc.touse.moplaf.tousepropagator.impl.ToUsePropagatorPackageImpl#getResource()
+		 * @generated
+		 */
+		EClass RESOURCE = eINSTANCE.getResource();
+
+		/**
+		 * The meta object literal for the '<em><b>Start</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RESOURCE__START = eINSTANCE.getResource_Start();
+
+		/**
+		 * The meta object literal for the '<em><b>End</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RESOURCE__END = eINSTANCE.getResource_End();
+
+		/**
+		 * The meta object literal for the '<em><b>Project</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RESOURCE__PROJECT = eINSTANCE.getResource_Project();
+
+		/**
+		 * The meta object literal for the '<em><b>Resource Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RESOURCE__RESOURCE_NAME = eINSTANCE.getResource_ResourceName();
+
+		/**
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousepropagator.impl.ResourceCandidateImpl <em>Resource Candidate</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.touse.moplaf.tousepropagator.impl.ResourceCandidateImpl
+		 * @see com.misc.touse.moplaf.tousepropagator.impl.ToUsePropagatorPackageImpl#getResourceCandidate()
+		 * @generated
+		 */
+		EClass RESOURCE_CANDIDATE = eINSTANCE.getResourceCandidate();
+
+		/**
+		 * The meta object literal for the '<em><b>Resource</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RESOURCE_CANDIDATE__RESOURCE = eINSTANCE.getResourceCandidate_Resource();
+
+		/**
+		 * The meta object literal for the '<em><b>Match</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RESOURCE_CANDIDATE__MATCH = eINSTANCE.getResourceCandidate_Match();
 
 	}
 
