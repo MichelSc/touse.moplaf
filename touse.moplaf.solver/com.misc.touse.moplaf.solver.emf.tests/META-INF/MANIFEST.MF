@@ -11,7 +11,6 @@ Export-Package: com.misc.touse.moplaf.solver.tousesolver.tests
 Require-Bundle: org.eclipse.core.runtime,
  com.misc.touse.moplaf.solver.emf;visibility:=reexport,
  com.misc.common.moplaf.solver.emf;visibility:=reexport,
- com.misc.common.moplaf.solver.cplex.emf;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.junit;visibility:=reexport
 Bundle-ActivationPolicy: lazy
