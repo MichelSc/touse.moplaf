@@ -1,43 +1,43 @@
 /**
  */
-package com.misc.touse.moplaf.solver.tousesolver.provider;
+package com.misc.touse.moplaf.solver.tousesolverlp.provider;
 
 
-import com.misc.common.moplaf.solver.SolverPackage;
-import com.misc.common.moplaf.solver.provider.GeneratorItemProvider;
-import com.misc.touse.moplaf.solver.tousesolver.KnapsackLp;
-import com.misc.touse.moplaf.solver.tousesolver.TousesolverFactory;
-import com.misc.touse.moplaf.solver.tousesolver.TousesolverPackage;
+import com.misc.common.moplaf.solver.SolverFactory;
+
+import com.misc.common.moplaf.solver.provider.GeneratorTupleItemProvider;
+
+import com.misc.touse.moplaf.solver.tousesolverlp.ToUseSolverLpFactory;
+import com.misc.touse.moplaf.solver.tousesolverlp.ToUseSolverLpPackage;
+import com.misc.touse.moplaf.solver.tousesolverlp.ToUseTuple;
+
 import java.util.Collection;
-import java.util.LinkedList;
 import java.util.List;
-import org.eclipse.emf.common.CommonPlugin;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.common.util.ResourceLocator;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EClassifier;
-import org.eclipse.emf.ecore.EFactory;
-import org.eclipse.emf.ecore.EPackage;
+
 import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link com.misc.touse.moplaf.solver.tousesolver.KnapsackLp} object.
+ * This is the item provider adapter for a {@link com.misc.touse.moplaf.solver.tousesolverlp.ToUseTuple} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class KnapsackLpItemProvider
-	extends GeneratorItemProvider {
+public class ToUseTupleItemProvider extends GeneratorTupleItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public KnapsackLpItemProvider(AdapterFactory adapterFactory) {
+	public ToUseTupleItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -68,9 +68,9 @@ public class KnapsackLpItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(TousesolverPackage.Literals.KNAPSACK_LP__ROOT);
-			childrenFeatures.add(TousesolverPackage.Literals.KNAPSACK_LP__READER);
-			childrenFeatures.add(TousesolverPackage.Literals.KNAPSACK_LP__SOLVER);
+			childrenFeatures.add(ToUseSolverLpPackage.Literals.TO_USE_TUPLE__CHILD_TUPLES);
+			childrenFeatures.add(ToUseSolverLpPackage.Literals.TO_USE_TUPLE__TO_USE_VARS);
+			childrenFeatures.add(ToUseSolverLpPackage.Literals.TO_USE_TUPLE__TO_USE_CONS);
 		}
 		return childrenFeatures;
 	}
@@ -89,14 +89,14 @@ public class KnapsackLpItemProvider
 	}
 
 	/**
-	 * This returns KnapsackLp.gif.
+	 * This returns ToUseTuple.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/KnapsackLp"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ToUseTuple"));
 	}
 
 	/**
@@ -107,11 +107,12 @@ public class KnapsackLpItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((KnapsackLp)object).getCode();
+		String label = ((ToUseTuple)object).getCode();
 		return label == null || label.length() == 0 ?
-			getString("_UI_KnapsackLp_type") :
-			getString("_UI_KnapsackLp_type") + " " + label;
+			getString("_UI_ToUseTuple_type") :
+			getString("_UI_ToUseTuple_type") + " " + label;
 	}
+	
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -124,10 +125,10 @@ public class KnapsackLpItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(KnapsackLp.class)) {
-			case TousesolverPackage.KNAPSACK_LP__ROOT:
-			case TousesolverPackage.KNAPSACK_LP__READER:
-			case TousesolverPackage.KNAPSACK_LP__SOLVER:
+		switch (notification.getFeatureID(ToUseTuple.class)) {
+			case ToUseSolverLpPackage.TO_USE_TUPLE__CHILD_TUPLES:
+			case ToUseSolverLpPackage.TO_USE_TUPLE__TO_USE_VARS:
+			case ToUseSolverLpPackage.TO_USE_TUPLE__TO_USE_CONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -139,6 +140,7 @@ public class KnapsackLpItemProvider
 	 * that can be created under this object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
 	 */
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
@@ -146,33 +148,20 @@ public class KnapsackLpItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TousesolverPackage.Literals.KNAPSACK_LP__READER,
-				 TousesolverFactory.eINSTANCE.createSolutionReaderToUse()));
+				(ToUseSolverLpPackage.Literals.TO_USE_TUPLE__CHILD_TUPLES,
+				 ToUseSolverLpFactory.eINSTANCE.createToUseTuple()));
 
-		EPackage.Registry registry = EPackage.Registry.INSTANCE;
-		EClass solverLpClass = SolverPackage.Literals.SOLVER_LP;
-		LinkedList<String> uriList = new LinkedList<String>(registry.keySet());
-		for ( String  uri : uriList){
-			EPackage aPackage = registry.getEPackage(uri);
-			EFactory aFactory = registry.getEFactory(uri);
-			for ( EClassifier aClassifier : aPackage.getEClassifiers()){
-				if ( aClassifier instanceof EClass ){
-					EClass aClass = (EClass)aClassifier;
-					if ( !aClass.isAbstract() && solverLpClass.isSuperTypeOf(aClass)){
-						CommonPlugin.INSTANCE.log( "  concrete candidate"
-					                             + aPackage.getClass().getName()
-					                             + " : "
-					                             + aClass.getName());
-						
-						newChildDescriptors.add
-						(createChildParameter
-							(TousesolverPackage.Literals.KNAPSACK_LP__SOLVER,
-							 aFactory.create(aClass)));
-					}  // if is solver
-				}  // if is class
-			}  // traverse classifiers
-		} // traverse the packages registered
-	}  // method collectNewChildDescriptors
+		newChildDescriptors.add
+			(createChildParameter
+				(ToUseSolverLpPackage.Literals.TO_USE_TUPLE__TO_USE_VARS,
+				 SolverFactory.eINSTANCE.createGeneratorLpVar()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ToUseSolverLpPackage.Literals.TO_USE_TUPLE__TO_USE_CONS,
+				 SolverFactory.eINSTANCE.createGeneratorLpCons()));
+	}
+
 	/**
 	 * Return the resource locator for this item provider's resources.
 	 * <!-- begin-user-doc -->
@@ -181,7 +170,7 @@ public class KnapsackLpItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return ToUserSolverEditPlugin.INSTANCE;
+		return ToUseSolverLpEditPlugin.INSTANCE;
 	}
 
 }
