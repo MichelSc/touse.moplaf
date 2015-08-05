@@ -39,6 +39,7 @@ import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.PartInitException;
 
+
 /**
  * This is the action bar contributor for the ToUseSolverLp model editor.
  * <!-- begin-user-doc -->
@@ -107,6 +108,14 @@ public class ToUseSolverLpActionBarContributor
 				}
 			}
 		};
+		
+	/**
+	 * This action runs the object
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	protected RunAction runAction = new RunAction();
+		
 
 	/**
 	 * This will contain one {@link org.eclipse.emf.edit.ui.action.CreateChildAction} corresponding to each descriptor
@@ -284,6 +293,8 @@ public class ToUseSolverLpActionBarContributor
 			populateManager(createSiblingMenuManager, createSiblingActions, null);
 			createSiblingMenuManager.update(true);
 		}
+		
+		this.runAction   .selectionChanged(activeEditorPart, selection);
 	}
 
 	/**
@@ -390,6 +401,11 @@ public class ToUseSolverLpActionBarContributor
 		submenuManager = new MenuManager(ToUseSolverLpEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
 		populateManager(submenuManager, createSiblingActions, null);
 		menuManager.insertBefore("edit", submenuManager);
+		
+		submenuManager = new MenuManager("LpSolver");
+		menuManager.insertBefore("edit", submenuManager);
+		submenuManager.add(this.runAction);
+
 	}
 
 	/**

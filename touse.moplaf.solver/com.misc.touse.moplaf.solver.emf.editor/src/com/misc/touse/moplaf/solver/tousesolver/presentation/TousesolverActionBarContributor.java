@@ -120,7 +120,7 @@ public class TousesolverActionBarContributor
 	protected WriteAction writeAction = new WriteAction();
 			
 	/**
-	 * This action accpets the object
+	 * This action accepts the object
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 */
@@ -420,7 +420,7 @@ public class TousesolverActionBarContributor
 		populateManager(submenuManager, createSiblingActions, null);
 		menuManager.insertBefore("edit", submenuManager);
 
-		submenuManager = new MenuManager("POC");
+		submenuManager = new MenuManager("Solver");
 		menuManager.insertBefore("edit", submenuManager);
 		submenuManager.add(this.runAction);
 		submenuManager.add(this.writeAction);
