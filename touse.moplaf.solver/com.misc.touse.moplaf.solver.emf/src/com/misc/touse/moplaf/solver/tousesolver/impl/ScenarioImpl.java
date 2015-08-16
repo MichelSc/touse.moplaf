@@ -33,6 +33,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.ScenarioImpl#getKnapsack <em>Knapsack</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.ScenarioImpl#getItem <em>Item</em>}</li>
@@ -41,7 +42,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.ScenarioImpl#getName <em>Name</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.ScenarioImpl#getRemarks <em>Remarks</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

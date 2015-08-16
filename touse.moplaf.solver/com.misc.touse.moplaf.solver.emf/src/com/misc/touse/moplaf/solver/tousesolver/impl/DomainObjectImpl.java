@@ -15,11 +15,11 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.DomainObjectImpl#getName <em>Name</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.DomainObjectImpl#getShortName <em>Short Name</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

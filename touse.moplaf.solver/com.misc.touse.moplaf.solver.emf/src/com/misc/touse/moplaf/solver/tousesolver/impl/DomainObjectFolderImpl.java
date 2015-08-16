@@ -23,13 +23,13 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.DomainObjectFolderImpl#getObject <em>Object</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.DomainObjectFolderImpl#getSubFolder <em>Sub Folder</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.DomainObjectFolderImpl#getScenario <em>Scenario</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.DomainObjectFolderImpl#getName <em>Name</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

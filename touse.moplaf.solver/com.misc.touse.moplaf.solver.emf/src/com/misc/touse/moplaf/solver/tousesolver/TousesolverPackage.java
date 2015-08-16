@@ -732,6 +732,15 @@ public interface TousesolverPackage extends EPackage {
 	int KNAPSACK_LP___VISIT_TUPLES__ITUPLEVISITOR = SolverPackage.GENERATOR___VISIT_TUPLES__ITUPLEVISITOR;
 
 	/**
+	 * The operation id for the '<em>Refresh Selected Solution</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNAPSACK_LP___REFRESH_SELECTED_SOLUTION = SolverPackage.GENERATOR___REFRESH_SELECTED_SOLUTION;
+
+	/**
 	 * The number of operations of the '<em>Knapsack Lp</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -806,6 +815,15 @@ public interface TousesolverPackage extends EPackage {
 	int LP_ROOT__CODE = SolverPackage.GENERATOR_TUPLE__CODE;
 
 	/**
+	 * The feature id for the '<em><b>Members</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LP_ROOT__MEMBERS = SolverPackage.GENERATOR_TUPLE__MEMBERS;
+
+	/**
 	 * The feature id for the '<em><b>Item</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -876,6 +894,15 @@ public interface TousesolverPackage extends EPackage {
 	 * @ordered
 	 */
 	int LP_ROOT___VISIT_TUPLES__ITUPLEVISITOR = SolverPackage.GENERATOR_TUPLE___VISIT_TUPLES__ITUPLEVISITOR;
+
+	/**
+	 * The operation id for the '<em>Refresh Selected Solution</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LP_ROOT___REFRESH_SELECTED_SOLUTION = SolverPackage.GENERATOR_TUPLE___REFRESH_SELECTED_SOLUTION;
 
 	/**
 	 * The number of operations of the '<em>Lp Root</em>' class.
@@ -951,6 +978,15 @@ public interface TousesolverPackage extends EPackage {
 	int LP_KNAPSACK__CODE = SolverPackage.GENERATOR_TUPLE__CODE;
 
 	/**
+	 * The feature id for the '<em><b>Members</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LP_KNAPSACK__MEMBERS = SolverPackage.GENERATOR_TUPLE__MEMBERS;
+
+	/**
 	 * The feature id for the '<em><b>Knapsack</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1021,6 +1057,15 @@ public interface TousesolverPackage extends EPackage {
 	 * @ordered
 	 */
 	int LP_KNAPSACK___VISIT_TUPLES__ITUPLEVISITOR = SolverPackage.GENERATOR_TUPLE___VISIT_TUPLES__ITUPLEVISITOR;
+
+	/**
+	 * The operation id for the '<em>Refresh Selected Solution</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LP_KNAPSACK___REFRESH_SELECTED_SOLUTION = SolverPackage.GENERATOR_TUPLE___REFRESH_SELECTED_SOLUTION;
 
 	/**
 	 * The number of operations of the '<em>Lp Knapsack</em>' class.
@@ -1096,6 +1141,15 @@ public interface TousesolverPackage extends EPackage {
 	int LP_ITEM__CODE = SolverPackage.GENERATOR_TUPLE__CODE;
 
 	/**
+	 * The feature id for the '<em><b>Members</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LP_ITEM__MEMBERS = SolverPackage.GENERATOR_TUPLE__MEMBERS;
+
+	/**
 	 * The feature id for the '<em><b>Item</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1166,6 +1220,15 @@ public interface TousesolverPackage extends EPackage {
 	 * @ordered
 	 */
 	int LP_ITEM___VISIT_TUPLES__ITUPLEVISITOR = SolverPackage.GENERATOR_TUPLE___VISIT_TUPLES__ITUPLEVISITOR;
+
+	/**
+	 * The operation id for the '<em>Refresh Selected Solution</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LP_ITEM___REFRESH_SELECTED_SOLUTION = SolverPackage.GENERATOR_TUPLE___REFRESH_SELECTED_SOLUTION;
 
 	/**
 	 * The number of operations of the '<em>Lp Item</em>' class.

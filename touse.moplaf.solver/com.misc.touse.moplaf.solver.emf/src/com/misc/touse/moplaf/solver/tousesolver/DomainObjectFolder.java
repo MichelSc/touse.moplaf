@@ -13,13 +13,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.DomainObjectFolder#getObject <em>Object</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.DomainObjectFolder#getSubFolder <em>Sub Folder</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.DomainObjectFolder#getScenario <em>Scenario</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.DomainObjectFolder#getName <em>Name</em>}</li>
  * </ul>
- * </p>
  *
  * @see com.misc.touse.moplaf.solver.tousesolver.TousesolverPackage#getDomainObjectFolder()
  * @model

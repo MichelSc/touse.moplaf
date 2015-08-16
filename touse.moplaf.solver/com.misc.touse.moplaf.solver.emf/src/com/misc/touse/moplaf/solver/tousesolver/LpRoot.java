@@ -13,11 +13,11 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.LpRoot#getItem <em>Item</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.LpRoot#getKnapsack <em>Knapsack</em>}</li>
  * </ul>
- * </p>
  *
  * @see com.misc.touse.moplaf.solver.tousesolver.TousesolverPackage#getLpRoot()
  * @model

@@ -155,7 +155,6 @@ public class ToUseGeneratorItemProvider extends GeneratorItemProvider {
 				 ToUseSolverLpFactory.eINSTANCE.createToUseTuple()));
 
 		// solvers
-		/*
 		EPackage.Registry registry = EPackage.Registry.INSTANCE;
 		EClass solverLpClass = SolverPackage.Literals.SOLVER_LP;
 		LinkedList<String> uriList = new LinkedList<String>(registry.keySet());
@@ -179,7 +178,6 @@ public class ToUseGeneratorItemProvider extends GeneratorItemProvider {
 				}  // if is class
 			}  // traverse classifiers
 		} // traverse the packages registered
-		*/
 	}
 
 	/**

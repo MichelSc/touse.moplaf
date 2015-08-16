@@ -10,10 +10,10 @@ package com.misc.touse.moplaf.solver.tousesolver;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.Knapsack#getCapacity <em>Capacity</em>}</li>
  * </ul>
- * </p>
  *
  * @see com.misc.touse.moplaf.solver.tousesolver.TousesolverPackage#getKnapsack()
  * @model

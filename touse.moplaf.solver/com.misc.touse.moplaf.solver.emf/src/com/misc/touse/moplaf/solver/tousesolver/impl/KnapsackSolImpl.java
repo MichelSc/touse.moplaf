@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.KnapsackSolImpl#getTotalValue <em>Total Value</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.KnapsackSolImpl#getTotalWeight <em>Total Weight</em>}</li>
@@ -29,7 +30,6 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.KnapsackSolImpl#getItem <em>Item</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.KnapsackSolImpl#getLp <em>Lp</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

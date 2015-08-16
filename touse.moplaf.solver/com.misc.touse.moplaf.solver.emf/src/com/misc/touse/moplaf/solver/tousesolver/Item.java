@@ -10,11 +10,11 @@ package com.misc.touse.moplaf.solver.tousesolver;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.Item#getWeight <em>Weight</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.Item#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @see com.misc.touse.moplaf.solver.tousesolver.TousesolverPackage#getItem()
  * @model

@@ -11,11 +11,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.DomainObject#getName <em>Name</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.DomainObject#getShortName <em>Short Name</em>}</li>
  * </ul>
- * </p>
  *
  * @see com.misc.touse.moplaf.solver.tousesolver.TousesolverPackage#getDomainObject()
  * @model

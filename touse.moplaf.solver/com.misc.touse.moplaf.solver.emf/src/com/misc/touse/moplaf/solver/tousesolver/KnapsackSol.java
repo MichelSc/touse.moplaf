@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.KnapsackSol#getTotalValue <em>Total Value</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.KnapsackSol#getTotalWeight <em>Total Weight</em>}</li>
@@ -20,7 +21,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.KnapsackSol#getItem <em>Item</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.KnapsackSol#getLp <em>Lp</em>}</li>
  * </ul>
- * </p>
  *
  * @see com.misc.touse.moplaf.solver.tousesolver.TousesolverPackage#getKnapsackSol()
  * @model

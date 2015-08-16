@@ -28,11 +28,11 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.LpRootImpl#getItem <em>Item</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.LpRootImpl#getKnapsack <em>Knapsack</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

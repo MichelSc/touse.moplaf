@@ -12,11 +12,11 @@ import com.misc.common.moplaf.solver.GeneratorTuple;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.LpItem#getItem <em>Item</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.LpItem#getVarInKnapsack <em>Var In Knapsack</em>}</li>
  * </ul>
- * </p>
  *
  * @see com.misc.touse.moplaf.solver.tousesolver.TousesolverPackage#getLpItem()
  * @model
