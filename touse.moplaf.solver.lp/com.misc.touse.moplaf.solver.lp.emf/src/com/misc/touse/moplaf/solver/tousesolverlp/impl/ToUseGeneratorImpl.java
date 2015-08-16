@@ -12,6 +12,7 @@ import com.misc.touse.moplaf.solver.tousesolverlp.ToUseTuple;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.CommonPlugin;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -20,6 +21,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -186,5 +188,17 @@ public class ToUseGeneratorImpl extends GeneratorImpl implements ToUseGenerator 
 		}
 		return super.eIsSet(featureID);
 	}
-
+	
+	/**
+	 */
+	@Override
+	public void generate() {
+		CommonPlugin.INSTANCE.log("ToUseGenerator.generate: called");
+		this.generateTuples();
+		CommonPlugin.INSTANCE.log("TouseGenerator.generate: tuples generated");
+		this.generateVars();
+		CommonPlugin.INSTANCE.log("ToUseGenerator.generate: vars generated");
+		this.generateCons();
+		CommonPlugin.INSTANCE.log("ToUseGenerator.generate: cons generated");
+	}
 } //ToUseGeneratorImpl
