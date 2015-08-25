@@ -141,29 +141,6 @@ public class TousesolverItemProviderAdapterFactory extends TousesolverAdapterFac
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.solver.tousesolver.DomainObject} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DomainObjectItemProvider domainObjectItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.misc.touse.moplaf.solver.tousesolver.DomainObject}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDomainObjectAdapter() {
-		if (domainObjectItemProvider == null) {
-			domainObjectItemProvider = new DomainObjectItemProvider(this);
-		}
-
-		return domainObjectItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.solver.tousesolver.DomainObjectFolder} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -449,7 +426,6 @@ public class TousesolverItemProviderAdapterFactory extends TousesolverAdapterFac
 		if (domainItemProvider != null) domainItemProvider.dispose();
 		if (knapsackItemProvider != null) knapsackItemProvider.dispose();
 		if (itemItemProvider != null) itemItemProvider.dispose();
-		if (domainObjectItemProvider != null) domainObjectItemProvider.dispose();
 		if (domainObjectFolderItemProvider != null) domainObjectFolderItemProvider.dispose();
 		if (scenarioItemProvider != null) scenarioItemProvider.dispose();
 		if (knapsackSolItemProvider != null) knapsackSolItemProvider.dispose();

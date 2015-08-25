@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see com.misc.touse.moplaf.solver.tousesolver.TousesolverPackage#getDomainObject()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface DomainObject extends EObject {

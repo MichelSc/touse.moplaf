@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class DomainObjectImpl extends MinimalEObjectImpl.Container implements DomainObject {
+public abstract class DomainObjectImpl extends MinimalEObjectImpl.Container implements DomainObject {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->

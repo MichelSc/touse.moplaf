@@ -180,11 +180,6 @@ public class DomainObjectFolderItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TousesolverPackage.Literals.DOMAIN_OBJECT_FOLDER__OBJECT,
-				 TousesolverFactory.eINSTANCE.createDomainObject()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TousesolverPackage.Literals.DOMAIN_OBJECT_FOLDER__OBJECT,
 				 TousesolverFactory.eINSTANCE.createKnapsack()));
 
 		newChildDescriptors.add

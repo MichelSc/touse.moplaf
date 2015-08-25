@@ -59,7 +59,6 @@ public class TousesolverFactoryImpl extends EFactoryImpl implements TousesolverF
 			case TousesolverPackage.DOMAIN: return createDomain();
 			case TousesolverPackage.KNAPSACK: return createKnapsack();
 			case TousesolverPackage.ITEM: return createItem();
-			case TousesolverPackage.DOMAIN_OBJECT: return createDomainObject();
 			case TousesolverPackage.DOMAIN_OBJECT_FOLDER: return createDomainObjectFolder();
 			case TousesolverPackage.SCENARIO: return createScenario();
 			case TousesolverPackage.KNAPSACK_SOL: return createKnapsackSol();
@@ -101,16 +100,6 @@ public class TousesolverFactoryImpl extends EFactoryImpl implements TousesolverF
 	public Item createItem() {
 		ItemImpl item = new ItemImpl();
 		return item;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DomainObject createDomainObject() {
-		DomainObjectImpl domainObject = new DomainObjectImpl();
-		return domainObject;
 	}
 
 	/**
