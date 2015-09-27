@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: com.misc.touse.moplaf.report.emf.ToUseReport;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: .
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Export-Package: com.misc.touse.moplaf.report.ToUseReport,
+ com.misc.touse.moplaf.report.ToUseReport.impl,
+ com.misc.touse.moplaf.report.ToUseReport.util
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.ecore;visibility:=reexport,
+ com.misc.common.moplaf.report.emf;visibility:=reexport
+Bundle-ActivationPolicy: lazy
