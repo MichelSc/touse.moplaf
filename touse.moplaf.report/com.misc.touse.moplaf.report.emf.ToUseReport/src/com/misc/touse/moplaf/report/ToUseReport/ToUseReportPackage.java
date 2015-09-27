@@ -289,13 +289,13 @@ public interface ToUseReportPackage extends EPackage {
 	int REPORT_A__GENERATED = ReportPackage.REPORT_ABSTRACT__GENERATED;
 
 	/**
-	 * The feature id for the '<em><b>Output File</b></em>' attribute.
+	 * The feature id for the '<em><b>Output File Path</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REPORT_A__OUTPUT_FILE = ReportPackage.REPORT_ABSTRACT__OUTPUT_FILE;
+	int REPORT_A__OUTPUT_FILE_PATH = ReportPackage.REPORT_ABSTRACT__OUTPUT_FILE_PATH;
 
 	/**
 	 * The feature id for the '<em><b>Last Generated</b></em>' attribute.
@@ -395,6 +395,15 @@ public interface ToUseReportPackage extends EPackage {
 	 * @ordered
 	 */
 	int REPORT_A___RUN = ReportPackage.REPORT_ABSTRACT___RUN;
+
+	/**
+	 * The operation id for the '<em>Get Report Design File Path</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REPORT_A___GET_REPORT_DESIGN_FILE_PATH = ReportPackage.REPORT_ABSTRACT___GET_REPORT_DESIGN_FILE_PATH;
 
 	/**
 	 * The number of operations of the '<em>Report A</em>' class.

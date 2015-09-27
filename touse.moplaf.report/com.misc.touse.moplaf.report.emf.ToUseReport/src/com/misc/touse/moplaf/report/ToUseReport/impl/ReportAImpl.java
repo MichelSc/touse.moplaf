@@ -155,4 +155,10 @@ public class ReportAImpl extends ReportAbstractImpl implements ReportA {
 		return super.eIsSet(featureID);
 	}
 
+	@Override
+	public String getReportDesignFilePath() {
+		return "//home/michel/git/touse.moplaf/touse.moplaf.report/com.misc.touse.moplaf.report.emf.ToUseReport/model/toUse.rptdesign";
+	}
+	
+
 } //ReportAImpl
