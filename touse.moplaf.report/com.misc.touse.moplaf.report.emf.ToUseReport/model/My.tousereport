@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<trppt:Domain xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:trppt="http://www.misc.com/common/touse/solverlp/model/0.1" Name="domain">
+  <Folders Name="root">
+    <As Code="a1">
+      <Bs Code="a1b1"/>
+      <Bs Code="a1b2"/>
+    </As>
+    <As Code="a2"/>
+    <reporta Context="//@Folders.0/@As.0"/>
+  </Folders>
+</trppt:Domain>
