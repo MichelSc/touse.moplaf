@@ -8,12 +8,20 @@ import com.misc.touse.moplaf.report.ToUseReport.A;
 import com.misc.touse.moplaf.report.ToUseReport.ReportA;
 import com.misc.touse.moplaf.report.ToUseReport.ToUseReportPackage;
 
+import java.io.File;
+import java.net.URISyntaxException;
+import java.net.URL;
+
+import org.eclipse.core.runtime.FileLocator;
+import org.eclipse.core.runtime.Path;
+import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.osgi.framework.Bundle;
 
 /**
  * <!-- begin-user-doc -->
@@ -157,7 +165,17 @@ public class ReportAImpl extends ReportAbstractImpl implements ReportA {
 
 	@Override
 	public String getReportDesignFilePath() {
-		return "//home/michel/git/touse.moplaf/touse.moplaf.report/com.misc.touse.moplaf.report.emf.ToUseReport/model/toUse.rptdesign";
+		Bundle bundle = Platform.getBundle("com.misc.touse.moplaf.report.emf.ToUseReport");
+		URL file = FileLocator.find(bundle, new Path("model/toUse.rptdesign"), null);
+		String filepath = file.toString();
+		try {
+			filepath = file.toURI().toString();
+		} catch (URISyntaxException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return filepath;
+		//return "//home/michel/git/touse.moplaf/touse.moplaf.report/com.misc.touse.moplaf.report.emf.ToUseReport/model/toUse.rptdesign";
 	}
 	
 
