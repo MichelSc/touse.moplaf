@@ -397,13 +397,13 @@ public interface ToUseReportPackage extends EPackage {
 	int REPORT_A___RUN = ReportPackage.REPORT_ABSTRACT___RUN;
 
 	/**
-	 * The operation id for the '<em>Get Report Design File Path</em>' operation.
+	 * The operation id for the '<em>Get Report Design File URL</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REPORT_A___GET_REPORT_DESIGN_FILE_PATH = ReportPackage.REPORT_ABSTRACT___GET_REPORT_DESIGN_FILE_PATH;
+	int REPORT_A___GET_REPORT_DESIGN_FILE_URL = ReportPackage.REPORT_ABSTRACT___GET_REPORT_DESIGN_FILE_URL;
 
 	/**
 	 * The number of operations of the '<em>Report A</em>' class.

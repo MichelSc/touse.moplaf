@@ -7,23 +7,12 @@ import com.misc.common.moplaf.Report.impl.ReportAbstractImpl;
 import com.misc.touse.moplaf.report.ToUseReport.A;
 import com.misc.touse.moplaf.report.ToUseReport.ReportA;
 import com.misc.touse.moplaf.report.ToUseReport.ToUseReportPackage;
-
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.URISyntaxException;
-import java.net.URL;
-
-import org.eclipse.core.runtime.FileLocator;
-import org.eclipse.core.runtime.Path;
-import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.osgi.framework.Bundle;
 
 /**
  * <!-- begin-user-doc -->
@@ -166,14 +155,12 @@ public class ReportAImpl extends ReportAbstractImpl implements ReportA {
 	}
 
 	@Override
-	public String getReportDesignFilePath() {
-		return "model/toUse.rptdesign";
+	public String getReportDesignFileURL() {
+		String url = "platform:/plugin/com.misc.touse.moplaf.report.emf.ToUseReport/model/toUse.rptdesign";
+		return url;
 	}
-
-	@Override
-	public String getReportBundleID() {
-		return "com.misc.touse.moplaf.report.emf.ToUseReport";
-	}
+	
+	
 	
 	
 	
