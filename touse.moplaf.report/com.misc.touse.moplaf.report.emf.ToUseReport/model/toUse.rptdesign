@@ -6,12 +6,12 @@
     <property name="bidiLayoutOrientation">ltr</property>
     <property name="imageDPI">96</property>
     <data-sources>
-        <oda-data-source extensionID="org.eclipse.emf.oda.ecore.dataSource" name="Data Source Current EMF Model" id="5">
-            <property name="resource">platform:/resource/ToUseBirt/My.tousereport</property>
+        <oda-data-source extensionID="org.eclipse.emf.oda.ecore.dataSource" name="Data Source" id="4">
+            <property name="resource">file:/E:/Projects/Eclipse/gitrepositories2/touse.moplaf/touse.moplaf.report/com.misc.touse.moplaf.report.emf.ToUseReport/model/My.tousereport</property>
         </oda-data-source>
     </data-sources>
     <data-sets>
-        <oda-data-set extensionID="org.eclipse.emf.oda.ecore.dataSet" name="Data Set Report A" id="6">
+        <oda-data-set extensionID="org.eclipse.emf.oda.ecore.dataSet" name="Data Set" id="5">
             <list-property name="columnHints">
                 <structure>
                     <property name="columnName">@self</property>
@@ -25,7 +25,6 @@
                 </structure>
                 <structure>
                     <property name="columnName">Code</property>
-                    <property name="analysis">dimension</property>
                     <text-property name="displayName">Code</text-property>
                     <text-property name="heading">Code</text-property>
                 </structure>
@@ -62,7 +61,7 @@
                     </structure>
                 </list-property>
             </structure>
-            <property name="dataSource">Data Source Current EMF Model</property>
+            <property name="dataSource">Data Source</property>
             <list-property name="resultSet">
                 <structure>
                     <property name="position">1</property>
@@ -202,12 +201,18 @@
         </simple-master-page>
     </page-setup>
     <body>
-        <label id="4">
-            <text-property name="text">Hello from Michel</text-property>
+        <label id="6">
+            <text-property name="text">Hello Michel</text-property>
         </label>
-        <table id="8">
-            <property name="dataSet">Data Set Report A</property>
+        <table id="7">
+            <property name="dataSet">Data Set</property>
             <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">Bs</property>
+                    <text-property name="displayName">Bs</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Bs"]</expression>
+                    <property name="dataType">javaObject</property>
+                </structure>
                 <structure>
                     <property name="name">Code</property>
                     <text-property name="displayName">Code</text-property>
@@ -215,28 +220,40 @@
                     <property name="dataType">string</property>
                 </structure>
             </list-property>
-            <column id="17"/>
+            <column id="21"/>
+            <column id="22"/>
             <header>
-                <row id="9">
-                    <cell id="10">
-                        <label id="11">
+                <row id="8">
+                    <cell id="9">
+                        <label id="10">
+                            <text-property name="text">Bs</text-property>
+                        </label>
+                    </cell>
+                    <cell id="11">
+                        <label id="12">
                             <text-property name="text">Code</text-property>
                         </label>
                     </cell>
                 </row>
             </header>
             <detail>
-                <row id="12">
-                    <cell id="13">
-                        <data id="14">
+                <row id="13">
+                    <cell id="14">
+                        <data id="15">
+                            <property name="resultSetColumn">Bs</property>
+                        </data>
+                    </cell>
+                    <cell id="16">
+                        <data id="17">
                             <property name="resultSetColumn">Code</property>
                         </data>
                     </cell>
                 </row>
             </detail>
             <footer>
-                <row id="15">
-                    <cell id="16"/>
+                <row id="18">
+                    <cell id="19"/>
+                    <cell id="20"/>
                 </row>
             </footer>
         </table>

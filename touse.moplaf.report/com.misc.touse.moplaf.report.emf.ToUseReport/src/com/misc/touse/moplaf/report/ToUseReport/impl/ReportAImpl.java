@@ -9,6 +9,8 @@ import com.misc.touse.moplaf.report.ToUseReport.ReportA;
 import com.misc.touse.moplaf.report.ToUseReport.ToUseReportPackage;
 
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 import java.net.URISyntaxException;
 import java.net.URL;
 
@@ -165,18 +167,15 @@ public class ReportAImpl extends ReportAbstractImpl implements ReportA {
 
 	@Override
 	public String getReportDesignFilePath() {
-		Bundle bundle = Platform.getBundle("com.misc.touse.moplaf.report.emf.ToUseReport");
-		URL file = FileLocator.find(bundle, new Path("model/toUse.rptdesign"), null);
-		String filepath = file.toString();
-		try {
-			filepath = file.toURI().toString();
-		} catch (URISyntaxException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return filepath;
-		//return "//home/michel/git/touse.moplaf/touse.moplaf.report/com.misc.touse.moplaf.report.emf.ToUseReport/model/toUse.rptdesign";
+		return "model/toUse.rptdesign";
 	}
+
+	@Override
+	public String getReportBundleID() {
+		return "com.misc.touse.moplaf.report.emf.ToUseReport";
+	}
+	
+	
 	
 
 } //ReportAImpl
