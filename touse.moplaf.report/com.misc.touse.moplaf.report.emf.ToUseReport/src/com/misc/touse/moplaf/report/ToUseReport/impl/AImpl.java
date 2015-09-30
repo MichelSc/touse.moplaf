@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
+import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -32,6 +32,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.report.ToUseReport.impl.AImpl#getBs <em>Bs</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.report.ToUseReport.impl.AImpl#getCode <em>Code</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.report.ToUseReport.impl.AImpl#getFragment <em>Fragment</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,6 +67,16 @@ public class AImpl extends MinimalEObjectImpl.Container implements A {
 	 * @ordered
 	 */
 	protected String code = CODE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getFragment() <em>Fragment</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFragment()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String FRAGMENT_EDEFAULT = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -122,6 +133,16 @@ public class AImpl extends MinimalEObjectImpl.Container implements A {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 */
+	public String getFragment() {
+		Resource resource = this.eResource();
+		String fragment = resource.getURIFragment(this);
+		return fragment;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -145,6 +166,8 @@ public class AImpl extends MinimalEObjectImpl.Container implements A {
 				return getBs();
 			case ToUseReportPackage.A__CODE:
 				return getCode();
+			case ToUseReportPackage.A__FRAGMENT:
+				return getFragment();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -199,6 +222,8 @@ public class AImpl extends MinimalEObjectImpl.Container implements A {
 				return bs != null && !bs.isEmpty();
 			case ToUseReportPackage.A__CODE:
 				return CODE_EDEFAULT == null ? code != null : !CODE_EDEFAULT.equals(code);
+			case ToUseReportPackage.A__FRAGMENT:
+				return FRAGMENT_EDEFAULT == null ? getFragment() != null : !FRAGMENT_EDEFAULT.equals(getFragment());
 		}
 		return super.eIsSet(featureID);
 	}

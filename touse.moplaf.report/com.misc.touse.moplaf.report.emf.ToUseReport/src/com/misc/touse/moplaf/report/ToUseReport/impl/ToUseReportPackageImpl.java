@@ -228,6 +228,15 @@ public class ToUseReportPackageImpl extends EPackageImpl implements ToUseReportP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getA_Fragment() {
+		return (EAttribute)aEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getB() {
 		return bEClass;
 	}
@@ -300,6 +309,7 @@ public class ToUseReportPackageImpl extends EPackageImpl implements ToUseReportP
 		aEClass = createEClass(A);
 		createEReference(aEClass, A__BS);
 		createEAttribute(aEClass, A__CODE);
+		createEAttribute(aEClass, A__FRAGMENT);
 
 		bEClass = createEClass(B);
 		createEAttribute(bEClass, B__CODE);
@@ -356,6 +366,7 @@ public class ToUseReportPackageImpl extends EPackageImpl implements ToUseReportP
 		initEClass(aEClass, com.misc.touse.moplaf.report.ToUseReport.A.class, "A", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getA_Bs(), this.getB(), null, "Bs", null, 0, -1, com.misc.touse.moplaf.report.ToUseReport.A.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getA_Code(), theEcorePackage.getEString(), "Code", null, 0, 1, com.misc.touse.moplaf.report.ToUseReport.A.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getA_Fragment(), theEcorePackage.getEString(), "Fragment", null, 0, 1, com.misc.touse.moplaf.report.ToUseReport.A.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(bEClass, com.misc.touse.moplaf.report.ToUseReport.B.class, "B", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getB_Code(), theEcorePackage.getEString(), "Code", null, 0, 1, com.misc.touse.moplaf.report.ToUseReport.B.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

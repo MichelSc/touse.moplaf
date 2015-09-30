@@ -197,13 +197,22 @@ public interface ToUseReportPackage extends EPackage {
 	int A__CODE = 1;
 
 	/**
+	 * The feature id for the '<em><b>Fragment</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int A__FRAGMENT = 2;
+
+	/**
 	 * The number of structural features of the '<em>A</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int A_FEATURE_COUNT = 2;
+	int A_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>A</em>' class.
@@ -534,6 +543,17 @@ public interface ToUseReportPackage extends EPackage {
 	EAttribute getA_Code();
 
 	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.report.ToUseReport.A#getFragment <em>Fragment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Fragment</em>'.
+	 * @see com.misc.touse.moplaf.report.ToUseReport.A#getFragment()
+	 * @see #getA()
+	 * @generated
+	 */
+	EAttribute getA_Fragment();
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.report.ToUseReport.B <em>B</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -691,6 +711,14 @@ public interface ToUseReportPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute A__CODE = eINSTANCE.getA_Code();
+
+		/**
+		 * The meta object literal for the '<em><b>Fragment</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute A__FRAGMENT = eINSTANCE.getA_Fragment();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.report.ToUseReport.impl.BImpl <em>B</em>}' class.

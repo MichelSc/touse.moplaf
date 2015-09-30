@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.report.ToUseReport.A#getBs <em>Bs</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.report.ToUseReport.A#getCode <em>Code</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.report.ToUseReport.A#getFragment <em>Fragment</em>}</li>
  * </ul>
  *
  * @see com.misc.touse.moplaf.report.ToUseReport.ToUseReportPackage#getA()
@@ -65,5 +66,20 @@ public interface A extends EObject {
 	 * @generated
 	 */
 	void setCode(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Fragment</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Fragment</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Fragment</em>' attribute.
+	 * @see com.misc.touse.moplaf.report.ToUseReport.ToUseReportPackage#getA_Fragment()
+	 * @model transient="true" changeable="false" volatile="true" derived="true"
+	 * @generated
+	 */
+	String getFragment();
 
 } // A
