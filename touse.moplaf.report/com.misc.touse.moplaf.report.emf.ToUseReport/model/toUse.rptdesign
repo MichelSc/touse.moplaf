@@ -5,65 +5,20 @@
         <structure>
             <property name="name">resource</property>
             <property name="id">4</property>
-            <expression name="value" type="javascript">params["ResourceURL"].value</expression>
         </structure>
         <structure>
-            <property name="name">queryText</property>
-            <property name="id">5</property>
+            <property name="name">OdaConnProfileName</property>
+            <property name="id">4</property>
         </structure>
         <structure>
-            <property name="name">delegate</property>
-            <property name="id">5</property>
-        </structure>
-        <structure>
-            <property name="name">context</property>
-            <property name="id">5</property>
-        </structure>
-        <structure>
-            <property name="name">variables</property>
-            <property name="id">5</property>
-        </structure>
-        <structure>
-            <property name="name">type</property>
-            <property name="id">5</property>
+            <property name="name">OdaConnProfileStorePath</property>
+            <property name="id">4</property>
         </structure>
     </list-property>
     <property name="units">in</property>
     <property name="iconFile">/templates/blank_report.gif</property>
     <property name="bidiLayoutOrientation">ltr</property>
     <property name="imageDPI">96</property>
-    <parameters>
-        <scalar-parameter name="ResourceURL" id="23">
-            <property name="valueType">static</property>
-            <property name="dataType">string</property>
-            <property name="distinct">true</property>
-            <simple-property-list name="defaultValue">
-                <value type="constant">platform:/resource/ToUseBirt/My.tousereport</value>
-            </simple-property-list>
-            <list-property name="selectionList"/>
-            <property name="paramType">simple</property>
-            <property name="controlType">text-box</property>
-            <structure name="format">
-                <property name="category">Unformatted</property>
-            </structure>
-        </scalar-parameter>
-        <scalar-parameter name="ObjectFragment" id="24">
-            <property name="valueType">static</property>
-            <property name="isRequired">false</property>
-            <property name="dataType">string</property>
-            <property name="distinct">true</property>
-            <simple-property-list name="defaultValue">
-                <value type="constant">//@Folders.0/@As.1</value>
-            </simple-property-list>
-            <list-property name="selectionList"/>
-            <property name="paramType">simple</property>
-            <property name="concealValue">false</property>
-            <property name="controlType">text-box</property>
-            <structure name="format">
-                <property name="category">Unformatted</property>
-            </structure>
-        </scalar-parameter>
-    </parameters>
     <data-sources>
         <oda-data-source extensionID="org.eclipse.emf.oda.ecore.dataSource" name="Data Source" id="4">
             <property name="resource">file:/E:/Projects/Eclipse/gitrepositories2/touse.moplaf/touse.moplaf.report/com.misc.touse.moplaf.report.emf.ToUseReport/model/My.tousereport</property>
@@ -71,6 +26,7 @@
     </data-sources>
     <data-sets>
         <oda-data-set extensionID="org.eclipse.emf.oda.ecore.dataSet" name="Data Set" id="5">
+            <property name="nullsOrdering">nulls lowest</property>
             <list-property name="columnHints">
                 <structure>
                     <property name="columnName">@self</property>
@@ -106,18 +62,6 @@
                     <property name="isOptional">true</property>
                     <property name="allowNull">true</property>
                     <property name="isInput">true</property>
-                </structure>
-                <structure>
-                    <property name="name">varObjectFragment</property>
-                    <property name="paramName">ObjectFragment</property>
-                    <property name="nativeName">varObjectFragment</property>
-                    <property name="dataType">string</property>
-                    <property name="nativeDataType">50</property>
-                    <property name="position">2</property>
-                    <expression name="defaultValue" type="constant">&lt;unset></expression>
-                    <property name="isOptional">true</property>
-                    <property name="allowNull">true</property>
-                    <property name="isInput">true</property>
                     <property name="isOutput">false</property>
                 </structure>
             </list-property>
@@ -145,6 +89,16 @@
                     </structure>
                 </list-property>
             </structure>
+            <method name="beforeOpen"><![CDATA[myObjectFromContext = reportContext.getAppContext().get("michelid");
+this.setInputParameterValue("@target", myObjectFromContext);
+
+
+//this.setInputParameterValue("varObjectFragment", "//@Folders.0/@As.0");
+
+//michtest2 = this.getInputParameters().get("varObjectFragment");
+
+
+]]></method>
             <property name="dataSource">Data Source</property>
             <list-property name="resultSet">
                 <structure>
@@ -176,7 +130,7 @@
                     <property name="nativeDataType">50</property>
                 </structure>
             </list-property>
-            <xml-property name="queryText"><![CDATA[self.Folders.As->any(Fragment=varObjectFragment)]]></xml-property>
+            <xml-property name="queryText"><![CDATA[self]]></xml-property>
             <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
   <Version>2.0</Version>
@@ -190,29 +144,6 @@
             <design:position>1</design:position>
           </design:identifier>
           <design:nativeDataTypeCode>42</design:nativeDataTypeCode>
-          <design:precision>-1</design:precision>
-          <design:scale>-1</design:scale>
-          <design:nullability>Nullable</design:nullability>
-        </design:attributes>
-        <design:inputAttributes>
-          <design:elementAttributes>
-            <design:defaultValues>
-              <design:values>&amp;lt;unset></design:values>
-            </design:defaultValues>
-            <design:optional>true</design:optional>
-          </design:elementAttributes>
-        </design:inputAttributes>
-      </design:ParameterDefinition>
-    </parameter>
-    <parameter>
-      <design:ParameterDefinition>
-        <design:inOutMode>In</design:inOutMode>
-        <design:attributes>
-          <design:identifier>
-            <design:name>varObjectFragment</design:name>
-            <design:position>2</design:position>
-          </design:identifier>
-          <design:nativeDataTypeCode>50</design:nativeDataTypeCode>
           <design:precision>-1</design:precision>
           <design:scale>-1</design:scale>
           <design:nullability>Nullable</design:nullability>
@@ -300,8 +231,7 @@
   </design:ResultSets>
 </model:DesignValues>]]></xml-property>
             <property name="delegate">http://www.eclipse.org/emf/2002/Ecore/OCL/LPG</property>
-            <property name="context">http://www.misc.com/common/touse/solverlp/model/0.1#//Domain</property>
-            <property name="variables">varObjectFragment http://www.eclipse.org/emf/2002/Ecore#//EString</property>
+            <property name="context">http://www.misc.com/common/touse/solverlp/model/0.1#//A</property>
             <property name="type">http://www.misc.com/common/touse/solverlp/model/0.1#//A</property>
         </oda-data-set>
     </data-sets>
@@ -316,7 +246,7 @@
         </simple-master-page>
     </page-setup>
     <body>
-        <label id="6">
+        <label name="Premier label" id="6">
             <text-property name="text">Hello Michel</text-property>
         </label>
         <table id="7">
@@ -335,6 +265,8 @@
                     <property name="dataType">string</property>
                 </structure>
             </list-property>
+            <method name="onPrepare"><![CDATA[// on prepare, but where??
+]]></method>
             <column id="21"/>
             <column id="22"/>
             <header>
@@ -372,5 +304,12 @@
                 </row>
             </footer>
         </table>
+        <label name="autre label" id="25">
+            <method name="onCreate"><![CDATA[myObjectFromContext = reportContext.getAppContext().get("michelid");
+
+myText = myObjectFromContext == null ? "null" : String(myObjectFromContext);
+
+this.text = ">"+ myText + "<";]]></method>
+        </label>
     </body>
 </report>
