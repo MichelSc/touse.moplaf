@@ -3,8 +3,8 @@
 package com.misc.touse.moplaf.report.ToUseReport.provider;
 
 
-import com.misc.common.moplaf.Report.ReportEngine;
-import com.misc.common.moplaf.Report.provider.ReportAbstractItemProvider;
+import com.misc.common.moplaf.report.ReportEngine;
+import com.misc.common.moplaf.report.provider.ReportAbstractItemProvider;
 import com.misc.touse.moplaf.report.ToUseReport.A;
 import com.misc.touse.moplaf.report.ToUseReport.ReportA;
 import com.misc.touse.moplaf.report.ToUseReport.ToUseReportPackage;

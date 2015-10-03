@@ -2,8 +2,7 @@
  */
 package com.misc.touse.moplaf.report.ToUseReport.util;
 
-import com.misc.common.moplaf.Report.ReportAbstract;
-
+import com.misc.common.moplaf.report.ReportAbstract;
 import com.misc.touse.moplaf.report.ToUseReport.*;
 
 import org.eclipse.emf.ecore.EObject;

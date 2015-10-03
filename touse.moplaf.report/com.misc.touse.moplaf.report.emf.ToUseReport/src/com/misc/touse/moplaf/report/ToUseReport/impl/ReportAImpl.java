@@ -2,8 +2,7 @@
  */
 package com.misc.touse.moplaf.report.ToUseReport.impl;
 
-import com.misc.common.moplaf.Report.impl.ReportAbstractImpl;
-
+import com.misc.common.moplaf.report.impl.ReportAbstractImpl;
 import com.misc.touse.moplaf.report.ToUseReport.A;
 import com.misc.touse.moplaf.report.ToUseReport.ReportA;
 import com.misc.touse.moplaf.report.ToUseReport.ToUseReportPackage;

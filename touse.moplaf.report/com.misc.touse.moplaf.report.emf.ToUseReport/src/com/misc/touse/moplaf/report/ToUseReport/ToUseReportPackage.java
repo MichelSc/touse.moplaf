@@ -2,12 +2,12 @@
  */
 package com.misc.touse.moplaf.report.ToUseReport;
 
-import com.misc.common.moplaf.Report.ReportPackage;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+
+import com.misc.common.moplaf.report.ReportPackage;
 
 /**
  * <!-- begin-user-doc -->

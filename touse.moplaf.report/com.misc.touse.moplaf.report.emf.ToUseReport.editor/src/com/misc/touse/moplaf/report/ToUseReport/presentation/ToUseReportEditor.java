@@ -154,9 +154,8 @@ import org.eclipse.emf.edit.ui.util.EditUIUtil;
 
 import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 
+import com.misc.common.moplaf.report.provider.ReportItemProviderAdapterFactory;
 import com.misc.touse.moplaf.report.ToUseReport.provider.ToUseReportItemProviderAdapterFactory;
-
-import com.misc.common.moplaf.Report.provider.ReportItemProviderAdapterFactory;
 
 import org.eclipse.emf.ecore.provider.EcoreItemProviderAdapterFactory;
 

@@ -2,8 +2,7 @@
  */
 package com.misc.touse.moplaf.report.ToUseReport.util;
 
-import com.misc.common.moplaf.Report.ReportAbstract;
-
+import com.misc.common.moplaf.report.ReportAbstract;
 import com.misc.touse.moplaf.report.ToUseReport.*;
 
 import org.eclipse.emf.common.notify.Adapter;
@@ -184,13 +183,13 @@ public class ToUseReportAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.Report.ReportAbstract <em>Abstract</em>}'.
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.report.ReportAbstract <em>Abstract</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.Report.ReportAbstract
+	 * @see com.misc.common.moplaf.report.ReportAbstract
 	 * @generated
 	 */
 	public Adapter createReportAbstractAdapter() {

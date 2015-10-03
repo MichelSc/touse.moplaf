@@ -21,11 +21,12 @@
     <property name="imageDPI">96</property>
     <data-sources>
         <oda-data-source extensionID="org.eclipse.emf.oda.ecore.dataSource" name="Data Source" id="4">
-            <property name="resource">file:/E:/Projects/Eclipse/gitrepositories2/touse.moplaf/touse.moplaf.report/com.misc.touse.moplaf.report.emf.ToUseReport/model/My.tousereport</property>
+            <property name="resource">platform:/plugin/com.misc.touse.moplaf.report.emf.ToUseReport/model/My.tousereport</property>
         </oda-data-source>
     </data-sources>
     <data-sets>
         <oda-data-set extensionID="org.eclipse.emf.oda.ecore.dataSet" name="Data Set" id="5">
+            <property name="eventHandlerClass">com.misc.common.moplaf.report.util.DataSetEventHandler</property>
             <property name="nullsOrdering">nulls lowest</property>
             <list-property name="columnHints">
                 <structure>
@@ -89,8 +90,8 @@
                     </structure>
                 </list-property>
             </structure>
-            <method name="beforeOpen"><![CDATA[myObjectFromContext = reportContext.getAppContext().get("michelid");
-this.setInputParameterValue("@target", myObjectFromContext);
+            <method name="beforeOpen"><![CDATA[//myObjectFromContext = reportContext.getAppContext().get("michelid");
+//this.setInputParameterValue("@target", myObjectFromContext);
 
 
 //this.setInputParameterValue("varObjectFragment", "//@Folders.0/@As.0");

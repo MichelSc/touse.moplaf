@@ -2,7 +2,7 @@
  */
 package com.misc.touse.moplaf.report.ToUseReport;
 
-import com.misc.common.moplaf.Report.ReportAbstract;
+import com.misc.common.moplaf.report.ReportAbstract;
 
 /**
  * <!-- begin-user-doc -->
