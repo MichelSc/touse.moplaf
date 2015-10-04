@@ -61,6 +61,7 @@ public class BItemProvider
 			super.getPropertyDescriptors(object);
 
 			addCodePropertyDescriptor(object);
+			addSomeStringPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -79,6 +80,28 @@ public class BItemProvider
 				 getString("_UI_B_Code_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_B_Code_feature", "_UI_B_type"),
 				 ToUseReportPackage.Literals.B__CODE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Some String feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSomeStringPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_B_SomeString_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_B_SomeString_feature", "_UI_B_type"),
+				 ToUseReportPackage.Literals.B__SOME_STRING,
 				 true,
 				 false,
 				 false,
@@ -126,6 +149,7 @@ public class BItemProvider
 
 		switch (notification.getFeatureID(B.class)) {
 			case ToUseReportPackage.B__CODE:
+			case ToUseReportPackage.B__SOME_STRING:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

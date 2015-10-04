@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.report.ToUseReport.B#getCode <em>Code</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.report.ToUseReport.B#getSomeString <em>Some String</em>}</li>
  * </ul>
  *
  * @see com.misc.touse.moplaf.report.ToUseReport.ToUseReportPackage#getB()
@@ -46,5 +47,31 @@ public interface B extends EObject {
 	 * @generated
 	 */
 	void setCode(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Some String</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Some String</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Some String</em>' attribute.
+	 * @see #setSomeString(String)
+	 * @see com.misc.touse.moplaf.report.ToUseReport.ToUseReportPackage#getB_SomeString()
+	 * @model
+	 * @generated
+	 */
+	String getSomeString();
+
+	/**
+	 * Sets the value of the '{@link com.misc.touse.moplaf.report.ToUseReport.B#getSomeString <em>Some String</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Some String</em>' attribute.
+	 * @see #getSomeString()
+	 * @generated
+	 */
+	void setSomeString(String value);
 
 } // B

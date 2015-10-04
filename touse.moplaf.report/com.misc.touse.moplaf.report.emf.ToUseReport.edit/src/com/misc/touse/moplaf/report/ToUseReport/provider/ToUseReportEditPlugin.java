@@ -2,13 +2,12 @@
  */
 package com.misc.touse.moplaf.report.ToUseReport.provider;
 
+import com.misc.common.moplaf.report.provider.ReportEditPlugin;
 import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
-
-import com.misc.common.moplaf.report.provider.ReportEditPlugin;
 
 /**
  * This is the central singleton for the ToUseReport edit plugin.

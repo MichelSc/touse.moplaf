@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.report.ToUseReport.impl.BImpl#getCode <em>Code</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.report.ToUseReport.impl.BImpl#getSomeString <em>Some String</em>}</li>
  * </ul>
  *
  * @generated
@@ -45,6 +46,26 @@ public class BImpl extends MinimalEObjectImpl.Container implements B {
 	 * @ordered
 	 */
 	protected String code = CODE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getSomeString() <em>Some String</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSomeString()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SOME_STRING_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getSomeString() <em>Some String</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSomeString()
+	 * @generated
+	 * @ordered
+	 */
+	protected String someString = SOME_STRING_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -91,11 +112,34 @@ public class BImpl extends MinimalEObjectImpl.Container implements B {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getSomeString() {
+		return someString;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSomeString(String newSomeString) {
+		String oldSomeString = someString;
+		someString = newSomeString;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseReportPackage.B__SOME_STRING, oldSomeString, someString));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case ToUseReportPackage.B__CODE:
 				return getCode();
+			case ToUseReportPackage.B__SOME_STRING:
+				return getSomeString();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -110,6 +154,9 @@ public class BImpl extends MinimalEObjectImpl.Container implements B {
 		switch (featureID) {
 			case ToUseReportPackage.B__CODE:
 				setCode((String)newValue);
+				return;
+			case ToUseReportPackage.B__SOME_STRING:
+				setSomeString((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -126,6 +173,9 @@ public class BImpl extends MinimalEObjectImpl.Container implements B {
 			case ToUseReportPackage.B__CODE:
 				setCode(CODE_EDEFAULT);
 				return;
+			case ToUseReportPackage.B__SOME_STRING:
+				setSomeString(SOME_STRING_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -140,6 +190,8 @@ public class BImpl extends MinimalEObjectImpl.Container implements B {
 		switch (featureID) {
 			case ToUseReportPackage.B__CODE:
 				return CODE_EDEFAULT == null ? code != null : !CODE_EDEFAULT.equals(code);
+			case ToUseReportPackage.B__SOME_STRING:
+				return SOME_STRING_EDEFAULT == null ? someString != null : !SOME_STRING_EDEFAULT.equals(someString);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -156,6 +208,8 @@ public class BImpl extends MinimalEObjectImpl.Container implements B {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (Code: ");
 		result.append(code);
+		result.append(", SomeString: ");
+		result.append(someString);
 		result.append(')');
 		return result.toString();
 	}

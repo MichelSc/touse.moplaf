@@ -3,16 +3,24 @@
     <property name="createdBy">Eclipse BIRT Designer Version 4.5.0.v201506092134 Build &lt;@BUILD@></property>
     <list-property name="propertyBindings">
         <structure>
-            <property name="name">resource</property>
-            <property name="id">4</property>
+            <property name="name">queryText</property>
+            <property name="id">39</property>
         </structure>
         <structure>
-            <property name="name">OdaConnProfileName</property>
-            <property name="id">4</property>
+            <property name="name">delegate</property>
+            <property name="id">39</property>
         </structure>
         <structure>
-            <property name="name">OdaConnProfileStorePath</property>
-            <property name="id">4</property>
+            <property name="name">context</property>
+            <property name="id">39</property>
+        </structure>
+        <structure>
+            <property name="name">variables</property>
+            <property name="id">39</property>
+        </structure>
+        <structure>
+            <property name="name">type</property>
+            <property name="id">39</property>
         </structure>
     </list-property>
     <property name="units">in</property>
@@ -25,7 +33,7 @@
         </oda-data-source>
     </data-sources>
     <data-sets>
-        <oda-data-set extensionID="org.eclipse.emf.oda.ecore.dataSet" name="Data Set" id="5">
+        <oda-data-set extensionID="org.eclipse.emf.oda.ecore.dataSet" name="Root Data Set" id="5">
             <property name="eventHandlerClass">com.misc.common.moplaf.report.birt.RootDataSetEventHandler</property>
             <property name="nullsOrdering">nulls lowest</property>
             <list-property name="columnHints">
@@ -50,6 +58,16 @@
                     <property name="analysis">dimension</property>
                     <text-property name="displayName">Fragment</text-property>
                     <text-property name="heading">Fragment</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Some Date Time</property>
+                    <text-property name="displayName">Some Date Time</text-property>
+                    <text-property name="heading">Some Date Time</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Some Real</property>
+                    <text-property name="displayName">Some Real</text-property>
+                    <text-property name="heading">Some Real</text-property>
                 </structure>
             </list-property>
             <list-property name="parameters">
@@ -87,6 +105,16 @@
                         <property name="position">4</property>
                         <property name="name">Fragment</property>
                         <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">Some Date Time</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">Some Real</property>
+                        <property name="dataType">float</property>
                     </structure>
                 </list-property>
             </structure>
@@ -129,6 +157,20 @@
                     <property name="nativeName">Fragment</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">50</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">Some Date Time</property>
+                    <property name="nativeName">SomeDateTime</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">29</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">Some Real</property>
+                    <property name="nativeName">SomeReal</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">37</property>
                 </structure>
             </list-property>
             <xml-property name="queryText"><![CDATA[self]]></xml-property>
@@ -235,6 +277,400 @@
             <property name="context">http://www.misc.com/common/touse/solverlp/model/0.1#//A</property>
             <property name="type">http://www.misc.com/common/touse/solverlp/model/0.1#//A</property>
         </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.emf.oda.ecore.dataSet" name="Detail Data Set" id="39">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">@self</property>
+                    <text-property name="displayName">@self</text-property>
+                    <text-property name="heading">@self</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Code</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Code</text-property>
+                    <text-property name="heading">Code</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">@target</property>
+                    <property name="nativeName">@target</property>
+                    <property name="dataType">javaObject</property>
+                    <property name="nativeDataType">42</property>
+                    <property name="position">1</property>
+                    <expression name="defaultValue" type="constant">&lt;unset></expression>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">@self</property>
+                        <property name="dataType">javaObject</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Code</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">@self</property>
+                    <property name="nativeName">@self</property>
+                    <property name="dataType">javaObject</property>
+                    <property name="nativeDataType">42</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Code</property>
+                    <property name="nativeName">Code</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">50</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[self.Bs]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <DataSetParameters>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>@target</design:name>
+            <design:position>1</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>42</design:nativeDataTypeCode>
+          <design:precision>-1</design:precision>
+          <design:scale>-1</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:defaultValues>
+              <design:values>&amp;lt;unset></design:values>
+            </design:defaultValues>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+  </DataSetParameters>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>@self</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>42</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>@self</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>@self</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Code</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>50</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>Code</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Code</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+            <property name="delegate">http://www.eclipse.org/emf/2002/Ecore/OCL/LPG</property>
+            <property name="context">http://www.misc.com/common/touse/solverlp/model/0.1#//A</property>
+            <property name="type">http://www.misc.com/common/touse/solverlp/model/0.1#//B</property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.emf.oda.ecore.dataSet" name="Data Set Master" id="133">
+            <property name="eventHandlerClass">com.misc.common.moplaf.report.birt.RootDataSetEventHandler</property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">@self</property>
+                    <text-property name="displayName">@self</text-property>
+                    <text-property name="heading">@self</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Bs</property>
+                    <text-property name="displayName">Bs</text-property>
+                    <text-property name="heading">Bs</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Code</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Code</text-property>
+                    <text-property name="heading">Code</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Fragment</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Fragment</text-property>
+                    <text-property name="heading">Fragment</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Some Date Time</property>
+                    <text-property name="displayName">Some Date Time</text-property>
+                    <text-property name="heading">Some Date Time</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Some Real</property>
+                    <text-property name="displayName">Some Real</text-property>
+                    <text-property name="heading">Some Real</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">@target</property>
+                    <property name="nativeName">@target</property>
+                    <property name="dataType">javaObject</property>
+                    <property name="nativeDataType">42</property>
+                    <property name="position">1</property>
+                    <expression name="defaultValue" type="constant">&lt;unset></expression>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">@self</property>
+                        <property name="dataType">javaObject</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Bs</property>
+                        <property name="dataType">javaObject</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Code</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">Fragment</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">Some Date Time</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">Some Real</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">@self</property>
+                    <property name="nativeName">@self</property>
+                    <property name="dataType">javaObject</property>
+                    <property name="nativeDataType">42</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Bs</property>
+                    <property name="nativeName">Bs</property>
+                    <property name="dataType">javaObject</property>
+                    <property name="nativeDataType">42</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Code</property>
+                    <property name="nativeName">Code</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">50</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">Fragment</property>
+                    <property name="nativeName">Fragment</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">50</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">Some Date Time</property>
+                    <property name="nativeName">SomeDateTime</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">29</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">Some Real</property>
+                    <property name="nativeName">SomeReal</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">37</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[self]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <DataSetParameters>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>@target</design:name>
+            <design:position>1</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>42</design:nativeDataTypeCode>
+          <design:precision>-1</design:precision>
+          <design:scale>-1</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:defaultValues>
+              <design:values>&amp;lt;unset></design:values>
+            </design:defaultValues>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+  </DataSetParameters>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>@self</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>42</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>@self</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>@self</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Bs</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>42</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>Bs</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Bs</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Code</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>50</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>Code</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Code</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Fragment</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>50</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>Fragment</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Fragment</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+            <property name="delegate">http://www.eclipse.org/emf/2002/Ecore/OCL/LPG</property>
+            <property name="context">http://www.misc.com/common/touse/solverlp/model/0.1#//A</property>
+            <property name="type">http://www.misc.com/common/touse/solverlp/model/0.1#//A</property>
+        </oda-data-set>
     </data-sets>
     <page-setup>
         <simple-master-page name="Simple MasterPage" id="2">
@@ -247,12 +683,21 @@
         </simple-master-page>
     </page-setup>
     <body>
-        <label name="Premier label" id="6">
-            <text-property name="text">Hello Michel</text-property>
+        <label name="Header label" id="6">
+            <property name="fontSize">14pt</property>
+            <text-property name="text">MOPLAF framework: touse report</text-property>
         </label>
-        <table id="7">
-            <property name="dataSet">Data Set</property>
+        <grid name="PageGrid" id="28">
+            <property name="width">7.947916666666667in</property>
+            <property name="dataSet">Root Data Set</property>
             <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">@self</property>
+                    <text-property name="displayName">grid@self</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["@self"]</expression>
+                    <property name="dataType">javaObject</property>
+                    <property name="allowExport">true</property>
+                </structure>
                 <structure>
                     <property name="name">Bs</property>
                     <text-property name="displayName">Bs</text-property>
@@ -265,52 +710,154 @@
                     <expression name="expression" type="javascript">dataSetRow["Code"]</expression>
                     <property name="dataType">string</property>
                 </structure>
+                <structure>
+                    <property name="name">Fragment</property>
+                    <text-property name="displayName">Fragment</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Fragment"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Column Binding</property>
+                    <expression name="expression" type="javascript">row["@self"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Column Binding_1</property>
+                    <expression name="expression" type="javascript">dataSetRow["@self"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Column Binding_2</property>
+                    <expression name="expression" type="javascript">row["Fragment"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Column Binding_SomeReal</property>
+                    <expression name="expression" type="javascript">dataSetRow["Some Real"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
             </list-property>
-            <method name="onPrepare"><![CDATA[// on prepare, but where??
-]]></method>
-            <column id="21"/>
-            <column id="22"/>
-            <header>
-                <row id="8">
-                    <cell id="9">
-                        <label id="10">
-                            <text-property name="text">Bs</text-property>
-                        </label>
-                    </cell>
-                    <cell id="11">
-                        <label id="12">
-                            <text-property name="text">Code</text-property>
-                        </label>
-                    </cell>
-                </row>
-            </header>
-            <detail>
-                <row id="13">
-                    <cell id="14">
-                        <data id="15">
-                            <property name="resultSetColumn">Bs</property>
-                        </data>
-                    </cell>
-                    <cell id="16">
-                        <data id="17">
-                            <property name="resultSetColumn">Code</property>
-                        </data>
-                    </cell>
-                </row>
-            </detail>
-            <footer>
-                <row id="18">
-                    <cell id="19"/>
-                    <cell id="20"/>
-                </row>
-            </footer>
-        </table>
-        <label name="autre label" id="25">
-            <method name="onCreate"><![CDATA[myObjectFromContext = reportContext.getAppContext().get("michelid");
-
-myText = myObjectFromContext == null ? "null" : String(myObjectFromContext);
-
-this.text = ">"+ myText + "<";]]></method>
-        </label>
+            <column id="29">
+                <property name="width">1.1354166666666667in</property>
+            </column>
+            <column id="30">
+                <property name="width">6.8125in</property>
+            </column>
+            <row id="31">
+                <cell id="32">
+                    <label name="LabelObjectACode" id="27">
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Code:</text-property>
+                    </label>
+                </cell>
+                <cell id="33">
+                    <data id="179">
+                        <property name="resultSetColumn">@self</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="34">
+                <cell id="35">
+                    <label name="LabelObjectAFragment" id="37">
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Fragment:</text-property>
+                    </label>
+                </cell>
+                <cell id="36">
+                    <data id="180">
+                        <property name="resultSetColumn">Column Binding_2</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="182">
+                <cell id="183">
+                    <label name="LabelObjectAFragment1" id="185">
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">SomeReal:</text-property>
+                    </label>
+                </cell>
+                <cell id="184">
+                    <data id="188">
+                        <property name="resultSetColumn">Column Binding_SomeReal</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="40">
+                <cell id="41">
+                    <label name="LabelObjectADetail" id="43">
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Detail:</text-property>
+                    </label>
+                </cell>
+                <cell id="42">
+                    <table name="ObjectADetailB" id="44">
+                        <property name="dataSet">Detail Data Set</property>
+                        <list-property name="paramBindings">
+                            <structure>
+                                <property name="paramName">@target</property>
+                                <simple-property-list name="expression">
+                                    <value type="javascript">row["@self"]</value>
+                                </simple-property-list>
+                            </structure>
+                        </list-property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">@self</property>
+                                <text-property name="displayName">@self</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["@self"]</expression>
+                                <property name="dataType">javaObject</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Code</property>
+                                <text-property name="displayName">Code</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["Code"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Column Binding</property>
+                                <expression name="expression" type="javascript">row["Code"]</expression>
+                                <property name="dataType">string</property>
+                                <property name="allowExport">true</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Column Binding_1</property>
+                                <expression name="expression" type="javascript">row["Code"]</expression>
+                                <property name="dataType">string</property>
+                                <property name="allowExport">true</property>
+                            </structure>
+                        </list-property>
+                        <column id="53"/>
+                        <header>
+                            <row id="45">
+                                <cell id="46">
+                                    <label id="47">
+                                        <property name="textAlign">left</property>
+                                        <text-property name="text">B Code</text-property>
+                                    </label>
+                                </cell>
+                            </row>
+                        </header>
+                        <detail>
+                            <row id="48">
+                                <cell id="49">
+                                    <data id="181">
+                                        <property name="resultSetColumn">Column Binding_1</property>
+                                    </data>
+                                </cell>
+                            </row>
+                        </detail>
+                        <footer>
+                            <row id="51">
+                                <cell id="52"/>
+                            </row>
+                        </footer>
+                    </table>
+                </cell>
+            </row>
+        </grid>
     </body>
 </report>

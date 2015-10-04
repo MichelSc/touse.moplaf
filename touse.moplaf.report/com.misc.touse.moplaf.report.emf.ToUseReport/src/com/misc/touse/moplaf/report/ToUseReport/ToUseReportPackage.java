@@ -2,12 +2,11 @@
  */
 package com.misc.touse.moplaf.report.ToUseReport;
 
+import com.misc.common.moplaf.report.ReportPackage;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
-import com.misc.common.moplaf.report.ReportPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -206,13 +205,31 @@ public interface ToUseReportPackage extends EPackage {
 	int A__FRAGMENT = 2;
 
 	/**
+	 * The feature id for the '<em><b>Some Date Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int A__SOME_DATE_TIME = 3;
+
+	/**
+	 * The feature id for the '<em><b>Some Real</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int A__SOME_REAL = 4;
+
+	/**
 	 * The number of structural features of the '<em>A</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int A_FEATURE_COUNT = 3;
+	int A_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>A</em>' class.
@@ -243,13 +260,22 @@ public interface ToUseReportPackage extends EPackage {
 	int B__CODE = 0;
 
 	/**
+	 * The feature id for the '<em><b>Some String</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int B__SOME_STRING = 1;
+
+	/**
 	 * The number of structural features of the '<em>B</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int B_FEATURE_COUNT = 1;
+	int B_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>B</em>' class.
@@ -554,6 +580,28 @@ public interface ToUseReportPackage extends EPackage {
 	EAttribute getA_Fragment();
 
 	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.report.ToUseReport.A#getSomeDateTime <em>Some Date Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Some Date Time</em>'.
+	 * @see com.misc.touse.moplaf.report.ToUseReport.A#getSomeDateTime()
+	 * @see #getA()
+	 * @generated
+	 */
+	EAttribute getA_SomeDateTime();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.report.ToUseReport.A#getSomeReal <em>Some Real</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Some Real</em>'.
+	 * @see com.misc.touse.moplaf.report.ToUseReport.A#getSomeReal()
+	 * @see #getA()
+	 * @generated
+	 */
+	EAttribute getA_SomeReal();
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.report.ToUseReport.B <em>B</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -573,6 +621,17 @@ public interface ToUseReportPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getB_Code();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.report.ToUseReport.B#getSomeString <em>Some String</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Some String</em>'.
+	 * @see com.misc.touse.moplaf.report.ToUseReport.B#getSomeString()
+	 * @see #getB()
+	 * @generated
+	 */
+	EAttribute getB_SomeString();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.report.ToUseReport.ReportA <em>Report A</em>}'.
@@ -721,6 +780,22 @@ public interface ToUseReportPackage extends EPackage {
 		EAttribute A__FRAGMENT = eINSTANCE.getA_Fragment();
 
 		/**
+		 * The meta object literal for the '<em><b>Some Date Time</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute A__SOME_DATE_TIME = eINSTANCE.getA_SomeDateTime();
+
+		/**
+		 * The meta object literal for the '<em><b>Some Real</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute A__SOME_REAL = eINSTANCE.getA_SomeReal();
+
+		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.report.ToUseReport.impl.BImpl <em>B</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -737,6 +812,14 @@ public interface ToUseReportPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute B__CODE = eINSTANCE.getB_Code();
+
+		/**
+		 * The meta object literal for the '<em><b>Some String</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute B__SOME_STRING = eINSTANCE.getB_SomeString();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.report.ToUseReport.impl.ReportAImpl <em>Report A</em>}' class.

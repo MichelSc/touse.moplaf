@@ -153,10 +153,9 @@ import org.eclipse.emf.edit.ui.util.EditUIMarkerHelper;
 import org.eclipse.emf.edit.ui.util.EditUIUtil;
 
 import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
-
-import com.misc.common.moplaf.report.provider.ReportItemProviderAdapterFactory;
 import com.misc.touse.moplaf.report.ToUseReport.provider.ToUseReportItemProviderAdapterFactory;
 
+import com.misc.common.moplaf.report.provider.ReportItemProviderAdapterFactory;
 import org.eclipse.emf.ecore.provider.EcoreItemProviderAdapterFactory;
 
 import org.eclipse.ui.actions.WorkspaceModifyOperation;

@@ -236,6 +236,24 @@ public class ToUseReportPackageImpl extends EPackageImpl implements ToUseReportP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getA_SomeDateTime() {
+		return (EAttribute)aEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getA_SomeReal() {
+		return (EAttribute)aEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getB() {
 		return bEClass;
 	}
@@ -247,6 +265,15 @@ public class ToUseReportPackageImpl extends EPackageImpl implements ToUseReportP
 	 */
 	public EAttribute getB_Code() {
 		return (EAttribute)bEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getB_SomeString() {
+		return (EAttribute)bEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -309,9 +336,12 @@ public class ToUseReportPackageImpl extends EPackageImpl implements ToUseReportP
 		createEReference(aEClass, A__BS);
 		createEAttribute(aEClass, A__CODE);
 		createEAttribute(aEClass, A__FRAGMENT);
+		createEAttribute(aEClass, A__SOME_DATE_TIME);
+		createEAttribute(aEClass, A__SOME_REAL);
 
 		bEClass = createEClass(B);
 		createEAttribute(bEClass, B__CODE);
+		createEAttribute(bEClass, B__SOME_STRING);
 
 		reportAEClass = createEClass(REPORT_A);
 		createEReference(reportAEClass, REPORT_A__CONTEXT);
@@ -366,9 +396,12 @@ public class ToUseReportPackageImpl extends EPackageImpl implements ToUseReportP
 		initEReference(getA_Bs(), this.getB(), null, "Bs", null, 0, -1, com.misc.touse.moplaf.report.ToUseReport.A.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getA_Code(), theEcorePackage.getEString(), "Code", null, 0, 1, com.misc.touse.moplaf.report.ToUseReport.A.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getA_Fragment(), theEcorePackage.getEString(), "Fragment", null, 0, 1, com.misc.touse.moplaf.report.ToUseReport.A.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getA_SomeDateTime(), theEcorePackage.getEDate(), "SomeDateTime", null, 0, 1, com.misc.touse.moplaf.report.ToUseReport.A.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getA_SomeReal(), theEcorePackage.getEFloat(), "SomeReal", "0.0f", 0, 1, com.misc.touse.moplaf.report.ToUseReport.A.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(bEClass, com.misc.touse.moplaf.report.ToUseReport.B.class, "B", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getB_Code(), theEcorePackage.getEString(), "Code", null, 0, 1, com.misc.touse.moplaf.report.ToUseReport.B.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getB_SomeString(), theEcorePackage.getEString(), "SomeString", null, 0, 1, com.misc.touse.moplaf.report.ToUseReport.B.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(reportAEClass, ReportA.class, "ReportA", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getReportA_Context(), this.getA(), null, "Context", null, 0, 1, ReportA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -8,6 +8,7 @@ import com.misc.touse.moplaf.report.ToUseReport.ToUseReportPackage;
 
 import java.util.Collection;
 
+import java.util.Date;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -33,6 +34,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.misc.touse.moplaf.report.ToUseReport.impl.AImpl#getBs <em>Bs</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.report.ToUseReport.impl.AImpl#getCode <em>Code</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.report.ToUseReport.impl.AImpl#getFragment <em>Fragment</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.report.ToUseReport.impl.AImpl#getSomeDateTime <em>Some Date Time</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.report.ToUseReport.impl.AImpl#getSomeReal <em>Some Real</em>}</li>
  * </ul>
  *
  * @generated
@@ -77,6 +80,46 @@ public class AImpl extends MinimalEObjectImpl.Container implements A {
 	 * @ordered
 	 */
 	protected static final String FRAGMENT_EDEFAULT = null;
+
+	/**
+	 * The default value of the '{@link #getSomeDateTime() <em>Some Date Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSomeDateTime()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Date SOME_DATE_TIME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getSomeDateTime() <em>Some Date Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSomeDateTime()
+	 * @generated
+	 * @ordered
+	 */
+	protected Date someDateTime = SOME_DATE_TIME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getSomeReal() <em>Some Real</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSomeReal()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final float SOME_REAL_EDEFAULT = 0.0F;
+
+	/**
+	 * The cached value of the '{@link #getSomeReal() <em>Some Real</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSomeReal()
+	 * @generated
+	 * @ordered
+	 */
+	protected float someReal = SOME_REAL_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -145,6 +188,48 @@ public class AImpl extends MinimalEObjectImpl.Container implements A {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Date getSomeDateTime() {
+		return someDateTime;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSomeDateTime(Date newSomeDateTime) {
+		Date oldSomeDateTime = someDateTime;
+		someDateTime = newSomeDateTime;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseReportPackage.A__SOME_DATE_TIME, oldSomeDateTime, someDateTime));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public float getSomeReal() {
+		return someReal;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSomeReal(float newSomeReal) {
+		float oldSomeReal = someReal;
+		someReal = newSomeReal;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseReportPackage.A__SOME_REAL, oldSomeReal, someReal));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -168,6 +253,10 @@ public class AImpl extends MinimalEObjectImpl.Container implements A {
 				return getCode();
 			case ToUseReportPackage.A__FRAGMENT:
 				return getFragment();
+			case ToUseReportPackage.A__SOME_DATE_TIME:
+				return getSomeDateTime();
+			case ToUseReportPackage.A__SOME_REAL:
+				return getSomeReal();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -188,6 +277,12 @@ public class AImpl extends MinimalEObjectImpl.Container implements A {
 			case ToUseReportPackage.A__CODE:
 				setCode((String)newValue);
 				return;
+			case ToUseReportPackage.A__SOME_DATE_TIME:
+				setSomeDateTime((Date)newValue);
+				return;
+			case ToUseReportPackage.A__SOME_REAL:
+				setSomeReal((Float)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -205,6 +300,12 @@ public class AImpl extends MinimalEObjectImpl.Container implements A {
 				return;
 			case ToUseReportPackage.A__CODE:
 				setCode(CODE_EDEFAULT);
+				return;
+			case ToUseReportPackage.A__SOME_DATE_TIME:
+				setSomeDateTime(SOME_DATE_TIME_EDEFAULT);
+				return;
+			case ToUseReportPackage.A__SOME_REAL:
+				setSomeReal(SOME_REAL_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -224,6 +325,10 @@ public class AImpl extends MinimalEObjectImpl.Container implements A {
 				return CODE_EDEFAULT == null ? code != null : !CODE_EDEFAULT.equals(code);
 			case ToUseReportPackage.A__FRAGMENT:
 				return FRAGMENT_EDEFAULT == null ? getFragment() != null : !FRAGMENT_EDEFAULT.equals(getFragment());
+			case ToUseReportPackage.A__SOME_DATE_TIME:
+				return SOME_DATE_TIME_EDEFAULT == null ? someDateTime != null : !SOME_DATE_TIME_EDEFAULT.equals(someDateTime);
+			case ToUseReportPackage.A__SOME_REAL:
+				return someReal != SOME_REAL_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -240,6 +345,10 @@ public class AImpl extends MinimalEObjectImpl.Container implements A {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (Code: ");
 		result.append(code);
+		result.append(", SomeDateTime: ");
+		result.append(someDateTime);
+		result.append(", SomeReal: ");
+		result.append(someReal);
 		result.append(')');
 		return result.toString();
 	}

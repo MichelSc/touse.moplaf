@@ -65,6 +65,8 @@ public class AItemProvider
 
 			addCodePropertyDescriptor(object);
 			addFragmentPropertyDescriptor(object);
+			addSomeDateTimePropertyDescriptor(object);
+			addSomeRealPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -109,6 +111,50 @@ public class AItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Some Date Time feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSomeDateTimePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_A_SomeDateTime_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_A_SomeDateTime_feature", "_UI_A_type"),
+				 ToUseReportPackage.Literals.A__SOME_DATE_TIME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Some Real feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSomeRealPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_A_SomeReal_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_A_SomeReal_feature", "_UI_A_type"),
+				 ToUseReportPackage.Literals.A__SOME_REAL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -183,6 +229,8 @@ public class AItemProvider
 		switch (notification.getFeatureID(A.class)) {
 			case ToUseReportPackage.A__CODE:
 			case ToUseReportPackage.A__FRAGMENT:
+			case ToUseReportPackage.A__SOME_DATE_TIME:
+			case ToUseReportPackage.A__SOME_REAL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case ToUseReportPackage.A__BS:
