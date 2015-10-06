@@ -94,15 +94,10 @@ public class ReportAItemProvider extends ReportAbstractItemProvider {
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	@Override
 	public String getText(Object object) {
-		ReportEngine labelValue = ((ReportA)object).getEngine();
-		String label = labelValue == null ? null : labelValue.toString();
-		return label == null || label.length() == 0 ?
-			getString("_UI_ReportA_type") :
-			getString("_UI_ReportA_type") + " " + label;
+		return super.getText(object);
 	}
 	
 
