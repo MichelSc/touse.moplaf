@@ -315,15 +315,6 @@ public interface ToUseReportPackage extends EPackage {
 	int REPORT_A__FORMAT = ReportPackage.REPORT_ABSTRACT__FORMAT;
 
 	/**
-	 * The feature id for the '<em><b>Generated</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REPORT_A__GENERATED = ReportPackage.REPORT_ABSTRACT__GENERATED;
-
-	/**
 	 * The feature id for the '<em><b>Output File Path</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -340,15 +331,6 @@ public interface ToUseReportPackage extends EPackage {
 	 * @ordered
 	 */
 	int REPORT_A__LAST_GENERATED = ReportPackage.REPORT_ABSTRACT__LAST_GENERATED;
-
-	/**
-	 * The feature id for the '<em><b>Run Mode</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REPORT_A__RUN_MODE = ReportPackage.REPORT_ABSTRACT__RUN_MODE;
 
 	/**
 	 * The feature id for the '<em><b>May Be Run</b></em>' attribute.
@@ -385,33 +367,6 @@ public interface ToUseReportPackage extends EPackage {
 	 * @ordered
 	 */
 	int REPORT_A_FEATURE_COUNT = ReportPackage.REPORT_ABSTRACT_FEATURE_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Generate</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REPORT_A___GENERATE = ReportPackage.REPORT_ABSTRACT___GENERATE;
-
-	/**
-	 * The operation id for the '<em>Render</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REPORT_A___RENDER = ReportPackage.REPORT_ABSTRACT___RENDER;
-
-	/**
-	 * The operation id for the '<em>Write</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REPORT_A___WRITE = ReportPackage.REPORT_ABSTRACT___WRITE;
 
 	/**
 	 * The operation id for the '<em>Get Context</em>' operation.
