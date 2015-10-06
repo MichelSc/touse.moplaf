@@ -417,7 +417,7 @@
     <page-setup>
         <simple-master-page name="Simple MasterPage" id="2">
             <page-footer>
-                <text id="3">
+                <text name="TextFooterMasterPage" id="3">
                     <property name="contentType">html</property>
                     <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
                 </text>
@@ -427,9 +427,26 @@
     <body>
         <label name="Header label" id="6">
             <property name="fontSize">14pt</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">medium</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">medium</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">medium</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">medium</property>
             <text-property name="text">MOPLAF framework: touse report</text-property>
         </label>
         <grid name="PageGrid" id="28">
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">thin</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">thin</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">thin</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">thin</property>
+            <property name="height">2.15625in</property>
             <property name="width">7.947916666666667in</property>
             <property name="dataSet">Root Data Set</property>
             <list-property name="boundDataColumns">
@@ -478,14 +495,19 @@
                 <property name="width">6.8125in</property>
             </column>
             <row id="31">
+                <property name="borderBottomStyle">solid</property>
+                <property name="borderBottomWidth">medium</property>
+                <property name="height">0.6041666666666666in</property>
                 <cell id="32">
                     <label name="LabelObjectACode" id="27">
                         <property name="fontWeight">bold</property>
+                        <property name="paddingTop">25pt</property>
                         <text-property name="text">Code:</text-property>
                     </label>
                 </cell>
                 <cell id="33">
                     <data id="179">
+                        <property name="paddingTop">25pt</property>
                         <property name="resultSetColumn">Code</property>
                     </data>
                 </cell>
@@ -521,6 +543,10 @@
                 </cell>
             </row>
             <row id="189">
+                <property name="borderBottomStyle">none</property>
+                <property name="borderLeftStyle">none</property>
+                <property name="borderRightStyle">none</property>
+                <property name="borderTopStyle">none</property>
                 <cell id="190">
                     <label name="LabelObjectASomeDate" id="192">
                         <property name="fontWeight">bold</property>
