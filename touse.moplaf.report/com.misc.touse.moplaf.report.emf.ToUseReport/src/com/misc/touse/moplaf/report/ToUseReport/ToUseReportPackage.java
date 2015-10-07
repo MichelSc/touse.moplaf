@@ -351,6 +351,24 @@ public interface ToUseReportPackage extends EPackage {
 	int REPORT_A__MAY_BE_RUN_FEEDBACK = ReportPackage.REPORT_ABSTRACT__MAY_BE_RUN_FEEDBACK;
 
 	/**
+	 * The feature id for the '<em><b>Report Context</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REPORT_A__REPORT_CONTEXT = ReportPackage.REPORT_ABSTRACT__REPORT_CONTEXT;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REPORT_A__DESCRIPTION = ReportPackage.REPORT_ABSTRACT__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Context</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -367,15 +385,6 @@ public interface ToUseReportPackage extends EPackage {
 	 * @ordered
 	 */
 	int REPORT_A_FEATURE_COUNT = ReportPackage.REPORT_ABSTRACT_FEATURE_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Get Context</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REPORT_A___GET_CONTEXT = ReportPackage.REPORT_ABSTRACT___GET_CONTEXT;
 
 	/**
 	 * The operation id for the '<em>Run</em>' operation.

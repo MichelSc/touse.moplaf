@@ -9,6 +9,7 @@ import com.misc.touse.moplaf.report.ToUseReport.ToUseReportPackage;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -159,9 +160,18 @@ public class ReportAImpl extends ReportAbstractImpl implements ReportA {
 		return url;
 	}
 	
-	
-	
-	
-	
+	public EObject basicGetReportContext() {
+		return this.getContext();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	public String getDescription() {
+		
+		String description = "ToUse "+(this.getContext()==null?"null":this.getContext().getCode());
+		return description;
+	}
 
 } //ReportAImpl

@@ -29,7 +29,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseReport.ecore#//B/Code"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseReport.ecore#//B/SomeString"/>
     </genClasses>
-    <genClasses ecoreClass="ToUseReport.ecore#//ReportA">
+    <genClasses ecoreClass="ToUseReport.ecore#//ReportA" labelFeature="../../com.misc.common.moplaf.report.emf/model/Report.genmodel#//report/ReportAbstract/Description">
       <genFeatures createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUseReport.ecore#//ReportA/Context"/>
     </genClasses>
   </genPackages>
