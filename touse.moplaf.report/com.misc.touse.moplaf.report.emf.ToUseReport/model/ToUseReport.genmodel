@@ -30,7 +30,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseReport.ecore#//B/SomeString"/>
     </genClasses>
     <genClasses ecoreClass="ToUseReport.ecore#//ReportA">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUseReport.ecore#//ReportA/Context"/>
+      <genFeatures createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUseReport.ecore#//ReportA/Context"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

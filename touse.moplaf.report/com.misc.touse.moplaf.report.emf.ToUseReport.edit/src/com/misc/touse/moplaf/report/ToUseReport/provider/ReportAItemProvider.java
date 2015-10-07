@@ -3,7 +3,6 @@
 package com.misc.touse.moplaf.report.ToUseReport.provider;
 
 
-import com.misc.common.moplaf.report.ReportEngine;
 import com.misc.common.moplaf.report.provider.ReportAbstractItemProvider;
 import com.misc.touse.moplaf.report.ToUseReport.A;
 import com.misc.touse.moplaf.report.ToUseReport.ReportA;
@@ -23,6 +22,7 @@ import org.eclipse.emf.edit.command.SetCommand;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link com.misc.touse.moplaf.report.ToUseReport.ReportA} object.
@@ -111,6 +111,12 @@ public class ReportAItemProvider extends ReportAbstractItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(ReportA.class)) {
+			case ToUseReportPackage.REPORT_A__CONTEXT:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 
