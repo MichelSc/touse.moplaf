@@ -112,10 +112,6 @@
           <children xmi:type="notation:Node" xmi:id="_hmkh8GzcEeWqUqO3DXf1qA" type="2003" element="_hmJEIGzcEeWqUqO3DXf1qA">
             <children xmi:type="notation:Node" xmi:id="_hmlJAGzcEeWqUqO3DXf1qA" type="5007"/>
             <children xmi:type="notation:Node" xmi:id="_hmlJAWzcEeWqUqO3DXf1qA" type="7004">
-              <children xmi:type="notation:Node" xmi:id="_hmlwEGzcEeWqUqO3DXf1qA" type="3010" element="_hmUqUGzcEeWqUqO3DXf1qA">
-                <styles xmi:type="notation:FontStyle" xmi:id="_hmlwEWzcEeWqUqO3DXf1qA" fontHeight="8"/>
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_hmlwEmzcEeWqUqO3DXf1qA"/>
-              </children>
               <children xmi:type="notation:Node" xmi:id="_hmmXIGzcEeWqUqO3DXf1qA" type="3010" element="_hmVRYWzcEeWqUqO3DXf1qA">
                 <styles xmi:type="notation:FontStyle" xmi:id="_hmmXIWzcEeWqUqO3DXf1qA" fontHeight="8"/>
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_hmmXImzcEeWqUqO3DXf1qA"/>
@@ -519,14 +515,6 @@
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@conditionnalStyles.1/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_hmUqUGzcEeWqUqO3DXf1qA" name="Engine : ReportEngine = Birt" tooltipText="">
-          <target xmi:type="ecore:EAttribute" href="platform:/resource/com.misc.common.moplaf.report.emf/model/Report.ecore#//ReportAbstract/Engine"/>
-          <semanticElements xmi:type="ecore:EAttribute" href="platform:/resource/com.misc.common.moplaf.report.emf/model/Report.ecore#//ReportAbstract/Engine"/>
-          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_hmVRYGzcEeWqUqO3DXf1qA" labelAlignment="LEFT">
-            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
-          </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
-        </ownedElements>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_hmVRYWzcEeWqUqO3DXf1qA" name="Format : ReportRenderFormat = pdf" tooltipText="">
           <target xmi:type="ecore:EAttribute" href="platform:/resource/com.misc.common.moplaf.report.emf/model/Report.ecore#//ReportAbstract/Format"/>
           <semanticElements xmi:type="ecore:EAttribute" href="platform:/resource/com.misc.common.moplaf.report.emf/model/Report.ecore#//ReportAbstract/Format"/>
