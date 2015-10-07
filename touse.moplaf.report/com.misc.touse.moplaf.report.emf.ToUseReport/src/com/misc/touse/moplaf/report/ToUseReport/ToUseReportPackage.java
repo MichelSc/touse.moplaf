@@ -2,7 +2,6 @@
  */
 package com.misc.touse.moplaf.report.ToUseReport;
 
-import com.misc.common.moplaf.report.ReportPackage;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -303,7 +302,7 @@ public interface ToUseReportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REPORT_A__ENGINE = ReportPackage.REPORT_ABSTRACT__ENGINE;
+	int REPORT_A__ENGINE = com.misc.common.moplaf.report.birt.BirtPackage.REPORT_BIRT__ENGINE;
 
 	/**
 	 * The feature id for the '<em><b>Format</b></em>' attribute.
@@ -312,7 +311,7 @@ public interface ToUseReportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REPORT_A__FORMAT = ReportPackage.REPORT_ABSTRACT__FORMAT;
+	int REPORT_A__FORMAT = com.misc.common.moplaf.report.birt.BirtPackage.REPORT_BIRT__FORMAT;
 
 	/**
 	 * The feature id for the '<em><b>Output File Path</b></em>' attribute.
@@ -321,7 +320,7 @@ public interface ToUseReportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REPORT_A__OUTPUT_FILE_PATH = ReportPackage.REPORT_ABSTRACT__OUTPUT_FILE_PATH;
+	int REPORT_A__OUTPUT_FILE_PATH = com.misc.common.moplaf.report.birt.BirtPackage.REPORT_BIRT__OUTPUT_FILE_PATH;
 
 	/**
 	 * The feature id for the '<em><b>Last Generated</b></em>' attribute.
@@ -330,7 +329,7 @@ public interface ToUseReportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REPORT_A__LAST_GENERATED = ReportPackage.REPORT_ABSTRACT__LAST_GENERATED;
+	int REPORT_A__LAST_GENERATED = com.misc.common.moplaf.report.birt.BirtPackage.REPORT_BIRT__LAST_GENERATED;
 
 	/**
 	 * The feature id for the '<em><b>May Be Run</b></em>' attribute.
@@ -339,7 +338,7 @@ public interface ToUseReportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REPORT_A__MAY_BE_RUN = ReportPackage.REPORT_ABSTRACT__MAY_BE_RUN;
+	int REPORT_A__MAY_BE_RUN = com.misc.common.moplaf.report.birt.BirtPackage.REPORT_BIRT__MAY_BE_RUN;
 
 	/**
 	 * The feature id for the '<em><b>May Be Run Feedback</b></em>' attribute.
@@ -348,7 +347,7 @@ public interface ToUseReportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REPORT_A__MAY_BE_RUN_FEEDBACK = ReportPackage.REPORT_ABSTRACT__MAY_BE_RUN_FEEDBACK;
+	int REPORT_A__MAY_BE_RUN_FEEDBACK = com.misc.common.moplaf.report.birt.BirtPackage.REPORT_BIRT__MAY_BE_RUN_FEEDBACK;
 
 	/**
 	 * The feature id for the '<em><b>Report Context</b></em>' reference.
@@ -357,7 +356,7 @@ public interface ToUseReportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REPORT_A__REPORT_CONTEXT = ReportPackage.REPORT_ABSTRACT__REPORT_CONTEXT;
+	int REPORT_A__REPORT_CONTEXT = com.misc.common.moplaf.report.birt.BirtPackage.REPORT_BIRT__REPORT_CONTEXT;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -366,7 +365,7 @@ public interface ToUseReportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REPORT_A__DESCRIPTION = ReportPackage.REPORT_ABSTRACT__DESCRIPTION;
+	int REPORT_A__DESCRIPTION = com.misc.common.moplaf.report.birt.BirtPackage.REPORT_BIRT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Context</b></em>' reference.
@@ -375,7 +374,7 @@ public interface ToUseReportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REPORT_A__CONTEXT = ReportPackage.REPORT_ABSTRACT_FEATURE_COUNT + 0;
+	int REPORT_A__CONTEXT = com.misc.common.moplaf.report.birt.BirtPackage.REPORT_BIRT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Report A</em>' class.
@@ -384,7 +383,7 @@ public interface ToUseReportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REPORT_A_FEATURE_COUNT = ReportPackage.REPORT_ABSTRACT_FEATURE_COUNT + 1;
+	int REPORT_A_FEATURE_COUNT = com.misc.common.moplaf.report.birt.BirtPackage.REPORT_BIRT_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Run</em>' operation.
@@ -393,7 +392,7 @@ public interface ToUseReportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REPORT_A___RUN = ReportPackage.REPORT_ABSTRACT___RUN;
+	int REPORT_A___RUN = com.misc.common.moplaf.report.birt.BirtPackage.REPORT_BIRT___RUN;
 
 	/**
 	 * The operation id for the '<em>Get Report Design File URL</em>' operation.
@@ -402,7 +401,7 @@ public interface ToUseReportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REPORT_A___GET_REPORT_DESIGN_FILE_URL = ReportPackage.REPORT_ABSTRACT___GET_REPORT_DESIGN_FILE_URL;
+	int REPORT_A___GET_REPORT_DESIGN_FILE_URL = com.misc.common.moplaf.report.birt.BirtPackage.REPORT_BIRT___GET_REPORT_DESIGN_FILE_URL;
 
 	/**
 	 * The number of operations of the '<em>Report A</em>' class.
@@ -411,7 +410,7 @@ public interface ToUseReportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REPORT_A_OPERATION_COUNT = ReportPackage.REPORT_ABSTRACT_OPERATION_COUNT + 0;
+	int REPORT_A_OPERATION_COUNT = com.misc.common.moplaf.report.birt.BirtPackage.REPORT_BIRT_OPERATION_COUNT + 0;
 
 
 	/**

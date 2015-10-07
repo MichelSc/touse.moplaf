@@ -15,5 +15,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.ecore.edit;visibility:=reexport,
  com.misc.common.moplaf.report.emf;visibility:=reexport,
- com.misc.common.moplaf.report.emf.edit;visibility:=reexport
+ com.misc.common.moplaf.report.emf.edit;visibility:=reexport,
+ com.misc.common.moplaf.report.birt.emf;visibility:=reexport,
+ com.misc.common.moplaf.report.birt.emf.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

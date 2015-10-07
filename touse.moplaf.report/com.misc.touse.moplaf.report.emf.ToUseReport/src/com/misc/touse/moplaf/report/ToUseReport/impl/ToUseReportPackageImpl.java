@@ -2,7 +2,6 @@
  */
 package com.misc.touse.moplaf.report.ToUseReport.impl;
 
-import com.misc.common.moplaf.report.ReportPackage;
 import com.misc.touse.moplaf.report.ToUseReport.Domain;
 import com.misc.touse.moplaf.report.ToUseReport.Folder;
 import com.misc.touse.moplaf.report.ToUseReport.ReportA;
@@ -106,7 +105,7 @@ public class ToUseReportPackageImpl extends EPackageImpl implements ToUseReportP
 		isInited = true;
 
 		// Initialize simple dependencies
-		ReportPackage.eINSTANCE.eClass();
+		com.misc.common.moplaf.report.birt.BirtPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theToUseReportPackage.createPackageContents();
@@ -372,14 +371,14 @@ public class ToUseReportPackageImpl extends EPackageImpl implements ToUseReportP
 
 		// Obtain other dependent packages
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		ReportPackage theReportPackage = (ReportPackage)EPackage.Registry.INSTANCE.getEPackage(ReportPackage.eNS_URI);
+		com.misc.common.moplaf.report.birt.BirtPackage theBirtPackage = (com.misc.common.moplaf.report.birt.BirtPackage)EPackage.Registry.INSTANCE.getEPackage(com.misc.common.moplaf.report.birt.BirtPackage.eNS_URI);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		reportAEClass.getESuperTypes().add(theReportPackage.getReportAbstract());
+		reportAEClass.getESuperTypes().add(theBirtPackage.getReportBirt());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

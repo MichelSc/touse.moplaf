@@ -3,7 +3,6 @@
 package com.misc.touse.moplaf.report.ToUseReport.provider;
 
 
-import com.misc.common.moplaf.report.provider.ReportAbstractItemProvider;
 import com.misc.touse.moplaf.report.ToUseReport.A;
 import com.misc.touse.moplaf.report.ToUseReport.ReportA;
 import com.misc.touse.moplaf.report.ToUseReport.ToUseReportPackage;
@@ -30,7 +29,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ReportAItemProvider extends ReportAbstractItemProvider {
+public class ReportAItemProvider extends com.misc.common.moplaf.report.birt.provider.ReportBirtItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

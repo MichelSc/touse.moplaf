@@ -2,6 +2,7 @@
  */
 package com.misc.touse.moplaf.report.ToUseReport.provider;
 
+import com.misc.common.moplaf.report.birt.provider.ReportBirtEditPlugin;
 import com.misc.common.moplaf.report.provider.ReportEditPlugin;
 import org.eclipse.emf.common.EMFPlugin;
 
@@ -43,6 +44,7 @@ public final class ToUseReportEditPlugin extends EMFPlugin {
 		  (new ResourceLocator [] {
 		     EcoreEditPlugin.INSTANCE,
 		     ReportEditPlugin.INSTANCE,
+		     ReportBirtEditPlugin.INSTANCE,
 		   });
 	}
 

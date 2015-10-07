@@ -12,7 +12,7 @@
     </data-sources>
     <data-sets>
         <oda-data-set extensionID="org.eclipse.emf.oda.ecore.dataSet" name="Root Data Set" id="5">
-            <property name="eventHandlerClass">com.misc.common.moplaf.report.birt.RootDataSetEventHandler</property>
+            <property name="eventHandlerClass">com.misc.common.moplaf.report.birt.event.RootDataSetEventHandler</property>
             <property name="nullsOrdering">nulls lowest</property>
             <list-property name="columnHints">
                 <structure>

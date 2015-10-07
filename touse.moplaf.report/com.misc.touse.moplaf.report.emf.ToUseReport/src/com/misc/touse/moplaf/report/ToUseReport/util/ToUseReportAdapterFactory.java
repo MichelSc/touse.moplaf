@@ -93,6 +93,10 @@ public class ToUseReportAdapterFactory extends AdapterFactoryImpl {
 				return createReportAbstractAdapter();
 			}
 			@Override
+			public Adapter caseReportBirt(com.misc.common.moplaf.report.birt.ReportBirt object) {
+				return createReportBirtAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -193,6 +197,20 @@ public class ToUseReportAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createReportAbstractAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.report.birt.ReportBirt <em>Report Birt</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.report.birt.ReportBirt
+	 * @generated
+	 */
+	public Adapter createReportBirtAdapter() {
 		return null;
 	}
 

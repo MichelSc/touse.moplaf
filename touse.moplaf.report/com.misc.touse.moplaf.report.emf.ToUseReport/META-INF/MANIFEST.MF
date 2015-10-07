@@ -12,5 +12,6 @@ Export-Package: com.misc.touse.moplaf.report.ToUseReport,
  com.misc.touse.moplaf.report.ToUseReport.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- com.misc.common.moplaf.report.emf;visibility:=reexport
+ com.misc.common.moplaf.report.emf;visibility:=reexport,
+ com.misc.common.moplaf.report.birt.emf;visibility:=reexport
 Bundle-ActivationPolicy: lazy

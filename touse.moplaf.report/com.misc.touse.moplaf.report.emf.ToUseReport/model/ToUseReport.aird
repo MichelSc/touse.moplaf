@@ -4,6 +4,7 @@
   <semanticResources>platform:/resource/com.misc.common.moplaf.report.emf/model/Report.ecore</semanticResources>
   <semanticResources>http://www.eclipse.org/emf/2002/Ecore</semanticResources>
   <semanticResources>platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore</semanticResources>
+  <semanticResources>platform:/resource/com.misc.common.moplaf.report.birt.emf/model/ReportBirt.ecore</semanticResources>
   <ownedViews xmi:type="viewpoint:DRepresentationContainer" xmi:id="_xLY58GT1EeW1wLwk0KN-fA">
     <ownedRepresentations xmi:type="diagram:DSemanticDiagram" xmi:id="_yxn38GT1EeW1wLwk0KN-fA" name="ToUseReport class diagram">
       <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_yxn38WT1EeW1wLwk0KN-fA" source="DANNOTATION_CUSTOMIZATION_KEY">

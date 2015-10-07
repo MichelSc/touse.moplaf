@@ -154,7 +154,7 @@ import org.eclipse.emf.edit.ui.util.EditUIUtil;
 
 import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 import com.misc.touse.moplaf.report.ToUseReport.provider.ToUseReportItemProviderAdapterFactory;
-
+import com.misc.common.moplaf.report.birt.provider.BirtItemProviderAdapterFactory;
 import com.misc.common.moplaf.report.provider.ReportItemProviderAdapterFactory;
 import org.eclipse.emf.ecore.provider.EcoreItemProviderAdapterFactory;
 
@@ -706,6 +706,7 @@ public class ToUseReportEditor
 		adapterFactory.addAdapterFactory(new ToUseReportItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new EcoreItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReportItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new BirtItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
 		// Create the command stack that will notify this editor as commands are executed.

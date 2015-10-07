@@ -2,7 +2,6 @@
  */
 package com.misc.touse.moplaf.report.ToUseReport.impl;
 
-import com.misc.common.moplaf.report.impl.ReportAbstractImpl;
 import com.misc.touse.moplaf.report.ToUseReport.A;
 import com.misc.touse.moplaf.report.ToUseReport.ReportA;
 import com.misc.touse.moplaf.report.ToUseReport.ToUseReportPackage;
@@ -27,7 +26,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class ReportAImpl extends ReportAbstractImpl implements ReportA {
+public class ReportAImpl extends com.misc.common.moplaf.report.birt.impl.ReportBirtImpl implements ReportA {
 	/**
 	 * The cached value of the '{@link #getContext() <em>Context</em>}' reference.
 	 * <!-- begin-user-doc -->

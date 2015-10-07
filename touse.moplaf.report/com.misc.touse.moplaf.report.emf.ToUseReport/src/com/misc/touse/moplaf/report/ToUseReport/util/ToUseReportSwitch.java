@@ -94,6 +94,7 @@ public class ToUseReportSwitch<T> extends Switch<T> {
 			case ToUseReportPackage.REPORT_A: {
 				ReportA reportA = (ReportA)theEObject;
 				T result = caseReportA(reportA);
+				if (result == null) result = caseReportBirt(reportA);
 				if (result == null) result = caseReportAbstract(reportA);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -189,6 +190,21 @@ public class ToUseReportSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseReportAbstract(ReportAbstract object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Report Birt</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Report Birt</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseReportBirt(com.misc.common.moplaf.report.birt.ReportBirt object) {
 		return null;
 	}
 
