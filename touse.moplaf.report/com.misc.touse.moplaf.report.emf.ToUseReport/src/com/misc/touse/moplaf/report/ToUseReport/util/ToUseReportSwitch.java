@@ -3,6 +3,7 @@
 package com.misc.touse.moplaf.report.ToUseReport.util;
 
 import com.misc.common.moplaf.report.ReportAbstract;
+import com.misc.common.moplaf.report.birt.ReportBirt;
 import com.misc.touse.moplaf.report.ToUseReport.*;
 
 import org.eclipse.emf.ecore.EObject;
@@ -204,7 +205,7 @@ public class ToUseReportSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseReportBirt(com.misc.common.moplaf.report.birt.ReportBirt object) {
+	public T caseReportBirt(ReportBirt object) {
 		return null;
 	}
 

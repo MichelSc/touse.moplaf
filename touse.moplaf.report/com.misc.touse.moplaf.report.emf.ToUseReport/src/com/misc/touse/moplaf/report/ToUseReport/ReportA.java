@@ -2,6 +2,8 @@
  */
 package com.misc.touse.moplaf.report.ToUseReport;
 
+import com.misc.common.moplaf.report.birt.ReportBirt;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Report A</b></em>'.
@@ -18,7 +20,7 @@ package com.misc.touse.moplaf.report.ToUseReport;
  * @model
  * @generated
  */
-public interface ReportA extends com.misc.common.moplaf.report.birt.ReportBirt {
+public interface ReportA extends ReportBirt {
 	/**
 	 * Returns the value of the '<em><b>Context</b></em>' reference.
 	 * <!-- begin-user-doc -->

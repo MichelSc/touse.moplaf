@@ -2,6 +2,7 @@
  */
 package com.misc.touse.moplaf.report.ToUseReport;
 
+import com.misc.common.moplaf.report.birt.BirtPackage;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -195,22 +196,13 @@ public interface ToUseReportPackage extends EPackage {
 	int A__CODE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Fragment</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int A__FRAGMENT = 2;
-
-	/**
 	 * The feature id for the '<em><b>Some Date Time</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int A__SOME_DATE_TIME = 3;
+	int A__SOME_DATE_TIME = 2;
 
 	/**
 	 * The feature id for the '<em><b>Some Real</b></em>' attribute.
@@ -219,7 +211,7 @@ public interface ToUseReportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int A__SOME_REAL = 4;
+	int A__SOME_REAL = 3;
 
 	/**
 	 * The number of structural features of the '<em>A</em>' class.
@@ -228,7 +220,7 @@ public interface ToUseReportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int A_FEATURE_COUNT = 5;
+	int A_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>A</em>' class.
@@ -296,22 +288,13 @@ public interface ToUseReportPackage extends EPackage {
 	int REPORT_A = 4;
 
 	/**
-	 * The feature id for the '<em><b>Engine</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REPORT_A__ENGINE = com.misc.common.moplaf.report.birt.BirtPackage.REPORT_BIRT__ENGINE;
-
-	/**
 	 * The feature id for the '<em><b>Format</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REPORT_A__FORMAT = com.misc.common.moplaf.report.birt.BirtPackage.REPORT_BIRT__FORMAT;
+	int REPORT_A__FORMAT = BirtPackage.REPORT_BIRT__FORMAT;
 
 	/**
 	 * The feature id for the '<em><b>Output File Path</b></em>' attribute.
@@ -320,7 +303,7 @@ public interface ToUseReportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REPORT_A__OUTPUT_FILE_PATH = com.misc.common.moplaf.report.birt.BirtPackage.REPORT_BIRT__OUTPUT_FILE_PATH;
+	int REPORT_A__OUTPUT_FILE_PATH = BirtPackage.REPORT_BIRT__OUTPUT_FILE_PATH;
 
 	/**
 	 * The feature id for the '<em><b>Last Generated</b></em>' attribute.
@@ -329,7 +312,7 @@ public interface ToUseReportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REPORT_A__LAST_GENERATED = com.misc.common.moplaf.report.birt.BirtPackage.REPORT_BIRT__LAST_GENERATED;
+	int REPORT_A__LAST_GENERATED = BirtPackage.REPORT_BIRT__LAST_GENERATED;
 
 	/**
 	 * The feature id for the '<em><b>May Be Run</b></em>' attribute.
@@ -338,7 +321,7 @@ public interface ToUseReportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REPORT_A__MAY_BE_RUN = com.misc.common.moplaf.report.birt.BirtPackage.REPORT_BIRT__MAY_BE_RUN;
+	int REPORT_A__MAY_BE_RUN = BirtPackage.REPORT_BIRT__MAY_BE_RUN;
 
 	/**
 	 * The feature id for the '<em><b>May Be Run Feedback</b></em>' attribute.
@@ -347,7 +330,7 @@ public interface ToUseReportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REPORT_A__MAY_BE_RUN_FEEDBACK = com.misc.common.moplaf.report.birt.BirtPackage.REPORT_BIRT__MAY_BE_RUN_FEEDBACK;
+	int REPORT_A__MAY_BE_RUN_FEEDBACK = BirtPackage.REPORT_BIRT__MAY_BE_RUN_FEEDBACK;
 
 	/**
 	 * The feature id for the '<em><b>Report Context</b></em>' reference.
@@ -356,7 +339,7 @@ public interface ToUseReportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REPORT_A__REPORT_CONTEXT = com.misc.common.moplaf.report.birt.BirtPackage.REPORT_BIRT__REPORT_CONTEXT;
+	int REPORT_A__REPORT_CONTEXT = BirtPackage.REPORT_BIRT__REPORT_CONTEXT;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -365,7 +348,7 @@ public interface ToUseReportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REPORT_A__DESCRIPTION = com.misc.common.moplaf.report.birt.BirtPackage.REPORT_BIRT__DESCRIPTION;
+	int REPORT_A__DESCRIPTION = BirtPackage.REPORT_BIRT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Context</b></em>' reference.
@@ -374,7 +357,7 @@ public interface ToUseReportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REPORT_A__CONTEXT = com.misc.common.moplaf.report.birt.BirtPackage.REPORT_BIRT_FEATURE_COUNT + 0;
+	int REPORT_A__CONTEXT = BirtPackage.REPORT_BIRT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Report A</em>' class.
@@ -383,7 +366,7 @@ public interface ToUseReportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REPORT_A_FEATURE_COUNT = com.misc.common.moplaf.report.birt.BirtPackage.REPORT_BIRT_FEATURE_COUNT + 1;
+	int REPORT_A_FEATURE_COUNT = BirtPackage.REPORT_BIRT_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Run</em>' operation.
@@ -392,7 +375,7 @@ public interface ToUseReportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REPORT_A___RUN = com.misc.common.moplaf.report.birt.BirtPackage.REPORT_BIRT___RUN;
+	int REPORT_A___RUN = BirtPackage.REPORT_BIRT___RUN;
 
 	/**
 	 * The operation id for the '<em>Get Report Design File URL</em>' operation.
@@ -401,7 +384,7 @@ public interface ToUseReportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REPORT_A___GET_REPORT_DESIGN_FILE_URL = com.misc.common.moplaf.report.birt.BirtPackage.REPORT_BIRT___GET_REPORT_DESIGN_FILE_URL;
+	int REPORT_A___GET_REPORT_DESIGN_FILE_URL = BirtPackage.REPORT_BIRT___GET_REPORT_DESIGN_FILE_URL;
 
 	/**
 	 * The number of operations of the '<em>Report A</em>' class.
@@ -410,7 +393,7 @@ public interface ToUseReportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REPORT_A_OPERATION_COUNT = com.misc.common.moplaf.report.birt.BirtPackage.REPORT_BIRT_OPERATION_COUNT + 0;
+	int REPORT_A_OPERATION_COUNT = BirtPackage.REPORT_BIRT_OPERATION_COUNT + 0;
 
 
 	/**
@@ -530,17 +513,6 @@ public interface ToUseReportPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getA_Code();
-
-	/**
-	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.report.ToUseReport.A#getFragment <em>Fragment</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Fragment</em>'.
-	 * @see com.misc.touse.moplaf.report.ToUseReport.A#getFragment()
-	 * @see #getA()
-	 * @generated
-	 */
-	EAttribute getA_Fragment();
 
 	/**
 	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.report.ToUseReport.A#getSomeDateTime <em>Some Date Time</em>}'.
@@ -733,14 +705,6 @@ public interface ToUseReportPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute A__CODE = eINSTANCE.getA_Code();
-
-		/**
-		 * The meta object literal for the '<em><b>Fragment</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute A__FRAGMENT = eINSTANCE.getA_Fragment();
 
 		/**
 		 * The meta object literal for the '<em><b>Some Date Time</b></em>' attribute feature.

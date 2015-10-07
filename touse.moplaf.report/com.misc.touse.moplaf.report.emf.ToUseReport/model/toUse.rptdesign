@@ -32,12 +32,6 @@
                     <text-property name="heading">Code</text-property>
                 </structure>
                 <structure>
-                    <property name="columnName">Fragment</property>
-                    <property name="analysis">dimension</property>
-                    <text-property name="displayName">Fragment</text-property>
-                    <text-property name="heading">Fragment</text-property>
-                </structure>
-                <structure>
                     <property name="columnName">Some Date Time</property>
                     <text-property name="displayName">Some Date Time</text-property>
                     <text-property name="heading">Some Date Time</text-property>
@@ -81,16 +75,11 @@
                     </structure>
                     <structure>
                         <property name="position">4</property>
-                        <property name="name">Fragment</property>
-                        <property name="dataType">string</property>
-                    </structure>
-                    <structure>
-                        <property name="position">5</property>
                         <property name="name">Some Date Time</property>
                         <property name="dataType">date</property>
                     </structure>
                     <structure>
-                        <property name="position">6</property>
+                        <property name="position">5</property>
                         <property name="name">Some Real</property>
                         <property name="dataType">float</property>
                     </structure>
@@ -131,20 +120,13 @@
                 </structure>
                 <structure>
                     <property name="position">4</property>
-                    <property name="name">Fragment</property>
-                    <property name="nativeName">Fragment</property>
-                    <property name="dataType">string</property>
-                    <property name="nativeDataType">50</property>
-                </structure>
-                <structure>
-                    <property name="position">5</property>
                     <property name="name">Some Date Time</property>
                     <property name="nativeName">SomeDateTime</property>
                     <property name="dataType">date</property>
                     <property name="nativeDataType">29</property>
                 </structure>
                 <structure>
-                    <property name="position">6</property>
+                    <property name="position">5</property>
                     <property name="name">Some Real</property>
                     <property name="nativeName">SomeReal</property>
                     <property name="dataType">float</property>
@@ -470,22 +452,18 @@
                     <property name="dataType">string</property>
                 </structure>
                 <structure>
-                    <property name="name">Fragment</property>
-                    <text-property name="displayName">Fragment</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["Fragment"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
                     <property name="name">Some Date Time</property>
                     <text-property name="displayName">Some Date Time</text-property>
                     <expression name="expression" type="javascript">dataSetRow["Some Date Time"]</expression>
                     <property name="dataType">date</property>
+                    <property name="allowExport">true</property>
                 </structure>
                 <structure>
                     <property name="name">Some Real</property>
                     <text-property name="displayName">Some Real</text-property>
                     <expression name="expression" type="javascript">dataSetRow["Some Real"]</expression>
                     <property name="dataType">float</property>
+                    <property name="allowExport">true</property>
                 </structure>
             </list-property>
             <column id="29">
@@ -509,19 +487,6 @@
                     <data id="179">
                         <property name="paddingTop">25pt</property>
                         <property name="resultSetColumn">Code</property>
-                    </data>
-                </cell>
-            </row>
-            <row id="34">
-                <cell id="35">
-                    <label name="LabelObjectAFragment" id="37">
-                        <property name="fontWeight">bold</property>
-                        <text-property name="text">Fragment:</text-property>
-                    </label>
-                </cell>
-                <cell id="36">
-                    <data name="EditorFragment" id="180">
-                        <property name="resultSetColumn">Fragment</property>
                     </data>
                 </cell>
             </row>

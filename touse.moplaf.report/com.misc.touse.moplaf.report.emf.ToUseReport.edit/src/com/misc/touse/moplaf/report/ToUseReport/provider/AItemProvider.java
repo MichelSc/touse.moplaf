@@ -64,7 +64,6 @@ public class AItemProvider
 			super.getPropertyDescriptors(object);
 
 			addCodePropertyDescriptor(object);
-			addFragmentPropertyDescriptor(object);
 			addSomeDateTimePropertyDescriptor(object);
 			addSomeRealPropertyDescriptor(object);
 		}
@@ -86,28 +85,6 @@ public class AItemProvider
 				 getString("_UI_PropertyDescriptor_description", "_UI_A_Code_feature", "_UI_A_type"),
 				 ToUseReportPackage.Literals.A__CODE,
 				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Fragment feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addFragmentPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_A_Fragment_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_A_Fragment_feature", "_UI_A_type"),
-				 ToUseReportPackage.Literals.A__FRAGMENT,
-				 false,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
@@ -228,7 +205,6 @@ public class AItemProvider
 
 		switch (notification.getFeatureID(A.class)) {
 			case ToUseReportPackage.A__CODE:
-			case ToUseReportPackage.A__FRAGMENT:
 			case ToUseReportPackage.A__SOME_DATE_TIME:
 			case ToUseReportPackage.A__SOME_REAL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

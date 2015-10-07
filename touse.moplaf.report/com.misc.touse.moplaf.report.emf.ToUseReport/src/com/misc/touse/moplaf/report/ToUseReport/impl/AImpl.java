@@ -33,7 +33,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.report.ToUseReport.impl.AImpl#getBs <em>Bs</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.report.ToUseReport.impl.AImpl#getCode <em>Code</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.report.ToUseReport.impl.AImpl#getFragment <em>Fragment</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.report.ToUseReport.impl.AImpl#getSomeDateTime <em>Some Date Time</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.report.ToUseReport.impl.AImpl#getSomeReal <em>Some Real</em>}</li>
  * </ul>
@@ -70,16 +69,6 @@ public class AImpl extends MinimalEObjectImpl.Container implements A {
 	 * @ordered
 	 */
 	protected String code = CODE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getFragment() <em>Fragment</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFragment()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String FRAGMENT_EDEFAULT = null;
 
 	/**
 	 * The default value of the '{@link #getSomeDateTime() <em>Some Date Time</em>}' attribute.
@@ -251,8 +240,6 @@ public class AImpl extends MinimalEObjectImpl.Container implements A {
 				return getBs();
 			case ToUseReportPackage.A__CODE:
 				return getCode();
-			case ToUseReportPackage.A__FRAGMENT:
-				return getFragment();
 			case ToUseReportPackage.A__SOME_DATE_TIME:
 				return getSomeDateTime();
 			case ToUseReportPackage.A__SOME_REAL:
@@ -323,8 +310,6 @@ public class AImpl extends MinimalEObjectImpl.Container implements A {
 				return bs != null && !bs.isEmpty();
 			case ToUseReportPackage.A__CODE:
 				return CODE_EDEFAULT == null ? code != null : !CODE_EDEFAULT.equals(code);
-			case ToUseReportPackage.A__FRAGMENT:
-				return FRAGMENT_EDEFAULT == null ? getFragment() != null : !FRAGMENT_EDEFAULT.equals(getFragment());
 			case ToUseReportPackage.A__SOME_DATE_TIME:
 				return SOME_DATE_TIME_EDEFAULT == null ? someDateTime != null : !SOME_DATE_TIME_EDEFAULT.equals(someDateTime);
 			case ToUseReportPackage.A__SOME_REAL:

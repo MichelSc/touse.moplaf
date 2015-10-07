@@ -3,6 +3,7 @@
 package com.misc.touse.moplaf.report.ToUseReport.util;
 
 import com.misc.common.moplaf.report.ReportAbstract;
+import com.misc.common.moplaf.report.birt.ReportBirt;
 import com.misc.touse.moplaf.report.ToUseReport.*;
 
 import org.eclipse.emf.common.notify.Adapter;
@@ -93,7 +94,7 @@ public class ToUseReportAdapterFactory extends AdapterFactoryImpl {
 				return createReportAbstractAdapter();
 			}
 			@Override
-			public Adapter caseReportBirt(com.misc.common.moplaf.report.birt.ReportBirt object) {
+			public Adapter caseReportBirt(ReportBirt object) {
 				return createReportBirtAdapter();
 			}
 			@Override
