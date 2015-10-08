@@ -7,7 +7,7 @@ Bundle-ClassPath: .
 Bundle-Activator: com.misc.touse.moplaf.gistouse.provider.TousegisEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Export-Package: com.misc.touse.moplaf.gistouse.provider
 Require-Bundle: org.eclipse.core.runtime,
  com.misc.touse.moplaf.gis.emf;visibility:=reexport,
