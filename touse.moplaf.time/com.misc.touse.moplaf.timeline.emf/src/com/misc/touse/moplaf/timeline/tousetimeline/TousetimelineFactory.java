@@ -31,24 +31,6 @@ public interface TousetimelineFactory extends EFactory {
 	Domain createDomain();
 
 	/**
-	 * Returns a new object of class '<em>Domain Time Line</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Domain Time Line</em>'.
-	 * @generated
-	 */
-	DomainTimeLine createDomainTimeLine();
-
-	/**
-	 * Returns a new object of class '<em>Domain Time Bucket</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Domain Time Bucket</em>'.
-	 * @generated
-	 */
-	DomainTimeBucket createDomainTimeBucket();
-
-	/**
 	 * Returns a new object of class '<em>To Use Amount Impulsion</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

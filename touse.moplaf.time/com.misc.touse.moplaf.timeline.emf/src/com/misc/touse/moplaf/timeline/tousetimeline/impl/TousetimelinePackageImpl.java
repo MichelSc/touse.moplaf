@@ -10,8 +10,6 @@ import com.misc.common.moplaf.time.discrete.DiscretePackage;
 
 import com.misc.touse.moplaf.timeline.tousetimeline.Domain;
 import com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution;
-import com.misc.touse.moplaf.timeline.tousetimeline.DomainTimeBucket;
-import com.misc.touse.moplaf.timeline.tousetimeline.DomainTimeLine;
 import com.misc.touse.moplaf.timeline.tousetimeline.ToUseAmountAbsolute;
 import com.misc.touse.moplaf.timeline.tousetimeline.ToUseAmountImpulsion;
 import com.misc.touse.moplaf.timeline.tousetimeline.ToUseSlopeAbsolute;
@@ -39,20 +37,6 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 	 * @generated
 	 */
 	private EClass domainEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass domainTimeLineEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass domainTimeBucketEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -168,7 +152,7 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDomain_TimeLine() {
+	public EReference getDomain_TimeLineMerges() {
 		return (EReference)domainEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -177,7 +161,7 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDomain_TimeLineMerge() {
+	public EReference getDomain_AmountImpulsion() {
 		return (EReference)domainEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -186,7 +170,7 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDomain_AmountImpulsion() {
+	public EReference getDomain_AmountAbsolute() {
 		return (EReference)domainEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -195,7 +179,7 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDomain_AmountAbsolute() {
+	public EReference getDomain_SlopeAbsolute() {
 		return (EReference)domainEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -204,7 +188,7 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDomain_SlopeAbsolute() {
+	public EReference getDomain_SlopeImpulsion() {
 		return (EReference)domainEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -213,7 +197,7 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDomain_SlopeImpulsion() {
+	public EReference getDomain_CapacityChange() {
 		return (EReference)domainEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -222,7 +206,7 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDomain_CapacityChange() {
+	public EReference getDomain_StockChange() {
 		return (EReference)domainEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -231,7 +215,7 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDomain_StockChange() {
+	public EReference getDomain_Distribution() {
 		return (EReference)domainEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -240,17 +224,8 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDomain_Distribution() {
-		return (EReference)domainEClass.getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getDomain_Name() {
-		return (EAttribute)domainEClass.getEStructuralFeatures().get(9);
+		return (EAttribute)domainEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -258,17 +233,8 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getDomainTimeLine() {
-		return domainTimeLineEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getDomainTimeBucket() {
-		return domainTimeBucketEClass;
+	public EReference getDomain_Timelines() {
+		return (EReference)domainEClass.getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -354,8 +320,7 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 
 		// Create classes and their features
 		domainEClass = createEClass(DOMAIN);
-		createEReference(domainEClass, DOMAIN__TIME_LINE);
-		createEReference(domainEClass, DOMAIN__TIME_LINE_MERGE);
+		createEReference(domainEClass, DOMAIN__TIME_LINE_MERGES);
 		createEReference(domainEClass, DOMAIN__AMOUNT_IMPULSION);
 		createEReference(domainEClass, DOMAIN__AMOUNT_ABSOLUTE);
 		createEReference(domainEClass, DOMAIN__SLOPE_ABSOLUTE);
@@ -364,10 +329,7 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 		createEReference(domainEClass, DOMAIN__STOCK_CHANGE);
 		createEReference(domainEClass, DOMAIN__DISTRIBUTION);
 		createEAttribute(domainEClass, DOMAIN__NAME);
-
-		domainTimeLineEClass = createEClass(DOMAIN_TIME_LINE);
-
-		domainTimeBucketEClass = createEClass(DOMAIN_TIME_BUCKET);
+		createEReference(domainEClass, DOMAIN__TIMELINES);
 
 		toUseAmountImpulsionEClass = createEClass(TO_USE_AMOUNT_IMPULSION);
 
@@ -416,8 +378,6 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 		// Add supertypes to classes
 		domainEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctionAdapterScope());
 		domainEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctionAdapter());
-		domainTimeLineEClass.getESuperTypes().add(theDiscretePackage.getTimeLine());
-		domainTimeBucketEClass.getESuperTypes().add(theDiscretePackage.getTimeBucket());
 		toUseAmountImpulsionEClass.getESuperTypes().add(theContinuousPackage.getAmountImpulsion());
 		toUseAmountAbsoluteEClass.getESuperTypes().add(theContinuousPackage.getAmountAbsolute());
 		toUseSlopeAbsoluteEClass.getESuperTypes().add(theContinuousPackage.getSlopeAbsolute());
@@ -426,8 +386,7 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDomain_TimeLine(), this.getDomainTimeLine(), null, "TimeLine", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDomain_TimeLineMerge(), theDiscretePackage.getTimeLineMerge(), null, "TimeLineMerge", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDomain_TimeLineMerges(), theDiscretePackage.getTimeLineMerge(), null, "TimeLineMerges", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDomain_AmountImpulsion(), this.getToUseAmountImpulsion(), null, "AmountImpulsion", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDomain_AmountAbsolute(), this.getToUseAmountAbsolute(), null, "AmountAbsolute", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDomain_SlopeAbsolute(), this.getToUseSlopeAbsolute(), null, "SlopeAbsolute", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -436,10 +395,7 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 		initEReference(getDomain_StockChange(), theContinuousPackage.getStockChange(), null, "StockChange", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDomain_Distribution(), this.getDomainDistribution(), null, "Distribution", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDomain_Name(), ecorePackage.getEString(), "Name", null, 0, 1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(domainTimeLineEClass, DomainTimeLine.class, "DomainTimeLine", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(domainTimeBucketEClass, DomainTimeBucket.class, "DomainTimeBucket", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDomain_Timelines(), theDiscretePackage.getTimeLine(), null, "Timelines", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(toUseAmountImpulsionEClass, ToUseAmountImpulsion.class, "ToUseAmountImpulsion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

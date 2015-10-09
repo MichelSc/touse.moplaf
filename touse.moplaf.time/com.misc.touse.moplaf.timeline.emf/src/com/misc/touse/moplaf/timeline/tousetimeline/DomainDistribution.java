@@ -11,10 +11,10 @@ import com.misc.common.moplaf.time.continuous.Distribution;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution#getName <em>Name</em>}</li>
  * </ul>
- * </p>
  *
  * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getDomainDistribution()
  * @model

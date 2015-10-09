@@ -104,8 +104,7 @@ public class DomainItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(TousetimelinePackage.Literals.DOMAIN__TIME_LINE);
-			childrenFeatures.add(TousetimelinePackage.Literals.DOMAIN__TIME_LINE_MERGE);
+			childrenFeatures.add(TousetimelinePackage.Literals.DOMAIN__TIME_LINE_MERGES);
 			childrenFeatures.add(TousetimelinePackage.Literals.DOMAIN__AMOUNT_IMPULSION);
 			childrenFeatures.add(TousetimelinePackage.Literals.DOMAIN__AMOUNT_ABSOLUTE);
 			childrenFeatures.add(TousetimelinePackage.Literals.DOMAIN__SLOPE_ABSOLUTE);
@@ -113,6 +112,7 @@ public class DomainItemProvider
 			childrenFeatures.add(TousetimelinePackage.Literals.DOMAIN__CAPACITY_CHANGE);
 			childrenFeatures.add(TousetimelinePackage.Literals.DOMAIN__STOCK_CHANGE);
 			childrenFeatures.add(TousetimelinePackage.Literals.DOMAIN__DISTRIBUTION);
+			childrenFeatures.add(TousetimelinePackage.Literals.DOMAIN__TIMELINES);
 		}
 		return childrenFeatures;
 	}
@@ -170,8 +170,7 @@ public class DomainItemProvider
 			case TousetimelinePackage.DOMAIN__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case TousetimelinePackage.DOMAIN__TIME_LINE:
-			case TousetimelinePackage.DOMAIN__TIME_LINE_MERGE:
+			case TousetimelinePackage.DOMAIN__TIME_LINE_MERGES:
 			case TousetimelinePackage.DOMAIN__AMOUNT_IMPULSION:
 			case TousetimelinePackage.DOMAIN__AMOUNT_ABSOLUTE:
 			case TousetimelinePackage.DOMAIN__SLOPE_ABSOLUTE:
@@ -179,6 +178,7 @@ public class DomainItemProvider
 			case TousetimelinePackage.DOMAIN__CAPACITY_CHANGE:
 			case TousetimelinePackage.DOMAIN__STOCK_CHANGE:
 			case TousetimelinePackage.DOMAIN__DISTRIBUTION:
+			case TousetimelinePackage.DOMAIN__TIMELINES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -198,12 +198,7 @@ public class DomainItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TousetimelinePackage.Literals.DOMAIN__TIME_LINE,
-				 TousetimelineFactory.eINSTANCE.createDomainTimeLine()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TousetimelinePackage.Literals.DOMAIN__TIME_LINE_MERGE,
+				(TousetimelinePackage.Literals.DOMAIN__TIME_LINE_MERGES,
 				 DiscreteFactory.eINSTANCE.createTimeLineMerge()));
 
 		newChildDescriptors.add
@@ -240,6 +235,11 @@ public class DomainItemProvider
 			(createChildParameter
 				(TousetimelinePackage.Literals.DOMAIN__DISTRIBUTION,
 				 TousetimelineFactory.eINSTANCE.createDomainDistribution()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TousetimelinePackage.Literals.DOMAIN__TIMELINES,
+				 DiscreteFactory.eINSTANCE.createTimeLine()));
 	}
 
 	/**

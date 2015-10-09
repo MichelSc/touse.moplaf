@@ -95,52 +95,6 @@ public class TousetimelineItemProviderAdapterFactory extends TousetimelineAdapte
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.timeline.tousetimeline.DomainTimeLine} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DomainTimeLineItemProvider domainTimeLineItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.misc.touse.moplaf.timeline.tousetimeline.DomainTimeLine}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDomainTimeLineAdapter() {
-		if (domainTimeLineItemProvider == null) {
-			domainTimeLineItemProvider = new DomainTimeLineItemProvider(this);
-		}
-
-		return domainTimeLineItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.timeline.tousetimeline.DomainTimeBucket} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DomainTimeBucketItemProvider domainTimeBucketItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.misc.touse.moplaf.timeline.tousetimeline.DomainTimeBucket}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDomainTimeBucketAdapter() {
-		if (domainTimeBucketItemProvider == null) {
-			domainTimeBucketItemProvider = new DomainTimeBucketItemProvider(this);
-		}
-
-		return domainTimeBucketItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.timeline.tousetimeline.ToUseAmountImpulsion} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -355,8 +309,6 @@ public class TousetimelineItemProviderAdapterFactory extends TousetimelineAdapte
 	 */
 	public void dispose() {
 		if (domainItemProvider != null) domainItemProvider.dispose();
-		if (domainTimeLineItemProvider != null) domainTimeLineItemProvider.dispose();
-		if (domainTimeBucketItemProvider != null) domainTimeBucketItemProvider.dispose();
 		if (toUseAmountImpulsionItemProvider != null) toUseAmountImpulsionItemProvider.dispose();
 		if (toUseAmountAbsoluteItemProvider != null) toUseAmountAbsoluteItemProvider.dispose();
 		if (toUseSlopeAbsoluteItemProvider != null) toUseSlopeAbsoluteItemProvider.dispose();

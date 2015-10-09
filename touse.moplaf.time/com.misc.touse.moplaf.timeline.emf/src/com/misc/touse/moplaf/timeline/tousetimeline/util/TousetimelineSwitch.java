@@ -10,9 +10,6 @@ import com.misc.common.moplaf.time.continuous.Distribution;
 import com.misc.common.moplaf.time.continuous.DistributionEvent;
 import com.misc.common.moplaf.time.continuous.SlopeAbsolute;
 import com.misc.common.moplaf.time.continuous.SlopeImpulsion;
-import com.misc.common.moplaf.time.discrete.TimeBucket;
-import com.misc.common.moplaf.time.discrete.TimeLine;
-
 import com.misc.touse.moplaf.timeline.tousetimeline.*;
 
 import org.eclipse.emf.ecore.EObject;
@@ -58,7 +55,7 @@ public class TousetimelineSwitch<T> extends Switch<T> {
 	 * Checks whether this is a switch for the given package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @parameter ePackage the package in question.
+	 * @param ePackage the package in question.
 	 * @return whether this is a switch for the given package.
 	 * @generated
 	 */
@@ -82,20 +79,6 @@ public class TousetimelineSwitch<T> extends Switch<T> {
 				T result = caseDomain(domain);
 				if (result == null) result = caseObjectWithPropagatorFunctionAdapterScope(domain);
 				if (result == null) result = caseObjectWithPropagatorFunctionAdapter(domain);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case TousetimelinePackage.DOMAIN_TIME_LINE: {
-				DomainTimeLine domainTimeLine = (DomainTimeLine)theEObject;
-				T result = caseDomainTimeLine(domainTimeLine);
-				if (result == null) result = caseTimeLine(domainTimeLine);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case TousetimelinePackage.DOMAIN_TIME_BUCKET: {
-				DomainTimeBucket domainTimeBucket = (DomainTimeBucket)theEObject;
-				T result = caseDomainTimeBucket(domainTimeBucket);
-				if (result == null) result = caseTimeBucket(domainTimeBucket);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -159,36 +142,6 @@ public class TousetimelineSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseDomain(Domain object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Domain Time Line</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Domain Time Line</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseDomainTimeLine(DomainTimeLine object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Domain Time Bucket</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Domain Time Bucket</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseDomainTimeBucket(DomainTimeBucket object) {
 		return null;
 	}
 
@@ -294,36 +247,6 @@ public class TousetimelineSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseObjectWithPropagatorFunctionAdapter(ObjectWithPropagatorFunctionAdapter object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Time Line</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Time Line</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTimeLine(TimeLine object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Time Bucket</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Time Bucket</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTimeBucket(TimeBucket object) {
 		return null;
 	}
 

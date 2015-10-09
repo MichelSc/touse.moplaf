@@ -4,7 +4,6 @@ package com.misc.touse.moplaf.timeline.tousetimeline;
 
 import com.misc.common.moplaf.propagator.PropagatorPackage;
 import com.misc.common.moplaf.time.continuous.ContinuousPackage;
-import com.misc.common.moplaf.time.discrete.DiscretePackage;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -70,22 +69,13 @@ public interface TousetimelinePackage extends EPackage {
 	int DOMAIN = 0;
 
 	/**
-	 * The feature id for the '<em><b>Time Line</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Time Line Merges</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN__TIME_LINE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_SCOPE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Time Line Merge</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN__TIME_LINE_MERGE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_SCOPE_FEATURE_COUNT + 1;
+	int DOMAIN__TIME_LINE_MERGES = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_SCOPE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Amount Impulsion</b></em>' containment reference list.
@@ -94,7 +84,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN__AMOUNT_IMPULSION = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_SCOPE_FEATURE_COUNT + 2;
+	int DOMAIN__AMOUNT_IMPULSION = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_SCOPE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Amount Absolute</b></em>' containment reference list.
@@ -103,7 +93,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN__AMOUNT_ABSOLUTE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_SCOPE_FEATURE_COUNT + 3;
+	int DOMAIN__AMOUNT_ABSOLUTE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_SCOPE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Slope Absolute</b></em>' containment reference list.
@@ -112,7 +102,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN__SLOPE_ABSOLUTE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_SCOPE_FEATURE_COUNT + 4;
+	int DOMAIN__SLOPE_ABSOLUTE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_SCOPE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Slope Impulsion</b></em>' containment reference list.
@@ -121,7 +111,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN__SLOPE_IMPULSION = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_SCOPE_FEATURE_COUNT + 5;
+	int DOMAIN__SLOPE_IMPULSION = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_SCOPE_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Capacity Change</b></em>' containment reference list.
@@ -130,7 +120,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN__CAPACITY_CHANGE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_SCOPE_FEATURE_COUNT + 6;
+	int DOMAIN__CAPACITY_CHANGE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_SCOPE_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Stock Change</b></em>' containment reference list.
@@ -139,7 +129,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN__STOCK_CHANGE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_SCOPE_FEATURE_COUNT + 7;
+	int DOMAIN__STOCK_CHANGE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_SCOPE_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Distribution</b></em>' containment reference list.
@@ -148,7 +138,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN__DISTRIBUTION = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_SCOPE_FEATURE_COUNT + 8;
+	int DOMAIN__DISTRIBUTION = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_SCOPE_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -157,7 +147,16 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN__NAME = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_SCOPE_FEATURE_COUNT + 9;
+	int DOMAIN__NAME = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_SCOPE_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>Timelines</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN__TIMELINES = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_SCOPE_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of structural features of the '<em>Domain</em>' class.
@@ -196,279 +195,6 @@ public interface TousetimelinePackage extends EPackage {
 	int DOMAIN_OPERATION_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_SCOPE_OPERATION_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainTimeLineImpl <em>Domain Time Line</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainTimeLineImpl
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.TousetimelinePackageImpl#getDomainTimeLine()
-	 * @generated
-	 */
-	int DOMAIN_TIME_LINE = 1;
-
-	/**
-	 * The feature id for the '<em><b>Bucket Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_TIME_LINE__BUCKET_TYPE = DiscretePackage.TIME_LINE__BUCKET_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_TIME_LINE__DESCRIPTION = DiscretePackage.TIME_LINE__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Time Zone ID</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_TIME_LINE__TIME_ZONE_ID = DiscretePackage.TIME_LINE__TIME_ZONE_ID;
-
-	/**
-	 * The feature id for the '<em><b>Locale Language</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_TIME_LINE__LOCALE_LANGUAGE = DiscretePackage.TIME_LINE__LOCALE_LANGUAGE;
-
-	/**
-	 * The feature id for the '<em><b>Locale Country</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_TIME_LINE__LOCALE_COUNTRY = DiscretePackage.TIME_LINE__LOCALE_COUNTRY;
-
-	/**
-	 * The feature id for the '<em><b>Horizon Start</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_TIME_LINE__HORIZON_START = DiscretePackage.TIME_LINE__HORIZON_START;
-
-	/**
-	 * The feature id for the '<em><b>Horizon End</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_TIME_LINE__HORIZON_END = DiscretePackage.TIME_LINE__HORIZON_END;
-
-	/**
-	 * The feature id for the '<em><b>Bucket</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_TIME_LINE__BUCKET = DiscretePackage.TIME_LINE__BUCKET;
-
-	/**
-	 * The feature id for the '<em><b>First Bucket</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_TIME_LINE__FIRST_BUCKET = DiscretePackage.TIME_LINE__FIRST_BUCKET;
-
-	/**
-	 * The feature id for the '<em><b>Last Bucket</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_TIME_LINE__LAST_BUCKET = DiscretePackage.TIME_LINE__LAST_BUCKET;
-
-	/**
-	 * The number of structural features of the '<em>Domain Time Line</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_TIME_LINE_FEATURE_COUNT = DiscretePackage.TIME_LINE_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Refresh Horizon</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_TIME_LINE___REFRESH_HORIZON = DiscretePackage.TIME_LINE___REFRESH_HORIZON;
-
-	/**
-	 * The operation id for the '<em>Iterator</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_TIME_LINE___ITERATOR__DATE_DATE_BOOLEAN = DiscretePackage.TIME_LINE___ITERATOR__DATE_DATE_BOOLEAN;
-
-	/**
-	 * The operation id for the '<em>Get Bucket</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_TIME_LINE___GET_BUCKET__DATE = DiscretePackage.TIME_LINE___GET_BUCKET__DATE;
-
-	/**
-	 * The operation id for the '<em>Get Seconds Intersection</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_TIME_LINE___GET_SECONDS_INTERSECTION__DATE_DATE_DATE_DATE = DiscretePackage.TIME_LINE___GET_SECONDS_INTERSECTION__DATE_DATE_DATE_DATE;
-
-	/**
-	 * The operation id for the '<em>Create Bucket</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_TIME_LINE___CREATE_BUCKET = DiscretePackage.TIME_LINE___CREATE_BUCKET;
-
-	/**
-	 * The number of operations of the '<em>Domain Time Line</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_TIME_LINE_OPERATION_COUNT = DiscretePackage.TIME_LINE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainTimeBucketImpl <em>Domain Time Bucket</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainTimeBucketImpl
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.TousetimelinePackageImpl#getDomainTimeBucket()
-	 * @generated
-	 */
-	int DOMAIN_TIME_BUCKET = 2;
-
-	/**
-	 * The feature id for the '<em><b>Bucket Start</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_TIME_BUCKET__BUCKET_START = DiscretePackage.TIME_BUCKET__BUCKET_START;
-
-	/**
-	 * The feature id for the '<em><b>Bucket End</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_TIME_BUCKET__BUCKET_END = DiscretePackage.TIME_BUCKET__BUCKET_END;
-
-	/**
-	 * The feature id for the '<em><b>Next</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_TIME_BUCKET__NEXT = DiscretePackage.TIME_BUCKET__NEXT;
-
-	/**
-	 * The feature id for the '<em><b>Previous</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_TIME_BUCKET__PREVIOUS = DiscretePackage.TIME_BUCKET__PREVIOUS;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_TIME_BUCKET__DESCRIPTION = DiscretePackage.TIME_BUCKET__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Seconds</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_TIME_BUCKET__SECONDS = DiscretePackage.TIME_BUCKET__SECONDS;
-
-	/**
-	 * The number of structural features of the '<em>Domain Time Bucket</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_TIME_BUCKET_FEATURE_COUNT = DiscretePackage.TIME_BUCKET_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Contains</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_TIME_BUCKET___CONTAINS__DATE = DiscretePackage.TIME_BUCKET___CONTAINS__DATE;
-
-	/**
-	 * The operation id for the '<em>Is Before</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_TIME_BUCKET___IS_BEFORE__TIMEBUCKET = DiscretePackage.TIME_BUCKET___IS_BEFORE__TIMEBUCKET;
-
-	/**
-	 * The operation id for the '<em>Get Seconds Intersection</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_TIME_BUCKET___GET_SECONDS_INTERSECTION__DATE_DATE = DiscretePackage.TIME_BUCKET___GET_SECONDS_INTERSECTION__DATE_DATE;
-
-	/**
-	 * The number of operations of the '<em>Domain Time Bucket</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_TIME_BUCKET_OPERATION_COUNT = DiscretePackage.TIME_BUCKET_OPERATION_COUNT + 0;
-
-
-	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.ToUseAmountImpulsionImpl <em>To Use Amount Impulsion</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -476,7 +202,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.TousetimelinePackageImpl#getToUseAmountImpulsion()
 	 * @generated
 	 */
-	int TO_USE_AMOUNT_IMPULSION = 3;
+	int TO_USE_AMOUNT_IMPULSION = 1;
 
 	/**
 	 * The feature id for the '<em><b>Moment</b></em>' attribute.
@@ -675,7 +401,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.TousetimelinePackageImpl#getToUseAmountAbsolute()
 	 * @generated
 	 */
-	int TO_USE_AMOUNT_ABSOLUTE = 4;
+	int TO_USE_AMOUNT_ABSOLUTE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Moment</b></em>' attribute.
@@ -865,7 +591,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.TousetimelinePackageImpl#getToUseSlopeAbsolute()
 	 * @generated
 	 */
-	int TO_USE_SLOPE_ABSOLUTE = 5;
+	int TO_USE_SLOPE_ABSOLUTE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Moment</b></em>' attribute.
@@ -1055,7 +781,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.TousetimelinePackageImpl#getToUseSlopeImpulsion()
 	 * @generated
 	 */
-	int TO_USE_SLOPE_IMPULSION = 6;
+	int TO_USE_SLOPE_IMPULSION = 4;
 
 	/**
 	 * The feature id for the '<em><b>Moment</b></em>' attribute.
@@ -1255,7 +981,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.TousetimelinePackageImpl#getDomainDistribution()
 	 * @generated
 	 */
-	int DOMAIN_DISTRIBUTION = 7;
+	int DOMAIN_DISTRIBUTION = 5;
 
 	/**
 	 * The feature id for the '<em><b>Time Unit</b></em>' attribute.
@@ -1539,26 +1265,15 @@ public interface TousetimelinePackage extends EPackage {
 	EClass getDomain();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.timeline.tousetimeline.Domain#getTimeLine <em>Time Line</em>}'.
+	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.timeline.tousetimeline.Domain#getTimeLineMerges <em>Time Line Merges</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Time Line</em>'.
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.Domain#getTimeLine()
+	 * @return the meta object for the containment reference list '<em>Time Line Merges</em>'.
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.Domain#getTimeLineMerges()
 	 * @see #getDomain()
 	 * @generated
 	 */
-	EReference getDomain_TimeLine();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.timeline.tousetimeline.Domain#getTimeLineMerge <em>Time Line Merge</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Time Line Merge</em>'.
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.Domain#getTimeLineMerge()
-	 * @see #getDomain()
-	 * @generated
-	 */
-	EReference getDomain_TimeLineMerge();
+	EReference getDomain_TimeLineMerges();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.timeline.tousetimeline.Domain#getDistribution <em>Distribution</em>}'.
@@ -1581,6 +1296,17 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getDomain_Name();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.timeline.tousetimeline.Domain#getTimelines <em>Timelines</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Timelines</em>'.
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.Domain#getTimelines()
+	 * @see #getDomain()
+	 * @generated
+	 */
+	EReference getDomain_Timelines();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.timeline.tousetimeline.Domain#getAmountImpulsion <em>Amount Impulsion</em>}'.
@@ -1647,26 +1373,6 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getDomain_StockChange();
-
-	/**
-	 * Returns the meta object for class '{@link com.misc.touse.moplaf.timeline.tousetimeline.DomainTimeLine <em>Domain Time Line</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Domain Time Line</em>'.
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.DomainTimeLine
-	 * @generated
-	 */
-	EClass getDomainTimeLine();
-
-	/**
-	 * Returns the meta object for class '{@link com.misc.touse.moplaf.timeline.tousetimeline.DomainTimeBucket <em>Domain Time Bucket</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Domain Time Bucket</em>'.
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.DomainTimeBucket
-	 * @generated
-	 */
-	EClass getDomainTimeBucket();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.timeline.tousetimeline.ToUseAmountImpulsion <em>To Use Amount Impulsion</em>}'.
@@ -1763,20 +1469,12 @@ public interface TousetimelinePackage extends EPackage {
 		EClass DOMAIN = eINSTANCE.getDomain();
 
 		/**
-		 * The meta object literal for the '<em><b>Time Line</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Time Line Merges</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DOMAIN__TIME_LINE = eINSTANCE.getDomain_TimeLine();
-
-		/**
-		 * The meta object literal for the '<em><b>Time Line Merge</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DOMAIN__TIME_LINE_MERGE = eINSTANCE.getDomain_TimeLineMerge();
+		EReference DOMAIN__TIME_LINE_MERGES = eINSTANCE.getDomain_TimeLineMerges();
 
 		/**
 		 * The meta object literal for the '<em><b>Distribution</b></em>' containment reference list feature.
@@ -1793,6 +1491,14 @@ public interface TousetimelinePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute DOMAIN__NAME = eINSTANCE.getDomain_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Timelines</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DOMAIN__TIMELINES = eINSTANCE.getDomain_Timelines();
 
 		/**
 		 * The meta object literal for the '<em><b>Amount Impulsion</b></em>' containment reference list feature.
@@ -1841,26 +1547,6 @@ public interface TousetimelinePackage extends EPackage {
 		 * @generated
 		 */
 		EReference DOMAIN__STOCK_CHANGE = eINSTANCE.getDomain_StockChange();
-
-		/**
-		 * The meta object literal for the '{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainTimeLineImpl <em>Domain Time Line</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainTimeLineImpl
-		 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.TousetimelinePackageImpl#getDomainTimeLine()
-		 * @generated
-		 */
-		EClass DOMAIN_TIME_LINE = eINSTANCE.getDomainTimeLine();
-
-		/**
-		 * The meta object literal for the '{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainTimeBucketImpl <em>Domain Time Bucket</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainTimeBucketImpl
-		 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.TousetimelinePackageImpl#getDomainTimeBucket()
-		 * @generated
-		 */
-		EClass DOMAIN_TIME_BUCKET = eINSTANCE.getDomainTimeBucket();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.ToUseAmountImpulsionImpl <em>To Use Amount Impulsion</em>}' class.

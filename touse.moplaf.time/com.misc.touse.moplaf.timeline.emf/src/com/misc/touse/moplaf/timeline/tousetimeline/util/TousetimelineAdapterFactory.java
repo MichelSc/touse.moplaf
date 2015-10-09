@@ -10,9 +10,6 @@ import com.misc.common.moplaf.time.continuous.Distribution;
 import com.misc.common.moplaf.time.continuous.DistributionEvent;
 import com.misc.common.moplaf.time.continuous.SlopeAbsolute;
 import com.misc.common.moplaf.time.continuous.SlopeImpulsion;
-import com.misc.common.moplaf.time.discrete.TimeBucket;
-import com.misc.common.moplaf.time.discrete.TimeLine;
-
 import com.misc.touse.moplaf.timeline.tousetimeline.*;
 
 import org.eclipse.emf.common.notify.Adapter;
@@ -83,14 +80,6 @@ public class TousetimelineAdapterFactory extends AdapterFactoryImpl {
 				return createDomainAdapter();
 			}
 			@Override
-			public Adapter caseDomainTimeLine(DomainTimeLine object) {
-				return createDomainTimeLineAdapter();
-			}
-			@Override
-			public Adapter caseDomainTimeBucket(DomainTimeBucket object) {
-				return createDomainTimeBucketAdapter();
-			}
-			@Override
 			public Adapter caseToUseAmountImpulsion(ToUseAmountImpulsion object) {
 				return createToUseAmountImpulsionAdapter();
 			}
@@ -117,14 +106,6 @@ public class TousetimelineAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseObjectWithPropagatorFunctionAdapter(ObjectWithPropagatorFunctionAdapter object) {
 				return createObjectWithPropagatorFunctionAdapterAdapter();
-			}
-			@Override
-			public Adapter caseTimeLine(TimeLine object) {
-				return createTimeLineAdapter();
-			}
-			@Override
-			public Adapter caseTimeBucket(TimeBucket object) {
-				return createTimeBucketAdapter();
 			}
 			@Override
 			public Adapter caseDistributionEvent(DistributionEvent object) {
@@ -181,34 +162,6 @@ public class TousetimelineAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDomainAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.timeline.tousetimeline.DomainTimeLine <em>Domain Time Line</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.DomainTimeLine
-	 * @generated
-	 */
-	public Adapter createDomainTimeLineAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.timeline.tousetimeline.DomainTimeBucket <em>Domain Time Bucket</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.DomainTimeBucket
-	 * @generated
-	 */
-	public Adapter createDomainTimeBucketAdapter() {
 		return null;
 	}
 
@@ -307,34 +260,6 @@ public class TousetimelineAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createObjectWithPropagatorFunctionAdapterAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.time.discrete.TimeLine <em>Time Line</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.time.discrete.TimeLine
-	 * @generated
-	 */
-	public Adapter createTimeLineAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.time.discrete.TimeBucket <em>Time Bucket</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.time.discrete.TimeBucket
-	 * @generated
-	 */
-	public Adapter createTimeBucketAdapter() {
 		return null;
 	}
 

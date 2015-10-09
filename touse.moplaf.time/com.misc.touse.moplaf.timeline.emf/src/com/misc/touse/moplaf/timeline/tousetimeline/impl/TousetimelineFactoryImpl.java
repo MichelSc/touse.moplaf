@@ -57,8 +57,6 @@ public class TousetimelineFactoryImpl extends EFactoryImpl implements Tousetimel
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case TousetimelinePackage.DOMAIN: return createDomain();
-			case TousetimelinePackage.DOMAIN_TIME_LINE: return createDomainTimeLine();
-			case TousetimelinePackage.DOMAIN_TIME_BUCKET: return createDomainTimeBucket();
 			case TousetimelinePackage.TO_USE_AMOUNT_IMPULSION: return createToUseAmountImpulsion();
 			case TousetimelinePackage.TO_USE_AMOUNT_ABSOLUTE: return createToUseAmountAbsolute();
 			case TousetimelinePackage.TO_USE_SLOPE_ABSOLUTE: return createToUseSlopeAbsolute();
@@ -77,26 +75,6 @@ public class TousetimelineFactoryImpl extends EFactoryImpl implements Tousetimel
 	public Domain createDomain() {
 		DomainImpl domain = new DomainImpl();
 		return domain;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DomainTimeLine createDomainTimeLine() {
-		DomainTimeLineImpl domainTimeLine = new DomainTimeLineImpl();
-		return domainTimeLine;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DomainTimeBucket createDomainTimeBucket() {
-		DomainTimeBucketImpl domainTimeBucket = new DomainTimeBucketImpl();
-		return domainTimeBucket;
 	}
 
 	/**

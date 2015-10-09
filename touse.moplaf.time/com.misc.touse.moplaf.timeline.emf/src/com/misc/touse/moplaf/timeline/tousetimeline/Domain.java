@@ -6,6 +6,7 @@ import com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapter;
 import com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapterScope;
 import com.misc.common.moplaf.time.continuous.CapacityChange;
 import com.misc.common.moplaf.time.continuous.StockChange;
+import com.misc.common.moplaf.time.discrete.TimeLine;
 import com.misc.common.moplaf.time.discrete.TimeLineMerge;
 import org.eclipse.emf.common.util.EList;
 
@@ -16,9 +17,9 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
- *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.Domain#getTimeLine <em>Time Line</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.Domain#getTimeLineMerge <em>Time Line Merge</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.Domain#getTimeLineMerges <em>Time Line Merges</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.Domain#getAmountImpulsion <em>Amount Impulsion</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.Domain#getAmountAbsolute <em>Amount Absolute</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.Domain#getSlopeAbsolute <em>Slope Absolute</em>}</li>
@@ -27,8 +28,8 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.Domain#getStockChange <em>Stock Change</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.Domain#getDistribution <em>Distribution</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.Domain#getName <em>Name</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.Domain#getTimelines <em>Timelines</em>}</li>
  * </ul>
- * </p>
  *
  * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getDomain()
  * @model
@@ -36,36 +37,20 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Domain extends ObjectWithPropagatorFunctionAdapterScope, ObjectWithPropagatorFunctionAdapter {
 	/**
-	 * Returns the value of the '<em><b>Time Line</b></em>' containment reference list.
-	 * The list contents are of type {@link com.misc.touse.moplaf.timeline.tousetimeline.DomainTimeLine}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Time Line</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Time Line</em>' containment reference list.
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getDomain_TimeLine()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<DomainTimeLine> getTimeLine();
-
-	/**
-	 * Returns the value of the '<em><b>Time Line Merge</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Time Line Merges</b></em>' containment reference list.
 	 * The list contents are of type {@link com.misc.common.moplaf.time.discrete.TimeLineMerge}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Time Line Merge</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Time Line Merges</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Time Line Merge</em>' containment reference list.
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getDomain_TimeLineMerge()
+	 * @return the value of the '<em>Time Line Merges</em>' containment reference list.
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getDomain_TimeLineMerges()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<TimeLineMerge> getTimeLineMerge();
+	EList<TimeLineMerge> getTimeLineMerges();
 
 	/**
 	 * Returns the value of the '<em><b>Distribution</b></em>' containment reference list.
@@ -108,6 +93,22 @@ public interface Domain extends ObjectWithPropagatorFunctionAdapterScope, Object
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Timelines</b></em>' containment reference list.
+	 * The list contents are of type {@link com.misc.common.moplaf.time.discrete.TimeLine}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Timelines</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Timelines</em>' containment reference list.
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getDomain_Timelines()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<TimeLine> getTimelines();
 
 	/**
 	 * Returns the value of the '<em><b>Amount Impulsion</b></em>' containment reference list.

@@ -937,7 +937,6 @@ public class TousetimelineEditor
 			// Load the resource through the editing domain.
 			//
 			resource = editingDomain.getResourceSet().getResource(resourceURI, true);
-			resource.eAdapters().add(new PropagatorFunctionAdapterManager());
 		}
 		catch (Exception e) {
 			exception = e;
@@ -949,6 +948,7 @@ public class TousetimelineEditor
 			resourceToDiagnosticMap.put(resource,  analyzeResourceProblems(resource, exception));
 		}
 		editingDomain.getResourceSet().eAdapters().add(problemIndicationAdapter);
+		resource.eAdapters().add(new PropagatorFunctionAdapterManager());
 	}
 
 	/**
@@ -959,10 +959,11 @@ public class TousetimelineEditor
 	 * @generated
 	 */
 	public Diagnostic analyzeResourceProblems(Resource resource, Exception exception) {
-		if (!resource.getErrors().isEmpty() || !resource.getWarnings().isEmpty()) {
+		boolean hasErrors = !resource.getErrors().isEmpty();
+		if (hasErrors || !resource.getWarnings().isEmpty()) {
 			BasicDiagnostic basicDiagnostic =
 				new BasicDiagnostic
-					(Diagnostic.ERROR,
+					(hasErrors ? Diagnostic.ERROR : Diagnostic.WARNING,
 					 "com.misc.touse.moplaf.timeline.emf.editor",
 					 0,
 					 getString("_UI_CreateModelError_message", resource.getURI()),

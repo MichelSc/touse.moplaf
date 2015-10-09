@@ -9,10 +9,10 @@ import com.misc.common.moplaf.propagator.PropagatorPackage;
 import com.misc.common.moplaf.propagator.Util;
 import com.misc.common.moplaf.time.continuous.CapacityChange;
 import com.misc.common.moplaf.time.continuous.StockChange;
+import com.misc.common.moplaf.time.discrete.TimeLine;
 import com.misc.common.moplaf.time.discrete.TimeLineMerge;
 import com.misc.touse.moplaf.timeline.tousetimeline.Domain;
 import com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution;
-import com.misc.touse.moplaf.timeline.tousetimeline.DomainTimeLine;
 import com.misc.touse.moplaf.timeline.tousetimeline.ToUseAmountAbsolute;
 import com.misc.touse.moplaf.timeline.tousetimeline.ToUseAmountImpulsion;
 import com.misc.touse.moplaf.timeline.tousetimeline.ToUseSlopeAbsolute;
@@ -38,9 +38,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
- *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainImpl#getTimeLine <em>Time Line</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainImpl#getTimeLineMerge <em>Time Line Merge</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainImpl#getTimeLineMerges <em>Time Line Merges</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainImpl#getAmountImpulsion <em>Amount Impulsion</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainImpl#getAmountAbsolute <em>Amount Absolute</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainImpl#getSlopeAbsolute <em>Slope Absolute</em>}</li>
@@ -49,31 +49,21 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainImpl#getStockChange <em>Stock Change</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainImpl#getDistribution <em>Distribution</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainImpl#getName <em>Name</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainImpl#getTimelines <em>Timelines</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
 public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	/**
-	 * The cached value of the '{@link #getTimeLine() <em>Time Line</em>}' containment reference list.
+	 * The cached value of the '{@link #getTimeLineMerges() <em>Time Line Merges</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTimeLine()
+	 * @see #getTimeLineMerges()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<DomainTimeLine> timeLine;
-
-	/**
-	 * The cached value of the '{@link #getTimeLineMerge() <em>Time Line Merge</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTimeLineMerge()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<TimeLineMerge> timeLineMerge;
+	protected EList<TimeLineMerge> timeLineMerges;
 
 	/**
 	 * The cached value of the '{@link #getAmountImpulsion() <em>Amount Impulsion</em>}' containment reference list.
@@ -166,6 +156,16 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	protected String name = NAME_EDEFAULT;
 
 	/**
+	 * The cached value of the '{@link #getTimelines() <em>Timelines</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTimelines()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<TimeLine> timelines;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -189,23 +189,11 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<DomainTimeLine> getTimeLine() {
-		if (timeLine == null) {
-			timeLine = new EObjectContainmentEList<DomainTimeLine>(DomainTimeLine.class, this, TousetimelinePackage.DOMAIN__TIME_LINE);
+	public EList<TimeLineMerge> getTimeLineMerges() {
+		if (timeLineMerges == null) {
+			timeLineMerges = new EObjectContainmentEList<TimeLineMerge>(TimeLineMerge.class, this, TousetimelinePackage.DOMAIN__TIME_LINE_MERGES);
 		}
-		return timeLine;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<TimeLineMerge> getTimeLineMerge() {
-		if (timeLineMerge == null) {
-			timeLineMerge = new EObjectContainmentEList<TimeLineMerge>(TimeLineMerge.class, this, TousetimelinePackage.DOMAIN__TIME_LINE_MERGE);
-		}
-		return timeLineMerge;
+		return timeLineMerges;
 	}
 
 	/**
@@ -313,6 +301,18 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 			eNotify(new ENotificationImpl(this, Notification.SET, TousetimelinePackage.DOMAIN__NAME, oldName, name));
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<TimeLine> getTimelines() {
+		if (timelines == null) {
+			timelines = new EObjectContainmentEList<TimeLine>(TimeLine.class, this, TousetimelinePackage.DOMAIN__TIMELINES);
+		}
+		return timelines;
+	}
+
 	/* (non-Javadoc)
 	 * @see com.misc.common.moplaf.time.continuous.impl.DistributionImpl#addPropagatorFunctionAdapter()
 	 */
@@ -348,10 +348,8 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case TousetimelinePackage.DOMAIN__TIME_LINE:
-				return ((InternalEList<?>)getTimeLine()).basicRemove(otherEnd, msgs);
-			case TousetimelinePackage.DOMAIN__TIME_LINE_MERGE:
-				return ((InternalEList<?>)getTimeLineMerge()).basicRemove(otherEnd, msgs);
+			case TousetimelinePackage.DOMAIN__TIME_LINE_MERGES:
+				return ((InternalEList<?>)getTimeLineMerges()).basicRemove(otherEnd, msgs);
 			case TousetimelinePackage.DOMAIN__AMOUNT_IMPULSION:
 				return ((InternalEList<?>)getAmountImpulsion()).basicRemove(otherEnd, msgs);
 			case TousetimelinePackage.DOMAIN__AMOUNT_ABSOLUTE:
@@ -366,6 +364,8 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 				return ((InternalEList<?>)getStockChange()).basicRemove(otherEnd, msgs);
 			case TousetimelinePackage.DOMAIN__DISTRIBUTION:
 				return ((InternalEList<?>)getDistribution()).basicRemove(otherEnd, msgs);
+			case TousetimelinePackage.DOMAIN__TIMELINES:
+				return ((InternalEList<?>)getTimelines()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -378,10 +378,8 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TousetimelinePackage.DOMAIN__TIME_LINE:
-				return getTimeLine();
-			case TousetimelinePackage.DOMAIN__TIME_LINE_MERGE:
-				return getTimeLineMerge();
+			case TousetimelinePackage.DOMAIN__TIME_LINE_MERGES:
+				return getTimeLineMerges();
 			case TousetimelinePackage.DOMAIN__AMOUNT_IMPULSION:
 				return getAmountImpulsion();
 			case TousetimelinePackage.DOMAIN__AMOUNT_ABSOLUTE:
@@ -398,6 +396,8 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 				return getDistribution();
 			case TousetimelinePackage.DOMAIN__NAME:
 				return getName();
+			case TousetimelinePackage.DOMAIN__TIMELINES:
+				return getTimelines();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -411,13 +411,9 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TousetimelinePackage.DOMAIN__TIME_LINE:
-				getTimeLine().clear();
-				getTimeLine().addAll((Collection<? extends DomainTimeLine>)newValue);
-				return;
-			case TousetimelinePackage.DOMAIN__TIME_LINE_MERGE:
-				getTimeLineMerge().clear();
-				getTimeLineMerge().addAll((Collection<? extends TimeLineMerge>)newValue);
+			case TousetimelinePackage.DOMAIN__TIME_LINE_MERGES:
+				getTimeLineMerges().clear();
+				getTimeLineMerges().addAll((Collection<? extends TimeLineMerge>)newValue);
 				return;
 			case TousetimelinePackage.DOMAIN__AMOUNT_IMPULSION:
 				getAmountImpulsion().clear();
@@ -450,6 +446,10 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 			case TousetimelinePackage.DOMAIN__NAME:
 				setName((String)newValue);
 				return;
+			case TousetimelinePackage.DOMAIN__TIMELINES:
+				getTimelines().clear();
+				getTimelines().addAll((Collection<? extends TimeLine>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -462,11 +462,8 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TousetimelinePackage.DOMAIN__TIME_LINE:
-				getTimeLine().clear();
-				return;
-			case TousetimelinePackage.DOMAIN__TIME_LINE_MERGE:
-				getTimeLineMerge().clear();
+			case TousetimelinePackage.DOMAIN__TIME_LINE_MERGES:
+				getTimeLineMerges().clear();
 				return;
 			case TousetimelinePackage.DOMAIN__AMOUNT_IMPULSION:
 				getAmountImpulsion().clear();
@@ -492,6 +489,9 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 			case TousetimelinePackage.DOMAIN__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case TousetimelinePackage.DOMAIN__TIMELINES:
+				getTimelines().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -504,10 +504,8 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TousetimelinePackage.DOMAIN__TIME_LINE:
-				return timeLine != null && !timeLine.isEmpty();
-			case TousetimelinePackage.DOMAIN__TIME_LINE_MERGE:
-				return timeLineMerge != null && !timeLineMerge.isEmpty();
+			case TousetimelinePackage.DOMAIN__TIME_LINE_MERGES:
+				return timeLineMerges != null && !timeLineMerges.isEmpty();
 			case TousetimelinePackage.DOMAIN__AMOUNT_IMPULSION:
 				return amountImpulsion != null && !amountImpulsion.isEmpty();
 			case TousetimelinePackage.DOMAIN__AMOUNT_ABSOLUTE:
@@ -524,6 +522,8 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 				return distribution != null && !distribution.isEmpty();
 			case TousetimelinePackage.DOMAIN__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case TousetimelinePackage.DOMAIN__TIMELINES:
+				return timelines != null && !timelines.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
