@@ -5,16 +5,11 @@ import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.domain.IEditingDomainProvider;
-import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.jface.action.Action;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.ui.IWorkbenchPart;
 
-import com.misc.common.moplaf.time.RefreshCommand;
-import com.misc.common.moplaf.time.discrete.provider.DiscreteItemProviderAdapterFactory;
-import com.misc.common.moplaf.timeview.IIntervalEventProvider;
 import com.misc.common.moplaf.timeview.impl.IItemIntervalEventProvider;
 import com.misc.touse.moplaf.timeline.tousetimeline.provider.TousetimelineItemProviderAdapterFactory;
 
