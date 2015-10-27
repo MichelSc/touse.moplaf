@@ -9,7 +9,6 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.ui.IWorkbenchPart;
 
 import com.misc.common.moplaf.emf.edit.command.RunCommand;
-import com.misc.common.moplaf.report.ReportAbstract;
 
 public class RunAction extends Action {
 
