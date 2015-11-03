@@ -15,5 +15,7 @@ Require-Bundle: org.eclipse.core.runtime,
  com.misc.common.moplaf.timeline.emf;visibility:=reexport,
  com.misc.common.moplaf.timeline.emf.edit;visibility:=reexport,
  com.misc.common.moplaf.propagator;visibility:=reexport,
- com.misc.common.moplaf.propagator.edit;visibility:=reexport
+ com.misc.common.moplaf.propagator.edit;visibility:=reexport,
+ org.eclipse.jface,
+ com.misc.common.moplaf.emf.edit;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy

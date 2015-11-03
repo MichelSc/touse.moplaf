@@ -3,6 +3,7 @@
 package com.misc.touse.moplaf.timeline.tousetimeline.provider;
 
 
+import com.misc.common.moplaf.emf.edit.Util;
 import com.misc.common.moplaf.time.continuous.provider.DistributionItemProvider;
 import com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution;
 import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage;
@@ -12,18 +13,23 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
+import org.eclipse.emf.edit.provider.IItemColorProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.swt.graphics.Color;
+import org.eclipse.swt.graphics.RGB;
+import org.eclipse.swt.widgets.Display;
 
 /**
  * This is the item provider adapter for a {@link com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution} object.
  * <!-- begin-user-doc -->
+ * @implements IItemColorProvider
  * <!-- end-user-doc -->
  * @generated
  */
 public class DomainDistributionItemProvider
-	extends DistributionItemProvider {
+	extends DistributionItemProvider implements IItemColorProvider  {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -33,6 +39,17 @@ public class DomainDistributionItemProvider
 	public DomainDistributionItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
+
+	/* (non-Javadoc)
+	 * @see org.eclipse.emf.edit.provider.ItemProviderAdapter#isAdapterForType(java.lang.Object)
+	 */
+	@Override
+	public boolean isAdapterForType(Object type) {
+		if ( super.isAdapterForType(type) ){ return true; }
+		if ( type == IItemColorProvider.class) { return true; }
+		return false;
+	}
+
 
 	/**
 	 * This returns the property descriptors for the adapted class.
@@ -162,5 +179,14 @@ public class DomainDistributionItemProvider
 	public ResourceLocator getResourceLocator() {
 		return ToUseTimeLineEditPlugin.INSTANCE;
 	}
+
+	@Override
+	public Object getForeground(Object object) {
+		DomainDistribution distribution = (DomainDistribution)object;
+		RGB rgb = Util.integerToRgb(distribution.getColor());
+		return new Color(Display.getCurrent(), rgb);
+	}
+	
+	
 
 }
