@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainDistributionImpl#getName <em>Name</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainDistributionImpl#getColor <em>Color</em>}</li>
  * </ul>
  *
  * @generated
@@ -45,6 +46,26 @@ public class DomainDistributionImpl extends DistributionImpl implements DomainDi
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getColor() <em>Color</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getColor()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int COLOR_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getColor() <em>Color</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getColor()
+	 * @generated
+	 * @ordered
+	 */
+	protected int color = COLOR_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -104,11 +125,38 @@ public class DomainDistributionImpl extends DistributionImpl implements DomainDi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getColor() {
+		return color;
+	}
+
+
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setColor(int newColor) {
+		int oldColor = color;
+		color = newColor;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TousetimelinePackage.DOMAIN_DISTRIBUTION__COLOR, oldColor, color));
+	}
+
+
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case TousetimelinePackage.DOMAIN_DISTRIBUTION__NAME:
 				return getName();
+			case TousetimelinePackage.DOMAIN_DISTRIBUTION__COLOR:
+				return getColor();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -123,6 +171,9 @@ public class DomainDistributionImpl extends DistributionImpl implements DomainDi
 		switch (featureID) {
 			case TousetimelinePackage.DOMAIN_DISTRIBUTION__NAME:
 				setName((String)newValue);
+				return;
+			case TousetimelinePackage.DOMAIN_DISTRIBUTION__COLOR:
+				setColor((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -139,6 +190,9 @@ public class DomainDistributionImpl extends DistributionImpl implements DomainDi
 			case TousetimelinePackage.DOMAIN_DISTRIBUTION__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case TousetimelinePackage.DOMAIN_DISTRIBUTION__COLOR:
+				setColor(COLOR_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -153,6 +207,8 @@ public class DomainDistributionImpl extends DistributionImpl implements DomainDi
 		switch (featureID) {
 			case TousetimelinePackage.DOMAIN_DISTRIBUTION__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case TousetimelinePackage.DOMAIN_DISTRIBUTION__COLOR:
+				return color != COLOR_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -169,6 +225,8 @@ public class DomainDistributionImpl extends DistributionImpl implements DomainDi
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (Name: ");
 		result.append(name);
+		result.append(", Color: ");
+		result.append(color);
 		result.append(')');
 		return result.toString();
 	}

@@ -119,6 +119,7 @@ import org.eclipse.emf.edit.ui.util.EditUIMarkerHelper;
 import org.eclipse.emf.edit.ui.util.EditUIUtil;
 import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 
+import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage;
 import com.misc.touse.moplaf.timeline.tousetimeline.provider.TousetimelineItemProviderAdapterFactory;
 import com.misc.common.moplaf.emf.editor.AdapterFactoryContentProviderExtended;
 import com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapterScope;
@@ -1396,6 +1397,7 @@ public class TousetimelineEditor
 			//propertySourceProvider.editDates.addSelector(DiscretePackage.Literals.TIME_BUCKET);
 			//propertySourceProvider.editDates.addSelector(DiscretePackage.eINSTANCE);
 			propertySourceProvider.editDates.addSelectorAll();
+			propertySourceProvider.editColors.addSelector(TousetimelinePackage.Literals.DOMAIN_DISTRIBUTION__COLOR);
 			propertySheetPage.setPropertySourceProvider(propertySourceProvider);
 		    propertySheetPages.add(propertySheetPage);
 

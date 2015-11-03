@@ -46,6 +46,7 @@ public class DomainDistributionItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
+			addColorPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -68,6 +69,28 @@ public class DomainDistributionItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Color feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addColorPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_DomainDistribution_Color_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_DomainDistribution_Color_feature", "_UI_DomainDistribution_type"),
+				 TousetimelinePackage.Literals.DOMAIN_DISTRIBUTION__COLOR,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -110,6 +133,7 @@ public class DomainDistributionItemProvider
 
 		switch (notification.getFeatureID(DomainDistribution.class)) {
 			case TousetimelinePackage.DOMAIN_DISTRIBUTION__NAME:
+			case TousetimelinePackage.DOMAIN_DISTRIBUTION__COLOR:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

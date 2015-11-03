@@ -1092,13 +1092,22 @@ public interface TousetimelinePackage extends EPackage {
 	int DOMAIN_DISTRIBUTION__NAME = ContinuousPackage.DISTRIBUTION_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_DISTRIBUTION__COLOR = ContinuousPackage.DISTRIBUTION_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Domain Distribution</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION_FEATURE_COUNT = ContinuousPackage.DISTRIBUTION_FEATURE_COUNT + 1;
+	int DOMAIN_DISTRIBUTION_FEATURE_COUNT = ContinuousPackage.DISTRIBUTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Add Propagator Function Adapter</em>' operation.
@@ -1436,6 +1445,17 @@ public interface TousetimelinePackage extends EPackage {
 	EAttribute getDomainDistribution_Name();
 
 	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution#getColor <em>Color</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Color</em>'.
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution#getColor()
+	 * @see #getDomainDistribution()
+	 * @generated
+	 */
+	EAttribute getDomainDistribution_Color();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1605,6 +1625,14 @@ public interface TousetimelinePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute DOMAIN_DISTRIBUTION__NAME = eINSTANCE.getDomainDistribution_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Color</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DOMAIN_DISTRIBUTION__COLOR = eINSTANCE.getDomainDistribution_Color();
 
 	}
 

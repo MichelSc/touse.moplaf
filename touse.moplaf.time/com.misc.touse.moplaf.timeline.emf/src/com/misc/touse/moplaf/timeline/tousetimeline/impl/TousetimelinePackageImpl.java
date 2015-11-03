@@ -296,6 +296,15 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getDomainDistribution_Color() {
+		return (EAttribute)domainDistributionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public TousetimelineFactory getTousetimelineFactory() {
 		return (TousetimelineFactory)getEFactoryInstance();
 	}
@@ -341,6 +350,7 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 
 		domainDistributionEClass = createEClass(DOMAIN_DISTRIBUTION);
 		createEAttribute(domainDistributionEClass, DOMAIN_DISTRIBUTION__NAME);
+		createEAttribute(domainDistributionEClass, DOMAIN_DISTRIBUTION__COLOR);
 	}
 
 	/**
@@ -407,6 +417,7 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 
 		initEClass(domainDistributionEClass, DomainDistribution.class, "DomainDistribution", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDomainDistribution_Name(), ecorePackage.getEString(), "Name", null, 0, 1, DomainDistribution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDomainDistribution_Color(), ecorePackage.getEInt(), "Color", null, 0, 1, DomainDistribution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
