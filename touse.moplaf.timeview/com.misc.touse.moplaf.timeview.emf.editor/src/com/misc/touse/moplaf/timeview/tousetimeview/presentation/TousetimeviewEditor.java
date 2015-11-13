@@ -155,6 +155,7 @@ import org.eclipse.emf.edit.ui.util.EditUIUtil;
 import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 
 import com.misc.common.moplaf.emf.editor.AdapterFactoryContentProviderExtended;
+import com.misc.touse.moplaf.timeview.tousetimeview.TousetimeviewPackage;
 import com.misc.touse.moplaf.timeview.tousetimeview.provider.TousetimeviewItemProviderAdapterFactory;
 
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
@@ -1412,11 +1413,11 @@ public class TousetimeviewEditor
 			};
 
 		AdapterFactoryContentProviderExtended propertySourceProvider = new AdapterFactoryContentProviderExtended(adapterFactory);
-		//propertySourceProvider.editDates.addSelector(DiscretePackage.Literals.TIME_BUCKET__BUCKET_START);
-		//propertySourceProvider.editDates.addSelector(DiscretePackage.Literals.TIME_BUCKET);
-		//propertySourceProvider.editDates.addSelector(DiscretePackage.eINSTANCE);
-		propertySourceProvider.editDates.addSelectorAll();
-		//propertySourceProvider.editColors.addSelector(TousetimelinePackage.Literals.DOMAIN_DISTRIBUTION__COLOR);
+		propertySourceProvider.editDateTimes.addSelectorAll();
+		propertySourceProvider.editColors.addSelector(TousetimeviewPackage.Literals.NODE__BACKGROUND);
+		propertySourceProvider.editColors.addSelector(TousetimeviewPackage.Literals.NODE__FOREGROUND);
+		propertySourceProvider.editColors.addSelector(TousetimeviewPackage.Literals.ROW__BACKGROUND);
+		propertySourceProvider.editColors.addSelector(TousetimeviewPackage.Literals.ROW__FOREGROUND);
 
 		propertySheetPage.setPropertySourceProvider(propertySourceProvider);
 	    propertySheetPages.add(propertySheetPage);

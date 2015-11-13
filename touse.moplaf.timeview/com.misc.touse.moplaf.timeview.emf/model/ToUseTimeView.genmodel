@@ -18,12 +18,12 @@
     <genClasses ecoreClass="ToUseTimeView.ecore#//Row">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseTimeView.ecore#//Row/SubRows"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseTimeView.ecore#//Row/Nodes"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseTimeView.ecore#//Row/Text"/>
+      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute ToUseTimeView.ecore#//Row/Text"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseTimeView.ecore#//Row/Foreground"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseTimeView.ecore#//Row/Background"/>
     </genClasses>
     <genClasses ecoreClass="ToUseTimeView.ecore#//Node">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseTimeView.ecore#//Node/Text"/>
+      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute ToUseTimeView.ecore#//Node/Text"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseTimeView.ecore#//Node/Foreground"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseTimeView.ecore#//Node/Background"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseTimeView.ecore#//Node/Start"/>

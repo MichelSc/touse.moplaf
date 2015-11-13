@@ -95,7 +95,7 @@ public class NodeItemProvider
 				 getString("_UI_PropertyDescriptor_description", "_UI_Node_Text_feature", "_UI_Node_type"),
 				 TousetimeviewPackage.Literals.NODE__TEXT,
 				 true,
-				 false,
+				 true,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
@@ -209,7 +209,7 @@ public class NodeItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Node)object).getText();
+		String label = crop(((Node)object).getText());
 		return label == null || label.length() == 0 ?
 			getString("_UI_Node_type") :
 			getString("_UI_Node_type") + " " + label;

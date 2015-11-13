@@ -93,7 +93,7 @@ public class RowItemProvider
 				 getString("_UI_PropertyDescriptor_description", "_UI_Row_Text_feature", "_UI_Row_type"),
 				 TousetimeviewPackage.Literals.ROW__TEXT,
 				 true,
-				 false,
+				 true,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
@@ -194,7 +194,7 @@ public class RowItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Row)object).getText();
+		String label = crop(((Row)object).getText());
 		return label == null || label.length() == 0 ?
 			getString("_UI_Row_type") :
 			getString("_UI_Row_type") + " " + label;
