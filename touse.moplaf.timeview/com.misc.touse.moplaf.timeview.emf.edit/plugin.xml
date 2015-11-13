@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <factory
+            uri="http://www.misc.com/touse/moplaf/timeview/model/0.1"
+            class="com.misc.touse.moplaf.timeview.tousetimeview.provider.TousetimeviewItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource
+               com.misc.common.moplaf.timeview.impl.IItemIntervalEventProvider
+               com.misc.common.moplaf.timeview.impl.IItemIntervalEventsProvider"/>
+   </extension>
+
+</plugin>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ToUseTimeView -->
+      <package
+            uri="http://www.misc.com/touse/moplaf/timeview/model/0.1"
+            class="com.misc.touse.moplaf.timeview.tousetimeview.TousetimeviewPackage"
+            genModel="model/ToUseTimeView.genmodel"/>
+   </extension>
+
+</plugin>
