@@ -154,6 +154,7 @@ import org.eclipse.emf.edit.ui.util.EditUIUtil;
 
 import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 
+import com.misc.common.moplaf.emf.editor.AdapterFactoryContentProviderExtended;
 import com.misc.touse.moplaf.timeview.tousetimeview.provider.TousetimeviewItemProviderAdapterFactory;
 
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
@@ -1393,7 +1394,6 @@ public class TousetimeviewEditor
 	 * This accesses a cached version of the property sheet.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	public IPropertySheetPage getPropertySheetPage() {
 		PropertySheetPage propertySheetPage =
@@ -1410,9 +1410,17 @@ public class TousetimeviewEditor
 					getActionBarContributor().shareGlobalActions(this, actionBars);
 				}
 			};
-		propertySheetPage.setPropertySourceProvider(new AdapterFactoryContentProvider(adapterFactory));
-		propertySheetPages.add(propertySheetPage);
 
+		AdapterFactoryContentProviderExtended propertySourceProvider = new AdapterFactoryContentProviderExtended(adapterFactory);
+		//propertySourceProvider.editDates.addSelector(DiscretePackage.Literals.TIME_BUCKET__BUCKET_START);
+		//propertySourceProvider.editDates.addSelector(DiscretePackage.Literals.TIME_BUCKET);
+		//propertySourceProvider.editDates.addSelector(DiscretePackage.eINSTANCE);
+		propertySourceProvider.editDates.addSelectorAll();
+		//propertySourceProvider.editColors.addSelector(TousetimelinePackage.Literals.DOMAIN_DISTRIBUTION__COLOR);
+
+		propertySheetPage.setPropertySourceProvider(propertySourceProvider);
+	    propertySheetPages.add(propertySheetPage);
+		
 		return propertySheetPage;
 	}
 
