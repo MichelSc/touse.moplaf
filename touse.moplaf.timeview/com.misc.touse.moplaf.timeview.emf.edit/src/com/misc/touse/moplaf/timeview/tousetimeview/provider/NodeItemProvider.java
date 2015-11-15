@@ -3,6 +3,7 @@
 package com.misc.touse.moplaf.timeview.tousetimeview.provider;
 
 
+import com.misc.common.moplaf.emf.edit.Util;
 import com.misc.common.moplaf.timeview.impl.IItemIntervalEventProvider;
 import com.misc.touse.moplaf.timeview.tousetimeview.Node;
 import com.misc.touse.moplaf.timeview.tousetimeview.TousetimeviewPackage;
@@ -18,6 +19,7 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
+import org.eclipse.emf.edit.provider.IItemColorProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
@@ -26,18 +28,22 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.swt.graphics.Color;
+import org.eclipse.swt.graphics.RGB;
+import org.eclipse.swt.widgets.Display;
 
 /**
  * This is the item provider adapter for a {@link com.misc.touse.moplaf.timeview.tousetimeview.Node} object.
  * <!-- begin-user-doc -->
  * @implements IItemIntervalEventProvider
+ * @implements IItemColorProvider
  * <!-- end-user-doc -->
  * @generated
  */
 public class NodeItemProvider 
 	extends ItemProviderAdapter
 	implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource, IItemIntervalEventProvider {
+		IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource, IItemIntervalEventProvider, IItemColorProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -56,6 +62,7 @@ public class NodeItemProvider
 	public boolean isAdapterForType(Object type) {
 		if ( super.isAdapterForType(type) ){ return true; }
 		if ( type == IItemIntervalEventProvider.class) { return true; }
+		if ( type == IItemColorProvider.class) { return true; }
 		return false;
 	}
 
@@ -272,6 +279,20 @@ public class NodeItemProvider
 	public Date getIntervalEventEnd(Object element) {
 		Node node = (Node) element;
 		return node.getEnd();
+	}
+	
+	@Override
+	public Object getForeground(Object element) {
+		Node node = (Node) element;
+		RGB rgb = Util.integerToRgb(node.getForeground());
+		return new Color(Display.getCurrent(), rgb);
+	}
+	
+	@Override
+	public Object getBackground(Object element) {
+		Node node = (Node) element;
+		RGB rgb = Util.integerToRgb(node.getBackground());
+		return new Color(Display.getCurrent(), rgb);
 	}
 
 }

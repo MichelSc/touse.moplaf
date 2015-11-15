@@ -15,6 +15,7 @@
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
                org.eclipse.emf.edit.provider.ITreeItemContentProvider
                org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemColorProvider
                org.eclipse.emf.edit.provider.IItemPropertySource
                com.misc.common.moplaf.timeview.impl.IItemIntervalEventProvider
                com.misc.common.moplaf.timeview.impl.IItemIntervalEventsProvider"/>
