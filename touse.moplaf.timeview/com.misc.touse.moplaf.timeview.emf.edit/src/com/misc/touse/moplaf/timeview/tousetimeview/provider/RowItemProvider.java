@@ -260,9 +260,9 @@ public class RowItemProvider
 	}
 
 	@Override
-	public Object[] getIntervalEvents(Object element) {
+	public Collection<?> getIntervalEvents(Object element) {
 		Row row = (Row)element;
-		return row.getNodes().toArray(); 
+		return row.getNodes(); 
 	}
 
 }
