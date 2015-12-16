@@ -397,6 +397,15 @@ public class ToUsePropagatorPackageImpl extends EPackageImpl implements ToUsePro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getTask__RefreshResourceCandidates() {
+		return taskEClass.getEOperations().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getDependence() {
 		return dependenceEClass;
 	}
@@ -603,6 +612,7 @@ public class ToUsePropagatorPackageImpl extends EPackageImpl implements ToUsePro
 		createEOperation(taskEClass, TASK___REFRESH_HOURS_ITEM);
 		createEOperation(taskEClass, TASK___REFRESH_HOURS_VAR);
 		createEOperation(taskEClass, TASK___REFRESH_RESOURCE_CANDIDATES__RESOURCE);
+		createEOperation(taskEClass, TASK___REFRESH_RESOURCE_CANDIDATES);
 
 		dependenceEClass = createEClass(DEPENDENCE);
 		createEReference(dependenceEClass, DEPENDENCE__TASK_BEFORE);
@@ -701,6 +711,8 @@ public class ToUsePropagatorPackageImpl extends EPackageImpl implements ToUsePro
 
 		EOperation op = initEOperation(getTask__RefreshResourceCandidates__Resource(), null, "refreshResourceCandidates", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getResource(), "resource", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getTask__RefreshResourceCandidates(), null, "refreshResourceCandidates", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(dependenceEClass, Dependence.class, "Dependence", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDependence_TaskBefore(), this.getTask(), this.getTask_DependencesAfter(), "TaskBefore", null, 1, 1, Dependence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

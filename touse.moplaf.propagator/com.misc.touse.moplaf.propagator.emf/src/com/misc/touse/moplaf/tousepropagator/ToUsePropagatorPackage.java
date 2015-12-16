@@ -367,13 +367,22 @@ public interface ToUsePropagatorPackage extends EPackage {
 	int TASK___REFRESH_RESOURCE_CANDIDATES__RESOURCE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_OPERATION_COUNT + 5;
 
 	/**
+	 * The operation id for the '<em>Refresh Resource Candidates</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK___REFRESH_RESOURCE_CANDIDATES = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_OPERATION_COUNT + 6;
+
+	/**
 	 * The number of operations of the '<em>Task</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_OPERATION_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_OPERATION_COUNT + 6;
+	int TASK_OPERATION_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_OPERATION_COUNT + 7;
 
 	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.tousepropagator.impl.DependenceImpl <em>Dependence</em>}' class.
@@ -916,6 +925,16 @@ public interface ToUsePropagatorPackage extends EPackage {
 	EOperation getTask__RefreshResourceCandidates__Resource();
 
 	/**
+	 * Returns the meta object for the '{@link com.misc.touse.moplaf.tousepropagator.Task#refreshResourceCandidates() <em>Refresh Resource Candidates</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Refresh Resource Candidates</em>' operation.
+	 * @see com.misc.touse.moplaf.tousepropagator.Task#refreshResourceCandidates()
+	 * @generated
+	 */
+	EOperation getTask__RefreshResourceCandidates();
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousepropagator.Dependence <em>Dependence</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1356,6 +1375,14 @@ public interface ToUsePropagatorPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation TASK___REFRESH_RESOURCE_CANDIDATES__RESOURCE = eINSTANCE.getTask__RefreshResourceCandidates__Resource();
+
+		/**
+		 * The meta object literal for the '<em><b>Refresh Resource Candidates</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TASK___REFRESH_RESOURCE_CANDIDATES = eINSTANCE.getTask__RefreshResourceCandidates();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousepropagator.impl.DependenceImpl <em>Dependence</em>}' class.

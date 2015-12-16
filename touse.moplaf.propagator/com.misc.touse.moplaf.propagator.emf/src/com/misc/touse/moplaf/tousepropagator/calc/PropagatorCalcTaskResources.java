@@ -3,7 +3,6 @@ package com.misc.touse.moplaf.tousepropagator.calc;
 
 import com.misc.common.moplaf.propagator.PropagatorDependencyAdapter;
 import com.misc.common.moplaf.propagator.PropagatorFunctionAdapter;
-import com.misc.common.moplaf.propagator.PropagatorFunctionAdapters;
 import com.misc.common.moplaf.propagator.Util;
 import com.misc.touse.moplaf.tousepropagator.Project;
 import com.misc.touse.moplaf.tousepropagator.Resource;
@@ -27,10 +26,18 @@ public class PropagatorCalcTaskResources extends PropagatorFunctionAdapter {
 		task.refreshResourceCandidates(resource);
 	}
 
+	//@Override
+	protected void calculate() {
+		Task task = (Task)this.target;
+		task.refreshResourceCandidates();
+	}
+
 	@Override
 	protected void addListeners() {
 		super.addListeners();
 		this.addNavigationFeatureListener(ToUsePropagatorPackage.Literals.TASK__PROJECT, DependencyProject.class);
+		this.addFeatureListener(ToUsePropagatorPackage.Literals.TASK__START);
+		this.addFeatureListener(ToUsePropagatorPackage.Literals.TASK__END);
 	}
 
 	static public class DependencyProject extends PropagatorDependencyAdapter{

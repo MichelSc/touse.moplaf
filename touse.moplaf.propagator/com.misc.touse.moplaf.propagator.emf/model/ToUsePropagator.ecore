@@ -32,6 +32,7 @@
     <eOperations name="refreshResourceCandidates">
       <eParameters name="resource" eType="#//Resource"/>
     </eOperations>
+    <eOperations name="refreshResourceCandidates"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Start" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"
         defaultValueLiteral="2001-01-01">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">

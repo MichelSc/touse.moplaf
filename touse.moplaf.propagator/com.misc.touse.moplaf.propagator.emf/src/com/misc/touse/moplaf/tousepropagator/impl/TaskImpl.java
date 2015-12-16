@@ -21,7 +21,7 @@ import com.misc.touse.moplaf.tousepropagator.calc.PropagatorCalcTaskStart;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import java.util.Date;
-
+import java.util.HashMap;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -565,6 +565,66 @@ public class TaskImpl extends MinimalEObjectImpl.Container implements Task {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 */
+	
+	private boolean isCandidate(Resource resource){
+		if ( resource.eContainer()==null) { return false; }
+		if ( resource.getStart() == null ) { return false; }
+		if ( resource.getEnd() == null ) { return false; }
+		if ( this.getStart() == null ) { return false; }
+		if ( this.getEnd() == null ) { return false; }
+		if ( resource.getStart().after(this.getEnd() )){ return false; }
+		if ( resource.getEnd().before(this.getStart() )){ return false; }
+		return true;
+	}
+	
+	private float getCandidateMatch(Resource resource) {
+		Date overlapStart = this.getStart(); 
+		if ( resource.getStart().after(overlapStart)){
+			overlapStart = resource.getStart();
+		}
+		Date overlapEnd = this.getEnd();
+		if ( resource.getEnd().before(overlapEnd)){
+			overlapEnd = resource.getEnd();
+		}
+		float overlapDuration = (float)(overlapEnd.getTime()-overlapStart.getTime());
+		float taskDuration = (float)(this.getEnd().getTime()-this.getStart().getTime());
+		float match = overlapDuration/taskDuration;
+		return match;
+	}
+
+	public void refreshResourceCandidates() {
+		HashMap<Resource, ResourceCandidate> candidatesAsIs = new HashMap<Resource, ResourceCandidate>();
+		for ( ResourceCandidate resourceCandidate : this.getResourcecandidate()){
+			candidatesAsIs.put(resourceCandidate.getResource(), resourceCandidate);
+		}
+		for ( Resource resource : this.getProject().getResources()){
+			ResourceCandidate candidateAsIs = candidatesAsIs.get(resource);
+			boolean toBe = this.isCandidate(resource);
+			if ( toBe ){
+				
+				candidatesAsIs.remove(resource);
+				if ( candidateAsIs == null ){
+					// create
+					candidateAsIs = ToUsePropagatorFactory.eINSTANCE.createResourceCandidate();
+					candidateAsIs.setResource(resource);
+					this.getResourcecandidate().add(candidateAsIs);
+				}
+				// update
+				float match = this.getCandidateMatch(resource);
+				candidateAsIs.setMatch(match);
+			}
+		} // traverse the resources of the project
+		for ( ResourceCandidate candidateToRemove : candidatesAsIs.values()){
+			// delete
+			this.getResourcecandidate().remove(candidateToRemove);
+			candidateToRemove.setResource(null);
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
 	public void refreshResourceCandidates(Resource resource) {
 		// get the asIs
 		ResourceCandidate resourceCandidateAsIs = null;
@@ -574,32 +634,9 @@ public class TaskImpl extends MinimalEObjectImpl.Container implements Task {
 			}
 		}
 		// calculate the toBe
-		boolean toBe = false;
-		float match = 0.0f;
-		Date resourceStart = resource.getStart();
-		Date resourceEnd = resource.getEnd();
-		Date taskStart = this.getStart();
-		Date taskEnd = this.getEnd();
-		if (   resourceStart != null 
-			&& resourceEnd != null 
-			&& taskStart != null
-			&& taskEnd != null
-			&& resourceStart.before(taskEnd)
-			&& taskStart.before(resourceEnd) ){
-			// there is an overlap
-			toBe = true;
-			Date overlapStart = taskStart; 
-			if ( resourceStart.after(overlapStart)){
-				overlapStart = resourceStart;
-			}
-			Date overlapEnd = taskEnd;
-			if ( resourceEnd.before(overlapEnd)){
-				overlapEnd = resourceEnd;
-			}
-			match = (float)(overlapEnd.getTime()-overlapStart.getTime())/(float)(taskEnd.getTime()-taskStart.getTime());
-		}
-		// create/update/delete
-		if ( toBe){
+		boolean toBe = this.isCandidate(resource);
+		if ( toBe ){
+			float match = this.getCandidateMatch(resource);
 			ResourceCandidate resourceCandidate = null;
 			if ( resourceCandidateAsIs == null ){
 				// create
@@ -888,6 +925,9 @@ public class TaskImpl extends MinimalEObjectImpl.Container implements Task {
 				return null;
 			case ToUsePropagatorPackage.TASK___REFRESH_RESOURCE_CANDIDATES__RESOURCE:
 				refreshResourceCandidates((Resource)arguments.get(0));
+				return null;
+			case ToUsePropagatorPackage.TASK___REFRESH_RESOURCE_CANDIDATES:
+				refreshResourceCandidates();
 				return null;
 			case ToUsePropagatorPackage.TASK___ADD_PROPAGATOR_FUNCTION_ADAPTER:
 				addPropagatorFunctionAdapter();
