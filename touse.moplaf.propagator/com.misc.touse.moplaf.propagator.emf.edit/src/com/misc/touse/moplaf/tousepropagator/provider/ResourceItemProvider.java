@@ -9,11 +9,15 @@ import com.misc.touse.moplaf.tousepropagator.ToUsePropagatorPackage;
 import java.util.Collection;
 import java.util.List;
 
+import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
-
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.edit.command.CommandParameter;
+import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -203,4 +207,21 @@ public class ResourceItemProvider
 		return ToUsePropagatorEditPlugin.INSTANCE;
 	}
 
+	@Override
+	protected Command createRemoveCommand(EditingDomain domain, EObject owner, EStructuralFeature feature,
+			Collection<?> collection) {
+		// TODO Auto-generated method stub
+		return super.createRemoveCommand(domain, owner, feature, collection);
+	}
+
+	@Override
+	public Command createCommand(Object object, EditingDomain domain, Class<? extends Command> commandClass,
+			CommandParameter commandParameter) {
+		// TODO Auto-generated method stub
+		return super.createCommand(object, domain, commandClass, commandParameter);
+	}
+	
+	
+
+	
 }

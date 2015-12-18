@@ -26,6 +26,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
 
+import org.eclipse.emf.common.CommonPlugin;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -597,17 +598,22 @@ public class TaskImpl extends MinimalEObjectImpl.Container implements Task {
 	}
 
 	private ResourceCandidate refreshResourceCandidatesImplCreate(Resource resource) {
+		CommonPlugin.INSTANCE.log("refreshResourceCandidates, create resource "+resource.getResourceName());
 		ResourceCandidate toBe = ToUsePropagatorFactory.eINSTANCE.createResourceCandidate();
 		toBe.setResource(resource);
 		return toBe;
 	}
 	
 	private void refreshResourceCandidatesImplUpdate(ResourceCandidate candidate) {
-		float match = this.getCandidateMatch(candidate.getResource());
+		Resource resource = candidate.getResource();
+		CommonPlugin.INSTANCE.log("refreshResourceCandidates, update resource "+resource.getResourceName());
+		float match = this.getCandidateMatch(resource);
 		candidate.setMatch(match);
 	}
 	
 	private void refreshResourceCandidatesImplDelete(ResourceCandidate candidate) {
+		Resource resource = candidate.getResource();
+		CommonPlugin.INSTANCE.log("refreshResourceCandidates, update resource "+resource.getResourceName());
 		candidate.setResource(null);
 	}
 
@@ -631,6 +637,7 @@ public class TaskImpl extends MinimalEObjectImpl.Container implements Task {
 	}
 	
 	public void refreshResourceCandidates() {
+		CommonPlugin.INSTANCE.log("refreshResourceCandidates, all resources ");
 		HashMap<Resource, ResourceCandidate> candidatesAsIs = new HashMap<Resource, ResourceCandidate>();
 		for ( ResourceCandidate candidateAsIs : this.getResourcecandidate()){
 			Resource resource = candidateAsIs.getResource();
@@ -665,11 +672,13 @@ public class TaskImpl extends MinimalEObjectImpl.Container implements Task {
 	 * <!-- end-user-doc -->
 	 */
 	public void refreshResourceCandidates(Resource resourceToRefresh) {
+		CommonPlugin.INSTANCE.log("refreshResourceCandidates, resource "+resourceToRefresh.getResourceName());
 		ResourceCandidate candidateAsIs = null;
 		for ( ResourceCandidate candidateAsIsTmp : this.getResourcecandidate()){
 			Resource resource = candidateAsIsTmp.getResource();
 			if ( resource ==resourceToRefresh){
 				candidateAsIs = candidateAsIsTmp;
+				break;
 			}
 		}
 

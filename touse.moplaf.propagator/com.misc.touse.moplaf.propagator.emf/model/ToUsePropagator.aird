@@ -120,7 +120,7 @@
               <styles xmi:type="notation:FilteringStyle" xmi:id="_29v1o0ZJEeSDLaDY72dKfA"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_29ungUZJEeSDLaDY72dKfA" fontName="Sans Serif" fontHeight="8"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_29ungkZJEeSDLaDY72dKfA" x="1188" y="336"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_29ungkZJEeSDLaDY72dKfA" x="1185" y="390"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_3cXrUEZJEeSDLaDY72dKfA" type="2003" element="_3bQ4EEZJEeSDLaDY72dKfA">
             <children xmi:type="notation:Node" xmi:id="_3cY5cEZJEeSDLaDY72dKfA" type="5007"/>
@@ -158,7 +158,7 @@
               <styles xmi:type="notation:FilteringStyle" xmi:id="_MeEAAzNpEeWVIrJhIpryGQ"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_Md_HgTNpEeWVIrJhIpryGQ" fontName="Oxygen-Sans" fontHeight="8"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Md_HgjNpEeWVIrJhIpryGQ" x="108" y="423" width="171" height="100"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Md_HgjNpEeWVIrJhIpryGQ" x="108" y="423" width="210" height="150"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_D4VD0DNqEeWVIrJhIpryGQ" type="2003" element="_D3puYDNqEeWVIrJhIpryGQ">
             <children xmi:type="notation:Node" xmi:id="_D4Vq4DNqEeWVIrJhIpryGQ" type="5007"/>
@@ -202,7 +202,7 @@
             </children>
             <styles xmi:type="notation:ConnectorStyle" xmi:id="_29xq0UZJEeSDLaDY72dKfA" routing="Rectilinear" jumpLinkStatus="Above"/>
             <styles xmi:type="notation:FontStyle" xmi:id="_29xq0kZJEeSDLaDY72dKfA" fontName="Sans Serif" fontHeight="8"/>
-            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_29xq00ZJEeSDLaDY72dKfA" points="[92, 1, -633, -238]$[726, 1, 1, -238]$[726, 226, 1, -13]"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_29xq00ZJEeSDLaDY72dKfA" points="[93, 1, -627, -292]$[722, 1, 2, -292]$[722, 190, 2, -103]"/>
             <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_290HEEZJEeSDLaDY72dKfA" id="(0.5,0.5)"/>
             <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_290HEUZJEeSDLaDY72dKfA" id="(0.5,0.5)"/>
           </edges>
@@ -211,14 +211,14 @@
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_290uIUZJEeSDLaDY72dKfA" y="-10"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_291VMEZJEeSDLaDY72dKfA" type="6002">
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_291VMUZJEeSDLaDY72dKfA" x="22" y="-18"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_291VMUZJEeSDLaDY72dKfA" x="21" y="-24"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_291VMkZJEeSDLaDY72dKfA" type="6003">
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_291VM0ZJEeSDLaDY72dKfA" x="-46" y="-18"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_291VM0ZJEeSDLaDY72dKfA" x="-49" y="25"/>
             </children>
-            <styles xmi:type="notation:ConnectorStyle" xmi:id="_290HE0ZJEeSDLaDY72dKfA" routing="Rectilinear" jumpLinkStatus="Above"/>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_290HE0ZJEeSDLaDY72dKfA" jumpLinkStatus="Above"/>
             <styles xmi:type="notation:FontStyle" xmi:id="_290HFEZJEeSDLaDY72dKfA" fontName="Sans Serif" fontHeight="8"/>
-            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_290HFUZJEeSDLaDY72dKfA" points="[40, -15, -410, -25]$[378, -15, -72, -25]"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_290HFUZJEeSDLaDY72dKfA" points="[49, 10, -348, -54]$[325, 52, -72, -12]"/>
             <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_292jUEZJEeSDLaDY72dKfA" id="(0.8484848484848485,0.19458435304334099)"/>
             <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_292jUUZJEeSDLaDY72dKfA" id="(0.5,0.5)"/>
           </edges>
@@ -227,15 +227,15 @@
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_293KYUZJEeSDLaDY72dKfA" y="-10"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_293xcEZJEeSDLaDY72dKfA" type="6002">
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_293xcUZJEeSDLaDY72dKfA" x="15" y="14"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_293xcUZJEeSDLaDY72dKfA" x="27" y="22"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_293xckZJEeSDLaDY72dKfA" type="6003">
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_293xc0ZJEeSDLaDY72dKfA" x="-40" y="14"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_293xc0ZJEeSDLaDY72dKfA" x="-49" y="-21"/>
             </children>
-            <styles xmi:type="notation:ConnectorStyle" xmi:id="_292jU0ZJEeSDLaDY72dKfA" routing="Rectilinear" jumpLinkStatus="Above"/>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_292jU0ZJEeSDLaDY72dKfA" jumpLinkStatus="Above"/>
             <styles xmi:type="notation:FontStyle" xmi:id="_292jVEZJEeSDLaDY72dKfA" fontName="Sans Serif" fontHeight="8"/>
-            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_292jVUZJEeSDLaDY72dKfA" points="[101, -14, -525, 8]$[499, -14, -127, 8]"/>
-            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_294_kEZJEeSDLaDY72dKfA" id="(0.5,0.44716981132075473)"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_292jVUZJEeSDLaDY72dKfA" points="[16, -4, -404, 52]$[292, -40, -128, 16]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_294_kEZJEeSDLaDY72dKfA" id="(0.9504643962848297,0.7490636704119851)"/>
             <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_294_kUZJEeSDLaDY72dKfA" id="(0.888,0.78)"/>
           </edges>
           <edges xmi:type="notation:Edge" xmi:id="_3cb8wEZJEeSDLaDY72dKfA" type="4001" element="_3cEwYEZJEeSDLaDY72dKfA" source="_2dg2YEZJEeSDLaDY72dKfA" target="_3cXrUEZJEeSDLaDY72dKfA">
@@ -268,7 +268,7 @@
             <styles xmi:type="notation:FontStyle" xmi:id="_u4NgAjNpEeWVIrJhIpryGQ" fontName="Oxygen-Sans" fontHeight="8"/>
             <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_u4NgAzNpEeWVIrJhIpryGQ" points="[-91, 1, 252, -325]$[-292, 1, 51, -325]$[-292, 277, 51, -49]"/>
             <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_u4QjUDNpEeWVIrJhIpryGQ" id="(0.5,0.5)"/>
-            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_u4QjUTNpEeWVIrJhIpryGQ" id="(0.49707602339181284,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_u4QjUTNpEeWVIrJhIpryGQ" id="(0.40387426900584794,0.3310810810810811)"/>
           </edges>
           <edges xmi:type="notation:Edge" xmi:id="_HszbADNqEeWVIrJhIpryGQ" type="4001" element="_HsFCQDNqEeWVIrJhIpryGQ" source="_2dg2YEZJEeSDLaDY72dKfA" target="_D4VD0DNqEeWVIrJhIpryGQ">
             <children xmi:type="notation:Node" xmi:id="_Hs0CEDNqEeWVIrJhIpryGQ" type="6001">
@@ -300,7 +300,7 @@
             <styles xmi:type="notation:FontStyle" xmi:id="_KEm_4jNqEeWVIrJhIpryGQ" fontColor="7490599" fontName="Oxygen-Sans" fontHeight="8"/>
             <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_KEm_4zNqEeWVIrJhIpryGQ" points="[0, 0, 335, 264]$[0, -79, 335, 185]$[-407, -79, -72, 185]$[-407, -187, -72, 77]"/>
             <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_KEoOADNqEeWVIrJhIpryGQ" id="(0.28402366863905326,0.0)"/>
-            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_KEoOATNqEeWVIrJhIpryGQ" id="(1.0,0.21428571428571427)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_KEoOATNqEeWVIrJhIpryGQ" id="(0.8125,0.14189189189189189)"/>
           </edges>
         </data>
       </ownedAnnotationEntries>
@@ -560,7 +560,8 @@
         <target xmi:type="ecore:EReference" href="ToUsePropagator.ecore#//Task/DependencesBefore"/>
         <semanticElements xmi:type="ecore:EReference" href="ToUsePropagator.ecore#//Task/DependencesBefore"/>
         <semanticElements xmi:type="ecore:EReference" href="ToUsePropagator.ecore#//Dependence/TaskAfter"/>
-        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_29kPcEZJEeSDLaDY72dKfA" sourceArrow="InputArrow" routingStyle="manhattan" strokeColor="0,0,0">
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_29kPcEZJEeSDLaDY72dKfA" sourceArrow="InputArrow" strokeColor="0,0,0">
+          <customFeatures>routingStyle</customFeatures>
           <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='Bi-directional%20EC_EReference%20']/@style"/>
           <beginLabelStyle xmi:type="diagram:BeginLabelStyle" xmi:id="_29kPckZJEeSDLaDY72dKfA" showIcon="false"/>
           <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_29kPdEZJEeSDLaDY72dKfA" showIcon="false"/>
@@ -571,7 +572,8 @@
         <target xmi:type="ecore:EReference" href="ToUsePropagator.ecore#//Task/DependencesAfter"/>
         <semanticElements xmi:type="ecore:EReference" href="ToUsePropagator.ecore#//Task/DependencesAfter"/>
         <semanticElements xmi:type="ecore:EReference" href="ToUsePropagator.ecore#//Dependence/TaskBefore"/>
-        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_29mrsEZJEeSDLaDY72dKfA" sourceArrow="InputArrow" routingStyle="manhattan" strokeColor="0,0,0">
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_29mrsEZJEeSDLaDY72dKfA" sourceArrow="InputArrow" strokeColor="0,0,0">
+          <customFeatures>routingStyle</customFeatures>
           <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='Bi-directional%20EC_EReference%20']/@style"/>
           <beginLabelStyle xmi:type="diagram:BeginLabelStyle" xmi:id="_29mrskZJEeSDLaDY72dKfA" showIcon="false"/>
           <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_29mrtEZJEeSDLaDY72dKfA" showIcon="false"/>
