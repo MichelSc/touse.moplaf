@@ -596,53 +596,67 @@ public class TaskImpl extends MinimalEObjectImpl.Container implements Task {
 		return match;
 	}
 
-	private ResourceCandidate refreshResourceCandidatesImpl(ResourceCandidate asis, Resource resource) {
+	private ResourceCandidate refreshResourceCandidatesImplCreate(Resource resource) {
+		ResourceCandidate toBe = ToUsePropagatorFactory.eINSTANCE.createResourceCandidate();
+		toBe.setResource(resource);
+		return toBe;
+	}
+	
+	private void refreshResourceCandidatesImplUpdate(ResourceCandidate candidate) {
+		float match = this.getCandidateMatch(candidate.getResource());
+		candidate.setMatch(match);
+	}
+	
+	private void refreshResourceCandidatesImplDelete(ResourceCandidate candidate) {
+		candidate.setResource(null);
+	}
+
+	
+	private ResourceCandidate refreshResourceCandidatesImpl(ResourceCandidate asIs, Resource resource) {
 		ResourceCandidate toBe = null;
 		if ( this.isCandidate(resource) ){
-			if ( asis == null ){
+			if ( asIs == null ){
 				// create
-				toBe = ToUsePropagatorFactory.eINSTANCE.createResourceCandidate();
-				toBe.setResource(resource);
+				toBe = this.refreshResourceCandidatesImplCreate(resource);
 			} else {
-				toBe= asis;
-			// update
-			float match = this.getCandidateMatch(resource);
-			toBe.setMatch(match);
+				// update
+				toBe = asIs;
 			}
-		} else if (asis!=null){
-			asis.setResource(null);
+			this.refreshResourceCandidatesImplUpdate(toBe);
+		} else if (asIs!=null){
+			// not tobe but asis: delete asis
+			this.refreshResourceCandidatesImplDelete(asIs);
 		}
 		return toBe;
 	}
 	
-
 	public void refreshResourceCandidates() {
-		HashSet<Resource> candidatesToCreate = new HashSet<Resource>(this.getProject().getResources());
+		HashMap<Resource, ResourceCandidate> candidatesAsIs = new HashMap<Resource, ResourceCandidate>();
+		for ( ResourceCandidate candidateAsIs : this.getResourcecandidate()){
+			Resource resource = candidateAsIs.getResource();
+			if ( resource !=null){
+				candidatesAsIs.put(resource, candidateAsIs);
+			}
+		}
 
+		for ( Resource resource : this.getProject().getResources()){
+			ResourceCandidate candidateAsIs = candidatesAsIs.remove(resource);
+			ResourceCandidate candidateToBe = this.refreshResourceCandidatesImpl(candidateAsIs, resource);
+			if ( candidateToBe!=null  && candidateToBe!=candidateAsIs){
+				this.getResourcecandidate().add(candidateToBe);
+			}
+		}
+		
+		for ( ResourceCandidate candidateAsIs : candidatesAsIs.values()){
+			this.refreshResourceCandidatesImplDelete(candidateAsIs);
+		}
+		
 		for (  Iterator<ResourceCandidate> iterator = this.getResourcecandidate().iterator(); iterator.hasNext();){
 			ResourceCandidate resourceCandidate = iterator.next();
 			Resource resource = resourceCandidate.getResource();
 			if ( resource == null){
 				iterator.remove();
-			} else {
-				ResourceCandidate resourceCandidateToBe = this.refreshResourceCandidatesImpl(resourceCandidate, resource);
-				if ( resourceCandidateToBe != null ){
-					candidatesToCreate.remove(resource);
-				}
-				if ( resourceCandidateToBe!=resourceCandidate){
-					iterator.remove();
-					if ( resourceCandidateToBe != null ){
-						this.getResourcecandidate().add(resourceCandidateToBe);
-					}
-				}
-			}
-		}
-		
-		for ( Resource aResource : candidatesToCreate){
-			ResourceCandidate resourceCandidateToBe = this.refreshResourceCandidatesImpl(null, aResource);
-			if ( resourceCandidateToBe != null ){
-				this.getResourcecandidate().add(resourceCandidateToBe);
-			}
+			} 
 		}
 	}
 
@@ -652,30 +666,24 @@ public class TaskImpl extends MinimalEObjectImpl.Container implements Task {
 	 */
 	public void refreshResourceCandidates(Resource resourceToRefresh) {
 		ResourceCandidate candidateAsIs = null;
-		boolean toCreate = true;
+		for ( ResourceCandidate candidateAsIsTmp : this.getResourcecandidate()){
+			Resource resource = candidateAsIsTmp.getResource();
+			if ( resource ==resourceToRefresh){
+				candidateAsIs = candidateAsIsTmp;
+			}
+		}
+
+		ResourceCandidate candidateToBe = this.refreshResourceCandidatesImpl(candidateAsIs, resourceToRefresh);
+		if ( candidateToBe!=null  && candidateToBe!=candidateAsIs){
+			this.getResourcecandidate().add(candidateToBe);
+		}
+		
 		for (  Iterator<ResourceCandidate> iterator = this.getResourcecandidate().iterator(); iterator.hasNext();){
 			ResourceCandidate resourceCandidate = iterator.next();
 			Resource resource = resourceCandidate.getResource();
 			if ( resource == null){
 				iterator.remove();
-			} else if ( resource==resourceToRefresh){
-				ResourceCandidate candidateToBe = this.refreshResourceCandidatesImpl(candidateAsIs, resourceToRefresh);
-				if ( candidateToBe != null ){
-					toCreate = false;
-				}
-				if ( candidateToBe != resourceCandidate ) {
-					iterator.remove();
-					if ( candidateToBe != null ){
-						this.getResourcecandidate().add(candidateToBe);
-					}
-				}
-			}
-		}
-		if ( toCreate ){
-			ResourceCandidate resourceCandidateToBe = this.refreshResourceCandidatesImpl(null, resourceToRefresh);
-			if ( resourceCandidateToBe != null ){
-				this.getResourcecandidate().add(resourceCandidateToBe);
-			}
+			} 
 		}
 	}
 
