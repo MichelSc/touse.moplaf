@@ -22,6 +22,10 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedList;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -592,32 +596,53 @@ public class TaskImpl extends MinimalEObjectImpl.Container implements Task {
 		return match;
 	}
 
-	public void refreshResourceCandidates() {
-		HashMap<Resource, ResourceCandidate> candidatesAsIs = new HashMap<Resource, ResourceCandidate>();
-		for ( ResourceCandidate resourceCandidate : this.getResourcecandidate()){
-			candidatesAsIs.put(resourceCandidate.getResource(), resourceCandidate);
-		}
-		for ( Resource resource : this.getProject().getResources()){
-			ResourceCandidate candidateAsIs = candidatesAsIs.get(resource);
-			boolean toBe = this.isCandidate(resource);
-			if ( toBe ){
-				
-				candidatesAsIs.remove(resource);
-				if ( candidateAsIs == null ){
-					// create
-					candidateAsIs = ToUsePropagatorFactory.eINSTANCE.createResourceCandidate();
-					candidateAsIs.setResource(resource);
-					this.getResourcecandidate().add(candidateAsIs);
-				}
-				// update
-				float match = this.getCandidateMatch(resource);
-				candidateAsIs.setMatch(match);
+	private ResourceCandidate refreshResourceCandidatesImpl(ResourceCandidate asis, Resource resource) {
+		ResourceCandidate toBe = null;
+		if ( this.isCandidate(resource) ){
+			if ( asis == null ){
+				// create
+				toBe = ToUsePropagatorFactory.eINSTANCE.createResourceCandidate();
+				toBe.setResource(resource);
+			} else {
+				toBe= asis;
+			// update
+			float match = this.getCandidateMatch(resource);
+			toBe.setMatch(match);
 			}
-		} // traverse the resources of the project
-		for ( ResourceCandidate candidateToRemove : candidatesAsIs.values()){
-			// delete
-			this.getResourcecandidate().remove(candidateToRemove);
-			candidateToRemove.setResource(null);
+		} else if (asis!=null){
+			asis.setResource(null);
+		}
+		return toBe;
+	}
+	
+
+	public void refreshResourceCandidates() {
+		HashSet<Resource> candidatesToCreate = new HashSet<Resource>(this.getProject().getResources());
+
+		for (  Iterator<ResourceCandidate> iterator = this.getResourcecandidate().iterator(); iterator.hasNext();){
+			ResourceCandidate resourceCandidate = iterator.next();
+			Resource resource = resourceCandidate.getResource();
+			if ( resource == null){
+				iterator.remove();
+			} else {
+				ResourceCandidate resourceCandidateToBe = this.refreshResourceCandidatesImpl(resourceCandidate, resource);
+				if ( resourceCandidateToBe != null ){
+					candidatesToCreate.remove(resource);
+				}
+				if ( resourceCandidateToBe!=resourceCandidate){
+					iterator.remove();
+					if ( resourceCandidateToBe != null ){
+						this.getResourcecandidate().add(resourceCandidateToBe);
+					}
+				}
+			}
+		}
+		
+		for ( Resource aResource : candidatesToCreate){
+			ResourceCandidate resourceCandidateToBe = this.refreshResourceCandidatesImpl(null, aResource);
+			if ( resourceCandidateToBe != null ){
+				this.getResourcecandidate().add(resourceCandidateToBe);
+			}
 		}
 	}
 
@@ -625,34 +650,31 @@ public class TaskImpl extends MinimalEObjectImpl.Container implements Task {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 */
-	public void refreshResourceCandidates(Resource resource) {
-		// get the asIs
-		ResourceCandidate resourceCandidateAsIs = null;
-		for ( ResourceCandidate resourceCandidate : this.getResourcecandidate()){
-			if ( resourceCandidate.getResource()==resource) {
-				resourceCandidateAsIs = resourceCandidate;
+	public void refreshResourceCandidates(Resource resourceToRefresh) {
+		ResourceCandidate candidateAsIs = null;
+		boolean toCreate = true;
+		for (  Iterator<ResourceCandidate> iterator = this.getResourcecandidate().iterator(); iterator.hasNext();){
+			ResourceCandidate resourceCandidate = iterator.next();
+			Resource resource = resourceCandidate.getResource();
+			if ( resource == null){
+				iterator.remove();
+			} else if ( resource==resourceToRefresh){
+				ResourceCandidate candidateToBe = this.refreshResourceCandidatesImpl(candidateAsIs, resourceToRefresh);
+				if ( candidateToBe != null ){
+					toCreate = false;
+				}
+				if ( candidateToBe != resourceCandidate ) {
+					iterator.remove();
+					if ( candidateToBe != null ){
+						this.getResourcecandidate().add(candidateToBe);
+					}
+				}
 			}
 		}
-		// calculate the toBe
-		boolean toBe = this.isCandidate(resource);
-		if ( toBe ){
-			float match = this.getCandidateMatch(resource);
-			ResourceCandidate resourceCandidate = null;
-			if ( resourceCandidateAsIs == null ){
-				// create
-				resourceCandidate = ToUsePropagatorFactory.eINSTANCE.createResourceCandidate();
-				resourceCandidate.setResource(resource);
-				this.getResourcecandidate().add(resourceCandidate);
-			} else {
-				// update
-				resourceCandidate = resourceCandidateAsIs;
-			}
-			resourceCandidate.setMatch(match);
-		} else if ( !toBe){
-			if ( resourceCandidateAsIs!=null ){
-				// delete
-				this.getResourcecandidate().remove(resourceCandidateAsIs);
-				resourceCandidateAsIs.setResource(null);
+		if ( toCreate ){
+			ResourceCandidate resourceCandidateToBe = this.refreshResourceCandidatesImpl(null, resourceToRefresh);
+			if ( resourceCandidateToBe != null ){
+				this.getResourcecandidate().add(resourceCandidateToBe);
 			}
 		}
 	}
