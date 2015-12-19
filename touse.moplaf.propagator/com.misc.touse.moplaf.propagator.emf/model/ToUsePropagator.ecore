@@ -33,6 +33,7 @@
       <eParameters name="resource" eType="#//Resource"/>
     </eOperations>
     <eOperations name="refreshResourceCandidates"/>
+    <eOperations name="dispose"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Start" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"
         defaultValueLiteral="2001-01-01">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -77,7 +78,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="resourcecandidate" upperBound="-1"
         eType="#//ResourceCandidate" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Dependence">
+  <eClassifiers xsi:type="ecore:EClass" name="Dependence" eSuperTypes="../../com.misc.common.moplaf.propagator/model/propagator.ecore#//ObjectWithPropagatorFunctionAdapter">
+    <eOperations name="dispose"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="TaskBefore" lowerBound="1"
         eType="#//Task" eOpposite="#//Task/DependencesAfter"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="TaskAfter" lowerBound="1"

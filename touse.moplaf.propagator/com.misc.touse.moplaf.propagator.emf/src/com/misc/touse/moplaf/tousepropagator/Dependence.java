@@ -2,7 +2,7 @@
  */
 package com.misc.touse.moplaf.tousepropagator;
 
-import org.eclipse.emf.ecore.EObject;
+import com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapter;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Dependence extends EObject {
+public interface Dependence extends ObjectWithPropagatorFunctionAdapter {
 	/**
 	 * Returns the value of the '<em><b>Task Before</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link com.misc.touse.moplaf.tousepropagator.Task#getDependencesAfter <em>Dependences After</em>}'.
@@ -161,5 +161,13 @@ public interface Dependence extends EObject {
 	 * @generated
 	 */
 	void setNotes(String value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void dispose();
 
 } // Dependence

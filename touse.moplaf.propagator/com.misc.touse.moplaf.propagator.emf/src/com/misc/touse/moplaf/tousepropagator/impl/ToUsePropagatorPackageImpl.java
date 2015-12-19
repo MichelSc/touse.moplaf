@@ -406,6 +406,15 @@ public class ToUsePropagatorPackageImpl extends EPackageImpl implements ToUsePro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getTask__Dispose() {
+		return taskEClass.getEOperations().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getDependence() {
 		return dependenceEClass;
 	}
@@ -453,6 +462,15 @@ public class ToUsePropagatorPackageImpl extends EPackageImpl implements ToUsePro
 	 */
 	public EAttribute getDependence_Notes() {
 		return (EAttribute)dependenceEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getDependence__Dispose() {
+		return dependenceEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -613,6 +631,7 @@ public class ToUsePropagatorPackageImpl extends EPackageImpl implements ToUsePro
 		createEOperation(taskEClass, TASK___REFRESH_HOURS_VAR);
 		createEOperation(taskEClass, TASK___REFRESH_RESOURCE_CANDIDATES__RESOURCE);
 		createEOperation(taskEClass, TASK___REFRESH_RESOURCE_CANDIDATES);
+		createEOperation(taskEClass, TASK___DISPOSE);
 
 		dependenceEClass = createEClass(DEPENDENCE);
 		createEReference(dependenceEClass, DEPENDENCE__TASK_BEFORE);
@@ -620,6 +639,7 @@ public class ToUsePropagatorPackageImpl extends EPackageImpl implements ToUsePro
 		createEAttribute(dependenceEClass, DEPENDENCE__HOURS);
 		createEReference(dependenceEClass, DEPENDENCE__PROJECT);
 		createEAttribute(dependenceEClass, DEPENDENCE__NOTES);
+		createEOperation(dependenceEClass, DEPENDENCE___DISPOSE);
 
 		taskItemEClass = createEClass(TASK_ITEM);
 		createEAttribute(taskItemEClass, TASK_ITEM__NAME);
@@ -670,6 +690,7 @@ public class ToUsePropagatorPackageImpl extends EPackageImpl implements ToUsePro
 		projectEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctionAdapter());
 		projectEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctionAdapterScope());
 		taskEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctionAdapter());
+		dependenceEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctionAdapter());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(projectEClass, Project.class, "Project", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -714,12 +735,16 @@ public class ToUsePropagatorPackageImpl extends EPackageImpl implements ToUsePro
 
 		initEOperation(getTask__RefreshResourceCandidates(), null, "refreshResourceCandidates", 0, 1, IS_UNIQUE, IS_ORDERED);
 
+		initEOperation(getTask__Dispose(), null, "dispose", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(dependenceEClass, Dependence.class, "Dependence", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDependence_TaskBefore(), this.getTask(), this.getTask_DependencesAfter(), "TaskBefore", null, 1, 1, Dependence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDependence_TaskAfter(), this.getTask(), this.getTask_DependencesBefore(), "TaskAfter", null, 1, 1, Dependence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDependence_Hours(), ecorePackage.getEFloat(), "Hours", "1.0", 0, 1, Dependence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDependence_Project(), this.getProject(), this.getProject_Dependences(), "Project", null, 1, 1, Dependence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDependence_Notes(), ecorePackage.getEString(), "Notes", null, 0, 1, Dependence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getDependence__Dispose(), null, "dispose", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(taskItemEClass, TaskItem.class, "TaskItem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTaskItem_Name(), ecorePackage.getEString(), "Name", null, 0, 1, TaskItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

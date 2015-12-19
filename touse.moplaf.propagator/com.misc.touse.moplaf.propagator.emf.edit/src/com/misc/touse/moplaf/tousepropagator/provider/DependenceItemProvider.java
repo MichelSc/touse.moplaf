@@ -175,8 +175,10 @@ public class DependenceItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		Dependence dependence = (Dependence)object;
-		return getString("_UI_Dependence_type") + " " + dependence.getHours();
+		String label = ((Dependence)object).getNotes();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Dependence_type") :
+			getString("_UI_Dependence_type") + " " + label;
 	}
 
 	/**

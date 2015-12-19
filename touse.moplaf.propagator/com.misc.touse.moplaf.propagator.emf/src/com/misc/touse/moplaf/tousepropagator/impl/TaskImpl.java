@@ -11,6 +11,7 @@ import com.misc.touse.moplaf.tousepropagator.Task;
 import com.misc.touse.moplaf.tousepropagator.TaskItem;
 import com.misc.touse.moplaf.tousepropagator.ToUsePropagatorFactory;
 import com.misc.touse.moplaf.tousepropagator.ToUsePropagatorPackage;
+import com.misc.touse.moplaf.tousepropagator.calc.PropagatorCalcTaskDispose;
 import com.misc.touse.moplaf.tousepropagator.calc.PropagatorCalcTaskEnd;
 import com.misc.touse.moplaf.tousepropagator.calc.PropagatorCalcTaskHours;
 import com.misc.touse.moplaf.tousepropagator.calc.PropagatorCalcTaskHoursItems;
@@ -22,10 +23,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Iterator;
-import java.util.LinkedList;
-
 import org.eclipse.emf.common.CommonPlugin;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -506,10 +504,9 @@ public class TaskImpl extends MinimalEObjectImpl.Container implements Task {
 	 * <!-- end-user-doc -->
 	 */
 	public void refreshStart() {
-		Date start = new Date(Long.MAX_VALUE);
-		if ( this.getProject() != null ){
-			start = this.getProject().getStart();
-		}
+		Project project = this.getProject();
+		if ( project == null ) { return ; }
+		Date start = project.getStart();
 		for ( Dependence dependencebefore : this.getDependencesBefore()){
 			Task taskbefore = dependencebefore.getTaskBefore();
 			if ( taskbefore != null ) {
@@ -562,6 +559,7 @@ public class TaskImpl extends MinimalEObjectImpl.Container implements Task {
 	 */
 	public void refreshHoursVar() {
 		Project project = this.getProject();
+		if ( project == null ) { return ; }
 		float hours = project.getNofRes()*this.getHoursVarPerRes();
 		this.setHoursVar(hours);
 	}
@@ -613,7 +611,7 @@ public class TaskImpl extends MinimalEObjectImpl.Container implements Task {
 	
 	private void refreshResourceCandidatesImplDelete(ResourceCandidate candidate) {
 		Resource resource = candidate.getResource();
-		CommonPlugin.INSTANCE.log("refreshResourceCandidates, update resource "+resource.getResourceName());
+		CommonPlugin.INSTANCE.log("refreshResourceCandidates, delete resource "+resource.getResourceName());
 		candidate.setResource(null);
 	}
 
@@ -637,7 +635,7 @@ public class TaskImpl extends MinimalEObjectImpl.Container implements Task {
 	}
 	
 	public void refreshResourceCandidates() {
-		CommonPlugin.INSTANCE.log("refreshResourceCandidates, all resources ");
+		CommonPlugin.INSTANCE.log("refreshResourceCandidates, " + this.getTaskName() + ", all resources ");
 		HashMap<Resource, ResourceCandidate> candidatesAsIs = new HashMap<Resource, ResourceCandidate>();
 		for ( ResourceCandidate candidateAsIs : this.getResourcecandidate()){
 			Resource resource = candidateAsIs.getResource();
@@ -646,11 +644,14 @@ public class TaskImpl extends MinimalEObjectImpl.Container implements Task {
 			}
 		}
 
-		for ( Resource resource : this.getProject().getResources()){
-			ResourceCandidate candidateAsIs = candidatesAsIs.remove(resource);
-			ResourceCandidate candidateToBe = this.refreshResourceCandidatesImpl(candidateAsIs, resource);
-			if ( candidateToBe!=null  && candidateToBe!=candidateAsIs){
-				this.getResourcecandidate().add(candidateToBe);
+		Project project = this.getProject();
+		if ( project != null ) {
+			for ( Resource resource : this.getProject().getResources()){
+				ResourceCandidate candidateAsIs = candidatesAsIs.remove(resource);
+				ResourceCandidate candidateToBe = this.refreshResourceCandidatesImpl(candidateAsIs, resource);
+				if ( candidateToBe!=null  && candidateToBe!=candidateAsIs){
+					this.getResourcecandidate().add(candidateToBe);
+				}
 			}
 		}
 		
@@ -672,7 +673,7 @@ public class TaskImpl extends MinimalEObjectImpl.Container implements Task {
 	 * <!-- end-user-doc -->
 	 */
 	public void refreshResourceCandidates(Resource resourceToRefresh) {
-		CommonPlugin.INSTANCE.log("refreshResourceCandidates, resource "+resourceToRefresh.getResourceName());
+		CommonPlugin.INSTANCE.log("refreshResourceCandidates, " + this.getTaskName() + ", resource "+resourceToRefresh.getResourceName());
 		ResourceCandidate candidateAsIs = null;
 		for ( ResourceCandidate candidateAsIsTmp : this.getResourcecandidate()){
 			Resource resource = candidateAsIsTmp.getResource();
@@ -700,7 +701,18 @@ public class TaskImpl extends MinimalEObjectImpl.Container implements Task {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 */
+	public void dispose() {
+		CommonPlugin.INSTANCE.log("Task.dispose, " + this.getTaskName() + "");
+		this.getDependencesAfter().clear();
+		this.getDependencesBefore().clear();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
 	public void addPropagatorFunctionAdapter() {
+		Util.adapt(this, PropagatorCalcTaskDispose.class);
 		Util.adapt(this, PropagatorCalcTaskHoursItems.class);
 		Util.adapt(this, PropagatorCalcTaskHoursVar.class);
 		Util.adapt(this, PropagatorCalcTaskHours.class);
@@ -967,6 +979,9 @@ public class TaskImpl extends MinimalEObjectImpl.Container implements Task {
 				return null;
 			case ToUsePropagatorPackage.TASK___REFRESH_RESOURCE_CANDIDATES:
 				refreshResourceCandidates();
+				return null;
+			case ToUsePropagatorPackage.TASK___DISPOSE:
+				dispose();
 				return null;
 			case ToUsePropagatorPackage.TASK___ADD_PROPAGATOR_FUNCTION_ADAPTER:
 				addPropagatorFunctionAdapter();

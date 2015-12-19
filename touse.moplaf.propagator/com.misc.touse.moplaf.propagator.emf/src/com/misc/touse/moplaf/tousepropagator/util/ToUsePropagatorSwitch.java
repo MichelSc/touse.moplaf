@@ -84,6 +84,7 @@ public class ToUsePropagatorSwitch<T> extends Switch<T> {
 			case ToUsePropagatorPackage.DEPENDENCE: {
 				Dependence dependence = (Dependence)theEObject;
 				T result = caseDependence(dependence);
+				if (result == null) result = caseObjectWithPropagatorFunctionAdapter(dependence);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

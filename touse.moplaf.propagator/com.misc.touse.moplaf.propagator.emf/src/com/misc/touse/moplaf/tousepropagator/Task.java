@@ -319,4 +319,12 @@ public interface Task extends ObjectWithPropagatorFunctionAdapter {
 	 */
 	void refreshResourceCandidates();
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void dispose();
+
 } // Task

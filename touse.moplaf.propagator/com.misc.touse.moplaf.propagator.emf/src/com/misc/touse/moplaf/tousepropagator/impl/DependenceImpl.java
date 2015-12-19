@@ -2,14 +2,20 @@
  */
 package com.misc.touse.moplaf.tousepropagator.impl;
 
+import com.misc.common.moplaf.propagator.Util;
 import com.misc.touse.moplaf.tousepropagator.Dependence;
 import com.misc.touse.moplaf.tousepropagator.Project;
 import com.misc.touse.moplaf.tousepropagator.Task;
 import com.misc.touse.moplaf.tousepropagator.ToUsePropagatorPackage;
+import com.misc.touse.moplaf.tousepropagator.calc.PropagatorCalcDependenceDispose;
 
+import java.lang.reflect.InvocationTargetException;
+
+import org.eclipse.emf.common.CommonPlugin;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -321,6 +327,24 @@ public class DependenceImpl extends MinimalEObjectImpl.Container implements Depe
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 */
+	public void dispose() {
+		CommonPlugin.INSTANCE.log("Dependence.dispose");
+		this.setTaskAfter(null);
+		this.setTaskBefore(null);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	public void addPropagatorFunctionAdapter() {
+		Util.adapt(this, PropagatorCalcDependenceDispose.class);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -472,6 +496,24 @@ public class DependenceImpl extends MinimalEObjectImpl.Container implements Depe
 				return NOTES_EDEFAULT == null ? notes != null : !NOTES_EDEFAULT.equals(notes);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case ToUsePropagatorPackage.DEPENDENCE___DISPOSE:
+				dispose();
+				return null;
+			case ToUsePropagatorPackage.DEPENDENCE___ADD_PROPAGATOR_FUNCTION_ADAPTER:
+				addPropagatorFunctionAdapter();
+				return null;
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

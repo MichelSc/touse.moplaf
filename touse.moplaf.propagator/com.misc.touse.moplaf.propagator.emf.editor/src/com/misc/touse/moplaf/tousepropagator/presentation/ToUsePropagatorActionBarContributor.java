@@ -413,11 +413,11 @@ public class ToUsePropagatorActionBarContributor
 	 * This ensures that a delete action will clean up all references to deleted objects.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	protected boolean removeAllReferencesOnDelete() {
-		return true;
+		return false;
 	}
 
 }

@@ -11,6 +11,7 @@ import com.misc.touse.moplaf.tousepropagator.Project;
 import com.misc.touse.moplaf.tousepropagator.Resource;
 import com.misc.touse.moplaf.tousepropagator.Task;
 import com.misc.touse.moplaf.tousepropagator.ToUsePropagatorPackage;
+import com.misc.touse.moplaf.tousepropagator.calc.PropagatorLayerDispose;
 import com.misc.touse.moplaf.tousepropagator.calc.PropagatorLayerProjectEnd;
 import com.misc.touse.moplaf.tousepropagator.calc.PropagatorLayerTaskHours;
 import com.misc.touse.moplaf.tousepropagator.calc.PropagatorLayerTaskHoursItems;
@@ -338,6 +339,7 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
 	 * <!-- end-user-doc -->
 	 */
 	public void addPropagatorFunctionAdapter() {
+		Util.adapt(this, PropagatorLayerDispose.class);
 		Util.adapt(this, PropagatorLayerTaskHoursItems.class);
 		Util.adapt(this, PropagatorLayerTaskHoursVar.class);
 		Util.adapt(this, PropagatorLayerTaskHours.class);

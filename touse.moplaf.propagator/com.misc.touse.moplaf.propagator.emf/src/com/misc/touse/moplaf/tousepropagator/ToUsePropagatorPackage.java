@@ -376,13 +376,22 @@ public interface ToUsePropagatorPackage extends EPackage {
 	int TASK___REFRESH_RESOURCE_CANDIDATES = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_OPERATION_COUNT + 6;
 
 	/**
+	 * The operation id for the '<em>Dispose</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK___DISPOSE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_OPERATION_COUNT + 7;
+
+	/**
 	 * The number of operations of the '<em>Task</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_OPERATION_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_OPERATION_COUNT + 7;
+	int TASK_OPERATION_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_OPERATION_COUNT + 8;
 
 	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.tousepropagator.impl.DependenceImpl <em>Dependence</em>}' class.
@@ -401,7 +410,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEPENDENCE__TASK_BEFORE = 0;
+	int DEPENDENCE__TASK_BEFORE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Task After</b></em>' reference.
@@ -410,7 +419,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEPENDENCE__TASK_AFTER = 1;
+	int DEPENDENCE__TASK_AFTER = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Hours</b></em>' attribute.
@@ -419,7 +428,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEPENDENCE__HOURS = 2;
+	int DEPENDENCE__HOURS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Project</b></em>' container reference.
@@ -428,7 +437,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEPENDENCE__PROJECT = 3;
+	int DEPENDENCE__PROJECT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Notes</b></em>' attribute.
@@ -437,7 +446,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEPENDENCE__NOTES = 4;
+	int DEPENDENCE__NOTES = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Dependence</em>' class.
@@ -446,7 +455,25 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEPENDENCE_FEATURE_COUNT = 5;
+	int DEPENDENCE_FEATURE_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 5;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Function Adapter</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEPENDENCE___ADD_PROPAGATOR_FUNCTION_ADAPTER = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER___ADD_PROPAGATOR_FUNCTION_ADAPTER;
+
+	/**
+	 * The operation id for the '<em>Dispose</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEPENDENCE___DISPOSE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Dependence</em>' class.
@@ -455,7 +482,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEPENDENCE_OPERATION_COUNT = 0;
+	int DEPENDENCE_OPERATION_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.tousepropagator.impl.TaskItemImpl <em>Task Item</em>}' class.
@@ -935,6 +962,16 @@ public interface ToUsePropagatorPackage extends EPackage {
 	EOperation getTask__RefreshResourceCandidates();
 
 	/**
+	 * Returns the meta object for the '{@link com.misc.touse.moplaf.tousepropagator.Task#dispose() <em>Dispose</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Dispose</em>' operation.
+	 * @see com.misc.touse.moplaf.tousepropagator.Task#dispose()
+	 * @generated
+	 */
+	EOperation getTask__Dispose();
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousepropagator.Dependence <em>Dependence</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -998,6 +1035,16 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getDependence_Notes();
+
+	/**
+	 * Returns the meta object for the '{@link com.misc.touse.moplaf.tousepropagator.Dependence#dispose() <em>Dispose</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Dispose</em>' operation.
+	 * @see com.misc.touse.moplaf.tousepropagator.Dependence#dispose()
+	 * @generated
+	 */
+	EOperation getDependence__Dispose();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousepropagator.TaskItem <em>Task Item</em>}'.
@@ -1385,6 +1432,14 @@ public interface ToUsePropagatorPackage extends EPackage {
 		EOperation TASK___REFRESH_RESOURCE_CANDIDATES = eINSTANCE.getTask__RefreshResourceCandidates();
 
 		/**
+		 * The meta object literal for the '<em><b>Dispose</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TASK___DISPOSE = eINSTANCE.getTask__Dispose();
+
+		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousepropagator.impl.DependenceImpl <em>Dependence</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1433,6 +1488,14 @@ public interface ToUsePropagatorPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute DEPENDENCE__NOTES = eINSTANCE.getDependence_Notes();
+
+		/**
+		 * The meta object literal for the '<em><b>Dispose</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation DEPENDENCE___DISPOSE = eINSTANCE.getDependence__Dispose();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousepropagator.impl.TaskItemImpl <em>Task Item</em>}' class.
