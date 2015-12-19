@@ -27,4 +27,8 @@ public class PropagatorCalcTaskDispose extends PropagatorFunctionAdapter {
 		return true;
 	}
 
+	@Override
+	protected boolean isTouchOnOwned() {
+		return false;
+	}
 };

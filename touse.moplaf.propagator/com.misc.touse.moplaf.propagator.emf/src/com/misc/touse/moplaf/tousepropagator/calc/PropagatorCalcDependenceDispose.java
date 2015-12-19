@@ -26,5 +26,10 @@ public class PropagatorCalcDependenceDispose extends PropagatorFunctionAdapter {
 	protected boolean isTouchOnDispose() {
 		return true;
 	}
+	
+	@Override
+	protected boolean isTouchOnOwned() {
+		return false;
+	}
 
 };
