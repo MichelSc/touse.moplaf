@@ -4,8 +4,6 @@ package com.misc.touse.moplaf.timeline.tousetimeline;
 
 import com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapter;
 import com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapterScope;
-import com.misc.common.moplaf.time.continuous.CapacityChange;
-import com.misc.common.moplaf.time.continuous.StockChange;
 import com.misc.common.moplaf.time.discrete.TimeLine;
 import com.misc.common.moplaf.time.discrete.TimeLineMerge;
 import org.eclipse.emf.common.util.EList;
@@ -20,12 +18,6 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.Domain#getTimeLineMerges <em>Time Line Merges</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.Domain#getAmountImpulsion <em>Amount Impulsion</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.Domain#getAmountAbsolute <em>Amount Absolute</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.Domain#getSlopeAbsolute <em>Slope Absolute</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.Domain#getSlopeImpulsion <em>Slope Impulsion</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.Domain#getCapacityChange <em>Capacity Change</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.Domain#getStockChange <em>Stock Change</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.Domain#getDistribution <em>Distribution</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.Domain#getName <em>Name</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.Domain#getTimelines <em>Timelines</em>}</li>
@@ -109,101 +101,5 @@ public interface Domain extends ObjectWithPropagatorFunctionAdapterScope, Object
 	 * @generated
 	 */
 	EList<TimeLine> getTimelines();
-
-	/**
-	 * Returns the value of the '<em><b>Amount Impulsion</b></em>' containment reference list.
-	 * The list contents are of type {@link com.misc.touse.moplaf.timeline.tousetimeline.ToUseAmountImpulsion}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Amount Impulsion</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Amount Impulsion</em>' containment reference list.
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getDomain_AmountImpulsion()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<ToUseAmountImpulsion> getAmountImpulsion();
-
-	/**
-	 * Returns the value of the '<em><b>Amount Absolute</b></em>' containment reference list.
-	 * The list contents are of type {@link com.misc.touse.moplaf.timeline.tousetimeline.ToUseAmountAbsolute}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Amount Absolute</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Amount Absolute</em>' containment reference list.
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getDomain_AmountAbsolute()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<ToUseAmountAbsolute> getAmountAbsolute();
-
-	/**
-	 * Returns the value of the '<em><b>Slope Absolute</b></em>' containment reference list.
-	 * The list contents are of type {@link com.misc.touse.moplaf.timeline.tousetimeline.ToUseSlopeAbsolute}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Slope Absolute</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Slope Absolute</em>' containment reference list.
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getDomain_SlopeAbsolute()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<ToUseSlopeAbsolute> getSlopeAbsolute();
-
-	/**
-	 * Returns the value of the '<em><b>Slope Impulsion</b></em>' containment reference list.
-	 * The list contents are of type {@link com.misc.touse.moplaf.timeline.tousetimeline.ToUseSlopeImpulsion}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Ämount Impulsion</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Slope Impulsion</em>' containment reference list.
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getDomain_SlopeImpulsion()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<ToUseSlopeImpulsion> getSlopeImpulsion();
-
-	/**
-	 * Returns the value of the '<em><b>Capacity Change</b></em>' containment reference list.
-	 * The list contents are of type {@link com.misc.common.moplaf.time.continuous.CapacityChange}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Capacity Change</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Capacity Change</em>' containment reference list.
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getDomain_CapacityChange()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<CapacityChange> getCapacityChange();
-
-	/**
-	 * Returns the value of the '<em><b>Stock Change</b></em>' containment reference list.
-	 * The list contents are of type {@link com.misc.common.moplaf.time.continuous.StockChange}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Stock Change</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Stock Change</em>' containment reference list.
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getDomain_StockChange()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<StockChange> getStockChange();
 
 } // Domain

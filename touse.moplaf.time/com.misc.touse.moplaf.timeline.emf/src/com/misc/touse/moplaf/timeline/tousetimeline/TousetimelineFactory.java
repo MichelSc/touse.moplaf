@@ -31,42 +31,6 @@ public interface TousetimelineFactory extends EFactory {
 	Domain createDomain();
 
 	/**
-	 * Returns a new object of class '<em>To Use Amount Impulsion</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>To Use Amount Impulsion</em>'.
-	 * @generated
-	 */
-	ToUseAmountImpulsion createToUseAmountImpulsion();
-
-	/**
-	 * Returns a new object of class '<em>To Use Amount Absolute</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>To Use Amount Absolute</em>'.
-	 * @generated
-	 */
-	ToUseAmountAbsolute createToUseAmountAbsolute();
-
-	/**
-	 * Returns a new object of class '<em>To Use Slope Absolute</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>To Use Slope Absolute</em>'.
-	 * @generated
-	 */
-	ToUseSlopeAbsolute createToUseSlopeAbsolute();
-
-	/**
-	 * Returns a new object of class '<em>To Use Slope Impulsion</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>To Use Slope Impulsion</em>'.
-	 * @generated
-	 */
-	ToUseSlopeImpulsion createToUseSlopeImpulsion();
-
-	/**
 	 * Returns a new object of class '<em>Domain Distribution</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -3,7 +3,6 @@
 package com.misc.touse.moplaf.timeline.tousetimeline.provider;
 
 
-import com.misc.common.moplaf.time.continuous.ContinuousFactory;
 import com.misc.common.moplaf.time.discrete.DiscreteFactory;
 import com.misc.touse.moplaf.timeline.tousetimeline.Domain;
 import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelineFactory;
@@ -105,12 +104,6 @@ public class DomainItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(TousetimelinePackage.Literals.DOMAIN__TIME_LINE_MERGES);
-			childrenFeatures.add(TousetimelinePackage.Literals.DOMAIN__AMOUNT_IMPULSION);
-			childrenFeatures.add(TousetimelinePackage.Literals.DOMAIN__AMOUNT_ABSOLUTE);
-			childrenFeatures.add(TousetimelinePackage.Literals.DOMAIN__SLOPE_ABSOLUTE);
-			childrenFeatures.add(TousetimelinePackage.Literals.DOMAIN__SLOPE_IMPULSION);
-			childrenFeatures.add(TousetimelinePackage.Literals.DOMAIN__CAPACITY_CHANGE);
-			childrenFeatures.add(TousetimelinePackage.Literals.DOMAIN__STOCK_CHANGE);
 			childrenFeatures.add(TousetimelinePackage.Literals.DOMAIN__DISTRIBUTION);
 			childrenFeatures.add(TousetimelinePackage.Literals.DOMAIN__TIMELINES);
 		}
@@ -171,12 +164,6 @@ public class DomainItemProvider
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case TousetimelinePackage.DOMAIN__TIME_LINE_MERGES:
-			case TousetimelinePackage.DOMAIN__AMOUNT_IMPULSION:
-			case TousetimelinePackage.DOMAIN__AMOUNT_ABSOLUTE:
-			case TousetimelinePackage.DOMAIN__SLOPE_ABSOLUTE:
-			case TousetimelinePackage.DOMAIN__SLOPE_IMPULSION:
-			case TousetimelinePackage.DOMAIN__CAPACITY_CHANGE:
-			case TousetimelinePackage.DOMAIN__STOCK_CHANGE:
 			case TousetimelinePackage.DOMAIN__DISTRIBUTION:
 			case TousetimelinePackage.DOMAIN__TIMELINES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
@@ -200,36 +187,6 @@ public class DomainItemProvider
 			(createChildParameter
 				(TousetimelinePackage.Literals.DOMAIN__TIME_LINE_MERGES,
 				 DiscreteFactory.eINSTANCE.createTimeLineMerge()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TousetimelinePackage.Literals.DOMAIN__AMOUNT_IMPULSION,
-				 TousetimelineFactory.eINSTANCE.createToUseAmountImpulsion()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TousetimelinePackage.Literals.DOMAIN__AMOUNT_ABSOLUTE,
-				 TousetimelineFactory.eINSTANCE.createToUseAmountAbsolute()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TousetimelinePackage.Literals.DOMAIN__SLOPE_ABSOLUTE,
-				 TousetimelineFactory.eINSTANCE.createToUseSlopeAbsolute()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TousetimelinePackage.Literals.DOMAIN__SLOPE_IMPULSION,
-				 TousetimelineFactory.eINSTANCE.createToUseSlopeImpulsion()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TousetimelinePackage.Literals.DOMAIN__CAPACITY_CHANGE,
-				 ContinuousFactory.eINSTANCE.createCapacityChange()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TousetimelinePackage.Literals.DOMAIN__STOCK_CHANGE,
-				 ContinuousFactory.eINSTANCE.createStockChange()));
 
 		newChildDescriptors.add
 			(createChildParameter

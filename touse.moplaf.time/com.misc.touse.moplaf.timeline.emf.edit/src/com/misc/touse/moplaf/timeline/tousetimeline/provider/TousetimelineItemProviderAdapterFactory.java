@@ -96,98 +96,6 @@ public class TousetimelineItemProviderAdapterFactory extends TousetimelineAdapte
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.timeline.tousetimeline.ToUseAmountImpulsion} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ToUseAmountImpulsionItemProvider toUseAmountImpulsionItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.misc.touse.moplaf.timeline.tousetimeline.ToUseAmountImpulsion}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createToUseAmountImpulsionAdapter() {
-		if (toUseAmountImpulsionItemProvider == null) {
-			toUseAmountImpulsionItemProvider = new ToUseAmountImpulsionItemProvider(this);
-		}
-
-		return toUseAmountImpulsionItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.timeline.tousetimeline.ToUseAmountAbsolute} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ToUseAmountAbsoluteItemProvider toUseAmountAbsoluteItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.misc.touse.moplaf.timeline.tousetimeline.ToUseAmountAbsolute}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createToUseAmountAbsoluteAdapter() {
-		if (toUseAmountAbsoluteItemProvider == null) {
-			toUseAmountAbsoluteItemProvider = new ToUseAmountAbsoluteItemProvider(this);
-		}
-
-		return toUseAmountAbsoluteItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.timeline.tousetimeline.ToUseSlopeAbsolute} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ToUseSlopeAbsoluteItemProvider toUseSlopeAbsoluteItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.misc.touse.moplaf.timeline.tousetimeline.ToUseSlopeAbsolute}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createToUseSlopeAbsoluteAdapter() {
-		if (toUseSlopeAbsoluteItemProvider == null) {
-			toUseSlopeAbsoluteItemProvider = new ToUseSlopeAbsoluteItemProvider(this);
-		}
-
-		return toUseSlopeAbsoluteItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.timeline.tousetimeline.ToUseSlopeImpulsion} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ToUseSlopeImpulsionItemProvider toUseSlopeImpulsionItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.misc.touse.moplaf.timeline.tousetimeline.ToUseSlopeImpulsion}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createToUseSlopeImpulsionAdapter() {
-		if (toUseSlopeImpulsionItemProvider == null) {
-			toUseSlopeImpulsionItemProvider = new ToUseSlopeImpulsionItemProvider(this);
-		}
-
-		return toUseSlopeImpulsionItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -310,10 +218,6 @@ public class TousetimelineItemProviderAdapterFactory extends TousetimelineAdapte
 	 */
 	public void dispose() {
 		if (domainItemProvider != null) domainItemProvider.dispose();
-		if (toUseAmountImpulsionItemProvider != null) toUseAmountImpulsionItemProvider.dispose();
-		if (toUseAmountAbsoluteItemProvider != null) toUseAmountAbsoluteItemProvider.dispose();
-		if (toUseSlopeAbsoluteItemProvider != null) toUseSlopeAbsoluteItemProvider.dispose();
-		if (toUseSlopeImpulsionItemProvider != null) toUseSlopeImpulsionItemProvider.dispose();
 		if (domainDistributionItemProvider != null) domainDistributionItemProvider.dispose();
 	}
 

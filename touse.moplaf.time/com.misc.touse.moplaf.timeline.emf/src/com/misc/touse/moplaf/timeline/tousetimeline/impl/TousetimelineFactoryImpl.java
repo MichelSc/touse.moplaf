@@ -57,10 +57,6 @@ public class TousetimelineFactoryImpl extends EFactoryImpl implements Tousetimel
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case TousetimelinePackage.DOMAIN: return createDomain();
-			case TousetimelinePackage.TO_USE_AMOUNT_IMPULSION: return createToUseAmountImpulsion();
-			case TousetimelinePackage.TO_USE_AMOUNT_ABSOLUTE: return createToUseAmountAbsolute();
-			case TousetimelinePackage.TO_USE_SLOPE_ABSOLUTE: return createToUseSlopeAbsolute();
-			case TousetimelinePackage.TO_USE_SLOPE_IMPULSION: return createToUseSlopeImpulsion();
 			case TousetimelinePackage.DOMAIN_DISTRIBUTION: return createDomainDistribution();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -75,46 +71,6 @@ public class TousetimelineFactoryImpl extends EFactoryImpl implements Tousetimel
 	public Domain createDomain() {
 		DomainImpl domain = new DomainImpl();
 		return domain;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ToUseAmountImpulsion createToUseAmountImpulsion() {
-		ToUseAmountImpulsionImpl toUseAmountImpulsion = new ToUseAmountImpulsionImpl();
-		return toUseAmountImpulsion;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ToUseAmountAbsolute createToUseAmountAbsolute() {
-		ToUseAmountAbsoluteImpl toUseAmountAbsolute = new ToUseAmountAbsoluteImpl();
-		return toUseAmountAbsolute;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ToUseSlopeAbsolute createToUseSlopeAbsolute() {
-		ToUseSlopeAbsoluteImpl toUseSlopeAbsolute = new ToUseSlopeAbsoluteImpl();
-		return toUseSlopeAbsolute;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ToUseSlopeImpulsion createToUseSlopeImpulsion() {
-		ToUseSlopeImpulsionImpl toUseSlopeImpulsion = new ToUseSlopeImpulsionImpl();
-		return toUseSlopeImpulsion;
 	}
 
 	/**
