@@ -4,12 +4,7 @@ package com.misc.touse.moplaf.timeline.tousetimeline.util;
 
 import com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapter;
 import com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapterScope;
-import com.misc.common.moplaf.time.continuous.AmountAbsolute;
-import com.misc.common.moplaf.time.continuous.AmountImpulsion;
 import com.misc.common.moplaf.time.continuous.Distribution;
-import com.misc.common.moplaf.time.continuous.DistributionEvent;
-import com.misc.common.moplaf.time.continuous.SlopeAbsolute;
-import com.misc.common.moplaf.time.continuous.SlopeImpulsion;
 import com.misc.touse.moplaf.timeline.tousetimeline.*;
 
 import org.eclipse.emf.ecore.EObject;
@@ -82,42 +77,6 @@ public class TousetimelineSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case TousetimelinePackage.TO_USE_AMOUNT_IMPULSION: {
-				ToUseAmountImpulsion toUseAmountImpulsion = (ToUseAmountImpulsion)theEObject;
-				T result = caseToUseAmountImpulsion(toUseAmountImpulsion);
-				if (result == null) result = caseAmountImpulsion(toUseAmountImpulsion);
-				if (result == null) result = caseDistributionEvent(toUseAmountImpulsion);
-				if (result == null) result = caseObjectWithPropagatorFunctionAdapter(toUseAmountImpulsion);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case TousetimelinePackage.TO_USE_AMOUNT_ABSOLUTE: {
-				ToUseAmountAbsolute toUseAmountAbsolute = (ToUseAmountAbsolute)theEObject;
-				T result = caseToUseAmountAbsolute(toUseAmountAbsolute);
-				if (result == null) result = caseAmountAbsolute(toUseAmountAbsolute);
-				if (result == null) result = caseDistributionEvent(toUseAmountAbsolute);
-				if (result == null) result = caseObjectWithPropagatorFunctionAdapter(toUseAmountAbsolute);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case TousetimelinePackage.TO_USE_SLOPE_ABSOLUTE: {
-				ToUseSlopeAbsolute toUseSlopeAbsolute = (ToUseSlopeAbsolute)theEObject;
-				T result = caseToUseSlopeAbsolute(toUseSlopeAbsolute);
-				if (result == null) result = caseSlopeAbsolute(toUseSlopeAbsolute);
-				if (result == null) result = caseDistributionEvent(toUseSlopeAbsolute);
-				if (result == null) result = caseObjectWithPropagatorFunctionAdapter(toUseSlopeAbsolute);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case TousetimelinePackage.TO_USE_SLOPE_IMPULSION: {
-				ToUseSlopeImpulsion toUseSlopeImpulsion = (ToUseSlopeImpulsion)theEObject;
-				T result = caseToUseSlopeImpulsion(toUseSlopeImpulsion);
-				if (result == null) result = caseSlopeImpulsion(toUseSlopeImpulsion);
-				if (result == null) result = caseDistributionEvent(toUseSlopeImpulsion);
-				if (result == null) result = caseObjectWithPropagatorFunctionAdapter(toUseSlopeImpulsion);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case TousetimelinePackage.DOMAIN_DISTRIBUTION: {
 				DomainDistribution domainDistribution = (DomainDistribution)theEObject;
 				T result = caseDomainDistribution(domainDistribution);
@@ -142,66 +101,6 @@ public class TousetimelineSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseDomain(Domain object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>To Use Amount Impulsion</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>To Use Amount Impulsion</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseToUseAmountImpulsion(ToUseAmountImpulsion object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>To Use Amount Absolute</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>To Use Amount Absolute</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseToUseAmountAbsolute(ToUseAmountAbsolute object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>To Use Slope Absolute</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>To Use Slope Absolute</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseToUseSlopeAbsolute(ToUseSlopeAbsolute object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>To Use Slope Impulsion</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>To Use Slope Impulsion</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseToUseSlopeImpulsion(ToUseSlopeImpulsion object) {
 		return null;
 	}
 
@@ -247,81 +146,6 @@ public class TousetimelineSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseObjectWithPropagatorFunctionAdapter(ObjectWithPropagatorFunctionAdapter object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Distribution Event</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Distribution Event</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseDistributionEvent(DistributionEvent object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Amount Impulsion</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Amount Impulsion</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseAmountImpulsion(AmountImpulsion object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Amount Absolute</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Amount Absolute</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseAmountAbsolute(AmountAbsolute object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Slope Absolute</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Slope Absolute</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSlopeAbsolute(SlopeAbsolute object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Slope Impulsion</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Slope Impulsion</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSlopeImpulsion(SlopeImpulsion object) {
 		return null;
 	}
 

@@ -7,16 +7,10 @@ import com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapter;
 import com.misc.common.moplaf.propagator.PropagatorFunctionAdapter;
 import com.misc.common.moplaf.propagator.PropagatorPackage;
 import com.misc.common.moplaf.propagator.Util;
-import com.misc.common.moplaf.time.continuous.CapacityChange;
-import com.misc.common.moplaf.time.continuous.StockChange;
 import com.misc.common.moplaf.time.discrete.TimeLine;
 import com.misc.common.moplaf.time.discrete.TimeLineMerge;
 import com.misc.touse.moplaf.timeline.tousetimeline.Domain;
 import com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution;
-import com.misc.touse.moplaf.timeline.tousetimeline.ToUseAmountAbsolute;
-import com.misc.touse.moplaf.timeline.tousetimeline.ToUseAmountImpulsion;
-import com.misc.touse.moplaf.timeline.tousetimeline.ToUseSlopeAbsolute;
-import com.misc.touse.moplaf.timeline.tousetimeline.ToUseSlopeImpulsion;
 import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage;
 
 import java.lang.reflect.InvocationTargetException;
@@ -41,12 +35,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainImpl#getTimeLineMerges <em>Time Line Merges</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainImpl#getAmountImpulsion <em>Amount Impulsion</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainImpl#getAmountAbsolute <em>Amount Absolute</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainImpl#getSlopeAbsolute <em>Slope Absolute</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainImpl#getSlopeImpulsion <em>Slope Impulsion</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainImpl#getCapacityChange <em>Capacity Change</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainImpl#getStockChange <em>Stock Change</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainImpl#getDistribution <em>Distribution</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainImpl#getName <em>Name</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainImpl#getTimelines <em>Timelines</em>}</li>
@@ -64,66 +52,6 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	 * @ordered
 	 */
 	protected EList<TimeLineMerge> timeLineMerges;
-
-	/**
-	 * The cached value of the '{@link #getAmountImpulsion() <em>Amount Impulsion</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAmountImpulsion()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ToUseAmountImpulsion> amountImpulsion;
-
-	/**
-	 * The cached value of the '{@link #getAmountAbsolute() <em>Amount Absolute</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAmountAbsolute()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ToUseAmountAbsolute> amountAbsolute;
-
-	/**
-	 * The cached value of the '{@link #getSlopeAbsolute() <em>Slope Absolute</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSlopeAbsolute()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ToUseSlopeAbsolute> slopeAbsolute;
-
-	/**
-	 * The cached value of the '{@link #getSlopeImpulsion() <em>Slope Impulsion</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSlopeImpulsion()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ToUseSlopeImpulsion> slopeImpulsion;
-
-	/**
-	 * The cached value of the '{@link #getCapacityChange() <em>Capacity Change</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCapacityChange()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<CapacityChange> capacityChange;
-
-	/**
-	 * The cached value of the '{@link #getStockChange() <em>Stock Change</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStockChange()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<StockChange> stockChange;
 
 	/**
 	 * The cached value of the '{@link #getDistribution() <em>Distribution</em>}' containment reference list.
@@ -194,78 +122,6 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 			timeLineMerges = new EObjectContainmentEList<TimeLineMerge>(TimeLineMerge.class, this, TousetimelinePackage.DOMAIN__TIME_LINE_MERGES);
 		}
 		return timeLineMerges;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<ToUseAmountImpulsion> getAmountImpulsion() {
-		if (amountImpulsion == null) {
-			amountImpulsion = new EObjectContainmentEList<ToUseAmountImpulsion>(ToUseAmountImpulsion.class, this, TousetimelinePackage.DOMAIN__AMOUNT_IMPULSION);
-		}
-		return amountImpulsion;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<ToUseAmountAbsolute> getAmountAbsolute() {
-		if (amountAbsolute == null) {
-			amountAbsolute = new EObjectContainmentEList<ToUseAmountAbsolute>(ToUseAmountAbsolute.class, this, TousetimelinePackage.DOMAIN__AMOUNT_ABSOLUTE);
-		}
-		return amountAbsolute;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<ToUseSlopeAbsolute> getSlopeAbsolute() {
-		if (slopeAbsolute == null) {
-			slopeAbsolute = new EObjectContainmentEList<ToUseSlopeAbsolute>(ToUseSlopeAbsolute.class, this, TousetimelinePackage.DOMAIN__SLOPE_ABSOLUTE);
-		}
-		return slopeAbsolute;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<ToUseSlopeImpulsion> getSlopeImpulsion() {
-		if (slopeImpulsion == null) {
-			slopeImpulsion = new EObjectContainmentEList<ToUseSlopeImpulsion>(ToUseSlopeImpulsion.class, this, TousetimelinePackage.DOMAIN__SLOPE_IMPULSION);
-		}
-		return slopeImpulsion;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<CapacityChange> getCapacityChange() {
-		if (capacityChange == null) {
-			capacityChange = new EObjectContainmentEList<CapacityChange>(CapacityChange.class, this, TousetimelinePackage.DOMAIN__CAPACITY_CHANGE);
-		}
-		return capacityChange;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<StockChange> getStockChange() {
-		if (stockChange == null) {
-			stockChange = new EObjectContainmentEList<StockChange>(StockChange.class, this, TousetimelinePackage.DOMAIN__STOCK_CHANGE);
-		}
-		return stockChange;
 	}
 
 	/**
@@ -350,18 +206,6 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 		switch (featureID) {
 			case TousetimelinePackage.DOMAIN__TIME_LINE_MERGES:
 				return ((InternalEList<?>)getTimeLineMerges()).basicRemove(otherEnd, msgs);
-			case TousetimelinePackage.DOMAIN__AMOUNT_IMPULSION:
-				return ((InternalEList<?>)getAmountImpulsion()).basicRemove(otherEnd, msgs);
-			case TousetimelinePackage.DOMAIN__AMOUNT_ABSOLUTE:
-				return ((InternalEList<?>)getAmountAbsolute()).basicRemove(otherEnd, msgs);
-			case TousetimelinePackage.DOMAIN__SLOPE_ABSOLUTE:
-				return ((InternalEList<?>)getSlopeAbsolute()).basicRemove(otherEnd, msgs);
-			case TousetimelinePackage.DOMAIN__SLOPE_IMPULSION:
-				return ((InternalEList<?>)getSlopeImpulsion()).basicRemove(otherEnd, msgs);
-			case TousetimelinePackage.DOMAIN__CAPACITY_CHANGE:
-				return ((InternalEList<?>)getCapacityChange()).basicRemove(otherEnd, msgs);
-			case TousetimelinePackage.DOMAIN__STOCK_CHANGE:
-				return ((InternalEList<?>)getStockChange()).basicRemove(otherEnd, msgs);
 			case TousetimelinePackage.DOMAIN__DISTRIBUTION:
 				return ((InternalEList<?>)getDistribution()).basicRemove(otherEnd, msgs);
 			case TousetimelinePackage.DOMAIN__TIMELINES:
@@ -380,18 +224,6 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 		switch (featureID) {
 			case TousetimelinePackage.DOMAIN__TIME_LINE_MERGES:
 				return getTimeLineMerges();
-			case TousetimelinePackage.DOMAIN__AMOUNT_IMPULSION:
-				return getAmountImpulsion();
-			case TousetimelinePackage.DOMAIN__AMOUNT_ABSOLUTE:
-				return getAmountAbsolute();
-			case TousetimelinePackage.DOMAIN__SLOPE_ABSOLUTE:
-				return getSlopeAbsolute();
-			case TousetimelinePackage.DOMAIN__SLOPE_IMPULSION:
-				return getSlopeImpulsion();
-			case TousetimelinePackage.DOMAIN__CAPACITY_CHANGE:
-				return getCapacityChange();
-			case TousetimelinePackage.DOMAIN__STOCK_CHANGE:
-				return getStockChange();
 			case TousetimelinePackage.DOMAIN__DISTRIBUTION:
 				return getDistribution();
 			case TousetimelinePackage.DOMAIN__NAME:
@@ -414,30 +246,6 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 			case TousetimelinePackage.DOMAIN__TIME_LINE_MERGES:
 				getTimeLineMerges().clear();
 				getTimeLineMerges().addAll((Collection<? extends TimeLineMerge>)newValue);
-				return;
-			case TousetimelinePackage.DOMAIN__AMOUNT_IMPULSION:
-				getAmountImpulsion().clear();
-				getAmountImpulsion().addAll((Collection<? extends ToUseAmountImpulsion>)newValue);
-				return;
-			case TousetimelinePackage.DOMAIN__AMOUNT_ABSOLUTE:
-				getAmountAbsolute().clear();
-				getAmountAbsolute().addAll((Collection<? extends ToUseAmountAbsolute>)newValue);
-				return;
-			case TousetimelinePackage.DOMAIN__SLOPE_ABSOLUTE:
-				getSlopeAbsolute().clear();
-				getSlopeAbsolute().addAll((Collection<? extends ToUseSlopeAbsolute>)newValue);
-				return;
-			case TousetimelinePackage.DOMAIN__SLOPE_IMPULSION:
-				getSlopeImpulsion().clear();
-				getSlopeImpulsion().addAll((Collection<? extends ToUseSlopeImpulsion>)newValue);
-				return;
-			case TousetimelinePackage.DOMAIN__CAPACITY_CHANGE:
-				getCapacityChange().clear();
-				getCapacityChange().addAll((Collection<? extends CapacityChange>)newValue);
-				return;
-			case TousetimelinePackage.DOMAIN__STOCK_CHANGE:
-				getStockChange().clear();
-				getStockChange().addAll((Collection<? extends StockChange>)newValue);
 				return;
 			case TousetimelinePackage.DOMAIN__DISTRIBUTION:
 				getDistribution().clear();
@@ -465,24 +273,6 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 			case TousetimelinePackage.DOMAIN__TIME_LINE_MERGES:
 				getTimeLineMerges().clear();
 				return;
-			case TousetimelinePackage.DOMAIN__AMOUNT_IMPULSION:
-				getAmountImpulsion().clear();
-				return;
-			case TousetimelinePackage.DOMAIN__AMOUNT_ABSOLUTE:
-				getAmountAbsolute().clear();
-				return;
-			case TousetimelinePackage.DOMAIN__SLOPE_ABSOLUTE:
-				getSlopeAbsolute().clear();
-				return;
-			case TousetimelinePackage.DOMAIN__SLOPE_IMPULSION:
-				getSlopeImpulsion().clear();
-				return;
-			case TousetimelinePackage.DOMAIN__CAPACITY_CHANGE:
-				getCapacityChange().clear();
-				return;
-			case TousetimelinePackage.DOMAIN__STOCK_CHANGE:
-				getStockChange().clear();
-				return;
 			case TousetimelinePackage.DOMAIN__DISTRIBUTION:
 				getDistribution().clear();
 				return;
@@ -506,18 +296,6 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 		switch (featureID) {
 			case TousetimelinePackage.DOMAIN__TIME_LINE_MERGES:
 				return timeLineMerges != null && !timeLineMerges.isEmpty();
-			case TousetimelinePackage.DOMAIN__AMOUNT_IMPULSION:
-				return amountImpulsion != null && !amountImpulsion.isEmpty();
-			case TousetimelinePackage.DOMAIN__AMOUNT_ABSOLUTE:
-				return amountAbsolute != null && !amountAbsolute.isEmpty();
-			case TousetimelinePackage.DOMAIN__SLOPE_ABSOLUTE:
-				return slopeAbsolute != null && !slopeAbsolute.isEmpty();
-			case TousetimelinePackage.DOMAIN__SLOPE_IMPULSION:
-				return slopeImpulsion != null && !slopeImpulsion.isEmpty();
-			case TousetimelinePackage.DOMAIN__CAPACITY_CHANGE:
-				return capacityChange != null && !capacityChange.isEmpty();
-			case TousetimelinePackage.DOMAIN__STOCK_CHANGE:
-				return stockChange != null && !stockChange.isEmpty();
 			case TousetimelinePackage.DOMAIN__DISTRIBUTION:
 				return distribution != null && !distribution.isEmpty();
 			case TousetimelinePackage.DOMAIN__NAME:

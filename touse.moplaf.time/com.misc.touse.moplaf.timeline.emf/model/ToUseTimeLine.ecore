@@ -6,20 +6,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="TimeLineMerges" upperBound="-1"
         eType="ecore:EClass ../../com.misc.common.moplaf.timeline.emf/model/timeline.ecore#//discrete/TimeLineMerge"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="AmountImpulsion" upperBound="-1"
-        eType="#//ToUseAmountImpulsion" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="AmountAbsolute" upperBound="-1"
-        eType="#//ToUseAmountAbsolute" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="SlopeAbsolute" upperBound="-1"
-        eType="#//ToUseSlopeAbsolute" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="SlopeImpulsion" upperBound="-1"
-        eType="#//ToUseSlopeImpulsion" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="CapacityChange" upperBound="-1"
-        eType="ecore:EClass ../../com.misc.common.moplaf.timeline.emf/model/timeline.ecore#//continuous/CapacityChange"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="StockChange" upperBound="-1"
-        eType="ecore:EClass ../../com.misc.common.moplaf.timeline.emf/model/timeline.ecore#//continuous/StockChange"
-        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Distribution" upperBound="-1"
         eType="#//DomainDistribution" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -27,10 +13,6 @@
         eType="ecore:EClass ../../com.misc.common.moplaf.timeline.emf/model/timeline.ecore#//discrete/TimeLine"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ToUseAmountImpulsion" eSuperTypes="../../com.misc.common.moplaf.timeline.emf/model/timeline.ecore#//continuous/AmountImpulsion"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ToUseAmountAbsolute" eSuperTypes="../../com.misc.common.moplaf.timeline.emf/model/timeline.ecore#//continuous/AmountAbsolute"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ToUseSlopeAbsolute" eSuperTypes="../../com.misc.common.moplaf.timeline.emf/model/timeline.ecore#//continuous/SlopeAbsolute"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ToUseSlopeImpulsion" eSuperTypes="../../com.misc.common.moplaf.timeline.emf/model/timeline.ecore#//continuous/SlopeImpulsion"/>
   <eClassifiers xsi:type="ecore:EClass" name="DomainDistribution" eSuperTypes="../../com.misc.common.moplaf.timeline.emf/model/timeline.ecore#//continuous/Distribution">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Color" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
