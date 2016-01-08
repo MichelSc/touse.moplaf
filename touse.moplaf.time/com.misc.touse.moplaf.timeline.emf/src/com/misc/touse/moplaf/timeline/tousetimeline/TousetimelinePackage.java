@@ -178,22 +178,22 @@ public interface TousetimelinePackage extends EPackage {
 	int DOMAIN_DISTRIBUTION__HORIZON_END = ContinuousPackage.DISTRIBUTION__HORIZON_END;
 
 	/**
-	 * The feature id for the '<em><b>Child Event</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Child Events</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION__CHILD_EVENT = ContinuousPackage.DISTRIBUTION__CHILD_EVENTS;
+	int DOMAIN_DISTRIBUTION__CHILD_EVENTS = ContinuousPackage.DISTRIBUTION__CHILD_EVENTS;
 
 	/**
-	 * The feature id for the '<em><b>Sequence Event</b></em>' reference list.
+	 * The feature id for the '<em><b>Sequence Events</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION__SEQUENCE_EVENT = ContinuousPackage.DISTRIBUTION__SEQUENCE_EVENTS;
+	int DOMAIN_DISTRIBUTION__SEQUENCE_EVENTS = ContinuousPackage.DISTRIBUTION__SEQUENCE_EVENTS;
 
 	/**
 	 * The feature id for the '<em><b>Start</b></em>' containment reference.
@@ -239,6 +239,15 @@ public interface TousetimelinePackage extends EPackage {
 	 * @ordered
 	 */
 	int DOMAIN_DISTRIBUTION__CHILD_DISTRIBUTION = ContinuousPackage.DISTRIBUTION__CHILD_DISTRIBUTION;
+
+	/**
+	 * The feature id for the '<em><b>Provided Events</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_DISTRIBUTION__PROVIDED_EVENTS = ContinuousPackage.DISTRIBUTION__PROVIDED_EVENTS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -410,6 +419,15 @@ public interface TousetimelinePackage extends EPackage {
 	 * @ordered
 	 */
 	int DOMAIN_DISTRIBUTION___REFRESH = ContinuousPackage.DISTRIBUTION___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Refresh Provided Events</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_DISTRIBUTION___REFRESH_PROVIDED_EVENTS = ContinuousPackage.DISTRIBUTION___REFRESH_PROVIDED_EVENTS;
 
 	/**
 	 * The number of operations of the '<em>Domain Distribution</em>' class.
