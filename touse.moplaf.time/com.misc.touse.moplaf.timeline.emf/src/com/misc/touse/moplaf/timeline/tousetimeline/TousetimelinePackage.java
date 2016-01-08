@@ -184,7 +184,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION__CHILD_EVENT = ContinuousPackage.DISTRIBUTION__CHILD_EVENT;
+	int DOMAIN_DISTRIBUTION__CHILD_EVENT = ContinuousPackage.DISTRIBUTION__CHILD_EVENTS;
 
 	/**
 	 * The feature id for the '<em><b>Sequence Event</b></em>' reference list.
@@ -193,7 +193,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION__SEQUENCE_EVENT = ContinuousPackage.DISTRIBUTION__SEQUENCE_EVENT;
+	int DOMAIN_DISTRIBUTION__SEQUENCE_EVENT = ContinuousPackage.DISTRIBUTION__SEQUENCE_EVENTS;
 
 	/**
 	 * The feature id for the '<em><b>Start</b></em>' containment reference.
