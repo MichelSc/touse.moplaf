@@ -14,6 +14,7 @@ import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.edit.provider.ChangeNotifier;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
+import org.eclipse.emf.edit.provider.Disposable;
 import org.eclipse.emf.edit.provider.IChangeNotifier;
 import org.eclipse.emf.edit.provider.IDisposable;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
@@ -49,6 +50,14 @@ public class TousetimelineItemProviderAdapterFactory extends TousetimelineAdapte
 	 * @generated
 	 */
 	protected IChangeNotifier changeNotifier = new ChangeNotifier();
+
+	/**
+	 * This keeps track of all the item providers created, so that they can be {@link #dispose disposed}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Disposable disposable = new Disposable();
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -96,14 +105,6 @@ public class TousetimelineItemProviderAdapterFactory extends TousetimelineAdapte
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DomainDistributionItemProvider domainDistributionItemProvider;
-
-	/**
 	 * This creates an adapter for a {@link com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -111,11 +112,7 @@ public class TousetimelineItemProviderAdapterFactory extends TousetimelineAdapte
 	 */
 	@Override
 	public Adapter createDomainDistributionAdapter() {
-		if (domainDistributionItemProvider == null) {
-			domainDistributionItemProvider = new DomainDistributionItemProvider(this);
-		}
-
-		return domainDistributionItemProvider;
+		return new DomainDistributionItemProvider(this);
 	}
 
 	/**
@@ -177,6 +174,20 @@ public class TousetimelineItemProviderAdapterFactory extends TousetimelineAdapte
 	}
 
 	/**
+	 * Associates an adapter with a notifier via the base implementation, then records it to ensure it will be disposed.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected void associate(Adapter adapter, Notifier target) {
+		super.associate(adapter, target);
+		if (adapter != null) {
+			disposable.add(adapter);
+		}
+	}
+
+	/**
 	 * This adds a listener.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -217,8 +228,7 @@ public class TousetimelineItemProviderAdapterFactory extends TousetimelineAdapte
 	 * @generated
 	 */
 	public void dispose() {
-		if (domainItemProvider != null) domainItemProvider.dispose();
-		if (domainDistributionItemProvider != null) domainDistributionItemProvider.dispose();
+		disposable.dispose();
 	}
 
 }
