@@ -16,15 +16,25 @@
   <eClassifiers xsi:type="ecore:EClass" name="DomainDistribution" eSuperTypes="../../com.misc.common.moplaf.timeline.emf/model/timeline.ecore#//continuous/Distribution">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Color" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Calcs" upperBound="-1"
-        eType="#//FunctionMinimum" containment="true" eOpposite="#//FunctionMinimum/Distribution"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Functions" upperBound="-1"
+        eType="#//FunctionInterval" containment="true" eOpposite="#//FunctionInterval/Distribution"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FunctionMinimum" eSuperTypes="../../com.misc.common.moplaf.propagator/model/propagator.ecore#//ObjectWithPropagatorFunctionAdapter">
-    <eOperations name="refreshMinimum"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FunctionMinimum" eSuperTypes="#//FunctionInterval">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="minimum" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FunctionInterval" eSuperTypes="../../com.misc.common.moplaf.propagator/model/propagator.ecore#//ObjectWithPropagatorFunctionAdapter">
+    <eOperations name="refresh"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="from" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="to" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="minimum" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Distribution" lowerBound="1"
-        eType="#//DomainDistribution" eOpposite="#//DomainDistribution/Calcs"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Distribution" eType="#//DomainDistribution"
+        eOpposite="#//DomainDistribution/Functions"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FunctionCumulated" eSuperTypes="#//FunctionInterval">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cumulated" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
+        defaultValueLiteral="0.0"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FunctionAverage" eSuperTypes="#//FunctionInterval">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="average" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
+        defaultValueLiteral="0.0"/>
   </eClassifiers>
 </ecore:EPackage>

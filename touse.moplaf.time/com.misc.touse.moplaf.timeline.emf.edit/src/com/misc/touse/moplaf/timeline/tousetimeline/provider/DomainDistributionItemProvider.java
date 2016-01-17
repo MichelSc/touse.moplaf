@@ -126,7 +126,7 @@ public class DomainDistributionItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(TousetimelinePackage.Literals.DOMAIN_DISTRIBUTION__CALCS);
+			childrenFeatures.add(TousetimelinePackage.Literals.DOMAIN_DISTRIBUTION__FUNCTIONS);
 		}
 		return childrenFeatures;
 	}
@@ -185,7 +185,7 @@ public class DomainDistributionItemProvider
 			case TousetimelinePackage.DOMAIN_DISTRIBUTION__COLOR:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case TousetimelinePackage.DOMAIN_DISTRIBUTION__CALCS:
+			case TousetimelinePackage.DOMAIN_DISTRIBUTION__FUNCTIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -205,8 +205,23 @@ public class DomainDistributionItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TousetimelinePackage.Literals.DOMAIN_DISTRIBUTION__CALCS,
+				(TousetimelinePackage.Literals.DOMAIN_DISTRIBUTION__FUNCTIONS,
+				 TousetimelineFactory.eINSTANCE.createFunctionInterval()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TousetimelinePackage.Literals.DOMAIN_DISTRIBUTION__FUNCTIONS,
 				 TousetimelineFactory.eINSTANCE.createFunctionMinimum()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TousetimelinePackage.Literals.DOMAIN_DISTRIBUTION__FUNCTIONS,
+				 TousetimelineFactory.eINSTANCE.createFunctionCumulated()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TousetimelinePackage.Literals.DOMAIN_DISTRIBUTION__FUNCTIONS,
+				 TousetimelineFactory.eINSTANCE.createFunctionAverage()));
 	}
 
 	/**

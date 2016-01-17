@@ -7,7 +7,7 @@ import com.mis.touse.moplaf.timeline.tousetimeline.calc.PropagatorScopeDomainDis
 import com.misc.common.moplaf.propagator.Util;
 import com.misc.common.moplaf.time.continuous.impl.DistributionImpl;
 import com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution;
-import com.misc.touse.moplaf.timeline.tousetimeline.FunctionMinimum;
+import com.misc.touse.moplaf.timeline.tousetimeline.FunctionInterval;
 import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage;
 
 import java.util.Collection;
@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainDistributionImpl#getName <em>Name</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainDistributionImpl#getColor <em>Color</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainDistributionImpl#getCalcs <em>Calcs</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainDistributionImpl#getFunctions <em>Functions</em>}</li>
  * </ul>
  *
  * @generated
@@ -77,14 +77,14 @@ public class DomainDistributionImpl extends DistributionImpl implements DomainDi
 	protected int color = COLOR_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getCalcs() <em>Calcs</em>}' containment reference list.
+	 * The cached value of the '{@link #getFunctions() <em>Functions</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCalcs()
+	 * @see #getFunctions()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<FunctionMinimum> calcs;
+	protected EList<FunctionInterval> functions;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -171,11 +171,11 @@ public class DomainDistributionImpl extends DistributionImpl implements DomainDi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<FunctionMinimum> getCalcs() {
-		if (calcs == null) {
-			calcs = new EObjectContainmentWithInverseEList<FunctionMinimum>(FunctionMinimum.class, this, TousetimelinePackage.DOMAIN_DISTRIBUTION__CALCS, TousetimelinePackage.FUNCTION_MINIMUM__DISTRIBUTION);
+	public EList<FunctionInterval> getFunctions() {
+		if (functions == null) {
+			functions = new EObjectContainmentWithInverseEList<FunctionInterval>(FunctionInterval.class, this, TousetimelinePackage.DOMAIN_DISTRIBUTION__FUNCTIONS, TousetimelinePackage.FUNCTION_INTERVAL__DISTRIBUTION);
 		}
-		return calcs;
+		return functions;
 	}
 
 
@@ -189,8 +189,8 @@ public class DomainDistributionImpl extends DistributionImpl implements DomainDi
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case TousetimelinePackage.DOMAIN_DISTRIBUTION__CALCS:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getCalcs()).basicAdd(otherEnd, msgs);
+			case TousetimelinePackage.DOMAIN_DISTRIBUTION__FUNCTIONS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getFunctions()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -205,8 +205,8 @@ public class DomainDistributionImpl extends DistributionImpl implements DomainDi
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case TousetimelinePackage.DOMAIN_DISTRIBUTION__CALCS:
-				return ((InternalEList<?>)getCalcs()).basicRemove(otherEnd, msgs);
+			case TousetimelinePackage.DOMAIN_DISTRIBUTION__FUNCTIONS:
+				return ((InternalEList<?>)getFunctions()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -225,8 +225,8 @@ public class DomainDistributionImpl extends DistributionImpl implements DomainDi
 				return getName();
 			case TousetimelinePackage.DOMAIN_DISTRIBUTION__COLOR:
 				return getColor();
-			case TousetimelinePackage.DOMAIN_DISTRIBUTION__CALCS:
-				return getCalcs();
+			case TousetimelinePackage.DOMAIN_DISTRIBUTION__FUNCTIONS:
+				return getFunctions();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -246,9 +246,9 @@ public class DomainDistributionImpl extends DistributionImpl implements DomainDi
 			case TousetimelinePackage.DOMAIN_DISTRIBUTION__COLOR:
 				setColor((Integer)newValue);
 				return;
-			case TousetimelinePackage.DOMAIN_DISTRIBUTION__CALCS:
-				getCalcs().clear();
-				getCalcs().addAll((Collection<? extends FunctionMinimum>)newValue);
+			case TousetimelinePackage.DOMAIN_DISTRIBUTION__FUNCTIONS:
+				getFunctions().clear();
+				getFunctions().addAll((Collection<? extends FunctionInterval>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -268,8 +268,8 @@ public class DomainDistributionImpl extends DistributionImpl implements DomainDi
 			case TousetimelinePackage.DOMAIN_DISTRIBUTION__COLOR:
 				setColor(COLOR_EDEFAULT);
 				return;
-			case TousetimelinePackage.DOMAIN_DISTRIBUTION__CALCS:
-				getCalcs().clear();
+			case TousetimelinePackage.DOMAIN_DISTRIBUTION__FUNCTIONS:
+				getFunctions().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -287,8 +287,8 @@ public class DomainDistributionImpl extends DistributionImpl implements DomainDi
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case TousetimelinePackage.DOMAIN_DISTRIBUTION__COLOR:
 				return color != COLOR_EDEFAULT;
-			case TousetimelinePackage.DOMAIN_DISTRIBUTION__CALCS:
-				return calcs != null && !calcs.isEmpty();
+			case TousetimelinePackage.DOMAIN_DISTRIBUTION__FUNCTIONS:
+				return functions != null && !functions.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

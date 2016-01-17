@@ -269,13 +269,13 @@ public interface TousetimelinePackage extends EPackage {
 	int DOMAIN_DISTRIBUTION__COLOR = ContinuousPackage.DISTRIBUTION_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Calcs</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Functions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION__CALCS = ContinuousPackage.DISTRIBUTION_FEATURE_COUNT + 2;
+	int DOMAIN_DISTRIBUTION__FUNCTIONS = ContinuousPackage.DISTRIBUTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Domain Distribution</em>' class.
@@ -302,7 +302,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_DURATION__DATE_DATE_1 = ContinuousPackage.DISTRIBUTION___GET_DURATION__DATE_DATE;
+	int DOMAIN_DISTRIBUTION___GET_DURATION__DATE_DATE = ContinuousPackage.DISTRIBUTION___GET_DURATION__DATE_DATE;
 
 	/**
 	 * The operation id for the '<em>Get Moment</em>' operation.
@@ -311,7 +311,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_MOMENT__DATE_FLOAT_1 = ContinuousPackage.DISTRIBUTION___GET_MOMENT__DATE_FLOAT;
+	int DOMAIN_DISTRIBUTION___GET_MOMENT__DATE_FLOAT = ContinuousPackage.DISTRIBUTION___GET_MOMENT__DATE_FLOAT;
 
 	/**
 	 * The operation id for the '<em>Get Event Before</em>' operation.
@@ -320,7 +320,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_EVENT_BEFORE__DATE_1 = ContinuousPackage.DISTRIBUTION___GET_EVENT_BEFORE__DATE;
+	int DOMAIN_DISTRIBUTION___GET_EVENT_BEFORE__DATE = ContinuousPackage.DISTRIBUTION___GET_EVENT_BEFORE__DATE;
 
 	/**
 	 * The operation id for the '<em>Get Event Strict Before</em>' operation.
@@ -329,7 +329,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_EVENT_STRICT_BEFORE__DATE_1 = ContinuousPackage.DISTRIBUTION___GET_EVENT_STRICT_BEFORE__DATE;
+	int DOMAIN_DISTRIBUTION___GET_EVENT_STRICT_BEFORE__DATE = ContinuousPackage.DISTRIBUTION___GET_EVENT_STRICT_BEFORE__DATE;
 
 	/**
 	 * The operation id for the '<em>Get Event After</em>' operation.
@@ -338,7 +338,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_EVENT_AFTER__DATE_1 = ContinuousPackage.DISTRIBUTION___GET_EVENT_AFTER__DATE;
+	int DOMAIN_DISTRIBUTION___GET_EVENT_AFTER__DATE = ContinuousPackage.DISTRIBUTION___GET_EVENT_AFTER__DATE;
 
 	/**
 	 * The operation id for the '<em>Get Event Strict After</em>' operation.
@@ -347,7 +347,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_EVENT_STRICT_AFTER__DATE_1 = ContinuousPackage.DISTRIBUTION___GET_EVENT_STRICT_AFTER__DATE;
+	int DOMAIN_DISTRIBUTION___GET_EVENT_STRICT_AFTER__DATE = ContinuousPackage.DISTRIBUTION___GET_EVENT_STRICT_AFTER__DATE;
 
 	/**
 	 * The operation id for the '<em>Get Amount Before</em>' operation.
@@ -356,7 +356,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_AMOUNT_BEFORE__DATE_1 = ContinuousPackage.DISTRIBUTION___GET_AMOUNT_BEFORE__DATE;
+	int DOMAIN_DISTRIBUTION___GET_AMOUNT_BEFORE__DATE = ContinuousPackage.DISTRIBUTION___GET_AMOUNT_BEFORE__DATE;
 
 	/**
 	 * The operation id for the '<em>Get Amount After</em>' operation.
@@ -365,7 +365,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_AMOUNT_AFTER__DATE_1 = ContinuousPackage.DISTRIBUTION___GET_AMOUNT_AFTER__DATE;
+	int DOMAIN_DISTRIBUTION___GET_AMOUNT_AFTER__DATE = ContinuousPackage.DISTRIBUTION___GET_AMOUNT_AFTER__DATE;
 
 	/**
 	 * The operation id for the '<em>Get Slope Before</em>' operation.
@@ -374,7 +374,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_SLOPE_BEFORE__DATE_1 = ContinuousPackage.DISTRIBUTION___GET_SLOPE_BEFORE__DATE;
+	int DOMAIN_DISTRIBUTION___GET_SLOPE_BEFORE__DATE = ContinuousPackage.DISTRIBUTION___GET_SLOPE_BEFORE__DATE;
 
 	/**
 	 * The operation id for the '<em>Get Slope After</em>' operation.
@@ -383,7 +383,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_SLOPE_AFTER__DATE_1 = ContinuousPackage.DISTRIBUTION___GET_SLOPE_AFTER__DATE;
+	int DOMAIN_DISTRIBUTION___GET_SLOPE_AFTER__DATE = ContinuousPackage.DISTRIBUTION___GET_SLOPE_AFTER__DATE;
 
 	/**
 	 * The operation id for the '<em>Get Min Amount</em>' operation.
@@ -392,7 +392,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_MIN_AMOUNT__DATE_DATE_1 = ContinuousPackage.DISTRIBUTION___GET_MIN_AMOUNT__DATE_DATE;
+	int DOMAIN_DISTRIBUTION___GET_MIN_AMOUNT__DATE_DATE = ContinuousPackage.DISTRIBUTION___GET_MIN_AMOUNT__DATE_DATE;
 
 	/**
 	 * The operation id for the '<em>Get Max Amount</em>' operation.
@@ -401,7 +401,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_MAX_AMOUNT__DATE_DATE_1 = ContinuousPackage.DISTRIBUTION___GET_MAX_AMOUNT__DATE_DATE;
+	int DOMAIN_DISTRIBUTION___GET_MAX_AMOUNT__DATE_DATE = ContinuousPackage.DISTRIBUTION___GET_MAX_AMOUNT__DATE_DATE;
 
 	/**
 	 * The operation id for the '<em>Get Average Amount</em>' operation.
@@ -410,7 +410,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_AVERAGE_AMOUNT__DATE_DATE_1 = ContinuousPackage.DISTRIBUTION___GET_AVERAGE_AMOUNT__DATE_DATE;
+	int DOMAIN_DISTRIBUTION___GET_AVERAGE_AMOUNT__DATE_DATE = ContinuousPackage.DISTRIBUTION___GET_AVERAGE_AMOUNT__DATE_DATE;
 
 	/**
 	 * The operation id for the '<em>Get Cumulated Amount</em>' operation.
@@ -419,7 +419,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_CUMULATED_AMOUNT__DATE_DATE_1 = ContinuousPackage.DISTRIBUTION___GET_CUMULATED_AMOUNT__DATE_DATE;
+	int DOMAIN_DISTRIBUTION___GET_CUMULATED_AMOUNT__DATE_DATE = ContinuousPackage.DISTRIBUTION___GET_CUMULATED_AMOUNT__DATE_DATE;
 
 	/**
 	 * The operation id for the '<em>Get Earliest Below</em>' operation.
@@ -428,7 +428,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_EARLIEST_BELOW__DATE_FLOAT_FLOAT_1 = ContinuousPackage.DISTRIBUTION___GET_EARLIEST_BELOW__DATE_FLOAT_FLOAT;
+	int DOMAIN_DISTRIBUTION___GET_EARLIEST_BELOW__DATE_FLOAT_FLOAT = ContinuousPackage.DISTRIBUTION___GET_EARLIEST_BELOW__DATE_FLOAT_FLOAT;
 
 	/**
 	 * The operation id for the '<em>Get Latest Below</em>' operation.
@@ -437,7 +437,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_LATEST_BELOW__DATE_FLOAT_FLOAT_1 = ContinuousPackage.DISTRIBUTION___GET_LATEST_BELOW__DATE_FLOAT_FLOAT;
+	int DOMAIN_DISTRIBUTION___GET_LATEST_BELOW__DATE_FLOAT_FLOAT = ContinuousPackage.DISTRIBUTION___GET_LATEST_BELOW__DATE_FLOAT_FLOAT;
 
 	/**
 	 * The operation id for the '<em>Get Earliest Above</em>' operation.
@@ -446,7 +446,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_EARLIEST_ABOVE__DATE_FLOAT_FLOAT_1 = ContinuousPackage.DISTRIBUTION___GET_EARLIEST_ABOVE__DATE_FLOAT_FLOAT;
+	int DOMAIN_DISTRIBUTION___GET_EARLIEST_ABOVE__DATE_FLOAT_FLOAT = ContinuousPackage.DISTRIBUTION___GET_EARLIEST_ABOVE__DATE_FLOAT_FLOAT;
 
 	/**
 	 * The operation id for the '<em>Get Latest Above</em>' operation.
@@ -455,7 +455,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_LATEST_ABOVE__DATE_FLOAT_FLOAT_1 = ContinuousPackage.DISTRIBUTION___GET_LATEST_ABOVE__DATE_FLOAT_FLOAT;
+	int DOMAIN_DISTRIBUTION___GET_LATEST_ABOVE__DATE_FLOAT_FLOAT = ContinuousPackage.DISTRIBUTION___GET_LATEST_ABOVE__DATE_FLOAT_FLOAT;
 
 	/**
 	 * The operation id for the '<em>Refresh Init</em>' operation.
@@ -509,7 +509,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___ACCEPT__DATE_DATE_DISTRIBUTIONVISITOR_1 = ContinuousPackage.DISTRIBUTION___ACCEPT__DATE_DATE_DISTRIBUTIONVISITOR;
+	int DOMAIN_DISTRIBUTION___ACCEPT__DATE_DATE_DISTRIBUTIONVISITOR = ContinuousPackage.DISTRIBUTION___ACCEPT__DATE_DATE_DISTRIBUTIONVISITOR;
 
 	/**
 	 * The number of operations of the '<em>Domain Distribution</em>' class.
@@ -532,13 +532,23 @@ public interface TousetimelinePackage extends EPackage {
 	int FUNCTION_MINIMUM = 2;
 
 	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.FunctionIntervalImpl <em>Function Interval</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.FunctionIntervalImpl
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.TousetimelinePackageImpl#getFunctionInterval()
+	 * @generated
+	 */
+	int FUNCTION_INTERVAL = 3;
+
+	/**
 	 * The feature id for the '<em><b>From</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_MINIMUM__FROM = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 0;
+	int FUNCTION_INTERVAL__FROM = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>To</b></em>' attribute.
@@ -547,16 +557,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_MINIMUM__TO = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Minimum</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION_MINIMUM__MINIMUM = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 2;
+	int FUNCTION_INTERVAL__TO = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Distribution</b></em>' container reference.
@@ -565,16 +566,16 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_MINIMUM__DISTRIBUTION = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 3;
+	int FUNCTION_INTERVAL__DISTRIBUTION = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of structural features of the '<em>Function Minimum</em>' class.
+	 * The number of structural features of the '<em>Function Interval</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_MINIMUM_FEATURE_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 4;
+	int FUNCTION_INTERVAL_FEATURE_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Add Propagator Function Adapter</em>' operation.
@@ -583,16 +584,88 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_MINIMUM___ADD_PROPAGATOR_FUNCTION_ADAPTER = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER___ADD_PROPAGATOR_FUNCTION_ADAPTER;
+	int FUNCTION_INTERVAL___ADD_PROPAGATOR_FUNCTION_ADAPTER = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER___ADD_PROPAGATOR_FUNCTION_ADAPTER;
 
 	/**
-	 * The operation id for the '<em>Refresh Minimum</em>' operation.
+	 * The operation id for the '<em>Refresh</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_MINIMUM___REFRESH_MINIMUM = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_OPERATION_COUNT + 0;
+	int FUNCTION_INTERVAL___REFRESH = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_OPERATION_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Function Interval</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_INTERVAL_OPERATION_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_OPERATION_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>From</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_MINIMUM__FROM = FUNCTION_INTERVAL__FROM;
+
+	/**
+	 * The feature id for the '<em><b>To</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_MINIMUM__TO = FUNCTION_INTERVAL__TO;
+
+	/**
+	 * The feature id for the '<em><b>Distribution</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_MINIMUM__DISTRIBUTION = FUNCTION_INTERVAL__DISTRIBUTION;
+
+	/**
+	 * The feature id for the '<em><b>Minimum</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_MINIMUM__MINIMUM = FUNCTION_INTERVAL_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Function Minimum</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_MINIMUM_FEATURE_COUNT = FUNCTION_INTERVAL_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Function Adapter</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_MINIMUM___ADD_PROPAGATOR_FUNCTION_ADAPTER = FUNCTION_INTERVAL___ADD_PROPAGATOR_FUNCTION_ADAPTER;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_MINIMUM___REFRESH = FUNCTION_INTERVAL___REFRESH;
 
 	/**
 	 * The number of operations of the '<em>Function Minimum</em>' class.
@@ -601,7 +674,171 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_MINIMUM_OPERATION_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_OPERATION_COUNT + 1;
+	int FUNCTION_MINIMUM_OPERATION_COUNT = FUNCTION_INTERVAL_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.FunctionCumulatedImpl <em>Function Cumulated</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.FunctionCumulatedImpl
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.TousetimelinePackageImpl#getFunctionCumulated()
+	 * @generated
+	 */
+	int FUNCTION_CUMULATED = 4;
+
+	/**
+	 * The feature id for the '<em><b>From</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_CUMULATED__FROM = FUNCTION_INTERVAL__FROM;
+
+	/**
+	 * The feature id for the '<em><b>To</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_CUMULATED__TO = FUNCTION_INTERVAL__TO;
+
+	/**
+	 * The feature id for the '<em><b>Distribution</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_CUMULATED__DISTRIBUTION = FUNCTION_INTERVAL__DISTRIBUTION;
+
+	/**
+	 * The feature id for the '<em><b>Cumulated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_CUMULATED__CUMULATED = FUNCTION_INTERVAL_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Function Cumulated</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_CUMULATED_FEATURE_COUNT = FUNCTION_INTERVAL_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Function Adapter</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_CUMULATED___ADD_PROPAGATOR_FUNCTION_ADAPTER = FUNCTION_INTERVAL___ADD_PROPAGATOR_FUNCTION_ADAPTER;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_CUMULATED___REFRESH = FUNCTION_INTERVAL___REFRESH;
+
+	/**
+	 * The number of operations of the '<em>Function Cumulated</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_CUMULATED_OPERATION_COUNT = FUNCTION_INTERVAL_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.FunctionAverageImpl <em>Function Average</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.FunctionAverageImpl
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.TousetimelinePackageImpl#getFunctionAverage()
+	 * @generated
+	 */
+	int FUNCTION_AVERAGE = 5;
+
+	/**
+	 * The feature id for the '<em><b>From</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_AVERAGE__FROM = FUNCTION_INTERVAL__FROM;
+
+	/**
+	 * The feature id for the '<em><b>To</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_AVERAGE__TO = FUNCTION_INTERVAL__TO;
+
+	/**
+	 * The feature id for the '<em><b>Distribution</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_AVERAGE__DISTRIBUTION = FUNCTION_INTERVAL__DISTRIBUTION;
+
+	/**
+	 * The feature id for the '<em><b>Average</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_AVERAGE__AVERAGE = FUNCTION_INTERVAL_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Function Average</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_AVERAGE_FEATURE_COUNT = FUNCTION_INTERVAL_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Function Adapter</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_AVERAGE___ADD_PROPAGATOR_FUNCTION_ADAPTER = FUNCTION_INTERVAL___ADD_PROPAGATOR_FUNCTION_ADAPTER;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_AVERAGE___REFRESH = FUNCTION_INTERVAL___REFRESH;
+
+	/**
+	 * The number of operations of the '<em>Function Average</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_AVERAGE_OPERATION_COUNT = FUNCTION_INTERVAL_OPERATION_COUNT + 0;
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.timeline.tousetimeline.Domain <em>Domain</em>}'.
@@ -690,15 +927,15 @@ public interface TousetimelinePackage extends EPackage {
 	EAttribute getDomainDistribution_Color();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution#getCalcs <em>Calcs</em>}'.
+	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution#getFunctions <em>Functions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Calcs</em>'.
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution#getCalcs()
+	 * @return the meta object for the containment reference list '<em>Functions</em>'.
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution#getFunctions()
 	 * @see #getDomainDistribution()
 	 * @generated
 	 */
-	EReference getDomainDistribution_Calcs();
+	EReference getDomainDistribution_Functions();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionMinimum <em>Function Minimum</em>}'.
@@ -709,28 +946,6 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 */
 	EClass getFunctionMinimum();
-
-	/**
-	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionMinimum#getFrom <em>From</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>From</em>'.
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.FunctionMinimum#getFrom()
-	 * @see #getFunctionMinimum()
-	 * @generated
-	 */
-	EAttribute getFunctionMinimum_From();
-
-	/**
-	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionMinimum#getTo <em>To</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>To</em>'.
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.FunctionMinimum#getTo()
-	 * @see #getFunctionMinimum()
-	 * @generated
-	 */
-	EAttribute getFunctionMinimum_To();
 
 	/**
 	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionMinimum#getMinimum <em>Minimum</em>}'.
@@ -744,25 +959,99 @@ public interface TousetimelinePackage extends EPackage {
 	EAttribute getFunctionMinimum_Minimum();
 
 	/**
-	 * Returns the meta object for the container reference '{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionMinimum#getDistribution <em>Distribution</em>}'.
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionInterval <em>Function Interval</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Function Interval</em>'.
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.FunctionInterval
+	 * @generated
+	 */
+	EClass getFunctionInterval();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionInterval#getFrom <em>From</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>From</em>'.
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.FunctionInterval#getFrom()
+	 * @see #getFunctionInterval()
+	 * @generated
+	 */
+	EAttribute getFunctionInterval_From();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionInterval#getTo <em>To</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>To</em>'.
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.FunctionInterval#getTo()
+	 * @see #getFunctionInterval()
+	 * @generated
+	 */
+	EAttribute getFunctionInterval_To();
+
+	/**
+	 * Returns the meta object for the container reference '{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionInterval#getDistribution <em>Distribution</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Distribution</em>'.
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.FunctionMinimum#getDistribution()
-	 * @see #getFunctionMinimum()
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.FunctionInterval#getDistribution()
+	 * @see #getFunctionInterval()
 	 * @generated
 	 */
-	EReference getFunctionMinimum_Distribution();
+	EReference getFunctionInterval_Distribution();
 
 	/**
-	 * Returns the meta object for the '{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionMinimum#refreshMinimum() <em>Refresh Minimum</em>}' operation.
+	 * Returns the meta object for the '{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionInterval#refresh() <em>Refresh</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Refresh Minimum</em>' operation.
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.FunctionMinimum#refreshMinimum()
+	 * @return the meta object for the '<em>Refresh</em>' operation.
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.FunctionInterval#refresh()
 	 * @generated
 	 */
-	EOperation getFunctionMinimum__RefreshMinimum();
+	EOperation getFunctionInterval__Refresh();
+
+	/**
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionCumulated <em>Function Cumulated</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Function Cumulated</em>'.
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.FunctionCumulated
+	 * @generated
+	 */
+	EClass getFunctionCumulated();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionCumulated#getCumulated <em>Cumulated</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Cumulated</em>'.
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.FunctionCumulated#getCumulated()
+	 * @see #getFunctionCumulated()
+	 * @generated
+	 */
+	EAttribute getFunctionCumulated_Cumulated();
+
+	/**
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionAverage <em>Function Average</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Function Average</em>'.
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.FunctionAverage
+	 * @generated
+	 */
+	EClass getFunctionAverage();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionAverage#getAverage <em>Average</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Average</em>'.
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.FunctionAverage#getAverage()
+	 * @see #getFunctionAverage()
+	 * @generated
+	 */
+	EAttribute getFunctionAverage_Average();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -856,12 +1145,12 @@ public interface TousetimelinePackage extends EPackage {
 		EAttribute DOMAIN_DISTRIBUTION__COLOR = eINSTANCE.getDomainDistribution_Color();
 
 		/**
-		 * The meta object literal for the '<em><b>Calcs</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Functions</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DOMAIN_DISTRIBUTION__CALCS = eINSTANCE.getDomainDistribution_Calcs();
+		EReference DOMAIN_DISTRIBUTION__FUNCTIONS = eINSTANCE.getDomainDistribution_Functions();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.FunctionMinimumImpl <em>Function Minimum</em>}' class.
@@ -874,22 +1163,6 @@ public interface TousetimelinePackage extends EPackage {
 		EClass FUNCTION_MINIMUM = eINSTANCE.getFunctionMinimum();
 
 		/**
-		 * The meta object literal for the '<em><b>From</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FUNCTION_MINIMUM__FROM = eINSTANCE.getFunctionMinimum_From();
-
-		/**
-		 * The meta object literal for the '<em><b>To</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FUNCTION_MINIMUM__TO = eINSTANCE.getFunctionMinimum_To();
-
-		/**
 		 * The meta object literal for the '<em><b>Minimum</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -898,20 +1171,82 @@ public interface TousetimelinePackage extends EPackage {
 		EAttribute FUNCTION_MINIMUM__MINIMUM = eINSTANCE.getFunctionMinimum_Minimum();
 
 		/**
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.FunctionIntervalImpl <em>Function Interval</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.FunctionIntervalImpl
+		 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.TousetimelinePackageImpl#getFunctionInterval()
+		 * @generated
+		 */
+		EClass FUNCTION_INTERVAL = eINSTANCE.getFunctionInterval();
+
+		/**
+		 * The meta object literal for the '<em><b>From</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FUNCTION_INTERVAL__FROM = eINSTANCE.getFunctionInterval_From();
+
+		/**
+		 * The meta object literal for the '<em><b>To</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FUNCTION_INTERVAL__TO = eINSTANCE.getFunctionInterval_To();
+
+		/**
 		 * The meta object literal for the '<em><b>Distribution</b></em>' container reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference FUNCTION_MINIMUM__DISTRIBUTION = eINSTANCE.getFunctionMinimum_Distribution();
+		EReference FUNCTION_INTERVAL__DISTRIBUTION = eINSTANCE.getFunctionInterval_Distribution();
 
 		/**
-		 * The meta object literal for the '<em><b>Refresh Minimum</b></em>' operation.
+		 * The meta object literal for the '<em><b>Refresh</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation FUNCTION_MINIMUM___REFRESH_MINIMUM = eINSTANCE.getFunctionMinimum__RefreshMinimum();
+		EOperation FUNCTION_INTERVAL___REFRESH = eINSTANCE.getFunctionInterval__Refresh();
+
+		/**
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.FunctionCumulatedImpl <em>Function Cumulated</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.FunctionCumulatedImpl
+		 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.TousetimelinePackageImpl#getFunctionCumulated()
+		 * @generated
+		 */
+		EClass FUNCTION_CUMULATED = eINSTANCE.getFunctionCumulated();
+
+		/**
+		 * The meta object literal for the '<em><b>Cumulated</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FUNCTION_CUMULATED__CUMULATED = eINSTANCE.getFunctionCumulated_Cumulated();
+
+		/**
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.FunctionAverageImpl <em>Function Average</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.FunctionAverageImpl
+		 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.TousetimelinePackageImpl#getFunctionAverage()
+		 * @generated
+		 */
+		EClass FUNCTION_AVERAGE = eINSTANCE.getFunctionAverage();
+
+		/**
+		 * The meta object literal for the '<em><b>Average</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FUNCTION_AVERAGE__AVERAGE = eINSTANCE.getFunctionAverage_Average();
 
 	}
 

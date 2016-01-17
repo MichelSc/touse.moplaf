@@ -9,6 +9,9 @@ import com.misc.common.moplaf.time.continuous.ContinuousPackage;
 import com.misc.common.moplaf.time.discrete.DiscretePackage;
 import com.misc.touse.moplaf.timeline.tousetimeline.Domain;
 import com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution;
+import com.misc.touse.moplaf.timeline.tousetimeline.FunctionAverage;
+import com.misc.touse.moplaf.timeline.tousetimeline.FunctionCumulated;
+import com.misc.touse.moplaf.timeline.tousetimeline.FunctionInterval;
 import com.misc.touse.moplaf.timeline.tousetimeline.FunctionMinimum;
 import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelineFactory;
 import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage;
@@ -48,6 +51,27 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 	 * @generated
 	 */
 	private EClass functionMinimumEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass functionIntervalEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass functionCumulatedEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass functionAverageEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -191,7 +215,7 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDomainDistribution_Calcs() {
+	public EReference getDomainDistribution_Functions() {
 		return (EReference)domainDistributionEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -209,7 +233,7 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getFunctionMinimum_From() {
+	public EAttribute getFunctionMinimum_Minimum() {
 		return (EAttribute)functionMinimumEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -218,8 +242,8 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getFunctionMinimum_To() {
-		return (EAttribute)functionMinimumEClass.getEStructuralFeatures().get(1);
+	public EClass getFunctionInterval() {
+		return functionIntervalEClass;
 	}
 
 	/**
@@ -227,8 +251,8 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getFunctionMinimum_Minimum() {
-		return (EAttribute)functionMinimumEClass.getEStructuralFeatures().get(2);
+	public EAttribute getFunctionInterval_From() {
+		return (EAttribute)functionIntervalEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -236,8 +260,8 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getFunctionMinimum_Distribution() {
-		return (EReference)functionMinimumEClass.getEStructuralFeatures().get(3);
+	public EAttribute getFunctionInterval_To() {
+		return (EAttribute)functionIntervalEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -245,8 +269,53 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getFunctionMinimum__RefreshMinimum() {
-		return functionMinimumEClass.getEOperations().get(0);
+	public EReference getFunctionInterval_Distribution() {
+		return (EReference)functionIntervalEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getFunctionInterval__Refresh() {
+		return functionIntervalEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getFunctionCumulated() {
+		return functionCumulatedEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFunctionCumulated_Cumulated() {
+		return (EAttribute)functionCumulatedEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getFunctionAverage() {
+		return functionAverageEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFunctionAverage_Average() {
+		return (EAttribute)functionAverageEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -286,14 +355,22 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 		domainDistributionEClass = createEClass(DOMAIN_DISTRIBUTION);
 		createEAttribute(domainDistributionEClass, DOMAIN_DISTRIBUTION__NAME);
 		createEAttribute(domainDistributionEClass, DOMAIN_DISTRIBUTION__COLOR);
-		createEReference(domainDistributionEClass, DOMAIN_DISTRIBUTION__CALCS);
+		createEReference(domainDistributionEClass, DOMAIN_DISTRIBUTION__FUNCTIONS);
 
 		functionMinimumEClass = createEClass(FUNCTION_MINIMUM);
-		createEAttribute(functionMinimumEClass, FUNCTION_MINIMUM__FROM);
-		createEAttribute(functionMinimumEClass, FUNCTION_MINIMUM__TO);
 		createEAttribute(functionMinimumEClass, FUNCTION_MINIMUM__MINIMUM);
-		createEReference(functionMinimumEClass, FUNCTION_MINIMUM__DISTRIBUTION);
-		createEOperation(functionMinimumEClass, FUNCTION_MINIMUM___REFRESH_MINIMUM);
+
+		functionIntervalEClass = createEClass(FUNCTION_INTERVAL);
+		createEAttribute(functionIntervalEClass, FUNCTION_INTERVAL__FROM);
+		createEAttribute(functionIntervalEClass, FUNCTION_INTERVAL__TO);
+		createEReference(functionIntervalEClass, FUNCTION_INTERVAL__DISTRIBUTION);
+		createEOperation(functionIntervalEClass, FUNCTION_INTERVAL___REFRESH);
+
+		functionCumulatedEClass = createEClass(FUNCTION_CUMULATED);
+		createEAttribute(functionCumulatedEClass, FUNCTION_CUMULATED__CUMULATED);
+
+		functionAverageEClass = createEClass(FUNCTION_AVERAGE);
+		createEAttribute(functionAverageEClass, FUNCTION_AVERAGE__AVERAGE);
 	}
 
 	/**
@@ -332,7 +409,10 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 		domainEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctionAdapterScope());
 		domainEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctionAdapter());
 		domainDistributionEClass.getESuperTypes().add(theContinuousPackage.getDistribution());
-		functionMinimumEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctionAdapter());
+		functionMinimumEClass.getESuperTypes().add(this.getFunctionInterval());
+		functionIntervalEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctionAdapter());
+		functionCumulatedEClass.getESuperTypes().add(this.getFunctionInterval());
+		functionAverageEClass.getESuperTypes().add(this.getFunctionInterval());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -344,15 +424,23 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 		initEClass(domainDistributionEClass, DomainDistribution.class, "DomainDistribution", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDomainDistribution_Name(), ecorePackage.getEString(), "Name", null, 0, 1, DomainDistribution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDomainDistribution_Color(), ecorePackage.getEInt(), "Color", null, 0, 1, DomainDistribution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDomainDistribution_Calcs(), this.getFunctionMinimum(), this.getFunctionMinimum_Distribution(), "Calcs", null, 0, -1, DomainDistribution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDomainDistribution_Functions(), this.getFunctionInterval(), this.getFunctionInterval_Distribution(), "Functions", null, 0, -1, DomainDistribution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(functionMinimumEClass, FunctionMinimum.class, "FunctionMinimum", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getFunctionMinimum_From(), ecorePackage.getEDate(), "from", null, 0, 1, FunctionMinimum.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getFunctionMinimum_To(), ecorePackage.getEDate(), "to", null, 0, 1, FunctionMinimum.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFunctionMinimum_Minimum(), ecorePackage.getEFloat(), "minimum", null, 0, 1, FunctionMinimum.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFunctionMinimum_Distribution(), this.getDomainDistribution(), this.getDomainDistribution_Calcs(), "Distribution", null, 1, 1, FunctionMinimum.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEOperation(getFunctionMinimum__RefreshMinimum(), null, "refreshMinimum", 0, 1, IS_UNIQUE, IS_ORDERED);
+		initEClass(functionIntervalEClass, FunctionInterval.class, "FunctionInterval", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFunctionInterval_From(), ecorePackage.getEDate(), "from", null, 0, 1, FunctionInterval.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFunctionInterval_To(), ecorePackage.getEDate(), "to", null, 0, 1, FunctionInterval.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFunctionInterval_Distribution(), this.getDomainDistribution(), this.getDomainDistribution_Functions(), "Distribution", null, 0, 1, FunctionInterval.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getFunctionInterval__Refresh(), null, "refresh", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(functionCumulatedEClass, FunctionCumulated.class, "FunctionCumulated", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFunctionCumulated_Cumulated(), ecorePackage.getEFloat(), "cumulated", "0.0", 0, 1, FunctionCumulated.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(functionAverageEClass, FunctionAverage.class, "FunctionAverage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFunctionAverage_Average(), ecorePackage.getEFloat(), "average", "0.0", 0, 1, FunctionAverage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

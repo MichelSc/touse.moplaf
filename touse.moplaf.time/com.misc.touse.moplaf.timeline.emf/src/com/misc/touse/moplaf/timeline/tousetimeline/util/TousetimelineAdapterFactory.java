@@ -83,6 +83,18 @@ public class TousetimelineAdapterFactory extends AdapterFactoryImpl {
 				return createFunctionMinimumAdapter();
 			}
 			@Override
+			public Adapter caseFunctionInterval(FunctionInterval object) {
+				return createFunctionIntervalAdapter();
+			}
+			@Override
+			public Adapter caseFunctionCumulated(FunctionCumulated object) {
+				return createFunctionCumulatedAdapter();
+			}
+			@Override
+			public Adapter caseFunctionAverage(FunctionAverage object) {
+				return createFunctionAverageAdapter();
+			}
+			@Override
 			public Adapter caseObjectWithPropagatorFunctionAdapterScope(ObjectWithPropagatorFunctionAdapterScope object) {
 				return createObjectWithPropagatorFunctionAdapterScopeAdapter();
 			}
@@ -153,6 +165,48 @@ public class TousetimelineAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createFunctionMinimumAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionInterval <em>Function Interval</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.FunctionInterval
+	 * @generated
+	 */
+	public Adapter createFunctionIntervalAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionCumulated <em>Function Cumulated</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.FunctionCumulated
+	 * @generated
+	 */
+	public Adapter createFunctionCumulatedAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionAverage <em>Function Average</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.FunctionAverage
+	 * @generated
+	 */
+	public Adapter createFunctionAverageAdapter() {
 		return null;
 	}
 

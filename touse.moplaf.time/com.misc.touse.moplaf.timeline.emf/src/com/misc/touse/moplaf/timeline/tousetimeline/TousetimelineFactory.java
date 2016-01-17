@@ -49,6 +49,33 @@ public interface TousetimelineFactory extends EFactory {
 	FunctionMinimum createFunctionMinimum();
 
 	/**
+	 * Returns a new object of class '<em>Function Interval</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Function Interval</em>'.
+	 * @generated
+	 */
+	FunctionInterval createFunctionInterval();
+
+	/**
+	 * Returns a new object of class '<em>Function Cumulated</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Function Cumulated</em>'.
+	 * @generated
+	 */
+	FunctionCumulated createFunctionCumulated();
+
+	/**
+	 * Returns a new object of class '<em>Function Average</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Function Average</em>'.
+	 * @generated
+	 */
+	FunctionAverage createFunctionAverage();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

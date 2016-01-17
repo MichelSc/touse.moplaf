@@ -88,7 +88,31 @@ public class TousetimelineSwitch<T> extends Switch<T> {
 			case TousetimelinePackage.FUNCTION_MINIMUM: {
 				FunctionMinimum functionMinimum = (FunctionMinimum)theEObject;
 				T result = caseFunctionMinimum(functionMinimum);
+				if (result == null) result = caseFunctionInterval(functionMinimum);
 				if (result == null) result = caseObjectWithPropagatorFunctionAdapter(functionMinimum);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case TousetimelinePackage.FUNCTION_INTERVAL: {
+				FunctionInterval functionInterval = (FunctionInterval)theEObject;
+				T result = caseFunctionInterval(functionInterval);
+				if (result == null) result = caseObjectWithPropagatorFunctionAdapter(functionInterval);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case TousetimelinePackage.FUNCTION_CUMULATED: {
+				FunctionCumulated functionCumulated = (FunctionCumulated)theEObject;
+				T result = caseFunctionCumulated(functionCumulated);
+				if (result == null) result = caseFunctionInterval(functionCumulated);
+				if (result == null) result = caseObjectWithPropagatorFunctionAdapter(functionCumulated);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case TousetimelinePackage.FUNCTION_AVERAGE: {
+				FunctionAverage functionAverage = (FunctionAverage)theEObject;
+				T result = caseFunctionAverage(functionAverage);
+				if (result == null) result = caseFunctionInterval(functionAverage);
+				if (result == null) result = caseObjectWithPropagatorFunctionAdapter(functionAverage);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -138,6 +162,51 @@ public class TousetimelineSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseFunctionMinimum(FunctionMinimum object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Function Interval</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Function Interval</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFunctionInterval(FunctionInterval object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Function Cumulated</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Function Cumulated</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFunctionCumulated(FunctionCumulated object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Function Average</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Function Average</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFunctionAverage(FunctionAverage object) {
 		return null;
 	}
 

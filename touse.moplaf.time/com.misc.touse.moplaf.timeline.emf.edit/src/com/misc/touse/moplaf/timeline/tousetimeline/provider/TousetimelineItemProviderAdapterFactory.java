@@ -139,6 +139,75 @@ public class TousetimelineItemProviderAdapterFactory extends TousetimelineAdapte
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionInterval} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FunctionIntervalItemProvider functionIntervalItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionInterval}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFunctionIntervalAdapter() {
+		if (functionIntervalItemProvider == null) {
+			functionIntervalItemProvider = new FunctionIntervalItemProvider(this);
+		}
+
+		return functionIntervalItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionCumulated} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FunctionCumulatedItemProvider functionCumulatedItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionCumulated}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFunctionCumulatedAdapter() {
+		if (functionCumulatedItemProvider == null) {
+			functionCumulatedItemProvider = new FunctionCumulatedItemProvider(this);
+		}
+
+		return functionCumulatedItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionAverage} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FunctionAverageItemProvider functionAverageItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionAverage}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFunctionAverageAdapter() {
+		if (functionAverageItemProvider == null) {
+			functionAverageItemProvider = new FunctionAverageItemProvider(this);
+		}
+
+		return functionAverageItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

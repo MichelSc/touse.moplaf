@@ -16,7 +16,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution#getName <em>Name</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution#getColor <em>Color</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution#getCalcs <em>Calcs</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution#getFunctions <em>Functions</em>}</li>
  * </ul>
  *
  * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getDomainDistribution()
@@ -77,21 +77,21 @@ public interface DomainDistribution extends Distribution {
 	void setColor(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Calcs</b></em>' containment reference list.
-	 * The list contents are of type {@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionMinimum}.
-	 * It is bidirectional and its opposite is '{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionMinimum#getDistribution <em>Distribution</em>}'.
+	 * Returns the value of the '<em><b>Functions</b></em>' containment reference list.
+	 * The list contents are of type {@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionInterval}.
+	 * It is bidirectional and its opposite is '{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionInterval#getDistribution <em>Distribution</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Calcs</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Functions</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Calcs</em>' containment reference list.
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getDomainDistribution_Calcs()
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.FunctionMinimum#getDistribution
+	 * @return the value of the '<em>Functions</em>' containment reference list.
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getDomainDistribution_Functions()
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.FunctionInterval#getDistribution
 	 * @model opposite="Distribution" containment="true"
 	 * @generated
 	 */
-	EList<FunctionMinimum> getCalcs();
+	EList<FunctionInterval> getFunctions();
 
 } // DomainDistribution

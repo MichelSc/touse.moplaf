@@ -3,52 +3,55 @@
 package com.misc.touse.moplaf.timeline.tousetimeline.impl;
 
 import com.misc.common.moplaf.time.continuous.Distribution;
-import com.misc.touse.moplaf.timeline.tousetimeline.FunctionMinimum;
+import com.misc.touse.moplaf.timeline.tousetimeline.FunctionAverage;
 import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage;
+
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Function Minimum</b></em>'.
+ * An implementation of the model object '<em><b>Function Average</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.FunctionMinimumImpl#getMinimum <em>Minimum</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.FunctionAverageImpl#getAverage <em>Average</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class FunctionMinimumImpl extends FunctionIntervalImpl implements FunctionMinimum {
+public class FunctionAverageImpl extends FunctionIntervalImpl implements FunctionAverage {
 	/**
-	 * The default value of the '{@link #getMinimum() <em>Minimum</em>}' attribute.
+	 * The default value of the '{@link #getAverage() <em>Average</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMinimum()
+	 * @see #getAverage()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final float MINIMUM_EDEFAULT = 0.0F;
+	protected static final float AVERAGE_EDEFAULT = 0.0F;
 
 	/**
-	 * The cached value of the '{@link #getMinimum() <em>Minimum</em>}' attribute.
+	 * The cached value of the '{@link #getAverage() <em>Average</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMinimum()
+	 * @see #getAverage()
 	 * @generated
 	 * @ordered
 	 */
-	protected float minimum = MINIMUM_EDEFAULT;
+	protected float average = AVERAGE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected FunctionMinimumImpl() {
+	protected FunctionAverageImpl() {
 		super();
 	}
 
@@ -59,7 +62,7 @@ public class FunctionMinimumImpl extends FunctionIntervalImpl implements Functio
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TousetimelinePackage.Literals.FUNCTION_MINIMUM;
+		return TousetimelinePackage.Literals.FUNCTION_AVERAGE;
 	}
 
 	/**
@@ -67,8 +70,8 @@ public class FunctionMinimumImpl extends FunctionIntervalImpl implements Functio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getMinimum() {
-		return minimum;
+	public float getAverage() {
+		return average;
 	}
 
 	/**
@@ -76,13 +79,13 @@ public class FunctionMinimumImpl extends FunctionIntervalImpl implements Functio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMinimum(float newMinimum) {
-		float oldMinimum = minimum;
-		minimum = newMinimum;
+	public void setAverage(float newAverage) {
+		float oldAverage = average;
+		average = newAverage;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousetimelinePackage.FUNCTION_MINIMUM__MINIMUM, oldMinimum, minimum));
+			eNotify(new ENotificationImpl(this, Notification.SET, TousetimelinePackage.FUNCTION_AVERAGE__AVERAGE, oldAverage, average));
 	}
-
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -90,8 +93,8 @@ public class FunctionMinimumImpl extends FunctionIntervalImpl implements Functio
 	@Override
 	public void refresh() {
 		Distribution distribution = this.getDistribution();
-		float minimum = distribution.getMinAmount(this.getFrom(), this.getTo());
-		this.setMinimum(minimum);
+		float average = distribution.getAverageAmount(this.getFrom(), this.getTo());
+		this.setAverage(average);
 	}
 
 	/**
@@ -102,8 +105,8 @@ public class FunctionMinimumImpl extends FunctionIntervalImpl implements Functio
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TousetimelinePackage.FUNCTION_MINIMUM__MINIMUM:
-				return getMinimum();
+			case TousetimelinePackage.FUNCTION_AVERAGE__AVERAGE:
+				return getAverage();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -116,8 +119,8 @@ public class FunctionMinimumImpl extends FunctionIntervalImpl implements Functio
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TousetimelinePackage.FUNCTION_MINIMUM__MINIMUM:
-				setMinimum((Float)newValue);
+			case TousetimelinePackage.FUNCTION_AVERAGE__AVERAGE:
+				setAverage((Float)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -131,8 +134,8 @@ public class FunctionMinimumImpl extends FunctionIntervalImpl implements Functio
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TousetimelinePackage.FUNCTION_MINIMUM__MINIMUM:
-				setMinimum(MINIMUM_EDEFAULT);
+			case TousetimelinePackage.FUNCTION_AVERAGE__AVERAGE:
+				setAverage(AVERAGE_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -146,8 +149,8 @@ public class FunctionMinimumImpl extends FunctionIntervalImpl implements Functio
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TousetimelinePackage.FUNCTION_MINIMUM__MINIMUM:
-				return minimum != MINIMUM_EDEFAULT;
+			case TousetimelinePackage.FUNCTION_AVERAGE__AVERAGE:
+				return average != AVERAGE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -162,10 +165,10 @@ public class FunctionMinimumImpl extends FunctionIntervalImpl implements Functio
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (minimum: ");
-		result.append(minimum);
+		result.append(" (average: ");
+		result.append(average);
 		result.append(')');
 		return result.toString();
 	}
 
-} //FunctionMinimumImpl
+} //FunctionAverageImpl
