@@ -17,6 +17,14 @@
     <genClasses provider="Stateful" ecoreClass="ToUseTimeLine.ecore#//DomainDistribution">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseTimeLine.ecore#//DomainDistribution/Name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseTimeLine.ecore#//DomainDistribution/Color"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseTimeLine.ecore#//DomainDistribution/Calcs"/>
+    </genClasses>
+    <genClasses ecoreClass="ToUseTimeLine.ecore#//FunctionMinimum">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseTimeLine.ecore#//FunctionMinimum/from"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseTimeLine.ecore#//FunctionMinimum/to"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute ToUseTimeLine.ecore#//FunctionMinimum/minimum"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ToUseTimeLine.ecore#//FunctionMinimum/Distribution"/>
+      <genOperations ecoreOperation="ToUseTimeLine.ecore#//FunctionMinimum/refreshMinimum"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -7,14 +7,15 @@ import com.misc.common.moplaf.propagator.PropagatorPackage;
 import com.misc.common.moplaf.time.continuous.ContinuousPackage;
 
 import com.misc.common.moplaf.time.discrete.DiscretePackage;
-
 import com.misc.touse.moplaf.timeline.tousetimeline.Domain;
 import com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution;
+import com.misc.touse.moplaf.timeline.tousetimeline.FunctionMinimum;
 import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelineFactory;
 import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -40,6 +41,13 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 	 * @generated
 	 */
 	private EClass domainDistributionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass functionMinimumEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -183,6 +191,69 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getDomainDistribution_Calcs() {
+		return (EReference)domainDistributionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getFunctionMinimum() {
+		return functionMinimumEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFunctionMinimum_From() {
+		return (EAttribute)functionMinimumEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFunctionMinimum_To() {
+		return (EAttribute)functionMinimumEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFunctionMinimum_Minimum() {
+		return (EAttribute)functionMinimumEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFunctionMinimum_Distribution() {
+		return (EReference)functionMinimumEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getFunctionMinimum__RefreshMinimum() {
+		return functionMinimumEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public TousetimelineFactory getTousetimelineFactory() {
 		return (TousetimelineFactory)getEFactoryInstance();
 	}
@@ -215,6 +286,14 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 		domainDistributionEClass = createEClass(DOMAIN_DISTRIBUTION);
 		createEAttribute(domainDistributionEClass, DOMAIN_DISTRIBUTION__NAME);
 		createEAttribute(domainDistributionEClass, DOMAIN_DISTRIBUTION__COLOR);
+		createEReference(domainDistributionEClass, DOMAIN_DISTRIBUTION__CALCS);
+
+		functionMinimumEClass = createEClass(FUNCTION_MINIMUM);
+		createEAttribute(functionMinimumEClass, FUNCTION_MINIMUM__FROM);
+		createEAttribute(functionMinimumEClass, FUNCTION_MINIMUM__TO);
+		createEAttribute(functionMinimumEClass, FUNCTION_MINIMUM__MINIMUM);
+		createEReference(functionMinimumEClass, FUNCTION_MINIMUM__DISTRIBUTION);
+		createEOperation(functionMinimumEClass, FUNCTION_MINIMUM___REFRESH_MINIMUM);
 	}
 
 	/**
@@ -253,6 +332,7 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 		domainEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctionAdapterScope());
 		domainEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctionAdapter());
 		domainDistributionEClass.getESuperTypes().add(theContinuousPackage.getDistribution());
+		functionMinimumEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctionAdapter());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -264,6 +344,15 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 		initEClass(domainDistributionEClass, DomainDistribution.class, "DomainDistribution", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDomainDistribution_Name(), ecorePackage.getEString(), "Name", null, 0, 1, DomainDistribution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDomainDistribution_Color(), ecorePackage.getEInt(), "Color", null, 0, 1, DomainDistribution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDomainDistribution_Calcs(), this.getFunctionMinimum(), this.getFunctionMinimum_Distribution(), "Calcs", null, 0, -1, DomainDistribution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(functionMinimumEClass, FunctionMinimum.class, "FunctionMinimum", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFunctionMinimum_From(), ecorePackage.getEDate(), "from", null, 0, 1, FunctionMinimum.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFunctionMinimum_To(), ecorePackage.getEDate(), "to", null, 0, 1, FunctionMinimum.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFunctionMinimum_Minimum(), ecorePackage.getEFloat(), "minimum", null, 0, 1, FunctionMinimum.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFunctionMinimum_Distribution(), this.getDomainDistribution(), this.getDomainDistribution_Calcs(), "Distribution", null, 1, 1, FunctionMinimum.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getFunctionMinimum__RefreshMinimum(), null, "refreshMinimum", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

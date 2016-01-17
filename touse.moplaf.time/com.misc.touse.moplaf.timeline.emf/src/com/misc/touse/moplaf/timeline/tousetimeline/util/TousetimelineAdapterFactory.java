@@ -79,6 +79,10 @@ public class TousetimelineAdapterFactory extends AdapterFactoryImpl {
 				return createDomainDistributionAdapter();
 			}
 			@Override
+			public Adapter caseFunctionMinimum(FunctionMinimum object) {
+				return createFunctionMinimumAdapter();
+			}
+			@Override
 			public Adapter caseObjectWithPropagatorFunctionAdapterScope(ObjectWithPropagatorFunctionAdapterScope object) {
 				return createObjectWithPropagatorFunctionAdapterScopeAdapter();
 			}
@@ -135,6 +139,20 @@ public class TousetimelineAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDomainDistributionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionMinimum <em>Function Minimum</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.FunctionMinimum
+	 * @generated
+	 */
+	public Adapter createFunctionMinimumAdapter() {
 		return null;
 	}
 

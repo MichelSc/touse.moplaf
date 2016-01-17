@@ -40,6 +40,15 @@ public interface TousetimelineFactory extends EFactory {
 	DomainDistribution createDomainDistribution();
 
 	/**
+	 * Returns a new object of class '<em>Function Minimum</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Function Minimum</em>'.
+	 * @generated
+	 */
+	FunctionMinimum createFunctionMinimum();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

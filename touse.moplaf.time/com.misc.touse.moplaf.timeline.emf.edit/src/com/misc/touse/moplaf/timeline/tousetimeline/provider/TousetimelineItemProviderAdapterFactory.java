@@ -116,6 +116,29 @@ public class TousetimelineItemProviderAdapterFactory extends TousetimelineAdapte
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionMinimum} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FunctionMinimumItemProvider functionMinimumItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionMinimum}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFunctionMinimumAdapter() {
+		if (functionMinimumItemProvider == null) {
+			functionMinimumItemProvider = new FunctionMinimumItemProvider(this);
+		}
+
+		return functionMinimumItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

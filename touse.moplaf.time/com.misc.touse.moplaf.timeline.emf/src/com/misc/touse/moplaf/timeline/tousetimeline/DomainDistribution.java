@@ -3,6 +3,7 @@
 package com.misc.touse.moplaf.timeline.tousetimeline;
 
 import com.misc.common.moplaf.time.continuous.Distribution;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,6 +16,7 @@ import com.misc.common.moplaf.time.continuous.Distribution;
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution#getName <em>Name</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution#getColor <em>Color</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution#getCalcs <em>Calcs</em>}</li>
  * </ul>
  *
  * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getDomainDistribution()
@@ -73,5 +75,23 @@ public interface DomainDistribution extends Distribution {
 	 * @generated
 	 */
 	void setColor(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Calcs</b></em>' containment reference list.
+	 * The list contents are of type {@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionMinimum}.
+	 * It is bidirectional and its opposite is '{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionMinimum#getDistribution <em>Distribution</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Calcs</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Calcs</em>' containment reference list.
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getDomainDistribution_Calcs()
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.FunctionMinimum#getDistribution
+	 * @model opposite="Distribution" containment="true"
+	 * @generated
+	 */
+	EList<FunctionMinimum> getCalcs();
 
 } // DomainDistribution

@@ -58,6 +58,7 @@ public class TousetimelineFactoryImpl extends EFactoryImpl implements Tousetimel
 		switch (eClass.getClassifierID()) {
 			case TousetimelinePackage.DOMAIN: return createDomain();
 			case TousetimelinePackage.DOMAIN_DISTRIBUTION: return createDomainDistribution();
+			case TousetimelinePackage.FUNCTION_MINIMUM: return createFunctionMinimum();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -81,6 +82,16 @@ public class TousetimelineFactoryImpl extends EFactoryImpl implements Tousetimel
 	public DomainDistribution createDomainDistribution() {
 		DomainDistributionImpl domainDistribution = new DomainDistributionImpl();
 		return domainDistribution;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FunctionMinimum createFunctionMinimum() {
+		FunctionMinimumImpl functionMinimum = new FunctionMinimumImpl();
+		return functionMinimum;
 	}
 
 	/**
