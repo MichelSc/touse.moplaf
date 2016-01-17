@@ -17,6 +17,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution#getName <em>Name</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution#getColor <em>Color</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution#getFunctions <em>Functions</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution#getPossibles <em>Possibles</em>}</li>
  * </ul>
  *
  * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getDomainDistribution()
@@ -93,5 +94,23 @@ public interface DomainDistribution extends Distribution {
 	 * @generated
 	 */
 	EList<FunctionInterval> getFunctions();
+
+	/**
+	 * Returns the value of the '<em><b>Possibles</b></em>' containment reference list.
+	 * The list contents are of type {@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionPossible}.
+	 * It is bidirectional and its opposite is '{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionPossible#getDistribution <em>Distribution</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Possibles</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Possibles</em>' containment reference list.
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getDomainDistribution_Possibles()
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.FunctionPossible#getDistribution
+	 * @model opposite="Distribution" containment="true"
+	 * @generated
+	 */
+	EList<FunctionPossible> getPossibles();
 
 } // DomainDistribution

@@ -76,6 +76,24 @@ public interface TousetimelineFactory extends EFactory {
 	FunctionAverage createFunctionAverage();
 
 	/**
+	 * Returns a new object of class '<em>Function Possible</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Function Possible</em>'.
+	 * @generated
+	 */
+	FunctionPossible createFunctionPossible();
+
+	/**
+	 * Returns a new object of class '<em>Function Earliest Below</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Function Earliest Below</em>'.
+	 * @generated
+	 */
+	FunctionEarliestBelow createFunctionEarliestBelow();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

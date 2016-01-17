@@ -208,6 +208,52 @@ public class TousetimelineItemProviderAdapterFactory extends TousetimelineAdapte
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionPossible} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FunctionPossibleItemProvider functionPossibleItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionPossible}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFunctionPossibleAdapter() {
+		if (functionPossibleItemProvider == null) {
+			functionPossibleItemProvider = new FunctionPossibleItemProvider(this);
+		}
+
+		return functionPossibleItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionEarliestBelow} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FunctionEarliestBelowItemProvider functionEarliestBelowItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionEarliestBelow}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFunctionEarliestBelowAdapter() {
+		if (functionEarliestBelowItemProvider == null) {
+			functionEarliestBelowItemProvider = new FunctionEarliestBelowItemProvider(this);
+		}
+
+		return functionEarliestBelowItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

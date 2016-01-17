@@ -116,6 +116,21 @@ public class TousetimelineSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case TousetimelinePackage.FUNCTION_POSSIBLE: {
+				FunctionPossible functionPossible = (FunctionPossible)theEObject;
+				T result = caseFunctionPossible(functionPossible);
+				if (result == null) result = caseObjectWithPropagatorFunctionAdapter(functionPossible);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case TousetimelinePackage.FUNCTION_EARLIEST_BELOW: {
+				FunctionEarliestBelow functionEarliestBelow = (FunctionEarliestBelow)theEObject;
+				T result = caseFunctionEarliestBelow(functionEarliestBelow);
+				if (result == null) result = caseFunctionPossible(functionEarliestBelow);
+				if (result == null) result = caseObjectWithPropagatorFunctionAdapter(functionEarliestBelow);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -207,6 +222,36 @@ public class TousetimelineSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseFunctionAverage(FunctionAverage object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Function Possible</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Function Possible</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFunctionPossible(FunctionPossible object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Function Earliest Below</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Function Earliest Below</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFunctionEarliestBelow(FunctionEarliestBelow object) {
 		return null;
 	}
 

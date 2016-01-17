@@ -11,8 +11,10 @@ import com.misc.touse.moplaf.timeline.tousetimeline.Domain;
 import com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution;
 import com.misc.touse.moplaf.timeline.tousetimeline.FunctionAverage;
 import com.misc.touse.moplaf.timeline.tousetimeline.FunctionCumulated;
+import com.misc.touse.moplaf.timeline.tousetimeline.FunctionEarliestBelow;
 import com.misc.touse.moplaf.timeline.tousetimeline.FunctionInterval;
 import com.misc.touse.moplaf.timeline.tousetimeline.FunctionMinimum;
+import com.misc.touse.moplaf.timeline.tousetimeline.FunctionPossible;
 import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelineFactory;
 import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage;
 
@@ -72,6 +74,20 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 	 * @generated
 	 */
 	private EClass functionAverageEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass functionPossibleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass functionEarliestBelowEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -224,6 +240,15 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getDomainDistribution_Possibles() {
+		return (EReference)domainDistributionEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getFunctionMinimum() {
 		return functionMinimumEClass;
 	}
@@ -323,6 +348,78 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getFunctionPossible() {
+		return functionPossibleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFunctionPossible_LimitMoment() {
+		return (EAttribute)functionPossibleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFunctionPossible_LimitDuration() {
+		return (EAttribute)functionPossibleEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFunctionPossible_LimitAmount() {
+		return (EAttribute)functionPossibleEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFunctionPossible_Distribution() {
+		return (EReference)functionPossibleEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getFunctionPossible__Refresh() {
+		return functionPossibleEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getFunctionEarliestBelow() {
+		return functionEarliestBelowEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFunctionEarliestBelow_EarliestBelow() {
+		return (EAttribute)functionEarliestBelowEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public TousetimelineFactory getTousetimelineFactory() {
 		return (TousetimelineFactory)getEFactoryInstance();
 	}
@@ -356,6 +453,7 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 		createEAttribute(domainDistributionEClass, DOMAIN_DISTRIBUTION__NAME);
 		createEAttribute(domainDistributionEClass, DOMAIN_DISTRIBUTION__COLOR);
 		createEReference(domainDistributionEClass, DOMAIN_DISTRIBUTION__FUNCTIONS);
+		createEReference(domainDistributionEClass, DOMAIN_DISTRIBUTION__POSSIBLES);
 
 		functionMinimumEClass = createEClass(FUNCTION_MINIMUM);
 		createEAttribute(functionMinimumEClass, FUNCTION_MINIMUM__MINIMUM);
@@ -371,6 +469,16 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 
 		functionAverageEClass = createEClass(FUNCTION_AVERAGE);
 		createEAttribute(functionAverageEClass, FUNCTION_AVERAGE__AVERAGE);
+
+		functionPossibleEClass = createEClass(FUNCTION_POSSIBLE);
+		createEAttribute(functionPossibleEClass, FUNCTION_POSSIBLE__LIMIT_MOMENT);
+		createEAttribute(functionPossibleEClass, FUNCTION_POSSIBLE__LIMIT_DURATION);
+		createEAttribute(functionPossibleEClass, FUNCTION_POSSIBLE__LIMIT_AMOUNT);
+		createEReference(functionPossibleEClass, FUNCTION_POSSIBLE__DISTRIBUTION);
+		createEOperation(functionPossibleEClass, FUNCTION_POSSIBLE___REFRESH);
+
+		functionEarliestBelowEClass = createEClass(FUNCTION_EARLIEST_BELOW);
+		createEAttribute(functionEarliestBelowEClass, FUNCTION_EARLIEST_BELOW__EARLIEST_BELOW);
 	}
 
 	/**
@@ -413,6 +521,8 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 		functionIntervalEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctionAdapter());
 		functionCumulatedEClass.getESuperTypes().add(this.getFunctionInterval());
 		functionAverageEClass.getESuperTypes().add(this.getFunctionInterval());
+		functionPossibleEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctionAdapter());
+		functionEarliestBelowEClass.getESuperTypes().add(this.getFunctionPossible());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -425,6 +535,7 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 		initEAttribute(getDomainDistribution_Name(), ecorePackage.getEString(), "Name", null, 0, 1, DomainDistribution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDomainDistribution_Color(), ecorePackage.getEInt(), "Color", null, 0, 1, DomainDistribution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDomainDistribution_Functions(), this.getFunctionInterval(), this.getFunctionInterval_Distribution(), "Functions", null, 0, -1, DomainDistribution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDomainDistribution_Possibles(), this.getFunctionPossible(), this.getFunctionPossible_Distribution(), "Possibles", null, 0, -1, DomainDistribution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(functionMinimumEClass, FunctionMinimum.class, "FunctionMinimum", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFunctionMinimum_Minimum(), ecorePackage.getEFloat(), "minimum", null, 0, 1, FunctionMinimum.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -441,6 +552,17 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 
 		initEClass(functionAverageEClass, FunctionAverage.class, "FunctionAverage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFunctionAverage_Average(), ecorePackage.getEFloat(), "average", "0.0", 0, 1, FunctionAverage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(functionPossibleEClass, FunctionPossible.class, "FunctionPossible", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFunctionPossible_LimitMoment(), ecorePackage.getEDate(), "limitMoment", null, 0, 1, FunctionPossible.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFunctionPossible_LimitDuration(), ecorePackage.getEFloat(), "limitDuration", null, 0, 1, FunctionPossible.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFunctionPossible_LimitAmount(), ecorePackage.getEFloat(), "limitAmount", null, 0, 1, FunctionPossible.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFunctionPossible_Distribution(), this.getDomainDistribution(), this.getDomainDistribution_Possibles(), "Distribution", null, 0, 1, FunctionPossible.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getFunctionPossible__Refresh(), null, "refresh", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(functionEarliestBelowEClass, FunctionEarliestBelow.class, "FunctionEarliestBelow", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFunctionEarliestBelow_EarliestBelow(), ecorePackage.getEDate(), "earliestBelow", null, 0, 1, FunctionEarliestBelow.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

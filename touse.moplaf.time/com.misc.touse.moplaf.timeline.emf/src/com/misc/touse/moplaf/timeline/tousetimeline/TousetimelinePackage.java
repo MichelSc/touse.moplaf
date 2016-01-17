@@ -278,13 +278,22 @@ public interface TousetimelinePackage extends EPackage {
 	int DOMAIN_DISTRIBUTION__FUNCTIONS = ContinuousPackage.DISTRIBUTION_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Possibles</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_DISTRIBUTION__POSSIBLES = ContinuousPackage.DISTRIBUTION_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Domain Distribution</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION_FEATURE_COUNT = ContinuousPackage.DISTRIBUTION_FEATURE_COUNT + 3;
+	int DOMAIN_DISTRIBUTION_FEATURE_COUNT = ContinuousPackage.DISTRIBUTION_FEATURE_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Add Propagator Function Adapter</em>' operation.
@@ -841,6 +850,179 @@ public interface TousetimelinePackage extends EPackage {
 	int FUNCTION_AVERAGE_OPERATION_COUNT = FUNCTION_INTERVAL_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.FunctionPossibleImpl <em>Function Possible</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.FunctionPossibleImpl
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.TousetimelinePackageImpl#getFunctionPossible()
+	 * @generated
+	 */
+	int FUNCTION_POSSIBLE = 6;
+
+	/**
+	 * The feature id for the '<em><b>Limit Moment</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_POSSIBLE__LIMIT_MOMENT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Limit Duration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_POSSIBLE__LIMIT_DURATION = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Limit Amount</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_POSSIBLE__LIMIT_AMOUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Distribution</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_POSSIBLE__DISTRIBUTION = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>Function Possible</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_POSSIBLE_FEATURE_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 4;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Function Adapter</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_POSSIBLE___ADD_PROPAGATOR_FUNCTION_ADAPTER = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER___ADD_PROPAGATOR_FUNCTION_ADAPTER;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_POSSIBLE___REFRESH = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_OPERATION_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Function Possible</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_POSSIBLE_OPERATION_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_OPERATION_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.FunctionEarliestBelowImpl <em>Function Earliest Below</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.FunctionEarliestBelowImpl
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.TousetimelinePackageImpl#getFunctionEarliestBelow()
+	 * @generated
+	 */
+	int FUNCTION_EARLIEST_BELOW = 7;
+
+	/**
+	 * The feature id for the '<em><b>Limit Moment</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_EARLIEST_BELOW__LIMIT_MOMENT = FUNCTION_POSSIBLE__LIMIT_MOMENT;
+
+	/**
+	 * The feature id for the '<em><b>Limit Duration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_EARLIEST_BELOW__LIMIT_DURATION = FUNCTION_POSSIBLE__LIMIT_DURATION;
+
+	/**
+	 * The feature id for the '<em><b>Limit Amount</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_EARLIEST_BELOW__LIMIT_AMOUNT = FUNCTION_POSSIBLE__LIMIT_AMOUNT;
+
+	/**
+	 * The feature id for the '<em><b>Distribution</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_EARLIEST_BELOW__DISTRIBUTION = FUNCTION_POSSIBLE__DISTRIBUTION;
+
+	/**
+	 * The feature id for the '<em><b>Earliest Below</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_EARLIEST_BELOW__EARLIEST_BELOW = FUNCTION_POSSIBLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Function Earliest Below</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_EARLIEST_BELOW_FEATURE_COUNT = FUNCTION_POSSIBLE_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Function Adapter</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_EARLIEST_BELOW___ADD_PROPAGATOR_FUNCTION_ADAPTER = FUNCTION_POSSIBLE___ADD_PROPAGATOR_FUNCTION_ADAPTER;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_EARLIEST_BELOW___REFRESH = FUNCTION_POSSIBLE___REFRESH;
+
+	/**
+	 * The number of operations of the '<em>Function Earliest Below</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_EARLIEST_BELOW_OPERATION_COUNT = FUNCTION_POSSIBLE_OPERATION_COUNT + 0;
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.timeline.tousetimeline.Domain <em>Domain</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -936,6 +1118,17 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getDomainDistribution_Functions();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution#getPossibles <em>Possibles</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Possibles</em>'.
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution#getPossibles()
+	 * @see #getDomainDistribution()
+	 * @generated
+	 */
+	EReference getDomainDistribution_Possibles();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionMinimum <em>Function Minimum</em>}'.
@@ -1054,6 +1247,91 @@ public interface TousetimelinePackage extends EPackage {
 	EAttribute getFunctionAverage_Average();
 
 	/**
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionPossible <em>Function Possible</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Function Possible</em>'.
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.FunctionPossible
+	 * @generated
+	 */
+	EClass getFunctionPossible();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionPossible#getLimitMoment <em>Limit Moment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Limit Moment</em>'.
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.FunctionPossible#getLimitMoment()
+	 * @see #getFunctionPossible()
+	 * @generated
+	 */
+	EAttribute getFunctionPossible_LimitMoment();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionPossible#getLimitDuration <em>Limit Duration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Limit Duration</em>'.
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.FunctionPossible#getLimitDuration()
+	 * @see #getFunctionPossible()
+	 * @generated
+	 */
+	EAttribute getFunctionPossible_LimitDuration();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionPossible#getLimitAmount <em>Limit Amount</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Limit Amount</em>'.
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.FunctionPossible#getLimitAmount()
+	 * @see #getFunctionPossible()
+	 * @generated
+	 */
+	EAttribute getFunctionPossible_LimitAmount();
+
+	/**
+	 * Returns the meta object for the container reference '{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionPossible#getDistribution <em>Distribution</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Distribution</em>'.
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.FunctionPossible#getDistribution()
+	 * @see #getFunctionPossible()
+	 * @generated
+	 */
+	EReference getFunctionPossible_Distribution();
+
+	/**
+	 * Returns the meta object for the '{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionPossible#refresh() <em>Refresh</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Refresh</em>' operation.
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.FunctionPossible#refresh()
+	 * @generated
+	 */
+	EOperation getFunctionPossible__Refresh();
+
+	/**
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionEarliestBelow <em>Function Earliest Below</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Function Earliest Below</em>'.
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.FunctionEarliestBelow
+	 * @generated
+	 */
+	EClass getFunctionEarliestBelow();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionEarliestBelow#getEarliestBelow <em>Earliest Below</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Earliest Below</em>'.
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.FunctionEarliestBelow#getEarliestBelow()
+	 * @see #getFunctionEarliestBelow()
+	 * @generated
+	 */
+	EAttribute getFunctionEarliestBelow_EarliestBelow();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1153,6 +1431,14 @@ public interface TousetimelinePackage extends EPackage {
 		EReference DOMAIN_DISTRIBUTION__FUNCTIONS = eINSTANCE.getDomainDistribution_Functions();
 
 		/**
+		 * The meta object literal for the '<em><b>Possibles</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DOMAIN_DISTRIBUTION__POSSIBLES = eINSTANCE.getDomainDistribution_Possibles();
+
+		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.FunctionMinimumImpl <em>Function Minimum</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1247,6 +1533,74 @@ public interface TousetimelinePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute FUNCTION_AVERAGE__AVERAGE = eINSTANCE.getFunctionAverage_Average();
+
+		/**
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.FunctionPossibleImpl <em>Function Possible</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.FunctionPossibleImpl
+		 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.TousetimelinePackageImpl#getFunctionPossible()
+		 * @generated
+		 */
+		EClass FUNCTION_POSSIBLE = eINSTANCE.getFunctionPossible();
+
+		/**
+		 * The meta object literal for the '<em><b>Limit Moment</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FUNCTION_POSSIBLE__LIMIT_MOMENT = eINSTANCE.getFunctionPossible_LimitMoment();
+
+		/**
+		 * The meta object literal for the '<em><b>Limit Duration</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FUNCTION_POSSIBLE__LIMIT_DURATION = eINSTANCE.getFunctionPossible_LimitDuration();
+
+		/**
+		 * The meta object literal for the '<em><b>Limit Amount</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FUNCTION_POSSIBLE__LIMIT_AMOUNT = eINSTANCE.getFunctionPossible_LimitAmount();
+
+		/**
+		 * The meta object literal for the '<em><b>Distribution</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FUNCTION_POSSIBLE__DISTRIBUTION = eINSTANCE.getFunctionPossible_Distribution();
+
+		/**
+		 * The meta object literal for the '<em><b>Refresh</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation FUNCTION_POSSIBLE___REFRESH = eINSTANCE.getFunctionPossible__Refresh();
+
+		/**
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.FunctionEarliestBelowImpl <em>Function Earliest Below</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.FunctionEarliestBelowImpl
+		 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.TousetimelinePackageImpl#getFunctionEarliestBelow()
+		 * @generated
+		 */
+		EClass FUNCTION_EARLIEST_BELOW = eINSTANCE.getFunctionEarliestBelow();
+
+		/**
+		 * The meta object literal for the '<em><b>Earliest Below</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FUNCTION_EARLIEST_BELOW__EARLIEST_BELOW = eINSTANCE.getFunctionEarliestBelow_EarliestBelow();
 
 	}
 

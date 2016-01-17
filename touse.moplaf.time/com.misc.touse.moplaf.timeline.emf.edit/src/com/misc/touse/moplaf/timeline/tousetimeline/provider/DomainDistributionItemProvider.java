@@ -127,6 +127,7 @@ public class DomainDistributionItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(TousetimelinePackage.Literals.DOMAIN_DISTRIBUTION__FUNCTIONS);
+			childrenFeatures.add(TousetimelinePackage.Literals.DOMAIN_DISTRIBUTION__POSSIBLES);
 		}
 		return childrenFeatures;
 	}
@@ -186,6 +187,7 @@ public class DomainDistributionItemProvider
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case TousetimelinePackage.DOMAIN_DISTRIBUTION__FUNCTIONS:
+			case TousetimelinePackage.DOMAIN_DISTRIBUTION__POSSIBLES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -222,6 +224,16 @@ public class DomainDistributionItemProvider
 			(createChildParameter
 				(TousetimelinePackage.Literals.DOMAIN_DISTRIBUTION__FUNCTIONS,
 				 TousetimelineFactory.eINSTANCE.createFunctionAverage()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TousetimelinePackage.Literals.DOMAIN_DISTRIBUTION__POSSIBLES,
+				 TousetimelineFactory.eINSTANCE.createFunctionPossible()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TousetimelinePackage.Literals.DOMAIN_DISTRIBUTION__POSSIBLES,
+				 TousetimelineFactory.eINSTANCE.createFunctionEarliestBelow()));
 	}
 
 	/**

@@ -18,6 +18,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Color" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Functions" upperBound="-1"
         eType="#//FunctionInterval" containment="true" eOpposite="#//FunctionInterval/Distribution"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Possibles" upperBound="-1"
+        eType="#//FunctionPossible" containment="true" eOpposite="#//FunctionPossible/Distribution"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FunctionMinimum" eSuperTypes="#//FunctionInterval">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="minimum" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
@@ -36,5 +38,16 @@
   <eClassifiers xsi:type="ecore:EClass" name="FunctionAverage" eSuperTypes="#//FunctionInterval">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="average" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
         defaultValueLiteral="0.0"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FunctionPossible" eSuperTypes="../../com.misc.common.moplaf.propagator/model/propagator.ecore#//ObjectWithPropagatorFunctionAdapter">
+    <eOperations name="refresh"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="limitMoment" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="limitDuration" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="limitAmount" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Distribution" eType="#//DomainDistribution"
+        eOpposite="#//DomainDistribution/Possibles"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FunctionEarliestBelow" eSuperTypes="#//FunctionPossible">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="earliestBelow" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
   </eClassifiers>
 </ecore:EPackage>

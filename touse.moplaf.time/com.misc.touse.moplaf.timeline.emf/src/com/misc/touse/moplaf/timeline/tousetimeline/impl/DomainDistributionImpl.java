@@ -8,6 +8,7 @@ import com.misc.common.moplaf.propagator.Util;
 import com.misc.common.moplaf.time.continuous.impl.DistributionImpl;
 import com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution;
 import com.misc.touse.moplaf.timeline.tousetimeline.FunctionInterval;
+import com.misc.touse.moplaf.timeline.tousetimeline.FunctionPossible;
 import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage;
 
 import java.util.Collection;
@@ -31,6 +32,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainDistributionImpl#getName <em>Name</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainDistributionImpl#getColor <em>Color</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainDistributionImpl#getFunctions <em>Functions</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainDistributionImpl#getPossibles <em>Possibles</em>}</li>
  * </ul>
  *
  * @generated
@@ -85,6 +87,16 @@ public class DomainDistributionImpl extends DistributionImpl implements DomainDi
 	 * @ordered
 	 */
 	protected EList<FunctionInterval> functions;
+
+	/**
+	 * The cached value of the '{@link #getPossibles() <em>Possibles</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPossibles()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<FunctionPossible> possibles;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -185,12 +197,28 @@ public class DomainDistributionImpl extends DistributionImpl implements DomainDi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<FunctionPossible> getPossibles() {
+		if (possibles == null) {
+			possibles = new EObjectContainmentWithInverseEList<FunctionPossible>(FunctionPossible.class, this, TousetimelinePackage.DOMAIN_DISTRIBUTION__POSSIBLES, TousetimelinePackage.FUNCTION_POSSIBLE__DISTRIBUTION);
+		}
+		return possibles;
+	}
+
+
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case TousetimelinePackage.DOMAIN_DISTRIBUTION__FUNCTIONS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getFunctions()).basicAdd(otherEnd, msgs);
+			case TousetimelinePackage.DOMAIN_DISTRIBUTION__POSSIBLES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getPossibles()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -207,6 +235,8 @@ public class DomainDistributionImpl extends DistributionImpl implements DomainDi
 		switch (featureID) {
 			case TousetimelinePackage.DOMAIN_DISTRIBUTION__FUNCTIONS:
 				return ((InternalEList<?>)getFunctions()).basicRemove(otherEnd, msgs);
+			case TousetimelinePackage.DOMAIN_DISTRIBUTION__POSSIBLES:
+				return ((InternalEList<?>)getPossibles()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -227,6 +257,8 @@ public class DomainDistributionImpl extends DistributionImpl implements DomainDi
 				return getColor();
 			case TousetimelinePackage.DOMAIN_DISTRIBUTION__FUNCTIONS:
 				return getFunctions();
+			case TousetimelinePackage.DOMAIN_DISTRIBUTION__POSSIBLES:
+				return getPossibles();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -250,6 +282,10 @@ public class DomainDistributionImpl extends DistributionImpl implements DomainDi
 				getFunctions().clear();
 				getFunctions().addAll((Collection<? extends FunctionInterval>)newValue);
 				return;
+			case TousetimelinePackage.DOMAIN_DISTRIBUTION__POSSIBLES:
+				getPossibles().clear();
+				getPossibles().addAll((Collection<? extends FunctionPossible>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -271,6 +307,9 @@ public class DomainDistributionImpl extends DistributionImpl implements DomainDi
 			case TousetimelinePackage.DOMAIN_DISTRIBUTION__FUNCTIONS:
 				getFunctions().clear();
 				return;
+			case TousetimelinePackage.DOMAIN_DISTRIBUTION__POSSIBLES:
+				getPossibles().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -289,6 +328,8 @@ public class DomainDistributionImpl extends DistributionImpl implements DomainDi
 				return color != COLOR_EDEFAULT;
 			case TousetimelinePackage.DOMAIN_DISTRIBUTION__FUNCTIONS:
 				return functions != null && !functions.isEmpty();
+			case TousetimelinePackage.DOMAIN_DISTRIBUTION__POSSIBLES:
+				return possibles != null && !possibles.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

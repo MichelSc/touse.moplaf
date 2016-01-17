@@ -17,14 +17,33 @@
     <genClasses provider="Stateful" ecoreClass="ToUseTimeLine.ecore#//DomainDistribution">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseTimeLine.ecore#//DomainDistribution/Name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseTimeLine.ecore#//DomainDistribution/Color"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseTimeLine.ecore#//DomainDistribution/Calcs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseTimeLine.ecore#//DomainDistribution/Functions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseTimeLine.ecore#//DomainDistribution/Possibles"/>
     </genClasses>
     <genClasses ecoreClass="ToUseTimeLine.ecore#//FunctionMinimum">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseTimeLine.ecore#//FunctionMinimum/from"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseTimeLine.ecore#//FunctionMinimum/to"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute ToUseTimeLine.ecore#//FunctionMinimum/minimum"/>
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ToUseTimeLine.ecore#//FunctionMinimum/Distribution"/>
-      <genOperations ecoreOperation="ToUseTimeLine.ecore#//FunctionMinimum/refreshMinimum"/>
+    </genClasses>
+    <genClasses ecoreClass="ToUseTimeLine.ecore#//FunctionInterval">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseTimeLine.ecore#//FunctionInterval/from"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseTimeLine.ecore#//FunctionInterval/to"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ToUseTimeLine.ecore#//FunctionInterval/Distribution"/>
+      <genOperations ecoreOperation="ToUseTimeLine.ecore#//FunctionInterval/refresh"/>
+    </genClasses>
+    <genClasses ecoreClass="ToUseTimeLine.ecore#//FunctionCumulated">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseTimeLine.ecore#//FunctionCumulated/cumulated"/>
+    </genClasses>
+    <genClasses ecoreClass="ToUseTimeLine.ecore#//FunctionAverage">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseTimeLine.ecore#//FunctionAverage/average"/>
+    </genClasses>
+    <genClasses ecoreClass="ToUseTimeLine.ecore#//FunctionPossible">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseTimeLine.ecore#//FunctionPossible/limitMoment"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseTimeLine.ecore#//FunctionPossible/limitDuration"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseTimeLine.ecore#//FunctionPossible/limitAmount"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ToUseTimeLine.ecore#//FunctionPossible/Distribution"/>
+      <genOperations ecoreOperation="ToUseTimeLine.ecore#//FunctionPossible/refresh"/>
+    </genClasses>
+    <genClasses ecoreClass="ToUseTimeLine.ecore#//FunctionEarliestBelow">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute ToUseTimeLine.ecore#//FunctionEarliestBelow/earliestBelow"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

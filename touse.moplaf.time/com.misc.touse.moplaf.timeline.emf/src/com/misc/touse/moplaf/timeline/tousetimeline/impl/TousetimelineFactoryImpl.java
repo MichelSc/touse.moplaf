@@ -62,6 +62,8 @@ public class TousetimelineFactoryImpl extends EFactoryImpl implements Tousetimel
 			case TousetimelinePackage.FUNCTION_INTERVAL: return createFunctionInterval();
 			case TousetimelinePackage.FUNCTION_CUMULATED: return createFunctionCumulated();
 			case TousetimelinePackage.FUNCTION_AVERAGE: return createFunctionAverage();
+			case TousetimelinePackage.FUNCTION_POSSIBLE: return createFunctionPossible();
+			case TousetimelinePackage.FUNCTION_EARLIEST_BELOW: return createFunctionEarliestBelow();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -125,6 +127,26 @@ public class TousetimelineFactoryImpl extends EFactoryImpl implements Tousetimel
 	public FunctionAverage createFunctionAverage() {
 		FunctionAverageImpl functionAverage = new FunctionAverageImpl();
 		return functionAverage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FunctionPossible createFunctionPossible() {
+		FunctionPossibleImpl functionPossible = new FunctionPossibleImpl();
+		return functionPossible;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FunctionEarliestBelow createFunctionEarliestBelow() {
+		FunctionEarliestBelowImpl functionEarliestBelow = new FunctionEarliestBelowImpl();
+		return functionEarliestBelow;
 	}
 
 	/**
