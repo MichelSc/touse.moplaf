@@ -65,7 +65,7 @@ public class FunctionCumulatedItemProvider extends FunctionIntervalItemProvider 
 				 getString("_UI_FunctionCumulated_cumulated_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FunctionCumulated_cumulated_feature", "_UI_FunctionCumulated_type"),
 				 TousetimelinePackage.Literals.FUNCTION_CUMULATED__CUMULATED,
-				 true,
+				 false,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,

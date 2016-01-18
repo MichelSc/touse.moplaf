@@ -234,6 +234,11 @@ public class DomainDistributionItemProvider
 			(createChildParameter
 				(TousetimelinePackage.Literals.DOMAIN_DISTRIBUTION__POSSIBLES,
 				 TousetimelineFactory.eINSTANCE.createFunctionEarliestBelow()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TousetimelinePackage.Literals.DOMAIN_DISTRIBUTION__POSSIBLES,
+				 TousetimelineFactory.eINSTANCE.createFunctionEarliestOutput()));
 	}
 
 	/**

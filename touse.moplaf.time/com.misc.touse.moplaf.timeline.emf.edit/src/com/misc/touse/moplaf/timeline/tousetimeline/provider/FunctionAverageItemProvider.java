@@ -65,7 +65,7 @@ public class FunctionAverageItemProvider extends FunctionIntervalItemProvider {
 				 getString("_UI_FunctionAverage_average_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FunctionAverage_average_feature", "_UI_FunctionAverage_type"),
 				 TousetimelinePackage.Literals.FUNCTION_AVERAGE__AVERAGE,
-				 true,
+				 false,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,

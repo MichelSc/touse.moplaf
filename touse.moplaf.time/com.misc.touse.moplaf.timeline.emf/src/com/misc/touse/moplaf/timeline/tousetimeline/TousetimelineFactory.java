@@ -94,6 +94,15 @@ public interface TousetimelineFactory extends EFactory {
 	FunctionEarliestBelow createFunctionEarliestBelow();
 
 	/**
+	 * Returns a new object of class '<em>Function Earliest Output</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Function Earliest Output</em>'.
+	 * @generated
+	 */
+	FunctionEarliestOutput createFunctionEarliestOutput();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

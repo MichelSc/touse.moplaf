@@ -103,6 +103,10 @@ public class TousetimelineAdapterFactory extends AdapterFactoryImpl {
 				return createFunctionEarliestBelowAdapter();
 			}
 			@Override
+			public Adapter caseFunctionEarliestOutput(FunctionEarliestOutput object) {
+				return createFunctionEarliestOutputAdapter();
+			}
+			@Override
 			public Adapter caseObjectWithPropagatorFunctionAdapterScope(ObjectWithPropagatorFunctionAdapterScope object) {
 				return createObjectWithPropagatorFunctionAdapterScopeAdapter();
 			}
@@ -243,6 +247,20 @@ public class TousetimelineAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createFunctionEarliestBelowAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionEarliestOutput <em>Function Earliest Output</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.FunctionEarliestOutput
+	 * @generated
+	 */
+	public Adapter createFunctionEarliestOutputAdapter() {
 		return null;
 	}
 

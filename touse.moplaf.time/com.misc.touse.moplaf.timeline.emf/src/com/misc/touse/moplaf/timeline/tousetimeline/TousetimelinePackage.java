@@ -467,6 +467,15 @@ public interface TousetimelinePackage extends EPackage {
 	int DOMAIN_DISTRIBUTION___GET_LATEST_ABOVE__DATE_FLOAT_FLOAT = ContinuousPackage.DISTRIBUTION___GET_LATEST_ABOVE__DATE_FLOAT_FLOAT;
 
 	/**
+	 * The operation id for the '<em>Get Earliest Output Possible</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_DISTRIBUTION___GET_EARLIEST_OUTPUT_POSSIBLE__DATE_FLOAT_FLOAT = ContinuousPackage.DISTRIBUTION___GET_EARLIEST_OUTPUT_POSSIBLE__DATE_FLOAT_FLOAT;
+
+	/**
 	 * The operation id for the '<em>Refresh Init</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1023,6 +1032,97 @@ public interface TousetimelinePackage extends EPackage {
 	int FUNCTION_EARLIEST_BELOW_OPERATION_COUNT = FUNCTION_POSSIBLE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.FunctionEarliestOutputImpl <em>Function Earliest Output</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.FunctionEarliestOutputImpl
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.TousetimelinePackageImpl#getFunctionEarliestOutput()
+	 * @generated
+	 */
+	int FUNCTION_EARLIEST_OUTPUT = 8;
+
+	/**
+	 * The feature id for the '<em><b>Limit Moment</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_EARLIEST_OUTPUT__LIMIT_MOMENT = FUNCTION_POSSIBLE__LIMIT_MOMENT;
+
+	/**
+	 * The feature id for the '<em><b>Limit Duration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_EARLIEST_OUTPUT__LIMIT_DURATION = FUNCTION_POSSIBLE__LIMIT_DURATION;
+
+	/**
+	 * The feature id for the '<em><b>Limit Amount</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_EARLIEST_OUTPUT__LIMIT_AMOUNT = FUNCTION_POSSIBLE__LIMIT_AMOUNT;
+
+	/**
+	 * The feature id for the '<em><b>Distribution</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_EARLIEST_OUTPUT__DISTRIBUTION = FUNCTION_POSSIBLE__DISTRIBUTION;
+
+	/**
+	 * The feature id for the '<em><b>Earliest Output</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_EARLIEST_OUTPUT__EARLIEST_OUTPUT = FUNCTION_POSSIBLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Function Earliest Output</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_EARLIEST_OUTPUT_FEATURE_COUNT = FUNCTION_POSSIBLE_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Function Adapter</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_EARLIEST_OUTPUT___ADD_PROPAGATOR_FUNCTION_ADAPTER = FUNCTION_POSSIBLE___ADD_PROPAGATOR_FUNCTION_ADAPTER;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_EARLIEST_OUTPUT___REFRESH = FUNCTION_POSSIBLE___REFRESH;
+
+	/**
+	 * The number of operations of the '<em>Function Earliest Output</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_EARLIEST_OUTPUT_OPERATION_COUNT = FUNCTION_POSSIBLE_OPERATION_COUNT + 0;
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.timeline.tousetimeline.Domain <em>Domain</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1332,6 +1432,27 @@ public interface TousetimelinePackage extends EPackage {
 	EAttribute getFunctionEarliestBelow_EarliestBelow();
 
 	/**
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionEarliestOutput <em>Function Earliest Output</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Function Earliest Output</em>'.
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.FunctionEarliestOutput
+	 * @generated
+	 */
+	EClass getFunctionEarliestOutput();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionEarliestOutput#getEarliestOutput <em>Earliest Output</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Earliest Output</em>'.
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.FunctionEarliestOutput#getEarliestOutput()
+	 * @see #getFunctionEarliestOutput()
+	 * @generated
+	 */
+	EAttribute getFunctionEarliestOutput_EarliestOutput();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1601,6 +1722,24 @@ public interface TousetimelinePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute FUNCTION_EARLIEST_BELOW__EARLIEST_BELOW = eINSTANCE.getFunctionEarliestBelow_EarliestBelow();
+
+		/**
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.FunctionEarliestOutputImpl <em>Function Earliest Output</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.FunctionEarliestOutputImpl
+		 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.TousetimelinePackageImpl#getFunctionEarliestOutput()
+		 * @generated
+		 */
+		EClass FUNCTION_EARLIEST_OUTPUT = eINSTANCE.getFunctionEarliestOutput();
+
+		/**
+		 * The meta object literal for the '<em><b>Earliest Output</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FUNCTION_EARLIEST_OUTPUT__EARLIEST_OUTPUT = eINSTANCE.getFunctionEarliestOutput_EarliestOutput();
 
 	}
 

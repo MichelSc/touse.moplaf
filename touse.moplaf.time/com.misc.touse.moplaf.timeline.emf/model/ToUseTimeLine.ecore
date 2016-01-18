@@ -50,4 +50,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="FunctionEarliestBelow" eSuperTypes="#//FunctionPossible">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="earliestBelow" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FunctionEarliestOutput" eSuperTypes="#//FunctionPossible">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="earliestOutput" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+  </eClassifiers>
 </ecore:EPackage>

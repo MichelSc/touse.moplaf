@@ -30,10 +30,10 @@
       <genOperations ecoreOperation="ToUseTimeLine.ecore#//FunctionInterval/refresh"/>
     </genClasses>
     <genClasses ecoreClass="ToUseTimeLine.ecore#//FunctionCumulated">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseTimeLine.ecore#//FunctionCumulated/cumulated"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute ToUseTimeLine.ecore#//FunctionCumulated/cumulated"/>
     </genClasses>
     <genClasses ecoreClass="ToUseTimeLine.ecore#//FunctionAverage">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseTimeLine.ecore#//FunctionAverage/average"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute ToUseTimeLine.ecore#//FunctionAverage/average"/>
     </genClasses>
     <genClasses ecoreClass="ToUseTimeLine.ecore#//FunctionPossible">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseTimeLine.ecore#//FunctionPossible/limitMoment"/>
@@ -44,6 +44,9 @@
     </genClasses>
     <genClasses ecoreClass="ToUseTimeLine.ecore#//FunctionEarliestBelow">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute ToUseTimeLine.ecore#//FunctionEarliestBelow/earliestBelow"/>
+    </genClasses>
+    <genClasses ecoreClass="ToUseTimeLine.ecore#//FunctionEarliestOutput">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute ToUseTimeLine.ecore#//FunctionEarliestOutput/earliestOutput"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

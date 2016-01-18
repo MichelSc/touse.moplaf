@@ -12,6 +12,7 @@ import com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution;
 import com.misc.touse.moplaf.timeline.tousetimeline.FunctionAverage;
 import com.misc.touse.moplaf.timeline.tousetimeline.FunctionCumulated;
 import com.misc.touse.moplaf.timeline.tousetimeline.FunctionEarliestBelow;
+import com.misc.touse.moplaf.timeline.tousetimeline.FunctionEarliestOutput;
 import com.misc.touse.moplaf.timeline.tousetimeline.FunctionInterval;
 import com.misc.touse.moplaf.timeline.tousetimeline.FunctionMinimum;
 import com.misc.touse.moplaf.timeline.tousetimeline.FunctionPossible;
@@ -88,6 +89,13 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 	 * @generated
 	 */
 	private EClass functionEarliestBelowEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass functionEarliestOutputEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -420,6 +428,24 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getFunctionEarliestOutput() {
+		return functionEarliestOutputEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFunctionEarliestOutput_EarliestOutput() {
+		return (EAttribute)functionEarliestOutputEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public TousetimelineFactory getTousetimelineFactory() {
 		return (TousetimelineFactory)getEFactoryInstance();
 	}
@@ -479,6 +505,9 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 
 		functionEarliestBelowEClass = createEClass(FUNCTION_EARLIEST_BELOW);
 		createEAttribute(functionEarliestBelowEClass, FUNCTION_EARLIEST_BELOW__EARLIEST_BELOW);
+
+		functionEarliestOutputEClass = createEClass(FUNCTION_EARLIEST_OUTPUT);
+		createEAttribute(functionEarliestOutputEClass, FUNCTION_EARLIEST_OUTPUT__EARLIEST_OUTPUT);
 	}
 
 	/**
@@ -523,6 +552,7 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 		functionAverageEClass.getESuperTypes().add(this.getFunctionInterval());
 		functionPossibleEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctionAdapter());
 		functionEarliestBelowEClass.getESuperTypes().add(this.getFunctionPossible());
+		functionEarliestOutputEClass.getESuperTypes().add(this.getFunctionPossible());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -563,6 +593,9 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 
 		initEClass(functionEarliestBelowEClass, FunctionEarliestBelow.class, "FunctionEarliestBelow", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFunctionEarliestBelow_EarliestBelow(), ecorePackage.getEDate(), "earliestBelow", null, 0, 1, FunctionEarliestBelow.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(functionEarliestOutputEClass, FunctionEarliestOutput.class, "FunctionEarliestOutput", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFunctionEarliestOutput_EarliestOutput(), ecorePackage.getEDate(), "earliestOutput", null, 0, 1, FunctionEarliestOutput.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
