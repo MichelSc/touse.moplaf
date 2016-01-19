@@ -473,7 +473,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_EARLIEST_OUTPUT_POSSIBLE__DATE_FLOAT_FLOAT = ContinuousPackage.DISTRIBUTION___GET_EARLIEST_OUTPUT_POSSIBLE__DATE_FLOAT_FLOAT;
+	int DOMAIN_DISTRIBUTION___GET_EARLIEST_OUTPUT_POSSIBLE__FLOAT_DATE_FLOAT_FLOAT = ContinuousPackage.DISTRIBUTION___GET_EARLIEST_OUTPUT_POSSIBLE__FLOAT_DATE_FLOAT_FLOAT;
 
 	/**
 	 * The operation id for the '<em>Refresh Init</em>' operation.

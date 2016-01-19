@@ -95,7 +95,8 @@ public class FunctionEarliestOutputImpl extends FunctionPossibleImpl implements 
 	@Override
 	public void refresh() {
 		Distribution distribution = this.getDistribution();
-		Date earliestPossible  = distribution.getEarliestOutputPossible(this.getLimitMoment(), // after 
+		Date earliestPossible  = distribution.getEarliestOutputPossible( 0.0f, // above
+				                                                         this.getLimitMoment(), // after 
 				                                                         this.getLimitDuration(),
 				                                                         this.getLimitAmount());
 		this.setEarliestOutput(earliestPossible);
