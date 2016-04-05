@@ -3,7 +3,7 @@
 package com.misc.touse.moplaf.timeview.tousetimeview.provider;
 
 
-import com.misc.common.moplaf.emf.edit.Util;
+import com.misc.common.moplaf.emf.Util;
 import com.misc.common.moplaf.timeview.impl.IItemIntervalEventProvider;
 import com.misc.touse.moplaf.timeview.tousetimeview.Node;
 import com.misc.touse.moplaf.timeview.tousetimeview.TousetimeviewPackage;
