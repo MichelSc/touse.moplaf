@@ -71,6 +71,7 @@ public class KnapsackLpItemProvider
 			childrenFeatures.add(TousesolverPackage.Literals.KNAPSACK_LP__ROOT);
 			childrenFeatures.add(TousesolverPackage.Literals.KNAPSACK_LP__READER);
 			childrenFeatures.add(TousesolverPackage.Literals.KNAPSACK_LP__SOLVER);
+			childrenFeatures.add(TousesolverPackage.Literals.KNAPSACK_LP__VALUE);
 		}
 		return childrenFeatures;
 	}
@@ -128,6 +129,7 @@ public class KnapsackLpItemProvider
 			case TousesolverPackage.KNAPSACK_LP__ROOT:
 			case TousesolverPackage.KNAPSACK_LP__READER:
 			case TousesolverPackage.KNAPSACK_LP__SOLVER:
+			case TousesolverPackage.KNAPSACK_LP__VALUE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}

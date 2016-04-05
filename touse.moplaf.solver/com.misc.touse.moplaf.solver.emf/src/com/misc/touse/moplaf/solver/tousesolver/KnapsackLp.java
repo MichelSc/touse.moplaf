@@ -3,6 +3,7 @@
 package com.misc.touse.moplaf.solver.tousesolver;
 
 import com.misc.common.moplaf.solver.Generator;
+import com.misc.common.moplaf.solver.GeneratorLpGoal;
 import com.misc.common.moplaf.solver.Solver;
 import org.eclipse.emf.common.util.EList;
 
@@ -19,6 +20,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.KnapsackLp#getScenario <em>Scenario</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.KnapsackLp#getReader <em>Reader</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.KnapsackLp#getSolver <em>Solver</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.KnapsackLp#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @see com.misc.touse.moplaf.solver.tousesolver.TousesolverPackage#getKnapsackLp()
@@ -112,4 +114,30 @@ public interface KnapsackLp extends Generator {
 	 * @generated
 	 */
 	EList<Solver> getSolver();
+
+	/**
+	 * Returns the value of the '<em><b>Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Value</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Value</em>' containment reference.
+	 * @see #setValue(GeneratorLpGoal)
+	 * @see com.misc.touse.moplaf.solver.tousesolver.TousesolverPackage#getKnapsackLp_Value()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	GeneratorLpGoal getValue();
+
+	/**
+	 * Sets the value of the '{@link com.misc.touse.moplaf.solver.tousesolver.KnapsackLp#getValue <em>Value</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Value</em>' containment reference.
+	 * @see #getValue()
+	 * @generated
+	 */
+	void setValue(GeneratorLpGoal value);
 } // KnapsackLp

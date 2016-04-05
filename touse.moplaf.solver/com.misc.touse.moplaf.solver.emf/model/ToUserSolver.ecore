@@ -55,6 +55,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="Solver" upperBound="-1"
         eType="ecore:EClass ../../com.misc.common.moplaf.solver.emf/model/solver.ecore#//Solver"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Value" lowerBound="1" eType="ecore:EClass ../../com.misc.common.moplaf.solver.emf/model/solver.ecore#//GeneratorLpGoal"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LpRoot" eSuperTypes="../../com.misc.common.moplaf.solver.emf/model/solver.ecore#//GeneratorTuple">
     <eStructuralFeatures xsi:type="ecore:EReference" name="Item" upperBound="-1" eType="#//LpItem"

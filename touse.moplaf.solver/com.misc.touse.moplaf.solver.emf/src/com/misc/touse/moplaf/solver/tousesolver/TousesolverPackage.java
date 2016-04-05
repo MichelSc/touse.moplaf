@@ -507,15 +507,6 @@ public interface TousesolverPackage extends EPackage {
 	int KNAPSACK_LP__GENERATOR_FEATURE_MODES = SolverPackage.GENERATOR__GENERATOR_FEATURE_MODES;
 
 	/**
-	 * The feature id for the '<em><b>Objective Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KNAPSACK_LP__OBJECTIVE_TYPE = SolverPackage.GENERATOR__OBJECTIVE_TYPE;
-
-	/**
 	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -615,6 +606,15 @@ public interface TousesolverPackage extends EPackage {
 	int KNAPSACK_LP__SELECTED = SolverPackage.GENERATOR__SELECTED;
 
 	/**
+	 * The feature id for the '<em><b>Goals</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNAPSACK_LP__GOALS = SolverPackage.GENERATOR__GOALS;
+
+	/**
 	 * The feature id for the '<em><b>Root</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -651,13 +651,22 @@ public interface TousesolverPackage extends EPackage {
 	int KNAPSACK_LP__SOLVER = SolverPackage.GENERATOR_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNAPSACK_LP__VALUE = SolverPackage.GENERATOR_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>Knapsack Lp</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int KNAPSACK_LP_FEATURE_COUNT = SolverPackage.GENERATOR_FEATURE_COUNT + 4;
+	int KNAPSACK_LP_FEATURE_COUNT = SolverPackage.GENERATOR_FEATURE_COUNT + 5;
 
 	/**
 	 * The operation id for the '<em>Generate</em>' operation.
@@ -703,6 +712,15 @@ public interface TousesolverPackage extends EPackage {
 	 * @ordered
 	 */
 	int KNAPSACK_LP___GENERATE_CONS = SolverPackage.GENERATOR___GENERATE_CONS;
+
+	/**
+	 * The operation id for the '<em>Generate Goals</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNAPSACK_LP___GENERATE_GOALS = SolverPackage.GENERATOR___GENERATE_GOALS;
 
 	/**
 	 * The operation id for the '<em>Accept Solution</em>' operation.
@@ -1713,6 +1731,17 @@ public interface TousesolverPackage extends EPackage {
 	EReference getKnapsackLp_Solver();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link com.misc.touse.moplaf.solver.tousesolver.KnapsackLp#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Value</em>'.
+	 * @see com.misc.touse.moplaf.solver.tousesolver.KnapsackLp#getValue()
+	 * @see #getKnapsackLp()
+	 * @generated
+	 */
+	EReference getKnapsackLp_Value();
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.solver.tousesolver.LpRoot <em>Lp Root</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2120,6 +2149,14 @@ public interface TousesolverPackage extends EPackage {
 		 * @generated
 		 */
 		EReference KNAPSACK_LP__SOLVER = eINSTANCE.getKnapsackLp_Solver();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference KNAPSACK_LP__VALUE = eINSTANCE.getKnapsackLp_Value();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.solver.tousesolver.impl.LpRootImpl <em>Lp Root</em>}' class.

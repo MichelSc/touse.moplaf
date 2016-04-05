@@ -244,7 +244,6 @@ public class LpItemImpl extends GeneratorTupleImpl implements LpItem {
     	var.setLowerBound(0.0f);
     	var.setUpperBound(1.0f);
     	var.setName("itemin");
-    	var.setObjectiveCoeff(lpitem.getValue());
     	this.setVarInKnapsack(var);  // owning
 	}
 	

@@ -2,9 +2,11 @@
  */
 package com.misc.touse.moplaf.solver.tousesolver.impl;
 
+import com.misc.common.moplaf.solver.GeneratorLpGoal;
 import com.misc.common.moplaf.solver.GeneratorLpVar;
 import com.misc.common.moplaf.solver.Solution;
 import com.misc.common.moplaf.solver.Solver;
+import com.misc.common.moplaf.solver.SolverFactory;
 import com.misc.common.moplaf.solver.impl.GeneratorImpl;
 import com.misc.touse.moplaf.solver.tousesolver.Item;
 import com.misc.touse.moplaf.solver.tousesolver.KnapsackLp;
@@ -40,6 +42,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.KnapsackLpImpl#getScenario <em>Scenario</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.KnapsackLpImpl#getReader <em>Reader</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.KnapsackLpImpl#getSolver <em>Solver</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.KnapsackLpImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @generated
@@ -74,6 +77,16 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 	 * @ordered
 	 */
 	protected EList<Solver> solver;
+
+	/**
+	 * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected GeneratorLpGoal value;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -207,6 +220,49 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public GeneratorLpGoal getValue() {
+		return value;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetValue(GeneratorLpGoal newValue, NotificationChain msgs) {
+		GeneratorLpGoal oldValue = value;
+		value = newValue;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TousesolverPackage.KNAPSACK_LP__VALUE, oldValue, newValue);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setValue(GeneratorLpGoal newValue) {
+		if (newValue != value) {
+			NotificationChain msgs = null;
+			if (value != null)
+				msgs = ((InternalEObject)value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TousesolverPackage.KNAPSACK_LP__VALUE, null, msgs);
+			if (newValue != null)
+				msgs = ((InternalEObject)newValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TousesolverPackage.KNAPSACK_LP__VALUE, null, msgs);
+			msgs = basicSetValue(newValue, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TousesolverPackage.KNAPSACK_LP__VALUE, newValue, newValue));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -234,6 +290,8 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 				return ((InternalEList<?>)getReader()).basicRemove(otherEnd, msgs);
 			case TousesolverPackage.KNAPSACK_LP__SOLVER:
 				return ((InternalEList<?>)getSolver()).basicRemove(otherEnd, msgs);
+			case TousesolverPackage.KNAPSACK_LP__VALUE:
+				return basicSetValue(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -268,6 +326,8 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 				return getReader();
 			case TousesolverPackage.KNAPSACK_LP__SOLVER:
 				return getSolver();
+			case TousesolverPackage.KNAPSACK_LP__VALUE:
+				return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -295,6 +355,9 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 				getSolver().clear();
 				getSolver().addAll((Collection<? extends Solver>)newValue);
 				return;
+			case TousesolverPackage.KNAPSACK_LP__VALUE:
+				setValue((GeneratorLpGoal)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -319,6 +382,9 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 			case TousesolverPackage.KNAPSACK_LP__SOLVER:
 				getSolver().clear();
 				return;
+			case TousesolverPackage.KNAPSACK_LP__VALUE:
+				setValue((GeneratorLpGoal)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -339,6 +405,8 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 				return reader != null && !reader.isEmpty();
 			case TousesolverPackage.KNAPSACK_LP__SOLVER:
 				return solver != null && !solver.isEmpty();
+			case TousesolverPackage.KNAPSACK_LP__VALUE:
+				return value != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -349,6 +417,21 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 		LpRoot tupleroot = TousesolverFactory.eINSTANCE.createLpRoot();
 		tupleroot.setCode("root");
 		this.setRoot(tupleroot); // owning
+	}
+
+	@Override
+	public void generateGoals() {
+		this.generateGoalValue();
+	}
+
+	private void generateGoalValue() {
+		GeneratorLpGoal goal = SolverFactory.eINSTANCE.createGeneratorLpGoal();
+		goal.setName("value");
+		this.setValue(goal); // owning
+		LpRoot root = this.getRoot();
+		for ( LpItem item : root.getItem()){
+			goal.constructTerm(item.getVarInKnapsack(), item.getItem().getValue());
+		}
 	}
 
 	/* (non-Javadoc)

@@ -480,6 +480,15 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getKnapsackLp_Value() {
+		return (EReference)knapsackLpEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getLpRoot() {
 		return lpRootEClass;
 	}
@@ -633,6 +642,7 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 		createEReference(knapsackLpEClass, KNAPSACK_LP__SCENARIO);
 		createEReference(knapsackLpEClass, KNAPSACK_LP__READER);
 		createEReference(knapsackLpEClass, KNAPSACK_LP__SOLVER);
+		createEReference(knapsackLpEClass, KNAPSACK_LP__VALUE);
 
 		lpRootEClass = createEClass(LP_ROOT);
 		createEReference(lpRootEClass, LP_ROOT__ITEM);
@@ -729,6 +739,7 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 		initEReference(getKnapsackLp_Scenario(), this.getScenario(), this.getScenario_LP(), "Scenario", null, 1, 1, KnapsackLp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getKnapsackLp_Reader(), this.getSolutionReaderToUse(), null, "Reader", null, 0, -1, KnapsackLp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getKnapsackLp_Solver(), theSolverPackage.getSolver(), null, "Solver", null, 0, -1, KnapsackLp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getKnapsackLp_Value(), theSolverPackage.getGeneratorLpGoal(), null, "Value", null, 1, 1, KnapsackLp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(lpRootEClass, LpRoot.class, "LpRoot", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLpRoot_Item(), this.getLpItem(), null, "Item", null, 0, -1, LpRoot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
