@@ -1346,7 +1346,7 @@ public interface TousesolverPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLUTION_READER_TO_USE___CONSTRUCT_SOLUTION__FLOAT = SolverPackage.SOLUTION_READER___CONSTRUCT_SOLUTION__FLOAT;
+	int SOLUTION_READER_TO_USE___CONSTRUCT_SOLUTION = SolverPackage.SOLUTION_READER___CONSTRUCT_SOLUTION;
 
 	/**
 	 * The operation id for the '<em>Read Sol From File</em>' operation.
