@@ -3,16 +3,15 @@
 package com.misc.touse.moplaf.solver.tousesolver.provider;
 
 
+import com.misc.common.moplaf.solver.Plugin;
 import com.misc.common.moplaf.solver.SolverFactory;
 import com.misc.common.moplaf.solver.SolverPackage;
 import com.misc.common.moplaf.solver.provider.GeneratorItemProvider;
 import com.misc.touse.moplaf.solver.tousesolver.KnapsackLp;
-import com.misc.touse.moplaf.solver.tousesolver.TousesolverFactory;
 import com.misc.touse.moplaf.solver.tousesolver.TousesolverPackage;
 import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
-import org.eclipse.emf.common.CommonPlugin;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
@@ -151,11 +150,12 @@ public class KnapsackLpItemProvider
 				if ( aClassifier instanceof EClass ){
 					EClass aClass = (EClass)aClassifier;
 					if ( !aClass.isAbstract() && solverLpClass.isSuperTypeOf(aClass)){
-						CommonPlugin.INSTANCE.log( "  concrete candidate"
+						/*
+						Plugin.INSTANCE.logInfo("  concrete candidate"
 					                             + aPackage.getClass().getName()
 					                             + " : "
 					                             + aClass.getName());
-						
+						*/
 						newChildDescriptors.add
 						(createChildParameter
 							(TousesolverPackage.Literals.KNAPSACK_LP__SOLVER,
