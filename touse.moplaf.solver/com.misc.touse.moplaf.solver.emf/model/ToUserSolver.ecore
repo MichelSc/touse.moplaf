@@ -50,12 +50,13 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Scenario" lowerBound="1"
         eType="#//Scenario" eOpposite="#//Scenario/LP"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Reader" upperBound="-1"
-        eType="#//SolutionReaderToUse" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Solver" upperBound="-1"
         eType="ecore:EClass ../../com.misc.common.moplaf.solver.emf/model/solver.ecore#//Solver"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Value" lowerBound="1" eType="ecore:EClass ../../com.misc.common.moplaf.solver.emf/model/solver.ecore#//GeneratorLpGoal"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SolutionReader" upperBound="-1"
+        eType="ecore:EClass ../../com.misc.common.moplaf.solver.emf/model/solver.ecore#//SolutionReader"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LpRoot" eSuperTypes="../../com.misc.common.moplaf.solver.emf/model/solver.ecore#//GeneratorTuple">
@@ -77,5 +78,4 @@
         eType="ecore:EClass ../../com.misc.common.moplaf.solver.emf/model/solver.ecore#//GeneratorLpVar"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SolutionReaderToUse" eSuperTypes="../../com.misc.common.moplaf.solver.emf/model/solver.ecore#//SolutionReader"/>
 </ecore:EPackage>

@@ -14,7 +14,6 @@ import com.misc.touse.moplaf.solver.tousesolver.LpItem;
 import com.misc.touse.moplaf.solver.tousesolver.LpKnapsack;
 import com.misc.touse.moplaf.solver.tousesolver.LpRoot;
 import com.misc.touse.moplaf.solver.tousesolver.Scenario;
-import com.misc.touse.moplaf.solver.tousesolver.SolutionReaderToUse;
 import com.misc.touse.moplaf.solver.tousesolver.TousesolverFactory;
 import com.misc.touse.moplaf.solver.tousesolver.TousesolverPackage;
 import org.eclipse.emf.ecore.EAttribute;
@@ -106,13 +105,6 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 	 * @generated
 	 */
 	private EClass lpItemEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass solutionReaderToUseEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -462,7 +454,7 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getKnapsackLp_Reader() {
+	public EReference getKnapsackLp_Solver() {
 		return (EReference)knapsackLpEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -471,7 +463,7 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getKnapsackLp_Solver() {
+	public EReference getKnapsackLp_Value() {
 		return (EReference)knapsackLpEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -480,7 +472,7 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getKnapsackLp_Value() {
+	public EReference getKnapsackLp_SolutionReader() {
 		return (EReference)knapsackLpEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -570,15 +562,6 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSolutionReaderToUse() {
-		return solutionReaderToUseEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public TousesolverFactory getTousesolverFactory() {
 		return (TousesolverFactory)getEFactoryInstance();
 	}
@@ -640,9 +623,9 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 		knapsackLpEClass = createEClass(KNAPSACK_LP);
 		createEReference(knapsackLpEClass, KNAPSACK_LP__ROOT);
 		createEReference(knapsackLpEClass, KNAPSACK_LP__SCENARIO);
-		createEReference(knapsackLpEClass, KNAPSACK_LP__READER);
 		createEReference(knapsackLpEClass, KNAPSACK_LP__SOLVER);
 		createEReference(knapsackLpEClass, KNAPSACK_LP__VALUE);
+		createEReference(knapsackLpEClass, KNAPSACK_LP__SOLUTION_READER);
 
 		lpRootEClass = createEClass(LP_ROOT);
 		createEReference(lpRootEClass, LP_ROOT__ITEM);
@@ -655,8 +638,6 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 		lpItemEClass = createEClass(LP_ITEM);
 		createEReference(lpItemEClass, LP_ITEM__ITEM);
 		createEReference(lpItemEClass, LP_ITEM__VAR_IN_KNAPSACK);
-
-		solutionReaderToUseEClass = createEClass(SOLUTION_READER_TO_USE);
 	}
 
 	/**
@@ -696,7 +677,6 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 		lpRootEClass.getESuperTypes().add(theSolverPackage.getGeneratorTuple());
 		lpKnapsackEClass.getESuperTypes().add(theSolverPackage.getGeneratorTuple());
 		lpItemEClass.getESuperTypes().add(theSolverPackage.getGeneratorTuple());
-		solutionReaderToUseEClass.getESuperTypes().add(theSolverPackage.getSolutionReader());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -737,9 +717,9 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 		initEClass(knapsackLpEClass, KnapsackLp.class, "KnapsackLp", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getKnapsackLp_Root(), this.getLpRoot(), null, "Root", null, 1, 1, KnapsackLp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getKnapsackLp_Scenario(), this.getScenario(), this.getScenario_LP(), "Scenario", null, 1, 1, KnapsackLp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getKnapsackLp_Reader(), this.getSolutionReaderToUse(), null, "Reader", null, 0, -1, KnapsackLp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getKnapsackLp_Solver(), theSolverPackage.getSolver(), null, "Solver", null, 0, -1, KnapsackLp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getKnapsackLp_Value(), theSolverPackage.getGeneratorLpGoal(), null, "Value", null, 1, 1, KnapsackLp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getKnapsackLp_SolutionReader(), theSolverPackage.getSolutionReader(), null, "SolutionReader", null, 0, -1, KnapsackLp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(lpRootEClass, LpRoot.class, "LpRoot", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLpRoot_Item(), this.getLpItem(), null, "Item", null, 0, -1, LpRoot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -752,8 +732,6 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 		initEClass(lpItemEClass, LpItem.class, "LpItem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLpItem_Item(), this.getItem(), null, "Item", null, 1, 1, LpItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLpItem_VarInKnapsack(), theSolverPackage.getGeneratorLpVar(), null, "VarInKnapsack", null, 1, 1, LpItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(solutionReaderToUseEClass, SolutionReaderToUse.class, "SolutionReaderToUse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

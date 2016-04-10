@@ -633,22 +633,13 @@ public interface TousesolverPackage extends EPackage {
 	int KNAPSACK_LP__SCENARIO = SolverPackage.GENERATOR_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Reader</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KNAPSACK_LP__READER = SolverPackage.GENERATOR_FEATURE_COUNT + 2;
-
-	/**
 	 * The feature id for the '<em><b>Solver</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int KNAPSACK_LP__SOLVER = SolverPackage.GENERATOR_FEATURE_COUNT + 3;
+	int KNAPSACK_LP__SOLVER = SolverPackage.GENERATOR_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -657,7 +648,16 @@ public interface TousesolverPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KNAPSACK_LP__VALUE = SolverPackage.GENERATOR_FEATURE_COUNT + 4;
+	int KNAPSACK_LP__VALUE = SolverPackage.GENERATOR_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Solution Reader</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNAPSACK_LP__SOLUTION_READER = SolverPackage.GENERATOR_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Knapsack Lp</em>' class.
@@ -1258,124 +1258,6 @@ public interface TousesolverPackage extends EPackage {
 	int LP_ITEM_OPERATION_COUNT = SolverPackage.GENERATOR_TUPLE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link com.misc.touse.moplaf.solver.tousesolver.impl.SolutionReaderToUseImpl <em>Solution Reader To Use</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.misc.touse.moplaf.solver.tousesolver.impl.SolutionReaderToUseImpl
-	 * @see com.misc.touse.moplaf.solver.tousesolver.impl.TousesolverPackageImpl#getSolutionReaderToUse()
-	 * @generated
-	 */
-	int SOLUTION_READER_TO_USE = 11;
-
-	/**
-	 * The feature id for the '<em><b>Solution</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLUTION_READER_TO_USE__SOLUTION = SolverPackage.SOLUTION_READER__SOLUTION;
-
-	/**
-	 * The feature id for the '<em><b>Current Solution Nr</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLUTION_READER_TO_USE__CURRENT_SOLUTION_NR = SolverPackage.SOLUTION_READER__CURRENT_SOLUTION_NR;
-
-	/**
-	 * The feature id for the '<em><b>Code</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLUTION_READER_TO_USE__CODE = SolverPackage.SOLUTION_READER__CODE;
-
-	/**
-	 * The feature id for the '<em><b>File Path</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLUTION_READER_TO_USE__FILE_PATH = SolverPackage.SOLUTION_READER__FILE_PATH;
-
-	/**
-	 * The number of structural features of the '<em>Solution Reader To Use</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLUTION_READER_TO_USE_FEATURE_COUNT = SolverPackage.SOLUTION_READER_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Get Parent Generator Tool</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLUTION_READER_TO_USE___GET_PARENT_GENERATOR_TOOL = SolverPackage.SOLUTION_READER___GET_PARENT_GENERATOR_TOOL;
-
-	/**
-	 * The operation id for the '<em>Get Generator</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLUTION_READER_TO_USE___GET_GENERATOR = SolverPackage.SOLUTION_READER___GET_GENERATOR;
-
-	/**
-	 * The operation id for the '<em>Solution Factory</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLUTION_READER_TO_USE___SOLUTION_FACTORY = SolverPackage.SOLUTION_READER___SOLUTION_FACTORY;
-
-	/**
-	 * The operation id for the '<em>Construct Solution</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLUTION_READER_TO_USE___CONSTRUCT_SOLUTION = SolverPackage.SOLUTION_READER___CONSTRUCT_SOLUTION;
-
-	/**
-	 * The operation id for the '<em>Read Sol From File</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLUTION_READER_TO_USE___READ_SOL_FROM_FILE = SolverPackage.SOLUTION_READER___READ_SOL_FROM_FILE;
-
-	/**
-	 * The operation id for the '<em>Set Sol As String</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLUTION_READER_TO_USE___SET_SOL_AS_STRING__STRING = SolverPackage.SOLUTION_READER___SET_SOL_AS_STRING__STRING;
-
-	/**
-	 * The number of operations of the '<em>Solution Reader To Use</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLUTION_READER_TO_USE_OPERATION_COUNT = SolverPackage.SOLUTION_READER_OPERATION_COUNT + 0;
-
-	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.solver.tousesolver.Domain <em>Domain</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1709,17 +1591,6 @@ public interface TousesolverPackage extends EPackage {
 	EReference getKnapsackLp_Scenario();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.solver.tousesolver.KnapsackLp#getReader <em>Reader</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Reader</em>'.
-	 * @see com.misc.touse.moplaf.solver.tousesolver.KnapsackLp#getReader()
-	 * @see #getKnapsackLp()
-	 * @generated
-	 */
-	EReference getKnapsackLp_Reader();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.solver.tousesolver.KnapsackLp#getSolver <em>Solver</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1740,6 +1611,17 @@ public interface TousesolverPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getKnapsackLp_Value();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.solver.tousesolver.KnapsackLp#getSolutionReader <em>Solution Reader</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Solution Reader</em>'.
+	 * @see com.misc.touse.moplaf.solver.tousesolver.KnapsackLp#getSolutionReader()
+	 * @see #getKnapsackLp()
+	 * @generated
+	 */
+	EReference getKnapsackLp_SolutionReader();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.solver.tousesolver.LpRoot <em>Lp Root</em>}'.
@@ -1836,16 +1718,6 @@ public interface TousesolverPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getLpItem_VarInKnapsack();
-
-	/**
-	 * Returns the meta object for class '{@link com.misc.touse.moplaf.solver.tousesolver.SolutionReaderToUse <em>Solution Reader To Use</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Solution Reader To Use</em>'.
-	 * @see com.misc.touse.moplaf.solver.tousesolver.SolutionReaderToUse
-	 * @generated
-	 */
-	EClass getSolutionReaderToUse();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -2135,14 +2007,6 @@ public interface TousesolverPackage extends EPackage {
 		EReference KNAPSACK_LP__SCENARIO = eINSTANCE.getKnapsackLp_Scenario();
 
 		/**
-		 * The meta object literal for the '<em><b>Reader</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference KNAPSACK_LP__READER = eINSTANCE.getKnapsackLp_Reader();
-
-		/**
 		 * The meta object literal for the '<em><b>Solver</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2157,6 +2021,14 @@ public interface TousesolverPackage extends EPackage {
 		 * @generated
 		 */
 		EReference KNAPSACK_LP__VALUE = eINSTANCE.getKnapsackLp_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>Solution Reader</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference KNAPSACK_LP__SOLUTION_READER = eINSTANCE.getKnapsackLp_SolutionReader();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.solver.tousesolver.impl.LpRootImpl <em>Lp Root</em>}' class.
@@ -2235,16 +2107,6 @@ public interface TousesolverPackage extends EPackage {
 		 * @generated
 		 */
 		EReference LP_ITEM__VAR_IN_KNAPSACK = eINSTANCE.getLpItem_VarInKnapsack();
-
-		/**
-		 * The meta object literal for the '{@link com.misc.touse.moplaf.solver.tousesolver.impl.SolutionReaderToUseImpl <em>Solution Reader To Use</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see com.misc.touse.moplaf.solver.tousesolver.impl.SolutionReaderToUseImpl
-		 * @see com.misc.touse.moplaf.solver.tousesolver.impl.TousesolverPackageImpl#getSolutionReaderToUse()
-		 * @generated
-		 */
-		EClass SOLUTION_READER_TO_USE = eINSTANCE.getSolutionReaderToUse();
 
 	}
 

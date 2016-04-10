@@ -5,9 +5,6 @@ package com.misc.touse.moplaf.solver.tousesolver.util;
 import com.misc.common.moplaf.solver.Generator;
 import com.misc.common.moplaf.solver.GeneratorElement;
 import com.misc.common.moplaf.solver.GeneratorTuple;
-import com.misc.common.moplaf.solver.IGeneratorTool;
-import com.misc.common.moplaf.solver.SolutionProvider;
-import com.misc.common.moplaf.solver.SolutionReader;
 import com.misc.touse.moplaf.solver.tousesolver.*;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -115,10 +112,6 @@ public class TousesolverAdapterFactory extends AdapterFactoryImpl {
 				return createLpItemAdapter();
 			}
 			@Override
-			public Adapter caseSolutionReaderToUse(SolutionReaderToUse object) {
-				return createSolutionReaderToUseAdapter();
-			}
-			@Override
 			public Adapter caseGenerator(Generator object) {
 				return createGeneratorAdapter();
 			}
@@ -129,18 +122,6 @@ public class TousesolverAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseGeneratorTuple(GeneratorTuple object) {
 				return createGeneratorTupleAdapter();
-			}
-			@Override
-			public Adapter caseIGeneratorTool(IGeneratorTool object) {
-				return createIGeneratorToolAdapter();
-			}
-			@Override
-			public Adapter caseSolutionProvider(SolutionProvider object) {
-				return createSolutionProviderAdapter();
-			}
-			@Override
-			public Adapter caseSolutionReader(SolutionReader object) {
-				return createSolutionReaderAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -317,20 +298,6 @@ public class TousesolverAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.solver.tousesolver.SolutionReaderToUse <em>Solution Reader To Use</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.touse.moplaf.solver.tousesolver.SolutionReaderToUse
-	 * @generated
-	 */
-	public Adapter createSolutionReaderToUseAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.solver.Generator <em>Generator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -369,48 +336,6 @@ public class TousesolverAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGeneratorElementAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.solver.IGeneratorTool <em>IGenerator Tool</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.solver.IGeneratorTool
-	 * @generated
-	 */
-	public Adapter createIGeneratorToolAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.solver.SolutionProvider <em>Solution Provider</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.solver.SolutionProvider
-	 * @generated
-	 */
-	public Adapter createSolutionProviderAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.solver.SolutionReader <em>Solution Reader</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.solver.SolutionReader
-	 * @generated
-	 */
-	public Adapter createSolutionReaderAdapter() {
 		return null;
 	}
 

@@ -5,9 +5,6 @@ package com.misc.touse.moplaf.solver.tousesolver.util;
 import com.misc.common.moplaf.solver.Generator;
 import com.misc.common.moplaf.solver.GeneratorElement;
 import com.misc.common.moplaf.solver.GeneratorTuple;
-import com.misc.common.moplaf.solver.IGeneratorTool;
-import com.misc.common.moplaf.solver.SolutionProvider;
-import com.misc.common.moplaf.solver.SolutionReader;
 import com.misc.touse.moplaf.solver.tousesolver.*;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -142,15 +139,6 @@ public class TousesolverSwitch<T> extends Switch<T> {
 				T result = caseLpItem(lpItem);
 				if (result == null) result = caseGeneratorTuple(lpItem);
 				if (result == null) result = caseGeneratorElement(lpItem);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case TousesolverPackage.SOLUTION_READER_TO_USE: {
-				SolutionReaderToUse solutionReaderToUse = (SolutionReaderToUse)theEObject;
-				T result = caseSolutionReaderToUse(solutionReaderToUse);
-				if (result == null) result = caseSolutionReader(solutionReaderToUse);
-				if (result == null) result = caseSolutionProvider(solutionReaderToUse);
-				if (result == null) result = caseIGeneratorTool(solutionReaderToUse);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -324,21 +312,6 @@ public class TousesolverSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Solution Reader To Use</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Solution Reader To Use</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSolutionReaderToUse(SolutionReaderToUse object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Generator</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -380,51 +353,6 @@ public class TousesolverSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGeneratorElement(GeneratorElement object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>IGenerator Tool</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>IGenerator Tool</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseIGeneratorTool(IGeneratorTool object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Solution Provider</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Solution Provider</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSolutionProvider(SolutionProvider object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Solution Reader</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Solution Reader</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSolutionReader(SolutionReader object) {
 		return null;
 	}
 

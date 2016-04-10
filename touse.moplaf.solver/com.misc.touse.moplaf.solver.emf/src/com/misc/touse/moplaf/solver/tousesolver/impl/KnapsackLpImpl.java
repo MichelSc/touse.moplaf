@@ -5,6 +5,7 @@ package com.misc.touse.moplaf.solver.tousesolver.impl;
 import com.misc.common.moplaf.solver.GeneratorLpGoal;
 import com.misc.common.moplaf.solver.GeneratorLpVar;
 import com.misc.common.moplaf.solver.Solution;
+import com.misc.common.moplaf.solver.SolutionReader;
 import com.misc.common.moplaf.solver.Solver;
 import com.misc.common.moplaf.solver.SolverFactory;
 import com.misc.common.moplaf.solver.impl.GeneratorImpl;
@@ -14,7 +15,6 @@ import com.misc.touse.moplaf.solver.tousesolver.KnapsackSol;
 import com.misc.touse.moplaf.solver.tousesolver.LpItem;
 import com.misc.touse.moplaf.solver.tousesolver.LpRoot;
 import com.misc.touse.moplaf.solver.tousesolver.Scenario;
-import com.misc.touse.moplaf.solver.tousesolver.SolutionReaderToUse;
 import com.misc.touse.moplaf.solver.tousesolver.TousesolverFactory;
 import com.misc.touse.moplaf.solver.tousesolver.TousesolverPackage;
 
@@ -40,9 +40,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.KnapsackLpImpl#getRoot <em>Root</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.KnapsackLpImpl#getScenario <em>Scenario</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.KnapsackLpImpl#getReader <em>Reader</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.KnapsackLpImpl#getSolver <em>Solver</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.KnapsackLpImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.KnapsackLpImpl#getSolutionReader <em>Solution Reader</em>}</li>
  * </ul>
  *
  * @generated
@@ -57,16 +57,6 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 	 * @ordered
 	 */
 	protected LpRoot root;
-
-	/**
-	 * The cached value of the '{@link #getReader() <em>Reader</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getReader()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<SolutionReaderToUse> reader;
 
 	/**
 	 * The cached value of the '{@link #getSolver() <em>Solver</em>}' containment reference list.
@@ -87,6 +77,16 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 	 * @ordered
 	 */
 	protected GeneratorLpGoal value;
+
+	/**
+	 * The cached value of the '{@link #getSolutionReader() <em>Solution Reader</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSolutionReader()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<SolutionReader> solutionReader;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -196,18 +196,6 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<SolutionReaderToUse> getReader() {
-		if (reader == null) {
-			reader = new EObjectContainmentEList<SolutionReaderToUse>(SolutionReaderToUse.class, this, TousesolverPackage.KNAPSACK_LP__READER);
-		}
-		return reader;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<Solver> getSolver() {
 		if (solver == null) {
 			solver = new EObjectContainmentEList<Solver>(Solver.class, this, TousesolverPackage.KNAPSACK_LP__SOLVER);
@@ -263,6 +251,18 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<SolutionReader> getSolutionReader() {
+		if (solutionReader == null) {
+			solutionReader = new EObjectContainmentEList<SolutionReader>(SolutionReader.class, this, TousesolverPackage.KNAPSACK_LP__SOLUTION_READER);
+		}
+		return solutionReader;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -286,12 +286,12 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 				return basicSetRoot(null, msgs);
 			case TousesolverPackage.KNAPSACK_LP__SCENARIO:
 				return basicSetScenario(null, msgs);
-			case TousesolverPackage.KNAPSACK_LP__READER:
-				return ((InternalEList<?>)getReader()).basicRemove(otherEnd, msgs);
 			case TousesolverPackage.KNAPSACK_LP__SOLVER:
 				return ((InternalEList<?>)getSolver()).basicRemove(otherEnd, msgs);
 			case TousesolverPackage.KNAPSACK_LP__VALUE:
 				return basicSetValue(null, msgs);
+			case TousesolverPackage.KNAPSACK_LP__SOLUTION_READER:
+				return ((InternalEList<?>)getSolutionReader()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -322,12 +322,12 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 				return getRoot();
 			case TousesolverPackage.KNAPSACK_LP__SCENARIO:
 				return getScenario();
-			case TousesolverPackage.KNAPSACK_LP__READER:
-				return getReader();
 			case TousesolverPackage.KNAPSACK_LP__SOLVER:
 				return getSolver();
 			case TousesolverPackage.KNAPSACK_LP__VALUE:
 				return getValue();
+			case TousesolverPackage.KNAPSACK_LP__SOLUTION_READER:
+				return getSolutionReader();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -347,16 +347,16 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 			case TousesolverPackage.KNAPSACK_LP__SCENARIO:
 				setScenario((Scenario)newValue);
 				return;
-			case TousesolverPackage.KNAPSACK_LP__READER:
-				getReader().clear();
-				getReader().addAll((Collection<? extends SolutionReaderToUse>)newValue);
-				return;
 			case TousesolverPackage.KNAPSACK_LP__SOLVER:
 				getSolver().clear();
 				getSolver().addAll((Collection<? extends Solver>)newValue);
 				return;
 			case TousesolverPackage.KNAPSACK_LP__VALUE:
 				setValue((GeneratorLpGoal)newValue);
+				return;
+			case TousesolverPackage.KNAPSACK_LP__SOLUTION_READER:
+				getSolutionReader().clear();
+				getSolutionReader().addAll((Collection<? extends SolutionReader>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -376,14 +376,14 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 			case TousesolverPackage.KNAPSACK_LP__SCENARIO:
 				setScenario((Scenario)null);
 				return;
-			case TousesolverPackage.KNAPSACK_LP__READER:
-				getReader().clear();
-				return;
 			case TousesolverPackage.KNAPSACK_LP__SOLVER:
 				getSolver().clear();
 				return;
 			case TousesolverPackage.KNAPSACK_LP__VALUE:
 				setValue((GeneratorLpGoal)null);
+				return;
+			case TousesolverPackage.KNAPSACK_LP__SOLUTION_READER:
+				getSolutionReader().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -401,12 +401,12 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 				return root != null;
 			case TousesolverPackage.KNAPSACK_LP__SCENARIO:
 				return getScenario() != null;
-			case TousesolverPackage.KNAPSACK_LP__READER:
-				return reader != null && !reader.isEmpty();
 			case TousesolverPackage.KNAPSACK_LP__SOLVER:
 				return solver != null && !solver.isEmpty();
 			case TousesolverPackage.KNAPSACK_LP__VALUE:
 				return value != null;
+			case TousesolverPackage.KNAPSACK_LP__SOLUTION_READER:
+				return solutionReader != null && !solutionReader.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

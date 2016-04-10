@@ -302,29 +302,6 @@ public class TousesolverItemProviderAdapterFactory extends TousesolverAdapterFac
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.solver.tousesolver.SolutionReaderToUse} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SolutionReaderToUseItemProvider solutionReaderToUseItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.misc.touse.moplaf.solver.tousesolver.SolutionReaderToUse}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSolutionReaderToUseAdapter() {
-		if (solutionReaderToUseItemProvider == null) {
-			solutionReaderToUseItemProvider = new SolutionReaderToUseItemProvider(this);
-		}
-
-		return solutionReaderToUseItemProvider;
-	}
-
-	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -433,7 +410,6 @@ public class TousesolverItemProviderAdapterFactory extends TousesolverAdapterFac
 		if (lpRootItemProvider != null) lpRootItemProvider.dispose();
 		if (lpKnapsackItemProvider != null) lpKnapsackItemProvider.dispose();
 		if (lpItemItemProvider != null) lpItemItemProvider.dispose();
-		if (solutionReaderToUseItemProvider != null) solutionReaderToUseItemProvider.dispose();
 	}
 
 }

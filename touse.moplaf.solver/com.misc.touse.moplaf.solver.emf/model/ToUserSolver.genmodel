@@ -46,33 +46,32 @@
       <genFeatures property="Readonly" notify="false" createChild="false" propertySortChoices="true"
           ecoreFeature="ecore:EReference ToUserSolver.ecore#//KnapsackSol/Lp"/>
     </genClasses>
-    <genClasses ecoreClass="ToUserSolver.ecore#//KnapsackLp" labelFeature="../../com.misc.common.moplaf.solver.emf/model/solver.genmodel#//solver/Generator/Code">
+    <genClasses image="false" ecoreClass="ToUserSolver.ecore#//KnapsackLp" labelFeature="../../com.misc.common.moplaf.solver.emf/model/solver.genmodel#//solver/Generator/Code">
       <genFeatures property="None" children="true" createChild="false" propertyCategory=""
           propertySortChoices="true" ecoreFeature="ecore:EReference ToUserSolver.ecore#//KnapsackLp/Root"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ToUserSolver.ecore#//KnapsackLp/Scenario"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUserSolver.ecore#//KnapsackLp/Reader"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUserSolver.ecore#//KnapsackLp/Solver"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUserSolver.ecore#//KnapsackLp/Value"/>
     </genClasses>
-    <genClasses ecoreClass="ToUserSolver.ecore#//LpRoot">
+    <genClasses image="false" ecoreClass="ToUserSolver.ecore#//LpRoot">
       <genFeatures children="true" createChild="false" propertySortChoices="true"
           ecoreFeature="ecore:EReference ToUserSolver.ecore#//LpRoot/Item"/>
       <genFeatures children="true" createChild="false" propertySortChoices="true"
           ecoreFeature="ecore:EReference ToUserSolver.ecore#//LpRoot/Knapsack"/>
     </genClasses>
-    <genClasses ecoreClass="ToUserSolver.ecore#//LpKnapsack">
+    <genClasses image="false" ecoreClass="ToUserSolver.ecore#//LpKnapsack">
       <genFeatures property="Readonly" notify="false" createChild="false" propertySortChoices="true"
           ecoreFeature="ecore:EReference ToUserSolver.ecore#//LpKnapsack/Knapsack"/>
       <genFeatures property="Readonly" children="true" createChild="false" propertySortChoices="true"
           ecoreFeature="ecore:EReference ToUserSolver.ecore#//LpKnapsack/ConsCapacity"/>
     </genClasses>
-    <genClasses ecoreClass="ToUserSolver.ecore#//LpItem">
+    <genClasses image="false" ecoreClass="ToUserSolver.ecore#//LpItem">
       <genFeatures property="Readonly" notify="false" createChild="false" propertySortChoices="true"
           ecoreFeature="ecore:EReference ToUserSolver.ecore#//LpItem/Item"/>
       <genFeatures property="Readonly" children="true" createChild="false" propertySortChoices="true"
           ecoreFeature="ecore:EReference ToUserSolver.ecore#//LpItem/VarInKnapsack"/>
     </genClasses>
-    <genClasses ecoreClass="ToUserSolver.ecore#//VarItemInKnapsack" labelFeature="../../com.misc.common.moplaf.solver.emf/model/solver.genmodel#//solver/GeneratorTupleElement/Code"/>
-    <genClasses ecoreClass="ToUserSolver.ecore#//ConsKnapsackCapacity" labelFeature="../../com.misc.common.moplaf.solver.emf/model/solver.genmodel#//solver/GeneratorTupleElement/Code"/>
     <genClasses ecoreClass="ToUserSolver.ecore#//SolutionReaderToUse" labelFeature="../../com.misc.common.moplaf.solver.emf/model/solver.genmodel#//solver/SolutionReader/FilePath"/>
   </genPackages>
 </genmodel:GenModel>

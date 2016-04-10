@@ -66,7 +66,6 @@ public class TousesolverFactoryImpl extends EFactoryImpl implements TousesolverF
 			case TousesolverPackage.LP_ROOT: return createLpRoot();
 			case TousesolverPackage.LP_KNAPSACK: return createLpKnapsack();
 			case TousesolverPackage.LP_ITEM: return createLpItem();
-			case TousesolverPackage.SOLUTION_READER_TO_USE: return createSolutionReaderToUse();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -170,16 +169,6 @@ public class TousesolverFactoryImpl extends EFactoryImpl implements TousesolverF
 	public LpItem createLpItem() {
 		LpItemImpl lpItem = new LpItemImpl();
 		return lpItem;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SolutionReaderToUse createSolutionReaderToUse() {
-		SolutionReaderToUseImpl solutionReaderToUse = new SolutionReaderToUseImpl();
-		return solutionReaderToUse;
 	}
 
 	/**

@@ -3,6 +3,7 @@
 package com.misc.touse.moplaf.solver.tousesolver.provider;
 
 
+import com.misc.common.moplaf.solver.SolverFactory;
 import com.misc.common.moplaf.solver.SolverPackage;
 import com.misc.common.moplaf.solver.provider.GeneratorItemProvider;
 import com.misc.touse.moplaf.solver.tousesolver.KnapsackLp;
@@ -69,9 +70,9 @@ public class KnapsackLpItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(TousesolverPackage.Literals.KNAPSACK_LP__ROOT);
-			childrenFeatures.add(TousesolverPackage.Literals.KNAPSACK_LP__READER);
 			childrenFeatures.add(TousesolverPackage.Literals.KNAPSACK_LP__SOLVER);
 			childrenFeatures.add(TousesolverPackage.Literals.KNAPSACK_LP__VALUE);
+			childrenFeatures.add(TousesolverPackage.Literals.KNAPSACK_LP__SOLUTION_READER);
 		}
 		return childrenFeatures;
 	}
@@ -87,17 +88,6 @@ public class KnapsackLpItemProvider
 		// adding (see {@link AddCommand}) it as a child.
 
 		return super.getChildFeature(object, child);
-	}
-
-	/**
-	 * This returns KnapsackLp.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/KnapsackLp"));
 	}
 
 	/**
@@ -127,9 +117,9 @@ public class KnapsackLpItemProvider
 
 		switch (notification.getFeatureID(KnapsackLp.class)) {
 			case TousesolverPackage.KNAPSACK_LP__ROOT:
-			case TousesolverPackage.KNAPSACK_LP__READER:
 			case TousesolverPackage.KNAPSACK_LP__SOLVER:
 			case TousesolverPackage.KNAPSACK_LP__VALUE:
+			case TousesolverPackage.KNAPSACK_LP__SOLUTION_READER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -148,8 +138,8 @@ public class KnapsackLpItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TousesolverPackage.Literals.KNAPSACK_LP__READER,
-				 TousesolverFactory.eINSTANCE.createSolutionReaderToUse()));
+				(TousesolverPackage.Literals.KNAPSACK_LP__SOLUTION_READER,
+				 SolverFactory.eINSTANCE.createSolutionReaderPattern()));
 
 		EPackage.Registry registry = EPackage.Registry.INSTANCE;
 		EClass solverLpClass = SolverPackage.Literals.SOLVER_LP;
