@@ -606,13 +606,13 @@ public interface TousesolverPackage extends EPackage {
 	int KNAPSACK_LP__SELECTED = SolverPackage.GENERATOR__SELECTED;
 
 	/**
-	 * The feature id for the '<em><b>Goals</b></em>' reference list.
+	 * The feature id for the '<em><b>Goals Root</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int KNAPSACK_LP__GOALS = SolverPackage.GENERATOR__GOALS;
+	int KNAPSACK_LP__GOALS_ROOT = SolverPackage.GENERATOR__GOALS_ROOT;
 
 	/**
 	 * The feature id for the '<em><b>Root</b></em>' containment reference.
