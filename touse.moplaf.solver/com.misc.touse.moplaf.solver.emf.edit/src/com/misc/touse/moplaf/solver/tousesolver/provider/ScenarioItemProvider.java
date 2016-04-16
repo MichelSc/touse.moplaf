@@ -3,6 +3,8 @@
 package com.misc.touse.moplaf.solver.tousesolver.provider;
 
 
+import com.misc.common.moplaf.solver.SolverFactory;
+import com.misc.common.moplaf.solver.provider.Util;
 import com.misc.touse.moplaf.solver.tousesolver.Scenario;
 import com.misc.touse.moplaf.solver.tousesolver.TousesolverFactory;
 import com.misc.touse.moplaf.solver.tousesolver.TousesolverPackage;
@@ -168,6 +170,8 @@ public class ScenarioItemProvider
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(TousesolverPackage.Literals.SCENARIO__LP);
 			childrenFeatures.add(TousesolverPackage.Literals.SCENARIO__SOL);
+			childrenFeatures.add(TousesolverPackage.Literals.SCENARIO__SOLUTION_READER);
+			childrenFeatures.add(TousesolverPackage.Literals.SCENARIO__SOLVER);
 		}
 		return childrenFeatures;
 	}
@@ -228,6 +232,8 @@ public class ScenarioItemProvider
 				return;
 			case TousesolverPackage.SCENARIO__LP:
 			case TousesolverPackage.SCENARIO__SOL:
+			case TousesolverPackage.SCENARIO__SOLUTION_READER:
+			case TousesolverPackage.SCENARIO__SOLVER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -239,7 +245,6 @@ public class ScenarioItemProvider
 	 * that can be created under this object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
@@ -254,6 +259,15 @@ public class ScenarioItemProvider
 			(createChildParameter
 				(TousesolverPackage.Literals.SCENARIO__SOL,
 				 TousesolverFactory.eINSTANCE.createKnapsackSol()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TousesolverPackage.Literals.SCENARIO__SOLUTION_READER,
+				 SolverFactory.eINSTANCE.createSolutionReaderPattern()));
+		
+		Util.collectNewChildSolverDescriptors(newChildDescriptors, 
+				                              object, 
+				                              TousesolverPackage.Literals.SCENARIO__SOLVER);
 	}
 
 	/**

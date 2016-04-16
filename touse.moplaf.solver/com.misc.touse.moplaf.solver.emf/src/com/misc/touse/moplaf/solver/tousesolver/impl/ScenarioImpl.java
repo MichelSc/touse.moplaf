@@ -2,6 +2,8 @@
  */
 package com.misc.touse.moplaf.solver.tousesolver.impl;
 
+import com.misc.common.moplaf.solver.SolutionReader;
+import com.misc.common.moplaf.solver.Solver;
 import com.misc.touse.moplaf.solver.tousesolver.Item;
 import com.misc.touse.moplaf.solver.tousesolver.Knapsack;
 import com.misc.touse.moplaf.solver.tousesolver.KnapsackLp;
@@ -41,6 +43,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.ScenarioImpl#getSol <em>Sol</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.ScenarioImpl#getName <em>Name</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.ScenarioImpl#getRemarks <em>Remarks</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.ScenarioImpl#getSolutionReader <em>Solution Reader</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.ScenarioImpl#getSolver <em>Solver</em>}</li>
  * </ul>
  *
  * @generated
@@ -125,6 +129,26 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 	 * @ordered
 	 */
 	protected String remarks = REMARKS_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getSolutionReader() <em>Solution Reader</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSolutionReader()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<SolutionReader> solutionReader;
+
+	/**
+	 * The cached value of the '{@link #getSolver() <em>Solver</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSolver()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Solver> solver;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -266,6 +290,30 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<SolutionReader> getSolutionReader() {
+		if (solutionReader == null) {
+			solutionReader = new EObjectContainmentEList<SolutionReader>(SolutionReader.class, this, TousesolverPackage.SCENARIO__SOLUTION_READER);
+		}
+		return solutionReader;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Solver> getSolver() {
+		if (solver == null) {
+			solver = new EObjectContainmentEList<Solver>(Solver.class, this, TousesolverPackage.SCENARIO__SOLVER);
+		}
+		return solver;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -288,6 +336,10 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 				return ((InternalEList<?>)getLP()).basicRemove(otherEnd, msgs);
 			case TousesolverPackage.SCENARIO__SOL:
 				return ((InternalEList<?>)getSol()).basicRemove(otherEnd, msgs);
+			case TousesolverPackage.SCENARIO__SOLUTION_READER:
+				return ((InternalEList<?>)getSolutionReader()).basicRemove(otherEnd, msgs);
+			case TousesolverPackage.SCENARIO__SOLVER:
+				return ((InternalEList<?>)getSolver()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -313,6 +365,10 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 				return getName();
 			case TousesolverPackage.SCENARIO__REMARKS:
 				return getRemarks();
+			case TousesolverPackage.SCENARIO__SOLUTION_READER:
+				return getSolutionReader();
+			case TousesolverPackage.SCENARIO__SOLVER:
+				return getSolver();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -347,6 +403,14 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 			case TousesolverPackage.SCENARIO__REMARKS:
 				setRemarks((String)newValue);
 				return;
+			case TousesolverPackage.SCENARIO__SOLUTION_READER:
+				getSolutionReader().clear();
+				getSolutionReader().addAll((Collection<? extends SolutionReader>)newValue);
+				return;
+			case TousesolverPackage.SCENARIO__SOLVER:
+				getSolver().clear();
+				getSolver().addAll((Collection<? extends Solver>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -377,6 +441,12 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 			case TousesolverPackage.SCENARIO__REMARKS:
 				setRemarks(REMARKS_EDEFAULT);
 				return;
+			case TousesolverPackage.SCENARIO__SOLUTION_READER:
+				getSolutionReader().clear();
+				return;
+			case TousesolverPackage.SCENARIO__SOLVER:
+				getSolver().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -401,6 +471,10 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case TousesolverPackage.SCENARIO__REMARKS:
 				return REMARKS_EDEFAULT == null ? remarks != null : !REMARKS_EDEFAULT.equals(remarks);
+			case TousesolverPackage.SCENARIO__SOLUTION_READER:
+				return solutionReader != null && !solutionReader.isEmpty();
+			case TousesolverPackage.SCENARIO__SOLVER:
+				return solver != null && !solver.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

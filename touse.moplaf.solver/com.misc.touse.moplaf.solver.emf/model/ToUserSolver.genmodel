@@ -35,6 +35,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUserSolver.ecore#//Scenario/Sol"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUserSolver.ecore#//Scenario/Name"/>
       <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute ToUserSolver.ecore#//Scenario/Remarks"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUserSolver.ecore#//Scenario/SolutionReader"/>
+      <genFeatures property="None" children="true" createChild="false" ecoreFeature="ecore:EReference ToUserSolver.ecore#//Scenario/Solver"/>
     </genClasses>
     <genClasses ecoreClass="ToUserSolver.ecore#//KnapsackSol">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute ToUserSolver.ecore#//KnapsackSol/TotalValue"/>
@@ -50,8 +52,6 @@
       <genFeatures property="None" children="true" createChild="false" propertyCategory=""
           propertySortChoices="true" ecoreFeature="ecore:EReference ToUserSolver.ecore#//KnapsackLp/Root"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ToUserSolver.ecore#//KnapsackLp/Scenario"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUserSolver.ecore#//KnapsackLp/Reader"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUserSolver.ecore#//KnapsackLp/Solver"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUserSolver.ecore#//KnapsackLp/Value"/>
     </genClasses>
     <genClasses image="false" ecoreClass="ToUserSolver.ecore#//LpRoot">
@@ -72,6 +72,5 @@
       <genFeatures property="Readonly" children="true" createChild="false" propertySortChoices="true"
           ecoreFeature="ecore:EReference ToUserSolver.ecore#//LpItem/VarInKnapsack"/>
     </genClasses>
-    <genClasses ecoreClass="ToUserSolver.ecore#//SolutionReaderToUse" labelFeature="../../com.misc.common.moplaf.solver.emf/model/solver.genmodel#//solver/SolutionReader/FilePath"/>
   </genPackages>
 </genmodel:GenModel>

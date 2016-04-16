@@ -2,6 +2,8 @@
  */
 package com.misc.touse.moplaf.solver.tousesolver;
 
+import com.misc.common.moplaf.solver.SolutionReader;
+import com.misc.common.moplaf.solver.Solver;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -21,6 +23,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.Scenario#getSol <em>Sol</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.Scenario#getName <em>Name</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.Scenario#getRemarks <em>Remarks</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.Scenario#getSolutionReader <em>Solution Reader</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.Scenario#getSolver <em>Solver</em>}</li>
  * </ul>
  *
  * @see com.misc.touse.moplaf.solver.tousesolver.TousesolverPackage#getScenario()
@@ -155,5 +159,37 @@ public interface Scenario extends EObject {
 	 * @generated
 	 */
 	void setRemarks(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Solution Reader</b></em>' containment reference list.
+	 * The list contents are of type {@link com.misc.common.moplaf.solver.SolutionReader}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Solution Reader</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Solution Reader</em>' containment reference list.
+	 * @see com.misc.touse.moplaf.solver.tousesolver.TousesolverPackage#getScenario_SolutionReader()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<SolutionReader> getSolutionReader();
+
+	/**
+	 * Returns the value of the '<em><b>Solver</b></em>' containment reference list.
+	 * The list contents are of type {@link com.misc.common.moplaf.solver.Solver}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Solver</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Solver</em>' containment reference list.
+	 * @see com.misc.touse.moplaf.solver.tousesolver.TousesolverPackage#getScenario_Solver()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Solver> getSolver();
 
 } // Scenario
