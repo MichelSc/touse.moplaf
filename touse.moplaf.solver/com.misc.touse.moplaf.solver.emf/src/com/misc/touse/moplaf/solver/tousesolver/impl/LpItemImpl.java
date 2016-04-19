@@ -238,7 +238,7 @@ public class LpItemImpl extends GeneratorTupleImpl implements LpItem {
 	public void generateVars() {
 		super.generateVars();
 		
-		Item lpitem = this.getItem();
+		//Item lpitem = this.getItem();
 		GeneratorLpVar var = SolverFactory.eINSTANCE.createGeneratorLpVar();
     	var.setType(EnumLpVarType.ENUM_LITERAL_LP_VAR_INTEGER);;
     	var.setLowerBound(0.0f);
