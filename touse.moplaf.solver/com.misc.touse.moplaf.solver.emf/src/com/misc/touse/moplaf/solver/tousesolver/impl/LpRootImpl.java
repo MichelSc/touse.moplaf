@@ -229,14 +229,14 @@ public class LpRootImpl extends GeneratorTupleImpl implements LpRoot {
         if ( knapsack != null){
         	LpKnapsack lpknapsack = TousesolverFactory.eINSTANCE.createLpKnapsack();
         	lpknapsack.setKnapsack(knapsack);
-        	lpknapsack.setCode(knapsack.getShortName());
+        	lpknapsack.setName(knapsack.getShortName());
         	this.setKnapsack(lpknapsack); // owning
         }
         // item
         for (Item item : scenario.getItem()){
         	LpItem lpitem = TousesolverFactory.eINSTANCE.createLpItem();
         	lpitem.setItem(item);
-        	lpitem.setCode(item.getShortName());
+        	lpitem.setName(item.getShortName());
         	this.getItem().add(lpitem);  // owning
         }
 	}

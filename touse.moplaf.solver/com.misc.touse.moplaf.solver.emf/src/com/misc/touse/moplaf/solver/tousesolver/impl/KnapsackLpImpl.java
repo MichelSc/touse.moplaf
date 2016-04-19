@@ -335,7 +335,7 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 	@Override
 	public void generateRootTuples() {
 		LpRoot tupleroot = TousesolverFactory.eINSTANCE.createLpRoot();
-		tupleroot.setCode("root");
+		tupleroot.setName("root");
 		this.setRoot(tupleroot); // owning
 	}
 
