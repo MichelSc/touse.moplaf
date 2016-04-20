@@ -4,7 +4,6 @@ package com.misc.touse.moplaf.solver.tousesolver.provider;
 
 
 import com.misc.common.moplaf.solver.SolverFactory;
-import com.misc.common.moplaf.solver.provider.Util;
 import com.misc.touse.moplaf.solver.tousesolver.Scenario;
 import com.misc.touse.moplaf.solver.tousesolver.TousesolverFactory;
 import com.misc.touse.moplaf.solver.tousesolver.TousesolverPackage;
@@ -238,11 +237,13 @@ public class ScenarioItemProvider
 		super.notifyChanged(notification);
 	}
 
+
 	/**
 	 * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
 	 * that can be created under this object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
 	 */
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
@@ -262,10 +263,6 @@ public class ScenarioItemProvider
 			(createChildParameter
 				(TousesolverPackage.Literals.SCENARIO__SOLUTION_READER,
 				 SolverFactory.eINSTANCE.createSolutionReaderPattern()));
-		
-		Util.collectNewChildSolverDescriptors(newChildDescriptors, 
-				                              object, 
-				                              TousesolverPackage.Literals.SCENARIO__SOLVER);
 	}
 
 	/**
