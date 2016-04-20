@@ -624,13 +624,13 @@ public interface TousesolverPackage extends EPackage {
 	int KNAPSACK_LP__SELECTED = SolverPackage.GENERATOR__SELECTED;
 
 	/**
-	 * The feature id for the '<em><b>Goals Root</b></em>' reference list.
+	 * The feature id for the '<em><b>Goals</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int KNAPSACK_LP__GOALS_ROOT = SolverPackage.GENERATOR__GOALS_ROOT;
+	int KNAPSACK_LP__GOALS = SolverPackage.GENERATOR__GOALS;
 
 	/**
 	 * The feature id for the '<em><b>Root</b></em>' containment reference.
@@ -779,6 +779,15 @@ public interface TousesolverPackage extends EPackage {
 	int LP_ROOT = 8;
 
 	/**
+	 * The feature id for the '<em><b>Code</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LP_ROOT__CODE = SolverPackage.GENERATOR_TUPLE__CODE;
+
+	/**
 	 * The feature id for the '<em><b>Generator As Root</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -824,13 +833,13 @@ public interface TousesolverPackage extends EPackage {
 	int LP_ROOT__CONS = SolverPackage.GENERATOR_TUPLE__CONS;
 
 	/**
-	 * The feature id for the '<em><b>Code</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LP_ROOT__CODE = SolverPackage.GENERATOR_TUPLE__CODE;
+	int LP_ROOT__NAME = SolverPackage.GENERATOR_TUPLE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Members</b></em>' reference list.
@@ -869,6 +878,15 @@ public interface TousesolverPackage extends EPackage {
 	int LP_ROOT_FEATURE_COUNT = SolverPackage.GENERATOR_TUPLE_FEATURE_COUNT + 2;
 
 	/**
+	 * The operation id for the '<em>Get Generator</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LP_ROOT___GET_GENERATOR = SolverPackage.GENERATOR_TUPLE___GET_GENERATOR;
+
+	/**
 	 * The operation id for the '<em>Generate Vars</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -894,15 +912,6 @@ public interface TousesolverPackage extends EPackage {
 	 * @ordered
 	 */
 	int LP_ROOT___GENERATE_TUPLES = SolverPackage.GENERATOR_TUPLE___GENERATE_TUPLES;
-
-	/**
-	 * The operation id for the '<em>Get Generator</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LP_ROOT___GET_GENERATOR = SolverPackage.GENERATOR_TUPLE___GET_GENERATOR;
 
 	/**
 	 * The operation id for the '<em>Visit Tuples</em>' operation.
@@ -940,6 +949,15 @@ public interface TousesolverPackage extends EPackage {
 	 * @generated
 	 */
 	int LP_KNAPSACK = 9;
+
+	/**
+	 * The feature id for the '<em><b>Code</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LP_KNAPSACK__CODE = SolverPackage.GENERATOR_TUPLE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Generator As Root</b></em>' reference.
@@ -987,13 +1005,13 @@ public interface TousesolverPackage extends EPackage {
 	int LP_KNAPSACK__CONS = SolverPackage.GENERATOR_TUPLE__CONS;
 
 	/**
-	 * The feature id for the '<em><b>Code</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LP_KNAPSACK__CODE = SolverPackage.GENERATOR_TUPLE__CODE;
+	int LP_KNAPSACK__NAME = SolverPackage.GENERATOR_TUPLE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Members</b></em>' reference list.
@@ -1032,6 +1050,15 @@ public interface TousesolverPackage extends EPackage {
 	int LP_KNAPSACK_FEATURE_COUNT = SolverPackage.GENERATOR_TUPLE_FEATURE_COUNT + 2;
 
 	/**
+	 * The operation id for the '<em>Get Generator</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LP_KNAPSACK___GET_GENERATOR = SolverPackage.GENERATOR_TUPLE___GET_GENERATOR;
+
+	/**
 	 * The operation id for the '<em>Generate Vars</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1057,15 +1084,6 @@ public interface TousesolverPackage extends EPackage {
 	 * @ordered
 	 */
 	int LP_KNAPSACK___GENERATE_TUPLES = SolverPackage.GENERATOR_TUPLE___GENERATE_TUPLES;
-
-	/**
-	 * The operation id for the '<em>Get Generator</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LP_KNAPSACK___GET_GENERATOR = SolverPackage.GENERATOR_TUPLE___GET_GENERATOR;
 
 	/**
 	 * The operation id for the '<em>Visit Tuples</em>' operation.
@@ -1103,6 +1121,15 @@ public interface TousesolverPackage extends EPackage {
 	 * @generated
 	 */
 	int LP_ITEM = 10;
+
+	/**
+	 * The feature id for the '<em><b>Code</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LP_ITEM__CODE = SolverPackage.GENERATOR_TUPLE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Generator As Root</b></em>' reference.
@@ -1150,13 +1177,13 @@ public interface TousesolverPackage extends EPackage {
 	int LP_ITEM__CONS = SolverPackage.GENERATOR_TUPLE__CONS;
 
 	/**
-	 * The feature id for the '<em><b>Code</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LP_ITEM__CODE = SolverPackage.GENERATOR_TUPLE__CODE;
+	int LP_ITEM__NAME = SolverPackage.GENERATOR_TUPLE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Members</b></em>' reference list.
@@ -1195,6 +1222,15 @@ public interface TousesolverPackage extends EPackage {
 	int LP_ITEM_FEATURE_COUNT = SolverPackage.GENERATOR_TUPLE_FEATURE_COUNT + 2;
 
 	/**
+	 * The operation id for the '<em>Get Generator</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LP_ITEM___GET_GENERATOR = SolverPackage.GENERATOR_TUPLE___GET_GENERATOR;
+
+	/**
 	 * The operation id for the '<em>Generate Vars</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1220,15 +1256,6 @@ public interface TousesolverPackage extends EPackage {
 	 * @ordered
 	 */
 	int LP_ITEM___GENERATE_TUPLES = SolverPackage.GENERATOR_TUPLE___GENERATE_TUPLES;
-
-	/**
-	 * The operation id for the '<em>Get Generator</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LP_ITEM___GET_GENERATOR = SolverPackage.GENERATOR_TUPLE___GET_GENERATOR;
 
 	/**
 	 * The operation id for the '<em>Visit Tuples</em>' operation.
