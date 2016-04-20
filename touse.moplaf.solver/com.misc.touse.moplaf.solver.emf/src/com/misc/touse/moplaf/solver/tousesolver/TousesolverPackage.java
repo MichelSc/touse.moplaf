@@ -397,22 +397,13 @@ public interface TousesolverPackage extends EPackage {
 	int SCENARIO__SOLUTION_READER = 6;
 
 	/**
-	 * The feature id for the '<em><b>Solver</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCENARIO__SOLVER = 7;
-
-	/**
 	 * The number of structural features of the '<em>Scenario</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCENARIO_FEATURE_COUNT = 8;
+	int SCENARIO_FEATURE_COUNT = 7;
 
 	/**
 	 * The number of operations of the '<em>Scenario</em>' class.
@@ -660,13 +651,22 @@ public interface TousesolverPackage extends EPackage {
 	int KNAPSACK_LP__VALUE = SolverPackage.GENERATOR_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Solver</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNAPSACK_LP__SOLVER = SolverPackage.GENERATOR_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Knapsack Lp</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int KNAPSACK_LP_FEATURE_COUNT = SolverPackage.GENERATOR_FEATURE_COUNT + 3;
+	int KNAPSACK_LP_FEATURE_COUNT = SolverPackage.GENERATOR_FEATURE_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Generate</em>' operation.
@@ -1532,17 +1532,6 @@ public interface TousesolverPackage extends EPackage {
 	EReference getScenario_SolutionReader();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.solver.tousesolver.Scenario#getSolver <em>Solver</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Solver</em>'.
-	 * @see com.misc.touse.moplaf.solver.tousesolver.Scenario#getSolver()
-	 * @see #getScenario()
-	 * @generated
-	 */
-	EReference getScenario_Solver();
-
-	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.solver.tousesolver.KnapsackSol <em>Knapsack Sol</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1649,6 +1638,17 @@ public interface TousesolverPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getKnapsackLp_Value();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.solver.tousesolver.KnapsackLp#getSolver <em>Solver</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Solver</em>'.
+	 * @see com.misc.touse.moplaf.solver.tousesolver.KnapsackLp#getSolver()
+	 * @see #getKnapsackLp()
+	 * @generated
+	 */
+	EReference getKnapsackLp_Solver();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.solver.tousesolver.LpRoot <em>Lp Root</em>}'.
@@ -1966,14 +1966,6 @@ public interface TousesolverPackage extends EPackage {
 		EReference SCENARIO__SOLUTION_READER = eINSTANCE.getScenario_SolutionReader();
 
 		/**
-		 * The meta object literal for the '<em><b>Solver</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SCENARIO__SOLVER = eINSTANCE.getScenario_Solver();
-
-		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.solver.tousesolver.impl.KnapsackSolImpl <em>Knapsack Sol</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2056,6 +2048,14 @@ public interface TousesolverPackage extends EPackage {
 		 * @generated
 		 */
 		EReference KNAPSACK_LP__VALUE = eINSTANCE.getKnapsackLp_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>Solver</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference KNAPSACK_LP__SOLVER = eINSTANCE.getKnapsackLp_Solver();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.solver.tousesolver.impl.LpRootImpl <em>Lp Root</em>}' class.

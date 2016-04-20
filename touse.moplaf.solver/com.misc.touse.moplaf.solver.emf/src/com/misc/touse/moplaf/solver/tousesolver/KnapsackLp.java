@@ -4,6 +4,8 @@ package com.misc.touse.moplaf.solver.tousesolver;
 
 import com.misc.common.moplaf.solver.Generator;
 import com.misc.common.moplaf.solver.GeneratorLpGoal;
+import com.misc.common.moplaf.solver.Solver;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,6 +19,7 @@ import com.misc.common.moplaf.solver.GeneratorLpGoal;
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.KnapsackLp#getRoot <em>Root</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.KnapsackLp#getScenario <em>Scenario</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.KnapsackLp#getValue <em>Value</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.KnapsackLp#getSolver <em>Solver</em>}</li>
  * </ul>
  *
  * @see com.misc.touse.moplaf.solver.tousesolver.TousesolverPackage#getKnapsackLp()
@@ -104,4 +107,20 @@ public interface KnapsackLp extends Generator {
 	 * @generated
 	 */
 	void setValue(GeneratorLpGoal value);
+
+	/**
+	 * Returns the value of the '<em><b>Solver</b></em>' containment reference list.
+	 * The list contents are of type {@link com.misc.common.moplaf.solver.Solver}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Solver</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Solver</em>' containment reference list.
+	 * @see com.misc.touse.moplaf.solver.tousesolver.TousesolverPackage#getKnapsackLp_Solver()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Solver> getSolver();
 } // KnapsackLp

@@ -133,7 +133,7 @@ public class LpItemItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((LpItem)object).getCode();
+		String label = ((LpItem)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_LpItem_type") :
 			getString("_UI_LpItem_type") + " " + label;

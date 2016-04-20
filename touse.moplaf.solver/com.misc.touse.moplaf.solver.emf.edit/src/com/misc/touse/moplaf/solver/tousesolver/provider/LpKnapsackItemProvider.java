@@ -133,7 +133,7 @@ public class LpKnapsackItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((LpKnapsack)object).getCode();
+		String label = ((LpKnapsack)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_LpKnapsack_type") :
 			getString("_UI_LpKnapsack_type") + " " + label;

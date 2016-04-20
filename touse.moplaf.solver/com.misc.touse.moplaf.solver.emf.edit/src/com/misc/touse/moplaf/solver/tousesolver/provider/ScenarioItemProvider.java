@@ -171,7 +171,6 @@ public class ScenarioItemProvider
 			childrenFeatures.add(TousesolverPackage.Literals.SCENARIO__LP);
 			childrenFeatures.add(TousesolverPackage.Literals.SCENARIO__SOL);
 			childrenFeatures.add(TousesolverPackage.Literals.SCENARIO__SOLUTION_READER);
-			childrenFeatures.add(TousesolverPackage.Literals.SCENARIO__SOLVER);
 		}
 		return childrenFeatures;
 	}
@@ -233,7 +232,6 @@ public class ScenarioItemProvider
 			case TousesolverPackage.SCENARIO__LP:
 			case TousesolverPackage.SCENARIO__SOL:
 			case TousesolverPackage.SCENARIO__SOLUTION_READER:
-			case TousesolverPackage.SCENARIO__SOLVER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}

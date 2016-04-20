@@ -382,15 +382,6 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getScenario_Solver() {
-		return (EReference)scenarioEClass.getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getKnapsackSol() {
 		return knapsackSolEClass;
 	}
@@ -474,6 +465,15 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 	 */
 	public EReference getKnapsackLp_Value() {
 		return (EReference)knapsackLpEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getKnapsackLp_Solver() {
+		return (EReference)knapsackLpEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -613,7 +613,6 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 		createEAttribute(scenarioEClass, SCENARIO__NAME);
 		createEAttribute(scenarioEClass, SCENARIO__REMARKS);
 		createEReference(scenarioEClass, SCENARIO__SOLUTION_READER);
-		createEReference(scenarioEClass, SCENARIO__SOLVER);
 
 		knapsackSolEClass = createEClass(KNAPSACK_SOL);
 		createEAttribute(knapsackSolEClass, KNAPSACK_SOL__TOTAL_VALUE);
@@ -626,6 +625,7 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 		createEReference(knapsackLpEClass, KNAPSACK_LP__ROOT);
 		createEReference(knapsackLpEClass, KNAPSACK_LP__SCENARIO);
 		createEReference(knapsackLpEClass, KNAPSACK_LP__VALUE);
+		createEReference(knapsackLpEClass, KNAPSACK_LP__SOLVER);
 
 		lpRootEClass = createEClass(LP_ROOT);
 		createEReference(lpRootEClass, LP_ROOT__ITEM);
@@ -707,7 +707,6 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 		initEAttribute(getScenario_Name(), ecorePackage.getEString(), "Name", null, 0, 1, Scenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getScenario_Remarks(), ecorePackage.getEString(), "Remarks", null, 0, 1, Scenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getScenario_SolutionReader(), theSolverPackage.getSolutionReader(), null, "SolutionReader", null, 0, -1, Scenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getScenario_Solver(), theSolverPackage.getSolver(), null, "Solver", null, 0, -1, Scenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(knapsackSolEClass, KnapsackSol.class, "KnapsackSol", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getKnapsackSol_TotalValue(), ecorePackage.getEFloat(), "TotalValue", null, 0, 1, KnapsackSol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -720,6 +719,7 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 		initEReference(getKnapsackLp_Root(), this.getLpRoot(), null, "Root", null, 1, 1, KnapsackLp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getKnapsackLp_Scenario(), this.getScenario(), this.getScenario_LP(), "Scenario", null, 1, 1, KnapsackLp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getKnapsackLp_Value(), theSolverPackage.getGeneratorLpGoal(), null, "Value", null, 1, 1, KnapsackLp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getKnapsackLp_Solver(), theSolverPackage.getSolver(), null, "Solver", null, 0, -1, KnapsackLp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(lpRootEClass, LpRoot.class, "LpRoot", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLpRoot_Item(), this.getLpItem(), null, "Item", null, 0, -1, LpRoot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
