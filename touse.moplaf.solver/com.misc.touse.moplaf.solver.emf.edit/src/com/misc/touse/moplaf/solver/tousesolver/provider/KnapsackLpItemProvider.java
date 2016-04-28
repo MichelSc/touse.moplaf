@@ -65,6 +65,7 @@ public class KnapsackLpItemProvider
 			childrenFeatures.add(TousesolverPackage.Literals.KNAPSACK_LP__ROOT);
 			childrenFeatures.add(TousesolverPackage.Literals.KNAPSACK_LP__VALUE);
 			childrenFeatures.add(TousesolverPackage.Literals.KNAPSACK_LP__SOLVER);
+			childrenFeatures.add(TousesolverPackage.Literals.KNAPSACK_LP__CARDINALITY);
 		}
 		return childrenFeatures;
 	}
@@ -111,6 +112,7 @@ public class KnapsackLpItemProvider
 			case TousesolverPackage.KNAPSACK_LP__ROOT:
 			case TousesolverPackage.KNAPSACK_LP__VALUE:
 			case TousesolverPackage.KNAPSACK_LP__SOLVER:
+			case TousesolverPackage.KNAPSACK_LP__CARDINALITY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -135,6 +137,29 @@ public class KnapsackLpItemProvider
 		Util.collectNewChildSolverDescriptors(newChildDescriptors, 
                 object, 
                 TousesolverPackage.Literals.KNAPSACK_LP__SOLVER);
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify =
+			childFeature == TousesolverPackage.Literals.KNAPSACK_LP__VALUE ||
+			childFeature == TousesolverPackage.Literals.KNAPSACK_LP__CARDINALITY;
+
+		if (qualify) {
+			return getString
+				("_UI_CreateChild_text2",
+				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 	/**

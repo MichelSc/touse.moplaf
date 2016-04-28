@@ -20,6 +20,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.KnapsackLp#getScenario <em>Scenario</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.KnapsackLp#getValue <em>Value</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.KnapsackLp#getSolver <em>Solver</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.KnapsackLp#getCardinality <em>Cardinality</em>}</li>
  * </ul>
  *
  * @see com.misc.touse.moplaf.solver.tousesolver.TousesolverPackage#getKnapsackLp()
@@ -123,4 +124,30 @@ public interface KnapsackLp extends Generator {
 	 * @generated
 	 */
 	EList<Solver> getSolver();
+
+	/**
+	 * Returns the value of the '<em><b>Cardinality</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Cardinality</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Cardinality</em>' containment reference.
+	 * @see #setCardinality(GeneratorLpGoal)
+	 * @see com.misc.touse.moplaf.solver.tousesolver.TousesolverPackage#getKnapsackLp_Cardinality()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	GeneratorLpGoal getCardinality();
+
+	/**
+	 * Sets the value of the '{@link com.misc.touse.moplaf.solver.tousesolver.KnapsackLp#getCardinality <em>Cardinality</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Cardinality</em>' containment reference.
+	 * @see #getCardinality()
+	 * @generated
+	 */
+	void setCardinality(GeneratorLpGoal value);
 } // KnapsackLp

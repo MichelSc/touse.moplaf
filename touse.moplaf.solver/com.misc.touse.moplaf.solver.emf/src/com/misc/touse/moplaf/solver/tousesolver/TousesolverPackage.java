@@ -660,13 +660,22 @@ public interface TousesolverPackage extends EPackage {
 	int KNAPSACK_LP__SOLVER = SolverPackage.GENERATOR_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Cardinality</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNAPSACK_LP__CARDINALITY = SolverPackage.GENERATOR_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>Knapsack Lp</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int KNAPSACK_LP_FEATURE_COUNT = SolverPackage.GENERATOR_FEATURE_COUNT + 4;
+	int KNAPSACK_LP_FEATURE_COUNT = SolverPackage.GENERATOR_FEATURE_COUNT + 5;
 
 	/**
 	 * The operation id for the '<em>Generate</em>' operation.
@@ -887,6 +896,15 @@ public interface TousesolverPackage extends EPackage {
 	int LP_ROOT___GET_GENERATOR = SolverPackage.GENERATOR_TUPLE___GET_GENERATOR;
 
 	/**
+	 * The operation id for the '<em>Refresh Selected Solution</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LP_ROOT___REFRESH_SELECTED_SOLUTION = SolverPackage.GENERATOR_TUPLE___REFRESH_SELECTED_SOLUTION;
+
+	/**
 	 * The operation id for the '<em>Generate Vars</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -921,15 +939,6 @@ public interface TousesolverPackage extends EPackage {
 	 * @ordered
 	 */
 	int LP_ROOT___VISIT_TUPLES__ITUPLEVISITOR = SolverPackage.GENERATOR_TUPLE___VISIT_TUPLES__ITUPLEVISITOR;
-
-	/**
-	 * The operation id for the '<em>Refresh Selected Solution</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LP_ROOT___REFRESH_SELECTED_SOLUTION = SolverPackage.GENERATOR_TUPLE___REFRESH_SELECTED_SOLUTION;
 
 	/**
 	 * The number of operations of the '<em>Lp Root</em>' class.
@@ -1059,6 +1068,15 @@ public interface TousesolverPackage extends EPackage {
 	int LP_KNAPSACK___GET_GENERATOR = SolverPackage.GENERATOR_TUPLE___GET_GENERATOR;
 
 	/**
+	 * The operation id for the '<em>Refresh Selected Solution</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LP_KNAPSACK___REFRESH_SELECTED_SOLUTION = SolverPackage.GENERATOR_TUPLE___REFRESH_SELECTED_SOLUTION;
+
+	/**
 	 * The operation id for the '<em>Generate Vars</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1093,15 +1111,6 @@ public interface TousesolverPackage extends EPackage {
 	 * @ordered
 	 */
 	int LP_KNAPSACK___VISIT_TUPLES__ITUPLEVISITOR = SolverPackage.GENERATOR_TUPLE___VISIT_TUPLES__ITUPLEVISITOR;
-
-	/**
-	 * The operation id for the '<em>Refresh Selected Solution</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LP_KNAPSACK___REFRESH_SELECTED_SOLUTION = SolverPackage.GENERATOR_TUPLE___REFRESH_SELECTED_SOLUTION;
 
 	/**
 	 * The number of operations of the '<em>Lp Knapsack</em>' class.
@@ -1231,6 +1240,15 @@ public interface TousesolverPackage extends EPackage {
 	int LP_ITEM___GET_GENERATOR = SolverPackage.GENERATOR_TUPLE___GET_GENERATOR;
 
 	/**
+	 * The operation id for the '<em>Refresh Selected Solution</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LP_ITEM___REFRESH_SELECTED_SOLUTION = SolverPackage.GENERATOR_TUPLE___REFRESH_SELECTED_SOLUTION;
+
+	/**
 	 * The operation id for the '<em>Generate Vars</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1265,15 +1283,6 @@ public interface TousesolverPackage extends EPackage {
 	 * @ordered
 	 */
 	int LP_ITEM___VISIT_TUPLES__ITUPLEVISITOR = SolverPackage.GENERATOR_TUPLE___VISIT_TUPLES__ITUPLEVISITOR;
-
-	/**
-	 * The operation id for the '<em>Refresh Selected Solution</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LP_ITEM___REFRESH_SELECTED_SOLUTION = SolverPackage.GENERATOR_TUPLE___REFRESH_SELECTED_SOLUTION;
 
 	/**
 	 * The number of operations of the '<em>Lp Item</em>' class.
@@ -1649,6 +1658,17 @@ public interface TousesolverPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getKnapsackLp_Solver();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link com.misc.touse.moplaf.solver.tousesolver.KnapsackLp#getCardinality <em>Cardinality</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Cardinality</em>'.
+	 * @see com.misc.touse.moplaf.solver.tousesolver.KnapsackLp#getCardinality()
+	 * @see #getKnapsackLp()
+	 * @generated
+	 */
+	EReference getKnapsackLp_Cardinality();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.solver.tousesolver.LpRoot <em>Lp Root</em>}'.
@@ -2056,6 +2076,14 @@ public interface TousesolverPackage extends EPackage {
 		 * @generated
 		 */
 		EReference KNAPSACK_LP__SOLVER = eINSTANCE.getKnapsackLp_Solver();
+
+		/**
+		 * The meta object literal for the '<em><b>Cardinality</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference KNAPSACK_LP__CARDINALITY = eINSTANCE.getKnapsackLp_Cardinality();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.solver.tousesolver.impl.LpRootImpl <em>Lp Root</em>}' class.

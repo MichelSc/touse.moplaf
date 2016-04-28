@@ -39,6 +39,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.KnapsackLpImpl#getScenario <em>Scenario</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.KnapsackLpImpl#getValue <em>Value</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.KnapsackLpImpl#getSolver <em>Solver</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.KnapsackLpImpl#getCardinality <em>Cardinality</em>}</li>
  * </ul>
  *
  * @generated
@@ -73,6 +74,16 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 	 * @ordered
 	 */
 	protected EList<Solver> solver;
+
+	/**
+	 * The cached value of the '{@link #getCardinality() <em>Cardinality</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCardinality()
+	 * @generated
+	 * @ordered
+	 */
+	protected GeneratorLpGoal cardinality;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -237,6 +248,49 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public GeneratorLpGoal getCardinality() {
+		return cardinality;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetCardinality(GeneratorLpGoal newCardinality, NotificationChain msgs) {
+		GeneratorLpGoal oldCardinality = cardinality;
+		cardinality = newCardinality;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TousesolverPackage.KNAPSACK_LP__CARDINALITY, oldCardinality, newCardinality);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCardinality(GeneratorLpGoal newCardinality) {
+		if (newCardinality != cardinality) {
+			NotificationChain msgs = null;
+			if (cardinality != null)
+				msgs = ((InternalEObject)cardinality).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TousesolverPackage.KNAPSACK_LP__CARDINALITY, null, msgs);
+			if (newCardinality != null)
+				msgs = ((InternalEObject)newCardinality).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TousesolverPackage.KNAPSACK_LP__CARDINALITY, null, msgs);
+			msgs = basicSetCardinality(newCardinality, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TousesolverPackage.KNAPSACK_LP__CARDINALITY, newCardinality, newCardinality));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -264,6 +318,8 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 				return basicSetValue(null, msgs);
 			case TousesolverPackage.KNAPSACK_LP__SOLVER:
 				return ((InternalEList<?>)getSolver()).basicRemove(otherEnd, msgs);
+			case TousesolverPackage.KNAPSACK_LP__CARDINALITY:
+				return basicSetCardinality(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -298,6 +354,8 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 				return getValue();
 			case TousesolverPackage.KNAPSACK_LP__SOLVER:
 				return getSolver();
+			case TousesolverPackage.KNAPSACK_LP__CARDINALITY:
+				return getCardinality();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -324,6 +382,9 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 				getSolver().clear();
 				getSolver().addAll((Collection<? extends Solver>)newValue);
 				return;
+			case TousesolverPackage.KNAPSACK_LP__CARDINALITY:
+				setCardinality((GeneratorLpGoal)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -348,6 +409,9 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 			case TousesolverPackage.KNAPSACK_LP__SOLVER:
 				getSolver().clear();
 				return;
+			case TousesolverPackage.KNAPSACK_LP__CARDINALITY:
+				setCardinality((GeneratorLpGoal)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -368,6 +432,8 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 				return value != null;
 			case TousesolverPackage.KNAPSACK_LP__SOLVER:
 				return solver != null && !solver.isEmpty();
+			case TousesolverPackage.KNAPSACK_LP__CARDINALITY:
+				return cardinality != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -383,6 +449,7 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 	@Override
 	public void generateGoals() {
 		this.generateGoalValue();
+		this.generateGoalCardinality();
 	}
 
 	private void generateGoalValue() {
@@ -392,6 +459,16 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 		LpRoot root = this.getRoot();
 		for ( LpItem item : root.getItem()){
 			goal.constructTerm(item.getVarInKnapsack(), item.getItem().getValue());
+		}
+	}
+
+	private void generateGoalCardinality() {
+		GeneratorLpGoal goal = SolverFactory.eINSTANCE.createGeneratorLpGoal();
+		goal.setName("cardinality");
+		this.setCardinality(goal); // owning
+		LpRoot root = this.getRoot();
+		for ( LpItem item : root.getItem()){
+			goal.constructTerm(item.getVarInKnapsack(), 1.0f);
 		}
 	}
 
