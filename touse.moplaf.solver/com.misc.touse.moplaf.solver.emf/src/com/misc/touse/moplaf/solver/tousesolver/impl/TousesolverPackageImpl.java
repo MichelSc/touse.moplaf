@@ -473,7 +473,7 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 	 * @generated
 	 */
 	public EReference getKnapsackLp_Solver() {
-		return (EReference)knapsackLpEClass.getEStructuralFeatures().get(3);
+		return (EReference)knapsackLpEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -482,7 +482,7 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 	 * @generated
 	 */
 	public EReference getKnapsackLp_Cardinality() {
-		return (EReference)knapsackLpEClass.getEStructuralFeatures().get(4);
+		return (EReference)knapsackLpEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -634,8 +634,8 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 		createEReference(knapsackLpEClass, KNAPSACK_LP__ROOT);
 		createEReference(knapsackLpEClass, KNAPSACK_LP__SCENARIO);
 		createEReference(knapsackLpEClass, KNAPSACK_LP__VALUE);
-		createEReference(knapsackLpEClass, KNAPSACK_LP__SOLVER);
 		createEReference(knapsackLpEClass, KNAPSACK_LP__CARDINALITY);
+		createEReference(knapsackLpEClass, KNAPSACK_LP__SOLVER);
 
 		lpRootEClass = createEClass(LP_ROOT);
 		createEReference(lpRootEClass, LP_ROOT__ITEM);
@@ -729,8 +729,8 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 		initEReference(getKnapsackLp_Root(), this.getLpRoot(), null, "Root", null, 1, 1, KnapsackLp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getKnapsackLp_Scenario(), this.getScenario(), this.getScenario_LP(), "Scenario", null, 1, 1, KnapsackLp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getKnapsackLp_Value(), theSolverPackage.getGeneratorLpGoal(), null, "Value", null, 1, 1, KnapsackLp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getKnapsackLp_Solver(), theSolverPackage.getSolver(), null, "Solver", null, 0, -1, KnapsackLp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getKnapsackLp_Cardinality(), theSolverPackage.getGeneratorLpGoal(), null, "Cardinality", null, 1, 1, KnapsackLp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getKnapsackLp_Solver(), theSolverPackage.getSolver(), null, "Solver", null, 0, -1, KnapsackLp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(lpRootEClass, LpRoot.class, "LpRoot", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLpRoot_Item(), this.getLpItem(), null, "Item", null, 0, -1, LpRoot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

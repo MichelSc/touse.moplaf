@@ -64,8 +64,8 @@ public class KnapsackLpItemProvider
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(TousesolverPackage.Literals.KNAPSACK_LP__ROOT);
 			childrenFeatures.add(TousesolverPackage.Literals.KNAPSACK_LP__VALUE);
-			childrenFeatures.add(TousesolverPackage.Literals.KNAPSACK_LP__SOLVER);
 			childrenFeatures.add(TousesolverPackage.Literals.KNAPSACK_LP__CARDINALITY);
+			childrenFeatures.add(TousesolverPackage.Literals.KNAPSACK_LP__SOLVER);
 		}
 		return childrenFeatures;
 	}
@@ -111,8 +111,8 @@ public class KnapsackLpItemProvider
 		switch (notification.getFeatureID(KnapsackLp.class)) {
 			case TousesolverPackage.KNAPSACK_LP__ROOT:
 			case TousesolverPackage.KNAPSACK_LP__VALUE:
-			case TousesolverPackage.KNAPSACK_LP__SOLVER:
 			case TousesolverPackage.KNAPSACK_LP__CARDINALITY:
+			case TousesolverPackage.KNAPSACK_LP__SOLVER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}

@@ -651,22 +651,22 @@ public interface TousesolverPackage extends EPackage {
 	int KNAPSACK_LP__VALUE = SolverPackage.GENERATOR_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Solver</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KNAPSACK_LP__SOLVER = SolverPackage.GENERATOR_FEATURE_COUNT + 3;
-
-	/**
 	 * The feature id for the '<em><b>Cardinality</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int KNAPSACK_LP__CARDINALITY = SolverPackage.GENERATOR_FEATURE_COUNT + 4;
+	int KNAPSACK_LP__CARDINALITY = SolverPackage.GENERATOR_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Solver</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNAPSACK_LP__SOLVER = SolverPackage.GENERATOR_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Knapsack Lp</em>' class.

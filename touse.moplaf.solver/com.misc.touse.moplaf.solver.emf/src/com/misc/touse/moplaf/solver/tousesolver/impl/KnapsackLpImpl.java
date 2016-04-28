@@ -38,8 +38,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.KnapsackLpImpl#getRoot <em>Root</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.KnapsackLpImpl#getScenario <em>Scenario</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.KnapsackLpImpl#getValue <em>Value</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.KnapsackLpImpl#getSolver <em>Solver</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.KnapsackLpImpl#getCardinality <em>Cardinality</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.KnapsackLpImpl#getSolver <em>Solver</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,16 +66,6 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 	protected GeneratorLpGoal value;
 
 	/**
-	 * The cached value of the '{@link #getSolver() <em>Solver</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSolver()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Solver> solver;
-
-	/**
 	 * The cached value of the '{@link #getCardinality() <em>Cardinality</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -84,6 +74,16 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 	 * @ordered
 	 */
 	protected GeneratorLpGoal cardinality;
+
+	/**
+	 * The cached value of the '{@link #getSolver() <em>Solver</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSolver()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Solver> solver;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -316,10 +316,10 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 				return basicSetScenario(null, msgs);
 			case TousesolverPackage.KNAPSACK_LP__VALUE:
 				return basicSetValue(null, msgs);
-			case TousesolverPackage.KNAPSACK_LP__SOLVER:
-				return ((InternalEList<?>)getSolver()).basicRemove(otherEnd, msgs);
 			case TousesolverPackage.KNAPSACK_LP__CARDINALITY:
 				return basicSetCardinality(null, msgs);
+			case TousesolverPackage.KNAPSACK_LP__SOLVER:
+				return ((InternalEList<?>)getSolver()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -352,10 +352,10 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 				return getScenario();
 			case TousesolverPackage.KNAPSACK_LP__VALUE:
 				return getValue();
-			case TousesolverPackage.KNAPSACK_LP__SOLVER:
-				return getSolver();
 			case TousesolverPackage.KNAPSACK_LP__CARDINALITY:
 				return getCardinality();
+			case TousesolverPackage.KNAPSACK_LP__SOLVER:
+				return getSolver();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -378,12 +378,12 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 			case TousesolverPackage.KNAPSACK_LP__VALUE:
 				setValue((GeneratorLpGoal)newValue);
 				return;
+			case TousesolverPackage.KNAPSACK_LP__CARDINALITY:
+				setCardinality((GeneratorLpGoal)newValue);
+				return;
 			case TousesolverPackage.KNAPSACK_LP__SOLVER:
 				getSolver().clear();
 				getSolver().addAll((Collection<? extends Solver>)newValue);
-				return;
-			case TousesolverPackage.KNAPSACK_LP__CARDINALITY:
-				setCardinality((GeneratorLpGoal)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -406,11 +406,11 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 			case TousesolverPackage.KNAPSACK_LP__VALUE:
 				setValue((GeneratorLpGoal)null);
 				return;
-			case TousesolverPackage.KNAPSACK_LP__SOLVER:
-				getSolver().clear();
-				return;
 			case TousesolverPackage.KNAPSACK_LP__CARDINALITY:
 				setCardinality((GeneratorLpGoal)null);
+				return;
+			case TousesolverPackage.KNAPSACK_LP__SOLVER:
+				getSolver().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -430,10 +430,10 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 				return getScenario() != null;
 			case TousesolverPackage.KNAPSACK_LP__VALUE:
 				return value != null;
-			case TousesolverPackage.KNAPSACK_LP__SOLVER:
-				return solver != null && !solver.isEmpty();
 			case TousesolverPackage.KNAPSACK_LP__CARDINALITY:
 				return cardinality != null;
+			case TousesolverPackage.KNAPSACK_LP__SOLVER:
+				return solver != null && !solver.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
