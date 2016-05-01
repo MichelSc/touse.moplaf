@@ -2,15 +2,13 @@
  */
 package com.misc.touse.moplaf.tousedatasetload.util;
 
-import com.misc.common.moplaf.DatasetLoadDerby.DataSourceJdbDerbyEmbedded;
-
 import com.misc.common.moplaf.DatasetLoadMariaDb.DatasetLoadJdbcMariaDb;
-import com.misc.common.moplaf.datasetload.DataSource;
-import com.misc.common.moplaf.datasetload.DataSourceJdbc;
-import com.misc.common.moplaf.datasetload.Table;
-import com.misc.common.moplaf.datasetload.TableGroup;
-import com.misc.common.moplaf.datasetload.TableRow;
-
+import com.misc.common.moplaf.dbsynch.DataSource;
+import com.misc.common.moplaf.dbsynch.DataSourceJdbc;
+import com.misc.common.moplaf.dbsynch.Table;
+import com.misc.common.moplaf.dbsynch.TableGroup;
+import com.misc.common.moplaf.dbsynch.TableRow;
+import com.misc.common.moplaf.dbsynch.derby.DataSourceJdbDerbyEmbedded;
 import com.misc.touse.moplaf.tousedatasetload.*;
 
 import org.eclipse.emf.ecore.EObject;

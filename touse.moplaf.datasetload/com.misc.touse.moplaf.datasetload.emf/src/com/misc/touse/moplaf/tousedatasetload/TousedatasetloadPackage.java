@@ -2,10 +2,9 @@
  */
 package com.misc.touse.moplaf.tousedatasetload;
 
-import com.misc.common.moplaf.DatasetLoadDerby.DatasetLoadDerbyPackage;
-
 import com.misc.common.moplaf.DatasetLoadMariaDb.DatasetLoadMariaDbPackage;
-import com.misc.common.moplaf.datasetload.DatasetloadPackage;
+import com.misc.common.moplaf.dbsynch.DatasetloadPackage;
+import com.misc.common.moplaf.dbsynch.derby.DatasetLoadDerbyPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;

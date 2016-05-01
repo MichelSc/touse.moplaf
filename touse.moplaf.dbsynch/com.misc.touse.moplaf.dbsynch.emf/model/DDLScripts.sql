@@ -18,6 +18,11 @@ create table SortingPlanInput
 , productid  char(32) 
 );
 
+insert into SortingPlan ( "ID", "NAME", "VALIDFROM", "VALIDTO") 
+values ( 'id1', 'premier', '2016-01-01', '2016-12-31');
+
+insert into SortingPlan ( "ID") values ( 'jj');
+
 select sp.id
      , sp.name
      , sp.validfrom

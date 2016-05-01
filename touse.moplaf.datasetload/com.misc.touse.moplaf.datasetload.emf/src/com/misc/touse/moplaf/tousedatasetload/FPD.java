@@ -2,7 +2,7 @@
  */
 package com.misc.touse.moplaf.tousedatasetload;
 
-import com.misc.common.moplaf.DatasetLoadDerby.DataSourceJdbDerbyEmbedded;
+import com.misc.common.moplaf.dbsynch.derby.DataSourceJdbDerbyEmbedded;
 
 /**
  * <!-- begin-user-doc -->

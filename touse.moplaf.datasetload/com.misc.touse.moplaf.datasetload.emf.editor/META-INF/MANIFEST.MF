@@ -11,11 +11,7 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Export-Package: com.misc.touse.moplaf.tousedatasetload.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,
- com.misc.touse.moplaf.datasetload.emf.edit;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.eclipse.emf.edit.ui;visibility:=reexport,
- org.eclipse.ui.ide;visibility:=reexport,
- com.misc.common.moplaf.datasetload.emf.edit;visibility:=reexport,
- com.misc.common.moplaf.datasetload.derby.emf.edit;visibility:=reexport,
- com.misc.common.moplaf.datasetload.mariadb.emf.edit;visibility:=reexport
+ org.eclipse.ui.ide;visibility:=reexport
 Bundle-ActivationPolicy: lazy

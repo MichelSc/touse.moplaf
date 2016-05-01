@@ -8,11 +8,9 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.ui.IWorkbenchPart;
 
-import com.misc.common.moplaf.datasetload.provider.ConnectCommand;
-
 
 public class ConnectAction extends Action {
-		public final static String ID = "com.misc.touse.moplaf.datasetload.ConnectActionID";
+		public final static String ID = "com.misc.touse.moplaf.dbsynch.ConnectActionID";
 
 		Command currentCommand = null;
 		EditingDomain editingDomain = null;

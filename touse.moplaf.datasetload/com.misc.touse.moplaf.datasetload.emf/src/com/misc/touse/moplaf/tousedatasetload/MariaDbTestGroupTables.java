@@ -2,9 +2,9 @@
  */
 package com.misc.touse.moplaf.tousedatasetload;
 
-import com.misc.common.moplaf.datasetload.TableGroup;
-
 import org.eclipse.emf.common.util.EList;
+
+import com.misc.common.moplaf.dbsynch.TableGroup;
 
 /**
  * <!-- begin-user-doc -->

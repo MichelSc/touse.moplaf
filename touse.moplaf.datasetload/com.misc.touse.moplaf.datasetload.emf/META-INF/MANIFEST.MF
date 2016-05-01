@@ -12,7 +12,7 @@ Export-Package: com.misc.touse.moplaf.tousedatasetload,
  com.misc.touse.moplaf.tousedatasetload.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- com.misc.common.moplaf.datasetload.emf;visibility:=reexport,
- com.misc.common.moplaf.datasetload.derby.emf;visibility:=reexport,
+ com.misc.common.moplaf.dbsynch.emf;visibility:=reexport,
+ com.misc.common.moplaf.dbsynch.derby.emf;visibility:=reexport,
  com.misc.common.moplaf.datasetload.mariadb.emf;visibility:=reexport
 Bundle-ActivationPolicy: lazy

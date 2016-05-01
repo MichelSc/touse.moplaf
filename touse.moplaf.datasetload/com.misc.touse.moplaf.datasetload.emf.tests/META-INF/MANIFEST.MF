@@ -10,8 +10,8 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Export-Package: com.misc.touse.moplaf.tousedatasetload.tests
 Require-Bundle: org.eclipse.core.runtime,
  com.misc.touse.moplaf.datasetload.emf;visibility:=reexport,
- com.misc.common.moplaf.datasetload.emf;visibility:=reexport,
- com.misc.common.moplaf.datasetload.derby.emf;visibility:=reexport,
+ com.misc.common.moplaf.dbsynch.emf;visibility:=reexport,
+ com.misc.common.moplaf.dbsynch.derby.emf;visibility:=reexport,
  com.misc.common.moplaf.datasetload.mariadb.emf;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.junit;visibility:=reexport

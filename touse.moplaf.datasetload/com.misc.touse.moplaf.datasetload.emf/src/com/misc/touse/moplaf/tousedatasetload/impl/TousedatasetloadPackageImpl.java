@@ -2,9 +2,9 @@
  */
 package com.misc.touse.moplaf.tousedatasetload.impl;
 
-import com.misc.common.moplaf.DatasetLoadDerby.DatasetLoadDerbyPackage;
 import com.misc.common.moplaf.DatasetLoadMariaDb.DatasetLoadMariaDbPackage;
-import com.misc.common.moplaf.datasetload.DatasetloadPackage;
+import com.misc.common.moplaf.dbsynch.DatasetloadPackage;
+import com.misc.common.moplaf.dbsynch.derby.DatasetLoadDerbyPackage;
 import com.misc.touse.moplaf.tousedatasetload.FPDGroupSortingPlan;
 import com.misc.touse.moplaf.tousedatasetload.FPDSortingPlan;
 import com.misc.touse.moplaf.tousedatasetload.FPDSortingPlanInput;

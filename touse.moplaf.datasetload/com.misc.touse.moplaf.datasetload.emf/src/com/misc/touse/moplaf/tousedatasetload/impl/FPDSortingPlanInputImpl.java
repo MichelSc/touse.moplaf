@@ -2,8 +2,7 @@
  */
 package com.misc.touse.moplaf.tousedatasetload.impl;
 
-import com.misc.common.moplaf.datasetload.impl.TableRowImpl;
-
+import com.misc.common.moplaf.dbsynch.impl.TableRowImpl;
 import com.misc.touse.moplaf.tousedatasetload.FPDSortingPlanInput;
 import com.misc.touse.moplaf.tousedatasetload.TousedatasetloadPackage;
 

@@ -2,7 +2,7 @@
  */
 package com.misc.touse.moplaf.tousedatasetload.impl;
 
-import com.misc.common.moplaf.DatasetLoadDerby.impl.DataSourceJdbDerbyEmbeddedImpl;
+import com.misc.common.moplaf.dbsynch.derby.impl.DataSourceJdbDerbyEmbeddedImpl;
 import com.misc.touse.moplaf.tousedatasetload.FPD;
 import com.misc.touse.moplaf.tousedatasetload.FPDGroupSortingPlan;
 import com.misc.touse.moplaf.tousedatasetload.TousedatasetloadPackage;

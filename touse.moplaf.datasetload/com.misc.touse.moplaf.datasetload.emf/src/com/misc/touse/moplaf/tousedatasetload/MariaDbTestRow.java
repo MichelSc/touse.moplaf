@@ -2,7 +2,7 @@
  */
 package com.misc.touse.moplaf.tousedatasetload;
 
-import com.misc.common.moplaf.datasetload.TableRow;
+import com.misc.common.moplaf.dbsynch.TableRow;
 
 /**
  * <!-- begin-user-doc -->

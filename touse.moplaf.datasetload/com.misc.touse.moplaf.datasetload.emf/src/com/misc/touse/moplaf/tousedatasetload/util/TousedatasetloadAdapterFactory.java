@@ -2,15 +2,13 @@
  */
 package com.misc.touse.moplaf.tousedatasetload.util;
 
-import com.misc.common.moplaf.DatasetLoadDerby.DataSourceJdbDerbyEmbedded;
-
 import com.misc.common.moplaf.DatasetLoadMariaDb.DatasetLoadJdbcMariaDb;
-import com.misc.common.moplaf.datasetload.DataSource;
-import com.misc.common.moplaf.datasetload.DataSourceJdbc;
-import com.misc.common.moplaf.datasetload.Table;
-import com.misc.common.moplaf.datasetload.TableGroup;
-import com.misc.common.moplaf.datasetload.TableRow;
-
+import com.misc.common.moplaf.dbsynch.DataSource;
+import com.misc.common.moplaf.dbsynch.DataSourceJdbc;
+import com.misc.common.moplaf.dbsynch.Table;
+import com.misc.common.moplaf.dbsynch.TableGroup;
+import com.misc.common.moplaf.dbsynch.TableRow;
+import com.misc.common.moplaf.dbsynch.derby.DataSourceJdbDerbyEmbedded;
 import com.misc.touse.moplaf.tousedatasetload.*;
 
 import org.eclipse.emf.common.notify.Adapter;
@@ -305,13 +303,13 @@ public class TousedatasetloadAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.datasetload.DataSource <em>Data Source</em>}'.
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.dbsynch.DataSource <em>Data Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.datasetload.DataSource
+	 * @see com.misc.common.moplaf.dbsynch.DataSource
 	 * @generated
 	 */
 	public Adapter createDataSourceAdapter() {
@@ -319,13 +317,13 @@ public class TousedatasetloadAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.datasetload.DataSourceJdbc <em>Data Source Jdbc</em>}'.
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.dbsynch.DataSourceJdbc <em>Data Source Jdbc</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.datasetload.DataSourceJdbc
+	 * @see com.misc.common.moplaf.dbsynch.DataSourceJdbc
 	 * @generated
 	 */
 	public Adapter createDataSourceJdbcAdapter() {
@@ -333,13 +331,13 @@ public class TousedatasetloadAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.DatasetLoadDerby.DataSourceJdbDerbyEmbedded <em>Data Source Jdb Derby Embedded</em>}'.
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.dbsynch.derby.DataSourceJdbDerbyEmbedded <em>Data Source Jdb Derby Embedded</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.DatasetLoadDerby.DataSourceJdbDerbyEmbedded
+	 * @see com.misc.common.moplaf.dbsynch.derby.DataSourceJdbDerbyEmbedded
 	 * @generated
 	 */
 	public Adapter createDataSourceJdbDerbyEmbeddedAdapter() {
@@ -347,13 +345,13 @@ public class TousedatasetloadAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.datasetload.TableGroup <em>Table Group</em>}'.
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.dbsynch.TableGroup <em>Table Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.datasetload.TableGroup
+	 * @see com.misc.common.moplaf.dbsynch.TableGroup
 	 * @generated
 	 */
 	public Adapter createTableGroupAdapter() {
@@ -361,13 +359,13 @@ public class TousedatasetloadAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.datasetload.Table <em>Table</em>}'.
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.dbsynch.Table <em>Table</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.datasetload.Table
+	 * @see com.misc.common.moplaf.dbsynch.Table
 	 * @generated
 	 */
 	public Adapter createTableAdapter() {
@@ -375,13 +373,13 @@ public class TousedatasetloadAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.datasetload.TableRow <em>Table Row</em>}'.
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.dbsynch.TableRow <em>Table Row</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.datasetload.TableRow
+	 * @see com.misc.common.moplaf.dbsynch.TableRow
 	 * @generated
 	 */
 	public Adapter createTableRowAdapter() {

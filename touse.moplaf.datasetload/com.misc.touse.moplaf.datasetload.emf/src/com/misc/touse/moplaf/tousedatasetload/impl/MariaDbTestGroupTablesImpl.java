@@ -2,8 +2,7 @@
  */
 package com.misc.touse.moplaf.tousedatasetload.impl;
 
-import com.misc.common.moplaf.datasetload.impl.TableGroupImpl;
-
+import com.misc.common.moplaf.dbsynch.impl.TableGroupImpl;
 import com.misc.touse.moplaf.tousedatasetload.MariaDbTestGroupTables;
 import com.misc.touse.moplaf.tousedatasetload.MariaDbTestTable;
 import com.misc.touse.moplaf.tousedatasetload.TousedatasetloadPackage;
