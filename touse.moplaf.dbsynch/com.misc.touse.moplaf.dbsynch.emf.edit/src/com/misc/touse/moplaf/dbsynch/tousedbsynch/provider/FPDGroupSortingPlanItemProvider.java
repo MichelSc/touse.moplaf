@@ -6,9 +6,8 @@ package com.misc.touse.moplaf.dbsynch.tousedbsynch.provider;
 import com.misc.common.moplaf.dbsynch.provider.TableGroupItemProvider;
 
 import com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDGroupSortingPlan;
-import com.misc.touse.moplaf.dbsynch.tousedbsynch.TousedbsynchFactory;
-import com.misc.touse.moplaf.dbsynch.tousedbsynch.TousedbsynchPackage;
-
+import com.misc.touse.moplaf.dbsynch.tousedbsynch.ToUseDbSynchFactory;
+import com.misc.touse.moplaf.dbsynch.tousedbsynch.ToUseDbSynchPackage;
 import java.util.Collection;
 import java.util.List;
 
@@ -71,7 +70,7 @@ public class FPDGroupSortingPlanItemProvider extends TableGroupItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_FPDGroupSortingPlan_FromDate_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FPDGroupSortingPlan_FromDate_feature", "_UI_FPDGroupSortingPlan_type"),
-				 TousedbsynchPackage.Literals.FPD_GROUP_SORTING_PLAN__FROM_DATE,
+				 ToUseDbSynchPackage.Literals.FPD_GROUP_SORTING_PLAN__FROM_DATE,
 				 true,
 				 false,
 				 false,
@@ -93,7 +92,7 @@ public class FPDGroupSortingPlanItemProvider extends TableGroupItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_FPDGroupSortingPlan_ToDate_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FPDGroupSortingPlan_ToDate_feature", "_UI_FPDGroupSortingPlan_type"),
-				 TousedbsynchPackage.Literals.FPD_GROUP_SORTING_PLAN__TO_DATE,
+				 ToUseDbSynchPackage.Literals.FPD_GROUP_SORTING_PLAN__TO_DATE,
 				 true,
 				 false,
 				 false,
@@ -114,8 +113,8 @@ public class FPDGroupSortingPlanItemProvider extends TableGroupItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(TousedbsynchPackage.Literals.FPD_GROUP_SORTING_PLAN__SORTING_PLANS_TABLE);
-			childrenFeatures.add(TousedbsynchPackage.Literals.FPD_GROUP_SORTING_PLAN__SORTING_PLAN_INPUTS_TABLE);
+			childrenFeatures.add(ToUseDbSynchPackage.Literals.FPD_GROUP_SORTING_PLAN__SORTING_PLANS_TABLE);
+			childrenFeatures.add(ToUseDbSynchPackage.Literals.FPD_GROUP_SORTING_PLAN__SORTING_PLAN_INPUTS_TABLE);
 		}
 		return childrenFeatures;
 	}
@@ -160,12 +159,12 @@ public class FPDGroupSortingPlanItemProvider extends TableGroupItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(FPDGroupSortingPlan.class)) {
-			case TousedbsynchPackage.FPD_GROUP_SORTING_PLAN__FROM_DATE:
-			case TousedbsynchPackage.FPD_GROUP_SORTING_PLAN__TO_DATE:
+			case ToUseDbSynchPackage.FPD_GROUP_SORTING_PLAN__FROM_DATE:
+			case ToUseDbSynchPackage.FPD_GROUP_SORTING_PLAN__TO_DATE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case TousedbsynchPackage.FPD_GROUP_SORTING_PLAN__SORTING_PLANS_TABLE:
-			case TousedbsynchPackage.FPD_GROUP_SORTING_PLAN__SORTING_PLAN_INPUTS_TABLE:
+			case ToUseDbSynchPackage.FPD_GROUP_SORTING_PLAN__SORTING_PLANS_TABLE:
+			case ToUseDbSynchPackage.FPD_GROUP_SORTING_PLAN__SORTING_PLAN_INPUTS_TABLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -185,13 +184,13 @@ public class FPDGroupSortingPlanItemProvider extends TableGroupItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TousedbsynchPackage.Literals.FPD_GROUP_SORTING_PLAN__SORTING_PLANS_TABLE,
-				 TousedbsynchFactory.eINSTANCE.createFPDSortingPlans()));
+				(ToUseDbSynchPackage.Literals.FPD_GROUP_SORTING_PLAN__SORTING_PLANS_TABLE,
+				 ToUseDbSynchFactory.eINSTANCE.createFPDSortingPlans()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TousedbsynchPackage.Literals.FPD_GROUP_SORTING_PLAN__SORTING_PLAN_INPUTS_TABLE,
-				 TousedbsynchFactory.eINSTANCE.createFPDSortingPlanInputs()));
+				(ToUseDbSynchPackage.Literals.FPD_GROUP_SORTING_PLAN__SORTING_PLAN_INPUTS_TABLE,
+				 ToUseDbSynchFactory.eINSTANCE.createFPDSortingPlanInputs()));
 	}
 
 	/**

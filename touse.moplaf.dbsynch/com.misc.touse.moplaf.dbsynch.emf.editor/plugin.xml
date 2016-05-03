@@ -34,4 +34,31 @@
       </editor>
    </extension>
 
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated tousebsynch -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="com.misc.touse.moplaf.dbsynch.tousedbsynch.presentation.ToUseDbSynchModelWizardID"
+            name="%_UI_ToUseDbSynchModelWizard_label"
+            class="com.misc.touse.moplaf.dbsynch.tousedbsynch.presentation.ToUseDbSynchModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ToUseDbSynchModelFile.gif">
+         <description>%_UI_ToUseDbSynchModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated tousebsynch -->
+      <editor
+            id="com.misc.touse.moplaf.dbsynch.tousedbsynch.presentation.ToUseDbSynchEditorID"
+            name="%_UI_ToUseDbSynchEditor_label"
+            icon="icons/full/obj16/ToUseDbSynchModelFile.gif"
+            extensions="tousedbsynch"
+            class="com.misc.touse.moplaf.dbsynch.tousedbsynch.presentation.ToUseDbSynchEditor"
+            contributorClass="com.misc.touse.moplaf.dbsynch.tousedbsynch.presentation.ToUseDbSynchActionBarContributor">
+      </editor>
+   </extension>
 </plugin>

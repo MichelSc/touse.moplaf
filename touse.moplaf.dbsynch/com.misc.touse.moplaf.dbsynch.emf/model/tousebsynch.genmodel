@@ -6,7 +6,7 @@
     usedGenPackages="../../com.misc.common.moplaf.dbsynch.emf/model/dbsynch.genmodel#//dbsynch ../../com.misc.common.moplaf.dbsynch.derby.emf/model/dbsynchderby.genmodel#//dbsynchderby"
     operationReflection="true" importOrganizing="true">
   <foreignModel>tousedbsynch.ecore</foreignModel>
-  <genPackages prefix="Tousedbsynch" basePackage="com.misc.touse.moplaf.dbsynch" disposableProviderFactory="true"
+  <genPackages prefix="ToUseDbSynch" basePackage="com.misc.touse.moplaf.dbsynch" disposableProviderFactory="true"
       ecorePackage="tousedbsynch.ecore#/">
     <genClasses image="false" ecoreClass="tousedbsynch.ecore#//FPD">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousedbsynch.ecore#//FPD/SortingPlansSet"/>

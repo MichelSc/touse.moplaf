@@ -18,7 +18,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDSortingPlanInputs#getSortingPlanInputs <em>Sorting Plan Inputs</em>}</li>
  * </ul>
  *
- * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.TousedbsynchPackage#getFPDSortingPlanInputs()
+ * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.ToUseDbSynchPackage#getFPDSortingPlanInputs()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface FPDSortingPlanInputs extends Table {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Sorting Plan Inputs</em>' containment reference list.
-	 * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.TousedbsynchPackage#getFPDSortingPlanInputs_SortingPlanInputs()
+	 * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.ToUseDbSynchPackage#getFPDSortingPlanInputs_SortingPlanInputs()
 	 * @model containment="true"
 	 * @generated
 	 */

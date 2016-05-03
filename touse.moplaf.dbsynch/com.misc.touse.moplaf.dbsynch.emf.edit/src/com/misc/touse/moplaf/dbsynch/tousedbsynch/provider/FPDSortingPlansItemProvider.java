@@ -8,9 +8,8 @@ import com.misc.common.moplaf.dbsynch.DbSynchPackage;
 import com.misc.common.moplaf.dbsynch.provider.TableItemProvider;
 
 import com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDSortingPlans;
-import com.misc.touse.moplaf.dbsynch.tousedbsynch.TousedbsynchFactory;
-import com.misc.touse.moplaf.dbsynch.tousedbsynch.TousedbsynchPackage;
-
+import com.misc.touse.moplaf.dbsynch.tousedbsynch.ToUseDbSynchFactory;
+import com.misc.touse.moplaf.dbsynch.tousedbsynch.ToUseDbSynchPackage;
 import java.util.Collection;
 import java.util.List;
 
@@ -68,7 +67,7 @@ public class FPDSortingPlansItemProvider extends TableItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(TousedbsynchPackage.Literals.FPD_SORTING_PLANS__SORTING_PLANS);
+			childrenFeatures.add(ToUseDbSynchPackage.Literals.FPD_SORTING_PLANS__SORTING_PLANS);
 		}
 		return childrenFeatures;
 	}
@@ -113,7 +112,7 @@ public class FPDSortingPlansItemProvider extends TableItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(FPDSortingPlans.class)) {
-			case TousedbsynchPackage.FPD_SORTING_PLANS__SORTING_PLANS:
+			case ToUseDbSynchPackage.FPD_SORTING_PLANS__SORTING_PLANS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -133,8 +132,8 @@ public class FPDSortingPlansItemProvider extends TableItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TousedbsynchPackage.Literals.FPD_SORTING_PLANS__SORTING_PLANS,
-				 TousedbsynchFactory.eINSTANCE.createFPDSortingPlan()));
+				(ToUseDbSynchPackage.Literals.FPD_SORTING_PLANS__SORTING_PLANS,
+				 ToUseDbSynchFactory.eINSTANCE.createFPDSortingPlan()));
 	}
 
 	/**

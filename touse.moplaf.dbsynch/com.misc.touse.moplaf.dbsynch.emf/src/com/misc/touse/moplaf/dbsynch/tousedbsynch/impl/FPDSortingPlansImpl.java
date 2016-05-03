@@ -2,11 +2,13 @@
  */
 package com.misc.touse.moplaf.dbsynch.tousedbsynch.impl;
 
+import com.misc.common.moplaf.dbsynch.DbSynchFactory;
+import com.misc.common.moplaf.dbsynch.TableColumn;
 import com.misc.common.moplaf.dbsynch.impl.TableImpl;
 
 import com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDSortingPlan;
 import com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDSortingPlans;
-import com.misc.touse.moplaf.dbsynch.tousedbsynch.TousedbsynchPackage;
+import com.misc.touse.moplaf.dbsynch.tousedbsynch.ToUseDbSynchPackage;
 
 import java.util.Collection;
 
@@ -60,7 +62,7 @@ public class FPDSortingPlansImpl extends TableImpl implements FPDSortingPlans {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TousedbsynchPackage.Literals.FPD_SORTING_PLANS;
+		return ToUseDbSynchPackage.Literals.FPD_SORTING_PLANS;
 	}
 
 	/**
@@ -70,7 +72,7 @@ public class FPDSortingPlansImpl extends TableImpl implements FPDSortingPlans {
 	 */
 	public EList<FPDSortingPlan> getSortingPlans() {
 		if (sortingPlans == null) {
-			sortingPlans = new EObjectContainmentEList<FPDSortingPlan>(FPDSortingPlan.class, this, TousedbsynchPackage.FPD_SORTING_PLANS__SORTING_PLANS);
+			sortingPlans = new EObjectContainmentEList<FPDSortingPlan>(FPDSortingPlan.class, this, ToUseDbSynchPackage.FPD_SORTING_PLANS__SORTING_PLANS);
 		}
 		return sortingPlans;
 	}
@@ -83,7 +85,7 @@ public class FPDSortingPlansImpl extends TableImpl implements FPDSortingPlans {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case TousedbsynchPackage.FPD_SORTING_PLANS__SORTING_PLANS:
+			case ToUseDbSynchPackage.FPD_SORTING_PLANS__SORTING_PLANS:
 				return ((InternalEList<?>)getSortingPlans()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -97,7 +99,7 @@ public class FPDSortingPlansImpl extends TableImpl implements FPDSortingPlans {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TousedbsynchPackage.FPD_SORTING_PLANS__SORTING_PLANS:
+			case ToUseDbSynchPackage.FPD_SORTING_PLANS__SORTING_PLANS:
 				return getSortingPlans();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -112,7 +114,7 @@ public class FPDSortingPlansImpl extends TableImpl implements FPDSortingPlans {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TousedbsynchPackage.FPD_SORTING_PLANS__SORTING_PLANS:
+			case ToUseDbSynchPackage.FPD_SORTING_PLANS__SORTING_PLANS:
 				getSortingPlans().clear();
 				getSortingPlans().addAll((Collection<? extends FPDSortingPlan>)newValue);
 				return;
@@ -128,7 +130,7 @@ public class FPDSortingPlansImpl extends TableImpl implements FPDSortingPlans {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TousedbsynchPackage.FPD_SORTING_PLANS__SORTING_PLANS:
+			case ToUseDbSynchPackage.FPD_SORTING_PLANS__SORTING_PLANS:
 				getSortingPlans().clear();
 				return;
 		}
@@ -143,10 +145,41 @@ public class FPDSortingPlansImpl extends TableImpl implements FPDSortingPlans {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TousedbsynchPackage.FPD_SORTING_PLANS__SORTING_PLANS:
+			case ToUseDbSynchPackage.FPD_SORTING_PLANS__SORTING_PLANS:
 				return sortingPlans != null && !sortingPlans.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
+
+	@Override
+	protected void refreshMetaDataImpl() {
+		TableColumn idColumn = DbSynchFactory.eINSTANCE.createTableColumn();
+		idColumn.setColumnName("id");
+		idColumn.setRowAttribute(ToUseDbSynchPackage.Literals.FPD_SORTING_PLAN__SORTING_PLAN_ID);
+		idColumn.setVolatile(false);
+		
+		TableColumn nameColumn = DbSynchFactory.eINSTANCE.createTableColumn();
+		nameColumn.setColumnName("name");
+		nameColumn.setRowAttribute(ToUseDbSynchPackage.Literals.FPD_SORTING_PLAN__NAME);
+		nameColumn.setVolatile(false);
+		
+		TableColumn validFromColumn = DbSynchFactory.eINSTANCE.createTableColumn();
+		validFromColumn.setColumnName("validfrom");
+		validFromColumn.setRowAttribute(ToUseDbSynchPackage.Literals.FPD_SORTING_PLAN__VALID_FROM);
+		validFromColumn.setVolatile(false);
+		
+		TableColumn validToColumn = DbSynchFactory.eINSTANCE.createTableColumn();
+		validToColumn.setColumnName("validto");
+		validToColumn.setRowAttribute(ToUseDbSynchPackage.Literals.FPD_SORTING_PLAN__VALID_TO);
+		validToColumn.setVolatile(false);
+		
+		this.getKeyColumns().add(idColumn);
+		this.getDataColumns().add(nameColumn);
+		this.getDataColumns().add(validFromColumn);
+		this.getDataColumns().add(validToColumn);
+		
+	}
+	
+	
 
 } //FPDSortingPlansImpl

@@ -17,7 +17,7 @@ import com.misc.common.moplaf.dbsynch.TableRow;
  *   <li>{@link com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDSortingPlanInput#getSortingPlanID <em>Sorting Plan ID</em>}</li>
  * </ul>
  *
- * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.TousedbsynchPackage#getFPDSortingPlanInput()
+ * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.ToUseDbSynchPackage#getFPDSortingPlanInput()
  * @model
  * @generated
  */
@@ -32,7 +32,7 @@ public interface FPDSortingPlanInput extends TableRow {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Product ID</em>' attribute.
 	 * @see #setProductID(String)
-	 * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.TousedbsynchPackage#getFPDSortingPlanInput_ProductID()
+	 * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.ToUseDbSynchPackage#getFPDSortingPlanInput_ProductID()
 	 * @model
 	 * @generated
 	 */
@@ -58,7 +58,7 @@ public interface FPDSortingPlanInput extends TableRow {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Sorting Plan ID</em>' attribute.
 	 * @see #setSortingPlanID(String)
-	 * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.TousedbsynchPackage#getFPDSortingPlanInput_SortingPlanID()
+	 * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.ToUseDbSynchPackage#getFPDSortingPlanInput_SortingPlanID()
 	 * @model
 	 * @generated
 	 */

@@ -5,8 +5,7 @@ package com.misc.touse.moplaf.dbsynch.tousedbsynch.impl;
 import com.misc.common.moplaf.dbsynch.impl.TableRowImpl;
 
 import com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDSortingPlan;
-import com.misc.touse.moplaf.dbsynch.tousedbsynch.TousedbsynchPackage;
-
+import com.misc.touse.moplaf.dbsynch.tousedbsynch.ToUseDbSynchPackage;
 import java.util.Date;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -128,7 +127,7 @@ public class FPDSortingPlanImpl extends TableRowImpl implements FPDSortingPlan {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TousedbsynchPackage.Literals.FPD_SORTING_PLAN;
+		return ToUseDbSynchPackage.Literals.FPD_SORTING_PLAN;
 	}
 
 	/**
@@ -149,7 +148,7 @@ public class FPDSortingPlanImpl extends TableRowImpl implements FPDSortingPlan {
 		String oldSortingPlanID = sortingPlanID;
 		sortingPlanID = newSortingPlanID;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousedbsynchPackage.FPD_SORTING_PLAN__SORTING_PLAN_ID, oldSortingPlanID, sortingPlanID));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseDbSynchPackage.FPD_SORTING_PLAN__SORTING_PLAN_ID, oldSortingPlanID, sortingPlanID));
 	}
 
 	/**
@@ -170,7 +169,7 @@ public class FPDSortingPlanImpl extends TableRowImpl implements FPDSortingPlan {
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousedbsynchPackage.FPD_SORTING_PLAN__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseDbSynchPackage.FPD_SORTING_PLAN__NAME, oldName, name));
 	}
 
 	/**
@@ -191,7 +190,7 @@ public class FPDSortingPlanImpl extends TableRowImpl implements FPDSortingPlan {
 		Date oldValidFrom = validFrom;
 		validFrom = newValidFrom;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousedbsynchPackage.FPD_SORTING_PLAN__VALID_FROM, oldValidFrom, validFrom));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseDbSynchPackage.FPD_SORTING_PLAN__VALID_FROM, oldValidFrom, validFrom));
 	}
 
 	/**
@@ -212,7 +211,7 @@ public class FPDSortingPlanImpl extends TableRowImpl implements FPDSortingPlan {
 		Date oldValidTo = validTo;
 		validTo = newValidTo;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousedbsynchPackage.FPD_SORTING_PLAN__VALID_TO, oldValidTo, validTo));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseDbSynchPackage.FPD_SORTING_PLAN__VALID_TO, oldValidTo, validTo));
 	}
 
 	/**
@@ -223,13 +222,13 @@ public class FPDSortingPlanImpl extends TableRowImpl implements FPDSortingPlan {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TousedbsynchPackage.FPD_SORTING_PLAN__SORTING_PLAN_ID:
+			case ToUseDbSynchPackage.FPD_SORTING_PLAN__SORTING_PLAN_ID:
 				return getSortingPlanID();
-			case TousedbsynchPackage.FPD_SORTING_PLAN__NAME:
+			case ToUseDbSynchPackage.FPD_SORTING_PLAN__NAME:
 				return getName();
-			case TousedbsynchPackage.FPD_SORTING_PLAN__VALID_FROM:
+			case ToUseDbSynchPackage.FPD_SORTING_PLAN__VALID_FROM:
 				return getValidFrom();
-			case TousedbsynchPackage.FPD_SORTING_PLAN__VALID_TO:
+			case ToUseDbSynchPackage.FPD_SORTING_PLAN__VALID_TO:
 				return getValidTo();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -243,16 +242,16 @@ public class FPDSortingPlanImpl extends TableRowImpl implements FPDSortingPlan {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TousedbsynchPackage.FPD_SORTING_PLAN__SORTING_PLAN_ID:
+			case ToUseDbSynchPackage.FPD_SORTING_PLAN__SORTING_PLAN_ID:
 				setSortingPlanID((String)newValue);
 				return;
-			case TousedbsynchPackage.FPD_SORTING_PLAN__NAME:
+			case ToUseDbSynchPackage.FPD_SORTING_PLAN__NAME:
 				setName((String)newValue);
 				return;
-			case TousedbsynchPackage.FPD_SORTING_PLAN__VALID_FROM:
+			case ToUseDbSynchPackage.FPD_SORTING_PLAN__VALID_FROM:
 				setValidFrom((Date)newValue);
 				return;
-			case TousedbsynchPackage.FPD_SORTING_PLAN__VALID_TO:
+			case ToUseDbSynchPackage.FPD_SORTING_PLAN__VALID_TO:
 				setValidTo((Date)newValue);
 				return;
 		}
@@ -267,16 +266,16 @@ public class FPDSortingPlanImpl extends TableRowImpl implements FPDSortingPlan {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TousedbsynchPackage.FPD_SORTING_PLAN__SORTING_PLAN_ID:
+			case ToUseDbSynchPackage.FPD_SORTING_PLAN__SORTING_PLAN_ID:
 				setSortingPlanID(SORTING_PLAN_ID_EDEFAULT);
 				return;
-			case TousedbsynchPackage.FPD_SORTING_PLAN__NAME:
+			case ToUseDbSynchPackage.FPD_SORTING_PLAN__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case TousedbsynchPackage.FPD_SORTING_PLAN__VALID_FROM:
+			case ToUseDbSynchPackage.FPD_SORTING_PLAN__VALID_FROM:
 				setValidFrom(VALID_FROM_EDEFAULT);
 				return;
-			case TousedbsynchPackage.FPD_SORTING_PLAN__VALID_TO:
+			case ToUseDbSynchPackage.FPD_SORTING_PLAN__VALID_TO:
 				setValidTo(VALID_TO_EDEFAULT);
 				return;
 		}
@@ -291,13 +290,13 @@ public class FPDSortingPlanImpl extends TableRowImpl implements FPDSortingPlan {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TousedbsynchPackage.FPD_SORTING_PLAN__SORTING_PLAN_ID:
+			case ToUseDbSynchPackage.FPD_SORTING_PLAN__SORTING_PLAN_ID:
 				return SORTING_PLAN_ID_EDEFAULT == null ? sortingPlanID != null : !SORTING_PLAN_ID_EDEFAULT.equals(sortingPlanID);
-			case TousedbsynchPackage.FPD_SORTING_PLAN__NAME:
+			case ToUseDbSynchPackage.FPD_SORTING_PLAN__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case TousedbsynchPackage.FPD_SORTING_PLAN__VALID_FROM:
+			case ToUseDbSynchPackage.FPD_SORTING_PLAN__VALID_FROM:
 				return VALID_FROM_EDEFAULT == null ? validFrom != null : !VALID_FROM_EDEFAULT.equals(validFrom);
-			case TousedbsynchPackage.FPD_SORTING_PLAN__VALID_TO:
+			case ToUseDbSynchPackage.FPD_SORTING_PLAN__VALID_TO:
 				return VALID_TO_EDEFAULT == null ? validTo != null : !VALID_TO_EDEFAULT.equals(validTo);
 		}
 		return super.eIsSet(featureID);

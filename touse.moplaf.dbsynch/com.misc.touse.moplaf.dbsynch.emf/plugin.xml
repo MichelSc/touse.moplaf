@@ -11,7 +11,15 @@
       <package
             uri="//www.misc.com/touse/moplaf/dbsynch/model/0.1"
             class="com.misc.touse.moplaf.dbsynch.tousedbsynch.TousedbsynchPackage"
-            genModel="model/tousedbsynch.genmodel"/>
+            genModel="model/tousebsynch.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated tousebsynch -->
+      <package
+            uri="//www.misc.com/touse/moplaf/dbsynch/model/0.1"
+            class="com.misc.touse.moplaf.dbsynch.tousedbsynch.ToUseDbSynchPackage"
+            genModel="model/tousebsynch.genmodel"/>
    </extension>
 
 </plugin>

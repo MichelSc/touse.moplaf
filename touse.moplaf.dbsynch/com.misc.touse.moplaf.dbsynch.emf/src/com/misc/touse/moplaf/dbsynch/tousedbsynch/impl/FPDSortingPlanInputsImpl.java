@@ -6,8 +6,7 @@ import com.misc.common.moplaf.dbsynch.impl.TableImpl;
 
 import com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDSortingPlanInput;
 import com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDSortingPlanInputs;
-import com.misc.touse.moplaf.dbsynch.tousedbsynch.TousedbsynchPackage;
-
+import com.misc.touse.moplaf.dbsynch.tousedbsynch.ToUseDbSynchPackage;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -60,7 +59,7 @@ public class FPDSortingPlanInputsImpl extends TableImpl implements FPDSortingPla
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TousedbsynchPackage.Literals.FPD_SORTING_PLAN_INPUTS;
+		return ToUseDbSynchPackage.Literals.FPD_SORTING_PLAN_INPUTS;
 	}
 
 	/**
@@ -70,7 +69,7 @@ public class FPDSortingPlanInputsImpl extends TableImpl implements FPDSortingPla
 	 */
 	public EList<FPDSortingPlanInput> getSortingPlanInputs() {
 		if (sortingPlanInputs == null) {
-			sortingPlanInputs = new EObjectContainmentEList<FPDSortingPlanInput>(FPDSortingPlanInput.class, this, TousedbsynchPackage.FPD_SORTING_PLAN_INPUTS__SORTING_PLAN_INPUTS);
+			sortingPlanInputs = new EObjectContainmentEList<FPDSortingPlanInput>(FPDSortingPlanInput.class, this, ToUseDbSynchPackage.FPD_SORTING_PLAN_INPUTS__SORTING_PLAN_INPUTS);
 		}
 		return sortingPlanInputs;
 	}
@@ -83,7 +82,7 @@ public class FPDSortingPlanInputsImpl extends TableImpl implements FPDSortingPla
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case TousedbsynchPackage.FPD_SORTING_PLAN_INPUTS__SORTING_PLAN_INPUTS:
+			case ToUseDbSynchPackage.FPD_SORTING_PLAN_INPUTS__SORTING_PLAN_INPUTS:
 				return ((InternalEList<?>)getSortingPlanInputs()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -97,7 +96,7 @@ public class FPDSortingPlanInputsImpl extends TableImpl implements FPDSortingPla
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TousedbsynchPackage.FPD_SORTING_PLAN_INPUTS__SORTING_PLAN_INPUTS:
+			case ToUseDbSynchPackage.FPD_SORTING_PLAN_INPUTS__SORTING_PLAN_INPUTS:
 				return getSortingPlanInputs();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -112,7 +111,7 @@ public class FPDSortingPlanInputsImpl extends TableImpl implements FPDSortingPla
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TousedbsynchPackage.FPD_SORTING_PLAN_INPUTS__SORTING_PLAN_INPUTS:
+			case ToUseDbSynchPackage.FPD_SORTING_PLAN_INPUTS__SORTING_PLAN_INPUTS:
 				getSortingPlanInputs().clear();
 				getSortingPlanInputs().addAll((Collection<? extends FPDSortingPlanInput>)newValue);
 				return;
@@ -128,7 +127,7 @@ public class FPDSortingPlanInputsImpl extends TableImpl implements FPDSortingPla
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TousedbsynchPackage.FPD_SORTING_PLAN_INPUTS__SORTING_PLAN_INPUTS:
+			case ToUseDbSynchPackage.FPD_SORTING_PLAN_INPUTS__SORTING_PLAN_INPUTS:
 				getSortingPlanInputs().clear();
 				return;
 		}
@@ -143,7 +142,7 @@ public class FPDSortingPlanInputsImpl extends TableImpl implements FPDSortingPla
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TousedbsynchPackage.FPD_SORTING_PLAN_INPUTS__SORTING_PLAN_INPUTS:
+			case ToUseDbSynchPackage.FPD_SORTING_PLAN_INPUTS__SORTING_PLAN_INPUTS:
 				return sortingPlanInputs != null && !sortingPlanInputs.isEmpty();
 		}
 		return super.eIsSet(featureID);

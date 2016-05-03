@@ -21,7 +21,7 @@ import java.util.Date;
  *   <li>{@link com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDSortingPlan#getValidTo <em>Valid To</em>}</li>
  * </ul>
  *
- * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.TousedbsynchPackage#getFPDSortingPlan()
+ * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.ToUseDbSynchPackage#getFPDSortingPlan()
  * @model
  * @generated
  */
@@ -36,7 +36,7 @@ public interface FPDSortingPlan extends TableRow {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Sorting Plan ID</em>' attribute.
 	 * @see #setSortingPlanID(String)
-	 * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.TousedbsynchPackage#getFPDSortingPlan_SortingPlanID()
+	 * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.ToUseDbSynchPackage#getFPDSortingPlan_SortingPlanID()
 	 * @model
 	 * @generated
 	 */
@@ -62,7 +62,7 @@ public interface FPDSortingPlan extends TableRow {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.TousedbsynchPackage#getFPDSortingPlan_Name()
+	 * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.ToUseDbSynchPackage#getFPDSortingPlan_Name()
 	 * @model
 	 * @generated
 	 */
@@ -88,7 +88,7 @@ public interface FPDSortingPlan extends TableRow {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Valid From</em>' attribute.
 	 * @see #setValidFrom(Date)
-	 * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.TousedbsynchPackage#getFPDSortingPlan_ValidFrom()
+	 * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.ToUseDbSynchPackage#getFPDSortingPlan_ValidFrom()
 	 * @model
 	 * @generated
 	 */
@@ -114,7 +114,7 @@ public interface FPDSortingPlan extends TableRow {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Valid To</em>' attribute.
 	 * @see #setValidTo(Date)
-	 * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.TousedbsynchPackage#getFPDSortingPlan_ValidTo()
+	 * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.ToUseDbSynchPackage#getFPDSortingPlan_ValidTo()
 	 * @model
 	 * @generated
 	 */

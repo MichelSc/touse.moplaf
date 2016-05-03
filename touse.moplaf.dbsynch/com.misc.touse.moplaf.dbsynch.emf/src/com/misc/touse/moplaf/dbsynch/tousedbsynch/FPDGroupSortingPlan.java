@@ -21,7 +21,7 @@ import java.util.Date;
  *   <li>{@link com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDGroupSortingPlan#getSortingPlanInputsTable <em>Sorting Plan Inputs Table</em>}</li>
  * </ul>
  *
- * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.TousedbsynchPackage#getFPDGroupSortingPlan()
+ * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.ToUseDbSynchPackage#getFPDGroupSortingPlan()
  * @model
  * @generated
  */
@@ -36,7 +36,7 @@ public interface FPDGroupSortingPlan extends TableGroup {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>From Date</em>' attribute.
 	 * @see #setFromDate(Date)
-	 * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.TousedbsynchPackage#getFPDGroupSortingPlan_FromDate()
+	 * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.ToUseDbSynchPackage#getFPDGroupSortingPlan_FromDate()
 	 * @model
 	 * @generated
 	 */
@@ -62,7 +62,7 @@ public interface FPDGroupSortingPlan extends TableGroup {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>To Date</em>' attribute.
 	 * @see #setToDate(Date)
-	 * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.TousedbsynchPackage#getFPDGroupSortingPlan_ToDate()
+	 * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.ToUseDbSynchPackage#getFPDGroupSortingPlan_ToDate()
 	 * @model
 	 * @generated
 	 */
@@ -88,7 +88,7 @@ public interface FPDGroupSortingPlan extends TableGroup {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Sorting Plans Table</em>' containment reference.
 	 * @see #setSortingPlansTable(FPDSortingPlans)
-	 * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.TousedbsynchPackage#getFPDGroupSortingPlan_SortingPlansTable()
+	 * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.ToUseDbSynchPackage#getFPDGroupSortingPlan_SortingPlansTable()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -114,7 +114,7 @@ public interface FPDGroupSortingPlan extends TableGroup {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Sorting Plan Inputs Table</em>' containment reference.
 	 * @see #setSortingPlanInputsTable(FPDSortingPlanInputs)
-	 * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.TousedbsynchPackage#getFPDGroupSortingPlan_SortingPlanInputsTable()
+	 * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.ToUseDbSynchPackage#getFPDGroupSortingPlan_SortingPlanInputsTable()
 	 * @model containment="true"
 	 * @generated
 	 */

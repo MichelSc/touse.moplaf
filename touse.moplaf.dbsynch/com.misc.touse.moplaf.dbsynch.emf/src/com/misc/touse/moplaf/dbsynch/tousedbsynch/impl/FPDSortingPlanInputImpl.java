@@ -5,8 +5,7 @@ package com.misc.touse.moplaf.dbsynch.tousedbsynch.impl;
 import com.misc.common.moplaf.dbsynch.impl.TableRowImpl;
 
 import com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDSortingPlanInput;
-import com.misc.touse.moplaf.dbsynch.tousedbsynch.TousedbsynchPackage;
-
+import com.misc.touse.moplaf.dbsynch.tousedbsynch.ToUseDbSynchPackage;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -84,7 +83,7 @@ public class FPDSortingPlanInputImpl extends TableRowImpl implements FPDSortingP
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TousedbsynchPackage.Literals.FPD_SORTING_PLAN_INPUT;
+		return ToUseDbSynchPackage.Literals.FPD_SORTING_PLAN_INPUT;
 	}
 
 	/**
@@ -105,7 +104,7 @@ public class FPDSortingPlanInputImpl extends TableRowImpl implements FPDSortingP
 		String oldProductID = productID;
 		productID = newProductID;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousedbsynchPackage.FPD_SORTING_PLAN_INPUT__PRODUCT_ID, oldProductID, productID));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseDbSynchPackage.FPD_SORTING_PLAN_INPUT__PRODUCT_ID, oldProductID, productID));
 	}
 
 	/**
@@ -126,7 +125,7 @@ public class FPDSortingPlanInputImpl extends TableRowImpl implements FPDSortingP
 		String oldSortingPlanID = sortingPlanID;
 		sortingPlanID = newSortingPlanID;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousedbsynchPackage.FPD_SORTING_PLAN_INPUT__SORTING_PLAN_ID, oldSortingPlanID, sortingPlanID));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseDbSynchPackage.FPD_SORTING_PLAN_INPUT__SORTING_PLAN_ID, oldSortingPlanID, sortingPlanID));
 	}
 
 	/**
@@ -137,9 +136,9 @@ public class FPDSortingPlanInputImpl extends TableRowImpl implements FPDSortingP
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TousedbsynchPackage.FPD_SORTING_PLAN_INPUT__PRODUCT_ID:
+			case ToUseDbSynchPackage.FPD_SORTING_PLAN_INPUT__PRODUCT_ID:
 				return getProductID();
-			case TousedbsynchPackage.FPD_SORTING_PLAN_INPUT__SORTING_PLAN_ID:
+			case ToUseDbSynchPackage.FPD_SORTING_PLAN_INPUT__SORTING_PLAN_ID:
 				return getSortingPlanID();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -153,10 +152,10 @@ public class FPDSortingPlanInputImpl extends TableRowImpl implements FPDSortingP
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TousedbsynchPackage.FPD_SORTING_PLAN_INPUT__PRODUCT_ID:
+			case ToUseDbSynchPackage.FPD_SORTING_PLAN_INPUT__PRODUCT_ID:
 				setProductID((String)newValue);
 				return;
-			case TousedbsynchPackage.FPD_SORTING_PLAN_INPUT__SORTING_PLAN_ID:
+			case ToUseDbSynchPackage.FPD_SORTING_PLAN_INPUT__SORTING_PLAN_ID:
 				setSortingPlanID((String)newValue);
 				return;
 		}
@@ -171,10 +170,10 @@ public class FPDSortingPlanInputImpl extends TableRowImpl implements FPDSortingP
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TousedbsynchPackage.FPD_SORTING_PLAN_INPUT__PRODUCT_ID:
+			case ToUseDbSynchPackage.FPD_SORTING_PLAN_INPUT__PRODUCT_ID:
 				setProductID(PRODUCT_ID_EDEFAULT);
 				return;
-			case TousedbsynchPackage.FPD_SORTING_PLAN_INPUT__SORTING_PLAN_ID:
+			case ToUseDbSynchPackage.FPD_SORTING_PLAN_INPUT__SORTING_PLAN_ID:
 				setSortingPlanID(SORTING_PLAN_ID_EDEFAULT);
 				return;
 		}
@@ -189,9 +188,9 @@ public class FPDSortingPlanInputImpl extends TableRowImpl implements FPDSortingP
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TousedbsynchPackage.FPD_SORTING_PLAN_INPUT__PRODUCT_ID:
+			case ToUseDbSynchPackage.FPD_SORTING_PLAN_INPUT__PRODUCT_ID:
 				return PRODUCT_ID_EDEFAULT == null ? productID != null : !PRODUCT_ID_EDEFAULT.equals(productID);
-			case TousedbsynchPackage.FPD_SORTING_PLAN_INPUT__SORTING_PLAN_ID:
+			case ToUseDbSynchPackage.FPD_SORTING_PLAN_INPUT__SORTING_PLAN_ID:
 				return SORTING_PLAN_ID_EDEFAULT == null ? sortingPlanID != null : !SORTING_PLAN_ID_EDEFAULT.equals(sortingPlanID);
 		}
 		return super.eIsSet(featureID);

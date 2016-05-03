@@ -8,8 +8,7 @@ import com.misc.common.moplaf.dbsynch.impl.TableRowKeyImpl;
 import com.misc.common.moplaf.dbsynch.provider.TableRowItemProvider;
 
 import com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDSortingPlanInput;
-import com.misc.touse.moplaf.dbsynch.tousedbsynch.TousedbsynchPackage;
-
+import com.misc.touse.moplaf.dbsynch.tousedbsynch.ToUseDbSynchPackage;
 import java.util.Collection;
 import java.util.List;
 
@@ -70,7 +69,7 @@ public class FPDSortingPlanInputItemProvider extends TableRowItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_FPDSortingPlanInput_ProductID_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FPDSortingPlanInput_ProductID_feature", "_UI_FPDSortingPlanInput_type"),
-				 TousedbsynchPackage.Literals.FPD_SORTING_PLAN_INPUT__PRODUCT_ID,
+				 ToUseDbSynchPackage.Literals.FPD_SORTING_PLAN_INPUT__PRODUCT_ID,
 				 true,
 				 false,
 				 false,
@@ -92,7 +91,7 @@ public class FPDSortingPlanInputItemProvider extends TableRowItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_FPDSortingPlanInput_SortingPlanID_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FPDSortingPlanInput_SortingPlanID_feature", "_UI_FPDSortingPlanInput_type"),
-				 TousedbsynchPackage.Literals.FPD_SORTING_PLAN_INPUT__SORTING_PLAN_ID,
+				 ToUseDbSynchPackage.Literals.FPD_SORTING_PLAN_INPUT__SORTING_PLAN_ID,
 				 true,
 				 false,
 				 false,
@@ -129,8 +128,8 @@ public class FPDSortingPlanInputItemProvider extends TableRowItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(FPDSortingPlanInput.class)) {
-			case TousedbsynchPackage.FPD_SORTING_PLAN_INPUT__PRODUCT_ID:
-			case TousedbsynchPackage.FPD_SORTING_PLAN_INPUT__SORTING_PLAN_ID:
+			case ToUseDbSynchPackage.FPD_SORTING_PLAN_INPUT__PRODUCT_ID:
+			case ToUseDbSynchPackage.FPD_SORTING_PLAN_INPUT__SORTING_PLAN_ID:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

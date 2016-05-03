@@ -18,7 +18,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link com.misc.touse.moplaf.dbsynch.tousedbsynch.FPD#getSortingPlansSet <em>Sorting Plans Set</em>}</li>
  * </ul>
  *
- * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.TousedbsynchPackage#getFPD()
+ * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.ToUseDbSynchPackage#getFPD()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface FPD extends DataSourceJdbcDerbyEmbedded {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Sorting Plans Set</em>' containment reference list.
-	 * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.TousedbsynchPackage#getFPD_SortingPlansSet()
+	 * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.ToUseDbSynchPackage#getFPD_SortingPlansSet()
 	 * @model containment="true"
 	 * @generated
 	 */

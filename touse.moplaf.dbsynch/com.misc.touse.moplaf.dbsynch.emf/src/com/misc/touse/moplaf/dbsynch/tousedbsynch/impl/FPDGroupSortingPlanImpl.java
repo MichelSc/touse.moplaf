@@ -7,8 +7,7 @@ import com.misc.common.moplaf.dbsynch.impl.TableGroupImpl;
 import com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDGroupSortingPlan;
 import com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDSortingPlanInputs;
 import com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDSortingPlans;
-import com.misc.touse.moplaf.dbsynch.tousedbsynch.TousedbsynchPackage;
-
+import com.misc.touse.moplaf.dbsynch.tousedbsynch.ToUseDbSynchPackage;
 import java.util.Date;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -112,7 +111,7 @@ public class FPDGroupSortingPlanImpl extends TableGroupImpl implements FPDGroupS
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TousedbsynchPackage.Literals.FPD_GROUP_SORTING_PLAN;
+		return ToUseDbSynchPackage.Literals.FPD_GROUP_SORTING_PLAN;
 	}
 
 	/**
@@ -133,7 +132,7 @@ public class FPDGroupSortingPlanImpl extends TableGroupImpl implements FPDGroupS
 		Date oldFromDate = fromDate;
 		fromDate = newFromDate;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousedbsynchPackage.FPD_GROUP_SORTING_PLAN__FROM_DATE, oldFromDate, fromDate));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseDbSynchPackage.FPD_GROUP_SORTING_PLAN__FROM_DATE, oldFromDate, fromDate));
 	}
 
 	/**
@@ -154,7 +153,7 @@ public class FPDGroupSortingPlanImpl extends TableGroupImpl implements FPDGroupS
 		Date oldToDate = toDate;
 		toDate = newToDate;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousedbsynchPackage.FPD_GROUP_SORTING_PLAN__TO_DATE, oldToDate, toDate));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseDbSynchPackage.FPD_GROUP_SORTING_PLAN__TO_DATE, oldToDate, toDate));
 	}
 
 	/**
@@ -175,7 +174,7 @@ public class FPDGroupSortingPlanImpl extends TableGroupImpl implements FPDGroupS
 		FPDSortingPlans oldSortingPlansTable = sortingPlansTable;
 		sortingPlansTable = newSortingPlansTable;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TousedbsynchPackage.FPD_GROUP_SORTING_PLAN__SORTING_PLANS_TABLE, oldSortingPlansTable, newSortingPlansTable);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ToUseDbSynchPackage.FPD_GROUP_SORTING_PLAN__SORTING_PLANS_TABLE, oldSortingPlansTable, newSortingPlansTable);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -190,14 +189,14 @@ public class FPDGroupSortingPlanImpl extends TableGroupImpl implements FPDGroupS
 		if (newSortingPlansTable != sortingPlansTable) {
 			NotificationChain msgs = null;
 			if (sortingPlansTable != null)
-				msgs = ((InternalEObject)sortingPlansTable).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TousedbsynchPackage.FPD_GROUP_SORTING_PLAN__SORTING_PLANS_TABLE, null, msgs);
+				msgs = ((InternalEObject)sortingPlansTable).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ToUseDbSynchPackage.FPD_GROUP_SORTING_PLAN__SORTING_PLANS_TABLE, null, msgs);
 			if (newSortingPlansTable != null)
-				msgs = ((InternalEObject)newSortingPlansTable).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TousedbsynchPackage.FPD_GROUP_SORTING_PLAN__SORTING_PLANS_TABLE, null, msgs);
+				msgs = ((InternalEObject)newSortingPlansTable).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ToUseDbSynchPackage.FPD_GROUP_SORTING_PLAN__SORTING_PLANS_TABLE, null, msgs);
 			msgs = basicSetSortingPlansTable(newSortingPlansTable, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousedbsynchPackage.FPD_GROUP_SORTING_PLAN__SORTING_PLANS_TABLE, newSortingPlansTable, newSortingPlansTable));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseDbSynchPackage.FPD_GROUP_SORTING_PLAN__SORTING_PLANS_TABLE, newSortingPlansTable, newSortingPlansTable));
 	}
 
 	/**
@@ -218,7 +217,7 @@ public class FPDGroupSortingPlanImpl extends TableGroupImpl implements FPDGroupS
 		FPDSortingPlanInputs oldSortingPlanInputsTable = sortingPlanInputsTable;
 		sortingPlanInputsTable = newSortingPlanInputsTable;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TousedbsynchPackage.FPD_GROUP_SORTING_PLAN__SORTING_PLAN_INPUTS_TABLE, oldSortingPlanInputsTable, newSortingPlanInputsTable);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ToUseDbSynchPackage.FPD_GROUP_SORTING_PLAN__SORTING_PLAN_INPUTS_TABLE, oldSortingPlanInputsTable, newSortingPlanInputsTable);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -233,14 +232,14 @@ public class FPDGroupSortingPlanImpl extends TableGroupImpl implements FPDGroupS
 		if (newSortingPlanInputsTable != sortingPlanInputsTable) {
 			NotificationChain msgs = null;
 			if (sortingPlanInputsTable != null)
-				msgs = ((InternalEObject)sortingPlanInputsTable).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TousedbsynchPackage.FPD_GROUP_SORTING_PLAN__SORTING_PLAN_INPUTS_TABLE, null, msgs);
+				msgs = ((InternalEObject)sortingPlanInputsTable).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ToUseDbSynchPackage.FPD_GROUP_SORTING_PLAN__SORTING_PLAN_INPUTS_TABLE, null, msgs);
 			if (newSortingPlanInputsTable != null)
-				msgs = ((InternalEObject)newSortingPlanInputsTable).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TousedbsynchPackage.FPD_GROUP_SORTING_PLAN__SORTING_PLAN_INPUTS_TABLE, null, msgs);
+				msgs = ((InternalEObject)newSortingPlanInputsTable).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ToUseDbSynchPackage.FPD_GROUP_SORTING_PLAN__SORTING_PLAN_INPUTS_TABLE, null, msgs);
 			msgs = basicSetSortingPlanInputsTable(newSortingPlanInputsTable, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousedbsynchPackage.FPD_GROUP_SORTING_PLAN__SORTING_PLAN_INPUTS_TABLE, newSortingPlanInputsTable, newSortingPlanInputsTable));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseDbSynchPackage.FPD_GROUP_SORTING_PLAN__SORTING_PLAN_INPUTS_TABLE, newSortingPlanInputsTable, newSortingPlanInputsTable));
 	}
 
 	/**
@@ -251,9 +250,9 @@ public class FPDGroupSortingPlanImpl extends TableGroupImpl implements FPDGroupS
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case TousedbsynchPackage.FPD_GROUP_SORTING_PLAN__SORTING_PLANS_TABLE:
+			case ToUseDbSynchPackage.FPD_GROUP_SORTING_PLAN__SORTING_PLANS_TABLE:
 				return basicSetSortingPlansTable(null, msgs);
-			case TousedbsynchPackage.FPD_GROUP_SORTING_PLAN__SORTING_PLAN_INPUTS_TABLE:
+			case ToUseDbSynchPackage.FPD_GROUP_SORTING_PLAN__SORTING_PLAN_INPUTS_TABLE:
 				return basicSetSortingPlanInputsTable(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -267,13 +266,13 @@ public class FPDGroupSortingPlanImpl extends TableGroupImpl implements FPDGroupS
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TousedbsynchPackage.FPD_GROUP_SORTING_PLAN__FROM_DATE:
+			case ToUseDbSynchPackage.FPD_GROUP_SORTING_PLAN__FROM_DATE:
 				return getFromDate();
-			case TousedbsynchPackage.FPD_GROUP_SORTING_PLAN__TO_DATE:
+			case ToUseDbSynchPackage.FPD_GROUP_SORTING_PLAN__TO_DATE:
 				return getToDate();
-			case TousedbsynchPackage.FPD_GROUP_SORTING_PLAN__SORTING_PLANS_TABLE:
+			case ToUseDbSynchPackage.FPD_GROUP_SORTING_PLAN__SORTING_PLANS_TABLE:
 				return getSortingPlansTable();
-			case TousedbsynchPackage.FPD_GROUP_SORTING_PLAN__SORTING_PLAN_INPUTS_TABLE:
+			case ToUseDbSynchPackage.FPD_GROUP_SORTING_PLAN__SORTING_PLAN_INPUTS_TABLE:
 				return getSortingPlanInputsTable();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -287,16 +286,16 @@ public class FPDGroupSortingPlanImpl extends TableGroupImpl implements FPDGroupS
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TousedbsynchPackage.FPD_GROUP_SORTING_PLAN__FROM_DATE:
+			case ToUseDbSynchPackage.FPD_GROUP_SORTING_PLAN__FROM_DATE:
 				setFromDate((Date)newValue);
 				return;
-			case TousedbsynchPackage.FPD_GROUP_SORTING_PLAN__TO_DATE:
+			case ToUseDbSynchPackage.FPD_GROUP_SORTING_PLAN__TO_DATE:
 				setToDate((Date)newValue);
 				return;
-			case TousedbsynchPackage.FPD_GROUP_SORTING_PLAN__SORTING_PLANS_TABLE:
+			case ToUseDbSynchPackage.FPD_GROUP_SORTING_PLAN__SORTING_PLANS_TABLE:
 				setSortingPlansTable((FPDSortingPlans)newValue);
 				return;
-			case TousedbsynchPackage.FPD_GROUP_SORTING_PLAN__SORTING_PLAN_INPUTS_TABLE:
+			case ToUseDbSynchPackage.FPD_GROUP_SORTING_PLAN__SORTING_PLAN_INPUTS_TABLE:
 				setSortingPlanInputsTable((FPDSortingPlanInputs)newValue);
 				return;
 		}
@@ -311,16 +310,16 @@ public class FPDGroupSortingPlanImpl extends TableGroupImpl implements FPDGroupS
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TousedbsynchPackage.FPD_GROUP_SORTING_PLAN__FROM_DATE:
+			case ToUseDbSynchPackage.FPD_GROUP_SORTING_PLAN__FROM_DATE:
 				setFromDate(FROM_DATE_EDEFAULT);
 				return;
-			case TousedbsynchPackage.FPD_GROUP_SORTING_PLAN__TO_DATE:
+			case ToUseDbSynchPackage.FPD_GROUP_SORTING_PLAN__TO_DATE:
 				setToDate(TO_DATE_EDEFAULT);
 				return;
-			case TousedbsynchPackage.FPD_GROUP_SORTING_PLAN__SORTING_PLANS_TABLE:
+			case ToUseDbSynchPackage.FPD_GROUP_SORTING_PLAN__SORTING_PLANS_TABLE:
 				setSortingPlansTable((FPDSortingPlans)null);
 				return;
-			case TousedbsynchPackage.FPD_GROUP_SORTING_PLAN__SORTING_PLAN_INPUTS_TABLE:
+			case ToUseDbSynchPackage.FPD_GROUP_SORTING_PLAN__SORTING_PLAN_INPUTS_TABLE:
 				setSortingPlanInputsTable((FPDSortingPlanInputs)null);
 				return;
 		}
@@ -335,13 +334,13 @@ public class FPDGroupSortingPlanImpl extends TableGroupImpl implements FPDGroupS
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TousedbsynchPackage.FPD_GROUP_SORTING_PLAN__FROM_DATE:
+			case ToUseDbSynchPackage.FPD_GROUP_SORTING_PLAN__FROM_DATE:
 				return FROM_DATE_EDEFAULT == null ? fromDate != null : !FROM_DATE_EDEFAULT.equals(fromDate);
-			case TousedbsynchPackage.FPD_GROUP_SORTING_PLAN__TO_DATE:
+			case ToUseDbSynchPackage.FPD_GROUP_SORTING_PLAN__TO_DATE:
 				return TO_DATE_EDEFAULT == null ? toDate != null : !TO_DATE_EDEFAULT.equals(toDate);
-			case TousedbsynchPackage.FPD_GROUP_SORTING_PLAN__SORTING_PLANS_TABLE:
+			case ToUseDbSynchPackage.FPD_GROUP_SORTING_PLAN__SORTING_PLANS_TABLE:
 				return sortingPlansTable != null;
-			case TousedbsynchPackage.FPD_GROUP_SORTING_PLAN__SORTING_PLAN_INPUTS_TABLE:
+			case ToUseDbSynchPackage.FPD_GROUP_SORTING_PLAN__SORTING_PLAN_INPUTS_TABLE:
 				return sortingPlanInputsTable != null;
 		}
 		return super.eIsSet(featureID);

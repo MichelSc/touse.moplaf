@@ -6,9 +6,8 @@ package com.misc.touse.moplaf.dbsynch.tousedbsynch.provider;
 import com.misc.common.moplaf.dbsynch.dbsynchderby.provider.DataSourceJdbcDerbyEmbeddedItemProvider;
 
 import com.misc.touse.moplaf.dbsynch.tousedbsynch.FPD;
-import com.misc.touse.moplaf.dbsynch.tousedbsynch.TousedbsynchFactory;
-import com.misc.touse.moplaf.dbsynch.tousedbsynch.TousedbsynchPackage;
-
+import com.misc.touse.moplaf.dbsynch.tousedbsynch.ToUseDbSynchFactory;
+import com.misc.touse.moplaf.dbsynch.tousedbsynch.ToUseDbSynchPackage;
 import java.util.Collection;
 import java.util.List;
 
@@ -66,7 +65,7 @@ public class FPDItemProvider extends DataSourceJdbcDerbyEmbeddedItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(TousedbsynchPackage.Literals.FPD__SORTING_PLANS_SET);
+			childrenFeatures.add(ToUseDbSynchPackage.Literals.FPD__SORTING_PLANS_SET);
 		}
 		return childrenFeatures;
 	}
@@ -111,7 +110,7 @@ public class FPDItemProvider extends DataSourceJdbcDerbyEmbeddedItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(FPD.class)) {
-			case TousedbsynchPackage.FPD__SORTING_PLANS_SET:
+			case ToUseDbSynchPackage.FPD__SORTING_PLANS_SET:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -131,8 +130,8 @@ public class FPDItemProvider extends DataSourceJdbcDerbyEmbeddedItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TousedbsynchPackage.Literals.FPD__SORTING_PLANS_SET,
-				 TousedbsynchFactory.eINSTANCE.createFPDGroupSortingPlan()));
+				(ToUseDbSynchPackage.Literals.FPD__SORTING_PLANS_SET,
+				 ToUseDbSynchFactory.eINSTANCE.createFPDGroupSortingPlan()));
 	}
 
 	/**

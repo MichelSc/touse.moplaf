@@ -6,8 +6,7 @@ import com.misc.common.moplaf.dbsynch.dbsynchderby.impl.DataSourceJdbcDerbyEmbed
 
 import com.misc.touse.moplaf.dbsynch.tousedbsynch.FPD;
 import com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDGroupSortingPlan;
-import com.misc.touse.moplaf.dbsynch.tousedbsynch.TousedbsynchPackage;
-
+import com.misc.touse.moplaf.dbsynch.tousedbsynch.ToUseDbSynchPackage;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -60,7 +59,7 @@ public class FPDImpl extends DataSourceJdbcDerbyEmbeddedImpl implements FPD {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TousedbsynchPackage.Literals.FPD;
+		return ToUseDbSynchPackage.Literals.FPD;
 	}
 
 	/**
@@ -70,7 +69,7 @@ public class FPDImpl extends DataSourceJdbcDerbyEmbeddedImpl implements FPD {
 	 */
 	public EList<FPDGroupSortingPlan> getSortingPlansSet() {
 		if (sortingPlansSet == null) {
-			sortingPlansSet = new EObjectContainmentEList<FPDGroupSortingPlan>(FPDGroupSortingPlan.class, this, TousedbsynchPackage.FPD__SORTING_PLANS_SET);
+			sortingPlansSet = new EObjectContainmentEList<FPDGroupSortingPlan>(FPDGroupSortingPlan.class, this, ToUseDbSynchPackage.FPD__SORTING_PLANS_SET);
 		}
 		return sortingPlansSet;
 	}
@@ -83,7 +82,7 @@ public class FPDImpl extends DataSourceJdbcDerbyEmbeddedImpl implements FPD {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case TousedbsynchPackage.FPD__SORTING_PLANS_SET:
+			case ToUseDbSynchPackage.FPD__SORTING_PLANS_SET:
 				return ((InternalEList<?>)getSortingPlansSet()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -97,7 +96,7 @@ public class FPDImpl extends DataSourceJdbcDerbyEmbeddedImpl implements FPD {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TousedbsynchPackage.FPD__SORTING_PLANS_SET:
+			case ToUseDbSynchPackage.FPD__SORTING_PLANS_SET:
 				return getSortingPlansSet();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -112,7 +111,7 @@ public class FPDImpl extends DataSourceJdbcDerbyEmbeddedImpl implements FPD {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TousedbsynchPackage.FPD__SORTING_PLANS_SET:
+			case ToUseDbSynchPackage.FPD__SORTING_PLANS_SET:
 				getSortingPlansSet().clear();
 				getSortingPlansSet().addAll((Collection<? extends FPDGroupSortingPlan>)newValue);
 				return;
@@ -128,7 +127,7 @@ public class FPDImpl extends DataSourceJdbcDerbyEmbeddedImpl implements FPD {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TousedbsynchPackage.FPD__SORTING_PLANS_SET:
+			case ToUseDbSynchPackage.FPD__SORTING_PLANS_SET:
 				getSortingPlansSet().clear();
 				return;
 		}
@@ -143,7 +142,7 @@ public class FPDImpl extends DataSourceJdbcDerbyEmbeddedImpl implements FPD {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TousedbsynchPackage.FPD__SORTING_PLANS_SET:
+			case ToUseDbSynchPackage.FPD__SORTING_PLANS_SET:
 				return sortingPlansSet != null && !sortingPlansSet.isEmpty();
 		}
 		return super.eIsSet(featureID);

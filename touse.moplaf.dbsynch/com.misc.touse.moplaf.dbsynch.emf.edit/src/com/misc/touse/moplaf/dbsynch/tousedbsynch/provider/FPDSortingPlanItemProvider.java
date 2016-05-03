@@ -6,8 +6,7 @@ package com.misc.touse.moplaf.dbsynch.tousedbsynch.provider;
 import com.misc.common.moplaf.dbsynch.provider.TableRowItemProvider;
 
 import com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDSortingPlan;
-import com.misc.touse.moplaf.dbsynch.tousedbsynch.TousedbsynchPackage;
-
+import com.misc.touse.moplaf.dbsynch.tousedbsynch.ToUseDbSynchPackage;
 import java.util.Collection;
 import java.util.List;
 
@@ -70,7 +69,7 @@ public class FPDSortingPlanItemProvider extends TableRowItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_FPDSortingPlan_SortingPlanID_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FPDSortingPlan_SortingPlanID_feature", "_UI_FPDSortingPlan_type"),
-				 TousedbsynchPackage.Literals.FPD_SORTING_PLAN__SORTING_PLAN_ID,
+				 ToUseDbSynchPackage.Literals.FPD_SORTING_PLAN__SORTING_PLAN_ID,
 				 true,
 				 false,
 				 false,
@@ -92,7 +91,7 @@ public class FPDSortingPlanItemProvider extends TableRowItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_FPDSortingPlan_Name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FPDSortingPlan_Name_feature", "_UI_FPDSortingPlan_type"),
-				 TousedbsynchPackage.Literals.FPD_SORTING_PLAN__NAME,
+				 ToUseDbSynchPackage.Literals.FPD_SORTING_PLAN__NAME,
 				 true,
 				 false,
 				 false,
@@ -114,7 +113,7 @@ public class FPDSortingPlanItemProvider extends TableRowItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_FPDSortingPlan_ValidFrom_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FPDSortingPlan_ValidFrom_feature", "_UI_FPDSortingPlan_type"),
-				 TousedbsynchPackage.Literals.FPD_SORTING_PLAN__VALID_FROM,
+				 ToUseDbSynchPackage.Literals.FPD_SORTING_PLAN__VALID_FROM,
 				 true,
 				 false,
 				 false,
@@ -136,7 +135,7 @@ public class FPDSortingPlanItemProvider extends TableRowItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_FPDSortingPlan_ValidTo_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FPDSortingPlan_ValidTo_feature", "_UI_FPDSortingPlan_type"),
-				 TousedbsynchPackage.Literals.FPD_SORTING_PLAN__VALID_TO,
+				 ToUseDbSynchPackage.Literals.FPD_SORTING_PLAN__VALID_TO,
 				 true,
 				 false,
 				 false,
@@ -172,10 +171,10 @@ public class FPDSortingPlanItemProvider extends TableRowItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(FPDSortingPlan.class)) {
-			case TousedbsynchPackage.FPD_SORTING_PLAN__SORTING_PLAN_ID:
-			case TousedbsynchPackage.FPD_SORTING_PLAN__NAME:
-			case TousedbsynchPackage.FPD_SORTING_PLAN__VALID_FROM:
-			case TousedbsynchPackage.FPD_SORTING_PLAN__VALID_TO:
+			case ToUseDbSynchPackage.FPD_SORTING_PLAN__SORTING_PLAN_ID:
+			case ToUseDbSynchPackage.FPD_SORTING_PLAN__NAME:
+			case ToUseDbSynchPackage.FPD_SORTING_PLAN__VALID_FROM:
+			case ToUseDbSynchPackage.FPD_SORTING_PLAN__VALID_TO:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
