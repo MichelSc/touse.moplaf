@@ -153,25 +153,26 @@ public class FPDSortingPlansImpl extends TableImpl implements FPDSortingPlans {
 
 	@Override
 	protected void refreshMetaDataImpl() {
+		this.setTableName("SortingPlan");
 		TableColumn idColumn = DbSynchFactory.eINSTANCE.createTableColumn();
 		idColumn.setColumnName("id");
 		idColumn.setRowAttribute(ToUseDbSynchPackage.Literals.FPD_SORTING_PLAN__SORTING_PLAN_ID);
-		idColumn.setVolatile(false);
+		idColumn.setVolatile(true);
 		
 		TableColumn nameColumn = DbSynchFactory.eINSTANCE.createTableColumn();
 		nameColumn.setColumnName("name");
 		nameColumn.setRowAttribute(ToUseDbSynchPackage.Literals.FPD_SORTING_PLAN__NAME);
-		nameColumn.setVolatile(false);
+		nameColumn.setVolatile(true);
 		
 		TableColumn validFromColumn = DbSynchFactory.eINSTANCE.createTableColumn();
 		validFromColumn.setColumnName("validfrom");
 		validFromColumn.setRowAttribute(ToUseDbSynchPackage.Literals.FPD_SORTING_PLAN__VALID_FROM);
-		validFromColumn.setVolatile(false);
+		validFromColumn.setVolatile(true);
 		
 		TableColumn validToColumn = DbSynchFactory.eINSTANCE.createTableColumn();
 		validToColumn.setColumnName("validto");
 		validToColumn.setRowAttribute(ToUseDbSynchPackage.Literals.FPD_SORTING_PLAN__VALID_TO);
-		validToColumn.setVolatile(false);
+		validToColumn.setVolatile(true);
 		
 		this.getKeyColumns().add(idColumn);
 		this.getDataColumns().add(nameColumn);

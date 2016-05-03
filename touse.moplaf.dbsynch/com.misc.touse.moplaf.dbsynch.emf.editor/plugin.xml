@@ -7,34 +7,6 @@
 <plugin>
 
    <extension point="org.eclipse.ui.newWizards">
-      <!-- @generated tousedbsynch -->
-      <category
-            id="org.eclipse.emf.ecore.Wizard.category.ID"
-            name="%_UI_Wizard_category"/>
-      <wizard
-            id="com.misc.touse.moplaf.dbsynch.tousedbsynch.presentation.TousedbsynchModelWizardID"
-            name="%_UI_TousedbsynchModelWizard_label"
-            class="com.misc.touse.moplaf.dbsynch.tousedbsynch.presentation.TousedbsynchModelWizard"
-            category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/TousedbsynchModelFile.gif">
-         <description>%_UI_TousedbsynchModelWizard_description</description>
-         <selection class="org.eclipse.core.resources.IResource"/>
-      </wizard>
-   </extension>
-
-   <extension point="org.eclipse.ui.editors">
-      <!-- @generated tousedbsynch -->
-      <editor
-            id="com.misc.touse.moplaf.dbsynch.tousedbsynch.presentation.TousedbsynchEditorID"
-            name="%_UI_TousedbsynchEditor_label"
-            icon="icons/full/obj16/TousedbsynchModelFile.gif"
-            extensions="tousedbsynch"
-            class="com.misc.touse.moplaf.dbsynch.tousedbsynch.presentation.TousedbsynchEditor"
-            contributorClass="com.misc.touse.moplaf.dbsynch.tousedbsynch.presentation.TousedbsynchActionBarContributor">
-      </editor>
-   </extension>
-
-   <extension point="org.eclipse.ui.newWizards">
       <!-- @generated tousebsynch -->
       <category
             id="org.eclipse.emf.ecore.Wizard.category.ID"
@@ -61,4 +33,5 @@
             contributorClass="com.misc.touse.moplaf.dbsynch.tousedbsynch.presentation.ToUseDbSynchActionBarContributor">
       </editor>
    </extension>
+
 </plugin>
