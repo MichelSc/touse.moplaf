@@ -4,10 +4,12 @@ package com.misc.touse.moplaf.dbsynch.tousedbsynch.impl;
 
 import com.misc.common.moplaf.dbsynch.DbSynchFactory;
 import com.misc.common.moplaf.dbsynch.TableColumn;
+import com.misc.common.moplaf.dbsynch.TableRow;
 import com.misc.common.moplaf.dbsynch.impl.TableImpl;
 
 import com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDSortingPlan;
 import com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDSortingPlans;
+import com.misc.touse.moplaf.dbsynch.tousedbsynch.ToUseDbSynchFactory;
 import com.misc.touse.moplaf.dbsynch.tousedbsynch.ToUseDbSynchPackage;
 
 import java.util.Collection;
@@ -150,10 +152,29 @@ public class FPDSortingPlansImpl extends TableImpl implements FPDSortingPlans {
 		}
 		return super.eIsSet(featureID);
 	}
+	
 
+	
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	@Override
+	public TableRow constructRow() {
+		FPDSortingPlan newRow =  ToUseDbSynchFactory.eINSTANCE.createFPDSortingPlan();
+		this.getSortingPlans().add(newRow);
+		return newRow;
+		
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
 	@Override
 	protected void refreshMetaDataImpl() {
-		this.setTableName("SortingPlan");
+		this.setTableName("FPD_T.SORTINGPLAN");
 		TableColumn idColumn = DbSynchFactory.eINSTANCE.createTableColumn();
 		idColumn.setColumnName("id");
 		idColumn.setRowAttribute(ToUseDbSynchPackage.Literals.FPD_SORTING_PLAN__SORTING_PLAN_ID);

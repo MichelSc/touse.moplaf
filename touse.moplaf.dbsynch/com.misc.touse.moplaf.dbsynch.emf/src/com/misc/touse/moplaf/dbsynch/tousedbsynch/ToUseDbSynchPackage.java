@@ -334,6 +334,24 @@ public interface ToUseDbSynchPackage extends EPackage {
 	int FPD_SORTING_PLANS__TABLE_GROUP = DbSynchPackage.TABLE__TABLE_GROUP;
 
 	/**
+	 * The feature id for the '<em><b>Key Columns</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_SORTING_PLANS__KEY_COLUMNS = DbSynchPackage.TABLE__KEY_COLUMNS;
+
+	/**
+	 * The feature id for the '<em><b>Data Columns</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_SORTING_PLANS__DATA_COLUMNS = DbSynchPackage.TABLE__DATA_COLUMNS;
+
+	/**
 	 * The feature id for the '<em><b>Rows</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -388,15 +406,6 @@ public interface ToUseDbSynchPackage extends EPackage {
 	int FPD_SORTING_PLANS__LAST_SYNCH_UP = DbSynchPackage.TABLE__LAST_SYNCH_UP;
 
 	/**
-	 * The feature id for the '<em><b>Data Columns</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FPD_SORTING_PLANS__DATA_COLUMNS = DbSynchPackage.TABLE__DATA_COLUMNS;
-
-	/**
 	 * The feature id for the '<em><b>Select Sql Statement</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -440,15 +449,6 @@ public interface ToUseDbSynchPackage extends EPackage {
 	 * @ordered
 	 */
 	int FPD_SORTING_PLANS__PARAM_TABLE_GROUP_ATTRIBUTES = DbSynchPackage.TABLE__PARAM_TABLE_GROUP_ATTRIBUTES;
-
-	/**
-	 * The feature id for the '<em><b>Key Columns</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FPD_SORTING_PLANS__KEY_COLUMNS = DbSynchPackage.TABLE__KEY_COLUMNS;
 
 	/**
 	 * The feature id for the '<em><b>Columns</b></em>' reference list.
@@ -532,13 +532,13 @@ public interface ToUseDbSynchPackage extends EPackage {
 	int FPD_SORTING_PLANS___GET_ROW__TABLEROWKEYIMPL = DbSynchPackage.TABLE___GET_ROW__TABLEROWKEYIMPL;
 
 	/**
-	 * The operation id for the '<em>Row Factory</em>' operation.
+	 * The operation id for the '<em>Construct Row</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FPD_SORTING_PLANS___ROW_FACTORY = DbSynchPackage.TABLE___ROW_FACTORY;
+	int FPD_SORTING_PLANS___CONSTRUCT_ROW = DbSynchPackage.TABLE___CONSTRUCT_ROW;
 
 	/**
 	 * The operation id for the '<em>Add Row</em>' operation.
@@ -585,6 +585,24 @@ public interface ToUseDbSynchPackage extends EPackage {
 	 * @ordered
 	 */
 	int FPD_SORTING_PLAN_INPUTS__TABLE_GROUP = DbSynchPackage.TABLE__TABLE_GROUP;
+
+	/**
+	 * The feature id for the '<em><b>Key Columns</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_SORTING_PLAN_INPUTS__KEY_COLUMNS = DbSynchPackage.TABLE__KEY_COLUMNS;
+
+	/**
+	 * The feature id for the '<em><b>Data Columns</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_SORTING_PLAN_INPUTS__DATA_COLUMNS = DbSynchPackage.TABLE__DATA_COLUMNS;
 
 	/**
 	 * The feature id for the '<em><b>Rows</b></em>' reference list.
@@ -641,15 +659,6 @@ public interface ToUseDbSynchPackage extends EPackage {
 	int FPD_SORTING_PLAN_INPUTS__LAST_SYNCH_UP = DbSynchPackage.TABLE__LAST_SYNCH_UP;
 
 	/**
-	 * The feature id for the '<em><b>Data Columns</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FPD_SORTING_PLAN_INPUTS__DATA_COLUMNS = DbSynchPackage.TABLE__DATA_COLUMNS;
-
-	/**
 	 * The feature id for the '<em><b>Select Sql Statement</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -693,15 +702,6 @@ public interface ToUseDbSynchPackage extends EPackage {
 	 * @ordered
 	 */
 	int FPD_SORTING_PLAN_INPUTS__PARAM_TABLE_GROUP_ATTRIBUTES = DbSynchPackage.TABLE__PARAM_TABLE_GROUP_ATTRIBUTES;
-
-	/**
-	 * The feature id for the '<em><b>Key Columns</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FPD_SORTING_PLAN_INPUTS__KEY_COLUMNS = DbSynchPackage.TABLE__KEY_COLUMNS;
 
 	/**
 	 * The feature id for the '<em><b>Columns</b></em>' reference list.
@@ -785,13 +785,13 @@ public interface ToUseDbSynchPackage extends EPackage {
 	int FPD_SORTING_PLAN_INPUTS___GET_ROW__TABLEROWKEYIMPL = DbSynchPackage.TABLE___GET_ROW__TABLEROWKEYIMPL;
 
 	/**
-	 * The operation id for the '<em>Row Factory</em>' operation.
+	 * The operation id for the '<em>Construct Row</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FPD_SORTING_PLAN_INPUTS___ROW_FACTORY = DbSynchPackage.TABLE___ROW_FACTORY;
+	int FPD_SORTING_PLAN_INPUTS___CONSTRUCT_ROW = DbSynchPackage.TABLE___CONSTRUCT_ROW;
 
 	/**
 	 * The operation id for the '<em>Add Row</em>' operation.

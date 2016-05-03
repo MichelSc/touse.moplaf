@@ -148,9 +148,8 @@ public class FPDSortingPlanInputsItemProvider extends TableItemProvider {
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == DbSynchPackage.Literals.TABLE__DATA_COLUMNS ||
 			childFeature == DbSynchPackage.Literals.TABLE__KEY_COLUMNS ||
-			childFeature == DbSynchPackage.Literals.TABLE__COLUMNS;
+			childFeature == DbSynchPackage.Literals.TABLE__DATA_COLUMNS;
 
 		if (qualify) {
 			return getString
