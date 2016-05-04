@@ -574,7 +574,7 @@ public interface ToUseDbSynchPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FPD_SORTING_PLANS___ADD_COLUMN__BOOLEAN_STRING_INT_INT_EATTRIBUTE = DbSynchPackage.TABLE___ADD_COLUMN__BOOLEAN_STRING_INT_INT_EATTRIBUTE;
+	int FPD_SORTING_PLANS___ADD_COLUMN__BOOLEAN_STRING_EATTRIBUTE = DbSynchPackage.TABLE___ADD_COLUMN__BOOLEAN_STRING_EATTRIBUTE;
 
 	/**
 	 * The operation id for the '<em>Refresh Meta Data</em>' operation.
@@ -827,7 +827,7 @@ public interface ToUseDbSynchPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FPD_SORTING_PLAN_INPUTS___ADD_COLUMN__BOOLEAN_STRING_INT_INT_EATTRIBUTE = DbSynchPackage.TABLE___ADD_COLUMN__BOOLEAN_STRING_INT_INT_EATTRIBUTE;
+	int FPD_SORTING_PLAN_INPUTS___ADD_COLUMN__BOOLEAN_STRING_EATTRIBUTE = DbSynchPackage.TABLE___ADD_COLUMN__BOOLEAN_STRING_EATTRIBUTE;
 
 	/**
 	 * The operation id for the '<em>Refresh Meta Data</em>' operation.

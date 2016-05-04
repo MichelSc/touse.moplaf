@@ -2,8 +2,6 @@
  */
 package com.misc.touse.moplaf.dbsynch.tousedbsynch.impl;
 
-import com.misc.common.moplaf.dbsynch.DbSynchFactory;
-import com.misc.common.moplaf.dbsynch.TableColumn;
 import com.misc.common.moplaf.dbsynch.TableRow;
 import com.misc.common.moplaf.dbsynch.impl.TableImpl;
 
