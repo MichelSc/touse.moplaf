@@ -150,6 +150,13 @@ public class ToUseDbSynchActionBarContributor
 	protected DisconnectAction disconnectAction = new DisconnectAction();
 		
 	/**
+	 * This refreshes the metadata of the object
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	protected RefreshMetaDataAction refreshMetaDataAction = new RefreshMetaDataAction();
+		
+	/**
 	 * This action synchs up the object
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -314,10 +321,11 @@ public class ToUseDbSynchActionBarContributor
 			createSiblingMenuManager.update(true);
 		}
 
-		this.connectAction   .selectionChanged(activeEditorPart, selection);
-		this.disconnectAction.selectionChanged(activeEditorPart, selection);
-		this.synchUpAction   .selectionChanged(activeEditorPart, selection);
-		this.synchDownAction .selectionChanged(activeEditorPart, selection);
+		this.connectAction        .selectionChanged(activeEditorPart, selection);
+		this.disconnectAction     .selectionChanged(activeEditorPart, selection);
+		this.refreshMetaDataAction.selectionChanged(activeEditorPart, selection);
+		this.synchUpAction        .selectionChanged(activeEditorPart, selection);
+		this.synchDownAction      .selectionChanged(activeEditorPart, selection);
 }
 
 	/**
@@ -429,6 +437,7 @@ public class ToUseDbSynchActionBarContributor
 		
 		submenuManager.add(this.connectAction);
 		submenuManager.add(this.disconnectAction);
+		submenuManager.add(this.refreshMetaDataAction);
 		submenuManager.add(this.synchUpAction);
 		submenuManager.add(this.synchDownAction);
 	}
