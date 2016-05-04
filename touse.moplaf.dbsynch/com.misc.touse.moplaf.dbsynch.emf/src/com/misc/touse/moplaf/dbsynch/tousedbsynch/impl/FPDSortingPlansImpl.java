@@ -173,6 +173,9 @@ public class FPDSortingPlansImpl extends TableImpl implements FPDSortingPlans {
 	@Override
 	protected void refreshMetaDataImpl() {
 		this.setTableName("FPD_T.SORTINGPLAN");
+		this.setWhereClause(" validto > ? and validfrom < ? ");
+		this.addParam(ToUseDbSynchPackage.Literals.FPD_GROUP_SORTING_PLAN__FROM_DATE);
+		this.addParam(ToUseDbSynchPackage.Literals.FPD_GROUP_SORTING_PLAN__TO_DATE);
 		this.addColumn(true,  "id",        ToUseDbSynchPackage.Literals.FPD_SORTING_PLAN__SORTING_PLAN_ID);
 		this.addColumn(false, "name",      ToUseDbSynchPackage.Literals.FPD_SORTING_PLAN__NAME);
 		this.addColumn(false, "validfrom", ToUseDbSynchPackage.Literals.FPD_SORTING_PLAN__VALID_FROM);

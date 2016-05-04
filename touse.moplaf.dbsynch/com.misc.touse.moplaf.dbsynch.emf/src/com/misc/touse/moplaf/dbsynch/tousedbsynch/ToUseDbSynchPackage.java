@@ -532,15 +532,6 @@ public interface ToUseDbSynchPackage extends EPackage {
 	int FPD_SORTING_PLANS__DELETE_SQL_STATEMENT = DbSynchPackage.TABLE__DELETE_SQL_STATEMENT;
 
 	/**
-	 * The feature id for the '<em><b>Param Table Group Attributes</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FPD_SORTING_PLANS__PARAM_TABLE_GROUP_ATTRIBUTES = DbSynchPackage.TABLE__PARAM_TABLE_GROUP_ATTRIBUTES;
-
-	/**
 	 * The feature id for the '<em><b>Columns</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -548,6 +539,15 @@ public interface ToUseDbSynchPackage extends EPackage {
 	 * @ordered
 	 */
 	int FPD_SORTING_PLANS__COLUMNS = DbSynchPackage.TABLE__COLUMNS;
+
+	/**
+	 * The feature id for the '<em><b>Param Db Synch Unit Attributes</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_SORTING_PLANS__PARAM_DB_SYNCH_UNIT_ATTRIBUTES = DbSynchPackage.TABLE__PARAM_DB_SYNCH_UNIT_ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Sorting Plans</b></em>' containment reference list.
@@ -785,15 +785,6 @@ public interface ToUseDbSynchPackage extends EPackage {
 	int FPD_SORTING_PLAN_INPUTS__DELETE_SQL_STATEMENT = DbSynchPackage.TABLE__DELETE_SQL_STATEMENT;
 
 	/**
-	 * The feature id for the '<em><b>Param Table Group Attributes</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FPD_SORTING_PLAN_INPUTS__PARAM_TABLE_GROUP_ATTRIBUTES = DbSynchPackage.TABLE__PARAM_TABLE_GROUP_ATTRIBUTES;
-
-	/**
 	 * The feature id for the '<em><b>Columns</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -801,6 +792,15 @@ public interface ToUseDbSynchPackage extends EPackage {
 	 * @ordered
 	 */
 	int FPD_SORTING_PLAN_INPUTS__COLUMNS = DbSynchPackage.TABLE__COLUMNS;
+
+	/**
+	 * The feature id for the '<em><b>Param Db Synch Unit Attributes</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_SORTING_PLAN_INPUTS__PARAM_DB_SYNCH_UNIT_ATTRIBUTES = DbSynchPackage.TABLE__PARAM_DB_SYNCH_UNIT_ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Sorting Plan Inputs</b></em>' containment reference list.
