@@ -6,7 +6,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="SortingPlansSet" upperBound="-1"
         eType="#//FPDGroupSortingPlan" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FPDGroupSortingPlan" eSuperTypes="../../com.misc.common.moplaf.dbsynch.emf/model/dbsynch.ecore#//TableGroup">
+  <eClassifiers xsi:type="ecore:EClass" name="FPDGroupSortingPlan" eSuperTypes="../../com.misc.common.moplaf.dbsynch.emf/model/dbsynch.ecore#//DbSynchUnit">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="FromDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ToDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="SortingPlansTable" eType="#//FPDSortingPlans"

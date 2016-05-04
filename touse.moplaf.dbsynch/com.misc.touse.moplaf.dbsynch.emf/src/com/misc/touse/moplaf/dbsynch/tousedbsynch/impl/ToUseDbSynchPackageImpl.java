@@ -392,7 +392,7 @@ public class ToUseDbSynchPackageImpl extends EPackageImpl implements ToUseDbSync
 
 		// Add supertypes to classes
 		fpdEClass.getESuperTypes().add(theDbsynchderbyPackage.getDataSourceJdbcDerbyEmbedded());
-		fpdGroupSortingPlanEClass.getESuperTypes().add(theDbSynchPackage.getTableGroup());
+		fpdGroupSortingPlanEClass.getESuperTypes().add(theDbSynchPackage.getDbSynchUnit());
 		fpdSortingPlansEClass.getESuperTypes().add(theDbSynchPackage.getTable());
 		fpdSortingPlanInputsEClass.getESuperTypes().add(theDbSynchPackage.getTable());
 		fpdSortingPlanEClass.getESuperTypes().add(theDbSynchPackage.getTableRow());

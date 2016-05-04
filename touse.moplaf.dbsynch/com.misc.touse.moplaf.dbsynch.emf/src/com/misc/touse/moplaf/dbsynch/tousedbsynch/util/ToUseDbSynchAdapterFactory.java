@@ -4,8 +4,9 @@ package com.misc.touse.moplaf.dbsynch.tousedbsynch.util;
 
 import com.misc.common.moplaf.dbsynch.DataSource;
 import com.misc.common.moplaf.dbsynch.DataSourceJdbc;
+import com.misc.common.moplaf.dbsynch.DbSynchUnit;
+import com.misc.common.moplaf.dbsynch.DbSynchUnitAbstract;
 import com.misc.common.moplaf.dbsynch.Table;
-import com.misc.common.moplaf.dbsynch.TableGroup;
 import com.misc.common.moplaf.dbsynch.TableRow;
 
 import com.misc.common.moplaf.dbsynch.dbsynchderby.DataSourceJdbcDerbyEmbedded;
@@ -100,6 +101,10 @@ public class ToUseDbSynchAdapterFactory extends AdapterFactoryImpl {
 				return createFPDSortingPlanInputAdapter();
 			}
 			@Override
+			public Adapter caseDbSynchUnitAbstract(DbSynchUnitAbstract object) {
+				return createDbSynchUnitAbstractAdapter();
+			}
+			@Override
 			public Adapter caseDataSource(DataSource object) {
 				return createDataSourceAdapter();
 			}
@@ -112,8 +117,8 @@ public class ToUseDbSynchAdapterFactory extends AdapterFactoryImpl {
 				return createDataSourceJdbcDerbyEmbeddedAdapter();
 			}
 			@Override
-			public Adapter caseTableGroup(TableGroup object) {
-				return createTableGroupAdapter();
+			public Adapter caseDbSynchUnit(DbSynchUnit object) {
+				return createDbSynchUnitAdapter();
 			}
 			@Override
 			public Adapter caseTable(Table object) {
@@ -228,6 +233,20 @@ public class ToUseDbSynchAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.dbsynch.DbSynchUnitAbstract <em>Unit Abstract</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.dbsynch.DbSynchUnitAbstract
+	 * @generated
+	 */
+	public Adapter createDbSynchUnitAbstractAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.dbsynch.DataSource <em>Data Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -270,16 +289,16 @@ public class ToUseDbSynchAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.dbsynch.TableGroup <em>Table Group</em>}'.
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.dbsynch.DbSynchUnit <em>Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.dbsynch.TableGroup
+	 * @see com.misc.common.moplaf.dbsynch.DbSynchUnit
 	 * @generated
 	 */
-	public Adapter createTableGroupAdapter() {
+	public Adapter createDbSynchUnitAdapter() {
 		return null;
 	}
 

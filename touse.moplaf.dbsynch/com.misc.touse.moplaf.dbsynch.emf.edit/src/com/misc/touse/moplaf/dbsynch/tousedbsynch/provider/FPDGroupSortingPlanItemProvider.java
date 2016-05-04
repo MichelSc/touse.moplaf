@@ -3,8 +3,7 @@
 package com.misc.touse.moplaf.dbsynch.tousedbsynch.provider;
 
 
-import com.misc.common.moplaf.dbsynch.provider.TableGroupItemProvider;
-
+import com.misc.common.moplaf.dbsynch.provider.DbSynchUnitItemProvider;
 import com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDGroupSortingPlan;
 import com.misc.touse.moplaf.dbsynch.tousedbsynch.ToUseDbSynchFactory;
 import com.misc.touse.moplaf.dbsynch.tousedbsynch.ToUseDbSynchPackage;
@@ -29,7 +28,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class FPDGroupSortingPlanItemProvider extends TableGroupItemProvider {
+public class FPDGroupSortingPlanItemProvider extends DbSynchUnitItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
