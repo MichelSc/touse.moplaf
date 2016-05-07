@@ -577,6 +577,15 @@ public interface ToUseDbSynchPackage extends EPackage {
 	int FPD_SORTING_PLANS___ADD_COLUMN__BOOLEAN_STRING_EATTRIBUTE = DbSynchPackage.TABLE___ADD_COLUMN__BOOLEAN_STRING_EATTRIBUTE;
 
 	/**
+	 * The operation id for the '<em>Add Param</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_SORTING_PLANS___ADD_PARAM__EATTRIBUTE = DbSynchPackage.TABLE___ADD_PARAM__EATTRIBUTE;
+
+	/**
 	 * The operation id for the '<em>Refresh Meta Data</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -830,6 +839,15 @@ public interface ToUseDbSynchPackage extends EPackage {
 	int FPD_SORTING_PLAN_INPUTS___ADD_COLUMN__BOOLEAN_STRING_EATTRIBUTE = DbSynchPackage.TABLE___ADD_COLUMN__BOOLEAN_STRING_EATTRIBUTE;
 
 	/**
+	 * The operation id for the '<em>Add Param</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_SORTING_PLAN_INPUTS___ADD_PARAM__EATTRIBUTE = DbSynchPackage.TABLE___ADD_PARAM__EATTRIBUTE;
+
+	/**
 	 * The operation id for the '<em>Refresh Meta Data</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -957,6 +975,15 @@ public interface ToUseDbSynchPackage extends EPackage {
 	int FPD_SORTING_PLAN__MODIFICATION_NEXT_SYNCH_DOWN = DbSynchPackage.TABLE_ROW__MODIFICATION_NEXT_SYNCH_DOWN;
 
 	/**
+	 * The feature id for the '<em><b>Deleted</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_SORTING_PLAN__DELETED = DbSynchPackage.TABLE_ROW__DELETED;
+
+	/**
 	 * The feature id for the '<em><b>Sorting Plan ID</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1064,6 +1091,15 @@ public interface ToUseDbSynchPackage extends EPackage {
 	 * @ordered
 	 */
 	int FPD_SORTING_PLAN_INPUT__MODIFICATION_NEXT_SYNCH_DOWN = DbSynchPackage.TABLE_ROW__MODIFICATION_NEXT_SYNCH_DOWN;
+
+	/**
+	 * The feature id for the '<em><b>Deleted</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_SORTING_PLAN_INPUT__DELETED = DbSynchPackage.TABLE_ROW__DELETED;
 
 	/**
 	 * The feature id for the '<em><b>Product ID</b></em>' attribute.
