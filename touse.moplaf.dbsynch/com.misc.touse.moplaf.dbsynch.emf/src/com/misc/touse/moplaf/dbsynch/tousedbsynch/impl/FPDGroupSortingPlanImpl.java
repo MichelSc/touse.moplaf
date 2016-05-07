@@ -2,8 +2,7 @@
  */
 package com.misc.touse.moplaf.dbsynch.tousedbsynch.impl;
 
-import com.misc.common.moplaf.dbsynch.impl.TableGroupImpl;
-
+import com.misc.common.moplaf.dbsynch.impl.DbSynchUnitImpl;
 import com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDGroupSortingPlan;
 import com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDSortingPlanInputs;
 import com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDSortingPlans;
@@ -34,7 +33,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class FPDGroupSortingPlanImpl extends TableGroupImpl implements FPDGroupSortingPlan {
+public class FPDGroupSortingPlanImpl extends DbSynchUnitImpl implements FPDGroupSortingPlan {
 	/**
 	 * The default value of the '{@link #getFromDate() <em>From Date</em>}' attribute.
 	 * <!-- begin-user-doc -->

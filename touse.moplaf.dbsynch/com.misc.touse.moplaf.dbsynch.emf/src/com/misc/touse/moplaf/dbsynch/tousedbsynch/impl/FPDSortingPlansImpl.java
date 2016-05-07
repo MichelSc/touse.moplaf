@@ -2,8 +2,6 @@
  */
 package com.misc.touse.moplaf.dbsynch.tousedbsynch.impl;
 
-import com.misc.common.moplaf.dbsynch.DbSynchFactory;
-import com.misc.common.moplaf.dbsynch.TableColumn;
 import com.misc.common.moplaf.dbsynch.TableRow;
 import com.misc.common.moplaf.dbsynch.impl.TableImpl;
 
@@ -175,31 +173,13 @@ public class FPDSortingPlansImpl extends TableImpl implements FPDSortingPlans {
 	@Override
 	protected void refreshMetaDataImpl() {
 		this.setTableName("FPD_T.SORTINGPLAN");
-		TableColumn idColumn = DbSynchFactory.eINSTANCE.createTableColumn();
-		idColumn.setColumnName("id");
-		idColumn.setRowAttribute(ToUseDbSynchPackage.Literals.FPD_SORTING_PLAN__SORTING_PLAN_ID);
-		idColumn.setVolatile(true);
-		
-		TableColumn nameColumn = DbSynchFactory.eINSTANCE.createTableColumn();
-		nameColumn.setColumnName("name");
-		nameColumn.setRowAttribute(ToUseDbSynchPackage.Literals.FPD_SORTING_PLAN__NAME);
-		nameColumn.setVolatile(true);
-		
-		TableColumn validFromColumn = DbSynchFactory.eINSTANCE.createTableColumn();
-		validFromColumn.setColumnName("validfrom");
-		validFromColumn.setRowAttribute(ToUseDbSynchPackage.Literals.FPD_SORTING_PLAN__VALID_FROM);
-		validFromColumn.setVolatile(true);
-		
-		TableColumn validToColumn = DbSynchFactory.eINSTANCE.createTableColumn();
-		validToColumn.setColumnName("validto");
-		validToColumn.setRowAttribute(ToUseDbSynchPackage.Literals.FPD_SORTING_PLAN__VALID_TO);
-		validToColumn.setVolatile(true);
-		
-		this.getKeyColumns().add(idColumn);
-		this.getDataColumns().add(nameColumn);
-		this.getDataColumns().add(validFromColumn);
-		this.getDataColumns().add(validToColumn);
-		
+		this.setWhereClause(" validto > ? and validfrom < ? ");
+		this.addParam(ToUseDbSynchPackage.Literals.FPD_GROUP_SORTING_PLAN__FROM_DATE);
+		this.addParam(ToUseDbSynchPackage.Literals.FPD_GROUP_SORTING_PLAN__TO_DATE);
+		this.addColumn(true,  "id",        ToUseDbSynchPackage.Literals.FPD_SORTING_PLAN__SORTING_PLAN_ID);
+		this.addColumn(false, "name",      ToUseDbSynchPackage.Literals.FPD_SORTING_PLAN__NAME);
+		this.addColumn(false, "validfrom", ToUseDbSynchPackage.Literals.FPD_SORTING_PLAN__VALID_FROM);
+		this.addColumn(false, "validto",   ToUseDbSynchPackage.Literals.FPD_SORTING_PLAN__VALID_TO);
 	}
 	
 	

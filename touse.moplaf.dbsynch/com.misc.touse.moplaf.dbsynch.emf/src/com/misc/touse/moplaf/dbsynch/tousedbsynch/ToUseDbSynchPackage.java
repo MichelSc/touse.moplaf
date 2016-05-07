@@ -71,6 +71,24 @@ public interface ToUseDbSynchPackage extends EPackage {
 	int FPD = 0;
 
 	/**
+	 * The feature id for the '<em><b>Tables</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD__TABLES = DbsynchderbyPackage.DATA_SOURCE_JDBC_DERBY_EMBEDDED__TABLES;
+
+	/**
+	 * The feature id for the '<em><b>Data Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD__DATA_SOURCE = DbsynchderbyPackage.DATA_SOURCE_JDBC_DERBY_EMBEDDED__DATA_SOURCE;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -78,6 +96,15 @@ public interface ToUseDbSynchPackage extends EPackage {
 	 * @ordered
 	 */
 	int FPD__NAME = DbsynchderbyPackage.DATA_SOURCE_JDBC_DERBY_EMBEDDED__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Child Units</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD__CHILD_UNITS = DbsynchderbyPackage.DATA_SOURCE_JDBC_DERBY_EMBEDDED__CHILD_UNITS;
 
 	/**
 	 * The feature id for the '<em><b>Connected</b></em>' attribute.
@@ -143,6 +170,42 @@ public interface ToUseDbSynchPackage extends EPackage {
 	int FPD_FEATURE_COUNT = DbsynchderbyPackage.DATA_SOURCE_JDBC_DERBY_EMBEDDED_FEATURE_COUNT + 1;
 
 	/**
+	 * The operation id for the '<em>Refresh Meta Data</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD___REFRESH_META_DATA = DbsynchderbyPackage.DATA_SOURCE_JDBC_DERBY_EMBEDDED___REFRESH_META_DATA;
+
+	/**
+	 * The operation id for the '<em>Synch Up</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD___SYNCH_UP = DbsynchderbyPackage.DATA_SOURCE_JDBC_DERBY_EMBEDDED___SYNCH_UP;
+
+	/**
+	 * The operation id for the '<em>Synch Down</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD___SYNCH_DOWN = DbsynchderbyPackage.DATA_SOURCE_JDBC_DERBY_EMBEDDED___SYNCH_DOWN;
+
+	/**
+	 * The operation id for the '<em>Get Param Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD___GET_PARAM_VALUE__EATTRIBUTE = DbsynchderbyPackage.DATA_SOURCE_JDBC_DERBY_EMBEDDED___GET_PARAM_VALUE__EATTRIBUTE;
+
+	/**
 	 * The operation id for the '<em>Connect</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -198,22 +261,13 @@ public interface ToUseDbSynchPackage extends EPackage {
 	int FPD_GROUP_SORTING_PLAN = 1;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FPD_GROUP_SORTING_PLAN__NAME = DbSynchPackage.TABLE_GROUP__NAME;
-
-	/**
 	 * The feature id for the '<em><b>Tables</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FPD_GROUP_SORTING_PLAN__TABLES = DbSynchPackage.TABLE_GROUP__TABLES;
+	int FPD_GROUP_SORTING_PLAN__TABLES = DbSynchPackage.DB_SYNCH_UNIT__TABLES;
 
 	/**
 	 * The feature id for the '<em><b>Data Source</b></em>' reference.
@@ -222,7 +276,34 @@ public interface ToUseDbSynchPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FPD_GROUP_SORTING_PLAN__DATA_SOURCE = DbSynchPackage.TABLE_GROUP__DATA_SOURCE;
+	int FPD_GROUP_SORTING_PLAN__DATA_SOURCE = DbSynchPackage.DB_SYNCH_UNIT__DATA_SOURCE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_GROUP_SORTING_PLAN__NAME = DbSynchPackage.DB_SYNCH_UNIT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Child Units</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_GROUP_SORTING_PLAN__CHILD_UNITS = DbSynchPackage.DB_SYNCH_UNIT__CHILD_UNITS;
+
+	/**
+	 * The feature id for the '<em><b>Parent Unit</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_GROUP_SORTING_PLAN__PARENT_UNIT = DbSynchPackage.DB_SYNCH_UNIT__PARENT_UNIT;
 
 	/**
 	 * The feature id for the '<em><b>From Date</b></em>' attribute.
@@ -231,7 +312,7 @@ public interface ToUseDbSynchPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FPD_GROUP_SORTING_PLAN__FROM_DATE = DbSynchPackage.TABLE_GROUP_FEATURE_COUNT + 0;
+	int FPD_GROUP_SORTING_PLAN__FROM_DATE = DbSynchPackage.DB_SYNCH_UNIT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>To Date</b></em>' attribute.
@@ -240,7 +321,7 @@ public interface ToUseDbSynchPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FPD_GROUP_SORTING_PLAN__TO_DATE = DbSynchPackage.TABLE_GROUP_FEATURE_COUNT + 1;
+	int FPD_GROUP_SORTING_PLAN__TO_DATE = DbSynchPackage.DB_SYNCH_UNIT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Sorting Plans Table</b></em>' containment reference.
@@ -249,7 +330,7 @@ public interface ToUseDbSynchPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FPD_GROUP_SORTING_PLAN__SORTING_PLANS_TABLE = DbSynchPackage.TABLE_GROUP_FEATURE_COUNT + 2;
+	int FPD_GROUP_SORTING_PLAN__SORTING_PLANS_TABLE = DbSynchPackage.DB_SYNCH_UNIT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Sorting Plan Inputs Table</b></em>' containment reference.
@@ -258,7 +339,7 @@ public interface ToUseDbSynchPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FPD_GROUP_SORTING_PLAN__SORTING_PLAN_INPUTS_TABLE = DbSynchPackage.TABLE_GROUP_FEATURE_COUNT + 3;
+	int FPD_GROUP_SORTING_PLAN__SORTING_PLAN_INPUTS_TABLE = DbSynchPackage.DB_SYNCH_UNIT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>FPD Group Sorting Plan</em>' class.
@@ -267,7 +348,7 @@ public interface ToUseDbSynchPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FPD_GROUP_SORTING_PLAN_FEATURE_COUNT = DbSynchPackage.TABLE_GROUP_FEATURE_COUNT + 4;
+	int FPD_GROUP_SORTING_PLAN_FEATURE_COUNT = DbSynchPackage.DB_SYNCH_UNIT_FEATURE_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Refresh Meta Data</em>' operation.
@@ -276,16 +357,7 @@ public interface ToUseDbSynchPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FPD_GROUP_SORTING_PLAN___REFRESH_META_DATA = DbSynchPackage.TABLE_GROUP___REFRESH_META_DATA;
-
-	/**
-	 * The operation id for the '<em>Synch Down</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FPD_GROUP_SORTING_PLAN___SYNCH_DOWN = DbSynchPackage.TABLE_GROUP___SYNCH_DOWN;
+	int FPD_GROUP_SORTING_PLAN___REFRESH_META_DATA = DbSynchPackage.DB_SYNCH_UNIT___REFRESH_META_DATA;
 
 	/**
 	 * The operation id for the '<em>Synch Up</em>' operation.
@@ -294,7 +366,25 @@ public interface ToUseDbSynchPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FPD_GROUP_SORTING_PLAN___SYNCH_UP = DbSynchPackage.TABLE_GROUP___SYNCH_UP;
+	int FPD_GROUP_SORTING_PLAN___SYNCH_UP = DbSynchPackage.DB_SYNCH_UNIT___SYNCH_UP;
+
+	/**
+	 * The operation id for the '<em>Synch Down</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_GROUP_SORTING_PLAN___SYNCH_DOWN = DbSynchPackage.DB_SYNCH_UNIT___SYNCH_DOWN;
+
+	/**
+	 * The operation id for the '<em>Get Param Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_GROUP_SORTING_PLAN___GET_PARAM_VALUE__EATTRIBUTE = DbSynchPackage.DB_SYNCH_UNIT___GET_PARAM_VALUE__EATTRIBUTE;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -303,7 +393,7 @@ public interface ToUseDbSynchPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FPD_GROUP_SORTING_PLAN___REFRESH = DbSynchPackage.TABLE_GROUP___REFRESH;
+	int FPD_GROUP_SORTING_PLAN___REFRESH = DbSynchPackage.DB_SYNCH_UNIT___REFRESH;
 
 	/**
 	 * The number of operations of the '<em>FPD Group Sorting Plan</em>' class.
@@ -312,7 +402,7 @@ public interface ToUseDbSynchPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FPD_GROUP_SORTING_PLAN_OPERATION_COUNT = DbSynchPackage.TABLE_GROUP_OPERATION_COUNT + 0;
+	int FPD_GROUP_SORTING_PLAN_OPERATION_COUNT = DbSynchPackage.DB_SYNCH_UNIT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.dbsynch.tousedbsynch.impl.FPDSortingPlansImpl <em>FPD Sorting Plans</em>}' class.
@@ -325,13 +415,13 @@ public interface ToUseDbSynchPackage extends EPackage {
 	int FPD_SORTING_PLANS = 2;
 
 	/**
-	 * The feature id for the '<em><b>Table Group</b></em>' reference.
+	 * The feature id for the '<em><b>Synch Unit</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FPD_SORTING_PLANS__TABLE_GROUP = DbSynchPackage.TABLE__TABLE_GROUP;
+	int FPD_SORTING_PLANS__SYNCH_UNIT = DbSynchPackage.TABLE__SYNCH_UNIT;
 
 	/**
 	 * The feature id for the '<em><b>Key Columns</b></em>' containment reference list.
@@ -442,15 +532,6 @@ public interface ToUseDbSynchPackage extends EPackage {
 	int FPD_SORTING_PLANS__DELETE_SQL_STATEMENT = DbSynchPackage.TABLE__DELETE_SQL_STATEMENT;
 
 	/**
-	 * The feature id for the '<em><b>Param Table Group Attributes</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FPD_SORTING_PLANS__PARAM_TABLE_GROUP_ATTRIBUTES = DbSynchPackage.TABLE__PARAM_TABLE_GROUP_ATTRIBUTES;
-
-	/**
 	 * The feature id for the '<em><b>Columns</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -458,6 +539,15 @@ public interface ToUseDbSynchPackage extends EPackage {
 	 * @ordered
 	 */
 	int FPD_SORTING_PLANS__COLUMNS = DbSynchPackage.TABLE__COLUMNS;
+
+	/**
+	 * The feature id for the '<em><b>Param Db Synch Unit Attributes</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_SORTING_PLANS__PARAM_DB_SYNCH_UNIT_ATTRIBUTES = DbSynchPackage.TABLE__PARAM_DB_SYNCH_UNIT_ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Sorting Plans</b></em>' containment reference list.
@@ -484,7 +574,7 @@ public interface ToUseDbSynchPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FPD_SORTING_PLANS___ADD_COLUMN__STRING_INT_INT_EATTRIBUTE = DbSynchPackage.TABLE___ADD_COLUMN__STRING_INT_INT_EATTRIBUTE;
+	int FPD_SORTING_PLANS___ADD_COLUMN__BOOLEAN_STRING_EATTRIBUTE = DbSynchPackage.TABLE___ADD_COLUMN__BOOLEAN_STRING_EATTRIBUTE;
 
 	/**
 	 * The operation id for the '<em>Refresh Meta Data</em>' operation.
@@ -578,13 +668,13 @@ public interface ToUseDbSynchPackage extends EPackage {
 	int FPD_SORTING_PLAN_INPUTS = 3;
 
 	/**
-	 * The feature id for the '<em><b>Table Group</b></em>' reference.
+	 * The feature id for the '<em><b>Synch Unit</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FPD_SORTING_PLAN_INPUTS__TABLE_GROUP = DbSynchPackage.TABLE__TABLE_GROUP;
+	int FPD_SORTING_PLAN_INPUTS__SYNCH_UNIT = DbSynchPackage.TABLE__SYNCH_UNIT;
 
 	/**
 	 * The feature id for the '<em><b>Key Columns</b></em>' containment reference list.
@@ -695,15 +785,6 @@ public interface ToUseDbSynchPackage extends EPackage {
 	int FPD_SORTING_PLAN_INPUTS__DELETE_SQL_STATEMENT = DbSynchPackage.TABLE__DELETE_SQL_STATEMENT;
 
 	/**
-	 * The feature id for the '<em><b>Param Table Group Attributes</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FPD_SORTING_PLAN_INPUTS__PARAM_TABLE_GROUP_ATTRIBUTES = DbSynchPackage.TABLE__PARAM_TABLE_GROUP_ATTRIBUTES;
-
-	/**
 	 * The feature id for the '<em><b>Columns</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -711,6 +792,15 @@ public interface ToUseDbSynchPackage extends EPackage {
 	 * @ordered
 	 */
 	int FPD_SORTING_PLAN_INPUTS__COLUMNS = DbSynchPackage.TABLE__COLUMNS;
+
+	/**
+	 * The feature id for the '<em><b>Param Db Synch Unit Attributes</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_SORTING_PLAN_INPUTS__PARAM_DB_SYNCH_UNIT_ATTRIBUTES = DbSynchPackage.TABLE__PARAM_DB_SYNCH_UNIT_ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Sorting Plan Inputs</b></em>' containment reference list.
@@ -737,7 +827,7 @@ public interface ToUseDbSynchPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FPD_SORTING_PLAN_INPUTS___ADD_COLUMN__STRING_INT_INT_EATTRIBUTE = DbSynchPackage.TABLE___ADD_COLUMN__STRING_INT_INT_EATTRIBUTE;
+	int FPD_SORTING_PLAN_INPUTS___ADD_COLUMN__BOOLEAN_STRING_EATTRIBUTE = DbSynchPackage.TABLE___ADD_COLUMN__BOOLEAN_STRING_EATTRIBUTE;
 
 	/**
 	 * The operation id for the '<em>Refresh Meta Data</em>' operation.

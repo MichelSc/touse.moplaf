@@ -3,8 +3,6 @@
 package com.misc.touse.moplaf.dbsynch.tousedbsynch.provider;
 
 
-import com.misc.common.moplaf.dbsynch.DbSynchPackage;
-
 import com.misc.common.moplaf.dbsynch.provider.TableItemProvider;
 
 import com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDSortingPlans;
@@ -134,29 +132,6 @@ public class FPDSortingPlansItemProvider extends TableItemProvider {
 			(createChildParameter
 				(ToUseDbSynchPackage.Literals.FPD_SORTING_PLANS__SORTING_PLANS,
 				 ToUseDbSynchFactory.eINSTANCE.createFPDSortingPlan()));
-	}
-
-	/**
-	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
-		Object childFeature = feature;
-		Object childObject = child;
-
-		boolean qualify =
-			childFeature == DbSynchPackage.Literals.TABLE__KEY_COLUMNS ||
-			childFeature == DbSynchPackage.Literals.TABLE__DATA_COLUMNS;
-
-		if (qualify) {
-			return getString
-				("_UI_CreateChild_text2",
-				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
-		}
-		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 	/**

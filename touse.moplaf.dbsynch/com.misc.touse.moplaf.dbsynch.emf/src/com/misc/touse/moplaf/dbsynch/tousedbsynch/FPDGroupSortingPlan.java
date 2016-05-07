@@ -2,8 +2,7 @@
  */
 package com.misc.touse.moplaf.dbsynch.tousedbsynch;
 
-import com.misc.common.moplaf.dbsynch.TableGroup;
-
+import com.misc.common.moplaf.dbsynch.DbSynchUnit;
 import java.util.Date;
 
 /**
@@ -25,7 +24,7 @@ import java.util.Date;
  * @model
  * @generated
  */
-public interface FPDGroupSortingPlan extends TableGroup {
+public interface FPDGroupSortingPlan extends DbSynchUnit {
 	/**
 	 * Returns the value of the '<em><b>From Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->

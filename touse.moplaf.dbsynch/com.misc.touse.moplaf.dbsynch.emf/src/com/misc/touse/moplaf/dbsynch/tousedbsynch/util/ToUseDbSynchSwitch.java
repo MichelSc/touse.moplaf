@@ -4,8 +4,9 @@ package com.misc.touse.moplaf.dbsynch.tousedbsynch.util;
 
 import com.misc.common.moplaf.dbsynch.DataSource;
 import com.misc.common.moplaf.dbsynch.DataSourceJdbc;
+import com.misc.common.moplaf.dbsynch.DbSynchUnit;
+import com.misc.common.moplaf.dbsynch.DbSynchUnitAbstract;
 import com.misc.common.moplaf.dbsynch.Table;
-import com.misc.common.moplaf.dbsynch.TableGroup;
 import com.misc.common.moplaf.dbsynch.TableRow;
 
 import com.misc.common.moplaf.dbsynch.dbsynchderby.DataSourceJdbcDerbyEmbedded;
@@ -80,13 +81,15 @@ public class ToUseDbSynchSwitch<T> extends Switch<T> {
 				if (result == null) result = caseDataSourceJdbcDerbyEmbedded(fpd);
 				if (result == null) result = caseDataSourceJdbc(fpd);
 				if (result == null) result = caseDataSource(fpd);
+				if (result == null) result = caseDbSynchUnitAbstract(fpd);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ToUseDbSynchPackage.FPD_GROUP_SORTING_PLAN: {
 				FPDGroupSortingPlan fpdGroupSortingPlan = (FPDGroupSortingPlan)theEObject;
 				T result = caseFPDGroupSortingPlan(fpdGroupSortingPlan);
-				if (result == null) result = caseTableGroup(fpdGroupSortingPlan);
+				if (result == null) result = caseDbSynchUnit(fpdGroupSortingPlan);
+				if (result == null) result = caseDbSynchUnitAbstract(fpdGroupSortingPlan);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -213,6 +216,21 @@ public class ToUseDbSynchSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Unit Abstract</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Unit Abstract</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDbSynchUnitAbstract(DbSynchUnitAbstract object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Data Source</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -258,17 +276,17 @@ public class ToUseDbSynchSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Table Group</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Unit</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Table Group</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Unit</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTableGroup(TableGroup object) {
+	public T caseDbSynchUnit(DbSynchUnit object) {
 		return null;
 	}
 
