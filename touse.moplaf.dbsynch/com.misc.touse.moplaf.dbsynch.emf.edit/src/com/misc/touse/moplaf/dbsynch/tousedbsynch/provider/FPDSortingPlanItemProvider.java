@@ -74,7 +74,7 @@ public class FPDSortingPlanItemProvider extends TableRowItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI__20ToUsePropertyCategory"),
 				 null));
 	}
 
@@ -96,7 +96,7 @@ public class FPDSortingPlanItemProvider extends TableRowItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI__20ToUsePropertyCategory"),
 				 null));
 	}
 
@@ -118,7 +118,7 @@ public class FPDSortingPlanItemProvider extends TableRowItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI__20ToUsePropertyCategory"),
 				 null));
 	}
 
@@ -140,7 +140,7 @@ public class FPDSortingPlanItemProvider extends TableRowItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI__20ToUsePropertyCategory"),
 				 null));
 	}
 

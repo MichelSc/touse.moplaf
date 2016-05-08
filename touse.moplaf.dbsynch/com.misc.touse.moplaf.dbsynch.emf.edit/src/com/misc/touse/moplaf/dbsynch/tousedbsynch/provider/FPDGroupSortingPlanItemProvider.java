@@ -74,7 +74,7 @@ public class FPDGroupSortingPlanItemProvider extends DbSynchUnitItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI__20ToUsePropertyCategory"),
 				 null));
 	}
 
@@ -96,7 +96,7 @@ public class FPDGroupSortingPlanItemProvider extends DbSynchUnitItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI__20ToUsePropertyCategory"),
 				 null));
 	}
 

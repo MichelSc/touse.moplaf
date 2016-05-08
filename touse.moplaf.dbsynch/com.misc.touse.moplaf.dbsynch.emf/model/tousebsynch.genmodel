@@ -12,8 +12,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousedbsynch.ecore#//FPD/SortingPlansSet"/>
     </genClasses>
     <genClasses image="false" ecoreClass="tousedbsynch.ecore#//FPDGroupSortingPlan">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousedbsynch.ecore#//FPDGroupSortingPlan/FromDate"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousedbsynch.ecore#//FPDGroupSortingPlan/ToDate"/>
+      <genFeatures createChild="false" propertyCategory="20 ToUse" ecoreFeature="ecore:EAttribute tousedbsynch.ecore#//FPDGroupSortingPlan/FromDate"/>
+      <genFeatures createChild="false" propertyCategory="20 ToUse" ecoreFeature="ecore:EAttribute tousedbsynch.ecore#//FPDGroupSortingPlan/ToDate"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousedbsynch.ecore#//FPDGroupSortingPlan/SortingPlansTable"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousedbsynch.ecore#//FPDGroupSortingPlan/SortingPlanInputsTable"/>
     </genClasses>
@@ -24,10 +24,10 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousedbsynch.ecore#//FPDSortingPlanInputs/SortingPlanInputs"/>
     </genClasses>
     <genClasses image="false" ecoreClass="tousedbsynch.ecore#//FPDSortingPlan">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousedbsynch.ecore#//FPDSortingPlan/SortingPlanID"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousedbsynch.ecore#//FPDSortingPlan/Name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousedbsynch.ecore#//FPDSortingPlan/ValidFrom"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousedbsynch.ecore#//FPDSortingPlan/ValidTo"/>
+      <genFeatures createChild="false" propertyCategory="20 ToUse" ecoreFeature="ecore:EAttribute tousedbsynch.ecore#//FPDSortingPlan/SortingPlanID"/>
+      <genFeatures createChild="false" propertyCategory="20 ToUse" ecoreFeature="ecore:EAttribute tousedbsynch.ecore#//FPDSortingPlan/Name"/>
+      <genFeatures createChild="false" propertyCategory="20 ToUse" ecoreFeature="ecore:EAttribute tousedbsynch.ecore#//FPDSortingPlan/ValidFrom"/>
+      <genFeatures createChild="false" propertyCategory="20 ToUse" ecoreFeature="ecore:EAttribute tousedbsynch.ecore#//FPDSortingPlan/ValidTo"/>
     </genClasses>
     <genClasses image="false" ecoreClass="tousedbsynch.ecore#//FPDSortingPlanInput">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousedbsynch.ecore#//FPDSortingPlanInput/ProductID"/>
