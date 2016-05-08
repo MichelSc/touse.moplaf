@@ -13,5 +13,6 @@ Export-Package: com.misc.touse.moplaf.dbsynch.tousedbsynch,
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  com.misc.common.moplaf.dbsynch.emf;visibility:=reexport,
- com.misc.common.moplaf.dbsynch.derby.emf;visibility:=reexport
+ com.misc.common.moplaf.dbsynch.derby.emf;visibility:=reexport,
+ com.misc.common.moplaf.dbsynch.mysql.emf;visibility:=reexport
 Bundle-ActivationPolicy: lazy

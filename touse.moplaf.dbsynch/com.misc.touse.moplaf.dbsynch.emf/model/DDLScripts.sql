@@ -18,10 +18,20 @@ create table SortingPlanInput
 , productid  char(32) 
 );
 
-insert into SortingPlan ( "ID", "NAME", "VALIDFROM", "VALIDTO") 
-values ( 'id1', 'premier', '2016-01-01', '2016-12-31');
+insert into SortingPlan ( id, name, validfrom, validto) 
+values ( 'id1', 'premier', '2016-01-01', '2016-12-31')
+;
 
-insert into SortingPlan ( "ID") values ( 'jj');
+delete from SortingPlan;
+
+insert into SortingPlan  
+values ( 'id2', 'second', '2016-02-02', '2016-11-30')
+;
+
+
+commit;
+
+insert into SortingPlan ( id ) values ( 'jj');
 
 select sp.id
      , sp.name

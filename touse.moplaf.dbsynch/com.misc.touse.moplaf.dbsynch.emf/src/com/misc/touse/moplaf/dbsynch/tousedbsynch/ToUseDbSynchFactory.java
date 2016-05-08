@@ -76,6 +76,15 @@ public interface ToUseDbSynchFactory extends EFactory {
 	FPDSortingPlanInput createFPDSortingPlanInput();
 
 	/**
+	 * Returns a new object of class '<em>FPD My Sql</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>FPD My Sql</em>'.
+	 * @generated
+	 */
+	FPDMySql createFPDMySql();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

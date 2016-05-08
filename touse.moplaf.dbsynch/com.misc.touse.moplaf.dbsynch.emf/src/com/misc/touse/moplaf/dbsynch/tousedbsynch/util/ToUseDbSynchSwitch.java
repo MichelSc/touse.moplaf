@@ -11,6 +11,7 @@ import com.misc.common.moplaf.dbsynch.TableRow;
 
 import com.misc.common.moplaf.dbsynch.dbsynchderby.DataSourceJdbcDerbyEmbedded;
 
+import com.misc.common.moplaf.dbsynch.dbsynchmysql.DataSourceJdbcMySql;
 import com.misc.touse.moplaf.dbsynch.tousedbsynch.*;
 
 import org.eclipse.emf.ecore.EObject;
@@ -121,6 +122,16 @@ public class ToUseDbSynchSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ToUseDbSynchPackage.FPD_MY_SQL: {
+				FPDMySql fpdMySql = (FPDMySql)theEObject;
+				T result = caseFPDMySql(fpdMySql);
+				if (result == null) result = caseDataSourceJdbcMySql(fpdMySql);
+				if (result == null) result = caseDataSourceJdbc(fpdMySql);
+				if (result == null) result = caseDataSource(fpdMySql);
+				if (result == null) result = caseDbSynchUnitAbstract(fpdMySql);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -212,6 +223,21 @@ public class ToUseDbSynchSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseFPDSortingPlanInput(FPDSortingPlanInput object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>FPD My Sql</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>FPD My Sql</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFPDMySql(FPDMySql object) {
 		return null;
 	}
 
@@ -317,6 +343,21 @@ public class ToUseDbSynchSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseTableRow(TableRow object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Data Source Jdbc My Sql</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Data Source Jdbc My Sql</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDataSourceJdbcMySql(DataSourceJdbcMySql object) {
 		return null;
 	}
 

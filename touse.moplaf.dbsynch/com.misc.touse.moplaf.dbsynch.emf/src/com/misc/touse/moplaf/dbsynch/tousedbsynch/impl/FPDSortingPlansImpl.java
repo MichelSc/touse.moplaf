@@ -9,7 +9,6 @@ import com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDSortingPlan;
 import com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDSortingPlans;
 import com.misc.touse.moplaf.dbsynch.tousedbsynch.ToUseDbSynchFactory;
 import com.misc.touse.moplaf.dbsynch.tousedbsynch.ToUseDbSynchPackage;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -172,7 +171,7 @@ public class FPDSortingPlansImpl extends TableImpl implements FPDSortingPlans {
 	 */
 	@Override
 	protected void refreshMetaDataImpl() {
-		this.setTableName("FPD_T.SORTINGPLAN");
+		this.setTableName("fpd_t.SortingPlan");
 		this.setWhereClause(" validto > ? and validfrom < ? ");
 		this.addParam(ToUseDbSynchPackage.Literals.FPD_GROUP_SORTING_PLAN__FROM_DATE);
 		this.addParam(ToUseDbSynchPackage.Literals.FPD_GROUP_SORTING_PLAN__TO_DATE);

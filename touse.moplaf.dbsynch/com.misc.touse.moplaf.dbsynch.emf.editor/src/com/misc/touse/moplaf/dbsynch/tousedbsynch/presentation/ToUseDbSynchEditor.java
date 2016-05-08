@@ -158,6 +158,7 @@ import com.misc.touse.moplaf.dbsynch.tousedbsynch.provider.ToUseDbSynchItemProvi
 
 import com.misc.common.moplaf.dbsynch.dbsynchderby.provider.DbsynchderbyItemProviderAdapterFactory;
 
+import com.misc.common.moplaf.dbsynch.dbsynchmysql.provider.DbsynchmysqlItemProviderAdapterFactory;
 import com.misc.common.moplaf.dbsynch.provider.DbSynchItemProviderAdapterFactory;
 
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
@@ -708,6 +709,7 @@ public class ToUseDbSynchEditor
 		adapterFactory.addAdapterFactory(new ToUseDbSynchItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new DbSynchItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new DbsynchderbyItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new DbsynchmysqlItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
 		// Create the command stack that will notify this editor as commands are executed.

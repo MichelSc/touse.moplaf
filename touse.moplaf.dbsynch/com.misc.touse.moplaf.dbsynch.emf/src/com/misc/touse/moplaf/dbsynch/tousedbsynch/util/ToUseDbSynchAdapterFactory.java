@@ -11,6 +11,7 @@ import com.misc.common.moplaf.dbsynch.TableRow;
 
 import com.misc.common.moplaf.dbsynch.dbsynchderby.DataSourceJdbcDerbyEmbedded;
 
+import com.misc.common.moplaf.dbsynch.dbsynchmysql.DataSourceJdbcMySql;
 import com.misc.touse.moplaf.dbsynch.tousedbsynch.*;
 
 import org.eclipse.emf.common.notify.Adapter;
@@ -101,6 +102,10 @@ public class ToUseDbSynchAdapterFactory extends AdapterFactoryImpl {
 				return createFPDSortingPlanInputAdapter();
 			}
 			@Override
+			public Adapter caseFPDMySql(FPDMySql object) {
+				return createFPDMySqlAdapter();
+			}
+			@Override
 			public Adapter caseDbSynchUnitAbstract(DbSynchUnitAbstract object) {
 				return createDbSynchUnitAbstractAdapter();
 			}
@@ -127,6 +132,10 @@ public class ToUseDbSynchAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseTableRow(TableRow object) {
 				return createTableRowAdapter();
+			}
+			@Override
+			public Adapter caseDataSourceJdbcMySql(DataSourceJdbcMySql object) {
+				return createDataSourceJdbcMySqlAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -233,6 +242,20 @@ public class ToUseDbSynchAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDMySql <em>FPD My Sql</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDMySql
+	 * @generated
+	 */
+	public Adapter createFPDMySqlAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.dbsynch.DbSynchUnitAbstract <em>Unit Abstract</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -327,6 +350,20 @@ public class ToUseDbSynchAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTableRowAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.dbsynch.dbsynchmysql.DataSourceJdbcMySql <em>Data Source Jdbc My Sql</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.dbsynch.dbsynchmysql.DataSourceJdbcMySql
+	 * @generated
+	 */
+	public Adapter createDataSourceJdbcMySqlAdapter() {
 		return null;
 	}
 

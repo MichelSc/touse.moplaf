@@ -15,5 +15,7 @@ Require-Bundle: org.eclipse.core.runtime,
  com.misc.common.moplaf.dbsynch.emf;visibility:=reexport,
  com.misc.common.moplaf.dbsynch.emf.edit;visibility:=reexport,
  com.misc.common.moplaf.dbsynch.derby.emf;visibility:=reexport,
- com.misc.common.moplaf.dbsynch.derby.emf.edit;visibility:=reexport
+ com.misc.common.moplaf.dbsynch.derby.emf.edit;visibility:=reexport,
+ com.misc.common.moplaf.dbsynch.mysql.emf;visibility:=reexport,
+ com.misc.common.moplaf.dbsynch.mysql.emf.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

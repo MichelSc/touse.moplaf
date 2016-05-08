@@ -6,6 +6,7 @@ import com.misc.common.moplaf.dbsynch.DbSynchPackage;
 
 import com.misc.common.moplaf.dbsynch.dbsynchderby.DbsynchderbyPackage;
 
+import com.misc.common.moplaf.dbsynch.dbsynchmysql.DbsynchmysqlPackage;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -206,6 +207,15 @@ public interface ToUseDbSynchPackage extends EPackage {
 	int FPD___GET_PARAM_VALUE__EATTRIBUTE = DbsynchderbyPackage.DATA_SOURCE_JDBC_DERBY_EMBEDDED___GET_PARAM_VALUE__EATTRIBUTE;
 
 	/**
+	 * The operation id for the '<em>Get Param Attributes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD___GET_PARAM_ATTRIBUTES = DbsynchderbyPackage.DATA_SOURCE_JDBC_DERBY_EMBEDDED___GET_PARAM_ATTRIBUTES;
+
+	/**
 	 * The operation id for the '<em>Connect</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -385,6 +395,15 @@ public interface ToUseDbSynchPackage extends EPackage {
 	 * @ordered
 	 */
 	int FPD_GROUP_SORTING_PLAN___GET_PARAM_VALUE__EATTRIBUTE = DbSynchPackage.DB_SYNCH_UNIT___GET_PARAM_VALUE__EATTRIBUTE;
+
+	/**
+	 * The operation id for the '<em>Get Param Attributes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_GROUP_SORTING_PLAN___GET_PARAM_ATTRIBUTES = DbSynchPackage.DB_SYNCH_UNIT___GET_PARAM_ATTRIBUTES;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -1148,6 +1167,224 @@ public interface ToUseDbSynchPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.dbsynch.tousedbsynch.impl.FPDMySqlImpl <em>FPD My Sql</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.impl.FPDMySqlImpl
+	 * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.impl.ToUseDbSynchPackageImpl#getFPDMySql()
+	 * @generated
+	 */
+	int FPD_MY_SQL = 6;
+
+	/**
+	 * The feature id for the '<em><b>Tables</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_MY_SQL__TABLES = DbsynchmysqlPackage.DATA_SOURCE_JDBC_MY_SQL__TABLES;
+
+	/**
+	 * The feature id for the '<em><b>Data Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_MY_SQL__DATA_SOURCE = DbsynchmysqlPackage.DATA_SOURCE_JDBC_MY_SQL__DATA_SOURCE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_MY_SQL__NAME = DbsynchmysqlPackage.DATA_SOURCE_JDBC_MY_SQL__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Child Units</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_MY_SQL__CHILD_UNITS = DbsynchmysqlPackage.DATA_SOURCE_JDBC_MY_SQL__CHILD_UNITS;
+
+	/**
+	 * The feature id for the '<em><b>Connected</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_MY_SQL__CONNECTED = DbsynchmysqlPackage.DATA_SOURCE_JDBC_MY_SQL__CONNECTED;
+
+	/**
+	 * The feature id for the '<em><b>Data Base User</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_MY_SQL__DATA_BASE_USER = DbsynchmysqlPackage.DATA_SOURCE_JDBC_MY_SQL__DATA_BASE_USER;
+
+	/**
+	 * The feature id for the '<em><b>Data Base User Pwd</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_MY_SQL__DATA_BASE_USER_PWD = DbsynchmysqlPackage.DATA_SOURCE_JDBC_MY_SQL__DATA_BASE_USER_PWD;
+
+	/**
+	 * The feature id for the '<em><b>Default Schema</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_MY_SQL__DEFAULT_SCHEMA = DbsynchmysqlPackage.DATA_SOURCE_JDBC_MY_SQL__DEFAULT_SCHEMA;
+
+	/**
+	 * The feature id for the '<em><b>Host</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_MY_SQL__HOST = DbsynchmysqlPackage.DATA_SOURCE_JDBC_MY_SQL__HOST;
+
+	/**
+	 * The feature id for the '<em><b>Port</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_MY_SQL__PORT = DbsynchmysqlPackage.DATA_SOURCE_JDBC_MY_SQL__PORT;
+
+	/**
+	 * The feature id for the '<em><b>Data Base</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_MY_SQL__DATA_BASE = DbsynchmysqlPackage.DATA_SOURCE_JDBC_MY_SQL__DATA_BASE;
+
+	/**
+	 * The feature id for the '<em><b>Sorting Plans Set</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_MY_SQL__SORTING_PLANS_SET = DbsynchmysqlPackage.DATA_SOURCE_JDBC_MY_SQL_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>FPD My Sql</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_MY_SQL_FEATURE_COUNT = DbsynchmysqlPackage.DATA_SOURCE_JDBC_MY_SQL_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Refresh Meta Data</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_MY_SQL___REFRESH_META_DATA = DbsynchmysqlPackage.DATA_SOURCE_JDBC_MY_SQL___REFRESH_META_DATA;
+
+	/**
+	 * The operation id for the '<em>Synch Up</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_MY_SQL___SYNCH_UP = DbsynchmysqlPackage.DATA_SOURCE_JDBC_MY_SQL___SYNCH_UP;
+
+	/**
+	 * The operation id for the '<em>Synch Down</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_MY_SQL___SYNCH_DOWN = DbsynchmysqlPackage.DATA_SOURCE_JDBC_MY_SQL___SYNCH_DOWN;
+
+	/**
+	 * The operation id for the '<em>Get Param Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_MY_SQL___GET_PARAM_VALUE__EATTRIBUTE = DbsynchmysqlPackage.DATA_SOURCE_JDBC_MY_SQL___GET_PARAM_VALUE__EATTRIBUTE;
+
+	/**
+	 * The operation id for the '<em>Get Param Attributes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_MY_SQL___GET_PARAM_ATTRIBUTES = DbsynchmysqlPackage.DATA_SOURCE_JDBC_MY_SQL___GET_PARAM_ATTRIBUTES;
+
+	/**
+	 * The operation id for the '<em>Connect</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_MY_SQL___CONNECT = DbsynchmysqlPackage.DATA_SOURCE_JDBC_MY_SQL___CONNECT;
+
+	/**
+	 * The operation id for the '<em>Disconnect</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_MY_SQL___DISCONNECT = DbsynchmysqlPackage.DATA_SOURCE_JDBC_MY_SQL___DISCONNECT;
+
+	/**
+	 * The operation id for the '<em>Synch Down Table Impl</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_MY_SQL___SYNCH_DOWN_TABLE_IMPL__TABLE = DbsynchmysqlPackage.DATA_SOURCE_JDBC_MY_SQL___SYNCH_DOWN_TABLE_IMPL__TABLE;
+
+	/**
+	 * The operation id for the '<em>Synch Up Table Impl</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_MY_SQL___SYNCH_UP_TABLE_IMPL__TABLE = DbsynchmysqlPackage.DATA_SOURCE_JDBC_MY_SQL___SYNCH_UP_TABLE_IMPL__TABLE;
+
+	/**
+	 * The number of operations of the '<em>FPD My Sql</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_MY_SQL_OPERATION_COUNT = DbsynchmysqlPackage.DATA_SOURCE_JDBC_MY_SQL_OPERATION_COUNT + 0;
+
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.dbsynch.tousedbsynch.FPD <em>FPD</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1351,6 +1588,27 @@ public interface ToUseDbSynchPackage extends EPackage {
 	EAttribute getFPDSortingPlanInput_SortingPlanID();
 
 	/**
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDMySql <em>FPD My Sql</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>FPD My Sql</em>'.
+	 * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDMySql
+	 * @generated
+	 */
+	EClass getFPDMySql();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDMySql#getSortingPlansSet <em>Sorting Plans Set</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Sorting Plans Set</em>'.
+	 * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDMySql#getSortingPlansSet()
+	 * @see #getFPDMySql()
+	 * @generated
+	 */
+	EReference getFPDMySql_SortingPlansSet();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1536,6 +1794,24 @@ public interface ToUseDbSynchPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute FPD_SORTING_PLAN_INPUT__SORTING_PLAN_ID = eINSTANCE.getFPDSortingPlanInput_SortingPlanID();
+
+		/**
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.dbsynch.tousedbsynch.impl.FPDMySqlImpl <em>FPD My Sql</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.impl.FPDMySqlImpl
+		 * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.impl.ToUseDbSynchPackageImpl#getFPDMySql()
+		 * @generated
+		 */
+		EClass FPD_MY_SQL = eINSTANCE.getFPDMySql();
+
+		/**
+		 * The meta object literal for the '<em><b>Sorting Plans Set</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FPD_MY_SQL__SORTING_PLANS_SET = eINSTANCE.getFPDMySql_SortingPlansSet();
 
 	}
 

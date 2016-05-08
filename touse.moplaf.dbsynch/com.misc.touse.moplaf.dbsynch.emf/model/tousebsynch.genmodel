@@ -3,7 +3,7 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.misc.touse.moplaf.dbsynch.emf/src" modelPluginID="com.misc.touse.moplaf.dbsynch.emf"
     modelName="Tousedbsynch" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
-    usedGenPackages="../../com.misc.common.moplaf.dbsynch.emf/model/dbsynch.genmodel#//dbsynch ../../com.misc.common.moplaf.dbsynch.derby.emf/model/dbsynchderby.genmodel#//dbsynchderby"
+    usedGenPackages="../../com.misc.common.moplaf.dbsynch.emf/model/dbsynch.genmodel#//dbsynch ../../com.misc.common.moplaf.dbsynch.derby.emf/model/dbsynchderby.genmodel#//dbsynchderby ../../com.misc.common.moplaf.dbsynch.mysql.emf/model/dbsynchmysql.genmodel#//dbsynchmysql"
     operationReflection="true" importOrganizing="true">
   <foreignModel>tousedbsynch.ecore</foreignModel>
   <genPackages prefix="ToUseDbSynch" basePackage="com.misc.touse.moplaf.dbsynch" disposableProviderFactory="true"
@@ -32,6 +32,9 @@
     <genClasses image="false" ecoreClass="tousedbsynch.ecore#//FPDSortingPlanInput">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousedbsynch.ecore#//FPDSortingPlanInput/ProductID"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousedbsynch.ecore#//FPDSortingPlanInput/SortingPlanID"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="tousedbsynch.ecore#//FPDMySql">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousedbsynch.ecore#//FPDMySql/SortingPlansSet"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
