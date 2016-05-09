@@ -7,6 +7,7 @@ import com.misc.common.moplaf.dbsynch.DbSynchPackage;
 import com.misc.common.moplaf.dbsynch.dbsynchderby.DbsynchderbyPackage;
 
 import com.misc.common.moplaf.dbsynch.dbsynchmysql.DbsynchmysqlPackage;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -443,6 +444,15 @@ public interface ToUseDbSynchPackage extends EPackage {
 	int FPD_SORTING_PLANS__SYNCH_UNIT = DbSynchPackage.TABLE__SYNCH_UNIT;
 
 	/**
+	 * The feature id for the '<em><b>Columns</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_SORTING_PLANS__COLUMNS = DbSynchPackage.TABLE__COLUMNS;
+
+	/**
 	 * The feature id for the '<em><b>Key Columns</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -459,15 +469,6 @@ public interface ToUseDbSynchPackage extends EPackage {
 	 * @ordered
 	 */
 	int FPD_SORTING_PLANS__DATA_COLUMNS = DbSynchPackage.TABLE__DATA_COLUMNS;
-
-	/**
-	 * The feature id for the '<em><b>Rows</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FPD_SORTING_PLANS__ROWS = DbSynchPackage.TABLE__ROWS;
 
 	/**
 	 * The feature id for the '<em><b>Table Name</b></em>' attribute.
@@ -488,31 +489,22 @@ public interface ToUseDbSynchPackage extends EPackage {
 	int FPD_SORTING_PLANS__WHERE_CLAUSE = DbSynchPackage.TABLE__WHERE_CLAUSE;
 
 	/**
-	 * The feature id for the '<em><b>Number Of Rows</b></em>' attribute.
+	 * The feature id for the '<em><b>Param Db Synch Unit Attributes</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FPD_SORTING_PLANS__NUMBER_OF_ROWS = DbSynchPackage.TABLE__NUMBER_OF_ROWS;
+	int FPD_SORTING_PLANS__PARAM_DB_SYNCH_UNIT_ATTRIBUTES = DbSynchPackage.TABLE__PARAM_DB_SYNCH_UNIT_ATTRIBUTES;
 
 	/**
-	 * The feature id for the '<em><b>Last Synch Down</b></em>' attribute.
+	 * The feature id for the '<em><b>Rows</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FPD_SORTING_PLANS__LAST_SYNCH_DOWN = DbSynchPackage.TABLE__LAST_SYNCH_DOWN;
-
-	/**
-	 * The feature id for the '<em><b>Last Synch Up</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FPD_SORTING_PLANS__LAST_SYNCH_UP = DbSynchPackage.TABLE__LAST_SYNCH_UP;
+	int FPD_SORTING_PLANS__ROWS = DbSynchPackage.TABLE__ROWS;
 
 	/**
 	 * The feature id for the '<em><b>Select Sql Statement</b></em>' attribute.
@@ -551,22 +543,31 @@ public interface ToUseDbSynchPackage extends EPackage {
 	int FPD_SORTING_PLANS__DELETE_SQL_STATEMENT = DbSynchPackage.TABLE__DELETE_SQL_STATEMENT;
 
 	/**
-	 * The feature id for the '<em><b>Columns</b></em>' reference list.
+	 * The feature id for the '<em><b>Number Of Rows</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FPD_SORTING_PLANS__COLUMNS = DbSynchPackage.TABLE__COLUMNS;
+	int FPD_SORTING_PLANS__NUMBER_OF_ROWS = DbSynchPackage.TABLE__NUMBER_OF_ROWS;
 
 	/**
-	 * The feature id for the '<em><b>Param Db Synch Unit Attributes</b></em>' reference list.
+	 * The feature id for the '<em><b>Last Synch Down</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FPD_SORTING_PLANS__PARAM_DB_SYNCH_UNIT_ATTRIBUTES = DbSynchPackage.TABLE__PARAM_DB_SYNCH_UNIT_ATTRIBUTES;
+	int FPD_SORTING_PLANS__LAST_SYNCH_DOWN = DbSynchPackage.TABLE__LAST_SYNCH_DOWN;
+
+	/**
+	 * The feature id for the '<em><b>Last Synch Up</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_SORTING_PLANS__LAST_SYNCH_UP = DbSynchPackage.TABLE__LAST_SYNCH_UP;
 
 	/**
 	 * The feature id for the '<em><b>Sorting Plans</b></em>' containment reference list.
@@ -705,6 +706,15 @@ public interface ToUseDbSynchPackage extends EPackage {
 	int FPD_SORTING_PLAN_INPUTS__SYNCH_UNIT = DbSynchPackage.TABLE__SYNCH_UNIT;
 
 	/**
+	 * The feature id for the '<em><b>Columns</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_SORTING_PLAN_INPUTS__COLUMNS = DbSynchPackage.TABLE__COLUMNS;
+
+	/**
 	 * The feature id for the '<em><b>Key Columns</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -721,15 +731,6 @@ public interface ToUseDbSynchPackage extends EPackage {
 	 * @ordered
 	 */
 	int FPD_SORTING_PLAN_INPUTS__DATA_COLUMNS = DbSynchPackage.TABLE__DATA_COLUMNS;
-
-	/**
-	 * The feature id for the '<em><b>Rows</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FPD_SORTING_PLAN_INPUTS__ROWS = DbSynchPackage.TABLE__ROWS;
 
 	/**
 	 * The feature id for the '<em><b>Table Name</b></em>' attribute.
@@ -750,31 +751,22 @@ public interface ToUseDbSynchPackage extends EPackage {
 	int FPD_SORTING_PLAN_INPUTS__WHERE_CLAUSE = DbSynchPackage.TABLE__WHERE_CLAUSE;
 
 	/**
-	 * The feature id for the '<em><b>Number Of Rows</b></em>' attribute.
+	 * The feature id for the '<em><b>Param Db Synch Unit Attributes</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FPD_SORTING_PLAN_INPUTS__NUMBER_OF_ROWS = DbSynchPackage.TABLE__NUMBER_OF_ROWS;
+	int FPD_SORTING_PLAN_INPUTS__PARAM_DB_SYNCH_UNIT_ATTRIBUTES = DbSynchPackage.TABLE__PARAM_DB_SYNCH_UNIT_ATTRIBUTES;
 
 	/**
-	 * The feature id for the '<em><b>Last Synch Down</b></em>' attribute.
+	 * The feature id for the '<em><b>Rows</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FPD_SORTING_PLAN_INPUTS__LAST_SYNCH_DOWN = DbSynchPackage.TABLE__LAST_SYNCH_DOWN;
-
-	/**
-	 * The feature id for the '<em><b>Last Synch Up</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FPD_SORTING_PLAN_INPUTS__LAST_SYNCH_UP = DbSynchPackage.TABLE__LAST_SYNCH_UP;
+	int FPD_SORTING_PLAN_INPUTS__ROWS = DbSynchPackage.TABLE__ROWS;
 
 	/**
 	 * The feature id for the '<em><b>Select Sql Statement</b></em>' attribute.
@@ -813,22 +805,31 @@ public interface ToUseDbSynchPackage extends EPackage {
 	int FPD_SORTING_PLAN_INPUTS__DELETE_SQL_STATEMENT = DbSynchPackage.TABLE__DELETE_SQL_STATEMENT;
 
 	/**
-	 * The feature id for the '<em><b>Columns</b></em>' reference list.
+	 * The feature id for the '<em><b>Number Of Rows</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FPD_SORTING_PLAN_INPUTS__COLUMNS = DbSynchPackage.TABLE__COLUMNS;
+	int FPD_SORTING_PLAN_INPUTS__NUMBER_OF_ROWS = DbSynchPackage.TABLE__NUMBER_OF_ROWS;
 
 	/**
-	 * The feature id for the '<em><b>Param Db Synch Unit Attributes</b></em>' reference list.
+	 * The feature id for the '<em><b>Last Synch Down</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FPD_SORTING_PLAN_INPUTS__PARAM_DB_SYNCH_UNIT_ATTRIBUTES = DbSynchPackage.TABLE__PARAM_DB_SYNCH_UNIT_ATTRIBUTES;
+	int FPD_SORTING_PLAN_INPUTS__LAST_SYNCH_DOWN = DbSynchPackage.TABLE__LAST_SYNCH_DOWN;
+
+	/**
+	 * The feature id for the '<em><b>Last Synch Up</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_SORTING_PLAN_INPUTS__LAST_SYNCH_UP = DbSynchPackage.TABLE__LAST_SYNCH_UP;
 
 	/**
 	 * The feature id for the '<em><b>Sorting Plan Inputs</b></em>' containment reference list.
@@ -976,6 +977,33 @@ public interface ToUseDbSynchPackage extends EPackage {
 	int FPD_SORTING_PLAN__KEY = DbSynchPackage.TABLE_ROW__KEY;
 
 	/**
+	 * The feature id for the '<em><b>Old Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_SORTING_PLAN__OLD_KEY = DbSynchPackage.TABLE_ROW__OLD_KEY;
+
+	/**
+	 * The feature id for the '<em><b>Deleted</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_SORTING_PLAN__DELETED = DbSynchPackage.TABLE_ROW__DELETED;
+
+	/**
+	 * The feature id for the '<em><b>Old Deleted</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_SORTING_PLAN__OLD_DELETED = DbSynchPackage.TABLE_ROW__OLD_DELETED;
+
+	/**
 	 * The feature id for the '<em><b>Modification Last Synch Up</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -992,15 +1020,6 @@ public interface ToUseDbSynchPackage extends EPackage {
 	 * @ordered
 	 */
 	int FPD_SORTING_PLAN__MODIFICATION_NEXT_SYNCH_DOWN = DbSynchPackage.TABLE_ROW__MODIFICATION_NEXT_SYNCH_DOWN;
-
-	/**
-	 * The feature id for the '<em><b>Deleted</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FPD_SORTING_PLAN__DELETED = DbSynchPackage.TABLE_ROW__DELETED;
 
 	/**
 	 * The feature id for the '<em><b>Sorting Plan ID</b></em>' attribute.
@@ -1094,6 +1113,33 @@ public interface ToUseDbSynchPackage extends EPackage {
 	int FPD_SORTING_PLAN_INPUT__KEY = DbSynchPackage.TABLE_ROW__KEY;
 
 	/**
+	 * The feature id for the '<em><b>Old Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_SORTING_PLAN_INPUT__OLD_KEY = DbSynchPackage.TABLE_ROW__OLD_KEY;
+
+	/**
+	 * The feature id for the '<em><b>Deleted</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_SORTING_PLAN_INPUT__DELETED = DbSynchPackage.TABLE_ROW__DELETED;
+
+	/**
+	 * The feature id for the '<em><b>Old Deleted</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_SORTING_PLAN_INPUT__OLD_DELETED = DbSynchPackage.TABLE_ROW__OLD_DELETED;
+
+	/**
 	 * The feature id for the '<em><b>Modification Last Synch Up</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1110,15 +1156,6 @@ public interface ToUseDbSynchPackage extends EPackage {
 	 * @ordered
 	 */
 	int FPD_SORTING_PLAN_INPUT__MODIFICATION_NEXT_SYNCH_DOWN = DbSynchPackage.TABLE_ROW__MODIFICATION_NEXT_SYNCH_DOWN;
-
-	/**
-	 * The feature id for the '<em><b>Deleted</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FPD_SORTING_PLAN_INPUT__DELETED = DbSynchPackage.TABLE_ROW__DELETED;
 
 	/**
 	 * The feature id for the '<em><b>Product ID</b></em>' attribute.
@@ -1164,7 +1201,6 @@ public interface ToUseDbSynchPackage extends EPackage {
 	 * @ordered
 	 */
 	int FPD_SORTING_PLAN_INPUT_OPERATION_COUNT = DbSynchPackage.TABLE_ROW_OPERATION_COUNT + 0;
-
 
 	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.dbsynch.tousedbsynch.impl.FPDMySqlImpl <em>FPD My Sql</em>}' class.
