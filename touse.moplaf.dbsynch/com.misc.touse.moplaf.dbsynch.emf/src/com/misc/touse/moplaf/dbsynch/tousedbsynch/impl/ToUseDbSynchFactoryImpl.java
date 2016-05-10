@@ -63,6 +63,7 @@ public class ToUseDbSynchFactoryImpl extends EFactoryImpl implements ToUseDbSync
 			case ToUseDbSynchPackage.FPD_SORTING_PLAN: return createFPDSortingPlan();
 			case ToUseDbSynchPackage.FPD_SORTING_PLAN_INPUT: return createFPDSortingPlanInput();
 			case ToUseDbSynchPackage.FPD_MY_SQL: return createFPDMySql();
+			case ToUseDbSynchPackage.FPD_JTDS: return createFPDJtds();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -136,6 +137,16 @@ public class ToUseDbSynchFactoryImpl extends EFactoryImpl implements ToUseDbSync
 	public FPDMySql createFPDMySql() {
 		FPDMySqlImpl fpdMySql = new FPDMySqlImpl();
 		return fpdMySql;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FPDJtds createFPDJtds() {
+		FPDJtdsImpl fpdJtds = new FPDJtdsImpl();
+		return fpdJtds;
 	}
 
 	/**

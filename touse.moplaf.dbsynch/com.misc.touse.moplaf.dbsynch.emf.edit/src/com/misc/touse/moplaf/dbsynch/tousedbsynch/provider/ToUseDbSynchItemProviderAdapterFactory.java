@@ -233,6 +233,29 @@ public class ToUseDbSynchItemProviderAdapterFactory extends ToUseDbSynchAdapterF
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDJtds} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FPDJtdsItemProvider fpdJtdsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDJtds}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFPDJtdsAdapter() {
+		if (fpdJtdsItemProvider == null) {
+			fpdJtdsItemProvider = new FPDJtdsItemProvider(this);
+		}
+
+		return fpdJtdsItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -338,6 +361,7 @@ public class ToUseDbSynchItemProviderAdapterFactory extends ToUseDbSynchAdapterF
 		if (fpdSortingPlanItemProvider != null) fpdSortingPlanItemProvider.dispose();
 		if (fpdSortingPlanInputItemProvider != null) fpdSortingPlanInputItemProvider.dispose();
 		if (fpdMySqlItemProvider != null) fpdMySqlItemProvider.dispose();
+		if (fpdJtdsItemProvider != null) fpdJtdsItemProvider.dispose();
 	}
 
 }

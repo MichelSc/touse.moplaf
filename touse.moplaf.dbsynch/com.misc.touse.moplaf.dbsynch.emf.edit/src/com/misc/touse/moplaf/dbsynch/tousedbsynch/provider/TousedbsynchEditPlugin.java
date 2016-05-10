@@ -4,6 +4,7 @@ package com.misc.touse.moplaf.dbsynch.tousedbsynch.provider;
 
 import com.misc.common.moplaf.dbsynch.dbsynchderby.provider.DbsynchderbyEditPlugin;
 
+import com.misc.common.moplaf.dbsynch.dbsynchjtds.provider.DbsynchjtdsEditPlugin;
 import com.misc.common.moplaf.dbsynch.dbsynchmysql.provider.DbsynchmysqlEditPlugin;
 
 import com.misc.common.moplaf.dbsynch.provider.dbsynchEditPlugin;
@@ -46,6 +47,7 @@ public final class TousedbsynchEditPlugin extends EMFPlugin {
 		  (new ResourceLocator [] {
 		     dbsynchEditPlugin.INSTANCE,
 		     DbsynchderbyEditPlugin.INSTANCE,
+		     DbsynchjtdsEditPlugin.INSTANCE,
 		     DbsynchmysqlEditPlugin.INSTANCE,
 		   });
 	}

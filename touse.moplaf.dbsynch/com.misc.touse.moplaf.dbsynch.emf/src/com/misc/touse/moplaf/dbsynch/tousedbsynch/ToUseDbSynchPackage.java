@@ -6,6 +6,7 @@ import com.misc.common.moplaf.dbsynch.DbSynchPackage;
 
 import com.misc.common.moplaf.dbsynch.dbsynchderby.DbsynchderbyPackage;
 
+import com.misc.common.moplaf.dbsynch.dbsynchjtds.DbsynchjtdsPackage;
 import com.misc.common.moplaf.dbsynch.dbsynchmysql.DbsynchmysqlPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -1421,6 +1422,233 @@ public interface ToUseDbSynchPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.dbsynch.tousedbsynch.impl.FPDJtdsImpl <em>FPD Jtds</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.impl.FPDJtdsImpl
+	 * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.impl.ToUseDbSynchPackageImpl#getFPDJtds()
+	 * @generated
+	 */
+	int FPD_JTDS = 7;
+
+	/**
+	 * The feature id for the '<em><b>Tables</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_JTDS__TABLES = DbsynchjtdsPackage.DATA_SOURCE_JDBC_JTDS__TABLES;
+
+	/**
+	 * The feature id for the '<em><b>Data Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_JTDS__DATA_SOURCE = DbsynchjtdsPackage.DATA_SOURCE_JDBC_JTDS__DATA_SOURCE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_JTDS__NAME = DbsynchjtdsPackage.DATA_SOURCE_JDBC_JTDS__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Child Units</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_JTDS__CHILD_UNITS = DbsynchjtdsPackage.DATA_SOURCE_JDBC_JTDS__CHILD_UNITS;
+
+	/**
+	 * The feature id for the '<em><b>Connected</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_JTDS__CONNECTED = DbsynchjtdsPackage.DATA_SOURCE_JDBC_JTDS__CONNECTED;
+
+	/**
+	 * The feature id for the '<em><b>Data Base User</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_JTDS__DATA_BASE_USER = DbsynchjtdsPackage.DATA_SOURCE_JDBC_JTDS__DATA_BASE_USER;
+
+	/**
+	 * The feature id for the '<em><b>Data Base User Pwd</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_JTDS__DATA_BASE_USER_PWD = DbsynchjtdsPackage.DATA_SOURCE_JDBC_JTDS__DATA_BASE_USER_PWD;
+
+	/**
+	 * The feature id for the '<em><b>Default Schema</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_JTDS__DEFAULT_SCHEMA = DbsynchjtdsPackage.DATA_SOURCE_JDBC_JTDS__DEFAULT_SCHEMA;
+
+	/**
+	 * The feature id for the '<em><b>Host</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_JTDS__HOST = DbsynchjtdsPackage.DATA_SOURCE_JDBC_JTDS__HOST;
+
+	/**
+	 * The feature id for the '<em><b>Port</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_JTDS__PORT = DbsynchjtdsPackage.DATA_SOURCE_JDBC_JTDS__PORT;
+
+	/**
+	 * The feature id for the '<em><b>Data Base</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_JTDS__DATA_BASE = DbsynchjtdsPackage.DATA_SOURCE_JDBC_JTDS__DATA_BASE;
+
+	/**
+	 * The feature id for the '<em><b>Server Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_JTDS__SERVER_TYPE = DbsynchjtdsPackage.DATA_SOURCE_JDBC_JTDS__SERVER_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Sorting Plans Set</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_JTDS__SORTING_PLANS_SET = DbsynchjtdsPackage.DATA_SOURCE_JDBC_JTDS_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>FPD Jtds</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_JTDS_FEATURE_COUNT = DbsynchjtdsPackage.DATA_SOURCE_JDBC_JTDS_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Refresh Meta Data</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_JTDS___REFRESH_META_DATA = DbsynchjtdsPackage.DATA_SOURCE_JDBC_JTDS___REFRESH_META_DATA;
+
+	/**
+	 * The operation id for the '<em>Synch Up</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_JTDS___SYNCH_UP = DbsynchjtdsPackage.DATA_SOURCE_JDBC_JTDS___SYNCH_UP;
+
+	/**
+	 * The operation id for the '<em>Synch Down</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_JTDS___SYNCH_DOWN = DbsynchjtdsPackage.DATA_SOURCE_JDBC_JTDS___SYNCH_DOWN;
+
+	/**
+	 * The operation id for the '<em>Get Param Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_JTDS___GET_PARAM_VALUE__EATTRIBUTE = DbsynchjtdsPackage.DATA_SOURCE_JDBC_JTDS___GET_PARAM_VALUE__EATTRIBUTE;
+
+	/**
+	 * The operation id for the '<em>Get Param Attributes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_JTDS___GET_PARAM_ATTRIBUTES = DbsynchjtdsPackage.DATA_SOURCE_JDBC_JTDS___GET_PARAM_ATTRIBUTES;
+
+	/**
+	 * The operation id for the '<em>Connect</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_JTDS___CONNECT = DbsynchjtdsPackage.DATA_SOURCE_JDBC_JTDS___CONNECT;
+
+	/**
+	 * The operation id for the '<em>Disconnect</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_JTDS___DISCONNECT = DbsynchjtdsPackage.DATA_SOURCE_JDBC_JTDS___DISCONNECT;
+
+	/**
+	 * The operation id for the '<em>Synch Down Table Impl</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_JTDS___SYNCH_DOWN_TABLE_IMPL__TABLE = DbsynchjtdsPackage.DATA_SOURCE_JDBC_JTDS___SYNCH_DOWN_TABLE_IMPL__TABLE;
+
+	/**
+	 * The operation id for the '<em>Synch Up Table Impl</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_JTDS___SYNCH_UP_TABLE_IMPL__TABLE = DbsynchjtdsPackage.DATA_SOURCE_JDBC_JTDS___SYNCH_UP_TABLE_IMPL__TABLE;
+
+	/**
+	 * The number of operations of the '<em>FPD Jtds</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_JTDS_OPERATION_COUNT = DbsynchjtdsPackage.DATA_SOURCE_JDBC_JTDS_OPERATION_COUNT + 0;
+
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.dbsynch.tousedbsynch.FPD <em>FPD</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1645,6 +1873,27 @@ public interface ToUseDbSynchPackage extends EPackage {
 	EReference getFPDMySql_SortingPlansSet();
 
 	/**
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDJtds <em>FPD Jtds</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>FPD Jtds</em>'.
+	 * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDJtds
+	 * @generated
+	 */
+	EClass getFPDJtds();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDJtds#getSortingPlansSet <em>Sorting Plans Set</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Sorting Plans Set</em>'.
+	 * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDJtds#getSortingPlansSet()
+	 * @see #getFPDJtds()
+	 * @generated
+	 */
+	EReference getFPDJtds_SortingPlansSet();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1848,6 +2097,24 @@ public interface ToUseDbSynchPackage extends EPackage {
 		 * @generated
 		 */
 		EReference FPD_MY_SQL__SORTING_PLANS_SET = eINSTANCE.getFPDMySql_SortingPlansSet();
+
+		/**
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.dbsynch.tousedbsynch.impl.FPDJtdsImpl <em>FPD Jtds</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.impl.FPDJtdsImpl
+		 * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.impl.ToUseDbSynchPackageImpl#getFPDJtds()
+		 * @generated
+		 */
+		EClass FPD_JTDS = eINSTANCE.getFPDJtds();
+
+		/**
+		 * The meta object literal for the '<em><b>Sorting Plans Set</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FPD_JTDS__SORTING_PLANS_SET = eINSTANCE.getFPDJtds_SortingPlansSet();
 
 	}
 

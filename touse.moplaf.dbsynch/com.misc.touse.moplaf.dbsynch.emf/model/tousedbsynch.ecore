@@ -36,4 +36,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="SortingPlansSet" upperBound="-1"
         eType="#//FPDGroupSortingPlan" containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FPDJtds" eSuperTypes="../../com.misc.common.moplaf.dbsynch.jtds.emf/model/dbsynchjtds.ecore#//DataSourceJdbcJtds">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SortingPlansSet" upperBound="-1"
+        eType="#//FPDGroupSortingPlan" containment="true"/>
+  </eClassifiers>
 </ecore:EPackage>

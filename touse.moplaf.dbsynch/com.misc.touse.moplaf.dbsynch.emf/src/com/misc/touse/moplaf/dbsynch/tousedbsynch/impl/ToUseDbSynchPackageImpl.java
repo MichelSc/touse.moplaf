@@ -6,9 +6,11 @@ import com.misc.common.moplaf.dbsynch.DbSynchPackage;
 
 import com.misc.common.moplaf.dbsynch.dbsynchderby.DbsynchderbyPackage;
 
+import com.misc.common.moplaf.dbsynch.dbsynchjtds.DbsynchjtdsPackage;
 import com.misc.common.moplaf.dbsynch.dbsynchmysql.DbsynchmysqlPackage;
 
 import com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDGroupSortingPlan;
+import com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDJtds;
 import com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDMySql;
 import com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDSortingPlan;
 import com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDSortingPlanInput;
@@ -81,6 +83,13 @@ public class ToUseDbSynchPackageImpl extends EPackageImpl implements ToUseDbSync
 	private EClass fpdMySqlEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass fpdJtdsEClass = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -128,6 +137,7 @@ public class ToUseDbSynchPackageImpl extends EPackageImpl implements ToUseDbSync
 
 		// Initialize simple dependencies
 		DbsynchderbyPackage.eINSTANCE.eClass();
+		DbsynchjtdsPackage.eINSTANCE.eClass();
 		DbsynchmysqlPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
@@ -339,6 +349,24 @@ public class ToUseDbSynchPackageImpl extends EPackageImpl implements ToUseDbSync
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getFPDJtds() {
+		return fpdJtdsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFPDJtds_SortingPlansSet() {
+		return (EReference)fpdJtdsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ToUseDbSynchFactory getToUseDbSynchFactory() {
 		return (ToUseDbSynchFactory)getEFactoryInstance();
 	}
@@ -389,6 +417,9 @@ public class ToUseDbSynchPackageImpl extends EPackageImpl implements ToUseDbSync
 
 		fpdMySqlEClass = createEClass(FPD_MY_SQL);
 		createEReference(fpdMySqlEClass, FPD_MY_SQL__SORTING_PLANS_SET);
+
+		fpdJtdsEClass = createEClass(FPD_JTDS);
+		createEReference(fpdJtdsEClass, FPD_JTDS__SORTING_PLANS_SET);
 	}
 
 	/**
@@ -418,6 +449,7 @@ public class ToUseDbSynchPackageImpl extends EPackageImpl implements ToUseDbSync
 		DbsynchderbyPackage theDbsynchderbyPackage = (DbsynchderbyPackage)EPackage.Registry.INSTANCE.getEPackage(DbsynchderbyPackage.eNS_URI);
 		DbSynchPackage theDbSynchPackage = (DbSynchPackage)EPackage.Registry.INSTANCE.getEPackage(DbSynchPackage.eNS_URI);
 		DbsynchmysqlPackage theDbsynchmysqlPackage = (DbsynchmysqlPackage)EPackage.Registry.INSTANCE.getEPackage(DbsynchmysqlPackage.eNS_URI);
+		DbsynchjtdsPackage theDbsynchjtdsPackage = (DbsynchjtdsPackage)EPackage.Registry.INSTANCE.getEPackage(DbsynchjtdsPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -431,6 +463,7 @@ public class ToUseDbSynchPackageImpl extends EPackageImpl implements ToUseDbSync
 		fpdSortingPlanEClass.getESuperTypes().add(theDbSynchPackage.getTableRow());
 		fpdSortingPlanInputEClass.getESuperTypes().add(theDbSynchPackage.getTableRow());
 		fpdMySqlEClass.getESuperTypes().add(theDbsynchmysqlPackage.getDataSourceJdbcMySql());
+		fpdJtdsEClass.getESuperTypes().add(theDbsynchjtdsPackage.getDataSourceJdbcJtds());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(fpdEClass, com.misc.touse.moplaf.dbsynch.tousedbsynch.FPD.class, "FPD", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -460,6 +493,9 @@ public class ToUseDbSynchPackageImpl extends EPackageImpl implements ToUseDbSync
 
 		initEClass(fpdMySqlEClass, FPDMySql.class, "FPDMySql", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getFPDMySql_SortingPlansSet(), this.getFPDGroupSortingPlan(), null, "SortingPlansSet", null, 0, -1, FPDMySql.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(fpdJtdsEClass, FPDJtds.class, "FPDJtds", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getFPDJtds_SortingPlansSet(), this.getFPDGroupSortingPlan(), null, "SortingPlansSet", null, 0, -1, FPDJtds.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
