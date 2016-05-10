@@ -36,7 +36,7 @@
     <genClasses image="false" ecoreClass="tousedbsynch.ecore#//FPDMySql">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousedbsynch.ecore#//FPDMySql/SortingPlansSet"/>
     </genClasses>
-    <genClasses ecoreClass="tousedbsynch.ecore#//FPDJtds">
+    <genClasses image="false" ecoreClass="tousedbsynch.ecore#//FPDJtds">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousedbsynch.ecore#//FPDJtds/SortingPlansSet"/>
     </genClasses>
   </genPackages>
