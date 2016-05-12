@@ -661,22 +661,22 @@ public interface ToUseDbSynchPackage extends EPackage {
 	int FPD_SORTING_PLANS___CONSTRUCT_ROW = DbSynchPackage.TABLE___CONSTRUCT_ROW;
 
 	/**
-	 * The operation id for the '<em>Add Row</em>' operation.
+	 * The operation id for the '<em>Index Row</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FPD_SORTING_PLANS___ADD_ROW__TABLEROW = DbSynchPackage.TABLE___ADD_ROW__TABLEROW;
+	int FPD_SORTING_PLANS___INDEX_ROW__TABLEROW = DbSynchPackage.TABLE___INDEX_ROW__TABLEROW;
 
 	/**
-	 * The operation id for the '<em>Remove Row</em>' operation.
+	 * The operation id for the '<em>Unindex Row</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FPD_SORTING_PLANS___REMOVE_ROW__TABLEROW = DbSynchPackage.TABLE___REMOVE_ROW__TABLEROW;
+	int FPD_SORTING_PLANS___UNINDEX_ROW__TABLEROW = DbSynchPackage.TABLE___UNINDEX_ROW__TABLEROW;
 
 	/**
 	 * The number of operations of the '<em>FPD Sorting Plans</em>' class.
@@ -923,22 +923,22 @@ public interface ToUseDbSynchPackage extends EPackage {
 	int FPD_SORTING_PLAN_INPUTS___CONSTRUCT_ROW = DbSynchPackage.TABLE___CONSTRUCT_ROW;
 
 	/**
-	 * The operation id for the '<em>Add Row</em>' operation.
+	 * The operation id for the '<em>Index Row</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FPD_SORTING_PLAN_INPUTS___ADD_ROW__TABLEROW = DbSynchPackage.TABLE___ADD_ROW__TABLEROW;
+	int FPD_SORTING_PLAN_INPUTS___INDEX_ROW__TABLEROW = DbSynchPackage.TABLE___INDEX_ROW__TABLEROW;
 
 	/**
-	 * The operation id for the '<em>Remove Row</em>' operation.
+	 * The operation id for the '<em>Unindex Row</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FPD_SORTING_PLAN_INPUTS___REMOVE_ROW__TABLEROW = DbSynchPackage.TABLE___REMOVE_ROW__TABLEROW;
+	int FPD_SORTING_PLAN_INPUTS___UNINDEX_ROW__TABLEROW = DbSynchPackage.TABLE___UNINDEX_ROW__TABLEROW;
 
 	/**
 	 * The number of operations of the '<em>FPD Sorting Plan Inputs</em>' class.
@@ -969,22 +969,13 @@ public interface ToUseDbSynchPackage extends EPackage {
 	int FPD_SORTING_PLAN__TABLE = DbSynchPackage.TABLE_ROW__TABLE;
 
 	/**
-	 * The feature id for the '<em><b>Key</b></em>' attribute.
+	 * The feature id for the '<em><b>Current Key</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FPD_SORTING_PLAN__KEY = DbSynchPackage.TABLE_ROW__KEY;
-
-	/**
-	 * The feature id for the '<em><b>Old Key</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FPD_SORTING_PLAN__OLD_KEY = DbSynchPackage.TABLE_ROW__OLD_KEY;
+	int FPD_SORTING_PLAN__CURRENT_KEY = DbSynchPackage.TABLE_ROW__CURRENT_KEY;
 
 	/**
 	 * The feature id for the '<em><b>Deleted</b></em>' attribute.
@@ -996,13 +987,31 @@ public interface ToUseDbSynchPackage extends EPackage {
 	int FPD_SORTING_PLAN__DELETED = DbSynchPackage.TABLE_ROW__DELETED;
 
 	/**
-	 * The feature id for the '<em><b>Old Deleted</b></em>' attribute.
+	 * The feature id for the '<em><b>Index Key</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FPD_SORTING_PLAN__OLD_DELETED = DbSynchPackage.TABLE_ROW__OLD_DELETED;
+	int FPD_SORTING_PLAN__INDEX_KEY = DbSynchPackage.TABLE_ROW__INDEX_KEY;
+
+	/**
+	 * The feature id for the '<em><b>Last Synch Down Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_SORTING_PLAN__LAST_SYNCH_DOWN_KEY = DbSynchPackage.TABLE_ROW__LAST_SYNCH_DOWN_KEY;
+
+	/**
+	 * The feature id for the '<em><b>Last Synch Down Deleted</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_SORTING_PLAN__LAST_SYNCH_DOWN_DELETED = DbSynchPackage.TABLE_ROW__LAST_SYNCH_DOWN_DELETED;
 
 	/**
 	 * The feature id for the '<em><b>Modification Last Synch Up</b></em>' attribute.
@@ -1105,22 +1114,13 @@ public interface ToUseDbSynchPackage extends EPackage {
 	int FPD_SORTING_PLAN_INPUT__TABLE = DbSynchPackage.TABLE_ROW__TABLE;
 
 	/**
-	 * The feature id for the '<em><b>Key</b></em>' attribute.
+	 * The feature id for the '<em><b>Current Key</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FPD_SORTING_PLAN_INPUT__KEY = DbSynchPackage.TABLE_ROW__KEY;
-
-	/**
-	 * The feature id for the '<em><b>Old Key</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FPD_SORTING_PLAN_INPUT__OLD_KEY = DbSynchPackage.TABLE_ROW__OLD_KEY;
+	int FPD_SORTING_PLAN_INPUT__CURRENT_KEY = DbSynchPackage.TABLE_ROW__CURRENT_KEY;
 
 	/**
 	 * The feature id for the '<em><b>Deleted</b></em>' attribute.
@@ -1132,13 +1132,31 @@ public interface ToUseDbSynchPackage extends EPackage {
 	int FPD_SORTING_PLAN_INPUT__DELETED = DbSynchPackage.TABLE_ROW__DELETED;
 
 	/**
-	 * The feature id for the '<em><b>Old Deleted</b></em>' attribute.
+	 * The feature id for the '<em><b>Index Key</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FPD_SORTING_PLAN_INPUT__OLD_DELETED = DbSynchPackage.TABLE_ROW__OLD_DELETED;
+	int FPD_SORTING_PLAN_INPUT__INDEX_KEY = DbSynchPackage.TABLE_ROW__INDEX_KEY;
+
+	/**
+	 * The feature id for the '<em><b>Last Synch Down Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_SORTING_PLAN_INPUT__LAST_SYNCH_DOWN_KEY = DbSynchPackage.TABLE_ROW__LAST_SYNCH_DOWN_KEY;
+
+	/**
+	 * The feature id for the '<em><b>Last Synch Down Deleted</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_SORTING_PLAN_INPUT__LAST_SYNCH_DOWN_DELETED = DbSynchPackage.TABLE_ROW__LAST_SYNCH_DOWN_DELETED;
 
 	/**
 	 * The feature id for the '<em><b>Modification Last Synch Up</b></em>' attribute.

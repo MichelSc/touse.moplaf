@@ -108,7 +108,7 @@ public class FPDSortingPlanInputItemProvider extends TableRowItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		TableRowKeyImpl labelValue = ((FPDSortingPlanInput)object).getKey();
+		TableRowKeyImpl labelValue = ((FPDSortingPlanInput)object).getCurrentKey();
 		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ?
 			getString("_UI_FPDSortingPlanInput_type") :
