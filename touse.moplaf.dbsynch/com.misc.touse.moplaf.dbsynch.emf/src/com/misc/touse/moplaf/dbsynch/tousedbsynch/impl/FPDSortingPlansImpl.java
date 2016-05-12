@@ -2,6 +2,7 @@
  */
 package com.misc.touse.moplaf.dbsynch.tousedbsynch.impl;
 
+import com.misc.common.moplaf.dbsynch.EnumColumnType;
 import com.misc.common.moplaf.dbsynch.TableRow;
 import com.misc.common.moplaf.dbsynch.impl.TableImpl;
 
@@ -175,10 +176,10 @@ public class FPDSortingPlansImpl extends TableImpl implements FPDSortingPlans {
 		this.setWhereClause(" validto > ? and validfrom < ? ");
 		this.addParam(ToUseDbSynchPackage.Literals.FPD_GROUP_SORTING_PLAN__FROM_DATE);
 		this.addParam(ToUseDbSynchPackage.Literals.FPD_GROUP_SORTING_PLAN__TO_DATE);
-		this.addColumn(true,  "id",        null, ToUseDbSynchPackage.Literals.FPD_SORTING_PLAN__SORTING_PLAN_ID);
-		this.addColumn(false, "name",      null, ToUseDbSynchPackage.Literals.FPD_SORTING_PLAN__NAME           );
-		this.addColumn(false, "validfrom", null, ToUseDbSynchPackage.Literals.FPD_SORTING_PLAN__VALID_FROM     );
-		this.addColumn(false, "validto",   null, ToUseDbSynchPackage.Literals.FPD_SORTING_PLAN__VALID_TO       );
+		this.addColumn(true,  "id",        EnumColumnType.ENUM_COLUMN_TYPE_CHAR, ToUseDbSynchPackage.Literals.FPD_SORTING_PLAN__SORTING_PLAN_ID);
+		this.addColumn(false, "name",      EnumColumnType.ENUM_COLUMN_TYPE_CHAR, ToUseDbSynchPackage.Literals.FPD_SORTING_PLAN__NAME           );
+		this.addColumn(false, "validfrom", EnumColumnType.ENUM_COLUMN_TYPE_DATE, ToUseDbSynchPackage.Literals.FPD_SORTING_PLAN__VALID_FROM     );
+		this.addColumn(false, "validto",   EnumColumnType.ENUM_COLUMN_TYPE_DATE, ToUseDbSynchPackage.Literals.FPD_SORTING_PLAN__VALID_TO       );
 	}
 	
 	

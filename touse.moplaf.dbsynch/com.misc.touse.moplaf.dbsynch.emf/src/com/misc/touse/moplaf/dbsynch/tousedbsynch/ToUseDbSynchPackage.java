@@ -595,7 +595,7 @@ public interface ToUseDbSynchPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FPD_SORTING_PLANS___ADD_COLUMN__BOOLEAN_STRING_EATTRIBUTE = DbSynchPackage.TABLE___ADD_COLUMN__BOOLEAN_STRING_EATTRIBUTE;
+	int FPD_SORTING_PLANS___ADD_COLUMN__BOOLEAN_STRING_ENUMCOLUMNTYPE_EATTRIBUTE = DbSynchPackage.TABLE___ADD_COLUMN__BOOLEAN_STRING_ENUMCOLUMNTYPE_EATTRIBUTE;
 
 	/**
 	 * The operation id for the '<em>Add Param</em>' operation.
@@ -857,7 +857,7 @@ public interface ToUseDbSynchPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FPD_SORTING_PLAN_INPUTS___ADD_COLUMN__BOOLEAN_STRING_EATTRIBUTE = DbSynchPackage.TABLE___ADD_COLUMN__BOOLEAN_STRING_EATTRIBUTE;
+	int FPD_SORTING_PLAN_INPUTS___ADD_COLUMN__BOOLEAN_STRING_ENUMCOLUMNTYPE_EATTRIBUTE = DbSynchPackage.TABLE___ADD_COLUMN__BOOLEAN_STRING_ENUMCOLUMNTYPE_EATTRIBUTE;
 
 	/**
 	 * The operation id for the '<em>Add Param</em>' operation.
@@ -1538,6 +1538,15 @@ public interface ToUseDbSynchPackage extends EPackage {
 	 * @ordered
 	 */
 	int FPD_JTDS__SERVER_TYPE = DbsynchjtdsPackage.DATA_SOURCE_JDBC_JTDS__SERVER_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>User Domain</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_JTDS__USER_DOMAIN = DbsynchjtdsPackage.DATA_SOURCE_JDBC_JTDS__USER_DOMAIN;
 
 	/**
 	 * The feature id for the '<em><b>Sorting Plans Set</b></em>' containment reference list.
