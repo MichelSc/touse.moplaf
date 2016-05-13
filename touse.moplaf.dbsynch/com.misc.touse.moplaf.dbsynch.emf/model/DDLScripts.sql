@@ -2,16 +2,24 @@ create schema fpd_t;
 
 set schema fpd_t;
 
+drop table SortingPlan;
+
 create table SortingPlan 
 ( id char(32)
 , name char(128)
 );
 
-alter table SortingPlan
-add column validfrom date;
+-- for sqlserver, to have non fixed length strings
+create table SortingPlan 
+( id varchar(32)
+, name varchar(128)
+);
 
 alter table SortingPlan
-add column validto date;
+add  validfrom date;
+
+alter table SortingPlan
+add validto date;
 
 create table SortingPlanInput
 ( sortingplanid char(32)
