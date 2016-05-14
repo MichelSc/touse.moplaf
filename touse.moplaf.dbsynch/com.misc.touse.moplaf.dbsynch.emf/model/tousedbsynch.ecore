@@ -24,9 +24,16 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FPDSortingPlan" eSuperTypes="../../com.misc.common.moplaf.dbsynch.emf/model/dbsynch.ecore#//TableRow">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="SortingPlanID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ValidFrom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ValidTo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ValidFrom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"
+        unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ValidTo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"
+        unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="someDateTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"
+        unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="someTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
+        unsettable="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FPDSortingPlanInput" eSuperTypes="../../com.misc.common.moplaf.dbsynch.emf/model/dbsynch.ecore#//TableRow">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ProductID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

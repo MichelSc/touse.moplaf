@@ -28,6 +28,8 @@
       <genFeatures createChild="false" propertyCategory="20 ToUse" ecoreFeature="ecore:EAttribute tousedbsynch.ecore#//FPDSortingPlan/Name"/>
       <genFeatures createChild="false" propertyCategory="20 ToUse" ecoreFeature="ecore:EAttribute tousedbsynch.ecore#//FPDSortingPlan/ValidFrom"/>
       <genFeatures createChild="false" propertyCategory="20 ToUse" ecoreFeature="ecore:EAttribute tousedbsynch.ecore#//FPDSortingPlan/ValidTo"/>
+      <genFeatures createChild="false" propertyCategory="20 ToUse" ecoreFeature="ecore:EAttribute tousedbsynch.ecore#//FPDSortingPlan/someDateTime"/>
+      <genFeatures createChild="false" propertyCategory="20 ToUse" ecoreFeature="ecore:EAttribute tousedbsynch.ecore#//FPDSortingPlan/someTime"/>
     </genClasses>
     <genClasses image="false" ecoreClass="tousedbsynch.ecore#//FPDSortingPlanInput"
         labelFeature="../../com.misc.common.moplaf.dbsynch.emf/model/dbsynch.genmodel#//dbsynch/TableRow/CurrentKey">

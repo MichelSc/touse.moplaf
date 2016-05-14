@@ -679,6 +679,15 @@ public interface ToUseDbSynchPackage extends EPackage {
 	int FPD_SORTING_PLANS___UNINDEX_ROW__TABLEROW = DbSynchPackage.TABLE___UNINDEX_ROW__TABLEROW;
 
 	/**
+	 * The operation id for the '<em>Refresh Index</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_SORTING_PLANS___REFRESH_INDEX = DbSynchPackage.TABLE___REFRESH_INDEX;
+
+	/**
 	 * The number of operations of the '<em>FPD Sorting Plans</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -941,6 +950,15 @@ public interface ToUseDbSynchPackage extends EPackage {
 	int FPD_SORTING_PLAN_INPUTS___UNINDEX_ROW__TABLEROW = DbSynchPackage.TABLE___UNINDEX_ROW__TABLEROW;
 
 	/**
+	 * The operation id for the '<em>Refresh Index</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_SORTING_PLAN_INPUTS___REFRESH_INDEX = DbSynchPackage.TABLE___REFRESH_INDEX;
+
+	/**
 	 * The number of operations of the '<em>FPD Sorting Plan Inputs</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1068,13 +1086,31 @@ public interface ToUseDbSynchPackage extends EPackage {
 	int FPD_SORTING_PLAN__VALID_TO = DbSynchPackage.TABLE_ROW_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Some Date Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_SORTING_PLAN__SOME_DATE_TIME = DbSynchPackage.TABLE_ROW_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Some Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FPD_SORTING_PLAN__SOME_TIME = DbSynchPackage.TABLE_ROW_FEATURE_COUNT + 5;
+
+	/**
 	 * The number of structural features of the '<em>FPD Sorting Plan</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FPD_SORTING_PLAN_FEATURE_COUNT = DbSynchPackage.TABLE_ROW_FEATURE_COUNT + 4;
+	int FPD_SORTING_PLAN_FEATURE_COUNT = DbSynchPackage.TABLE_ROW_FEATURE_COUNT + 6;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -1847,6 +1883,28 @@ public interface ToUseDbSynchPackage extends EPackage {
 	EAttribute getFPDSortingPlan_ValidTo();
 
 	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDSortingPlan#getSomeDateTime <em>Some Date Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Some Date Time</em>'.
+	 * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDSortingPlan#getSomeDateTime()
+	 * @see #getFPDSortingPlan()
+	 * @generated
+	 */
+	EAttribute getFPDSortingPlan_SomeDateTime();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDSortingPlan#getSomeTime <em>Some Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Some Time</em>'.
+	 * @see com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDSortingPlan#getSomeTime()
+	 * @see #getFPDSortingPlan()
+	 * @generated
+	 */
+	EAttribute getFPDSortingPlan_SomeTime();
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.dbsynch.tousedbsynch.FPDSortingPlanInput <em>FPD Sorting Plan Input</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2080,6 +2138,22 @@ public interface ToUseDbSynchPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute FPD_SORTING_PLAN__VALID_TO = eINSTANCE.getFPDSortingPlan_ValidTo();
+
+		/**
+		 * The meta object literal for the '<em><b>Some Date Time</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FPD_SORTING_PLAN__SOME_DATE_TIME = eINSTANCE.getFPDSortingPlan_SomeDateTime();
+
+		/**
+		 * The meta object literal for the '<em><b>Some Time</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FPD_SORTING_PLAN__SOME_TIME = eINSTANCE.getFPDSortingPlan_SomeTime();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.dbsynch.tousedbsynch.impl.FPDSortingPlanInputImpl <em>FPD Sorting Plan Input</em>}' class.

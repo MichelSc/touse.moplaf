@@ -52,6 +52,8 @@ public class FPDSortingPlanItemProvider extends TableRowItemProvider {
 			addNamePropertyDescriptor(object);
 			addValidFromPropertyDescriptor(object);
 			addValidToPropertyDescriptor(object);
+			addSomeDateTimePropertyDescriptor(object);
+			addSomeTimePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -145,6 +147,50 @@ public class FPDSortingPlanItemProvider extends TableRowItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Some Date Time feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSomeDateTimePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FPDSortingPlan_someDateTime_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FPDSortingPlan_someDateTime_feature", "_UI_FPDSortingPlan_type"),
+				 ToUseDbSynchPackage.Literals.FPD_SORTING_PLAN__SOME_DATE_TIME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI__20ToUsePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Some Time feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSomeTimePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FPDSortingPlan_someTime_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FPDSortingPlan_someTime_feature", "_UI_FPDSortingPlan_type"),
+				 ToUseDbSynchPackage.Literals.FPD_SORTING_PLAN__SOME_TIME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 getString("_UI__20ToUsePropertyCategory"),
+				 null));
+	}
+
+	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -175,6 +221,8 @@ public class FPDSortingPlanItemProvider extends TableRowItemProvider {
 			case ToUseDbSynchPackage.FPD_SORTING_PLAN__NAME:
 			case ToUseDbSynchPackage.FPD_SORTING_PLAN__VALID_FROM:
 			case ToUseDbSynchPackage.FPD_SORTING_PLAN__VALID_TO:
+			case ToUseDbSynchPackage.FPD_SORTING_PLAN__SOME_DATE_TIME:
+			case ToUseDbSynchPackage.FPD_SORTING_PLAN__SOME_TIME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -304,6 +304,24 @@ public class ToUseDbSynchPackageImpl extends EPackageImpl implements ToUseDbSync
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getFPDSortingPlan_SomeDateTime() {
+		return (EAttribute)fpdSortingPlanEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFPDSortingPlan_SomeTime() {
+		return (EAttribute)fpdSortingPlanEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getFPDSortingPlanInput() {
 		return fpdSortingPlanInputEClass;
 	}
@@ -410,6 +428,8 @@ public class ToUseDbSynchPackageImpl extends EPackageImpl implements ToUseDbSync
 		createEAttribute(fpdSortingPlanEClass, FPD_SORTING_PLAN__NAME);
 		createEAttribute(fpdSortingPlanEClass, FPD_SORTING_PLAN__VALID_FROM);
 		createEAttribute(fpdSortingPlanEClass, FPD_SORTING_PLAN__VALID_TO);
+		createEAttribute(fpdSortingPlanEClass, FPD_SORTING_PLAN__SOME_DATE_TIME);
+		createEAttribute(fpdSortingPlanEClass, FPD_SORTING_PLAN__SOME_TIME);
 
 		fpdSortingPlanInputEClass = createEClass(FPD_SORTING_PLAN_INPUT);
 		createEAttribute(fpdSortingPlanInputEClass, FPD_SORTING_PLAN_INPUT__PRODUCT_ID);
@@ -483,9 +503,11 @@ public class ToUseDbSynchPackageImpl extends EPackageImpl implements ToUseDbSync
 
 		initEClass(fpdSortingPlanEClass, FPDSortingPlan.class, "FPDSortingPlan", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFPDSortingPlan_SortingPlanID(), ecorePackage.getEString(), "SortingPlanID", null, 0, 1, FPDSortingPlan.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getFPDSortingPlan_Name(), ecorePackage.getEString(), "Name", null, 0, 1, FPDSortingPlan.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getFPDSortingPlan_ValidFrom(), ecorePackage.getEDate(), "ValidFrom", null, 0, 1, FPDSortingPlan.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getFPDSortingPlan_ValidTo(), ecorePackage.getEDate(), "ValidTo", null, 0, 1, FPDSortingPlan.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFPDSortingPlan_Name(), ecorePackage.getEString(), "Name", null, 0, 1, FPDSortingPlan.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFPDSortingPlan_ValidFrom(), ecorePackage.getEDate(), "ValidFrom", null, 0, 1, FPDSortingPlan.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFPDSortingPlan_ValidTo(), ecorePackage.getEDate(), "ValidTo", null, 0, 1, FPDSortingPlan.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFPDSortingPlan_SomeDateTime(), ecorePackage.getEDate(), "someDateTime", null, 0, 1, FPDSortingPlan.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFPDSortingPlan_SomeTime(), ecorePackage.getEFloat(), "someTime", null, 0, 1, FPDSortingPlan.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(fpdSortingPlanInputEClass, FPDSortingPlanInput.class, "FPDSortingPlanInput", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFPDSortingPlanInput_ProductID(), ecorePackage.getEString(), "ProductID", null, 0, 1, FPDSortingPlanInput.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

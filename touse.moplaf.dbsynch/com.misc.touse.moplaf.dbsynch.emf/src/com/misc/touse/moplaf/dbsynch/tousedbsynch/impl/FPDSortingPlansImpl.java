@@ -180,6 +180,8 @@ public class FPDSortingPlansImpl extends TableImpl implements FPDSortingPlans {
 		this.addColumn(false, "name",      EnumColumnType.ENUM_COLUMN_TYPE_CHAR, ToUseDbSynchPackage.Literals.FPD_SORTING_PLAN__NAME           );
 		this.addColumn(false, "validfrom", EnumColumnType.ENUM_COLUMN_TYPE_DATE, ToUseDbSynchPackage.Literals.FPD_SORTING_PLAN__VALID_FROM     );
 		this.addColumn(false, "validto",   EnumColumnType.ENUM_COLUMN_TYPE_DATE, ToUseDbSynchPackage.Literals.FPD_SORTING_PLAN__VALID_TO       );
+		this.addColumn(false, "someDateTime",EnumColumnType.ENUM_COLUMN_TYPE_DATETIME, ToUseDbSynchPackage.Literals.FPD_SORTING_PLAN__SOME_DATE_TIME      );
+		this.addColumn(false, "someTime",   EnumColumnType.ENUM_COLUMN_TYPE_TIME, ToUseDbSynchPackage.Literals.FPD_SORTING_PLAN__SOME_TIME      );
 	}
 	
 	

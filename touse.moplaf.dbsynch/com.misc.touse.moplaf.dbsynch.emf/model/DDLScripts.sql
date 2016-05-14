@@ -19,6 +19,9 @@ alter table SortingPlan
 add  validfrom date;
 
 alter table SortingPlan
+add  someDateTime datetime;
+
+alter table SortingPlan
 add validto date;
 
 create table SortingPlanInput
