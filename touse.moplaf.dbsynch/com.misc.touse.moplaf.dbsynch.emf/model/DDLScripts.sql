@@ -1,28 +1,23 @@
 create schema fpd_t;
 
 set schema fpd_t;
+set schema test;
+use test;
 
 drop table SortingPlan;
 
-create table SortingPlan 
-( id char(32)
-, name char(128)
-);
+select * from SortingPlan;
 
 -- for sqlserver, to have non fixed length strings
 create table SortingPlan 
-( id varchar(32)
-, name varchar(128)
+( id           varchar(32)
+, name         varchar(128)
+, validfrom    date
+, validto      date
+, someDateTime datetime
+, someTime     time
 );
 
-alter table SortingPlan
-add  validfrom date;
-
-alter table SortingPlan
-add  someDateTime datetime;
-
-alter table SortingPlan
-add validto date;
 
 create table SortingPlanInput
 ( sortingplanid char(32)
@@ -33,12 +28,11 @@ insert into SortingPlan ( id, name, validfrom, validto)
 values ( 'id1', 'premier', '2016-01-01', '2016-12-31')
 ;
 
-delete from SortingPlan;
-
 insert into SortingPlan  
 values ( 'id2', 'second', '2016-02-02', '2016-11-30')
 ;
 
+delete from SortingPlan;
 
 commit;
 
