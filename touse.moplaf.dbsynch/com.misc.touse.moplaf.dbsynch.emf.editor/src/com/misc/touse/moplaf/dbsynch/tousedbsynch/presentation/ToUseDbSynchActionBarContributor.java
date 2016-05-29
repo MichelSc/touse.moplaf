@@ -39,6 +39,13 @@ import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.PartInitException;
 
+import com.misc.common.moplaf.emf.editor.Util;
+import com.misc.common.moplaf.emf.editor.action.ConnectAction;
+import com.misc.common.moplaf.emf.editor.action.DisconnectAction;
+import com.misc.common.moplaf.emf.editor.action.RefreshAction;
+import com.misc.common.moplaf.emf.editor.action.SynchDownAction;
+import com.misc.common.moplaf.emf.editor.action.SynchUpAction;
+
 /**
  * This is the action bar contributor for the ToUseDbSynch model editor.
  * <!-- begin-user-doc -->
@@ -134,43 +141,6 @@ public class ToUseDbSynchActionBarContributor
 	 */
 	protected Collection<IAction> createSiblingActions;
 
-	
-	/**
-	 * This action connects the object
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 */
-	protected ConnectAction connectAction = new ConnectAction();
-		
-	/**
-	 * This action disconnects the object
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 */
-	protected DisconnectAction disconnectAction = new DisconnectAction();
-		
-	/**
-	 * This refreshes the metadata of the object
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 */
-	protected RefreshMetaDataAction refreshMetaDataAction = new RefreshMetaDataAction();
-		
-	/**
-	 * This action synchs up the object
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 */
-	protected SynchUpAction synchUpAction = new SynchUpAction();
-		
-	/**
-	 * This action synchs down the object
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 */
-	protected SynchDownAction synchDownAction = new SynchDownAction();
-		
-
 	/**
 	 * This is the menu manager into which menu contribution items should be added for CreateSibling actions.
 	 * <!-- begin-user-doc -->
@@ -178,6 +148,21 @@ public class ToUseDbSynchActionBarContributor
 	 * @generated
 	 */
 	protected IMenuManager createSiblingMenuManager;
+
+	/**
+	 * This will contain one {@link org.eclipse.emf.edit.ui.action.ApplicationPopUpMenuAction} 
+	 * generated for the current selection by the item provider.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	protected Collection<IAction> applicationPopUpMenuActions;
+
+	/**
+	 * This is the menu manager into which menu contribution items should be added for G4SOptiPost actions.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	protected IMenuManager applicationPopUpMenuManager;
 
 	/**
 	 * This creates an instance of the contributor.
@@ -209,7 +194,6 @@ public class ToUseDbSynchActionBarContributor
 	 * as well as the sub-menus for object creation items.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	@Override
 	public void contributeToMenu(IMenuManager menuManager) {
@@ -231,6 +215,13 @@ public class ToUseDbSynchActionBarContributor
 		//
 		createSiblingMenuManager = new MenuManager(TousedbsynchEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
 		submenuManager.insertBefore("additions", createSiblingMenuManager);
+
+		// Prepare for DbSynchToUse item addition or removal.
+		//
+		applicationPopUpMenuManager = new MenuManager("ToUseDbSynch");
+		submenuManager.insertBefore("additions", applicationPopUpMenuManager);
+		
+		submenuManager.insertBefore("additions", new Separator("generic part"));
 
 		// Force an update because Eclipse hides empty menus now.
 		//
@@ -292,6 +283,9 @@ public class ToUseDbSynchActionBarContributor
 			depopulateManager(createSiblingMenuManager, createSiblingActions);
 		}
 
+		if (applicationPopUpMenuManager != null) {
+			depopulateManager(applicationPopUpMenuManager, applicationPopUpMenuActions);
+		}
 		// Query the new selection for appropriate new child/sibling descriptors
 		//
 		Collection<?> newChildDescriptors = null;
@@ -312,6 +306,14 @@ public class ToUseDbSynchActionBarContributor
 		createChildActions = generateCreateChildActions(newChildDescriptors, selection);
 		createSiblingActions = generateCreateSiblingActions(newSiblingDescriptors, selection);
 
+		applicationPopUpMenuActions = new ArrayList<IAction>();
+		applicationPopUpMenuActions.add(new ConnectAction        (activeEditorPart, selection));
+		applicationPopUpMenuActions.add(new DisconnectAction     (activeEditorPart, selection));
+		applicationPopUpMenuActions.add(new SynchUpAction        (activeEditorPart, selection));
+		applicationPopUpMenuActions.add(new SynchDownAction      (activeEditorPart, selection));
+		applicationPopUpMenuActions.add(new RefreshAction        (activeEditorPart, selection));
+		applicationPopUpMenuActions.add(new RefreshMetaDataAction(activeEditorPart, selection));
+
 		if (createChildMenuManager != null) {
 			populateManager(createChildMenuManager, createChildActions, null);
 			createChildMenuManager.update(true);
@@ -321,12 +323,11 @@ public class ToUseDbSynchActionBarContributor
 			createSiblingMenuManager.update(true);
 		}
 
-		this.connectAction        .selectionChanged(activeEditorPart, selection);
-		this.disconnectAction     .selectionChanged(activeEditorPart, selection);
-		this.refreshMetaDataAction.selectionChanged(activeEditorPart, selection);
-		this.synchUpAction        .selectionChanged(activeEditorPart, selection);
-		this.synchDownAction      .selectionChanged(activeEditorPart, selection);
-}
+		if (applicationPopUpMenuManager!= null) {
+			Util.populateManager(applicationPopUpMenuManager, applicationPopUpMenuActions, null);
+			applicationPopUpMenuManager.update(true);
+		}
+	}
 
 	/**
 	 * This generates a {@link org.eclipse.emf.edit.ui.action.CreateChildAction} for each object in <code>descriptors</code>,
@@ -432,14 +433,9 @@ public class ToUseDbSynchActionBarContributor
 		populateManager(submenuManager, createSiblingActions, null);
 		menuManager.insertBefore("edit", submenuManager);
 
-		submenuManager = new MenuManager("ToUse");
+		submenuManager = new MenuManager("ToUseDbSynch");
+		Util.populateManager(submenuManager, applicationPopUpMenuActions, null);
 		menuManager.insertBefore("edit", submenuManager);
-		
-		submenuManager.add(this.connectAction);
-		submenuManager.add(this.disconnectAction);
-		submenuManager.add(this.refreshMetaDataAction);
-		submenuManager.add(this.synchUpAction);
-		submenuManager.add(this.synchDownAction);
 	}
 
 	/**

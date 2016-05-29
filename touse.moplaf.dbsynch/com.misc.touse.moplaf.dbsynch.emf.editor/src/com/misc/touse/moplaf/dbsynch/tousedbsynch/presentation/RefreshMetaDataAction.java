@@ -1,54 +1,55 @@
+/**
+ * Copyright (c) 2002-2007 IBM Corporation and others.
+ * All rights reserved.   This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors: 
+ *   IBM - Initial API and implementation
+ */
 package com.misc.touse.moplaf.dbsynch.tousedbsynch.presentation;
 
-import org.eclipse.emf.common.command.Command;
-import org.eclipse.emf.edit.domain.EditingDomain;
-import org.eclipse.emf.edit.domain.IEditingDomainProvider;
-import org.eclipse.jface.action.Action;
+
+import java.util.Collection;
+
 import org.eclipse.jface.viewers.ISelection;
-import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.ui.IWorkbenchPart;
 
 import com.misc.common.moplaf.dbsynch.provider.RefreshMetaDataCommand;
+import com.misc.common.moplaf.emf.editor.action.BaseAction;
+
+import org.eclipse.emf.common.command.Command;
+import org.eclipse.emf.common.command.UnexecutableCommand;
+import org.eclipse.emf.edit.domain.EditingDomain;
 
 
-public class RefreshMetaDataAction extends Action {
-		public final static String ID = "com.misc.touse.moplaf.dbsynch.RefeshMetaDataActionID";
+/**
+ * A accept action  is implemented by creating a {@link AcceptCommand}.
+ */
+public class RefreshMetaDataAction extends BaseAction
+{
+  /**
+   * This constructs an instance of an action that uses the given editing domain to create a accept command
+   * for the <code>selection</code> object.
+   * @since 2.4.0
+   */
+  public RefreshMetaDataAction(IWorkbenchPart part, ISelection selection)
+  {
+    super(part, selection);
+  }
 
-		Command currentCommand = null;
-		EditingDomain editingDomain = null;
-
-
-		public RefreshMetaDataAction()	{
-			setId(ID);
-			setText("Refresh MetaData");
-			setToolTipText("Refresh MetaData");
-			//setImageDescriptor();
-		}
-
-		public void selectionChanged(IWorkbenchPart part, ISelection incomingselection) {
-			boolean enabled = false;
-			String tooltip = "Refresh the metadata";
-			currentCommand = null;
-			editingDomain = null;
-			if ( part != null  && incomingselection instanceof IStructuredSelection ) {
-				IStructuredSelection structuredselection = (IStructuredSelection)incomingselection;
-				if ( structuredselection.size()==1 ) {
-					if ( part instanceof IEditingDomainProvider){
-						IEditingDomainProvider editindomainprovider = (IEditingDomainProvider)part;
-						Object selection = structuredselection.getFirstElement();
-						editingDomain = editindomainprovider.getEditingDomain();
-						currentCommand = RefreshMetaDataCommand.create(editingDomain, selection);
-						if ( currentCommand!=null){
-							enabled = currentCommand.canExecute();
-	     				}
-					}
-				}
-			}
-			setEnabled(enabled);
-			setToolTipText(tooltip);
-		} // selectionChanged method
-		
-		public void run()	{
-			editingDomain.getCommandStack().execute(currentCommand);
-		} // run method
-	}  // class ConnectAction
+  /**
+   * 
+   */
+  @Override
+  protected Command createActionCommand(EditingDomain editingDomain, Collection<?> collection)
+  {
+    if (collection.size() == 1)
+    {
+      Object owner = collection.iterator().next();
+      return RefreshMetaDataCommand.create(editingDomain, owner);
+    }
+    return UnexecutableCommand.INSTANCE;
+  }
+}
