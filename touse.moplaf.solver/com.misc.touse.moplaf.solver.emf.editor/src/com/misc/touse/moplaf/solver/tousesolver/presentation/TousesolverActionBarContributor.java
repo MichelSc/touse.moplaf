@@ -219,8 +219,6 @@ public class TousesolverActionBarContributor
 		
 		submenuManager.insertBefore("additions", new Separator("generic part"));
 		
-
-
 		// Force an update because Eclipse hides empty menus now.
 		//
 		submenuManager.addMenuListener
