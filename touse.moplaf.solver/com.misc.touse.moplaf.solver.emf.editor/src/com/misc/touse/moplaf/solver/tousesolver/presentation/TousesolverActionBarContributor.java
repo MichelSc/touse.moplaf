@@ -34,6 +34,7 @@ import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.PartInitException;
 
+import com.misc.common.moplaf.emf.editor.Util;
 import com.misc.common.moplaf.emf.editor.action.AcceptAction;
 import com.misc.common.moplaf.emf.editor.action.ReadAction;
 import com.misc.common.moplaf.emf.editor.action.RunAction;
@@ -149,7 +150,6 @@ public class TousesolverActionBarContributor
 	 * generated for the current selection by the item provider.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	protected Collection<IAction> applicationPopUpMenuActions;
 
@@ -157,10 +157,8 @@ public class TousesolverActionBarContributor
 	 * This is the menu manager into which menu contribution items should be added for G4SOptiPost actions.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	protected IMenuManager applicationPopUpMenuManager;
-
 
 	/**
 	 * This creates an instance of the contributor.
@@ -319,7 +317,7 @@ public class TousesolverActionBarContributor
 			createSiblingMenuManager.update(true);
 		}
 		if (applicationPopUpMenuManager!= null) {
-			populateManager(applicationPopUpMenuManager, applicationPopUpMenuActions, null);
+			Util.populateManager(applicationPopUpMenuManager, applicationPopUpMenuActions, null);
 			applicationPopUpMenuManager.update(true);
 		}
 		
@@ -430,9 +428,9 @@ public class TousesolverActionBarContributor
 		menuManager.insertBefore("edit", submenuManager);
 
 		submenuManager = new MenuManager("ToUseSolver");
-		populateManager(submenuManager, applicationPopUpMenuActions, null);
+		Util.populateManager(submenuManager, applicationPopUpMenuActions, null);
 		menuManager.insertBefore("edit", submenuManager);
-}
+	}
 
 	/**
 	 * This inserts global actions before the "additions-end" separator.
