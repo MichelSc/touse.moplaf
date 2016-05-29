@@ -216,6 +216,9 @@ public class TousesolverActionBarContributor
 		//
 		applicationPopUpMenuManager = new MenuManager("ToUseSolver");
 		submenuManager.insertBefore("additions", applicationPopUpMenuManager);
+		
+		submenuManager.insertBefore("additions", new Separator("generic part"));
+		
 
 
 		// Force an update because Eclipse hides empty menus now.
