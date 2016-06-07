@@ -34,6 +34,10 @@ import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.PartInitException;
 
+import com.misc.common.moplaf.emf.editor.Util;
+import com.misc.common.moplaf.emf.editor.action.RefreshAction;
+import com.misc.common.moplaf.emf.editor.action.TestAction;
+
 
 /**
  * This is the action bar contributor for the Tousetimeline model editor.
@@ -104,20 +108,6 @@ public class TousetimelineActionBarContributor
 			}
 		};
 		
-		/**
-		 * This action runs the object
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 */
-		protected RefreshAction refreshAction = new RefreshAction();
-			
-
-		/**
-		 * This action test the object
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 */
-		protected TestAction testAction = new TestAction();
 			
 
 	/**
@@ -155,6 +145,21 @@ public class TousetimelineActionBarContributor
 	protected IMenuManager createSiblingMenuManager;
 
 	/**
+	 * This will contain one {@link org.eclipse.emf.edit.ui.action.ApplicationPopUpMenuAction} 
+	 * generated for the current selection by the item provider.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	protected Collection<IAction> applicationPopUpMenuActions;
+
+	/**
+	 * This is the menu manager into which menu contribution items should be added for G4SOptiPost actions.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	protected IMenuManager applicationPopUpMenuManager;
+
+	/**
 	 * This creates an instance of the contributor.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -184,7 +189,6 @@ public class TousetimelineActionBarContributor
 	 * as well as the sub-menus for object creation items.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	@Override
 	public void contributeToMenu(IMenuManager menuManager) {
@@ -207,6 +211,13 @@ public class TousetimelineActionBarContributor
 		createSiblingMenuManager = new MenuManager(ToUseTimeLineEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
 		submenuManager.insertBefore("additions", createSiblingMenuManager);
 
+		// Prepare for G4SOptiPost item addition or removal.
+		//
+		applicationPopUpMenuManager = new MenuManager("ToUseTimeLine");
+		submenuManager.insertBefore("additions", applicationPopUpMenuManager);
+
+		submenuManager.insertBefore("additions", new Separator("generic part"));
+		
 		// Force an update because Eclipse hides empty menus now.
 		//
 		submenuManager.addMenuListener
@@ -266,6 +277,10 @@ public class TousetimelineActionBarContributor
 		if (createSiblingMenuManager != null) {
 			depopulateManager(createSiblingMenuManager, createSiblingActions);
 		}
+		if (applicationPopUpMenuManager != null) {
+			depopulateManager(applicationPopUpMenuManager, applicationPopUpMenuActions);
+		}
+
 
 		// Query the new selection for appropriate new child/sibling descriptors
 		//
@@ -287,6 +302,11 @@ public class TousetimelineActionBarContributor
 		createChildActions = generateCreateChildActions(newChildDescriptors, selection);
 		createSiblingActions = generateCreateSiblingActions(newSiblingDescriptors, selection);
 
+		applicationPopUpMenuActions = new ArrayList<IAction>();
+		applicationPopUpMenuActions.add(new RefreshAction(activeEditorPart, selection));
+		applicationPopUpMenuActions.add(new TestAction(activeEditorPart, selection));
+
+
 		if (createChildMenuManager != null) {
 			populateManager(createChildMenuManager, createChildActions, null);
 			createChildMenuManager.update(true);
@@ -296,8 +316,10 @@ public class TousetimelineActionBarContributor
 			createSiblingMenuManager.update(true);
 		}
 
-		this.refreshAction.selectionChanged(activeEditorPart, selection);
-		this.testAction.selectionChanged(activeEditorPart, selection);
+		if (applicationPopUpMenuManager!= null) {
+			Util.populateManager(applicationPopUpMenuManager, applicationPopUpMenuActions, null);
+			applicationPopUpMenuManager.update(true);
+		}
 }
 
 	/**
@@ -404,10 +426,9 @@ public class TousetimelineActionBarContributor
 		populateManager(submenuManager, createSiblingActions, null);
 		menuManager.insertBefore("edit", submenuManager);
 		
-		submenuManager = new MenuManager("POC");
+		submenuManager = new MenuManager("ToUseTimeLine");
+		Util.populateManager(submenuManager, applicationPopUpMenuActions, null);
 		menuManager.insertBefore("edit", submenuManager);
-		submenuManager.add(this.refreshAction);
-		submenuManager.add(this.testAction);
 	}
 
 	/**
