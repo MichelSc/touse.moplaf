@@ -23,10 +23,10 @@ public class PropagatorCalcDomainDistributionFunctionPossible extends Propagator
 	}
 
 	@Override
-	protected void addListeners() {
-		super.addListeners();
-		this.addFeatureListener(TousetimelinePackage.Literals.FUNCTION_POSSIBLE__LIMIT_MOMENT);
-		this.addFeatureListener(TousetimelinePackage.Literals.FUNCTION_POSSIBLE__LIMIT_DURATION);
-		this.addFeatureListener(TousetimelinePackage.Literals.FUNCTION_POSSIBLE__LIMIT_AMOUNT);
+	protected void addInboundBindings() {
+		super.addInboundBindings();
+		this.addInboundBindingFeature(TousetimelinePackage.Literals.FUNCTION_POSSIBLE__LIMIT_MOMENT);
+		this.addInboundBindingFeature(TousetimelinePackage.Literals.FUNCTION_POSSIBLE__LIMIT_DURATION);
+		this.addInboundBindingFeature(TousetimelinePackage.Literals.FUNCTION_POSSIBLE__LIMIT_AMOUNT);
 	}
 };

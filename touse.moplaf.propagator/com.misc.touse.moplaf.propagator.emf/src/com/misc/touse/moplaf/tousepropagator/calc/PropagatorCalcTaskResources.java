@@ -33,23 +33,23 @@ public class PropagatorCalcTaskResources extends PropagatorFunctionAdapter {
 	}
 
 	@Override
-	protected void addListeners() {
-		super.addListeners();
-		this.addNavigationFeatureListener(ToUsePropagatorPackage.Literals.TASK__PROJECT, DependencyProject.class);
-		this.addFeatureListener(ToUsePropagatorPackage.Literals.TASK__START);
-		this.addFeatureListener(ToUsePropagatorPackage.Literals.TASK__END);
+	protected void addInboundBindings() {
+		super.addInboundBindings();
+		this.addInboundBindingNavigationFeature(ToUsePropagatorPackage.Literals.TASK__PROJECT, DependencyProject.class);
+		this.addInboundBindingFeature(ToUsePropagatorPackage.Literals.TASK__START);
+		this.addInboundBindingFeature(ToUsePropagatorPackage.Literals.TASK__END);
 	}
 
 	static public class DependencyProject extends PropagatorDependencyAdapter{
-		protected void addListeners() {
-			super.addListeners();
-			this.addNavigationFeatureListener(ToUsePropagatorPackage.Literals.PROJECT__RESOURCES, DependencyProjectResource.class);
+		protected void addInboundBindings() {
+			super.addInboundBindings();
+			this.addInboundBindingNavigationFeature(ToUsePropagatorPackage.Literals.PROJECT__RESOURCES, DependencyProjectResource.class);
 		}
 		static public class DependencyProjectResource extends PropagatorDependencyAdapter{
-			protected void addListeners() {
-				super.addListeners();
-				this.addFeatureListener(ToUsePropagatorPackage.Literals.RESOURCE__START);
-				this.addFeatureListener(ToUsePropagatorPackage.Literals.RESOURCE__END);
+			protected void addInboundBindings() {
+				super.addInboundBindings();
+				this.addInboundBindingFeature(ToUsePropagatorPackage.Literals.RESOURCE__START);
+				this.addInboundBindingFeature(ToUsePropagatorPackage.Literals.RESOURCE__END);
 			}
 
 			@Override

@@ -24,16 +24,16 @@ public class PropagatorCalcTaskHoursVar extends PropagatorFunctionAdapter {
 	}
 	
 	@Override
-	protected void addListeners() {
-		super.addListeners();
-		this.addFeatureListener(ToUsePropagatorPackage.Literals.TASK__HOURS_VAR_PER_RES);
-		this.addNavigationFeatureListener(ToUsePropagatorPackage.Literals.TASK__PROJECT, DependencyProject.class);
+	protected void addInboundBindings() {
+		super.addInboundBindings();
+		this.addInboundBindingFeature(ToUsePropagatorPackage.Literals.TASK__HOURS_VAR_PER_RES);
+		this.addInboundBindingNavigationFeature(ToUsePropagatorPackage.Literals.TASK__PROJECT, DependencyProject.class);
 	}
 
 	static public class DependencyProject extends PropagatorDependencyAdapter{
-		protected void addListeners() {
-			super.addListeners();
-			this.addFeatureListener(ToUsePropagatorPackage.Literals.PROJECT__NOF_RES);
+		protected void addInboundBindings() {
+			super.addInboundBindings();
+			this.addInboundBindingFeature(ToUsePropagatorPackage.Literals.PROJECT__NOF_RES);
 		} 
 	}; 
 };

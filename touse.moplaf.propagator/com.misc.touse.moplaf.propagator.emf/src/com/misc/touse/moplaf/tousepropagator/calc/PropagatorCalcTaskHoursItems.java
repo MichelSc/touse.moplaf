@@ -26,16 +26,16 @@ public class PropagatorCalcTaskHoursItems extends PropagatorFunctionAdapter {
 
 	
 	@Override
-	protected void addListeners() {
-		super.addListeners();
-		this.addNavigationFeatureListener(ToUsePropagatorPackage.Literals.TASK__ITEMS, DependencyTaskItem.class);
+	protected void addInboundBindings() {
+		super.addInboundBindings();
+		this.addInboundBindingNavigationFeature(ToUsePropagatorPackage.Literals.TASK__ITEMS, DependencyTaskItem.class);
 	}
 
 	
 	static public class DependencyTaskItem extends PropagatorDependencyAdapter{
-		protected void addListeners() {
-			super.addListeners();
-			this.addFeatureListener(ToUsePropagatorPackage.Literals.TASK_ITEM__HOURS);
+		protected void addInboundBindings() {
+			super.addInboundBindings();
+			this.addInboundBindingFeature(ToUsePropagatorPackage.Literals.TASK_ITEM__HOURS);
 		} 
 	}; // nested class DependencyTaskItem
 };
