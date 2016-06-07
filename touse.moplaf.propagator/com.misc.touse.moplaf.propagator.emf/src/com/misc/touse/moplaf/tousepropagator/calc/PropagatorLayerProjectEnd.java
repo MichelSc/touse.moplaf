@@ -33,15 +33,15 @@ public class PropagatorLayerProjectEnd extends PropagatorFunctionAdapter {
 		project.refreshEnd();
 	}
 
-	protected void addListeners() {
-		super.addListeners();
-		this.addNavigationFeatureListener(ToUsePropagatorPackage.Literals.PROJECT__TASKS, DependencyTaskEnd.class);
+	protected void addInboundBindings() {
+		super.addInboundBindings();
+		this.addInboundBindingNavigationFeature(ToUsePropagatorPackage.Literals.PROJECT__TASKS, DependencyTaskEnd.class);
 	}
 
 	static public class DependencyTaskEnd extends PropagatorDependencyAdapter{
-		protected void addListeners() {
-			super.addListeners();
-			this.addFeatureListener(ToUsePropagatorPackage.Literals.TASK__END);
+		protected void addInboundBindings() {
+			super.addInboundBindings();
+			this.addInboundBindingFeature(ToUsePropagatorPackage.Literals.TASK__END);
 		}
 	}; 
 }  

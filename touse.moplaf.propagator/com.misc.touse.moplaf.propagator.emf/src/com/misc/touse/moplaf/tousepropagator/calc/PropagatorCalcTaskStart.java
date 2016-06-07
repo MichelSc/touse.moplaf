@@ -41,31 +41,31 @@ public class PropagatorCalcTaskStart extends PropagatorFunctionAdapter {
 	}
 
 	@Override
-	protected void addListeners() {
-		super.addListeners();
-		this.addNavigationFeatureListener(ToUsePropagatorPackage.Literals.TASK__DEPENDENCES_BEFORE, DependencyDependenceBefore.class);
-		this.addNavigationFeatureListener(ToUsePropagatorPackage.Literals.TASK__PROJECT, DependencyProject.class);
+	protected void addInboundBindings() {
+		super.addInboundBindings();
+		this.addInboundBindingNavigationFeature(ToUsePropagatorPackage.Literals.TASK__DEPENDENCES_BEFORE, DependencyDependenceBefore.class);
+		this.addInboundBindingNavigationFeature(ToUsePropagatorPackage.Literals.TASK__PROJECT, DependencyProject.class);
 	}
 
 	static public class DependencyDependenceBefore extends PropagatorDependencyAdapter{
-		protected void addListeners() {
-			super.addListeners();
-			this.addNavigationFeatureListener(ToUsePropagatorPackage.Literals.DEPENDENCE__TASK_BEFORE, DependencyTaskBefore.class);
-			this.addFeatureListener(ToUsePropagatorPackage.Literals.DEPENDENCE__HOURS);
+		protected void addInboundBindings() {
+			super.addInboundBindings();
+			this.addInboundBindingNavigationFeature(ToUsePropagatorPackage.Literals.DEPENDENCE__TASK_BEFORE, DependencyTaskBefore.class);
+			this.addInboundBindingFeature(ToUsePropagatorPackage.Literals.DEPENDENCE__HOURS);
 		}
 
 		static public class DependencyTaskBefore extends PropagatorDependencyAdapter{
-			protected void addListeners() {
-				super.addListeners();
-				this.addFeatureListener(ToUsePropagatorPackage.Literals.TASK__END);
+			protected void addInboundBindings() {
+				super.addInboundBindings();
+				this.addInboundBindingFeature(ToUsePropagatorPackage.Literals.TASK__END);
 			}
 		}; // nested class DependencyDependenceBefore
 	}; 
 	
 	static public class DependencyProject extends PropagatorDependencyAdapter{
-		protected void addListeners() {
-			super.addListeners();
-			this.addFeatureListener(ToUsePropagatorPackage.Literals.PROJECT__START);
+		protected void addInboundBindings() {
+			super.addInboundBindings();
+			this.addInboundBindingFeature(ToUsePropagatorPackage.Literals.PROJECT__START);
 		}
 	}; 
 };

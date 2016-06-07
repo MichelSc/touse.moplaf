@@ -26,10 +26,10 @@ public class PropagatorCalcTaskHours extends PropagatorFunctionAdapter {
 	}
 
 	@Override
-	protected void addListeners() {
-		super.addListeners();
-		this.addFeatureListener(ToUsePropagatorPackage.Literals.TASK__HOURS_ITEMS);
-		this.addFeatureListener(ToUsePropagatorPackage.Literals.TASK__HOURS_VAR);
+	protected void addInboundBindings() {
+		super.addInboundBindings();
+		this.addInboundBindingFeature(ToUsePropagatorPackage.Literals.TASK__HOURS_ITEMS);
+		this.addInboundBindingFeature(ToUsePropagatorPackage.Literals.TASK__HOURS_VAR);
 	}
 	
 };
