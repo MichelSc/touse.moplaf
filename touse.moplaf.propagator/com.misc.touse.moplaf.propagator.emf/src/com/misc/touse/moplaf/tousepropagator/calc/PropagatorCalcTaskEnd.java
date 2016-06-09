@@ -9,6 +9,9 @@ import com.misc.touse.moplaf.tousepropagator.ToUsePropagatorPackage;
 
 public class PropagatorCalcTaskEnd extends PropagatorFunctionAdapter {
 
+	
+	
+	
 	@Override
 	protected PropagatorFunctionAdapter getParent() {
 		Task task = (Task)this.target;
@@ -16,7 +19,8 @@ public class PropagatorCalcTaskEnd extends PropagatorFunctionAdapter {
 		PropagatorFunctionAdapter parent = Util.getPropagatorFunctionAdapter(project, PropagatorLayerTaskTimes.class);
 		return parent;
 	}
-
+	
+	
 	
 	/*
 	@Override
@@ -44,7 +48,5 @@ public class PropagatorCalcTaskEnd extends PropagatorFunctionAdapter {
 		this.addInboundBindingFeature(ToUsePropagatorPackage.Literals.TASK__HOURS);
 		this.addOutboundBindingFeature(ToUsePropagatorPackage.Literals.TASK__END);
 	}
-	
-	
 
 };
