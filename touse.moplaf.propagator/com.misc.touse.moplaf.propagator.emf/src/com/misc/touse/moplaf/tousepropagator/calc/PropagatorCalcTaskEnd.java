@@ -2,7 +2,6 @@ package com.misc.touse.moplaf.tousepropagator.calc;
 
 
 import com.misc.common.moplaf.propagator.PropagatorFunctionAdapter;
-import com.misc.common.moplaf.propagator.PropagatorFunctionAdapters;
 import com.misc.common.moplaf.propagator.Util;
 import com.misc.touse.moplaf.tousepropagator.Project;
 import com.misc.touse.moplaf.tousepropagator.Task;
@@ -18,6 +17,7 @@ public class PropagatorCalcTaskEnd extends PropagatorFunctionAdapter {
 		return parent;
 	}
 
+	/*
 	@Override
 	protected PropagatorFunctionAdapters getAntecedents() {
 		Task task = (Task)this.target;
@@ -28,6 +28,7 @@ public class PropagatorCalcTaskEnd extends PropagatorFunctionAdapter {
 		antecedents.add(calcStart);
 		return antecedents;
 	}
+	*/
 
 	@Override
 	protected void calculate() {
@@ -36,10 +37,13 @@ public class PropagatorCalcTaskEnd extends PropagatorFunctionAdapter {
 	}
 
 	@Override
-	protected void addInboundBindings() {
-		super.addInboundBindings();
+	protected void addBindings() {
+		super.addBindings();
 		this.addInboundBindingFeature(ToUsePropagatorPackage.Literals.TASK__START);
 		this.addInboundBindingFeature(ToUsePropagatorPackage.Literals.TASK__HOURS);
+		this.addOutboundBindingFeature(ToUsePropagatorPackage.Literals.TASK__END);
 	}
+	
+	
 
 };

@@ -23,8 +23,8 @@ public class PropagatorCalcDomainDistributionFunctionPossible extends Propagator
 	}
 
 	@Override
-	protected void addInboundBindings() {
-		super.addInboundBindings();
+	protected void addBindings() {
+		super.addBindings();
 		this.addInboundBindingFeature(TousetimelinePackage.Literals.FUNCTION_POSSIBLE__LIMIT_MOMENT);
 		this.addInboundBindingFeature(TousetimelinePackage.Literals.FUNCTION_POSSIBLE__LIMIT_DURATION);
 		this.addInboundBindingFeature(TousetimelinePackage.Literals.FUNCTION_POSSIBLE__LIMIT_AMOUNT);

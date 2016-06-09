@@ -3,9 +3,7 @@ package com.misc.touse.moplaf.tousepropagator.calc;
 
 import com.misc.common.moplaf.propagator.PropagatorDependencyAdapter;
 import com.misc.common.moplaf.propagator.PropagatorFunctionAdapter;
-import com.misc.common.moplaf.propagator.PropagatorFunctionAdapters;
 import com.misc.common.moplaf.propagator.Util;
-import com.misc.touse.moplaf.tousepropagator.Dependence;
 import com.misc.touse.moplaf.tousepropagator.Project;
 import com.misc.touse.moplaf.tousepropagator.Task;
 import com.misc.touse.moplaf.tousepropagator.ToUsePropagatorPackage;
@@ -20,6 +18,7 @@ public class PropagatorCalcTaskStart extends PropagatorFunctionAdapter {
 		return parent;
 	}
 
+	/*
 	@Override
 	protected PropagatorFunctionAdapters getAntecedents() {
 		Task task = (Task)this.target;
@@ -33,6 +32,7 @@ public class PropagatorCalcTaskStart extends PropagatorFunctionAdapter {
 		}
 		return antecedents;
 	}
+	*/
 
 	@Override
 	protected void calculate() {
@@ -41,30 +41,31 @@ public class PropagatorCalcTaskStart extends PropagatorFunctionAdapter {
 	}
 
 	@Override
-	protected void addInboundBindings() {
-		super.addInboundBindings();
+	protected void addBindings() {
+		super.addBindings();
 		this.addInboundBindingNavigationFeature(ToUsePropagatorPackage.Literals.TASK__DEPENDENCES_BEFORE, DependencyDependenceBefore.class);
 		this.addInboundBindingNavigationFeature(ToUsePropagatorPackage.Literals.TASK__PROJECT, DependencyProject.class);
+		this.addOutboundBindingFeature(ToUsePropagatorPackage.Literals.TASK__START);
 	}
 
 	static public class DependencyDependenceBefore extends PropagatorDependencyAdapter{
-		protected void addInboundBindings() {
-			super.addInboundBindings();
+		protected void addBindings() {
+			super.addBindings();
 			this.addInboundBindingNavigationFeature(ToUsePropagatorPackage.Literals.DEPENDENCE__TASK_BEFORE, DependencyTaskBefore.class);
 			this.addInboundBindingFeature(ToUsePropagatorPackage.Literals.DEPENDENCE__HOURS);
 		}
 
 		static public class DependencyTaskBefore extends PropagatorDependencyAdapter{
-			protected void addInboundBindings() {
-				super.addInboundBindings();
+			protected void addBindings() {
+				super.addBindings();
 				this.addInboundBindingFeature(ToUsePropagatorPackage.Literals.TASK__END);
 			}
 		}; // nested class DependencyDependenceBefore
 	}; 
 	
 	static public class DependencyProject extends PropagatorDependencyAdapter{
-		protected void addInboundBindings() {
-			super.addInboundBindings();
+		protected void addBindings() {
+			super.addBindings();
 			this.addInboundBindingFeature(ToUsePropagatorPackage.Literals.PROJECT__START);
 		}
 	}; 
