@@ -17,6 +17,7 @@ public class PropagatorCalcTaskEnd extends PropagatorFunctionAdapter {
 		return parent;
 	}
 
+	
 	/*
 	@Override
 	protected PropagatorFunctionAdapters getAntecedents() {
