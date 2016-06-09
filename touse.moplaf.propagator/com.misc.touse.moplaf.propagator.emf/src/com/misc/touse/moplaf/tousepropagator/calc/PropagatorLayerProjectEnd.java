@@ -33,14 +33,14 @@ public class PropagatorLayerProjectEnd extends PropagatorFunctionAdapter {
 		project.refreshEnd();
 	}
 
-	protected void addInboundBindings() {
-		super.addInboundBindings();
+	protected void addBindings() {
+		super.addBindings();
 		this.addInboundBindingNavigationFeature(ToUsePropagatorPackage.Literals.PROJECT__TASKS, DependencyTaskEnd.class);
 	}
 
 	static public class DependencyTaskEnd extends PropagatorDependencyAdapter{
-		protected void addInboundBindings() {
-			super.addInboundBindings();
+		protected void addBindings() {
+			super.addBindings();
 			this.addInboundBindingFeature(ToUsePropagatorPackage.Literals.TASK__END);
 		}
 	}; 

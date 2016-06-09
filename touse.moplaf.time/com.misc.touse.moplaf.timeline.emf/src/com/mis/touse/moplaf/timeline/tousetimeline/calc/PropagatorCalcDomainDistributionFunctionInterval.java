@@ -23,8 +23,8 @@ public class PropagatorCalcDomainDistributionFunctionInterval extends Propagator
 	}
 
 	@Override
-	protected void addInboundBindings() {
-		super.addInboundBindings();
+	protected void addBindings() {
+		super.addBindings();
 		this.addInboundBindingFeature(TousetimelinePackage.Literals.FUNCTION_INTERVAL__FROM);
 		this.addInboundBindingFeature(TousetimelinePackage.Literals.FUNCTION_INTERVAL__TO);
 	}

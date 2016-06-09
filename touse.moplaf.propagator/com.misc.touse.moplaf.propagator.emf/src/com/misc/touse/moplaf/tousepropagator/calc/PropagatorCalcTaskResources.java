@@ -33,21 +33,21 @@ public class PropagatorCalcTaskResources extends PropagatorFunctionAdapter {
 	}
 
 	@Override
-	protected void addInboundBindings() {
-		super.addInboundBindings();
+	protected void addBindings() {
+		super.addBindings();
 		this.addInboundBindingNavigationFeature(ToUsePropagatorPackage.Literals.TASK__PROJECT, DependencyProject.class);
 		this.addInboundBindingFeature(ToUsePropagatorPackage.Literals.TASK__START);
 		this.addInboundBindingFeature(ToUsePropagatorPackage.Literals.TASK__END);
 	}
 
 	static public class DependencyProject extends PropagatorDependencyAdapter{
-		protected void addInboundBindings() {
-			super.addInboundBindings();
+		protected void addBindings() {
+			super.addBindings();
 			this.addInboundBindingNavigationFeature(ToUsePropagatorPackage.Literals.PROJECT__RESOURCES, DependencyProjectResource.class);
 		}
 		static public class DependencyProjectResource extends PropagatorDependencyAdapter{
-			protected void addInboundBindings() {
-				super.addInboundBindings();
+			protected void addBindings() {
+				super.addBindings();
 				this.addInboundBindingFeature(ToUsePropagatorPackage.Literals.RESOURCE__START);
 				this.addInboundBindingFeature(ToUsePropagatorPackage.Literals.RESOURCE__END);
 			}
