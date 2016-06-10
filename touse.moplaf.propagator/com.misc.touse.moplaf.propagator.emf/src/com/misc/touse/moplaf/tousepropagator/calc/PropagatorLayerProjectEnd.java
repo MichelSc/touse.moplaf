@@ -36,6 +36,7 @@ public class PropagatorLayerProjectEnd extends PropagatorFunctionAdapter {
 	protected void addBindings() {
 		super.addBindings();
 		this.addInboundBindingNavigationFeature(ToUsePropagatorPackage.Literals.PROJECT__TASKS, DependencyTaskEnd.class);
+		this.addInboundBindingFeature(ToUsePropagatorPackage.Literals.PROJECT__START);
 	}
 
 	static public class DependencyTaskEnd extends PropagatorDependencyAdapter{
