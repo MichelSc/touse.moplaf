@@ -18,22 +18,6 @@ public class PropagatorCalcTaskStart extends PropagatorFunctionAdapter {
 		return parent;
 	}
 
-	/*
-	@Override
-	protected PropagatorFunctionAdapters getAntecedents() {
-		Task task = (Task)this.target;
-		PropagatorFunctionAdapters antecedents = super.getAntecedents();
-		for (Dependence dependenceBefore :task.getDependencesBefore()){
-			Task taskbefore = dependenceBefore.getTaskBefore();
-		    if ( taskbefore !=null){
-				PropagatorFunctionAdapter calcTaskEnd = Util.getPropagatorFunctionAdapter(taskbefore, PropagatorCalcTaskEnd.class);
-				antecedents.add(calcTaskEnd);
-		    }
-		}
-		return antecedents;
-	}
-	*/
-
 	@Override
 	protected void calculate() {
 		Task task = (Task)this.target;

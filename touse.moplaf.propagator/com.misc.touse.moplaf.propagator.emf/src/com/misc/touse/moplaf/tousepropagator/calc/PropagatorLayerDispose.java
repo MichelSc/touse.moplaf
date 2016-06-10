@@ -12,7 +12,4 @@ public class PropagatorLayerDispose extends PropagatorFunctionAdapter {
 		PropagatorFunctionAdapter parent = Util.getPropagatorFunctionAdapter(project, PropagatorScopeProject.class);
 		return parent;
 	}
-	
-	
-	
 }
