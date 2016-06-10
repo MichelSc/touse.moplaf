@@ -56,8 +56,6 @@ public class PropagatorCalcTaskResources extends PropagatorFunctionAdapter {
 			protected boolean isTrackToucher() {
 				return true;
 			}
-			
 		}
 	};
- 
 };
