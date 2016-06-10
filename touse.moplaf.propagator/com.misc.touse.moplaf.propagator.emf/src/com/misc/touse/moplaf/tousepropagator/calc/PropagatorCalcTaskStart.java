@@ -27,9 +27,10 @@ public class PropagatorCalcTaskStart extends PropagatorFunctionAdapter {
 	@Override
 	protected void addBindings() {
 		super.addBindings();
+		this.addOutboundBindingFeature(ToUsePropagatorPackage.Literals.TASK__START);
+
 		this.addInboundBindingNavigationFeature(ToUsePropagatorPackage.Literals.TASK__DEPENDENCES_BEFORE, DependencyDependenceBefore.class);
 		this.addInboundBindingNavigationFeature(ToUsePropagatorPackage.Literals.TASK__PROJECT, DependencyProject.class);
-		this.addOutboundBindingFeature(ToUsePropagatorPackage.Literals.TASK__START);
 	}
 
 	static public class DependencyDependenceBefore extends PropagatorDependencyAdapter{

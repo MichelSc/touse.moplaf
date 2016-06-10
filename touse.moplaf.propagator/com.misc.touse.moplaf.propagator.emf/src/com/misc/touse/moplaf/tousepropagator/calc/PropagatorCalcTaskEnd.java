@@ -26,9 +26,10 @@ public class PropagatorCalcTaskEnd extends PropagatorFunctionAdapter {
 	@Override
 	protected void addBindings() {
 		super.addBindings();
+		this.addOutboundBindingFeature(ToUsePropagatorPackage.Literals.TASK__END);
+
 		this.addInboundBindingFeature(ToUsePropagatorPackage.Literals.TASK__START);
 		this.addInboundBindingFeature(ToUsePropagatorPackage.Literals.TASK__HOURS);
-		this.addOutboundBindingFeature(ToUsePropagatorPackage.Literals.TASK__END);
 	}
 
 };
