@@ -5,6 +5,7 @@
   <semanticResources>platform:/resource/com.misc.common.moplaf.dbsynch.emf/model/dbsynch.ecore</semanticResources>
   <semanticResources>http://www.eclipse.org/emf/2002/Ecore</semanticResources>
   <semanticResources>platform:/resource/com.misc.common.moplaf.dbsynch.mysql.emf/model/dbsynchmysql.ecore</semanticResources>
+  <semanticResources>platform:/resource/com.misc.common.moplaf.dbsynch.jtds.emf/model/dbsynchjtds.ecore</semanticResources>
   <ownedViews xmi:type="viewpoint:DRepresentationContainer" xmi:id="_Fihw4BFKEeas1ZJD3LToqg">
     <ownedRepresentations xmi:type="diagram:DSemanticDiagram" xmi:id="_GxOYoBFKEeas1ZJD3LToqg" name="tousedbsynch class diagram">
       <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_GxOYoRFKEeas1ZJD3LToqg" source="DANNOTATION_CUSTOMIZATION_KEY">
@@ -66,6 +67,14 @@
               <children xmi:type="notation:Node" xmi:id="_IR3sABFKEeas1ZJD3LToqg" type="3010" element="_IRaZARFKEeas1ZJD3LToqg">
                 <styles xmi:type="notation:FontStyle" xmi:id="_IR3sARFKEeas1ZJD3LToqg" fontName="Sans" fontHeight="8"/>
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_IR3sAhFKEeas1ZJD3LToqg"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_7kpwwDB9EeazLPeDghaZNw" type="3010" element="_7kdjgDB9EeazLPeDghaZNw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_7kpwwTB9EeazLPeDghaZNw" fontName="Oxygen-Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_7kpwwjB9EeazLPeDghaZNw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_7ktbIDB9EeazLPeDghaZNw" type="3010" element="_7kexoDB9EeazLPeDghaZNw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_7ktbITB9EeazLPeDghaZNw" fontName="Oxygen-Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_7ktbIjB9EeazLPeDghaZNw"/>
               </children>
               <styles xmi:type="notation:SortingStyle" xmi:id="_IRuiEhFKEeas1ZJD3LToqg"/>
               <styles xmi:type="notation:FilteringStyle" xmi:id="_IRuiExFKEeas1ZJD3LToqg"/>
@@ -292,6 +301,22 @@
           <target xmi:type="ecore:EAttribute" href="tousedbsynch.ecore#//FPDSortingPlan/ValidTo"/>
           <semanticElements xmi:type="ecore:EAttribute" href="tousedbsynch.ecore#//FPDSortingPlan/ValidTo"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_IRbAEBFKEeas1ZJD3LToqg" labelAlignment="LEFT">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_7kdjgDB9EeazLPeDghaZNw" name="someDateTime : EDate" tooltipText="">
+          <target xmi:type="ecore:EAttribute" href="tousedbsynch.ecore#//FPDSortingPlan/someDateTime"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="tousedbsynch.ecore#//FPDSortingPlan/someDateTime"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_7keKkDB9EeazLPeDghaZNw" labelAlignment="LEFT">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_7kexoDB9EeazLPeDghaZNw" name="someTime : EFloat = 0.0" tooltipText="">
+          <target xmi:type="ecore:EAttribute" href="tousedbsynch.ecore#//FPDSortingPlan/someTime"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="tousedbsynch.ecore#//FPDSortingPlan/someTime"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_7kfYsDB9EeazLPeDghaZNw" labelAlignment="LEFT">
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>

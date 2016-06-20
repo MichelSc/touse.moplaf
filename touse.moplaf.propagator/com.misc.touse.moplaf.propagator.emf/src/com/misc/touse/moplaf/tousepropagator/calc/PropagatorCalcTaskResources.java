@@ -19,14 +19,14 @@ public class PropagatorCalcTaskResources extends PropagatorFunctionAdapter {
 		return parent;
 	}
 
-	//@Override
+	@Override
 	protected void calculate(Object context) {
 		Task task = (Task)this.target;
 		Resource resource = (Resource)context;
 		task.refreshResourceCandidates(resource);
 	}
 
-	//@Override
+	@Override
 	protected void calculate() {
 		Task task = (Task)this.target;
 		task.refreshResourceCandidates();
@@ -56,8 +56,6 @@ public class PropagatorCalcTaskResources extends PropagatorFunctionAdapter {
 			protected boolean isTrackToucher() {
 				return true;
 			}
-			
 		}
 	};
- 
 };

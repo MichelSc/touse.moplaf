@@ -309,7 +309,7 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
 	 * <!-- end-user-doc -->
 	 */
 	public void refreshEnd() {
-		Date end = new Date(Long.MIN_VALUE);
+		Date end = this.getStart();
 		for ( Task task : this.getTasks()){
 			Date timebefore = task.getEnd();
 			if ( timebefore != null && timebefore.after(end)) {
@@ -324,7 +324,7 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
 	 * <!-- end-user-doc -->
 	 */
 	public void refresh() {
-		 CommonPlugin.INSTANCE.log( "project "+ this.toString());
+		 CommonPlugin.INSTANCE.log( "ToUsePropagator: project "+ this.toString());
 		 PropagatorFunctionAdapter propagatorScopeProject = (PropagatorFunctionAdapter)Util.getAdapter(this, PropagatorScopeProject.class);
 		 if ( propagatorScopeProject !=null){
 			 CommonPlugin.INSTANCE.log( "..: refresh");

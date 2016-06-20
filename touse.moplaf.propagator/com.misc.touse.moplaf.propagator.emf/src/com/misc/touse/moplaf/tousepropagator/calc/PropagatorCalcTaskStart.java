@@ -18,22 +18,6 @@ public class PropagatorCalcTaskStart extends PropagatorFunctionAdapter {
 		return parent;
 	}
 
-	/*
-	@Override
-	protected PropagatorFunctionAdapters getAntecedents() {
-		Task task = (Task)this.target;
-		PropagatorFunctionAdapters antecedents = super.getAntecedents();
-		for (Dependence dependenceBefore :task.getDependencesBefore()){
-			Task taskbefore = dependenceBefore.getTaskBefore();
-		    if ( taskbefore !=null){
-				PropagatorFunctionAdapter calcTaskEnd = Util.getPropagatorFunctionAdapter(taskbefore, PropagatorCalcTaskEnd.class);
-				antecedents.add(calcTaskEnd);
-		    }
-		}
-		return antecedents;
-	}
-	*/
-
 	@Override
 	protected void calculate() {
 		Task task = (Task)this.target;
@@ -43,9 +27,10 @@ public class PropagatorCalcTaskStart extends PropagatorFunctionAdapter {
 	@Override
 	protected void addBindings() {
 		super.addBindings();
+		this.addOutboundBindingFeature(ToUsePropagatorPackage.Literals.TASK__START);
+
 		this.addInboundBindingNavigationFeature(ToUsePropagatorPackage.Literals.TASK__DEPENDENCES_BEFORE, DependencyDependenceBefore.class);
 		this.addInboundBindingNavigationFeature(ToUsePropagatorPackage.Literals.TASK__PROJECT, DependencyProject.class);
-		this.addOutboundBindingFeature(ToUsePropagatorPackage.Literals.TASK__START);
 	}
 
 	static public class DependencyDependenceBefore extends PropagatorDependencyAdapter{
