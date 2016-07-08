@@ -3,7 +3,7 @@
 package com.misc.touse.moplaf.timeline.tousetimeline.provider;
 
 
-import com.misc.common.moplaf.emf.Util;
+import com.misc.common.moplaf.emf.edit.Util;
 import com.misc.common.moplaf.time.continuous.provider.DistributionItemProvider;
 import com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution;
 import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelineFactory;
