@@ -78,6 +78,7 @@ public class DomainItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(TousesolverPackage.Literals.DOMAIN__ROOT_FOLDER);
+			childrenFeatures.add(TousesolverPackage.Literals.DOMAIN__JOBS);
 		}
 		return childrenFeatures;
 	}
@@ -130,6 +131,7 @@ public class DomainItemProvider
 
 		switch (notification.getFeatureID(Domain.class)) {
 			case TousesolverPackage.DOMAIN__ROOT_FOLDER:
+			case TousesolverPackage.DOMAIN__JOBS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -151,6 +153,11 @@ public class DomainItemProvider
 			(createChildParameter
 				(TousesolverPackage.Literals.DOMAIN__ROOT_FOLDER,
 				 TousesolverFactory.eINSTANCE.createDomainObjectFolder()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TousesolverPackage.Literals.DOMAIN__JOBS,
+				 TousesolverFactory.eINSTANCE.createSolveKnapsack()));
 	}
 
 	/**

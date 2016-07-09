@@ -5,6 +5,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="Domain">
     <eStructuralFeatures xsi:type="ecore:EReference" name="RootFolder" upperBound="-1"
         eType="#//DomainObjectFolder" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Jobs" upperBound="-1" eType="#//SolveKnapsack"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Knapsack" eSuperTypes="#//DomainObject">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Capacity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
@@ -81,4 +83,5 @@
         eType="ecore:EClass ../../com.misc.common.moplaf.solver.emf/model/solver.ecore#//GeneratorLpVar"
         containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SolveKnapsack" eSuperTypes="../../com.misc.common.moplaf.emf/model/common.ecore#//Job"/>
 </ecore:EPackage>

@@ -3,7 +3,7 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.misc.touse.moplaf.solver.emf/src" modelPluginID="com.misc.touse.moplaf.solver.emf"
     modelName="ToUserSolver" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0" copyrightFields="false"
-    usedGenPackages="../../com.misc.common.moplaf.solver.emf/model/solver.genmodel#//solver"
+    usedGenPackages="../../com.misc.common.moplaf.emf/model/common.genmodel#//common ../../com.misc.common.moplaf.solver.emf/model/solver.genmodel#//solver"
     operationReflection="true" importOrganizing="true">
   <foreignModel>ToUserSolver.ecore</foreignModel>
   <genPackages prefix="Tousesolver" basePackage="com.misc.touse.moplaf.solver" disposableProviderFactory="true"
@@ -73,5 +73,6 @@
       <genFeatures property="Readonly" children="true" createChild="false" propertySortChoices="true"
           ecoreFeature="ecore:EReference ToUserSolver.ecore#//LpItem/VarInKnapsack"/>
     </genClasses>
+    <genClasses ecoreClass="ToUserSolver.ecore#//SolveKnapsack"/>
   </genPackages>
 </genmodel:GenModel>

@@ -2,6 +2,7 @@
  */
 package com.misc.touse.moplaf.solver.tousesolver;
 
+import com.misc.common.moplaf.common.CommonPackage;
 import com.misc.common.moplaf.solver.SolverPackage;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -77,13 +78,22 @@ public interface TousesolverPackage extends EPackage {
 	int DOMAIN__ROOT_FOLDER = 0;
 
 	/**
+	 * The feature id for the '<em><b>Jobs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN__JOBS = 1;
+
+	/**
 	 * The number of structural features of the '<em>Domain</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_FEATURE_COUNT = 1;
+	int DOMAIN_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Domain</em>' class.
@@ -1294,6 +1304,160 @@ public interface TousesolverPackage extends EPackage {
 	int LP_ITEM_OPERATION_COUNT = SolverPackage.GENERATOR_TUPLE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.solver.tousesolver.impl.SolveKnapsackImpl <em>Solve Knapsack</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.solver.tousesolver.impl.SolveKnapsackImpl
+	 * @see com.misc.touse.moplaf.solver.tousesolver.impl.TousesolverPackageImpl#getSolveKnapsack()
+	 * @generated
+	 */
+	int SOLVE_KNAPSACK = 11;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLVE_KNAPSACK__NAME = CommonPackage.JOB__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Background</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLVE_KNAPSACK__BACKGROUND = CommonPackage.JOB__BACKGROUND;
+
+	/**
+	 * The feature id for the '<em><b>Status</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLVE_KNAPSACK__STATUS = CommonPackage.JOB__STATUS;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLVE_KNAPSACK__DESCRIPTION = CommonPackage.JOB__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Start Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLVE_KNAPSACK__START_TIME = CommonPackage.JOB__START_TIME;
+
+	/**
+	 * The feature id for the '<em><b>End Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLVE_KNAPSACK__END_TIME = CommonPackage.JOB__END_TIME;
+
+	/**
+	 * The feature id for the '<em><b>Duration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLVE_KNAPSACK__DURATION = CommonPackage.JOB__DURATION;
+
+	/**
+	 * The feature id for the '<em><b>Created</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLVE_KNAPSACK__CREATED = CommonPackage.JOB__CREATED;
+
+	/**
+	 * The feature id for the '<em><b>Running</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLVE_KNAPSACK__RUNNING = CommonPackage.JOB__RUNNING;
+
+	/**
+	 * The feature id for the '<em><b>Stopped</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLVE_KNAPSACK__STOPPED = CommonPackage.JOB__STOPPED;
+
+	/**
+	 * The feature id for the '<em><b>Finished</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLVE_KNAPSACK__FINISHED = CommonPackage.JOB__FINISHED;
+
+	/**
+	 * The number of structural features of the '<em>Solve Knapsack</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLVE_KNAPSACK_FEATURE_COUNT = CommonPackage.JOB_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Run Impl</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLVE_KNAPSACK___RUN_IMPL = CommonPackage.JOB___RUN_IMPL;
+
+	/**
+	 * The operation id for the '<em>Start</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLVE_KNAPSACK___START = CommonPackage.JOB___START;
+
+	/**
+	 * The operation id for the '<em>Stop</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLVE_KNAPSACK___STOP = CommonPackage.JOB___STOP;
+
+	/**
+	 * The number of operations of the '<em>Solve Knapsack</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLVE_KNAPSACK_OPERATION_COUNT = CommonPackage.JOB_OPERATION_COUNT + 0;
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.solver.tousesolver.Domain <em>Domain</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1313,6 +1477,17 @@ public interface TousesolverPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getDomain_RootFolder();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.solver.tousesolver.Domain#getJobs <em>Jobs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Jobs</em>'.
+	 * @see com.misc.touse.moplaf.solver.tousesolver.Domain#getJobs()
+	 * @see #getDomain()
+	 * @generated
+	 */
+	EReference getDomain_Jobs();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.solver.tousesolver.Knapsack <em>Knapsack</em>}'.
@@ -1767,6 +1942,16 @@ public interface TousesolverPackage extends EPackage {
 	EReference getLpItem_VarInKnapsack();
 
 	/**
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.solver.tousesolver.SolveKnapsack <em>Solve Knapsack</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Solve Knapsack</em>'.
+	 * @see com.misc.touse.moplaf.solver.tousesolver.SolveKnapsack
+	 * @generated
+	 */
+	EClass getSolveKnapsack();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1806,6 +1991,14 @@ public interface TousesolverPackage extends EPackage {
 		 * @generated
 		 */
 		EReference DOMAIN__ROOT_FOLDER = eINSTANCE.getDomain_RootFolder();
+
+		/**
+		 * The meta object literal for the '<em><b>Jobs</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DOMAIN__JOBS = eINSTANCE.getDomain_Jobs();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.solver.tousesolver.impl.KnapsackImpl <em>Knapsack</em>}' class.
@@ -2162,6 +2355,16 @@ public interface TousesolverPackage extends EPackage {
 		 * @generated
 		 */
 		EReference LP_ITEM__VAR_IN_KNAPSACK = eINSTANCE.getLpItem_VarInKnapsack();
+
+		/**
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.solver.tousesolver.impl.SolveKnapsackImpl <em>Solve Knapsack</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.touse.moplaf.solver.tousesolver.impl.SolveKnapsackImpl
+		 * @see com.misc.touse.moplaf.solver.tousesolver.impl.TousesolverPackageImpl#getSolveKnapsack()
+		 * @generated
+		 */
+		EClass SOLVE_KNAPSACK = eINSTANCE.getSolveKnapsack();
 
 	}
 

@@ -112,6 +112,15 @@ public interface TousesolverFactory extends EFactory {
 	LpItem createLpItem();
 
 	/**
+	 * Returns a new object of class '<em>Solve Knapsack</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Solve Knapsack</em>'.
+	 * @generated
+	 */
+	SolveKnapsack createSolveKnapsack();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

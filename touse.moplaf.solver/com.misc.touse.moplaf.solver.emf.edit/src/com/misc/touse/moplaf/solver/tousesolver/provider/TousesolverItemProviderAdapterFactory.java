@@ -302,6 +302,29 @@ public class TousesolverItemProviderAdapterFactory extends TousesolverAdapterFac
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.solver.tousesolver.SolveKnapsack} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SolveKnapsackItemProvider solveKnapsackItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.solver.tousesolver.SolveKnapsack}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSolveKnapsackAdapter() {
+		if (solveKnapsackItemProvider == null) {
+			solveKnapsackItemProvider = new SolveKnapsackItemProvider(this);
+		}
+
+		return solveKnapsackItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -410,6 +433,7 @@ public class TousesolverItemProviderAdapterFactory extends TousesolverAdapterFac
 		if (lpRootItemProvider != null) lpRootItemProvider.dispose();
 		if (lpKnapsackItemProvider != null) lpKnapsackItemProvider.dispose();
 		if (lpItemItemProvider != null) lpItemItemProvider.dispose();
+		if (solveKnapsackItemProvider != null) solveKnapsackItemProvider.dispose();
 	}
 
 }

@@ -2,6 +2,7 @@
  */
 package com.misc.touse.moplaf.solver.tousesolver.util;
 
+import com.misc.common.moplaf.common.Job;
 import com.misc.common.moplaf.solver.Generator;
 import com.misc.common.moplaf.solver.GeneratorElement;
 import com.misc.common.moplaf.solver.GeneratorTuple;
@@ -139,6 +140,13 @@ public class TousesolverSwitch<T> extends Switch<T> {
 				T result = caseLpItem(lpItem);
 				if (result == null) result = caseGeneratorTuple(lpItem);
 				if (result == null) result = caseGeneratorElement(lpItem);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case TousesolverPackage.SOLVE_KNAPSACK: {
+				SolveKnapsack solveKnapsack = (SolveKnapsack)theEObject;
+				T result = caseSolveKnapsack(solveKnapsack);
+				if (result == null) result = caseJob(solveKnapsack);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -312,6 +320,21 @@ public class TousesolverSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Solve Knapsack</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Solve Knapsack</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSolveKnapsack(SolveKnapsack object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Generator</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -338,6 +361,21 @@ public class TousesolverSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGeneratorTuple(GeneratorTuple object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Job</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Job</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseJob(Job object) {
 		return null;
 	}
 

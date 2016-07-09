@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.Domain#getRootFolder <em>Root Folder</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.Domain#getJobs <em>Jobs</em>}</li>
  * </ul>
  *
  * @see com.misc.touse.moplaf.solver.tousesolver.TousesolverPackage#getDomain()
@@ -38,5 +39,21 @@ public interface Domain extends EObject {
 	 * @generated
 	 */
 	EList<DomainObjectFolder> getRootFolder();
+
+	/**
+	 * Returns the value of the '<em><b>Jobs</b></em>' containment reference list.
+	 * The list contents are of type {@link com.misc.touse.moplaf.solver.tousesolver.SolveKnapsack}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Jobs</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Jobs</em>' containment reference list.
+	 * @see com.misc.touse.moplaf.solver.tousesolver.TousesolverPackage#getDomain_Jobs()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<SolveKnapsack> getJobs();
 
 } // Domain
