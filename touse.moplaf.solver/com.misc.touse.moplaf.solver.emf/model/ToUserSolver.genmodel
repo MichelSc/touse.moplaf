@@ -10,6 +10,7 @@
       ecorePackage="ToUserSolver.ecore#/">
     <genClasses ecoreClass="ToUserSolver.ecore#//Domain">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUserSolver.ecore#//Domain/RootFolder"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUserSolver.ecore#//Domain/Jobs"/>
     </genClasses>
     <genClasses ecoreClass="ToUserSolver.ecore#//Knapsack">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUserSolver.ecore#//Knapsack/Capacity"/>
@@ -73,6 +74,6 @@
       <genFeatures property="Readonly" children="true" createChild="false" propertySortChoices="true"
           ecoreFeature="ecore:EReference ToUserSolver.ecore#//LpItem/VarInKnapsack"/>
     </genClasses>
-    <genClasses ecoreClass="ToUserSolver.ecore#//SolveKnapsack"/>
+    <genClasses image="false" ecoreClass="ToUserSolver.ecore#//SolveKnapsack"/>
   </genPackages>
 </genmodel:GenModel>

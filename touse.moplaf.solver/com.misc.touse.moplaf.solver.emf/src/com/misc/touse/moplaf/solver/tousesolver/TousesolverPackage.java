@@ -1413,6 +1413,15 @@ public interface TousesolverPackage extends EPackage {
 	int SOLVE_KNAPSACK__FINISHED = CommonPackage.JOB__FINISHED;
 
 	/**
+	 * The feature id for the '<em><b>Args</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLVE_KNAPSACK__ARGS = CommonPackage.JOB__ARGS;
+
+	/**
 	 * The number of structural features of the '<em>Solve Knapsack</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1447,6 +1456,33 @@ public interface TousesolverPackage extends EPackage {
 	 * @ordered
 	 */
 	int SOLVE_KNAPSACK___STOP = CommonPackage.JOB___STOP;
+
+	/**
+	 * The operation id for the '<em>Get Arg As String</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLVE_KNAPSACK___GET_ARG_AS_STRING__INT = CommonPackage.JOB___GET_ARG_AS_STRING__INT;
+
+	/**
+	 * The operation id for the '<em>Get Arg As Int</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLVE_KNAPSACK___GET_ARG_AS_INT__INT = CommonPackage.JOB___GET_ARG_AS_INT__INT;
+
+	/**
+	 * The operation id for the '<em>Get Arg As Float</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLVE_KNAPSACK___GET_ARG_AS_FLOAT__INT = CommonPackage.JOB___GET_ARG_AS_FLOAT__INT;
 
 	/**
 	 * The number of operations of the '<em>Solve Knapsack</em>' class.

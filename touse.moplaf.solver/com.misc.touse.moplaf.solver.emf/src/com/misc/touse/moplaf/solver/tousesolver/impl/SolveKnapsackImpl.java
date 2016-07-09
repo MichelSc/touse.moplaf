@@ -51,6 +51,7 @@ public class SolveKnapsackImpl extends JobImpl implements SolveKnapsack {
 	 */
 	@Override
 	public void runImpl() {
+		float maxSeconds = this.getArgAsFloat(0);
 		// get the domain
 		Domain domain = (Domain)this.eContainer();
 		
@@ -102,6 +103,7 @@ public class SolveKnapsackImpl extends JobImpl implements SolveKnapsack {
 		solver.setCode("demo run job "+this.getName());
 		lp.getSolver().add(solver);
 		solver.constructSolverGoal(goal);
+		solver.setSolverMaxDuration(maxSeconds);
 		
 		// run the solver
 		solver.solve();
