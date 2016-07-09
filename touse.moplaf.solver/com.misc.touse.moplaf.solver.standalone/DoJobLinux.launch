@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/com.misc.touse.moplaf.solver.standalone/src/com/misc/touse/moplaf/solver/standalone/DoJob.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<mapAttribute key="org.eclipse.debug.core.environmentVariables">
+<mapEntry key="LD_LIBRARY_PATH" value="/home/michel/git/common.moplaf/common.moplaf.solver.cplex/com.misc.common.moplaf.solver.cplex.emf/lib/x86_64-linux/"/>
+</mapAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.misc.touse.moplaf.solver.standalone.DoJob"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="12.36"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="com.misc.touse.moplaf.solver.standalone"/>
+</launchConfiguration>
