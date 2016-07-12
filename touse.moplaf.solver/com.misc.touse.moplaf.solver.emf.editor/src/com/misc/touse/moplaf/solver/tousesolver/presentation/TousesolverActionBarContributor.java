@@ -36,10 +36,10 @@ import org.eclipse.ui.PartInitException;
 
 import com.misc.common.moplaf.emf.editor.Util;
 import com.misc.common.moplaf.emf.editor.action.AcceptAction;
+import com.misc.common.moplaf.emf.editor.action.CancelAction;
 import com.misc.common.moplaf.emf.editor.action.ReadAction;
 import com.misc.common.moplaf.emf.editor.action.RunAction;
-import com.misc.common.moplaf.emf.editor.action.StartAction;
-import com.misc.common.moplaf.emf.editor.action.StopAction;
+import com.misc.common.moplaf.emf.editor.action.RunBackgroundAction;
 import com.misc.common.moplaf.emf.editor.action.TestAction;
 import com.misc.common.moplaf.emf.editor.action.WriteAction;
 
@@ -305,9 +305,9 @@ public class TousesolverActionBarContributor
 		createSiblingActions = generateCreateSiblingActions(newSiblingDescriptors, selection);
 
 		applicationPopUpMenuActions = new ArrayList<IAction>();
-		applicationPopUpMenuActions.add(new StartAction (activeEditorPart, selection));
-		applicationPopUpMenuActions.add(new StopAction  (activeEditorPart, selection));
 		applicationPopUpMenuActions.add(new RunAction   (activeEditorPart, selection));
+		applicationPopUpMenuActions.add(new RunBackgroundAction(activeEditorPart, selection));
+		applicationPopUpMenuActions.add(new CancelAction(activeEditorPart, selection));
 		applicationPopUpMenuActions.add(new AcceptAction(activeEditorPart, selection));
 		applicationPopUpMenuActions.add(new ReadAction  (activeEditorPart, selection));
 		applicationPopUpMenuActions.add(new WriteAction (activeEditorPart, selection));
