@@ -3,6 +3,7 @@
 package com.misc.touse.moplaf.solver.tousesolver.util;
 
 import com.misc.common.moplaf.common.Job;
+import com.misc.common.moplaf.common.Run;
 import com.misc.common.moplaf.solver.Generator;
 import com.misc.common.moplaf.solver.GeneratorElement;
 import com.misc.common.moplaf.solver.GeneratorTuple;
@@ -147,6 +148,7 @@ public class TousesolverSwitch<T> extends Switch<T> {
 				SolveKnapsack solveKnapsack = (SolveKnapsack)theEObject;
 				T result = caseSolveKnapsack(solveKnapsack);
 				if (result == null) result = caseJob(solveKnapsack);
+				if (result == null) result = caseRun(solveKnapsack);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -361,6 +363,21 @@ public class TousesolverSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGeneratorTuple(GeneratorTuple object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Run</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Run</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRun(Run object) {
 		return null;
 	}
 

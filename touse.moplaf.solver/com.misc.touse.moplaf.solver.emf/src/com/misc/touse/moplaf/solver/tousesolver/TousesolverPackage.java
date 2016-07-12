@@ -1314,6 +1314,24 @@ public interface TousesolverPackage extends EPackage {
 	int SOLVE_KNAPSACK = 11;
 
 	/**
+	 * The feature id for the '<em><b>Canceled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLVE_KNAPSACK__CANCELED = CommonPackage.JOB__CANCELED;
+
+	/**
+	 * The feature id for the '<em><b>Parent Run</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLVE_KNAPSACK__PARENT_RUN = CommonPackage.JOB__PARENT_RUN;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1431,31 +1449,49 @@ public interface TousesolverPackage extends EPackage {
 	int SOLVE_KNAPSACK_FEATURE_COUNT = CommonPackage.JOB_FEATURE_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Run Impl</em>' operation.
+	 * The operation id for the '<em>Run</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SOLVE_KNAPSACK___RUN_IMPL = CommonPackage.JOB___RUN_IMPL;
+	int SOLVE_KNAPSACK___RUN = CommonPackage.JOB___RUN;
 
 	/**
-	 * The operation id for the '<em>Start</em>' operation.
+	 * The operation id for the '<em>Run</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SOLVE_KNAPSACK___START = CommonPackage.JOB___START;
+	int SOLVE_KNAPSACK___RUN__RUN = CommonPackage.JOB___RUN__RUN;
 
 	/**
-	 * The operation id for the '<em>Stop</em>' operation.
+	 * The operation id for the '<em>Run Background</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SOLVE_KNAPSACK___STOP = CommonPackage.JOB___STOP;
+	int SOLVE_KNAPSACK___RUN_BACKGROUND = CommonPackage.JOB___RUN_BACKGROUND;
+
+	/**
+	 * The operation id for the '<em>Cancel</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLVE_KNAPSACK___CANCEL = CommonPackage.JOB___CANCEL;
+
+	/**
+	 * The operation id for the '<em>On Progress</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLVE_KNAPSACK___ON_PROGRESS__STRING_FLOAT = CommonPackage.JOB___ON_PROGRESS__STRING_FLOAT;
 
 	/**
 	 * The operation id for the '<em>Get Arg As String</em>' operation.

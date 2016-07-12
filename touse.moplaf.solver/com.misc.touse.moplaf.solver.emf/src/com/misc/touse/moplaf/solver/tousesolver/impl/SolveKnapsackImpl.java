@@ -50,7 +50,7 @@ public class SolveKnapsackImpl extends JobImpl implements SolveKnapsack {
 	 * @see com.misc.common.moplaf.common.impl.JobImpl#runImpl()
 	 */
 	@Override
-	public void runImpl() {
+	public boolean jobRunImpl() {
 		float maxSeconds = this.getArgAsFloat(0);
 		// get the domain
 		Domain domain = (Domain)this.eContainer();
@@ -107,6 +107,8 @@ public class SolveKnapsackImpl extends JobImpl implements SolveKnapsack {
 		
 		// run the solver
 		solver.solve();
+		
+		return true;
 	}
 
 } //SolveKnapsackImpl
