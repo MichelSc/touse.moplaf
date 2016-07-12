@@ -1341,15 +1341,6 @@ public interface TousesolverPackage extends EPackage {
 	int SOLVE_KNAPSACK__NAME = CommonPackage.JOB__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Background</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVE_KNAPSACK__BACKGROUND = CommonPackage.JOB__BACKGROUND;
-
-	/**
 	 * The feature id for the '<em><b>Status</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
