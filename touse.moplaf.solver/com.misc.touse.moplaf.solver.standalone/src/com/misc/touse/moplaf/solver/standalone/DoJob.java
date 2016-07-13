@@ -41,7 +41,7 @@ public class DoJob {
 	    newDomain.getJobs().add(newJob);
 	    
 	    // start the job
-	    newJob.start();
+	    newJob.run();
 	    
 	    System.out.println("ToUseSolver standalone finished");
 	   }
