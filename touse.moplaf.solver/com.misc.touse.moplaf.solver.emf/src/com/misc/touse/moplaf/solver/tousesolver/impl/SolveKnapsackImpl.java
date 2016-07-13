@@ -95,7 +95,7 @@ public class SolveKnapsackImpl extends JobImpl implements SolveKnapsack {
 		KnapsackLp lp = TousesolverFactoryImpl.eINSTANCE.createKnapsackLp();
 		lp.setCode("demo lp job "+this.getName());
 		scenario.getLP().add(lp);
-		lp.generate();
+		lp.run(this);
 		GeneratorLpGoal goal = lp.getValue();
 		
 		// make the solver
@@ -106,7 +106,7 @@ public class SolveKnapsackImpl extends JobImpl implements SolveKnapsack {
 		solver.setSolverMaxDuration(maxSeconds);
 		
 		// run the solver
-		solver.solve();
+		solver.run(this);
 		
 		return true;
 	}
