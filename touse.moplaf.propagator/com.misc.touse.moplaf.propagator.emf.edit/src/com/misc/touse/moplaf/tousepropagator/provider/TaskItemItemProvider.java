@@ -84,7 +84,7 @@ public class TaskItemItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI__10ItemPropertyCategory"),
 				 null));
 	}
 
@@ -106,7 +106,7 @@ public class TaskItemItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI__10ItemPropertyCategory"),
 				 null));
 	}
 

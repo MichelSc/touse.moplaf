@@ -64,6 +64,7 @@ public class DependenceItemProvider
 			addTaskAfterPropertyDescriptor(object);
 			addHoursPropertyDescriptor(object);
 			addNotesPropertyDescriptor(object);
+			addDescriptionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -86,7 +87,7 @@ public class DependenceItemProvider
 				 false,
 				 true,
 				 null,
-				 null,
+				 getString("_UI__10DependencePropertyCategory"),
 				 null));
 	}
 
@@ -108,7 +109,7 @@ public class DependenceItemProvider
 				 false,
 				 true,
 				 null,
-				 null,
+				 getString("_UI__10DependencePropertyCategory"),
 				 null));
 	}
 
@@ -130,7 +131,7 @@ public class DependenceItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI__10DependencePropertyCategory"),
 				 null));
 	}
 
@@ -152,7 +153,29 @@ public class DependenceItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI__10DependencePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Description feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDescriptionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Dependence_Description_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Dependence_Description_feature", "_UI_Dependence_type"),
+				 ToUsePropagatorPackage.Literals.DEPENDENCE__DESCRIPTION,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI__20DerivedPropertyCategory"),
 				 null));
 	}
 
@@ -175,7 +198,7 @@ public class DependenceItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Dependence)object).getNotes();
+		String label = ((Dependence)object).getDescription();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Dependence_type") :
 			getString("_UI_Dependence_type") + " " + label;
@@ -193,8 +216,11 @@ public class DependenceItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Dependence.class)) {
+			case ToUsePropagatorPackage.DEPENDENCE__TASK_BEFORE:
+			case ToUsePropagatorPackage.DEPENDENCE__TASK_AFTER:
 			case ToUsePropagatorPackage.DEPENDENCE__HOURS:
 			case ToUsePropagatorPackage.DEPENDENCE__NOTES:
+			case ToUsePropagatorPackage.DEPENDENCE__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

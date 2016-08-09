@@ -69,8 +69,6 @@ public class TaskItemProvider
 			addHoursItemsPropertyDescriptor(object);
 			addHoursVarPropertyDescriptor(object);
 			addHoursVarPerResPropertyDescriptor(object);
-			addDependencesAfterPropertyDescriptor(object);
-			addDependencesBeforePropertyDescriptor(object);
 			addTaskNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -94,7 +92,7 @@ public class TaskItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI__20DerivedPropertyCategory"),
 				 null));
 	}
 
@@ -116,7 +114,7 @@ public class TaskItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI__20DerivedPropertyCategory"),
 				 null));
 	}
 
@@ -138,7 +136,7 @@ public class TaskItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI__20DerivedPropertyCategory"),
 				 null));
 	}
 
@@ -160,7 +158,7 @@ public class TaskItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI__20DerivedPropertyCategory"),
 				 null));
 	}
 
@@ -182,7 +180,7 @@ public class TaskItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI__20DerivedPropertyCategory"),
 				 null));
 	}
 
@@ -204,51 +202,7 @@ public class TaskItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Dependences After feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDependencesAfterPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Task_DependencesAfter_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Task_DependencesAfter_feature", "_UI_Task_type"),
-				 ToUsePropagatorPackage.Literals.TASK__DEPENDENCES_AFTER,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Dependences Before feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDependencesBeforePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Task_DependencesBefore_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Task_DependencesBefore_feature", "_UI_Task_type"),
-				 ToUsePropagatorPackage.Literals.TASK__DEPENDENCES_BEFORE,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
+				 getString("_UI__10TaskPropertyCategory"),
 				 null));
 	}
 
@@ -270,7 +224,7 @@ public class TaskItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI__10TaskPropertyCategory"),
 				 null));
 	}
 

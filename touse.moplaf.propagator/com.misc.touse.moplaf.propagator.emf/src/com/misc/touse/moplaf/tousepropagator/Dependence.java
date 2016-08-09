@@ -18,6 +18,7 @@ import com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapter;
  *   <li>{@link com.misc.touse.moplaf.tousepropagator.Dependence#getHours <em>Hours</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousepropagator.Dependence#getProject <em>Project</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousepropagator.Dependence#getNotes <em>Notes</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousepropagator.Dependence#getDescription <em>Description</em>}</li>
  * </ul>
  *
  * @see com.misc.touse.moplaf.tousepropagator.ToUsePropagatorPackage#getDependence()
@@ -161,6 +162,21 @@ public interface Dependence extends ObjectWithPropagatorFunctionAdapter {
 	 * @generated
 	 */
 	void setNotes(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Description</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Description</em>' attribute.
+	 * @see com.misc.touse.moplaf.tousepropagator.ToUsePropagatorPackage#getDependence_Description()
+	 * @model transient="true" changeable="false" volatile="true" derived="true"
+	 * @generated
+	 */
+	String getDescription();
 
 	/**
 	 * <!-- begin-user-doc -->

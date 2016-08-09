@@ -89,7 +89,7 @@ public class ProjectItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI__10ProjectPropertyCategory"),
 				 null));
 	}
 
@@ -111,7 +111,7 @@ public class ProjectItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI__10ProjectPropertyCategory"),
 				 null));
 	}
 
@@ -133,7 +133,7 @@ public class ProjectItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI__20DerivedPropertyCategory"),
 				 null));
 	}
 
@@ -155,7 +155,7 @@ public class ProjectItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI__10ProjectPropertyCategory"),
 				 null));
 	}
 

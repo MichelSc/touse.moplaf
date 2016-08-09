@@ -80,11 +80,11 @@ public class ResourceCandidateItemProvider
 				 getString("_UI_ResourceCandidate_resource_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ResourceCandidate_resource_feature", "_UI_ResourceCandidate_type"),
 				 ToUsePropagatorPackage.Literals.RESOURCE_CANDIDATE__RESOURCE,
-				 true,
+				 false,
 				 false,
 				 true,
 				 null,
-				 null,
+				 getString("_UI__20DerivedPropertyCategory"),
 				 null));
 	}
 
@@ -102,11 +102,11 @@ public class ResourceCandidateItemProvider
 				 getString("_UI_ResourceCandidate_Match_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ResourceCandidate_Match_feature", "_UI_ResourceCandidate_type"),
 				 ToUsePropagatorPackage.Literals.RESOURCE_CANDIDATE__MATCH,
-				 true,
+				 false,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI__20DerivedPropertyCategory"),
 				 null));
 	}
 

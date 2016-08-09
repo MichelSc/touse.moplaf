@@ -37,6 +37,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  *   <li>{@link com.misc.touse.moplaf.tousepropagator.impl.DependenceImpl#getHours <em>Hours</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousepropagator.impl.DependenceImpl#getProject <em>Project</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousepropagator.impl.DependenceImpl#getNotes <em>Notes</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousepropagator.impl.DependenceImpl#getDescription <em>Description</em>}</li>
  * </ul>
  *
  * @generated
@@ -101,6 +102,16 @@ public class DependenceImpl extends MinimalEObjectImpl.Container implements Depe
 	 * @ordered
 	 */
 	protected String notes = NOTES_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DESCRIPTION_EDEFAULT = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -328,6 +339,20 @@ public class DependenceImpl extends MinimalEObjectImpl.Container implements Depe
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 */
+	public String getDescription() {
+		Task taskBefore = this.getTaskBefore();
+		Task taskAfter  = this.getTaskAfter();
+		String description = String.format("%s -> %s", 
+				                    taskBefore == null ? "null" : taskBefore.getTaskName(),
+				                    taskAfter  == null ? "null" : taskAfter.getTaskName());		
+		return description;
+ 
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
 	public void dispose() {
 		CommonPlugin.INSTANCE.log("Dependence.dispose");
 		this.setTaskAfter(null);
@@ -418,6 +443,8 @@ public class DependenceImpl extends MinimalEObjectImpl.Container implements Depe
 				return getProject();
 			case ToUsePropagatorPackage.DEPENDENCE__NOTES:
 				return getNotes();
+			case ToUsePropagatorPackage.DEPENDENCE__DESCRIPTION:
+				return getDescription();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -494,6 +521,8 @@ public class DependenceImpl extends MinimalEObjectImpl.Container implements Depe
 				return getProject() != null;
 			case ToUsePropagatorPackage.DEPENDENCE__NOTES:
 				return NOTES_EDEFAULT == null ? notes != null : !NOTES_EDEFAULT.equals(notes);
+			case ToUsePropagatorPackage.DEPENDENCE__DESCRIPTION:
+				return DESCRIPTION_EDEFAULT == null ? getDescription() != null : !DESCRIPTION_EDEFAULT.equals(getDescription());
 		}
 		return super.eIsSet(featureID);
 	}

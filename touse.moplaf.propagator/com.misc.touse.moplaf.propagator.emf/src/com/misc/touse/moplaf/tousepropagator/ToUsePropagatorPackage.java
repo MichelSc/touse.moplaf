@@ -449,13 +449,22 @@ public interface ToUsePropagatorPackage extends EPackage {
 	int DEPENDENCE__NOTES = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 4;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEPENDENCE__DESCRIPTION = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 5;
+
+	/**
 	 * The number of structural features of the '<em>Dependence</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DEPENDENCE_FEATURE_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 5;
+	int DEPENDENCE_FEATURE_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 6;
 
 	/**
 	 * The operation id for the '<em>Add Propagator Function Adapter</em>' operation.
@@ -1037,6 +1046,17 @@ public interface ToUsePropagatorPackage extends EPackage {
 	EAttribute getDependence_Notes();
 
 	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.tousepropagator.Dependence#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see com.misc.touse.moplaf.tousepropagator.Dependence#getDescription()
+	 * @see #getDependence()
+	 * @generated
+	 */
+	EAttribute getDependence_Description();
+
+	/**
 	 * Returns the meta object for the '{@link com.misc.touse.moplaf.tousepropagator.Dependence#dispose() <em>Dispose</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1488,6 +1508,14 @@ public interface ToUsePropagatorPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute DEPENDENCE__NOTES = eINSTANCE.getDependence_Notes();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DEPENDENCE__DESCRIPTION = eINSTANCE.getDependence_Description();
 
 		/**
 		 * The meta object literal for the '<em><b>Dispose</b></em>' operation.

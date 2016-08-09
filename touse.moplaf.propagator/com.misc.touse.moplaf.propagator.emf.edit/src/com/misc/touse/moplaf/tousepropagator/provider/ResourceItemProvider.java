@@ -89,7 +89,7 @@ public class ResourceItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI__10ResourcePropertyCategory"),
 				 null));
 	}
 
@@ -111,7 +111,7 @@ public class ResourceItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI__10ResourcePropertyCategory"),
 				 null));
 	}
 
@@ -133,7 +133,7 @@ public class ResourceItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI__10ResourcePropertyCategory"),
 				 null));
 	}
 
