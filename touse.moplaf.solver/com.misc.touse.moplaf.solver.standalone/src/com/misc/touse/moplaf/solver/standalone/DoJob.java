@@ -2,6 +2,7 @@ package com.misc.touse.moplaf.solver.standalone;
 
 import java.util.Arrays;
 
+import org.eclipse.emf.common.CommonPlugin;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
@@ -42,6 +43,8 @@ public class DoJob {
 	    
 	    // start the job
 	    newJob.run();
+	    
+	    CommonPlugin.INSTANCE.log("something to log");
 	    
 	    System.out.println("ToUseSolver standalone finished");
 	   }
