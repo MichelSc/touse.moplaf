@@ -7,4 +7,13 @@
 	       name="tousepropagator">
     </component>
   </extension>
+  <extension
+        id="com.misc.touse.moplaf.propagator.design.editing.domain.factory"
+        name="Editing Domain factory for ToUsePropagator Design"
+        point="org.eclipse.sirius.common.editingDomainFactory">
+     <editingDomainFactory
+           class="com.misc.touse.moplaf.propagator.design.ToUsePropagatorEditingDomainFactory"
+           override="org.eclipse.sirius.LocalSessionEditingDomainFactory">
+     </editingDomainFactory>
+  </extension>
 </plugin>
