@@ -306,7 +306,6 @@ public class TousetimelineActionBarContributor
 		applicationPopUpMenuActions.add(new RefreshAction(activeEditorPart, selection));
 		applicationPopUpMenuActions.add(new TestAction(activeEditorPart, selection));
 
-
 		if (createChildMenuManager != null) {
 			populateManager(createChildMenuManager, createChildActions, null);
 			createChildMenuManager.update(true);
