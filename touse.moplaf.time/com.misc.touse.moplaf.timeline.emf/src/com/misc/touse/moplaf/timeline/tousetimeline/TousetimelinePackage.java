@@ -106,13 +106,22 @@ public interface TousetimelinePackage extends EPackage {
 	int DOMAIN__TIMELINES = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_SCOPE_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Objects With Time Line</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN__OBJECTS_WITH_TIME_LINE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_SCOPE_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>Domain</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_FEATURE_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_SCOPE_FEATURE_COUNT + 4;
+	int DOMAIN_FEATURE_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_SCOPE_FEATURE_COUNT + 5;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -375,6 +384,15 @@ public interface TousetimelinePackage extends EPackage {
 	 * @ordered
 	 */
 	int DOMAIN_DISTRIBUTION___GET_AMOUNT_AFTER__DATE = ContinuousPackage.DISTRIBUTION___GET_AMOUNT_AFTER__DATE;
+
+	/**
+	 * The operation id for the '<em>Get Amount</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_DISTRIBUTION___GET_AMOUNT__DATE = ContinuousPackage.DISTRIBUTION___GET_AMOUNT__DATE;
 
 	/**
 	 * The operation id for the '<em>Get Slope Before</em>' operation.
@@ -1177,6 +1195,17 @@ public interface TousetimelinePackage extends EPackage {
 	EReference getDomain_Timelines();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.timeline.tousetimeline.Domain#getObjectsWithTimeLine <em>Objects With Time Line</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Objects With Time Line</em>'.
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.Domain#getObjectsWithTimeLine()
+	 * @see #getDomain()
+	 * @generated
+	 */
+	EReference getDomain_ObjectsWithTimeLine();
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution <em>Domain Distribution</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1516,6 +1545,14 @@ public interface TousetimelinePackage extends EPackage {
 		 * @generated
 		 */
 		EReference DOMAIN__TIMELINES = eINSTANCE.getDomain_Timelines();
+
+		/**
+		 * The meta object literal for the '<em><b>Objects With Time Line</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DOMAIN__OBJECTS_WITH_TIME_LINE = eINSTANCE.getDomain_ObjectsWithTimeLine();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainDistributionImpl <em>Domain Distribution</em>}' class.

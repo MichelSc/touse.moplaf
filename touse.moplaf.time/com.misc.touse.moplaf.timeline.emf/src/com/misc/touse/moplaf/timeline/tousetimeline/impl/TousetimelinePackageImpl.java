@@ -212,6 +212,15 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getDomain_ObjectsWithTimeLine() {
+		return (EReference)domainEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getDomainDistribution() {
 		return domainDistributionEClass;
 	}
@@ -474,6 +483,7 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 		createEReference(domainEClass, DOMAIN__DISTRIBUTION);
 		createEAttribute(domainEClass, DOMAIN__NAME);
 		createEReference(domainEClass, DOMAIN__TIMELINES);
+		createEReference(domainEClass, DOMAIN__OBJECTS_WITH_TIME_LINE);
 
 		domainDistributionEClass = createEClass(DOMAIN_DISTRIBUTION);
 		createEAttribute(domainDistributionEClass, DOMAIN_DISTRIBUTION__NAME);
@@ -560,6 +570,7 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 		initEReference(getDomain_Distribution(), this.getDomainDistribution(), null, "Distribution", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDomain_Name(), ecorePackage.getEString(), "Name", null, 0, 1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDomain_Timelines(), theDiscretePackage.getTimeLine(), null, "Timelines", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDomain_ObjectsWithTimeLine(), theDiscretePackage.getObjectWithTimeLine(), null, "ObjectsWithTimeLine", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(domainDistributionEClass, DomainDistribution.class, "DomainDistribution", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDomainDistribution_Name(), ecorePackage.getEString(), "Name", null, 0, 1, DomainDistribution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

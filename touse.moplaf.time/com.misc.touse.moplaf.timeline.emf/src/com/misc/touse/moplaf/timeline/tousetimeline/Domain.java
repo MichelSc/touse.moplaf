@@ -4,6 +4,7 @@ package com.misc.touse.moplaf.timeline.tousetimeline;
 
 import com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapter;
 import com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapterScope;
+import com.misc.common.moplaf.time.discrete.ObjectWithTimeLine;
 import com.misc.common.moplaf.time.discrete.TimeLine;
 import com.misc.common.moplaf.time.discrete.TimeLineMerge;
 import org.eclipse.emf.common.util.EList;
@@ -21,6 +22,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.Domain#getDistribution <em>Distribution</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.Domain#getName <em>Name</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.Domain#getTimelines <em>Timelines</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.Domain#getObjectsWithTimeLine <em>Objects With Time Line</em>}</li>
  * </ul>
  *
  * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getDomain()
@@ -101,5 +103,21 @@ public interface Domain extends ObjectWithPropagatorFunctionAdapterScope, Object
 	 * @generated
 	 */
 	EList<TimeLine> getTimelines();
+
+	/**
+	 * Returns the value of the '<em><b>Objects With Time Line</b></em>' containment reference list.
+	 * The list contents are of type {@link com.misc.common.moplaf.time.discrete.ObjectWithTimeLine}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Objects With Time Line</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Objects With Time Line</em>' containment reference list.
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getDomain_ObjectsWithTimeLine()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<ObjectWithTimeLine> getObjectsWithTimeLine();
 
 } // Domain

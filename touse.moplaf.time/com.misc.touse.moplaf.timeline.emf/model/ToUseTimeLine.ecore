@@ -12,6 +12,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="Timelines" upperBound="-1"
         eType="ecore:EClass ../../com.misc.common.moplaf.timeline.emf/model/timeline.ecore#//discrete/TimeLine"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ObjectsWithTimeLine" upperBound="-1"
+        eType="ecore:EClass ../../com.misc.common.moplaf.timeline.emf/model/timeline.ecore#//discrete/ObjectWithTimeLine"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DomainDistribution" eSuperTypes="../../com.misc.common.moplaf.timeline.emf/model/timeline.ecore#//continuous/Distribution">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

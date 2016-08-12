@@ -106,6 +106,7 @@ public class DomainItemProvider
 			childrenFeatures.add(TousetimelinePackage.Literals.DOMAIN__TIME_LINE_MERGES);
 			childrenFeatures.add(TousetimelinePackage.Literals.DOMAIN__DISTRIBUTION);
 			childrenFeatures.add(TousetimelinePackage.Literals.DOMAIN__TIMELINES);
+			childrenFeatures.add(TousetimelinePackage.Literals.DOMAIN__OBJECTS_WITH_TIME_LINE);
 		}
 		return childrenFeatures;
 	}
@@ -166,6 +167,7 @@ public class DomainItemProvider
 			case TousetimelinePackage.DOMAIN__TIME_LINE_MERGES:
 			case TousetimelinePackage.DOMAIN__DISTRIBUTION:
 			case TousetimelinePackage.DOMAIN__TIMELINES:
+			case TousetimelinePackage.DOMAIN__OBJECTS_WITH_TIME_LINE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -197,6 +199,11 @@ public class DomainItemProvider
 			(createChildParameter
 				(TousetimelinePackage.Literals.DOMAIN__TIMELINES,
 				 DiscreteFactory.eINSTANCE.createTimeLine()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TousetimelinePackage.Literals.DOMAIN__OBJECTS_WITH_TIME_LINE,
+				 DiscreteFactory.eINSTANCE.createObjectWithTimeLine()));
 	}
 
 	/**

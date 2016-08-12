@@ -7,6 +7,7 @@ import com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapter;
 import com.misc.common.moplaf.propagator.PropagatorFunctionAdapter;
 import com.misc.common.moplaf.propagator.PropagatorPackage;
 import com.misc.common.moplaf.propagator.Util;
+import com.misc.common.moplaf.time.discrete.ObjectWithTimeLine;
 import com.misc.common.moplaf.time.discrete.TimeLine;
 import com.misc.common.moplaf.time.discrete.TimeLineMerge;
 import com.misc.touse.moplaf.timeline.tousetimeline.Domain;
@@ -38,6 +39,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainImpl#getDistribution <em>Distribution</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainImpl#getName <em>Name</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainImpl#getTimelines <em>Timelines</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainImpl#getObjectsWithTimeLine <em>Objects With Time Line</em>}</li>
  * </ul>
  *
  * @generated
@@ -92,6 +94,16 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	 * @ordered
 	 */
 	protected EList<TimeLine> timelines;
+
+	/**
+	 * The cached value of the '{@link #getObjectsWithTimeLine() <em>Objects With Time Line</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getObjectsWithTimeLine()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ObjectWithTimeLine> objectsWithTimeLine;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -169,6 +181,18 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 		return timelines;
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<ObjectWithTimeLine> getObjectsWithTimeLine() {
+		if (objectsWithTimeLine == null) {
+			objectsWithTimeLine = new EObjectContainmentEList<ObjectWithTimeLine>(ObjectWithTimeLine.class, this, TousetimelinePackage.DOMAIN__OBJECTS_WITH_TIME_LINE);
+		}
+		return objectsWithTimeLine;
+	}
+
 	/* (non-Javadoc)
 	 * @see com.misc.common.moplaf.time.continuous.impl.DistributionImpl#addPropagatorFunctionAdapter()
 	 */
@@ -210,6 +234,8 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 				return ((InternalEList<?>)getDistribution()).basicRemove(otherEnd, msgs);
 			case TousetimelinePackage.DOMAIN__TIMELINES:
 				return ((InternalEList<?>)getTimelines()).basicRemove(otherEnd, msgs);
+			case TousetimelinePackage.DOMAIN__OBJECTS_WITH_TIME_LINE:
+				return ((InternalEList<?>)getObjectsWithTimeLine()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -230,6 +256,8 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 				return getName();
 			case TousetimelinePackage.DOMAIN__TIMELINES:
 				return getTimelines();
+			case TousetimelinePackage.DOMAIN__OBJECTS_WITH_TIME_LINE:
+				return getObjectsWithTimeLine();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -258,6 +286,10 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 				getTimelines().clear();
 				getTimelines().addAll((Collection<? extends TimeLine>)newValue);
 				return;
+			case TousetimelinePackage.DOMAIN__OBJECTS_WITH_TIME_LINE:
+				getObjectsWithTimeLine().clear();
+				getObjectsWithTimeLine().addAll((Collection<? extends ObjectWithTimeLine>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -282,6 +314,9 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 			case TousetimelinePackage.DOMAIN__TIMELINES:
 				getTimelines().clear();
 				return;
+			case TousetimelinePackage.DOMAIN__OBJECTS_WITH_TIME_LINE:
+				getObjectsWithTimeLine().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -302,6 +337,8 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case TousetimelinePackage.DOMAIN__TIMELINES:
 				return timelines != null && !timelines.isEmpty();
+			case TousetimelinePackage.DOMAIN__OBJECTS_WITH_TIME_LINE:
+				return objectsWithTimeLine != null && !objectsWithTimeLine.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
