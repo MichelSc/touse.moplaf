@@ -5,6 +5,7 @@ package com.misc.touse.moplaf.timeline.tousetimeline.util;
 import com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapter;
 import com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapterScope;
 import com.misc.common.moplaf.time.continuous.Distribution;
+import com.misc.common.moplaf.time.discrete.ObjectWithTimeLine;
 import com.misc.touse.moplaf.timeline.tousetimeline.*;
 
 import org.eclipse.emf.common.notify.Adapter;
@@ -107,6 +108,10 @@ public class TousetimelineAdapterFactory extends AdapterFactoryImpl {
 				return createFunctionEarliestOutputAdapter();
 			}
 			@Override
+			public Adapter caseConcreteObjectWithTimeLine(ConcreteObjectWithTimeLine object) {
+				return createConcreteObjectWithTimeLineAdapter();
+			}
+			@Override
 			public Adapter caseObjectWithPropagatorFunctionAdapterScope(ObjectWithPropagatorFunctionAdapterScope object) {
 				return createObjectWithPropagatorFunctionAdapterScopeAdapter();
 			}
@@ -117,6 +122,10 @@ public class TousetimelineAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseDistribution(Distribution object) {
 				return createDistributionAdapter();
+			}
+			@Override
+			public Adapter caseObjectWithTimeLine(ObjectWithTimeLine object) {
+				return createObjectWithTimeLineAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -265,6 +274,20 @@ public class TousetimelineAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.timeline.tousetimeline.ConcreteObjectWithTimeLine <em>Concrete Object With Time Line</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.ConcreteObjectWithTimeLine
+	 * @generated
+	 */
+	public Adapter createConcreteObjectWithTimeLineAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapterScope <em>Object With Propagator Function Adapter Scope</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -303,6 +326,20 @@ public class TousetimelineAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDistributionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.time.discrete.ObjectWithTimeLine <em>Object With Time Line</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.time.discrete.ObjectWithTimeLine
+	 * @generated
+	 */
+	public Adapter createObjectWithTimeLineAdapter() {
 		return null;
 	}
 

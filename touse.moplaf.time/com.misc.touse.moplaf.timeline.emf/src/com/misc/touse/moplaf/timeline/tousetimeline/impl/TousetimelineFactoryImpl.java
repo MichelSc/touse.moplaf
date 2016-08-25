@@ -65,6 +65,7 @@ public class TousetimelineFactoryImpl extends EFactoryImpl implements Tousetimel
 			case TousetimelinePackage.FUNCTION_POSSIBLE: return createFunctionPossible();
 			case TousetimelinePackage.FUNCTION_EARLIEST_BELOW: return createFunctionEarliestBelow();
 			case TousetimelinePackage.FUNCTION_EARLIEST_OUTPUT: return createFunctionEarliestOutput();
+			case TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE: return createConcreteObjectWithTimeLine();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -158,6 +159,16 @@ public class TousetimelineFactoryImpl extends EFactoryImpl implements Tousetimel
 	public FunctionEarliestOutput createFunctionEarliestOutput() {
 		FunctionEarliestOutputImpl functionEarliestOutput = new FunctionEarliestOutputImpl();
 		return functionEarliestOutput;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ConcreteObjectWithTimeLine createConcreteObjectWithTimeLine() {
+		ConcreteObjectWithTimeLineImpl concreteObjectWithTimeLine = new ConcreteObjectWithTimeLineImpl();
+		return concreteObjectWithTimeLine;
 	}
 
 	/**

@@ -7,6 +7,7 @@ import com.misc.common.moplaf.propagator.PropagatorPackage;
 import com.misc.common.moplaf.time.continuous.ContinuousPackage;
 
 import com.misc.common.moplaf.time.discrete.DiscretePackage;
+import com.misc.touse.moplaf.timeline.tousetimeline.ConcreteObjectWithTimeLine;
 import com.misc.touse.moplaf.timeline.tousetimeline.Domain;
 import com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution;
 import com.misc.touse.moplaf.timeline.tousetimeline.FunctionAverage;
@@ -96,6 +97,13 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 	 * @generated
 	 */
 	private EClass functionEarliestOutputEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass concreteObjectWithTimeLineEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -455,6 +463,24 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getConcreteObjectWithTimeLine() {
+		return concreteObjectWithTimeLineEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getConcreteObjectWithTimeLine_ConcreteBuckets() {
+		return (EReference)concreteObjectWithTimeLineEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public TousetimelineFactory getTousetimelineFactory() {
 		return (TousetimelineFactory)getEFactoryInstance();
 	}
@@ -518,6 +544,9 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 
 		functionEarliestOutputEClass = createEClass(FUNCTION_EARLIEST_OUTPUT);
 		createEAttribute(functionEarliestOutputEClass, FUNCTION_EARLIEST_OUTPUT__EARLIEST_OUTPUT);
+
+		concreteObjectWithTimeLineEClass = createEClass(CONCRETE_OBJECT_WITH_TIME_LINE);
+		createEReference(concreteObjectWithTimeLineEClass, CONCRETE_OBJECT_WITH_TIME_LINE__CONCRETE_BUCKETS);
 	}
 
 	/**
@@ -563,6 +592,7 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 		functionPossibleEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctionAdapter());
 		functionEarliestBelowEClass.getESuperTypes().add(this.getFunctionPossible());
 		functionEarliestOutputEClass.getESuperTypes().add(this.getFunctionPossible());
+		concreteObjectWithTimeLineEClass.getESuperTypes().add(theDiscretePackage.getObjectWithTimeLine());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -570,7 +600,7 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 		initEReference(getDomain_Distribution(), this.getDomainDistribution(), null, "Distribution", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDomain_Name(), ecorePackage.getEString(), "Name", null, 0, 1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDomain_Timelines(), theDiscretePackage.getTimeLine(), null, "Timelines", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDomain_ObjectsWithTimeLine(), theDiscretePackage.getObjectWithTimeLine(), null, "ObjectsWithTimeLine", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDomain_ObjectsWithTimeLine(), this.getConcreteObjectWithTimeLine(), null, "ObjectsWithTimeLine", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(domainDistributionEClass, DomainDistribution.class, "DomainDistribution", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDomainDistribution_Name(), ecorePackage.getEString(), "Name", null, 0, 1, DomainDistribution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -607,6 +637,9 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 
 		initEClass(functionEarliestOutputEClass, FunctionEarliestOutput.class, "FunctionEarliestOutput", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFunctionEarliestOutput_EarliestOutput(), ecorePackage.getEDate(), "earliestOutput", null, 0, 1, FunctionEarliestOutput.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(concreteObjectWithTimeLineEClass, ConcreteObjectWithTimeLine.class, "ConcreteObjectWithTimeLine", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getConcreteObjectWithTimeLine_ConcreteBuckets(), theDiscretePackage.getObjectTimeBucket(), null, "ConcreteBuckets", null, 0, -1, ConcreteObjectWithTimeLine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -5,6 +5,7 @@ package com.misc.touse.moplaf.timeline.tousetimeline.util;
 import com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapter;
 import com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapterScope;
 import com.misc.common.moplaf.time.continuous.Distribution;
+import com.misc.common.moplaf.time.discrete.ObjectWithTimeLine;
 import com.misc.touse.moplaf.timeline.tousetimeline.*;
 
 import org.eclipse.emf.ecore.EObject;
@@ -136,6 +137,13 @@ public class TousetimelineSwitch<T> extends Switch<T> {
 				T result = caseFunctionEarliestOutput(functionEarliestOutput);
 				if (result == null) result = caseFunctionPossible(functionEarliestOutput);
 				if (result == null) result = caseObjectWithPropagatorFunctionAdapter(functionEarliestOutput);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE: {
+				ConcreteObjectWithTimeLine concreteObjectWithTimeLine = (ConcreteObjectWithTimeLine)theEObject;
+				T result = caseConcreteObjectWithTimeLine(concreteObjectWithTimeLine);
+				if (result == null) result = caseObjectWithTimeLine(concreteObjectWithTimeLine);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -279,6 +287,21 @@ public class TousetimelineSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Concrete Object With Time Line</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Concrete Object With Time Line</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseConcreteObjectWithTimeLine(ConcreteObjectWithTimeLine object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Object With Propagator Function Adapter Scope</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -320,6 +343,21 @@ public class TousetimelineSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseDistribution(Distribution object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Object With Time Line</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Object With Time Line</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseObjectWithTimeLine(ObjectWithTimeLine object) {
 		return null;
 	}
 

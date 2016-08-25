@@ -13,6 +13,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseTimeLine.ecore#//Domain/Distribution"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseTimeLine.ecore#//Domain/Name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseTimeLine.ecore#//Domain/Timelines"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseTimeLine.ecore#//Domain/ObjectsWithTimeLine"/>
     </genClasses>
     <genClasses provider="Stateful" ecoreClass="ToUseTimeLine.ecore#//DomainDistribution">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseTimeLine.ecore#//DomainDistribution/Name"/>
@@ -47,6 +48,9 @@
     </genClasses>
     <genClasses ecoreClass="ToUseTimeLine.ecore#//FunctionEarliestOutput">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute ToUseTimeLine.ecore#//FunctionEarliestOutput/earliestOutput"/>
+    </genClasses>
+    <genClasses ecoreClass="ToUseTimeLine.ecore#//ConcreteObjectWithTimeLine">
+      <genFeatures property="None" createChild="false" ecoreFeature="ecore:EReference ToUseTimeLine.ecore#//ConcreteObjectWithTimeLine/ConcreteBuckets"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

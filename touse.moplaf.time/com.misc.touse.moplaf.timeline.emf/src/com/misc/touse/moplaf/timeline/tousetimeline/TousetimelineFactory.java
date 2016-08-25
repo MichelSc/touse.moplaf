@@ -103,6 +103,15 @@ public interface TousetimelineFactory extends EFactory {
 	FunctionEarliestOutput createFunctionEarliestOutput();
 
 	/**
+	 * Returns a new object of class '<em>Concrete Object With Time Line</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Concrete Object With Time Line</em>'.
+	 * @generated
+	 */
+	ConcreteObjectWithTimeLine createConcreteObjectWithTimeLine();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

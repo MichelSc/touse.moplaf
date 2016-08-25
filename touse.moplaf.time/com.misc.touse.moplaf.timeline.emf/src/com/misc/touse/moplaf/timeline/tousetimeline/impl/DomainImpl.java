@@ -7,9 +7,9 @@ import com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapter;
 import com.misc.common.moplaf.propagator.PropagatorFunctionAdapter;
 import com.misc.common.moplaf.propagator.PropagatorPackage;
 import com.misc.common.moplaf.propagator.Util;
-import com.misc.common.moplaf.time.discrete.ObjectWithTimeLine;
 import com.misc.common.moplaf.time.discrete.TimeLine;
 import com.misc.common.moplaf.time.discrete.TimeLineMerge;
+import com.misc.touse.moplaf.timeline.tousetimeline.ConcreteObjectWithTimeLine;
 import com.misc.touse.moplaf.timeline.tousetimeline.Domain;
 import com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution;
 import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage;
@@ -103,7 +103,7 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ObjectWithTimeLine> objectsWithTimeLine;
+	protected EList<ConcreteObjectWithTimeLine> objectsWithTimeLine;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -186,9 +186,9 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ObjectWithTimeLine> getObjectsWithTimeLine() {
+	public EList<ConcreteObjectWithTimeLine> getObjectsWithTimeLine() {
 		if (objectsWithTimeLine == null) {
-			objectsWithTimeLine = new EObjectContainmentEList<ObjectWithTimeLine>(ObjectWithTimeLine.class, this, TousetimelinePackage.DOMAIN__OBJECTS_WITH_TIME_LINE);
+			objectsWithTimeLine = new EObjectContainmentEList<ConcreteObjectWithTimeLine>(ConcreteObjectWithTimeLine.class, this, TousetimelinePackage.DOMAIN__OBJECTS_WITH_TIME_LINE);
 		}
 		return objectsWithTimeLine;
 	}
@@ -288,7 +288,7 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 				return;
 			case TousetimelinePackage.DOMAIN__OBJECTS_WITH_TIME_LINE:
 				getObjectsWithTimeLine().clear();
-				getObjectsWithTimeLine().addAll((Collection<? extends ObjectWithTimeLine>)newValue);
+				getObjectsWithTimeLine().addAll((Collection<? extends ConcreteObjectWithTimeLine>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

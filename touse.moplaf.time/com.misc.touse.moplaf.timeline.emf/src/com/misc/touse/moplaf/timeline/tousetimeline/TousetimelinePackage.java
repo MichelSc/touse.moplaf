@@ -4,6 +4,7 @@ package com.misc.touse.moplaf.timeline.tousetimeline;
 
 import com.misc.common.moplaf.propagator.PropagatorPackage;
 import com.misc.common.moplaf.time.continuous.ContinuousPackage;
+import com.misc.common.moplaf.time.discrete.DiscretePackage;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
@@ -1141,6 +1142,124 @@ public interface TousetimelinePackage extends EPackage {
 	int FUNCTION_EARLIEST_OUTPUT_OPERATION_COUNT = FUNCTION_POSSIBLE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.ConcreteObjectWithTimeLineImpl <em>Concrete Object With Time Line</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.ConcreteObjectWithTimeLineImpl
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.TousetimelinePackageImpl#getConcreteObjectWithTimeLine()
+	 * @generated
+	 */
+	int CONCRETE_OBJECT_WITH_TIME_LINE = 9;
+
+	/**
+	 * The feature id for the '<em><b>Time Line</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCRETE_OBJECT_WITH_TIME_LINE__TIME_LINE = DiscretePackage.OBJECT_WITH_TIME_LINE__TIME_LINE;
+
+	/**
+	 * The feature id for the '<em><b>Buckets</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCRETE_OBJECT_WITH_TIME_LINE__BUCKETS = DiscretePackage.OBJECT_WITH_TIME_LINE__BUCKETS;
+
+	/**
+	 * The feature id for the '<em><b>Last Bucket</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCRETE_OBJECT_WITH_TIME_LINE__LAST_BUCKET = DiscretePackage.OBJECT_WITH_TIME_LINE__LAST_BUCKET;
+
+	/**
+	 * The feature id for the '<em><b>First Bucket</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCRETE_OBJECT_WITH_TIME_LINE__FIRST_BUCKET = DiscretePackage.OBJECT_WITH_TIME_LINE__FIRST_BUCKET;
+
+	/**
+	 * The feature id for the '<em><b>Start Bucket</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCRETE_OBJECT_WITH_TIME_LINE__START_BUCKET = DiscretePackage.OBJECT_WITH_TIME_LINE__START_BUCKET;
+
+	/**
+	 * The feature id for the '<em><b>End Bucket</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCRETE_OBJECT_WITH_TIME_LINE__END_BUCKET = DiscretePackage.OBJECT_WITH_TIME_LINE__END_BUCKET;
+
+	/**
+	 * The feature id for the '<em><b>Concrete Buckets</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCRETE_OBJECT_WITH_TIME_LINE__CONCRETE_BUCKETS = DiscretePackage.OBJECT_WITH_TIME_LINE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Concrete Object With Time Line</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCRETE_OBJECT_WITH_TIME_LINE_FEATURE_COUNT = DiscretePackage.OBJECT_WITH_TIME_LINE_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Get Bucket</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCRETE_OBJECT_WITH_TIME_LINE___GET_BUCKET__TIMEBUCKET = DiscretePackage.OBJECT_WITH_TIME_LINE___GET_BUCKET__TIMEBUCKET;
+
+	/**
+	 * The operation id for the '<em>Construct Object Time Bucket</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCRETE_OBJECT_WITH_TIME_LINE___CONSTRUCT_OBJECT_TIME_BUCKET = DiscretePackage.OBJECT_WITH_TIME_LINE___CONSTRUCT_OBJECT_TIME_BUCKET;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCRETE_OBJECT_WITH_TIME_LINE___REFRESH = DiscretePackage.OBJECT_WITH_TIME_LINE___REFRESH;
+
+	/**
+	 * The number of operations of the '<em>Concrete Object With Time Line</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCRETE_OBJECT_WITH_TIME_LINE_OPERATION_COUNT = DiscretePackage.OBJECT_WITH_TIME_LINE_OPERATION_COUNT + 0;
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.timeline.tousetimeline.Domain <em>Domain</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1482,6 +1601,27 @@ public interface TousetimelinePackage extends EPackage {
 	EAttribute getFunctionEarliestOutput_EarliestOutput();
 
 	/**
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.timeline.tousetimeline.ConcreteObjectWithTimeLine <em>Concrete Object With Time Line</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Concrete Object With Time Line</em>'.
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.ConcreteObjectWithTimeLine
+	 * @generated
+	 */
+	EClass getConcreteObjectWithTimeLine();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.timeline.tousetimeline.ConcreteObjectWithTimeLine#getConcreteBuckets <em>Concrete Buckets</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Concrete Buckets</em>'.
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.ConcreteObjectWithTimeLine#getConcreteBuckets()
+	 * @see #getConcreteObjectWithTimeLine()
+	 * @generated
+	 */
+	EReference getConcreteObjectWithTimeLine_ConcreteBuckets();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1777,6 +1917,24 @@ public interface TousetimelinePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute FUNCTION_EARLIEST_OUTPUT__EARLIEST_OUTPUT = eINSTANCE.getFunctionEarliestOutput_EarliestOutput();
+
+		/**
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.ConcreteObjectWithTimeLineImpl <em>Concrete Object With Time Line</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.ConcreteObjectWithTimeLineImpl
+		 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.TousetimelinePackageImpl#getConcreteObjectWithTimeLine()
+		 * @generated
+		 */
+		EClass CONCRETE_OBJECT_WITH_TIME_LINE = eINSTANCE.getConcreteObjectWithTimeLine();
+
+		/**
+		 * The meta object literal for the '<em><b>Concrete Buckets</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONCRETE_OBJECT_WITH_TIME_LINE__CONCRETE_BUCKETS = eINSTANCE.getConcreteObjectWithTimeLine_ConcreteBuckets();
 
 	}
 

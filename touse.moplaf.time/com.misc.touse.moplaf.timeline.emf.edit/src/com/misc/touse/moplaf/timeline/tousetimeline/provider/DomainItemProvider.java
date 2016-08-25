@@ -203,7 +203,7 @@ public class DomainItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TousetimelinePackage.Literals.DOMAIN__OBJECTS_WITH_TIME_LINE,
-				 DiscreteFactory.eINSTANCE.createObjectWithTimeLine()));
+				 TousetimelineFactory.eINSTANCE.createConcreteObjectWithTimeLine()));
 	}
 
 	/**

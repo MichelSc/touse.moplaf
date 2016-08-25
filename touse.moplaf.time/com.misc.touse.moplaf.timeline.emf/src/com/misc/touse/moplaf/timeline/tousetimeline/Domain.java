@@ -4,7 +4,6 @@ package com.misc.touse.moplaf.timeline.tousetimeline;
 
 import com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapter;
 import com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapterScope;
-import com.misc.common.moplaf.time.discrete.ObjectWithTimeLine;
 import com.misc.common.moplaf.time.discrete.TimeLine;
 import com.misc.common.moplaf.time.discrete.TimeLineMerge;
 import org.eclipse.emf.common.util.EList;
@@ -106,7 +105,7 @@ public interface Domain extends ObjectWithPropagatorFunctionAdapterScope, Object
 
 	/**
 	 * Returns the value of the '<em><b>Objects With Time Line</b></em>' containment reference list.
-	 * The list contents are of type {@link com.misc.common.moplaf.time.discrete.ObjectWithTimeLine}.
+	 * The list contents are of type {@link com.misc.touse.moplaf.timeline.tousetimeline.ConcreteObjectWithTimeLine}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Objects With Time Line</em>' containment reference list isn't clear,
@@ -118,6 +117,6 @@ public interface Domain extends ObjectWithPropagatorFunctionAdapterScope, Object
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<ObjectWithTimeLine> getObjectsWithTimeLine();
+	EList<ConcreteObjectWithTimeLine> getObjectsWithTimeLine();
 
 } // Domain
