@@ -5,6 +5,7 @@ package com.misc.touse.moplaf.timeline.tousetimeline.util;
 import com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapter;
 import com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapterScope;
 import com.misc.common.moplaf.time.continuous.Distribution;
+import com.misc.common.moplaf.time.discrete.ObjectTimeBucket;
 import com.misc.common.moplaf.time.discrete.ObjectWithTimeLine;
 import com.misc.touse.moplaf.timeline.tousetimeline.*;
 
@@ -143,7 +144,22 @@ public class TousetimelineSwitch<T> extends Switch<T> {
 			case TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE: {
 				ConcreteObjectWithTimeLine concreteObjectWithTimeLine = (ConcreteObjectWithTimeLine)theEObject;
 				T result = caseConcreteObjectWithTimeLine(concreteObjectWithTimeLine);
+				if (result == null) result = caseSomeBaseClass(concreteObjectWithTimeLine);
 				if (result == null) result = caseObjectWithTimeLine(concreteObjectWithTimeLine);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case TousetimelinePackage.SOME_BASE_CLASS: {
+				SomeBaseClass someBaseClass = (SomeBaseClass)theEObject;
+				T result = caseSomeBaseClass(someBaseClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case TousetimelinePackage.CONCRETE_OBJECT_TIME_BUCKET: {
+				ConcreteObjectTimeBucket concreteObjectTimeBucket = (ConcreteObjectTimeBucket)theEObject;
+				T result = caseConcreteObjectTimeBucket(concreteObjectTimeBucket);
+				if (result == null) result = caseSomeBaseClass(concreteObjectTimeBucket);
+				if (result == null) result = caseObjectTimeBucket(concreteObjectTimeBucket);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -302,6 +318,36 @@ public class TousetimelineSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Some Base Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Some Base Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSomeBaseClass(SomeBaseClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Concrete Object Time Bucket</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Concrete Object Time Bucket</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseConcreteObjectTimeBucket(ConcreteObjectTimeBucket object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Object With Propagator Function Adapter Scope</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -358,6 +404,21 @@ public class TousetimelineSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseObjectWithTimeLine(ObjectWithTimeLine object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Object Time Bucket</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Object Time Bucket</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseObjectTimeBucket(ObjectTimeBucket object) {
 		return null;
 	}
 

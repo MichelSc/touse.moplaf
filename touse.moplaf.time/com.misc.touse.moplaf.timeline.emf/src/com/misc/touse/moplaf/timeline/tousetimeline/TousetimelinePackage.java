@@ -4,7 +4,6 @@ package com.misc.touse.moplaf.timeline.tousetimeline;
 
 import com.misc.common.moplaf.propagator.PropagatorPackage;
 import com.misc.common.moplaf.time.continuous.ContinuousPackage;
-import com.misc.common.moplaf.time.discrete.DiscretePackage;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
@@ -1142,6 +1141,52 @@ public interface TousetimelinePackage extends EPackage {
 	int FUNCTION_EARLIEST_OUTPUT_OPERATION_COUNT = FUNCTION_POSSIBLE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.SomeBaseClassImpl <em>Some Base Class</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.SomeBaseClassImpl
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.TousetimelinePackageImpl#getSomeBaseClass()
+	 * @generated
+	 */
+	int SOME_BASE_CLASS = 10;
+
+	/**
+	 * The feature id for the '<em><b>Some Attribute</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOME_BASE_CLASS__SOME_ATTRIBUTE = 0;
+
+	/**
+	 * The number of structural features of the '<em>Some Base Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOME_BASE_CLASS_FEATURE_COUNT = 1;
+
+	/**
+	 * The operation id for the '<em>Some Operation</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOME_BASE_CLASS___SOME_OPERATION = 0;
+
+	/**
+	 * The number of operations of the '<em>Some Base Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOME_BASE_CLASS_OPERATION_COUNT = 1;
+
+	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.ConcreteObjectWithTimeLineImpl <em>Concrete Object With Time Line</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1152,22 +1197,22 @@ public interface TousetimelinePackage extends EPackage {
 	int CONCRETE_OBJECT_WITH_TIME_LINE = 9;
 
 	/**
-	 * The feature id for the '<em><b>Time Line</b></em>' reference.
+	 * The feature id for the '<em><b>Some Attribute</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONCRETE_OBJECT_WITH_TIME_LINE__TIME_LINE = DiscretePackage.OBJECT_WITH_TIME_LINE__TIME_LINE;
+	int CONCRETE_OBJECT_WITH_TIME_LINE__SOME_ATTRIBUTE = SOME_BASE_CLASS__SOME_ATTRIBUTE;
 
 	/**
-	 * The feature id for the '<em><b>Buckets</b></em>' reference list.
+	 * The feature id for the '<em><b>Buckets</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONCRETE_OBJECT_WITH_TIME_LINE__BUCKETS = DiscretePackage.OBJECT_WITH_TIME_LINE__BUCKETS;
+	int CONCRETE_OBJECT_WITH_TIME_LINE__BUCKETS = SOME_BASE_CLASS_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Last Bucket</b></em>' reference.
@@ -1176,7 +1221,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONCRETE_OBJECT_WITH_TIME_LINE__LAST_BUCKET = DiscretePackage.OBJECT_WITH_TIME_LINE__LAST_BUCKET;
+	int CONCRETE_OBJECT_WITH_TIME_LINE__LAST_BUCKET = SOME_BASE_CLASS_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>First Bucket</b></em>' reference.
@@ -1185,7 +1230,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONCRETE_OBJECT_WITH_TIME_LINE__FIRST_BUCKET = DiscretePackage.OBJECT_WITH_TIME_LINE__FIRST_BUCKET;
+	int CONCRETE_OBJECT_WITH_TIME_LINE__FIRST_BUCKET = SOME_BASE_CLASS_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Start Bucket</b></em>' reference.
@@ -1194,7 +1239,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONCRETE_OBJECT_WITH_TIME_LINE__START_BUCKET = DiscretePackage.OBJECT_WITH_TIME_LINE__START_BUCKET;
+	int CONCRETE_OBJECT_WITH_TIME_LINE__START_BUCKET = SOME_BASE_CLASS_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>End Bucket</b></em>' reference.
@@ -1203,16 +1248,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONCRETE_OBJECT_WITH_TIME_LINE__END_BUCKET = DiscretePackage.OBJECT_WITH_TIME_LINE__END_BUCKET;
-
-	/**
-	 * The feature id for the '<em><b>Concrete Buckets</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONCRETE_OBJECT_WITH_TIME_LINE__CONCRETE_BUCKETS = DiscretePackage.OBJECT_WITH_TIME_LINE_FEATURE_COUNT + 0;
+	int CONCRETE_OBJECT_WITH_TIME_LINE__END_BUCKET = SOME_BASE_CLASS_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Concrete Object With Time Line</em>' class.
@@ -1221,7 +1257,16 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONCRETE_OBJECT_WITH_TIME_LINE_FEATURE_COUNT = DiscretePackage.OBJECT_WITH_TIME_LINE_FEATURE_COUNT + 1;
+	int CONCRETE_OBJECT_WITH_TIME_LINE_FEATURE_COUNT = SOME_BASE_CLASS_FEATURE_COUNT + 5;
+
+	/**
+	 * The operation id for the '<em>Some Operation</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCRETE_OBJECT_WITH_TIME_LINE___SOME_OPERATION = SOME_BASE_CLASS___SOME_OPERATION;
 
 	/**
 	 * The operation id for the '<em>Get Bucket</em>' operation.
@@ -1230,7 +1275,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONCRETE_OBJECT_WITH_TIME_LINE___GET_BUCKET__TIMEBUCKET = DiscretePackage.OBJECT_WITH_TIME_LINE___GET_BUCKET__TIMEBUCKET;
+	int CONCRETE_OBJECT_WITH_TIME_LINE___GET_BUCKET__TIMEBUCKET = SOME_BASE_CLASS_OPERATION_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Construct Object Time Bucket</em>' operation.
@@ -1239,7 +1284,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONCRETE_OBJECT_WITH_TIME_LINE___CONSTRUCT_OBJECT_TIME_BUCKET = DiscretePackage.OBJECT_WITH_TIME_LINE___CONSTRUCT_OBJECT_TIME_BUCKET;
+	int CONCRETE_OBJECT_WITH_TIME_LINE___CONSTRUCT_OBJECT_TIME_BUCKET = SOME_BASE_CLASS_OPERATION_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -1248,7 +1293,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONCRETE_OBJECT_WITH_TIME_LINE___REFRESH = DiscretePackage.OBJECT_WITH_TIME_LINE___REFRESH;
+	int CONCRETE_OBJECT_WITH_TIME_LINE___REFRESH = SOME_BASE_CLASS_OPERATION_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Concrete Object With Time Line</em>' class.
@@ -1257,7 +1302,89 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONCRETE_OBJECT_WITH_TIME_LINE_OPERATION_COUNT = DiscretePackage.OBJECT_WITH_TIME_LINE_OPERATION_COUNT + 0;
+	int CONCRETE_OBJECT_WITH_TIME_LINE_OPERATION_COUNT = SOME_BASE_CLASS_OPERATION_COUNT + 3;
+
+	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.ConcreteObjectTimeBucketImpl <em>Concrete Object Time Bucket</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.ConcreteObjectTimeBucketImpl
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.TousetimelinePackageImpl#getConcreteObjectTimeBucket()
+	 * @generated
+	 */
+	int CONCRETE_OBJECT_TIME_BUCKET = 11;
+
+	/**
+	 * The feature id for the '<em><b>Some Attribute</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCRETE_OBJECT_TIME_BUCKET__SOME_ATTRIBUTE = SOME_BASE_CLASS__SOME_ATTRIBUTE;
+
+	/**
+	 * The feature id for the '<em><b>Bucket</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCRETE_OBJECT_TIME_BUCKET__BUCKET = SOME_BASE_CLASS_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Next</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCRETE_OBJECT_TIME_BUCKET__NEXT = SOME_BASE_CLASS_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Previous</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCRETE_OBJECT_TIME_BUCKET__PREVIOUS = SOME_BASE_CLASS_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Concrete Object Time Bucket</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCRETE_OBJECT_TIME_BUCKET_FEATURE_COUNT = SOME_BASE_CLASS_FEATURE_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Some Operation</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCRETE_OBJECT_TIME_BUCKET___SOME_OPERATION = SOME_BASE_CLASS___SOME_OPERATION;
+
+	/**
+	 * The operation id for the '<em>Dispose</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCRETE_OBJECT_TIME_BUCKET___DISPOSE = SOME_BASE_CLASS_OPERATION_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Concrete Object Time Bucket</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCRETE_OBJECT_TIME_BUCKET_OPERATION_COUNT = SOME_BASE_CLASS_OPERATION_COUNT + 1;
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.timeline.tousetimeline.Domain <em>Domain</em>}'.
@@ -1611,15 +1738,45 @@ public interface TousetimelinePackage extends EPackage {
 	EClass getConcreteObjectWithTimeLine();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.timeline.tousetimeline.ConcreteObjectWithTimeLine#getConcreteBuckets <em>Concrete Buckets</em>}'.
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.timeline.tousetimeline.SomeBaseClass <em>Some Base Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Concrete Buckets</em>'.
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.ConcreteObjectWithTimeLine#getConcreteBuckets()
-	 * @see #getConcreteObjectWithTimeLine()
+	 * @return the meta object for class '<em>Some Base Class</em>'.
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.SomeBaseClass
 	 * @generated
 	 */
-	EReference getConcreteObjectWithTimeLine_ConcreteBuckets();
+	EClass getSomeBaseClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.timeline.tousetimeline.SomeBaseClass#getSomeAttribute <em>Some Attribute</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Some Attribute</em>'.
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.SomeBaseClass#getSomeAttribute()
+	 * @see #getSomeBaseClass()
+	 * @generated
+	 */
+	EAttribute getSomeBaseClass_SomeAttribute();
+
+	/**
+	 * Returns the meta object for the '{@link com.misc.touse.moplaf.timeline.tousetimeline.SomeBaseClass#someOperation() <em>Some Operation</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Some Operation</em>' operation.
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.SomeBaseClass#someOperation()
+	 * @generated
+	 */
+	EOperation getSomeBaseClass__SomeOperation();
+
+	/**
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.timeline.tousetimeline.ConcreteObjectTimeBucket <em>Concrete Object Time Bucket</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Concrete Object Time Bucket</em>'.
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.ConcreteObjectTimeBucket
+	 * @generated
+	 */
+	EClass getConcreteObjectTimeBucket();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1929,12 +2086,40 @@ public interface TousetimelinePackage extends EPackage {
 		EClass CONCRETE_OBJECT_WITH_TIME_LINE = eINSTANCE.getConcreteObjectWithTimeLine();
 
 		/**
-		 * The meta object literal for the '<em><b>Concrete Buckets</b></em>' containment reference list feature.
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.SomeBaseClassImpl <em>Some Base Class</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.SomeBaseClassImpl
+		 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.TousetimelinePackageImpl#getSomeBaseClass()
+		 * @generated
+		 */
+		EClass SOME_BASE_CLASS = eINSTANCE.getSomeBaseClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Some Attribute</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONCRETE_OBJECT_WITH_TIME_LINE__CONCRETE_BUCKETS = eINSTANCE.getConcreteObjectWithTimeLine_ConcreteBuckets();
+		EAttribute SOME_BASE_CLASS__SOME_ATTRIBUTE = eINSTANCE.getSomeBaseClass_SomeAttribute();
+
+		/**
+		 * The meta object literal for the '<em><b>Some Operation</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation SOME_BASE_CLASS___SOME_OPERATION = eINSTANCE.getSomeBaseClass__SomeOperation();
+
+		/**
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.ConcreteObjectTimeBucketImpl <em>Concrete Object Time Bucket</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.ConcreteObjectTimeBucketImpl
+		 * @see com.misc.touse.moplaf.timeline.tousetimeline.impl.TousetimelinePackageImpl#getConcreteObjectTimeBucket()
+		 * @generated
+		 */
+		EClass CONCRETE_OBJECT_TIME_BUCKET = eINSTANCE.getConcreteObjectTimeBucket();
 
 	}
 

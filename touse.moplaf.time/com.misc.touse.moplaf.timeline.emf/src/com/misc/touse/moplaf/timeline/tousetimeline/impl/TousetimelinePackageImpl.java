@@ -7,6 +7,7 @@ import com.misc.common.moplaf.propagator.PropagatorPackage;
 import com.misc.common.moplaf.time.continuous.ContinuousPackage;
 
 import com.misc.common.moplaf.time.discrete.DiscretePackage;
+import com.misc.touse.moplaf.timeline.tousetimeline.ConcreteObjectTimeBucket;
 import com.misc.touse.moplaf.timeline.tousetimeline.ConcreteObjectWithTimeLine;
 import com.misc.touse.moplaf.timeline.tousetimeline.Domain;
 import com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution;
@@ -17,6 +18,7 @@ import com.misc.touse.moplaf.timeline.tousetimeline.FunctionEarliestOutput;
 import com.misc.touse.moplaf.timeline.tousetimeline.FunctionInterval;
 import com.misc.touse.moplaf.timeline.tousetimeline.FunctionMinimum;
 import com.misc.touse.moplaf.timeline.tousetimeline.FunctionPossible;
+import com.misc.touse.moplaf.timeline.tousetimeline.SomeBaseClass;
 import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelineFactory;
 import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage;
 
@@ -104,6 +106,20 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 	 * @generated
 	 */
 	private EClass concreteObjectWithTimeLineEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass someBaseClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass concreteObjectTimeBucketEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -472,8 +488,35 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getConcreteObjectWithTimeLine_ConcreteBuckets() {
-		return (EReference)concreteObjectWithTimeLineEClass.getEStructuralFeatures().get(0);
+	public EClass getSomeBaseClass() {
+		return someBaseClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSomeBaseClass_SomeAttribute() {
+		return (EAttribute)someBaseClassEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSomeBaseClass__SomeOperation() {
+		return someBaseClassEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getConcreteObjectTimeBucket() {
+		return concreteObjectTimeBucketEClass;
 	}
 
 	/**
@@ -546,7 +589,12 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 		createEAttribute(functionEarliestOutputEClass, FUNCTION_EARLIEST_OUTPUT__EARLIEST_OUTPUT);
 
 		concreteObjectWithTimeLineEClass = createEClass(CONCRETE_OBJECT_WITH_TIME_LINE);
-		createEReference(concreteObjectWithTimeLineEClass, CONCRETE_OBJECT_WITH_TIME_LINE__CONCRETE_BUCKETS);
+
+		someBaseClassEClass = createEClass(SOME_BASE_CLASS);
+		createEAttribute(someBaseClassEClass, SOME_BASE_CLASS__SOME_ATTRIBUTE);
+		createEOperation(someBaseClassEClass, SOME_BASE_CLASS___SOME_OPERATION);
+
+		concreteObjectTimeBucketEClass = createEClass(CONCRETE_OBJECT_TIME_BUCKET);
 	}
 
 	/**
@@ -592,7 +640,10 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 		functionPossibleEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctionAdapter());
 		functionEarliestBelowEClass.getESuperTypes().add(this.getFunctionPossible());
 		functionEarliestOutputEClass.getESuperTypes().add(this.getFunctionPossible());
+		concreteObjectWithTimeLineEClass.getESuperTypes().add(this.getSomeBaseClass());
 		concreteObjectWithTimeLineEClass.getESuperTypes().add(theDiscretePackage.getObjectWithTimeLine());
+		concreteObjectTimeBucketEClass.getESuperTypes().add(this.getSomeBaseClass());
+		concreteObjectTimeBucketEClass.getESuperTypes().add(theDiscretePackage.getObjectTimeBucket());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -639,10 +690,36 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 		initEAttribute(getFunctionEarliestOutput_EarliestOutput(), ecorePackage.getEDate(), "earliestOutput", null, 0, 1, FunctionEarliestOutput.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(concreteObjectWithTimeLineEClass, ConcreteObjectWithTimeLine.class, "ConcreteObjectWithTimeLine", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getConcreteObjectWithTimeLine_ConcreteBuckets(), theDiscretePackage.getObjectTimeBucket(), null, "ConcreteBuckets", null, 0, -1, ConcreteObjectWithTimeLine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(someBaseClassEClass, SomeBaseClass.class, "SomeBaseClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getSomeBaseClass_SomeAttribute(), ecorePackage.getEString(), "someAttribute", null, 0, 1, SomeBaseClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getSomeBaseClass__SomeOperation(), null, "someOperation", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(concreteObjectTimeBucketEClass, ConcreteObjectTimeBucket.class, "ConcreteObjectTimeBucket", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);
+
+		// Create annotations
+		// http:///org/eclipse/emf/ecore/util/ExtendedMetaData
+		createExtendedMetaDataAnnotations();
+	}
+
+	/**
+	 * Initializes the annotations for <b>http:///org/eclipse/emf/ecore/util/ExtendedMetaData</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createExtendedMetaDataAnnotations() {
+		String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData";	
+		addAnnotation
+		  (concreteObjectTimeBucketEClass, 
+		   source, 
+		   new String[] {
+			 "name", "ConcreteObjectWithTimeLine"
+		   });
 	}
 
 } //TousetimelinePackageImpl

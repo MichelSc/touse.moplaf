@@ -3,17 +3,21 @@
 package com.misc.touse.moplaf.timeline.tousetimeline.provider;
 
 
-import com.misc.common.moplaf.time.discrete.provider.ObjectWithTimeLineItemProvider;
+import com.misc.common.moplaf.emf.edit.command.RefreshCommand;
+import com.misc.common.moplaf.time.discrete.DiscretePackage;
+import com.misc.common.moplaf.time.discrete.ObjectWithTimeLine;
 import com.misc.touse.moplaf.timeline.tousetimeline.ConcreteObjectWithTimeLine;
 import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage;
-
 import java.util.Collection;
 import java.util.List;
 
+import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.edit.command.CommandParameter;
+import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -24,7 +28,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * @generated
  */
 public class ConcreteObjectWithTimeLineItemProvider 
-	extends ObjectWithTimeLineItemProvider {
+	extends SomeBaseClassItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -46,8 +50,153 @@ public class ConcreteObjectWithTimeLineItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addBucketsPropertyDescriptor(object);
+			addLastBucketPropertyDescriptor(object);
+			addFirstBucketPropertyDescriptor(object);
+			addStartBucketPropertyDescriptor(object);
+			addEndBucketPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Buckets feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addBucketsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ObjectWithTimeLine_Buckets_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ObjectWithTimeLine_Buckets_feature", "_UI_ObjectWithTimeLine_type"),
+				 DiscretePackage.Literals.OBJECT_WITH_TIME_LINE__BUCKETS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Last Bucket feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLastBucketPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ObjectWithTimeLine_LastBucket_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ObjectWithTimeLine_LastBucket_feature", "_UI_ObjectWithTimeLine_type"),
+				 DiscretePackage.Literals.OBJECT_WITH_TIME_LINE__LAST_BUCKET,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the First Bucket feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addFirstBucketPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ObjectWithTimeLine_FirstBucket_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ObjectWithTimeLine_FirstBucket_feature", "_UI_ObjectWithTimeLine_type"),
+				 DiscretePackage.Literals.OBJECT_WITH_TIME_LINE__FIRST_BUCKET,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Start Bucket feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addStartBucketPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ObjectWithTimeLine_StartBucket_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ObjectWithTimeLine_StartBucket_feature", "_UI_ObjectWithTimeLine_type"),
+				 DiscretePackage.Literals.OBJECT_WITH_TIME_LINE__START_BUCKET,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the End Bucket feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addEndBucketPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ObjectWithTimeLine_EndBucket_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ObjectWithTimeLine_EndBucket_feature", "_UI_ObjectWithTimeLine_type"),
+				 DiscretePackage.Literals.OBJECT_WITH_TIME_LINE__END_BUCKET,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
+		if (childrenFeatures == null) {
+			super.getChildrenFeatures(object);
+			childrenFeatures.add(DiscretePackage.Literals.OBJECT_WITH_TIME_LINE__BUCKETS);
+		}
+		return childrenFeatures;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EStructuralFeature getChildFeature(Object object, Object child) {
+		// Check the type of the specified child object and return the proper feature to use for
+		// adding (see {@link AddCommand}) it as a child.
+
+		return super.getChildFeature(object, child);
 	}
 
 	/**
@@ -69,7 +218,10 @@ public class ConcreteObjectWithTimeLineItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_ConcreteObjectWithTimeLine_type");
+		String label = ((ConcreteObjectWithTimeLine)object).getSomeAttribute();
+		return label == null || label.length() == 0 ?
+			getString("_UI_ConcreteObjectWithTimeLine_type") :
+			getString("_UI_ConcreteObjectWithTimeLine_type") + " " + label;
 	}
 	
 
@@ -85,8 +237,8 @@ public class ConcreteObjectWithTimeLineItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ConcreteObjectWithTimeLine.class)) {
-			case TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__CONCRETE_BUCKETS:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+			case TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__BUCKETS:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
 		super.notifyChanged(notification);
@@ -105,14 +257,34 @@ public class ConcreteObjectWithTimeLineItemProvider
 	}
 
 	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * Command class Refresh
+	 */
+	public class ObjectWithTimeLineRefreshCommand extends RefreshCommand {
+		private ObjectWithTimeLine objetWithTimeLine;
+		
+		// constructor
+		public ObjectWithTimeLineRefreshCommand(ObjectWithTimeLine object)	{
+			super();
+			this.objetWithTimeLine= object;
+		}
+
+		@Override
+		public void execute() {
+			this.objetWithTimeLine.refresh();
+		}
+	} // class RefreshCommand
+
+	/**
+	 * Specified by EditingDomainProvider.createCommande
 	 */
 	@Override
-	public ResourceLocator getResourceLocator() {
-		return ToUseTimeLineEditPlugin.INSTANCE;
-	}
+	public Command createCommand(Object object, EditingDomain domain,
+			Class<? extends Command> commandClass,
+			CommandParameter commandParameter) {
+		if ( commandClass == RefreshCommand.class){
+			return new ObjectWithTimeLineRefreshCommand((ObjectWithTimeLine) object); 
+		}
+		return super.createCommand(object, domain, commandClass, commandParameter);
+	} //method createCommand
 
 }

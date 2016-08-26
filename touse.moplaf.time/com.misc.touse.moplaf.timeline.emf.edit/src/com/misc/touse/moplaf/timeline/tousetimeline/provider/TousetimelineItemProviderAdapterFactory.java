@@ -300,6 +300,52 @@ public class TousetimelineItemProviderAdapterFactory extends TousetimelineAdapte
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.timeline.tousetimeline.SomeBaseClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SomeBaseClassItemProvider someBaseClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.timeline.tousetimeline.SomeBaseClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSomeBaseClassAdapter() {
+		if (someBaseClassItemProvider == null) {
+			someBaseClassItemProvider = new SomeBaseClassItemProvider(this);
+		}
+
+		return someBaseClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.timeline.tousetimeline.ConcreteObjectTimeBucket} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ConcreteObjectTimeBucketItemProvider concreteObjectTimeBucketItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.timeline.tousetimeline.ConcreteObjectTimeBucket}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createConcreteObjectTimeBucketAdapter() {
+		if (concreteObjectTimeBucketItemProvider == null) {
+			concreteObjectTimeBucketItemProvider = new ConcreteObjectTimeBucketItemProvider(this);
+		}
+
+		return concreteObjectTimeBucketItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

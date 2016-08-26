@@ -112,6 +112,24 @@ public interface TousetimelineFactory extends EFactory {
 	ConcreteObjectWithTimeLine createConcreteObjectWithTimeLine();
 
 	/**
+	 * Returns a new object of class '<em>Some Base Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Some Base Class</em>'.
+	 * @generated
+	 */
+	SomeBaseClass createSomeBaseClass();
+
+	/**
+	 * Returns a new object of class '<em>Concrete Object Time Bucket</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Concrete Object Time Bucket</em>'.
+	 * @generated
+	 */
+	ConcreteObjectTimeBucket createConcreteObjectTimeBucket();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

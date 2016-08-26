@@ -55,9 +55,14 @@
   <eClassifiers xsi:type="ecore:EClass" name="FunctionEarliestOutput" eSuperTypes="#//FunctionPossible">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="earliestOutput" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ConcreteObjectWithTimeLine" eSuperTypes="../../com.misc.common.moplaf.time.discrete.emf/model/timediscrete.ecore#//ObjectWithTimeLine">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ConcreteBuckets" upperBound="-1"
-        eType="ecore:EClass ../../com.misc.common.moplaf.time.discrete.emf/model/timediscrete.ecore#//ObjectTimeBucket"
-        containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ConcreteObjectWithTimeLine" eSuperTypes="#//SomeBaseClass ../../com.misc.common.moplaf.time.discrete.emf/model/timediscrete.ecore#//ObjectWithTimeLine"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SomeBaseClass">
+    <eOperations name="someOperation"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="someAttribute" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConcreteObjectTimeBucket" eSuperTypes="#//SomeBaseClass ../../com.misc.common.moplaf.time.discrete.emf/model/timediscrete.ecore#//ObjectTimeBucket">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="ConcreteObjectWithTimeLine"/>
+    </eAnnotations>
   </eClassifiers>
 </ecore:EPackage>
