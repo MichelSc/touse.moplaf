@@ -12,7 +12,8 @@ Export-Package: com.misc.touse.moplaf.timeline.tousetimeline,
  com.misc.touse.moplaf.timeline.tousetimeline.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- com.misc.common.moplaf.timeline.emf;visibility:=reexport,
- com.misc.common.moplaf.propagator;visibility:=reexport
+ com.misc.common.moplaf.propagator;visibility:=reexport,
+ com.misc.common.moplaf.time.continuous.emf;visibility:=reexport,
+ com.misc.common.moplaf.time.discrete.emf;visibility:=reexport
 Bundle-ActivationPolicy: lazy
 Import-Package: com.misc.common.moplaf.propagator

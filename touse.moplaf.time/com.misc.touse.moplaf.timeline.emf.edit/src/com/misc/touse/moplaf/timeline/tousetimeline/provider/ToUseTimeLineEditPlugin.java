@@ -3,8 +3,8 @@
 package com.misc.touse.moplaf.timeline.tousetimeline.provider;
 
 import com.misc.common.moplaf.propagator.provider.PropagatorEditPlugin;
-import com.misc.common.moplaf.time.continuous.provider.TimelineEditPlugin;
-
+import com.misc.common.moplaf.time.continuous.provider.TimeContinuousEditPlugin;
+import com.misc.common.moplaf.time.discrete.provider.TimeDiscreteEditPlugin;
 import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
@@ -41,8 +41,9 @@ public final class ToUseTimeLineEditPlugin extends EMFPlugin {
 	public ToUseTimeLineEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     TimelineEditPlugin.INSTANCE,
 		     PropagatorEditPlugin.INSTANCE,
+		     TimeContinuousEditPlugin.INSTANCE,
+		     TimeDiscreteEditPlugin.INSTANCE,
 		   });
 	}
 

@@ -4,18 +4,18 @@
     nsPrefix="ttm">
   <eClassifiers xsi:type="ecore:EClass" name="Domain" eSuperTypes="../../com.misc.common.moplaf.propagator/model/propagator.ecore#//ObjectWithPropagatorFunctionAdapterScope ../../com.misc.common.moplaf.propagator/model/propagator.ecore#//ObjectWithPropagatorFunctionAdapter">
     <eStructuralFeatures xsi:type="ecore:EReference" name="TimeLineMerges" upperBound="-1"
-        eType="ecore:EClass ../../com.misc.common.moplaf.timeline.emf/model/timeline.ecore#//discrete/TimeLineMerge"
+        eType="ecore:EClass ../../com.misc.common.moplaf.time.discrete.emf/model/timediscrete.ecore#//TimeLineMerge"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Distribution" upperBound="-1"
         eType="#//DomainDistribution" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Timelines" upperBound="-1"
-        eType="ecore:EClass ../../com.misc.common.moplaf.timeline.emf/model/timeline.ecore#//discrete/TimeLine"
+        eType="ecore:EClass ../../com.misc.common.moplaf.time.discrete.emf/model/timediscrete.ecore#//TimeLine"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ObjectsWithTimeLine" upperBound="-1"
         eType="#//ConcreteObjectWithTimeLine" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DomainDistribution" eSuperTypes="../../com.misc.common.moplaf.timeline.emf/model/timeline.ecore#//continuous/Distribution">
+  <eClassifiers xsi:type="ecore:EClass" name="DomainDistribution" eSuperTypes="../../com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//Distribution">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Color" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Functions" upperBound="-1"
@@ -55,9 +55,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="FunctionEarliestOutput" eSuperTypes="#//FunctionPossible">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="earliestOutput" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ConcreteObjectWithTimeLine" eSuperTypes="../../com.misc.common.moplaf.timeline.emf/model/timeline.ecore#//discrete/ObjectWithTimeLine">
+  <eClassifiers xsi:type="ecore:EClass" name="ConcreteObjectWithTimeLine" eSuperTypes="../../com.misc.common.moplaf.time.discrete.emf/model/timediscrete.ecore#//ObjectWithTimeLine">
     <eStructuralFeatures xsi:type="ecore:EReference" name="ConcreteBuckets" upperBound="-1"
-        eType="ecore:EClass ../../com.misc.common.moplaf.timeline.emf/model/timeline.ecore#//discrete/ObjectTimeBucket"
+        eType="ecore:EClass ../../com.misc.common.moplaf.time.discrete.emf/model/timediscrete.ecore#//ObjectTimeBucket"
         containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

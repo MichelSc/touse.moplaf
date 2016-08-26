@@ -3,13 +3,9 @@
 package com.misc.touse.moplaf.timeline.tousetimeline.provider;
 
 
-import com.misc.common.moplaf.emf.edit.Util;
-import com.misc.common.moplaf.time.continuous.provider.DistributionItemProvider;
-import com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution;
-import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelineFactory;
-import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage;
 import java.util.Collection;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
@@ -22,6 +18,12 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.RGB;
 import org.eclipse.swt.widgets.Display;
+
+import com.misc.common.moplaf.emf.edit.Util;
+import com.misc.common.moplaf.time.continuous.provider.DistributionItemProvider;
+import com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution;
+import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelineFactory;
+import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage;
 
 /**
  * This is the item provider adapter for a {@link com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution} object.

@@ -3,7 +3,7 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.misc.touse.moplaf.timeline.emf/src" modelPluginID="com.misc.touse.moplaf.timeline.emf"
     modelName="ToUseTimeLine" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0" copyrightFields="false"
-    usedGenPackages="../../com.misc.common.moplaf.timeline.emf/model/timeline.genmodel#//time ../../com.misc.common.moplaf.propagator/model/propagator.genmodel#//propagator"
+    usedGenPackages="../../com.misc.common.moplaf.propagator/model/propagator.genmodel#//propagator ../../com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.genmodel#//continuous ../../com.misc.common.moplaf.time.discrete.emf/model/timediscrete.genmodel#//discrete"
     operationReflection="true" importOrganizing="true">
   <foreignModel>ToUseTimeLine.ecore</foreignModel>
   <genPackages prefix="Tousetimeline" basePackage="com.misc.touse.moplaf.timeline"
