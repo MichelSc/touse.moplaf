@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="tousepropagator" version="11.0.0.201601261200">
+  <ownedViewpoints name="touse..propagator.viewpoint.projectandtasks" label="Project and Tasks" modelFileExtension="tousepropagator">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="touse..propagator.viewpoint.projectandtasks.diagram" label="Diagram for a Project" domainClass="Project" enablePopupBars="true">
+      <defaultLayer name="touse..propagator.viewpoint.projectandtasks.diagram.defaultlayer" label="Default layer">
+        <nodeMappings name="touse..propagator.viewpoint.projectandtasks.diagram.defaultlayer.nodetask" label="Node task" semanticCandidatesExpression="feature:Tasks" domainClass="Task"/>
+        <nodeMappings name="touse..propagator.viewpoint.projectandtasks.diagram.defaultlayer.noderesource" label="Node Resource for Diagram Project" semanticCandidatesExpression="feature:Resources" domainClass="Resource">
+          <style xsi:type="style:DotDescription" labelExpression="feature:ResourceName" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="touse..propagator.viewpoint.projectandtasks.diagram.defaultlayer.edgedependence" label="Edge Dependence for diagram Project" semanticCandidatesExpression="feature:Dependences" sourceMapping="//@ownedViewpoints[name='touse..propagator.viewpoint.projectandtasks']/@ownedRepresentations[name='touse..propagator.viewpoint.projectandtasks.diagram']/@defaultLayer/@containerMappings[name='touse..propagator.viewpoint.projectandtasks.diagram.defaultlayer.containertask']" targetMapping="//@ownedViewpoints[name='touse..propagator.viewpoint.projectandtasks']/@ownedRepresentations[name='touse..propagator.viewpoint.projectandtasks.diagram']/@defaultLayer/@containerMappings[name='touse..propagator.viewpoint.projectandtasks.diagram.defaultlayer.containertask']" targetFinderExpression="feature:TaskAfter" sourceFinderExpression="feature:TaskBefore" domainClass="Dependence" useDomainElement="true">
+          <style sizeComputationExpression="2" endsCentering="Both">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelExpression="aql:self.Hours">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="touse..propagator.viewpoint.projectandtasks.diagram.defaultlayer.edgeresourcecandidate" label="Edge ResourceCandidate for diagram Project" sourceMapping="//@ownedViewpoints[name='touse..propagator.viewpoint.projectandtasks']/@ownedRepresentations[name='touse..propagator.viewpoint.projectandtasks.diagram']/@defaultLayer/@nodeMappings[name='touse..propagator.viewpoint.projectandtasks.diagram.defaultlayer.noderesource']" targetMapping="//@ownedViewpoints[name='touse..propagator.viewpoint.projectandtasks']/@ownedRepresentations[name='touse..propagator.viewpoint.projectandtasks.diagram']/@defaultLayer/@containerMappings[name='touse..propagator.viewpoint.projectandtasks.diagram.defaultlayer.containertask']" targetFinderExpression="feature:Task" sourceFinderExpression="feature:Resource" domainClass="ResourceCandidate" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='purple']"/>
+            <centerLabelStyleDescription labelExpression="feature:Match">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="touse..propagator.viewpoint.projectandtasks.diagram.defaultlayer.containertask" label="Container Task for diagram Project" semanticCandidatesExpression="feature:Tasks" doubleClickDescription="//@ownedViewpoints[name='touse..propagator.viewpoint.projectandtasks']/@ownedRepresentations[name='touse..propagator.viewpoint.projectandtasks.diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='touse..propagator.viewpoint.projectandtasks.diagram.defaultlayer.doubleclick']" domainClass="Task" childrenPresentation="List">
+          <subNodeMappings name="touse..propagator.viewpoint.projectandtasks.diagram.defaultlayer.containeritem" label="Item in task" semanticCandidatesExpression="feature:Items" domainClass="TaskItem">
+            <style xsi:type="style:SquareDescription" labelExpression="feature:Description" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelExpression="feature:TaskName">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="touse..propagator.viewpoint.projectandtasks.diagram.defaultlayer.section">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="touse..propagator.viewpoint.projectandtasks.diagram.defaultlayer.createtask" label="Create a Task" nodeMappings="//@ownedViewpoints[name='touse..propagator.viewpoint.projectandtasks']/@ownedRepresentations[name='touse..propagator.viewpoint.projectandtasks.diagram']/@defaultLayer/@nodeMappings[name='touse..propagator.viewpoint.projectandtasks.diagram.defaultlayer.nodetask']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="Task" referenceName="Tasks"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="touse..propagator.viewpoint.projectandtasks.diagram.defaultlayer.createresource" label="Create a Resource" nodeMappings="//@ownedViewpoints[name='touse..propagator.viewpoint.projectandtasks']/@ownedRepresentations[name='touse..propagator.viewpoint.projectandtasks.diagram']/@defaultLayer/@nodeMappings[name='touse..propagator.viewpoint.projectandtasks.diagram.defaultlayer.noderesource']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="tousepropagator2.Resource" referenceName="Resources"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="touse..propagator.viewpoint.projectandtasks.diagram.defaultlayer.createedge" label="Create a Dependence" edgeMappings="//@ownedViewpoints[name='touse..propagator.viewpoint.projectandtasks']/@ownedRepresentations[name='touse..propagator.viewpoint.projectandtasks.diagram']/@defaultLayer/@edgeMappings[name='touse..propagator.viewpoint.projectandtasks.diagram.defaultlayer.edgedependence']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:source.Project">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="Dependence" referenceName="Dependences">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="TaskBefore" valueExpression="var:source"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="TaskAfter" valueExpression="var:target"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="touse..propagator.viewpoint.projectandtasks.diagram.defaultlayer.doubleclick" mappings="//@ownedViewpoints[name='touse..propagator.viewpoint.projectandtasks']/@ownedRepresentations[name='touse..propagator.viewpoint.projectandtasks.diagram']/@defaultLayer/@containerMappings[name='touse..propagator.viewpoint.projectandtasks.diagram.defaultlayer.containertask']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:element">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="TaskItem" referenceName="Items"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:PopupMenu" name="touse..propagator.viewpoint.projectandtasks.diagram.defaultlayer.popupmenu1" label="ToUsePropagator">
+            <menuItemDescription xsi:type="tool_1:OperationAction" name="touse..propagator.viewpoint.projectandtasks.diagram.defaultlayer.menurefresh" label="Refresh">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ExternalJavaAction" name="touse..propagator.viewpoint.projectandtasks.diagram.defaultlayer.actionrefresh" label="Action Refresh" id="com.misc.touse.moplaf.propagator.design.javaActionsRefresh"/>
+              </initialOperation>
+            </menuItemDescription>
+            <menuItemDescription xsi:type="tool_1:OperationAction" name="touse..propagator.viewpoint.projectandtasks.diagram.defaultlayer.menureset" label="Reset">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ExternalJavaAction" name="touse..propagator.viewpoint.projectandtasks.diagram.defaultlayer.actionreset" label="Action Reset" id="com.misc.touse.moplaf.propagator.design.javaActionsReset"/>
+              </initialOperation>
+            </menuItemDescription>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+  </ownedViewpoints>
+  <ownedViewpoints name="com.misc.touse.moplaf.propagator.design.bindings" label="Run time bindings" modelFileExtension="tousepropagator">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="touse.propagator.design.bindings.project" label="Bindings for project" initialisation="true" domainClass="Project" enablePopupBars="true">
+      <defaultLayer name="touse.propagator.design.bindings.project.layer">
+        <nodeMappings name="touse.propagator.design.bindings.project.functions" label="PropagatorFunction for Project Bindings" domainClass="ToUsePropagatorFunction">
+          <style xsi:type="style:DotDescription" labelExpression="feature:Description" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+          <conditionnalStyles predicateExpression="feature:Touched">
+            <style xsi:type="style:SquareDescription" labelExpression="feature:Description" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="feature:Calculated">
+            <style xsi:type="style:SquareDescription" labelExpression="feature:Description" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+            </style>
+          </conditionnalStyles>
+        </nodeMappings>
+        <edgeMappings name="touse.propagator.design.bindings.project.antecedents" label="Antecedents for Project Bindings" sourceMapping="//@ownedViewpoints[name='com.misc.touse.moplaf.propagator.design.bindings']/@ownedRepresentations[name='touse.propagator.design.bindings.project']/@defaultLayer/@nodeMappings[name='touse.propagator.design.bindings.project.functions']" targetMapping="//@ownedViewpoints[name='com.misc.touse.moplaf.propagator.design.bindings']/@ownedRepresentations[name='touse.propagator.design.bindings.project']/@defaultLayer/@nodeMappings[name='touse.propagator.design.bindings.project.functions']" targetFinderExpression="feature:Antecedents">
+          <style lineStyle="dash" sizeComputationExpression="2" endsCentering="Both">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="touse.propagator.design.bindings.project.parent" label="Parent for Project Bindings" sourceMapping="//@ownedViewpoints[name='com.misc.touse.moplaf.propagator.design.bindings']/@ownedRepresentations[name='touse.propagator.design.bindings.project']/@defaultLayer/@nodeMappings[name='touse.propagator.design.bindings.project.functions']" targetMapping="//@ownedViewpoints[name='com.misc.touse.moplaf.propagator.design.bindings']/@ownedRepresentations[name='touse.propagator.design.bindings.project']/@defaultLayer/@nodeMappings[name='touse.propagator.design.bindings.project.functions']" targetFinderExpression="feature:Parent">
+          <style sizeComputationExpression="2" endsCentering="Both">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="touse.propagator.design.bindings.project.section">
+          <ownedTools xsi:type="tool_1:PopupMenu" name="touse.propagator.design.bindings.project.section.popupmenu1" label="ToUsePropagator">
+            <menuItemDescription xsi:type="tool_1:OperationAction" name="touse.propagator.design.bindings.project.section.menurefresh" label="Refresh">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ExternalJavaAction" name="touse.propagator.design.bindings.project.section.actionrefresh" label="Action Refresh" id="com.misc.touse.moplaf.propagator.design.javaActionsRefresh"/>
+              </initialOperation>
+            </menuItemDescription>
+            <menuItemDescription xsi:type="tool_1:OperationAction" name="touse.propagator.design.bindings.project.section.menurefreshhours" label="Refresh Hours">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ExternalJavaAction" name="touse.propagator.design.bindings.project.section.actionrefreshhours" label="Action RefreshHours" id="com.misc.touse.moplaf.propagator.design.javaActionsRefreshHours"/>
+              </initialOperation>
+            </menuItemDescription>
+            <menuItemDescription xsi:type="tool_1:OperationAction" name="touse.propagator.design.bindings.project.section.menureset" label="Reset">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ExternalJavaAction" name="touse.propagator.design.bindings.project.section.actionreset" label="Action Reset" id="com.misc.touse.moplaf.propagator.design.javaActionsReset"/>
+              </initialOperation>
+            </menuItemDescription>
+            <menuItemDescription xsi:type="tool_1:OperationAction" name="touse.propagator.design.bindings.project.section.menutoggleautomatic" label="Toggle automatic">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:container">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="AutomaticRefresh" valueExpression="aql:not self.AutomaticRefresh"/>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+  </ownedViewpoints>
+</description:Group>

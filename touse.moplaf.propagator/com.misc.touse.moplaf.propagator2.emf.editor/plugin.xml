@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated ToUsePropagator -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="com.misc.touse.moplaf.tousepropagator2.presentation.ToUsePropagatorModelWizardID"
+            name="%_UI_ToUsePropagatorModelWizard_label"
+            class="com.misc.touse.moplaf.tousepropagator2.presentation.ToUsePropagatorModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ToUsePropagatorModelFile.gif">
+         <description>%_UI_ToUsePropagatorModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated ToUsePropagator -->
+      <editor
+            id="com.misc.touse.moplaf.tousepropagator2.presentation.ToUsePropagatorEditorID"
+            name="%_UI_ToUsePropagatorEditor_label"
+            icon="icons/full/obj16/ToUsePropagatorModelFile.gif"
+            extensions="tousepropagator"
+            class="com.misc.touse.moplaf.tousepropagator2.presentation.ToUsePropagatorEditor"
+            contributorClass="com.misc.touse.moplaf.tousepropagator2.presentation.ToUsePropagatorActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated ToUsePropagator -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="com.misc.touse.moplaf.tousepropagator2.calc.presentation.CalcModelWizardID"
+            name="%_UI_CalcModelWizard_label"
+            class="com.misc.touse.moplaf.tousepropagator2.calc.presentation.CalcModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/CalcModelFile.gif">
+         <description>%_UI_CalcModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated ToUsePropagator -->
+      <editor
+            id="com.misc.touse.moplaf.tousepropagator2.calc.presentation.CalcEditorID"
+            name="%_UI_CalcEditor_label"
+            icon="icons/full/obj16/CalcModelFile.gif"
+            extensions="calc"
+            class="com.misc.touse.moplaf.tousepropagator2.calc.presentation.CalcEditor"
+            contributorClass="com.misc.touse.moplaf.tousepropagator2.calc.presentation.CalcActionBarContributor">
+      </editor>
+   </extension>
+</plugin>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+  <extension point="org.eclipse.sirius.componentization">
+    <component class="com.misc.touse.moplaf.propagator2.design.Activator"
+               id="com.misc.touse.moplaf.propagator2.design"
+	       name="ToUsePropagatorDesign">
+    </component>
+  </extension>
+  <extension
+        id="com.misc.touse.moplaf.propagator.design.editing.domain.factory"
+        name="Editing Domain factory for ToUsePropagator Design"
+        point="org.eclipse.sirius.common.editingDomainFactory">
+     <editingDomainFactory
+           class="com.misc.touse.moplaf.propagator2.design.ToUsePropagatorEditingDomainFactory"
+           override="org.eclipse.sirius.LocalSessionEditingDomainFactory">
+     </editingDomainFactory>
+  </extension>
+  <extension
+        id="com.misc.touse.moplaf.propagator.design.resourceSet.factory"
+        point="org.eclipse.sirius.common.resourceSetFactory">
+     <factory
+           class="com.misc.touse.moplaf.propagator2.design.ToUsePropagatorResourceSetFactory">
+     </factory>
+  </extension>
+  <extension
+        id="com.misc.touse.moplaf.propagator.design.externalActions"
+        point="org.eclipse.sirius.externalJavaAction">
+     <javaActions
+           actionClass="com.misc.touse.moplaf.propagator2.design.SirusActionRefresh"
+           id="com.misc.touse.moplaf.propagator.design.javaActionsRefresh">
+     </javaActions>
+     <javaActions
+           actionClass="com.misc.touse.moplaf.propagator2.design.SirusActionReset"
+           id="com.misc.touse.moplaf.propagator.design.javaActionsReset">
+     </javaActions>
+     <javaActions
+           actionClass="com.misc.touse.moplaf.propagator2.design.SirusActionRefreshHours"
+           id="com.misc.touse.moplaf.propagator.design.javaActionsRefreshHours">
+     </javaActions>
+  </extension>
+</plugin>
