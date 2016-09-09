@@ -266,8 +266,11 @@ public class CalcTaskHoursImpl extends ToUsePropagatorFunctionImpl implements Ca
 	private static Bindings doCreateBindings(){
 		
 		Bindings taskHoursBindings = Bindings.constructEClassBindings(ToUsePropagatorPackage.Literals.TASK);
+		
 		taskHoursBindings.addInboundBinding(ToUsePropagatorPackage.Literals.TASK__HOURS_VAR);
 		taskHoursBindings.addInboundBinding(ToUsePropagatorPackage.Literals.TASK__HOURS_ITEMS);
+		
+		taskHoursBindings.addOutboundBinding(ToUsePropagatorPackage.Literals.TASK__HOURS);
 		
 		return taskHoursBindings;
 	}

@@ -271,6 +271,8 @@ public class CalcTaskHoursVarImpl extends ToUsePropagatorFunctionImpl implements
 		taskHoursVarBindings.addInboundBinding(ToUsePropagatorPackage.Literals.TASK__PROJECT, projectBindings);
 		taskHoursVarBindings.addInboundBinding(ToUsePropagatorPackage.Literals.TASK__HOURS_VAR_PER_RES);
 		
+		taskHoursVarBindings.addOutboundBinding(ToUsePropagatorPackage.Literals.TASK__HOURS_VAR);
+
 		return taskHoursVarBindings;
 	}
 

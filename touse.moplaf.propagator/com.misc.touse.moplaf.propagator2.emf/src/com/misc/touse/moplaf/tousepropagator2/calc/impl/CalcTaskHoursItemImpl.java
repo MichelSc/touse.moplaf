@@ -270,6 +270,8 @@ public class CalcTaskHoursItemImpl extends ToUsePropagatorFunctionImpl implement
 		Bindings taskHoursItemBindings = Bindings.constructEClassBindings(ToUsePropagatorPackage.Literals.TASK);
 		taskHoursItemBindings.addInboundBinding(ToUsePropagatorPackage.Literals.TASK__ITEMS, taskItemBindings);
 		
+		taskHoursItemBindings.addOutboundBinding(ToUsePropagatorPackage.Literals.TASK__HOURS_ITEMS);
+
 		return taskHoursItemBindings;
 	}
 
