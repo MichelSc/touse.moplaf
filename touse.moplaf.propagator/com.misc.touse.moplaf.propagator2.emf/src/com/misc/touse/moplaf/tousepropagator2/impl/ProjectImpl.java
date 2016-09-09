@@ -776,17 +776,6 @@ public class ProjectImpl extends ObjectWithPropagatorFunctionsImpl implements Pr
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void newOperation2() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 */
 	@Override
 	public void onOwned() {
@@ -824,8 +813,6 @@ public class ProjectImpl extends ObjectWithPropagatorFunctionsImpl implements Pr
 		layerTaskResources.setAntecedentLayerTaskTimes(layerTaskTimes);
 		this.setLayerTaskResources(layerTaskResources);
 			
-//			Util.adapt(this, PropagatorLayerDispose.class);
-//			Util.adapt(this, PropagatorLayerTaskResources.class);
 	}
 
 	/**
@@ -1119,7 +1106,6 @@ public class ProjectImpl extends ObjectWithPropagatorFunctionsImpl implements Pr
 		if (baseClass == ObjectWithPropagatorFunctionScope.class) {
 			switch (baseOperationID) {
 				case PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_SCOPE___REFRESH: return ToUsePropagatorPackage.PROJECT___REFRESH;
-				case PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_SCOPE___NEW_OPERATION2: return ToUsePropagatorPackage.PROJECT___NEW_OPERATION2;
 				default: return -1;
 			}
 		}
@@ -1142,9 +1128,6 @@ public class ProjectImpl extends ObjectWithPropagatorFunctionsImpl implements Pr
 				return null;
 			case ToUsePropagatorPackage.PROJECT___RESET:
 				reset();
-				return null;
-			case ToUsePropagatorPackage.PROJECT___NEW_OPERATION2:
-				newOperation2();
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

@@ -241,22 +241,13 @@ public interface ToUsePropagatorPackage extends EPackage {
 	int PROJECT___ON_NOT_OWNED = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ON_NOT_OWNED;
 
 	/**
-	 * The operation id for the '<em>New Operation2</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROJECT___NEW_OPERATION2 = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 1;
-
-	/**
 	 * The operation id for the '<em>Refresh End</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROJECT___REFRESH_END = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 2;
+	int PROJECT___REFRESH_END = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -265,7 +256,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROJECT___REFRESH = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 3;
+	int PROJECT___REFRESH = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Reset</em>' operation.
@@ -274,7 +265,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROJECT___RESET = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 4;
+	int PROJECT___RESET = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Project</em>' class.
@@ -283,7 +274,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROJECT_OPERATION_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 5;
+	int PROJECT_OPERATION_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 4;
 
 	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.tousepropagator2.impl.TaskImpl <em>Task</em>}' class.

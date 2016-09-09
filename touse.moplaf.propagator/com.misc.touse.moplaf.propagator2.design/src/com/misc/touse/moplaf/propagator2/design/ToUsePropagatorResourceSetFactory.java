@@ -21,6 +21,7 @@ public class ToUsePropagatorResourceSetFactory extends ResourceSetFactory {
 			
 			@Override
 			protected void demandLoad(Resource resource) throws IOException {
+				CommonPlugin.INSTANCE.log( "ToUsePropagator(Sirius): resource doload ");
 				// load the resource
 				super.demandLoad(resource);
 				// add the propagator manager
@@ -30,7 +31,7 @@ public class ToUsePropagatorResourceSetFactory extends ResourceSetFactory {
 				if ( fileExtension != null && fileExtension.equals("tousepropagator") ){
 					CommonPlugin.INSTANCE.log( "ToUsePropagator(Sirius): add PropagatorFunctionAdapterManager ");
 					resource.eAdapters().add(new PropagatorFunctionAdapterManager());
-					CommonPlugin.INSTANCE.log( "ToUsePropagator(Sirius): initied ");
+					CommonPlugin.INSTANCE.log( "ToUsePropagator(Sirius): inited ");
 				}
 			}
 

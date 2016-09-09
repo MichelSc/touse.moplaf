@@ -87,6 +87,15 @@ public interface CalcPackage extends EPackage {
 	int TO_USE_PROPAGATOR_FUNCTION__ANTECEDENTS = PropagatorPackage.PROPAGATOR_FUNCTION__ANTECEDENTS;
 
 	/**
+	 * The feature id for the '<em><b>Antecedents Sibling</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION__ANTECEDENTS_SIBLING = PropagatorPackage.PROPAGATOR_FUNCTION__ANTECEDENTS_SIBLING;
+
+	/**
 	 * The feature id for the '<em><b>Touched</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -391,6 +400,15 @@ public interface CalcPackage extends EPackage {
 	int SCOPE_PROJECT__ANTECEDENTS = TO_USE_PROPAGATOR_FUNCTION__ANTECEDENTS;
 
 	/**
+	 * The feature id for the '<em><b>Antecedents Sibling</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCOPE_PROJECT__ANTECEDENTS_SIBLING = TO_USE_PROPAGATOR_FUNCTION__ANTECEDENTS_SIBLING;
+
+	/**
 	 * The feature id for the '<em><b>Touched</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -643,6 +661,15 @@ public interface CalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int LAYER_TASK_HOURS_ITEM__ANTECEDENTS = TO_USE_PROPAGATOR_FUNCTION__ANTECEDENTS;
+
+	/**
+	 * The feature id for the '<em><b>Antecedents Sibling</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_TASK_HOURS_ITEM__ANTECEDENTS_SIBLING = TO_USE_PROPAGATOR_FUNCTION__ANTECEDENTS_SIBLING;
 
 	/**
 	 * The feature id for the '<em><b>Touched</b></em>' attribute.
@@ -907,6 +934,15 @@ public interface CalcPackage extends EPackage {
 	int LAYER_TASK_HOURS_VAR__ANTECEDENTS = TO_USE_PROPAGATOR_FUNCTION__ANTECEDENTS;
 
 	/**
+	 * The feature id for the '<em><b>Antecedents Sibling</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_TASK_HOURS_VAR__ANTECEDENTS_SIBLING = TO_USE_PROPAGATOR_FUNCTION__ANTECEDENTS_SIBLING;
+
+	/**
 	 * The feature id for the '<em><b>Touched</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1167,6 +1203,15 @@ public interface CalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int LAYER_TASK_HOURS__ANTECEDENTS = TO_USE_PROPAGATOR_FUNCTION__ANTECEDENTS;
+
+	/**
+	 * The feature id for the '<em><b>Antecedents Sibling</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_TASK_HOURS__ANTECEDENTS_SIBLING = TO_USE_PROPAGATOR_FUNCTION__ANTECEDENTS_SIBLING;
 
 	/**
 	 * The feature id for the '<em><b>Touched</b></em>' attribute.
@@ -1437,6 +1482,15 @@ public interface CalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int LAYER_TASK_TIMES__ANTECEDENTS = TO_USE_PROPAGATOR_FUNCTION__ANTECEDENTS;
+
+	/**
+	 * The feature id for the '<em><b>Antecedents Sibling</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_TASK_TIMES__ANTECEDENTS_SIBLING = TO_USE_PROPAGATOR_FUNCTION__ANTECEDENTS_SIBLING;
 
 	/**
 	 * The feature id for the '<em><b>Touched</b></em>' attribute.
@@ -1720,6 +1774,15 @@ public interface CalcPackage extends EPackage {
 	int CALC_PROJECT_END__ANTECEDENTS = TO_USE_PROPAGATOR_FUNCTION__ANTECEDENTS;
 
 	/**
+	 * The feature id for the '<em><b>Antecedents Sibling</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_PROJECT_END__ANTECEDENTS_SIBLING = TO_USE_PROPAGATOR_FUNCTION__ANTECEDENTS_SIBLING;
+
+	/**
 	 * The feature id for the '<em><b>Touched</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1992,6 +2055,15 @@ public interface CalcPackage extends EPackage {
 	int LAYER_TASK_RESOURCES__ANTECEDENTS = TO_USE_PROPAGATOR_FUNCTION__ANTECEDENTS;
 
 	/**
+	 * The feature id for the '<em><b>Antecedents Sibling</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_TASK_RESOURCES__ANTECEDENTS_SIBLING = TO_USE_PROPAGATOR_FUNCTION__ANTECEDENTS_SIBLING;
+
+	/**
 	 * The feature id for the '<em><b>Touched</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2253,6 +2325,15 @@ public interface CalcPackage extends EPackage {
 	int CALC_TASK_HOURS_ITEM__ANTECEDENTS = TO_USE_PROPAGATOR_FUNCTION__ANTECEDENTS;
 
 	/**
+	 * The feature id for the '<em><b>Antecedents Sibling</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_HOURS_ITEM__ANTECEDENTS_SIBLING = TO_USE_PROPAGATOR_FUNCTION__ANTECEDENTS_SIBLING;
+
+	/**
 	 * The feature id for the '<em><b>Touched</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2503,6 +2584,15 @@ public interface CalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int CALC_TASK_HOURS_VAR__ANTECEDENTS = TO_USE_PROPAGATOR_FUNCTION__ANTECEDENTS;
+
+	/**
+	 * The feature id for the '<em><b>Antecedents Sibling</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_HOURS_VAR__ANTECEDENTS_SIBLING = TO_USE_PROPAGATOR_FUNCTION__ANTECEDENTS_SIBLING;
 
 	/**
 	 * The feature id for the '<em><b>Touched</b></em>' attribute.
@@ -2757,6 +2847,15 @@ public interface CalcPackage extends EPackage {
 	int CALC_TASK_HOURS__ANTECEDENTS = TO_USE_PROPAGATOR_FUNCTION__ANTECEDENTS;
 
 	/**
+	 * The feature id for the '<em><b>Antecedents Sibling</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_HOURS__ANTECEDENTS_SIBLING = TO_USE_PROPAGATOR_FUNCTION__ANTECEDENTS_SIBLING;
+
+	/**
 	 * The feature id for the '<em><b>Touched</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3007,6 +3106,15 @@ public interface CalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int CALC_TASK_START__ANTECEDENTS = TO_USE_PROPAGATOR_FUNCTION__ANTECEDENTS;
+
+	/**
+	 * The feature id for the '<em><b>Antecedents Sibling</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_START__ANTECEDENTS_SIBLING = TO_USE_PROPAGATOR_FUNCTION__ANTECEDENTS_SIBLING;
 
 	/**
 	 * The feature id for the '<em><b>Touched</b></em>' attribute.
@@ -3261,6 +3369,15 @@ public interface CalcPackage extends EPackage {
 	int CALC_TASK_END__ANTECEDENTS = TO_USE_PROPAGATOR_FUNCTION__ANTECEDENTS;
 
 	/**
+	 * The feature id for the '<em><b>Antecedents Sibling</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_END__ANTECEDENTS_SIBLING = TO_USE_PROPAGATOR_FUNCTION__ANTECEDENTS_SIBLING;
+
+	/**
 	 * The feature id for the '<em><b>Touched</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3511,6 +3628,15 @@ public interface CalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int CALC_TASK_RESOURCES__ANTECEDENTS = TO_USE_PROPAGATOR_FUNCTION__ANTECEDENTS;
+
+	/**
+	 * The feature id for the '<em><b>Antecedents Sibling</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_RESOURCES__ANTECEDENTS_SIBLING = TO_USE_PROPAGATOR_FUNCTION__ANTECEDENTS_SIBLING;
 
 	/**
 	 * The feature id for the '<em><b>Touched</b></em>' attribute.
