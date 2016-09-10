@@ -135,7 +135,7 @@
           </style>
         </edgeMappings>
         <edgeMappings name="touse.propagator.design.bindings.project.antecedentssibling" label="Sibling Antecedents for Project Bindings" sourceMapping="//@ownedViewpoints[name='com.misc.touse.moplaf.propagator.design.bindings']/@ownedRepresentations[name='touse.propagator.design.bindings.project']/@defaultLayer/@nodeMappings[name='touse.propagator.design.bindings.project.functions']" targetMapping="//@ownedViewpoints[name='com.misc.touse.moplaf.propagator.design.bindings']/@ownedRepresentations[name='touse.propagator.design.bindings.project']/@defaultLayer/@nodeMappings[name='touse.propagator.design.bindings.project.functions']" targetFinderExpression="feature:AntecedentsSibling">
-          <style lineStyle="dash" sizeComputationExpression="2">
+          <style lineStyle="dash" sizeComputationExpression="2" endsCentering="Both">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
             <centerLabelStyleDescription>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
