@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="tousepropagator" version="11.0.0.201601261200">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="tousepropagator" version="11.0.0.201601261200">
   <ownedViewpoints name="touse..propagator.viewpoint.projectandtasks" label="Project and Tasks" modelFileExtension="tousepropagator">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="touse..propagator.viewpoint.projectandtasks.diagram" label="Diagram for a Project" domainClass="Project" enablePopupBars="true">
       <defaultLayer name="touse..propagator.viewpoint.projectandtasks.diagram.defaultlayer" label="Default layer">
@@ -183,4 +183,12 @@
       </defaultLayer>
     </ownedRepresentations>
   </ownedViewpoints>
+  <extensions xsi:type="properties:ViewExtensionDescription" identifier="properties1">
+    <pages identifier="propertie1.page1" labelExpression="General" domainClass="PropagatorFunction" groups="//@extensions.0/@groups.0"/>
+    <groups identifier="properties1.group1" labelExpression="State PropagatorFunction">
+      <controls xsi:type="properties:TextDescription" identifier="properties1.group1.widget1" labelExpression="Description" helpExpression="Ceci est la description du PropagatorFunction" isEnabledExpression="aql: false" valueExpression="feature:Description"/>
+      <controls xsi:type="properties:CheckboxDescription" identifier="properties1.group1.widget1" labelExpression="Touched" helpExpression="Whether a refresh is necessary" isEnabledExpression="aql: false" valueExpression="feature:Touched"/>
+      <controls xsi:type="properties:CheckboxDescription" identifier="properties1.group1.widget2" labelExpression="Calculated" helpExpression="Whether a refresh has been done seen the last Reset" isEnabledExpression="aql: false" valueExpression="feature:Calculated"/>
+    </groups>
+  </extensions>
 </description:Group>
