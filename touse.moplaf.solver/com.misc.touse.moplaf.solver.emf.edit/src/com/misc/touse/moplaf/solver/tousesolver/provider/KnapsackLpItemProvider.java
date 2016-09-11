@@ -134,7 +134,7 @@ public class KnapsackLpItemProvider
 				(TousesolverPackage.Literals.KNAPSACK_LP__VALUE,
 				 SolverFactory.eINSTANCE.createGeneratorLpGoal()));
 
-		Util.collectNewChildSolverDescriptors(newChildDescriptors, 
+		Util.collectNewChildSolverDescriptors2(newChildDescriptors, 
                 object, 
                 TousesolverPackage.Literals.KNAPSACK_LP__SOLVER);
 	}
