@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style" xmi:id="_bweyMLVzEeWJRIileii1Yw" selectedViews="_b0d6ULVzEeWJRIileii1Yw _b0quoLVzEeWJRIileii1Yw _b0xcULVzEeWJRIileii1Yw _b0zRgLVzEeWJRIileii1Yw" version="11.0.0.201604141600">
+<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:table="http://www.eclipse.org/sirius/table/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/table/description/1.1.0 http://www.eclipse.org/sirius/table/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style" xmi:id="_bweyMLVzEeWJRIileii1Yw" selectedViews="_b0d6ULVzEeWJRIileii1Yw _b0quoLVzEeWJRIileii1Yw _b0xcULVzEeWJRIileii1Yw _b0zRgLVzEeWJRIileii1Yw" version="11.0.1.201608181000">
   <semanticResources>ToUseTimeLine.ecore</semanticResources>
   <semanticResources>platform:/resource/com.misc.common.moplaf.propagator/model/propagator.ecore</semanticResources>
   <semanticResources>platform:/resource/com.misc.common.moplaf.timeline.emf/model/timeline.ecore</semanticResources>
   <semanticResources>http://www.eclipse.org/emf/2002/Ecore</semanticResources>
   <semanticResources>platform:/resource/com.misc.common.moplaf.time.discrete.emf/model/timediscrete.ecore</semanticResources>
   <semanticResources>platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore</semanticResources>
+  <semanticResources>ToUseTimeLine.ecorediag</semanticResources>
+  <semanticResources>ToUseTimeLine.genmodel</semanticResources>
+  <semanticResources>platform:/resource/com.misc.common.moplaf.propagator/model/propagator.genmodel</semanticResources>
+  <semanticResources>platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.genmodel</semanticResources>
+  <semanticResources>platform:/resource/com.misc.common.moplaf.time.discrete.emf/model/timediscrete.genmodel</semanticResources>
   <ownedViews xmi:type="viewpoint:DView" xmi:id="_b0d6ULVzEeWJRIileii1Yw">
     <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
     <ownedRepresentations xmi:type="diagram:DSemanticDiagram" xmi:id="_dJB5gLVzEeWJRIileii1Yw" name="tousetimeline class diagram">
@@ -1359,11 +1364,973 @@
   </ownedViews>
   <ownedViews xmi:type="viewpoint:DView" xmi:id="_b0quoLVzEeWJRIileii1Yw">
     <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']"/>
+    <ownedRepresentations xmi:type="diagram:DSemanticDiagram" xmi:id="_YsjQkIGqEeao-6UyO1OEEw" name="tousetimeline package dependencies">
+      <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_YsjQkYGqEeao-6UyO1OEEw" source="DANNOTATION_CUSTOMIZATION_KEY">
+        <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_YsjQkoGqEeao-6UyO1OEEw"/>
+      </ownedAnnotationEntries>
+      <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_YtUsoIGqEeao-6UyO1OEEw" source="GMF_DIAGRAMS">
+        <data xmi:type="notation:Diagram" xmi:id="_YtUsoYGqEeao-6UyO1OEEw" type="Sirius" element="_YsjQkIGqEeao-6UyO1OEEw" measurementUnit="Pixel">
+          <children xmi:type="notation:Node" xmi:id="_Z4uIwIGqEeao-6UyO1OEEw" type="2003" element="_Z4BlMIGqEeao-6UyO1OEEw">
+            <children xmi:type="notation:Node" xmi:id="_Z4xzIIGqEeao-6UyO1OEEw" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="_Z4yaMIGqEeao-6UyO1OEEw" type="7004">
+              <children xmi:type="notation:Node" xmi:id="_cC0BwIGqEeao-6UyO1OEEw" type="3010" element="_cCaZIIGqEeao-6UyO1OEEw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_cC0BwYGqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_cC0BwoGqEeao-6UyO1OEEw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_cC0o0IGqEeao-6UyO1OEEw" type="3010" element="_cCbnQIGqEeao-6UyO1OEEw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_cC0o0YGqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_cC0o0oGqEeao-6UyO1OEEw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_cC0o04GqEeao-6UyO1OEEw" type="3010" element="_cCc1YIGqEeao-6UyO1OEEw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_cC0o1IGqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_cC0o1YGqEeao-6UyO1OEEw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_cC1P4IGqEeao-6UyO1OEEw" type="3010" element="_cCeDgIGqEeao-6UyO1OEEw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_cC1P4YGqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_cC1P4oGqEeao-6UyO1OEEw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_cC1P44GqEeao-6UyO1OEEw" type="3010" element="_cCeqkIGqEeao-6UyO1OEEw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_cC1P5IGqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_cC1P5YGqEeao-6UyO1OEEw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_cC128IGqEeao-6UyO1OEEw" type="3010" element="_cCfRoIGqEeao-6UyO1OEEw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_cC128YGqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_cC128oGqEeao-6UyO1OEEw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_cC1284GqEeao-6UyO1OEEw" type="3010" element="_cCf4sIGqEeao-6UyO1OEEw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_cC129IGqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_cC129YGqEeao-6UyO1OEEw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_cC2eAIGqEeao-6UyO1OEEw" type="3010" element="_cCgfwIGqEeao-6UyO1OEEw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_cC2eAYGqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_cC2eAoGqEeao-6UyO1OEEw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_cC2eA4GqEeao-6UyO1OEEw" type="3010" element="_cChG0YGqEeao-6UyO1OEEw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_cC2eBIGqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_cC2eBYGqEeao-6UyO1OEEw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_cC3FEIGqEeao-6UyO1OEEw" type="3010" element="_cCht4YGqEeao-6UyO1OEEw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_cC3FEYGqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_cC3FEoGqEeao-6UyO1OEEw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_cC3sIIGqEeao-6UyO1OEEw" type="3010" element="_cCiU8YGqEeao-6UyO1OEEw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_cC3sIYGqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_cC3sIoGqEeao-6UyO1OEEw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_cC4TMIGqEeao-6UyO1OEEw" type="3010" element="_cCi8AYGqEeao-6UyO1OEEw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_cC4TMYGqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_cC4TMoGqEeao-6UyO1OEEw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_cC46QIGqEeao-6UyO1OEEw" type="3010" element="_cCjjEYGqEeao-6UyO1OEEw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_cC46QYGqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_cC46QoGqEeao-6UyO1OEEw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_cC46Q4GqEeao-6UyO1OEEw" type="3010" element="_cCkKIYGqEeao-6UyO1OEEw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_cC46RIGqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_cC5hUIGqEeao-6UyO1OEEw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_cC5hUYGqEeao-6UyO1OEEw" type="3010" element="_cCkxMIGqEeao-6UyO1OEEw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_cC5hUoGqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_cC5hU4GqEeao-6UyO1OEEw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_cC6IYIGqEeao-6UyO1OEEw" type="3010" element="_cCkxMoGqEeao-6UyO1OEEw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_cC6IYYGqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_cC6IYoGqEeao-6UyO1OEEw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_cC6vcIGqEeao-6UyO1OEEw" type="3010" element="_cClYQYGqEeao-6UyO1OEEw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_cC6vcYGqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_cC6vcoGqEeao-6UyO1OEEw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_cC6vc4GqEeao-6UyO1OEEw" type="3010" element="_cCl_UYGqEeao-6UyO1OEEw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_cC7WgIGqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_cC7WgYGqEeao-6UyO1OEEw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_cC7WgoGqEeao-6UyO1OEEw" type="3010" element="_cCmmYYGqEeao-6UyO1OEEw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_cC7Wg4GqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_cC7WhIGqEeao-6UyO1OEEw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_cC7WhYGqEeao-6UyO1OEEw" type="3010" element="_cCnNcIGqEeao-6UyO1OEEw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_cC7WhoGqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_cC7Wh4GqEeao-6UyO1OEEw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_cC79kIGqEeao-6UyO1OEEw" type="3010" element="_cCnNcoGqEeao-6UyO1OEEw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_cC79kYGqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_cC79koGqEeao-6UyO1OEEw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_cC79k4GqEeao-6UyO1OEEw" type="3010" element="_cCn0gYGqEeao-6UyO1OEEw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_cC79lIGqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_cC79lYGqEeao-6UyO1OEEw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_cC8koIGqEeao-6UyO1OEEw" type="3010" element="_cCobkIGqEeao-6UyO1OEEw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_cC8koYGqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_cC8kooGqEeao-6UyO1OEEw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_cC8ko4GqEeao-6UyO1OEEw" type="3010" element="_cCobkoGqEeao-6UyO1OEEw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_cC8kpIGqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_cC8kpYGqEeao-6UyO1OEEw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_cC9LsIGqEeao-6UyO1OEEw" type="3010" element="_cCpCoYGqEeao-6UyO1OEEw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_cC9LsYGqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_cC9LsoGqEeao-6UyO1OEEw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_cC9Ls4GqEeao-6UyO1OEEw" type="3010" element="_cCppsIGqEeao-6UyO1OEEw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_cC9LtIGqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_cC9LtYGqEeao-6UyO1OEEw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_cC9ywIGqEeao-6UyO1OEEw" type="3010" element="_cCppsoGqEeao-6UyO1OEEw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_cC9ywYGqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_cC9ywoGqEeao-6UyO1OEEw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_cC9yw4GqEeao-6UyO1OEEw" type="3010" element="_cCqQwYGqEeao-6UyO1OEEw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_cC9yxIGqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_cC9yxYGqEeao-6UyO1OEEw"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_Z4yaMYGqEeao-6UyO1OEEw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_Z4yaMoGqEeao-6UyO1OEEw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_Z4uIwYGqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Z4uIwoGqEeao-6UyO1OEEw" y="-120"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_cCyMkIGqEeao-6UyO1OEEw" type="2003" element="_cCSdUIGqEeao-6UyO1OEEw">
+            <children xmi:type="notation:Node" xmi:id="_cCyzoIGqEeao-6UyO1OEEw" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="_cCyzoYGqEeao-6UyO1OEEw" type="7004">
+              <styles xmi:type="notation:SortingStyle" xmi:id="_cCyzooGqEeao-6UyO1OEEw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_cCyzo4GqEeao-6UyO1OEEw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_cCyMkYGqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cCyMkoGqEeao-6UyO1OEEw" x="-96" y="920"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_cCyzpIGqEeao-6UyO1OEEw" type="2003" element="_cCTrcIGqEeao-6UyO1OEEw">
+            <children xmi:type="notation:Node" xmi:id="_cCzasIGqEeao-6UyO1OEEw" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="_cCzasYGqEeao-6UyO1OEEw" type="7004">
+              <styles xmi:type="notation:SortingStyle" xmi:id="_cCzasoGqEeao-6UyO1OEEw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_cCzas4GqEeao-6UyO1OEEw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_cCyzpYGqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cCyzpoGqEeao-6UyO1OEEw" x="-540" y="372"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_hgDtkIGqEeao-6UyO1OEEw" type="2003" element="_hflzgIGqEeao-6UyO1OEEw">
+            <children xmi:type="notation:Node" xmi:id="_hgEUoIGqEeao-6UyO1OEEw" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="_hgEUoYGqEeao-6UyO1OEEw" type="7004">
+              <children xmi:type="notation:Node" xmi:id="_hgE7sIGqEeao-6UyO1OEEw" type="3010" element="_hf4ucIGqEeao-6UyO1OEEw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_hgE7sYGqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_hgE7soGqEeao-6UyO1OEEw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_hgFiwIGqEeao-6UyO1OEEw" type="3010" element="_hf5VgIGqEeao-6UyO1OEEw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_hgFiwYGqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_hgFiwoGqEeao-6UyO1OEEw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_hgFiw4GqEeao-6UyO1OEEw" type="3010" element="_hf5VgoGqEeao-6UyO1OEEw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_hgFixIGqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_hgFixYGqEeao-6UyO1OEEw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_hgFixoGqEeao-6UyO1OEEw" type="3010" element="_hf58kYGqEeao-6UyO1OEEw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_hgFix4GqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_hgFiyIGqEeao-6UyO1OEEw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_hgGJ0IGqEeao-6UyO1OEEw" type="3010" element="_hf6joIGqEeao-6UyO1OEEw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_hgGJ0YGqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_hgGJ0oGqEeao-6UyO1OEEw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_hgGJ04GqEeao-6UyO1OEEw" type="3010" element="_hf6jooGqEeao-6UyO1OEEw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_hgGJ1IGqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_hgGJ1YGqEeao-6UyO1OEEw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_hgGJ1oGqEeao-6UyO1OEEw" type="3010" element="_hf7KsYGqEeao-6UyO1OEEw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_hgGJ14GqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_hgGJ2IGqEeao-6UyO1OEEw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_hgGw4IGqEeao-6UyO1OEEw" type="3010" element="_hf7xwIGqEeao-6UyO1OEEw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_hgGw4YGqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_hgGw4oGqEeao-6UyO1OEEw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_hgGw44GqEeao-6UyO1OEEw" type="3010" element="_hf7xwoGqEeao-6UyO1OEEw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_hgGw5IGqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_hgGw5YGqEeao-6UyO1OEEw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_hgGw5oGqEeao-6UyO1OEEw" type="3010" element="_hf8Y0IGqEeao-6UyO1OEEw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_hgGw54GqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_hgGw6IGqEeao-6UyO1OEEw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_hgHX8IGqEeao-6UyO1OEEw" type="3010" element="_hf8Y0oGqEeao-6UyO1OEEw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_hgHX8YGqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_hgHX8oGqEeao-6UyO1OEEw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_hgHX84GqEeao-6UyO1OEEw" type="3010" element="_hf8_4IGqEeao-6UyO1OEEw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_hgHX9IGqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_hgHX9YGqEeao-6UyO1OEEw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_hgHX9oGqEeao-6UyO1OEEw" type="3010" element="_hf8_4oGqEeao-6UyO1OEEw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_hgHX94GqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_hgHX-IGqEeao-6UyO1OEEw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_hgH_AIGqEeao-6UyO1OEEw" type="3010" element="_hf9m8IGqEeao-6UyO1OEEw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_hgH_AYGqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_hgH_AoGqEeao-6UyO1OEEw"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_hgEUooGqEeao-6UyO1OEEw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_hgEUo4GqEeao-6UyO1OEEw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_hgDtkYGqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hgDtkoGqEeao-6UyO1OEEw" x="712" y="540"/>
+          </children>
+          <styles xmi:type="notation:DiagramStyle" xmi:id="_YtUsooGqEeao-6UyO1OEEw"/>
+          <edges xmi:type="notation:Edge" xmi:id="_cDA2EIGqEeao-6UyO1OEEw" type="4001" element="_cCstAIGqEeao-6UyO1OEEw" source="_Z4uIwIGqEeao-6UyO1OEEw" target="_cCyzpIGqEeao-6UyO1OEEw">
+            <children xmi:type="notation:Node" xmi:id="_cDCEMIGqEeao-6UyO1OEEw" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cDCEMYGqEeao-6UyO1OEEw" x="-28" y="7"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_cDDSUIGqEeao-6UyO1OEEw" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cDDSUYGqEeao-6UyO1OEEw" x="-17" y="-4"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_cDDSUoGqEeao-6UyO1OEEw" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cDDSU4GqEeao-6UyO1OEEw" x="-10" y="-5"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_cDA2EYGqEeao-6UyO1OEEw"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_cDA2EoGqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_cDA2E4GqEeao-6UyO1OEEw" points="[-175, 98, 411, -175]$[-456, 256, 130, -17]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_cDIx4IGqEeao-6UyO1OEEw" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_cDIx4YGqEeao-6UyO1OEEw" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_hgImEIGqEeao-6UyO1OEEw" type="4001" element="_hf-1EIGqEeao-6UyO1OEEw" source="_hgDtkIGqEeao-6UyO1OEEw" target="_cCyMkIGqEeao-6UyO1OEEw">
+            <children xmi:type="notation:Node" xmi:id="_hgImFIGqEeao-6UyO1OEEw" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hgImFYGqEeao-6UyO1OEEw" x="27" y="2"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_hgImFoGqEeao-6UyO1OEEw" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hgImF4GqEeao-6UyO1OEEw" x="-24" y="1"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_hgImGIGqEeao-6UyO1OEEw" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hgImGYGqEeao-6UyO1OEEw" x="-29" y="1"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_hgImEYGqEeao-6UyO1OEEw"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_hgImEoGqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_hgImE4GqEeao-6UyO1OEEw" points="[-2, -126, 753, -399]$[-720, 254, 35, -19]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_hgJNIIGqEeao-6UyO1OEEw" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_hgJNIYGqEeao-6UyO1OEEw" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_hgJNIoGqEeao-6UyO1OEEw" type="4001" element="_hf-1E4GqEeao-6UyO1OEEw" source="_hgDtkIGqEeao-6UyO1OEEw" target="_cCyzpIGqEeao-6UyO1OEEw">
+            <children xmi:type="notation:Node" xmi:id="_hgJNJoGqEeao-6UyO1OEEw" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pwKikIGqEeao-6UyO1OEEw" x="-54" y="2"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_hgJNKIGqEeao-6UyO1OEEw" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pwKikYGqEeao-6UyO1OEEw" x="43" y="-1"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_hgJNKoGqEeao-6UyO1OEEw" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pwKikoGqEeao-6UyO1OEEw" x="83"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_hgJNI4GqEeao-6UyO1OEEw"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_hgJNJIGqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_hgJNJYGqEeao-6UyO1OEEw" points="[-115, -127, 1123, 148]$[-1108, -258, 130, 17]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_hgJ0MIGqEeao-6UyO1OEEw" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_hgJ0MYGqEeao-6UyO1OEEw" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_hgJ0MoGqEeao-6UyO1OEEw" type="4001" element="_hf_cIIGqEeao-6UyO1OEEw" source="_hgDtkIGqEeao-6UyO1OEEw" target="_Z4uIwIGqEeao-6UyO1OEEw">
+            <children xmi:type="notation:Node" xmi:id="_hgJ0NoGqEeao-6UyO1OEEw" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hgJ0N4GqEeao-6UyO1OEEw" x="-5" y="-7"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_hgKbQIGqEeao-6UyO1OEEw" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hgKbQYGqEeao-6UyO1OEEw" x="15" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_hgKbQoGqEeao-6UyO1OEEw" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hgKbQ4GqEeao-6UyO1OEEw" x="17" y="9"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_hgJ0M4GqEeao-6UyO1OEEw"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_hgJ0NIGqEeao-6UyO1OEEw" fontName="Oxygen-Sans" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_hgJ0NYGqEeao-6UyO1OEEw" points="[-115, -80, 537, 468]$[-476, -395, 176, 153]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_hgKbRIGqEeao-6UyO1OEEw" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_hgKbRYGqEeao-6UyO1OEEw" id="(0.5,0.5)"/>
+          </edges>
+        </data>
+      </ownedAnnotationEntries>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_Z4BlMIGqEeao-6UyO1OEEw" name="http://www.misc.com/common/moplaf/time/continuous/model/0.1" outgoingEdges="_cCstAIGqEeao-6UyO1OEEw" incomingEdges="_hf_cIIGqEeao-6UyO1OEEw">
+        <target xmi:type="ecore:EPackage" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#/"/>
+        <semanticElements xmi:type="ecore:EPackage" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#/"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_Z4VuQIGqEeao-6UyO1OEEw" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" borderColor="125,125,125" backgroundStyle="Liquid" foregroundColor="217,210,220">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_cCaZIIGqEeao-6UyO1OEEw" name="Distribution (3)" tooltipText="Dependency to http://com.misc.common.moplaf.propagator.emf: &#xA; - EClassDistribution extends type ObjectWithPropagatorFunctionAdapter in package propagator">
+          <target xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//Distribution"/>
+          <semanticElements xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//Distribution"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_cCbAMIGqEeao-6UyO1OEEw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_cCbnQIGqEeao-6UyO1OEEw" name="DistributionEvent (3)" tooltipText="Dependency to http://com.misc.common.moplaf.propagator.emf: &#xA; - EClassDistributionEvent extends type ObjectWithPropagatorFunctionAdapter in package propagator">
+          <target xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//DistributionEvent"/>
+          <semanticElements xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//DistributionEvent"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_cCcOUIGqEeao-6UyO1OEEw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_cCc1YIGqEeao-6UyO1OEEw" name="ChildEvent (3)" tooltipText="Dependency to http://com.misc.common.moplaf.propagator.emf: &#xA; - EClassChildEvent extends type ObjectWithPropagatorFunctionAdapter in package propagator">
+          <target xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//ChildEvent"/>
+          <semanticElements xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//ChildEvent"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_cCdccIGqEeao-6UyO1OEEw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_cCeDgIGqEeao-6UyO1OEEw" name="StartEvent (3)" tooltipText="Dependency to http://com.misc.common.moplaf.propagator.emf: &#xA; - EClassStartEvent extends type ObjectWithPropagatorFunctionAdapter in package propagator">
+          <target xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//StartEvent"/>
+          <semanticElements xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//StartEvent"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_cCeDgYGqEeao-6UyO1OEEw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_cCeqkIGqEeao-6UyO1OEEw" name="EndEvent (3)" tooltipText="Dependency to http://com.misc.common.moplaf.propagator.emf: &#xA; - EClassEndEvent extends type ObjectWithPropagatorFunctionAdapter in package propagator">
+          <target xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//EndEvent"/>
+          <semanticElements xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//EndEvent"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_cCeqkYGqEeao-6UyO1OEEw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_cCfRoIGqEeao-6UyO1OEEw" name="AmountImpulsion (3)" tooltipText="Dependency to http://com.misc.common.moplaf.propagator.emf: &#xA; - EClassAmountImpulsion extends type ObjectWithPropagatorFunctionAdapter in package propagator">
+          <target xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//AmountImpulsion"/>
+          <semanticElements xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//AmountImpulsion"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_cCfRoYGqEeao-6UyO1OEEw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_cCf4sIGqEeao-6UyO1OEEw" name="SlopeImpulsion (3)" tooltipText="Dependency to http://com.misc.common.moplaf.propagator.emf: &#xA; - EClassSlopeImpulsion extends type ObjectWithPropagatorFunctionAdapter in package propagator">
+          <target xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//SlopeImpulsion"/>
+          <semanticElements xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//SlopeImpulsion"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_cCf4sYGqEeao-6UyO1OEEw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_cCgfwIGqEeao-6UyO1OEEw" name="AmountAbsolute (3)" tooltipText="Dependency to http://com.misc.common.moplaf.propagator.emf: &#xA; - EClassAmountAbsolute extends type ObjectWithPropagatorFunctionAdapter in package propagator">
+          <target xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//AmountAbsolute"/>
+          <semanticElements xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//AmountAbsolute"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_cChG0IGqEeao-6UyO1OEEw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_cChG0YGqEeao-6UyO1OEEw" name="SlopeAbsolute (3)" tooltipText="Dependency to http://com.misc.common.moplaf.propagator.emf: &#xA; - EClassSlopeAbsolute extends type ObjectWithPropagatorFunctionAdapter in package propagator">
+          <target xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//SlopeAbsolute"/>
+          <semanticElements xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//SlopeAbsolute"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_cCht4IGqEeao-6UyO1OEEw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_cCht4YGqEeao-6UyO1OEEw" name="CapacityChangeStart (3)" tooltipText="Dependency to http://com.misc.common.moplaf.propagator.emf: &#xA; - EClassCapacityChangeStart extends type ObjectWithPropagatorFunctionAdapter in package propagator">
+          <target xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//CapacityChangeStart"/>
+          <semanticElements xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//CapacityChangeStart"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_cCiU8IGqEeao-6UyO1OEEw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_cCiU8YGqEeao-6UyO1OEEw" name="CapacityChangeEnd (3)" tooltipText="Dependency to http://com.misc.common.moplaf.propagator.emf: &#xA; - EClassCapacityChangeEnd extends type ObjectWithPropagatorFunctionAdapter in package propagator">
+          <target xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//CapacityChangeEnd"/>
+          <semanticElements xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//CapacityChangeEnd"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_cCi8AIGqEeao-6UyO1OEEw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_cCi8AYGqEeao-6UyO1OEEw" name="StockChangeStart (3)" tooltipText="Dependency to http://com.misc.common.moplaf.propagator.emf: &#xA; - EClassStockChangeStart extends type ObjectWithPropagatorFunctionAdapter in package propagator">
+          <target xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//StockChangeStart"/>
+          <semanticElements xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//StockChangeStart"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_cCjjEIGqEeao-6UyO1OEEw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_cCjjEYGqEeao-6UyO1OEEw" name="StockChangeEnd (3)" tooltipText="Dependency to http://com.misc.common.moplaf.propagator.emf: &#xA; - EClassStockChangeEnd extends type ObjectWithPropagatorFunctionAdapter in package propagator">
+          <target xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//StockChangeEnd"/>
+          <semanticElements xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//StockChangeEnd"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_cCkKIIGqEeao-6UyO1OEEw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_cCkKIYGqEeao-6UyO1OEEw" name="AmountImpulsionAtomic (3)" tooltipText="Dependency to http://com.misc.common.moplaf.propagator.emf: &#xA; - EClassAmountImpulsionAtomic extends type ObjectWithPropagatorFunctionAdapter in package propagator">
+          <target xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//AmountImpulsionAtomic"/>
+          <semanticElements xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//AmountImpulsionAtomic"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_cCkKIoGqEeao-6UyO1OEEw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_cCkxMIGqEeao-6UyO1OEEw" name="SlopeImpulsionAtomic (3)" tooltipText="Dependency to http://com.misc.common.moplaf.propagator.emf: &#xA; - EClassSlopeImpulsionAtomic extends type ObjectWithPropagatorFunctionAdapter in package propagator">
+          <target xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//SlopeImpulsionAtomic"/>
+          <semanticElements xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//SlopeImpulsionAtomic"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_cCkxMYGqEeao-6UyO1OEEw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_cCkxMoGqEeao-6UyO1OEEw" name="AmountAbsoluteAtomic (3)" tooltipText="Dependency to http://com.misc.common.moplaf.propagator.emf: &#xA; - EClassAmountAbsoluteAtomic extends type ObjectWithPropagatorFunctionAdapter in package propagator">
+          <target xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//AmountAbsoluteAtomic"/>
+          <semanticElements xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//AmountAbsoluteAtomic"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_cClYQIGqEeao-6UyO1OEEw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_cClYQYGqEeao-6UyO1OEEw" name="SlopeAbsoluteAtomic (3)" tooltipText="Dependency to http://com.misc.common.moplaf.propagator.emf: &#xA; - EClassSlopeAbsoluteAtomic extends type ObjectWithPropagatorFunctionAdapter in package propagator">
+          <target xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//SlopeAbsoluteAtomic"/>
+          <semanticElements xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//SlopeAbsoluteAtomic"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_cCl_UIGqEeao-6UyO1OEEw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_cCl_UYGqEeao-6UyO1OEEw" name="EventsProviderAbstract (2)" tooltipText="Dependency to http://com.misc.common.moplaf.propagator.emf: &#xA; - EClassEventsProviderAbstract extends type ObjectWithPropagatorFunctionAdapter in package propagator">
+          <target xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//EventsProviderAbstract"/>
+          <semanticElements xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//EventsProviderAbstract"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_cCmmYIGqEeao-6UyO1OEEw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_cCmmYYGqEeao-6UyO1OEEw" name="EventsProvider (2)" tooltipText="Dependency to http://com.misc.common.moplaf.propagator.emf: &#xA; - EClassEventsProvider extends type ObjectWithPropagatorFunctionAdapter in package propagator">
+          <target xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//EventsProvider"/>
+          <semanticElements xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//EventsProvider"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_cCmmYoGqEeao-6UyO1OEEw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_cCnNcIGqEeao-6UyO1OEEw" name="StockChange (3)" tooltipText="Dependency to http://com.misc.common.moplaf.propagator.emf: &#xA; - EClassStockChange extends type ObjectWithPropagatorFunctionAdapter in package propagator">
+          <target xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//StockChange"/>
+          <semanticElements xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//StockChange"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_cCnNcYGqEeao-6UyO1OEEw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_cCnNcoGqEeao-6UyO1OEEw" name="CapacityChange (3)" tooltipText="Dependency to http://com.misc.common.moplaf.propagator.emf: &#xA; - EClassCapacityChange extends type ObjectWithPropagatorFunctionAdapter in package propagator">
+          <target xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//CapacityChange"/>
+          <semanticElements xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//CapacityChange"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_cCn0gIGqEeao-6UyO1OEEw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_cCn0gYGqEeao-6UyO1OEEw" name="EventProvider (3)" tooltipText="Dependency to http://com.misc.common.moplaf.propagator.emf: &#xA; - EClassEventProvider extends type ObjectWithPropagatorFunctionAdapter in package propagator">
+          <target xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//EventProvider"/>
+          <semanticElements xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//EventProvider"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_cCn0goGqEeao-6UyO1OEEw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_cCobkIGqEeao-6UyO1OEEw" name="SlopeImpulsionProvider (3)" tooltipText="Dependency to http://com.misc.common.moplaf.propagator.emf: &#xA; - EClassSlopeImpulsionProvider extends type ObjectWithPropagatorFunctionAdapter in package propagator">
+          <target xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//SlopeImpulsionProvider"/>
+          <semanticElements xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//SlopeImpulsionProvider"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_cCobkYGqEeao-6UyO1OEEw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_cCobkoGqEeao-6UyO1OEEw" name="SlopeAbsoluteProvider (3)" tooltipText="Dependency to http://com.misc.common.moplaf.propagator.emf: &#xA; - EClassSlopeAbsoluteProvider extends type ObjectWithPropagatorFunctionAdapter in package propagator">
+          <target xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//SlopeAbsoluteProvider"/>
+          <semanticElements xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//SlopeAbsoluteProvider"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_cCpCoIGqEeao-6UyO1OEEw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_cCpCoYGqEeao-6UyO1OEEw" name="AmountImpulsionProvider (3)" tooltipText="Dependency to http://com.misc.common.moplaf.propagator.emf: &#xA; - EClassAmountImpulsionProvider extends type ObjectWithPropagatorFunctionAdapter in package propagator">
+          <target xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//AmountImpulsionProvider"/>
+          <semanticElements xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//AmountImpulsionProvider"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_cCpCooGqEeao-6UyO1OEEw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_cCppsIGqEeao-6UyO1OEEw" name="AmountAbsoluteProvider (3)" tooltipText="Dependency to http://com.misc.common.moplaf.propagator.emf: &#xA; - EClassAmountAbsoluteProvider extends type ObjectWithPropagatorFunctionAdapter in package propagator">
+          <target xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//AmountAbsoluteProvider"/>
+          <semanticElements xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//AmountAbsoluteProvider"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_cCppsYGqEeao-6UyO1OEEw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_cCppsoGqEeao-6UyO1OEEw" name="OwnedEvent (3)" tooltipText="Dependency to http://com.misc.common.moplaf.propagator.emf: &#xA; - EClassOwnedEvent extends type ObjectWithPropagatorFunctionAdapter in package propagator">
+          <target xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//OwnedEvent"/>
+          <semanticElements xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//OwnedEvent"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_cCqQwIGqEeao-6UyO1OEEw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_cCqQwYGqEeao-6UyO1OEEw" name="ProvidedEvent (3)" tooltipText="Dependency to http://com.misc.common.moplaf.propagator.emf: &#xA; - EClassProvidedEvent extends type ObjectWithPropagatorFunctionAdapter in package propagator">
+          <target xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//ProvidedEvent"/>
+          <semanticElements xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//ProvidedEvent"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_cCq30IGqEeao-6UyO1OEEw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_cCSdUIGqEeao-6UyO1OEEw" name="http://www.misc.com/common/moplaf/time/discrete/model/0.1" incomingEdges="_hf-1EIGqEeao-6UyO1OEEw">
+        <target xmi:type="ecore:EPackage" href="platform:/resource/com.misc.common.moplaf.time.discrete.emf/model/timediscrete.ecore#/"/>
+        <semanticElements xmi:type="ecore:EPackage" href="platform:/resource/com.misc.common.moplaf.time.discrete.emf/model/timediscrete.ecore#/"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_cCSdUYGqEeao-6UyO1OEEw" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" borderColor="125,125,125" backgroundStyle="Liquid" foregroundColor="217,210,220">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_cCTrcIGqEeao-6UyO1OEEw" name="http://com.misc.common.moplaf.propagator.emf" incomingEdges="_cCstAIGqEeao-6UyO1OEEw _hf-1E4GqEeao-6UyO1OEEw">
+        <target xmi:type="ecore:EPackage" href="platform:/resource/com.misc.common.moplaf.propagator/model/propagator.ecore#/"/>
+        <semanticElements xmi:type="ecore:EPackage" href="platform:/resource/com.misc.common.moplaf.propagator/model/propagator.ecore#/"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_cCTrcYGqEeao-6UyO1OEEw" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" borderColor="125,125,125" backgroundStyle="Liquid" foregroundColor="217,210,220">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_cCstAIGqEeao-6UyO1OEEw" sourceNode="_Z4BlMIGqEeao-6UyO1OEEw" targetNode="_cCTrcIGqEeao-6UyO1OEEw">
+        <target xmi:type="ecore:EPackage" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#/"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_cCtUEIGqEeao-6UyO1OEEw" lineStyle="dash" size="2" strokeColor="239,41,41">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@edgeMappings[name='Package%20Dependency']/@style"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_cCtUEYGqEeao-6UyO1OEEw"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@edgeMappings[name='Package%20Dependency']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_hflzgIGqEeao-6UyO1OEEw" name="http://com.misc.touse.moplaf.timeline.emf" outgoingEdges="_hf-1EIGqEeao-6UyO1OEEw _hf-1E4GqEeao-6UyO1OEEw _hf_cIIGqEeao-6UyO1OEEw">
+        <target xmi:type="ecore:EPackage" href="ToUseTimeLine.ecore#/"/>
+        <semanticElements xmi:type="ecore:EPackage" href="ToUseTimeLine.ecore#/"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_hflzgYGqEeao-6UyO1OEEw" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" borderColor="125,125,125" backgroundStyle="Liquid" foregroundColor="217,210,220">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_hf4ucIGqEeao-6UyO1OEEw" name="Domain (4)" tooltipText="Dependency to http://www.misc.com/common/moplaf/time/discrete/model/0.1: &#xA; - EReference TimeLineMerges refers to type TimeLineMerge in package discrete&#xA; - EReference Timelines refers to type TimeLine in package discrete&#xA;Dependency to http://com.misc.common.moplaf.propagator.emf: &#xA; - EClassDomain extends type ObjectWithPropagatorFunctionAdapterScope in package propagator&#xA; - EClassDomain extends type ObjectWithPropagatorFunctionAdapter in package propagator">
+          <target xmi:type="ecore:EClass" href="ToUseTimeLine.ecore#//Domain"/>
+          <semanticElements xmi:type="ecore:EClass" href="ToUseTimeLine.ecore#//Domain"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_hf4ucYGqEeao-6UyO1OEEw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_hf5VgIGqEeao-6UyO1OEEw" name="Distribution (3)" tooltipText="Dependency to http://com.misc.common.moplaf.propagator.emf: &#xA; - EClassDistribution extends type ObjectWithPropagatorFunctionAdapter in package propagator">
+          <target xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//Distribution"/>
+          <semanticElements xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//Distribution"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_hf5VgYGqEeao-6UyO1OEEw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_hf5VgoGqEeao-6UyO1OEEw" name="DomainDistribution (4)" tooltipText="Dependency to http://www.misc.com/common/moplaf/time/continuous/model/0.1: &#xA; - EAttribute TimeUnit refers to type TimeUnit in package continuous&#xA; - EReference ChildEvents refers to type ChildEvent in package continuous&#xA; - EReference SequenceEvents refers to type DistributionEvent in package continuous&#xA; - EReference Start refers to type StartEvent in package continuous&#xA; - EReference End refers to type EndEvent in package continuous&#xA; - EReference EventsProviders refers to type EventsProviderAbstract in package continuous&#xA; - EReference ParentDistribution refers to type Distribution in package continuous&#xA; - EReference ChildDistribution refers to type Distribution in package continuous&#xA; - EReference ProvidedEvents refers to type DistributionEvent in package continuous&#xA; - EClassDomainDistribution extends type Distribution in package continuous&#xA;Dependency to http://com.misc.common.moplaf.propagator.emf: &#xA; - EClassDomainDistribution extends type ObjectWithPropagatorFunctionAdapter in package propagator">
+          <target xmi:type="ecore:EClass" href="ToUseTimeLine.ecore#//DomainDistribution"/>
+          <semanticElements xmi:type="ecore:EClass" href="ToUseTimeLine.ecore#//DomainDistribution"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_hf58kIGqEeao-6UyO1OEEw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_hf58kYGqEeao-6UyO1OEEw" name="FunctionMinimum (3)" tooltipText="Dependency to http://com.misc.common.moplaf.propagator.emf: &#xA; - EClassFunctionMinimum extends type ObjectWithPropagatorFunctionAdapter in package propagator">
+          <target xmi:type="ecore:EClass" href="ToUseTimeLine.ecore#//FunctionMinimum"/>
+          <semanticElements xmi:type="ecore:EClass" href="ToUseTimeLine.ecore#//FunctionMinimum"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_hf58koGqEeao-6UyO1OEEw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_hf6joIGqEeao-6UyO1OEEw" name="FunctionInterval (3)" tooltipText="Dependency to http://com.misc.common.moplaf.propagator.emf: &#xA; - EClassFunctionInterval extends type ObjectWithPropagatorFunctionAdapter in package propagator">
+          <target xmi:type="ecore:EClass" href="ToUseTimeLine.ecore#//FunctionInterval"/>
+          <semanticElements xmi:type="ecore:EClass" href="ToUseTimeLine.ecore#//FunctionInterval"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_hf6joYGqEeao-6UyO1OEEw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_hf6jooGqEeao-6UyO1OEEw" name="FunctionCumulated (3)" tooltipText="Dependency to http://com.misc.common.moplaf.propagator.emf: &#xA; - EClassFunctionCumulated extends type ObjectWithPropagatorFunctionAdapter in package propagator">
+          <target xmi:type="ecore:EClass" href="ToUseTimeLine.ecore#//FunctionCumulated"/>
+          <semanticElements xmi:type="ecore:EClass" href="ToUseTimeLine.ecore#//FunctionCumulated"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_hf7KsIGqEeao-6UyO1OEEw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_hf7KsYGqEeao-6UyO1OEEw" name="FunctionAverage (3)" tooltipText="Dependency to http://com.misc.common.moplaf.propagator.emf: &#xA; - EClassFunctionAverage extends type ObjectWithPropagatorFunctionAdapter in package propagator">
+          <target xmi:type="ecore:EClass" href="ToUseTimeLine.ecore#//FunctionAverage"/>
+          <semanticElements xmi:type="ecore:EClass" href="ToUseTimeLine.ecore#//FunctionAverage"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_hf7KsoGqEeao-6UyO1OEEw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_hf7xwIGqEeao-6UyO1OEEw" name="FunctionPossible (3)" tooltipText="Dependency to http://com.misc.common.moplaf.propagator.emf: &#xA; - EClassFunctionPossible extends type ObjectWithPropagatorFunctionAdapter in package propagator">
+          <target xmi:type="ecore:EClass" href="ToUseTimeLine.ecore#//FunctionPossible"/>
+          <semanticElements xmi:type="ecore:EClass" href="ToUseTimeLine.ecore#//FunctionPossible"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_hf7xwYGqEeao-6UyO1OEEw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_hf7xwoGqEeao-6UyO1OEEw" name="FunctionEarliestBelow (3)" tooltipText="Dependency to http://com.misc.common.moplaf.propagator.emf: &#xA; - EClassFunctionEarliestBelow extends type ObjectWithPropagatorFunctionAdapter in package propagator">
+          <target xmi:type="ecore:EClass" href="ToUseTimeLine.ecore#//FunctionEarliestBelow"/>
+          <semanticElements xmi:type="ecore:EClass" href="ToUseTimeLine.ecore#//FunctionEarliestBelow"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_hf7xw4GqEeao-6UyO1OEEw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_hf8Y0IGqEeao-6UyO1OEEw" name="FunctionEarliestOutput (3)" tooltipText="Dependency to http://com.misc.common.moplaf.propagator.emf: &#xA; - EClassFunctionEarliestOutput extends type ObjectWithPropagatorFunctionAdapter in package propagator">
+          <target xmi:type="ecore:EClass" href="ToUseTimeLine.ecore#//FunctionEarliestOutput"/>
+          <semanticElements xmi:type="ecore:EClass" href="ToUseTimeLine.ecore#//FunctionEarliestOutput"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_hf8Y0YGqEeao-6UyO1OEEw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_hf8Y0oGqEeao-6UyO1OEEw" name="ObjectWithTimeLine (1)" tooltipText="">
+          <target xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.discrete.emf/model/timediscrete.ecore#//ObjectWithTimeLine"/>
+          <semanticElements xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.discrete.emf/model/timediscrete.ecore#//ObjectWithTimeLine"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_hf8Y04GqEeao-6UyO1OEEw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_hf8_4IGqEeao-6UyO1OEEw" name="ConcreteObjectWithTimeLine (3)" tooltipText="Dependency to http://www.misc.com/common/moplaf/time/discrete/model/0.1: &#xA; - EReference Buckets refers to type ObjectTimeBucket in package discrete&#xA; - EReference LastBucket refers to type ObjectTimeBucket in package discrete&#xA; - EReference FirstBucket refers to type ObjectTimeBucket in package discrete&#xA; - EReference StartBucket refers to type TimeBucket in package discrete&#xA; - EReference EndBucket refers to type TimeBucket in package discrete&#xA; - EClassConcreteObjectWithTimeLine extends type ObjectWithTimeLine in package discrete">
+          <target xmi:type="ecore:EClass" href="ToUseTimeLine.ecore#//ConcreteObjectWithTimeLine"/>
+          <semanticElements xmi:type="ecore:EClass" href="ToUseTimeLine.ecore#//ConcreteObjectWithTimeLine"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_hf8_4YGqEeao-6UyO1OEEw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_hf8_4oGqEeao-6UyO1OEEw" name="ObjectTimeBucket (1)" tooltipText="">
+          <target xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.discrete.emf/model/timediscrete.ecore#//ObjectTimeBucket"/>
+          <semanticElements xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.time.discrete.emf/model/timediscrete.ecore#//ObjectTimeBucket"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_hf8_44GqEeao-6UyO1OEEw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_hf9m8IGqEeao-6UyO1OEEw" name="ConcreteObjectTimeBucket (3)" tooltipText="Dependency to http://www.misc.com/common/moplaf/time/discrete/model/0.1: &#xA; - EReference Bucket refers to type TimeBucket in package discrete&#xA; - EReference Next refers to type ObjectTimeBucket in package discrete&#xA; - EReference Previous refers to type ObjectTimeBucket in package discrete&#xA; - EClassConcreteObjectTimeBucket extends type ObjectTimeBucket in package discrete">
+          <target xmi:type="ecore:EClass" href="ToUseTimeLine.ecore#//ConcreteObjectTimeBucket"/>
+          <semanticElements xmi:type="ecore:EClass" href="ToUseTimeLine.ecore#//ConcreteObjectTimeBucket"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_hf9m8YGqEeao-6UyO1OEEw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@containerMappings[name='Analyzed%20Package']/@subNodeMappings[name='EClassfierIntroducingDependency']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_hf-1EIGqEeao-6UyO1OEEw" sourceNode="_hflzgIGqEeao-6UyO1OEEw" targetNode="_cCSdUIGqEeao-6UyO1OEEw">
+        <target xmi:type="ecore:EPackage" href="ToUseTimeLine.ecore#/"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_hf-1EYGqEeao-6UyO1OEEw" lineStyle="dash" size="2" strokeColor="239,41,41">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@edgeMappings[name='Package%20Dependency']/@style"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_hf-1EoGqEeao-6UyO1OEEw"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@edgeMappings[name='Package%20Dependency']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_hf-1E4GqEeao-6UyO1OEEw" sourceNode="_hflzgIGqEeao-6UyO1OEEw" targetNode="_cCTrcIGqEeao-6UyO1OEEw">
+        <target xmi:type="ecore:EPackage" href="ToUseTimeLine.ecore#/"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_hf-1FIGqEeao-6UyO1OEEw" lineStyle="dash" size="2" strokeColor="239,41,41">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@edgeMappings[name='Package%20Dependency']/@style"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_hf-1FYGqEeao-6UyO1OEEw"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@edgeMappings[name='Package%20Dependency']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_hf_cIIGqEeao-6UyO1OEEw" sourceNode="_hflzgIGqEeao-6UyO1OEEw" targetNode="_Z4BlMIGqEeao-6UyO1OEEw">
+        <target xmi:type="ecore:EPackage" href="ToUseTimeLine.ecore#/"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_hf_cIYGqEeao-6UyO1OEEw" lineStyle="dash" size="2" strokeColor="239,41,41">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@edgeMappings[name='Package%20Dependency']/@style"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_hf_cIoGqEeao-6UyO1OEEw"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer/@edgeMappings[name='Package%20Dependency']"/>
+      </ownedDiagramElements>
+      <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']"/>
+      <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_YsjQk4GqEeao-6UyO1OEEw"/>
+      <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']/@defaultLayer"/>
+      <target xmi:type="ecore:EPackage" href="ToUseTimeLine.ecore#/"/>
+    </ownedRepresentations>
   </ownedViews>
   <ownedViews xmi:type="viewpoint:DView" xmi:id="_b0xcULVzEeWJRIileii1Yw">
     <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Archetype']"/>
   </ownedViews>
   <ownedViews xmi:type="viewpoint:DView" xmi:id="_b0zRgLVzEeWJRIileii1Yw">
     <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']"/>
+    <ownedRepresentations xmi:type="table:DTable" xmi:id="_4Ppq8IGqEeao-6UyO1OEEw" name="Tousetimeline generation table" headerColumnWidth="237">
+      <target xmi:type="genmodel:GenPackage" href="ToUseTimeLine.genmodel#//tousetimeline"/>
+      <lines xmi:type="table:DLine" xmi:id="_4PqSAIGqEeao-6UyO1OEEw" label="Domain">
+        <target xmi:type="genmodel:GenClass" href="ToUseTimeLine.genmodel#//tousetimeline/Domain"/>
+        <lines xmi:type="table:DLine" xmi:id="_4PqSAYGqEeao-6UyO1OEEw" label="Name">
+          <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/Domain/Name"/>
+          <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/Domain/Name"/>
+          <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']/@ownedSubLines[name='GenFeature']"/>
+          <cells xmi:type="table:DCell" xmi:id="_4PqSAoGqEeao-6UyO1OEEw" label="10 ToUse" column="_4Pq5EYGqEeao-6UyO1OEEw">
+            <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/Domain/Name"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/Domain/Name"/>
+          </cells>
+          <cells xmi:type="table:DCell" xmi:id="_4PqSA4GqEeao-6UyO1OEEw" label="Name of the domain" column="_4Pq5EoGqEeao-6UyO1OEEw">
+            <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/Domain/Name"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/Domain/Name"/>
+          </cells>
+        </lines>
+        <semanticElements xmi:type="genmodel:GenClass" href="ToUseTimeLine.genmodel#//tousetimeline/Domain"/>
+        <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_4PqSBIGqEeao-6UyO1OEEw" label="DomainDistribution">
+        <target xmi:type="genmodel:GenClass" href="ToUseTimeLine.genmodel#//tousetimeline/DomainDistribution"/>
+        <lines xmi:type="table:DLine" xmi:id="_4PqSBYGqEeao-6UyO1OEEw" label="Name">
+          <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/DomainDistribution/Name"/>
+          <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/DomainDistribution/Name"/>
+          <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']/@ownedSubLines[name='GenFeature']"/>
+          <cells xmi:type="table:DCell" xmi:id="_4PqSBoGqEeao-6UyO1OEEw" label="" column="_4Pq5EYGqEeao-6UyO1OEEw">
+            <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/DomainDistribution/Name"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/DomainDistribution/Name"/>
+          </cells>
+          <cells xmi:type="table:DCell" xmi:id="_4PqSB4GqEeao-6UyO1OEEw" label="" column="_4Pq5EoGqEeao-6UyO1OEEw">
+            <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/DomainDistribution/Name"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/DomainDistribution/Name"/>
+          </cells>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_4PqSCIGqEeao-6UyO1OEEw" label="Color">
+          <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/DomainDistribution/Color"/>
+          <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/DomainDistribution/Color"/>
+          <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']/@ownedSubLines[name='GenFeature']"/>
+          <cells xmi:type="table:DCell" xmi:id="_4PqSCYGqEeao-6UyO1OEEw" label="10 ToUse" column="_4Pq5EYGqEeao-6UyO1OEEw">
+            <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/DomainDistribution/Color"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/DomainDistribution/Color"/>
+          </cells>
+          <cells xmi:type="table:DCell" xmi:id="_4PqSCoGqEeao-6UyO1OEEw" label="Color associated to the distribution" column="_4Pq5EoGqEeao-6UyO1OEEw">
+            <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/DomainDistribution/Color"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/DomainDistribution/Color"/>
+          </cells>
+        </lines>
+        <semanticElements xmi:type="genmodel:GenClass" href="ToUseTimeLine.genmodel#//tousetimeline/DomainDistribution"/>
+        <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_4PqSC4GqEeao-6UyO1OEEw" label="FunctionMinimum">
+        <target xmi:type="genmodel:GenClass" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionMinimum"/>
+        <lines xmi:type="table:DLine" xmi:id="_4PqSDIGqEeao-6UyO1OEEw" label="minimum">
+          <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionMinimum/minimum"/>
+          <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionMinimum/minimum"/>
+          <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']/@ownedSubLines[name='GenFeature']"/>
+          <cells xmi:type="table:DCell" xmi:id="_4PqSDYGqEeao-6UyO1OEEw" label="" column="_4Pq5EYGqEeao-6UyO1OEEw">
+            <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionMinimum/minimum"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionMinimum/minimum"/>
+          </cells>
+          <cells xmi:type="table:DCell" xmi:id="_4PqSDoGqEeao-6UyO1OEEw" label="" column="_4Pq5EoGqEeao-6UyO1OEEw">
+            <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionMinimum/minimum"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionMinimum/minimum"/>
+          </cells>
+        </lines>
+        <semanticElements xmi:type="genmodel:GenClass" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionMinimum"/>
+        <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_4PqSD4GqEeao-6UyO1OEEw" label="FunctionInterval">
+        <target xmi:type="genmodel:GenClass" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionInterval"/>
+        <lines xmi:type="table:DLine" xmi:id="_4PqSEIGqEeao-6UyO1OEEw" label="from">
+          <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionInterval/from"/>
+          <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionInterval/from"/>
+          <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']/@ownedSubLines[name='GenFeature']"/>
+          <cells xmi:type="table:DCell" xmi:id="_4PqSEYGqEeao-6UyO1OEEw" label="" column="_4Pq5EYGqEeao-6UyO1OEEw">
+            <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionInterval/from"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionInterval/from"/>
+          </cells>
+          <cells xmi:type="table:DCell" xmi:id="_4PqSEoGqEeao-6UyO1OEEw" label="" column="_4Pq5EoGqEeao-6UyO1OEEw">
+            <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionInterval/from"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionInterval/from"/>
+          </cells>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_4PqSE4GqEeao-6UyO1OEEw" label="to">
+          <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionInterval/to"/>
+          <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionInterval/to"/>
+          <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']/@ownedSubLines[name='GenFeature']"/>
+          <cells xmi:type="table:DCell" xmi:id="_4PqSFIGqEeao-6UyO1OEEw" label="" column="_4Pq5EYGqEeao-6UyO1OEEw">
+            <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionInterval/to"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionInterval/to"/>
+          </cells>
+          <cells xmi:type="table:DCell" xmi:id="_4PqSFYGqEeao-6UyO1OEEw" label="" column="_4Pq5EoGqEeao-6UyO1OEEw">
+            <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionInterval/to"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionInterval/to"/>
+          </cells>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_4PqSFoGqEeao-6UyO1OEEw" label="Distribution">
+          <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionInterval/Distribution"/>
+          <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionInterval/Distribution"/>
+          <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']/@ownedSubLines[name='GenFeature']"/>
+          <cells xmi:type="table:DCell" xmi:id="_4PqSF4GqEeao-6UyO1OEEw" label="" column="_4Pq5EYGqEeao-6UyO1OEEw">
+            <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionInterval/Distribution"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionInterval/Distribution"/>
+          </cells>
+          <cells xmi:type="table:DCell" xmi:id="_4PqSGIGqEeao-6UyO1OEEw" label="" column="_4Pq5EoGqEeao-6UyO1OEEw">
+            <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionInterval/Distribution"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionInterval/Distribution"/>
+          </cells>
+        </lines>
+        <semanticElements xmi:type="genmodel:GenClass" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionInterval"/>
+        <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_4PqSGYGqEeao-6UyO1OEEw" label="FunctionCumulated">
+        <target xmi:type="genmodel:GenClass" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionCumulated"/>
+        <lines xmi:type="table:DLine" xmi:id="_4PqSGoGqEeao-6UyO1OEEw" label="cumulated">
+          <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionCumulated/cumulated"/>
+          <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionCumulated/cumulated"/>
+          <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']/@ownedSubLines[name='GenFeature']"/>
+          <cells xmi:type="table:DCell" xmi:id="_4PqSG4GqEeao-6UyO1OEEw" label="" column="_4Pq5EYGqEeao-6UyO1OEEw">
+            <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionCumulated/cumulated"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionCumulated/cumulated"/>
+          </cells>
+          <cells xmi:type="table:DCell" xmi:id="_4PqSHIGqEeao-6UyO1OEEw" label="" column="_4Pq5EoGqEeao-6UyO1OEEw">
+            <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionCumulated/cumulated"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionCumulated/cumulated"/>
+          </cells>
+        </lines>
+        <semanticElements xmi:type="genmodel:GenClass" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionCumulated"/>
+        <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_4PqSHYGqEeao-6UyO1OEEw" label="FunctionAverage">
+        <target xmi:type="genmodel:GenClass" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionAverage"/>
+        <lines xmi:type="table:DLine" xmi:id="_4PqSHoGqEeao-6UyO1OEEw" label="average">
+          <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionAverage/average"/>
+          <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionAverage/average"/>
+          <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']/@ownedSubLines[name='GenFeature']"/>
+          <cells xmi:type="table:DCell" xmi:id="_4PqSH4GqEeao-6UyO1OEEw" label="" column="_4Pq5EYGqEeao-6UyO1OEEw">
+            <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionAverage/average"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionAverage/average"/>
+          </cells>
+          <cells xmi:type="table:DCell" xmi:id="_4PqSIIGqEeao-6UyO1OEEw" label="" column="_4Pq5EoGqEeao-6UyO1OEEw">
+            <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionAverage/average"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionAverage/average"/>
+          </cells>
+        </lines>
+        <semanticElements xmi:type="genmodel:GenClass" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionAverage"/>
+        <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_4PqSIYGqEeao-6UyO1OEEw" label="FunctionPossible">
+        <target xmi:type="genmodel:GenClass" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionPossible"/>
+        <lines xmi:type="table:DLine" xmi:id="_4PqSIoGqEeao-6UyO1OEEw" label="limitMoment">
+          <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionPossible/limitMoment"/>
+          <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionPossible/limitMoment"/>
+          <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']/@ownedSubLines[name='GenFeature']"/>
+          <cells xmi:type="table:DCell" xmi:id="_4PqSI4GqEeao-6UyO1OEEw" label="" column="_4Pq5EYGqEeao-6UyO1OEEw">
+            <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionPossible/limitMoment"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionPossible/limitMoment"/>
+          </cells>
+          <cells xmi:type="table:DCell" xmi:id="_4PqSJIGqEeao-6UyO1OEEw" label="" column="_4Pq5EoGqEeao-6UyO1OEEw">
+            <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionPossible/limitMoment"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionPossible/limitMoment"/>
+          </cells>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_4PqSJYGqEeao-6UyO1OEEw" label="limitDuration">
+          <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionPossible/limitDuration"/>
+          <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionPossible/limitDuration"/>
+          <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']/@ownedSubLines[name='GenFeature']"/>
+          <cells xmi:type="table:DCell" xmi:id="_4PqSJoGqEeao-6UyO1OEEw" label="" column="_4Pq5EYGqEeao-6UyO1OEEw">
+            <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionPossible/limitDuration"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionPossible/limitDuration"/>
+          </cells>
+          <cells xmi:type="table:DCell" xmi:id="_4PqSJ4GqEeao-6UyO1OEEw" label="" column="_4Pq5EoGqEeao-6UyO1OEEw">
+            <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionPossible/limitDuration"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionPossible/limitDuration"/>
+          </cells>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_4PqSKIGqEeao-6UyO1OEEw" label="limitAmount">
+          <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionPossible/limitAmount"/>
+          <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionPossible/limitAmount"/>
+          <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']/@ownedSubLines[name='GenFeature']"/>
+          <cells xmi:type="table:DCell" xmi:id="_4PqSKYGqEeao-6UyO1OEEw" label="" column="_4Pq5EYGqEeao-6UyO1OEEw">
+            <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionPossible/limitAmount"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionPossible/limitAmount"/>
+          </cells>
+          <cells xmi:type="table:DCell" xmi:id="_4PqSKoGqEeao-6UyO1OEEw" label="" column="_4Pq5EoGqEeao-6UyO1OEEw">
+            <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionPossible/limitAmount"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionPossible/limitAmount"/>
+          </cells>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_4PqSK4GqEeao-6UyO1OEEw" label="Distribution">
+          <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionPossible/Distribution"/>
+          <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionPossible/Distribution"/>
+          <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']/@ownedSubLines[name='GenFeature']"/>
+          <cells xmi:type="table:DCell" xmi:id="_4PqSLIGqEeao-6UyO1OEEw" label="" column="_4Pq5EYGqEeao-6UyO1OEEw">
+            <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionPossible/Distribution"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionPossible/Distribution"/>
+          </cells>
+          <cells xmi:type="table:DCell" xmi:id="_4PqSLYGqEeao-6UyO1OEEw" label="" column="_4Pq5EoGqEeao-6UyO1OEEw">
+            <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionPossible/Distribution"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionPossible/Distribution"/>
+          </cells>
+        </lines>
+        <semanticElements xmi:type="genmodel:GenClass" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionPossible"/>
+        <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_4PqSLoGqEeao-6UyO1OEEw" label="FunctionEarliestBelow">
+        <target xmi:type="genmodel:GenClass" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionEarliestBelow"/>
+        <lines xmi:type="table:DLine" xmi:id="_4PqSL4GqEeao-6UyO1OEEw" label="earliestBelow">
+          <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionEarliestBelow/earliestBelow"/>
+          <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionEarliestBelow/earliestBelow"/>
+          <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']/@ownedSubLines[name='GenFeature']"/>
+          <cells xmi:type="table:DCell" xmi:id="_4PqSMIGqEeao-6UyO1OEEw" label="" column="_4Pq5EYGqEeao-6UyO1OEEw">
+            <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionEarliestBelow/earliestBelow"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionEarliestBelow/earliestBelow"/>
+          </cells>
+          <cells xmi:type="table:DCell" xmi:id="_4PqSMYGqEeao-6UyO1OEEw" label="" column="_4Pq5EoGqEeao-6UyO1OEEw">
+            <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionEarliestBelow/earliestBelow"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionEarliestBelow/earliestBelow"/>
+          </cells>
+        </lines>
+        <semanticElements xmi:type="genmodel:GenClass" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionEarliestBelow"/>
+        <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_4PqSMoGqEeao-6UyO1OEEw" label="FunctionEarliestOutput">
+        <target xmi:type="genmodel:GenClass" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionEarliestOutput"/>
+        <lines xmi:type="table:DLine" xmi:id="_4PqSM4GqEeao-6UyO1OEEw" label="earliestOutput">
+          <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionEarliestOutput/earliestOutput"/>
+          <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionEarliestOutput/earliestOutput"/>
+          <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']/@ownedSubLines[name='GenFeature']"/>
+          <cells xmi:type="table:DCell" xmi:id="_4PqSNIGqEeao-6UyO1OEEw" label="" column="_4Pq5EYGqEeao-6UyO1OEEw">
+            <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionEarliestOutput/earliestOutput"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionEarliestOutput/earliestOutput"/>
+          </cells>
+          <cells xmi:type="table:DCell" xmi:id="_4PqSNYGqEeao-6UyO1OEEw" label="" column="_4Pq5EoGqEeao-6UyO1OEEw">
+            <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionEarliestOutput/earliestOutput"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionEarliestOutput/earliestOutput"/>
+          </cells>
+        </lines>
+        <semanticElements xmi:type="genmodel:GenClass" href="ToUseTimeLine.genmodel#//tousetimeline/FunctionEarliestOutput"/>
+        <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_4PqSNoGqEeao-6UyO1OEEw" label="ConcreteObjectWithTimeLine">
+        <target xmi:type="genmodel:GenClass" href="ToUseTimeLine.genmodel#//tousetimeline/ConcreteObjectWithTimeLine"/>
+        <lines xmi:type="table:DLine" xmi:id="_4PqSN4GqEeao-6UyO1OEEw" label="">
+          <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/ConcreteObjectWithTimeLine/"/>
+          <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/ConcreteObjectWithTimeLine/"/>
+          <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']/@ownedSubLines[name='GenFeature']"/>
+          <cells xmi:type="table:DCell" xmi:id="_4PqSOIGqEeao-6UyO1OEEw" label="" column="_4Pq5EYGqEeao-6UyO1OEEw">
+            <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/ConcreteObjectWithTimeLine/"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/ConcreteObjectWithTimeLine/"/>
+          </cells>
+          <cells xmi:type="table:DCell" xmi:id="_4Pq5EIGqEeao-6UyO1OEEw" label="" column="_4Pq5EoGqEeao-6UyO1OEEw">
+            <target xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/ConcreteObjectWithTimeLine/"/>
+            <semanticElements xmi:type="genmodel:GenFeature" href="ToUseTimeLine.genmodel#//tousetimeline/ConcreteObjectWithTimeLine/"/>
+          </cells>
+        </lines>
+        <semanticElements xmi:type="genmodel:GenClass" href="ToUseTimeLine.genmodel#//tousetimeline/ConcreteObjectWithTimeLine"/>
+        <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedLineMappings[name='GenClass']"/>
+      </lines>
+      <columns xmi:type="table:DFeatureColumn" xmi:id="_4Pq5EYGqEeao-6UyO1OEEw" label="Category" cells="_4PqSAoGqEeao-6UyO1OEEw _4PqSBoGqEeao-6UyO1OEEw _4PqSCYGqEeao-6UyO1OEEw _4PqSDYGqEeao-6UyO1OEEw _4PqSEYGqEeao-6UyO1OEEw _4PqSFIGqEeao-6UyO1OEEw _4PqSF4GqEeao-6UyO1OEEw _4PqSG4GqEeao-6UyO1OEEw _4PqSH4GqEeao-6UyO1OEEw _4PqSI4GqEeao-6UyO1OEEw _4PqSJoGqEeao-6UyO1OEEw _4PqSKYGqEeao-6UyO1OEEw _4PqSLIGqEeao-6UyO1OEEw _4PqSMIGqEeao-6UyO1OEEw _4PqSNIGqEeao-6UyO1OEEw _4PqSOIGqEeao-6UyO1OEEw" width="128" featureName="propertyCategory">
+        <originMapping xmi:type="description_2:FeatureColumnMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedColumnMappings[name='Category']"/>
+      </columns>
+      <columns xmi:type="table:DFeatureColumn" xmi:id="_4Pq5EoGqEeao-6UyO1OEEw" label="Description" cells="_4PqSA4GqEeao-6UyO1OEEw _4PqSB4GqEeao-6UyO1OEEw _4PqSCoGqEeao-6UyO1OEEw _4PqSDoGqEeao-6UyO1OEEw _4PqSEoGqEeao-6UyO1OEEw _4PqSFYGqEeao-6UyO1OEEw _4PqSGIGqEeao-6UyO1OEEw _4PqSHIGqEeao-6UyO1OEEw _4PqSIIGqEeao-6UyO1OEEw _4PqSJIGqEeao-6UyO1OEEw _4PqSJ4GqEeao-6UyO1OEEw _4PqSKoGqEeao-6UyO1OEEw _4PqSLYGqEeao-6UyO1OEEw _4PqSMYGqEeao-6UyO1OEEw _4PqSNYGqEeao-6UyO1OEEw _4Pq5EIGqEeao-6UyO1OEEw" featureName="propertyDescription">
+        <originMapping xmi:type="description_2:FeatureColumnMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']/@ownedColumnMappings[name='Decription']"/>
+      </columns>
+      <description xmi:type="description_2:EditionTableDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']"/>
+    </ownedRepresentations>
   </ownedViews>
 </viewpoint:DAnalysis>
