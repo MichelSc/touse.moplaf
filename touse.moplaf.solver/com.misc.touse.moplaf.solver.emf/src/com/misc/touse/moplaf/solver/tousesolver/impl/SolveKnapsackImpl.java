@@ -2,6 +2,7 @@
  */
 package com.misc.touse.moplaf.solver.tousesolver.impl;
 
+import com.misc.common.moplaf.common.ReturnFeedback;
 import com.misc.common.moplaf.common.impl.JobImpl;
 import com.misc.common.moplaf.solver.GeneratorLpGoal;
 import com.misc.common.moplaf.solver.solvercplex.SolverCplex;
@@ -50,7 +51,7 @@ public class SolveKnapsackImpl extends JobImpl implements SolveKnapsack {
 	 * @see com.misc.common.moplaf.common.impl.JobImpl#runImpl()
 	 */
 	@Override
-	public boolean jobRunImpl() {
+	public ReturnFeedback jobRunImpl() {
 		float maxSeconds = this.getArgAsFloat(0);
 		// get the domain
 		Domain domain = (Domain)this.eContainer();
@@ -95,7 +96,8 @@ public class SolveKnapsackImpl extends JobImpl implements SolveKnapsack {
 		KnapsackLp lp = TousesolverFactoryImpl.eINSTANCE.createKnapsackLp();
 		lp.setCode("demo lp job "+this.getName());
 		scenario.getLP().add(lp);
-		lp.run(this);
+		ReturnFeedback feedback = lp.run(this);
+		if ( feedback.isFailure() ) { return feedback; }
 		GeneratorLpGoal goal = lp.getValue();
 		
 		// make the solver
@@ -106,9 +108,8 @@ public class SolveKnapsackImpl extends JobImpl implements SolveKnapsack {
 		solver.setSolverMaxDuration(maxSeconds);
 		
 		// run the solver
-		solver.run(this);
+		return solver.run(this);
 		
-		return true;
 	}
 
 } //SolveKnapsackImpl
