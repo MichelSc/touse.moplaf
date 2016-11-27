@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="tousejob" nsURI="//www.misc.com/touse/moplaf/job/model/0.1"
+    nsPrefix="tuj">
+  <eClassifiers xsi:type="ecore:EClass" name="Domain">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Engines" eType="ecore:EClass ../../com.misc.common.moplaf.job.client.emf/model/jobclient.ecore#//JobEngineInProcess"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Jobs" upperBound="-1" eType="#//ToUseJob"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ToUseJob" eSuperTypes="../../com.misc.common.moplaf.job.client.emf/model/jobclient.ecore#//JobRemote">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="SecondsWaiting" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ToUseJobResult" eSuperTypes="../../com.misc.common.moplaf.job.client.emf/model/jobclient.ecore#//JobRemoteResult">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="TicksWaited" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+  </eClassifiers>
+</ecore:EPackage>

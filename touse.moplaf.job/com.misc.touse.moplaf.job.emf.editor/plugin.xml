@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated tousejob -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="com.misc.touse.moplaf.tousejob.presentation.TousejobModelWizardID"
+            name="%_UI_TousejobModelWizard_label"
+            class="com.misc.touse.moplaf.tousejob.presentation.TousejobModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/TousejobModelFile.gif">
+         <description>%_UI_TousejobModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated tousejob -->
+      <editor
+            id="com.misc.touse.moplaf.tousejob.presentation.TousejobEditorID"
+            name="%_UI_TousejobEditor_label"
+            icon="icons/full/obj16/TousejobModelFile.gif"
+            extensions="tousejob"
+            class="com.misc.touse.moplaf.tousejob.presentation.TousejobEditor"
+            contributorClass="com.misc.touse.moplaf.tousejob.presentation.TousejobActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
