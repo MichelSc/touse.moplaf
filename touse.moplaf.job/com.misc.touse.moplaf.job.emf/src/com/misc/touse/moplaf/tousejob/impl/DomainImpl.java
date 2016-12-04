@@ -2,8 +2,8 @@
  */
 package com.misc.touse.moplaf.tousejob.impl;
 
-import com.misc.common.moplaf.job.jobclient.JobEngineInProcess;
-
+import com.misc.common.moplaf.job.jobclient.JobEngine;
+import com.misc.common.moplaf.job.jobclient.JobEngineProxy;
 import com.misc.touse.moplaf.tousejob.Domain;
 import com.misc.touse.moplaf.tousejob.ToUseJob;
 import com.misc.touse.moplaf.tousejob.TousejobPackage;
@@ -34,6 +34,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.tousejob.impl.DomainImpl#getEngines <em>Engines</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousejob.impl.DomainImpl#getJobs <em>Jobs</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousejob.impl.DomainImpl#getProxies <em>Proxies</em>}</li>
  * </ul>
  *
  * @generated
@@ -47,7 +48,7 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	 * @generated
 	 * @ordered
 	 */
-	protected JobEngineInProcess engines;
+	protected JobEngine engines;
 
 	/**
 	 * The cached value of the '{@link #getJobs() <em>Jobs</em>}' containment reference list.
@@ -58,6 +59,16 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	 * @ordered
 	 */
 	protected EList<ToUseJob> jobs;
+
+	/**
+	 * The cached value of the '{@link #getProxies() <em>Proxies</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getProxies()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<JobEngineProxy> proxies;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -83,7 +94,7 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public JobEngineInProcess getEngines() {
+	public JobEngine getEngines() {
 		return engines;
 	}
 
@@ -92,8 +103,8 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetEngines(JobEngineInProcess newEngines, NotificationChain msgs) {
-		JobEngineInProcess oldEngines = engines;
+	public NotificationChain basicSetEngines(JobEngine newEngines, NotificationChain msgs) {
+		JobEngine oldEngines = engines;
 		engines = newEngines;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TousejobPackage.DOMAIN__ENGINES, oldEngines, newEngines);
@@ -107,7 +118,7 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setEngines(JobEngineInProcess newEngines) {
+	public void setEngines(JobEngine newEngines) {
 		if (newEngines != engines) {
 			NotificationChain msgs = null;
 			if (engines != null)
@@ -138,6 +149,18 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<JobEngineProxy> getProxies() {
+		if (proxies == null) {
+			proxies = new EObjectContainmentEList<JobEngineProxy>(JobEngineProxy.class, this, TousejobPackage.DOMAIN__PROXIES);
+		}
+		return proxies;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -145,6 +168,8 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 				return basicSetEngines(null, msgs);
 			case TousejobPackage.DOMAIN__JOBS:
 				return ((InternalEList<?>)getJobs()).basicRemove(otherEnd, msgs);
+			case TousejobPackage.DOMAIN__PROXIES:
+				return ((InternalEList<?>)getProxies()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -161,6 +186,8 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 				return getEngines();
 			case TousejobPackage.DOMAIN__JOBS:
 				return getJobs();
+			case TousejobPackage.DOMAIN__PROXIES:
+				return getProxies();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -175,11 +202,15 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case TousejobPackage.DOMAIN__ENGINES:
-				setEngines((JobEngineInProcess)newValue);
+				setEngines((JobEngine)newValue);
 				return;
 			case TousejobPackage.DOMAIN__JOBS:
 				getJobs().clear();
 				getJobs().addAll((Collection<? extends ToUseJob>)newValue);
+				return;
+			case TousejobPackage.DOMAIN__PROXIES:
+				getProxies().clear();
+				getProxies().addAll((Collection<? extends JobEngineProxy>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -194,10 +225,13 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case TousejobPackage.DOMAIN__ENGINES:
-				setEngines((JobEngineInProcess)null);
+				setEngines((JobEngine)null);
 				return;
 			case TousejobPackage.DOMAIN__JOBS:
 				getJobs().clear();
+				return;
+			case TousejobPackage.DOMAIN__PROXIES:
+				getProxies().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -215,6 +249,8 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 				return engines != null;
 			case TousejobPackage.DOMAIN__JOBS:
 				return jobs != null && !jobs.isEmpty();
+			case TousejobPackage.DOMAIN__PROXIES:
+				return proxies != null && !proxies.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

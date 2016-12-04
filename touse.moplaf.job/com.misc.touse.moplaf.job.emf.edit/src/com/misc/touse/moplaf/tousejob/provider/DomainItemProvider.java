@@ -81,6 +81,7 @@ public class DomainItemProvider
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(TousejobPackage.Literals.DOMAIN__ENGINES);
 			childrenFeatures.add(TousejobPackage.Literals.DOMAIN__JOBS);
+			childrenFeatures.add(TousejobPackage.Literals.DOMAIN__PROXIES);
 		}
 		return childrenFeatures;
 	}
@@ -135,6 +136,7 @@ public class DomainItemProvider
 		switch (notification.getFeatureID(Domain.class)) {
 			case TousejobPackage.DOMAIN__ENGINES:
 			case TousejobPackage.DOMAIN__JOBS:
+			case TousejobPackage.DOMAIN__PROXIES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -154,13 +156,13 @@ public class DomainItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TousejobPackage.Literals.DOMAIN__ENGINES,
-				 JobclientFactory.eINSTANCE.createJobEngineInProcess()));
+				(TousejobPackage.Literals.DOMAIN__JOBS,
+				 TousejobFactory.eINSTANCE.createToUseJob()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TousejobPackage.Literals.DOMAIN__JOBS,
-				 TousejobFactory.eINSTANCE.createToUseJob()));
+				(TousejobPackage.Literals.DOMAIN__PROXIES,
+				 JobclientFactory.eINSTANCE.createJobEngineInProcess()));
 	}
 
 	/**

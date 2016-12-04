@@ -141,6 +141,15 @@ public class TousejobPackageImpl extends EPackageImpl implements TousejobPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getDomain_Proxies() {
+		return (EReference)domainEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getToUseJob() {
 		return toUseJobEClass;
 	}
@@ -203,6 +212,7 @@ public class TousejobPackageImpl extends EPackageImpl implements TousejobPackage
 		domainEClass = createEClass(DOMAIN);
 		createEReference(domainEClass, DOMAIN__ENGINES);
 		createEReference(domainEClass, DOMAIN__JOBS);
+		createEReference(domainEClass, DOMAIN__PROXIES);
 
 		toUseJobEClass = createEClass(TO_USE_JOB);
 		createEAttribute(toUseJobEClass, TO_USE_JOB__SECONDS_WAITING);
@@ -247,8 +257,9 @@ public class TousejobPackageImpl extends EPackageImpl implements TousejobPackage
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDomain_Engines(), theJobclientPackage.getJobEngineInProcess(), null, "Engines", null, 0, 1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDomain_Engines(), theJobclientPackage.getJobEngine(), null, "Engines", null, 0, 1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDomain_Jobs(), this.getToUseJob(), null, "Jobs", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDomain_Proxies(), theJobclientPackage.getJobEngineProxy(), null, "Proxies", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(toUseJobEClass, ToUseJob.class, "ToUseJob", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getToUseJob_SecondsWaiting(), ecorePackage.getEInt(), "SecondsWaiting", null, 0, 1, ToUseJob.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

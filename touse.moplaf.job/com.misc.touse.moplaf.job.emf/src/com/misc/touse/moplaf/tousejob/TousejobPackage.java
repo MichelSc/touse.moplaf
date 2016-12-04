@@ -87,13 +87,22 @@ public interface TousejobPackage extends EPackage {
 	int DOMAIN__JOBS = 1;
 
 	/**
+	 * The feature id for the '<em><b>Proxies</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN__PROXIES = 2;
+
+	/**
 	 * The number of structural features of the '<em>Domain</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_FEATURE_COUNT = 2;
+	int DOMAIN_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Domain</em>' class.
@@ -455,6 +464,17 @@ public interface TousejobPackage extends EPackage {
 	EReference getDomain_Jobs();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.tousejob.Domain#getProxies <em>Proxies</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Proxies</em>'.
+	 * @see com.misc.touse.moplaf.tousejob.Domain#getProxies()
+	 * @see #getDomain()
+	 * @generated
+	 */
+	EReference getDomain_Proxies();
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousejob.ToUseJob <em>To Use Job</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -544,6 +564,14 @@ public interface TousejobPackage extends EPackage {
 		 * @generated
 		 */
 		EReference DOMAIN__JOBS = eINSTANCE.getDomain_Jobs();
+
+		/**
+		 * The meta object literal for the '<em><b>Proxies</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DOMAIN__PROXIES = eINSTANCE.getDomain_Proxies();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousejob.impl.ToUseJobImpl <em>To Use Job</em>}' class.
