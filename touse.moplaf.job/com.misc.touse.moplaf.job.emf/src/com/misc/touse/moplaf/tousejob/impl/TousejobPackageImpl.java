@@ -4,7 +4,9 @@ package com.misc.touse.moplaf.tousejob.impl;
 
 import com.misc.common.moplaf.job.jobclient.JobclientPackage;
 
+import com.misc.common.moplaf.job.jobxmlrpc.JobxmlrpcPackage;
 import com.misc.touse.moplaf.tousejob.Domain;
+import com.misc.touse.moplaf.tousejob.DummyToHoldRefToModel;
 import com.misc.touse.moplaf.tousejob.ToUseJob;
 import com.misc.touse.moplaf.tousejob.ToUseJobResult;
 import com.misc.touse.moplaf.tousejob.TousejobFactory;
@@ -44,6 +46,13 @@ public class TousejobPackageImpl extends EPackageImpl implements TousejobPackage
 	 * @generated
 	 */
 	private EClass toUseJobResultEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass dummyToHoldRefToModelEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -92,7 +101,7 @@ public class TousejobPackageImpl extends EPackageImpl implements TousejobPackage
 		isInited = true;
 
 		// Initialize simple dependencies
-		JobclientPackage.eINSTANCE.eClass();
+		JobxmlrpcPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theTousejobPackage.createPackageContents();
@@ -186,6 +195,15 @@ public class TousejobPackageImpl extends EPackageImpl implements TousejobPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getDummyToHoldRefToModel() {
+		return dummyToHoldRefToModelEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public TousejobFactory getTousejobFactory() {
 		return (TousejobFactory)getEFactoryInstance();
 	}
@@ -219,6 +237,8 @@ public class TousejobPackageImpl extends EPackageImpl implements TousejobPackage
 
 		toUseJobResultEClass = createEClass(TO_USE_JOB_RESULT);
 		createEAttribute(toUseJobResultEClass, TO_USE_JOB_RESULT__TICKS_WAITED);
+
+		dummyToHoldRefToModelEClass = createEClass(DUMMY_TO_HOLD_REF_TO_MODEL);
 	}
 
 	/**
@@ -246,6 +266,7 @@ public class TousejobPackageImpl extends EPackageImpl implements TousejobPackage
 
 		// Obtain other dependent packages
 		JobclientPackage theJobclientPackage = (JobclientPackage)EPackage.Registry.INSTANCE.getEPackage(JobclientPackage.eNS_URI);
+		JobxmlrpcPackage theJobxmlrpcPackage = (JobxmlrpcPackage)EPackage.Registry.INSTANCE.getEPackage(JobxmlrpcPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -254,6 +275,7 @@ public class TousejobPackageImpl extends EPackageImpl implements TousejobPackage
 		// Add supertypes to classes
 		toUseJobEClass.getESuperTypes().add(theJobclientPackage.getJobRemote());
 		toUseJobResultEClass.getESuperTypes().add(theJobclientPackage.getJobRemoteResult());
+		dummyToHoldRefToModelEClass.getESuperTypes().add(theJobxmlrpcPackage.getJobEngineServer());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -262,10 +284,12 @@ public class TousejobPackageImpl extends EPackageImpl implements TousejobPackage
 		initEReference(getDomain_Proxies(), theJobclientPackage.getJobEngineProxy(), null, "Proxies", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(toUseJobEClass, ToUseJob.class, "ToUseJob", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getToUseJob_SecondsWaiting(), ecorePackage.getEInt(), "SecondsWaiting", null, 0, 1, ToUseJob.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getToUseJob_SecondsWaiting(), ecorePackage.getEInt(), "SecondsWaiting", "5", 0, 1, ToUseJob.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(toUseJobResultEClass, ToUseJobResult.class, "ToUseJobResult", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getToUseJobResult_TicksWaited(), ecorePackage.getELong(), "TicksWaited", null, 0, 1, ToUseJobResult.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(dummyToHoldRefToModelEClass, DummyToHoldRefToModel.class, "DummyToHoldRefToModel", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

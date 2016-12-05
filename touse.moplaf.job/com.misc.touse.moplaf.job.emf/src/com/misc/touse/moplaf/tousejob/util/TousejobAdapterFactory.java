@@ -5,9 +5,11 @@ package com.misc.touse.moplaf.tousejob.util;
 import com.misc.common.moplaf.job.Job;
 import com.misc.common.moplaf.job.Run;
 
+import com.misc.common.moplaf.job.jobclient.JobEngine;
 import com.misc.common.moplaf.job.jobclient.JobRemote;
 import com.misc.common.moplaf.job.jobclient.JobRemoteResult;
 
+import com.misc.common.moplaf.job.jobxmlrpc.JobEngineServer;
 import com.misc.touse.moplaf.tousejob.*;
 
 import org.eclipse.emf.common.notify.Adapter;
@@ -86,6 +88,10 @@ public class TousejobAdapterFactory extends AdapterFactoryImpl {
 				return createToUseJobResultAdapter();
 			}
 			@Override
+			public Adapter caseDummyToHoldRefToModel(DummyToHoldRefToModel object) {
+				return createDummyToHoldRefToModelAdapter();
+			}
+			@Override
 			public Adapter caseRun(Run object) {
 				return createRunAdapter();
 			}
@@ -100,6 +106,14 @@ public class TousejobAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseJobRemoteResult(JobRemoteResult object) {
 				return createJobRemoteResultAdapter();
+			}
+			@Override
+			public Adapter caseJobEngine(JobEngine object) {
+				return createJobEngineAdapter();
+			}
+			@Override
+			public Adapter caseJobEngineServer(JobEngineServer object) {
+				return createJobEngineServerAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -164,6 +178,20 @@ public class TousejobAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.tousejob.DummyToHoldRefToModel <em>Dummy To Hold Ref To Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.touse.moplaf.tousejob.DummyToHoldRefToModel
+	 * @generated
+	 */
+	public Adapter createDummyToHoldRefToModelAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.job.Run <em>Run</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -216,6 +244,34 @@ public class TousejobAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createJobRemoteResultAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.job.jobclient.JobEngine <em>Job Engine</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.job.jobclient.JobEngine
+	 * @generated
+	 */
+	public Adapter createJobEngineAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.job.jobxmlrpc.JobEngineServer <em>Job Engine Server</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.job.jobxmlrpc.JobEngineServer
+	 * @generated
+	 */
+	public Adapter createJobEngineServerAdapter() {
 		return null;
 	}
 
