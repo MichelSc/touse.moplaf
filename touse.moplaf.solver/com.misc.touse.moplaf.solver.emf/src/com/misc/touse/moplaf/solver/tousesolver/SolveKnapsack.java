@@ -2,7 +2,7 @@
  */
 package com.misc.touse.moplaf.solver.tousesolver;
 
-import com.misc.common.moplaf.common.Job;
+import com.misc.common.moplaf.job.JobConsole;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,5 +14,5 @@ import com.misc.common.moplaf.common.Job;
  * @model
  * @generated
  */
-public interface SolveKnapsack extends Job {
+public interface SolveKnapsack extends JobConsole {
 } // SolveKnapsack

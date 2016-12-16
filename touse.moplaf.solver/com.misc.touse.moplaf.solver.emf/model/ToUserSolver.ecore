@@ -83,5 +83,5 @@
         eType="ecore:EClass ../../com.misc.common.moplaf.solver.emf/model/solver.ecore#//GeneratorLpVar"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SolveKnapsack" eSuperTypes="../../com.misc.common.moplaf.emf/model/common.ecore#//Job"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SolveKnapsack" eSuperTypes="../../com.misc.common.moplaf.job.emf/model/job.ecore#//JobConsole"/>
 </ecore:EPackage>

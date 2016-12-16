@@ -3,8 +3,7 @@
 package com.misc.touse.moplaf.solver.tousesolver.provider;
 
 
-import com.misc.common.moplaf.common.provider.JobItemProvider;
-
+import com.misc.common.moplaf.job.provider.JobConsoleItemProvider;
 import com.misc.touse.moplaf.solver.tousesolver.SolveKnapsack;
 
 import java.util.Collection;
@@ -23,7 +22,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
  * <!-- end-user-doc -->
  * @generated
  */
-public class SolveKnapsackItemProvider extends JobItemProvider {
+public class SolveKnapsackItemProvider extends JobConsoleItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

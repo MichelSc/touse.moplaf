@@ -2,7 +2,7 @@
  */
 package com.misc.touse.moplaf.solver.tousesolver.provider;
 
-import com.misc.common.moplaf.common.provider.CommonEditPlugin;
+import com.misc.common.moplaf.job.provider.JobEditPlugin;
 import com.misc.common.moplaf.solver.provider.SolverEditPlugin;
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
@@ -39,8 +39,8 @@ public final class ToUserSolverEditPlugin extends EMFPlugin {
 	public ToUserSolverEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     CommonEditPlugin.INSTANCE,
 		     SolverEditPlugin.INSTANCE,
+		     JobEditPlugin.INSTANCE,
 		   });
 	}
 

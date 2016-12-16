@@ -3,7 +3,8 @@
 package com.misc.touse.moplaf.solver.tousesolver.impl;
 
 import com.misc.common.moplaf.common.ReturnFeedback;
-import com.misc.common.moplaf.common.impl.JobImpl;
+import com.misc.common.moplaf.job.RunContext;
+import com.misc.common.moplaf.job.impl.JobConsoleImpl;
 import com.misc.common.moplaf.solver.GeneratorLpGoal;
 import com.misc.common.moplaf.solver.solvercplex.SolverCplex;
 import com.misc.common.moplaf.solver.solvercplex.SolvercplexFactory;
@@ -25,7 +26,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class SolveKnapsackImpl extends JobImpl implements SolveKnapsack {
+public class SolveKnapsackImpl extends JobConsoleImpl implements SolveKnapsack {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -51,8 +52,13 @@ public class SolveKnapsackImpl extends JobImpl implements SolveKnapsack {
 	 * @see com.misc.common.moplaf.common.impl.JobImpl#runImpl()
 	 */
 	@Override
-	public ReturnFeedback jobRunImpl() {
-		float maxSeconds = this.getArgAsFloat(0);
+	public ReturnFeedback jobRunImpl(RunContext runContext) {
+		float maxSeconds;
+		try {
+			maxSeconds = this.getArgAsFloat(0);
+		} catch (Exception e) {
+			return new ReturnFeedback("Parameters not parsed", e);
+		}
 		// get the domain
 		Domain domain = (Domain)this.eContainer();
 		
@@ -96,7 +102,7 @@ public class SolveKnapsackImpl extends JobImpl implements SolveKnapsack {
 		KnapsackLp lp = TousesolverFactoryImpl.eINSTANCE.createKnapsackLp();
 		lp.setCode("demo lp job "+this.getName());
 		scenario.getLP().add(lp);
-		ReturnFeedback feedback = lp.run(this);
+		ReturnFeedback feedback = lp.run(runContext);
 		if ( feedback.isFailure() ) { return feedback; }
 		GeneratorLpGoal goal = lp.getValue();
 		
@@ -108,7 +114,7 @@ public class SolveKnapsackImpl extends JobImpl implements SolveKnapsack {
 		solver.setSolverMaxDuration(maxSeconds);
 		
 		// run the solver
-		return solver.run(this);
+		return solver.run(runContext);
 		
 	}
 
