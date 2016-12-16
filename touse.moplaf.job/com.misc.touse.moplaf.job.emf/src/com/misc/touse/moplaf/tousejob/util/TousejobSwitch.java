@@ -5,9 +5,11 @@ package com.misc.touse.moplaf.tousejob.util;
 import com.misc.common.moplaf.job.Job;
 import com.misc.common.moplaf.job.Run;
 
+import com.misc.common.moplaf.job.jobclient.JobEngine;
 import com.misc.common.moplaf.job.jobclient.JobRemote;
 import com.misc.common.moplaf.job.jobclient.JobRemoteResult;
 
+import com.misc.common.moplaf.job.jobxmlrpc.JobEngineServer;
 import com.misc.touse.moplaf.tousejob.*;
 
 import org.eclipse.emf.ecore.EObject;
@@ -94,6 +96,14 @@ public class TousejobSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case TousejobPackage.DUMMY_TO_HOLD_REF_TO_MODEL: {
+				DummyToHoldRefToModel dummyToHoldRefToModel = (DummyToHoldRefToModel)theEObject;
+				T result = caseDummyToHoldRefToModel(dummyToHoldRefToModel);
+				if (result == null) result = caseJobEngineServer(dummyToHoldRefToModel);
+				if (result == null) result = caseJobEngine(dummyToHoldRefToModel);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -140,6 +150,21 @@ public class TousejobSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseToUseJobResult(ToUseJobResult object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Dummy To Hold Ref To Model</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Dummy To Hold Ref To Model</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDummyToHoldRefToModel(DummyToHoldRefToModel object) {
 		return null;
 	}
 
@@ -200,6 +225,36 @@ public class TousejobSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseJobRemoteResult(JobRemoteResult object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Job Engine</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Job Engine</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseJobEngine(JobEngine object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Job Engine Server</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Job Engine Server</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseJobEngineServer(JobEngineServer object) {
 		return null;
 	}
 

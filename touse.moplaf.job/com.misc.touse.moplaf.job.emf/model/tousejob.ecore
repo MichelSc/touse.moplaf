@@ -12,9 +12,12 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ToUseJob" eSuperTypes="../../com.misc.common.moplaf.job.client.emf/model/jobclient.ecore#//JobRemote">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="SecondsWaiting" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="SecondsWaiting" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="5"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ToUseJobResult" eSuperTypes="../../com.misc.common.moplaf.job.client.emf/model/jobclient.ecore#//JobRemoteResult">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="TicksWaited" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DummyToHoldRefToModel" abstract="true"
+      interface="true" eSuperTypes="../../com.misc.common.moplaf.job.xmlrpc.emf/model/jobxmlrpc.ecore#//JobEngineServer"/>
 </ecore:EPackage>

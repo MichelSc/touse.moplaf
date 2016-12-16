@@ -4,6 +4,7 @@ package com.misc.touse.moplaf.tousejob;
 
 import com.misc.common.moplaf.job.jobclient.JobclientPackage;
 
+import com.misc.common.moplaf.job.jobxmlrpc.JobxmlrpcPackage;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -432,6 +433,107 @@ public interface TousejobPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousejob.DummyToHoldRefToModel <em>Dummy To Hold Ref To Model</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousejob.DummyToHoldRefToModel
+	 * @see com.misc.touse.moplaf.tousejob.impl.TousejobPackageImpl#getDummyToHoldRefToModel()
+	 * @generated
+	 */
+	int DUMMY_TO_HOLD_REF_TO_MODEL = 3;
+
+	/**
+	 * The feature id for the '<em><b>Submitted Jobs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DUMMY_TO_HOLD_REF_TO_MODEL__SUBMITTED_JOBS = JobxmlrpcPackage.JOB_ENGINE_SERVER__SUBMITTED_JOBS;
+
+	/**
+	 * The feature id for the '<em><b>Running</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DUMMY_TO_HOLD_REF_TO_MODEL__RUNNING = JobxmlrpcPackage.JOB_ENGINE_SERVER__RUNNING;
+
+	/**
+	 * The feature id for the '<em><b>Start Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DUMMY_TO_HOLD_REF_TO_MODEL__START_FEEDBACK = JobxmlrpcPackage.JOB_ENGINE_SERVER__START_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Stop Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DUMMY_TO_HOLD_REF_TO_MODEL__STOP_FEEDBACK = JobxmlrpcPackage.JOB_ENGINE_SERVER__STOP_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Port</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DUMMY_TO_HOLD_REF_TO_MODEL__PORT = JobxmlrpcPackage.JOB_ENGINE_SERVER__PORT;
+
+	/**
+	 * The feature id for the '<em><b>Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DUMMY_TO_HOLD_REF_TO_MODEL__PATH = JobxmlrpcPackage.JOB_ENGINE_SERVER__PATH;
+
+	/**
+	 * The number of structural features of the '<em>Dummy To Hold Ref To Model</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DUMMY_TO_HOLD_REF_TO_MODEL_FEATURE_COUNT = JobxmlrpcPackage.JOB_ENGINE_SERVER_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Start</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DUMMY_TO_HOLD_REF_TO_MODEL___START = JobxmlrpcPackage.JOB_ENGINE_SERVER___START;
+
+	/**
+	 * The operation id for the '<em>Stop</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DUMMY_TO_HOLD_REF_TO_MODEL___STOP = JobxmlrpcPackage.JOB_ENGINE_SERVER___STOP;
+
+	/**
+	 * The number of operations of the '<em>Dummy To Hold Ref To Model</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DUMMY_TO_HOLD_REF_TO_MODEL_OPERATION_COUNT = JobxmlrpcPackage.JOB_ENGINE_SERVER_OPERATION_COUNT + 0;
+
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousejob.Domain <em>Domain</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -515,6 +617,16 @@ public interface TousejobPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getToUseJobResult_TicksWaited();
+
+	/**
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousejob.DummyToHoldRefToModel <em>Dummy To Hold Ref To Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Dummy To Hold Ref To Model</em>'.
+	 * @see com.misc.touse.moplaf.tousejob.DummyToHoldRefToModel
+	 * @generated
+	 */
+	EClass getDummyToHoldRefToModel();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -608,6 +720,16 @@ public interface TousejobPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TO_USE_JOB_RESULT__TICKS_WAITED = eINSTANCE.getToUseJobResult_TicksWaited();
+
+		/**
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousejob.DummyToHoldRefToModel <em>Dummy To Hold Ref To Model</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.touse.moplaf.tousejob.DummyToHoldRefToModel
+		 * @see com.misc.touse.moplaf.tousejob.impl.TousejobPackageImpl#getDummyToHoldRefToModel()
+		 * @generated
+		 */
+		EClass DUMMY_TO_HOLD_REF_TO_MODEL = eINSTANCE.getDummyToHoldRefToModel();
 
 	}
 

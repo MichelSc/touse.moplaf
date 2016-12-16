@@ -4,6 +4,7 @@ package com.misc.touse.moplaf.tousejob.provider;
 
 import com.misc.common.moplaf.job.jobclient.provider.JobclientEditPlugin;
 
+import com.misc.common.moplaf.job.jobxmlrpc.provider.JobxmlrpcEditPlugin;
 import com.misc.common.moplaf.job.provider.JobEditPlugin;
 
 import org.eclipse.emf.common.EMFPlugin;
@@ -44,6 +45,7 @@ public final class TousejobEditPlugin extends EMFPlugin {
 		  (new ResourceLocator [] {
 		     JobEditPlugin.INSTANCE,
 		     JobclientEditPlugin.INSTANCE,
+		     JobxmlrpcEditPlugin.INSTANCE,
 		   });
 	}
 

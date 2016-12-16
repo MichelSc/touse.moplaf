@@ -43,7 +43,7 @@ public class ToUseJobImpl extends JobRemoteImpl implements ToUseJob {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int SECONDS_WAITING_EDEFAULT = 0;
+	protected static final int SECONDS_WAITING_EDEFAULT = 5;
 
 	/**
 	 * The cached value of the '{@link #getSecondsWaiting() <em>Seconds Waiting</em>}' attribute.
