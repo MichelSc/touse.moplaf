@@ -158,6 +158,7 @@ import com.misc.touse.moplaf.tousejob.provider.TousejobItemProviderAdapterFactor
 
 import com.misc.common.moplaf.job.jobclient.provider.JobclientItemProviderAdapterFactory;
 
+import com.misc.common.moplaf.job.jobxmlrpc.provider.JobxmlrpcItemProviderAdapterFactory;
 import com.misc.common.moplaf.job.provider.JobItemProviderAdapterFactory;
 
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
@@ -708,6 +709,7 @@ public class TousejobEditor
 		adapterFactory.addAdapterFactory(new TousejobItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new JobItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new JobclientItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new JobxmlrpcItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
 		// Create the command stack that will notify this editor as commands are executed.

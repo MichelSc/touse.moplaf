@@ -368,6 +368,15 @@ public interface TousejobPackage extends EPackage {
 	int TO_USE_JOB___GET_RETURN = JobclientPackage.JOB_REMOTE___GET_RETURN;
 
 	/**
+	 * The operation id for the '<em>Set Return</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB___SET_RETURN__RETURNFEEDBACK = JobclientPackage.JOB_REMOTE___SET_RETURN__RETURNFEEDBACK;
+
+	/**
 	 * The operation id for the '<em>On Progress</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -477,6 +486,24 @@ public interface TousejobPackage extends EPackage {
 	 * @ordered
 	 */
 	int DUMMY_TO_HOLD_REF_TO_MODEL__STOP_FEEDBACK = JobxmlrpcPackage.JOB_ENGINE_SERVER__STOP_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DUMMY_TO_HOLD_REF_TO_MODEL__NAME = JobxmlrpcPackage.JOB_ENGINE_SERVER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DUMMY_TO_HOLD_REF_TO_MODEL__LABEL = JobxmlrpcPackage.JOB_ENGINE_SERVER__LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Port</b></em>' attribute.
