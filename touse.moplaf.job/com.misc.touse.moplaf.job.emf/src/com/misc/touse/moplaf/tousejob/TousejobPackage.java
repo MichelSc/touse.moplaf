@@ -296,13 +296,22 @@ public interface TousejobPackage extends EPackage {
 	int TO_USE_JOB__SECONDS_WAITING = JobclientPackage.JOB_REMOTE_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Iteration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB__ITERATION = JobclientPackage.JOB_REMOTE_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>To Use Job</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_JOB_FEATURE_COUNT = JobclientPackage.JOB_REMOTE_FEATURE_COUNT + 1;
+	int TO_USE_JOB_FEATURE_COUNT = JobclientPackage.JOB_REMOTE_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Reset</em>' operation.
@@ -551,6 +560,15 @@ public interface TousejobPackage extends EPackage {
 	int DUMMY_TO_HOLD_REF_TO_MODEL___STOP = JobxmlrpcPackage.JOB_ENGINE_SERVER___STOP;
 
 	/**
+	 * The operation id for the '<em>On Job Progress</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DUMMY_TO_HOLD_REF_TO_MODEL___ON_JOB_PROGRESS__SUBMITTEDJOB_PROGRESSFEEDBACK = JobxmlrpcPackage.JOB_ENGINE_SERVER___ON_JOB_PROGRESS__SUBMITTEDJOB_PROGRESSFEEDBACK;
+
+	/**
 	 * The number of operations of the '<em>Dummy To Hold Ref To Model</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -623,6 +641,17 @@ public interface TousejobPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getToUseJob_SecondsWaiting();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.tousejob.ToUseJob#getIteration <em>Iteration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Iteration</em>'.
+	 * @see com.misc.touse.moplaf.tousejob.ToUseJob#getIteration()
+	 * @see #getToUseJob()
+	 * @generated
+	 */
+	EAttribute getToUseJob_Iteration();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousejob.ToUseJobResult <em>To Use Job Result</em>}'.
@@ -729,6 +758,14 @@ public interface TousejobPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TO_USE_JOB__SECONDS_WAITING = eINSTANCE.getToUseJob_SecondsWaiting();
+
+		/**
+		 * The meta object literal for the '<em><b>Iteration</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TO_USE_JOB__ITERATION = eINSTANCE.getToUseJob_Iteration();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousejob.impl.ToUseJobResultImpl <em>To Use Job Result</em>}' class.
