@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated tousekpiview -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="com.misc.touse.moplaf.kpiview.tousekpiview.presentation.TousekpiviewModelWizardID"
+            name="%_UI_TousekpiviewModelWizard_label"
+            class="com.misc.touse.moplaf.kpiview.tousekpiview.presentation.TousekpiviewModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/TousekpiviewModelFile.gif">
+         <description>%_UI_TousekpiviewModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated tousekpiview -->
+      <editor
+            id="com.misc.touse.moplaf.kpiview.tousekpiview.presentation.TousekpiviewEditorID"
+            name="%_UI_TousekpiviewEditor_label"
+            icon="icons/full/obj16/TousekpiviewModelFile.gif"
+            extensions="tousekpiview"
+            class="com.misc.touse.moplaf.kpiview.tousekpiview.presentation.TousekpiviewEditor"
+            contributorClass="com.misc.touse.moplaf.kpiview.tousekpiview.presentation.TousekpiviewActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

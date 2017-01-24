@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.misc.touse.moplaf.kpiview.emf/src" modelPluginID="com.misc.touse.moplaf.kpiview.emf"
+    modelName="Tousekpiview" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>tousekpiview.ecore</foreignModel>
+  <genPackages prefix="Tousekpiview" basePackage="com.misc.touse.moplaf.kpiview" disposableProviderFactory="true"
+      ecorePackage="tousekpiview.ecore#/">
+    <genClasses ecoreClass="tousekpiview.ecore#//Domain">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousekpiview.ecore#//Domain/Scenarios"/>
+    </genClasses>
+    <genClasses ecoreClass="tousekpiview.ecore#//Scenario">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousekpiview.ecore#//Scenario/KPIs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousekpiview.ecore#//Scenario/Name"/>
+    </genClasses>
+    <genClasses ecoreClass="tousekpiview.ecore#//KPI">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousekpiview.ecore#//KPI/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousekpiview.ecore#//KPI/Value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousekpiview.ecore#//KPI/Ranges"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousekpiview.ecore#//KPI/Color"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousekpiview.ecore#//KPI/MinValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousekpiview.ecore#//KPI/MaxValue"/>
+    </genClasses>
+    <genClasses ecoreClass="tousekpiview.ecore#//KPIRange">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousekpiview.ecore#//KPIRange/LowValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousekpiview.ecore#//KPIRange/HighValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousekpiview.ecore#//KPIRange/Color"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousekpiview.ecore#//KPIRange/Name"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
