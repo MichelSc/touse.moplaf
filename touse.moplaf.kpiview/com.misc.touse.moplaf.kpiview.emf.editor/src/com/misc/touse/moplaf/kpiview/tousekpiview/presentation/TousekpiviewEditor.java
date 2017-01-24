@@ -154,6 +154,8 @@ import org.eclipse.emf.edit.ui.util.EditUIUtil;
 
 import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 
+import com.misc.common.moplaf.emf.editor.provider.AdapterFactoryContentProviderExtended;
+import com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewPackage;
 import com.misc.touse.moplaf.kpiview.tousekpiview.provider.TousekpiviewItemProviderAdapterFactory;
 
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
@@ -1393,7 +1395,6 @@ public class TousekpiviewEditor
 	 * This accesses a cached version of the property sheet.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	public IPropertySheetPage getPropertySheetPage() {
 		PropertySheetPage propertySheetPage =
@@ -1410,7 +1411,11 @@ public class TousekpiviewEditor
 					getActionBarContributor().shareGlobalActions(this, actionBars);
 				}
 			};
-		propertySheetPage.setPropertySourceProvider(new AdapterFactoryContentProvider(adapterFactory));
+			
+		AdapterFactoryContentProviderExtended contentProvider = new AdapterFactoryContentProviderExtended(adapterFactory);
+		contentProvider.editColors.addSelector(TousekpiviewPackage.Literals.KPI_RANGE__COLOR);
+		contentProvider.editColors.addSelector(TousekpiviewPackage.Literals.KPI__COLOR);
+		propertySheetPage.setPropertySourceProvider(contentProvider);
 		propertySheetPages.add(propertySheetPage);
 
 		return propertySheetPage;

@@ -3,6 +3,7 @@
 package com.misc.touse.moplaf.kpiview.tousekpiview.provider;
 
 
+import com.misc.common.moplaf.kpiview.emf.edit.IItemKPIRangeProvider;
 import com.misc.touse.moplaf.kpiview.tousekpiview.KPIRange;
 import com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewPackage;
 
@@ -28,17 +29,14 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 /**
  * This is the item provider adapter for a {@link com.misc.touse.moplaf.kpiview.tousekpiview.KPIRange} object.
  * <!-- begin-user-doc -->
+ * @implements IItemKPIRangeProvider
  * <!-- end-user-doc -->
  * @generated
  */
 public class KPIRangeItemProvider 
 	extends ItemProviderAdapter
 	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+		IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource, IItemKPIRangeProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -60,10 +58,10 @@ public class KPIRangeItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addNamePropertyDescriptor(object);
+			addColorPropertyDescriptor(object);
 			addLowValuePropertyDescriptor(object);
 			addHighValuePropertyDescriptor(object);
-			addColorPropertyDescriptor(object);
-			addNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -194,10 +192,10 @@ public class KPIRangeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(KPIRange.class)) {
+			case TousekpiviewPackage.KPI_RANGE__NAME:
+			case TousekpiviewPackage.KPI_RANGE__COLOR:
 			case TousekpiviewPackage.KPI_RANGE__LOW_VALUE:
 			case TousekpiviewPackage.KPI_RANGE__HIGH_VALUE:
-			case TousekpiviewPackage.KPI_RANGE__COLOR:
-			case TousekpiviewPackage.KPI_RANGE__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -225,6 +223,24 @@ public class KPIRangeItemProvider
 	@Override
 	public ResourceLocator getResourceLocator() {
 		return TousekpiviewEditPlugin.INSTANCE;
+	}
+
+	/**
+	 * Specified by IItemKPIRangeProvider
+	 */
+	@Override
+	public float getLowAmount(Object element) {
+		KPIRange range = (KPIRange)element;
+		return range.getLowValue();
+	}
+
+	/**
+	 * Specified by IItemKPIRangeProvider
+	 */
+	@Override
+	public float getHighAmount(Object element) {
+		KPIRange range = (KPIRange)element;
+		return range.getHighValue();
 	}
 
 }

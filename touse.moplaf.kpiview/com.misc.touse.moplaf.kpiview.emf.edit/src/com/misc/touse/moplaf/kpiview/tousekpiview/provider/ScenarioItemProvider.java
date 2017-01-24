@@ -3,6 +3,7 @@
 package com.misc.touse.moplaf.kpiview.tousekpiview.provider;
 
 
+import com.misc.common.moplaf.kpiview.emf.edit.IItemKPIsProvider;
 import com.misc.touse.moplaf.kpiview.tousekpiview.Scenario;
 import com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewFactory;
 import com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewPackage;
@@ -31,17 +32,14 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 /**
  * This is the item provider adapter for a {@link com.misc.touse.moplaf.kpiview.tousekpiview.Scenario} object.
  * <!-- begin-user-doc -->
+ * @implements IItemKPIsProvider
  * <!-- end-user-doc -->
  * @generated
  */
 public class ScenarioItemProvider 
 	extends ItemProviderAdapter
 	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+		IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource, IItemKPIsProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -194,6 +192,16 @@ public class ScenarioItemProvider
 	@Override
 	public ResourceLocator getResourceLocator() {
 		return TousekpiviewEditPlugin.INSTANCE;
+	}
+
+
+	/**
+	 * Specified by IItemKPIsProvider
+	 */
+	@Override
+	public Collection<?> getKPIs(Object element) {
+		Scenario scenario = (Scenario)element;
+		return scenario.getKPIs();
 	}
 
 }
