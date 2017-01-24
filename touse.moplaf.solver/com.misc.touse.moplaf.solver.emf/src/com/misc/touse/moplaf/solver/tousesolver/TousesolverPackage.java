@@ -2,7 +2,7 @@
  */
 package com.misc.touse.moplaf.solver.tousesolver;
 
-import com.misc.common.moplaf.common.CommonPackage;
+import com.misc.common.moplaf.job.JobPackage;
 import com.misc.common.moplaf.solver.SolverPackage;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -508,6 +508,69 @@ public interface TousesolverPackage extends EPackage {
 	int KNAPSACK_LP = 7;
 
 	/**
+	 * The feature id for the '<em><b>Run Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNAPSACK_LP__RUN_FEEDBACK = SolverPackage.GENERATOR__RUN_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Cancel Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNAPSACK_LP__CANCEL_FEEDBACK = SolverPackage.GENERATOR__CANCEL_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Reset Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNAPSACK_LP__RESET_FEEDBACK = SolverPackage.GENERATOR__RESET_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Canceled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNAPSACK_LP__CANCELED = SolverPackage.GENERATOR__CANCELED;
+
+	/**
+	 * The feature id for the '<em><b>Return Success</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNAPSACK_LP__RETURN_SUCCESS = SolverPackage.GENERATOR__RETURN_SUCCESS;
+
+	/**
+	 * The feature id for the '<em><b>Return Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNAPSACK_LP__RETURN_FEEDBACK = SolverPackage.GENERATOR__RETURN_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Return Information</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNAPSACK_LP__RETURN_INFORMATION = SolverPackage.GENERATOR__RETURN_INFORMATION;
+
+	/**
 	 * The feature id for the '<em><b>Tuple Root</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -517,6 +580,15 @@ public interface TousesolverPackage extends EPackage {
 	int KNAPSACK_LP__TUPLE_ROOT = SolverPackage.GENERATOR__TUPLE_ROOT;
 
 	/**
+	 * The feature id for the '<em><b>Goals</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNAPSACK_LP__GOALS = SolverPackage.GENERATOR__GOALS;
+
+	/**
 	 * The feature id for the '<em><b>Generator Feature Modes</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -524,6 +596,15 @@ public interface TousesolverPackage extends EPackage {
 	 * @ordered
 	 */
 	int KNAPSACK_LP__GENERATOR_FEATURE_MODES = SolverPackage.GENERATOR__GENERATOR_FEATURE_MODES;
+
+	/**
+	 * The feature id for the '<em><b>Solution Provider</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNAPSACK_LP__SOLUTION_PROVIDER = SolverPackage.GENERATOR__SOLUTION_PROVIDER;
 
 	/**
 	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
@@ -607,15 +688,6 @@ public interface TousesolverPackage extends EPackage {
 	int KNAPSACK_LP__CODE = SolverPackage.GENERATOR__CODE;
 
 	/**
-	 * The feature id for the '<em><b>Solution Provider</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KNAPSACK_LP__SOLUTION_PROVIDER = SolverPackage.GENERATOR__SOLUTION_PROVIDER;
-
-	/**
 	 * The feature id for the '<em><b>Selected</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -623,15 +695,6 @@ public interface TousesolverPackage extends EPackage {
 	 * @ordered
 	 */
 	int KNAPSACK_LP__SELECTED = SolverPackage.GENERATOR__SELECTED;
-
-	/**
-	 * The feature id for the '<em><b>Goals</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KNAPSACK_LP__GOALS = SolverPackage.GENERATOR__GOALS;
 
 	/**
 	 * The feature id for the '<em><b>Root</b></em>' containment reference.
@@ -688,6 +751,78 @@ public interface TousesolverPackage extends EPackage {
 	int KNAPSACK_LP_FEATURE_COUNT = SolverPackage.GENERATOR_FEATURE_COUNT + 5;
 
 	/**
+	 * The operation id for the '<em>Reset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNAPSACK_LP___RESET = SolverPackage.GENERATOR___RESET;
+
+	/**
+	 * The operation id for the '<em>Run</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNAPSACK_LP___RUN = SolverPackage.GENERATOR___RUN;
+
+	/**
+	 * The operation id for the '<em>Run</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNAPSACK_LP___RUN__RUNCONTEXT = SolverPackage.GENERATOR___RUN__RUNCONTEXT;
+
+	/**
+	 * The operation id for the '<em>Cancel</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNAPSACK_LP___CANCEL = SolverPackage.GENERATOR___CANCEL;
+
+	/**
+	 * The operation id for the '<em>Set Progress</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNAPSACK_LP___SET_PROGRESS__STRING_FLOAT = SolverPackage.GENERATOR___SET_PROGRESS__STRING_FLOAT;
+
+	/**
+	 * The operation id for the '<em>Set Progress</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNAPSACK_LP___SET_PROGRESS__PROGRESSFEEDBACK = SolverPackage.GENERATOR___SET_PROGRESS__PROGRESSFEEDBACK;
+
+	/**
+	 * The operation id for the '<em>Get Return</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNAPSACK_LP___GET_RETURN = SolverPackage.GENERATOR___GET_RETURN;
+
+	/**
+	 * The operation id for the '<em>Set Return</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNAPSACK_LP___SET_RETURN__RETURNFEEDBACK = SolverPackage.GENERATOR___SET_RETURN__RETURNFEEDBACK;
+
+	/**
 	 * The operation id for the '<em>Generate</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -713,6 +848,15 @@ public interface TousesolverPackage extends EPackage {
 	 * @ordered
 	 */
 	int KNAPSACK_LP___GENERATE_TUPLES = SolverPackage.GENERATOR___GENERATE_TUPLES;
+
+	/**
+	 * The operation id for the '<em>Generate Tuple XReferences</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNAPSACK_LP___GENERATE_TUPLE_XREFERENCES = SolverPackage.GENERATOR___GENERATE_TUPLE_XREFERENCES;
 
 	/**
 	 * The operation id for the '<em>Generate Vars</em>' operation.
@@ -951,6 +1095,15 @@ public interface TousesolverPackage extends EPackage {
 	int LP_ROOT___VISIT_TUPLES__ITUPLEVISITOR = SolverPackage.GENERATOR_TUPLE___VISIT_TUPLES__ITUPLEVISITOR;
 
 	/**
+	 * The operation id for the '<em>Generate XReferences</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LP_ROOT___GENERATE_XREFERENCES = SolverPackage.GENERATOR_TUPLE___GENERATE_XREFERENCES;
+
+	/**
 	 * The number of operations of the '<em>Lp Root</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1121,6 +1274,15 @@ public interface TousesolverPackage extends EPackage {
 	 * @ordered
 	 */
 	int LP_KNAPSACK___VISIT_TUPLES__ITUPLEVISITOR = SolverPackage.GENERATOR_TUPLE___VISIT_TUPLES__ITUPLEVISITOR;
+
+	/**
+	 * The operation id for the '<em>Generate XReferences</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LP_KNAPSACK___GENERATE_XREFERENCES = SolverPackage.GENERATOR_TUPLE___GENERATE_XREFERENCES;
 
 	/**
 	 * The number of operations of the '<em>Lp Knapsack</em>' class.
@@ -1295,6 +1457,15 @@ public interface TousesolverPackage extends EPackage {
 	int LP_ITEM___VISIT_TUPLES__ITUPLEVISITOR = SolverPackage.GENERATOR_TUPLE___VISIT_TUPLES__ITUPLEVISITOR;
 
 	/**
+	 * The operation id for the '<em>Generate XReferences</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LP_ITEM___GENERATE_XREFERENCES = SolverPackage.GENERATOR_TUPLE___GENERATE_XREFERENCES;
+
+	/**
 	 * The number of operations of the '<em>Lp Item</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1314,31 +1485,67 @@ public interface TousesolverPackage extends EPackage {
 	int SOLVE_KNAPSACK = 11;
 
 	/**
+	 * The feature id for the '<em><b>Run Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLVE_KNAPSACK__RUN_FEEDBACK = JobPackage.JOB_CONSOLE__RUN_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Cancel Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLVE_KNAPSACK__CANCEL_FEEDBACK = JobPackage.JOB_CONSOLE__CANCEL_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Reset Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLVE_KNAPSACK__RESET_FEEDBACK = JobPackage.JOB_CONSOLE__RESET_FEEDBACK;
+
+	/**
 	 * The feature id for the '<em><b>Canceled</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SOLVE_KNAPSACK__CANCELED = CommonPackage.JOB__CANCELED;
+	int SOLVE_KNAPSACK__CANCELED = JobPackage.JOB_CONSOLE__CANCELED;
 
 	/**
-	 * The feature id for the '<em><b>Parent Run</b></em>' reference.
+	 * The feature id for the '<em><b>Return Success</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SOLVE_KNAPSACK__PARENT_RUN = CommonPackage.JOB__PARENT_RUN;
+	int SOLVE_KNAPSACK__RETURN_SUCCESS = JobPackage.JOB_CONSOLE__RETURN_SUCCESS;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Return Feedback</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SOLVE_KNAPSACK__NAME = CommonPackage.JOB__NAME;
+	int SOLVE_KNAPSACK__RETURN_FEEDBACK = JobPackage.JOB_CONSOLE__RETURN_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Return Information</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLVE_KNAPSACK__RETURN_INFORMATION = JobPackage.JOB_CONSOLE__RETURN_INFORMATION;
 
 	/**
 	 * The feature id for the '<em><b>Status</b></em>' attribute.
@@ -1347,7 +1554,7 @@ public interface TousesolverPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLVE_KNAPSACK__STATUS = CommonPackage.JOB__STATUS;
+	int SOLVE_KNAPSACK__STATUS = JobPackage.JOB_CONSOLE__STATUS;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1356,7 +1563,7 @@ public interface TousesolverPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLVE_KNAPSACK__DESCRIPTION = CommonPackage.JOB__DESCRIPTION;
+	int SOLVE_KNAPSACK__DESCRIPTION = JobPackage.JOB_CONSOLE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Start Time</b></em>' attribute.
@@ -1365,7 +1572,7 @@ public interface TousesolverPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLVE_KNAPSACK__START_TIME = CommonPackage.JOB__START_TIME;
+	int SOLVE_KNAPSACK__START_TIME = JobPackage.JOB_CONSOLE__START_TIME;
 
 	/**
 	 * The feature id for the '<em><b>End Time</b></em>' attribute.
@@ -1374,7 +1581,7 @@ public interface TousesolverPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLVE_KNAPSACK__END_TIME = CommonPackage.JOB__END_TIME;
+	int SOLVE_KNAPSACK__END_TIME = JobPackage.JOB_CONSOLE__END_TIME;
 
 	/**
 	 * The feature id for the '<em><b>Duration</b></em>' attribute.
@@ -1383,34 +1590,16 @@ public interface TousesolverPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLVE_KNAPSACK__DURATION = CommonPackage.JOB__DURATION;
+	int SOLVE_KNAPSACK__DURATION = JobPackage.JOB_CONSOLE__DURATION;
 
 	/**
-	 * The feature id for the '<em><b>Created</b></em>' attribute.
+	 * The feature id for the '<em><b>Started</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SOLVE_KNAPSACK__CREATED = CommonPackage.JOB__CREATED;
-
-	/**
-	 * The feature id for the '<em><b>Running</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVE_KNAPSACK__RUNNING = CommonPackage.JOB__RUNNING;
-
-	/**
-	 * The feature id for the '<em><b>Stopped</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVE_KNAPSACK__STOPPED = CommonPackage.JOB__STOPPED;
+	int SOLVE_KNAPSACK__STARTED = JobPackage.JOB_CONSOLE__STARTED;
 
 	/**
 	 * The feature id for the '<em><b>Finished</b></em>' attribute.
@@ -1419,7 +1608,34 @@ public interface TousesolverPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLVE_KNAPSACK__FINISHED = CommonPackage.JOB__FINISHED;
+	int SOLVE_KNAPSACK__FINISHED = JobPackage.JOB_CONSOLE__FINISHED;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLVE_KNAPSACK__NAME = JobPackage.JOB_CONSOLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLVE_KNAPSACK__PARAMETERS = JobPackage.JOB_CONSOLE__PARAMETERS;
+
+	/**
+	 * The feature id for the '<em><b>Help Text</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLVE_KNAPSACK__HELP_TEXT = JobPackage.JOB_CONSOLE__HELP_TEXT;
 
 	/**
 	 * The feature id for the '<em><b>Args</b></em>' attribute list.
@@ -1428,7 +1644,7 @@ public interface TousesolverPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLVE_KNAPSACK__ARGS = CommonPackage.JOB__ARGS;
+	int SOLVE_KNAPSACK__ARGS = JobPackage.JOB_CONSOLE__ARGS;
 
 	/**
 	 * The number of structural features of the '<em>Solve Knapsack</em>' class.
@@ -1437,7 +1653,16 @@ public interface TousesolverPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLVE_KNAPSACK_FEATURE_COUNT = CommonPackage.JOB_FEATURE_COUNT + 0;
+	int SOLVE_KNAPSACK_FEATURE_COUNT = JobPackage.JOB_CONSOLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Reset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLVE_KNAPSACK___RESET = JobPackage.JOB_CONSOLE___RESET;
 
 	/**
 	 * The operation id for the '<em>Run</em>' operation.
@@ -1446,7 +1671,7 @@ public interface TousesolverPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLVE_KNAPSACK___RUN = CommonPackage.JOB___RUN;
+	int SOLVE_KNAPSACK___RUN = JobPackage.JOB_CONSOLE___RUN;
 
 	/**
 	 * The operation id for the '<em>Run</em>' operation.
@@ -1455,16 +1680,7 @@ public interface TousesolverPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLVE_KNAPSACK___RUN__RUN = CommonPackage.JOB___RUN__RUN;
-
-	/**
-	 * The operation id for the '<em>Run Background</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVE_KNAPSACK___RUN_BACKGROUND = CommonPackage.JOB___RUN_BACKGROUND;
+	int SOLVE_KNAPSACK___RUN__RUNCONTEXT = JobPackage.JOB_CONSOLE___RUN__RUNCONTEXT;
 
 	/**
 	 * The operation id for the '<em>Cancel</em>' operation.
@@ -1473,16 +1689,61 @@ public interface TousesolverPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLVE_KNAPSACK___CANCEL = CommonPackage.JOB___CANCEL;
+	int SOLVE_KNAPSACK___CANCEL = JobPackage.JOB_CONSOLE___CANCEL;
 
 	/**
-	 * The operation id for the '<em>On Progress</em>' operation.
+	 * The operation id for the '<em>Set Progress</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SOLVE_KNAPSACK___ON_PROGRESS__STRING_FLOAT = CommonPackage.JOB___ON_PROGRESS__STRING_FLOAT;
+	int SOLVE_KNAPSACK___SET_PROGRESS__STRING_FLOAT = JobPackage.JOB_CONSOLE___SET_PROGRESS__STRING_FLOAT;
+
+	/**
+	 * The operation id for the '<em>Set Progress</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLVE_KNAPSACK___SET_PROGRESS__PROGRESSFEEDBACK = JobPackage.JOB_CONSOLE___SET_PROGRESS__PROGRESSFEEDBACK;
+
+	/**
+	 * The operation id for the '<em>Get Return</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLVE_KNAPSACK___GET_RETURN = JobPackage.JOB_CONSOLE___GET_RETURN;
+
+	/**
+	 * The operation id for the '<em>Set Return</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLVE_KNAPSACK___SET_RETURN__RETURNFEEDBACK = JobPackage.JOB_CONSOLE___SET_RETURN__RETURNFEEDBACK;
+
+	/**
+	 * The operation id for the '<em>Add Parameter</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLVE_KNAPSACK___ADD_PARAMETER__STRING_JOBPARAMETERTYPE_EATTRIBUTE_STRING = JobPackage.JOB_CONSOLE___ADD_PARAMETER__STRING_JOBPARAMETERTYPE_EATTRIBUTE_STRING;
+
+	/**
+	 * The operation id for the '<em>Refresh Parameters</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLVE_KNAPSACK___REFRESH_PARAMETERS = JobPackage.JOB_CONSOLE___REFRESH_PARAMETERS;
 
 	/**
 	 * The operation id for the '<em>Get Arg As String</em>' operation.
@@ -1491,7 +1752,7 @@ public interface TousesolverPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLVE_KNAPSACK___GET_ARG_AS_STRING__INT = CommonPackage.JOB___GET_ARG_AS_STRING__INT;
+	int SOLVE_KNAPSACK___GET_ARG_AS_STRING__INT = JobPackage.JOB_CONSOLE___GET_ARG_AS_STRING__INT;
 
 	/**
 	 * The operation id for the '<em>Get Arg As Int</em>' operation.
@@ -1500,7 +1761,7 @@ public interface TousesolverPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLVE_KNAPSACK___GET_ARG_AS_INT__INT = CommonPackage.JOB___GET_ARG_AS_INT__INT;
+	int SOLVE_KNAPSACK___GET_ARG_AS_INT__INT = JobPackage.JOB_CONSOLE___GET_ARG_AS_INT__INT;
 
 	/**
 	 * The operation id for the '<em>Get Arg As Float</em>' operation.
@@ -1509,7 +1770,34 @@ public interface TousesolverPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLVE_KNAPSACK___GET_ARG_AS_FLOAT__INT = CommonPackage.JOB___GET_ARG_AS_FLOAT__INT;
+	int SOLVE_KNAPSACK___GET_ARG_AS_FLOAT__INT = JobPackage.JOB_CONSOLE___GET_ARG_AS_FLOAT__INT;
+
+	/**
+	 * The operation id for the '<em>Get Arg As Date</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLVE_KNAPSACK___GET_ARG_AS_DATE__INT = JobPackage.JOB_CONSOLE___GET_ARG_AS_DATE__INT;
+
+	/**
+	 * The operation id for the '<em>Get Arg As Date</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLVE_KNAPSACK___GET_ARG_AS_DATE__INT_STRING = JobPackage.JOB_CONSOLE___GET_ARG_AS_DATE__INT_STRING;
+
+	/**
+	 * The operation id for the '<em>Set Args</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLVE_KNAPSACK___SET_ARGS = JobPackage.JOB_CONSOLE___SET_ARGS;
 
 	/**
 	 * The number of operations of the '<em>Solve Knapsack</em>' class.
@@ -1518,7 +1806,7 @@ public interface TousesolverPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLVE_KNAPSACK_OPERATION_COUNT = CommonPackage.JOB_OPERATION_COUNT + 0;
+	int SOLVE_KNAPSACK_OPERATION_COUNT = JobPackage.JOB_CONSOLE_OPERATION_COUNT + 0;
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.solver.tousesolver.Domain <em>Domain</em>}'.

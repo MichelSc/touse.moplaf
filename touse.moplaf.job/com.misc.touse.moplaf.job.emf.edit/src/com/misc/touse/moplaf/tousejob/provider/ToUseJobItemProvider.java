@@ -53,6 +53,7 @@ public class ToUseJobItemProvider extends JobRemoteItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addSecondsWaitingPropertyDescriptor(object);
+			addIterationPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -71,6 +72,28 @@ public class ToUseJobItemProvider extends JobRemoteItemProvider {
 				 getString("_UI_ToUseJob_SecondsWaiting_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseJob_SecondsWaiting_feature", "_UI_ToUseJob_type"),
 				 TousejobPackage.Literals.TO_USE_JOB__SECONDS_WAITING,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 getString("_UI__20ToUseJobPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Iteration feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIterationPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ToUseJob_Iteration_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseJob_Iteration_feature", "_UI_ToUseJob_type"),
+				 TousejobPackage.Literals.TO_USE_JOB__ITERATION,
 				 true,
 				 false,
 				 false,
@@ -118,6 +141,7 @@ public class ToUseJobItemProvider extends JobRemoteItemProvider {
 
 		switch (notification.getFeatureID(ToUseJob.class)) {
 			case TousejobPackage.TO_USE_JOB__SECONDS_WAITING:
+			case TousejobPackage.TO_USE_JOB__ITERATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

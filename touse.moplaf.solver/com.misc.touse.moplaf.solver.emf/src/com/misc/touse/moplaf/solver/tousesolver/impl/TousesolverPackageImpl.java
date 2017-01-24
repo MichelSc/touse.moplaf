@@ -2,7 +2,7 @@
  */
 package com.misc.touse.moplaf.solver.tousesolver.impl;
 
-import com.misc.common.moplaf.common.CommonPackage;
+import com.misc.common.moplaf.job.JobPackage;
 import com.misc.common.moplaf.solver.SolverPackage;
 import com.misc.touse.moplaf.solver.tousesolver.Domain;
 import com.misc.touse.moplaf.solver.tousesolver.DomainObject;
@@ -162,7 +162,6 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 		isInited = true;
 
 		// Initialize simple dependencies
-		CommonPackage.eINSTANCE.eClass();
 		SolverPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
@@ -706,7 +705,7 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 
 		// Obtain other dependent packages
 		SolverPackage theSolverPackage = (SolverPackage)EPackage.Registry.INSTANCE.getEPackage(SolverPackage.eNS_URI);
-		CommonPackage theCommonPackage = (CommonPackage)EPackage.Registry.INSTANCE.getEPackage(CommonPackage.eNS_URI);
+		JobPackage theJobPackage = (JobPackage)EPackage.Registry.INSTANCE.getEPackage(JobPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -719,7 +718,7 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 		lpRootEClass.getESuperTypes().add(theSolverPackage.getGeneratorTuple());
 		lpKnapsackEClass.getESuperTypes().add(theSolverPackage.getGeneratorTuple());
 		lpItemEClass.getESuperTypes().add(theSolverPackage.getGeneratorTuple());
-		solveKnapsackEClass.getESuperTypes().add(theCommonPackage.getJob());
+		solveKnapsackEClass.getESuperTypes().add(theJobPackage.getJobConsole());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

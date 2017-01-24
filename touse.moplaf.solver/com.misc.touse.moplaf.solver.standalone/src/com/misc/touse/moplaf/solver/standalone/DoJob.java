@@ -42,7 +42,7 @@ public class DoJob {
 	    newDomain.getJobs().add(newJob);
 	    
 	    // start the job
-	    newJob.run();
+	    newJob.run(null);
 	    
 	    CommonPlugin.INSTANCE.log("something to log");
 	    

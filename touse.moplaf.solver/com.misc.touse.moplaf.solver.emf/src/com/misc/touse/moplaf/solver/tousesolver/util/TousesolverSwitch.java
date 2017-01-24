@@ -2,8 +2,7 @@
  */
 package com.misc.touse.moplaf.solver.tousesolver.util;
 
-import com.misc.common.moplaf.common.Job;
-import com.misc.common.moplaf.common.Run;
+import com.misc.common.moplaf.job.JobConsole;
 import com.misc.common.moplaf.solver.Generator;
 import com.misc.common.moplaf.solver.GeneratorElement;
 import com.misc.common.moplaf.solver.GeneratorTuple;
@@ -117,6 +116,7 @@ public class TousesolverSwitch<T> extends Switch<T> {
 				KnapsackLp knapsackLp = (KnapsackLp)theEObject;
 				T result = caseKnapsackLp(knapsackLp);
 				if (result == null) result = caseGenerator(knapsackLp);
+				if (result == null) result = caseRun(knapsackLp);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -147,6 +147,7 @@ public class TousesolverSwitch<T> extends Switch<T> {
 			case TousesolverPackage.SOLVE_KNAPSACK: {
 				SolveKnapsack solveKnapsack = (SolveKnapsack)theEObject;
 				T result = caseSolveKnapsack(solveKnapsack);
+				if (result == null) result = caseJobConsole(solveKnapsack);
 				if (result == null) result = caseJob(solveKnapsack);
 				if (result == null) result = caseRun(solveKnapsack);
 				if (result == null) result = defaultCase(theEObject);
@@ -337,6 +338,21 @@ public class TousesolverSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Run</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Run</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRun(com.misc.common.moplaf.job.Run object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Generator</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -367,21 +383,6 @@ public class TousesolverSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Run</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Run</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseRun(Run object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Job</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -392,7 +393,22 @@ public class TousesolverSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseJob(Job object) {
+	public T caseJob(com.misc.common.moplaf.job.Job object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Console</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Console</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseJobConsole(JobConsole object) {
 		return null;
 	}
 

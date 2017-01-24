@@ -2,8 +2,7 @@
  */
 package com.misc.touse.moplaf.solver.tousesolver.util;
 
-import com.misc.common.moplaf.common.Job;
-import com.misc.common.moplaf.common.Run;
+import com.misc.common.moplaf.job.JobConsole;
 import com.misc.common.moplaf.solver.Generator;
 import com.misc.common.moplaf.solver.GeneratorElement;
 import com.misc.common.moplaf.solver.GeneratorTuple;
@@ -118,6 +117,10 @@ public class TousesolverAdapterFactory extends AdapterFactoryImpl {
 				return createSolveKnapsackAdapter();
 			}
 			@Override
+			public Adapter caseRun(com.misc.common.moplaf.job.Run object) {
+				return createRunAdapter();
+			}
+			@Override
 			public Adapter caseGenerator(Generator object) {
 				return createGeneratorAdapter();
 			}
@@ -130,12 +133,12 @@ public class TousesolverAdapterFactory extends AdapterFactoryImpl {
 				return createGeneratorTupleAdapter();
 			}
 			@Override
-			public Adapter caseRun(Run object) {
-				return createRunAdapter();
+			public Adapter caseJob(com.misc.common.moplaf.job.Job object) {
+				return createJobAdapter();
 			}
 			@Override
-			public Adapter caseJob(Job object) {
-				return createJobAdapter();
+			public Adapter caseJobConsole(JobConsole object) {
+				return createJobConsoleAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -354,13 +357,13 @@ public class TousesolverAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.common.Run <em>Run</em>}'.
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.job.Run <em>Run</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.common.Run
+	 * @see com.misc.common.moplaf.job.Run
 	 * @generated
 	 */
 	public Adapter createRunAdapter() {
@@ -368,16 +371,30 @@ public class TousesolverAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.common.Job <em>Job</em>}'.
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.job.Job <em>Job</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.common.Job
+	 * @see com.misc.common.moplaf.job.Job
 	 * @generated
 	 */
 	public Adapter createJobAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.job.JobConsole <em>Console</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.job.JobConsole
+	 * @generated
+	 */
+	public Adapter createJobConsoleAdapter() {
 		return null;
 	}
 

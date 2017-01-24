@@ -15,6 +15,7 @@
     </genClasses>
     <genClasses ecoreClass="tousejob.ecore#//ToUseJob">
       <genFeatures createChild="false" propertyCategory="20 ToUseJob" ecoreFeature="ecore:EAttribute tousejob.ecore#//ToUseJob/SecondsWaiting"/>
+      <genFeatures createChild="false" propertyCategory="20 ToUseJob" ecoreFeature="ecore:EAttribute tousejob.ecore#//ToUseJob/Iteration"/>
     </genClasses>
     <genClasses ecoreClass="tousejob.ecore#//ToUseJobResult">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousejob.ecore#//ToUseJobResult/TicksWaited"/>
