@@ -7,7 +7,6 @@
 <plugin>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated tousekpiview -->
       <factory
             uri="http://www.misc.com/touse/moplaf/kpiview/model/0.1"
             class="com.misc.touse.moplaf.kpiview.tousekpiview.provider.TousekpiviewItemProviderAdapterFactory"
@@ -16,7 +15,10 @@
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
                org.eclipse.emf.edit.provider.ITreeItemContentProvider
                org.eclipse.emf.edit.provider.IItemLabelProvider
-               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+               org.eclipse.emf.edit.provider.IItemPropertySource
+               com.misc.common.moplaf.kpiview.emf.edit.IItemKPIsProvider
+               com.misc.common.moplaf.kpiview.emf.edit.IItemKPIProvider
+               com.misc.common.moplaf.kpiview.emf.edit.IItemKPIRangeProvider"/>
    </extension>
 
 </plugin>

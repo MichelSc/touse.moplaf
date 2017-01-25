@@ -2,6 +2,9 @@
  */
 package com.misc.touse.moplaf.kpiview.tousekpiview.provider;
 
+import com.misc.common.moplaf.kpiview.emf.edit.IItemKPIProvider;
+import com.misc.common.moplaf.kpiview.emf.edit.IItemKPIRangeProvider;
+import com.misc.common.moplaf.kpiview.emf.edit.IItemKPIsProvider;
 import com.misc.touse.moplaf.kpiview.tousekpiview.util.TousekpiviewAdapterFactory;
 
 import java.util.ArrayList;
@@ -61,7 +64,6 @@ public class TousekpiviewItemProviderAdapterFactory extends TousekpiviewAdapterF
 	 * This constructs an instance.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	public TousekpiviewItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
@@ -69,6 +71,9 @@ public class TousekpiviewItemProviderAdapterFactory extends TousekpiviewAdapterF
 		supportedTypes.add(ITreeItemContentProvider.class);
 		supportedTypes.add(IItemLabelProvider.class);
 		supportedTypes.add(IItemPropertySource.class);
+		supportedTypes.add(IItemKPIsProvider.class);
+		supportedTypes.add(IItemKPIProvider.class);
+		supportedTypes.add(IItemKPIRangeProvider.class);
 	}
 
 	/**
