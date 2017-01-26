@@ -30,23 +30,13 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link com.misc.touse.moplaf.kpiview.tousekpiview.impl.ScenarioImpl#getKPIs <em>KP Is</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.kpiview.tousekpiview.impl.ScenarioImpl#getName <em>Name</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.kpiview.tousekpiview.impl.ScenarioImpl#getKPIs <em>KP Is</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenario {
-	/**
-	 * The cached value of the '{@link #getKPIs() <em>KP Is</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getKPIs()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<KPI> kpIs;
-
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -66,6 +56,16 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getKPIs() <em>KP Is</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getKPIs()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<KPI> kpIs;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -141,10 +141,10 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TousekpiviewPackage.SCENARIO__KP_IS:
-				return getKPIs();
 			case TousekpiviewPackage.SCENARIO__NAME:
 				return getName();
+			case TousekpiviewPackage.SCENARIO__KP_IS:
+				return getKPIs();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -158,12 +158,12 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case TousekpiviewPackage.SCENARIO__NAME:
+				setName((String)newValue);
+				return;
 			case TousekpiviewPackage.SCENARIO__KP_IS:
 				getKPIs().clear();
 				getKPIs().addAll((Collection<? extends KPI>)newValue);
-				return;
-			case TousekpiviewPackage.SCENARIO__NAME:
-				setName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -177,11 +177,11 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TousekpiviewPackage.SCENARIO__KP_IS:
-				getKPIs().clear();
-				return;
 			case TousekpiviewPackage.SCENARIO__NAME:
 				setName(NAME_EDEFAULT);
+				return;
+			case TousekpiviewPackage.SCENARIO__KP_IS:
+				getKPIs().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -195,10 +195,10 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TousekpiviewPackage.SCENARIO__KP_IS:
-				return kpIs != null && !kpIs.isEmpty();
 			case TousekpiviewPackage.SCENARIO__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case TousekpiviewPackage.SCENARIO__KP_IS:
+				return kpIs != null && !kpIs.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

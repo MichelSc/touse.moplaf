@@ -16,11 +16,12 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.kpiview.tousekpiview.KPI#getName <em>Name</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.kpiview.tousekpiview.KPI#getValue <em>Value</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.kpiview.tousekpiview.KPI#getRanges <em>Ranges</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.kpiview.tousekpiview.KPI#getColor <em>Color</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.kpiview.tousekpiview.KPI#getValue <em>Value</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.kpiview.tousekpiview.KPI#getMinValue <em>Min Value</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.kpiview.tousekpiview.KPI#getMaxValue <em>Max Value</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.kpiview.tousekpiview.KPI#getRanges <em>Ranges</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.kpiview.tousekpiview.KPI#getUnit <em>Unit</em>}</li>
  * </ul>
  *
  * @see com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewPackage#getKPI()
@@ -95,6 +96,32 @@ public interface KPI extends EObject {
 	 * @generated
 	 */
 	EList<KPIRange> getRanges();
+
+	/**
+	 * Returns the value of the '<em><b>Unit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Unit</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Unit</em>' attribute.
+	 * @see #setUnit(String)
+	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewPackage#getKPI_Unit()
+	 * @model
+	 * @generated
+	 */
+	String getUnit();
+
+	/**
+	 * Sets the value of the '{@link com.misc.touse.moplaf.kpiview.tousekpiview.KPI#getUnit <em>Unit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Unit</em>' attribute.
+	 * @see #getUnit()
+	 * @generated
+	 */
+	void setUnit(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Color</b></em>' attribute.

@@ -20,15 +20,55 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link com.misc.touse.moplaf.kpiview.tousekpiview.impl.KPIRangeImpl#getName <em>Name</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.kpiview.tousekpiview.impl.KPIRangeImpl#getColor <em>Color</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.kpiview.tousekpiview.impl.KPIRangeImpl#getLowValue <em>Low Value</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.kpiview.tousekpiview.impl.KPIRangeImpl#getHighValue <em>High Value</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.kpiview.tousekpiview.impl.KPIRangeImpl#getColor <em>Color</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.kpiview.tousekpiview.impl.KPIRangeImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class KPIRangeImpl extends MinimalEObjectImpl.Container implements KPIRange {
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getColor() <em>Color</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getColor()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int COLOR_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getColor() <em>Color</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getColor()
+	 * @generated
+	 * @ordered
+	 */
+	protected int color = COLOR_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getLowValue() <em>Low Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -68,46 +108,6 @@ public class KPIRangeImpl extends MinimalEObjectImpl.Container implements KPIRan
 	 * @ordered
 	 */
 	protected float highValue = HIGH_VALUE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getColor() <em>Color</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getColor()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int COLOR_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getColor() <em>Color</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getColor()
-	 * @generated
-	 * @ordered
-	 */
-	protected int color = COLOR_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -220,14 +220,14 @@ public class KPIRangeImpl extends MinimalEObjectImpl.Container implements KPIRan
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case TousekpiviewPackage.KPI_RANGE__NAME:
+				return getName();
+			case TousekpiviewPackage.KPI_RANGE__COLOR:
+				return getColor();
 			case TousekpiviewPackage.KPI_RANGE__LOW_VALUE:
 				return getLowValue();
 			case TousekpiviewPackage.KPI_RANGE__HIGH_VALUE:
 				return getHighValue();
-			case TousekpiviewPackage.KPI_RANGE__COLOR:
-				return getColor();
-			case TousekpiviewPackage.KPI_RANGE__NAME:
-				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -240,17 +240,17 @@ public class KPIRangeImpl extends MinimalEObjectImpl.Container implements KPIRan
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case TousekpiviewPackage.KPI_RANGE__NAME:
+				setName((String)newValue);
+				return;
+			case TousekpiviewPackage.KPI_RANGE__COLOR:
+				setColor((Integer)newValue);
+				return;
 			case TousekpiviewPackage.KPI_RANGE__LOW_VALUE:
 				setLowValue((Float)newValue);
 				return;
 			case TousekpiviewPackage.KPI_RANGE__HIGH_VALUE:
 				setHighValue((Float)newValue);
-				return;
-			case TousekpiviewPackage.KPI_RANGE__COLOR:
-				setColor((Integer)newValue);
-				return;
-			case TousekpiviewPackage.KPI_RANGE__NAME:
-				setName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -264,17 +264,17 @@ public class KPIRangeImpl extends MinimalEObjectImpl.Container implements KPIRan
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case TousekpiviewPackage.KPI_RANGE__NAME:
+				setName(NAME_EDEFAULT);
+				return;
+			case TousekpiviewPackage.KPI_RANGE__COLOR:
+				setColor(COLOR_EDEFAULT);
+				return;
 			case TousekpiviewPackage.KPI_RANGE__LOW_VALUE:
 				setLowValue(LOW_VALUE_EDEFAULT);
 				return;
 			case TousekpiviewPackage.KPI_RANGE__HIGH_VALUE:
 				setHighValue(HIGH_VALUE_EDEFAULT);
-				return;
-			case TousekpiviewPackage.KPI_RANGE__COLOR:
-				setColor(COLOR_EDEFAULT);
-				return;
-			case TousekpiviewPackage.KPI_RANGE__NAME:
-				setName(NAME_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -288,14 +288,14 @@ public class KPIRangeImpl extends MinimalEObjectImpl.Container implements KPIRan
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case TousekpiviewPackage.KPI_RANGE__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case TousekpiviewPackage.KPI_RANGE__COLOR:
+				return color != COLOR_EDEFAULT;
 			case TousekpiviewPackage.KPI_RANGE__LOW_VALUE:
 				return lowValue != LOW_VALUE_EDEFAULT;
 			case TousekpiviewPackage.KPI_RANGE__HIGH_VALUE:
 				return highValue != HIGH_VALUE_EDEFAULT;
-			case TousekpiviewPackage.KPI_RANGE__COLOR:
-				return color != COLOR_EDEFAULT;
-			case TousekpiviewPackage.KPI_RANGE__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -310,14 +310,14 @@ public class KPIRangeImpl extends MinimalEObjectImpl.Container implements KPIRan
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (LowValue: ");
+		result.append(" (Name: ");
+		result.append(name);
+		result.append(", Color: ");
+		result.append(color);
+		result.append(", LowValue: ");
 		result.append(lowValue);
 		result.append(", HighValue: ");
 		result.append(highValue);
-		result.append(", Color: ");
-		result.append(color);
-		result.append(", Name: ");
-		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

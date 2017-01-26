@@ -15,8 +15,8 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link com.misc.touse.moplaf.kpiview.tousekpiview.Scenario#getKPIs <em>KP Is</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.kpiview.tousekpiview.Scenario#getName <em>Name</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.kpiview.tousekpiview.Scenario#getKPIs <em>KP Is</em>}</li>
  * </ul>
  *
  * @see com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewPackage#getScenario()

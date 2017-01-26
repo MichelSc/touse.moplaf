@@ -66,6 +66,7 @@ public class KPIItemProvider
 			addValuePropertyDescriptor(object);
 			addMinValuePropertyDescriptor(object);
 			addMaxValuePropertyDescriptor(object);
+			addUnitPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -181,6 +182,28 @@ public class KPIItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Unit feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addUnitPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_KPI_Unit_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_KPI_Unit_feature", "_UI_KPI_type"),
+				 TousekpiviewPackage.Literals.KPI__UNIT,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -253,6 +276,7 @@ public class KPIItemProvider
 			case TousekpiviewPackage.KPI__VALUE:
 			case TousekpiviewPackage.KPI__MIN_VALUE:
 			case TousekpiviewPackage.KPI__MAX_VALUE:
+			case TousekpiviewPackage.KPI__UNIT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case TousekpiviewPackage.KPI__RANGES:
@@ -333,6 +357,15 @@ public class KPIItemProvider
 	public Collection<?> getKPIRanges(Object element) {
 		KPI kpi = (KPI)element;
 		return kpi.getRanges();
+	}
+
+	/**
+	 * Specified by IItemKPIProvider
+	 */
+	@Override
+	public String getUnit(Object element) {
+		KPI kpi = (KPI)element;
+		return kpi.getUnit();
 	}
 
 }

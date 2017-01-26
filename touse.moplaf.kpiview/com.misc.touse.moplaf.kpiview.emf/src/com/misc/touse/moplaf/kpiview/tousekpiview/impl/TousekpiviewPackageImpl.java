@@ -144,7 +144,7 @@ public class TousekpiviewPackageImpl extends EPackageImpl implements Tousekpivie
 	 * @generated
 	 */
 	public EReference getScenario_KPIs() {
-		return (EReference)scenarioEClass.getEStructuralFeatures().get(0);
+		return (EReference)scenarioEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -153,7 +153,7 @@ public class TousekpiviewPackageImpl extends EPackageImpl implements Tousekpivie
 	 * @generated
 	 */
 	public EAttribute getScenario_Name() {
-		return (EAttribute)scenarioEClass.getEStructuralFeatures().get(1);
+		return (EAttribute)scenarioEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -180,7 +180,7 @@ public class TousekpiviewPackageImpl extends EPackageImpl implements Tousekpivie
 	 * @generated
 	 */
 	public EAttribute getKPI_Value() {
-		return (EAttribute)kpiEClass.getEStructuralFeatures().get(1);
+		return (EAttribute)kpiEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -189,7 +189,16 @@ public class TousekpiviewPackageImpl extends EPackageImpl implements Tousekpivie
 	 * @generated
 	 */
 	public EReference getKPI_Ranges() {
-		return (EReference)kpiEClass.getEStructuralFeatures().get(2);
+		return (EReference)kpiEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getKPI_Unit() {
+		return (EAttribute)kpiEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -198,7 +207,7 @@ public class TousekpiviewPackageImpl extends EPackageImpl implements Tousekpivie
 	 * @generated
 	 */
 	public EAttribute getKPI_Color() {
-		return (EAttribute)kpiEClass.getEStructuralFeatures().get(3);
+		return (EAttribute)kpiEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -207,7 +216,7 @@ public class TousekpiviewPackageImpl extends EPackageImpl implements Tousekpivie
 	 * @generated
 	 */
 	public EAttribute getKPI_MinValue() {
-		return (EAttribute)kpiEClass.getEStructuralFeatures().get(4);
+		return (EAttribute)kpiEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -216,7 +225,7 @@ public class TousekpiviewPackageImpl extends EPackageImpl implements Tousekpivie
 	 * @generated
 	 */
 	public EAttribute getKPI_MaxValue() {
-		return (EAttribute)kpiEClass.getEStructuralFeatures().get(5);
+		return (EAttribute)kpiEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -234,24 +243,6 @@ public class TousekpiviewPackageImpl extends EPackageImpl implements Tousekpivie
 	 * @generated
 	 */
 	public EAttribute getKPIRange_LowValue() {
-		return (EAttribute)kpiRangeEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getKPIRange_HighValue() {
-		return (EAttribute)kpiRangeEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getKPIRange_Color() {
 		return (EAttribute)kpiRangeEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -260,8 +251,26 @@ public class TousekpiviewPackageImpl extends EPackageImpl implements Tousekpivie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getKPIRange_Name() {
+	public EAttribute getKPIRange_HighValue() {
 		return (EAttribute)kpiRangeEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getKPIRange_Color() {
+		return (EAttribute)kpiRangeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getKPIRange_Name() {
+		return (EAttribute)kpiRangeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -296,22 +305,23 @@ public class TousekpiviewPackageImpl extends EPackageImpl implements Tousekpivie
 		createEReference(domainEClass, DOMAIN__SCENARIOS);
 
 		scenarioEClass = createEClass(SCENARIO);
-		createEReference(scenarioEClass, SCENARIO__KP_IS);
 		createEAttribute(scenarioEClass, SCENARIO__NAME);
+		createEReference(scenarioEClass, SCENARIO__KP_IS);
 
 		kpiEClass = createEClass(KPI);
 		createEAttribute(kpiEClass, KPI__NAME);
-		createEAttribute(kpiEClass, KPI__VALUE);
-		createEReference(kpiEClass, KPI__RANGES);
 		createEAttribute(kpiEClass, KPI__COLOR);
+		createEAttribute(kpiEClass, KPI__VALUE);
 		createEAttribute(kpiEClass, KPI__MIN_VALUE);
 		createEAttribute(kpiEClass, KPI__MAX_VALUE);
+		createEReference(kpiEClass, KPI__RANGES);
+		createEAttribute(kpiEClass, KPI__UNIT);
 
 		kpiRangeEClass = createEClass(KPI_RANGE);
+		createEAttribute(kpiRangeEClass, KPI_RANGE__NAME);
+		createEAttribute(kpiRangeEClass, KPI_RANGE__COLOR);
 		createEAttribute(kpiRangeEClass, KPI_RANGE__LOW_VALUE);
 		createEAttribute(kpiRangeEClass, KPI_RANGE__HIGH_VALUE);
-		createEAttribute(kpiRangeEClass, KPI_RANGE__COLOR);
-		createEAttribute(kpiRangeEClass, KPI_RANGE__NAME);
 	}
 
 	/**
@@ -348,22 +358,23 @@ public class TousekpiviewPackageImpl extends EPackageImpl implements Tousekpivie
 		initEReference(getDomain_Scenarios(), this.getScenario(), null, "Scenarios", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(scenarioEClass, Scenario.class, "Scenario", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getScenario_KPIs(), this.getKPI(), null, "KPIs", null, 0, -1, Scenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getScenario_Name(), ecorePackage.getEString(), "Name", null, 0, 1, Scenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getScenario_KPIs(), this.getKPI(), null, "KPIs", null, 0, -1, Scenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(kpiEClass, com.misc.touse.moplaf.kpiview.tousekpiview.KPI.class, "KPI", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getKPI_Name(), ecorePackage.getEString(), "Name", null, 0, 1, com.misc.touse.moplaf.kpiview.tousekpiview.KPI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getKPI_Value(), ecorePackage.getEFloat(), "Value", null, 0, 1, com.misc.touse.moplaf.kpiview.tousekpiview.KPI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getKPI_Ranges(), this.getKPIRange(), null, "Ranges", null, 0, -1, com.misc.touse.moplaf.kpiview.tousekpiview.KPI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getKPI_Color(), ecorePackage.getEInt(), "Color", null, 0, 1, com.misc.touse.moplaf.kpiview.tousekpiview.KPI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getKPI_Value(), ecorePackage.getEFloat(), "Value", null, 0, 1, com.misc.touse.moplaf.kpiview.tousekpiview.KPI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getKPI_MinValue(), ecorePackage.getEFloat(), "MinValue", null, 0, 1, com.misc.touse.moplaf.kpiview.tousekpiview.KPI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getKPI_MaxValue(), ecorePackage.getEFloat(), "MaxValue", null, 0, 1, com.misc.touse.moplaf.kpiview.tousekpiview.KPI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getKPI_Ranges(), this.getKPIRange(), null, "Ranges", null, 0, -1, com.misc.touse.moplaf.kpiview.tousekpiview.KPI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getKPI_Unit(), ecorePackage.getEString(), "Unit", null, 0, 1, com.misc.touse.moplaf.kpiview.tousekpiview.KPI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(kpiRangeEClass, KPIRange.class, "KPIRange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getKPIRange_Name(), ecorePackage.getEString(), "Name", null, 0, 1, KPIRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getKPIRange_Color(), ecorePackage.getEInt(), "Color", null, 0, 1, KPIRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getKPIRange_LowValue(), ecorePackage.getEFloat(), "LowValue", null, 0, 1, KPIRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getKPIRange_HighValue(), ecorePackage.getEFloat(), "HighValue", null, 0, 1, KPIRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getKPIRange_Color(), ecorePackage.getEInt(), "Color", null, 0, 1, KPIRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getKPIRange_Name(), ecorePackage.getEString(), "Name", null, 0, 1, KPIRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -104,22 +104,22 @@ public interface TousekpiviewPackage extends EPackage {
 	int SCENARIO = 1;
 
 	/**
-	 * The feature id for the '<em><b>KP Is</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCENARIO__KP_IS = 0;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCENARIO__NAME = 1;
+	int SCENARIO__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>KP Is</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCENARIO__KP_IS = 1;
 
 	/**
 	 * The number of structural features of the '<em>Scenario</em>' class.
@@ -159,31 +159,22 @@ public interface TousekpiviewPackage extends EPackage {
 	int KPI__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KPI__VALUE = 1;
-
-	/**
-	 * The feature id for the '<em><b>Ranges</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KPI__RANGES = 2;
-
-	/**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int KPI__COLOR = 3;
+	int KPI__COLOR = 1;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KPI__VALUE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Min Value</b></em>' attribute.
@@ -192,7 +183,7 @@ public interface TousekpiviewPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KPI__MIN_VALUE = 4;
+	int KPI__MIN_VALUE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Max Value</b></em>' attribute.
@@ -201,7 +192,25 @@ public interface TousekpiviewPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KPI__MAX_VALUE = 5;
+	int KPI__MAX_VALUE = 4;
+
+	/**
+	 * The feature id for the '<em><b>Ranges</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KPI__RANGES = 5;
+
+	/**
+	 * The feature id for the '<em><b>Unit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KPI__UNIT = 6;
 
 	/**
 	 * The number of structural features of the '<em>KPI</em>' class.
@@ -210,7 +219,7 @@ public interface TousekpiviewPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KPI_FEATURE_COUNT = 6;
+	int KPI_FEATURE_COUNT = 7;
 
 	/**
 	 * The number of operations of the '<em>KPI</em>' class.
@@ -232,22 +241,13 @@ public interface TousekpiviewPackage extends EPackage {
 	int KPI_RANGE = 3;
 
 	/**
-	 * The feature id for the '<em><b>Low Value</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int KPI_RANGE__LOW_VALUE = 0;
-
-	/**
-	 * The feature id for the '<em><b>High Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KPI_RANGE__HIGH_VALUE = 1;
+	int KPI_RANGE__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -256,16 +256,25 @@ public interface TousekpiviewPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KPI_RANGE__COLOR = 2;
+	int KPI_RANGE__COLOR = 1;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Low Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int KPI_RANGE__NAME = 3;
+	int KPI_RANGE__LOW_VALUE = 2;
+
+	/**
+	 * The feature id for the '<em><b>High Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KPI_RANGE__HIGH_VALUE = 3;
 
 	/**
 	 * The number of structural features of the '<em>KPI Range</em>' class.
@@ -381,6 +390,17 @@ public interface TousekpiviewPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getKPI_Ranges();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.kpiview.tousekpiview.KPI#getUnit <em>Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Unit</em>'.
+	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.KPI#getUnit()
+	 * @see #getKPI()
+	 * @generated
+	 */
+	EAttribute getKPI_Unit();
 
 	/**
 	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.kpiview.tousekpiview.KPI#getColor <em>Color</em>}'.
@@ -569,6 +589,14 @@ public interface TousekpiviewPackage extends EPackage {
 		 * @generated
 		 */
 		EReference KPI__RANGES = eINSTANCE.getKPI_Ranges();
+
+		/**
+		 * The meta object literal for the '<em><b>Unit</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute KPI__UNIT = eINSTANCE.getKPI_Unit();
 
 		/**
 		 * The meta object literal for the '<em><b>Color</b></em>' attribute feature.

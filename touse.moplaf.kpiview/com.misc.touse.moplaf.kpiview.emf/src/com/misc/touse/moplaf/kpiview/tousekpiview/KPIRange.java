@@ -13,10 +13,10 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link com.misc.touse.moplaf.kpiview.tousekpiview.KPIRange#getName <em>Name</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.kpiview.tousekpiview.KPIRange#getColor <em>Color</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.kpiview.tousekpiview.KPIRange#getLowValue <em>Low Value</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.kpiview.tousekpiview.KPIRange#getHighValue <em>High Value</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.kpiview.tousekpiview.KPIRange#getColor <em>Color</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.kpiview.tousekpiview.KPIRange#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewPackage#getKPIRange()
