@@ -3,6 +3,7 @@
 package com.misc.touse.moplaf.kpiview.tousekpiview.provider;
 
 
+import com.misc.common.moplaf.common.Color;
 import com.misc.common.moplaf.kpiview.emf.edit.IItemKPIRangeProvider;
 import com.misc.touse.moplaf.kpiview.tousekpiview.KPIRange;
 import com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewPackage;
@@ -17,6 +18,7 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
+import org.eclipse.emf.edit.provider.IItemColorProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
@@ -30,13 +32,14 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * This is the item provider adapter for a {@link com.misc.touse.moplaf.kpiview.tousekpiview.KPIRange} object.
  * <!-- begin-user-doc -->
  * @implements IItemKPIRangeProvider
+ * @implements IItemColorProvider 
  * <!-- end-user-doc -->
  * @generated
  */
 public class KPIRangeItemProvider 
 	extends ItemProviderAdapter
 	implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource, IItemKPIRangeProvider {
+		IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource, IItemKPIRangeProvider, IItemColorProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -241,6 +244,15 @@ public class KPIRangeItemProvider
 	public float getHighAmount(Object element) {
 		KPIRange range = (KPIRange)element;
 		return range.getHighValue();
+	}
+
+	
+	@Override
+	public Object getForeground(Object object) {
+		KPIRange range = (KPIRange)object;
+		int rgb = range.getColor();
+		Color color = new Color(rgb); 
+		return color.toURI();
 	}
 
 }
