@@ -3,6 +3,7 @@
 package com.misc.touse.moplaf.kpiview.tousekpiview.provider;
 
 
+import com.misc.common.moplaf.common.Color;
 import com.misc.common.moplaf.kpiview.emf.edit.IItemKPIsProvider;
 import com.misc.touse.moplaf.kpiview.tousekpiview.Scenario;
 import com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewFactory;
@@ -20,6 +21,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
+import org.eclipse.emf.edit.provider.IItemColorProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
@@ -33,13 +35,14 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * This is the item provider adapter for a {@link com.misc.touse.moplaf.kpiview.tousekpiview.Scenario} object.
  * <!-- begin-user-doc -->
  * @implements IItemKPIsProvider
+ * @implements IItemColorProvider 
  * <!-- end-user-doc -->
  * @generated
  */
 public class ScenarioItemProvider 
 	extends ItemProviderAdapter
 	implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource, IItemKPIsProvider {
+		IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource, IItemKPIsProvider, IItemColorProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -62,6 +65,7 @@ public class ScenarioItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
+			addColorPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -84,6 +88,28 @@ public class ScenarioItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Color feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addColorPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Scenario_Color_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Scenario_Color_feature", "_UI_Scenario_type"),
+				 TousekpiviewPackage.Literals.SCENARIO__COLOR,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -157,6 +183,7 @@ public class ScenarioItemProvider
 
 		switch (notification.getFeatureID(Scenario.class)) {
 			case TousekpiviewPackage.SCENARIO__NAME:
+			case TousekpiviewPackage.SCENARIO__COLOR:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case TousekpiviewPackage.SCENARIO__KP_IS:
@@ -202,6 +229,17 @@ public class ScenarioItemProvider
 	public Collection<?> getKPIs(Object element) {
 		Scenario scenario = (Scenario)element;
 		return scenario.getKPIs();
+	}
+	
+	/**
+	 * Specified by  IItemColorProvider
+	 */
+	@Override
+	public Object getForeground(Object object) {
+		Scenario scenario = (Scenario)object;
+		int rgb = scenario.getColor();
+		Color color = new Color(rgb); 
+		return color.toURI();
 	}
 
 }

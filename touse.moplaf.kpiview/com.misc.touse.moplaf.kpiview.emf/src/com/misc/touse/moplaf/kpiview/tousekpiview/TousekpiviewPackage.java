@@ -113,13 +113,22 @@ public interface TousekpiviewPackage extends EPackage {
 	int SCENARIO__NAME = 0;
 
 	/**
+	 * The feature id for the '<em><b>Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCENARIO__COLOR = 1;
+
+	/**
 	 * The feature id for the '<em><b>KP Is</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCENARIO__KP_IS = 1;
+	int SCENARIO__KP_IS = 2;
 
 	/**
 	 * The number of structural features of the '<em>Scenario</em>' class.
@@ -128,7 +137,7 @@ public interface TousekpiviewPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCENARIO_FEATURE_COUNT = 2;
+	int SCENARIO_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Scenario</em>' class.
@@ -349,6 +358,17 @@ public interface TousekpiviewPackage extends EPackage {
 	EAttribute getScenario_Name();
 
 	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.kpiview.tousekpiview.Scenario#getColor <em>Color</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Color</em>'.
+	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.Scenario#getColor()
+	 * @see #getScenario()
+	 * @generated
+	 */
+	EAttribute getScenario_Color();
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.kpiview.tousekpiview.KPI <em>KPI</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -555,6 +575,14 @@ public interface TousekpiviewPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute SCENARIO__NAME = eINSTANCE.getScenario_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Color</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SCENARIO__COLOR = eINSTANCE.getScenario_Color();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.kpiview.tousekpiview.impl.KPIImpl <em>KPI</em>}' class.

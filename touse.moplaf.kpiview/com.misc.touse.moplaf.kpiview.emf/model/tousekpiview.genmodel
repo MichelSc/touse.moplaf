@@ -11,22 +11,23 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousekpiview.ecore#//Domain/Scenarios"/>
     </genClasses>
     <genClasses ecoreClass="tousekpiview.ecore#//Scenario">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousekpiview.ecore#//Scenario/KPIs"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousekpiview.ecore#//Scenario/Name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousekpiview.ecore#//Scenario/KPIs"/>
     </genClasses>
     <genClasses ecoreClass="tousekpiview.ecore#//KPI">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousekpiview.ecore#//KPI/Name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousekpiview.ecore#//KPI/Value"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousekpiview.ecore#//KPI/Ranges"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousekpiview.ecore#//KPI/Color"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousekpiview.ecore#//KPI/Value"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousekpiview.ecore#//KPI/MinValue"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousekpiview.ecore#//KPI/MaxValue"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousekpiview.ecore#//KPI/Ranges"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousekpiview.ecore#//KPI/Unit"/>
     </genClasses>
     <genClasses ecoreClass="tousekpiview.ecore#//KPIRange">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousekpiview.ecore#//KPIRange/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousekpiview.ecore#//KPIRange/Color"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousekpiview.ecore#//KPIRange/LowValue"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousekpiview.ecore#//KPIRange/HighValue"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousekpiview.ecore#//KPIRange/Color"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousekpiview.ecore#//KPIRange/Name"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

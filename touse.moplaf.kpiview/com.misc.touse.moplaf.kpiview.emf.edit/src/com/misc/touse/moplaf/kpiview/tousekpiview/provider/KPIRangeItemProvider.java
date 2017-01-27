@@ -247,6 +247,9 @@ public class KPIRangeItemProvider
 	}
 
 	
+	/**
+	 * Specified by  IItemColorProvider
+	 */
 	@Override
 	public Object getForeground(Object object) {
 		KPIRange range = (KPIRange)object;

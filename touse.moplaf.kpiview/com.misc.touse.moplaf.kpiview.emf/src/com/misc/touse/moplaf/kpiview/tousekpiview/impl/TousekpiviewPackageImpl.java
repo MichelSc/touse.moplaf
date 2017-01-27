@@ -144,7 +144,7 @@ public class TousekpiviewPackageImpl extends EPackageImpl implements Tousekpivie
 	 * @generated
 	 */
 	public EReference getScenario_KPIs() {
-		return (EReference)scenarioEClass.getEStructuralFeatures().get(1);
+		return (EReference)scenarioEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -154,6 +154,15 @@ public class TousekpiviewPackageImpl extends EPackageImpl implements Tousekpivie
 	 */
 	public EAttribute getScenario_Name() {
 		return (EAttribute)scenarioEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getScenario_Color() {
+		return (EAttribute)scenarioEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -306,6 +315,7 @@ public class TousekpiviewPackageImpl extends EPackageImpl implements Tousekpivie
 
 		scenarioEClass = createEClass(SCENARIO);
 		createEAttribute(scenarioEClass, SCENARIO__NAME);
+		createEAttribute(scenarioEClass, SCENARIO__COLOR);
 		createEReference(scenarioEClass, SCENARIO__KP_IS);
 
 		kpiEClass = createEClass(KPI);
@@ -359,6 +369,7 @@ public class TousekpiviewPackageImpl extends EPackageImpl implements Tousekpivie
 
 		initEClass(scenarioEClass, Scenario.class, "Scenario", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getScenario_Name(), ecorePackage.getEString(), "Name", null, 0, 1, Scenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getScenario_Color(), ecorePackage.getEInt(), "Color", null, 0, 1, Scenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getScenario_KPIs(), this.getKPI(), null, "KPIs", null, 0, -1, Scenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(kpiEClass, com.misc.touse.moplaf.kpiview.tousekpiview.KPI.class, "KPI", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

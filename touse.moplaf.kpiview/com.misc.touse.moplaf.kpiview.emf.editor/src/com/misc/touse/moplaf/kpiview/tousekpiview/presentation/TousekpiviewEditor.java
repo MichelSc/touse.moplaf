@@ -1415,6 +1415,7 @@ public class TousekpiviewEditor
 		AdapterFactoryContentProviderExtended contentProvider = new AdapterFactoryContentProviderExtended(adapterFactory);
 		contentProvider.editColors.addSelector(TousekpiviewPackage.Literals.KPI_RANGE__COLOR);
 		contentProvider.editColors.addSelector(TousekpiviewPackage.Literals.KPI__COLOR);
+		contentProvider.editColors.addSelector(TousekpiviewPackage.Literals.SCENARIO__COLOR);
 		propertySheetPage.setPropertySourceProvider(contentProvider);
 		propertySheetPages.add(propertySheetPage);
 

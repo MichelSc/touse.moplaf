@@ -31,6 +31,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.kpiview.tousekpiview.impl.ScenarioImpl#getName <em>Name</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.kpiview.tousekpiview.impl.ScenarioImpl#getColor <em>Color</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.kpiview.tousekpiview.impl.ScenarioImpl#getKPIs <em>KP Is</em>}</li>
  * </ul>
  *
@@ -56,6 +57,26 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getColor() <em>Color</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getColor()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int COLOR_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getColor() <em>Color</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getColor()
+	 * @generated
+	 * @ordered
+	 */
+	protected int color = COLOR_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getKPIs() <em>KP Is</em>}' containment reference list.
@@ -124,6 +145,27 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getColor() {
+		return color;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setColor(int newColor) {
+		int oldColor = color;
+		color = newColor;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TousekpiviewPackage.SCENARIO__COLOR, oldColor, color));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -143,6 +185,8 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 		switch (featureID) {
 			case TousekpiviewPackage.SCENARIO__NAME:
 				return getName();
+			case TousekpiviewPackage.SCENARIO__COLOR:
+				return getColor();
 			case TousekpiviewPackage.SCENARIO__KP_IS:
 				return getKPIs();
 		}
@@ -160,6 +204,9 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 		switch (featureID) {
 			case TousekpiviewPackage.SCENARIO__NAME:
 				setName((String)newValue);
+				return;
+			case TousekpiviewPackage.SCENARIO__COLOR:
+				setColor((Integer)newValue);
 				return;
 			case TousekpiviewPackage.SCENARIO__KP_IS:
 				getKPIs().clear();
@@ -180,6 +227,9 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 			case TousekpiviewPackage.SCENARIO__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case TousekpiviewPackage.SCENARIO__COLOR:
+				setColor(COLOR_EDEFAULT);
+				return;
 			case TousekpiviewPackage.SCENARIO__KP_IS:
 				getKPIs().clear();
 				return;
@@ -197,6 +247,8 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 		switch (featureID) {
 			case TousekpiviewPackage.SCENARIO__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case TousekpiviewPackage.SCENARIO__COLOR:
+				return color != COLOR_EDEFAULT;
 			case TousekpiviewPackage.SCENARIO__KP_IS:
 				return kpIs != null && !kpIs.isEmpty();
 		}
@@ -215,6 +267,8 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (Name: ");
 		result.append(name);
+		result.append(", Color: ");
+		result.append(color);
 		result.append(')');
 		return result.toString();
 	}
