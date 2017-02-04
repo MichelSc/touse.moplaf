@@ -67,10 +67,107 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @see com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorPackageImpl#getProject()
 	 * @generated
 	 */
-	int PROJECT = 0;
+	int PROJECT = 1;
 
 	/**
-	 * The feature id for the '<em><b>Propagator Functions</b></em>' reference list.
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousepropagator2.impl.TaskImpl <em>Task</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousepropagator2.impl.TaskImpl
+	 * @see com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorPackageImpl#getTask()
+	 * @generated
+	 */
+	int TASK = 2;
+
+	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousepropagator2.impl.DependenceImpl <em>Dependence</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousepropagator2.impl.DependenceImpl
+	 * @see com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorPackageImpl#getDependence()
+	 * @generated
+	 */
+	int DEPENDENCE = 3;
+
+	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousepropagator2.impl.TaskItemImpl <em>Task Item</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousepropagator2.impl.TaskItemImpl
+	 * @see com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorPackageImpl#getTaskItem()
+	 * @generated
+	 */
+	int TASK_ITEM = 4;
+
+	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousepropagator2.impl.ResourceImpl <em>Resource</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousepropagator2.impl.ResourceImpl
+	 * @see com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorPackageImpl#getResource()
+	 * @generated
+	 */
+	int RESOURCE = 5;
+
+	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousepropagator2.impl.ResourceCandidateImpl <em>Resource Candidate</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousepropagator2.impl.ResourceCandidateImpl
+	 * @see com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorPackageImpl#getResourceCandidate()
+	 * @generated
+	 */
+	int RESOURCE_CANDIDATE = 6;
+
+	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorFunctionImpl <em>Function</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorFunctionImpl
+	 * @see com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorPackageImpl#getToUsePropagatorFunction()
+	 * @generated
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION = 7;
+
+	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousepropagator2.impl.DomainImpl <em>Domain</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousepropagator2.impl.DomainImpl
+	 * @see com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorPackageImpl#getDomain()
+	 * @generated
+	 */
+	int DOMAIN = 0;
+
+	/**
+	 * The feature id for the '<em><b>Projects</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN__PROJECTS = 0;
+
+	/**
+	 * The number of structural features of the '<em>Domain</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Domain</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Propagator Functions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -142,76 +239,13 @@ public interface ToUsePropagatorPackage extends EPackage {
 	int PROJECT__RESOURCES = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 6;
 
 	/**
-	 * The feature id for the '<em><b>Scope Project</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROJECT__SCOPE_PROJECT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 7;
-
-	/**
-	 * The feature id for the '<em><b>Layer Task Times</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROJECT__LAYER_TASK_TIMES = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 8;
-
-	/**
-	 * The feature id for the '<em><b>Layer Task Hours</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROJECT__LAYER_TASK_HOURS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 9;
-
-	/**
-	 * The feature id for the '<em><b>Layer Task Hours Item</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROJECT__LAYER_TASK_HOURS_ITEM = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 10;
-
-	/**
-	 * The feature id for the '<em><b>Layer Task Hours Var</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROJECT__LAYER_TASK_HOURS_VAR = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 11;
-
-	/**
-	 * The feature id for the '<em><b>Calc Project End</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROJECT__CALC_PROJECT_END = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 12;
-
-	/**
-	 * The feature id for the '<em><b>Layer Task Resources</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROJECT__LAYER_TASK_RESOURCES = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 13;
-
-	/**
 	 * The feature id for the '<em><b>Automatic Refresh</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROJECT__AUTOMATIC_REFRESH = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 14;
+	int PROJECT__AUTOMATIC_REFRESH = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of structural features of the '<em>Project</em>' class.
@@ -220,7 +254,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROJECT_FEATURE_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 15;
+	int PROJECT_FEATURE_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 8;
 
 	/**
 	 * The operation id for the '<em>On Owned</em>' operation.
@@ -241,31 +275,22 @@ public interface ToUsePropagatorPackage extends EPackage {
 	int PROJECT___ON_NOT_OWNED = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ON_NOT_OWNED;
 
 	/**
+	 * The operation id for the '<em>Get Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT___GET_PROPAGATOR_FUNCTION__OBJECT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___GET_PROPAGATOR_FUNCTION__OBJECT;
+
+	/**
 	 * The operation id for the '<em>Refresh End</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROJECT___REFRESH_END = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Refresh</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROJECT___REFRESH = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 2;
-
-	/**
-	 * The operation id for the '<em>Reset</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROJECT___RESET = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 3;
+	int PROJECT___REFRESH_END = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Project</em>' class.
@@ -274,20 +299,10 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROJECT_OPERATION_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 4;
+	int PROJECT_OPERATION_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link com.misc.touse.moplaf.tousepropagator2.impl.TaskImpl <em>Task</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.misc.touse.moplaf.tousepropagator2.impl.TaskImpl
-	 * @see com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorPackageImpl#getTask()
-	 * @generated
-	 */
-	int TASK = 1;
-
-	/**
-	 * The feature id for the '<em><b>Propagator Functions</b></em>' reference list.
+	 * The feature id for the '<em><b>Propagator Functions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -404,67 +419,13 @@ public interface ToUsePropagatorPackage extends EPackage {
 	int TASK__RESOURCE_CANDIDATES = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 11;
 
 	/**
-	 * The feature id for the '<em><b>Calc Task Start</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK__CALC_TASK_START = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 12;
-
-	/**
-	 * The feature id for the '<em><b>Calc Task End</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK__CALC_TASK_END = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 13;
-
-	/**
-	 * The feature id for the '<em><b>Calc Task Hours</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK__CALC_TASK_HOURS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 14;
-
-	/**
-	 * The feature id for the '<em><b>Calc Task Hours Var</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK__CALC_TASK_HOURS_VAR = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 15;
-
-	/**
-	 * The feature id for the '<em><b>Calc Task Hours Item</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK__CALC_TASK_HOURS_ITEM = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 16;
-
-	/**
-	 * The feature id for the '<em><b>Calc Task Resources</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK__CALC_TASK_RESOURCES = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 17;
-
-	/**
 	 * The number of structural features of the '<em>Task</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_FEATURE_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 18;
+	int TASK_FEATURE_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 12;
 
 	/**
 	 * The operation id for the '<em>On Owned</em>' operation.
@@ -483,6 +444,15 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @ordered
 	 */
 	int TASK___ON_NOT_OWNED = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ON_NOT_OWNED;
+
+	/**
+	 * The operation id for the '<em>Get Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK___GET_PROPAGATOR_FUNCTION__OBJECT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___GET_PROPAGATOR_FUNCTION__OBJECT;
 
 	/**
 	 * The operation id for the '<em>Refresh Start</em>' operation.
@@ -575,17 +545,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	int TASK_OPERATION_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 9;
 
 	/**
-	 * The meta object id for the '{@link com.misc.touse.moplaf.tousepropagator2.impl.DependenceImpl <em>Dependence</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.misc.touse.moplaf.tousepropagator2.impl.DependenceImpl
-	 * @see com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorPackageImpl#getDependence()
-	 * @generated
-	 */
-	int DEPENDENCE = 2;
-
-	/**
-	 * The feature id for the '<em><b>Propagator Functions</b></em>' reference list.
+	 * The feature id for the '<em><b>Propagator Functions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -675,6 +635,15 @@ public interface ToUsePropagatorPackage extends EPackage {
 	int DEPENDENCE___ON_NOT_OWNED = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ON_NOT_OWNED;
 
 	/**
+	 * The operation id for the '<em>Get Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEPENDENCE___GET_PROPAGATOR_FUNCTION__OBJECT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___GET_PROPAGATOR_FUNCTION__OBJECT;
+
+	/**
 	 * The operation id for the '<em>Dispose</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -691,16 +660,6 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @ordered
 	 */
 	int DEPENDENCE_OPERATION_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 1;
-
-	/**
-	 * The meta object id for the '{@link com.misc.touse.moplaf.tousepropagator2.impl.TaskItemImpl <em>Task Item</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.misc.touse.moplaf.tousepropagator2.impl.TaskItemImpl
-	 * @see com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorPackageImpl#getTaskItem()
-	 * @generated
-	 */
-	int TASK_ITEM = 3;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -746,17 +705,6 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @ordered
 	 */
 	int TASK_ITEM_OPERATION_COUNT = 0;
-
-
-	/**
-	 * The meta object id for the '{@link com.misc.touse.moplaf.tousepropagator2.impl.ResourceImpl <em>Resource</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.misc.touse.moplaf.tousepropagator2.impl.ResourceImpl
-	 * @see com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorPackageImpl#getResource()
-	 * @generated
-	 */
-	int RESOURCE = 4;
 
 	/**
 	 * The feature id for the '<em><b>Start</b></em>' attribute.
@@ -813,16 +761,6 @@ public interface ToUsePropagatorPackage extends EPackage {
 	int RESOURCE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link com.misc.touse.moplaf.tousepropagator2.impl.ResourceCandidateImpl <em>Resource Candidate</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.misc.touse.moplaf.tousepropagator2.impl.ResourceCandidateImpl
-	 * @see com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorPackageImpl#getResourceCandidate()
-	 * @generated
-	 */
-	int RESOURCE_CANDIDATE = 5;
-
-	/**
 	 * The feature id for the '<em><b>Resource</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -867,43 +805,827 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 */
 	int RESOURCE_CANDIDATE_OPERATION_COUNT = 0;
 
-
 	/**
-	 * The meta object id for the '{@link com.misc.touse.moplaf.tousepropagator2.impl.DomainImpl <em>Domain</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.misc.touse.moplaf.tousepropagator2.impl.DomainImpl
-	 * @see com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorPackageImpl#getDomain()
-	 * @generated
-	 */
-	int DOMAIN = 6;
-
-	/**
-	 * The feature id for the '<em><b>Projects</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN__PROJECTS = 0;
+	int TO_USE_PROPAGATOR_FUNCTION__PARENT = PropagatorPackage.PROPAGATOR_FUNCTION__PARENT;
 
 	/**
-	 * The number of structural features of the '<em>Domain</em>' class.
+	 * The feature id for the '<em><b>Antecedents</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_FEATURE_COUNT = 1;
+	int TO_USE_PROPAGATOR_FUNCTION__ANTECEDENTS = PropagatorPackage.PROPAGATOR_FUNCTION__ANTECEDENTS;
 
 	/**
-	 * The number of operations of the '<em>Domain</em>' class.
+	 * The feature id for the '<em><b>Antecedents Sibling</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_OPERATION_COUNT = 0;
+	int TO_USE_PROPAGATOR_FUNCTION__ANTECEDENTS_SIBLING = PropagatorPackage.PROPAGATOR_FUNCTION__ANTECEDENTS_SIBLING;
+
+	/**
+	 * The feature id for the '<em><b>Touched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION__TOUCHED = PropagatorPackage.PROPAGATOR_FUNCTION__TOUCHED;
+
+	/**
+	 * The feature id for the '<em><b>Touched Children</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION__TOUCHED_CHILDREN = PropagatorPackage.PROPAGATOR_FUNCTION__TOUCHED_CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Touchers</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION__TOUCHERS = PropagatorPackage.PROPAGATOR_FUNCTION__TOUCHERS;
+
+	/**
+	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION__ENABLED = PropagatorPackage.PROPAGATOR_FUNCTION__ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Object With Propagator Functions</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION__OBJECT_WITH_PROPAGATOR_FUNCTIONS = PropagatorPackage.PROPAGATOR_FUNCTION__OBJECT_WITH_PROPAGATOR_FUNCTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION__TYPE = PropagatorPackage.PROPAGATOR_FUNCTION__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Object</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION__OBJECT = PropagatorPackage.PROPAGATOR_FUNCTION__OBJECT;
+
+	/**
+	 * The feature id for the '<em><b>Instance</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION__INSTANCE = PropagatorPackage.PROPAGATOR_FUNCTION__INSTANCE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION__DESCRIPTION = PropagatorPackage.PROPAGATOR_FUNCTION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Calculated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION__CALCULATED = PropagatorPackage.PROPAGATOR_FUNCTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Function</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_FEATURE_COUNT = PropagatorPackage.PROPAGATOR_FUNCTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Enable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION___ENABLE = PropagatorPackage.PROPAGATOR_FUNCTION___ENABLE;
+
+	/**
+	 * The operation id for the '<em>Disable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION___DISABLE = PropagatorPackage.PROPAGATOR_FUNCTION___DISABLE;
+
+	/**
+	 * The operation id for the '<em>Touch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION___TOUCH__EOBJECT = PropagatorPackage.PROPAGATOR_FUNCTION___TOUCH__EOBJECT;
+
+	/**
+	 * The operation id for the '<em>Refresh Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION___REFRESH_ANTECEDENTS = PropagatorPackage.PROPAGATOR_FUNCTION___REFRESH_ANTECEDENTS;
+
+	/**
+	 * The operation id for the '<em>Refresh This</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION___REFRESH_THIS = PropagatorPackage.PROPAGATOR_FUNCTION___REFRESH_THIS;
+
+	/**
+	 * The operation id for the '<em>Refresh Children And This</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION___REFRESH_CHILDREN_AND_THIS = PropagatorPackage.PROPAGATOR_FUNCTION___REFRESH_CHILDREN_AND_THIS;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION___REFRESH = PropagatorPackage.PROPAGATOR_FUNCTION___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Do Get Parent</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION___DO_GET_PARENT = PropagatorPackage.PROPAGATOR_FUNCTION___DO_GET_PARENT;
+
+	/**
+	 * The operation id for the '<em>Do Get Explicit Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION___DO_GET_EXPLICIT_ANTECEDENTS = PropagatorPackage.PROPAGATOR_FUNCTION___DO_GET_EXPLICIT_ANTECEDENTS;
+
+	/**
+	 * The operation id for the '<em>Do Get Bindings</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION___DO_GET_BINDINGS = PropagatorPackage.PROPAGATOR_FUNCTION___DO_GET_BINDINGS;
+
+	/**
+	 * The operation id for the '<em>Do Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION___DO_REFRESH = PropagatorPackage.PROPAGATOR_FUNCTION___DO_REFRESH;
+
+	/**
+	 * The operation id for the '<em>Do Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION___DO_REFRESH__EOBJECT = PropagatorPackage.PROPAGATOR_FUNCTION___DO_REFRESH__EOBJECT;
+
+	/**
+	 * The operation id for the '<em>Is Propagator Function Of Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION___IS_PROPAGATOR_FUNCTION_OF_TYPE__OBJECT = PropagatorPackage.PROPAGATOR_FUNCTION___IS_PROPAGATOR_FUNCTION_OF_TYPE__OBJECT;
+
+	/**
+	 * The operation id for the '<em>Get Scope</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION___GET_SCOPE = PropagatorPackage.PROPAGATOR_FUNCTION___GET_SCOPE;
+
+	/**
+	 * The number of operations of the '<em>Function</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_OPERATION_COUNT = PropagatorPackage.PROPAGATOR_FUNCTION_OPERATION_COUNT + 0;
+
+
+	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorFunctionTaskImpl <em>Function Task</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorFunctionTaskImpl
+	 * @see com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorPackageImpl#getToUsePropagatorFunctionTask()
+	 * @generated
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_TASK = 8;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_TASK__PARENT = TO_USE_PROPAGATOR_FUNCTION__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Antecedents</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_TASK__ANTECEDENTS = TO_USE_PROPAGATOR_FUNCTION__ANTECEDENTS;
+
+	/**
+	 * The feature id for the '<em><b>Antecedents Sibling</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_TASK__ANTECEDENTS_SIBLING = TO_USE_PROPAGATOR_FUNCTION__ANTECEDENTS_SIBLING;
+
+	/**
+	 * The feature id for the '<em><b>Touched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_TASK__TOUCHED = TO_USE_PROPAGATOR_FUNCTION__TOUCHED;
+
+	/**
+	 * The feature id for the '<em><b>Touched Children</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_TASK__TOUCHED_CHILDREN = TO_USE_PROPAGATOR_FUNCTION__TOUCHED_CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Touchers</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_TASK__TOUCHERS = TO_USE_PROPAGATOR_FUNCTION__TOUCHERS;
+
+	/**
+	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_TASK__ENABLED = TO_USE_PROPAGATOR_FUNCTION__ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Object With Propagator Functions</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_TASK__OBJECT_WITH_PROPAGATOR_FUNCTIONS = TO_USE_PROPAGATOR_FUNCTION__OBJECT_WITH_PROPAGATOR_FUNCTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_TASK__TYPE = TO_USE_PROPAGATOR_FUNCTION__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Object</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_TASK__OBJECT = TO_USE_PROPAGATOR_FUNCTION__OBJECT;
+
+	/**
+	 * The feature id for the '<em><b>Instance</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_TASK__INSTANCE = TO_USE_PROPAGATOR_FUNCTION__INSTANCE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_TASK__DESCRIPTION = TO_USE_PROPAGATOR_FUNCTION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Calculated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_TASK__CALCULATED = TO_USE_PROPAGATOR_FUNCTION__CALCULATED;
+
+	/**
+	 * The feature id for the '<em><b>Task</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_TASK__TASK = TO_USE_PROPAGATOR_FUNCTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Function Task</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_TASK_FEATURE_COUNT = TO_USE_PROPAGATOR_FUNCTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Enable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_TASK___ENABLE = TO_USE_PROPAGATOR_FUNCTION___ENABLE;
+
+	/**
+	 * The operation id for the '<em>Disable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_TASK___DISABLE = TO_USE_PROPAGATOR_FUNCTION___DISABLE;
+
+	/**
+	 * The operation id for the '<em>Touch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_TASK___TOUCH__EOBJECT = TO_USE_PROPAGATOR_FUNCTION___TOUCH__EOBJECT;
+
+	/**
+	 * The operation id for the '<em>Refresh Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH_ANTECEDENTS = TO_USE_PROPAGATOR_FUNCTION___REFRESH_ANTECEDENTS;
+
+	/**
+	 * The operation id for the '<em>Refresh This</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH_THIS = TO_USE_PROPAGATOR_FUNCTION___REFRESH_THIS;
+
+	/**
+	 * The operation id for the '<em>Refresh Children And This</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH_CHILDREN_AND_THIS = TO_USE_PROPAGATOR_FUNCTION___REFRESH_CHILDREN_AND_THIS;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH = TO_USE_PROPAGATOR_FUNCTION___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Do Get Parent</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_PARENT = TO_USE_PROPAGATOR_FUNCTION___DO_GET_PARENT;
+
+	/**
+	 * The operation id for the '<em>Do Get Explicit Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_EXPLICIT_ANTECEDENTS = TO_USE_PROPAGATOR_FUNCTION___DO_GET_EXPLICIT_ANTECEDENTS;
+
+	/**
+	 * The operation id for the '<em>Do Get Bindings</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_BINDINGS = TO_USE_PROPAGATOR_FUNCTION___DO_GET_BINDINGS;
+
+	/**
+	 * The operation id for the '<em>Do Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_TASK___DO_REFRESH = TO_USE_PROPAGATOR_FUNCTION___DO_REFRESH;
+
+	/**
+	 * The operation id for the '<em>Do Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_TASK___DO_REFRESH__EOBJECT = TO_USE_PROPAGATOR_FUNCTION___DO_REFRESH__EOBJECT;
+
+	/**
+	 * The operation id for the '<em>Is Propagator Function Of Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_TASK___IS_PROPAGATOR_FUNCTION_OF_TYPE__OBJECT = TO_USE_PROPAGATOR_FUNCTION___IS_PROPAGATOR_FUNCTION_OF_TYPE__OBJECT;
+
+	/**
+	 * The operation id for the '<em>Get Scope</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_TASK___GET_SCOPE = TO_USE_PROPAGATOR_FUNCTION___GET_SCOPE;
+
+	/**
+	 * The number of operations of the '<em>Function Task</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_TASK_OPERATION_COUNT = TO_USE_PROPAGATOR_FUNCTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorFunctionProjectImpl <em>Function Project</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorFunctionProjectImpl
+	 * @see com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorPackageImpl#getToUsePropagatorFunctionProject()
+	 * @generated
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_PROJECT = 9;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_PROJECT__PARENT = TO_USE_PROPAGATOR_FUNCTION__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Antecedents</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_PROJECT__ANTECEDENTS = TO_USE_PROPAGATOR_FUNCTION__ANTECEDENTS;
+
+	/**
+	 * The feature id for the '<em><b>Antecedents Sibling</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_PROJECT__ANTECEDENTS_SIBLING = TO_USE_PROPAGATOR_FUNCTION__ANTECEDENTS_SIBLING;
+
+	/**
+	 * The feature id for the '<em><b>Touched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_PROJECT__TOUCHED = TO_USE_PROPAGATOR_FUNCTION__TOUCHED;
+
+	/**
+	 * The feature id for the '<em><b>Touched Children</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_PROJECT__TOUCHED_CHILDREN = TO_USE_PROPAGATOR_FUNCTION__TOUCHED_CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Touchers</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_PROJECT__TOUCHERS = TO_USE_PROPAGATOR_FUNCTION__TOUCHERS;
+
+	/**
+	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_PROJECT__ENABLED = TO_USE_PROPAGATOR_FUNCTION__ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Object With Propagator Functions</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_PROJECT__OBJECT_WITH_PROPAGATOR_FUNCTIONS = TO_USE_PROPAGATOR_FUNCTION__OBJECT_WITH_PROPAGATOR_FUNCTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_PROJECT__TYPE = TO_USE_PROPAGATOR_FUNCTION__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Object</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_PROJECT__OBJECT = TO_USE_PROPAGATOR_FUNCTION__OBJECT;
+
+	/**
+	 * The feature id for the '<em><b>Instance</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_PROJECT__INSTANCE = TO_USE_PROPAGATOR_FUNCTION__INSTANCE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_PROJECT__DESCRIPTION = TO_USE_PROPAGATOR_FUNCTION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Calculated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_PROJECT__CALCULATED = TO_USE_PROPAGATOR_FUNCTION__CALCULATED;
+
+	/**
+	 * The feature id for the '<em><b>Project</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_PROJECT__PROJECT = TO_USE_PROPAGATOR_FUNCTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Function Project</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_PROJECT_FEATURE_COUNT = TO_USE_PROPAGATOR_FUNCTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Enable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_PROJECT___ENABLE = TO_USE_PROPAGATOR_FUNCTION___ENABLE;
+
+	/**
+	 * The operation id for the '<em>Disable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_PROJECT___DISABLE = TO_USE_PROPAGATOR_FUNCTION___DISABLE;
+
+	/**
+	 * The operation id for the '<em>Touch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_PROJECT___TOUCH__EOBJECT = TO_USE_PROPAGATOR_FUNCTION___TOUCH__EOBJECT;
+
+	/**
+	 * The operation id for the '<em>Refresh Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_ANTECEDENTS = TO_USE_PROPAGATOR_FUNCTION___REFRESH_ANTECEDENTS;
+
+	/**
+	 * The operation id for the '<em>Refresh This</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_THIS = TO_USE_PROPAGATOR_FUNCTION___REFRESH_THIS;
+
+	/**
+	 * The operation id for the '<em>Refresh Children And This</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_CHILDREN_AND_THIS = TO_USE_PROPAGATOR_FUNCTION___REFRESH_CHILDREN_AND_THIS;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH = TO_USE_PROPAGATOR_FUNCTION___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Do Get Parent</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_PARENT = TO_USE_PROPAGATOR_FUNCTION___DO_GET_PARENT;
+
+	/**
+	 * The operation id for the '<em>Do Get Explicit Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_EXPLICIT_ANTECEDENTS = TO_USE_PROPAGATOR_FUNCTION___DO_GET_EXPLICIT_ANTECEDENTS;
+
+	/**
+	 * The operation id for the '<em>Do Get Bindings</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_BINDINGS = TO_USE_PROPAGATOR_FUNCTION___DO_GET_BINDINGS;
+
+	/**
+	 * The operation id for the '<em>Do Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_REFRESH = TO_USE_PROPAGATOR_FUNCTION___DO_REFRESH;
+
+	/**
+	 * The operation id for the '<em>Do Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_REFRESH__EOBJECT = TO_USE_PROPAGATOR_FUNCTION___DO_REFRESH__EOBJECT;
+
+	/**
+	 * The operation id for the '<em>Is Propagator Function Of Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_PROJECT___IS_PROPAGATOR_FUNCTION_OF_TYPE__OBJECT = TO_USE_PROPAGATOR_FUNCTION___IS_PROPAGATOR_FUNCTION_OF_TYPE__OBJECT;
+
+	/**
+	 * The operation id for the '<em>Get Scope</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_PROJECT___GET_SCOPE = TO_USE_PROPAGATOR_FUNCTION___GET_SCOPE;
+
+	/**
+	 * The number of operations of the '<em>Function Project</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_PROJECT_OPERATION_COUNT = TO_USE_PROPAGATOR_FUNCTION_OPERATION_COUNT + 0;
 
 
 	/**
@@ -994,83 +1716,6 @@ public interface ToUsePropagatorPackage extends EPackage {
 	EReference getProject_Resources();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link com.misc.touse.moplaf.tousepropagator2.Project#getScopeProject <em>Scope Project</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Scope Project</em>'.
-	 * @see com.misc.touse.moplaf.tousepropagator2.Project#getScopeProject()
-	 * @see #getProject()
-	 * @generated
-	 */
-	EReference getProject_ScopeProject();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link com.misc.touse.moplaf.tousepropagator2.Project#getLayerTaskTimes <em>Layer Task Times</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Layer Task Times</em>'.
-	 * @see com.misc.touse.moplaf.tousepropagator2.Project#getLayerTaskTimes()
-	 * @see #getProject()
-	 * @generated
-	 */
-	EReference getProject_LayerTaskTimes();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link com.misc.touse.moplaf.tousepropagator2.Project#getLayerTaskHours <em>Layer Task Hours</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Layer Task Hours</em>'.
-	 * @see com.misc.touse.moplaf.tousepropagator2.Project#getLayerTaskHours()
-	 * @see #getProject()
-	 * @generated
-	 */
-	EReference getProject_LayerTaskHours();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link com.misc.touse.moplaf.tousepropagator2.Project#getLayerTaskHoursItem <em>Layer Task Hours Item</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Layer Task Hours Item</em>'.
-	 * @see com.misc.touse.moplaf.tousepropagator2.Project#getLayerTaskHoursItem()
-	 * @see #getProject()
-	 * @generated
-	 */
-	EReference getProject_LayerTaskHoursItem();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link com.misc.touse.moplaf.tousepropagator2.Project#getLayerTaskHoursVar <em>Layer Task Hours Var</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Layer Task Hours Var</em>'.
-	 * @see com.misc.touse.moplaf.tousepropagator2.Project#getLayerTaskHoursVar()
-	 * @see #getProject()
-	 * @generated
-	 */
-	EReference getProject_LayerTaskHoursVar();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link com.misc.touse.moplaf.tousepropagator2.Project#getCalcProjectEnd <em>Calc Project End</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Calc Project End</em>'.
-	 * @see com.misc.touse.moplaf.tousepropagator2.Project#getCalcProjectEnd()
-	 * @see #getProject()
-	 * @generated
-	 */
-	EReference getProject_CalcProjectEnd();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link com.misc.touse.moplaf.tousepropagator2.Project#getLayerTaskResources <em>Layer Task Resources</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Layer Task Resources</em>'.
-	 * @see com.misc.touse.moplaf.tousepropagator2.Project#getLayerTaskResources()
-	 * @see #getProject()
-	 * @generated
-	 */
-	EReference getProject_LayerTaskResources();
-
-	/**
 	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.tousepropagator2.Project#isAutomaticRefresh <em>Automatic Refresh</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1090,26 +1735,6 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getProject__RefreshEnd();
-
-	/**
-	 * Returns the meta object for the '{@link com.misc.touse.moplaf.tousepropagator2.Project#refresh() <em>Refresh</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Refresh</em>' operation.
-	 * @see com.misc.touse.moplaf.tousepropagator2.Project#refresh()
-	 * @generated
-	 */
-	EOperation getProject__Refresh();
-
-	/**
-	 * Returns the meta object for the '{@link com.misc.touse.moplaf.tousepropagator2.Project#reset() <em>Reset</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Reset</em>' operation.
-	 * @see com.misc.touse.moplaf.tousepropagator2.Project#reset()
-	 * @generated
-	 */
-	EOperation getProject__Reset();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousepropagator2.Task <em>Task</em>}'.
@@ -1252,72 +1877,6 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getTask_ResourceCandidates();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link com.misc.touse.moplaf.tousepropagator2.Task#getCalcTaskStart <em>Calc Task Start</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Calc Task Start</em>'.
-	 * @see com.misc.touse.moplaf.tousepropagator2.Task#getCalcTaskStart()
-	 * @see #getTask()
-	 * @generated
-	 */
-	EReference getTask_CalcTaskStart();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link com.misc.touse.moplaf.tousepropagator2.Task#getCalcTaskEnd <em>Calc Task End</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Calc Task End</em>'.
-	 * @see com.misc.touse.moplaf.tousepropagator2.Task#getCalcTaskEnd()
-	 * @see #getTask()
-	 * @generated
-	 */
-	EReference getTask_CalcTaskEnd();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link com.misc.touse.moplaf.tousepropagator2.Task#getCalcTaskHours <em>Calc Task Hours</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Calc Task Hours</em>'.
-	 * @see com.misc.touse.moplaf.tousepropagator2.Task#getCalcTaskHours()
-	 * @see #getTask()
-	 * @generated
-	 */
-	EReference getTask_CalcTaskHours();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link com.misc.touse.moplaf.tousepropagator2.Task#getCalcTaskHoursVar <em>Calc Task Hours Var</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Calc Task Hours Var</em>'.
-	 * @see com.misc.touse.moplaf.tousepropagator2.Task#getCalcTaskHoursVar()
-	 * @see #getTask()
-	 * @generated
-	 */
-	EReference getTask_CalcTaskHoursVar();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link com.misc.touse.moplaf.tousepropagator2.Task#getCalcTaskHoursItem <em>Calc Task Hours Item</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Calc Task Hours Item</em>'.
-	 * @see com.misc.touse.moplaf.tousepropagator2.Task#getCalcTaskHoursItem()
-	 * @see #getTask()
-	 * @generated
-	 */
-	EReference getTask_CalcTaskHoursItem();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link com.misc.touse.moplaf.tousepropagator2.Task#getCalcTaskResources <em>Calc Task Resources</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Calc Task Resources</em>'.
-	 * @see com.misc.touse.moplaf.tousepropagator2.Task#getCalcTaskResources()
-	 * @see #getTask()
-	 * @generated
-	 */
-	EReference getTask_CalcTaskResources();
 
 	/**
 	 * Returns the meta object for the '{@link com.misc.touse.moplaf.tousepropagator2.Task#refreshStart() <em>Refresh Start</em>}' operation.
@@ -1636,6 +2195,69 @@ public interface ToUsePropagatorPackage extends EPackage {
 	EReference getResourceCandidate_Task();
 
 	/**
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFunction <em>Function</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Function</em>'.
+	 * @see com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFunction
+	 * @generated
+	 */
+	EClass getToUsePropagatorFunction();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFunction#isCalculated <em>Calculated</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Calculated</em>'.
+	 * @see com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFunction#isCalculated()
+	 * @see #getToUsePropagatorFunction()
+	 * @generated
+	 */
+	EAttribute getToUsePropagatorFunction_Calculated();
+
+	/**
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFunctionTask <em>Function Task</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Function Task</em>'.
+	 * @see com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFunctionTask
+	 * @generated
+	 */
+	EClass getToUsePropagatorFunctionTask();
+
+	/**
+	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFunctionTask#getTask <em>Task</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Task</em>'.
+	 * @see com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFunctionTask#getTask()
+	 * @see #getToUsePropagatorFunctionTask()
+	 * @generated
+	 */
+	EReference getToUsePropagatorFunctionTask_Task();
+
+	/**
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFunctionProject <em>Function Project</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Function Project</em>'.
+	 * @see com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFunctionProject
+	 * @generated
+	 */
+	EClass getToUsePropagatorFunctionProject();
+
+	/**
+	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFunctionProject#getProject <em>Project</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Project</em>'.
+	 * @see com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFunctionProject#getProject()
+	 * @see #getToUsePropagatorFunctionProject()
+	 * @generated
+	 */
+	EReference getToUsePropagatorFunctionProject_Project();
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousepropagator2.Domain <em>Domain</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1746,62 +2368,6 @@ public interface ToUsePropagatorPackage extends EPackage {
 		EReference PROJECT__RESOURCES = eINSTANCE.getProject_Resources();
 
 		/**
-		 * The meta object literal for the '<em><b>Scope Project</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PROJECT__SCOPE_PROJECT = eINSTANCE.getProject_ScopeProject();
-
-		/**
-		 * The meta object literal for the '<em><b>Layer Task Times</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PROJECT__LAYER_TASK_TIMES = eINSTANCE.getProject_LayerTaskTimes();
-
-		/**
-		 * The meta object literal for the '<em><b>Layer Task Hours</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PROJECT__LAYER_TASK_HOURS = eINSTANCE.getProject_LayerTaskHours();
-
-		/**
-		 * The meta object literal for the '<em><b>Layer Task Hours Item</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PROJECT__LAYER_TASK_HOURS_ITEM = eINSTANCE.getProject_LayerTaskHoursItem();
-
-		/**
-		 * The meta object literal for the '<em><b>Layer Task Hours Var</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PROJECT__LAYER_TASK_HOURS_VAR = eINSTANCE.getProject_LayerTaskHoursVar();
-
-		/**
-		 * The meta object literal for the '<em><b>Calc Project End</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PROJECT__CALC_PROJECT_END = eINSTANCE.getProject_CalcProjectEnd();
-
-		/**
-		 * The meta object literal for the '<em><b>Layer Task Resources</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PROJECT__LAYER_TASK_RESOURCES = eINSTANCE.getProject_LayerTaskResources();
-
-		/**
 		 * The meta object literal for the '<em><b>Automatic Refresh</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1816,22 +2382,6 @@ public interface ToUsePropagatorPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation PROJECT___REFRESH_END = eINSTANCE.getProject__RefreshEnd();
-
-		/**
-		 * The meta object literal for the '<em><b>Refresh</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation PROJECT___REFRESH = eINSTANCE.getProject__Refresh();
-
-		/**
-		 * The meta object literal for the '<em><b>Reset</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation PROJECT___RESET = eINSTANCE.getProject__Reset();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousepropagator2.impl.TaskImpl <em>Task</em>}' class.
@@ -1938,54 +2488,6 @@ public interface ToUsePropagatorPackage extends EPackage {
 		 * @generated
 		 */
 		EReference TASK__RESOURCE_CANDIDATES = eINSTANCE.getTask_ResourceCandidates();
-
-		/**
-		 * The meta object literal for the '<em><b>Calc Task Start</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TASK__CALC_TASK_START = eINSTANCE.getTask_CalcTaskStart();
-
-		/**
-		 * The meta object literal for the '<em><b>Calc Task End</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TASK__CALC_TASK_END = eINSTANCE.getTask_CalcTaskEnd();
-
-		/**
-		 * The meta object literal for the '<em><b>Calc Task Hours</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TASK__CALC_TASK_HOURS = eINSTANCE.getTask_CalcTaskHours();
-
-		/**
-		 * The meta object literal for the '<em><b>Calc Task Hours Var</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TASK__CALC_TASK_HOURS_VAR = eINSTANCE.getTask_CalcTaskHoursVar();
-
-		/**
-		 * The meta object literal for the '<em><b>Calc Task Hours Item</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TASK__CALC_TASK_HOURS_ITEM = eINSTANCE.getTask_CalcTaskHoursItem();
-
-		/**
-		 * The meta object literal for the '<em><b>Calc Task Resources</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TASK__CALC_TASK_RESOURCES = eINSTANCE.getTask_CalcTaskResources();
 
 		/**
 		 * The meta object literal for the '<em><b>Refresh Start</b></em>' operation.
@@ -2234,6 +2736,60 @@ public interface ToUsePropagatorPackage extends EPackage {
 		 * @generated
 		 */
 		EReference RESOURCE_CANDIDATE__TASK = eINSTANCE.getResourceCandidate_Task();
+
+		/**
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorFunctionImpl <em>Function</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorFunctionImpl
+		 * @see com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorPackageImpl#getToUsePropagatorFunction()
+		 * @generated
+		 */
+		EClass TO_USE_PROPAGATOR_FUNCTION = eINSTANCE.getToUsePropagatorFunction();
+
+		/**
+		 * The meta object literal for the '<em><b>Calculated</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TO_USE_PROPAGATOR_FUNCTION__CALCULATED = eINSTANCE.getToUsePropagatorFunction_Calculated();
+
+		/**
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorFunctionTaskImpl <em>Function Task</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorFunctionTaskImpl
+		 * @see com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorPackageImpl#getToUsePropagatorFunctionTask()
+		 * @generated
+		 */
+		EClass TO_USE_PROPAGATOR_FUNCTION_TASK = eINSTANCE.getToUsePropagatorFunctionTask();
+
+		/**
+		 * The meta object literal for the '<em><b>Task</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TO_USE_PROPAGATOR_FUNCTION_TASK__TASK = eINSTANCE.getToUsePropagatorFunctionTask_Task();
+
+		/**
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorFunctionProjectImpl <em>Function Project</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorFunctionProjectImpl
+		 * @see com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorPackageImpl#getToUsePropagatorFunctionProject()
+		 * @generated
+		 */
+		EClass TO_USE_PROPAGATOR_FUNCTION_PROJECT = eINSTANCE.getToUsePropagatorFunctionProject();
+
+		/**
+		 * The meta object literal for the '<em><b>Project</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TO_USE_PROPAGATOR_FUNCTION_PROJECT__PROJECT = eINSTANCE.getToUsePropagatorFunctionProject_Project();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousepropagator2.impl.DomainImpl <em>Domain</em>}' class.

@@ -210,6 +210,75 @@ public class ToUsePropagatorItemProviderAdapterFactory extends ToUsePropagatorAd
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFunction} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ToUsePropagatorFunctionItemProvider toUsePropagatorFunctionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFunction}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createToUsePropagatorFunctionAdapter() {
+		if (toUsePropagatorFunctionItemProvider == null) {
+			toUsePropagatorFunctionItemProvider = new ToUsePropagatorFunctionItemProvider(this);
+		}
+
+		return toUsePropagatorFunctionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFunctionTask} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ToUsePropagatorFunctionTaskItemProvider toUsePropagatorFunctionTaskItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFunctionTask}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createToUsePropagatorFunctionTaskAdapter() {
+		if (toUsePropagatorFunctionTaskItemProvider == null) {
+			toUsePropagatorFunctionTaskItemProvider = new ToUsePropagatorFunctionTaskItemProvider(this);
+		}
+
+		return toUsePropagatorFunctionTaskItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFunctionProject} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ToUsePropagatorFunctionProjectItemProvider toUsePropagatorFunctionProjectItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFunctionProject}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createToUsePropagatorFunctionProjectAdapter() {
+		if (toUsePropagatorFunctionProjectItemProvider == null) {
+			toUsePropagatorFunctionProjectItemProvider = new ToUsePropagatorFunctionProjectItemProvider(this);
+		}
+
+		return toUsePropagatorFunctionProjectItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousepropagator2.Domain} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -331,13 +400,16 @@ public class ToUsePropagatorItemProviderAdapterFactory extends ToUsePropagatorAd
 	 * @generated
 	 */
 	public void dispose() {
+		if (domainItemProvider != null) domainItemProvider.dispose();
 		if (projectItemProvider != null) projectItemProvider.dispose();
 		if (taskItemProvider != null) taskItemProvider.dispose();
 		if (dependenceItemProvider != null) dependenceItemProvider.dispose();
 		if (taskItemItemProvider != null) taskItemItemProvider.dispose();
 		if (resourceItemProvider != null) resourceItemProvider.dispose();
 		if (resourceCandidateItemProvider != null) resourceCandidateItemProvider.dispose();
-		if (domainItemProvider != null) domainItemProvider.dispose();
+		if (toUsePropagatorFunctionItemProvider != null) toUsePropagatorFunctionItemProvider.dispose();
+		if (toUsePropagatorFunctionTaskItemProvider != null) toUsePropagatorFunctionTaskItemProvider.dispose();
+		if (toUsePropagatorFunctionProjectItemProvider != null) toUsePropagatorFunctionProjectItemProvider.dispose();
 	}
 
 }

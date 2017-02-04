@@ -7,10 +7,7 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
-Export-Package: com.misc.touse.moplaf.tousepropagator2.calc,
- com.misc.touse.moplaf.tousepropagator2.calc.impl,
- com.misc.touse.moplaf.tousepropagator2.calc.util,
- com.misc.touse.moplaf.tousepropagator2,
+Export-Package: com.misc.touse.moplaf.tousepropagator2,
  com.misc.touse.moplaf.tousepropagator2.impl,
  com.misc.touse.moplaf.tousepropagator2.util
 Require-Bundle: org.eclipse.core.runtime,

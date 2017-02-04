@@ -11,9 +11,10 @@ import com.misc.touse.moplaf.tousepropagator2.ResourceCandidate;
 import com.misc.touse.moplaf.tousepropagator2.Task;
 import com.misc.touse.moplaf.tousepropagator2.TaskItem;
 import com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFactory;
+import com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFunction;
+import com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFunctionProject;
+import com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFunctionTask;
 import com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorPackage;
-import com.misc.touse.moplaf.tousepropagator2.calc.CalcPackage;
-import com.misc.touse.moplaf.tousepropagator2.calc.impl.CalcPackageImpl;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
@@ -75,6 +76,27 @@ public class ToUsePropagatorPackageImpl extends EPackageImpl implements ToUsePro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass toUsePropagatorFunctionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass toUsePropagatorFunctionTaskEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass toUsePropagatorFunctionProjectEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass domainEClass = null;
 
 	/**
@@ -126,16 +148,11 @@ public class ToUsePropagatorPackageImpl extends EPackageImpl implements ToUsePro
 		// Initialize simple dependencies
 		PropagatorPackage.eINSTANCE.eClass();
 
-		// Obtain or create and register interdependencies
-		CalcPackageImpl theCalcPackage = (CalcPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(CalcPackage.eNS_URI) instanceof CalcPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(CalcPackage.eNS_URI) : CalcPackage.eINSTANCE);
-
 		// Create package meta-data objects
 		theToUsePropagatorPackage.createPackageContents();
-		theCalcPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theToUsePropagatorPackage.initializePackageContents();
-		theCalcPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theToUsePropagatorPackage.freeze();
@@ -223,71 +240,8 @@ public class ToUsePropagatorPackageImpl extends EPackageImpl implements ToUsePro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getProject_ScopeProject() {
-		return (EReference)projectEClass.getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getProject_LayerTaskTimes() {
-		return (EReference)projectEClass.getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getProject_LayerTaskHours() {
-		return (EReference)projectEClass.getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getProject_LayerTaskHoursItem() {
-		return (EReference)projectEClass.getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getProject_LayerTaskHoursVar() {
-		return (EReference)projectEClass.getEStructuralFeatures().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getProject_CalcProjectEnd() {
-		return (EReference)projectEClass.getEStructuralFeatures().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getProject_LayerTaskResources() {
-		return (EReference)projectEClass.getEStructuralFeatures().get(13);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getProject_AutomaticRefresh() {
-		return (EAttribute)projectEClass.getEStructuralFeatures().get(14);
+		return (EAttribute)projectEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -297,24 +251,6 @@ public class ToUsePropagatorPackageImpl extends EPackageImpl implements ToUsePro
 	 */
 	public EOperation getProject__RefreshEnd() {
 		return projectEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getProject__Refresh() {
-		return projectEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getProject__Reset() {
-		return projectEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -432,60 +368,6 @@ public class ToUsePropagatorPackageImpl extends EPackageImpl implements ToUsePro
 	 */
 	public EReference getTask_ResourceCandidates() {
 		return (EReference)taskEClass.getEStructuralFeatures().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTask_CalcTaskStart() {
-		return (EReference)taskEClass.getEStructuralFeatures().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTask_CalcTaskEnd() {
-		return (EReference)taskEClass.getEStructuralFeatures().get(13);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTask_CalcTaskHours() {
-		return (EReference)taskEClass.getEStructuralFeatures().get(14);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTask_CalcTaskHoursVar() {
-		return (EReference)taskEClass.getEStructuralFeatures().get(15);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTask_CalcTaskHoursItem() {
-		return (EReference)taskEClass.getEStructuralFeatures().get(16);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTask_CalcTaskResources() {
-		return (EReference)taskEClass.getEStructuralFeatures().get(17);
 	}
 
 	/**
@@ -763,6 +645,60 @@ public class ToUsePropagatorPackageImpl extends EPackageImpl implements ToUsePro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getToUsePropagatorFunction() {
+		return toUsePropagatorFunctionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getToUsePropagatorFunction_Calculated() {
+		return (EAttribute)toUsePropagatorFunctionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getToUsePropagatorFunctionTask() {
+		return toUsePropagatorFunctionTaskEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getToUsePropagatorFunctionTask_Task() {
+		return (EReference)toUsePropagatorFunctionTaskEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getToUsePropagatorFunctionProject() {
+		return toUsePropagatorFunctionProjectEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getToUsePropagatorFunctionProject_Project() {
+		return (EReference)toUsePropagatorFunctionProjectEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getDomain() {
 		return domainEClass;
 	}
@@ -804,6 +740,9 @@ public class ToUsePropagatorPackageImpl extends EPackageImpl implements ToUsePro
 		isCreated = true;
 
 		// Create classes and their features
+		domainEClass = createEClass(DOMAIN);
+		createEReference(domainEClass, DOMAIN__PROJECTS);
+
 		projectEClass = createEClass(PROJECT);
 		createEReference(projectEClass, PROJECT__TASKS);
 		createEReference(projectEClass, PROJECT__DEPENDENCES);
@@ -812,17 +751,8 @@ public class ToUsePropagatorPackageImpl extends EPackageImpl implements ToUsePro
 		createEAttribute(projectEClass, PROJECT__END);
 		createEAttribute(projectEClass, PROJECT__PROJECT_NAME);
 		createEReference(projectEClass, PROJECT__RESOURCES);
-		createEReference(projectEClass, PROJECT__SCOPE_PROJECT);
-		createEReference(projectEClass, PROJECT__LAYER_TASK_TIMES);
-		createEReference(projectEClass, PROJECT__LAYER_TASK_HOURS);
-		createEReference(projectEClass, PROJECT__LAYER_TASK_HOURS_ITEM);
-		createEReference(projectEClass, PROJECT__LAYER_TASK_HOURS_VAR);
-		createEReference(projectEClass, PROJECT__CALC_PROJECT_END);
-		createEReference(projectEClass, PROJECT__LAYER_TASK_RESOURCES);
 		createEAttribute(projectEClass, PROJECT__AUTOMATIC_REFRESH);
 		createEOperation(projectEClass, PROJECT___REFRESH_END);
-		createEOperation(projectEClass, PROJECT___REFRESH);
-		createEOperation(projectEClass, PROJECT___RESET);
 
 		taskEClass = createEClass(TASK);
 		createEAttribute(taskEClass, TASK__START);
@@ -837,12 +767,6 @@ public class ToUsePropagatorPackageImpl extends EPackageImpl implements ToUsePro
 		createEReference(taskEClass, TASK__ITEMS);
 		createEReference(taskEClass, TASK__PROJECT);
 		createEReference(taskEClass, TASK__RESOURCE_CANDIDATES);
-		createEReference(taskEClass, TASK__CALC_TASK_START);
-		createEReference(taskEClass, TASK__CALC_TASK_END);
-		createEReference(taskEClass, TASK__CALC_TASK_HOURS);
-		createEReference(taskEClass, TASK__CALC_TASK_HOURS_VAR);
-		createEReference(taskEClass, TASK__CALC_TASK_HOURS_ITEM);
-		createEReference(taskEClass, TASK__CALC_TASK_RESOURCES);
 		createEOperation(taskEClass, TASK___REFRESH_START);
 		createEOperation(taskEClass, TASK___REFRESH_END);
 		createEOperation(taskEClass, TASK___REFRESH_HOURS);
@@ -878,8 +802,14 @@ public class ToUsePropagatorPackageImpl extends EPackageImpl implements ToUsePro
 		createEAttribute(resourceCandidateEClass, RESOURCE_CANDIDATE__MATCH);
 		createEReference(resourceCandidateEClass, RESOURCE_CANDIDATE__TASK);
 
-		domainEClass = createEClass(DOMAIN);
-		createEReference(domainEClass, DOMAIN__PROJECTS);
+		toUsePropagatorFunctionEClass = createEClass(TO_USE_PROPAGATOR_FUNCTION);
+		createEAttribute(toUsePropagatorFunctionEClass, TO_USE_PROPAGATOR_FUNCTION__CALCULATED);
+
+		toUsePropagatorFunctionTaskEClass = createEClass(TO_USE_PROPAGATOR_FUNCTION_TASK);
+		createEReference(toUsePropagatorFunctionTaskEClass, TO_USE_PROPAGATOR_FUNCTION_TASK__TASK);
+
+		toUsePropagatorFunctionProjectEClass = createEClass(TO_USE_PROPAGATOR_FUNCTION_PROJECT);
+		createEReference(toUsePropagatorFunctionProjectEClass, TO_USE_PROPAGATOR_FUNCTION_PROJECT__PROJECT);
 	}
 
 	/**
@@ -906,11 +836,7 @@ public class ToUsePropagatorPackageImpl extends EPackageImpl implements ToUsePro
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		CalcPackage theCalcPackage = (CalcPackage)EPackage.Registry.INSTANCE.getEPackage(CalcPackage.eNS_URI);
 		PropagatorPackage thePropagatorPackage = (PropagatorPackage)EPackage.Registry.INSTANCE.getEPackage(PropagatorPackage.eNS_URI);
-
-		// Add subpackages
-		getESubpackages().add(theCalcPackage);
 
 		// Create type parameters
 
@@ -918,11 +844,16 @@ public class ToUsePropagatorPackageImpl extends EPackageImpl implements ToUsePro
 
 		// Add supertypes to classes
 		projectEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctions());
-		projectEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctionScope());
 		taskEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctions());
 		dependenceEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctions());
+		toUsePropagatorFunctionEClass.getESuperTypes().add(thePropagatorPackage.getPropagatorFunction());
+		toUsePropagatorFunctionTaskEClass.getESuperTypes().add(this.getToUsePropagatorFunction());
+		toUsePropagatorFunctionProjectEClass.getESuperTypes().add(this.getToUsePropagatorFunction());
 
 		// Initialize classes, features, and operations; add parameters
+		initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDomain_Projects(), this.getProject(), null, "Projects", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(projectEClass, Project.class, "Project", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getProject_Tasks(), this.getTask(), this.getTask_Project(), "Tasks", null, 0, -1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProject_Dependences(), this.getDependence(), this.getDependence_Project(), "Dependences", null, 0, -1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -931,20 +862,9 @@ public class ToUsePropagatorPackageImpl extends EPackageImpl implements ToUsePro
 		initEAttribute(getProject_End(), ecorePackage.getEDate(), "End", "2001-01-01", 0, 1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProject_ProjectName(), ecorePackage.getEString(), "ProjectName", null, 0, 1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProject_Resources(), this.getResource(), this.getResource_Project(), "Resources", null, 0, -1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProject_ScopeProject(), theCalcPackage.getScopeProject(), theCalcPackage.getScopeProject_Project(), "ScopeProject", null, 0, 1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProject_LayerTaskTimes(), theCalcPackage.getLayerTaskTimes(), theCalcPackage.getLayerTaskTimes_Project(), "LayerTaskTimes", null, 0, 1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProject_LayerTaskHours(), theCalcPackage.getLayerTaskHours(), theCalcPackage.getLayerTaskHours_Project(), "LayerTaskHours", null, 0, 1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProject_LayerTaskHoursItem(), theCalcPackage.getLayerTaskHoursItem(), theCalcPackage.getLayerTaskHoursItem_Project(), "LayerTaskHoursItem", null, 0, 1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProject_LayerTaskHoursVar(), theCalcPackage.getLayerTaskHoursVar(), theCalcPackage.getLayerTaskHoursVar_Project(), "LayerTaskHoursVar", null, 0, 1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProject_CalcProjectEnd(), theCalcPackage.getCalcProjectEnd(), theCalcPackage.getCalcProjectEnd_Project(), "CalcProjectEnd", null, 0, 1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProject_LayerTaskResources(), theCalcPackage.getLayerTaskResources(), theCalcPackage.getLayerTaskResources_Project(), "LayerTaskResources", null, 0, 1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProject_AutomaticRefresh(), ecorePackage.getEBoolean(), "AutomaticRefresh", null, 0, 1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getProject__RefreshEnd(), null, "refreshEnd", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEOperation(getProject__Refresh(), null, "refresh", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEOperation(getProject__Reset(), null, "reset", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(taskEClass, Task.class, "Task", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTask_Start(), ecorePackage.getEDate(), "Start", "2001-01-01", 0, 1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -959,12 +879,6 @@ public class ToUsePropagatorPackageImpl extends EPackageImpl implements ToUsePro
 		initEReference(getTask_Items(), this.getTaskItem(), null, "Items", null, 0, -1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTask_Project(), this.getProject(), this.getProject_Tasks(), "Project", null, 1, 1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTask_ResourceCandidates(), this.getResourceCandidate(), this.getResourceCandidate_Task(), "ResourceCandidates", null, 0, -1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTask_CalcTaskStart(), theCalcPackage.getCalcTaskStart(), theCalcPackage.getCalcTaskStart_Task(), "CalcTaskStart", null, 0, 1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTask_CalcTaskEnd(), theCalcPackage.getCalcTaskEnd(), theCalcPackage.getCalcTaskEnd_Task(), "CalcTaskEnd", null, 0, 1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTask_CalcTaskHours(), theCalcPackage.getCalcTaskHours(), theCalcPackage.getCalcTaskHours_Task(), "CalcTaskHours", null, 0, 1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTask_CalcTaskHoursVar(), theCalcPackage.getCalcTaskHoursVar(), theCalcPackage.getCalcTaskHoursVar_Task(), "CalcTaskHoursVar", null, 0, 1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTask_CalcTaskHoursItem(), theCalcPackage.getCalcTaskHoursItem(), theCalcPackage.getCalcTaskHoursItem_Task(), "CalcTaskHoursItem", null, 0, 1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTask_CalcTaskResources(), theCalcPackage.getCalcTaskResources(), theCalcPackage.getCalcTaskResources_Task(), "CalcTaskResources", null, 0, 1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getTask__RefreshStart(), null, "refreshStart", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -1012,11 +926,37 @@ public class ToUsePropagatorPackageImpl extends EPackageImpl implements ToUsePro
 		initEAttribute(getResourceCandidate_Match(), ecorePackage.getEFloat(), "Match", null, 0, 1, ResourceCandidate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getResourceCandidate_Task(), this.getTask(), this.getTask_ResourceCandidates(), "Task", null, 1, 1, ResourceCandidate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDomain_Projects(), this.getProject(), null, "Projects", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(toUsePropagatorFunctionEClass, ToUsePropagatorFunction.class, "ToUsePropagatorFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getToUsePropagatorFunction_Calculated(), ecorePackage.getEBoolean(), "Calculated", null, 0, 1, ToUsePropagatorFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(toUsePropagatorFunctionTaskEClass, ToUsePropagatorFunctionTask.class, "ToUsePropagatorFunctionTask", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getToUsePropagatorFunctionTask_Task(), this.getTask(), null, "Task", null, 1, 1, ToUsePropagatorFunctionTask.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+
+		initEClass(toUsePropagatorFunctionProjectEClass, ToUsePropagatorFunctionProject.class, "ToUsePropagatorFunctionProject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getToUsePropagatorFunctionProject_Project(), this.getProject(), null, "Project", null, 1, 1, ToUsePropagatorFunctionProject.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
+
+		// Create annotations
+		// http://www.obeo.fr/dsl/dnc/archetype
+		createArchetypeAnnotations();
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.obeo.fr/dsl/dnc/archetype</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createArchetypeAnnotations() {
+		String source = "http://www.obeo.fr/dsl/dnc/archetype";	
+		addAnnotation
+		  (projectEClass, 
+		   source, 
+		   new String[] {
+			 "archetype", "Thing"
+		   });
 	}
 
 } //ToUsePropagatorPackageImpl

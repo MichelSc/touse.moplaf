@@ -7,7 +7,8 @@ import org.eclipse.emf.common.CommonPlugin;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.sirius.tools.api.ui.IExternalJavaAction;
 
-import com.misc.touse.moplaf.tousepropagator2.Project;
+import com.misc.touse.moplaf.tousepropagator2.util.Util;
+import com.misc.touse.moplaf.tousepropagator2calc.util.ToUsePropagatorPropagatorFunctionManager;
 
 public class SirusActionReset implements IExternalJavaAction {
 
@@ -21,10 +22,7 @@ public class SirusActionReset implements IExternalJavaAction {
 		CommonPlugin.INSTANCE.log("SirisActionReset called");
 		for ( EObject object : arg0){
 			CommonPlugin.INSTANCE.log("..object "+object.eClass().getName());
-			if ( object instanceof Project ){
-				Project project = (Project)object;
-				project.reset();
-			}
+			Util.reset(object);
 		}
 	}
 

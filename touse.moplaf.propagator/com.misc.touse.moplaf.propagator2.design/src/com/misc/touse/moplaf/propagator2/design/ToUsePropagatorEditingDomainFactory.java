@@ -7,6 +7,7 @@ import org.eclipse.emf.transaction.ResourceSetListenerImpl;
 import org.eclipse.emf.transaction.impl.TransactionalEditingDomainImpl.FactoryImpl;
 import org.eclipse.sirius.common.tools.api.editing.IEditingDomainFactory;
 
+import com.misc.common.moplaf.propagator2.util.Util;
 import com.misc.touse.moplaf.tousepropagator2.Domain;
 import com.misc.touse.moplaf.tousepropagator2.Project;
 
@@ -57,7 +58,7 @@ public class ToUsePropagatorEditingDomainFactory extends FactoryImpl implements 
 								Domain domain = (Domain)anobject;
 								for ( Project project : domain.getProjects()){
 									if ( project.isAutomaticRefresh()){
-										project.refresh();
+										Util.propagate(project);
 									}  // project is automatic refresh
 								}  // traverse the projects
 							}  // object is Domain

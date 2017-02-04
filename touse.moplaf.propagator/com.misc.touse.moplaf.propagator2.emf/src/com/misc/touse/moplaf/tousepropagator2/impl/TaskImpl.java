@@ -11,15 +11,6 @@ import com.misc.touse.moplaf.tousepropagator2.Task;
 import com.misc.touse.moplaf.tousepropagator2.TaskItem;
 import com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFactory;
 import com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorPackage;
-import com.misc.touse.moplaf.tousepropagator2.calc.CalcFactory;
-import com.misc.touse.moplaf.tousepropagator2.calc.CalcPackage;
-import com.misc.touse.moplaf.tousepropagator2.calc.CalcTaskEnd;
-import com.misc.touse.moplaf.tousepropagator2.calc.CalcTaskHours;
-import com.misc.touse.moplaf.tousepropagator2.calc.CalcTaskHoursItem;
-import com.misc.touse.moplaf.tousepropagator2.calc.CalcTaskHoursVar;
-import com.misc.touse.moplaf.tousepropagator2.calc.CalcTaskResources;
-import com.misc.touse.moplaf.tousepropagator2.calc.CalcTaskStart;
-
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import java.util.Date;
@@ -60,12 +51,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.misc.touse.moplaf.tousepropagator2.impl.TaskImpl#getItems <em>Items</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousepropagator2.impl.TaskImpl#getProject <em>Project</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousepropagator2.impl.TaskImpl#getResourceCandidates <em>Resource Candidates</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.tousepropagator2.impl.TaskImpl#getCalcTaskStart <em>Calc Task Start</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.tousepropagator2.impl.TaskImpl#getCalcTaskEnd <em>Calc Task End</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.tousepropagator2.impl.TaskImpl#getCalcTaskHours <em>Calc Task Hours</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.tousepropagator2.impl.TaskImpl#getCalcTaskHoursVar <em>Calc Task Hours Var</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.tousepropagator2.impl.TaskImpl#getCalcTaskHoursItem <em>Calc Task Hours Item</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.tousepropagator2.impl.TaskImpl#getCalcTaskResources <em>Calc Task Resources</em>}</li>
  * </ul>
  *
  * @generated
@@ -250,66 +235,6 @@ public class TaskImpl extends ObjectWithPropagatorFunctionsImpl implements Task 
 	 * @ordered
 	 */
 	protected EList<ResourceCandidate> resourceCandidates;
-
-	/**
-	 * The cached value of the '{@link #getCalcTaskStart() <em>Calc Task Start</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCalcTaskStart()
-	 * @generated
-	 * @ordered
-	 */
-	protected CalcTaskStart calcTaskStart;
-
-	/**
-	 * The cached value of the '{@link #getCalcTaskEnd() <em>Calc Task End</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCalcTaskEnd()
-	 * @generated
-	 * @ordered
-	 */
-	protected CalcTaskEnd calcTaskEnd;
-
-	/**
-	 * The cached value of the '{@link #getCalcTaskHours() <em>Calc Task Hours</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCalcTaskHours()
-	 * @generated
-	 * @ordered
-	 */
-	protected CalcTaskHours calcTaskHours;
-
-	/**
-	 * The cached value of the '{@link #getCalcTaskHoursVar() <em>Calc Task Hours Var</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCalcTaskHoursVar()
-	 * @generated
-	 * @ordered
-	 */
-	protected CalcTaskHoursVar calcTaskHoursVar;
-
-	/**
-	 * The cached value of the '{@link #getCalcTaskHoursItem() <em>Calc Task Hours Item</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCalcTaskHoursItem()
-	 * @generated
-	 * @ordered
-	 */
-	protected CalcTaskHoursItem calcTaskHoursItem;
-
-	/**
-	 * The cached value of the '{@link #getCalcTaskResources() <em>Calc Task Resources</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCalcTaskResources()
-	 * @generated
-	 * @ordered
-	 */
-	protected CalcTaskResources calcTaskResources;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -569,264 +494,6 @@ public class TaskImpl extends ObjectWithPropagatorFunctionsImpl implements Task 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public CalcTaskStart getCalcTaskStart() {
-		return calcTaskStart;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetCalcTaskStart(CalcTaskStart newCalcTaskStart, NotificationChain msgs) {
-		CalcTaskStart oldCalcTaskStart = calcTaskStart;
-		calcTaskStart = newCalcTaskStart;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ToUsePropagatorPackage.TASK__CALC_TASK_START, oldCalcTaskStart, newCalcTaskStart);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCalcTaskStart(CalcTaskStart newCalcTaskStart) {
-		if (newCalcTaskStart != calcTaskStart) {
-			NotificationChain msgs = null;
-			if (calcTaskStart != null)
-				msgs = ((InternalEObject)calcTaskStart).eInverseRemove(this, CalcPackage.CALC_TASK_START__TASK, CalcTaskStart.class, msgs);
-			if (newCalcTaskStart != null)
-				msgs = ((InternalEObject)newCalcTaskStart).eInverseAdd(this, CalcPackage.CALC_TASK_START__TASK, CalcTaskStart.class, msgs);
-			msgs = basicSetCalcTaskStart(newCalcTaskStart, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToUsePropagatorPackage.TASK__CALC_TASK_START, newCalcTaskStart, newCalcTaskStart));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public CalcTaskEnd getCalcTaskEnd() {
-		return calcTaskEnd;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetCalcTaskEnd(CalcTaskEnd newCalcTaskEnd, NotificationChain msgs) {
-		CalcTaskEnd oldCalcTaskEnd = calcTaskEnd;
-		calcTaskEnd = newCalcTaskEnd;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ToUsePropagatorPackage.TASK__CALC_TASK_END, oldCalcTaskEnd, newCalcTaskEnd);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCalcTaskEnd(CalcTaskEnd newCalcTaskEnd) {
-		if (newCalcTaskEnd != calcTaskEnd) {
-			NotificationChain msgs = null;
-			if (calcTaskEnd != null)
-				msgs = ((InternalEObject)calcTaskEnd).eInverseRemove(this, CalcPackage.CALC_TASK_END__TASK, CalcTaskEnd.class, msgs);
-			if (newCalcTaskEnd != null)
-				msgs = ((InternalEObject)newCalcTaskEnd).eInverseAdd(this, CalcPackage.CALC_TASK_END__TASK, CalcTaskEnd.class, msgs);
-			msgs = basicSetCalcTaskEnd(newCalcTaskEnd, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToUsePropagatorPackage.TASK__CALC_TASK_END, newCalcTaskEnd, newCalcTaskEnd));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public CalcTaskHours getCalcTaskHours() {
-		return calcTaskHours;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetCalcTaskHours(CalcTaskHours newCalcTaskHours, NotificationChain msgs) {
-		CalcTaskHours oldCalcTaskHours = calcTaskHours;
-		calcTaskHours = newCalcTaskHours;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ToUsePropagatorPackage.TASK__CALC_TASK_HOURS, oldCalcTaskHours, newCalcTaskHours);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCalcTaskHours(CalcTaskHours newCalcTaskHours) {
-		if (newCalcTaskHours != calcTaskHours) {
-			NotificationChain msgs = null;
-			if (calcTaskHours != null)
-				msgs = ((InternalEObject)calcTaskHours).eInverseRemove(this, CalcPackage.CALC_TASK_HOURS__TASK, CalcTaskHours.class, msgs);
-			if (newCalcTaskHours != null)
-				msgs = ((InternalEObject)newCalcTaskHours).eInverseAdd(this, CalcPackage.CALC_TASK_HOURS__TASK, CalcTaskHours.class, msgs);
-			msgs = basicSetCalcTaskHours(newCalcTaskHours, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToUsePropagatorPackage.TASK__CALC_TASK_HOURS, newCalcTaskHours, newCalcTaskHours));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public CalcTaskHoursVar getCalcTaskHoursVar() {
-		return calcTaskHoursVar;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetCalcTaskHoursVar(CalcTaskHoursVar newCalcTaskHoursVar, NotificationChain msgs) {
-		CalcTaskHoursVar oldCalcTaskHoursVar = calcTaskHoursVar;
-		calcTaskHoursVar = newCalcTaskHoursVar;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ToUsePropagatorPackage.TASK__CALC_TASK_HOURS_VAR, oldCalcTaskHoursVar, newCalcTaskHoursVar);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCalcTaskHoursVar(CalcTaskHoursVar newCalcTaskHoursVar) {
-		if (newCalcTaskHoursVar != calcTaskHoursVar) {
-			NotificationChain msgs = null;
-			if (calcTaskHoursVar != null)
-				msgs = ((InternalEObject)calcTaskHoursVar).eInverseRemove(this, CalcPackage.CALC_TASK_HOURS_VAR__TASK, CalcTaskHoursVar.class, msgs);
-			if (newCalcTaskHoursVar != null)
-				msgs = ((InternalEObject)newCalcTaskHoursVar).eInverseAdd(this, CalcPackage.CALC_TASK_HOURS_VAR__TASK, CalcTaskHoursVar.class, msgs);
-			msgs = basicSetCalcTaskHoursVar(newCalcTaskHoursVar, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToUsePropagatorPackage.TASK__CALC_TASK_HOURS_VAR, newCalcTaskHoursVar, newCalcTaskHoursVar));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public CalcTaskHoursItem getCalcTaskHoursItem() {
-		return calcTaskHoursItem;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetCalcTaskHoursItem(CalcTaskHoursItem newCalcTaskHoursItem, NotificationChain msgs) {
-		CalcTaskHoursItem oldCalcTaskHoursItem = calcTaskHoursItem;
-		calcTaskHoursItem = newCalcTaskHoursItem;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ToUsePropagatorPackage.TASK__CALC_TASK_HOURS_ITEM, oldCalcTaskHoursItem, newCalcTaskHoursItem);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCalcTaskHoursItem(CalcTaskHoursItem newCalcTaskHoursItem) {
-		if (newCalcTaskHoursItem != calcTaskHoursItem) {
-			NotificationChain msgs = null;
-			if (calcTaskHoursItem != null)
-				msgs = ((InternalEObject)calcTaskHoursItem).eInverseRemove(this, CalcPackage.CALC_TASK_HOURS_ITEM__TASK, CalcTaskHoursItem.class, msgs);
-			if (newCalcTaskHoursItem != null)
-				msgs = ((InternalEObject)newCalcTaskHoursItem).eInverseAdd(this, CalcPackage.CALC_TASK_HOURS_ITEM__TASK, CalcTaskHoursItem.class, msgs);
-			msgs = basicSetCalcTaskHoursItem(newCalcTaskHoursItem, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToUsePropagatorPackage.TASK__CALC_TASK_HOURS_ITEM, newCalcTaskHoursItem, newCalcTaskHoursItem));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public CalcTaskResources getCalcTaskResources() {
-		return calcTaskResources;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetCalcTaskResources(CalcTaskResources newCalcTaskResources, NotificationChain msgs) {
-		CalcTaskResources oldCalcTaskResources = calcTaskResources;
-		calcTaskResources = newCalcTaskResources;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ToUsePropagatorPackage.TASK__CALC_TASK_RESOURCES, oldCalcTaskResources, newCalcTaskResources);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCalcTaskResources(CalcTaskResources newCalcTaskResources) {
-		if (newCalcTaskResources != calcTaskResources) {
-			NotificationChain msgs = null;
-			if (calcTaskResources != null)
-				msgs = ((InternalEObject)calcTaskResources).eInverseRemove(this, CalcPackage.CALC_TASK_RESOURCES__TASK, CalcTaskResources.class, msgs);
-			if (newCalcTaskResources != null)
-				msgs = ((InternalEObject)newCalcTaskResources).eInverseAdd(this, CalcPackage.CALC_TASK_RESOURCES__TASK, CalcTaskResources.class, msgs);
-			msgs = basicSetCalcTaskResources(newCalcTaskResources, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToUsePropagatorPackage.TASK__CALC_TASK_RESOURCES, newCalcTaskResources, newCalcTaskResources));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 */
 	public void refreshStart() {
 		Project project = this.getProject();
@@ -1033,48 +700,6 @@ public class TaskImpl extends ObjectWithPropagatorFunctionsImpl implements Task 
 	}
 
 
-	
-	@Override
-	public void onOwned() {
-		
-		Project project = this.getProject();
-		
-		CalcTaskHoursVar calcTaskHoursVar = CalcFactory.eINSTANCE.createCalcTaskHoursVar();
-		calcTaskHoursVar.setConcreteParent(project.getLayerTaskHoursVar());
-		this.setCalcTaskHoursVar(calcTaskHoursVar);
-		calcTaskHoursVar.touch(null);
-		
-		CalcTaskHoursItem calcTaskHoursItem = CalcFactory.eINSTANCE.createCalcTaskHoursItem();
-		calcTaskHoursItem.setConcreteParent(project.getLayerTaskHoursItem());
-		this.setCalcTaskHoursItem(calcTaskHoursItem);
-		calcTaskHoursItem.touch(null);
-		
-		CalcTaskHours calcTaskHours = CalcFactory.eINSTANCE.createCalcTaskHours();
-		calcTaskHours.setConcreteParent(project.getLayerTaskHours());
-		this.setCalcTaskHours(calcTaskHours);
-		calcTaskHours.touch(null);
-
-		CalcTaskStart calcTaskStart = CalcFactory.eINSTANCE.createCalcTaskStart();
-		calcTaskStart.setConcreteParent(project.getLayerTaskTimes());
-		this.setCalcTaskStart(calcTaskStart);
-		calcTaskStart.touch(null);
-
-		CalcTaskEnd calcTaskEnd = CalcFactory.eINSTANCE.createCalcTaskEnd();
-		calcTaskEnd.setConcreteParent(project.getLayerTaskTimes());
-		this.setCalcTaskEnd(calcTaskEnd);
-		calcTaskEnd.touch(null);
-		
-		CalcTaskResources calcTaskResources = CalcFactory.eINSTANCE.createCalcTaskResources();
-		calcTaskResources.setConcreteParent(project.getLayerTaskResources());
-		this.setCalcTaskResources(calcTaskResources);
-		calcTaskResources.touch(null);
-
-		
-//		Util.adapt(this, PropagatorCalcTaskDispose.class);
-//		Util.adapt(this, PropagatorCalcTaskResources.class);
-	}
-	
-	
 
 	@Override
 	public void onNotOwned() {
@@ -1101,30 +726,6 @@ public class TaskImpl extends ObjectWithPropagatorFunctionsImpl implements Task 
 				return basicSetProject((Project)otherEnd, msgs);
 			case ToUsePropagatorPackage.TASK__RESOURCE_CANDIDATES:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getResourceCandidates()).basicAdd(otherEnd, msgs);
-			case ToUsePropagatorPackage.TASK__CALC_TASK_START:
-				if (calcTaskStart != null)
-					msgs = ((InternalEObject)calcTaskStart).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ToUsePropagatorPackage.TASK__CALC_TASK_START, null, msgs);
-				return basicSetCalcTaskStart((CalcTaskStart)otherEnd, msgs);
-			case ToUsePropagatorPackage.TASK__CALC_TASK_END:
-				if (calcTaskEnd != null)
-					msgs = ((InternalEObject)calcTaskEnd).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ToUsePropagatorPackage.TASK__CALC_TASK_END, null, msgs);
-				return basicSetCalcTaskEnd((CalcTaskEnd)otherEnd, msgs);
-			case ToUsePropagatorPackage.TASK__CALC_TASK_HOURS:
-				if (calcTaskHours != null)
-					msgs = ((InternalEObject)calcTaskHours).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ToUsePropagatorPackage.TASK__CALC_TASK_HOURS, null, msgs);
-				return basicSetCalcTaskHours((CalcTaskHours)otherEnd, msgs);
-			case ToUsePropagatorPackage.TASK__CALC_TASK_HOURS_VAR:
-				if (calcTaskHoursVar != null)
-					msgs = ((InternalEObject)calcTaskHoursVar).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ToUsePropagatorPackage.TASK__CALC_TASK_HOURS_VAR, null, msgs);
-				return basicSetCalcTaskHoursVar((CalcTaskHoursVar)otherEnd, msgs);
-			case ToUsePropagatorPackage.TASK__CALC_TASK_HOURS_ITEM:
-				if (calcTaskHoursItem != null)
-					msgs = ((InternalEObject)calcTaskHoursItem).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ToUsePropagatorPackage.TASK__CALC_TASK_HOURS_ITEM, null, msgs);
-				return basicSetCalcTaskHoursItem((CalcTaskHoursItem)otherEnd, msgs);
-			case ToUsePropagatorPackage.TASK__CALC_TASK_RESOURCES:
-				if (calcTaskResources != null)
-					msgs = ((InternalEObject)calcTaskResources).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ToUsePropagatorPackage.TASK__CALC_TASK_RESOURCES, null, msgs);
-				return basicSetCalcTaskResources((CalcTaskResources)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -1147,18 +748,6 @@ public class TaskImpl extends ObjectWithPropagatorFunctionsImpl implements Task 
 				return basicSetProject(null, msgs);
 			case ToUsePropagatorPackage.TASK__RESOURCE_CANDIDATES:
 				return ((InternalEList<?>)getResourceCandidates()).basicRemove(otherEnd, msgs);
-			case ToUsePropagatorPackage.TASK__CALC_TASK_START:
-				return basicSetCalcTaskStart(null, msgs);
-			case ToUsePropagatorPackage.TASK__CALC_TASK_END:
-				return basicSetCalcTaskEnd(null, msgs);
-			case ToUsePropagatorPackage.TASK__CALC_TASK_HOURS:
-				return basicSetCalcTaskHours(null, msgs);
-			case ToUsePropagatorPackage.TASK__CALC_TASK_HOURS_VAR:
-				return basicSetCalcTaskHoursVar(null, msgs);
-			case ToUsePropagatorPackage.TASK__CALC_TASK_HOURS_ITEM:
-				return basicSetCalcTaskHoursItem(null, msgs);
-			case ToUsePropagatorPackage.TASK__CALC_TASK_RESOURCES:
-				return basicSetCalcTaskResources(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -1209,18 +798,6 @@ public class TaskImpl extends ObjectWithPropagatorFunctionsImpl implements Task 
 				return getProject();
 			case ToUsePropagatorPackage.TASK__RESOURCE_CANDIDATES:
 				return getResourceCandidates();
-			case ToUsePropagatorPackage.TASK__CALC_TASK_START:
-				return getCalcTaskStart();
-			case ToUsePropagatorPackage.TASK__CALC_TASK_END:
-				return getCalcTaskEnd();
-			case ToUsePropagatorPackage.TASK__CALC_TASK_HOURS:
-				return getCalcTaskHours();
-			case ToUsePropagatorPackage.TASK__CALC_TASK_HOURS_VAR:
-				return getCalcTaskHoursVar();
-			case ToUsePropagatorPackage.TASK__CALC_TASK_HOURS_ITEM:
-				return getCalcTaskHoursItem();
-			case ToUsePropagatorPackage.TASK__CALC_TASK_RESOURCES:
-				return getCalcTaskResources();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -1274,24 +851,6 @@ public class TaskImpl extends ObjectWithPropagatorFunctionsImpl implements Task 
 				getResourceCandidates().clear();
 				getResourceCandidates().addAll((Collection<? extends ResourceCandidate>)newValue);
 				return;
-			case ToUsePropagatorPackage.TASK__CALC_TASK_START:
-				setCalcTaskStart((CalcTaskStart)newValue);
-				return;
-			case ToUsePropagatorPackage.TASK__CALC_TASK_END:
-				setCalcTaskEnd((CalcTaskEnd)newValue);
-				return;
-			case ToUsePropagatorPackage.TASK__CALC_TASK_HOURS:
-				setCalcTaskHours((CalcTaskHours)newValue);
-				return;
-			case ToUsePropagatorPackage.TASK__CALC_TASK_HOURS_VAR:
-				setCalcTaskHoursVar((CalcTaskHoursVar)newValue);
-				return;
-			case ToUsePropagatorPackage.TASK__CALC_TASK_HOURS_ITEM:
-				setCalcTaskHoursItem((CalcTaskHoursItem)newValue);
-				return;
-			case ToUsePropagatorPackage.TASK__CALC_TASK_RESOURCES:
-				setCalcTaskResources((CalcTaskResources)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -1340,24 +899,6 @@ public class TaskImpl extends ObjectWithPropagatorFunctionsImpl implements Task 
 			case ToUsePropagatorPackage.TASK__RESOURCE_CANDIDATES:
 				getResourceCandidates().clear();
 				return;
-			case ToUsePropagatorPackage.TASK__CALC_TASK_START:
-				setCalcTaskStart((CalcTaskStart)null);
-				return;
-			case ToUsePropagatorPackage.TASK__CALC_TASK_END:
-				setCalcTaskEnd((CalcTaskEnd)null);
-				return;
-			case ToUsePropagatorPackage.TASK__CALC_TASK_HOURS:
-				setCalcTaskHours((CalcTaskHours)null);
-				return;
-			case ToUsePropagatorPackage.TASK__CALC_TASK_HOURS_VAR:
-				setCalcTaskHoursVar((CalcTaskHoursVar)null);
-				return;
-			case ToUsePropagatorPackage.TASK__CALC_TASK_HOURS_ITEM:
-				setCalcTaskHoursItem((CalcTaskHoursItem)null);
-				return;
-			case ToUsePropagatorPackage.TASK__CALC_TASK_RESOURCES:
-				setCalcTaskResources((CalcTaskResources)null);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -1394,18 +935,6 @@ public class TaskImpl extends ObjectWithPropagatorFunctionsImpl implements Task 
 				return getProject() != null;
 			case ToUsePropagatorPackage.TASK__RESOURCE_CANDIDATES:
 				return resourceCandidates != null && !resourceCandidates.isEmpty();
-			case ToUsePropagatorPackage.TASK__CALC_TASK_START:
-				return calcTaskStart != null;
-			case ToUsePropagatorPackage.TASK__CALC_TASK_END:
-				return calcTaskEnd != null;
-			case ToUsePropagatorPackage.TASK__CALC_TASK_HOURS:
-				return calcTaskHours != null;
-			case ToUsePropagatorPackage.TASK__CALC_TASK_HOURS_VAR:
-				return calcTaskHoursVar != null;
-			case ToUsePropagatorPackage.TASK__CALC_TASK_HOURS_ITEM:
-				return calcTaskHoursItem != null;
-			case ToUsePropagatorPackage.TASK__CALC_TASK_RESOURCES:
-				return calcTaskResources != null;
 		}
 		return super.eIsSet(featureID);
 	}

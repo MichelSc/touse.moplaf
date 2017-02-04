@@ -8,6 +8,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.sirius.tools.api.ui.IExternalJavaAction;
 
 import com.misc.touse.moplaf.tousepropagator2.Project;
+import com.misc.touse.moplaf.tousepropagator2calc.LayerTaskHours;
 
 public class SirusActionRefreshHours implements IExternalJavaAction {
 
@@ -23,7 +24,8 @@ public class SirusActionRefreshHours implements IExternalJavaAction {
 			CommonPlugin.INSTANCE.log("..object "+object.eClass().getName());
 			if ( object instanceof Project ){
 				Project project = (Project)object;
-				project.getLayerTaskHours().refresh();
+//				project.getLayerTaskHours().refresh();
+				project.getPropagatorFunction(LayerTaskHours.class);
 			}
 		}
 	}

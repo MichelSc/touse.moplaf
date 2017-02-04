@@ -76,6 +76,33 @@ public interface ToUsePropagatorFactory extends EFactory {
 	ResourceCandidate createResourceCandidate();
 
 	/**
+	 * Returns a new object of class '<em>Function</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Function</em>'.
+	 * @generated
+	 */
+	ToUsePropagatorFunction createToUsePropagatorFunction();
+
+	/**
+	 * Returns a new object of class '<em>Function Task</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Function Task</em>'.
+	 * @generated
+	 */
+	ToUsePropagatorFunctionTask createToUsePropagatorFunctionTask();
+
+	/**
+	 * Returns a new object of class '<em>Function Project</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Function Project</em>'.
+	 * @generated
+	 */
+	ToUsePropagatorFunctionProject createToUsePropagatorFunctionProject();
+
+	/**
 	 * Returns a new object of class '<em>Domain</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

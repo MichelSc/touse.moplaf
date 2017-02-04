@@ -10,6 +10,7 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.sirius.common.tools.api.resource.ResourceSetFactory;
 
 import com.misc.common.moplaf.propagator2.PropagatorFunctionAdapterManager;
+import com.misc.touse.moplaf.tousepropagator2calc.util.ToUsePropagatorPropagatorFunctionManager;
 
 public class ToUsePropagatorResourceSetFactory extends ResourceSetFactory {
 
@@ -30,7 +31,7 @@ public class ToUsePropagatorResourceSetFactory extends ResourceSetFactory {
 				String fileExtension = uri.fileExtension(); 
 				if ( fileExtension != null && fileExtension.equals("tousepropagator") ){
 					CommonPlugin.INSTANCE.log( "ToUsePropagator(Sirius): add PropagatorFunctionAdapterManager ");
-					resource.eAdapters().add(new PropagatorFunctionAdapterManager());
+					resource.eAdapters().add(new ToUsePropagatorPropagatorFunctionManager());
 					CommonPlugin.INSTANCE.log( "ToUsePropagator(Sirius): inited ");
 				}
 			}

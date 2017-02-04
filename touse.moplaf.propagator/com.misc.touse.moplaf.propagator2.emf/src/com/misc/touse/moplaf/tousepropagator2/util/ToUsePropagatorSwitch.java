@@ -2,8 +2,8 @@
  */
 package com.misc.touse.moplaf.tousepropagator2.util;
 
-import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctionScope;
 import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
+import com.misc.common.moplaf.propagator2.PropagatorFunction;
 import com.misc.touse.moplaf.tousepropagator2.*;
 
 import org.eclipse.emf.ecore.EObject;
@@ -67,11 +67,16 @@ public class ToUsePropagatorSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
+			case ToUsePropagatorPackage.DOMAIN: {
+				Domain domain = (Domain)theEObject;
+				T result = caseDomain(domain);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ToUsePropagatorPackage.PROJECT: {
 				Project project = (Project)theEObject;
 				T result = caseProject(project);
 				if (result == null) result = caseObjectWithPropagatorFunctions(project);
-				if (result == null) result = caseObjectWithPropagatorFunctionScope(project);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -107,9 +112,26 @@ public class ToUsePropagatorSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ToUsePropagatorPackage.DOMAIN: {
-				Domain domain = (Domain)theEObject;
-				T result = caseDomain(domain);
+			case ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION: {
+				ToUsePropagatorFunction toUsePropagatorFunction = (ToUsePropagatorFunction)theEObject;
+				T result = caseToUsePropagatorFunction(toUsePropagatorFunction);
+				if (result == null) result = casePropagatorFunction(toUsePropagatorFunction);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK: {
+				ToUsePropagatorFunctionTask toUsePropagatorFunctionTask = (ToUsePropagatorFunctionTask)theEObject;
+				T result = caseToUsePropagatorFunctionTask(toUsePropagatorFunctionTask);
+				if (result == null) result = caseToUsePropagatorFunction(toUsePropagatorFunctionTask);
+				if (result == null) result = casePropagatorFunction(toUsePropagatorFunctionTask);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT: {
+				ToUsePropagatorFunctionProject toUsePropagatorFunctionProject = (ToUsePropagatorFunctionProject)theEObject;
+				T result = caseToUsePropagatorFunctionProject(toUsePropagatorFunctionProject);
+				if (result == null) result = caseToUsePropagatorFunction(toUsePropagatorFunctionProject);
+				if (result == null) result = casePropagatorFunction(toUsePropagatorFunctionProject);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -208,6 +230,51 @@ public class ToUsePropagatorSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Function</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Function</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseToUsePropagatorFunction(ToUsePropagatorFunction object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Function Task</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Function Task</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseToUsePropagatorFunctionTask(ToUsePropagatorFunctionTask object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Function Project</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Function Project</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseToUsePropagatorFunctionProject(ToUsePropagatorFunctionProject object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Domain</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -238,17 +305,17 @@ public class ToUsePropagatorSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Object With Propagator Function Scope</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Function</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Object With Propagator Function Scope</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Function</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseObjectWithPropagatorFunctionScope(ObjectWithPropagatorFunctionScope object) {
+	public T casePropagatorFunction(PropagatorFunction object) {
 		return null;
 	}
 

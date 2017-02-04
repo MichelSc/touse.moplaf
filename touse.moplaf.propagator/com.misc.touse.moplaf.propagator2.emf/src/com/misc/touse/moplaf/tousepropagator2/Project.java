@@ -2,15 +2,7 @@
  */
 package com.misc.touse.moplaf.tousepropagator2;
 
-import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctionScope;
 import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
-import com.misc.touse.moplaf.tousepropagator2.calc.CalcProjectEnd;
-import com.misc.touse.moplaf.tousepropagator2.calc.LayerTaskHours;
-import com.misc.touse.moplaf.tousepropagator2.calc.LayerTaskHoursItem;
-import com.misc.touse.moplaf.tousepropagator2.calc.LayerTaskHoursVar;
-import com.misc.touse.moplaf.tousepropagator2.calc.LayerTaskResources;
-import com.misc.touse.moplaf.tousepropagator2.calc.LayerTaskTimes;
-import com.misc.touse.moplaf.tousepropagator2.calc.ScopeProject;
 import java.util.Date;
 import org.eclipse.emf.common.util.EList;
 
@@ -30,21 +22,14 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link com.misc.touse.moplaf.tousepropagator2.Project#getEnd <em>End</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousepropagator2.Project#getProjectName <em>Project Name</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousepropagator2.Project#getResources <em>Resources</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.tousepropagator2.Project#getScopeProject <em>Scope Project</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.tousepropagator2.Project#getLayerTaskTimes <em>Layer Task Times</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.tousepropagator2.Project#getLayerTaskHours <em>Layer Task Hours</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.tousepropagator2.Project#getLayerTaskHoursItem <em>Layer Task Hours Item</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.tousepropagator2.Project#getLayerTaskHoursVar <em>Layer Task Hours Var</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.tousepropagator2.Project#getCalcProjectEnd <em>Calc Project End</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.tousepropagator2.Project#getLayerTaskResources <em>Layer Task Resources</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousepropagator2.Project#isAutomaticRefresh <em>Automatic Refresh</em>}</li>
  * </ul>
  *
  * @see com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorPackage#getProject()
- * @model
+ * @model annotation="http://www.obeo.fr/dsl/dnc/archetype archetype='Thing'"
  * @generated
  */
-public interface Project extends ObjectWithPropagatorFunctions, ObjectWithPropagatorFunctionScope {
+public interface Project extends ObjectWithPropagatorFunctions {
 	/**
 	 * Returns the value of the '<em><b>Tasks</b></em>' containment reference list.
 	 * The list contents are of type {@link com.misc.touse.moplaf.tousepropagator2.Task}.
@@ -196,202 +181,6 @@ public interface Project extends ObjectWithPropagatorFunctions, ObjectWithPropag
 	EList<Resource> getResources();
 
 	/**
-	 * Returns the value of the '<em><b>Scope Project</b></em>' containment reference.
-	 * It is bidirectional and its opposite is '{@link com.misc.touse.moplaf.tousepropagator2.calc.ScopeProject#getProject <em>Project</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Scope Project</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Scope Project</em>' containment reference.
-	 * @see #setScopeProject(ScopeProject)
-	 * @see com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorPackage#getProject_ScopeProject()
-	 * @see com.misc.touse.moplaf.tousepropagator2.calc.ScopeProject#getProject
-	 * @model opposite="Project" containment="true"
-	 * @generated
-	 */
-	ScopeProject getScopeProject();
-
-	/**
-	 * Sets the value of the '{@link com.misc.touse.moplaf.tousepropagator2.Project#getScopeProject <em>Scope Project</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Scope Project</em>' containment reference.
-	 * @see #getScopeProject()
-	 * @generated
-	 */
-	void setScopeProject(ScopeProject value);
-
-	/**
-	 * Returns the value of the '<em><b>Layer Task Times</b></em>' containment reference.
-	 * It is bidirectional and its opposite is '{@link com.misc.touse.moplaf.tousepropagator2.calc.LayerTaskTimes#getProject <em>Project</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Layer Task Times</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Layer Task Times</em>' containment reference.
-	 * @see #setLayerTaskTimes(LayerTaskTimes)
-	 * @see com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorPackage#getProject_LayerTaskTimes()
-	 * @see com.misc.touse.moplaf.tousepropagator2.calc.LayerTaskTimes#getProject
-	 * @model opposite="Project" containment="true"
-	 * @generated
-	 */
-	LayerTaskTimes getLayerTaskTimes();
-
-	/**
-	 * Sets the value of the '{@link com.misc.touse.moplaf.tousepropagator2.Project#getLayerTaskTimes <em>Layer Task Times</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Layer Task Times</em>' containment reference.
-	 * @see #getLayerTaskTimes()
-	 * @generated
-	 */
-	void setLayerTaskTimes(LayerTaskTimes value);
-
-	/**
-	 * Returns the value of the '<em><b>Layer Task Hours</b></em>' containment reference.
-	 * It is bidirectional and its opposite is '{@link com.misc.touse.moplaf.tousepropagator2.calc.LayerTaskHours#getProject <em>Project</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Layer Task Hours</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Layer Task Hours</em>' containment reference.
-	 * @see #setLayerTaskHours(LayerTaskHours)
-	 * @see com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorPackage#getProject_LayerTaskHours()
-	 * @see com.misc.touse.moplaf.tousepropagator2.calc.LayerTaskHours#getProject
-	 * @model opposite="Project" containment="true"
-	 * @generated
-	 */
-	LayerTaskHours getLayerTaskHours();
-
-	/**
-	 * Sets the value of the '{@link com.misc.touse.moplaf.tousepropagator2.Project#getLayerTaskHours <em>Layer Task Hours</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Layer Task Hours</em>' containment reference.
-	 * @see #getLayerTaskHours()
-	 * @generated
-	 */
-	void setLayerTaskHours(LayerTaskHours value);
-
-	/**
-	 * Returns the value of the '<em><b>Layer Task Hours Item</b></em>' containment reference.
-	 * It is bidirectional and its opposite is '{@link com.misc.touse.moplaf.tousepropagator2.calc.LayerTaskHoursItem#getProject <em>Project</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Layer Task Hours Item</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Layer Task Hours Item</em>' containment reference.
-	 * @see #setLayerTaskHoursItem(LayerTaskHoursItem)
-	 * @see com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorPackage#getProject_LayerTaskHoursItem()
-	 * @see com.misc.touse.moplaf.tousepropagator2.calc.LayerTaskHoursItem#getProject
-	 * @model opposite="Project" containment="true"
-	 * @generated
-	 */
-	LayerTaskHoursItem getLayerTaskHoursItem();
-
-	/**
-	 * Sets the value of the '{@link com.misc.touse.moplaf.tousepropagator2.Project#getLayerTaskHoursItem <em>Layer Task Hours Item</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Layer Task Hours Item</em>' containment reference.
-	 * @see #getLayerTaskHoursItem()
-	 * @generated
-	 */
-	void setLayerTaskHoursItem(LayerTaskHoursItem value);
-
-	/**
-	 * Returns the value of the '<em><b>Layer Task Hours Var</b></em>' containment reference.
-	 * It is bidirectional and its opposite is '{@link com.misc.touse.moplaf.tousepropagator2.calc.LayerTaskHoursVar#getProject <em>Project</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Layer Task Hours Var</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Layer Task Hours Var</em>' containment reference.
-	 * @see #setLayerTaskHoursVar(LayerTaskHoursVar)
-	 * @see com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorPackage#getProject_LayerTaskHoursVar()
-	 * @see com.misc.touse.moplaf.tousepropagator2.calc.LayerTaskHoursVar#getProject
-	 * @model opposite="Project" containment="true"
-	 * @generated
-	 */
-	LayerTaskHoursVar getLayerTaskHoursVar();
-
-	/**
-	 * Sets the value of the '{@link com.misc.touse.moplaf.tousepropagator2.Project#getLayerTaskHoursVar <em>Layer Task Hours Var</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Layer Task Hours Var</em>' containment reference.
-	 * @see #getLayerTaskHoursVar()
-	 * @generated
-	 */
-	void setLayerTaskHoursVar(LayerTaskHoursVar value);
-
-	/**
-	 * Returns the value of the '<em><b>Calc Project End</b></em>' containment reference.
-	 * It is bidirectional and its opposite is '{@link com.misc.touse.moplaf.tousepropagator2.calc.CalcProjectEnd#getProject <em>Project</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Calc Project End</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Calc Project End</em>' containment reference.
-	 * @see #setCalcProjectEnd(CalcProjectEnd)
-	 * @see com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorPackage#getProject_CalcProjectEnd()
-	 * @see com.misc.touse.moplaf.tousepropagator2.calc.CalcProjectEnd#getProject
-	 * @model opposite="Project" containment="true"
-	 * @generated
-	 */
-	CalcProjectEnd getCalcProjectEnd();
-
-	/**
-	 * Sets the value of the '{@link com.misc.touse.moplaf.tousepropagator2.Project#getCalcProjectEnd <em>Calc Project End</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Calc Project End</em>' containment reference.
-	 * @see #getCalcProjectEnd()
-	 * @generated
-	 */
-	void setCalcProjectEnd(CalcProjectEnd value);
-
-	/**
-	 * Returns the value of the '<em><b>Layer Task Resources</b></em>' containment reference.
-	 * It is bidirectional and its opposite is '{@link com.misc.touse.moplaf.tousepropagator2.calc.LayerTaskResources#getProject <em>Project</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Layer Task Resources</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Layer Task Resources</em>' containment reference.
-	 * @see #setLayerTaskResources(LayerTaskResources)
-	 * @see com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorPackage#getProject_LayerTaskResources()
-	 * @see com.misc.touse.moplaf.tousepropagator2.calc.LayerTaskResources#getProject
-	 * @model opposite="Project" containment="true"
-	 * @generated
-	 */
-	LayerTaskResources getLayerTaskResources();
-
-	/**
-	 * Sets the value of the '{@link com.misc.touse.moplaf.tousepropagator2.Project#getLayerTaskResources <em>Layer Task Resources</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Layer Task Resources</em>' containment reference.
-	 * @see #getLayerTaskResources()
-	 * @generated
-	 */
-	void setLayerTaskResources(LayerTaskResources value);
-
-	/**
 	 * Returns the value of the '<em><b>Automatic Refresh</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -424,21 +213,5 @@ public interface Project extends ObjectWithPropagatorFunctions, ObjectWithPropag
 	 * @generated
 	 */
 	void refreshEnd();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void refresh();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void reset();
 
 } // Project

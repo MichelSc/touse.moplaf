@@ -2,8 +2,8 @@
  */
 package com.misc.touse.moplaf.tousepropagator2.util;
 
-import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctionScope;
 import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
+import com.misc.common.moplaf.propagator2.PropagatorFunction;
 import com.misc.touse.moplaf.tousepropagator2.*;
 
 import org.eclipse.emf.common.notify.Adapter;
@@ -68,6 +68,10 @@ public class ToUsePropagatorAdapterFactory extends AdapterFactoryImpl {
 	protected ToUsePropagatorSwitch<Adapter> modelSwitch =
 		new ToUsePropagatorSwitch<Adapter>() {
 			@Override
+			public Adapter caseDomain(Domain object) {
+				return createDomainAdapter();
+			}
+			@Override
 			public Adapter caseProject(Project object) {
 				return createProjectAdapter();
 			}
@@ -92,16 +96,24 @@ public class ToUsePropagatorAdapterFactory extends AdapterFactoryImpl {
 				return createResourceCandidateAdapter();
 			}
 			@Override
-			public Adapter caseDomain(Domain object) {
-				return createDomainAdapter();
+			public Adapter caseToUsePropagatorFunction(ToUsePropagatorFunction object) {
+				return createToUsePropagatorFunctionAdapter();
+			}
+			@Override
+			public Adapter caseToUsePropagatorFunctionTask(ToUsePropagatorFunctionTask object) {
+				return createToUsePropagatorFunctionTaskAdapter();
+			}
+			@Override
+			public Adapter caseToUsePropagatorFunctionProject(ToUsePropagatorFunctionProject object) {
+				return createToUsePropagatorFunctionProjectAdapter();
 			}
 			@Override
 			public Adapter caseObjectWithPropagatorFunctions(ObjectWithPropagatorFunctions object) {
 				return createObjectWithPropagatorFunctionsAdapter();
 			}
 			@Override
-			public Adapter caseObjectWithPropagatorFunctionScope(ObjectWithPropagatorFunctionScope object) {
-				return createObjectWithPropagatorFunctionScopeAdapter();
+			public Adapter casePropagatorFunction(PropagatorFunction object) {
+				return createPropagatorFunctionAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -208,6 +220,48 @@ public class ToUsePropagatorAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFunction <em>Function</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFunction
+	 * @generated
+	 */
+	public Adapter createToUsePropagatorFunctionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFunctionTask <em>Function Task</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFunctionTask
+	 * @generated
+	 */
+	public Adapter createToUsePropagatorFunctionTaskAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFunctionProject <em>Function Project</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFunctionProject
+	 * @generated
+	 */
+	public Adapter createToUsePropagatorFunctionProjectAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.tousepropagator2.Domain <em>Domain</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -236,16 +290,16 @@ public class ToUsePropagatorAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctionScope <em>Object With Propagator Function Scope</em>}'.
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.propagator2.PropagatorFunction <em>Function</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctionScope
+	 * @see com.misc.common.moplaf.propagator2.PropagatorFunction
 	 * @generated
 	 */
-	public Adapter createObjectWithPropagatorFunctionScopeAdapter() {
+	public Adapter createPropagatorFunctionAdapter() {
 		return null;
 	}
 

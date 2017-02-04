@@ -5,11 +5,13 @@ package com.misc.touse.moplaf.tousepropagator2.provider;
 
 import com.misc.common.moplaf.emf.edit.command.RefreshCommand;
 import com.misc.common.moplaf.emf.edit.command.ResetCommand;
+import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
+import com.misc.common.moplaf.propagator2.PropagatorPackage;
 import com.misc.common.moplaf.propagator2.provider.ObjectWithPropagatorFunctionsItemProvider;
 import com.misc.touse.moplaf.tousepropagator2.Project;
 import com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFactory;
 import com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorPackage;
-import com.misc.touse.moplaf.tousepropagator2.calc.CalcFactory;
+import com.misc.touse.moplaf.tousepropagator2.util.Util;
 
 import java.util.Collection;
 import java.util.List;
@@ -190,13 +192,6 @@ public class ProjectItemProvider
 			childrenFeatures.add(ToUsePropagatorPackage.Literals.PROJECT__TASKS);
 			childrenFeatures.add(ToUsePropagatorPackage.Literals.PROJECT__DEPENDENCES);
 			childrenFeatures.add(ToUsePropagatorPackage.Literals.PROJECT__RESOURCES);
-			childrenFeatures.add(ToUsePropagatorPackage.Literals.PROJECT__SCOPE_PROJECT);
-			childrenFeatures.add(ToUsePropagatorPackage.Literals.PROJECT__LAYER_TASK_TIMES);
-			childrenFeatures.add(ToUsePropagatorPackage.Literals.PROJECT__LAYER_TASK_HOURS);
-			childrenFeatures.add(ToUsePropagatorPackage.Literals.PROJECT__LAYER_TASK_HOURS_ITEM);
-			childrenFeatures.add(ToUsePropagatorPackage.Literals.PROJECT__LAYER_TASK_HOURS_VAR);
-			childrenFeatures.add(ToUsePropagatorPackage.Literals.PROJECT__CALC_PROJECT_END);
-			childrenFeatures.add(ToUsePropagatorPackage.Literals.PROJECT__LAYER_TASK_RESOURCES);
 		}
 		return childrenFeatures;
 	}
@@ -261,13 +256,6 @@ public class ProjectItemProvider
 			case ToUsePropagatorPackage.PROJECT__TASKS:
 			case ToUsePropagatorPackage.PROJECT__DEPENDENCES:
 			case ToUsePropagatorPackage.PROJECT__RESOURCES:
-			case ToUsePropagatorPackage.PROJECT__SCOPE_PROJECT:
-			case ToUsePropagatorPackage.PROJECT__LAYER_TASK_TIMES:
-			case ToUsePropagatorPackage.PROJECT__LAYER_TASK_HOURS:
-			case ToUsePropagatorPackage.PROJECT__LAYER_TASK_HOURS_ITEM:
-			case ToUsePropagatorPackage.PROJECT__LAYER_TASK_HOURS_VAR:
-			case ToUsePropagatorPackage.PROJECT__CALC_PROJECT_END:
-			case ToUsePropagatorPackage.PROJECT__LAYER_TASK_RESOURCES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -287,6 +275,21 @@ public class ProjectItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
+				(PropagatorPackage.Literals.OBJECT_WITH_PROPAGATOR_FUNCTIONS__PROPAGATOR_FUNCTIONS,
+				 ToUsePropagatorFactory.eINSTANCE.createToUsePropagatorFunction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PropagatorPackage.Literals.OBJECT_WITH_PROPAGATOR_FUNCTIONS__PROPAGATOR_FUNCTIONS,
+				 ToUsePropagatorFactory.eINSTANCE.createToUsePropagatorFunctionTask()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PropagatorPackage.Literals.OBJECT_WITH_PROPAGATOR_FUNCTIONS__PROPAGATOR_FUNCTIONS,
+				 ToUsePropagatorFactory.eINSTANCE.createToUsePropagatorFunctionProject()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(ToUsePropagatorPackage.Literals.PROJECT__TASKS,
 				 ToUsePropagatorFactory.eINSTANCE.createTask()));
 
@@ -299,41 +302,6 @@ public class ProjectItemProvider
 			(createChildParameter
 				(ToUsePropagatorPackage.Literals.PROJECT__RESOURCES,
 				 ToUsePropagatorFactory.eINSTANCE.createResource()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ToUsePropagatorPackage.Literals.PROJECT__SCOPE_PROJECT,
-				 CalcFactory.eINSTANCE.createScopeProject()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ToUsePropagatorPackage.Literals.PROJECT__LAYER_TASK_TIMES,
-				 CalcFactory.eINSTANCE.createLayerTaskTimes()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ToUsePropagatorPackage.Literals.PROJECT__LAYER_TASK_HOURS,
-				 CalcFactory.eINSTANCE.createLayerTaskHours()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ToUsePropagatorPackage.Literals.PROJECT__LAYER_TASK_HOURS_ITEM,
-				 CalcFactory.eINSTANCE.createLayerTaskHoursItem()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ToUsePropagatorPackage.Literals.PROJECT__LAYER_TASK_HOURS_VAR,
-				 CalcFactory.eINSTANCE.createLayerTaskHoursVar()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ToUsePropagatorPackage.Literals.PROJECT__CALC_PROJECT_END,
-				 CalcFactory.eINSTANCE.createCalcProjectEnd()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ToUsePropagatorPackage.Literals.PROJECT__LAYER_TASK_RESOURCES,
-				 CalcFactory.eINSTANCE.createLayerTaskResources()));
 	}
 
 	/**
@@ -346,44 +314,25 @@ public class ProjectItemProvider
 	public ResourceLocator getResourceLocator() {
 		return ToUsePropagatorEditPlugin.INSTANCE;
 	}
-
+	
 	public class ProjectResetCommand extends ResetCommand{
 		private Project project;
 		
 		public ProjectResetCommand(Project aProject)	{
 			super();
 			this.project = aProject;
+			
 		}
 
 		@Override
 		protected boolean prepare(){
 			boolean isExecutable = true;
 			return isExecutable;
-		}
+			}
 
 		@Override
 		public void execute() {
-			this.project.reset();
-		}
-	} // class ProjectResetCommand
-
-	public class ProjectRefreshCommand extends RefreshCommand{
-		private Project project;
-		
-		public ProjectRefreshCommand(Project aProject)	{
-			super();
-			this.project = aProject;
-		}
-
-		@Override
-		protected boolean prepare(){
-			boolean isExecutable = true;
-			return isExecutable;
-		}
-
-		@Override
-		public void execute() {
-			this.project.refresh();
+			Util.reset(this.project);
 		}
 	} // class ProjectResetCommand
 
@@ -394,9 +343,11 @@ public class ProjectItemProvider
 		if ( commandClass == ResetCommand.class){
 			return new ProjectResetCommand((Project) object); 
 		} else if  ( commandClass == RefreshCommand.class){
-			return new ProjectRefreshCommand((Project) object); 
+			return new ObjectRefreshCommand((ObjectWithPropagatorFunctions) object); 
 		}
 
 		return super.createCommand(object, domain, commandClass, commandParameter);
 	} //method createCommand
+
+
 }

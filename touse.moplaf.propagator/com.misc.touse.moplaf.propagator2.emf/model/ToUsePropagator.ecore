@@ -2,10 +2,15 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="tousepropagator2" nsURI="http://www.misc.com/touse/moplaf/propagator2/model/0.1"
     nsPrefix="top">
-  <eClassifiers xsi:type="ecore:EClass" name="Project" eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//ObjectWithPropagatorFunctions ../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//ObjectWithPropagatorFunctionScope">
+  <eClassifiers xsi:type="ecore:EClass" name="Domain">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Projects" upperBound="-1"
+        eType="#//Project" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Project" eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//ObjectWithPropagatorFunctions">
+    <eAnnotations source="http://www.obeo.fr/dsl/dnc/archetype">
+      <details key="archetype" value="Thing"/>
+    </eAnnotations>
     <eOperations name="refreshEnd"/>
-    <eOperations name="refresh"/>
-    <eOperations name="reset"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Tasks" upperBound="-1"
         eType="#//Task" containment="true" eOpposite="#//Task/Project"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Dependences" upperBound="-1"
@@ -23,20 +28,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ProjectName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Resources" upperBound="-1"
         eType="#//Resource" containment="true" eOpposite="#//Resource/Project"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ScopeProject" eType="#//calc/ScopeProject"
-        containment="true" eOpposite="#//calc/ScopeProject/Project"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="LayerTaskTimes" eType="#//calc/LayerTaskTimes"
-        containment="true" eOpposite="#//calc/LayerTaskTimes/Project"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="LayerTaskHours" eType="#//calc/LayerTaskHours"
-        containment="true" eOpposite="#//calc/LayerTaskHours/Project"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="LayerTaskHoursItem" eType="#//calc/LayerTaskHoursItem"
-        containment="true" eOpposite="#//calc/LayerTaskHoursItem/Project"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="LayerTaskHoursVar" eType="#//calc/LayerTaskHoursVar"
-        containment="true" eOpposite="#//calc/LayerTaskHoursVar/Project"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="CalcProjectEnd" eType="#//calc/CalcProjectEnd"
-        containment="true" eOpposite="#//calc/CalcProjectEnd/Project"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="LayerTaskResources" eType="#//calc/LayerTaskResources"
-        containment="true" eOpposite="#//calc/LayerTaskResources/Project"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="AutomaticRefresh" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Task" eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//ObjectWithPropagatorFunctions">
@@ -97,18 +88,6 @@
         eType="#//Project" eOpposite="#//Project/Tasks"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ResourceCandidates" upperBound="-1"
         eType="#//ResourceCandidate" containment="true" eOpposite="#//ResourceCandidate/Task"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="CalcTaskStart" eType="#//calc/CalcTaskStart"
-        containment="true" eOpposite="#//calc/CalcTaskStart/Task"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="CalcTaskEnd" eType="#//calc/CalcTaskEnd"
-        containment="true" eOpposite="#//calc/CalcTaskEnd/Task"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="CalcTaskHours" eType="#//calc/CalcTaskHours"
-        containment="true" eOpposite="#//calc/CalcTaskHours/Task"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="CalcTaskHoursVar" eType="#//calc/CalcTaskHoursVar"
-        containment="true" eOpposite="#//calc/CalcTaskHoursVar/Task"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="CalcTaskHoursItem" eType="#//calc/CalcTaskHoursItem"
-        containment="true" eOpposite="#//calc/CalcTaskHoursItem/Task"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="CalcTaskResources" eType="#//calc/CalcTaskResources"
-        containment="true" eOpposite="#//calc/CalcTaskResources/Task"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Dependence" eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//ObjectWithPropagatorFunctions">
     <eOperations name="dispose"/>
@@ -154,97 +133,15 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="Task" lowerBound="1" eType="#//Task"
         eOpposite="#//Task/ResourceCandidates"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Domain">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Projects" upperBound="-1"
-        eType="#//Project" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ToUsePropagatorFunction" eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//PropagatorFunction">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Calculated" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
-  <eSubpackages name="calc" nsURI="http://www.misc.com/touse/moplaf/propagator2/calc/model/0.1"
-      nsPrefix="topc">
-    <eClassifiers xsi:type="ecore:EClass" name="ScopeProject" eSuperTypes="#//calc/ToUsePropagatorFunction">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="Project" lowerBound="1"
-          eType="#//Project" eOpposite="#//Project/ScopeProject"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="LayerTaskHoursItem" eSuperTypes="#//calc/ToUsePropagatorFunction">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="Project" lowerBound="1"
-          eType="#//Project" eOpposite="#//Project/LayerTaskHoursItem"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="ConcreteParent" lowerBound="1"
-          eType="#//calc/ScopeProject"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="LayerTaskHoursVar" eSuperTypes="#//calc/ToUsePropagatorFunction">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="Project" lowerBound="1"
-          eType="#//Project" eOpposite="#//Project/LayerTaskHoursVar"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="ConcreteParent" lowerBound="1"
-          eType="#//calc/ScopeProject"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="LayerTaskHours" eSuperTypes="#//calc/ToUsePropagatorFunction">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="Project" lowerBound="1"
-          eType="#//Project" eOpposite="#//Project/LayerTaskHours"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="ConcreteParent" lowerBound="1"
-          eType="#//calc/ScopeProject"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="AntecedentLayerTaskHoursItem"
-          eType="#//calc/LayerTaskHoursItem"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="AntecedentLayerTaskHoursVar"
-          eType="#//calc/LayerTaskHoursVar"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="LayerTaskTimes" eSuperTypes="#//calc/ToUsePropagatorFunction">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="Project" lowerBound="1"
-          eType="#//Project" eOpposite="#//Project/LayerTaskTimes"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="ConcreteParent" lowerBound="1"
-          eType="#//calc/ScopeProject"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="AntecedentLayerTaskHours"
-          eType="#//calc/LayerTaskHours"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="CalcProjectEnd" eSuperTypes="#//calc/ToUsePropagatorFunction">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="ConcreteParent" eType="#//calc/ScopeProject"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="Project" lowerBound="1"
-          eType="#//Project" eOpposite="#//Project/CalcProjectEnd"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="AntecedentLayerTaskTimes"
-          eType="#//calc/LayerTaskTimes"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="LayerTaskResources" eSuperTypes="#//calc/ToUsePropagatorFunction">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="Project" lowerBound="1"
-          eType="#//Project" eOpposite="#//Project/LayerTaskResources"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="AntecedentLayerTaskTimes"
-          eType="#//calc/LayerTaskTimes"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="ConcreteParent" eType="#//calc/ScopeProject"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="CalcTaskHoursItem" eSuperTypes="#//calc/ToUsePropagatorFunction">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="Task" lowerBound="1"
-          eType="#//Task" eOpposite="#//Task/CalcTaskHoursItem"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="ConcreteParent" lowerBound="1"
-          eType="#//calc/LayerTaskHoursItem"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="CalcTaskHoursVar" eSuperTypes="#//calc/ToUsePropagatorFunction">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="Task" lowerBound="1"
-          eType="#//Task" eOpposite="#//Task/CalcTaskHoursVar"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="ConcreteParent" lowerBound="1"
-          eType="#//calc/LayerTaskHoursVar"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="CalcTaskHours" eSuperTypes="#//calc/ToUsePropagatorFunction">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="Task" lowerBound="1"
-          eType="#//Task" eOpposite="#//Task/CalcTaskHours"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="ConcreteParent" lowerBound="1"
-          eType="#//calc/LayerTaskHours"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="CalcTaskStart" eSuperTypes="#//calc/ToUsePropagatorFunction">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="Task" lowerBound="1"
-          eType="#//Task" eOpposite="#//Task/CalcTaskStart"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="ConcreteParent" lowerBound="1"
-          eType="#//calc/LayerTaskTimes"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="CalcTaskEnd" eSuperTypes="#//calc/ToUsePropagatorFunction">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="Task" lowerBound="1"
-          eType="#//Task" eOpposite="#//Task/CalcTaskEnd"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="ConcreteParent" lowerBound="1"
-          eType="#//calc/LayerTaskTimes"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="CalcTaskResources" eSuperTypes="#//calc/ToUsePropagatorFunction">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="ConcreteParent" eType="#//calc/LayerTaskResources"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="Task" lowerBound="1"
-          eType="#//Task" eOpposite="#//Task/CalcTaskResources"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ToUsePropagatorFunction" eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//PropagatorFunction">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="Calculated" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    </eClassifiers>
-  </eSubpackages>
+  <eClassifiers xsi:type="ecore:EClass" name="ToUsePropagatorFunctionTask" eSuperTypes="#//ToUsePropagatorFunction">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Task" lowerBound="1" eType="#//Task"
+        changeable="false" volatile="true" transient="true" derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ToUsePropagatorFunctionProject" eSuperTypes="#//ToUsePropagatorFunction">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Project" lowerBound="1"
+        eType="#//Project" changeable="false" volatile="true" transient="true" derived="true"/>
+  </eClassifiers>
 </ecore:EPackage>

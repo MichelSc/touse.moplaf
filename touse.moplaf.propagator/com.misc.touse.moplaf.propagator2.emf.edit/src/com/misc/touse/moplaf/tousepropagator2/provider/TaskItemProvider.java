@@ -3,12 +3,11 @@
 package com.misc.touse.moplaf.tousepropagator2.provider;
 
 
+import com.misc.common.moplaf.propagator2.PropagatorPackage;
 import com.misc.common.moplaf.propagator2.provider.ObjectWithPropagatorFunctionsItemProvider;
 import com.misc.touse.moplaf.tousepropagator2.Task;
 import com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFactory;
 import com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorPackage;
-import com.misc.touse.moplaf.tousepropagator2.calc.CalcFactory;
-
 import java.util.Collection;
 import java.util.List;
 
@@ -232,12 +231,6 @@ public class TaskItemProvider
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ToUsePropagatorPackage.Literals.TASK__ITEMS);
 			childrenFeatures.add(ToUsePropagatorPackage.Literals.TASK__RESOURCE_CANDIDATES);
-			childrenFeatures.add(ToUsePropagatorPackage.Literals.TASK__CALC_TASK_START);
-			childrenFeatures.add(ToUsePropagatorPackage.Literals.TASK__CALC_TASK_END);
-			childrenFeatures.add(ToUsePropagatorPackage.Literals.TASK__CALC_TASK_HOURS);
-			childrenFeatures.add(ToUsePropagatorPackage.Literals.TASK__CALC_TASK_HOURS_VAR);
-			childrenFeatures.add(ToUsePropagatorPackage.Literals.TASK__CALC_TASK_HOURS_ITEM);
-			childrenFeatures.add(ToUsePropagatorPackage.Literals.TASK__CALC_TASK_RESOURCES);
 		}
 		return childrenFeatures;
 	}
@@ -303,12 +296,6 @@ public class TaskItemProvider
 				return;
 			case ToUsePropagatorPackage.TASK__ITEMS:
 			case ToUsePropagatorPackage.TASK__RESOURCE_CANDIDATES:
-			case ToUsePropagatorPackage.TASK__CALC_TASK_START:
-			case ToUsePropagatorPackage.TASK__CALC_TASK_END:
-			case ToUsePropagatorPackage.TASK__CALC_TASK_HOURS:
-			case ToUsePropagatorPackage.TASK__CALC_TASK_HOURS_VAR:
-			case ToUsePropagatorPackage.TASK__CALC_TASK_HOURS_ITEM:
-			case ToUsePropagatorPackage.TASK__CALC_TASK_RESOURCES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -328,6 +315,21 @@ public class TaskItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
+				(PropagatorPackage.Literals.OBJECT_WITH_PROPAGATOR_FUNCTIONS__PROPAGATOR_FUNCTIONS,
+				 ToUsePropagatorFactory.eINSTANCE.createToUsePropagatorFunction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PropagatorPackage.Literals.OBJECT_WITH_PROPAGATOR_FUNCTIONS__PROPAGATOR_FUNCTIONS,
+				 ToUsePropagatorFactory.eINSTANCE.createToUsePropagatorFunctionTask()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PropagatorPackage.Literals.OBJECT_WITH_PROPAGATOR_FUNCTIONS__PROPAGATOR_FUNCTIONS,
+				 ToUsePropagatorFactory.eINSTANCE.createToUsePropagatorFunctionProject()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(ToUsePropagatorPackage.Literals.TASK__ITEMS,
 				 ToUsePropagatorFactory.eINSTANCE.createTaskItem()));
 
@@ -335,36 +337,6 @@ public class TaskItemProvider
 			(createChildParameter
 				(ToUsePropagatorPackage.Literals.TASK__RESOURCE_CANDIDATES,
 				 ToUsePropagatorFactory.eINSTANCE.createResourceCandidate()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ToUsePropagatorPackage.Literals.TASK__CALC_TASK_START,
-				 CalcFactory.eINSTANCE.createCalcTaskStart()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ToUsePropagatorPackage.Literals.TASK__CALC_TASK_END,
-				 CalcFactory.eINSTANCE.createCalcTaskEnd()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ToUsePropagatorPackage.Literals.TASK__CALC_TASK_HOURS,
-				 CalcFactory.eINSTANCE.createCalcTaskHours()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ToUsePropagatorPackage.Literals.TASK__CALC_TASK_HOURS_VAR,
-				 CalcFactory.eINSTANCE.createCalcTaskHoursVar()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ToUsePropagatorPackage.Literals.TASK__CALC_TASK_HOURS_ITEM,
-				 CalcFactory.eINSTANCE.createCalcTaskHoursItem()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ToUsePropagatorPackage.Literals.TASK__CALC_TASK_RESOURCES,
-				 CalcFactory.eINSTANCE.createCalcTaskResources()));
 	}
 
 	/**

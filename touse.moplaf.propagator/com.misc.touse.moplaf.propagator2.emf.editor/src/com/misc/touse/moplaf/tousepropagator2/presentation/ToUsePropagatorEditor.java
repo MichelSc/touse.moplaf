@@ -117,10 +117,11 @@ import org.eclipse.emf.edit.ui.util.EditUIMarkerHelper;
 import org.eclipse.emf.edit.ui.util.EditUIUtil;
 import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 
-import com.misc.common.moplaf.propagator2.PropagatorFunctionAdapterManager;
+import com.misc.common.moplaf.propagator2.util.Util;
 import com.misc.touse.moplaf.tousepropagator2.Domain;
 import com.misc.touse.moplaf.tousepropagator2.Project;
 import com.misc.touse.moplaf.tousepropagator2.provider.ToUsePropagatorItemProviderAdapterFactory;
+import com.misc.touse.moplaf.tousepropagator2calc.util.ToUsePropagatorPropagatorFunctionManager;
 
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 
@@ -684,7 +685,7 @@ public class ToUsePropagatorEditor
 								Domain domain = (Domain)anobject;
 								for ( Project project : domain.getProjects()){
 									if ( project.isAutomaticRefresh()){
-										project.refresh();
+										Util.propagate(project);
 									}
 								}
 							}
@@ -932,7 +933,7 @@ public class ToUsePropagatorEditor
 			// Load the resource through the editing domain.
 			//
 			resource = editingDomain.getResourceSet().getResource(resourceURI, true);
-			resource.eAdapters().add(new PropagatorFunctionAdapterManager());
+			resource.eAdapters().add(new ToUsePropagatorPropagatorFunctionManager());
 		}
 		catch (Exception e) {
 			exception = e;

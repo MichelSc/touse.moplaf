@@ -56,13 +56,16 @@ public class ToUsePropagatorFactoryImpl extends EFactoryImpl implements ToUsePro
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
+			case ToUsePropagatorPackage.DOMAIN: return createDomain();
 			case ToUsePropagatorPackage.PROJECT: return createProject();
 			case ToUsePropagatorPackage.TASK: return createTask();
 			case ToUsePropagatorPackage.DEPENDENCE: return createDependence();
 			case ToUsePropagatorPackage.TASK_ITEM: return createTaskItem();
 			case ToUsePropagatorPackage.RESOURCE: return createResource();
 			case ToUsePropagatorPackage.RESOURCE_CANDIDATE: return createResourceCandidate();
-			case ToUsePropagatorPackage.DOMAIN: return createDomain();
+			case ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION: return createToUsePropagatorFunction();
+			case ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK: return createToUsePropagatorFunctionTask();
+			case ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT: return createToUsePropagatorFunctionProject();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -126,6 +129,36 @@ public class ToUsePropagatorFactoryImpl extends EFactoryImpl implements ToUsePro
 	public ResourceCandidate createResourceCandidate() {
 		ResourceCandidateImpl resourceCandidate = new ResourceCandidateImpl();
 		return resourceCandidate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ToUsePropagatorFunction createToUsePropagatorFunction() {
+		ToUsePropagatorFunctionImpl toUsePropagatorFunction = new ToUsePropagatorFunctionImpl();
+		return toUsePropagatorFunction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ToUsePropagatorFunctionTask createToUsePropagatorFunctionTask() {
+		ToUsePropagatorFunctionTaskImpl toUsePropagatorFunctionTask = new ToUsePropagatorFunctionTaskImpl();
+		return toUsePropagatorFunctionTask;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ToUsePropagatorFunctionProject createToUsePropagatorFunctionProject() {
+		ToUsePropagatorFunctionProjectImpl toUsePropagatorFunctionProject = new ToUsePropagatorFunctionProjectImpl();
+		return toUsePropagatorFunctionProject;
 	}
 
 	/**

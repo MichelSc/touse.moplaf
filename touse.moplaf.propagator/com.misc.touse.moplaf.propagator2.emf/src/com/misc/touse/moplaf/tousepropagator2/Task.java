@@ -3,12 +3,6 @@
 package com.misc.touse.moplaf.tousepropagator2;
 
 import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
-import com.misc.touse.moplaf.tousepropagator2.calc.CalcTaskEnd;
-import com.misc.touse.moplaf.tousepropagator2.calc.CalcTaskHours;
-import com.misc.touse.moplaf.tousepropagator2.calc.CalcTaskHoursItem;
-import com.misc.touse.moplaf.tousepropagator2.calc.CalcTaskHoursVar;
-import com.misc.touse.moplaf.tousepropagator2.calc.CalcTaskResources;
-import com.misc.touse.moplaf.tousepropagator2.calc.CalcTaskStart;
 import java.util.Date;
 import org.eclipse.emf.common.util.EList;
 
@@ -33,12 +27,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link com.misc.touse.moplaf.tousepropagator2.Task#getItems <em>Items</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousepropagator2.Task#getProject <em>Project</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousepropagator2.Task#getResourceCandidates <em>Resource Candidates</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.tousepropagator2.Task#getCalcTaskStart <em>Calc Task Start</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.tousepropagator2.Task#getCalcTaskEnd <em>Calc Task End</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.tousepropagator2.Task#getCalcTaskHours <em>Calc Task Hours</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.tousepropagator2.Task#getCalcTaskHoursVar <em>Calc Task Hours Var</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.tousepropagator2.Task#getCalcTaskHoursItem <em>Calc Task Hours Item</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.tousepropagator2.Task#getCalcTaskResources <em>Calc Task Resources</em>}</li>
  * </ul>
  *
  * @see com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorPackage#getTask()
@@ -277,174 +265,6 @@ public interface Task extends ObjectWithPropagatorFunctions {
 	 * @generated
 	 */
 	EList<ResourceCandidate> getResourceCandidates();
-
-	/**
-	 * Returns the value of the '<em><b>Calc Task Start</b></em>' containment reference.
-	 * It is bidirectional and its opposite is '{@link com.misc.touse.moplaf.tousepropagator2.calc.CalcTaskStart#getTask <em>Task</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Calc Task Start</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Calc Task Start</em>' containment reference.
-	 * @see #setCalcTaskStart(CalcTaskStart)
-	 * @see com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorPackage#getTask_CalcTaskStart()
-	 * @see com.misc.touse.moplaf.tousepropagator2.calc.CalcTaskStart#getTask
-	 * @model opposite="Task" containment="true"
-	 * @generated
-	 */
-	CalcTaskStart getCalcTaskStart();
-
-	/**
-	 * Sets the value of the '{@link com.misc.touse.moplaf.tousepropagator2.Task#getCalcTaskStart <em>Calc Task Start</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Calc Task Start</em>' containment reference.
-	 * @see #getCalcTaskStart()
-	 * @generated
-	 */
-	void setCalcTaskStart(CalcTaskStart value);
-
-	/**
-	 * Returns the value of the '<em><b>Calc Task End</b></em>' containment reference.
-	 * It is bidirectional and its opposite is '{@link com.misc.touse.moplaf.tousepropagator2.calc.CalcTaskEnd#getTask <em>Task</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Calc Task End</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Calc Task End</em>' containment reference.
-	 * @see #setCalcTaskEnd(CalcTaskEnd)
-	 * @see com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorPackage#getTask_CalcTaskEnd()
-	 * @see com.misc.touse.moplaf.tousepropagator2.calc.CalcTaskEnd#getTask
-	 * @model opposite="Task" containment="true"
-	 * @generated
-	 */
-	CalcTaskEnd getCalcTaskEnd();
-
-	/**
-	 * Sets the value of the '{@link com.misc.touse.moplaf.tousepropagator2.Task#getCalcTaskEnd <em>Calc Task End</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Calc Task End</em>' containment reference.
-	 * @see #getCalcTaskEnd()
-	 * @generated
-	 */
-	void setCalcTaskEnd(CalcTaskEnd value);
-
-	/**
-	 * Returns the value of the '<em><b>Calc Task Hours</b></em>' containment reference.
-	 * It is bidirectional and its opposite is '{@link com.misc.touse.moplaf.tousepropagator2.calc.CalcTaskHours#getTask <em>Task</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Calc Task Hours</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Calc Task Hours</em>' containment reference.
-	 * @see #setCalcTaskHours(CalcTaskHours)
-	 * @see com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorPackage#getTask_CalcTaskHours()
-	 * @see com.misc.touse.moplaf.tousepropagator2.calc.CalcTaskHours#getTask
-	 * @model opposite="Task" containment="true"
-	 * @generated
-	 */
-	CalcTaskHours getCalcTaskHours();
-
-	/**
-	 * Sets the value of the '{@link com.misc.touse.moplaf.tousepropagator2.Task#getCalcTaskHours <em>Calc Task Hours</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Calc Task Hours</em>' containment reference.
-	 * @see #getCalcTaskHours()
-	 * @generated
-	 */
-	void setCalcTaskHours(CalcTaskHours value);
-
-	/**
-	 * Returns the value of the '<em><b>Calc Task Hours Var</b></em>' containment reference.
-	 * It is bidirectional and its opposite is '{@link com.misc.touse.moplaf.tousepropagator2.calc.CalcTaskHoursVar#getTask <em>Task</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Calc Task Hours Var</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Calc Task Hours Var</em>' containment reference.
-	 * @see #setCalcTaskHoursVar(CalcTaskHoursVar)
-	 * @see com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorPackage#getTask_CalcTaskHoursVar()
-	 * @see com.misc.touse.moplaf.tousepropagator2.calc.CalcTaskHoursVar#getTask
-	 * @model opposite="Task" containment="true"
-	 * @generated
-	 */
-	CalcTaskHoursVar getCalcTaskHoursVar();
-
-	/**
-	 * Sets the value of the '{@link com.misc.touse.moplaf.tousepropagator2.Task#getCalcTaskHoursVar <em>Calc Task Hours Var</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Calc Task Hours Var</em>' containment reference.
-	 * @see #getCalcTaskHoursVar()
-	 * @generated
-	 */
-	void setCalcTaskHoursVar(CalcTaskHoursVar value);
-
-	/**
-	 * Returns the value of the '<em><b>Calc Task Hours Item</b></em>' containment reference.
-	 * It is bidirectional and its opposite is '{@link com.misc.touse.moplaf.tousepropagator2.calc.CalcTaskHoursItem#getTask <em>Task</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Calc Task Hours Item</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Calc Task Hours Item</em>' containment reference.
-	 * @see #setCalcTaskHoursItem(CalcTaskHoursItem)
-	 * @see com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorPackage#getTask_CalcTaskHoursItem()
-	 * @see com.misc.touse.moplaf.tousepropagator2.calc.CalcTaskHoursItem#getTask
-	 * @model opposite="Task" containment="true"
-	 * @generated
-	 */
-	CalcTaskHoursItem getCalcTaskHoursItem();
-
-	/**
-	 * Sets the value of the '{@link com.misc.touse.moplaf.tousepropagator2.Task#getCalcTaskHoursItem <em>Calc Task Hours Item</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Calc Task Hours Item</em>' containment reference.
-	 * @see #getCalcTaskHoursItem()
-	 * @generated
-	 */
-	void setCalcTaskHoursItem(CalcTaskHoursItem value);
-
-	/**
-	 * Returns the value of the '<em><b>Calc Task Resources</b></em>' containment reference.
-	 * It is bidirectional and its opposite is '{@link com.misc.touse.moplaf.tousepropagator2.calc.CalcTaskResources#getTask <em>Task</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Calc Task Resources</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Calc Task Resources</em>' containment reference.
-	 * @see #setCalcTaskResources(CalcTaskResources)
-	 * @see com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorPackage#getTask_CalcTaskResources()
-	 * @see com.misc.touse.moplaf.tousepropagator2.calc.CalcTaskResources#getTask
-	 * @model opposite="Task" containment="true"
-	 * @generated
-	 */
-	CalcTaskResources getCalcTaskResources();
-
-	/**
-	 * Sets the value of the '{@link com.misc.touse.moplaf.tousepropagator2.Task#getCalcTaskResources <em>Calc Task Resources</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Calc Task Resources</em>' containment reference.
-	 * @see #getCalcTaskResources()
-	 * @generated
-	 */
-	void setCalcTaskResources(CalcTaskResources value);
 
 	/**
 	 * <!-- begin-user-doc -->

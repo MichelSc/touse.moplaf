@@ -10,6 +10,9 @@
   <foreignModel>ToUsePropagator.ecore</foreignModel>
   <genPackages prefix="ToUsePropagator" basePackage="com.misc.touse.moplaf" disposableProviderFactory="true"
       ecorePackage="ToUsePropagator.ecore#/">
+    <genClasses ecoreClass="ToUsePropagator.ecore#//Domain">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//Domain/Projects"/>
+    </genClasses>
     <genClasses ecoreClass="ToUsePropagator.ecore#//Project">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//Project/Tasks"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//Project/Dependences"/>
@@ -20,17 +23,8 @@
           ecoreFeature="ecore:EAttribute ToUsePropagator.ecore#//Project/End"/>
       <genFeatures createChild="false" propertyCategory="10 Project" ecoreFeature="ecore:EAttribute ToUsePropagator.ecore#//Project/ProjectName"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//Project/Resources"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//Project/ScopeProject"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//Project/LayerTaskTimes"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//Project/LayerTaskHours"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//Project/LayerTaskHoursItem"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//Project/LayerTaskHoursVar"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//Project/CalcProjectEnd"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//Project/LayerTaskResources"/>
       <genFeatures createChild="false" propertyCategory="10 Project" ecoreFeature="ecore:EAttribute ToUsePropagator.ecore#//Project/AutomaticRefresh"/>
       <genOperations ecoreOperation="ToUsePropagator.ecore#//Project/refreshEnd"/>
-      <genOperations ecoreOperation="ToUsePropagator.ecore#//Project/refresh"/>
-      <genOperations ecoreOperation="ToUsePropagator.ecore#//Project/reset"/>
     </genClasses>
     <genClasses ecoreClass="ToUsePropagator.ecore#//Task">
       <genFeatures property="Readonly" createChild="false" propertyCategory="20 Derived"
@@ -52,12 +46,6 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//Task/Items"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//Task/Project"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//Task/ResourceCandidates"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//Task/CalcTaskStart"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//Task/CalcTaskEnd"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//Task/CalcTaskHours"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//Task/CalcTaskHoursVar"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//Task/CalcTaskHoursItem"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//Task/CalcTaskResources"/>
       <genOperations ecoreOperation="ToUsePropagator.ecore#//Task/refreshStart"/>
       <genOperations ecoreOperation="ToUsePropagator.ecore#//Task/refreshEnd"/>
       <genOperations ecoreOperation="ToUsePropagator.ecore#//Task/refreshHours"/>
@@ -101,101 +89,14 @@
           ecoreFeature="ecore:EAttribute ToUsePropagator.ecore#//ResourceCandidate/Match"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//ResourceCandidate/Task"/>
     </genClasses>
-    <genClasses ecoreClass="ToUsePropagator.ecore#//Domain">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//Domain/Projects"/>
+    <genClasses ecoreClass="ToUsePropagator.ecore#//ToUsePropagatorFunction">
+      <genFeatures createChild="false" propertyCategory="50 ToUsePropagator" ecoreFeature="ecore:EAttribute ToUsePropagator.ecore#//ToUsePropagatorFunction/Calculated"/>
     </genClasses>
-    <nestedGenPackages prefix="Calc" basePackage="com.misc.touse.moplaf.tousepropagator2"
-        disposableProviderFactory="true" ecorePackage="ToUsePropagator.ecore#//calc">
-      <genClasses image="false" ecoreClass="ToUsePropagator.ecore#//calc/ScopeProject"
-          labelFeature="../../com.misc.common.moplaf.propagator2/model/propagator.genmodel#//propagator2/PropagatorFunction/Description">
-        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//calc/ScopeProject/Project"/>
-      </genClasses>
-      <genClasses image="false" ecoreClass="ToUsePropagator.ecore#//calc/LayerTaskHoursItem"
-          labelFeature="../../com.misc.common.moplaf.propagator2/model/propagator.genmodel#//propagator2/PropagatorFunction/Description">
-        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//calc/LayerTaskHoursItem/Project"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference ToUsePropagator.ecore#//calc/LayerTaskHoursItem/ConcreteParent"/>
-      </genClasses>
-      <genClasses image="false" ecoreClass="ToUsePropagator.ecore#//calc/LayerTaskHoursVar"
-          labelFeature="../../com.misc.common.moplaf.propagator2/model/propagator.genmodel#//propagator2/PropagatorFunction/Description">
-        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//calc/LayerTaskHoursVar/Project"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference ToUsePropagator.ecore#//calc/LayerTaskHoursVar/ConcreteParent"/>
-      </genClasses>
-      <genClasses image="false" ecoreClass="ToUsePropagator.ecore#//calc/LayerTaskHours"
-          labelFeature="../../com.misc.common.moplaf.propagator2/model/propagator.genmodel#//propagator2/PropagatorFunction/Description">
-        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//calc/LayerTaskHours/Project"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference ToUsePropagator.ecore#//calc/LayerTaskHours/ConcreteParent"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference ToUsePropagator.ecore#//calc/LayerTaskHours/AntecedentLayerTaskHoursItem"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference ToUsePropagator.ecore#//calc/LayerTaskHours/AntecedentLayerTaskHoursVar"/>
-      </genClasses>
-      <genClasses image="false" ecoreClass="ToUsePropagator.ecore#//calc/LayerTaskTimes"
-          labelFeature="../../com.misc.common.moplaf.propagator2/model/propagator.genmodel#//propagator2/PropagatorFunction/Description">
-        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//calc/LayerTaskTimes/Project"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference ToUsePropagator.ecore#//calc/LayerTaskTimes/ConcreteParent"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference ToUsePropagator.ecore#//calc/LayerTaskTimes/AntecedentLayerTaskHours"/>
-      </genClasses>
-      <genClasses image="false" ecoreClass="ToUsePropagator.ecore#//calc/CalcProjectEnd"
-          labelFeature="../../com.misc.common.moplaf.propagator2/model/propagator.genmodel#//propagator2/PropagatorFunction/Description">
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference ToUsePropagator.ecore#//calc/CalcProjectEnd/ConcreteParent"/>
-        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//calc/CalcProjectEnd/Project"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference ToUsePropagator.ecore#//calc/CalcProjectEnd/AntecedentLayerTaskTimes"/>
-      </genClasses>
-      <genClasses image="false" ecoreClass="ToUsePropagator.ecore#//calc/LayerTaskResources"
-          labelFeature="../../com.misc.common.moplaf.propagator2/model/propagator.genmodel#//propagator2/PropagatorFunction/Description">
-        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//calc/LayerTaskResources/Project"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference ToUsePropagator.ecore#//calc/LayerTaskResources/AntecedentLayerTaskTimes"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference ToUsePropagator.ecore#//calc/LayerTaskResources/ConcreteParent"/>
-      </genClasses>
-      <genClasses image="false" ecoreClass="ToUsePropagator.ecore#//calc/CalcTaskHoursItem"
-          labelFeature="../../com.misc.common.moplaf.propagator2/model/propagator.genmodel#//propagator2/PropagatorFunction/Description">
-        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//calc/CalcTaskHoursItem/Task"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference ToUsePropagator.ecore#//calc/CalcTaskHoursItem/ConcreteParent"/>
-      </genClasses>
-      <genClasses image="false" ecoreClass="ToUsePropagator.ecore#//calc/CalcTaskHoursVar"
-          labelFeature="../../com.misc.common.moplaf.propagator2/model/propagator.genmodel#//propagator2/PropagatorFunction/Description">
-        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//calc/CalcTaskHoursVar/Task"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference ToUsePropagator.ecore#//calc/CalcTaskHoursVar/ConcreteParent"/>
-      </genClasses>
-      <genClasses image="false" ecoreClass="ToUsePropagator.ecore#//calc/CalcTaskHours"
-          labelFeature="../../com.misc.common.moplaf.propagator2/model/propagator.genmodel#//propagator2/PropagatorFunction/Description">
-        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//calc/CalcTaskHours/Task"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference ToUsePropagator.ecore#//calc/CalcTaskHours/ConcreteParent"/>
-      </genClasses>
-      <genClasses image="false" ecoreClass="ToUsePropagator.ecore#//calc/CalcTaskStart"
-          labelFeature="../../com.misc.common.moplaf.propagator2/model/propagator.genmodel#//propagator2/PropagatorFunction/Description">
-        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//calc/CalcTaskStart/Task"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference ToUsePropagator.ecore#//calc/CalcTaskStart/ConcreteParent"/>
-      </genClasses>
-      <genClasses image="false" ecoreClass="ToUsePropagator.ecore#//calc/CalcTaskEnd"
-          labelFeature="../../com.misc.common.moplaf.propagator2/model/propagator.genmodel#//propagator2/PropagatorFunction/Description">
-        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//calc/CalcTaskEnd/Task"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference ToUsePropagator.ecore#//calc/CalcTaskEnd/ConcreteParent"/>
-      </genClasses>
-      <genClasses image="false" ecoreClass="ToUsePropagator.ecore#//calc/CalcTaskResources"
-          labelFeature="../../com.misc.common.moplaf.propagator2/model/propagator.genmodel#//propagator2/PropagatorFunction/Description">
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference ToUsePropagator.ecore#//calc/CalcTaskResources/ConcreteParent"/>
-        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//calc/CalcTaskResources/Task"/>
-      </genClasses>
-      <genClasses image="false" ecoreClass="ToUsePropagator.ecore#//calc/ToUsePropagatorFunction"
-          labelFeature="../../com.misc.common.moplaf.propagator2/model/propagator.genmodel#//propagator2/PropagatorFunction/Description">
-        <genFeatures createChild="false" propertyCategory="20 State" ecoreFeature="ecore:EAttribute ToUsePropagator.ecore#//calc/ToUsePropagatorFunction/Calculated"/>
-      </genClasses>
-    </nestedGenPackages>
+    <genClasses ecoreClass="ToUsePropagator.ecore#//ToUsePropagatorFunctionTask">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//ToUsePropagatorFunctionTask/Task"/>
+    </genClasses>
+    <genClasses ecoreClass="ToUsePropagator.ecore#//ToUsePropagatorFunctionProject">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//ToUsePropagatorFunctionProject/Project"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

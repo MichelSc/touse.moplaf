@@ -7,7 +7,8 @@ import org.eclipse.emf.common.CommonPlugin;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.sirius.tools.api.ui.IExternalJavaAction;
 
-import com.misc.touse.moplaf.tousepropagator2.Project;
+import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
+import com.misc.common.moplaf.propagator2.util.Util;
 
 public class SirusActionRefresh implements IExternalJavaAction {
 
@@ -21,9 +22,9 @@ public class SirusActionRefresh implements IExternalJavaAction {
 		CommonPlugin.INSTANCE.log("SirisActionRefresh called");
 		for ( EObject object : arg0){
 			CommonPlugin.INSTANCE.log("..object "+object.eClass().getName());
-			if ( object instanceof Project ){
-				Project project = (Project)object;
-				project.refresh();
+			if ( object instanceof ObjectWithPropagatorFunctions ){
+				ObjectWithPropagatorFunctions objectWithPF = (ObjectWithPropagatorFunctions)object;
+				Util.propagate(objectWithPF);
 			}
 		}
 	}
