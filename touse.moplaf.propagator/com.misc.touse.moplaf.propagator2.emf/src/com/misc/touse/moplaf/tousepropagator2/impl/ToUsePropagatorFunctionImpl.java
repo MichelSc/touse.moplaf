@@ -161,4 +161,18 @@ public class ToUsePropagatorFunctionImpl extends PropagatorFunctionImpl implemen
 		return result.toString();
 	}
 
+	/**
+	 * This will be called by the framework every time so function must be calculated
+	 */
+	@Override
+	protected void doRefreshImpl() {
+		// TODO Auto-generated method stub
+		super.doRefreshImpl();
+		this.setCalculated(true); 
+	}
+	
+	
+	
+	
+
 } //ToUsePropagatorFunctionImpl

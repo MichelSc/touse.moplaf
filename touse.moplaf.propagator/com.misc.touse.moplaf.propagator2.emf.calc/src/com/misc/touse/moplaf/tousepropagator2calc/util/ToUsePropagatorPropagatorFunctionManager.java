@@ -38,7 +38,6 @@ public class ToUsePropagatorPropagatorFunctionManager extends PropagatorFunction
 	static void refreshProjet(Project project){
 		 CommonPlugin.INSTANCE.log( "ToUsePropagator, refresh called: project "+ project.getProjectName());
 		 ScopeProject scopeProject = project.getPropagatorFunction(ScopeProject.class);
-//			 PropagatorFunctionAdapter propagatorScopeProject = (PropagatorFunctionAdapter)Util.getAdapter(this, PropagatorScopeProject.class);
 		 if ( scopeProject !=null){
 			 CommonPlugin.INSTANCE.log( "ToUsePropagator, refresh started: project "+ project.getProjectName());
 			 scopeProject.refresh();
