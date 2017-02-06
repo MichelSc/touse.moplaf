@@ -257,22 +257,13 @@ public interface ToUsePropagatorPackage extends EPackage {
 	int PROJECT_FEATURE_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 8;
 
 	/**
-	 * The operation id for the '<em>On Owned</em>' operation.
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROJECT___ON_OWNED = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ON_OWNED;
-
-	/**
-	 * The operation id for the '<em>On Not Owned</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROJECT___ON_NOT_OWNED = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ON_NOT_OWNED;
+	int PROJECT___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION;
 
 	/**
 	 * The operation id for the '<em>Get Propagator Function</em>' operation.
@@ -281,7 +272,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROJECT___GET_PROPAGATOR_FUNCTION__OBJECT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___GET_PROPAGATOR_FUNCTION__OBJECT;
+	int PROJECT___GET_PROPAGATOR_FUNCTION__ECLASS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___GET_PROPAGATOR_FUNCTION__ECLASS;
 
 	/**
 	 * The operation id for the '<em>Refresh End</em>' operation.
@@ -428,22 +419,13 @@ public interface ToUsePropagatorPackage extends EPackage {
 	int TASK_FEATURE_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 12;
 
 	/**
-	 * The operation id for the '<em>On Owned</em>' operation.
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TASK___ON_OWNED = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ON_OWNED;
-
-	/**
-	 * The operation id for the '<em>On Not Owned</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK___ON_NOT_OWNED = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ON_NOT_OWNED;
+	int TASK___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION;
 
 	/**
 	 * The operation id for the '<em>Get Propagator Function</em>' operation.
@@ -452,7 +434,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK___GET_PROPAGATOR_FUNCTION__OBJECT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___GET_PROPAGATOR_FUNCTION__OBJECT;
+	int TASK___GET_PROPAGATOR_FUNCTION__ECLASS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___GET_PROPAGATOR_FUNCTION__ECLASS;
 
 	/**
 	 * The operation id for the '<em>Refresh Start</em>' operation.
@@ -617,22 +599,13 @@ public interface ToUsePropagatorPackage extends EPackage {
 	int DEPENDENCE_FEATURE_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 6;
 
 	/**
-	 * The operation id for the '<em>On Owned</em>' operation.
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DEPENDENCE___ON_OWNED = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ON_OWNED;
-
-	/**
-	 * The operation id for the '<em>On Not Owned</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DEPENDENCE___ON_NOT_OWNED = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ON_NOT_OWNED;
+	int DEPENDENCE___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION;
 
 	/**
 	 * The operation id for the '<em>Get Propagator Function</em>' operation.
@@ -641,7 +614,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEPENDENCE___GET_PROPAGATOR_FUNCTION__OBJECT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___GET_PROPAGATOR_FUNCTION__OBJECT;
+	int DEPENDENCE___GET_PROPAGATOR_FUNCTION__ECLASS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___GET_PROPAGATOR_FUNCTION__ECLASS;
 
 	/**
 	 * The operation id for the '<em>Dispose</em>' operation.
@@ -959,6 +932,15 @@ public interface ToUsePropagatorPackage extends EPackage {
 	int TO_USE_PROPAGATOR_FUNCTION___TOUCH__EOBJECT = PropagatorPackage.PROPAGATOR_FUNCTION___TOUCH__EOBJECT;
 
 	/**
+	 * The operation id for the '<em>Untouch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION___UNTOUCH = PropagatorPackage.PROPAGATOR_FUNCTION___UNTOUCH;
+
+	/**
 	 * The operation id for the '<em>Refresh Antecedents</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1038,15 +1020,6 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_PROPAGATOR_FUNCTION___DO_REFRESH__EOBJECT = PropagatorPackage.PROPAGATOR_FUNCTION___DO_REFRESH__EOBJECT;
-
-	/**
-	 * The operation id for the '<em>Is Propagator Function Of Type</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_PROPAGATOR_FUNCTION___IS_PROPAGATOR_FUNCTION_OF_TYPE__OBJECT = PropagatorPackage.PROPAGATOR_FUNCTION___IS_PROPAGATOR_FUNCTION_OF_TYPE__OBJECT;
 
 	/**
 	 * The operation id for the '<em>Get Scope</em>' operation.
@@ -1240,6 +1213,15 @@ public interface ToUsePropagatorPackage extends EPackage {
 	int TO_USE_PROPAGATOR_FUNCTION_TASK___TOUCH__EOBJECT = TO_USE_PROPAGATOR_FUNCTION___TOUCH__EOBJECT;
 
 	/**
+	 * The operation id for the '<em>Untouch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_TASK___UNTOUCH = TO_USE_PROPAGATOR_FUNCTION___UNTOUCH;
+
+	/**
 	 * The operation id for the '<em>Refresh Antecedents</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1319,15 +1301,6 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_PROPAGATOR_FUNCTION_TASK___DO_REFRESH__EOBJECT = TO_USE_PROPAGATOR_FUNCTION___DO_REFRESH__EOBJECT;
-
-	/**
-	 * The operation id for the '<em>Is Propagator Function Of Type</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_PROPAGATOR_FUNCTION_TASK___IS_PROPAGATOR_FUNCTION_OF_TYPE__OBJECT = TO_USE_PROPAGATOR_FUNCTION___IS_PROPAGATOR_FUNCTION_OF_TYPE__OBJECT;
 
 	/**
 	 * The operation id for the '<em>Get Scope</em>' operation.
@@ -1520,6 +1493,15 @@ public interface ToUsePropagatorPackage extends EPackage {
 	int TO_USE_PROPAGATOR_FUNCTION_PROJECT___TOUCH__EOBJECT = TO_USE_PROPAGATOR_FUNCTION___TOUCH__EOBJECT;
 
 	/**
+	 * The operation id for the '<em>Untouch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_PROJECT___UNTOUCH = TO_USE_PROPAGATOR_FUNCTION___UNTOUCH;
+
+	/**
 	 * The operation id for the '<em>Refresh Antecedents</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1599,15 +1581,6 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_REFRESH__EOBJECT = TO_USE_PROPAGATOR_FUNCTION___DO_REFRESH__EOBJECT;
-
-	/**
-	 * The operation id for the '<em>Is Propagator Function Of Type</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_PROPAGATOR_FUNCTION_PROJECT___IS_PROPAGATOR_FUNCTION_OF_TYPE__OBJECT = TO_USE_PROPAGATOR_FUNCTION___IS_PROPAGATOR_FUNCTION_OF_TYPE__OBJECT;
 
 	/**
 	 * The operation id for the '<em>Get Scope</em>' operation.

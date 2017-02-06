@@ -549,12 +549,6 @@ public class DependenceImpl extends ObjectWithPropagatorFunctionsImpl implements
 		return result.toString();
 	}
 
-	@Override
-	public void onNotOwned() {
-		this.dispose();
-		super.onNotOwned();
-	}
-	
 	
 
 } //DependenceImpl

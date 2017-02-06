@@ -63,32 +63,32 @@ public class ToUsePropagatorPropagatorFunctionManager extends PropagatorFunction
 			
 			LayerTaskHoursVar layerTaskHoursVar = ToUsePropagatorCalcFactory.eINSTANCE.createLayerTaskHoursVar();
 			layerTaskHoursVar.setConcreteParent(scopeProject);
-			object.getPropagatorFunctions().add(layerTaskHoursVar);
+			object.addPropagatorFunction(layerTaskHoursVar);
 			
 			LayerTaskHoursItem layerTaskHoursItem = ToUsePropagatorCalcFactory.eINSTANCE.createLayerTaskHoursItem();
 			layerTaskHoursItem.setConcreteParent(scopeProject);
-			object.getPropagatorFunctions().add(layerTaskHoursItem);
+			object.addPropagatorFunction(layerTaskHoursItem);
 			
 			LayerTaskHours layerTaskHours = ToUsePropagatorCalcFactory.eINSTANCE.createLayerTaskHours();
 			layerTaskHours.setConcreteParent(scopeProject);
 			layerTaskHours.setAntecedentLayerTaskHoursItem(layerTaskHoursItem);
 			layerTaskHours.setAntecedentLayerTaskHoursVar(layerTaskHoursVar);
-			object.getPropagatorFunctions().add(layerTaskHours);
+			object.addPropagatorFunction(layerTaskHours);
 			
 			LayerTaskTimes layerTaskTimes = ToUsePropagatorCalcFactory.eINSTANCE.createLayerTaskTimes();
 			layerTaskTimes.setConcreteParent(scopeProject);
 			layerTaskTimes.setAntecedentLayerTaskHours(layerTaskHours);
-			object.getPropagatorFunctions().add(layerTaskTimes);
+			object.addPropagatorFunction(layerTaskTimes);
 				
 			CalcProjectEnd calcProjectEnd = ToUsePropagatorCalcFactory.eINSTANCE.createCalcProjectEnd();
 			calcProjectEnd.setConcreteParent(scopeProject);
 			calcProjectEnd.setAntecedentLayerTaskTimes(layerTaskTimes);
-			object.getPropagatorFunctions().add(calcProjectEnd);
+			object.addPropagatorFunction(calcProjectEnd);
 				
 			LayerTaskResources layerTaskResources = ToUsePropagatorCalcFactory.eINSTANCE.createLayerTaskResources();
 			layerTaskResources.setConcreteParent(scopeProject);
 			layerTaskResources.setAntecedentLayerTaskTimes(layerTaskTimes);
-			object.getPropagatorFunctions().add(layerTaskResources);
+			object.addPropagatorFunction(layerTaskResources);
 			
 			return null;
 		} // case Project
@@ -99,33 +99,33 @@ public class ToUsePropagatorPropagatorFunctionManager extends PropagatorFunction
 			
 			CalcTaskHoursVar calcTaskHoursVar = ToUsePropagatorCalcFactory.eINSTANCE.createCalcTaskHoursVar();
 			calcTaskHoursVar.setConcreteParent(project.getPropagatorFunction(LayerTaskHoursVar.class));
-			object.getPropagatorFunctions().add(calcTaskHoursVar);
+			object.addPropagatorFunction(calcTaskHoursVar);
 			calcTaskHoursVar.touch(null);
 			
 			CalcTaskHoursItem calcTaskHoursItem = ToUsePropagatorCalcFactory.eINSTANCE.createCalcTaskHoursItem();
 			calcTaskHoursItem.setConcreteParent(project.getPropagatorFunction(LayerTaskHoursItem.class));
-			object.getPropagatorFunctions().add(calcTaskHoursItem);
+			object.addPropagatorFunction(calcTaskHoursItem);
 			calcTaskHoursItem.touch(null);
 			
 			CalcTaskHours calcTaskHours = ToUsePropagatorCalcFactory.eINSTANCE.createCalcTaskHours();
 			calcTaskHours.setConcreteParent((LayerTaskHours)project.getPropagatorFunction(LayerTaskHours.class));
 			calcTaskHours.setConcreteParent(project.getPropagatorFunction(LayerTaskHours.class));
-			object.getPropagatorFunctions().add(calcTaskHours);
+			object.addPropagatorFunction(calcTaskHours);
 			calcTaskHours.touch(null);
 
 			CalcTaskStart calcTaskStart = ToUsePropagatorCalcFactory.eINSTANCE.createCalcTaskStart();
 			calcTaskStart.setConcreteParent(project.getPropagatorFunction(LayerTaskTimes.class));
-			object.getPropagatorFunctions().add(calcTaskStart);
+			object.addPropagatorFunction(calcTaskStart);
 			calcTaskStart.touch(null);
 
 			CalcTaskEnd calcTaskEnd = ToUsePropagatorCalcFactory.eINSTANCE.createCalcTaskEnd();
 			calcTaskEnd.setConcreteParent(project.getPropagatorFunction(LayerTaskTimes.class));
-			object.getPropagatorFunctions().add(calcTaskEnd);
+			object.addPropagatorFunction(calcTaskEnd);
 			calcTaskEnd.touch(null);
 			
 			CalcTaskResources calcTaskResources = ToUsePropagatorCalcFactory.eINSTANCE.createCalcTaskResources();
 			calcTaskResources.setConcreteParent(project.getPropagatorFunction(LayerTaskResources.class));
-			object.getPropagatorFunctions().add(calcTaskResources);
+			object.addPropagatorFunction(calcTaskResources);
 			calcTaskResources.touch(null);
 
 			

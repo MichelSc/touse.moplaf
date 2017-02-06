@@ -229,6 +229,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	int SCOPE_PROJECT___TOUCH__EOBJECT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___TOUCH__EOBJECT;
 
 	/**
+	 * The operation id for the '<em>Untouch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCOPE_PROJECT___UNTOUCH = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___UNTOUCH;
+
+	/**
 	 * The operation id for the '<em>Refresh Antecedents</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -308,15 +317,6 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int SCOPE_PROJECT___DO_REFRESH__EOBJECT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_REFRESH__EOBJECT;
-
-	/**
-	 * The operation id for the '<em>Is Propagator Function Of Type</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCOPE_PROJECT___IS_PROPAGATOR_FUNCTION_OF_TYPE__OBJECT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___IS_PROPAGATOR_FUNCTION_OF_TYPE__OBJECT;
 
 	/**
 	 * The operation id for the '<em>Get Scope</em>' operation.
@@ -518,6 +518,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	int LAYER_TASK_HOURS_ITEM___TOUCH__EOBJECT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___TOUCH__EOBJECT;
 
 	/**
+	 * The operation id for the '<em>Untouch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_TASK_HOURS_ITEM___UNTOUCH = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___UNTOUCH;
+
+	/**
 	 * The operation id for the '<em>Refresh Antecedents</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -597,15 +606,6 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int LAYER_TASK_HOURS_ITEM___DO_REFRESH__EOBJECT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_REFRESH__EOBJECT;
-
-	/**
-	 * The operation id for the '<em>Is Propagator Function Of Type</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LAYER_TASK_HOURS_ITEM___IS_PROPAGATOR_FUNCTION_OF_TYPE__OBJECT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___IS_PROPAGATOR_FUNCTION_OF_TYPE__OBJECT;
 
 	/**
 	 * The operation id for the '<em>Get Scope</em>' operation.
@@ -807,6 +807,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	int LAYER_TASK_HOURS_VAR___TOUCH__EOBJECT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___TOUCH__EOBJECT;
 
 	/**
+	 * The operation id for the '<em>Untouch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_TASK_HOURS_VAR___UNTOUCH = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___UNTOUCH;
+
+	/**
 	 * The operation id for the '<em>Refresh Antecedents</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -886,15 +895,6 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int LAYER_TASK_HOURS_VAR___DO_REFRESH__EOBJECT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_REFRESH__EOBJECT;
-
-	/**
-	 * The operation id for the '<em>Is Propagator Function Of Type</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LAYER_TASK_HOURS_VAR___IS_PROPAGATOR_FUNCTION_OF_TYPE__OBJECT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___IS_PROPAGATOR_FUNCTION_OF_TYPE__OBJECT;
 
 	/**
 	 * The operation id for the '<em>Get Scope</em>' operation.
@@ -1114,6 +1114,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	int LAYER_TASK_HOURS___TOUCH__EOBJECT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___TOUCH__EOBJECT;
 
 	/**
+	 * The operation id for the '<em>Untouch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_TASK_HOURS___UNTOUCH = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___UNTOUCH;
+
+	/**
 	 * The operation id for the '<em>Refresh Antecedents</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1193,15 +1202,6 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int LAYER_TASK_HOURS___DO_REFRESH__EOBJECT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_REFRESH__EOBJECT;
-
-	/**
-	 * The operation id for the '<em>Is Propagator Function Of Type</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LAYER_TASK_HOURS___IS_PROPAGATOR_FUNCTION_OF_TYPE__OBJECT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___IS_PROPAGATOR_FUNCTION_OF_TYPE__OBJECT;
 
 	/**
 	 * The operation id for the '<em>Get Scope</em>' operation.
@@ -1412,6 +1412,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	int LAYER_TASK_TIMES___TOUCH__EOBJECT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___TOUCH__EOBJECT;
 
 	/**
+	 * The operation id for the '<em>Untouch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_TASK_TIMES___UNTOUCH = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___UNTOUCH;
+
+	/**
 	 * The operation id for the '<em>Refresh Antecedents</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1491,15 +1500,6 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int LAYER_TASK_TIMES___DO_REFRESH__EOBJECT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_REFRESH__EOBJECT;
-
-	/**
-	 * The operation id for the '<em>Is Propagator Function Of Type</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LAYER_TASK_TIMES___IS_PROPAGATOR_FUNCTION_OF_TYPE__OBJECT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___IS_PROPAGATOR_FUNCTION_OF_TYPE__OBJECT;
 
 	/**
 	 * The operation id for the '<em>Get Scope</em>' operation.
@@ -1720,6 +1720,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	int LAYER_TASK_RESOURCES___TOUCH__EOBJECT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___TOUCH__EOBJECT;
 
 	/**
+	 * The operation id for the '<em>Untouch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_TASK_RESOURCES___UNTOUCH = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___UNTOUCH;
+
+	/**
 	 * The operation id for the '<em>Refresh Antecedents</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1799,15 +1808,6 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int LAYER_TASK_RESOURCES___DO_REFRESH__EOBJECT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_REFRESH__EOBJECT;
-
-	/**
-	 * The operation id for the '<em>Is Propagator Function Of Type</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LAYER_TASK_RESOURCES___IS_PROPAGATOR_FUNCTION_OF_TYPE__OBJECT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___IS_PROPAGATOR_FUNCTION_OF_TYPE__OBJECT;
 
 	/**
 	 * The operation id for the '<em>Get Scope</em>' operation.
@@ -2008,6 +2008,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	int CALC_PROJECT_END___TOUCH__EOBJECT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___TOUCH__EOBJECT;
 
 	/**
+	 * The operation id for the '<em>Untouch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_PROJECT_END___UNTOUCH = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___UNTOUCH;
+
+	/**
 	 * The operation id for the '<em>Refresh Antecedents</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2087,15 +2096,6 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int CALC_PROJECT_END___DO_REFRESH__EOBJECT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_REFRESH__EOBJECT;
-
-	/**
-	 * The operation id for the '<em>Is Propagator Function Of Type</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALC_PROJECT_END___IS_PROPAGATOR_FUNCTION_OF_TYPE__OBJECT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___IS_PROPAGATOR_FUNCTION_OF_TYPE__OBJECT;
 
 	/**
 	 * The operation id for the '<em>Get Scope</em>' operation.
@@ -2297,6 +2297,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	int CALC_TASK_HOURS_ITEM___TOUCH__EOBJECT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___TOUCH__EOBJECT;
 
 	/**
+	 * The operation id for the '<em>Untouch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_HOURS_ITEM___UNTOUCH = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___UNTOUCH;
+
+	/**
 	 * The operation id for the '<em>Refresh Antecedents</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2376,15 +2385,6 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int CALC_TASK_HOURS_ITEM___DO_REFRESH__EOBJECT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___DO_REFRESH__EOBJECT;
-
-	/**
-	 * The operation id for the '<em>Is Propagator Function Of Type</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALC_TASK_HOURS_ITEM___IS_PROPAGATOR_FUNCTION_OF_TYPE__OBJECT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___IS_PROPAGATOR_FUNCTION_OF_TYPE__OBJECT;
 
 	/**
 	 * The operation id for the '<em>Get Scope</em>' operation.
@@ -2586,6 +2586,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	int CALC_TASK_HOURS_VAR___TOUCH__EOBJECT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___TOUCH__EOBJECT;
 
 	/**
+	 * The operation id for the '<em>Untouch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_HOURS_VAR___UNTOUCH = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___UNTOUCH;
+
+	/**
 	 * The operation id for the '<em>Refresh Antecedents</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2665,15 +2674,6 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int CALC_TASK_HOURS_VAR___DO_REFRESH__EOBJECT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___DO_REFRESH__EOBJECT;
-
-	/**
-	 * The operation id for the '<em>Is Propagator Function Of Type</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALC_TASK_HOURS_VAR___IS_PROPAGATOR_FUNCTION_OF_TYPE__OBJECT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___IS_PROPAGATOR_FUNCTION_OF_TYPE__OBJECT;
 
 	/**
 	 * The operation id for the '<em>Get Scope</em>' operation.
@@ -2875,6 +2875,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	int CALC_TASK_HOURS___TOUCH__EOBJECT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___TOUCH__EOBJECT;
 
 	/**
+	 * The operation id for the '<em>Untouch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_HOURS___UNTOUCH = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___UNTOUCH;
+
+	/**
 	 * The operation id for the '<em>Refresh Antecedents</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2954,15 +2963,6 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int CALC_TASK_HOURS___DO_REFRESH__EOBJECT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___DO_REFRESH__EOBJECT;
-
-	/**
-	 * The operation id for the '<em>Is Propagator Function Of Type</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALC_TASK_HOURS___IS_PROPAGATOR_FUNCTION_OF_TYPE__OBJECT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___IS_PROPAGATOR_FUNCTION_OF_TYPE__OBJECT;
 
 	/**
 	 * The operation id for the '<em>Get Scope</em>' operation.
@@ -3164,6 +3164,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	int CALC_TASK_START___TOUCH__EOBJECT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___TOUCH__EOBJECT;
 
 	/**
+	 * The operation id for the '<em>Untouch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_START___UNTOUCH = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___UNTOUCH;
+
+	/**
 	 * The operation id for the '<em>Refresh Antecedents</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3243,15 +3252,6 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int CALC_TASK_START___DO_REFRESH__EOBJECT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___DO_REFRESH__EOBJECT;
-
-	/**
-	 * The operation id for the '<em>Is Propagator Function Of Type</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALC_TASK_START___IS_PROPAGATOR_FUNCTION_OF_TYPE__OBJECT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___IS_PROPAGATOR_FUNCTION_OF_TYPE__OBJECT;
 
 	/**
 	 * The operation id for the '<em>Get Scope</em>' operation.
@@ -3453,6 +3453,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	int CALC_TASK_END___TOUCH__EOBJECT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___TOUCH__EOBJECT;
 
 	/**
+	 * The operation id for the '<em>Untouch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_END___UNTOUCH = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___UNTOUCH;
+
+	/**
 	 * The operation id for the '<em>Refresh Antecedents</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3532,15 +3541,6 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int CALC_TASK_END___DO_REFRESH__EOBJECT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___DO_REFRESH__EOBJECT;
-
-	/**
-	 * The operation id for the '<em>Is Propagator Function Of Type</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALC_TASK_END___IS_PROPAGATOR_FUNCTION_OF_TYPE__OBJECT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___IS_PROPAGATOR_FUNCTION_OF_TYPE__OBJECT;
 
 	/**
 	 * The operation id for the '<em>Get Scope</em>' operation.
@@ -3742,6 +3742,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	int CALC_TASK_RESOURCES___TOUCH__EOBJECT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___TOUCH__EOBJECT;
 
 	/**
+	 * The operation id for the '<em>Untouch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_RESOURCES___UNTOUCH = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___UNTOUCH;
+
+	/**
 	 * The operation id for the '<em>Refresh Antecedents</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3821,15 +3830,6 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int CALC_TASK_RESOURCES___DO_REFRESH__EOBJECT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___DO_REFRESH__EOBJECT;
-
-	/**
-	 * The operation id for the '<em>Is Propagator Function Of Type</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALC_TASK_RESOURCES___IS_PROPAGATOR_FUNCTION_OF_TYPE__OBJECT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___IS_PROPAGATOR_FUNCTION_OF_TYPE__OBJECT;
 
 	/**
 	 * The operation id for the '<em>Get Scope</em>' operation.

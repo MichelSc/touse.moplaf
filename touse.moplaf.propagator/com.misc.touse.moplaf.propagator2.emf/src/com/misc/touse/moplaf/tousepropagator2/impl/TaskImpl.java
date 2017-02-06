@@ -700,13 +700,6 @@ public class TaskImpl extends ObjectWithPropagatorFunctionsImpl implements Task 
 	}
 
 
-
-	@Override
-	public void onNotOwned() {
-		this.dispose();
-		super.onNotOwned();
-	}
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
