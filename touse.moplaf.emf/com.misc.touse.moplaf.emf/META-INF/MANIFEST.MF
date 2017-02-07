@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: com.misc.touse.moplaf.emf;singleton:=true
+Bundle-Version: 0.1.0.qualifier
+Bundle-ClassPath: .
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: com.misc.touse.moplaf.touseemf,
+ com.misc.touse.moplaf.touseemf.impl,
+ com.misc.touse.moplaf.touseemf.util
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.ecore;visibility:=reexport,
+ com.misc.common.moplaf.emf;bundle-version="1.0.0"
+Bundle-ActivationPolicy: lazy

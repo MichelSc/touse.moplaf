@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated ToUseEMF -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="com.misc.touse.moplaf.touseemf.presentation.ToUseEMFModelWizardID"
+            name="%_UI_ToUseEMFModelWizard_label"
+            class="com.misc.touse.moplaf.touseemf.presentation.ToUseEMFModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ToUseEMFModelFile.gif">
+         <description>%_UI_ToUseEMFModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated ToUseEMF -->
+      <editor
+            id="com.misc.touse.moplaf.touseemf.presentation.ToUseEMFEditorID"
+            name="%_UI_ToUseEMFEditor_label"
+            icon="icons/full/obj16/ToUseEMFModelFile.gif"
+            extensions="touseemf"
+            class="com.misc.touse.moplaf.touseemf.presentation.ToUseEMFEditor"
+            contributorClass="com.misc.touse.moplaf.touseemf.presentation.ToUseEMFActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

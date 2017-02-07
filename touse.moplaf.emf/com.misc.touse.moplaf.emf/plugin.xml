@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ToUseEMF -->
+      <package
+            uri="http://www.misc.com/touse/moplaf/emf/model/0.1"
+            class="com.misc.touse.moplaf.touseemf.ToUseEMFPackage"
+            genModel="model/ToUseEMF.genmodel"/>
+   </extension>
+
+</plugin>
