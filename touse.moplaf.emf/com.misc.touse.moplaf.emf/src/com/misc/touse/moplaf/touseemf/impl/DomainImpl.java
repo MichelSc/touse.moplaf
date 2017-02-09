@@ -2,6 +2,8 @@
  */
 package com.misc.touse.moplaf.touseemf.impl;
 
+import com.misc.common.moplaf.common.util.EContainmentListenerAdapter;
+import com.misc.common.moplaf.common.util.Util;
 import com.misc.touse.moplaf.touseemf.Domain;
 import com.misc.touse.moplaf.touseemf.Folder;
 import com.misc.touse.moplaf.touseemf.ToUseEMFPackage;
@@ -70,10 +72,10 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	protected DomainImpl() {
 		super();
+		Util.adapt(this, EContainmentListenerAdapter.class, true);
 	}
 
 	/**

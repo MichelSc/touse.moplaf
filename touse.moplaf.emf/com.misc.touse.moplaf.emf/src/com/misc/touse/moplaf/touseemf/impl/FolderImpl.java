@@ -2,12 +2,14 @@
  */
 package com.misc.touse.moplaf.touseemf.impl;
 
+import com.misc.common.moplaf.common.util.EContainmentListener;
 import com.misc.touse.moplaf.touseemf.Document;
 import com.misc.touse.moplaf.touseemf.Folder;
 import com.misc.touse.moplaf.touseemf.ToUseEMFPackage;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.CommonPlugin;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -25,6 +27,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Folder</b></em>'.
+ * @implements EContainmentListener
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
@@ -37,7 +40,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class FolderImpl extends MinimalEObjectImpl.Container implements Folder {
+public class FolderImpl extends MinimalEObjectImpl.Container implements Folder, EContainmentListener {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -255,4 +258,18 @@ public class FolderImpl extends MinimalEObjectImpl.Container implements Folder {
 		return result.toString();
 	}
 
+	@Override
+	public void onLoaded() {
+		CommonPlugin.INSTANCE.log("Folder "+this.getName()+": onLoaded");
+	}
+
+	@Override
+	public void onContained() {
+		CommonPlugin.INSTANCE.log("Folder "+this.getName()+": onContained");
+	}
+
+	@Override
+	public void onNotContained() {
+		CommonPlugin.INSTANCE.log("Folder "+this.getName()+": onNotContained");
+	}
 } //FolderImpl

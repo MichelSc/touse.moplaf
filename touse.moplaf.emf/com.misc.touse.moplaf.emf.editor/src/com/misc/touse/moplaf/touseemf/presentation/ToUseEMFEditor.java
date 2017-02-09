@@ -968,7 +968,7 @@ public class ToUseEMFEditor
 			resourceToDiagnosticMap.put(resource,  analyzeResourceProblems(resource, exception));
 		}
 		editingDomain.getResourceSet().eAdapters().add(problemIndicationAdapter);
-		Util.adapt(editingDomain.getResourceSet(), EContainmentListenerAdapter.class, true);
+//		Util.adapt(editingDomain.getResourceSet(), EContainmentListenerAdapter.class, true);
 	}
 
 	/**
