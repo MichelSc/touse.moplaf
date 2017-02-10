@@ -152,6 +152,16 @@ public class ToUsePropagatorCalcSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ToUsePropagatorCalcPackage.CALC_TASK_WITH_OVERHEAD_HOURS_VAR: {
+				CalcTaskWithOverheadHoursVar calcTaskWithOverheadHoursVar = (CalcTaskWithOverheadHoursVar)theEObject;
+				T result = caseCalcTaskWithOverheadHoursVar(calcTaskWithOverheadHoursVar);
+				if (result == null) result = caseCalcTaskHoursVar(calcTaskWithOverheadHoursVar);
+				if (result == null) result = caseToUsePropagatorFunctionTask(calcTaskWithOverheadHoursVar);
+				if (result == null) result = caseToUsePropagatorFunction(calcTaskWithOverheadHoursVar);
+				if (result == null) result = casePropagatorFunction(calcTaskWithOverheadHoursVar);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ToUsePropagatorCalcPackage.CALC_TASK_HOURS: {
 				CalcTaskHours calcTaskHours = (CalcTaskHours)theEObject;
 				T result = caseCalcTaskHours(calcTaskHours);
@@ -324,6 +334,21 @@ public class ToUsePropagatorCalcSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseCalcTaskHoursVar(CalcTaskHoursVar object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Calc Task With Overhead Hours Var</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Calc Task With Overhead Hours Var</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCalcTaskWithOverheadHoursVar(CalcTaskWithOverheadHoursVar object) {
 		return null;
 	}
 

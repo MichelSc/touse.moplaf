@@ -59,6 +59,7 @@ public class ToUsePropagatorFactoryImpl extends EFactoryImpl implements ToUsePro
 			case ToUsePropagatorPackage.DOMAIN: return createDomain();
 			case ToUsePropagatorPackage.PROJECT: return createProject();
 			case ToUsePropagatorPackage.TASK: return createTask();
+			case ToUsePropagatorPackage.TASK_WITH_OVERHEAD: return createTaskWithOverhead();
 			case ToUsePropagatorPackage.DEPENDENCE: return createDependence();
 			case ToUsePropagatorPackage.TASK_ITEM: return createTaskItem();
 			case ToUsePropagatorPackage.RESOURCE: return createResource();
@@ -89,6 +90,16 @@ public class ToUsePropagatorFactoryImpl extends EFactoryImpl implements ToUsePro
 	public Task createTask() {
 		TaskImpl task = new TaskImpl();
 		return task;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TaskWithOverhead createTaskWithOverhead() {
+		TaskWithOverheadImpl taskWithOverhead = new TaskWithOverheadImpl();
+		return taskWithOverhead;
 	}
 
 	/**

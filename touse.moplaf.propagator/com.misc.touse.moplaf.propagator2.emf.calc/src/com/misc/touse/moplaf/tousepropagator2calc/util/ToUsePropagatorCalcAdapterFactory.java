@@ -109,6 +109,10 @@ public class ToUsePropagatorCalcAdapterFactory extends AdapterFactoryImpl {
 				return createCalcTaskHoursVarAdapter();
 			}
 			@Override
+			public Adapter caseCalcTaskWithOverheadHoursVar(CalcTaskWithOverheadHoursVar object) {
+				return createCalcTaskWithOverheadHoursVarAdapter();
+			}
+			@Override
 			public Adapter caseCalcTaskHours(CalcTaskHours object) {
 				return createCalcTaskHoursAdapter();
 			}
@@ -283,6 +287,20 @@ public class ToUsePropagatorCalcAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCalcTaskHoursVarAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.tousepropagator2calc.CalcTaskWithOverheadHoursVar <em>Calc Task With Overhead Hours Var</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.touse.moplaf.tousepropagator2calc.CalcTaskWithOverheadHoursVar
+	 * @generated
+	 */
+	public Adapter createCalcTaskWithOverheadHoursVarAdapter() {
 		return null;
 	}
 

@@ -12,5 +12,6 @@ Export-Package: com.misc.touse.moplaf.tousepropagator2,
  com.misc.touse.moplaf.tousepropagator2.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- com.misc.common.moplaf.propagator2;bundle-version="1.0.0";visibility:=reexport
+ com.misc.common.moplaf.propagator2;bundle-version="1.0.0";visibility:=reexport,
+ com.misc.common.moplaf.emf;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy

@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.sirius.common.tools.api.resource.ResourceSetFactory;
 
-import com.misc.common.moplaf.propagator2.PropagatorFunctionAdapterManager;
+import com.misc.common.moplaf.propagator2.util.PropagatorFunctionManagerAdapter;
 import com.misc.touse.moplaf.tousepropagator2calc.util.ToUsePropagatorPropagatorFunctionManager;
 
 public class ToUsePropagatorResourceSetFactory extends ResourceSetFactory {

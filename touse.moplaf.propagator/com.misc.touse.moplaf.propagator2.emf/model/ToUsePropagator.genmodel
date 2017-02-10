@@ -60,6 +60,9 @@
         <genParameters ecoreParameter="ToUsePropagator.ecore#//Task/isCandidate/resource"/>
       </genOperations>
     </genClasses>
+    <genClasses ecoreClass="ToUsePropagator.ecore#//TaskWithOverhead">
+      <genFeatures createChild="false" propertyCategory="10 Task" ecoreFeature="ecore:EAttribute ToUsePropagator.ecore#//TaskWithOverhead/HoursOverhead"/>
+    </genClasses>
     <genClasses ecoreClass="ToUsePropagator.ecore#//Dependence" labelFeature="#//tousepropagator2/Dependence/Description">
       <genFeatures createChild="false" propertyCategory="10 Dependence" propertySortChoices="true"
           ecoreFeature="ecore:EReference ToUsePropagator.ecore#//Dependence/TaskBefore"/>

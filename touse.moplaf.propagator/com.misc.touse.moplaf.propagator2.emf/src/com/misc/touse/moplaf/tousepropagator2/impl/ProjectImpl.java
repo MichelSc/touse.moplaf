@@ -2,6 +2,9 @@
  */
 package com.misc.touse.moplaf.tousepropagator2.impl;
 
+import com.misc.common.moplaf.common.util.EContainmentListener;
+import com.misc.common.moplaf.common.util.EContainmentListenerAdapter;
+import com.misc.common.moplaf.common.util.Util;
 import com.misc.common.moplaf.propagator2.impl.ObjectWithPropagatorFunctionsImpl;
 import com.misc.touse.moplaf.tousepropagator2.Dependence;
 import com.misc.touse.moplaf.tousepropagator2.Project;
@@ -177,10 +180,10 @@ public class ProjectImpl extends ObjectWithPropagatorFunctionsImpl implements Pr
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	protected ProjectImpl() {
 		super();
+		Util.adapt(this,  EContainmentListenerAdapter.class, true);
 	}
 
 	/**

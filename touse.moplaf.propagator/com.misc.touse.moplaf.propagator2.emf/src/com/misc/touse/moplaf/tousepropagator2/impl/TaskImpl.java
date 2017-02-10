@@ -2,6 +2,7 @@
  */
 package com.misc.touse.moplaf.tousepropagator2.impl;
 
+import com.misc.common.moplaf.common.util.EContainmentListener;
 import com.misc.common.moplaf.propagator2.impl.ObjectWithPropagatorFunctionsImpl;
 import com.misc.touse.moplaf.tousepropagator2.Dependence;
 import com.misc.touse.moplaf.tousepropagator2.Project;
@@ -34,6 +35,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Task</b></em>'.
+ * @implements EContainmentListener
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
@@ -55,7 +57,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class TaskImpl extends ObjectWithPropagatorFunctionsImpl implements Task {
+public class TaskImpl extends ObjectWithPropagatorFunctionsImpl implements Task, EContainmentListener {
 	/**
 	 * The default value of the '{@link #getStart() <em>Start</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -996,6 +998,19 @@ public class TaskImpl extends ObjectWithPropagatorFunctionsImpl implements Task 
 		result.append(taskName);
 		result.append(')');
 		return result.toString();
+	}
+
+	@Override
+	public void onLoaded() {
+	}
+
+	@Override
+	public void onContained() {
+	}
+
+	@Override
+	public void onNotContained() {
+		this.dispose();
 	}
 
 } //TaskImpl

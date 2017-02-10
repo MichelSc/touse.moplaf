@@ -10,6 +10,7 @@ import com.misc.touse.moplaf.tousepropagator2.Resource;
 import com.misc.touse.moplaf.tousepropagator2.ResourceCandidate;
 import com.misc.touse.moplaf.tousepropagator2.Task;
 import com.misc.touse.moplaf.tousepropagator2.TaskItem;
+import com.misc.touse.moplaf.tousepropagator2.TaskWithOverhead;
 import com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFactory;
 import com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFunction;
 import com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFunctionProject;
@@ -42,6 +43,13 @@ public class ToUsePropagatorPackageImpl extends EPackageImpl implements ToUsePro
 	 * @generated
 	 */
 	private EClass taskEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass taskWithOverheadEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -456,6 +464,24 @@ public class ToUsePropagatorPackageImpl extends EPackageImpl implements ToUsePro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getTaskWithOverhead() {
+		return taskWithOverheadEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTaskWithOverhead_HoursOverhead() {
+		return (EAttribute)taskWithOverheadEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getDependence() {
 		return dependenceEClass;
 	}
@@ -777,6 +803,9 @@ public class ToUsePropagatorPackageImpl extends EPackageImpl implements ToUsePro
 		createEOperation(taskEClass, TASK___DISPOSE);
 		createEOperation(taskEClass, TASK___IS_CANDIDATE__RESOURCE);
 
+		taskWithOverheadEClass = createEClass(TASK_WITH_OVERHEAD);
+		createEAttribute(taskWithOverheadEClass, TASK_WITH_OVERHEAD__HOURS_OVERHEAD);
+
 		dependenceEClass = createEClass(DEPENDENCE);
 		createEReference(dependenceEClass, DEPENDENCE__TASK_BEFORE);
 		createEReference(dependenceEClass, DEPENDENCE__TASK_AFTER);
@@ -845,6 +874,7 @@ public class ToUsePropagatorPackageImpl extends EPackageImpl implements ToUsePro
 		// Add supertypes to classes
 		projectEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctions());
 		taskEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctions());
+		taskWithOverheadEClass.getESuperTypes().add(this.getTask());
 		dependenceEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctions());
 		toUsePropagatorFunctionEClass.getESuperTypes().add(thePropagatorPackage.getPropagatorFunction());
 		toUsePropagatorFunctionTaskEClass.getESuperTypes().add(this.getToUsePropagatorFunction());
@@ -899,6 +929,9 @@ public class ToUsePropagatorPackageImpl extends EPackageImpl implements ToUsePro
 
 		op = initEOperation(getTask__IsCandidate__Resource(), ecorePackage.getEBoolean(), "isCandidate", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getResource(), "resource", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(taskWithOverheadEClass, TaskWithOverhead.class, "TaskWithOverhead", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTaskWithOverhead_HoursOverhead(), ecorePackage.getEFloat(), "HoursOverhead", null, 0, 1, TaskWithOverhead.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dependenceEClass, Dependence.class, "Dependence", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDependence_TaskBefore(), this.getTask(), this.getTask_DependencesAfter(), "TaskBefore", null, 1, 1, Dependence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

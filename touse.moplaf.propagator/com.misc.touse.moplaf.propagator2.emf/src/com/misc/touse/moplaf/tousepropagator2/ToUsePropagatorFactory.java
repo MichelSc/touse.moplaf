@@ -40,6 +40,15 @@ public interface ToUsePropagatorFactory extends EFactory {
 	Task createTask();
 
 	/**
+	 * Returns a new object of class '<em>Task With Overhead</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Task With Overhead</em>'.
+	 * @generated
+	 */
+	TaskWithOverhead createTaskWithOverhead();
+
+	/**
 	 * Returns a new object of class '<em>Dependence</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

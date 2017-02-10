@@ -87,6 +87,14 @@ public class ToUsePropagatorSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ToUsePropagatorPackage.TASK_WITH_OVERHEAD: {
+				TaskWithOverhead taskWithOverhead = (TaskWithOverhead)theEObject;
+				T result = caseTaskWithOverhead(taskWithOverhead);
+				if (result == null) result = caseTask(taskWithOverhead);
+				if (result == null) result = caseObjectWithPropagatorFunctions(taskWithOverhead);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ToUsePropagatorPackage.DEPENDENCE: {
 				Dependence dependence = (Dependence)theEObject;
 				T result = caseDependence(dependence);
@@ -166,6 +174,21 @@ public class ToUsePropagatorSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseTask(Task object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Task With Overhead</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Task With Overhead</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTaskWithOverhead(TaskWithOverhead object) {
 		return null;
 	}
 

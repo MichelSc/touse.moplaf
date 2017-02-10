@@ -65,6 +65,7 @@ public class ToUsePropagatorCalcFactoryImpl extends EFactoryImpl implements ToUs
 			case ToUsePropagatorCalcPackage.CALC_PROJECT_END: return createCalcProjectEnd();
 			case ToUsePropagatorCalcPackage.CALC_TASK_HOURS_ITEM: return createCalcTaskHoursItem();
 			case ToUsePropagatorCalcPackage.CALC_TASK_HOURS_VAR: return createCalcTaskHoursVar();
+			case ToUsePropagatorCalcPackage.CALC_TASK_WITH_OVERHEAD_HOURS_VAR: return createCalcTaskWithOverheadHoursVar();
 			case ToUsePropagatorCalcPackage.CALC_TASK_HOURS: return createCalcTaskHours();
 			case ToUsePropagatorCalcPackage.CALC_TASK_START: return createCalcTaskStart();
 			case ToUsePropagatorCalcPackage.CALC_TASK_END: return createCalcTaskEnd();
@@ -162,6 +163,16 @@ public class ToUsePropagatorCalcFactoryImpl extends EFactoryImpl implements ToUs
 	public CalcTaskHoursVar createCalcTaskHoursVar() {
 		CalcTaskHoursVarImpl calcTaskHoursVar = new CalcTaskHoursVarImpl();
 		return calcTaskHoursVar;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CalcTaskWithOverheadHoursVar createCalcTaskWithOverheadHoursVar() {
+		CalcTaskWithOverheadHoursVarImpl calcTaskWithOverheadHoursVar = new CalcTaskWithOverheadHoursVarImpl();
+		return calcTaskWithOverheadHoursVar;
 	}
 
 	/**

@@ -2694,6 +2694,295 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	int CALC_TASK_HOURS_VAR_OPERATION_COUNT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousepropagator2calc.impl.CalcTaskWithOverheadHoursVarImpl <em>Calc Task With Overhead Hours Var</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousepropagator2calc.impl.CalcTaskWithOverheadHoursVarImpl
+	 * @see com.misc.touse.moplaf.tousepropagator2calc.impl.ToUsePropagatorCalcPackageImpl#getCalcTaskWithOverheadHoursVar()
+	 * @generated
+	 */
+	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR = 9;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR__PARENT = CALC_TASK_HOURS_VAR__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Antecedents</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR__ANTECEDENTS = CALC_TASK_HOURS_VAR__ANTECEDENTS;
+
+	/**
+	 * The feature id for the '<em><b>Antecedents Sibling</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR__ANTECEDENTS_SIBLING = CALC_TASK_HOURS_VAR__ANTECEDENTS_SIBLING;
+
+	/**
+	 * The feature id for the '<em><b>Touched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR__TOUCHED = CALC_TASK_HOURS_VAR__TOUCHED;
+
+	/**
+	 * The feature id for the '<em><b>Touched Children</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR__TOUCHED_CHILDREN = CALC_TASK_HOURS_VAR__TOUCHED_CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Touchers</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR__TOUCHERS = CALC_TASK_HOURS_VAR__TOUCHERS;
+
+	/**
+	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR__ENABLED = CALC_TASK_HOURS_VAR__ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Object With Propagator Functions</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR__OBJECT_WITH_PROPAGATOR_FUNCTIONS = CALC_TASK_HOURS_VAR__OBJECT_WITH_PROPAGATOR_FUNCTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR__TYPE = CALC_TASK_HOURS_VAR__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Object</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR__OBJECT = CALC_TASK_HOURS_VAR__OBJECT;
+
+	/**
+	 * The feature id for the '<em><b>Instance</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR__INSTANCE = CALC_TASK_HOURS_VAR__INSTANCE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR__DESCRIPTION = CALC_TASK_HOURS_VAR__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Calculated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR__CALCULATED = CALC_TASK_HOURS_VAR__CALCULATED;
+
+	/**
+	 * The feature id for the '<em><b>Task</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR__TASK = CALC_TASK_HOURS_VAR__TASK;
+
+	/**
+	 * The feature id for the '<em><b>Concrete Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR__CONCRETE_PARENT = CALC_TASK_HOURS_VAR__CONCRETE_PARENT;
+
+	/**
+	 * The number of structural features of the '<em>Calc Task With Overhead Hours Var</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR_FEATURE_COUNT = CALC_TASK_HOURS_VAR_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Enable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR___ENABLE = CALC_TASK_HOURS_VAR___ENABLE;
+
+	/**
+	 * The operation id for the '<em>Disable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR___DISABLE = CALC_TASK_HOURS_VAR___DISABLE;
+
+	/**
+	 * The operation id for the '<em>Touch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR___TOUCH__EOBJECT = CALC_TASK_HOURS_VAR___TOUCH__EOBJECT;
+
+	/**
+	 * The operation id for the '<em>Untouch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR___UNTOUCH = CALC_TASK_HOURS_VAR___UNTOUCH;
+
+	/**
+	 * The operation id for the '<em>Refresh Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR___REFRESH_ANTECEDENTS = CALC_TASK_HOURS_VAR___REFRESH_ANTECEDENTS;
+
+	/**
+	 * The operation id for the '<em>Refresh This</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR___REFRESH_THIS = CALC_TASK_HOURS_VAR___REFRESH_THIS;
+
+	/**
+	 * The operation id for the '<em>Refresh Children And This</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR___REFRESH_CHILDREN_AND_THIS = CALC_TASK_HOURS_VAR___REFRESH_CHILDREN_AND_THIS;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR___REFRESH = CALC_TASK_HOURS_VAR___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Do Get Parent</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR___DO_GET_PARENT = CALC_TASK_HOURS_VAR___DO_GET_PARENT;
+
+	/**
+	 * The operation id for the '<em>Do Get Explicit Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR___DO_GET_EXPLICIT_ANTECEDENTS = CALC_TASK_HOURS_VAR___DO_GET_EXPLICIT_ANTECEDENTS;
+
+	/**
+	 * The operation id for the '<em>Do Get Bindings</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR___DO_GET_BINDINGS = CALC_TASK_HOURS_VAR___DO_GET_BINDINGS;
+
+	/**
+	 * The operation id for the '<em>Do Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR___DO_REFRESH = CALC_TASK_HOURS_VAR___DO_REFRESH;
+
+	/**
+	 * The operation id for the '<em>Do Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR___DO_REFRESH__EOBJECT = CALC_TASK_HOURS_VAR___DO_REFRESH__EOBJECT;
+
+	/**
+	 * The operation id for the '<em>Get Scope</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR___GET_SCOPE = CALC_TASK_HOURS_VAR___GET_SCOPE;
+
+	/**
+	 * The number of operations of the '<em>Calc Task With Overhead Hours Var</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR_OPERATION_COUNT = CALC_TASK_HOURS_VAR_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.tousepropagator2calc.impl.CalcTaskHoursImpl <em>Calc Task Hours</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2701,7 +2990,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @see com.misc.touse.moplaf.tousepropagator2calc.impl.ToUsePropagatorCalcPackageImpl#getCalcTaskHours()
 	 * @generated
 	 */
-	int CALC_TASK_HOURS = 9;
+	int CALC_TASK_HOURS = 10;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -2990,7 +3279,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @see com.misc.touse.moplaf.tousepropagator2calc.impl.ToUsePropagatorCalcPackageImpl#getCalcTaskStart()
 	 * @generated
 	 */
-	int CALC_TASK_START = 10;
+	int CALC_TASK_START = 11;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -3279,7 +3568,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @see com.misc.touse.moplaf.tousepropagator2calc.impl.ToUsePropagatorCalcPackageImpl#getCalcTaskEnd()
 	 * @generated
 	 */
-	int CALC_TASK_END = 11;
+	int CALC_TASK_END = 12;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -3568,7 +3857,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @see com.misc.touse.moplaf.tousepropagator2calc.impl.ToUsePropagatorCalcPackageImpl#getCalcTaskResources()
 	 * @generated
 	 */
-	int CALC_TASK_RESOURCES = 12;
+	int CALC_TASK_RESOURCES = 13;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -4084,6 +4373,16 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	EReference getCalcTaskHoursVar_ConcreteParent();
 
 	/**
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousepropagator2calc.CalcTaskWithOverheadHoursVar <em>Calc Task With Overhead Hours Var</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Calc Task With Overhead Hours Var</em>'.
+	 * @see com.misc.touse.moplaf.tousepropagator2calc.CalcTaskWithOverheadHoursVar
+	 * @generated
+	 */
+	EClass getCalcTaskWithOverheadHoursVar();
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousepropagator2calc.CalcTaskHours <em>Calc Task Hours</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4383,6 +4682,16 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CALC_TASK_HOURS_VAR__CONCRETE_PARENT = eINSTANCE.getCalcTaskHoursVar_ConcreteParent();
+
+		/**
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousepropagator2calc.impl.CalcTaskWithOverheadHoursVarImpl <em>Calc Task With Overhead Hours Var</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.touse.moplaf.tousepropagator2calc.impl.CalcTaskWithOverheadHoursVarImpl
+		 * @see com.misc.touse.moplaf.tousepropagator2calc.impl.ToUsePropagatorCalcPackageImpl#getCalcTaskWithOverheadHoursVar()
+		 * @generated
+		 */
+		EClass CALC_TASK_WITH_OVERHEAD_HOURS_VAR = eINSTANCE.getCalcTaskWithOverheadHoursVar();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousepropagator2calc.impl.CalcTaskHoursImpl <em>Calc Task Hours</em>}' class.

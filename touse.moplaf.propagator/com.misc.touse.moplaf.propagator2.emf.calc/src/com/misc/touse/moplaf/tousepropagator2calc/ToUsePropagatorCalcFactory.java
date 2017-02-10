@@ -103,6 +103,15 @@ public interface ToUsePropagatorCalcFactory extends EFactory {
 	CalcTaskHoursVar createCalcTaskHoursVar();
 
 	/**
+	 * Returns a new object of class '<em>Calc Task With Overhead Hours Var</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Calc Task With Overhead Hours Var</em>'.
+	 * @generated
+	 */
+	CalcTaskWithOverheadHoursVar createCalcTaskWithOverheadHoursVar();
+
+	/**
 	 * Returns a new object of class '<em>Calc Task Hours</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

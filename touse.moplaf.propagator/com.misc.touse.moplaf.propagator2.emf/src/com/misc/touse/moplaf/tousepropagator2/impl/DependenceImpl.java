@@ -2,6 +2,7 @@
  */
 package com.misc.touse.moplaf.tousepropagator2.impl;
 
+import com.misc.common.moplaf.common.util.EContainmentListener;
 import com.misc.common.moplaf.propagator2.impl.ObjectWithPropagatorFunctionsImpl;
 import com.misc.touse.moplaf.tousepropagator2.Dependence;
 import com.misc.touse.moplaf.tousepropagator2.Project;
@@ -23,6 +24,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Dependence</b></em>'.
+ * @implements EContainmentListener
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
@@ -38,7 +40,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  *
  * @generated
  */
-public class DependenceImpl extends ObjectWithPropagatorFunctionsImpl implements Dependence {
+public class DependenceImpl extends ObjectWithPropagatorFunctionsImpl implements Dependence, EContainmentListener {
 	/**
 	 * The cached value of the '{@link #getTaskBefore() <em>Task Before</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -550,5 +552,17 @@ public class DependenceImpl extends ObjectWithPropagatorFunctionsImpl implements
 	}
 
 	
+	@Override
+	public void onLoaded() {
+	}
+
+	@Override
+	public void onContained() {
+	}
+
+	@Override
+	public void onNotContained() {
+		this.dispose();
+	}
 
 } //DependenceImpl

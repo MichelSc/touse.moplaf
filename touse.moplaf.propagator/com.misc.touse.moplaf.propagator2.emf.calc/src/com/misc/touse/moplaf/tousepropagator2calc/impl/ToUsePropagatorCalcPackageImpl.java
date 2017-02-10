@@ -11,6 +11,7 @@ import com.misc.touse.moplaf.tousepropagator2calc.CalcTaskHoursItem;
 import com.misc.touse.moplaf.tousepropagator2calc.CalcTaskHoursVar;
 import com.misc.touse.moplaf.tousepropagator2calc.CalcTaskResources;
 import com.misc.touse.moplaf.tousepropagator2calc.CalcTaskStart;
+import com.misc.touse.moplaf.tousepropagator2calc.CalcTaskWithOverheadHoursVar;
 import com.misc.touse.moplaf.tousepropagator2calc.LayerTaskHours;
 import com.misc.touse.moplaf.tousepropagator2calc.LayerTaskHoursItem;
 import com.misc.touse.moplaf.tousepropagator2calc.LayerTaskHoursVar;
@@ -94,6 +95,13 @@ public class ToUsePropagatorCalcPackageImpl extends EPackageImpl implements ToUs
 	 * @generated
 	 */
 	private EClass calcTaskHoursVarEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass calcTaskWithOverheadHoursVarEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -390,6 +398,15 @@ public class ToUsePropagatorCalcPackageImpl extends EPackageImpl implements ToUs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getCalcTaskWithOverheadHoursVar() {
+		return calcTaskWithOverheadHoursVarEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getCalcTaskHours() {
 		return calcTaskHoursEClass;
 	}
@@ -516,6 +533,8 @@ public class ToUsePropagatorCalcPackageImpl extends EPackageImpl implements ToUs
 		calcTaskHoursVarEClass = createEClass(CALC_TASK_HOURS_VAR);
 		createEReference(calcTaskHoursVarEClass, CALC_TASK_HOURS_VAR__CONCRETE_PARENT);
 
+		calcTaskWithOverheadHoursVarEClass = createEClass(CALC_TASK_WITH_OVERHEAD_HOURS_VAR);
+
 		calcTaskHoursEClass = createEClass(CALC_TASK_HOURS);
 		createEReference(calcTaskHoursEClass, CALC_TASK_HOURS__CONCRETE_PARENT);
 
@@ -569,6 +588,7 @@ public class ToUsePropagatorCalcPackageImpl extends EPackageImpl implements ToUs
 		calcProjectEndEClass.getESuperTypes().add(theToUsePropagatorPackage.getToUsePropagatorFunctionProject());
 		calcTaskHoursItemEClass.getESuperTypes().add(theToUsePropagatorPackage.getToUsePropagatorFunctionTask());
 		calcTaskHoursVarEClass.getESuperTypes().add(theToUsePropagatorPackage.getToUsePropagatorFunctionTask());
+		calcTaskWithOverheadHoursVarEClass.getESuperTypes().add(this.getCalcTaskHoursVar());
 		calcTaskHoursEClass.getESuperTypes().add(theToUsePropagatorPackage.getToUsePropagatorFunctionTask());
 		calcTaskStartEClass.getESuperTypes().add(theToUsePropagatorPackage.getToUsePropagatorFunctionTask());
 		calcTaskEndEClass.getESuperTypes().add(theToUsePropagatorPackage.getToUsePropagatorFunctionTask());
@@ -605,6 +625,8 @@ public class ToUsePropagatorCalcPackageImpl extends EPackageImpl implements ToUs
 
 		initEClass(calcTaskHoursVarEClass, CalcTaskHoursVar.class, "CalcTaskHoursVar", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCalcTaskHoursVar_ConcreteParent(), this.getLayerTaskHoursVar(), null, "ConcreteParent", null, 1, 1, CalcTaskHoursVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(calcTaskWithOverheadHoursVarEClass, CalcTaskWithOverheadHoursVar.class, "CalcTaskWithOverheadHoursVar", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(calcTaskHoursEClass, CalcTaskHours.class, "CalcTaskHours", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCalcTaskHours_ConcreteParent(), this.getLayerTaskHours(), null, "ConcreteParent", null, 1, 1, CalcTaskHours.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

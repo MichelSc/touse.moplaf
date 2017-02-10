@@ -295,6 +295,11 @@ public class ProjectItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
+				(ToUsePropagatorPackage.Literals.PROJECT__TASKS,
+				 ToUsePropagatorFactory.eINSTANCE.createTaskWithOverhead()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(ToUsePropagatorPackage.Literals.PROJECT__DEPENDENCES,
 				 ToUsePropagatorFactory.eINSTANCE.createDependence()));
 

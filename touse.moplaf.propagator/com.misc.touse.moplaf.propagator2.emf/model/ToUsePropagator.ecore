@@ -89,6 +89,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="ResourceCandidates" upperBound="-1"
         eType="#//ResourceCandidate" containment="true" eOpposite="#//ResourceCandidate/Task"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TaskWithOverhead" eSuperTypes="#//Task">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="HoursOverhead" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Dependence" eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//ObjectWithPropagatorFunctions">
     <eOperations name="dispose"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="TaskBefore" lowerBound="1"

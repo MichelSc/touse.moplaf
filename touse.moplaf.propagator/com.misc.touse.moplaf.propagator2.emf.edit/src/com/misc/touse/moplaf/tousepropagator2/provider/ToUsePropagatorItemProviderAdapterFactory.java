@@ -118,6 +118,29 @@ public class ToUsePropagatorItemProviderAdapterFactory extends ToUsePropagatorAd
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousepropagator2.TaskWithOverhead} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TaskWithOverheadItemProvider taskWithOverheadItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousepropagator2.TaskWithOverhead}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTaskWithOverheadAdapter() {
+		if (taskWithOverheadItemProvider == null) {
+			taskWithOverheadItemProvider = new TaskWithOverheadItemProvider(this);
+		}
+
+		return taskWithOverheadItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousepropagator2.Dependence} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -403,6 +426,7 @@ public class ToUsePropagatorItemProviderAdapterFactory extends ToUsePropagatorAd
 		if (domainItemProvider != null) domainItemProvider.dispose();
 		if (projectItemProvider != null) projectItemProvider.dispose();
 		if (taskItemProvider != null) taskItemProvider.dispose();
+		if (taskWithOverheadItemProvider != null) taskWithOverheadItemProvider.dispose();
 		if (dependenceItemProvider != null) dependenceItemProvider.dispose();
 		if (taskItemItemProvider != null) taskItemItemProvider.dispose();
 		if (resourceItemProvider != null) resourceItemProvider.dispose();

@@ -43,6 +43,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="ConcreteParent" lowerBound="1"
         eType="#//LayerTaskHoursVar"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CalcTaskWithOverheadHoursVar" eSuperTypes="#//CalcTaskHoursVar"/>
   <eClassifiers xsi:type="ecore:EClass" name="CalcTaskHours" eSuperTypes="../../com.misc.touse.moplaf.propagator2.emf/model/ToUsePropagator.ecore#//ToUsePropagatorFunctionTask">
     <eStructuralFeatures xsi:type="ecore:EReference" name="ConcreteParent" lowerBound="1"
         eType="#//LayerTaskHours"/>

@@ -3,9 +3,10 @@ package com.misc.touse.moplaf.tousepropagator2calc.util;
 import org.eclipse.emf.common.CommonPlugin;
 
 import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
-import com.misc.common.moplaf.propagator2.PropagatorFunctionAdapterManager;
+import com.misc.common.moplaf.propagator2.util.PropagatorFunctionManagerAdapter;
 import com.misc.touse.moplaf.tousepropagator2.Project;
 import com.misc.touse.moplaf.tousepropagator2.Task;
+import com.misc.touse.moplaf.tousepropagator2.TaskWithOverhead;
 import com.misc.touse.moplaf.tousepropagator2.util.ToUsePropagatorSwitch;
 import com.misc.touse.moplaf.tousepropagator2calc.CalcProjectEnd;
 import com.misc.touse.moplaf.tousepropagator2calc.CalcTaskEnd;
@@ -14,6 +15,7 @@ import com.misc.touse.moplaf.tousepropagator2calc.CalcTaskHoursItem;
 import com.misc.touse.moplaf.tousepropagator2calc.CalcTaskHoursVar;
 import com.misc.touse.moplaf.tousepropagator2calc.CalcTaskResources;
 import com.misc.touse.moplaf.tousepropagator2calc.CalcTaskStart;
+import com.misc.touse.moplaf.tousepropagator2calc.CalcTaskWithOverheadHoursVar;
 import com.misc.touse.moplaf.tousepropagator2calc.LayerTaskHours;
 import com.misc.touse.moplaf.tousepropagator2calc.LayerTaskHoursItem;
 import com.misc.touse.moplaf.tousepropagator2calc.LayerTaskHoursVar;
@@ -22,7 +24,7 @@ import com.misc.touse.moplaf.tousepropagator2calc.LayerTaskTimes;
 import com.misc.touse.moplaf.tousepropagator2calc.ScopeProject;
 import com.misc.touse.moplaf.tousepropagator2calc.ToUsePropagatorCalcFactory;
 
-public class ToUsePropagatorPropagatorFunctionManager extends PropagatorFunctionAdapterManager {
+public class ToUsePropagatorPropagatorFunctionManager extends PropagatorFunctionManagerAdapter {
 
 	/**
 	 * Constructor
@@ -99,41 +101,41 @@ public class ToUsePropagatorPropagatorFunctionManager extends PropagatorFunction
 			
 			CalcTaskHoursVar calcTaskHoursVar = ToUsePropagatorCalcFactory.eINSTANCE.createCalcTaskHoursVar();
 			calcTaskHoursVar.setConcreteParent(project.getPropagatorFunction(LayerTaskHoursVar.class));
-			object.addPropagatorFunction(calcTaskHoursVar);
-			calcTaskHoursVar.touch(null);
+			object.addPropagatorFunction(calcTaskHoursVar, true);
 			
 			CalcTaskHoursItem calcTaskHoursItem = ToUsePropagatorCalcFactory.eINSTANCE.createCalcTaskHoursItem();
 			calcTaskHoursItem.setConcreteParent(project.getPropagatorFunction(LayerTaskHoursItem.class));
-			object.addPropagatorFunction(calcTaskHoursItem);
-			calcTaskHoursItem.touch(null);
+			object.addPropagatorFunction(calcTaskHoursItem, true);
 			
 			CalcTaskHours calcTaskHours = ToUsePropagatorCalcFactory.eINSTANCE.createCalcTaskHours();
-			calcTaskHours.setConcreteParent((LayerTaskHours)project.getPropagatorFunction(LayerTaskHours.class));
 			calcTaskHours.setConcreteParent(project.getPropagatorFunction(LayerTaskHours.class));
-			object.addPropagatorFunction(calcTaskHours);
-			calcTaskHours.touch(null);
+			object.addPropagatorFunction(calcTaskHours, true);
 
 			CalcTaskStart calcTaskStart = ToUsePropagatorCalcFactory.eINSTANCE.createCalcTaskStart();
 			calcTaskStart.setConcreteParent(project.getPropagatorFunction(LayerTaskTimes.class));
-			object.addPropagatorFunction(calcTaskStart);
-			calcTaskStart.touch(null);
+			object.addPropagatorFunction(calcTaskStart, true);
 
 			CalcTaskEnd calcTaskEnd = ToUsePropagatorCalcFactory.eINSTANCE.createCalcTaskEnd();
 			calcTaskEnd.setConcreteParent(project.getPropagatorFunction(LayerTaskTimes.class));
-			object.addPropagatorFunction(calcTaskEnd);
-			calcTaskEnd.touch(null);
+			object.addPropagatorFunction(calcTaskEnd, true);
 			
 			CalcTaskResources calcTaskResources = ToUsePropagatorCalcFactory.eINSTANCE.createCalcTaskResources();
 			calcTaskResources.setConcreteParent(project.getPropagatorFunction(LayerTaskResources.class));
-			object.addPropagatorFunction(calcTaskResources);
-			calcTaskResources.touch(null);
+			object.addPropagatorFunction(calcTaskResources, true);
 
-			
-//			Util.adapt(this, PropagatorCalcTaskDispose.class);
-//			Util.adapt(this, PropagatorCalcTaskResources.class);
-			
 			return null;
 		} // case Task
+
+		@Override
+		public Boolean caseTaskWithOverhead(TaskWithOverhead object) {
+			Project project = object.getProject();
+			
+			CalcTaskWithOverheadHoursVar calcTaskHoursVar = ToUsePropagatorCalcFactory.eINSTANCE.createCalcTaskWithOverheadHoursVar();
+			calcTaskHoursVar.setConcreteParent(project.getPropagatorFunction(LayerTaskHoursVar.class));
+			object.addPropagatorFunction(calcTaskHoursVar, true);
+			
+			return null;
+		} // case TaskWithOverhead
 
 	} // class PropagatorFunctionsConstructor
 }

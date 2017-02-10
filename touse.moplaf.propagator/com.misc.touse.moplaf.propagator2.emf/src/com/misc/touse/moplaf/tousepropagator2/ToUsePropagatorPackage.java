@@ -87,7 +87,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @see com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorPackageImpl#getDependence()
 	 * @generated
 	 */
-	int DEPENDENCE = 3;
+	int DEPENDENCE = 4;
 
 	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.tousepropagator2.impl.TaskItemImpl <em>Task Item</em>}' class.
@@ -97,7 +97,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @see com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorPackageImpl#getTaskItem()
 	 * @generated
 	 */
-	int TASK_ITEM = 4;
+	int TASK_ITEM = 5;
 
 	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.tousepropagator2.impl.ResourceImpl <em>Resource</em>}' class.
@@ -107,7 +107,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @see com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorPackageImpl#getResource()
 	 * @generated
 	 */
-	int RESOURCE = 5;
+	int RESOURCE = 6;
 
 	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.tousepropagator2.impl.ResourceCandidateImpl <em>Resource Candidate</em>}' class.
@@ -117,7 +117,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @see com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorPackageImpl#getResourceCandidate()
 	 * @generated
 	 */
-	int RESOURCE_CANDIDATE = 6;
+	int RESOURCE_CANDIDATE = 7;
 
 	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorFunctionImpl <em>Function</em>}' class.
@@ -127,7 +127,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @see com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorPackageImpl#getToUsePropagatorFunction()
 	 * @generated
 	 */
-	int TO_USE_PROPAGATOR_FUNCTION = 7;
+	int TO_USE_PROPAGATOR_FUNCTION = 8;
 
 	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.tousepropagator2.impl.DomainImpl <em>Domain</em>}' class.
@@ -525,6 +525,259 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @ordered
 	 */
 	int TASK_OPERATION_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 9;
+
+	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousepropagator2.impl.TaskWithOverheadImpl <em>Task With Overhead</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousepropagator2.impl.TaskWithOverheadImpl
+	 * @see com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorPackageImpl#getTaskWithOverhead()
+	 * @generated
+	 */
+	int TASK_WITH_OVERHEAD = 3;
+
+	/**
+	 * The feature id for the '<em><b>Propagator Functions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_WITH_OVERHEAD__PROPAGATOR_FUNCTIONS = TASK__PROPAGATOR_FUNCTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Start</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_WITH_OVERHEAD__START = TASK__START;
+
+	/**
+	 * The feature id for the '<em><b>End</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_WITH_OVERHEAD__END = TASK__END;
+
+	/**
+	 * The feature id for the '<em><b>Hours</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_WITH_OVERHEAD__HOURS = TASK__HOURS;
+
+	/**
+	 * The feature id for the '<em><b>Hours Items</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_WITH_OVERHEAD__HOURS_ITEMS = TASK__HOURS_ITEMS;
+
+	/**
+	 * The feature id for the '<em><b>Hours Var</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_WITH_OVERHEAD__HOURS_VAR = TASK__HOURS_VAR;
+
+	/**
+	 * The feature id for the '<em><b>Hours Var Per Res</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_WITH_OVERHEAD__HOURS_VAR_PER_RES = TASK__HOURS_VAR_PER_RES;
+
+	/**
+	 * The feature id for the '<em><b>Dependences After</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_WITH_OVERHEAD__DEPENDENCES_AFTER = TASK__DEPENDENCES_AFTER;
+
+	/**
+	 * The feature id for the '<em><b>Dependences Before</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_WITH_OVERHEAD__DEPENDENCES_BEFORE = TASK__DEPENDENCES_BEFORE;
+
+	/**
+	 * The feature id for the '<em><b>Task Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_WITH_OVERHEAD__TASK_NAME = TASK__TASK_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Items</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_WITH_OVERHEAD__ITEMS = TASK__ITEMS;
+
+	/**
+	 * The feature id for the '<em><b>Project</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_WITH_OVERHEAD__PROJECT = TASK__PROJECT;
+
+	/**
+	 * The feature id for the '<em><b>Resource Candidates</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_WITH_OVERHEAD__RESOURCE_CANDIDATES = TASK__RESOURCE_CANDIDATES;
+
+	/**
+	 * The feature id for the '<em><b>Hours Overhead</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_WITH_OVERHEAD__HOURS_OVERHEAD = TASK_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Task With Overhead</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_WITH_OVERHEAD_FEATURE_COUNT = TASK_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_WITH_OVERHEAD___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION = TASK___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION;
+
+	/**
+	 * The operation id for the '<em>Get Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_WITH_OVERHEAD___GET_PROPAGATOR_FUNCTION__ECLASS = TASK___GET_PROPAGATOR_FUNCTION__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Refresh Start</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_WITH_OVERHEAD___REFRESH_START = TASK___REFRESH_START;
+
+	/**
+	 * The operation id for the '<em>Refresh End</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_WITH_OVERHEAD___REFRESH_END = TASK___REFRESH_END;
+
+	/**
+	 * The operation id for the '<em>Refresh Hours</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_WITH_OVERHEAD___REFRESH_HOURS = TASK___REFRESH_HOURS;
+
+	/**
+	 * The operation id for the '<em>Refresh Hours Item</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_WITH_OVERHEAD___REFRESH_HOURS_ITEM = TASK___REFRESH_HOURS_ITEM;
+
+	/**
+	 * The operation id for the '<em>Refresh Hours Var</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_WITH_OVERHEAD___REFRESH_HOURS_VAR = TASK___REFRESH_HOURS_VAR;
+
+	/**
+	 * The operation id for the '<em>Refresh Resource Candidates</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_WITH_OVERHEAD___REFRESH_RESOURCE_CANDIDATES__RESOURCE = TASK___REFRESH_RESOURCE_CANDIDATES__RESOURCE;
+
+	/**
+	 * The operation id for the '<em>Refresh Resource Candidates</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_WITH_OVERHEAD___REFRESH_RESOURCE_CANDIDATES = TASK___REFRESH_RESOURCE_CANDIDATES;
+
+	/**
+	 * The operation id for the '<em>Dispose</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_WITH_OVERHEAD___DISPOSE = TASK___DISPOSE;
+
+	/**
+	 * The operation id for the '<em>Is Candidate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_WITH_OVERHEAD___IS_CANDIDATE__RESOURCE = TASK___IS_CANDIDATE__RESOURCE;
+
+	/**
+	 * The number of operations of the '<em>Task With Overhead</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_WITH_OVERHEAD_OPERATION_COUNT = TASK_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Propagator Functions</b></em>' containment reference list.
@@ -1048,7 +1301,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @see com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorPackageImpl#getToUsePropagatorFunctionTask()
 	 * @generated
 	 */
-	int TO_USE_PROPAGATOR_FUNCTION_TASK = 8;
+	int TO_USE_PROPAGATOR_FUNCTION_TASK = 9;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -1328,7 +1581,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @see com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorPackageImpl#getToUsePropagatorFunctionProject()
 	 * @generated
 	 */
-	int TO_USE_PROPAGATOR_FUNCTION_PROJECT = 9;
+	int TO_USE_PROPAGATOR_FUNCTION_PROJECT = 10;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -1942,6 +2195,27 @@ public interface ToUsePropagatorPackage extends EPackage {
 	EOperation getTask__IsCandidate__Resource();
 
 	/**
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousepropagator2.TaskWithOverhead <em>Task With Overhead</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Task With Overhead</em>'.
+	 * @see com.misc.touse.moplaf.tousepropagator2.TaskWithOverhead
+	 * @generated
+	 */
+	EClass getTaskWithOverhead();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.tousepropagator2.TaskWithOverhead#getHoursOverhead <em>Hours Overhead</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Hours Overhead</em>'.
+	 * @see com.misc.touse.moplaf.tousepropagator2.TaskWithOverhead#getHoursOverhead()
+	 * @see #getTaskWithOverhead()
+	 * @generated
+	 */
+	EAttribute getTaskWithOverhead_HoursOverhead();
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousepropagator2.Dependence <em>Dependence</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2533,6 +2807,24 @@ public interface ToUsePropagatorPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation TASK___IS_CANDIDATE__RESOURCE = eINSTANCE.getTask__IsCandidate__Resource();
+
+		/**
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousepropagator2.impl.TaskWithOverheadImpl <em>Task With Overhead</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.touse.moplaf.tousepropagator2.impl.TaskWithOverheadImpl
+		 * @see com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorPackageImpl#getTaskWithOverhead()
+		 * @generated
+		 */
+		EClass TASK_WITH_OVERHEAD = eINSTANCE.getTaskWithOverhead();
+
+		/**
+		 * The meta object literal for the '<em><b>Hours Overhead</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TASK_WITH_OVERHEAD__HOURS_OVERHEAD = eINSTANCE.getTaskWithOverhead_HoursOverhead();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousepropagator2.impl.DependenceImpl <em>Dependence</em>}' class.

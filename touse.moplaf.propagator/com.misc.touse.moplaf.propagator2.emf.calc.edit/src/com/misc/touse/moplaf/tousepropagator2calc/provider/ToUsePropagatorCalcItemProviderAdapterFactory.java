@@ -279,6 +279,29 @@ public class ToUsePropagatorCalcItemProviderAdapterFactory extends ToUsePropagat
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousepropagator2calc.CalcTaskWithOverheadHoursVar} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CalcTaskWithOverheadHoursVarItemProvider calcTaskWithOverheadHoursVarItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousepropagator2calc.CalcTaskWithOverheadHoursVar}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCalcTaskWithOverheadHoursVarAdapter() {
+		if (calcTaskWithOverheadHoursVarItemProvider == null) {
+			calcTaskWithOverheadHoursVarItemProvider = new CalcTaskWithOverheadHoursVarItemProvider(this);
+		}
+
+		return calcTaskWithOverheadHoursVarItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousepropagator2calc.CalcTaskHours} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -478,6 +501,7 @@ public class ToUsePropagatorCalcItemProviderAdapterFactory extends ToUsePropagat
 		if (calcProjectEndItemProvider != null) calcProjectEndItemProvider.dispose();
 		if (calcTaskHoursItemItemProvider != null) calcTaskHoursItemItemProvider.dispose();
 		if (calcTaskHoursVarItemProvider != null) calcTaskHoursVarItemProvider.dispose();
+		if (calcTaskWithOverheadHoursVarItemProvider != null) calcTaskWithOverheadHoursVarItemProvider.dispose();
 		if (calcTaskHoursItemProvider != null) calcTaskHoursItemProvider.dispose();
 		if (calcTaskStartItemProvider != null) calcTaskStartItemProvider.dispose();
 		if (calcTaskEndItemProvider != null) calcTaskEndItemProvider.dispose();
