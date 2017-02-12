@@ -2,8 +2,8 @@
  */
 package com.misc.touse.moplaf.tousepropagator2calc.impl;
 
-import com.misc.common.moplaf.propagator2.Bindings;
 import com.misc.common.moplaf.propagator2.PropagatorFunction;
+import com.misc.common.moplaf.propagator2.util.Bindings;
 import com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorPackage;
 import com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorFunctionProjectImpl;
 import com.misc.touse.moplaf.tousepropagator2calc.CalcProjectEnd;
