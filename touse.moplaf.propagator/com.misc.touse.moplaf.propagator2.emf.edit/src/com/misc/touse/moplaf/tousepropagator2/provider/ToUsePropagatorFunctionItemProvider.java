@@ -3,8 +3,7 @@
 package com.misc.touse.moplaf.tousepropagator2.provider;
 
 
-import com.misc.common.moplaf.propagator2.provider.PropagatorFunctionItemProvider;
-
+import com.misc.common.moplaf.propagator2.provider.PropagatorFunctionBindingsItemProvider;
 import com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFunction;
 import com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorPackage;
 
@@ -27,7 +26,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ToUsePropagatorFunctionItemProvider extends PropagatorFunctionItemProvider {
+public class ToUsePropagatorFunctionItemProvider extends PropagatorFunctionBindingsItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

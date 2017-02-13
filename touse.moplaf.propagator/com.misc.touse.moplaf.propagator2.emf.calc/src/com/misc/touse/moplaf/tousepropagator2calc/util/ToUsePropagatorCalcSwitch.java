@@ -4,6 +4,7 @@ package com.misc.touse.moplaf.tousepropagator2calc.util;
 
 import com.misc.common.moplaf.propagator2.PropagatorFunction;
 
+import com.misc.common.moplaf.propagator2.PropagatorFunctionBindings;
 import com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFunction;
 import com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFunctionProject;
 import com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFunctionTask;
@@ -76,6 +77,7 @@ public class ToUsePropagatorCalcSwitch<T> extends Switch<T> {
 				T result = caseScopeProject(scopeProject);
 				if (result == null) result = caseToUsePropagatorFunctionProject(scopeProject);
 				if (result == null) result = caseToUsePropagatorFunction(scopeProject);
+				if (result == null) result = casePropagatorFunctionBindings(scopeProject);
 				if (result == null) result = casePropagatorFunction(scopeProject);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -85,6 +87,7 @@ public class ToUsePropagatorCalcSwitch<T> extends Switch<T> {
 				T result = caseLayerTaskHoursItem(layerTaskHoursItem);
 				if (result == null) result = caseToUsePropagatorFunctionProject(layerTaskHoursItem);
 				if (result == null) result = caseToUsePropagatorFunction(layerTaskHoursItem);
+				if (result == null) result = casePropagatorFunctionBindings(layerTaskHoursItem);
 				if (result == null) result = casePropagatorFunction(layerTaskHoursItem);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -94,6 +97,7 @@ public class ToUsePropagatorCalcSwitch<T> extends Switch<T> {
 				T result = caseLayerTaskHoursVar(layerTaskHoursVar);
 				if (result == null) result = caseToUsePropagatorFunctionProject(layerTaskHoursVar);
 				if (result == null) result = caseToUsePropagatorFunction(layerTaskHoursVar);
+				if (result == null) result = casePropagatorFunctionBindings(layerTaskHoursVar);
 				if (result == null) result = casePropagatorFunction(layerTaskHoursVar);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -103,6 +107,7 @@ public class ToUsePropagatorCalcSwitch<T> extends Switch<T> {
 				T result = caseLayerTaskHours(layerTaskHours);
 				if (result == null) result = caseToUsePropagatorFunctionProject(layerTaskHours);
 				if (result == null) result = caseToUsePropagatorFunction(layerTaskHours);
+				if (result == null) result = casePropagatorFunctionBindings(layerTaskHours);
 				if (result == null) result = casePropagatorFunction(layerTaskHours);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -112,6 +117,7 @@ public class ToUsePropagatorCalcSwitch<T> extends Switch<T> {
 				T result = caseLayerTaskTimes(layerTaskTimes);
 				if (result == null) result = caseToUsePropagatorFunctionProject(layerTaskTimes);
 				if (result == null) result = caseToUsePropagatorFunction(layerTaskTimes);
+				if (result == null) result = casePropagatorFunctionBindings(layerTaskTimes);
 				if (result == null) result = casePropagatorFunction(layerTaskTimes);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -121,6 +127,7 @@ public class ToUsePropagatorCalcSwitch<T> extends Switch<T> {
 				T result = caseLayerTaskResources(layerTaskResources);
 				if (result == null) result = caseToUsePropagatorFunctionProject(layerTaskResources);
 				if (result == null) result = caseToUsePropagatorFunction(layerTaskResources);
+				if (result == null) result = casePropagatorFunctionBindings(layerTaskResources);
 				if (result == null) result = casePropagatorFunction(layerTaskResources);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -130,6 +137,7 @@ public class ToUsePropagatorCalcSwitch<T> extends Switch<T> {
 				T result = caseCalcProjectEnd(calcProjectEnd);
 				if (result == null) result = caseToUsePropagatorFunctionProject(calcProjectEnd);
 				if (result == null) result = caseToUsePropagatorFunction(calcProjectEnd);
+				if (result == null) result = casePropagatorFunctionBindings(calcProjectEnd);
 				if (result == null) result = casePropagatorFunction(calcProjectEnd);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -139,6 +147,7 @@ public class ToUsePropagatorCalcSwitch<T> extends Switch<T> {
 				T result = caseCalcTaskHoursItem(calcTaskHoursItem);
 				if (result == null) result = caseToUsePropagatorFunctionTask(calcTaskHoursItem);
 				if (result == null) result = caseToUsePropagatorFunction(calcTaskHoursItem);
+				if (result == null) result = casePropagatorFunctionBindings(calcTaskHoursItem);
 				if (result == null) result = casePropagatorFunction(calcTaskHoursItem);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -148,6 +157,7 @@ public class ToUsePropagatorCalcSwitch<T> extends Switch<T> {
 				T result = caseCalcTaskHoursVar(calcTaskHoursVar);
 				if (result == null) result = caseToUsePropagatorFunctionTask(calcTaskHoursVar);
 				if (result == null) result = caseToUsePropagatorFunction(calcTaskHoursVar);
+				if (result == null) result = casePropagatorFunctionBindings(calcTaskHoursVar);
 				if (result == null) result = casePropagatorFunction(calcTaskHoursVar);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -158,6 +168,7 @@ public class ToUsePropagatorCalcSwitch<T> extends Switch<T> {
 				if (result == null) result = caseCalcTaskHoursVar(calcTaskWithOverheadHoursVar);
 				if (result == null) result = caseToUsePropagatorFunctionTask(calcTaskWithOverheadHoursVar);
 				if (result == null) result = caseToUsePropagatorFunction(calcTaskWithOverheadHoursVar);
+				if (result == null) result = casePropagatorFunctionBindings(calcTaskWithOverheadHoursVar);
 				if (result == null) result = casePropagatorFunction(calcTaskWithOverheadHoursVar);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -167,6 +178,7 @@ public class ToUsePropagatorCalcSwitch<T> extends Switch<T> {
 				T result = caseCalcTaskHours(calcTaskHours);
 				if (result == null) result = caseToUsePropagatorFunctionTask(calcTaskHours);
 				if (result == null) result = caseToUsePropagatorFunction(calcTaskHours);
+				if (result == null) result = casePropagatorFunctionBindings(calcTaskHours);
 				if (result == null) result = casePropagatorFunction(calcTaskHours);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -176,6 +188,7 @@ public class ToUsePropagatorCalcSwitch<T> extends Switch<T> {
 				T result = caseCalcTaskStart(calcTaskStart);
 				if (result == null) result = caseToUsePropagatorFunctionTask(calcTaskStart);
 				if (result == null) result = caseToUsePropagatorFunction(calcTaskStart);
+				if (result == null) result = casePropagatorFunctionBindings(calcTaskStart);
 				if (result == null) result = casePropagatorFunction(calcTaskStart);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -185,6 +198,7 @@ public class ToUsePropagatorCalcSwitch<T> extends Switch<T> {
 				T result = caseCalcTaskEnd(calcTaskEnd);
 				if (result == null) result = caseToUsePropagatorFunctionTask(calcTaskEnd);
 				if (result == null) result = caseToUsePropagatorFunction(calcTaskEnd);
+				if (result == null) result = casePropagatorFunctionBindings(calcTaskEnd);
 				if (result == null) result = casePropagatorFunction(calcTaskEnd);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -194,6 +208,7 @@ public class ToUsePropagatorCalcSwitch<T> extends Switch<T> {
 				T result = caseCalcTaskResources(calcTaskResources);
 				if (result == null) result = caseToUsePropagatorFunctionTask(calcTaskResources);
 				if (result == null) result = caseToUsePropagatorFunction(calcTaskResources);
+				if (result == null) result = casePropagatorFunctionBindings(calcTaskResources);
 				if (result == null) result = casePropagatorFunction(calcTaskResources);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -469,6 +484,21 @@ public class ToUsePropagatorCalcSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePropagatorFunction(PropagatorFunction object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Function Bindings</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Function Bindings</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePropagatorFunctionBindings(PropagatorFunctionBindings object) {
 		return null;
 	}
 

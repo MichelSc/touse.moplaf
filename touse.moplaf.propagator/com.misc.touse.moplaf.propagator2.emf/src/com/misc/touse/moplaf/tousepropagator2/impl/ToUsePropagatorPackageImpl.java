@@ -876,7 +876,7 @@ public class ToUsePropagatorPackageImpl extends EPackageImpl implements ToUsePro
 		taskEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctions());
 		taskWithOverheadEClass.getESuperTypes().add(this.getTask());
 		dependenceEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctions());
-		toUsePropagatorFunctionEClass.getESuperTypes().add(thePropagatorPackage.getPropagatorFunction());
+		toUsePropagatorFunctionEClass.getESuperTypes().add(thePropagatorPackage.getPropagatorFunctionBindings());
 		toUsePropagatorFunctionTaskEClass.getESuperTypes().add(this.getToUsePropagatorFunction());
 		toUsePropagatorFunctionProjectEClass.getESuperTypes().add(this.getToUsePropagatorFunction());
 

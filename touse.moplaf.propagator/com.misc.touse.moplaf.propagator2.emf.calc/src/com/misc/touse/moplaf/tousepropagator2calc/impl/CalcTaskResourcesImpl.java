@@ -3,7 +3,7 @@
 package com.misc.touse.moplaf.tousepropagator2calc.impl;
 
 import com.misc.common.moplaf.propagator2.PropagatorFunction;
-import com.misc.common.moplaf.propagator2.Bindings;
+import com.misc.common.moplaf.propagator2.util.Bindings;
 import com.misc.touse.moplaf.tousepropagator2.Resource;
 import com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorPackage;
 import com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorFunctionTaskImpl;
@@ -164,27 +164,21 @@ public class CalcTaskResourcesImpl extends ToUsePropagatorFunctionTaskImpl imple
 	}
 
 
-	private static Bindings thisClassBindings = doCreateBindings();
-	
-	private static Bindings doCreateBindings(){
-		Bindings resourceBindings = Bindings.constructEClassBindings(ToUsePropagatorPackage.Literals.RESOURCE, true);  // track toucher
-		resourceBindings.addInboundBinding(ToUsePropagatorPackage.Literals.RESOURCE__START);
-		resourceBindings.addInboundBinding(ToUsePropagatorPackage.Literals.RESOURCE__END);
+	private static Bindings resourceBindings = Bindings.constructEClassBindings(ToUsePropagatorPackage.Literals.RESOURCE, true)
+			.addInboundBinding(ToUsePropagatorPackage.Literals.RESOURCE__START)
+			.addInboundBinding(ToUsePropagatorPackage.Literals.RESOURCE__END);
 		
-		Bindings projectBindings = Bindings.constructEClassBindings(ToUsePropagatorPackage.Literals.PROJECT);
-		projectBindings.addInboundBinding(ToUsePropagatorPackage.Literals.PROJECT__RESOURCES, resourceBindings);
+	private static Bindings projectBindings = Bindings.constructEClassBindings(ToUsePropagatorPackage.Literals.PROJECT)
+			.addInboundBinding(ToUsePropagatorPackage.Literals.PROJECT__RESOURCES, resourceBindings);
 
-		Bindings taskBindings = Bindings.constructEClassBindings(ToUsePropagatorPackage.Literals.TASK);
-		taskBindings.addInboundBinding(ToUsePropagatorPackage.Literals.TASK__START);
-		taskBindings.addInboundBinding(ToUsePropagatorPackage.Literals.TASK__END);
-		taskBindings.addInboundBinding(ToUsePropagatorPackage.Literals.TASK__PROJECT, projectBindings);
+	private static Bindings taskBindings = Bindings.constructEClassBindings(ToUsePropagatorPackage.Literals.TASK)
+			.addInboundBinding(ToUsePropagatorPackage.Literals.TASK__START)
+			.addInboundBinding(ToUsePropagatorPackage.Literals.TASK__END)
+			.addInboundBinding(ToUsePropagatorPackage.Literals.TASK__PROJECT, projectBindings);
 		
-		return taskBindings;
-	}
-
 	@Override
 	public Bindings doGetBindings() {
-		return thisClassBindings;
+		return taskBindings;
 	}
 
 	@Override

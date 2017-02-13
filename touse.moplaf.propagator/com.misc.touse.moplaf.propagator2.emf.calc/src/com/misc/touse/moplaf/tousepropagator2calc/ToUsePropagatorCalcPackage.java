@@ -274,6 +274,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	int SCOPE_PROJECT___REFRESH = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH;
 
 	/**
+	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCOPE_PROJECT___DO_GET_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_ANTECEDENTS;
+
+	/**
 	 * The operation id for the '<em>Do Get Parent</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -281,24 +290,6 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int SCOPE_PROJECT___DO_GET_PARENT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_PARENT;
-
-	/**
-	 * The operation id for the '<em>Do Get Explicit Antecedents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCOPE_PROJECT___DO_GET_EXPLICIT_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_EXPLICIT_ANTECEDENTS;
-
-	/**
-	 * The operation id for the '<em>Do Get Bindings</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCOPE_PROJECT___DO_GET_BINDINGS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_BINDINGS;
 
 	/**
 	 * The operation id for the '<em>Do Refresh</em>' operation.
@@ -326,6 +317,24 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int SCOPE_PROJECT___GET_SCOPE = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___GET_SCOPE;
+
+	/**
+	 * The operation id for the '<em>Do Get Bindings</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCOPE_PROJECT___DO_GET_BINDINGS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_BINDINGS;
+
+	/**
+	 * The operation id for the '<em>Do Get Explicit Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCOPE_PROJECT___DO_GET_EXPLICIT_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_EXPLICIT_ANTECEDENTS;
 
 	/**
 	 * The number of operations of the '<em>Scope Project</em>' class.
@@ -563,6 +572,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	int LAYER_TASK_HOURS_ITEM___REFRESH = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH;
 
 	/**
+	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_TASK_HOURS_ITEM___DO_GET_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_ANTECEDENTS;
+
+	/**
 	 * The operation id for the '<em>Do Get Parent</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -570,24 +588,6 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int LAYER_TASK_HOURS_ITEM___DO_GET_PARENT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_PARENT;
-
-	/**
-	 * The operation id for the '<em>Do Get Explicit Antecedents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LAYER_TASK_HOURS_ITEM___DO_GET_EXPLICIT_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_EXPLICIT_ANTECEDENTS;
-
-	/**
-	 * The operation id for the '<em>Do Get Bindings</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LAYER_TASK_HOURS_ITEM___DO_GET_BINDINGS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_BINDINGS;
 
 	/**
 	 * The operation id for the '<em>Do Refresh</em>' operation.
@@ -615,6 +615,24 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int LAYER_TASK_HOURS_ITEM___GET_SCOPE = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___GET_SCOPE;
+
+	/**
+	 * The operation id for the '<em>Do Get Bindings</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_TASK_HOURS_ITEM___DO_GET_BINDINGS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_BINDINGS;
+
+	/**
+	 * The operation id for the '<em>Do Get Explicit Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_TASK_HOURS_ITEM___DO_GET_EXPLICIT_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_EXPLICIT_ANTECEDENTS;
 
 	/**
 	 * The number of operations of the '<em>Layer Task Hours Item</em>' class.
@@ -852,6 +870,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	int LAYER_TASK_HOURS_VAR___REFRESH = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH;
 
 	/**
+	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_TASK_HOURS_VAR___DO_GET_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_ANTECEDENTS;
+
+	/**
 	 * The operation id for the '<em>Do Get Parent</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -859,24 +886,6 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int LAYER_TASK_HOURS_VAR___DO_GET_PARENT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_PARENT;
-
-	/**
-	 * The operation id for the '<em>Do Get Explicit Antecedents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LAYER_TASK_HOURS_VAR___DO_GET_EXPLICIT_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_EXPLICIT_ANTECEDENTS;
-
-	/**
-	 * The operation id for the '<em>Do Get Bindings</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LAYER_TASK_HOURS_VAR___DO_GET_BINDINGS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_BINDINGS;
 
 	/**
 	 * The operation id for the '<em>Do Refresh</em>' operation.
@@ -904,6 +913,24 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int LAYER_TASK_HOURS_VAR___GET_SCOPE = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___GET_SCOPE;
+
+	/**
+	 * The operation id for the '<em>Do Get Bindings</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_TASK_HOURS_VAR___DO_GET_BINDINGS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_BINDINGS;
+
+	/**
+	 * The operation id for the '<em>Do Get Explicit Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_TASK_HOURS_VAR___DO_GET_EXPLICIT_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_EXPLICIT_ANTECEDENTS;
 
 	/**
 	 * The number of operations of the '<em>Layer Task Hours Var</em>' class.
@@ -1159,6 +1186,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	int LAYER_TASK_HOURS___REFRESH = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH;
 
 	/**
+	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_TASK_HOURS___DO_GET_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_ANTECEDENTS;
+
+	/**
 	 * The operation id for the '<em>Do Get Parent</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1166,24 +1202,6 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int LAYER_TASK_HOURS___DO_GET_PARENT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_PARENT;
-
-	/**
-	 * The operation id for the '<em>Do Get Explicit Antecedents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LAYER_TASK_HOURS___DO_GET_EXPLICIT_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_EXPLICIT_ANTECEDENTS;
-
-	/**
-	 * The operation id for the '<em>Do Get Bindings</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LAYER_TASK_HOURS___DO_GET_BINDINGS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_BINDINGS;
 
 	/**
 	 * The operation id for the '<em>Do Refresh</em>' operation.
@@ -1211,6 +1229,24 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int LAYER_TASK_HOURS___GET_SCOPE = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___GET_SCOPE;
+
+	/**
+	 * The operation id for the '<em>Do Get Bindings</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_TASK_HOURS___DO_GET_BINDINGS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_BINDINGS;
+
+	/**
+	 * The operation id for the '<em>Do Get Explicit Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_TASK_HOURS___DO_GET_EXPLICIT_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_EXPLICIT_ANTECEDENTS;
 
 	/**
 	 * The number of operations of the '<em>Layer Task Hours</em>' class.
@@ -1457,6 +1493,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	int LAYER_TASK_TIMES___REFRESH = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH;
 
 	/**
+	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_TASK_TIMES___DO_GET_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_ANTECEDENTS;
+
+	/**
 	 * The operation id for the '<em>Do Get Parent</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1464,24 +1509,6 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int LAYER_TASK_TIMES___DO_GET_PARENT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_PARENT;
-
-	/**
-	 * The operation id for the '<em>Do Get Explicit Antecedents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LAYER_TASK_TIMES___DO_GET_EXPLICIT_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_EXPLICIT_ANTECEDENTS;
-
-	/**
-	 * The operation id for the '<em>Do Get Bindings</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LAYER_TASK_TIMES___DO_GET_BINDINGS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_BINDINGS;
 
 	/**
 	 * The operation id for the '<em>Do Refresh</em>' operation.
@@ -1509,6 +1536,24 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int LAYER_TASK_TIMES___GET_SCOPE = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___GET_SCOPE;
+
+	/**
+	 * The operation id for the '<em>Do Get Bindings</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_TASK_TIMES___DO_GET_BINDINGS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_BINDINGS;
+
+	/**
+	 * The operation id for the '<em>Do Get Explicit Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_TASK_TIMES___DO_GET_EXPLICIT_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_EXPLICIT_ANTECEDENTS;
 
 	/**
 	 * The number of operations of the '<em>Layer Task Times</em>' class.
@@ -1765,6 +1810,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	int LAYER_TASK_RESOURCES___REFRESH = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH;
 
 	/**
+	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_TASK_RESOURCES___DO_GET_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_ANTECEDENTS;
+
+	/**
 	 * The operation id for the '<em>Do Get Parent</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1772,24 +1826,6 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int LAYER_TASK_RESOURCES___DO_GET_PARENT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_PARENT;
-
-	/**
-	 * The operation id for the '<em>Do Get Explicit Antecedents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LAYER_TASK_RESOURCES___DO_GET_EXPLICIT_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_EXPLICIT_ANTECEDENTS;
-
-	/**
-	 * The operation id for the '<em>Do Get Bindings</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LAYER_TASK_RESOURCES___DO_GET_BINDINGS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_BINDINGS;
 
 	/**
 	 * The operation id for the '<em>Do Refresh</em>' operation.
@@ -1817,6 +1853,24 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int LAYER_TASK_RESOURCES___GET_SCOPE = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___GET_SCOPE;
+
+	/**
+	 * The operation id for the '<em>Do Get Bindings</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_TASK_RESOURCES___DO_GET_BINDINGS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_BINDINGS;
+
+	/**
+	 * The operation id for the '<em>Do Get Explicit Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_TASK_RESOURCES___DO_GET_EXPLICIT_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_EXPLICIT_ANTECEDENTS;
 
 	/**
 	 * The number of operations of the '<em>Layer Task Resources</em>' class.
@@ -2053,6 +2107,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	int CALC_PROJECT_END___REFRESH = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH;
 
 	/**
+	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_PROJECT_END___DO_GET_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_ANTECEDENTS;
+
+	/**
 	 * The operation id for the '<em>Do Get Parent</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2060,24 +2123,6 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int CALC_PROJECT_END___DO_GET_PARENT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_PARENT;
-
-	/**
-	 * The operation id for the '<em>Do Get Explicit Antecedents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALC_PROJECT_END___DO_GET_EXPLICIT_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_EXPLICIT_ANTECEDENTS;
-
-	/**
-	 * The operation id for the '<em>Do Get Bindings</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALC_PROJECT_END___DO_GET_BINDINGS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_BINDINGS;
 
 	/**
 	 * The operation id for the '<em>Do Refresh</em>' operation.
@@ -2105,6 +2150,24 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int CALC_PROJECT_END___GET_SCOPE = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___GET_SCOPE;
+
+	/**
+	 * The operation id for the '<em>Do Get Bindings</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_PROJECT_END___DO_GET_BINDINGS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_BINDINGS;
+
+	/**
+	 * The operation id for the '<em>Do Get Explicit Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_PROJECT_END___DO_GET_EXPLICIT_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_EXPLICIT_ANTECEDENTS;
 
 	/**
 	 * The number of operations of the '<em>Calc Project End</em>' class.
@@ -2342,6 +2405,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	int CALC_TASK_HOURS_ITEM___REFRESH = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH;
 
 	/**
+	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_HOURS_ITEM___DO_GET_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_ANTECEDENTS;
+
+	/**
 	 * The operation id for the '<em>Do Get Parent</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2349,24 +2421,6 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int CALC_TASK_HOURS_ITEM___DO_GET_PARENT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_PARENT;
-
-	/**
-	 * The operation id for the '<em>Do Get Explicit Antecedents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALC_TASK_HOURS_ITEM___DO_GET_EXPLICIT_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_EXPLICIT_ANTECEDENTS;
-
-	/**
-	 * The operation id for the '<em>Do Get Bindings</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALC_TASK_HOURS_ITEM___DO_GET_BINDINGS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_BINDINGS;
 
 	/**
 	 * The operation id for the '<em>Do Refresh</em>' operation.
@@ -2394,6 +2448,24 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int CALC_TASK_HOURS_ITEM___GET_SCOPE = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___GET_SCOPE;
+
+	/**
+	 * The operation id for the '<em>Do Get Bindings</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_HOURS_ITEM___DO_GET_BINDINGS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_BINDINGS;
+
+	/**
+	 * The operation id for the '<em>Do Get Explicit Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_HOURS_ITEM___DO_GET_EXPLICIT_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_EXPLICIT_ANTECEDENTS;
 
 	/**
 	 * The number of operations of the '<em>Calc Task Hours Item</em>' class.
@@ -2631,6 +2703,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	int CALC_TASK_HOURS_VAR___REFRESH = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH;
 
 	/**
+	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_HOURS_VAR___DO_GET_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_ANTECEDENTS;
+
+	/**
 	 * The operation id for the '<em>Do Get Parent</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2638,24 +2719,6 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int CALC_TASK_HOURS_VAR___DO_GET_PARENT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_PARENT;
-
-	/**
-	 * The operation id for the '<em>Do Get Explicit Antecedents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALC_TASK_HOURS_VAR___DO_GET_EXPLICIT_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_EXPLICIT_ANTECEDENTS;
-
-	/**
-	 * The operation id for the '<em>Do Get Bindings</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALC_TASK_HOURS_VAR___DO_GET_BINDINGS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_BINDINGS;
 
 	/**
 	 * The operation id for the '<em>Do Refresh</em>' operation.
@@ -2683,6 +2746,24 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int CALC_TASK_HOURS_VAR___GET_SCOPE = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___GET_SCOPE;
+
+	/**
+	 * The operation id for the '<em>Do Get Bindings</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_HOURS_VAR___DO_GET_BINDINGS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_BINDINGS;
+
+	/**
+	 * The operation id for the '<em>Do Get Explicit Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_HOURS_VAR___DO_GET_EXPLICIT_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_EXPLICIT_ANTECEDENTS;
 
 	/**
 	 * The number of operations of the '<em>Calc Task Hours Var</em>' class.
@@ -2920,6 +3001,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR___REFRESH = CALC_TASK_HOURS_VAR___REFRESH;
 
 	/**
+	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR___DO_GET_ANTECEDENTS = CALC_TASK_HOURS_VAR___DO_GET_ANTECEDENTS;
+
+	/**
 	 * The operation id for the '<em>Do Get Parent</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2927,24 +3017,6 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR___DO_GET_PARENT = CALC_TASK_HOURS_VAR___DO_GET_PARENT;
-
-	/**
-	 * The operation id for the '<em>Do Get Explicit Antecedents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR___DO_GET_EXPLICIT_ANTECEDENTS = CALC_TASK_HOURS_VAR___DO_GET_EXPLICIT_ANTECEDENTS;
-
-	/**
-	 * The operation id for the '<em>Do Get Bindings</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR___DO_GET_BINDINGS = CALC_TASK_HOURS_VAR___DO_GET_BINDINGS;
 
 	/**
 	 * The operation id for the '<em>Do Refresh</em>' operation.
@@ -2972,6 +3044,24 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR___GET_SCOPE = CALC_TASK_HOURS_VAR___GET_SCOPE;
+
+	/**
+	 * The operation id for the '<em>Do Get Bindings</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR___DO_GET_BINDINGS = CALC_TASK_HOURS_VAR___DO_GET_BINDINGS;
+
+	/**
+	 * The operation id for the '<em>Do Get Explicit Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR___DO_GET_EXPLICIT_ANTECEDENTS = CALC_TASK_HOURS_VAR___DO_GET_EXPLICIT_ANTECEDENTS;
 
 	/**
 	 * The number of operations of the '<em>Calc Task With Overhead Hours Var</em>' class.
@@ -3209,6 +3299,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	int CALC_TASK_HOURS___REFRESH = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH;
 
 	/**
+	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_HOURS___DO_GET_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_ANTECEDENTS;
+
+	/**
 	 * The operation id for the '<em>Do Get Parent</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3216,24 +3315,6 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int CALC_TASK_HOURS___DO_GET_PARENT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_PARENT;
-
-	/**
-	 * The operation id for the '<em>Do Get Explicit Antecedents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALC_TASK_HOURS___DO_GET_EXPLICIT_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_EXPLICIT_ANTECEDENTS;
-
-	/**
-	 * The operation id for the '<em>Do Get Bindings</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALC_TASK_HOURS___DO_GET_BINDINGS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_BINDINGS;
 
 	/**
 	 * The operation id for the '<em>Do Refresh</em>' operation.
@@ -3261,6 +3342,24 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int CALC_TASK_HOURS___GET_SCOPE = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___GET_SCOPE;
+
+	/**
+	 * The operation id for the '<em>Do Get Bindings</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_HOURS___DO_GET_BINDINGS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_BINDINGS;
+
+	/**
+	 * The operation id for the '<em>Do Get Explicit Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_HOURS___DO_GET_EXPLICIT_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_EXPLICIT_ANTECEDENTS;
 
 	/**
 	 * The number of operations of the '<em>Calc Task Hours</em>' class.
@@ -3498,6 +3597,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	int CALC_TASK_START___REFRESH = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH;
 
 	/**
+	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_START___DO_GET_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_ANTECEDENTS;
+
+	/**
 	 * The operation id for the '<em>Do Get Parent</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3505,24 +3613,6 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int CALC_TASK_START___DO_GET_PARENT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_PARENT;
-
-	/**
-	 * The operation id for the '<em>Do Get Explicit Antecedents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALC_TASK_START___DO_GET_EXPLICIT_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_EXPLICIT_ANTECEDENTS;
-
-	/**
-	 * The operation id for the '<em>Do Get Bindings</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALC_TASK_START___DO_GET_BINDINGS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_BINDINGS;
 
 	/**
 	 * The operation id for the '<em>Do Refresh</em>' operation.
@@ -3550,6 +3640,24 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int CALC_TASK_START___GET_SCOPE = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___GET_SCOPE;
+
+	/**
+	 * The operation id for the '<em>Do Get Bindings</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_START___DO_GET_BINDINGS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_BINDINGS;
+
+	/**
+	 * The operation id for the '<em>Do Get Explicit Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_START___DO_GET_EXPLICIT_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_EXPLICIT_ANTECEDENTS;
 
 	/**
 	 * The number of operations of the '<em>Calc Task Start</em>' class.
@@ -3787,6 +3895,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	int CALC_TASK_END___REFRESH = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH;
 
 	/**
+	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_END___DO_GET_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_ANTECEDENTS;
+
+	/**
 	 * The operation id for the '<em>Do Get Parent</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3794,24 +3911,6 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int CALC_TASK_END___DO_GET_PARENT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_PARENT;
-
-	/**
-	 * The operation id for the '<em>Do Get Explicit Antecedents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALC_TASK_END___DO_GET_EXPLICIT_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_EXPLICIT_ANTECEDENTS;
-
-	/**
-	 * The operation id for the '<em>Do Get Bindings</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALC_TASK_END___DO_GET_BINDINGS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_BINDINGS;
 
 	/**
 	 * The operation id for the '<em>Do Refresh</em>' operation.
@@ -3839,6 +3938,24 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int CALC_TASK_END___GET_SCOPE = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___GET_SCOPE;
+
+	/**
+	 * The operation id for the '<em>Do Get Bindings</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_END___DO_GET_BINDINGS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_BINDINGS;
+
+	/**
+	 * The operation id for the '<em>Do Get Explicit Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_END___DO_GET_EXPLICIT_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_EXPLICIT_ANTECEDENTS;
 
 	/**
 	 * The number of operations of the '<em>Calc Task End</em>' class.
@@ -4076,6 +4193,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	int CALC_TASK_RESOURCES___REFRESH = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH;
 
 	/**
+	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_RESOURCES___DO_GET_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_ANTECEDENTS;
+
+	/**
 	 * The operation id for the '<em>Do Get Parent</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4083,24 +4209,6 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int CALC_TASK_RESOURCES___DO_GET_PARENT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_PARENT;
-
-	/**
-	 * The operation id for the '<em>Do Get Explicit Antecedents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALC_TASK_RESOURCES___DO_GET_EXPLICIT_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_EXPLICIT_ANTECEDENTS;
-
-	/**
-	 * The operation id for the '<em>Do Get Bindings</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALC_TASK_RESOURCES___DO_GET_BINDINGS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_BINDINGS;
 
 	/**
 	 * The operation id for the '<em>Do Refresh</em>' operation.
@@ -4128,6 +4236,24 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int CALC_TASK_RESOURCES___GET_SCOPE = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___GET_SCOPE;
+
+	/**
+	 * The operation id for the '<em>Do Get Bindings</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_RESOURCES___DO_GET_BINDINGS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_BINDINGS;
+
+	/**
+	 * The operation id for the '<em>Do Get Explicit Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_RESOURCES___DO_GET_EXPLICIT_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_EXPLICIT_ANTECEDENTS;
 
 	/**
 	 * The number of operations of the '<em>Calc Task Resources</em>' class.

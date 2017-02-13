@@ -3,7 +3,7 @@
 package com.misc.touse.moplaf.tousepropagator2calc.impl;
 
 import com.misc.common.moplaf.propagator2.PropagatorFunction;
-import com.misc.common.moplaf.propagator2.Bindings;
+import com.misc.common.moplaf.propagator2.util.Bindings;
 import com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorPackage;
 import com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorFunctionTaskImpl;
 import com.misc.touse.moplaf.tousepropagator2calc.CalcTaskHoursVar;
@@ -161,24 +161,17 @@ public class CalcTaskHoursVarImpl extends ToUsePropagatorFunctionTaskImpl implem
 		return this.getConcreteParent();
 	}
 
-	private static Bindings thisClassBindings = doCreateBindings();
-	
-	private static Bindings doCreateBindings(){
-		Bindings projectBindings = Bindings.constructEClassBindings(ToUsePropagatorPackage.Literals.PROJECT);
-		projectBindings.addInboundBinding(ToUsePropagatorPackage.Literals.PROJECT__NOF_RES);
+	private static Bindings projectBindings = Bindings.constructEClassBindings(ToUsePropagatorPackage.Literals.PROJECT)
+			.addInboundBinding(ToUsePropagatorPackage.Literals.PROJECT__NOF_RES);
 
-		Bindings taskHoursVarBindings = Bindings.constructEClassBindings(ToUsePropagatorPackage.Literals.TASK);
-		taskHoursVarBindings.addInboundBinding(ToUsePropagatorPackage.Literals.TASK__PROJECT, projectBindings);
-		taskHoursVarBindings.addInboundBinding(ToUsePropagatorPackage.Literals.TASK__HOURS_VAR_PER_RES);
-		
-		taskHoursVarBindings.addOutboundBinding(ToUsePropagatorPackage.Literals.TASK__HOURS_VAR);
-
-		return taskHoursVarBindings;
-	}
+	private static Bindings taskHoursVarBindings = Bindings.constructEClassBindings(ToUsePropagatorPackage.Literals.TASK)
+			.addInboundBinding(ToUsePropagatorPackage.Literals.TASK__PROJECT, projectBindings)
+			.addInboundBinding(ToUsePropagatorPackage.Literals.TASK__HOURS_VAR_PER_RES)
+			.addOutboundBinding(ToUsePropagatorPackage.Literals.TASK__HOURS_VAR);
 
 	@Override
 	public Bindings doGetBindings() {
-		return thisClassBindings;
+		return taskHoursVarBindings;
 	}
 
 

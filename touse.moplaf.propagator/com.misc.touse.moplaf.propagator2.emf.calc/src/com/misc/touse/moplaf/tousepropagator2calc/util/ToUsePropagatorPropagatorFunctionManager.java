@@ -4,6 +4,7 @@ import org.eclipse.emf.common.CommonPlugin;
 
 import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
 import com.misc.common.moplaf.propagator2.util.PropagatorFunctionManagerAdapter;
+import com.misc.common.moplaf.propagator2.util.PropagatorFunctionsConstructor;
 import com.misc.touse.moplaf.tousepropagator2.Project;
 import com.misc.touse.moplaf.tousepropagator2.Task;
 import com.misc.touse.moplaf.tousepropagator2.TaskWithOverhead;
@@ -30,7 +31,7 @@ public class ToUsePropagatorPropagatorFunctionManager extends PropagatorFunction
 	 * Constructor
 	 */
 	public ToUsePropagatorPropagatorFunctionManager() {
-		super( new PropagatorFunctionsConstructor());
+		super( new Constructor());
 	}
 
 	/**
@@ -52,7 +53,7 @@ public class ToUsePropagatorPropagatorFunctionManager extends PropagatorFunction
 	 * @author michel
 	 *
 	 */
-	static public class PropagatorFunctionsConstructor extends ToUsePropagatorSwitch<Boolean> implements com.misc.common.moplaf.propagator2.PropagatorFunctionsConstructor {
+	static public class Constructor extends ToUsePropagatorSwitch<Boolean> implements PropagatorFunctionsConstructor {
 		@Override
 		public void construct(ObjectWithPropagatorFunctions object) {
 			doSwitch(object);

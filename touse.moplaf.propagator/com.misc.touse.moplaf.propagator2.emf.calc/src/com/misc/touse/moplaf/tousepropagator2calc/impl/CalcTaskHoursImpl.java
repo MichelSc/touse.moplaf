@@ -3,7 +3,7 @@
 package com.misc.touse.moplaf.tousepropagator2calc.impl;
 
 import com.misc.common.moplaf.propagator2.PropagatorFunction;
-import com.misc.common.moplaf.propagator2.Bindings;
+import com.misc.common.moplaf.propagator2.util.Bindings;
 import com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorPackage;
 import com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorFunctionTaskImpl;
 import com.misc.touse.moplaf.tousepropagator2calc.CalcTaskHours;
@@ -161,26 +161,15 @@ public class CalcTaskHoursImpl extends ToUsePropagatorFunctionTaskImpl implement
 		return this.getConcreteParent();
 	}
 
-	private static Bindings thisClassBindings = doCreateBindings();
-	
-	private static Bindings doCreateBindings(){
-		
-		Bindings taskHoursBindings = Bindings.constructEClassBindings(ToUsePropagatorPackage.Literals.TASK);
-		
-		taskHoursBindings.addInboundBinding(ToUsePropagatorPackage.Literals.TASK__HOURS_VAR);
-		taskHoursBindings.addInboundBinding(ToUsePropagatorPackage.Literals.TASK__HOURS_ITEMS);
-		
-		taskHoursBindings.addOutboundBinding(ToUsePropagatorPackage.Literals.TASK__HOURS);
-		
-		return taskHoursBindings;
-	}
+	private static Bindings taskHoursBindings = Bindings.constructEClassBindings(ToUsePropagatorPackage.Literals.TASK)
+			.addInboundBinding(ToUsePropagatorPackage.Literals.TASK__HOURS_VAR)
+			.addInboundBinding(ToUsePropagatorPackage.Literals.TASK__HOURS_ITEMS)
+			.addOutboundBinding(ToUsePropagatorPackage.Literals.TASK__HOURS);
 
 	@Override
 	public Bindings doGetBindings() {
-		return thisClassBindings;
+		return taskHoursBindings;
 	}
-
-
 
 	@Override
 	public void doRefresh() {

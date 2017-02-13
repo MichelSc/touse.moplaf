@@ -4,6 +4,7 @@ package com.misc.touse.moplaf.tousepropagator2.util;
 
 import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
 import com.misc.common.moplaf.propagator2.PropagatorFunction;
+import com.misc.common.moplaf.propagator2.PropagatorFunctionBindings;
 import com.misc.touse.moplaf.tousepropagator2.*;
 
 import org.eclipse.emf.common.notify.Adapter;
@@ -118,6 +119,10 @@ public class ToUsePropagatorAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter casePropagatorFunction(PropagatorFunction object) {
 				return createPropagatorFunctionAdapter();
+			}
+			@Override
+			public Adapter casePropagatorFunctionBindings(PropagatorFunctionBindings object) {
+				return createPropagatorFunctionBindingsAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -318,6 +323,20 @@ public class ToUsePropagatorAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPropagatorFunctionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.propagator2.PropagatorFunctionBindings <em>Function Bindings</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.propagator2.PropagatorFunctionBindings
+	 * @generated
+	 */
+	public Adapter createPropagatorFunctionBindingsAdapter() {
 		return null;
 	}
 

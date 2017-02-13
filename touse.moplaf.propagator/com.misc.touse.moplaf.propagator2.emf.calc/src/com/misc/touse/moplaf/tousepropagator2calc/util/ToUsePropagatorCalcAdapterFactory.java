@@ -4,6 +4,7 @@ package com.misc.touse.moplaf.tousepropagator2calc.util;
 
 import com.misc.common.moplaf.propagator2.PropagatorFunction;
 
+import com.misc.common.moplaf.propagator2.PropagatorFunctionBindings;
 import com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFunction;
 import com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFunctionProject;
 import com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFunctionTask;
@@ -131,6 +132,10 @@ public class ToUsePropagatorCalcAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter casePropagatorFunction(PropagatorFunction object) {
 				return createPropagatorFunctionAdapter();
+			}
+			@Override
+			public Adapter casePropagatorFunctionBindings(PropagatorFunctionBindings object) {
+				return createPropagatorFunctionBindingsAdapter();
 			}
 			@Override
 			public Adapter caseToUsePropagatorFunction(ToUsePropagatorFunction object) {
@@ -413,6 +418,20 @@ public class ToUsePropagatorCalcAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPropagatorFunctionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.propagator2.PropagatorFunctionBindings <em>Function Bindings</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.propagator2.PropagatorFunctionBindings
+	 * @generated
+	 */
+	public Adapter createPropagatorFunctionBindingsAdapter() {
 		return null;
 	}
 

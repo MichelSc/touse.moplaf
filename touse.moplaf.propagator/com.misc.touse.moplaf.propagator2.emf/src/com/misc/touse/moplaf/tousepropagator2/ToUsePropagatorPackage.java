@@ -1110,7 +1110,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_PROPAGATOR_FUNCTION__PARENT = PropagatorPackage.PROPAGATOR_FUNCTION__PARENT;
+	int TO_USE_PROPAGATOR_FUNCTION__PARENT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Antecedents</b></em>' reference list.
@@ -1119,7 +1119,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_PROPAGATOR_FUNCTION__ANTECEDENTS = PropagatorPackage.PROPAGATOR_FUNCTION__ANTECEDENTS;
+	int TO_USE_PROPAGATOR_FUNCTION__ANTECEDENTS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__ANTECEDENTS;
 
 	/**
 	 * The feature id for the '<em><b>Antecedents Sibling</b></em>' reference list.
@@ -1128,7 +1128,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_PROPAGATOR_FUNCTION__ANTECEDENTS_SIBLING = PropagatorPackage.PROPAGATOR_FUNCTION__ANTECEDENTS_SIBLING;
+	int TO_USE_PROPAGATOR_FUNCTION__ANTECEDENTS_SIBLING = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__ANTECEDENTS_SIBLING;
 
 	/**
 	 * The feature id for the '<em><b>Touched</b></em>' attribute.
@@ -1137,7 +1137,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_PROPAGATOR_FUNCTION__TOUCHED = PropagatorPackage.PROPAGATOR_FUNCTION__TOUCHED;
+	int TO_USE_PROPAGATOR_FUNCTION__TOUCHED = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TOUCHED;
 
 	/**
 	 * The feature id for the '<em><b>Touched Children</b></em>' reference list.
@@ -1146,7 +1146,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_PROPAGATOR_FUNCTION__TOUCHED_CHILDREN = PropagatorPackage.PROPAGATOR_FUNCTION__TOUCHED_CHILDREN;
+	int TO_USE_PROPAGATOR_FUNCTION__TOUCHED_CHILDREN = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TOUCHED_CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Touchers</b></em>' reference list.
@@ -1155,7 +1155,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_PROPAGATOR_FUNCTION__TOUCHERS = PropagatorPackage.PROPAGATOR_FUNCTION__TOUCHERS;
+	int TO_USE_PROPAGATOR_FUNCTION__TOUCHERS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TOUCHERS;
 
 	/**
 	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
@@ -1164,7 +1164,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_PROPAGATOR_FUNCTION__ENABLED = PropagatorPackage.PROPAGATOR_FUNCTION__ENABLED;
+	int TO_USE_PROPAGATOR_FUNCTION__ENABLED = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__ENABLED;
 
 	/**
 	 * The feature id for the '<em><b>Object With Propagator Functions</b></em>' container reference.
@@ -1173,7 +1173,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_PROPAGATOR_FUNCTION__OBJECT_WITH_PROPAGATOR_FUNCTIONS = PropagatorPackage.PROPAGATOR_FUNCTION__OBJECT_WITH_PROPAGATOR_FUNCTIONS;
+	int TO_USE_PROPAGATOR_FUNCTION__OBJECT_WITH_PROPAGATOR_FUNCTIONS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__OBJECT_WITH_PROPAGATOR_FUNCTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -1182,7 +1182,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_PROPAGATOR_FUNCTION__TYPE = PropagatorPackage.PROPAGATOR_FUNCTION__TYPE;
+	int TO_USE_PROPAGATOR_FUNCTION__TYPE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Object</b></em>' attribute.
@@ -1191,7 +1191,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_PROPAGATOR_FUNCTION__OBJECT = PropagatorPackage.PROPAGATOR_FUNCTION__OBJECT;
+	int TO_USE_PROPAGATOR_FUNCTION__OBJECT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__OBJECT;
 
 	/**
 	 * The feature id for the '<em><b>Instance</b></em>' attribute.
@@ -1200,7 +1200,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_PROPAGATOR_FUNCTION__INSTANCE = PropagatorPackage.PROPAGATOR_FUNCTION__INSTANCE;
+	int TO_USE_PROPAGATOR_FUNCTION__INSTANCE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__INSTANCE;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1209,7 +1209,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_PROPAGATOR_FUNCTION__DESCRIPTION = PropagatorPackage.PROPAGATOR_FUNCTION__DESCRIPTION;
+	int TO_USE_PROPAGATOR_FUNCTION__DESCRIPTION = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Calculated</b></em>' attribute.
@@ -1218,7 +1218,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_PROPAGATOR_FUNCTION__CALCULATED = PropagatorPackage.PROPAGATOR_FUNCTION_FEATURE_COUNT + 0;
+	int TO_USE_PROPAGATOR_FUNCTION__CALCULATED = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Function</em>' class.
@@ -1227,7 +1227,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_PROPAGATOR_FUNCTION_FEATURE_COUNT = PropagatorPackage.PROPAGATOR_FUNCTION_FEATURE_COUNT + 1;
+	int TO_USE_PROPAGATOR_FUNCTION_FEATURE_COUNT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Enable</em>' operation.
@@ -1236,7 +1236,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_PROPAGATOR_FUNCTION___ENABLE = PropagatorPackage.PROPAGATOR_FUNCTION___ENABLE;
+	int TO_USE_PROPAGATOR_FUNCTION___ENABLE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___ENABLE;
 
 	/**
 	 * The operation id for the '<em>Disable</em>' operation.
@@ -1245,7 +1245,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_PROPAGATOR_FUNCTION___DISABLE = PropagatorPackage.PROPAGATOR_FUNCTION___DISABLE;
+	int TO_USE_PROPAGATOR_FUNCTION___DISABLE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DISABLE;
 
 	/**
 	 * The operation id for the '<em>Touch</em>' operation.
@@ -1254,7 +1254,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_PROPAGATOR_FUNCTION___TOUCH__EOBJECT = PropagatorPackage.PROPAGATOR_FUNCTION___TOUCH__EOBJECT;
+	int TO_USE_PROPAGATOR_FUNCTION___TOUCH__EOBJECT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___TOUCH__EOBJECT;
 
 	/**
 	 * The operation id for the '<em>Untouch</em>' operation.
@@ -1263,7 +1263,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_PROPAGATOR_FUNCTION___UNTOUCH = PropagatorPackage.PROPAGATOR_FUNCTION___UNTOUCH;
+	int TO_USE_PROPAGATOR_FUNCTION___UNTOUCH = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___UNTOUCH;
 
 	/**
 	 * The operation id for the '<em>Refresh Antecedents</em>' operation.
@@ -1272,7 +1272,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_PROPAGATOR_FUNCTION___REFRESH_ANTECEDENTS = PropagatorPackage.PROPAGATOR_FUNCTION___REFRESH_ANTECEDENTS;
+	int TO_USE_PROPAGATOR_FUNCTION___REFRESH_ANTECEDENTS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_ANTECEDENTS;
 
 	/**
 	 * The operation id for the '<em>Refresh This</em>' operation.
@@ -1281,7 +1281,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_PROPAGATOR_FUNCTION___REFRESH_THIS = PropagatorPackage.PROPAGATOR_FUNCTION___REFRESH_THIS;
+	int TO_USE_PROPAGATOR_FUNCTION___REFRESH_THIS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_THIS;
 
 	/**
 	 * The operation id for the '<em>Refresh Children And This</em>' operation.
@@ -1290,7 +1290,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_PROPAGATOR_FUNCTION___REFRESH_CHILDREN_AND_THIS = PropagatorPackage.PROPAGATOR_FUNCTION___REFRESH_CHILDREN_AND_THIS;
+	int TO_USE_PROPAGATOR_FUNCTION___REFRESH_CHILDREN_AND_THIS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_CHILDREN_AND_THIS;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -1299,7 +1299,16 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_PROPAGATOR_FUNCTION___REFRESH = PropagatorPackage.PROPAGATOR_FUNCTION___REFRESH;
+	int TO_USE_PROPAGATOR_FUNCTION___REFRESH = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION___DO_GET_ANTECEDENTS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_GET_ANTECEDENTS;
 
 	/**
 	 * The operation id for the '<em>Do Get Parent</em>' operation.
@@ -1308,25 +1317,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_PROPAGATOR_FUNCTION___DO_GET_PARENT = PropagatorPackage.PROPAGATOR_FUNCTION___DO_GET_PARENT;
-
-	/**
-	 * The operation id for the '<em>Do Get Explicit Antecedents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_PROPAGATOR_FUNCTION___DO_GET_EXPLICIT_ANTECEDENTS = PropagatorPackage.PROPAGATOR_FUNCTION___DO_GET_EXPLICIT_ANTECEDENTS;
-
-	/**
-	 * The operation id for the '<em>Do Get Bindings</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_PROPAGATOR_FUNCTION___DO_GET_BINDINGS = PropagatorPackage.PROPAGATOR_FUNCTION___DO_GET_BINDINGS;
+	int TO_USE_PROPAGATOR_FUNCTION___DO_GET_PARENT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_GET_PARENT;
 
 	/**
 	 * The operation id for the '<em>Do Refresh</em>' operation.
@@ -1335,7 +1326,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_PROPAGATOR_FUNCTION___DO_REFRESH = PropagatorPackage.PROPAGATOR_FUNCTION___DO_REFRESH;
+	int TO_USE_PROPAGATOR_FUNCTION___DO_REFRESH = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_REFRESH;
 
 	/**
 	 * The operation id for the '<em>Do Refresh</em>' operation.
@@ -1344,7 +1335,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_PROPAGATOR_FUNCTION___DO_REFRESH__EOBJECT = PropagatorPackage.PROPAGATOR_FUNCTION___DO_REFRESH__EOBJECT;
+	int TO_USE_PROPAGATOR_FUNCTION___DO_REFRESH__EOBJECT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_REFRESH__EOBJECT;
 
 	/**
 	 * The operation id for the '<em>Get Scope</em>' operation.
@@ -1353,7 +1344,25 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_PROPAGATOR_FUNCTION___GET_SCOPE = PropagatorPackage.PROPAGATOR_FUNCTION___GET_SCOPE;
+	int TO_USE_PROPAGATOR_FUNCTION___GET_SCOPE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___GET_SCOPE;
+
+	/**
+	 * The operation id for the '<em>Do Get Bindings</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION___DO_GET_BINDINGS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_GET_BINDINGS;
+
+	/**
+	 * The operation id for the '<em>Do Get Explicit Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION___DO_GET_EXPLICIT_ANTECEDENTS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_GET_EXPLICIT_ANTECEDENTS;
 
 	/**
 	 * The number of operations of the '<em>Function</em>' class.
@@ -1362,7 +1371,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_PROPAGATOR_FUNCTION_OPERATION_COUNT = PropagatorPackage.PROPAGATOR_FUNCTION_OPERATION_COUNT + 0;
+	int TO_USE_PROPAGATOR_FUNCTION_OPERATION_COUNT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS_OPERATION_COUNT + 0;
 
 
 	/**
@@ -1583,6 +1592,15 @@ public interface ToUsePropagatorPackage extends EPackage {
 	int TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH = TO_USE_PROPAGATOR_FUNCTION___REFRESH;
 
 	/**
+	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_ANTECEDENTS = TO_USE_PROPAGATOR_FUNCTION___DO_GET_ANTECEDENTS;
+
+	/**
 	 * The operation id for the '<em>Do Get Parent</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1590,24 +1608,6 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_PARENT = TO_USE_PROPAGATOR_FUNCTION___DO_GET_PARENT;
-
-	/**
-	 * The operation id for the '<em>Do Get Explicit Antecedents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_EXPLICIT_ANTECEDENTS = TO_USE_PROPAGATOR_FUNCTION___DO_GET_EXPLICIT_ANTECEDENTS;
-
-	/**
-	 * The operation id for the '<em>Do Get Bindings</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_BINDINGS = TO_USE_PROPAGATOR_FUNCTION___DO_GET_BINDINGS;
 
 	/**
 	 * The operation id for the '<em>Do Refresh</em>' operation.
@@ -1635,6 +1635,24 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_PROPAGATOR_FUNCTION_TASK___GET_SCOPE = TO_USE_PROPAGATOR_FUNCTION___GET_SCOPE;
+
+	/**
+	 * The operation id for the '<em>Do Get Bindings</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_BINDINGS = TO_USE_PROPAGATOR_FUNCTION___DO_GET_BINDINGS;
+
+	/**
+	 * The operation id for the '<em>Do Get Explicit Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_EXPLICIT_ANTECEDENTS = TO_USE_PROPAGATOR_FUNCTION___DO_GET_EXPLICIT_ANTECEDENTS;
 
 	/**
 	 * The number of operations of the '<em>Function Task</em>' class.
@@ -1863,6 +1881,15 @@ public interface ToUsePropagatorPackage extends EPackage {
 	int TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH = TO_USE_PROPAGATOR_FUNCTION___REFRESH;
 
 	/**
+	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_ANTECEDENTS = TO_USE_PROPAGATOR_FUNCTION___DO_GET_ANTECEDENTS;
+
+	/**
 	 * The operation id for the '<em>Do Get Parent</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1870,24 +1897,6 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_PARENT = TO_USE_PROPAGATOR_FUNCTION___DO_GET_PARENT;
-
-	/**
-	 * The operation id for the '<em>Do Get Explicit Antecedents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_EXPLICIT_ANTECEDENTS = TO_USE_PROPAGATOR_FUNCTION___DO_GET_EXPLICIT_ANTECEDENTS;
-
-	/**
-	 * The operation id for the '<em>Do Get Bindings</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_BINDINGS = TO_USE_PROPAGATOR_FUNCTION___DO_GET_BINDINGS;
 
 	/**
 	 * The operation id for the '<em>Do Refresh</em>' operation.
@@ -1915,6 +1924,24 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_PROPAGATOR_FUNCTION_PROJECT___GET_SCOPE = TO_USE_PROPAGATOR_FUNCTION___GET_SCOPE;
+
+	/**
+	 * The operation id for the '<em>Do Get Bindings</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_BINDINGS = TO_USE_PROPAGATOR_FUNCTION___DO_GET_BINDINGS;
+
+	/**
+	 * The operation id for the '<em>Do Get Explicit Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_EXPLICIT_ANTECEDENTS = TO_USE_PROPAGATOR_FUNCTION___DO_GET_EXPLICIT_ANTECEDENTS;
 
 	/**
 	 * The number of operations of the '<em>Function Project</em>' class.

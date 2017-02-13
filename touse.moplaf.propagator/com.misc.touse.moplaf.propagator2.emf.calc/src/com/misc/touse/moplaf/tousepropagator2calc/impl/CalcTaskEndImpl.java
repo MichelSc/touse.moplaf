@@ -3,7 +3,7 @@
 package com.misc.touse.moplaf.tousepropagator2calc.impl;
 
 import com.misc.common.moplaf.propagator2.PropagatorFunction;
-import com.misc.common.moplaf.propagator2.Bindings;
+import com.misc.common.moplaf.propagator2.util.Bindings;
 import com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorPackage;
 import com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorFunctionTaskImpl;
 import com.misc.touse.moplaf.tousepropagator2calc.CalcTaskEnd;
@@ -161,22 +161,15 @@ public class CalcTaskEndImpl extends ToUsePropagatorFunctionTaskImpl implements 
 		return this.getConcreteParent();
 	}
 	
-	private static Bindings thisClassBindings = doCreateBindings();
-	
-	private static Bindings doCreateBindings(){
-		Bindings taskEndBindings = Bindings.constructEClassBindings(ToUsePropagatorPackage.Literals.TASK);
-
-		taskEndBindings.addInboundBinding(ToUsePropagatorPackage.Literals.TASK__START);
-		taskEndBindings.addInboundBinding(ToUsePropagatorPackage.Literals.TASK__HOURS);
+	private static Bindings taskEndBindings = Bindings.constructEClassBindings(ToUsePropagatorPackage.Literals.TASK)
+			.addInboundBinding(ToUsePropagatorPackage.Literals.TASK__START)
+			.addInboundBinding(ToUsePropagatorPackage.Literals.TASK__HOURS)
+			.addOutboundBinding(ToUsePropagatorPackage.Literals.TASK__END);
 		
-		taskEndBindings.addOutboundBinding(ToUsePropagatorPackage.Literals.TASK__END);
-		
-		return taskEndBindings;
-	}
 
 	@Override
 	public Bindings doGetBindings() {
-		return thisClassBindings;
+		return taskEndBindings;
 	}
 
 	@Override

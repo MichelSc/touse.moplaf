@@ -2,8 +2,7 @@
  */
 package com.misc.touse.moplaf.tousepropagator2.impl;
 
-import com.misc.common.moplaf.propagator2.impl.PropagatorFunctionImpl;
-
+import com.misc.common.moplaf.propagator2.impl.PropagatorFunctionBindingsImpl;
 import com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFunction;
 import com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorPackage;
 
@@ -26,7 +25,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class ToUsePropagatorFunctionImpl extends PropagatorFunctionImpl implements ToUsePropagatorFunction {
+public class ToUsePropagatorFunctionImpl extends PropagatorFunctionBindingsImpl implements ToUsePropagatorFunction {
 	/**
 	 * The default value of the '{@link #isCalculated() <em>Calculated</em>}' attribute.
 	 * <!-- begin-user-doc -->

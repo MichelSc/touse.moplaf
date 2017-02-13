@@ -4,6 +4,7 @@ package com.misc.touse.moplaf.tousepropagator2.util;
 
 import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
 import com.misc.common.moplaf.propagator2.PropagatorFunction;
+import com.misc.common.moplaf.propagator2.PropagatorFunctionBindings;
 import com.misc.touse.moplaf.tousepropagator2.*;
 
 import org.eclipse.emf.ecore.EObject;
@@ -123,6 +124,7 @@ public class ToUsePropagatorSwitch<T> extends Switch<T> {
 			case ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION: {
 				ToUsePropagatorFunction toUsePropagatorFunction = (ToUsePropagatorFunction)theEObject;
 				T result = caseToUsePropagatorFunction(toUsePropagatorFunction);
+				if (result == null) result = casePropagatorFunctionBindings(toUsePropagatorFunction);
 				if (result == null) result = casePropagatorFunction(toUsePropagatorFunction);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -131,6 +133,7 @@ public class ToUsePropagatorSwitch<T> extends Switch<T> {
 				ToUsePropagatorFunctionTask toUsePropagatorFunctionTask = (ToUsePropagatorFunctionTask)theEObject;
 				T result = caseToUsePropagatorFunctionTask(toUsePropagatorFunctionTask);
 				if (result == null) result = caseToUsePropagatorFunction(toUsePropagatorFunctionTask);
+				if (result == null) result = casePropagatorFunctionBindings(toUsePropagatorFunctionTask);
 				if (result == null) result = casePropagatorFunction(toUsePropagatorFunctionTask);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -139,6 +142,7 @@ public class ToUsePropagatorSwitch<T> extends Switch<T> {
 				ToUsePropagatorFunctionProject toUsePropagatorFunctionProject = (ToUsePropagatorFunctionProject)theEObject;
 				T result = caseToUsePropagatorFunctionProject(toUsePropagatorFunctionProject);
 				if (result == null) result = caseToUsePropagatorFunction(toUsePropagatorFunctionProject);
+				if (result == null) result = casePropagatorFunctionBindings(toUsePropagatorFunctionProject);
 				if (result == null) result = casePropagatorFunction(toUsePropagatorFunctionProject);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -339,6 +343,21 @@ public class ToUsePropagatorSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePropagatorFunction(PropagatorFunction object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Function Bindings</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Function Bindings</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePropagatorFunctionBindings(PropagatorFunctionBindings object) {
 		return null;
 	}
 

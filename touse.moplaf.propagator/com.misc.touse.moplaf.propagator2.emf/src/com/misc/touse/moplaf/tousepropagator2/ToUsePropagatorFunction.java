@@ -2,7 +2,7 @@
  */
 package com.misc.touse.moplaf.tousepropagator2;
 
-import com.misc.common.moplaf.propagator2.PropagatorFunction;
+import com.misc.common.moplaf.propagator2.PropagatorFunctionBindings;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +20,7 @@ import com.misc.common.moplaf.propagator2.PropagatorFunction;
  * @model
  * @generated
  */
-public interface ToUsePropagatorFunction extends PropagatorFunction {
+public interface ToUsePropagatorFunction extends PropagatorFunctionBindings {
 	/**
 	 * Returns the value of the '<em><b>Calculated</b></em>' attribute.
 	 * <!-- begin-user-doc -->
