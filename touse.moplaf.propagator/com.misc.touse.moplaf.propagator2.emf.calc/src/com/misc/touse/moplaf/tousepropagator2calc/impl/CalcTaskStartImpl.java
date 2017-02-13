@@ -3,7 +3,7 @@
 package com.misc.touse.moplaf.tousepropagator2calc.impl;
 
 import com.misc.common.moplaf.propagator2.PropagatorFunction;
-import com.misc.common.moplaf.propagator2.util.Bindings;
+import com.misc.common.moplaf.propagator2.Bindings;
 import com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorPackage;
 import com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorFunctionTaskImpl;
 import com.misc.touse.moplaf.tousepropagator2calc.CalcTaskStart;
@@ -160,7 +160,6 @@ public class CalcTaskStartImpl extends ToUsePropagatorFunctionTaskImpl implement
 		return this.getConcreteParent();
 	}
 	
-	/*
 	private static Bindings thisClassBindings = doCreateBindings();
 	
 	private static Bindings doCreateBindings(){
@@ -182,28 +181,11 @@ public class CalcTaskStartImpl extends ToUsePropagatorFunctionTaskImpl implement
 		
 		return thisTaskBindings;
 	}
-	*/
 	
-	// this is tentative
-	private static Bindings projectBindings = Bindings.constructEClassBindings(ToUsePropagatorPackage.Literals.PROJECT)
-			.addInboundBinding(ToUsePropagatorPackage.Literals.PROJECT__START);
-	
-	private static Bindings taskBeforeBindings = Bindings.constructEClassBindings(ToUsePropagatorPackage.Literals.TASK)
-			.addInboundBinding(ToUsePropagatorPackage.Literals.TASK__END);
-	
-	private static Bindings dependenceBeforeBindings = Bindings.constructEClassBindings(ToUsePropagatorPackage.Literals.DEPENDENCE)
-            .addInboundBinding(ToUsePropagatorPackage.Literals.DEPENDENCE__HOURS)
-    		.addInboundBinding(ToUsePropagatorPackage.Literals.DEPENDENCE__TASK_BEFORE, taskBeforeBindings);
-
-	private static Bindings thisTaskBindings = Bindings.constructEClassBindings(ToUsePropagatorPackage.Literals.TASK)
-            .addInboundBinding(ToUsePropagatorPackage.Literals.TASK__PROJECT, projectBindings)		
-            .addInboundBinding(ToUsePropagatorPackage.Literals.TASK__DEPENDENCES_BEFORE, dependenceBeforeBindings)	
-			.addOutboundBinding(ToUsePropagatorPackage.Literals.TASK__START);
 
 	@Override
 	public Bindings doGetBindings() {
-//		return thisClassBindings;
-		return thisTaskBindings;
+		return thisClassBindings;
 	}
 
 	@Override

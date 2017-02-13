@@ -263,6 +263,24 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
+	int PROJECT___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_EOBJECT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_EOBJECT;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_BOOLEAN = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_BOOLEAN;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
 	int PROJECT___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION;
 
 	/**
@@ -417,6 +435,24 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @ordered
 	 */
 	int TASK_FEATURE_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 12;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_EOBJECT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_EOBJECT;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_BOOLEAN = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_BOOLEAN;
 
 	/**
 	 * The operation id for the '<em>Add Propagator Function</em>' operation.
@@ -678,6 +714,24 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
+	int TASK_WITH_OVERHEAD___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_EOBJECT = TASK___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_EOBJECT;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_WITH_OVERHEAD___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_BOOLEAN = TASK___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_BOOLEAN;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
 	int TASK_WITH_OVERHEAD___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION = TASK___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION;
 
 	/**
@@ -850,6 +904,24 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @ordered
 	 */
 	int DEPENDENCE_FEATURE_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 6;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEPENDENCE___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_EOBJECT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_EOBJECT;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEPENDENCE___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_BOOLEAN = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_BOOLEAN;
 
 	/**
 	 * The operation id for the '<em>Add Propagator Function</em>' operation.

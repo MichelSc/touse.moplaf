@@ -2,7 +2,6 @@
  */
 package com.misc.touse.moplaf.tousepropagator2.impl;
 
-import com.misc.common.moplaf.common.util.EContainmentListener;
 import com.misc.common.moplaf.common.util.EContainmentListenerAdapter;
 import com.misc.common.moplaf.common.util.Util;
 import com.misc.common.moplaf.propagator2.impl.ObjectWithPropagatorFunctionsImpl;

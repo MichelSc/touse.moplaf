@@ -52,7 +52,7 @@ public class ToUsePropagatorPropagatorFunctionManager extends PropagatorFunction
 	 * @author michel
 	 *
 	 */
-	static public class PropagatorFunctionsConstructor extends ToUsePropagatorSwitch<Boolean> implements com.misc.common.moplaf.propagator2.util.PropagatorFunctionsConstructor {
+	static public class PropagatorFunctionsConstructor extends ToUsePropagatorSwitch<Boolean> implements com.misc.common.moplaf.propagator2.PropagatorFunctionsConstructor {
 		@Override
 		public void construct(ObjectWithPropagatorFunctions object) {
 			doSwitch(object);
