@@ -221,11 +221,9 @@ public class LayerTaskResourcesImpl extends ToUsePropagatorFunctionProjectImpl i
 		return this.getConcreteParent();
 	}
 
-
 	@Override
-	public EList<PropagatorFunction> doGetExplicitAntecedents() {
-		EList<PropagatorFunction> list = super.doGetExplicitAntecedents();
-		list.add(this.getAntecedentLayerTaskTimes());
-		return list;
+	public void doCollectExplicitAntecedents(EList<PropagatorFunction> antecedents) {
+		antecedents.add(this.getAntecedentLayerTaskTimes());
 	}
+	
 } //LayerTaskResourcesImpl

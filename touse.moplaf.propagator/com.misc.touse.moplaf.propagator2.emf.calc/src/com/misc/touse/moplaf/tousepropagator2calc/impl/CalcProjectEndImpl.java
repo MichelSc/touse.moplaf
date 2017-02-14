@@ -236,7 +236,6 @@ public class CalcProjectEndImpl extends ToUsePropagatorFunctionProjectImpl imple
 		return projectEndBindings;
 	}
 
-
 	@Override
 	public void doRefresh() {
 		this.getProject().refreshEnd();
@@ -244,10 +243,9 @@ public class CalcProjectEndImpl extends ToUsePropagatorFunctionProjectImpl imple
 	}
 
 	@Override
-	public EList<PropagatorFunction> doGetExplicitAntecedents() {
-		EList<PropagatorFunction> list = super.doGetExplicitAntecedents();
-		list.add(this.getAntecedentLayerTaskTimes());
-		return list;
+	public void doCollectExplicitAntecedents(EList<PropagatorFunction> antecedents) {
+		antecedents.add(this.getAntecedentLayerTaskTimes());
 	}
+
 	
 } //CalcProjectEndImpl

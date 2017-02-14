@@ -283,11 +283,9 @@ public class LayerTaskHoursImpl extends ToUsePropagatorFunctionProjectImpl imple
 	}
 
 	@Override
-	public EList<PropagatorFunction> doGetExplicitAntecedents() {
-		EList<PropagatorFunction> list = super.doGetExplicitAntecedents();
-		list.add(this.getAntecedentLayerTaskHoursItem());
-		list.add(this.getAntecedentLayerTaskHoursVar());
-		return list;
+	public void doCollectExplicitAntecedents(EList<PropagatorFunction> antecedents) {
+		antecedents.add(this.getAntecedentLayerTaskHoursItem());
+		antecedents.add(this.getAntecedentLayerTaskHoursVar());
 	}
 	
 } //LayerTaskHoursImpl

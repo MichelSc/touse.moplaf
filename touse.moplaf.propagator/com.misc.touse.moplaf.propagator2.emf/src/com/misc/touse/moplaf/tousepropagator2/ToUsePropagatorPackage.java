@@ -1356,13 +1356,13 @@ public interface ToUsePropagatorPackage extends EPackage {
 	int TO_USE_PROPAGATOR_FUNCTION___DO_GET_BINDINGS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_GET_BINDINGS;
 
 	/**
-	 * The operation id for the '<em>Do Get Explicit Antecedents</em>' operation.
+	 * The operation id for the '<em>Do Collect Explicit Antecedents</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_PROPAGATOR_FUNCTION___DO_GET_EXPLICIT_ANTECEDENTS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_GET_EXPLICIT_ANTECEDENTS;
+	int TO_USE_PROPAGATOR_FUNCTION___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST;
 
 	/**
 	 * The number of operations of the '<em>Function</em>' class.
@@ -1646,13 +1646,13 @@ public interface ToUsePropagatorPackage extends EPackage {
 	int TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_BINDINGS = TO_USE_PROPAGATOR_FUNCTION___DO_GET_BINDINGS;
 
 	/**
-	 * The operation id for the '<em>Do Get Explicit Antecedents</em>' operation.
+	 * The operation id for the '<em>Do Collect Explicit Antecedents</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_PROPAGATOR_FUNCTION_TASK___DO_GET_EXPLICIT_ANTECEDENTS = TO_USE_PROPAGATOR_FUNCTION___DO_GET_EXPLICIT_ANTECEDENTS;
+	int TO_USE_PROPAGATOR_FUNCTION_TASK___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST = TO_USE_PROPAGATOR_FUNCTION___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST;
 
 	/**
 	 * The number of operations of the '<em>Function Task</em>' class.
@@ -1935,13 +1935,13 @@ public interface ToUsePropagatorPackage extends EPackage {
 	int TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_BINDINGS = TO_USE_PROPAGATOR_FUNCTION___DO_GET_BINDINGS;
 
 	/**
-	 * The operation id for the '<em>Do Get Explicit Antecedents</em>' operation.
+	 * The operation id for the '<em>Do Collect Explicit Antecedents</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_GET_EXPLICIT_ANTECEDENTS = TO_USE_PROPAGATOR_FUNCTION___DO_GET_EXPLICIT_ANTECEDENTS;
+	int TO_USE_PROPAGATOR_FUNCTION_PROJECT___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST = TO_USE_PROPAGATOR_FUNCTION___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST;
 
 	/**
 	 * The number of operations of the '<em>Function Project</em>' class.
