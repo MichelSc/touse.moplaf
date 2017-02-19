@@ -16,15 +16,12 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -45,7 +42,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class ConcreteObjectWithTimeLineImpl extends SomeBaseClassImpl implements ConcreteObjectWithTimeLine {
 	/**
-	 * The cached value of the '{@link #getBuckets() <em>Buckets</em>}' containment reference list.
+	 * The cached value of the '{@link #getBuckets() <em>Buckets</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getBuckets()
@@ -115,7 +112,7 @@ public class ConcreteObjectWithTimeLineImpl extends SomeBaseClassImpl implements
 	 */
 	public EList<ObjectTimeBucket> getBuckets() {
 		if (buckets == null) {
-			buckets = new EObjectContainmentEList<ObjectTimeBucket>(ObjectTimeBucket.class, this, TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__BUCKETS);
+			buckets = new EObjectResolvingEList<ObjectTimeBucket>(ObjectTimeBucket.class, this, TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__BUCKETS);
 		}
 		return buckets;
 	}
@@ -280,20 +277,6 @@ public class ConcreteObjectWithTimeLineImpl extends SomeBaseClassImpl implements
 	public ObjectTimeBucket getBucket(TimeBucket bucket) {
 		this.currentObjectTimeBucket = ObjectWithTimeLineImpl.getBucket(this, bucket, this.currentObjectTimeBucket);
 		return this.currentObjectTimeBucket;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__BUCKETS:
-				return ((InternalEList<?>)getBuckets()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

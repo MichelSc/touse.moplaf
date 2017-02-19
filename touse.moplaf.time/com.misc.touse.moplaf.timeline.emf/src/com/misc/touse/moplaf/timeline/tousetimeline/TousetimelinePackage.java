@@ -2,8 +2,7 @@
  */
 package com.misc.touse.moplaf.timeline.tousetimeline;
 
-import com.misc.common.moplaf.propagator.PropagatorPackage;
-import com.misc.common.moplaf.time.continuous.ContinuousPackage;
+import com.misc.common.moplaf.time.continuous.TimeContinuousPackage;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
@@ -70,13 +69,22 @@ public interface TousetimelinePackage extends EPackage {
 	int DOMAIN = 0;
 
 	/**
+	 * The feature id for the '<em><b>Propagator Functions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN__PROPAGATOR_FUNCTIONS = com.misc.common.moplaf.propagator2.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS__PROPAGATOR_FUNCTIONS;
+
+	/**
 	 * The feature id for the '<em><b>Time Line Merges</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN__TIME_LINE_MERGES = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_SCOPE_FEATURE_COUNT + 0;
+	int DOMAIN__TIME_LINE_MERGES = com.misc.common.moplaf.propagator2.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Distribution</b></em>' containment reference list.
@@ -85,7 +93,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN__DISTRIBUTION = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_SCOPE_FEATURE_COUNT + 1;
+	int DOMAIN__DISTRIBUTION = com.misc.common.moplaf.propagator2.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -94,7 +102,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN__NAME = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_SCOPE_FEATURE_COUNT + 2;
+	int DOMAIN__NAME = com.misc.common.moplaf.propagator2.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Timelines</b></em>' containment reference list.
@@ -103,7 +111,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN__TIMELINES = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_SCOPE_FEATURE_COUNT + 3;
+	int DOMAIN__TIMELINES = com.misc.common.moplaf.propagator2.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Objects With Time Line</b></em>' containment reference list.
@@ -112,7 +120,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN__OBJECTS_WITH_TIME_LINE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_SCOPE_FEATURE_COUNT + 4;
+	int DOMAIN__OBJECTS_WITH_TIME_LINE = com.misc.common.moplaf.propagator2.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Domain</em>' class.
@@ -121,25 +129,43 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_FEATURE_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_SCOPE_FEATURE_COUNT + 5;
+	int DOMAIN_FEATURE_COUNT = com.misc.common.moplaf.propagator2.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 5;
 
 	/**
-	 * The operation id for the '<em>Refresh</em>' operation.
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN___REFRESH = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_SCOPE___REFRESH;
+	int DOMAIN___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_EOBJECT = com.misc.common.moplaf.propagator2.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_EOBJECT;
 
 	/**
-	 * The operation id for the '<em>Add Propagator Function Adapter</em>' operation.
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN___ADD_PROPAGATOR_FUNCTION_ADAPTER = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_SCOPE_OPERATION_COUNT + 0;
+	int DOMAIN___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_BOOLEAN = com.misc.common.moplaf.propagator2.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_BOOLEAN;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION = com.misc.common.moplaf.propagator2.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION;
+
+	/**
+	 * The operation id for the '<em>Get Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN___GET_PROPAGATOR_FUNCTION__ECLASS = com.misc.common.moplaf.propagator2.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___GET_PROPAGATOR_FUNCTION__ECLASS;
 
 	/**
 	 * The number of operations of the '<em>Domain</em>' class.
@@ -148,7 +174,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_OPERATION_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_SCOPE_OPERATION_COUNT + 1;
+	int DOMAIN_OPERATION_COUNT = com.misc.common.moplaf.propagator2.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainDistributionImpl <em>Domain Distribution</em>}' class.
@@ -161,13 +187,22 @@ public interface TousetimelinePackage extends EPackage {
 	int DOMAIN_DISTRIBUTION = 1;
 
 	/**
+	 * The feature id for the '<em><b>Propagator Functions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_DISTRIBUTION__PROPAGATOR_FUNCTIONS = TimeContinuousPackage.DISTRIBUTION__PROPAGATOR_FUNCTIONS;
+
+	/**
 	 * The feature id for the '<em><b>Time Unit</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION__TIME_UNIT = ContinuousPackage.DISTRIBUTION__TIME_UNIT;
+	int DOMAIN_DISTRIBUTION__TIME_UNIT = TimeContinuousPackage.DISTRIBUTION__TIME_UNIT;
 
 	/**
 	 * The feature id for the '<em><b>Horizon Start</b></em>' attribute.
@@ -176,7 +211,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION__HORIZON_START = ContinuousPackage.DISTRIBUTION__HORIZON_START;
+	int DOMAIN_DISTRIBUTION__HORIZON_START = TimeContinuousPackage.DISTRIBUTION__HORIZON_START;
 
 	/**
 	 * The feature id for the '<em><b>Horizon End</b></em>' attribute.
@@ -185,7 +220,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION__HORIZON_END = ContinuousPackage.DISTRIBUTION__HORIZON_END;
+	int DOMAIN_DISTRIBUTION__HORIZON_END = TimeContinuousPackage.DISTRIBUTION__HORIZON_END;
 
 	/**
 	 * The feature id for the '<em><b>Child Events</b></em>' containment reference list.
@@ -194,7 +229,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION__CHILD_EVENTS = ContinuousPackage.DISTRIBUTION__CHILD_EVENTS;
+	int DOMAIN_DISTRIBUTION__CHILD_EVENTS = TimeContinuousPackage.DISTRIBUTION__CHILD_EVENTS;
 
 	/**
 	 * The feature id for the '<em><b>Sequence Events</b></em>' reference list.
@@ -203,7 +238,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION__SEQUENCE_EVENTS = ContinuousPackage.DISTRIBUTION__SEQUENCE_EVENTS;
+	int DOMAIN_DISTRIBUTION__SEQUENCE_EVENTS = TimeContinuousPackage.DISTRIBUTION__SEQUENCE_EVENTS;
 
 	/**
 	 * The feature id for the '<em><b>Start</b></em>' containment reference.
@@ -212,7 +247,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION__START = ContinuousPackage.DISTRIBUTION__START;
+	int DOMAIN_DISTRIBUTION__START = TimeContinuousPackage.DISTRIBUTION__START;
 
 	/**
 	 * The feature id for the '<em><b>End</b></em>' containment reference.
@@ -221,7 +256,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION__END = ContinuousPackage.DISTRIBUTION__END;
+	int DOMAIN_DISTRIBUTION__END = TimeContinuousPackage.DISTRIBUTION__END;
 
 	/**
 	 * The feature id for the '<em><b>Events Providers</b></em>' containment reference list.
@@ -230,7 +265,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION__EVENTS_PROVIDERS = ContinuousPackage.DISTRIBUTION__EVENTS_PROVIDERS;
+	int DOMAIN_DISTRIBUTION__EVENTS_PROVIDERS = TimeContinuousPackage.DISTRIBUTION__EVENTS_PROVIDERS;
 
 	/**
 	 * The feature id for the '<em><b>Parent Distribution</b></em>' reference.
@@ -239,7 +274,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION__PARENT_DISTRIBUTION = ContinuousPackage.DISTRIBUTION__PARENT_DISTRIBUTION;
+	int DOMAIN_DISTRIBUTION__PARENT_DISTRIBUTION = TimeContinuousPackage.DISTRIBUTION__PARENT_DISTRIBUTION;
 
 	/**
 	 * The feature id for the '<em><b>Child Distribution</b></em>' reference list.
@@ -248,7 +283,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION__CHILD_DISTRIBUTION = ContinuousPackage.DISTRIBUTION__CHILD_DISTRIBUTION;
+	int DOMAIN_DISTRIBUTION__CHILD_DISTRIBUTION = TimeContinuousPackage.DISTRIBUTION__CHILD_DISTRIBUTION;
 
 	/**
 	 * The feature id for the '<em><b>Provided Events</b></em>' reference list.
@@ -257,7 +292,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION__PROVIDED_EVENTS = ContinuousPackage.DISTRIBUTION__PROVIDED_EVENTS;
+	int DOMAIN_DISTRIBUTION__PROVIDED_EVENTS = TimeContinuousPackage.DISTRIBUTION__PROVIDED_EVENTS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -266,7 +301,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION__NAME = ContinuousPackage.DISTRIBUTION_FEATURE_COUNT + 0;
+	int DOMAIN_DISTRIBUTION__NAME = TimeContinuousPackage.DISTRIBUTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -275,7 +310,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION__COLOR = ContinuousPackage.DISTRIBUTION_FEATURE_COUNT + 1;
+	int DOMAIN_DISTRIBUTION__COLOR = TimeContinuousPackage.DISTRIBUTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Functions</b></em>' containment reference list.
@@ -284,7 +319,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION__FUNCTIONS = ContinuousPackage.DISTRIBUTION_FEATURE_COUNT + 2;
+	int DOMAIN_DISTRIBUTION__FUNCTIONS = TimeContinuousPackage.DISTRIBUTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Possibles</b></em>' containment reference list.
@@ -293,7 +328,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION__POSSIBLES = ContinuousPackage.DISTRIBUTION_FEATURE_COUNT + 3;
+	int DOMAIN_DISTRIBUTION__POSSIBLES = TimeContinuousPackage.DISTRIBUTION_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Domain Distribution</em>' class.
@@ -302,16 +337,43 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION_FEATURE_COUNT = ContinuousPackage.DISTRIBUTION_FEATURE_COUNT + 4;
+	int DOMAIN_DISTRIBUTION_FEATURE_COUNT = TimeContinuousPackage.DISTRIBUTION_FEATURE_COUNT + 4;
 
 	/**
-	 * The operation id for the '<em>Add Propagator Function Adapter</em>' operation.
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___ADD_PROPAGATOR_FUNCTION_ADAPTER = ContinuousPackage.DISTRIBUTION___ADD_PROPAGATOR_FUNCTION_ADAPTER;
+	int DOMAIN_DISTRIBUTION___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_EOBJECT = TimeContinuousPackage.DISTRIBUTION___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_EOBJECT;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_DISTRIBUTION___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_BOOLEAN = TimeContinuousPackage.DISTRIBUTION___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_BOOLEAN;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_DISTRIBUTION___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION = TimeContinuousPackage.DISTRIBUTION___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION;
+
+	/**
+	 * The operation id for the '<em>Get Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_DISTRIBUTION___GET_PROPAGATOR_FUNCTION__ECLASS = TimeContinuousPackage.DISTRIBUTION___GET_PROPAGATOR_FUNCTION__ECLASS;
 
 	/**
 	 * The operation id for the '<em>Get Duration</em>' operation.
@@ -320,7 +382,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_DURATION__DATE_DATE = ContinuousPackage.DISTRIBUTION___GET_DURATION__DATE_DATE;
+	int DOMAIN_DISTRIBUTION___GET_DURATION__DATE_DATE = TimeContinuousPackage.DISTRIBUTION___GET_DURATION__DATE_DATE;
 
 	/**
 	 * The operation id for the '<em>Get Moment</em>' operation.
@@ -329,7 +391,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_MOMENT__DATE_FLOAT = ContinuousPackage.DISTRIBUTION___GET_MOMENT__DATE_FLOAT;
+	int DOMAIN_DISTRIBUTION___GET_MOMENT__DATE_FLOAT = TimeContinuousPackage.DISTRIBUTION___GET_MOMENT__DATE_FLOAT;
 
 	/**
 	 * The operation id for the '<em>Get Event Before</em>' operation.
@@ -338,7 +400,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_EVENT_BEFORE__DATE = ContinuousPackage.DISTRIBUTION___GET_EVENT_BEFORE__DATE;
+	int DOMAIN_DISTRIBUTION___GET_EVENT_BEFORE__DATE = TimeContinuousPackage.DISTRIBUTION___GET_EVENT_BEFORE__DATE;
 
 	/**
 	 * The operation id for the '<em>Get Event Strict Before</em>' operation.
@@ -347,7 +409,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_EVENT_STRICT_BEFORE__DATE = ContinuousPackage.DISTRIBUTION___GET_EVENT_STRICT_BEFORE__DATE;
+	int DOMAIN_DISTRIBUTION___GET_EVENT_STRICT_BEFORE__DATE = TimeContinuousPackage.DISTRIBUTION___GET_EVENT_STRICT_BEFORE__DATE;
 
 	/**
 	 * The operation id for the '<em>Get Event After</em>' operation.
@@ -356,7 +418,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_EVENT_AFTER__DATE = ContinuousPackage.DISTRIBUTION___GET_EVENT_AFTER__DATE;
+	int DOMAIN_DISTRIBUTION___GET_EVENT_AFTER__DATE = TimeContinuousPackage.DISTRIBUTION___GET_EVENT_AFTER__DATE;
 
 	/**
 	 * The operation id for the '<em>Get Event Strict After</em>' operation.
@@ -365,7 +427,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_EVENT_STRICT_AFTER__DATE = ContinuousPackage.DISTRIBUTION___GET_EVENT_STRICT_AFTER__DATE;
+	int DOMAIN_DISTRIBUTION___GET_EVENT_STRICT_AFTER__DATE = TimeContinuousPackage.DISTRIBUTION___GET_EVENT_STRICT_AFTER__DATE;
 
 	/**
 	 * The operation id for the '<em>Get Amount Before</em>' operation.
@@ -374,7 +436,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_AMOUNT_BEFORE__DATE = ContinuousPackage.DISTRIBUTION___GET_AMOUNT_BEFORE__DATE;
+	int DOMAIN_DISTRIBUTION___GET_AMOUNT_BEFORE__DATE = TimeContinuousPackage.DISTRIBUTION___GET_AMOUNT_BEFORE__DATE;
 
 	/**
 	 * The operation id for the '<em>Get Amount After</em>' operation.
@@ -383,7 +445,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_AMOUNT_AFTER__DATE = ContinuousPackage.DISTRIBUTION___GET_AMOUNT_AFTER__DATE;
+	int DOMAIN_DISTRIBUTION___GET_AMOUNT_AFTER__DATE = TimeContinuousPackage.DISTRIBUTION___GET_AMOUNT_AFTER__DATE;
 
 	/**
 	 * The operation id for the '<em>Get Amount</em>' operation.
@@ -392,7 +454,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_AMOUNT__DATE = ContinuousPackage.DISTRIBUTION___GET_AMOUNT__DATE;
+	int DOMAIN_DISTRIBUTION___GET_AMOUNT__DATE = TimeContinuousPackage.DISTRIBUTION___GET_AMOUNT__DATE;
 
 	/**
 	 * The operation id for the '<em>Get Slope Before</em>' operation.
@@ -401,7 +463,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_SLOPE_BEFORE__DATE = ContinuousPackage.DISTRIBUTION___GET_SLOPE_BEFORE__DATE;
+	int DOMAIN_DISTRIBUTION___GET_SLOPE_BEFORE__DATE = TimeContinuousPackage.DISTRIBUTION___GET_SLOPE_BEFORE__DATE;
 
 	/**
 	 * The operation id for the '<em>Get Slope After</em>' operation.
@@ -410,7 +472,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_SLOPE_AFTER__DATE = ContinuousPackage.DISTRIBUTION___GET_SLOPE_AFTER__DATE;
+	int DOMAIN_DISTRIBUTION___GET_SLOPE_AFTER__DATE = TimeContinuousPackage.DISTRIBUTION___GET_SLOPE_AFTER__DATE;
 
 	/**
 	 * The operation id for the '<em>Get Min Amount</em>' operation.
@@ -419,7 +481,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_MIN_AMOUNT__DATE_DATE = ContinuousPackage.DISTRIBUTION___GET_MIN_AMOUNT__DATE_DATE;
+	int DOMAIN_DISTRIBUTION___GET_MIN_AMOUNT__DATE_DATE = TimeContinuousPackage.DISTRIBUTION___GET_MIN_AMOUNT__DATE_DATE;
 
 	/**
 	 * The operation id for the '<em>Get Max Amount</em>' operation.
@@ -428,7 +490,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_MAX_AMOUNT__DATE_DATE = ContinuousPackage.DISTRIBUTION___GET_MAX_AMOUNT__DATE_DATE;
+	int DOMAIN_DISTRIBUTION___GET_MAX_AMOUNT__DATE_DATE = TimeContinuousPackage.DISTRIBUTION___GET_MAX_AMOUNT__DATE_DATE;
 
 	/**
 	 * The operation id for the '<em>Get Average Amount</em>' operation.
@@ -437,7 +499,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_AVERAGE_AMOUNT__DATE_DATE = ContinuousPackage.DISTRIBUTION___GET_AVERAGE_AMOUNT__DATE_DATE;
+	int DOMAIN_DISTRIBUTION___GET_AVERAGE_AMOUNT__DATE_DATE = TimeContinuousPackage.DISTRIBUTION___GET_AVERAGE_AMOUNT__DATE_DATE;
 
 	/**
 	 * The operation id for the '<em>Get Cumulated Amount</em>' operation.
@@ -446,7 +508,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_CUMULATED_AMOUNT__DATE_DATE = ContinuousPackage.DISTRIBUTION___GET_CUMULATED_AMOUNT__DATE_DATE;
+	int DOMAIN_DISTRIBUTION___GET_CUMULATED_AMOUNT__DATE_DATE = TimeContinuousPackage.DISTRIBUTION___GET_CUMULATED_AMOUNT__DATE_DATE;
 
 	/**
 	 * The operation id for the '<em>Get Earliest Below</em>' operation.
@@ -455,7 +517,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_EARLIEST_BELOW__DATE_FLOAT_FLOAT = ContinuousPackage.DISTRIBUTION___GET_EARLIEST_BELOW__DATE_FLOAT_FLOAT;
+	int DOMAIN_DISTRIBUTION___GET_EARLIEST_BELOW__DATE_FLOAT_FLOAT = TimeContinuousPackage.DISTRIBUTION___GET_EARLIEST_BELOW__DATE_FLOAT_FLOAT;
 
 	/**
 	 * The operation id for the '<em>Get Latest Below</em>' operation.
@@ -464,7 +526,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_LATEST_BELOW__DATE_FLOAT_FLOAT = ContinuousPackage.DISTRIBUTION___GET_LATEST_BELOW__DATE_FLOAT_FLOAT;
+	int DOMAIN_DISTRIBUTION___GET_LATEST_BELOW__DATE_FLOAT_FLOAT = TimeContinuousPackage.DISTRIBUTION___GET_LATEST_BELOW__DATE_FLOAT_FLOAT;
 
 	/**
 	 * The operation id for the '<em>Get Earliest Above</em>' operation.
@@ -473,7 +535,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_EARLIEST_ABOVE__DATE_FLOAT_FLOAT = ContinuousPackage.DISTRIBUTION___GET_EARLIEST_ABOVE__DATE_FLOAT_FLOAT;
+	int DOMAIN_DISTRIBUTION___GET_EARLIEST_ABOVE__DATE_FLOAT_FLOAT = TimeContinuousPackage.DISTRIBUTION___GET_EARLIEST_ABOVE__DATE_FLOAT_FLOAT;
 
 	/**
 	 * The operation id for the '<em>Get Latest Above</em>' operation.
@@ -482,7 +544,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_LATEST_ABOVE__DATE_FLOAT_FLOAT = ContinuousPackage.DISTRIBUTION___GET_LATEST_ABOVE__DATE_FLOAT_FLOAT;
+	int DOMAIN_DISTRIBUTION___GET_LATEST_ABOVE__DATE_FLOAT_FLOAT = TimeContinuousPackage.DISTRIBUTION___GET_LATEST_ABOVE__DATE_FLOAT_FLOAT;
 
 	/**
 	 * The operation id for the '<em>Get Earliest Output Possible</em>' operation.
@@ -491,7 +553,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_EARLIEST_OUTPUT_POSSIBLE__FLOAT_DATE_FLOAT_FLOAT = ContinuousPackage.DISTRIBUTION___GET_EARLIEST_OUTPUT_POSSIBLE__FLOAT_DATE_FLOAT_FLOAT;
+	int DOMAIN_DISTRIBUTION___GET_EARLIEST_OUTPUT_POSSIBLE__FLOAT_DATE_FLOAT_FLOAT = TimeContinuousPackage.DISTRIBUTION___GET_EARLIEST_OUTPUT_POSSIBLE__FLOAT_DATE_FLOAT_FLOAT;
 
 	/**
 	 * The operation id for the '<em>Refresh Init</em>' operation.
@@ -500,7 +562,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___REFRESH_INIT = ContinuousPackage.DISTRIBUTION___REFRESH_INIT;
+	int DOMAIN_DISTRIBUTION___REFRESH_INIT = TimeContinuousPackage.DISTRIBUTION___REFRESH_INIT;
 
 	/**
 	 * The operation id for the '<em>Refresh Sequence</em>' operation.
@@ -509,7 +571,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___REFRESH_SEQUENCE = ContinuousPackage.DISTRIBUTION___REFRESH_SEQUENCE;
+	int DOMAIN_DISTRIBUTION___REFRESH_SEQUENCE = TimeContinuousPackage.DISTRIBUTION___REFRESH_SEQUENCE;
 
 	/**
 	 * The operation id for the '<em>Refresh Child Event</em>' operation.
@@ -518,16 +580,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___REFRESH_CHILD_EVENT = ContinuousPackage.DISTRIBUTION___REFRESH_CHILD_EVENT;
-
-	/**
-	 * The operation id for the '<em>Refresh</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_DISTRIBUTION___REFRESH = ContinuousPackage.DISTRIBUTION___REFRESH;
+	int DOMAIN_DISTRIBUTION___REFRESH_CHILD_EVENT = TimeContinuousPackage.DISTRIBUTION___REFRESH_CHILD_EVENT;
 
 	/**
 	 * The operation id for the '<em>Refresh Provided Events</em>' operation.
@@ -536,7 +589,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___REFRESH_PROVIDED_EVENTS = ContinuousPackage.DISTRIBUTION___REFRESH_PROVIDED_EVENTS;
+	int DOMAIN_DISTRIBUTION___REFRESH_PROVIDED_EVENTS = TimeContinuousPackage.DISTRIBUTION___REFRESH_PROVIDED_EVENTS;
 
 	/**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -545,7 +598,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___ACCEPT__DATE_DATE_DISTRIBUTIONVISITOR = ContinuousPackage.DISTRIBUTION___ACCEPT__DATE_DATE_DISTRIBUTIONVISITOR;
+	int DOMAIN_DISTRIBUTION___ACCEPT__DATE_DATE_DISTRIBUTIONVISITOR = TimeContinuousPackage.DISTRIBUTION___ACCEPT__DATE_DATE_DISTRIBUTIONVISITOR;
 
 	/**
 	 * The number of operations of the '<em>Domain Distribution</em>' class.
@@ -554,7 +607,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION_OPERATION_COUNT = ContinuousPackage.DISTRIBUTION_OPERATION_COUNT + 0;
+	int DOMAIN_DISTRIBUTION_OPERATION_COUNT = TimeContinuousPackage.DISTRIBUTION_OPERATION_COUNT + 0;
 
 
 	/**
@@ -578,13 +631,22 @@ public interface TousetimelinePackage extends EPackage {
 	int FUNCTION_INTERVAL = 3;
 
 	/**
+	 * The feature id for the '<em><b>Propagator Functions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_INTERVAL__PROPAGATOR_FUNCTIONS = com.misc.common.moplaf.propagator2.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS__PROPAGATOR_FUNCTIONS;
+
+	/**
 	 * The feature id for the '<em><b>From</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_INTERVAL__FROM = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 0;
+	int FUNCTION_INTERVAL__FROM = com.misc.common.moplaf.propagator2.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>To</b></em>' attribute.
@@ -593,7 +655,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_INTERVAL__TO = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 1;
+	int FUNCTION_INTERVAL__TO = com.misc.common.moplaf.propagator2.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Distribution</b></em>' container reference.
@@ -602,7 +664,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_INTERVAL__DISTRIBUTION = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 2;
+	int FUNCTION_INTERVAL__DISTRIBUTION = com.misc.common.moplaf.propagator2.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Function Interval</em>' class.
@@ -611,16 +673,43 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_INTERVAL_FEATURE_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 3;
+	int FUNCTION_INTERVAL_FEATURE_COUNT = com.misc.common.moplaf.propagator2.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 3;
 
 	/**
-	 * The operation id for the '<em>Add Propagator Function Adapter</em>' operation.
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_INTERVAL___ADD_PROPAGATOR_FUNCTION_ADAPTER = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER___ADD_PROPAGATOR_FUNCTION_ADAPTER;
+	int FUNCTION_INTERVAL___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_EOBJECT = com.misc.common.moplaf.propagator2.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_EOBJECT;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_INTERVAL___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_BOOLEAN = com.misc.common.moplaf.propagator2.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_BOOLEAN;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_INTERVAL___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION = com.misc.common.moplaf.propagator2.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION;
+
+	/**
+	 * The operation id for the '<em>Get Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_INTERVAL___GET_PROPAGATOR_FUNCTION__ECLASS = com.misc.common.moplaf.propagator2.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___GET_PROPAGATOR_FUNCTION__ECLASS;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -629,7 +718,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_INTERVAL___REFRESH = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_OPERATION_COUNT + 0;
+	int FUNCTION_INTERVAL___REFRESH = com.misc.common.moplaf.propagator2.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Function Interval</em>' class.
@@ -638,7 +727,16 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_INTERVAL_OPERATION_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_OPERATION_COUNT + 1;
+	int FUNCTION_INTERVAL_OPERATION_COUNT = com.misc.common.moplaf.propagator2.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Propagator Functions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_MINIMUM__PROPAGATOR_FUNCTIONS = FUNCTION_INTERVAL__PROPAGATOR_FUNCTIONS;
 
 	/**
 	 * The feature id for the '<em><b>From</b></em>' attribute.
@@ -686,13 +784,40 @@ public interface TousetimelinePackage extends EPackage {
 	int FUNCTION_MINIMUM_FEATURE_COUNT = FUNCTION_INTERVAL_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Add Propagator Function Adapter</em>' operation.
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_MINIMUM___ADD_PROPAGATOR_FUNCTION_ADAPTER = FUNCTION_INTERVAL___ADD_PROPAGATOR_FUNCTION_ADAPTER;
+	int FUNCTION_MINIMUM___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_EOBJECT = FUNCTION_INTERVAL___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_EOBJECT;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_MINIMUM___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_BOOLEAN = FUNCTION_INTERVAL___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_BOOLEAN;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_MINIMUM___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION = FUNCTION_INTERVAL___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION;
+
+	/**
+	 * The operation id for the '<em>Get Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_MINIMUM___GET_PROPAGATOR_FUNCTION__ECLASS = FUNCTION_INTERVAL___GET_PROPAGATOR_FUNCTION__ECLASS;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -721,6 +846,15 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 */
 	int FUNCTION_CUMULATED = 4;
+
+	/**
+	 * The feature id for the '<em><b>Propagator Functions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_CUMULATED__PROPAGATOR_FUNCTIONS = FUNCTION_INTERVAL__PROPAGATOR_FUNCTIONS;
 
 	/**
 	 * The feature id for the '<em><b>From</b></em>' attribute.
@@ -768,13 +902,40 @@ public interface TousetimelinePackage extends EPackage {
 	int FUNCTION_CUMULATED_FEATURE_COUNT = FUNCTION_INTERVAL_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Add Propagator Function Adapter</em>' operation.
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_CUMULATED___ADD_PROPAGATOR_FUNCTION_ADAPTER = FUNCTION_INTERVAL___ADD_PROPAGATOR_FUNCTION_ADAPTER;
+	int FUNCTION_CUMULATED___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_EOBJECT = FUNCTION_INTERVAL___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_EOBJECT;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_CUMULATED___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_BOOLEAN = FUNCTION_INTERVAL___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_BOOLEAN;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_CUMULATED___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION = FUNCTION_INTERVAL___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION;
+
+	/**
+	 * The operation id for the '<em>Get Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_CUMULATED___GET_PROPAGATOR_FUNCTION__ECLASS = FUNCTION_INTERVAL___GET_PROPAGATOR_FUNCTION__ECLASS;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -803,6 +964,15 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 */
 	int FUNCTION_AVERAGE = 5;
+
+	/**
+	 * The feature id for the '<em><b>Propagator Functions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_AVERAGE__PROPAGATOR_FUNCTIONS = FUNCTION_INTERVAL__PROPAGATOR_FUNCTIONS;
 
 	/**
 	 * The feature id for the '<em><b>From</b></em>' attribute.
@@ -850,13 +1020,40 @@ public interface TousetimelinePackage extends EPackage {
 	int FUNCTION_AVERAGE_FEATURE_COUNT = FUNCTION_INTERVAL_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Add Propagator Function Adapter</em>' operation.
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_AVERAGE___ADD_PROPAGATOR_FUNCTION_ADAPTER = FUNCTION_INTERVAL___ADD_PROPAGATOR_FUNCTION_ADAPTER;
+	int FUNCTION_AVERAGE___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_EOBJECT = FUNCTION_INTERVAL___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_EOBJECT;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_AVERAGE___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_BOOLEAN = FUNCTION_INTERVAL___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_BOOLEAN;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_AVERAGE___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION = FUNCTION_INTERVAL___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION;
+
+	/**
+	 * The operation id for the '<em>Get Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_AVERAGE___GET_PROPAGATOR_FUNCTION__ECLASS = FUNCTION_INTERVAL___GET_PROPAGATOR_FUNCTION__ECLASS;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -887,13 +1084,22 @@ public interface TousetimelinePackage extends EPackage {
 	int FUNCTION_POSSIBLE = 6;
 
 	/**
+	 * The feature id for the '<em><b>Propagator Functions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_POSSIBLE__PROPAGATOR_FUNCTIONS = com.misc.common.moplaf.propagator2.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS__PROPAGATOR_FUNCTIONS;
+
+	/**
 	 * The feature id for the '<em><b>Limit Moment</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_POSSIBLE__LIMIT_MOMENT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 0;
+	int FUNCTION_POSSIBLE__LIMIT_MOMENT = com.misc.common.moplaf.propagator2.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Limit Duration</b></em>' attribute.
@@ -902,7 +1108,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_POSSIBLE__LIMIT_DURATION = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 1;
+	int FUNCTION_POSSIBLE__LIMIT_DURATION = com.misc.common.moplaf.propagator2.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Limit Amount</b></em>' attribute.
@@ -911,7 +1117,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_POSSIBLE__LIMIT_AMOUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 2;
+	int FUNCTION_POSSIBLE__LIMIT_AMOUNT = com.misc.common.moplaf.propagator2.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Distribution</b></em>' container reference.
@@ -920,7 +1126,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_POSSIBLE__DISTRIBUTION = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 3;
+	int FUNCTION_POSSIBLE__DISTRIBUTION = com.misc.common.moplaf.propagator2.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Function Possible</em>' class.
@@ -929,16 +1135,43 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_POSSIBLE_FEATURE_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 4;
+	int FUNCTION_POSSIBLE_FEATURE_COUNT = com.misc.common.moplaf.propagator2.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 4;
 
 	/**
-	 * The operation id for the '<em>Add Propagator Function Adapter</em>' operation.
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_POSSIBLE___ADD_PROPAGATOR_FUNCTION_ADAPTER = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER___ADD_PROPAGATOR_FUNCTION_ADAPTER;
+	int FUNCTION_POSSIBLE___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_EOBJECT = com.misc.common.moplaf.propagator2.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_EOBJECT;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_POSSIBLE___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_BOOLEAN = com.misc.common.moplaf.propagator2.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_BOOLEAN;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_POSSIBLE___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION = com.misc.common.moplaf.propagator2.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION;
+
+	/**
+	 * The operation id for the '<em>Get Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_POSSIBLE___GET_PROPAGATOR_FUNCTION__ECLASS = com.misc.common.moplaf.propagator2.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___GET_PROPAGATOR_FUNCTION__ECLASS;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -947,7 +1180,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_POSSIBLE___REFRESH = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_OPERATION_COUNT + 0;
+	int FUNCTION_POSSIBLE___REFRESH = com.misc.common.moplaf.propagator2.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Function Possible</em>' class.
@@ -956,7 +1189,7 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_POSSIBLE_OPERATION_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_OPERATION_COUNT + 1;
+	int FUNCTION_POSSIBLE_OPERATION_COUNT = com.misc.common.moplaf.propagator2.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.FunctionEarliestBelowImpl <em>Function Earliest Below</em>}' class.
@@ -967,6 +1200,15 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 */
 	int FUNCTION_EARLIEST_BELOW = 7;
+
+	/**
+	 * The feature id for the '<em><b>Propagator Functions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_EARLIEST_BELOW__PROPAGATOR_FUNCTIONS = FUNCTION_POSSIBLE__PROPAGATOR_FUNCTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Limit Moment</b></em>' attribute.
@@ -1023,13 +1265,40 @@ public interface TousetimelinePackage extends EPackage {
 	int FUNCTION_EARLIEST_BELOW_FEATURE_COUNT = FUNCTION_POSSIBLE_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Add Propagator Function Adapter</em>' operation.
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_EARLIEST_BELOW___ADD_PROPAGATOR_FUNCTION_ADAPTER = FUNCTION_POSSIBLE___ADD_PROPAGATOR_FUNCTION_ADAPTER;
+	int FUNCTION_EARLIEST_BELOW___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_EOBJECT = FUNCTION_POSSIBLE___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_EOBJECT;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_EARLIEST_BELOW___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_BOOLEAN = FUNCTION_POSSIBLE___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_BOOLEAN;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_EARLIEST_BELOW___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION = FUNCTION_POSSIBLE___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION;
+
+	/**
+	 * The operation id for the '<em>Get Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_EARLIEST_BELOW___GET_PROPAGATOR_FUNCTION__ECLASS = FUNCTION_POSSIBLE___GET_PROPAGATOR_FUNCTION__ECLASS;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -1058,6 +1327,15 @@ public interface TousetimelinePackage extends EPackage {
 	 * @generated
 	 */
 	int FUNCTION_EARLIEST_OUTPUT = 8;
+
+	/**
+	 * The feature id for the '<em><b>Propagator Functions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_EARLIEST_OUTPUT__PROPAGATOR_FUNCTIONS = FUNCTION_POSSIBLE__PROPAGATOR_FUNCTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Limit Moment</b></em>' attribute.
@@ -1114,13 +1392,40 @@ public interface TousetimelinePackage extends EPackage {
 	int FUNCTION_EARLIEST_OUTPUT_FEATURE_COUNT = FUNCTION_POSSIBLE_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Add Propagator Function Adapter</em>' operation.
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_EARLIEST_OUTPUT___ADD_PROPAGATOR_FUNCTION_ADAPTER = FUNCTION_POSSIBLE___ADD_PROPAGATOR_FUNCTION_ADAPTER;
+	int FUNCTION_EARLIEST_OUTPUT___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_EOBJECT = FUNCTION_POSSIBLE___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_EOBJECT;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_EARLIEST_OUTPUT___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_BOOLEAN = FUNCTION_POSSIBLE___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_BOOLEAN;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_EARLIEST_OUTPUT___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION = FUNCTION_POSSIBLE___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION;
+
+	/**
+	 * The operation id for the '<em>Get Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_EARLIEST_OUTPUT___GET_PROPAGATOR_FUNCTION__ECLASS = FUNCTION_POSSIBLE___GET_PROPAGATOR_FUNCTION__ECLASS;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -1206,7 +1511,7 @@ public interface TousetimelinePackage extends EPackage {
 	int CONCRETE_OBJECT_WITH_TIME_LINE__SOME_ATTRIBUTE = SOME_BASE_CLASS__SOME_ATTRIBUTE;
 
 	/**
-	 * The feature id for the '<em><b>Buckets</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Buckets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

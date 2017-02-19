@@ -161,7 +161,7 @@ public class CalcTaskEndImpl extends ToUsePropagatorFunctionTaskImpl implements 
 		return this.getConcreteParent();
 	}
 	
-	private static Bindings taskEndBindings = Bindings.constructEClassBindings(ToUsePropagatorPackage.Literals.TASK)
+	private static Bindings taskEndBindings = Bindings.constructBindings()
 			.addInboundBinding(ToUsePropagatorPackage.Literals.TASK__START)
 			.addInboundBinding(ToUsePropagatorPackage.Literals.TASK__HOURS)
 			.addOutboundBinding(ToUsePropagatorPackage.Literals.TASK__END);

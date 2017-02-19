@@ -223,10 +223,10 @@ public class CalcProjectEndImpl extends ToUsePropagatorFunctionProjectImpl imple
 		return this.getConcreteParent();
 	}
 
-	private static Bindings taskBeforeBindings = Bindings.constructEClassBindings(ToUsePropagatorPackage.Literals.TASK)
+	private static Bindings taskBeforeBindings = Bindings.constructBindings()
 			.addInboundBinding(ToUsePropagatorPackage.Literals.TASK__END);
 
-	private static Bindings projectEndBindings = Bindings.constructEClassBindings(ToUsePropagatorPackage.Literals.PROJECT)
+	private static Bindings projectEndBindings = Bindings.constructBindings()
 			.addInboundBinding(ToUsePropagatorPackage.Literals.PROJECT__START)
 			.addInboundBinding(ToUsePropagatorPackage.Literals.PROJECT__TASKS, taskBeforeBindings)
 			.addOutboundBinding(ToUsePropagatorPackage.Literals.PROJECT__END);

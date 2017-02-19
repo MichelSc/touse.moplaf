@@ -4,6 +4,7 @@ package com.misc.touse.moplaf.timeline.tousetimeline.impl;
 
 import com.mis.touse.moplaf.timeline.tousetimeline.calc.PropagatorCalcDomainDistributionFunctionPossible;
 import com.misc.common.moplaf.propagator.Util;
+import com.misc.common.moplaf.propagator2.impl.ObjectWithPropagatorFunctionsImpl;
 import com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution;
 import com.misc.touse.moplaf.timeline.tousetimeline.FunctionPossible;
 import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage;
@@ -19,8 +20,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
@@ -39,7 +38,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  *
  * @generated
  */
-public class FunctionPossibleImpl extends MinimalEObjectImpl.Container implements FunctionPossible {
+public class FunctionPossibleImpl extends ObjectWithPropagatorFunctionsImpl implements FunctionPossible {
 	/**
 	 * The default value of the '{@link #getLimitMoment() <em>Limit Moment</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -384,9 +383,6 @@ public class FunctionPossibleImpl extends MinimalEObjectImpl.Container implement
 		switch (operationID) {
 			case TousetimelinePackage.FUNCTION_POSSIBLE___REFRESH:
 				refresh();
-				return null;
-			case TousetimelinePackage.FUNCTION_POSSIBLE___ADD_PROPAGATOR_FUNCTION_ADAPTER:
-				addPropagatorFunctionAdapter();
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

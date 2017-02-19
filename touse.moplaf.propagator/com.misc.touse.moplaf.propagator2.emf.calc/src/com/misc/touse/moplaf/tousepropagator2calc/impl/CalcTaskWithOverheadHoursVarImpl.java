@@ -36,15 +36,9 @@ public class CalcTaskWithOverheadHoursVarImpl extends CalcTaskHoursVarImpl imple
 		return ToUsePropagatorCalcPackage.Literals.CALC_TASK_WITH_OVERHEAD_HOURS_VAR;
 	}
 
-	private static Bindings projectBindings = Bindings.constructEClassBindings(ToUsePropagatorPackage.Literals.PROJECT)
-			.addInboundBinding(ToUsePropagatorPackage.Literals.PROJECT__NOF_RES);
-
-	private static Bindings taskHoursVarBindings = Bindings.constructEClassBindings(ToUsePropagatorPackage.Literals.TASK)
-			.addInboundBinding(ToUsePropagatorPackage.Literals.TASK__PROJECT, projectBindings)
-			.addInboundBinding(ToUsePropagatorPackage.Literals.TASK__HOURS_VAR_PER_RES)
-			.addInboundBinding(ToUsePropagatorPackage.Literals.TASK_WITH_OVERHEAD__HOURS_OVERHEAD)
-			.addOutboundBinding(ToUsePropagatorPackage.Literals.TASK__HOURS_VAR);
-
+	private static Bindings taskHoursVarBindings = CalcTaskHoursVarImpl.taskHoursVarBindings.copy()
+			.addInboundBinding(ToUsePropagatorPackage.Literals.TASK_WITH_OVERHEAD__HOURS_OVERHEAD);
+	
 	@Override
 	public Bindings doGetBindings() {
 		return taskHoursVarBindings;

@@ -160,17 +160,17 @@ public class CalcTaskStartImpl extends ToUsePropagatorFunctionTaskImpl implement
 		return this.getConcreteParent();
 	}
 	
-	private static Bindings projectBindings = Bindings.constructEClassBindings(ToUsePropagatorPackage.Literals.PROJECT)
+	private static Bindings projectBindings = Bindings.constructBindings()
 			.addInboundBinding(ToUsePropagatorPackage.Literals.PROJECT__START);
 		
-	private static Bindings taskBeforeBindings = Bindings.constructEClassBindings(ToUsePropagatorPackage.Literals.TASK)
+	private static Bindings taskBeforeBindings = Bindings.constructBindings()
 			.addInboundBinding(ToUsePropagatorPackage.Literals.TASK__END);
 		
-	private static Bindings dependenceBeforeBindings = Bindings.constructEClassBindings(ToUsePropagatorPackage.Literals.DEPENDENCE)
+	private static Bindings dependenceBeforeBindings = Bindings.constructBindings()
 			.addInboundBinding(ToUsePropagatorPackage.Literals.DEPENDENCE__HOURS)
 			.addInboundBinding(ToUsePropagatorPackage.Literals.DEPENDENCE__TASK_BEFORE, taskBeforeBindings);
 
-	private static Bindings thisTaskBindings = Bindings.constructEClassBindings(ToUsePropagatorPackage.Literals.TASK)
+	private static Bindings thisTaskBindings = Bindings.constructBindings()
 			.addInboundBinding(ToUsePropagatorPackage.Literals.TASK__PROJECT, projectBindings)		
 			.addInboundBinding(ToUsePropagatorPackage.Literals.TASK__DEPENDENCES_BEFORE, dependenceBeforeBindings)	
 			.addOutboundBinding(ToUsePropagatorPackage.Literals.TASK__START);

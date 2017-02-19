@@ -161,10 +161,10 @@ public class CalcTaskHoursVarImpl extends ToUsePropagatorFunctionTaskImpl implem
 		return this.getConcreteParent();
 	}
 
-	private static Bindings projectBindings = Bindings.constructEClassBindings(ToUsePropagatorPackage.Literals.PROJECT)
+	private static Bindings projectBindings = Bindings.constructBindings()
 			.addInboundBinding(ToUsePropagatorPackage.Literals.PROJECT__NOF_RES);
 
-	private static Bindings taskHoursVarBindings = Bindings.constructEClassBindings(ToUsePropagatorPackage.Literals.TASK)
+	protected static Bindings taskHoursVarBindings = Bindings.constructBindings()
 			.addInboundBinding(ToUsePropagatorPackage.Literals.TASK__PROJECT, projectBindings)
 			.addInboundBinding(ToUsePropagatorPackage.Literals.TASK__HOURS_VAR_PER_RES)
 			.addOutboundBinding(ToUsePropagatorPackage.Literals.TASK__HOURS_VAR);

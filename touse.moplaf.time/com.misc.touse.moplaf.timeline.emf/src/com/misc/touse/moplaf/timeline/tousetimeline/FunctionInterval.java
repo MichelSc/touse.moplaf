@@ -2,7 +2,7 @@
  */
 package com.misc.touse.moplaf.timeline.tousetimeline;
 
-import com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapter;
+import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
 import java.util.Date;
 
 /**
@@ -23,7 +23,7 @@ import java.util.Date;
  * @model
  * @generated
  */
-public interface FunctionInterval extends ObjectWithPropagatorFunctionAdapter {
+public interface FunctionInterval extends ObjectWithPropagatorFunctions {
 	/**
 	 * Returns the value of the '<em><b>From</b></em>' attribute.
 	 * <!-- begin-user-doc -->

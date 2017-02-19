@@ -2,8 +2,7 @@
  */
 package com.misc.touse.moplaf.timeline.tousetimeline.util;
 
-import com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapter;
-import com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapterScope;
+import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
 import com.misc.common.moplaf.time.continuous.Distribution;
 import com.misc.common.moplaf.time.discrete.ObjectTimeBucket;
 import com.misc.common.moplaf.time.discrete.ObjectWithTimeLine;
@@ -121,12 +120,8 @@ public class TousetimelineAdapterFactory extends AdapterFactoryImpl {
 				return createConcreteObjectTimeBucketAdapter();
 			}
 			@Override
-			public Adapter caseObjectWithPropagatorFunctionAdapterScope(ObjectWithPropagatorFunctionAdapterScope object) {
-				return createObjectWithPropagatorFunctionAdapterScopeAdapter();
-			}
-			@Override
-			public Adapter caseObjectWithPropagatorFunctionAdapter(ObjectWithPropagatorFunctionAdapter object) {
-				return createObjectWithPropagatorFunctionAdapterAdapter();
+			public Adapter caseObjectWithPropagatorFunctions(ObjectWithPropagatorFunctions object) {
+				return createObjectWithPropagatorFunctionsAdapter();
 			}
 			@Override
 			public Adapter caseDistribution(Distribution object) {
@@ -329,30 +324,16 @@ public class TousetimelineAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapterScope <em>Object With Propagator Function Adapter Scope</em>}'.
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions <em>Object With Propagator Functions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapterScope
+	 * @see com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions
 	 * @generated
 	 */
-	public Adapter createObjectWithPropagatorFunctionAdapterScopeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapter <em>Object With Propagator Function Adapter</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapter
-	 * @generated
-	 */
-	public Adapter createObjectWithPropagatorFunctionAdapterAdapter() {
+	public Adapter createObjectWithPropagatorFunctionsAdapter() {
 		return null;
 	}
 

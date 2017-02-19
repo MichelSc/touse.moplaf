@@ -161,10 +161,10 @@ public class CalcTaskHoursItemImpl extends ToUsePropagatorFunctionTaskImpl imple
 		return this.getConcreteParent();
 	}
 
-	private static Bindings taskItemBindings = Bindings.constructEClassBindings(ToUsePropagatorPackage.Literals.TASK_ITEM)
+	private static Bindings taskItemBindings = Bindings.constructBindings()
 			.addInboundBinding(ToUsePropagatorPackage.Literals.TASK_ITEM__HOURS);
 
-	private static Bindings taskHoursItemBindings = Bindings.constructEClassBindings(ToUsePropagatorPackage.Literals.TASK)
+	private static Bindings taskHoursItemBindings = Bindings.constructBindings()
 			.addInboundBinding(ToUsePropagatorPackage.Literals.TASK__ITEMS, taskItemBindings)
 			.addOutboundBinding(ToUsePropagatorPackage.Literals.TASK__HOURS_ITEMS);
 

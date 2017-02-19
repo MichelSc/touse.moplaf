@@ -2,8 +2,7 @@
  */
 package com.misc.touse.moplaf.timeline.tousetimeline;
 
-import com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapter;
-import com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapterScope;
+import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
 import com.misc.common.moplaf.time.discrete.TimeLine;
 import com.misc.common.moplaf.time.discrete.TimeLineMerge;
 import org.eclipse.emf.common.util.EList;
@@ -28,7 +27,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Domain extends ObjectWithPropagatorFunctionAdapterScope, ObjectWithPropagatorFunctionAdapter {
+public interface Domain extends ObjectWithPropagatorFunctions {
 	/**
 	 * Returns the value of the '<em><b>Time Line Merges</b></em>' containment reference list.
 	 * The list contents are of type {@link com.misc.common.moplaf.time.discrete.TimeLineMerge}.

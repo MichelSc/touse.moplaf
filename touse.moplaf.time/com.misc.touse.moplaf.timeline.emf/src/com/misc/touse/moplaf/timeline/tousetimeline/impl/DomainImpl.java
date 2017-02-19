@@ -3,18 +3,15 @@
 package com.misc.touse.moplaf.timeline.tousetimeline.impl;
 
 import com.mis.touse.moplaf.timeline.tousetimeline.calc.PropagatorScopeDomain;
-import com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapter;
 import com.misc.common.moplaf.propagator.PropagatorFunctionAdapter;
-import com.misc.common.moplaf.propagator.PropagatorPackage;
 import com.misc.common.moplaf.propagator.Util;
+import com.misc.common.moplaf.propagator2.impl.ObjectWithPropagatorFunctionsImpl;
 import com.misc.common.moplaf.time.discrete.TimeLine;
 import com.misc.common.moplaf.time.discrete.TimeLineMerge;
 import com.misc.touse.moplaf.timeline.tousetimeline.ConcreteObjectWithTimeLine;
 import com.misc.touse.moplaf.timeline.tousetimeline.Domain;
 import com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution;
 import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage;
-
-import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -23,7 +20,6 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -44,7 +40,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
+public class DomainImpl extends ObjectWithPropagatorFunctionsImpl implements Domain {
 	/**
 	 * The cached value of the '{@link #getTimeLineMerges() <em>Time Line Merges</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -341,40 +337,6 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 				return objectsWithTimeLine != null && !objectsWithTimeLine.isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
-		if (baseClass == ObjectWithPropagatorFunctionAdapter.class) {
-			switch (baseOperationID) {
-				case PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER___ADD_PROPAGATOR_FUNCTION_ADAPTER: return TousetimelinePackage.DOMAIN___ADD_PROPAGATOR_FUNCTION_ADAPTER;
-				default: return -1;
-			}
-		}
-		return super.eDerivedOperationID(baseOperationID, baseClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case TousetimelinePackage.DOMAIN___ADD_PROPAGATOR_FUNCTION_ADAPTER:
-				addPropagatorFunctionAdapter();
-				return null;
-			case TousetimelinePackage.DOMAIN___REFRESH:
-				refresh();
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

@@ -164,14 +164,14 @@ public class CalcTaskResourcesImpl extends ToUsePropagatorFunctionTaskImpl imple
 	}
 
 
-	private static Bindings resourceBindings = Bindings.constructEClassBindings(ToUsePropagatorPackage.Literals.RESOURCE, true)
+	private static Bindings resourceBindings = Bindings.constructBindings()
 			.addInboundBinding(ToUsePropagatorPackage.Literals.RESOURCE__START)
 			.addInboundBinding(ToUsePropagatorPackage.Literals.RESOURCE__END);
 		
-	private static Bindings projectBindings = Bindings.constructEClassBindings(ToUsePropagatorPackage.Literals.PROJECT)
+	private static Bindings projectBindings = Bindings.constructBindings()
 			.addInboundBinding(ToUsePropagatorPackage.Literals.PROJECT__RESOURCES, resourceBindings);
 
-	private static Bindings taskBindings = Bindings.constructEClassBindings(ToUsePropagatorPackage.Literals.TASK)
+	private static Bindings taskBindings = Bindings.constructBindings()
 			.addInboundBinding(ToUsePropagatorPackage.Literals.TASK__START)
 			.addInboundBinding(ToUsePropagatorPackage.Literals.TASK__END)
 			.addInboundBinding(ToUsePropagatorPackage.Literals.TASK__PROJECT, projectBindings);

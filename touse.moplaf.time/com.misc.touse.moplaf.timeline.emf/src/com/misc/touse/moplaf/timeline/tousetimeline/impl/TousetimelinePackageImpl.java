@@ -2,10 +2,7 @@
  */
 package com.misc.touse.moplaf.timeline.tousetimeline.impl;
 
-import com.misc.common.moplaf.propagator.PropagatorPackage;
-
-import com.misc.common.moplaf.time.continuous.ContinuousPackage;
-
+import com.misc.common.moplaf.time.continuous.TimeContinuousPackage;
 import com.misc.common.moplaf.time.discrete.DiscretePackage;
 import com.misc.touse.moplaf.timeline.tousetimeline.ConcreteObjectTimeBucket;
 import com.misc.touse.moplaf.timeline.tousetimeline.ConcreteObjectWithTimeLine;
@@ -168,7 +165,7 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 		isInited = true;
 
 		// Initialize simple dependencies
-		ContinuousPackage.eINSTANCE.eClass();
+		TimeContinuousPackage.eINSTANCE.eClass();
 		DiscretePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
@@ -621,23 +618,22 @@ public class TousetimelinePackageImpl extends EPackageImpl implements Tousetimel
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		PropagatorPackage thePropagatorPackage = (PropagatorPackage)EPackage.Registry.INSTANCE.getEPackage(PropagatorPackage.eNS_URI);
+		com.misc.common.moplaf.propagator2.PropagatorPackage thePropagatorPackage = (com.misc.common.moplaf.propagator2.PropagatorPackage)EPackage.Registry.INSTANCE.getEPackage(com.misc.common.moplaf.propagator2.PropagatorPackage.eNS_URI);
 		DiscretePackage theDiscretePackage = (DiscretePackage)EPackage.Registry.INSTANCE.getEPackage(DiscretePackage.eNS_URI);
-		ContinuousPackage theContinuousPackage = (ContinuousPackage)EPackage.Registry.INSTANCE.getEPackage(ContinuousPackage.eNS_URI);
+		TimeContinuousPackage theTimeContinuousPackage = (TimeContinuousPackage)EPackage.Registry.INSTANCE.getEPackage(TimeContinuousPackage.eNS_URI);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		domainEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctionAdapterScope());
-		domainEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctionAdapter());
-		domainDistributionEClass.getESuperTypes().add(theContinuousPackage.getDistribution());
+		domainEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctions());
+		domainDistributionEClass.getESuperTypes().add(theTimeContinuousPackage.getDistribution());
 		functionMinimumEClass.getESuperTypes().add(this.getFunctionInterval());
-		functionIntervalEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctionAdapter());
+		functionIntervalEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctions());
 		functionCumulatedEClass.getESuperTypes().add(this.getFunctionInterval());
 		functionAverageEClass.getESuperTypes().add(this.getFunctionInterval());
-		functionPossibleEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctionAdapter());
+		functionPossibleEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctions());
 		functionEarliestBelowEClass.getESuperTypes().add(this.getFunctionPossible());
 		functionEarliestOutputEClass.getESuperTypes().add(this.getFunctionPossible());
 		concreteObjectWithTimeLineEClass.getESuperTypes().add(this.getSomeBaseClass());

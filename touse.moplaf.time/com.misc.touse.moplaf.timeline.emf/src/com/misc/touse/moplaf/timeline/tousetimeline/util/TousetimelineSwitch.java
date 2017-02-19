@@ -2,8 +2,7 @@
  */
 package com.misc.touse.moplaf.timeline.tousetimeline.util;
 
-import com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapter;
-import com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapterScope;
+import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
 import com.misc.common.moplaf.time.continuous.Distribution;
 import com.misc.common.moplaf.time.discrete.ObjectTimeBucket;
 import com.misc.common.moplaf.time.discrete.ObjectWithTimeLine;
@@ -74,8 +73,7 @@ public class TousetimelineSwitch<T> extends Switch<T> {
 			case TousetimelinePackage.DOMAIN: {
 				Domain domain = (Domain)theEObject;
 				T result = caseDomain(domain);
-				if (result == null) result = caseObjectWithPropagatorFunctionAdapterScope(domain);
-				if (result == null) result = caseObjectWithPropagatorFunctionAdapter(domain);
+				if (result == null) result = caseObjectWithPropagatorFunctions(domain);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -83,7 +81,7 @@ public class TousetimelineSwitch<T> extends Switch<T> {
 				DomainDistribution domainDistribution = (DomainDistribution)theEObject;
 				T result = caseDomainDistribution(domainDistribution);
 				if (result == null) result = caseDistribution(domainDistribution);
-				if (result == null) result = caseObjectWithPropagatorFunctionAdapter(domainDistribution);
+				if (result == null) result = caseObjectWithPropagatorFunctions(domainDistribution);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -91,14 +89,14 @@ public class TousetimelineSwitch<T> extends Switch<T> {
 				FunctionMinimum functionMinimum = (FunctionMinimum)theEObject;
 				T result = caseFunctionMinimum(functionMinimum);
 				if (result == null) result = caseFunctionInterval(functionMinimum);
-				if (result == null) result = caseObjectWithPropagatorFunctionAdapter(functionMinimum);
+				if (result == null) result = caseObjectWithPropagatorFunctions(functionMinimum);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case TousetimelinePackage.FUNCTION_INTERVAL: {
 				FunctionInterval functionInterval = (FunctionInterval)theEObject;
 				T result = caseFunctionInterval(functionInterval);
-				if (result == null) result = caseObjectWithPropagatorFunctionAdapter(functionInterval);
+				if (result == null) result = caseObjectWithPropagatorFunctions(functionInterval);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -106,7 +104,7 @@ public class TousetimelineSwitch<T> extends Switch<T> {
 				FunctionCumulated functionCumulated = (FunctionCumulated)theEObject;
 				T result = caseFunctionCumulated(functionCumulated);
 				if (result == null) result = caseFunctionInterval(functionCumulated);
-				if (result == null) result = caseObjectWithPropagatorFunctionAdapter(functionCumulated);
+				if (result == null) result = caseObjectWithPropagatorFunctions(functionCumulated);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -114,14 +112,14 @@ public class TousetimelineSwitch<T> extends Switch<T> {
 				FunctionAverage functionAverage = (FunctionAverage)theEObject;
 				T result = caseFunctionAverage(functionAverage);
 				if (result == null) result = caseFunctionInterval(functionAverage);
-				if (result == null) result = caseObjectWithPropagatorFunctionAdapter(functionAverage);
+				if (result == null) result = caseObjectWithPropagatorFunctions(functionAverage);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case TousetimelinePackage.FUNCTION_POSSIBLE: {
 				FunctionPossible functionPossible = (FunctionPossible)theEObject;
 				T result = caseFunctionPossible(functionPossible);
-				if (result == null) result = caseObjectWithPropagatorFunctionAdapter(functionPossible);
+				if (result == null) result = caseObjectWithPropagatorFunctions(functionPossible);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -129,7 +127,7 @@ public class TousetimelineSwitch<T> extends Switch<T> {
 				FunctionEarliestBelow functionEarliestBelow = (FunctionEarliestBelow)theEObject;
 				T result = caseFunctionEarliestBelow(functionEarliestBelow);
 				if (result == null) result = caseFunctionPossible(functionEarliestBelow);
-				if (result == null) result = caseObjectWithPropagatorFunctionAdapter(functionEarliestBelow);
+				if (result == null) result = caseObjectWithPropagatorFunctions(functionEarliestBelow);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -137,7 +135,7 @@ public class TousetimelineSwitch<T> extends Switch<T> {
 				FunctionEarliestOutput functionEarliestOutput = (FunctionEarliestOutput)theEObject;
 				T result = caseFunctionEarliestOutput(functionEarliestOutput);
 				if (result == null) result = caseFunctionPossible(functionEarliestOutput);
-				if (result == null) result = caseObjectWithPropagatorFunctionAdapter(functionEarliestOutput);
+				if (result == null) result = caseObjectWithPropagatorFunctions(functionEarliestOutput);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -348,32 +346,17 @@ public class TousetimelineSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Object With Propagator Function Adapter Scope</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Object With Propagator Functions</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Object With Propagator Function Adapter Scope</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Object With Propagator Functions</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseObjectWithPropagatorFunctionAdapterScope(ObjectWithPropagatorFunctionAdapterScope object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Object With Propagator Function Adapter</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Object With Propagator Function Adapter</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseObjectWithPropagatorFunctionAdapter(ObjectWithPropagatorFunctionAdapter object) {
+	public T caseObjectWithPropagatorFunctions(ObjectWithPropagatorFunctions object) {
 		return null;
 	}
 

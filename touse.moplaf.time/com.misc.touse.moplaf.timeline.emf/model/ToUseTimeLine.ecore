@@ -2,7 +2,7 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="tousetimeline" nsURI="http://com.misc.touse.moplaf.timeline.emf"
     nsPrefix="ttm">
-  <eClassifiers xsi:type="ecore:EClass" name="Domain" eSuperTypes="../../com.misc.common.moplaf.propagator/model/propagator.ecore#//ObjectWithPropagatorFunctionAdapterScope ../../com.misc.common.moplaf.propagator/model/propagator.ecore#//ObjectWithPropagatorFunctionAdapter">
+  <eClassifiers xsi:type="ecore:EClass" name="Domain" eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//ObjectWithPropagatorFunctions">
     <eStructuralFeatures xsi:type="ecore:EReference" name="TimeLineMerges" upperBound="-1"
         eType="ecore:EClass ../../com.misc.common.moplaf.time.discrete.emf/model/timediscrete.ecore#//TimeLineMerge"
         containment="true"/>
@@ -26,7 +26,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="FunctionMinimum" eSuperTypes="#//FunctionInterval">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="minimum" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FunctionInterval" eSuperTypes="../../com.misc.common.moplaf.propagator/model/propagator.ecore#//ObjectWithPropagatorFunctionAdapter">
+  <eClassifiers xsi:type="ecore:EClass" name="FunctionInterval" eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//ObjectWithPropagatorFunctions">
     <eOperations name="refresh"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="from" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="to" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
@@ -41,7 +41,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="average" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
         defaultValueLiteral="0.0"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FunctionPossible" eSuperTypes="../../com.misc.common.moplaf.propagator/model/propagator.ecore#//ObjectWithPropagatorFunctionAdapter">
+  <eClassifiers xsi:type="ecore:EClass" name="FunctionPossible" eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//ObjectWithPropagatorFunctions">
     <eOperations name="refresh"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="limitMoment" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="limitDuration" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>

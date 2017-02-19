@@ -154,8 +154,6 @@ import org.eclipse.emf.edit.ui.util.EditUIUtil;
 
 import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 
-import com.misc.common.moplaf.common.util.EContainmentListenerAdapter;
-import com.misc.common.moplaf.common.util.Util;
 import com.misc.touse.moplaf.touseemf.provider.ToUseEMFItemProviderAdapterFactory;
 
 import org.eclipse.ui.actions.WorkspaceModifyOperation;

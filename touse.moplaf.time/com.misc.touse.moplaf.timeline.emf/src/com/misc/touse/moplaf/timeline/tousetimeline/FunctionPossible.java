@@ -2,7 +2,7 @@
  */
 package com.misc.touse.moplaf.timeline.tousetimeline;
 
-import com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapter;
+import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
 import java.util.Date;
 
 /**
@@ -24,7 +24,7 @@ import java.util.Date;
  * @model
  * @generated
  */
-public interface FunctionPossible extends ObjectWithPropagatorFunctionAdapter {
+public interface FunctionPossible extends ObjectWithPropagatorFunctions {
 	/**
 	 * Returns the value of the '<em><b>Limit Moment</b></em>' attribute.
 	 * <!-- begin-user-doc -->
