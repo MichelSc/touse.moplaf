@@ -3,6 +3,7 @@
 package com.misc.touse.moplaf.tousepropagator2calc.impl;
 
 import com.misc.common.moplaf.propagator2.PropagatorFunction;
+import com.misc.touse.moplaf.tousepropagator2.Project;
 import com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorFunctionProjectImpl;
 import com.misc.touse.moplaf.tousepropagator2calc.LayerTaskHours;
 import com.misc.touse.moplaf.tousepropagator2calc.LayerTaskHoursItem;
@@ -277,6 +278,16 @@ public class LayerTaskHoursImpl extends ToUsePropagatorFunctionProjectImpl imple
 		return super.eIsSet(featureID);
 	}
 
+	
+	@Override
+	public void init() {
+		super.init();
+		Project project = this.getProject();
+		this.setConcreteParent(project.getPropagatorFunction(ScopeProject.class));
+		this.setAntecedentLayerTaskHoursItem(project.getPropagatorFunction(LayerTaskHoursItem.class));
+		this.setAntecedentLayerTaskHoursVar(project.getPropagatorFunction(LayerTaskHoursVar.class));
+	}
+
 	@Override
 	public PropagatorFunction doGetParent() {
 		return this.getConcreteParent();
@@ -287,5 +298,4 @@ public class LayerTaskHoursImpl extends ToUsePropagatorFunctionProjectImpl imple
 		antecedents.add(this.getAntecedentLayerTaskHoursItem());
 		antecedents.add(this.getAntecedentLayerTaskHoursVar());
 	}
-	
 } //LayerTaskHoursImpl

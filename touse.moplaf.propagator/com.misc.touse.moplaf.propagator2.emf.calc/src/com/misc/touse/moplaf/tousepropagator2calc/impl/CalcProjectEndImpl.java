@@ -4,6 +4,7 @@ package com.misc.touse.moplaf.tousepropagator2calc.impl;
 
 import com.misc.common.moplaf.propagator2.PropagatorFunction;
 import com.misc.common.moplaf.propagator2.util.Bindings;
+import com.misc.touse.moplaf.tousepropagator2.Project;
 import com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorPackage;
 import com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorFunctionProjectImpl;
 import com.misc.touse.moplaf.tousepropagator2calc.CalcProjectEnd;
@@ -219,8 +220,21 @@ public class CalcProjectEndImpl extends ToUsePropagatorFunctionProjectImpl imple
 	}
 
 	@Override
+	public void init() {
+		super.init();
+		Project project = this.getProject();
+		this.setConcreteParent(project.getPropagatorFunction(ScopeProject.class));
+		this.setAntecedentLayerTaskTimes(project.getPropagatorFunction(LayerTaskTimes.class));
+	}
+
+	@Override
 	public PropagatorFunction doGetParent() {
 		return this.getConcreteParent();
+	}
+
+	@Override
+	public void doCollectExplicitAntecedents(EList<PropagatorFunction> antecedents) {
+		antecedents.add(this.getAntecedentLayerTaskTimes());
 	}
 
 	private static Bindings taskBeforeBindings = Bindings.constructBindings()
@@ -241,11 +255,5 @@ public class CalcProjectEndImpl extends ToUsePropagatorFunctionProjectImpl imple
 		this.getProject().refreshEnd();
 
 	}
-
-	@Override
-	public void doCollectExplicitAntecedents(EList<PropagatorFunction> antecedents) {
-		antecedents.add(this.getAntecedentLayerTaskTimes());
-	}
-
 	
 } //CalcProjectEndImpl

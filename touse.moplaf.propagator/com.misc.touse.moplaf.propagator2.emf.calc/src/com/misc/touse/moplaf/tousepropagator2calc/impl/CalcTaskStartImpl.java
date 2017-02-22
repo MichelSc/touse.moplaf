@@ -2,8 +2,11 @@
  */
 package com.misc.touse.moplaf.tousepropagator2calc.impl;
 
+
 import com.misc.common.moplaf.propagator2.PropagatorFunction;
 import com.misc.common.moplaf.propagator2.util.Bindings;
+import com.misc.touse.moplaf.tousepropagator2.Project;
+import com.misc.touse.moplaf.tousepropagator2.Task;
 import com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorPackage;
 import com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorFunctionTaskImpl;
 import com.misc.touse.moplaf.tousepropagator2calc.CalcTaskStart;
@@ -154,6 +157,15 @@ public class CalcTaskStartImpl extends ToUsePropagatorFunctionTaskImpl implement
 		}
 		return super.eIsSet(featureID);
 	}
+	
+	@Override
+	public void init() {
+		super.init();
+		Task task = this.getTask();
+		Project project = task.getProject();
+		this.setConcreteParent(project.getPropagatorFunction(LayerTaskTimes.class));
+	}
+
 
 	@Override
 	public PropagatorFunction doGetParent() {

@@ -2,7 +2,9 @@
  */
 package com.misc.touse.moplaf.tousepropagator2calc.impl;
 
+
 import com.misc.common.moplaf.propagator2.PropagatorFunction;
+import com.misc.touse.moplaf.tousepropagator2.Project;
 import com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorFunctionProjectImpl;
 import com.misc.touse.moplaf.tousepropagator2calc.LayerTaskHoursVar;
 import com.misc.touse.moplaf.tousepropagator2calc.ScopeProject;
@@ -155,8 +157,16 @@ public class LayerTaskHoursVarImpl extends ToUsePropagatorFunctionProjectImpl im
 	}
 
 	@Override
+	public void init() {
+		super.init();
+		Project project = this.getProject();
+		this.setConcreteParent(project.getPropagatorFunction(ScopeProject.class));
+	}
+
+	@Override
 	public PropagatorFunction doGetParent() {
 		return this.getConcreteParent();
 	}
+
 	
 } //LayerTaskHoursVarImpl

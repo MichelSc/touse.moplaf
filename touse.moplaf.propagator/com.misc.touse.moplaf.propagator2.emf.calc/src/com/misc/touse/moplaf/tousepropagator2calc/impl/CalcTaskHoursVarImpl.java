@@ -4,11 +4,12 @@ package com.misc.touse.moplaf.tousepropagator2calc.impl;
 
 import com.misc.common.moplaf.propagator2.PropagatorFunction;
 import com.misc.common.moplaf.propagator2.util.Bindings;
+import com.misc.touse.moplaf.tousepropagator2.Project;
+import com.misc.touse.moplaf.tousepropagator2.Task;
 import com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorPackage;
 import com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorFunctionTaskImpl;
 import com.misc.touse.moplaf.tousepropagator2calc.CalcTaskHoursVar;
 import com.misc.touse.moplaf.tousepropagator2calc.LayerTaskHoursVar;
-
 import com.misc.touse.moplaf.tousepropagator2calc.ToUsePropagatorCalcPackage;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
@@ -154,6 +155,14 @@ public class CalcTaskHoursVarImpl extends ToUsePropagatorFunctionTaskImpl implem
 				return concreteParent != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	@Override
+	public void init() {
+		super.init();
+		Task task = this.getTask();
+		Project project = task.getProject();
+		this.setConcreteParent(project.getPropagatorFunction(LayerTaskHoursVar.class));
 	}
 
 	@Override

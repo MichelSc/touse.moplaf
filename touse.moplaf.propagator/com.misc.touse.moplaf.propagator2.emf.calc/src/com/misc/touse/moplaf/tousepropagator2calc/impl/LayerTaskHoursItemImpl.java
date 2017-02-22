@@ -3,6 +3,7 @@
 package com.misc.touse.moplaf.tousepropagator2calc.impl;
 
 import com.misc.common.moplaf.propagator2.PropagatorFunction;
+import com.misc.touse.moplaf.tousepropagator2.Project;
 import com.misc.touse.moplaf.tousepropagator2.impl.ToUsePropagatorFunctionProjectImpl;
 import com.misc.touse.moplaf.tousepropagator2calc.LayerTaskHoursItem;
 import com.misc.touse.moplaf.tousepropagator2calc.ScopeProject;
@@ -152,6 +153,13 @@ public class LayerTaskHoursItemImpl extends ToUsePropagatorFunctionProjectImpl i
 				return concreteParent != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	@Override
+	public void init() {
+		super.init();
+		Project project = this.getProject();
+		this.setConcreteParent(project.getPropagatorFunction(ScopeProject.class));
 	}
 
 	@Override

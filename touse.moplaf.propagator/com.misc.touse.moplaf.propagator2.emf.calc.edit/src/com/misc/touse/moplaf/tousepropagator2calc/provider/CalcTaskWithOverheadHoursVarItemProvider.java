@@ -64,8 +64,10 @@ public class CalcTaskWithOverheadHoursVarItemProvider extends CalcTaskHoursVarIt
 	 */
 	@Override
 	public String getText(Object object) {
-		CalcTaskWithOverheadHoursVar calcTaskWithOverheadHoursVar = (CalcTaskWithOverheadHoursVar)object;
-		return getString("_UI_CalcTaskWithOverheadHoursVar_type") + " " + calcTaskWithOverheadHoursVar.isTouched();
+		String label = ((CalcTaskWithOverheadHoursVar)object).getDescription();
+		return label == null || label.length() == 0 ?
+			getString("_UI_CalcTaskWithOverheadHoursVar_type") :
+			getString("_UI_CalcTaskWithOverheadHoursVar_type") + " " + label;
 	}
 	
 
