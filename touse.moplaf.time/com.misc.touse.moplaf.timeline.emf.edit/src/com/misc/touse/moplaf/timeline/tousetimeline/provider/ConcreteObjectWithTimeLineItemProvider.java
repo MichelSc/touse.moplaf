@@ -4,17 +4,16 @@ package com.misc.touse.moplaf.timeline.tousetimeline.provider;
 
 
 import com.misc.common.moplaf.emf.edit.command.RefreshCommand;
-import com.misc.common.moplaf.time.discrete.DiscretePackage;
 import com.misc.common.moplaf.time.discrete.ObjectWithTimeLine;
+import com.misc.common.moplaf.time.discrete.TimeDiscretePackage;
 import com.misc.touse.moplaf.timeline.tousetimeline.ConcreteObjectWithTimeLine;
-import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage;
+import com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage;
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.command.CommandParameter;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
@@ -72,7 +71,7 @@ public class ConcreteObjectWithTimeLineItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ObjectWithTimeLine_Buckets_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ObjectWithTimeLine_Buckets_feature", "_UI_ObjectWithTimeLine_type"),
-				 DiscretePackage.Literals.OBJECT_WITH_TIME_LINE__BUCKETS,
+				 TimeDiscretePackage.Literals.OBJECT_WITH_TIME_LINE__BUCKETS,
 				 true,
 				 false,
 				 true,
@@ -94,7 +93,7 @@ public class ConcreteObjectWithTimeLineItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ObjectWithTimeLine_LastBucket_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ObjectWithTimeLine_LastBucket_feature", "_UI_ObjectWithTimeLine_type"),
-				 DiscretePackage.Literals.OBJECT_WITH_TIME_LINE__LAST_BUCKET,
+				 TimeDiscretePackage.Literals.OBJECT_WITH_TIME_LINE__LAST_BUCKET,
 				 true,
 				 false,
 				 true,
@@ -116,7 +115,7 @@ public class ConcreteObjectWithTimeLineItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ObjectWithTimeLine_FirstBucket_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ObjectWithTimeLine_FirstBucket_feature", "_UI_ObjectWithTimeLine_type"),
-				 DiscretePackage.Literals.OBJECT_WITH_TIME_LINE__FIRST_BUCKET,
+				 TimeDiscretePackage.Literals.OBJECT_WITH_TIME_LINE__FIRST_BUCKET,
 				 true,
 				 false,
 				 true,
@@ -138,7 +137,7 @@ public class ConcreteObjectWithTimeLineItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ObjectWithTimeLine_StartBucket_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ObjectWithTimeLine_StartBucket_feature", "_UI_ObjectWithTimeLine_type"),
-				 DiscretePackage.Literals.OBJECT_WITH_TIME_LINE__START_BUCKET,
+				 TimeDiscretePackage.Literals.OBJECT_WITH_TIME_LINE__START_BUCKET,
 				 true,
 				 false,
 				 true,
@@ -160,43 +159,13 @@ public class ConcreteObjectWithTimeLineItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ObjectWithTimeLine_EndBucket_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ObjectWithTimeLine_EndBucket_feature", "_UI_ObjectWithTimeLine_type"),
-				 DiscretePackage.Literals.OBJECT_WITH_TIME_LINE__END_BUCKET,
+				 TimeDiscretePackage.Literals.OBJECT_WITH_TIME_LINE__END_BUCKET,
 				 true,
 				 false,
 				 true,
 				 null,
 				 null,
 				 null));
-	}
-
-	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(DiscretePackage.Literals.OBJECT_WITH_TIME_LINE__BUCKETS);
-		}
-		return childrenFeatures;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EStructuralFeature getChildFeature(Object object, Object child) {
-		// Check the type of the specified child object and return the proper feature to use for
-		// adding (see {@link AddCommand}) it as a child.
-
-		return super.getChildFeature(object, child);
 	}
 
 	/**
@@ -237,8 +206,8 @@ public class ConcreteObjectWithTimeLineItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ConcreteObjectWithTimeLine.class)) {
-			case TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__BUCKETS:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+			case ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__BUCKETS:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
 		super.notifyChanged(notification);

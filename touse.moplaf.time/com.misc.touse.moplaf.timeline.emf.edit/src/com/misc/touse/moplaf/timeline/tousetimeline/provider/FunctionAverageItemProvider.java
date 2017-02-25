@@ -4,8 +4,7 @@ package com.misc.touse.moplaf.timeline.tousetimeline.provider;
 
 
 import com.misc.touse.moplaf.timeline.tousetimeline.FunctionAverage;
-import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage;
-
+import com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
@@ -64,7 +63,7 @@ public class FunctionAverageItemProvider extends FunctionIntervalItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_FunctionAverage_average_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FunctionAverage_average_feature", "_UI_FunctionAverage_type"),
-				 TousetimelinePackage.Literals.FUNCTION_AVERAGE__AVERAGE,
+				 ToUseTimeLinePackage.Literals.FUNCTION_AVERAGE__AVERAGE,
 				 false,
 				 false,
 				 false,
@@ -112,7 +111,7 @@ public class FunctionAverageItemProvider extends FunctionIntervalItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(FunctionAverage.class)) {
-			case TousetimelinePackage.FUNCTION_AVERAGE__AVERAGE:
+			case ToUseTimeLinePackage.FUNCTION_AVERAGE__AVERAGE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

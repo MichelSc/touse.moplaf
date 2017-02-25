@@ -4,8 +4,7 @@ package com.misc.touse.moplaf.timeline.tousetimeline.impl;
 
 import com.misc.common.moplaf.time.continuous.Distribution;
 import com.misc.touse.moplaf.timeline.tousetimeline.FunctionEarliestOutput;
-import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage;
-
+import com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage;
 import java.util.Date;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -64,7 +63,7 @@ public class FunctionEarliestOutputImpl extends FunctionPossibleImpl implements 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TousetimelinePackage.Literals.FUNCTION_EARLIEST_OUTPUT;
+		return ToUseTimeLinePackage.Literals.FUNCTION_EARLIEST_OUTPUT;
 	}
 
 	/**
@@ -85,7 +84,7 @@ public class FunctionEarliestOutputImpl extends FunctionPossibleImpl implements 
 		Date oldEarliestOutput = earliestOutput;
 		earliestOutput = newEarliestOutput;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousetimelinePackage.FUNCTION_EARLIEST_OUTPUT__EARLIEST_OUTPUT, oldEarliestOutput, earliestOutput));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseTimeLinePackage.FUNCTION_EARLIEST_OUTPUT__EARLIEST_OUTPUT, oldEarliestOutput, earliestOutput));
 	}
 	
 	/**
@@ -112,7 +111,7 @@ public class FunctionEarliestOutputImpl extends FunctionPossibleImpl implements 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TousetimelinePackage.FUNCTION_EARLIEST_OUTPUT__EARLIEST_OUTPUT:
+			case ToUseTimeLinePackage.FUNCTION_EARLIEST_OUTPUT__EARLIEST_OUTPUT:
 				return getEarliestOutput();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -126,7 +125,7 @@ public class FunctionEarliestOutputImpl extends FunctionPossibleImpl implements 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TousetimelinePackage.FUNCTION_EARLIEST_OUTPUT__EARLIEST_OUTPUT:
+			case ToUseTimeLinePackage.FUNCTION_EARLIEST_OUTPUT__EARLIEST_OUTPUT:
 				setEarliestOutput((Date)newValue);
 				return;
 		}
@@ -141,7 +140,7 @@ public class FunctionEarliestOutputImpl extends FunctionPossibleImpl implements 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TousetimelinePackage.FUNCTION_EARLIEST_OUTPUT__EARLIEST_OUTPUT:
+			case ToUseTimeLinePackage.FUNCTION_EARLIEST_OUTPUT__EARLIEST_OUTPUT:
 				setEarliestOutput(EARLIEST_OUTPUT_EDEFAULT);
 				return;
 		}
@@ -156,7 +155,7 @@ public class FunctionEarliestOutputImpl extends FunctionPossibleImpl implements 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TousetimelinePackage.FUNCTION_EARLIEST_OUTPUT__EARLIEST_OUTPUT:
+			case ToUseTimeLinePackage.FUNCTION_EARLIEST_OUTPUT__EARLIEST_OUTPUT:
 				return EARLIEST_OUTPUT_EDEFAULT == null ? earliestOutput != null : !EARLIEST_OUTPUT_EDEFAULT.equals(earliestOutput);
 		}
 		return super.eIsSet(featureID);

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/com.misc.touse.moplaf.timeline.calc.emf/src" modelPluginID="com.misc.touse.moplaf.timeline.calc.emf"
+    modelName="ToUseTimeLineCalc" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    usedGenPackages="../../com.misc.common.moplaf.propagator2/model/propagator.genmodel#//propagator2 ../../com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.genmodel#//continuous ../../com.misc.common.moplaf.time.continuous.calc.emf/model/TimeContinuousCalc.genmodel#//calc"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>ToUseTimeLineCalc.ecore</foreignModel>
+  <genPackages prefix="ToUseTimeLineCalc" basePackage="com.misc.touse.moplaf.timeline.tousetimeline"
+      disposableProviderFactory="true" ecorePackage="ToUseTimeLineCalc.ecore#/">
+    <genClasses ecoreClass="ToUseTimeLineCalc.ecore#//PropagatorScopeDomain"/>
+    <genClasses ecoreClass="ToUseTimeLineCalc.ecore#//PropagatorScopeDomainDistribution"/>
+    <genClasses ecoreClass="ToUseTimeLineCalc.ecore#//PropagatorLayerDomainDistributionFunctions"/>
+    <genClasses ecoreClass="ToUseTimeLineCalc.ecore#//PropagatorCalcDomainDistributionFunctionInterval"/>
+    <genClasses ecoreClass="ToUseTimeLineCalc.ecore#//PropagatorCalcDomainDistributionFunctionPossible"/>
+  </genPackages>
+</genmodel:GenModel>

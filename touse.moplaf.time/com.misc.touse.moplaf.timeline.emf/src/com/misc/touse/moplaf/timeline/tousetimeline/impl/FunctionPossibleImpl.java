@@ -2,13 +2,10 @@
  */
 package com.misc.touse.moplaf.timeline.tousetimeline.impl;
 
-import com.mis.touse.moplaf.timeline.tousetimeline.calc.PropagatorCalcDomainDistributionFunctionPossible;
-import com.misc.common.moplaf.propagator.Util;
 import com.misc.common.moplaf.propagator2.impl.ObjectWithPropagatorFunctionsImpl;
 import com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution;
 import com.misc.touse.moplaf.timeline.tousetimeline.FunctionPossible;
-import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage;
-
+import com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Date;
 
@@ -115,7 +112,7 @@ public class FunctionPossibleImpl extends ObjectWithPropagatorFunctionsImpl impl
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TousetimelinePackage.Literals.FUNCTION_POSSIBLE;
+		return ToUseTimeLinePackage.Literals.FUNCTION_POSSIBLE;
 	}
 
 	/**
@@ -136,7 +133,7 @@ public class FunctionPossibleImpl extends ObjectWithPropagatorFunctionsImpl impl
 		Date oldLimitMoment = limitMoment;
 		limitMoment = newLimitMoment;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousetimelinePackage.FUNCTION_POSSIBLE__LIMIT_MOMENT, oldLimitMoment, limitMoment));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseTimeLinePackage.FUNCTION_POSSIBLE__LIMIT_MOMENT, oldLimitMoment, limitMoment));
 	}
 
 	/**
@@ -157,7 +154,7 @@ public class FunctionPossibleImpl extends ObjectWithPropagatorFunctionsImpl impl
 		float oldLimitDuration = limitDuration;
 		limitDuration = newLimitDuration;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousetimelinePackage.FUNCTION_POSSIBLE__LIMIT_DURATION, oldLimitDuration, limitDuration));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseTimeLinePackage.FUNCTION_POSSIBLE__LIMIT_DURATION, oldLimitDuration, limitDuration));
 	}
 
 	/**
@@ -178,7 +175,7 @@ public class FunctionPossibleImpl extends ObjectWithPropagatorFunctionsImpl impl
 		float oldLimitAmount = limitAmount;
 		limitAmount = newLimitAmount;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousetimelinePackage.FUNCTION_POSSIBLE__LIMIT_AMOUNT, oldLimitAmount, limitAmount));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseTimeLinePackage.FUNCTION_POSSIBLE__LIMIT_AMOUNT, oldLimitAmount, limitAmount));
 	}
 
 	/**
@@ -187,7 +184,7 @@ public class FunctionPossibleImpl extends ObjectWithPropagatorFunctionsImpl impl
 	 * @generated
 	 */
 	public DomainDistribution getDistribution() {
-		if (eContainerFeatureID() != TousetimelinePackage.FUNCTION_POSSIBLE__DISTRIBUTION) return null;
+		if (eContainerFeatureID() != ToUseTimeLinePackage.FUNCTION_POSSIBLE__DISTRIBUTION) return null;
 		return (DomainDistribution)eInternalContainer();
 	}
 
@@ -197,7 +194,7 @@ public class FunctionPossibleImpl extends ObjectWithPropagatorFunctionsImpl impl
 	 * @generated
 	 */
 	public NotificationChain basicSetDistribution(DomainDistribution newDistribution, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newDistribution, TousetimelinePackage.FUNCTION_POSSIBLE__DISTRIBUTION, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newDistribution, ToUseTimeLinePackage.FUNCTION_POSSIBLE__DISTRIBUTION, msgs);
 		return msgs;
 	}
 
@@ -207,19 +204,19 @@ public class FunctionPossibleImpl extends ObjectWithPropagatorFunctionsImpl impl
 	 * @generated
 	 */
 	public void setDistribution(DomainDistribution newDistribution) {
-		if (newDistribution != eInternalContainer() || (eContainerFeatureID() != TousetimelinePackage.FUNCTION_POSSIBLE__DISTRIBUTION && newDistribution != null)) {
+		if (newDistribution != eInternalContainer() || (eContainerFeatureID() != ToUseTimeLinePackage.FUNCTION_POSSIBLE__DISTRIBUTION && newDistribution != null)) {
 			if (EcoreUtil.isAncestor(this, newDistribution))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newDistribution != null)
-				msgs = ((InternalEObject)newDistribution).eInverseAdd(this, TousetimelinePackage.DOMAIN_DISTRIBUTION__POSSIBLES, DomainDistribution.class, msgs);
+				msgs = ((InternalEObject)newDistribution).eInverseAdd(this, ToUseTimeLinePackage.DOMAIN_DISTRIBUTION__POSSIBLES, DomainDistribution.class, msgs);
 			msgs = basicSetDistribution(newDistribution, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousetimelinePackage.FUNCTION_POSSIBLE__DISTRIBUTION, newDistribution, newDistribution));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseTimeLinePackage.FUNCTION_POSSIBLE__DISTRIBUTION, newDistribution, newDistribution));
 	}
 
 	/**
@@ -236,20 +233,12 @@ public class FunctionPossibleImpl extends ObjectWithPropagatorFunctionsImpl impl
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 */
-	public void addPropagatorFunctionAdapter() {
-		Util.adapt(this, PropagatorCalcDomainDistributionFunctionPossible.class);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case TousetimelinePackage.FUNCTION_POSSIBLE__DISTRIBUTION:
+			case ToUseTimeLinePackage.FUNCTION_POSSIBLE__DISTRIBUTION:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetDistribution((DomainDistribution)otherEnd, msgs);
@@ -265,7 +254,7 @@ public class FunctionPossibleImpl extends ObjectWithPropagatorFunctionsImpl impl
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case TousetimelinePackage.FUNCTION_POSSIBLE__DISTRIBUTION:
+			case ToUseTimeLinePackage.FUNCTION_POSSIBLE__DISTRIBUTION:
 				return basicSetDistribution(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -279,8 +268,8 @@ public class FunctionPossibleImpl extends ObjectWithPropagatorFunctionsImpl impl
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case TousetimelinePackage.FUNCTION_POSSIBLE__DISTRIBUTION:
-				return eInternalContainer().eInverseRemove(this, TousetimelinePackage.DOMAIN_DISTRIBUTION__POSSIBLES, DomainDistribution.class, msgs);
+			case ToUseTimeLinePackage.FUNCTION_POSSIBLE__DISTRIBUTION:
+				return eInternalContainer().eInverseRemove(this, ToUseTimeLinePackage.DOMAIN_DISTRIBUTION__POSSIBLES, DomainDistribution.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -293,13 +282,13 @@ public class FunctionPossibleImpl extends ObjectWithPropagatorFunctionsImpl impl
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TousetimelinePackage.FUNCTION_POSSIBLE__LIMIT_MOMENT:
+			case ToUseTimeLinePackage.FUNCTION_POSSIBLE__LIMIT_MOMENT:
 				return getLimitMoment();
-			case TousetimelinePackage.FUNCTION_POSSIBLE__LIMIT_DURATION:
+			case ToUseTimeLinePackage.FUNCTION_POSSIBLE__LIMIT_DURATION:
 				return getLimitDuration();
-			case TousetimelinePackage.FUNCTION_POSSIBLE__LIMIT_AMOUNT:
+			case ToUseTimeLinePackage.FUNCTION_POSSIBLE__LIMIT_AMOUNT:
 				return getLimitAmount();
-			case TousetimelinePackage.FUNCTION_POSSIBLE__DISTRIBUTION:
+			case ToUseTimeLinePackage.FUNCTION_POSSIBLE__DISTRIBUTION:
 				return getDistribution();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -313,16 +302,16 @@ public class FunctionPossibleImpl extends ObjectWithPropagatorFunctionsImpl impl
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TousetimelinePackage.FUNCTION_POSSIBLE__LIMIT_MOMENT:
+			case ToUseTimeLinePackage.FUNCTION_POSSIBLE__LIMIT_MOMENT:
 				setLimitMoment((Date)newValue);
 				return;
-			case TousetimelinePackage.FUNCTION_POSSIBLE__LIMIT_DURATION:
+			case ToUseTimeLinePackage.FUNCTION_POSSIBLE__LIMIT_DURATION:
 				setLimitDuration((Float)newValue);
 				return;
-			case TousetimelinePackage.FUNCTION_POSSIBLE__LIMIT_AMOUNT:
+			case ToUseTimeLinePackage.FUNCTION_POSSIBLE__LIMIT_AMOUNT:
 				setLimitAmount((Float)newValue);
 				return;
-			case TousetimelinePackage.FUNCTION_POSSIBLE__DISTRIBUTION:
+			case ToUseTimeLinePackage.FUNCTION_POSSIBLE__DISTRIBUTION:
 				setDistribution((DomainDistribution)newValue);
 				return;
 		}
@@ -337,16 +326,16 @@ public class FunctionPossibleImpl extends ObjectWithPropagatorFunctionsImpl impl
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TousetimelinePackage.FUNCTION_POSSIBLE__LIMIT_MOMENT:
+			case ToUseTimeLinePackage.FUNCTION_POSSIBLE__LIMIT_MOMENT:
 				setLimitMoment(LIMIT_MOMENT_EDEFAULT);
 				return;
-			case TousetimelinePackage.FUNCTION_POSSIBLE__LIMIT_DURATION:
+			case ToUseTimeLinePackage.FUNCTION_POSSIBLE__LIMIT_DURATION:
 				setLimitDuration(LIMIT_DURATION_EDEFAULT);
 				return;
-			case TousetimelinePackage.FUNCTION_POSSIBLE__LIMIT_AMOUNT:
+			case ToUseTimeLinePackage.FUNCTION_POSSIBLE__LIMIT_AMOUNT:
 				setLimitAmount(LIMIT_AMOUNT_EDEFAULT);
 				return;
-			case TousetimelinePackage.FUNCTION_POSSIBLE__DISTRIBUTION:
+			case ToUseTimeLinePackage.FUNCTION_POSSIBLE__DISTRIBUTION:
 				setDistribution((DomainDistribution)null);
 				return;
 		}
@@ -361,13 +350,13 @@ public class FunctionPossibleImpl extends ObjectWithPropagatorFunctionsImpl impl
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TousetimelinePackage.FUNCTION_POSSIBLE__LIMIT_MOMENT:
+			case ToUseTimeLinePackage.FUNCTION_POSSIBLE__LIMIT_MOMENT:
 				return LIMIT_MOMENT_EDEFAULT == null ? limitMoment != null : !LIMIT_MOMENT_EDEFAULT.equals(limitMoment);
-			case TousetimelinePackage.FUNCTION_POSSIBLE__LIMIT_DURATION:
+			case ToUseTimeLinePackage.FUNCTION_POSSIBLE__LIMIT_DURATION:
 				return limitDuration != LIMIT_DURATION_EDEFAULT;
-			case TousetimelinePackage.FUNCTION_POSSIBLE__LIMIT_AMOUNT:
+			case ToUseTimeLinePackage.FUNCTION_POSSIBLE__LIMIT_AMOUNT:
 				return limitAmount != LIMIT_AMOUNT_EDEFAULT;
-			case TousetimelinePackage.FUNCTION_POSSIBLE__DISTRIBUTION:
+			case ToUseTimeLinePackage.FUNCTION_POSSIBLE__DISTRIBUTION:
 				return getDistribution() != null;
 		}
 		return super.eIsSet(featureID);
@@ -381,7 +370,7 @@ public class FunctionPossibleImpl extends ObjectWithPropagatorFunctionsImpl impl
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case TousetimelinePackage.FUNCTION_POSSIBLE___REFRESH:
+			case ToUseTimeLinePackage.FUNCTION_POSSIBLE___REFRESH:
 				refresh();
 				return null;
 		}

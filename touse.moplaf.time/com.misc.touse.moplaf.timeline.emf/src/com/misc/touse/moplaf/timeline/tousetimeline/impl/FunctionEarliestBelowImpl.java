@@ -4,8 +4,7 @@ package com.misc.touse.moplaf.timeline.tousetimeline.impl;
 
 import com.misc.common.moplaf.time.continuous.Distribution;
 import com.misc.touse.moplaf.timeline.tousetimeline.FunctionEarliestBelow;
-import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage;
-
+import com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage;
 import java.util.Date;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -64,7 +63,7 @@ public class FunctionEarliestBelowImpl extends FunctionPossibleImpl implements F
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TousetimelinePackage.Literals.FUNCTION_EARLIEST_BELOW;
+		return ToUseTimeLinePackage.Literals.FUNCTION_EARLIEST_BELOW;
 	}
 
 	/**
@@ -85,7 +84,7 @@ public class FunctionEarliestBelowImpl extends FunctionPossibleImpl implements F
 		Date oldEarliestBelow = earliestBelow;
 		earliestBelow = newEarliestBelow;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousetimelinePackage.FUNCTION_EARLIEST_BELOW__EARLIEST_BELOW, oldEarliestBelow, earliestBelow));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseTimeLinePackage.FUNCTION_EARLIEST_BELOW__EARLIEST_BELOW, oldEarliestBelow, earliestBelow));
 	}
 
 	/**
@@ -110,7 +109,7 @@ public class FunctionEarliestBelowImpl extends FunctionPossibleImpl implements F
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TousetimelinePackage.FUNCTION_EARLIEST_BELOW__EARLIEST_BELOW:
+			case ToUseTimeLinePackage.FUNCTION_EARLIEST_BELOW__EARLIEST_BELOW:
 				return getEarliestBelow();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -124,7 +123,7 @@ public class FunctionEarliestBelowImpl extends FunctionPossibleImpl implements F
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TousetimelinePackage.FUNCTION_EARLIEST_BELOW__EARLIEST_BELOW:
+			case ToUseTimeLinePackage.FUNCTION_EARLIEST_BELOW__EARLIEST_BELOW:
 				setEarliestBelow((Date)newValue);
 				return;
 		}
@@ -139,7 +138,7 @@ public class FunctionEarliestBelowImpl extends FunctionPossibleImpl implements F
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TousetimelinePackage.FUNCTION_EARLIEST_BELOW__EARLIEST_BELOW:
+			case ToUseTimeLinePackage.FUNCTION_EARLIEST_BELOW__EARLIEST_BELOW:
 				setEarliestBelow(EARLIEST_BELOW_EDEFAULT);
 				return;
 		}
@@ -154,7 +153,7 @@ public class FunctionEarliestBelowImpl extends FunctionPossibleImpl implements F
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TousetimelinePackage.FUNCTION_EARLIEST_BELOW__EARLIEST_BELOW:
+			case ToUseTimeLinePackage.FUNCTION_EARLIEST_BELOW__EARLIEST_BELOW:
 				return EARLIEST_BELOW_EDEFAULT == null ? earliestBelow != null : !EARLIEST_BELOW_EDEFAULT.equals(earliestBelow);
 		}
 		return super.eIsSet(featureID);

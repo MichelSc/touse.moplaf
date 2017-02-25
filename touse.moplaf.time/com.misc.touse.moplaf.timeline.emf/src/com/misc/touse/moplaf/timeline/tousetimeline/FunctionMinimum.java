@@ -14,7 +14,7 @@ package com.misc.touse.moplaf.timeline.tousetimeline;
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionMinimum#getMinimum <em>Minimum</em>}</li>
  * </ul>
  *
- * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getFunctionMinimum()
+ * @see com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage#getFunctionMinimum()
  * @model
  * @generated
  */
@@ -29,7 +29,7 @@ public interface FunctionMinimum extends FunctionInterval {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Minimum</em>' attribute.
 	 * @see #setMinimum(float)
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getFunctionMinimum_Minimum()
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage#getFunctionMinimum_Minimum()
 	 * @model
 	 * @generated
 	 */

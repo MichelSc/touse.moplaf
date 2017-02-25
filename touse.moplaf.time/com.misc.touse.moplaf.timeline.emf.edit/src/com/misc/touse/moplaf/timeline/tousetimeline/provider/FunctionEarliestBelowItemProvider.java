@@ -4,8 +4,7 @@ package com.misc.touse.moplaf.timeline.tousetimeline.provider;
 
 
 import com.misc.touse.moplaf.timeline.tousetimeline.FunctionEarliestBelow;
-import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage;
-
+import com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
@@ -64,7 +63,7 @@ public class FunctionEarliestBelowItemProvider extends FunctionPossibleItemProvi
 				 getResourceLocator(),
 				 getString("_UI_FunctionEarliestBelow_earliestBelow_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FunctionEarliestBelow_earliestBelow_feature", "_UI_FunctionEarliestBelow_type"),
-				 TousetimelinePackage.Literals.FUNCTION_EARLIEST_BELOW__EARLIEST_BELOW,
+				 ToUseTimeLinePackage.Literals.FUNCTION_EARLIEST_BELOW__EARLIEST_BELOW,
 				 false,
 				 false,
 				 false,
@@ -112,7 +111,7 @@ public class FunctionEarliestBelowItemProvider extends FunctionPossibleItemProvi
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(FunctionEarliestBelow.class)) {
-			case TousetimelinePackage.FUNCTION_EARLIEST_BELOW__EARLIEST_BELOW:
+			case ToUseTimeLinePackage.FUNCTION_EARLIEST_BELOW__EARLIEST_BELOW:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

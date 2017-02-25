@@ -2,15 +2,12 @@
  */
 package com.misc.touse.moplaf.timeline.tousetimeline.impl;
 
-import com.mis.touse.moplaf.timeline.tousetimeline.calc.PropagatorLayerDomainDistributionFunctions;
-import com.mis.touse.moplaf.timeline.tousetimeline.calc.PropagatorScopeDomainDistribution;
-import com.misc.common.moplaf.propagator.Util;
+
 import com.misc.common.moplaf.time.continuous.impl.DistributionImpl;
 import com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution;
 import com.misc.touse.moplaf.timeline.tousetimeline.FunctionInterval;
 import com.misc.touse.moplaf.timeline.tousetimeline.FunctionPossible;
-import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage;
-
+import com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage;
 import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -107,21 +104,6 @@ public class DomainDistributionImpl extends DistributionImpl implements DomainDi
 		super();
 	}
 	
-	
-
-	/* (non-Javadoc)
-	 * @see com.misc.common.moplaf.time.continuous.impl.DistributionImpl#addPropagatorFunctionAdapter()
-	 */
-	@Override
-	public void addPropagatorFunctionAdapter() {
-		super.addPropagatorFunctionAdapter();
-		Util.adapt(this, PropagatorScopeDomainDistribution.class);
-		Util.adapt(this, PropagatorLayerDomainDistributionFunctions.class);
-		
-	}
-
-
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -129,7 +111,7 @@ public class DomainDistributionImpl extends DistributionImpl implements DomainDi
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TousetimelinePackage.Literals.DOMAIN_DISTRIBUTION;
+		return ToUseTimeLinePackage.Literals.DOMAIN_DISTRIBUTION;
 	}
 
 	/**
@@ -150,7 +132,7 @@ public class DomainDistributionImpl extends DistributionImpl implements DomainDi
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousetimelinePackage.DOMAIN_DISTRIBUTION__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseTimeLinePackage.DOMAIN_DISTRIBUTION__NAME, oldName, name));
 	}
 
 	/**
@@ -173,7 +155,7 @@ public class DomainDistributionImpl extends DistributionImpl implements DomainDi
 		int oldColor = color;
 		color = newColor;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousetimelinePackage.DOMAIN_DISTRIBUTION__COLOR, oldColor, color));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseTimeLinePackage.DOMAIN_DISTRIBUTION__COLOR, oldColor, color));
 	}
 
 
@@ -185,7 +167,7 @@ public class DomainDistributionImpl extends DistributionImpl implements DomainDi
 	 */
 	public EList<FunctionInterval> getFunctions() {
 		if (functions == null) {
-			functions = new EObjectContainmentWithInverseEList<FunctionInterval>(FunctionInterval.class, this, TousetimelinePackage.DOMAIN_DISTRIBUTION__FUNCTIONS, TousetimelinePackage.FUNCTION_INTERVAL__DISTRIBUTION);
+			functions = new EObjectContainmentWithInverseEList<FunctionInterval>(FunctionInterval.class, this, ToUseTimeLinePackage.DOMAIN_DISTRIBUTION__FUNCTIONS, ToUseTimeLinePackage.FUNCTION_INTERVAL__DISTRIBUTION);
 		}
 		return functions;
 	}
@@ -199,7 +181,7 @@ public class DomainDistributionImpl extends DistributionImpl implements DomainDi
 	 */
 	public EList<FunctionPossible> getPossibles() {
 		if (possibles == null) {
-			possibles = new EObjectContainmentWithInverseEList<FunctionPossible>(FunctionPossible.class, this, TousetimelinePackage.DOMAIN_DISTRIBUTION__POSSIBLES, TousetimelinePackage.FUNCTION_POSSIBLE__DISTRIBUTION);
+			possibles = new EObjectContainmentWithInverseEList<FunctionPossible>(FunctionPossible.class, this, ToUseTimeLinePackage.DOMAIN_DISTRIBUTION__POSSIBLES, ToUseTimeLinePackage.FUNCTION_POSSIBLE__DISTRIBUTION);
 		}
 		return possibles;
 	}
@@ -215,9 +197,9 @@ public class DomainDistributionImpl extends DistributionImpl implements DomainDi
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case TousetimelinePackage.DOMAIN_DISTRIBUTION__FUNCTIONS:
+			case ToUseTimeLinePackage.DOMAIN_DISTRIBUTION__FUNCTIONS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getFunctions()).basicAdd(otherEnd, msgs);
-			case TousetimelinePackage.DOMAIN_DISTRIBUTION__POSSIBLES:
+			case ToUseTimeLinePackage.DOMAIN_DISTRIBUTION__POSSIBLES:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getPossibles()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -233,9 +215,9 @@ public class DomainDistributionImpl extends DistributionImpl implements DomainDi
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case TousetimelinePackage.DOMAIN_DISTRIBUTION__FUNCTIONS:
+			case ToUseTimeLinePackage.DOMAIN_DISTRIBUTION__FUNCTIONS:
 				return ((InternalEList<?>)getFunctions()).basicRemove(otherEnd, msgs);
-			case TousetimelinePackage.DOMAIN_DISTRIBUTION__POSSIBLES:
+			case ToUseTimeLinePackage.DOMAIN_DISTRIBUTION__POSSIBLES:
 				return ((InternalEList<?>)getPossibles()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -251,13 +233,13 @@ public class DomainDistributionImpl extends DistributionImpl implements DomainDi
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TousetimelinePackage.DOMAIN_DISTRIBUTION__NAME:
+			case ToUseTimeLinePackage.DOMAIN_DISTRIBUTION__NAME:
 				return getName();
-			case TousetimelinePackage.DOMAIN_DISTRIBUTION__COLOR:
+			case ToUseTimeLinePackage.DOMAIN_DISTRIBUTION__COLOR:
 				return getColor();
-			case TousetimelinePackage.DOMAIN_DISTRIBUTION__FUNCTIONS:
+			case ToUseTimeLinePackage.DOMAIN_DISTRIBUTION__FUNCTIONS:
 				return getFunctions();
-			case TousetimelinePackage.DOMAIN_DISTRIBUTION__POSSIBLES:
+			case ToUseTimeLinePackage.DOMAIN_DISTRIBUTION__POSSIBLES:
 				return getPossibles();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -272,17 +254,17 @@ public class DomainDistributionImpl extends DistributionImpl implements DomainDi
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TousetimelinePackage.DOMAIN_DISTRIBUTION__NAME:
+			case ToUseTimeLinePackage.DOMAIN_DISTRIBUTION__NAME:
 				setName((String)newValue);
 				return;
-			case TousetimelinePackage.DOMAIN_DISTRIBUTION__COLOR:
+			case ToUseTimeLinePackage.DOMAIN_DISTRIBUTION__COLOR:
 				setColor((Integer)newValue);
 				return;
-			case TousetimelinePackage.DOMAIN_DISTRIBUTION__FUNCTIONS:
+			case ToUseTimeLinePackage.DOMAIN_DISTRIBUTION__FUNCTIONS:
 				getFunctions().clear();
 				getFunctions().addAll((Collection<? extends FunctionInterval>)newValue);
 				return;
-			case TousetimelinePackage.DOMAIN_DISTRIBUTION__POSSIBLES:
+			case ToUseTimeLinePackage.DOMAIN_DISTRIBUTION__POSSIBLES:
 				getPossibles().clear();
 				getPossibles().addAll((Collection<? extends FunctionPossible>)newValue);
 				return;
@@ -298,16 +280,16 @@ public class DomainDistributionImpl extends DistributionImpl implements DomainDi
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TousetimelinePackage.DOMAIN_DISTRIBUTION__NAME:
+			case ToUseTimeLinePackage.DOMAIN_DISTRIBUTION__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case TousetimelinePackage.DOMAIN_DISTRIBUTION__COLOR:
+			case ToUseTimeLinePackage.DOMAIN_DISTRIBUTION__COLOR:
 				setColor(COLOR_EDEFAULT);
 				return;
-			case TousetimelinePackage.DOMAIN_DISTRIBUTION__FUNCTIONS:
+			case ToUseTimeLinePackage.DOMAIN_DISTRIBUTION__FUNCTIONS:
 				getFunctions().clear();
 				return;
-			case TousetimelinePackage.DOMAIN_DISTRIBUTION__POSSIBLES:
+			case ToUseTimeLinePackage.DOMAIN_DISTRIBUTION__POSSIBLES:
 				getPossibles().clear();
 				return;
 		}
@@ -322,13 +304,13 @@ public class DomainDistributionImpl extends DistributionImpl implements DomainDi
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TousetimelinePackage.DOMAIN_DISTRIBUTION__NAME:
+			case ToUseTimeLinePackage.DOMAIN_DISTRIBUTION__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case TousetimelinePackage.DOMAIN_DISTRIBUTION__COLOR:
+			case ToUseTimeLinePackage.DOMAIN_DISTRIBUTION__COLOR:
 				return color != COLOR_EDEFAULT;
-			case TousetimelinePackage.DOMAIN_DISTRIBUTION__FUNCTIONS:
+			case ToUseTimeLinePackage.DOMAIN_DISTRIBUTION__FUNCTIONS:
 				return functions != null && !functions.isEmpty();
-			case TousetimelinePackage.DOMAIN_DISTRIBUTION__POSSIBLES:
+			case ToUseTimeLinePackage.DOMAIN_DISTRIBUTION__POSSIBLES:
 				return possibles != null && !possibles.isEmpty();
 		}
 		return super.eIsSet(featureID);

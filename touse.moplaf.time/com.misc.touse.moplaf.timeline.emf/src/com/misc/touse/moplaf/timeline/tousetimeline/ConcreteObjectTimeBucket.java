@@ -10,7 +10,7 @@ import com.misc.common.moplaf.time.discrete.ObjectTimeBucket;
  * <!-- end-user-doc -->
  *
  *
- * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getConcreteObjectTimeBucket()
+ * @see com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage#getConcreteObjectTimeBucket()
  * @model extendedMetaData="name='ConcreteObjectWithTimeLine'"
  * @generated
  */

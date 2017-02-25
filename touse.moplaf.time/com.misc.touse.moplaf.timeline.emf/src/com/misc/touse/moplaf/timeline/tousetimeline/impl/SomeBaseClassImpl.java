@@ -3,8 +3,7 @@
 package com.misc.touse.moplaf.timeline.tousetimeline.impl;
 
 import com.misc.touse.moplaf.timeline.tousetimeline.SomeBaseClass;
-import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage;
-
+import com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage;
 import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -66,7 +65,7 @@ public class SomeBaseClassImpl extends MinimalEObjectImpl.Container implements S
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TousetimelinePackage.Literals.SOME_BASE_CLASS;
+		return ToUseTimeLinePackage.Literals.SOME_BASE_CLASS;
 	}
 
 	/**
@@ -87,7 +86,7 @@ public class SomeBaseClassImpl extends MinimalEObjectImpl.Container implements S
 		String oldSomeAttribute = someAttribute;
 		someAttribute = newSomeAttribute;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousetimelinePackage.SOME_BASE_CLASS__SOME_ATTRIBUTE, oldSomeAttribute, someAttribute));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseTimeLinePackage.SOME_BASE_CLASS__SOME_ATTRIBUTE, oldSomeAttribute, someAttribute));
 	}
 
 	/**
@@ -109,7 +108,7 @@ public class SomeBaseClassImpl extends MinimalEObjectImpl.Container implements S
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TousetimelinePackage.SOME_BASE_CLASS__SOME_ATTRIBUTE:
+			case ToUseTimeLinePackage.SOME_BASE_CLASS__SOME_ATTRIBUTE:
 				return getSomeAttribute();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -123,7 +122,7 @@ public class SomeBaseClassImpl extends MinimalEObjectImpl.Container implements S
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TousetimelinePackage.SOME_BASE_CLASS__SOME_ATTRIBUTE:
+			case ToUseTimeLinePackage.SOME_BASE_CLASS__SOME_ATTRIBUTE:
 				setSomeAttribute((String)newValue);
 				return;
 		}
@@ -138,7 +137,7 @@ public class SomeBaseClassImpl extends MinimalEObjectImpl.Container implements S
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TousetimelinePackage.SOME_BASE_CLASS__SOME_ATTRIBUTE:
+			case ToUseTimeLinePackage.SOME_BASE_CLASS__SOME_ATTRIBUTE:
 				setSomeAttribute(SOME_ATTRIBUTE_EDEFAULT);
 				return;
 		}
@@ -153,7 +152,7 @@ public class SomeBaseClassImpl extends MinimalEObjectImpl.Container implements S
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TousetimelinePackage.SOME_BASE_CLASS__SOME_ATTRIBUTE:
+			case ToUseTimeLinePackage.SOME_BASE_CLASS__SOME_ATTRIBUTE:
 				return SOME_ATTRIBUTE_EDEFAULT == null ? someAttribute != null : !SOME_ATTRIBUTE_EDEFAULT.equals(someAttribute);
 		}
 		return super.eIsSet(featureID);
@@ -167,7 +166,7 @@ public class SomeBaseClassImpl extends MinimalEObjectImpl.Container implements S
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case TousetimelinePackage.SOME_BASE_CLASS___SOME_OPERATION:
+			case ToUseTimeLinePackage.SOME_BASE_CLASS___SOME_OPERATION:
 				someOperation();
 				return null;
 		}

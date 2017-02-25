@@ -4,8 +4,7 @@ package com.misc.touse.moplaf.timeline.tousetimeline.provider;
 
 
 import com.misc.touse.moplaf.timeline.tousetimeline.SomeBaseClass;
-import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage;
-
+import com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage;
 import java.util.Collection;
 import java.util.List;
 
@@ -78,7 +77,7 @@ public class SomeBaseClassItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SomeBaseClass_someAttribute_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SomeBaseClass_someAttribute_feature", "_UI_SomeBaseClass_type"),
-				 TousetimelinePackage.Literals.SOME_BASE_CLASS__SOME_ATTRIBUTE,
+				 ToUseTimeLinePackage.Literals.SOME_BASE_CLASS__SOME_ATTRIBUTE,
 				 true,
 				 false,
 				 false,
@@ -125,7 +124,7 @@ public class SomeBaseClassItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SomeBaseClass.class)) {
-			case TousetimelinePackage.SOME_BASE_CLASS__SOME_ATTRIBUTE:
+			case ToUseTimeLinePackage.SOME_BASE_CLASS__SOME_ATTRIBUTE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

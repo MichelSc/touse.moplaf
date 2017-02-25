@@ -10,7 +10,7 @@ import com.misc.common.moplaf.time.discrete.ObjectWithTimeLine;
  * <!-- end-user-doc -->
  *
  *
- * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getConcreteObjectWithTimeLine()
+ * @see com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage#getConcreteObjectWithTimeLine()
  * @model
  * @generated
  */

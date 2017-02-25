@@ -23,7 +23,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.Domain#getObjectsWithTimeLine <em>Objects With Time Line</em>}</li>
  * </ul>
  *
- * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getDomain()
+ * @see com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage#getDomain()
  * @model
  * @generated
  */
@@ -38,7 +38,7 @@ public interface Domain extends ObjectWithPropagatorFunctions {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Time Line Merges</em>' containment reference list.
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getDomain_TimeLineMerges()
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage#getDomain_TimeLineMerges()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -54,7 +54,7 @@ public interface Domain extends ObjectWithPropagatorFunctions {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Distribution</em>' containment reference list.
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getDomain_Distribution()
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage#getDomain_Distribution()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -70,7 +70,7 @@ public interface Domain extends ObjectWithPropagatorFunctions {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getDomain_Name()
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage#getDomain_Name()
 	 * @model
 	 * @generated
 	 */
@@ -96,7 +96,7 @@ public interface Domain extends ObjectWithPropagatorFunctions {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Timelines</em>' containment reference list.
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getDomain_Timelines()
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage#getDomain_Timelines()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -112,7 +112,7 @@ public interface Domain extends ObjectWithPropagatorFunctions {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Objects With Time Line</em>' containment reference list.
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getDomain_ObjectsWithTimeLine()
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage#getDomain_ObjectsWithTimeLine()
 	 * @model containment="true"
 	 * @generated
 	 */

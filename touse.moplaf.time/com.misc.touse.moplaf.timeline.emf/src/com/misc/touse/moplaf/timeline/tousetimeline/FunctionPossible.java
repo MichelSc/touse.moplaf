@@ -20,7 +20,7 @@ import java.util.Date;
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionPossible#getDistribution <em>Distribution</em>}</li>
  * </ul>
  *
- * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getFunctionPossible()
+ * @see com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage#getFunctionPossible()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface FunctionPossible extends ObjectWithPropagatorFunctions {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Limit Moment</em>' attribute.
 	 * @see #setLimitMoment(Date)
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getFunctionPossible_LimitMoment()
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage#getFunctionPossible_LimitMoment()
 	 * @model
 	 * @generated
 	 */
@@ -61,7 +61,7 @@ public interface FunctionPossible extends ObjectWithPropagatorFunctions {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Limit Duration</em>' attribute.
 	 * @see #setLimitDuration(float)
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getFunctionPossible_LimitDuration()
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage#getFunctionPossible_LimitDuration()
 	 * @model
 	 * @generated
 	 */
@@ -87,7 +87,7 @@ public interface FunctionPossible extends ObjectWithPropagatorFunctions {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Limit Amount</em>' attribute.
 	 * @see #setLimitAmount(float)
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getFunctionPossible_LimitAmount()
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage#getFunctionPossible_LimitAmount()
 	 * @model
 	 * @generated
 	 */
@@ -114,7 +114,7 @@ public interface FunctionPossible extends ObjectWithPropagatorFunctions {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Distribution</em>' container reference.
 	 * @see #setDistribution(DomainDistribution)
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getFunctionPossible_Distribution()
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage#getFunctionPossible_Distribution()
 	 * @see com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution#getPossibles
 	 * @model opposite="Possibles" transient="false"
 	 * @generated

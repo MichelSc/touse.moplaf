@@ -15,7 +15,7 @@ package com.misc.touse.moplaf.timeline.tousetimeline;
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionAverage#getAverage <em>Average</em>}</li>
  * </ul>
  *
- * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getFunctionAverage()
+ * @see com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage#getFunctionAverage()
  * @model
  * @generated
  */
@@ -31,7 +31,7 @@ public interface FunctionAverage extends FunctionInterval {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Average</em>' attribute.
 	 * @see #setAverage(float)
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getFunctionAverage_Average()
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage#getFunctionAverage_Average()
 	 * @model default="0.0"
 	 * @generated
 	 */

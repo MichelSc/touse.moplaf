@@ -4,7 +4,7 @@ package com.misc.touse.moplaf.timeline.tousetimeline.impl;
 
 import com.misc.common.moplaf.time.continuous.Distribution;
 import com.misc.touse.moplaf.timeline.tousetimeline.FunctionMinimum;
-import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage;
+import com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -59,7 +59,7 @@ public class FunctionMinimumImpl extends FunctionIntervalImpl implements Functio
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TousetimelinePackage.Literals.FUNCTION_MINIMUM;
+		return ToUseTimeLinePackage.Literals.FUNCTION_MINIMUM;
 	}
 
 	/**
@@ -80,7 +80,7 @@ public class FunctionMinimumImpl extends FunctionIntervalImpl implements Functio
 		float oldMinimum = minimum;
 		minimum = newMinimum;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousetimelinePackage.FUNCTION_MINIMUM__MINIMUM, oldMinimum, minimum));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseTimeLinePackage.FUNCTION_MINIMUM__MINIMUM, oldMinimum, minimum));
 	}
 
 	/**
@@ -102,7 +102,7 @@ public class FunctionMinimumImpl extends FunctionIntervalImpl implements Functio
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TousetimelinePackage.FUNCTION_MINIMUM__MINIMUM:
+			case ToUseTimeLinePackage.FUNCTION_MINIMUM__MINIMUM:
 				return getMinimum();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -116,7 +116,7 @@ public class FunctionMinimumImpl extends FunctionIntervalImpl implements Functio
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TousetimelinePackage.FUNCTION_MINIMUM__MINIMUM:
+			case ToUseTimeLinePackage.FUNCTION_MINIMUM__MINIMUM:
 				setMinimum((Float)newValue);
 				return;
 		}
@@ -131,7 +131,7 @@ public class FunctionMinimumImpl extends FunctionIntervalImpl implements Functio
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TousetimelinePackage.FUNCTION_MINIMUM__MINIMUM:
+			case ToUseTimeLinePackage.FUNCTION_MINIMUM__MINIMUM:
 				setMinimum(MINIMUM_EDEFAULT);
 				return;
 		}
@@ -146,7 +146,7 @@ public class FunctionMinimumImpl extends FunctionIntervalImpl implements Functio
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TousetimelinePackage.FUNCTION_MINIMUM__MINIMUM:
+			case ToUseTimeLinePackage.FUNCTION_MINIMUM__MINIMUM:
 				return minimum != MINIMUM_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

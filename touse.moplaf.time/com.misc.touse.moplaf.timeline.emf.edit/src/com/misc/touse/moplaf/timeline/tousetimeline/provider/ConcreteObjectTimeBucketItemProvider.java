@@ -3,7 +3,7 @@
 package com.misc.touse.moplaf.timeline.tousetimeline.provider;
 
 
-import com.misc.common.moplaf.time.discrete.DiscretePackage;
+import com.misc.common.moplaf.time.discrete.TimeDiscretePackage;
 import com.misc.touse.moplaf.timeline.tousetimeline.ConcreteObjectTimeBucket;
 import java.util.Collection;
 import java.util.List;
@@ -61,7 +61,7 @@ public class ConcreteObjectTimeBucketItemProvider extends SomeBaseClassItemProvi
 				 getResourceLocator(),
 				 getString("_UI_ObjectTimeBucket_Bucket_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ObjectTimeBucket_Bucket_feature", "_UI_ObjectTimeBucket_type"),
-				 DiscretePackage.Literals.OBJECT_TIME_BUCKET__BUCKET,
+				 TimeDiscretePackage.Literals.OBJECT_TIME_BUCKET__BUCKET,
 				 true,
 				 false,
 				 true,
@@ -83,7 +83,7 @@ public class ConcreteObjectTimeBucketItemProvider extends SomeBaseClassItemProvi
 				 getResourceLocator(),
 				 getString("_UI_ObjectTimeBucket_Next_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ObjectTimeBucket_Next_feature", "_UI_ObjectTimeBucket_type"),
-				 DiscretePackage.Literals.OBJECT_TIME_BUCKET__NEXT,
+				 TimeDiscretePackage.Literals.OBJECT_TIME_BUCKET__NEXT,
 				 true,
 				 false,
 				 true,
@@ -105,7 +105,7 @@ public class ConcreteObjectTimeBucketItemProvider extends SomeBaseClassItemProvi
 				 getResourceLocator(),
 				 getString("_UI_ObjectTimeBucket_Previous_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ObjectTimeBucket_Previous_feature", "_UI_ObjectTimeBucket_type"),
-				 DiscretePackage.Literals.OBJECT_TIME_BUCKET__PREVIOUS,
+				 TimeDiscretePackage.Literals.OBJECT_TIME_BUCKET__PREVIOUS,
 				 true,
 				 false,
 				 true,

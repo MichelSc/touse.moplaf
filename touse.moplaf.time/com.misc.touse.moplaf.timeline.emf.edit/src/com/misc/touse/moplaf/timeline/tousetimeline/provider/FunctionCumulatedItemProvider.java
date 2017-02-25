@@ -4,8 +4,7 @@ package com.misc.touse.moplaf.timeline.tousetimeline.provider;
 
 
 import com.misc.touse.moplaf.timeline.tousetimeline.FunctionCumulated;
-import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage;
-
+import com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
@@ -64,7 +63,7 @@ public class FunctionCumulatedItemProvider extends FunctionIntervalItemProvider 
 				 getResourceLocator(),
 				 getString("_UI_FunctionCumulated_cumulated_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FunctionCumulated_cumulated_feature", "_UI_FunctionCumulated_type"),
-				 TousetimelinePackage.Literals.FUNCTION_CUMULATED__CUMULATED,
+				 ToUseTimeLinePackage.Literals.FUNCTION_CUMULATED__CUMULATED,
 				 false,
 				 false,
 				 false,
@@ -112,7 +111,7 @@ public class FunctionCumulatedItemProvider extends FunctionIntervalItemProvider 
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(FunctionCumulated.class)) {
-			case TousetimelinePackage.FUNCTION_CUMULATED__CUMULATED:
+			case ToUseTimeLinePackage.FUNCTION_CUMULATED__CUMULATED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

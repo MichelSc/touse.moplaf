@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ToUseTimeLineCalc -->
+      <package
+            uri="http://www.misc.com/touse/moplaf/timeline/calc/model/0.1"
+            class="com.misc.touse.moplaf.timeline.tousetimeline.calc.ToUseTimeLineCalcPackage"
+            genModel="model/ToUseTimeLineCalc.genmodel"/>
+   </extension>
+
+</plugin>

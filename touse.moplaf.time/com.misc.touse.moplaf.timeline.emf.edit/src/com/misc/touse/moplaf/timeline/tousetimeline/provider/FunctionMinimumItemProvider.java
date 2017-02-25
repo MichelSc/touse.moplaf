@@ -4,8 +4,7 @@ package com.misc.touse.moplaf.timeline.tousetimeline.provider;
 
 
 import com.misc.touse.moplaf.timeline.tousetimeline.FunctionMinimum;
-import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage;
-
+import com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
@@ -64,7 +63,7 @@ public class FunctionMinimumItemProvider
 				 getResourceLocator(),
 				 getString("_UI_FunctionMinimum_minimum_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FunctionMinimum_minimum_feature", "_UI_FunctionMinimum_type"),
-				 TousetimelinePackage.Literals.FUNCTION_MINIMUM__MINIMUM,
+				 ToUseTimeLinePackage.Literals.FUNCTION_MINIMUM__MINIMUM,
 				 false,
 				 false,
 				 false,
@@ -112,7 +111,7 @@ public class FunctionMinimumItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(FunctionMinimum.class)) {
-			case TousetimelinePackage.FUNCTION_MINIMUM__MINIMUM:
+			case ToUseTimeLinePackage.FUNCTION_MINIMUM__MINIMUM:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -16,7 +16,7 @@ import java.util.Date;
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionEarliestOutput#getEarliestOutput <em>Earliest Output</em>}</li>
  * </ul>
  *
- * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getFunctionEarliestOutput()
+ * @see com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage#getFunctionEarliestOutput()
  * @model
  * @generated
  */
@@ -31,7 +31,7 @@ public interface FunctionEarliestOutput extends FunctionPossible {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Earliest Output</em>' attribute.
 	 * @see #setEarliestOutput(Date)
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getFunctionEarliestOutput_EarliestOutput()
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage#getFunctionEarliestOutput_EarliestOutput()
 	 * @model
 	 * @generated
 	 */

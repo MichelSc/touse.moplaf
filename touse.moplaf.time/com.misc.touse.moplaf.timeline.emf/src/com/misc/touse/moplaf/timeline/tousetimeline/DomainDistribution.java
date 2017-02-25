@@ -20,7 +20,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution#getPossibles <em>Possibles</em>}</li>
  * </ul>
  *
- * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getDomainDistribution()
+ * @see com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage#getDomainDistribution()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface DomainDistribution extends Distribution {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getDomainDistribution_Name()
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage#getDomainDistribution_Name()
 	 * @model
 	 * @generated
 	 */
@@ -61,7 +61,7 @@ public interface DomainDistribution extends Distribution {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Color</em>' attribute.
 	 * @see #setColor(int)
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getDomainDistribution_Color()
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage#getDomainDistribution_Color()
 	 * @model
 	 * @generated
 	 */
@@ -88,7 +88,7 @@ public interface DomainDistribution extends Distribution {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Functions</em>' containment reference list.
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getDomainDistribution_Functions()
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage#getDomainDistribution_Functions()
 	 * @see com.misc.touse.moplaf.timeline.tousetimeline.FunctionInterval#getDistribution
 	 * @model opposite="Distribution" containment="true"
 	 * @generated
@@ -106,7 +106,7 @@ public interface DomainDistribution extends Distribution {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Possibles</em>' containment reference list.
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getDomainDistribution_Possibles()
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage#getDomainDistribution_Possibles()
 	 * @see com.misc.touse.moplaf.timeline.tousetimeline.FunctionPossible#getDistribution
 	 * @model opposite="Distribution" containment="true"
 	 * @generated

@@ -9,8 +9,8 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated ToUseTimeLine -->
       <package
-            uri="http://com.misc.touse.moplaf.timeline.emf"
-            class="com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage"
+            uri="http://www.misc.com/touse/moplaf/timeline/model/0.1"
+            class="com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage"
             genModel="model/ToUseTimeLine.genmodel"/>
    </extension>
 

@@ -3,6 +3,7 @@
 package com.misc.touse.moplaf.timeline.tousetimeline.provider;
 
 
+
 import java.util.Collection;
 import java.util.List;
 
@@ -15,15 +16,12 @@ import org.eclipse.emf.edit.provider.IItemColorProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.swt.graphics.Color;
-import org.eclipse.swt.graphics.RGB;
-import org.eclipse.swt.widgets.Display;
 
-import com.misc.common.moplaf.emf.edit.Util;
+import com.misc.common.moplaf.common.Color;
 import com.misc.common.moplaf.time.continuous.provider.DistributionItemProvider;
 import com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution;
-import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelineFactory;
-import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage;
+import com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLineFactory;
+import com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage;
 
 /**
  * This is the item provider adapter for a {@link com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution} object.
@@ -85,7 +83,7 @@ public class DomainDistributionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_DomainDistribution_Name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_DomainDistribution_Name_feature", "_UI_DomainDistribution_type"),
-				 TousetimelinePackage.Literals.DOMAIN_DISTRIBUTION__NAME,
+				 ToUseTimeLinePackage.Literals.DOMAIN_DISTRIBUTION__NAME,
 				 true,
 				 false,
 				 false,
@@ -106,13 +104,13 @@ public class DomainDistributionItemProvider
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_DomainDistribution_Color_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_DomainDistribution_Color_feature", "_UI_DomainDistribution_type"),
-				 TousetimelinePackage.Literals.DOMAIN_DISTRIBUTION__COLOR,
+				 getString("_UI_DomainDistribution_Color_description"),
+				 ToUseTimeLinePackage.Literals.DOMAIN_DISTRIBUTION__COLOR,
 				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI__10ToUsePropertyCategory"),
 				 null));
 	}
 
@@ -128,8 +126,8 @@ public class DomainDistributionItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(TousetimelinePackage.Literals.DOMAIN_DISTRIBUTION__FUNCTIONS);
-			childrenFeatures.add(TousetimelinePackage.Literals.DOMAIN_DISTRIBUTION__POSSIBLES);
+			childrenFeatures.add(ToUseTimeLinePackage.Literals.DOMAIN_DISTRIBUTION__FUNCTIONS);
+			childrenFeatures.add(ToUseTimeLinePackage.Literals.DOMAIN_DISTRIBUTION__POSSIBLES);
 		}
 		return childrenFeatures;
 	}
@@ -184,12 +182,12 @@ public class DomainDistributionItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(DomainDistribution.class)) {
-			case TousetimelinePackage.DOMAIN_DISTRIBUTION__NAME:
-			case TousetimelinePackage.DOMAIN_DISTRIBUTION__COLOR:
+			case ToUseTimeLinePackage.DOMAIN_DISTRIBUTION__NAME:
+			case ToUseTimeLinePackage.DOMAIN_DISTRIBUTION__COLOR:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case TousetimelinePackage.DOMAIN_DISTRIBUTION__FUNCTIONS:
-			case TousetimelinePackage.DOMAIN_DISTRIBUTION__POSSIBLES:
+			case ToUseTimeLinePackage.DOMAIN_DISTRIBUTION__FUNCTIONS:
+			case ToUseTimeLinePackage.DOMAIN_DISTRIBUTION__POSSIBLES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -209,38 +207,38 @@ public class DomainDistributionItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TousetimelinePackage.Literals.DOMAIN_DISTRIBUTION__FUNCTIONS,
-				 TousetimelineFactory.eINSTANCE.createFunctionInterval()));
+				(ToUseTimeLinePackage.Literals.DOMAIN_DISTRIBUTION__FUNCTIONS,
+				 ToUseTimeLineFactory.eINSTANCE.createFunctionInterval()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TousetimelinePackage.Literals.DOMAIN_DISTRIBUTION__FUNCTIONS,
-				 TousetimelineFactory.eINSTANCE.createFunctionMinimum()));
+				(ToUseTimeLinePackage.Literals.DOMAIN_DISTRIBUTION__FUNCTIONS,
+				 ToUseTimeLineFactory.eINSTANCE.createFunctionMinimum()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TousetimelinePackage.Literals.DOMAIN_DISTRIBUTION__FUNCTIONS,
-				 TousetimelineFactory.eINSTANCE.createFunctionCumulated()));
+				(ToUseTimeLinePackage.Literals.DOMAIN_DISTRIBUTION__FUNCTIONS,
+				 ToUseTimeLineFactory.eINSTANCE.createFunctionCumulated()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TousetimelinePackage.Literals.DOMAIN_DISTRIBUTION__FUNCTIONS,
-				 TousetimelineFactory.eINSTANCE.createFunctionAverage()));
+				(ToUseTimeLinePackage.Literals.DOMAIN_DISTRIBUTION__FUNCTIONS,
+				 ToUseTimeLineFactory.eINSTANCE.createFunctionAverage()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TousetimelinePackage.Literals.DOMAIN_DISTRIBUTION__POSSIBLES,
-				 TousetimelineFactory.eINSTANCE.createFunctionPossible()));
+				(ToUseTimeLinePackage.Literals.DOMAIN_DISTRIBUTION__POSSIBLES,
+				 ToUseTimeLineFactory.eINSTANCE.createFunctionPossible()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TousetimelinePackage.Literals.DOMAIN_DISTRIBUTION__POSSIBLES,
-				 TousetimelineFactory.eINSTANCE.createFunctionEarliestBelow()));
+				(ToUseTimeLinePackage.Literals.DOMAIN_DISTRIBUTION__POSSIBLES,
+				 ToUseTimeLineFactory.eINSTANCE.createFunctionEarliestBelow()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TousetimelinePackage.Literals.DOMAIN_DISTRIBUTION__POSSIBLES,
-				 TousetimelineFactory.eINSTANCE.createFunctionEarliestOutput()));
+				(ToUseTimeLinePackage.Literals.DOMAIN_DISTRIBUTION__POSSIBLES,
+				 ToUseTimeLineFactory.eINSTANCE.createFunctionEarliestOutput()));
 	}
 
 	/**
@@ -257,10 +255,8 @@ public class DomainDistributionItemProvider
 	@Override
 	public Object getForeground(Object object) {
 		DomainDistribution distribution = (DomainDistribution)object;
-		RGB rgb = Util.integerToRgb(distribution.getColor());
-		return new Color(Display.getCurrent(), rgb);
+		Color color = new Color(distribution.getColor());
+		return color.toURI();
 	}
-	
-	
 
 }

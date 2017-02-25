@@ -4,8 +4,7 @@ package com.misc.touse.moplaf.timeline.tousetimeline.impl;
 
 import com.misc.common.moplaf.time.continuous.Distribution;
 import com.misc.touse.moplaf.timeline.tousetimeline.FunctionAverage;
-import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage;
-
+import com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -62,7 +61,7 @@ public class FunctionAverageImpl extends FunctionIntervalImpl implements Functio
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TousetimelinePackage.Literals.FUNCTION_AVERAGE;
+		return ToUseTimeLinePackage.Literals.FUNCTION_AVERAGE;
 	}
 
 	/**
@@ -83,7 +82,7 @@ public class FunctionAverageImpl extends FunctionIntervalImpl implements Functio
 		float oldAverage = average;
 		average = newAverage;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousetimelinePackage.FUNCTION_AVERAGE__AVERAGE, oldAverage, average));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseTimeLinePackage.FUNCTION_AVERAGE__AVERAGE, oldAverage, average));
 	}
 	
 	/**
@@ -105,7 +104,7 @@ public class FunctionAverageImpl extends FunctionIntervalImpl implements Functio
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TousetimelinePackage.FUNCTION_AVERAGE__AVERAGE:
+			case ToUseTimeLinePackage.FUNCTION_AVERAGE__AVERAGE:
 				return getAverage();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -119,7 +118,7 @@ public class FunctionAverageImpl extends FunctionIntervalImpl implements Functio
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TousetimelinePackage.FUNCTION_AVERAGE__AVERAGE:
+			case ToUseTimeLinePackage.FUNCTION_AVERAGE__AVERAGE:
 				setAverage((Float)newValue);
 				return;
 		}
@@ -134,7 +133,7 @@ public class FunctionAverageImpl extends FunctionIntervalImpl implements Functio
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TousetimelinePackage.FUNCTION_AVERAGE__AVERAGE:
+			case ToUseTimeLinePackage.FUNCTION_AVERAGE__AVERAGE:
 				setAverage(AVERAGE_EDEFAULT);
 				return;
 		}
@@ -149,7 +148,7 @@ public class FunctionAverageImpl extends FunctionIntervalImpl implements Functio
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TousetimelinePackage.FUNCTION_AVERAGE__AVERAGE:
+			case ToUseTimeLinePackage.FUNCTION_AVERAGE__AVERAGE:
 				return average != AVERAGE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

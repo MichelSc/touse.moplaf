@@ -4,8 +4,7 @@ package com.misc.touse.moplaf.timeline.tousetimeline.impl;
 
 import com.misc.common.moplaf.time.continuous.Distribution;
 import com.misc.touse.moplaf.timeline.tousetimeline.FunctionCumulated;
-import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage;
-
+import com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -62,7 +61,7 @@ public class FunctionCumulatedImpl extends FunctionIntervalImpl implements Funct
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TousetimelinePackage.Literals.FUNCTION_CUMULATED;
+		return ToUseTimeLinePackage.Literals.FUNCTION_CUMULATED;
 	}
 
 	/**
@@ -83,7 +82,7 @@ public class FunctionCumulatedImpl extends FunctionIntervalImpl implements Funct
 		float oldCumulated = cumulated;
 		cumulated = newCumulated;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousetimelinePackage.FUNCTION_CUMULATED__CUMULATED, oldCumulated, cumulated));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseTimeLinePackage.FUNCTION_CUMULATED__CUMULATED, oldCumulated, cumulated));
 	}
 
 	/**
@@ -106,7 +105,7 @@ public class FunctionCumulatedImpl extends FunctionIntervalImpl implements Funct
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TousetimelinePackage.FUNCTION_CUMULATED__CUMULATED:
+			case ToUseTimeLinePackage.FUNCTION_CUMULATED__CUMULATED:
 				return getCumulated();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -120,7 +119,7 @@ public class FunctionCumulatedImpl extends FunctionIntervalImpl implements Funct
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TousetimelinePackage.FUNCTION_CUMULATED__CUMULATED:
+			case ToUseTimeLinePackage.FUNCTION_CUMULATED__CUMULATED:
 				setCumulated((Float)newValue);
 				return;
 		}
@@ -135,7 +134,7 @@ public class FunctionCumulatedImpl extends FunctionIntervalImpl implements Funct
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TousetimelinePackage.FUNCTION_CUMULATED__CUMULATED:
+			case ToUseTimeLinePackage.FUNCTION_CUMULATED__CUMULATED:
 				setCumulated(CUMULATED_EDEFAULT);
 				return;
 		}
@@ -150,7 +149,7 @@ public class FunctionCumulatedImpl extends FunctionIntervalImpl implements Funct
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TousetimelinePackage.FUNCTION_CUMULATED__CUMULATED:
+			case ToUseTimeLinePackage.FUNCTION_CUMULATED__CUMULATED:
 				return cumulated != CUMULATED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

@@ -2,16 +2,15 @@
  */
 package com.misc.touse.moplaf.timeline.tousetimeline.impl;
 
-import com.misc.common.moplaf.time.discrete.DiscretePackage;
 import com.misc.common.moplaf.time.discrete.ObjectTimeBucket;
 
 import com.misc.common.moplaf.time.discrete.ObjectWithTimeLine;
 import com.misc.common.moplaf.time.discrete.TimeBucket;
-import com.misc.common.moplaf.time.discrete.impl.ObjectWithTimeLineImpl;
+import com.misc.common.moplaf.time.discrete.TimeDiscretePackage;
+import com.misc.common.moplaf.time.discrete.util.Util;
 import com.misc.touse.moplaf.timeline.tousetimeline.ConcreteObjectWithTimeLine;
-import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelineFactory;
-import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage;
-
+import com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLineFactory;
+import com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 
@@ -102,7 +101,7 @@ public class ConcreteObjectWithTimeLineImpl extends SomeBaseClassImpl implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TousetimelinePackage.Literals.CONCRETE_OBJECT_WITH_TIME_LINE;
+		return ToUseTimeLinePackage.Literals.CONCRETE_OBJECT_WITH_TIME_LINE;
 	}
 
 	/**
@@ -112,7 +111,7 @@ public class ConcreteObjectWithTimeLineImpl extends SomeBaseClassImpl implements
 	 */
 	public EList<ObjectTimeBucket> getBuckets() {
 		if (buckets == null) {
-			buckets = new EObjectResolvingEList<ObjectTimeBucket>(ObjectTimeBucket.class, this, TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__BUCKETS);
+			buckets = new EObjectResolvingEList<ObjectTimeBucket>(ObjectTimeBucket.class, this, ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__BUCKETS);
 		}
 		return buckets;
 	}
@@ -128,7 +127,7 @@ public class ConcreteObjectWithTimeLineImpl extends SomeBaseClassImpl implements
 			lastBucket = (ObjectTimeBucket)eResolveProxy(oldLastBucket);
 			if (lastBucket != oldLastBucket) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__LAST_BUCKET, oldLastBucket, lastBucket));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__LAST_BUCKET, oldLastBucket, lastBucket));
 			}
 		}
 		return lastBucket;
@@ -152,7 +151,7 @@ public class ConcreteObjectWithTimeLineImpl extends SomeBaseClassImpl implements
 		ObjectTimeBucket oldLastBucket = lastBucket;
 		lastBucket = newLastBucket;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__LAST_BUCKET, oldLastBucket, lastBucket));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__LAST_BUCKET, oldLastBucket, lastBucket));
 	}
 
 	/**
@@ -166,7 +165,7 @@ public class ConcreteObjectWithTimeLineImpl extends SomeBaseClassImpl implements
 			firstBucket = (ObjectTimeBucket)eResolveProxy(oldFirstBucket);
 			if (firstBucket != oldFirstBucket) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__FIRST_BUCKET, oldFirstBucket, firstBucket));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__FIRST_BUCKET, oldFirstBucket, firstBucket));
 			}
 		}
 		return firstBucket;
@@ -190,7 +189,7 @@ public class ConcreteObjectWithTimeLineImpl extends SomeBaseClassImpl implements
 		ObjectTimeBucket oldFirstBucket = firstBucket;
 		firstBucket = newFirstBucket;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__FIRST_BUCKET, oldFirstBucket, firstBucket));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__FIRST_BUCKET, oldFirstBucket, firstBucket));
 	}
 
 	/**
@@ -204,7 +203,7 @@ public class ConcreteObjectWithTimeLineImpl extends SomeBaseClassImpl implements
 			startBucket = (TimeBucket)eResolveProxy(oldStartBucket);
 			if (startBucket != oldStartBucket) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__START_BUCKET, oldStartBucket, startBucket));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__START_BUCKET, oldStartBucket, startBucket));
 			}
 		}
 		return startBucket;
@@ -228,7 +227,7 @@ public class ConcreteObjectWithTimeLineImpl extends SomeBaseClassImpl implements
 		TimeBucket oldStartBucket = startBucket;
 		startBucket = newStartBucket;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__START_BUCKET, oldStartBucket, startBucket));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__START_BUCKET, oldStartBucket, startBucket));
 	}
 
 	/**
@@ -242,7 +241,7 @@ public class ConcreteObjectWithTimeLineImpl extends SomeBaseClassImpl implements
 			endBucket = (TimeBucket)eResolveProxy(oldEndBucket);
 			if (endBucket != oldEndBucket) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__END_BUCKET, oldEndBucket, endBucket));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__END_BUCKET, oldEndBucket, endBucket));
 			}
 		}
 		return endBucket;
@@ -266,7 +265,7 @@ public class ConcreteObjectWithTimeLineImpl extends SomeBaseClassImpl implements
 		TimeBucket oldEndBucket = endBucket;
 		endBucket = newEndBucket;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__END_BUCKET, oldEndBucket, endBucket));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__END_BUCKET, oldEndBucket, endBucket));
 	}
 
 	private ObjectTimeBucket currentObjectTimeBucket = null;
@@ -275,7 +274,7 @@ public class ConcreteObjectWithTimeLineImpl extends SomeBaseClassImpl implements
 	 * <!-- end-user-doc -->
 	 */
 	public ObjectTimeBucket getBucket(TimeBucket bucket) {
-		this.currentObjectTimeBucket = ObjectWithTimeLineImpl.getBucket(this, bucket, this.currentObjectTimeBucket);
+		this.currentObjectTimeBucket = Util.getBucket(this, bucket, this.currentObjectTimeBucket);
 		return this.currentObjectTimeBucket;
 	}
 
@@ -287,18 +286,18 @@ public class ConcreteObjectWithTimeLineImpl extends SomeBaseClassImpl implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__BUCKETS:
+			case ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__BUCKETS:
 				return getBuckets();
-			case TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__LAST_BUCKET:
+			case ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__LAST_BUCKET:
 				if (resolve) return getLastBucket();
 				return basicGetLastBucket();
-			case TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__FIRST_BUCKET:
+			case ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__FIRST_BUCKET:
 				if (resolve) return getFirstBucket();
 				return basicGetFirstBucket();
-			case TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__START_BUCKET:
+			case ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__START_BUCKET:
 				if (resolve) return getStartBucket();
 				return basicGetStartBucket();
-			case TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__END_BUCKET:
+			case ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__END_BUCKET:
 				if (resolve) return getEndBucket();
 				return basicGetEndBucket();
 		}
@@ -314,20 +313,20 @@ public class ConcreteObjectWithTimeLineImpl extends SomeBaseClassImpl implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__BUCKETS:
+			case ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__BUCKETS:
 				getBuckets().clear();
 				getBuckets().addAll((Collection<? extends ObjectTimeBucket>)newValue);
 				return;
-			case TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__LAST_BUCKET:
+			case ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__LAST_BUCKET:
 				setLastBucket((ObjectTimeBucket)newValue);
 				return;
-			case TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__FIRST_BUCKET:
+			case ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__FIRST_BUCKET:
 				setFirstBucket((ObjectTimeBucket)newValue);
 				return;
-			case TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__START_BUCKET:
+			case ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__START_BUCKET:
 				setStartBucket((TimeBucket)newValue);
 				return;
-			case TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__END_BUCKET:
+			case ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__END_BUCKET:
 				setEndBucket((TimeBucket)newValue);
 				return;
 		}
@@ -342,19 +341,19 @@ public class ConcreteObjectWithTimeLineImpl extends SomeBaseClassImpl implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__BUCKETS:
+			case ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__BUCKETS:
 				getBuckets().clear();
 				return;
-			case TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__LAST_BUCKET:
+			case ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__LAST_BUCKET:
 				setLastBucket((ObjectTimeBucket)null);
 				return;
-			case TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__FIRST_BUCKET:
+			case ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__FIRST_BUCKET:
 				setFirstBucket((ObjectTimeBucket)null);
 				return;
-			case TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__START_BUCKET:
+			case ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__START_BUCKET:
 				setStartBucket((TimeBucket)null);
 				return;
-			case TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__END_BUCKET:
+			case ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__END_BUCKET:
 				setEndBucket((TimeBucket)null);
 				return;
 		}
@@ -369,15 +368,15 @@ public class ConcreteObjectWithTimeLineImpl extends SomeBaseClassImpl implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__BUCKETS:
+			case ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__BUCKETS:
 				return buckets != null && !buckets.isEmpty();
-			case TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__LAST_BUCKET:
+			case ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__LAST_BUCKET:
 				return lastBucket != null;
-			case TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__FIRST_BUCKET:
+			case ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__FIRST_BUCKET:
 				return firstBucket != null;
-			case TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__START_BUCKET:
+			case ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__START_BUCKET:
 				return startBucket != null;
-			case TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__END_BUCKET:
+			case ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__END_BUCKET:
 				return endBucket != null;
 		}
 		return super.eIsSet(featureID);
@@ -392,11 +391,11 @@ public class ConcreteObjectWithTimeLineImpl extends SomeBaseClassImpl implements
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == ObjectWithTimeLine.class) {
 			switch (derivedFeatureID) {
-				case TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__BUCKETS: return DiscretePackage.OBJECT_WITH_TIME_LINE__BUCKETS;
-				case TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__LAST_BUCKET: return DiscretePackage.OBJECT_WITH_TIME_LINE__LAST_BUCKET;
-				case TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__FIRST_BUCKET: return DiscretePackage.OBJECT_WITH_TIME_LINE__FIRST_BUCKET;
-				case TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__START_BUCKET: return DiscretePackage.OBJECT_WITH_TIME_LINE__START_BUCKET;
-				case TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__END_BUCKET: return DiscretePackage.OBJECT_WITH_TIME_LINE__END_BUCKET;
+				case ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__BUCKETS: return TimeDiscretePackage.OBJECT_WITH_TIME_LINE__BUCKETS;
+				case ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__LAST_BUCKET: return TimeDiscretePackage.OBJECT_WITH_TIME_LINE__LAST_BUCKET;
+				case ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__FIRST_BUCKET: return TimeDiscretePackage.OBJECT_WITH_TIME_LINE__FIRST_BUCKET;
+				case ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__START_BUCKET: return TimeDiscretePackage.OBJECT_WITH_TIME_LINE__START_BUCKET;
+				case ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__END_BUCKET: return TimeDiscretePackage.OBJECT_WITH_TIME_LINE__END_BUCKET;
 				default: return -1;
 			}
 		}
@@ -412,11 +411,11 @@ public class ConcreteObjectWithTimeLineImpl extends SomeBaseClassImpl implements
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == ObjectWithTimeLine.class) {
 			switch (baseFeatureID) {
-				case DiscretePackage.OBJECT_WITH_TIME_LINE__BUCKETS: return TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__BUCKETS;
-				case DiscretePackage.OBJECT_WITH_TIME_LINE__LAST_BUCKET: return TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__LAST_BUCKET;
-				case DiscretePackage.OBJECT_WITH_TIME_LINE__FIRST_BUCKET: return TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__FIRST_BUCKET;
-				case DiscretePackage.OBJECT_WITH_TIME_LINE__START_BUCKET: return TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__START_BUCKET;
-				case DiscretePackage.OBJECT_WITH_TIME_LINE__END_BUCKET: return TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__END_BUCKET;
+				case TimeDiscretePackage.OBJECT_WITH_TIME_LINE__BUCKETS: return ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__BUCKETS;
+				case TimeDiscretePackage.OBJECT_WITH_TIME_LINE__LAST_BUCKET: return ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__LAST_BUCKET;
+				case TimeDiscretePackage.OBJECT_WITH_TIME_LINE__FIRST_BUCKET: return ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__FIRST_BUCKET;
+				case TimeDiscretePackage.OBJECT_WITH_TIME_LINE__START_BUCKET: return ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__START_BUCKET;
+				case TimeDiscretePackage.OBJECT_WITH_TIME_LINE__END_BUCKET: return ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE__END_BUCKET;
 				default: return -1;
 			}
 		}
@@ -432,9 +431,9 @@ public class ConcreteObjectWithTimeLineImpl extends SomeBaseClassImpl implements
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
 		if (baseClass == ObjectWithTimeLine.class) {
 			switch (baseOperationID) {
-				case DiscretePackage.OBJECT_WITH_TIME_LINE___GET_BUCKET__TIMEBUCKET: return TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE___GET_BUCKET__TIMEBUCKET;
-				case DiscretePackage.OBJECT_WITH_TIME_LINE___CONSTRUCT_OBJECT_TIME_BUCKET: return TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE___CONSTRUCT_OBJECT_TIME_BUCKET;
-				case DiscretePackage.OBJECT_WITH_TIME_LINE___REFRESH: return TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE___REFRESH;
+				case TimeDiscretePackage.OBJECT_WITH_TIME_LINE___GET_BUCKET__TIMEBUCKET: return ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE___GET_BUCKET__TIMEBUCKET;
+				case TimeDiscretePackage.OBJECT_WITH_TIME_LINE___CONSTRUCT_OBJECT_TIME_BUCKET: return ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE___CONSTRUCT_OBJECT_TIME_BUCKET;
+				case TimeDiscretePackage.OBJECT_WITH_TIME_LINE___REFRESH: return ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE___REFRESH;
 				default: return -1;
 			}
 		}
@@ -449,11 +448,11 @@ public class ConcreteObjectWithTimeLineImpl extends SomeBaseClassImpl implements
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE___GET_BUCKET__TIMEBUCKET:
+			case ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE___GET_BUCKET__TIMEBUCKET:
 				return getBucket((TimeBucket)arguments.get(0));
-			case TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE___CONSTRUCT_OBJECT_TIME_BUCKET:
+			case ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE___CONSTRUCT_OBJECT_TIME_BUCKET:
 				return constructObjectTimeBucket();
-			case TousetimelinePackage.CONCRETE_OBJECT_WITH_TIME_LINE___REFRESH:
+			case ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE___REFRESH:
 				refresh();
 				return null;
 		}
@@ -462,7 +461,7 @@ public class ConcreteObjectWithTimeLineImpl extends SomeBaseClassImpl implements
 
 	@Override
 	public ObjectTimeBucket constructObjectTimeBucket() {
-		ObjectTimeBucket bucket = TousetimelineFactory.eINSTANCE.createConcreteObjectTimeBucket();
+		ObjectTimeBucket bucket = ToUseTimeLineFactory.eINSTANCE.createConcreteObjectTimeBucket();
 		return bucket;
 	}
 
@@ -471,7 +470,7 @@ public class ConcreteObjectWithTimeLineImpl extends SomeBaseClassImpl implements
 	 * <!-- end-user-doc -->
 	 */
 	public void refresh() {
-		ObjectWithTimeLineImpl.refresh(this);
+		Util.refresh(this);
 	}
 
 } //ConcreteObjectWithTimeLineImpl

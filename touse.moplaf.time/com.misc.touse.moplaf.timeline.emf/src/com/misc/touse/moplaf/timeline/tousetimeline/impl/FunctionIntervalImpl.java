@@ -2,13 +2,11 @@
  */
 package com.misc.touse.moplaf.timeline.tousetimeline.impl;
 
-import com.mis.touse.moplaf.timeline.tousetimeline.calc.PropagatorCalcDomainDistributionFunctionInterval;
-import com.misc.common.moplaf.propagator.Util;
+
 import com.misc.common.moplaf.propagator2.impl.ObjectWithPropagatorFunctionsImpl;
 import com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution;
 import com.misc.touse.moplaf.timeline.tousetimeline.FunctionInterval;
-import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage;
-
+import com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage;
 import java.lang.reflect.InvocationTargetException;
 
 import java.util.Date;
@@ -40,15 +38,6 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * @generated
  */
 public class FunctionIntervalImpl extends ObjectWithPropagatorFunctionsImpl implements FunctionInterval {
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 */
-	public void addPropagatorFunctionAdapter() {
-		Util.adapt(this, PropagatorCalcDomainDistributionFunctionInterval.class);
-	}
-
 
 	/**
 	 * The default value of the '{@link #getFrom() <em>From</em>}' attribute.
@@ -106,7 +95,7 @@ public class FunctionIntervalImpl extends ObjectWithPropagatorFunctionsImpl impl
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TousetimelinePackage.Literals.FUNCTION_INTERVAL;
+		return ToUseTimeLinePackage.Literals.FUNCTION_INTERVAL;
 	}
 
 	/**
@@ -127,7 +116,7 @@ public class FunctionIntervalImpl extends ObjectWithPropagatorFunctionsImpl impl
 		Date oldFrom = from;
 		from = newFrom;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousetimelinePackage.FUNCTION_INTERVAL__FROM, oldFrom, from));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseTimeLinePackage.FUNCTION_INTERVAL__FROM, oldFrom, from));
 	}
 
 	/**
@@ -148,7 +137,7 @@ public class FunctionIntervalImpl extends ObjectWithPropagatorFunctionsImpl impl
 		Date oldTo = to;
 		to = newTo;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousetimelinePackage.FUNCTION_INTERVAL__TO, oldTo, to));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseTimeLinePackage.FUNCTION_INTERVAL__TO, oldTo, to));
 	}
 
 	/**
@@ -157,7 +146,7 @@ public class FunctionIntervalImpl extends ObjectWithPropagatorFunctionsImpl impl
 	 * @generated
 	 */
 	public DomainDistribution getDistribution() {
-		if (eContainerFeatureID() != TousetimelinePackage.FUNCTION_INTERVAL__DISTRIBUTION) return null;
+		if (eContainerFeatureID() != ToUseTimeLinePackage.FUNCTION_INTERVAL__DISTRIBUTION) return null;
 		return (DomainDistribution)eInternalContainer();
 	}
 
@@ -167,7 +156,7 @@ public class FunctionIntervalImpl extends ObjectWithPropagatorFunctionsImpl impl
 	 * @generated
 	 */
 	public NotificationChain basicSetDistribution(DomainDistribution newDistribution, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newDistribution, TousetimelinePackage.FUNCTION_INTERVAL__DISTRIBUTION, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newDistribution, ToUseTimeLinePackage.FUNCTION_INTERVAL__DISTRIBUTION, msgs);
 		return msgs;
 	}
 
@@ -177,19 +166,19 @@ public class FunctionIntervalImpl extends ObjectWithPropagatorFunctionsImpl impl
 	 * @generated
 	 */
 	public void setDistribution(DomainDistribution newDistribution) {
-		if (newDistribution != eInternalContainer() || (eContainerFeatureID() != TousetimelinePackage.FUNCTION_INTERVAL__DISTRIBUTION && newDistribution != null)) {
+		if (newDistribution != eInternalContainer() || (eContainerFeatureID() != ToUseTimeLinePackage.FUNCTION_INTERVAL__DISTRIBUTION && newDistribution != null)) {
 			if (EcoreUtil.isAncestor(this, newDistribution))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newDistribution != null)
-				msgs = ((InternalEObject)newDistribution).eInverseAdd(this, TousetimelinePackage.DOMAIN_DISTRIBUTION__FUNCTIONS, DomainDistribution.class, msgs);
+				msgs = ((InternalEObject)newDistribution).eInverseAdd(this, ToUseTimeLinePackage.DOMAIN_DISTRIBUTION__FUNCTIONS, DomainDistribution.class, msgs);
 			msgs = basicSetDistribution(newDistribution, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousetimelinePackage.FUNCTION_INTERVAL__DISTRIBUTION, newDistribution, newDistribution));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseTimeLinePackage.FUNCTION_INTERVAL__DISTRIBUTION, newDistribution, newDistribution));
 	}
 
 	/**
@@ -211,7 +200,7 @@ public class FunctionIntervalImpl extends ObjectWithPropagatorFunctionsImpl impl
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case TousetimelinePackage.FUNCTION_INTERVAL__DISTRIBUTION:
+			case ToUseTimeLinePackage.FUNCTION_INTERVAL__DISTRIBUTION:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetDistribution((DomainDistribution)otherEnd, msgs);
@@ -227,7 +216,7 @@ public class FunctionIntervalImpl extends ObjectWithPropagatorFunctionsImpl impl
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case TousetimelinePackage.FUNCTION_INTERVAL__DISTRIBUTION:
+			case ToUseTimeLinePackage.FUNCTION_INTERVAL__DISTRIBUTION:
 				return basicSetDistribution(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -241,8 +230,8 @@ public class FunctionIntervalImpl extends ObjectWithPropagatorFunctionsImpl impl
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case TousetimelinePackage.FUNCTION_INTERVAL__DISTRIBUTION:
-				return eInternalContainer().eInverseRemove(this, TousetimelinePackage.DOMAIN_DISTRIBUTION__FUNCTIONS, DomainDistribution.class, msgs);
+			case ToUseTimeLinePackage.FUNCTION_INTERVAL__DISTRIBUTION:
+				return eInternalContainer().eInverseRemove(this, ToUseTimeLinePackage.DOMAIN_DISTRIBUTION__FUNCTIONS, DomainDistribution.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -255,11 +244,11 @@ public class FunctionIntervalImpl extends ObjectWithPropagatorFunctionsImpl impl
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TousetimelinePackage.FUNCTION_INTERVAL__FROM:
+			case ToUseTimeLinePackage.FUNCTION_INTERVAL__FROM:
 				return getFrom();
-			case TousetimelinePackage.FUNCTION_INTERVAL__TO:
+			case ToUseTimeLinePackage.FUNCTION_INTERVAL__TO:
 				return getTo();
-			case TousetimelinePackage.FUNCTION_INTERVAL__DISTRIBUTION:
+			case ToUseTimeLinePackage.FUNCTION_INTERVAL__DISTRIBUTION:
 				return getDistribution();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -273,13 +262,13 @@ public class FunctionIntervalImpl extends ObjectWithPropagatorFunctionsImpl impl
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TousetimelinePackage.FUNCTION_INTERVAL__FROM:
+			case ToUseTimeLinePackage.FUNCTION_INTERVAL__FROM:
 				setFrom((Date)newValue);
 				return;
-			case TousetimelinePackage.FUNCTION_INTERVAL__TO:
+			case ToUseTimeLinePackage.FUNCTION_INTERVAL__TO:
 				setTo((Date)newValue);
 				return;
-			case TousetimelinePackage.FUNCTION_INTERVAL__DISTRIBUTION:
+			case ToUseTimeLinePackage.FUNCTION_INTERVAL__DISTRIBUTION:
 				setDistribution((DomainDistribution)newValue);
 				return;
 		}
@@ -294,13 +283,13 @@ public class FunctionIntervalImpl extends ObjectWithPropagatorFunctionsImpl impl
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TousetimelinePackage.FUNCTION_INTERVAL__FROM:
+			case ToUseTimeLinePackage.FUNCTION_INTERVAL__FROM:
 				setFrom(FROM_EDEFAULT);
 				return;
-			case TousetimelinePackage.FUNCTION_INTERVAL__TO:
+			case ToUseTimeLinePackage.FUNCTION_INTERVAL__TO:
 				setTo(TO_EDEFAULT);
 				return;
-			case TousetimelinePackage.FUNCTION_INTERVAL__DISTRIBUTION:
+			case ToUseTimeLinePackage.FUNCTION_INTERVAL__DISTRIBUTION:
 				setDistribution((DomainDistribution)null);
 				return;
 		}
@@ -315,11 +304,11 @@ public class FunctionIntervalImpl extends ObjectWithPropagatorFunctionsImpl impl
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TousetimelinePackage.FUNCTION_INTERVAL__FROM:
+			case ToUseTimeLinePackage.FUNCTION_INTERVAL__FROM:
 				return FROM_EDEFAULT == null ? from != null : !FROM_EDEFAULT.equals(from);
-			case TousetimelinePackage.FUNCTION_INTERVAL__TO:
+			case ToUseTimeLinePackage.FUNCTION_INTERVAL__TO:
 				return TO_EDEFAULT == null ? to != null : !TO_EDEFAULT.equals(to);
-			case TousetimelinePackage.FUNCTION_INTERVAL__DISTRIBUTION:
+			case ToUseTimeLinePackage.FUNCTION_INTERVAL__DISTRIBUTION:
 				return getDistribution() != null;
 		}
 		return super.eIsSet(featureID);
@@ -333,7 +322,7 @@ public class FunctionIntervalImpl extends ObjectWithPropagatorFunctionsImpl impl
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case TousetimelinePackage.FUNCTION_INTERVAL___REFRESH:
+			case ToUseTimeLinePackage.FUNCTION_INTERVAL___REFRESH:
 				refresh();
 				return null;
 		}

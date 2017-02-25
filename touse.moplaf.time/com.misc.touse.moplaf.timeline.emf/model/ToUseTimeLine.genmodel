@@ -3,10 +3,10 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.misc.touse.moplaf.timeline.emf/src" modelPluginID="com.misc.touse.moplaf.timeline.emf"
     modelName="ToUseTimeLine" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0" copyrightFields="false"
-    usedGenPackages="../../com.misc.common.moplaf.propagator/model/propagator.genmodel#//propagator ../../com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.genmodel#//continuous ../../com.misc.common.moplaf.time.discrete.emf/model/timediscrete.genmodel#//discrete"
+    usedGenPackages="../../com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.genmodel#//continuous ../../com.misc.common.moplaf.time.discrete.emf/model/timediscrete.genmodel#//discrete ../../com.misc.common.moplaf.propagator2/model/propagator.genmodel#//propagator2"
     operationReflection="true" importOrganizing="true">
   <foreignModel>ToUseTimeLine.ecore</foreignModel>
-  <genPackages prefix="Tousetimeline" basePackage="com.misc.touse.moplaf.timeline"
+  <genPackages prefix="ToUseTimeLine" basePackage="com.misc.touse.moplaf.timeline"
       disposableProviderFactory="true" ecorePackage="ToUseTimeLine.ecore#/">
     <genClasses ecoreClass="ToUseTimeLine.ecore#//Domain">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseTimeLine.ecore#//Domain/TimeLineMerges"/>
@@ -51,8 +51,11 @@
     <genClasses ecoreClass="ToUseTimeLine.ecore#//FunctionEarliestOutput">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute ToUseTimeLine.ecore#//FunctionEarliestOutput/earliestOutput"/>
     </genClasses>
-    <genClasses ecoreClass="ToUseTimeLine.ecore#//ConcreteObjectWithTimeLine">
-      <genFeatures property="None" createChild="false" ecoreFeature="ecore:EReference ToUseTimeLine.ecore#//ConcreteObjectWithTimeLine/ConcreteBuckets"/>
+    <genClasses ecoreClass="ToUseTimeLine.ecore#//ConcreteObjectWithTimeLine"/>
+    <genClasses ecoreClass="ToUseTimeLine.ecore#//SomeBaseClass">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseTimeLine.ecore#//SomeBaseClass/someAttribute"/>
+      <genOperations ecoreOperation="ToUseTimeLine.ecore#//SomeBaseClass/someOperation"/>
     </genClasses>
+    <genClasses ecoreClass="ToUseTimeLine.ecore#//ConcreteObjectTimeBucket"/>
   </genPackages>
 </genmodel:GenModel>

@@ -19,7 +19,7 @@ import java.util.Date;
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionInterval#getDistribution <em>Distribution</em>}</li>
  * </ul>
  *
- * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getFunctionInterval()
+ * @see com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage#getFunctionInterval()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface FunctionInterval extends ObjectWithPropagatorFunctions {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>From</em>' attribute.
 	 * @see #setFrom(Date)
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getFunctionInterval_From()
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage#getFunctionInterval_From()
 	 * @model
 	 * @generated
 	 */
@@ -60,7 +60,7 @@ public interface FunctionInterval extends ObjectWithPropagatorFunctions {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>To</em>' attribute.
 	 * @see #setTo(Date)
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getFunctionInterval_To()
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage#getFunctionInterval_To()
 	 * @model
 	 * @generated
 	 */
@@ -87,7 +87,7 @@ public interface FunctionInterval extends ObjectWithPropagatorFunctions {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Distribution</em>' container reference.
 	 * @see #setDistribution(DomainDistribution)
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getFunctionInterval_Distribution()
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage#getFunctionInterval_Distribution()
 	 * @see com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution#getFunctions
 	 * @model opposite="Functions" transient="false"
 	 * @generated

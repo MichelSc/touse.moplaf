@@ -4,8 +4,7 @@ package com.misc.touse.moplaf.timeline.tousetimeline.provider;
 
 
 import com.misc.touse.moplaf.timeline.tousetimeline.FunctionEarliestOutput;
-import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage;
-
+import com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
@@ -64,7 +63,7 @@ public class FunctionEarliestOutputItemProvider extends FunctionPossibleItemProv
 				 getResourceLocator(),
 				 getString("_UI_FunctionEarliestOutput_earliestOutput_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FunctionEarliestOutput_earliestOutput_feature", "_UI_FunctionEarliestOutput_type"),
-				 TousetimelinePackage.Literals.FUNCTION_EARLIEST_OUTPUT__EARLIEST_OUTPUT,
+				 ToUseTimeLinePackage.Literals.FUNCTION_EARLIEST_OUTPUT__EARLIEST_OUTPUT,
 				 false,
 				 false,
 				 false,
@@ -112,7 +111,7 @@ public class FunctionEarliestOutputItemProvider extends FunctionPossibleItemProv
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(FunctionEarliestOutput.class)) {
-			case TousetimelinePackage.FUNCTION_EARLIEST_OUTPUT__EARLIEST_OUTPUT:
+			case ToUseTimeLinePackage.FUNCTION_EARLIEST_OUTPUT__EARLIEST_OUTPUT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

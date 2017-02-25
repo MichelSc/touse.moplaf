@@ -2,16 +2,13 @@
  */
 package com.misc.touse.moplaf.timeline.tousetimeline.impl;
 
-import com.mis.touse.moplaf.timeline.tousetimeline.calc.PropagatorScopeDomain;
-import com.misc.common.moplaf.propagator.PropagatorFunctionAdapter;
-import com.misc.common.moplaf.propagator.Util;
 import com.misc.common.moplaf.propagator2.impl.ObjectWithPropagatorFunctionsImpl;
 import com.misc.common.moplaf.time.discrete.TimeLine;
 import com.misc.common.moplaf.time.discrete.TimeLineMerge;
 import com.misc.touse.moplaf.timeline.tousetimeline.ConcreteObjectWithTimeLine;
 import com.misc.touse.moplaf.timeline.tousetimeline.Domain;
 import com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution;
-import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage;
+import com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -117,7 +114,7 @@ public class DomainImpl extends ObjectWithPropagatorFunctionsImpl implements Dom
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TousetimelinePackage.Literals.DOMAIN;
+		return ToUseTimeLinePackage.Literals.DOMAIN;
 	}
 
 	/**
@@ -127,7 +124,7 @@ public class DomainImpl extends ObjectWithPropagatorFunctionsImpl implements Dom
 	 */
 	public EList<TimeLineMerge> getTimeLineMerges() {
 		if (timeLineMerges == null) {
-			timeLineMerges = new EObjectContainmentEList<TimeLineMerge>(TimeLineMerge.class, this, TousetimelinePackage.DOMAIN__TIME_LINE_MERGES);
+			timeLineMerges = new EObjectContainmentEList<TimeLineMerge>(TimeLineMerge.class, this, ToUseTimeLinePackage.DOMAIN__TIME_LINE_MERGES);
 		}
 		return timeLineMerges;
 	}
@@ -139,7 +136,7 @@ public class DomainImpl extends ObjectWithPropagatorFunctionsImpl implements Dom
 	 */
 	public EList<DomainDistribution> getDistribution() {
 		if (distribution == null) {
-			distribution = new EObjectContainmentEList<DomainDistribution>(DomainDistribution.class, this, TousetimelinePackage.DOMAIN__DISTRIBUTION);
+			distribution = new EObjectContainmentEList<DomainDistribution>(DomainDistribution.class, this, ToUseTimeLinePackage.DOMAIN__DISTRIBUTION);
 		}
 		return distribution;
 	}
@@ -162,7 +159,7 @@ public class DomainImpl extends ObjectWithPropagatorFunctionsImpl implements Dom
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousetimelinePackage.DOMAIN__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseTimeLinePackage.DOMAIN__NAME, oldName, name));
 	}
 
 	/**
@@ -172,7 +169,7 @@ public class DomainImpl extends ObjectWithPropagatorFunctionsImpl implements Dom
 	 */
 	public EList<TimeLine> getTimelines() {
 		if (timelines == null) {
-			timelines = new EObjectContainmentEList<TimeLine>(TimeLine.class, this, TousetimelinePackage.DOMAIN__TIMELINES);
+			timelines = new EObjectContainmentEList<TimeLine>(TimeLine.class, this, ToUseTimeLinePackage.DOMAIN__TIMELINES);
 		}
 		return timelines;
 	}
@@ -184,19 +181,10 @@ public class DomainImpl extends ObjectWithPropagatorFunctionsImpl implements Dom
 	 */
 	public EList<ConcreteObjectWithTimeLine> getObjectsWithTimeLine() {
 		if (objectsWithTimeLine == null) {
-			objectsWithTimeLine = new EObjectContainmentEList<ConcreteObjectWithTimeLine>(ConcreteObjectWithTimeLine.class, this, TousetimelinePackage.DOMAIN__OBJECTS_WITH_TIME_LINE);
+			objectsWithTimeLine = new EObjectContainmentEList<ConcreteObjectWithTimeLine>(ConcreteObjectWithTimeLine.class, this, ToUseTimeLinePackage.DOMAIN__OBJECTS_WITH_TIME_LINE);
 		}
 		return objectsWithTimeLine;
 	}
-
-	/* (non-Javadoc)
-	 * @see com.misc.common.moplaf.time.continuous.impl.DistributionImpl#addPropagatorFunctionAdapter()
-	 */
-	@Override
-	public void addPropagatorFunctionAdapter() {
-		Util.adapt(this, PropagatorScopeDomain.class);
-	}
-
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -211,8 +199,7 @@ public class DomainImpl extends ObjectWithPropagatorFunctionsImpl implements Dom
 	 * <!-- end-user-doc -->
 	 */
 	public void refreshDistributions() {
-		PropagatorFunctionAdapter scope = Util.getPropagatorFunctionAdapter(this, PropagatorScopeDomain.class);
-		scope.refresh();
+		// TODO implement it procedurally
 	}
 
 
@@ -224,13 +211,13 @@ public class DomainImpl extends ObjectWithPropagatorFunctionsImpl implements Dom
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case TousetimelinePackage.DOMAIN__TIME_LINE_MERGES:
+			case ToUseTimeLinePackage.DOMAIN__TIME_LINE_MERGES:
 				return ((InternalEList<?>)getTimeLineMerges()).basicRemove(otherEnd, msgs);
-			case TousetimelinePackage.DOMAIN__DISTRIBUTION:
+			case ToUseTimeLinePackage.DOMAIN__DISTRIBUTION:
 				return ((InternalEList<?>)getDistribution()).basicRemove(otherEnd, msgs);
-			case TousetimelinePackage.DOMAIN__TIMELINES:
+			case ToUseTimeLinePackage.DOMAIN__TIMELINES:
 				return ((InternalEList<?>)getTimelines()).basicRemove(otherEnd, msgs);
-			case TousetimelinePackage.DOMAIN__OBJECTS_WITH_TIME_LINE:
+			case ToUseTimeLinePackage.DOMAIN__OBJECTS_WITH_TIME_LINE:
 				return ((InternalEList<?>)getObjectsWithTimeLine()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -244,15 +231,15 @@ public class DomainImpl extends ObjectWithPropagatorFunctionsImpl implements Dom
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TousetimelinePackage.DOMAIN__TIME_LINE_MERGES:
+			case ToUseTimeLinePackage.DOMAIN__TIME_LINE_MERGES:
 				return getTimeLineMerges();
-			case TousetimelinePackage.DOMAIN__DISTRIBUTION:
+			case ToUseTimeLinePackage.DOMAIN__DISTRIBUTION:
 				return getDistribution();
-			case TousetimelinePackage.DOMAIN__NAME:
+			case ToUseTimeLinePackage.DOMAIN__NAME:
 				return getName();
-			case TousetimelinePackage.DOMAIN__TIMELINES:
+			case ToUseTimeLinePackage.DOMAIN__TIMELINES:
 				return getTimelines();
-			case TousetimelinePackage.DOMAIN__OBJECTS_WITH_TIME_LINE:
+			case ToUseTimeLinePackage.DOMAIN__OBJECTS_WITH_TIME_LINE:
 				return getObjectsWithTimeLine();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -267,22 +254,22 @@ public class DomainImpl extends ObjectWithPropagatorFunctionsImpl implements Dom
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TousetimelinePackage.DOMAIN__TIME_LINE_MERGES:
+			case ToUseTimeLinePackage.DOMAIN__TIME_LINE_MERGES:
 				getTimeLineMerges().clear();
 				getTimeLineMerges().addAll((Collection<? extends TimeLineMerge>)newValue);
 				return;
-			case TousetimelinePackage.DOMAIN__DISTRIBUTION:
+			case ToUseTimeLinePackage.DOMAIN__DISTRIBUTION:
 				getDistribution().clear();
 				getDistribution().addAll((Collection<? extends DomainDistribution>)newValue);
 				return;
-			case TousetimelinePackage.DOMAIN__NAME:
+			case ToUseTimeLinePackage.DOMAIN__NAME:
 				setName((String)newValue);
 				return;
-			case TousetimelinePackage.DOMAIN__TIMELINES:
+			case ToUseTimeLinePackage.DOMAIN__TIMELINES:
 				getTimelines().clear();
 				getTimelines().addAll((Collection<? extends TimeLine>)newValue);
 				return;
-			case TousetimelinePackage.DOMAIN__OBJECTS_WITH_TIME_LINE:
+			case ToUseTimeLinePackage.DOMAIN__OBJECTS_WITH_TIME_LINE:
 				getObjectsWithTimeLine().clear();
 				getObjectsWithTimeLine().addAll((Collection<? extends ConcreteObjectWithTimeLine>)newValue);
 				return;
@@ -298,19 +285,19 @@ public class DomainImpl extends ObjectWithPropagatorFunctionsImpl implements Dom
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TousetimelinePackage.DOMAIN__TIME_LINE_MERGES:
+			case ToUseTimeLinePackage.DOMAIN__TIME_LINE_MERGES:
 				getTimeLineMerges().clear();
 				return;
-			case TousetimelinePackage.DOMAIN__DISTRIBUTION:
+			case ToUseTimeLinePackage.DOMAIN__DISTRIBUTION:
 				getDistribution().clear();
 				return;
-			case TousetimelinePackage.DOMAIN__NAME:
+			case ToUseTimeLinePackage.DOMAIN__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case TousetimelinePackage.DOMAIN__TIMELINES:
+			case ToUseTimeLinePackage.DOMAIN__TIMELINES:
 				getTimelines().clear();
 				return;
-			case TousetimelinePackage.DOMAIN__OBJECTS_WITH_TIME_LINE:
+			case ToUseTimeLinePackage.DOMAIN__OBJECTS_WITH_TIME_LINE:
 				getObjectsWithTimeLine().clear();
 				return;
 		}
@@ -325,15 +312,15 @@ public class DomainImpl extends ObjectWithPropagatorFunctionsImpl implements Dom
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TousetimelinePackage.DOMAIN__TIME_LINE_MERGES:
+			case ToUseTimeLinePackage.DOMAIN__TIME_LINE_MERGES:
 				return timeLineMerges != null && !timeLineMerges.isEmpty();
-			case TousetimelinePackage.DOMAIN__DISTRIBUTION:
+			case ToUseTimeLinePackage.DOMAIN__DISTRIBUTION:
 				return distribution != null && !distribution.isEmpty();
-			case TousetimelinePackage.DOMAIN__NAME:
+			case ToUseTimeLinePackage.DOMAIN__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case TousetimelinePackage.DOMAIN__TIMELINES:
+			case ToUseTimeLinePackage.DOMAIN__TIMELINES:
 				return timelines != null && !timelines.isEmpty();
-			case TousetimelinePackage.DOMAIN__OBJECTS_WITH_TIME_LINE:
+			case ToUseTimeLinePackage.DOMAIN__OBJECTS_WITH_TIME_LINE:
 				return objectsWithTimeLine != null && !objectsWithTimeLine.isEmpty();
 		}
 		return super.eIsSet(featureID);

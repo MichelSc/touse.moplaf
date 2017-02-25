@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.SomeBaseClass#getSomeAttribute <em>Some Attribute</em>}</li>
  * </ul>
  *
- * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getSomeBaseClass()
+ * @see com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage#getSomeBaseClass()
  * @model
  * @generated
  */
@@ -31,7 +31,7 @@ public interface SomeBaseClass extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Some Attribute</em>' attribute.
 	 * @see #setSomeAttribute(String)
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getSomeBaseClass_SomeAttribute()
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage#getSomeBaseClass_SomeAttribute()
 	 * @model
 	 * @generated
 	 */

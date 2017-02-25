@@ -3,11 +3,13 @@
 package com.misc.touse.moplaf.timeline.tousetimeline.provider;
 
 
-import com.misc.common.moplaf.time.discrete.DiscreteFactory;
+import com.misc.common.moplaf.propagator2.PropagatorPackage;
+import com.misc.common.moplaf.propagator2.provider.ObjectWithPropagatorFunctionsItemProvider;
+import com.misc.common.moplaf.time.continuous.TimeContinuousFactory;
+import com.misc.common.moplaf.time.discrete.TimeDiscreteFactory;
 import com.misc.touse.moplaf.timeline.tousetimeline.Domain;
-import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelineFactory;
-import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage;
-
+import com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLineFactory;
+import com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage;
 import java.util.Collection;
 import java.util.List;
 
@@ -19,14 +21,8 @@ import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
@@ -36,13 +32,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * @generated
  */
 public class DomainItemProvider
-	extends ItemProviderAdapter
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+	extends ObjectWithPropagatorFunctionsItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -81,13 +71,13 @@ public class DomainItemProvider
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_Domain_Name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Domain_Name_feature", "_UI_Domain_type"),
-				 TousetimelinePackage.Literals.DOMAIN__NAME,
+				 getString("_UI_Domain_Name_description"),
+				 ToUseTimeLinePackage.Literals.DOMAIN__NAME,
 				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI__10ToUsePropertyCategory"),
 				 null));
 	}
 
@@ -103,10 +93,10 @@ public class DomainItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(TousetimelinePackage.Literals.DOMAIN__TIME_LINE_MERGES);
-			childrenFeatures.add(TousetimelinePackage.Literals.DOMAIN__DISTRIBUTION);
-			childrenFeatures.add(TousetimelinePackage.Literals.DOMAIN__TIMELINES);
-			childrenFeatures.add(TousetimelinePackage.Literals.DOMAIN__OBJECTS_WITH_TIME_LINE);
+			childrenFeatures.add(ToUseTimeLinePackage.Literals.DOMAIN__TIME_LINE_MERGES);
+			childrenFeatures.add(ToUseTimeLinePackage.Literals.DOMAIN__DISTRIBUTION);
+			childrenFeatures.add(ToUseTimeLinePackage.Literals.DOMAIN__TIMELINES);
+			childrenFeatures.add(ToUseTimeLinePackage.Literals.DOMAIN__OBJECTS_WITH_TIME_LINE);
 		}
 		return childrenFeatures;
 	}
@@ -161,13 +151,13 @@ public class DomainItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Domain.class)) {
-			case TousetimelinePackage.DOMAIN__NAME:
+			case ToUseTimeLinePackage.DOMAIN__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case TousetimelinePackage.DOMAIN__TIME_LINE_MERGES:
-			case TousetimelinePackage.DOMAIN__DISTRIBUTION:
-			case TousetimelinePackage.DOMAIN__TIMELINES:
-			case TousetimelinePackage.DOMAIN__OBJECTS_WITH_TIME_LINE:
+			case ToUseTimeLinePackage.DOMAIN__TIME_LINE_MERGES:
+			case ToUseTimeLinePackage.DOMAIN__DISTRIBUTION:
+			case ToUseTimeLinePackage.DOMAIN__TIMELINES:
+			case ToUseTimeLinePackage.DOMAIN__OBJECTS_WITH_TIME_LINE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -187,23 +177,38 @@ public class DomainItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TousetimelinePackage.Literals.DOMAIN__TIME_LINE_MERGES,
-				 DiscreteFactory.eINSTANCE.createTimeLineMerge()));
+				(PropagatorPackage.Literals.OBJECT_WITH_PROPAGATOR_FUNCTIONS__PROPAGATOR_FUNCTIONS,
+				 TimeContinuousFactory.eINSTANCE.createPropagatorFunctionDistribution()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TousetimelinePackage.Literals.DOMAIN__DISTRIBUTION,
-				 TousetimelineFactory.eINSTANCE.createDomainDistribution()));
+				(PropagatorPackage.Literals.OBJECT_WITH_PROPAGATOR_FUNCTIONS__PROPAGATOR_FUNCTIONS,
+				 TimeContinuousFactory.eINSTANCE.createPropagatorFunctionDistributionEvent()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TousetimelinePackage.Literals.DOMAIN__TIMELINES,
-				 DiscreteFactory.eINSTANCE.createTimeLine()));
+				(PropagatorPackage.Literals.OBJECT_WITH_PROPAGATOR_FUNCTIONS__PROPAGATOR_FUNCTIONS,
+				 TimeContinuousFactory.eINSTANCE.createPropagatorFunctionEventsProvider()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TousetimelinePackage.Literals.DOMAIN__OBJECTS_WITH_TIME_LINE,
-				 TousetimelineFactory.eINSTANCE.createConcreteObjectWithTimeLine()));
+				(ToUseTimeLinePackage.Literals.DOMAIN__TIME_LINE_MERGES,
+				 TimeDiscreteFactory.eINSTANCE.createTimeLineMerge()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ToUseTimeLinePackage.Literals.DOMAIN__DISTRIBUTION,
+				 ToUseTimeLineFactory.eINSTANCE.createDomainDistribution()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ToUseTimeLinePackage.Literals.DOMAIN__TIMELINES,
+				 TimeDiscreteFactory.eINSTANCE.createTimeLine()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ToUseTimeLinePackage.Literals.DOMAIN__OBJECTS_WITH_TIME_LINE,
+				 ToUseTimeLineFactory.eINSTANCE.createConcreteObjectWithTimeLine()));
 	}
 
 	/**

@@ -3,9 +3,11 @@
 package com.misc.touse.moplaf.timeline.tousetimeline.provider;
 
 
+import com.misc.common.moplaf.propagator2.PropagatorPackage;
+import com.misc.common.moplaf.propagator2.provider.ObjectWithPropagatorFunctionsItemProvider;
+import com.misc.common.moplaf.time.continuous.TimeContinuousFactory;
 import com.misc.touse.moplaf.timeline.tousetimeline.FunctionInterval;
-import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage;
-
+import com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
@@ -16,14 +18,8 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
@@ -33,13 +29,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * @generated
  */
 public class FunctionIntervalItemProvider 
-	extends ItemProviderAdapter
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+	extends ObjectWithPropagatorFunctionsItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -80,7 +70,7 @@ public class FunctionIntervalItemProvider
 				 getResourceLocator(),
 				 getString("_UI_FunctionInterval_from_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FunctionInterval_from_feature", "_UI_FunctionInterval_type"),
-				 TousetimelinePackage.Literals.FUNCTION_INTERVAL__FROM,
+				 ToUseTimeLinePackage.Literals.FUNCTION_INTERVAL__FROM,
 				 true,
 				 false,
 				 false,
@@ -102,7 +92,7 @@ public class FunctionIntervalItemProvider
 				 getResourceLocator(),
 				 getString("_UI_FunctionInterval_to_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FunctionInterval_to_feature", "_UI_FunctionInterval_type"),
-				 TousetimelinePackage.Literals.FUNCTION_INTERVAL__TO,
+				 ToUseTimeLinePackage.Literals.FUNCTION_INTERVAL__TO,
 				 true,
 				 false,
 				 false,
@@ -150,8 +140,8 @@ public class FunctionIntervalItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(FunctionInterval.class)) {
-			case TousetimelinePackage.FUNCTION_INTERVAL__FROM:
-			case TousetimelinePackage.FUNCTION_INTERVAL__TO:
+			case ToUseTimeLinePackage.FUNCTION_INTERVAL__FROM:
+			case ToUseTimeLinePackage.FUNCTION_INTERVAL__TO:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -168,6 +158,21 @@ public class FunctionIntervalItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PropagatorPackage.Literals.OBJECT_WITH_PROPAGATOR_FUNCTIONS__PROPAGATOR_FUNCTIONS,
+				 TimeContinuousFactory.eINSTANCE.createPropagatorFunctionDistribution()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PropagatorPackage.Literals.OBJECT_WITH_PROPAGATOR_FUNCTIONS__PROPAGATOR_FUNCTIONS,
+				 TimeContinuousFactory.eINSTANCE.createPropagatorFunctionDistributionEvent()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PropagatorPackage.Literals.OBJECT_WITH_PROPAGATOR_FUNCTIONS__PROPAGATOR_FUNCTIONS,
+				 TimeContinuousFactory.eINSTANCE.createPropagatorFunctionEventsProvider()));
 	}
 
 	/**

@@ -15,7 +15,7 @@ package com.misc.touse.moplaf.timeline.tousetimeline;
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionCumulated#getCumulated <em>Cumulated</em>}</li>
  * </ul>
  *
- * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getFunctionCumulated()
+ * @see com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage#getFunctionCumulated()
  * @model
  * @generated
  */
@@ -31,7 +31,7 @@ public interface FunctionCumulated extends FunctionInterval {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Cumulated</em>' attribute.
 	 * @see #setCumulated(float)
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage#getFunctionCumulated_Cumulated()
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage#getFunctionCumulated_Cumulated()
 	 * @model default="0.0"
 	 * @generated
 	 */
