@@ -17,5 +17,8 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.ui.ide;visibility:=reexport,
  com.misc.common.moplaf.time.continuous.emf.edit;visibility:=reexport,
  com.misc.common.moplaf.time.discrete.emf.edit;visibility:=reexport,
- com.misc.common.moplaf.emf.editor;bundle-version="1.0.0"
+ com.misc.common.moplaf.propagator2.edit;visibility:=reexport,
+ com.misc.common.moplaf.emf.editor;bundle-version="1.0.0",
+ com.misc.common.moplaf.time.continuous.calc.emf.edit;bundle-version="1.0.0",
+ com.misc.touse.moplaf.timeline.calc.emf.edit;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy

@@ -69,8 +69,8 @@ import org.eclipse.ui.dialogs.WizardNewFileCreationPage;
 import org.eclipse.ui.part.FileEditorInput;
 import org.eclipse.ui.part.ISetSelectionTarget;
 
-import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelineFactory;
-import com.misc.touse.moplaf.timeline.tousetimeline.TousetimelinePackage;
+import com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLineFactory;
+import com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage;
 import com.misc.touse.moplaf.timeline.tousetimeline.provider.ToUseTimeLineEditPlugin;
 
 
@@ -91,7 +91,7 @@ import org.eclipse.ui.PartInitException;
  * <!-- end-user-doc -->
  * @generated
  */
-public class TousetimelineModelWizard extends Wizard implements INewWizard {
+public class ToUseTimeLineModelWizard extends Wizard implements INewWizard {
 	/**
 	 * The supported extensions for created files.
 	 * <!-- begin-user-doc -->
@@ -99,7 +99,7 @@ public class TousetimelineModelWizard extends Wizard implements INewWizard {
 	 * @generated
 	 */
 	public static final List<String> FILE_EXTENSIONS =
-		Collections.unmodifiableList(Arrays.asList(ToUseTimeLineEditorPlugin.INSTANCE.getString("_UI_TousetimelineEditorFilenameExtensions").split("\\s*,\\s*")));
+		Collections.unmodifiableList(Arrays.asList(ToUseTimeLineEditorPlugin.INSTANCE.getString("_UI_ToUseTimeLineEditorFilenameExtensions").split("\\s*,\\s*")));
 
 	/**
 	 * A formatted list of supported file extensions, suitable for display.
@@ -108,7 +108,7 @@ public class TousetimelineModelWizard extends Wizard implements INewWizard {
 	 * @generated
 	 */
 	public static final String FORMATTED_FILE_EXTENSIONS =
-		ToUseTimeLineEditorPlugin.INSTANCE.getString("_UI_TousetimelineEditorFilenameExtensions").replaceAll("\\s*,\\s*", ", ");
+		ToUseTimeLineEditorPlugin.INSTANCE.getString("_UI_ToUseTimeLineEditorFilenameExtensions").replaceAll("\\s*,\\s*", ", ");
 
 	/**
 	 * This caches an instance of the model package.
@@ -116,7 +116,7 @@ public class TousetimelineModelWizard extends Wizard implements INewWizard {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TousetimelinePackage tousetimelinePackage = TousetimelinePackage.eINSTANCE;
+	protected ToUseTimeLinePackage toUseTimeLinePackage = ToUseTimeLinePackage.eINSTANCE;
 
 	/**
 	 * This caches an instance of the model factory.
@@ -124,7 +124,7 @@ public class TousetimelineModelWizard extends Wizard implements INewWizard {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TousetimelineFactory tousetimelineFactory = tousetimelinePackage.getTousetimelineFactory();
+	protected ToUseTimeLineFactory toUseTimeLineFactory = toUseTimeLinePackage.getToUseTimeLineFactory();
 
 	/**
 	 * This is the file creation page.
@@ -132,7 +132,7 @@ public class TousetimelineModelWizard extends Wizard implements INewWizard {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TousetimelineModelWizardNewFileCreationPage newFileCreationPage;
+	protected ToUseTimeLineModelWizardNewFileCreationPage newFileCreationPage;
 
 	/**
 	 * This is the initial object creation page.
@@ -140,7 +140,7 @@ public class TousetimelineModelWizard extends Wizard implements INewWizard {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TousetimelineModelWizardInitialObjectCreationPage initialObjectCreationPage;
+	protected ToUseTimeLineModelWizardInitialObjectCreationPage initialObjectCreationPage;
 
 	/**
 	 * Remember the selection during initialization for populating the default container.
@@ -176,7 +176,7 @@ public class TousetimelineModelWizard extends Wizard implements INewWizard {
 		this.workbench = workbench;
 		this.selection = selection;
 		setWindowTitle(ToUseTimeLineEditorPlugin.INSTANCE.getString("_UI_Wizard_label"));
-		setDefaultPageImageDescriptor(ExtendedImageRegistry.INSTANCE.getImageDescriptor(ToUseTimeLineEditorPlugin.INSTANCE.getImage("full/wizban/NewTousetimeline")));
+		setDefaultPageImageDescriptor(ExtendedImageRegistry.INSTANCE.getImageDescriptor(ToUseTimeLineEditorPlugin.INSTANCE.getImage("full/wizban/NewToUseTimeLine")));
 	}
 
 	/**
@@ -188,7 +188,7 @@ public class TousetimelineModelWizard extends Wizard implements INewWizard {
 	protected Collection<String> getInitialObjectNames() {
 		if (initialObjectNames == null) {
 			initialObjectNames = new ArrayList<String>();
-			for (EClassifier eClassifier : tousetimelinePackage.getEClassifiers()) {
+			for (EClassifier eClassifier : toUseTimeLinePackage.getEClassifiers()) {
 				if (eClassifier instanceof EClass) {
 					EClass eClass = (EClass)eClassifier;
 					if (!eClass.isAbstract()) {
@@ -208,8 +208,8 @@ public class TousetimelineModelWizard extends Wizard implements INewWizard {
 	 * @generated
 	 */
 	protected EObject createInitialModel() {
-		EClass eClass = (EClass)tousetimelinePackage.getEClassifier(initialObjectCreationPage.getInitialObjectName());
-		EObject rootObject = tousetimelineFactory.create(eClass);
+		EClass eClass = (EClass)toUseTimeLinePackage.getEClassifier(initialObjectCreationPage.getInitialObjectName());
+		EObject rootObject = toUseTimeLineFactory.create(eClass);
 		return rootObject;
 	}
 
@@ -310,14 +310,14 @@ public class TousetimelineModelWizard extends Wizard implements INewWizard {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public class TousetimelineModelWizardNewFileCreationPage extends WizardNewFileCreationPage {
+	public class ToUseTimeLineModelWizardNewFileCreationPage extends WizardNewFileCreationPage {
 		/**
 		 * Pass in the selection.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		public TousetimelineModelWizardNewFileCreationPage(String pageId, IStructuredSelection selection) {
+		public ToUseTimeLineModelWizardNewFileCreationPage(String pageId, IStructuredSelection selection) {
 			super(pageId, selection);
 		}
 
@@ -357,7 +357,7 @@ public class TousetimelineModelWizard extends Wizard implements INewWizard {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public class TousetimelineModelWizardInitialObjectCreationPage extends WizardPage {
+	public class ToUseTimeLineModelWizardInitialObjectCreationPage extends WizardPage {
 		/**
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -385,7 +385,7 @@ public class TousetimelineModelWizard extends Wizard implements INewWizard {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		public TousetimelineModelWizardInitialObjectCreationPage(String pageId) {
+		public ToUseTimeLineModelWizardInitialObjectCreationPage(String pageId) {
 			super(pageId);
 		}
 
@@ -569,10 +569,10 @@ public class TousetimelineModelWizard extends Wizard implements INewWizard {
 	public void addPages() {
 		// Create a page, set the title, and the initial model file name.
 		//
-		newFileCreationPage = new TousetimelineModelWizardNewFileCreationPage("Whatever", selection);
-		newFileCreationPage.setTitle(ToUseTimeLineEditorPlugin.INSTANCE.getString("_UI_TousetimelineModelWizard_label"));
-		newFileCreationPage.setDescription(ToUseTimeLineEditorPlugin.INSTANCE.getString("_UI_TousetimelineModelWizard_description"));
-		newFileCreationPage.setFileName(ToUseTimeLineEditorPlugin.INSTANCE.getString("_UI_TousetimelineEditorFilenameDefaultBase") + "." + FILE_EXTENSIONS.get(0));
+		newFileCreationPage = new ToUseTimeLineModelWizardNewFileCreationPage("Whatever", selection);
+		newFileCreationPage.setTitle(ToUseTimeLineEditorPlugin.INSTANCE.getString("_UI_ToUseTimeLineModelWizard_label"));
+		newFileCreationPage.setDescription(ToUseTimeLineEditorPlugin.INSTANCE.getString("_UI_ToUseTimeLineModelWizard_description"));
+		newFileCreationPage.setFileName(ToUseTimeLineEditorPlugin.INSTANCE.getString("_UI_ToUseTimeLineEditorFilenameDefaultBase") + "." + FILE_EXTENSIONS.get(0));
 		addPage(newFileCreationPage);
 
 		// Try and get the resource selection to determine a current directory for the file dialog.
@@ -598,7 +598,7 @@ public class TousetimelineModelWizard extends Wizard implements INewWizard {
 
 					// Make up a unique new name here.
 					//
-					String defaultModelBaseFilename = ToUseTimeLineEditorPlugin.INSTANCE.getString("_UI_TousetimelineEditorFilenameDefaultBase");
+					String defaultModelBaseFilename = ToUseTimeLineEditorPlugin.INSTANCE.getString("_UI_ToUseTimeLineEditorFilenameDefaultBase");
 					String defaultModelFilenameExtension = FILE_EXTENSIONS.get(0);
 					String modelFilename = defaultModelBaseFilename + "." + defaultModelFilenameExtension;
 					for (int i = 1; ((IContainer)selectedResource).findMember(modelFilename) != null; ++i) {
@@ -608,8 +608,8 @@ public class TousetimelineModelWizard extends Wizard implements INewWizard {
 				}
 			}
 		}
-		initialObjectCreationPage = new TousetimelineModelWizardInitialObjectCreationPage("Whatever2");
-		initialObjectCreationPage.setTitle(ToUseTimeLineEditorPlugin.INSTANCE.getString("_UI_TousetimelineModelWizard_label"));
+		initialObjectCreationPage = new ToUseTimeLineModelWizardInitialObjectCreationPage("Whatever2");
+		initialObjectCreationPage.setTitle(ToUseTimeLineEditorPlugin.INSTANCE.getString("_UI_ToUseTimeLineModelWizard_label"));
 		initialObjectCreationPage.setDescription(ToUseTimeLineEditorPlugin.INSTANCE.getString("_UI_Wizard_initial_object_description"));
 		addPage(initialObjectCreationPage);
 	}

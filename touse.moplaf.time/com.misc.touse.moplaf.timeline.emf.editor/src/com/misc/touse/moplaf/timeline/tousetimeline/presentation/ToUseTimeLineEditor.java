@@ -5,6 +5,7 @@ package com.misc.touse.moplaf.timeline.tousetimeline.presentation;
 
 import java.io.IOException;
 import java.io.InputStream;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -23,19 +24,24 @@ import org.eclipse.core.resources.IResourceChangeListener;
 import org.eclipse.core.resources.IResourceDelta;
 import org.eclipse.core.resources.IResourceDeltaVisitor;
 import org.eclipse.core.resources.ResourcesPlugin;
+
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.NullProgressMonitor;
+
 import org.eclipse.jface.action.IMenuListener;
 import org.eclipse.jface.action.IMenuManager;
 import org.eclipse.jface.action.IStatusLineManager;
 import org.eclipse.jface.action.IToolBarManager;
 import org.eclipse.jface.action.MenuManager;
 import org.eclipse.jface.action.Separator;
+
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.dialogs.ProgressMonitorDialog;
+
 import org.eclipse.jface.util.LocalSelectionTransfer;
+
 import org.eclipse.jface.viewers.ColumnWeightData;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
@@ -49,21 +55,29 @@ import org.eclipse.jface.viewers.TableLayout;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.viewers.Viewer;
+
 import org.eclipse.swt.SWT;
+
 import org.eclipse.swt.custom.CTabFolder;
+
 import org.eclipse.swt.dnd.DND;
 import org.eclipse.swt.dnd.FileTransfer;
 import org.eclipse.swt.dnd.Transfer;
+
 import org.eclipse.swt.events.ControlAdapter;
 import org.eclipse.swt.events.ControlEvent;
+
 import org.eclipse.swt.graphics.Point;
+
 import org.eclipse.swt.layout.FillLayout;
+
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeColumn;
+
 import org.eclipse.ui.IActionBars;
 import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IEditorPart;
@@ -71,76 +85,93 @@ import org.eclipse.ui.IEditorSite;
 import org.eclipse.ui.IPartListener;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.PartInitException;
+
 import org.eclipse.ui.dialogs.SaveAsDialog;
+
 import org.eclipse.ui.ide.IGotoMarker;
+
 import org.eclipse.ui.part.FileEditorInput;
 import org.eclipse.ui.part.MultiPageEditorPart;
+
 import org.eclipse.ui.views.contentoutline.ContentOutline;
 import org.eclipse.ui.views.contentoutline.ContentOutlinePage;
 import org.eclipse.ui.views.contentoutline.IContentOutlinePage;
+
 import org.eclipse.ui.views.properties.IPropertySheetPage;
 import org.eclipse.ui.views.properties.PropertySheet;
 import org.eclipse.ui.views.properties.PropertySheetPage;
-
-import com.misc.common.moplaf.emf.editor.provider.AdapterFactoryContentProviderExtended;
-import com.misc.common.moplaf.time.continuous.calc.provider.TimeContinuousCalcItemProviderAdapterFactory;
-import com.misc.common.moplaf.time.continuous.provider.TimeContinuousItemProviderAdapterFactory;
-import com.misc.common.moplaf.time.discrete.provider.TimeDiscreteItemProviderAdapterFactory;
-import com.misc.touse.moplaf.timeline.tousetimeline.Domain;
-import com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage;
-import com.misc.touse.moplaf.timeline.tousetimeline.calc.provider.ToUseTimeLineCalcItemProviderAdapterFactory;
-import com.misc.touse.moplaf.timeline.tousetimeline.calc.util.ToUseTimeLinePropagatorFunctionManager;
-import com.misc.touse.moplaf.timeline.tousetimeline.provider.ToUseTimeLineItemProviderAdapterFactory;
 
 import org.eclipse.emf.common.command.BasicCommandStack;
 import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.common.command.CommandStack;
 import org.eclipse.emf.common.command.CommandStackListener;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.common.ui.MarkerHelper;
 import org.eclipse.emf.common.ui.ViewerPane;
+
 import org.eclipse.emf.common.ui.editor.ProblemEditorPart;
+
 import org.eclipse.emf.common.ui.viewer.IViewerProvider;
+
 import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
-import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.common.util.URI;
-import org.eclipse.emf.ecore.EObject;
+
+
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
+
 import org.eclipse.emf.ecore.util.EContentAdapter;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.domain.IEditingDomainProvider;
+
 import org.eclipse.emf.edit.provider.AdapterFactoryItemDelegator;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.provider.ReflectiveItemProviderAdapterFactory;
+
 import org.eclipse.emf.edit.provider.resource.ResourceItemProviderAdapterFactory;
+
 import org.eclipse.emf.edit.ui.action.EditingDomainActionBarContributor;
+
 import org.eclipse.emf.edit.ui.celleditor.AdapterFactoryTreeEditor;
+
 import org.eclipse.emf.edit.ui.dnd.EditingDomainViewerDropAdapter;
 import org.eclipse.emf.edit.ui.dnd.LocalTransfer;
 import org.eclipse.emf.edit.ui.dnd.ViewerDragAdapter;
+
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
 import org.eclipse.emf.edit.ui.provider.UnwrappingSelectionProvider;
+
 import org.eclipse.emf.edit.ui.util.EditUIMarkerHelper;
 import org.eclipse.emf.edit.ui.util.EditUIUtil;
+
 import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 
+import com.misc.touse.moplaf.timeline.tousetimeline.provider.ToUseTimeLineItemProviderAdapterFactory;
+
+import com.misc.common.moplaf.propagator2.provider.PropagatorItemProviderAdapterFactory;
+
+import com.misc.common.moplaf.time.continuous.provider.TimeContinuousItemProviderAdapterFactory;
+
+import com.misc.common.moplaf.time.discrete.provider.TimeDiscreteItemProviderAdapterFactory;
 
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 
 
 /**
- * This is an example of a Tousetimeline model editor.
+ * This is an example of a ToUseTimeLine model editor.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class TousetimelineEditor
+public class ToUseTimeLineEditor
 	extends MultiPageEditorPart
 	implements IEditingDomainProvider, ISelectionProvider, IMenuListener, IViewerProvider, IGotoMarker {
 	/**
@@ -302,18 +333,18 @@ public class TousetimelineEditor
 			public void partActivated(IWorkbenchPart p) {
 				if (p instanceof ContentOutline) {
 					if (((ContentOutline)p).getCurrentPage() == contentOutlinePage) {
-						getActionBarContributor().setActiveEditor(TousetimelineEditor.this);
+						getActionBarContributor().setActiveEditor(ToUseTimeLineEditor.this);
 
 						setCurrentViewer(contentOutlineViewer);
 					}
 				}
 				else if (p instanceof PropertySheet) {
 					if (propertySheetPages.contains(((PropertySheet)p).getCurrentPage())) {
-						getActionBarContributor().setActiveEditor(TousetimelineEditor.this);
+						getActionBarContributor().setActiveEditor(ToUseTimeLineEditor.this);
 						handleActivate();
 					}
 				}
-				else if (p == TousetimelineEditor.this) {
+				else if (p == ToUseTimeLineEditor.this) {
 					handleActivate();
 				}
 			}
@@ -486,7 +517,7 @@ public class TousetimelineEditor
 								 public void run() {
 									 removedResources.addAll(visitor.getRemovedResources());
 									 if (!isDirty()) {
-										 getSite().getPage().closeEditor(TousetimelineEditor.this, false);
+										 getSite().getPage().closeEditor(ToUseTimeLineEditor.this, false);
 									 }
 								 }
 							 });
@@ -497,7 +528,7 @@ public class TousetimelineEditor
 							(new Runnable() {
 								 public void run() {
 									 changedResources.addAll(visitor.getChangedResources());
-									 if (getSite().getPage().getActiveEditor() == TousetimelineEditor.this) {
+									 if (getSite().getPage().getActiveEditor() == ToUseTimeLineEditor.this) {
 										 handleActivate();
 									 }
 								 }
@@ -529,7 +560,7 @@ public class TousetimelineEditor
 
 		if (!removedResources.isEmpty()) {
 			if (handleDirtyConflict()) {
-				getSite().getPage().closeEditor(TousetimelineEditor.this, false);
+				getSite().getPage().closeEditor(ToUseTimeLineEditor.this, false);
 			}
 			else {
 				removedResources.clear();
@@ -659,7 +690,7 @@ public class TousetimelineEditor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TousetimelineEditor() {
+	public ToUseTimeLineEditor() {
 		super();
 		initializeEditingDomain();
 	}
@@ -668,6 +699,7 @@ public class TousetimelineEditor
 	 * This sets up the editing domain for the model editor.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
 	 */
 	protected void initializeEditingDomain() {
 		// Create an adapter factory that yields item providers.
@@ -676,10 +708,9 @@ public class TousetimelineEditor
 
 		adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ToUseTimeLineItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new ToUseTimeLineCalcItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new TimeContinuousItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new TimeContinuousCalcItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new TimeDiscreteItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new PropagatorItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
 		// Create the command stack that will notify this editor as commands are executed.
@@ -691,17 +722,6 @@ public class TousetimelineEditor
 		commandStack.addCommandStackListener
 			(new CommandStackListener() {
 				 public void commandStackChanged(final EventObject event) {
-						for (Resource aresource : editingDomain.getResourceSet().getResources()) {
-							TreeIterator<EObject> treeiterator = aresource.getAllContents();
-							while ( treeiterator.hasNext()){
-								EObject anobject = treeiterator.next();
-								if ( anobject instanceof Domain){
-									Domain domain = (Domain)anobject;
-									ToUseTimeLinePropagatorFunctionManager.refreshDistribution(domain);
-									treeiterator.prune();
-								}
-							}
-						 } // traverse the Resources
 					 getContainer().getDisplay().asyncExec
 						 (new Runnable() {
 							  public void run() {
@@ -935,9 +955,10 @@ public class TousetimelineEditor
 	 * This is the method called to load a resource into the editing domain's resource set based on the editor's input.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
 	 */
 	public void createModel() {
-		URI resourceURI = EditUIUtil.getURI(getEditorInput());
+		URI resourceURI = EditUIUtil.getURI(getEditorInput(), editingDomain.getResourceSet().getURIConverter());
 		Exception exception = null;
 		Resource resource = null;
 		try {
@@ -955,7 +976,6 @@ public class TousetimelineEditor
 			resourceToDiagnosticMap.put(resource,  analyzeResourceProblems(resource, exception));
 		}
 		editingDomain.getResourceSet().eAdapters().add(problemIndicationAdapter);
-		resource.eAdapters().add(new ToUseTimeLinePropagatorFunctionManager());
 	}
 
 	/**
@@ -1011,7 +1031,7 @@ public class TousetimelineEditor
 			//
 			{
 				ViewerPane viewerPane =
-					new ViewerPane(getSite().getPage(), TousetimelineEditor.this) {
+					new ViewerPane(getSite().getPage(), ToUseTimeLineEditor.this) {
 						@Override
 						public Viewer createViewer(Composite composite) {
 							Tree tree = new Tree(composite, SWT.MULTI);
@@ -1045,7 +1065,7 @@ public class TousetimelineEditor
 			//
 			{
 				ViewerPane viewerPane =
-					new ViewerPane(getSite().getPage(), TousetimelineEditor.this) {
+					new ViewerPane(getSite().getPage(), ToUseTimeLineEditor.this) {
 						@Override
 						public Viewer createViewer(Composite composite) {
 							Tree tree = new Tree(composite, SWT.MULTI);
@@ -1074,7 +1094,7 @@ public class TousetimelineEditor
 			//
 			{
 				ViewerPane viewerPane =
-					new ViewerPane(getSite().getPage(), TousetimelineEditor.this) {
+					new ViewerPane(getSite().getPage(), ToUseTimeLineEditor.this) {
 						@Override
 						public Viewer createViewer(Composite composite) {
 							return new ListViewer(composite);
@@ -1099,7 +1119,7 @@ public class TousetimelineEditor
 			//
 			{
 				ViewerPane viewerPane =
-					new ViewerPane(getSite().getPage(), TousetimelineEditor.this) {
+					new ViewerPane(getSite().getPage(), ToUseTimeLineEditor.this) {
 						@Override
 						public Viewer createViewer(Composite composite) {
 							return new TreeViewer(composite);
@@ -1126,7 +1146,7 @@ public class TousetimelineEditor
 			//
 			{
 				ViewerPane viewerPane =
-					new ViewerPane(getSite().getPage(), TousetimelineEditor.this) {
+					new ViewerPane(getSite().getPage(), ToUseTimeLineEditor.this) {
 						@Override
 						public Viewer createViewer(Composite composite) {
 							return new TableViewer(composite);
@@ -1169,7 +1189,7 @@ public class TousetimelineEditor
 			//
 			{
 				ViewerPane viewerPane =
-					new ViewerPane(getSite().getPage(), TousetimelineEditor.this) {
+					new ViewerPane(getSite().getPage(), ToUseTimeLineEditor.this) {
 						@Override
 						public Viewer createViewer(Composite composite) {
 							return new TreeViewer(composite);
@@ -1382,14 +1402,15 @@ public class TousetimelineEditor
 	 * This accesses a cached version of the property sheet.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
 	 */
 	public IPropertySheetPage getPropertySheetPage() {
 		PropertySheetPage propertySheetPage =
 			new ExtendedPropertySheetPage(editingDomain) {
 				@Override
 				public void setSelectionToViewer(List<?> selection) {
-					TousetimelineEditor.this.setSelectionToViewer(selection);
-					TousetimelineEditor.this.setFocus();
+					ToUseTimeLineEditor.this.setSelectionToViewer(selection);
+					ToUseTimeLineEditor.this.setFocus();
 				}
 
 				@Override
@@ -1398,14 +1419,8 @@ public class TousetimelineEditor
 					getActionBarContributor().shareGlobalActions(this, actionBars);
 				}
 			};
-			AdapterFactoryContentProviderExtended propertySourceProvider = new AdapterFactoryContentProviderExtended(adapterFactory);
-			//propertySourceProvider.editDates.addSelector(DiscretePackage.Literals.TIME_BUCKET__BUCKET_START);
-			//propertySourceProvider.editDates.addSelector(DiscretePackage.Literals.TIME_BUCKET);
-			//propertySourceProvider.editDates.addSelector(DiscretePackage.eINSTANCE);
-			propertySourceProvider.editDates.addSelectorAll();
-			propertySourceProvider.editColors.addSelector(ToUseTimeLinePackage.Literals.DOMAIN_DISTRIBUTION__COLOR);
-			propertySheetPage.setPropertySourceProvider(propertySourceProvider);
-		    propertySheetPages.add(propertySheetPage);
+		propertySheetPage.setPropertySourceProvider(new AdapterFactoryContentProvider(adapterFactory));
+		propertySheetPages.add(propertySheetPage);
 
 		return propertySheetPage;
 	}

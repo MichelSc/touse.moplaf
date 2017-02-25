@@ -12,12 +12,12 @@
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="com.misc.touse.moplaf.timeline.tousetimeline.presentation.TousetimelineModelWizardID"
-            name="%_UI_TousetimelineModelWizard_label"
-            class="com.misc.touse.moplaf.timeline.tousetimeline.presentation.TousetimelineModelWizard"
+            id="com.misc.touse.moplaf.timeline.tousetimeline.presentation.ToUseTimeLineModelWizardID"
+            name="%_UI_ToUseTimeLineModelWizard_label"
+            class="com.misc.touse.moplaf.timeline.tousetimeline.presentation.ToUseTimeLineModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/TousetimelineModelFile.gif">
-         <description>%_UI_TousetimelineModelWizard_description</description>
+            icon="icons/full/obj16/ToUseTimeLineModelFile.gif">
+         <description>%_UI_ToUseTimeLineModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
       </wizard>
    </extension>
@@ -25,13 +25,12 @@
    <extension point="org.eclipse.ui.editors">
       <!-- @generated ToUseTimeLine -->
       <editor
-            id="com.misc.touse.moplaf.timeline.tousetimeline.presentation.TousetimelineEditorID"
-            name="%_UI_TousetimelineEditor_label"
-            icon="icons/full/obj16/TousetimelineModelFile.gif"
+            id="com.misc.touse.moplaf.timeline.tousetimeline.presentation.ToUseTimeLineEditorID"
+            name="%_UI_ToUseTimeLineEditor_label"
+            icon="icons/full/obj16/ToUseTimeLineModelFile.gif"
             extensions="tousetimeline"
-            class="com.misc.touse.moplaf.timeline.tousetimeline.presentation.TousetimelineEditor"
-            contributorClass="com.misc.touse.moplaf.timeline.tousetimeline.presentation.TousetimelineActionBarContributor">
+            class="com.misc.touse.moplaf.timeline.tousetimeline.presentation.ToUseTimeLineEditor"
+            contributorClass="com.misc.touse.moplaf.timeline.tousetimeline.presentation.ToUseTimeLineActionBarContributor">
       </editor>
    </extension>
-
 </plugin>

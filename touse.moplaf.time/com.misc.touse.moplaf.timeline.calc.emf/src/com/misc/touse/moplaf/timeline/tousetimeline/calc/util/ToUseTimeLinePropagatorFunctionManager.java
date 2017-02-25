@@ -24,7 +24,7 @@ public class ToUseTimeLinePropagatorFunctionManager extends PropagatorFunctionMa
 	 * Helper for refreshing a Distribution
 	 * @param project
 	 */
-	static void refreshDistribution(Domain domain){
+	public static void refreshDistribution(Domain domain){
 		 CommonPlugin.INSTANCE.log( "ToUseTimeLine, refresh called: domain");
 		 PropagatorScopeDomain scopeDomain = domain.getPropagatorFunction(PropagatorScopeDomain.class);
 		 if ( scopeDomain !=null){
