@@ -118,9 +118,9 @@ import org.eclipse.emf.common.ui.viewer.IViewerProvider;
 
 import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
-import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.common.util.URI;
-import org.eclipse.emf.ecore.EObject;
+
+
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 
@@ -154,14 +154,10 @@ import org.eclipse.emf.edit.ui.util.EditUIUtil;
 
 import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 
-import com.misc.touse.moplaf.timeline.tousetimeline.Domain;
-import com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage;
-import com.misc.touse.moplaf.timeline.tousetimeline.calc.provider.ToUseTimeLineCalcItemProviderAdapterFactory;
-import com.misc.touse.moplaf.timeline.tousetimeline.calc.util.ToUseTimeLinePropagatorFunctionManager;
 import com.misc.touse.moplaf.timeline.tousetimeline.provider.ToUseTimeLineItemProviderAdapterFactory;
-import com.misc.common.moplaf.emf.editor.provider.AdapterFactoryContentProviderExtended;
+
 import com.misc.common.moplaf.propagator2.provider.PropagatorItemProviderAdapterFactory;
-import com.misc.common.moplaf.time.continuous.calc.provider.TimeContinuousCalcItemProviderAdapterFactory;
+
 import com.misc.common.moplaf.time.continuous.provider.TimeContinuousItemProviderAdapterFactory;
 
 import com.misc.common.moplaf.time.discrete.provider.TimeDiscreteItemProviderAdapterFactory;
@@ -703,6 +699,7 @@ public class ToUseTimeLineEditor
 	 * This sets up the editing domain for the model editor.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
 	 */
 	protected void initializeEditingDomain() {
 		// Create an adapter factory that yields item providers.
@@ -715,11 +712,6 @@ public class ToUseTimeLineEditor
 		adapterFactory.addAdapterFactory(new TimeDiscreteItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new PropagatorItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new ToUseTimeLineItemProviderAdapterFactory());  
-		adapterFactory.addAdapterFactory(new ToUseTimeLineCalcItemProviderAdapterFactory());  
-		adapterFactory.addAdapterFactory(new TimeContinuousItemProviderAdapterFactory());  
-		adapterFactory.addAdapterFactory(new TimeContinuousCalcItemProviderAdapterFactory());  
-
 
 		// Create the command stack that will notify this editor as commands are executed.
 		//
@@ -730,19 +722,6 @@ public class ToUseTimeLineEditor
 		commandStack.addCommandStackListener
 			(new CommandStackListener() {
 				 public void commandStackChanged(final EventObject event) {
-					 // refresh the thing
-					 for (Resource aresource : editingDomain.getResourceSet().getResources()) { 
-						 TreeIterator<EObject> treeiterator = aresource.getAllContents();  
-						 while ( treeiterator.hasNext()){  
-							 EObject anobject = treeiterator.next();  
-							 if ( anobject instanceof Domain){  
-								 Domain domain = (Domain)anobject;  
-								 ToUseTimeLinePropagatorFunctionManager.refreshDistribution(domain);  
-								 treeiterator.prune();
-							 }
-						 }
-					 }
-					 // something with dirty status
 					 getContainer().getDisplay().asyncExec
 						 (new Runnable() {
 							  public void run() {
@@ -976,6 +955,7 @@ public class ToUseTimeLineEditor
 	 * This is the method called to load a resource into the editing domain's resource set based on the editor's input.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
 	 */
 	public void createModel() {
 		URI resourceURI = EditUIUtil.getURI(getEditorInput(), editingDomain.getResourceSet().getURIConverter());
@@ -990,8 +970,6 @@ public class ToUseTimeLineEditor
 			exception = e;
 			resource = editingDomain.getResourceSet().getResource(resourceURI, false);
 		}
-		
-		resource.eAdapters().add(new ToUseTimeLinePropagatorFunctionManager());
 
 		Diagnostic diagnostic = analyzeResourceProblems(resource, exception);
 		if (diagnostic.getSeverity() != Diagnostic.OK) {
@@ -1424,6 +1402,7 @@ public class ToUseTimeLineEditor
 	 * This accesses a cached version of the property sheet.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
 	 */
 	public IPropertySheetPage getPropertySheetPage() {
 		PropertySheetPage propertySheetPage =
@@ -1441,13 +1420,6 @@ public class ToUseTimeLineEditor
 				}
 			};
 		propertySheetPage.setPropertySourceProvider(new AdapterFactoryContentProvider(adapterFactory));
-
-		
-		AdapterFactoryContentProviderExtended propertySourceProvider = new AdapterFactoryContentProviderExtended(adapterFactory); 
-		propertySourceProvider.editDates.addSelectorAll();  
-		propertySourceProvider.editColors.addSelector(ToUseTimeLinePackage.Literals.DOMAIN_DISTRIBUTION__COLOR);  
-		propertySheetPage.setPropertySourceProvider(propertySourceProvider);  
-		
 		propertySheetPages.add(propertySheetPage);
 
 		return propertySheetPage;
