@@ -1,6 +1,7 @@
 package com.misc.touse.moplaf.tousepropagator2calc.util;
 
 
+
 import org.eclipse.emf.common.CommonPlugin;
 
 import com.misc.common.moplaf.propagator2.util.PropagatorFunctionManagerAdapter;
@@ -34,7 +35,10 @@ public class ToUsePropagatorPropagatorFunctionManager extends PropagatorFunction
 		 }
 	}
 
-	static PropagatorFunctionsConstructors projectPropagatorFunctionsConstructors = PropagatorFunctionsFactory.constructPropagatorFunctionsConstructors() 
+	static PropagatorFunctionsFactory constructor = PropagatorFunctionsFactory.constructPropagatorFunctionsFactory();
+	
+	static PropagatorFunctionsConstructors projectPropagatorFunctionsConstructors =  
+			constructor.consructPropagatorFunctionsConstructors(ToUsePropagatorPackage.Literals.PROJECT)
 			.addConstructor(ToUsePropagatorCalcPackage.Literals.SCOPE_PROJECT)
 			.addConstructor(ToUsePropagatorCalcPackage.Literals.LAYER_TASK_HOURS_VAR)
 			.addConstructor(ToUsePropagatorCalcPackage.Literals.LAYER_TASK_HOURS_ITEM)
@@ -44,7 +48,8 @@ public class ToUsePropagatorPropagatorFunctionManager extends PropagatorFunction
 			.addConstructor(ToUsePropagatorCalcPackage.Literals.LAYER_TASK_RESOURCES)
 			;
 
-	static PropagatorFunctionsConstructors taskPropagatorFunctionsConstructors = PropagatorFunctionsFactory.constructPropagatorFunctionsConstructors() 
+	static PropagatorFunctionsConstructors taskPropagatorFunctionsConstructors =   
+			constructor.consructPropagatorFunctionsConstructors(ToUsePropagatorPackage.Literals.TASK) 
 			.addConstructor(ToUsePropagatorCalcPackage.Literals.CALC_TASK_HOURS_VAR, true)
 			.addConstructor(ToUsePropagatorCalcPackage.Literals.CALC_TASK_HOURS_ITEM, true)
 			.addConstructor(ToUsePropagatorCalcPackage.Literals.CALC_TASK_HOURS, true)
@@ -53,14 +58,9 @@ public class ToUsePropagatorPropagatorFunctionManager extends PropagatorFunction
 			.addConstructor(ToUsePropagatorCalcPackage.Literals.CALC_TASK_RESOURCES, true)
 			;
 
-	static PropagatorFunctionsConstructors taskWithOverheadPropagatorFunctionsConstructors = PropagatorFunctionsFactory.constructPropagatorFunctionsConstructors() 
+	static PropagatorFunctionsConstructors taskWithOverheadPropagatorFunctionsConstructors = 
+			constructor.consructPropagatorFunctionsConstructors(ToUsePropagatorPackage.Literals.TASK_WITH_OVERHEAD) 
 			.addConstructor(ToUsePropagatorCalcPackage.Literals.CALC_TASK_WITH_OVERHEAD_HOURS_VAR, true)
-			;
-
-	static PropagatorFunctionsFactory constructor = PropagatorFunctionsFactory.constructPropagatorFunctionsFactory()
-			.addPropagatorFunctionsFactory(ToUsePropagatorPackage.Literals.PROJECT, projectPropagatorFunctionsConstructors)
-			.addPropagatorFunctionsFactory(ToUsePropagatorPackage.Literals.TASK, taskPropagatorFunctionsConstructors)
-			.addPropagatorFunctionsFactory(ToUsePropagatorPackage.Literals.TASK_WITH_OVERHEAD, taskWithOverheadPropagatorFunctionsConstructors)
 			;
 
 
