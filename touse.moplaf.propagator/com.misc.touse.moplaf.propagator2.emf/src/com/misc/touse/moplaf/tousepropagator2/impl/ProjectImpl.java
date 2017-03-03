@@ -164,7 +164,7 @@ public class ProjectImpl extends ObjectWithPropagatorFunctionsImpl implements Pr
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean AUTOMATIC_REFRESH_EDEFAULT = false;
+	protected static final boolean AUTOMATIC_REFRESH_EDEFAULT = true;
 
 	/**
 	 * The cached value of the '{@link #isAutomaticRefresh() <em>Automatic Refresh</em>}' attribute.

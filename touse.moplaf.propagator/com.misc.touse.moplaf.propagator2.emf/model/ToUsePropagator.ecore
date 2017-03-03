@@ -28,7 +28,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ProjectName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Resources" upperBound="-1"
         eType="#//Resource" containment="true" eOpposite="#//Resource/Project"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="AutomaticRefresh" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="AutomaticRefresh" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Task" eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//ObjectWithPropagatorFunctions">
     <eOperations name="refreshStart"/>

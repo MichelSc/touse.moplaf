@@ -892,7 +892,7 @@ public class ToUsePropagatorPackageImpl extends EPackageImpl implements ToUsePro
 		initEAttribute(getProject_End(), ecorePackage.getEDate(), "End", "2001-01-01", 0, 1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProject_ProjectName(), ecorePackage.getEString(), "ProjectName", null, 0, 1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProject_Resources(), this.getResource(), this.getResource_Project(), "Resources", null, 0, -1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getProject_AutomaticRefresh(), ecorePackage.getEBoolean(), "AutomaticRefresh", null, 0, 1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProject_AutomaticRefresh(), ecorePackage.getEBoolean(), "AutomaticRefresh", "true", 0, 1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getProject__RefreshEnd(), null, "refreshEnd", 0, 1, IS_UNIQUE, IS_ORDERED);
 

@@ -182,6 +182,7 @@ public interface Project extends ObjectWithPropagatorFunctions {
 
 	/**
 	 * Returns the value of the '<em><b>Automatic Refresh</b></em>' attribute.
+	 * The default value is <code>"true"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Automatic Refresh</em>' attribute isn't clear,
@@ -191,7 +192,7 @@ public interface Project extends ObjectWithPropagatorFunctions {
 	 * @return the value of the '<em>Automatic Refresh</em>' attribute.
 	 * @see #setAutomaticRefresh(boolean)
 	 * @see com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorPackage#getProject_AutomaticRefresh()
-	 * @model
+	 * @model default="true"
 	 * @generated
 	 */
 	boolean isAutomaticRefresh();

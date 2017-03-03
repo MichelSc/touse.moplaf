@@ -50,17 +50,17 @@ public class ToUsePropagatorPropagatorFunctionManager extends PropagatorFunction
 
 	static PropagatorFunctionsConstructors taskPropagatorFunctionsConstructors =   
 			constructor.consructPropagatorFunctionsConstructors(ToUsePropagatorPackage.Literals.TASK) 
-			.addConstructor(ToUsePropagatorCalcPackage.Literals.CALC_TASK_HOURS_VAR, true)
-			.addConstructor(ToUsePropagatorCalcPackage.Literals.CALC_TASK_HOURS_ITEM, true)
-			.addConstructor(ToUsePropagatorCalcPackage.Literals.CALC_TASK_HOURS, true)
-			.addConstructor(ToUsePropagatorCalcPackage.Literals.CALC_TASK_START, true)
-			.addConstructor(ToUsePropagatorCalcPackage.Literals.CALC_TASK_END, true)
-			.addConstructor(ToUsePropagatorCalcPackage.Literals.CALC_TASK_RESOURCES, true)
+			.addConstructor(ToUsePropagatorCalcPackage.Literals.CALC_TASK_HOURS_VAR)
+			.addConstructor(ToUsePropagatorCalcPackage.Literals.CALC_TASK_HOURS_ITEM)
+			.addConstructor(ToUsePropagatorCalcPackage.Literals.CALC_TASK_HOURS)
+			.addConstructor(ToUsePropagatorCalcPackage.Literals.CALC_TASK_START)
+			.addConstructor(ToUsePropagatorCalcPackage.Literals.CALC_TASK_END)
+			.addConstructor(ToUsePropagatorCalcPackage.Literals.CALC_TASK_RESOURCES)
 			;
 
 	static PropagatorFunctionsConstructors taskWithOverheadPropagatorFunctionsConstructors = 
 			constructor.consructPropagatorFunctionsConstructors(ToUsePropagatorPackage.Literals.TASK_WITH_OVERHEAD) 
-			.addConstructor(ToUsePropagatorCalcPackage.Literals.CALC_TASK_WITH_OVERHEAD_HOURS_VAR, true)
+			.addConstructor(ToUsePropagatorCalcPackage.Literals.CALC_TASK_WITH_OVERHEAD_HOURS_VAR)
 			;
 
 

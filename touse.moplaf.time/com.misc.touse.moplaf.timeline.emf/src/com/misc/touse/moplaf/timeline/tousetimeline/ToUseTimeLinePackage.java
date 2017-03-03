@@ -141,24 +141,6 @@ public interface ToUseTimeLinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_EOBJECT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_EOBJECT;
-
-	/**
-	 * The operation id for the '<em>Add Propagator Function</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_BOOLEAN = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_BOOLEAN;
-
-	/**
-	 * The operation id for the '<em>Add Propagator Function</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
 	int DOMAIN___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION;
 
 	/**
@@ -341,24 +323,6 @@ public interface ToUseTimeLinePackage extends EPackage {
 	 * @ordered
 	 */
 	int DOMAIN_DISTRIBUTION_FEATURE_COUNT = TimeContinuousPackage.DISTRIBUTION_FEATURE_COUNT + 4;
-
-	/**
-	 * The operation id for the '<em>Add Propagator Function</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_DISTRIBUTION___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_EOBJECT = TimeContinuousPackage.DISTRIBUTION___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_EOBJECT;
-
-	/**
-	 * The operation id for the '<em>Add Propagator Function</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_DISTRIBUTION___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_BOOLEAN = TimeContinuousPackage.DISTRIBUTION___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_BOOLEAN;
 
 	/**
 	 * The operation id for the '<em>Add Propagator Function</em>' operation.
@@ -674,24 +638,6 @@ public interface ToUseTimeLinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_INTERVAL___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_EOBJECT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_EOBJECT;
-
-	/**
-	 * The operation id for the '<em>Add Propagator Function</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION_INTERVAL___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_BOOLEAN = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_BOOLEAN;
-
-	/**
-	 * The operation id for the '<em>Add Propagator Function</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
 	int FUNCTION_INTERVAL___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION;
 
 	/**
@@ -784,24 +730,6 @@ public interface ToUseTimeLinePackage extends EPackage {
 	 * @ordered
 	 */
 	int FUNCTION_MINIMUM_FEATURE_COUNT = FUNCTION_INTERVAL_FEATURE_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Add Propagator Function</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION_MINIMUM___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_EOBJECT = FUNCTION_INTERVAL___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_EOBJECT;
-
-	/**
-	 * The operation id for the '<em>Add Propagator Function</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION_MINIMUM___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_BOOLEAN = FUNCTION_INTERVAL___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_BOOLEAN;
 
 	/**
 	 * The operation id for the '<em>Add Propagator Function</em>' operation.
@@ -910,24 +838,6 @@ public interface ToUseTimeLinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_CUMULATED___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_EOBJECT = FUNCTION_INTERVAL___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_EOBJECT;
-
-	/**
-	 * The operation id for the '<em>Add Propagator Function</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION_CUMULATED___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_BOOLEAN = FUNCTION_INTERVAL___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_BOOLEAN;
-
-	/**
-	 * The operation id for the '<em>Add Propagator Function</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
 	int FUNCTION_CUMULATED___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION = FUNCTION_INTERVAL___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION;
 
 	/**
@@ -1028,24 +938,6 @@ public interface ToUseTimeLinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_AVERAGE___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_EOBJECT = FUNCTION_INTERVAL___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_EOBJECT;
-
-	/**
-	 * The operation id for the '<em>Add Propagator Function</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION_AVERAGE___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_BOOLEAN = FUNCTION_INTERVAL___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_BOOLEAN;
-
-	/**
-	 * The operation id for the '<em>Add Propagator Function</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
 	int FUNCTION_AVERAGE___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION = FUNCTION_INTERVAL___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION;
 
 	/**
@@ -1138,24 +1030,6 @@ public interface ToUseTimeLinePackage extends EPackage {
 	 * @ordered
 	 */
 	int FUNCTION_POSSIBLE_FEATURE_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 4;
-
-	/**
-	 * The operation id for the '<em>Add Propagator Function</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION_POSSIBLE___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_EOBJECT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_EOBJECT;
-
-	/**
-	 * The operation id for the '<em>Add Propagator Function</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION_POSSIBLE___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_BOOLEAN = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_BOOLEAN;
 
 	/**
 	 * The operation id for the '<em>Add Propagator Function</em>' operation.
@@ -1273,24 +1147,6 @@ public interface ToUseTimeLinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_EARLIEST_BELOW___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_EOBJECT = FUNCTION_POSSIBLE___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_EOBJECT;
-
-	/**
-	 * The operation id for the '<em>Add Propagator Function</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION_EARLIEST_BELOW___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_BOOLEAN = FUNCTION_POSSIBLE___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_BOOLEAN;
-
-	/**
-	 * The operation id for the '<em>Add Propagator Function</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
 	int FUNCTION_EARLIEST_BELOW___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION = FUNCTION_POSSIBLE___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION;
 
 	/**
@@ -1392,24 +1248,6 @@ public interface ToUseTimeLinePackage extends EPackage {
 	 * @ordered
 	 */
 	int FUNCTION_EARLIEST_OUTPUT_FEATURE_COUNT = FUNCTION_POSSIBLE_FEATURE_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Add Propagator Function</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION_EARLIEST_OUTPUT___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_EOBJECT = FUNCTION_POSSIBLE___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_EOBJECT;
-
-	/**
-	 * The operation id for the '<em>Add Propagator Function</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION_EARLIEST_OUTPUT___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_BOOLEAN = FUNCTION_POSSIBLE___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION_BOOLEAN;
 
 	/**
 	 * The operation id for the '<em>Add Propagator Function</em>' operation.
