@@ -33,4 +33,11 @@
             contributorClass="com.misc.touse.moplaf.timeline.tousetimeline.presentation.ToUseTimeLineActionBarContributor">
       </editor>
    </extension>
+   <extension
+         point="com.misc.common.moplaf.propagator2.propagator_function_manager">
+      <manager
+            class="com.misc.touse.moplaf.timeline.tousetimeline.calc.util.ToUseTimeLinePropagatorFunctionManager"
+            target_file_extension="tousetimeline">
+      </manager>
+   </extension>
 </plugin>
