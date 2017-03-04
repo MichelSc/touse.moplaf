@@ -19,9 +19,6 @@
   <extension
         id="com.misc.touse.moplaf.propagator.design.resourceSet.factory"
         point="org.eclipse.sirius.common.resourceSetFactory">
-     <factory
-           class="com.misc.touse.moplaf.propagator2.design.ToUsePropagatorResourceSetFactory">
-     </factory>
   </extension>
   <extension
         id="com.misc.touse.moplaf.propagator.design.externalActions"

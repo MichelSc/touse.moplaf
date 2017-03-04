@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="tousepropagator" version="11.0.0.201601261200">
-  <ownedViewpoints name="touse..propagator.viewpoint.projectandtasks" label="Project and Tasks" modelFileExtension="tousepropagator">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="tousepropagator" version="11.1.1.201610211630">
+  <ownedViewpoints name="touse..propagator.viewpoint.projectandtasks" label="ToUsePropagator: Project tasks" modelFileExtension="tousepropagator">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="touse..propagator.viewpoint.projectandtasks.diagram" label="Diagram for a Project" domainClass="Project" enablePopupBars="true">
       <defaultLayer name="touse..propagator.viewpoint.projectandtasks.diagram.defaultlayer" label="Default layer">
         <nodeMappings name="touse..propagator.viewpoint.projectandtasks.diagram.defaultlayer.nodetask" label="Node task" semanticCandidatesExpression="feature:Tasks" domainClass="Task"/>
@@ -102,7 +102,7 @@
       </defaultLayer>
     </ownedRepresentations>
   </ownedViewpoints>
-  <ownedViewpoints name="com.misc.touse.moplaf.propagator.design.bindings" label="Run time bindings" modelFileExtension="tousepropagator">
+  <ownedViewpoints name="com.misc.touse.moplaf.propagator.design.bindings" label="ToUsePropagator: Project run time bindings" modelFileExtension="tousepropagator">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="touse.propagator.design.bindings.project" label="Bindings for project" initialisation="true" domainClass="Project" enablePopupBars="true">
       <defaultLayer name="touse.propagator.design.bindings.project.layer">
         <nodeMappings name="touse.propagator.design.bindings.project.functions" label="PropagatorFunction for Project Bindings" domainClass="ToUsePropagatorFunction">
