@@ -76,7 +76,7 @@ public class FunctionPossibleItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI__20FunctionInPropertyCategory"),
 				 null));
 	}
 
@@ -98,7 +98,7 @@ public class FunctionPossibleItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI__20FunctionInPropertyCategory"),
 				 null));
 	}
 
@@ -120,7 +120,7 @@ public class FunctionPossibleItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI__20FunctionInPropertyCategory"),
 				 null));
 	}
 

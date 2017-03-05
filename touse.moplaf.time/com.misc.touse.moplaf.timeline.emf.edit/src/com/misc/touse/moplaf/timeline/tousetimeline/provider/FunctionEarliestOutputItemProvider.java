@@ -68,7 +68,7 @@ public class FunctionEarliestOutputItemProvider extends FunctionPossibleItemProv
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI__30FunctionoutPropertyCategory"),
 				 null));
 	}
 

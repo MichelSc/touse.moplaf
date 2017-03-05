@@ -75,7 +75,7 @@ public class FunctionIntervalItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI__20FunctionInPropertyCategory"),
 				 null));
 	}
 
@@ -97,7 +97,7 @@ public class FunctionIntervalItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI__20FunctionInPropertyCategory"),
 				 null));
 	}
 
