@@ -88,7 +88,7 @@ public class DomainDistributionItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI__10ToUsePropertyCategory"),
 				 null));
 	}
 

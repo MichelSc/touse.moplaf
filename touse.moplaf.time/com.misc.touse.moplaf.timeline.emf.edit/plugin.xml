@@ -8,20 +8,6 @@
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
-            uri="http://com.misc.touse.moplaf.timeline.emf"
-            class="com.misc.touse.moplaf.timeline.tousetimeline.provider.TousetimelineItemProviderAdapterFactory"
-            supportedTypes=
-              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
-               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
-               org.eclipse.emf.edit.provider.ITreeItemContentProvider
-               org.eclipse.emf.edit.provider.IItemLabelProvider
-               org.eclipse.emf.edit.provider.IItemPropertySource
-               org.eclipse.emf.edit.provider.IItemColorProvider"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated ToUseTimeLine -->
-      <factory
             uri="http://www.misc.com/touse/moplaf/timeline/model/0.1"
             class="com.misc.touse.moplaf.timeline.tousetimeline.provider.ToUseTimeLineItemProviderAdapterFactory"
             supportedTypes=
@@ -29,7 +15,10 @@
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
                org.eclipse.emf.edit.provider.ITreeItemContentProvider
                org.eclipse.emf.edit.provider.IItemLabelProvider
-               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+               org.eclipse.emf.edit.provider.IItemPropertySource
+               org.eclipse.emf.edit.provider.IItemColorProvider
+               com.misc.common.moplaf.timeview.emf.edit.IItemDiscontinuousAmountEventProvider 
+               com.misc.common.moplaf.timeview.emf.edit.IItemAmountEventsProvider"/>
    </extension>
 
 </plugin>

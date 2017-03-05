@@ -2,6 +2,8 @@
  */
 package com.misc.touse.moplaf.timeline.tousetimeline.provider;
 
+import com.misc.common.moplaf.timeview.emf.edit.IItemAmountEventsProvider;
+import com.misc.common.moplaf.timeview.emf.edit.IItemDiscontinuousAmountEventProvider;
 import com.misc.touse.moplaf.timeline.tousetimeline.util.ToUseTimeLineAdapterFactory;
 
 import java.util.ArrayList;
@@ -70,7 +72,6 @@ public class ToUseTimeLineItemProviderAdapterFactory extends ToUseTimeLineAdapte
 	 * This constructs an instance.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	public ToUseTimeLineItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
@@ -78,6 +79,8 @@ public class ToUseTimeLineItemProviderAdapterFactory extends ToUseTimeLineAdapte
 		supportedTypes.add(ITreeItemContentProvider.class);
 		supportedTypes.add(IItemLabelProvider.class);
 		supportedTypes.add(IItemPropertySource.class);
+		supportedTypes.add(IItemDiscontinuousAmountEventProvider.class); // non emf interface
+		supportedTypes.add(IItemAmountEventsProvider.class); // non emf interface
 	}
 
 	/**
