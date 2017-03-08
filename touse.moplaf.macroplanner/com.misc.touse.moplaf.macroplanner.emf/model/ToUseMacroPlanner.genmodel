@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.misc.touse.moplaf.macroplanner.emf/src" modelPluginID="com.misc.touse.moplaf.macroplanner.emf"
+    modelName="ToUseMacroPlanner" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    usedGenPackages="../../com.misc.common.moplaf.job.emf/model/job.genmodel#//job ../../com.misc.common.moplaf.macroplanner.emf/model/MacroPlanner.genmodel#//macroplanner ../../com.misc.common.moplaf.macroplanner.solver.emf/model/MacroPlannerSolver.genmodel#//solver ../../com.misc.common.moplaf.solver.emf/model/solver.genmodel#//solver ../../com.misc.common.moplaf.time.discrete.emf/model/timediscrete.genmodel#//discrete"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>ToUseMacroPlanner.ecore</foreignModel>
+  <genPackages prefix="ToUseMacroPlanner" basePackage="com.misc.touse.moplaf" disposableProviderFactory="true"
+      ecorePackage="ToUseMacroPlanner.ecore#/">
+    <genClasses ecoreClass="ToUseMacroPlanner.ecore#//Domain">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseMacroPlanner.ecore#//Domain/MasterData"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseMacroPlanner.ecore#//Domain/Data"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseMacroPlanner.ecore#//Domain/Chains"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseMacroPlanner.ecore#//Domain/Scenarios"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
