@@ -59,10 +59,8 @@ public class ToUseTimeLineFactoryImpl extends EFactoryImpl implements ToUseTimeL
 			case ToUseTimeLinePackage.DOMAIN: return createDomain();
 			case ToUseTimeLinePackage.DOMAIN_DISTRIBUTION: return createDomainDistribution();
 			case ToUseTimeLinePackage.FUNCTION_MINIMUM: return createFunctionMinimum();
-			case ToUseTimeLinePackage.FUNCTION_INTERVAL: return createFunctionInterval();
 			case ToUseTimeLinePackage.FUNCTION_CUMULATED: return createFunctionCumulated();
 			case ToUseTimeLinePackage.FUNCTION_AVERAGE: return createFunctionAverage();
-			case ToUseTimeLinePackage.FUNCTION_POSSIBLE: return createFunctionPossible();
 			case ToUseTimeLinePackage.FUNCTION_EARLIEST_BELOW: return createFunctionEarliestBelow();
 			case ToUseTimeLinePackage.FUNCTION_EARLIEST_OUTPUT: return createFunctionEarliestOutput();
 			case ToUseTimeLinePackage.CONCRETE_OBJECT_WITH_TIME_LINE: return createConcreteObjectWithTimeLine();
@@ -108,16 +106,6 @@ public class ToUseTimeLineFactoryImpl extends EFactoryImpl implements ToUseTimeL
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FunctionInterval createFunctionInterval() {
-		FunctionIntervalImpl functionInterval = new FunctionIntervalImpl();
-		return functionInterval;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public FunctionCumulated createFunctionCumulated() {
 		FunctionCumulatedImpl functionCumulated = new FunctionCumulatedImpl();
 		return functionCumulated;
@@ -131,16 +119,6 @@ public class ToUseTimeLineFactoryImpl extends EFactoryImpl implements ToUseTimeL
 	public FunctionAverage createFunctionAverage() {
 		FunctionAverageImpl functionAverage = new FunctionAverageImpl();
 		return functionAverage;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public FunctionPossible createFunctionPossible() {
-		FunctionPossibleImpl functionPossible = new FunctionPossibleImpl();
-		return functionPossible;
 	}
 
 	/**

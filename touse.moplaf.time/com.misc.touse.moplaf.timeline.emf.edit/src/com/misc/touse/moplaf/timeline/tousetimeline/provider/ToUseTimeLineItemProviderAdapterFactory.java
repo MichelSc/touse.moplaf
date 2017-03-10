@@ -141,29 +141,6 @@ public class ToUseTimeLineItemProviderAdapterFactory extends ToUseTimeLineAdapte
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionInterval} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected FunctionIntervalItemProvider functionIntervalItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionInterval}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFunctionIntervalAdapter() {
-		if (functionIntervalItemProvider == null) {
-			functionIntervalItemProvider = new FunctionIntervalItemProvider(this);
-		}
-
-		return functionIntervalItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionCumulated} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -207,29 +184,6 @@ public class ToUseTimeLineItemProviderAdapterFactory extends ToUseTimeLineAdapte
 		}
 
 		return functionAverageItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionPossible} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected FunctionPossibleItemProvider functionPossibleItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionPossible}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFunctionPossibleAdapter() {
-		if (functionPossibleItemProvider == null) {
-			functionPossibleItemProvider = new FunctionPossibleItemProvider(this);
-		}
-
-		return functionPossibleItemProvider;
 	}
 
 	/**

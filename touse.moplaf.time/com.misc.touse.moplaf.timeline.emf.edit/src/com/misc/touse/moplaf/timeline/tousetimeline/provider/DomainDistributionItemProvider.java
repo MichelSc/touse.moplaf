@@ -208,11 +208,6 @@ public class DomainDistributionItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(ToUseTimeLinePackage.Literals.DOMAIN_DISTRIBUTION__FUNCTIONS,
-				 ToUseTimeLineFactory.eINSTANCE.createFunctionInterval()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ToUseTimeLinePackage.Literals.DOMAIN_DISTRIBUTION__FUNCTIONS,
 				 ToUseTimeLineFactory.eINSTANCE.createFunctionMinimum()));
 
 		newChildDescriptors.add
@@ -224,11 +219,6 @@ public class DomainDistributionItemProvider
 			(createChildParameter
 				(ToUseTimeLinePackage.Literals.DOMAIN_DISTRIBUTION__FUNCTIONS,
 				 ToUseTimeLineFactory.eINSTANCE.createFunctionAverage()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ToUseTimeLinePackage.Literals.DOMAIN_DISTRIBUTION__POSSIBLES,
-				 ToUseTimeLineFactory.eINSTANCE.createFunctionPossible()));
 
 		newChildDescriptors.add
 			(createChildParameter

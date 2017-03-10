@@ -49,6 +49,15 @@ public interface TousejobFactory extends EFactory {
 	ToUseJobResult createToUseJobResult();
 
 	/**
+	 * Returns a new object of class '<em>To Use Job Console</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>To Use Job Console</em>'.
+	 * @generated
+	 */
+	ToUseJobConsole createToUseJobConsole();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

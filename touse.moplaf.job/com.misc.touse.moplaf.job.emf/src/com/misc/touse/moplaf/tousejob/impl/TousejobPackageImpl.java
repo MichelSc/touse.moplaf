@@ -2,12 +2,14 @@
  */
 package com.misc.touse.moplaf.tousejob.impl;
 
+import com.misc.common.moplaf.job.JobPackage;
 import com.misc.common.moplaf.job.jobclient.JobclientPackage;
 
 import com.misc.common.moplaf.job.jobxmlrpc.JobxmlrpcPackage;
 import com.misc.touse.moplaf.tousejob.Domain;
 import com.misc.touse.moplaf.tousejob.DummyToHoldRefToModel;
 import com.misc.touse.moplaf.tousejob.ToUseJob;
+import com.misc.touse.moplaf.tousejob.ToUseJobConsole;
 import com.misc.touse.moplaf.tousejob.ToUseJobResult;
 import com.misc.touse.moplaf.tousejob.TousejobFactory;
 import com.misc.touse.moplaf.tousejob.TousejobPackage;
@@ -53,6 +55,13 @@ public class TousejobPackageImpl extends EPackageImpl implements TousejobPackage
 	 * @generated
 	 */
 	private EClass dummyToHoldRefToModelEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass toUseJobConsoleEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -213,6 +222,24 @@ public class TousejobPackageImpl extends EPackageImpl implements TousejobPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getToUseJobConsole() {
+		return toUseJobConsoleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getToUseJobConsole_CallerName() {
+		return (EAttribute)toUseJobConsoleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public TousejobFactory getTousejobFactory() {
 		return (TousejobFactory)getEFactoryInstance();
 	}
@@ -249,6 +276,9 @@ public class TousejobPackageImpl extends EPackageImpl implements TousejobPackage
 		createEAttribute(toUseJobResultEClass, TO_USE_JOB_RESULT__TICKS_WAITED);
 
 		dummyToHoldRefToModelEClass = createEClass(DUMMY_TO_HOLD_REF_TO_MODEL);
+
+		toUseJobConsoleEClass = createEClass(TO_USE_JOB_CONSOLE);
+		createEAttribute(toUseJobConsoleEClass, TO_USE_JOB_CONSOLE__CALLER_NAME);
 	}
 
 	/**
@@ -276,6 +306,7 @@ public class TousejobPackageImpl extends EPackageImpl implements TousejobPackage
 
 		// Obtain other dependent packages
 		JobclientPackage theJobclientPackage = (JobclientPackage)EPackage.Registry.INSTANCE.getEPackage(JobclientPackage.eNS_URI);
+		JobPackage theJobPackage = (JobPackage)EPackage.Registry.INSTANCE.getEPackage(JobPackage.eNS_URI);
 		JobxmlrpcPackage theJobxmlrpcPackage = (JobxmlrpcPackage)EPackage.Registry.INSTANCE.getEPackage(JobxmlrpcPackage.eNS_URI);
 
 		// Create type parameters
@@ -286,11 +317,12 @@ public class TousejobPackageImpl extends EPackageImpl implements TousejobPackage
 		toUseJobEClass.getESuperTypes().add(theJobclientPackage.getJobRemote());
 		toUseJobResultEClass.getESuperTypes().add(theJobclientPackage.getJobRemoteResult());
 		dummyToHoldRefToModelEClass.getESuperTypes().add(theJobxmlrpcPackage.getJobEngineServer());
+		toUseJobConsoleEClass.getESuperTypes().add(theJobPackage.getJobConsole());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDomain_Engines(), theJobclientPackage.getJobEngine(), null, "Engines", null, 0, 1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDomain_Jobs(), this.getToUseJob(), null, "Jobs", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDomain_Jobs(), theJobPackage.getJob(), null, "Jobs", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDomain_Proxies(), theJobclientPackage.getJobEngineProxy(), null, "Proxies", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(toUseJobEClass, ToUseJob.class, "ToUseJob", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -301,6 +333,9 @@ public class TousejobPackageImpl extends EPackageImpl implements TousejobPackage
 		initEAttribute(getToUseJobResult_TicksWaited(), ecorePackage.getELong(), "TicksWaited", null, 0, 1, ToUseJobResult.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dummyToHoldRefToModelEClass, DummyToHoldRefToModel.class, "DummyToHoldRefToModel", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(toUseJobConsoleEClass, ToUseJobConsole.class, "ToUseJobConsole", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getToUseJobConsole_CallerName(), ecorePackage.getEString(), "CallerName", null, 0, 1, ToUseJobConsole.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

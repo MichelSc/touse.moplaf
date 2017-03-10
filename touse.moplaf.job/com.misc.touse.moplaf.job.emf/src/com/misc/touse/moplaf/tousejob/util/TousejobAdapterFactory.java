@@ -3,6 +3,7 @@
 package com.misc.touse.moplaf.tousejob.util;
 
 import com.misc.common.moplaf.job.Job;
+import com.misc.common.moplaf.job.JobConsole;
 import com.misc.common.moplaf.job.Run;
 
 import com.misc.common.moplaf.job.jobclient.JobEngine;
@@ -92,6 +93,10 @@ public class TousejobAdapterFactory extends AdapterFactoryImpl {
 				return createDummyToHoldRefToModelAdapter();
 			}
 			@Override
+			public Adapter caseToUseJobConsole(ToUseJobConsole object) {
+				return createToUseJobConsoleAdapter();
+			}
+			@Override
 			public Adapter caseRun(Run object) {
 				return createRunAdapter();
 			}
@@ -114,6 +119,10 @@ public class TousejobAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseJobEngineServer(JobEngineServer object) {
 				return createJobEngineServerAdapter();
+			}
+			@Override
+			public Adapter caseJobConsole(JobConsole object) {
+				return createJobConsoleAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -188,6 +197,20 @@ public class TousejobAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDummyToHoldRefToModelAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.tousejob.ToUseJobConsole <em>To Use Job Console</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.touse.moplaf.tousejob.ToUseJobConsole
+	 * @generated
+	 */
+	public Adapter createToUseJobConsoleAdapter() {
 		return null;
 	}
 
@@ -272,6 +295,20 @@ public class TousejobAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createJobEngineServerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.job.JobConsole <em>Console</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.job.JobConsole
+	 * @generated
+	 */
+	public Adapter createJobConsoleAdapter() {
 		return null;
 	}
 

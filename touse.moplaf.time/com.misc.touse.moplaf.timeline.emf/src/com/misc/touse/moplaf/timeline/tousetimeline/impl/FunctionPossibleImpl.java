@@ -35,7 +35,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  *
  * @generated
  */
-public class FunctionPossibleImpl extends ObjectWithPropagatorFunctionsImpl implements FunctionPossible {
+public abstract class FunctionPossibleImpl extends ObjectWithPropagatorFunctionsImpl implements FunctionPossible {
 	/**
 	 * The default value of the '{@link #getLimitMoment() <em>Limit Moment</em>}' attribute.
 	 * <!-- begin-user-doc -->

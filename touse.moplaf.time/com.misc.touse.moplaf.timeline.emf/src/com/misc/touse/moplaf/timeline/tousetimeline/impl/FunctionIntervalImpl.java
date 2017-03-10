@@ -37,7 +37,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  *
  * @generated
  */
-public class FunctionIntervalImpl extends ObjectWithPropagatorFunctionsImpl implements FunctionInterval {
+public abstract class FunctionIntervalImpl extends ObjectWithPropagatorFunctionsImpl implements FunctionInterval {
 
 	/**
 	 * The default value of the '{@link #getFrom() <em>From</em>}' attribute.

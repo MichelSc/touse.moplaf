@@ -20,7 +20,7 @@ import java.util.Date;
  * </ul>
  *
  * @see com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage#getFunctionInterval()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface FunctionInterval extends ObjectWithPropagatorFunctions {

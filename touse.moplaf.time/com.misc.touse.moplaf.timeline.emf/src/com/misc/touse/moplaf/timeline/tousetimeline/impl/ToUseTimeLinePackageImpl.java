@@ -662,7 +662,7 @@ public class ToUseTimeLinePackageImpl extends EPackageImpl implements ToUseTimeL
 		initEClass(functionMinimumEClass, FunctionMinimum.class, "FunctionMinimum", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFunctionMinimum_Minimum(), ecorePackage.getEFloat(), "minimum", null, 0, 1, FunctionMinimum.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(functionIntervalEClass, FunctionInterval.class, "FunctionInterval", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(functionIntervalEClass, FunctionInterval.class, "FunctionInterval", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFunctionInterval_From(), ecorePackage.getEDate(), "from", null, 0, 1, FunctionInterval.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFunctionInterval_To(), ecorePackage.getEDate(), "to", null, 0, 1, FunctionInterval.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFunctionInterval_Distribution(), this.getDomainDistribution(), this.getDomainDistribution_Functions(), "Distribution", null, 0, 1, FunctionInterval.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -675,7 +675,7 @@ public class ToUseTimeLinePackageImpl extends EPackageImpl implements ToUseTimeL
 		initEClass(functionAverageEClass, FunctionAverage.class, "FunctionAverage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFunctionAverage_Average(), ecorePackage.getEFloat(), "average", "0.0", 0, 1, FunctionAverage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(functionPossibleEClass, FunctionPossible.class, "FunctionPossible", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(functionPossibleEClass, FunctionPossible.class, "FunctionPossible", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFunctionPossible_LimitMoment(), ecorePackage.getEDate(), "limitMoment", null, 0, 1, FunctionPossible.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFunctionPossible_LimitDuration(), ecorePackage.getEFloat(), "limitDuration", null, 0, 1, FunctionPossible.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFunctionPossible_LimitAmount(), ecorePackage.getEFloat(), "limitAmount", null, 0, 1, FunctionPossible.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

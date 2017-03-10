@@ -59,6 +59,7 @@ public class TousejobFactoryImpl extends EFactoryImpl implements TousejobFactory
 			case TousejobPackage.DOMAIN: return createDomain();
 			case TousejobPackage.TO_USE_JOB: return createToUseJob();
 			case TousejobPackage.TO_USE_JOB_RESULT: return createToUseJobResult();
+			case TousejobPackage.TO_USE_JOB_CONSOLE: return createToUseJobConsole();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -92,6 +93,16 @@ public class TousejobFactoryImpl extends EFactoryImpl implements TousejobFactory
 	public ToUseJobResult createToUseJobResult() {
 		ToUseJobResultImpl toUseJobResult = new ToUseJobResultImpl();
 		return toUseJobResult;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ToUseJobConsole createToUseJobConsole() {
+		ToUseJobConsoleImpl toUseJobConsole = new ToUseJobConsoleImpl();
+		return toUseJobConsole;
 	}
 
 	/**

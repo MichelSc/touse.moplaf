@@ -40,6 +40,7 @@ import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.PartInitException;
 
 import com.misc.common.moplaf.emf.editor.Util;
+import com.misc.common.moplaf.emf.editor.action.RunAction;
 import com.misc.common.moplaf.emf.editor.action.StartAction;
 import com.misc.common.moplaf.emf.editor.action.StopAction;
 
@@ -308,6 +309,7 @@ public class TousejobActionBarContributor
 		createSiblingActions = generateCreateSiblingActions(newSiblingDescriptors, selection);
 
 		applicationPopUpMenuActions = new ArrayList<IAction>();
+		applicationPopUpMenuActions.add(new RunAction(activeEditorPart, selection));
 		applicationPopUpMenuActions.add(new StartAction(activeEditorPart, selection));
 		applicationPopUpMenuActions.add(new StopAction (activeEditorPart, selection));
 

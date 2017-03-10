@@ -2,10 +2,10 @@
  */
 package com.misc.touse.moplaf.tousejob.impl;
 
+import com.misc.common.moplaf.job.Job;
 import com.misc.common.moplaf.job.jobclient.JobEngine;
 import com.misc.common.moplaf.job.jobclient.JobEngineProxy;
 import com.misc.touse.moplaf.tousejob.Domain;
-import com.misc.touse.moplaf.tousejob.ToUseJob;
 import com.misc.touse.moplaf.tousejob.TousejobPackage;
 
 import java.util.Collection;
@@ -58,7 +58,7 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ToUseJob> jobs;
+	protected EList<Job> jobs;
 
 	/**
 	 * The cached value of the '{@link #getProxies() <em>Proxies</em>}' containment reference list.
@@ -137,9 +137,9 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ToUseJob> getJobs() {
+	public EList<Job> getJobs() {
 		if (jobs == null) {
-			jobs = new EObjectContainmentEList<ToUseJob>(ToUseJob.class, this, TousejobPackage.DOMAIN__JOBS);
+			jobs = new EObjectContainmentEList<Job>(Job.class, this, TousejobPackage.DOMAIN__JOBS);
 		}
 		return jobs;
 	}
@@ -206,7 +206,7 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 				return;
 			case TousejobPackage.DOMAIN__JOBS:
 				getJobs().clear();
-				getJobs().addAll((Collection<? extends ToUseJob>)newValue);
+				getJobs().addAll((Collection<? extends Job>)newValue);
 				return;
 			case TousejobPackage.DOMAIN__PROXIES:
 				getProxies().clear();

@@ -21,7 +21,7 @@ import java.util.Date;
  * </ul>
  *
  * @see com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage#getFunctionPossible()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface FunctionPossible extends ObjectWithPropagatorFunctions {

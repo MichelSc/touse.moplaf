@@ -3,6 +3,7 @@
 package com.misc.touse.moplaf.tousejob.provider;
 
 
+import com.misc.common.moplaf.job.JobFactory;
 import com.misc.common.moplaf.job.jobclient.JobclientFactory;
 
 import com.misc.common.moplaf.job.jobxmlrpc.JobxmlrpcFactory;
@@ -164,6 +165,26 @@ public class DomainItemProvider
 			(createChildParameter
 				(TousejobPackage.Literals.DOMAIN__JOBS,
 				 TousejobFactory.eINSTANCE.createToUseJob()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TousejobPackage.Literals.DOMAIN__JOBS,
+				 TousejobFactory.eINSTANCE.createToUseJobConsole()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TousejobPackage.Literals.DOMAIN__JOBS,
+				 JobFactory.eINSTANCE.createJob()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TousejobPackage.Literals.DOMAIN__JOBS,
+				 JobFactory.eINSTANCE.createJobConsole()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TousejobPackage.Literals.DOMAIN__JOBS,
+				 JobclientFactory.eINSTANCE.createJobRemote()));
 
 		newChildDescriptors.add
 			(createChildParameter

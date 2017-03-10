@@ -2,6 +2,7 @@
  */
 package com.misc.touse.moplaf.tousejob;
 
+import com.misc.common.moplaf.job.Job;
 import com.misc.common.moplaf.job.jobclient.JobEngine;
 import com.misc.common.moplaf.job.jobclient.JobEngineProxy;
 import org.eclipse.emf.common.util.EList;
@@ -55,7 +56,7 @@ public interface Domain extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Jobs</b></em>' containment reference list.
-	 * The list contents are of type {@link com.misc.touse.moplaf.tousejob.ToUseJob}.
+	 * The list contents are of type {@link com.misc.common.moplaf.job.Job}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Jobs</em>' containment reference list isn't clear,
@@ -67,7 +68,7 @@ public interface Domain extends EObject {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<ToUseJob> getJobs();
+	EList<Job> getJobs();
 
 	/**
 	 * Returns the value of the '<em><b>Proxies</b></em>' containment reference list.

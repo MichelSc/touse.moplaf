@@ -3,6 +3,7 @@
 package com.misc.touse.moplaf.tousejob.util;
 
 import com.misc.common.moplaf.job.Job;
+import com.misc.common.moplaf.job.JobConsole;
 import com.misc.common.moplaf.job.Run;
 
 import com.misc.common.moplaf.job.jobclient.JobEngine;
@@ -104,6 +105,15 @@ public class TousejobSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case TousejobPackage.TO_USE_JOB_CONSOLE: {
+				ToUseJobConsole toUseJobConsole = (ToUseJobConsole)theEObject;
+				T result = caseToUseJobConsole(toUseJobConsole);
+				if (result == null) result = caseJobConsole(toUseJobConsole);
+				if (result == null) result = caseJob(toUseJobConsole);
+				if (result == null) result = caseRun(toUseJobConsole);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -165,6 +175,21 @@ public class TousejobSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseDummyToHoldRefToModel(DummyToHoldRefToModel object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>To Use Job Console</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>To Use Job Console</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseToUseJobConsole(ToUseJobConsole object) {
 		return null;
 	}
 
@@ -255,6 +280,21 @@ public class TousejobSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseJobEngineServer(JobEngineServer object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Console</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Console</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseJobConsole(JobConsole object) {
 		return null;
 	}
 

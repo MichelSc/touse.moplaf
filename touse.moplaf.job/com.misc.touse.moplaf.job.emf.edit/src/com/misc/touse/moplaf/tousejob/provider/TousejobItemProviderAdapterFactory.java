@@ -141,6 +141,29 @@ public class TousejobItemProviderAdapterFactory extends TousejobAdapterFactory i
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousejob.ToUseJobConsole} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ToUseJobConsoleItemProvider toUseJobConsoleItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousejob.ToUseJobConsole}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createToUseJobConsoleAdapter() {
+		if (toUseJobConsoleItemProvider == null) {
+			toUseJobConsoleItemProvider = new ToUseJobConsoleItemProvider(this);
+		}
+
+		return toUseJobConsoleItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -242,6 +265,7 @@ public class TousejobItemProviderAdapterFactory extends TousejobAdapterFactory i
 		if (domainItemProvider != null) domainItemProvider.dispose();
 		if (toUseJobItemProvider != null) toUseJobItemProvider.dispose();
 		if (toUseJobResultItemProvider != null) toUseJobResultItemProvider.dispose();
+		if (toUseJobConsoleItemProvider != null) toUseJobConsoleItemProvider.dispose();
 	}
 
 }

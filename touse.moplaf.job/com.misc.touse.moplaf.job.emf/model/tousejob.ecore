@@ -5,7 +5,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Domain">
     <eStructuralFeatures xsi:type="ecore:EReference" name="Engines" eType="ecore:EClass ../../com.misc.common.moplaf.job.client.emf/model/jobclient.ecore#//JobEngine"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Jobs" upperBound="-1" eType="#//ToUseJob"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Jobs" upperBound="-1" eType="ecore:EClass ../../com.misc.common.moplaf.job.emf/model/job.ecore#//Job"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Proxies" upperBound="-1"
         eType="ecore:EClass ../../com.misc.common.moplaf.job.client.emf/model/jobclient.ecore#//JobEngineProxy"
@@ -22,4 +22,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DummyToHoldRefToModel" abstract="true"
       interface="true" eSuperTypes="../../com.misc.common.moplaf.job.xmlrpc.emf/model/jobxmlrpc.ecore#//JobEngineServer"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ToUseJobConsole" eSuperTypes="../../com.misc.common.moplaf.job.emf/model/job.ecore#//JobConsole">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="CallerName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
 </ecore:EPackage>

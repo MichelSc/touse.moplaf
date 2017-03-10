@@ -2,6 +2,7 @@
  */
 package com.misc.touse.moplaf.tousejob;
 
+import com.misc.common.moplaf.job.JobPackage;
 import com.misc.common.moplaf.job.jobclient.JobclientPackage;
 
 import com.misc.common.moplaf.job.jobxmlrpc.JobxmlrpcPackage;
@@ -287,6 +288,33 @@ public interface TousejobPackage extends EPackage {
 	int TO_USE_JOB__RESULT = JobclientPackage.JOB_REMOTE__RESULT;
 
 	/**
+	 * The feature id for the '<em><b>Last Progress</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB__LAST_PROGRESS = JobclientPackage.JOB_REMOTE__LAST_PROGRESS;
+
+	/**
+	 * The feature id for the '<em><b>Last Progress Work</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB__LAST_PROGRESS_WORK = JobclientPackage.JOB_REMOTE__LAST_PROGRESS_WORK;
+
+	/**
+	 * The feature id for the '<em><b>Last Progress Task</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB__LAST_PROGRESS_TASK = JobclientPackage.JOB_REMOTE__LAST_PROGRESS_TASK;
+
+	/**
 	 * The feature id for the '<em><b>Seconds Waiting</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -402,6 +430,15 @@ public interface TousejobPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_JOB___ON_RETURN__RETURNFEEDBACK = JobclientPackage.JOB_REMOTE___ON_RETURN__RETURNFEEDBACK;
+
+	/**
+	 * The operation id for the '<em>Refresh Progress</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB___REFRESH_PROGRESS = JobclientPackage.JOB_REMOTE___REFRESH_PROGRESS;
 
 	/**
 	 * The number of operations of the '<em>To Use Job</em>' class.
@@ -579,6 +616,350 @@ public interface TousejobPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousejob.impl.ToUseJobConsoleImpl <em>To Use Job Console</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousejob.impl.ToUseJobConsoleImpl
+	 * @see com.misc.touse.moplaf.tousejob.impl.TousejobPackageImpl#getToUseJobConsole()
+	 * @generated
+	 */
+	int TO_USE_JOB_CONSOLE = 4;
+
+	/**
+	 * The feature id for the '<em><b>Run Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB_CONSOLE__RUN_FEEDBACK = JobPackage.JOB_CONSOLE__RUN_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Cancel Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB_CONSOLE__CANCEL_FEEDBACK = JobPackage.JOB_CONSOLE__CANCEL_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Reset Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB_CONSOLE__RESET_FEEDBACK = JobPackage.JOB_CONSOLE__RESET_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Canceled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB_CONSOLE__CANCELED = JobPackage.JOB_CONSOLE__CANCELED;
+
+	/**
+	 * The feature id for the '<em><b>Return Success</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB_CONSOLE__RETURN_SUCCESS = JobPackage.JOB_CONSOLE__RETURN_SUCCESS;
+
+	/**
+	 * The feature id for the '<em><b>Return Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB_CONSOLE__RETURN_FEEDBACK = JobPackage.JOB_CONSOLE__RETURN_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Return Information</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB_CONSOLE__RETURN_INFORMATION = JobPackage.JOB_CONSOLE__RETURN_INFORMATION;
+
+	/**
+	 * The feature id for the '<em><b>Status</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB_CONSOLE__STATUS = JobPackage.JOB_CONSOLE__STATUS;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB_CONSOLE__DESCRIPTION = JobPackage.JOB_CONSOLE__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Start Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB_CONSOLE__START_TIME = JobPackage.JOB_CONSOLE__START_TIME;
+
+	/**
+	 * The feature id for the '<em><b>End Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB_CONSOLE__END_TIME = JobPackage.JOB_CONSOLE__END_TIME;
+
+	/**
+	 * The feature id for the '<em><b>Duration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB_CONSOLE__DURATION = JobPackage.JOB_CONSOLE__DURATION;
+
+	/**
+	 * The feature id for the '<em><b>Started</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB_CONSOLE__STARTED = JobPackage.JOB_CONSOLE__STARTED;
+
+	/**
+	 * The feature id for the '<em><b>Finished</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB_CONSOLE__FINISHED = JobPackage.JOB_CONSOLE__FINISHED;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB_CONSOLE__NAME = JobPackage.JOB_CONSOLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB_CONSOLE__PARAMETERS = JobPackage.JOB_CONSOLE__PARAMETERS;
+
+	/**
+	 * The feature id for the '<em><b>Help Text</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB_CONSOLE__HELP_TEXT = JobPackage.JOB_CONSOLE__HELP_TEXT;
+
+	/**
+	 * The feature id for the '<em><b>Args</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB_CONSOLE__ARGS = JobPackage.JOB_CONSOLE__ARGS;
+
+	/**
+	 * The feature id for the '<em><b>Caller Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB_CONSOLE__CALLER_NAME = JobPackage.JOB_CONSOLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>To Use Job Console</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB_CONSOLE_FEATURE_COUNT = JobPackage.JOB_CONSOLE_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Reset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB_CONSOLE___RESET = JobPackage.JOB_CONSOLE___RESET;
+
+	/**
+	 * The operation id for the '<em>Run</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB_CONSOLE___RUN = JobPackage.JOB_CONSOLE___RUN;
+
+	/**
+	 * The operation id for the '<em>Run</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB_CONSOLE___RUN__RUNCONTEXT = JobPackage.JOB_CONSOLE___RUN__RUNCONTEXT;
+
+	/**
+	 * The operation id for the '<em>Cancel</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB_CONSOLE___CANCEL = JobPackage.JOB_CONSOLE___CANCEL;
+
+	/**
+	 * The operation id for the '<em>Set Progress</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB_CONSOLE___SET_PROGRESS__STRING_FLOAT = JobPackage.JOB_CONSOLE___SET_PROGRESS__STRING_FLOAT;
+
+	/**
+	 * The operation id for the '<em>Set Progress</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB_CONSOLE___SET_PROGRESS__PROGRESSFEEDBACK = JobPackage.JOB_CONSOLE___SET_PROGRESS__PROGRESSFEEDBACK;
+
+	/**
+	 * The operation id for the '<em>Get Return</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB_CONSOLE___GET_RETURN = JobPackage.JOB_CONSOLE___GET_RETURN;
+
+	/**
+	 * The operation id for the '<em>Set Return</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB_CONSOLE___SET_RETURN__RETURNFEEDBACK = JobPackage.JOB_CONSOLE___SET_RETURN__RETURNFEEDBACK;
+
+	/**
+	 * The operation id for the '<em>Add Parameter</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB_CONSOLE___ADD_PARAMETER__STRING_JOBPARAMETERTYPE_EATTRIBUTE_STRING = JobPackage.JOB_CONSOLE___ADD_PARAMETER__STRING_JOBPARAMETERTYPE_EATTRIBUTE_STRING;
+
+	/**
+	 * The operation id for the '<em>Refresh Parameters</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB_CONSOLE___REFRESH_PARAMETERS = JobPackage.JOB_CONSOLE___REFRESH_PARAMETERS;
+
+	/**
+	 * The operation id for the '<em>Get Arg As String</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB_CONSOLE___GET_ARG_AS_STRING__INT = JobPackage.JOB_CONSOLE___GET_ARG_AS_STRING__INT;
+
+	/**
+	 * The operation id for the '<em>Get Arg As Int</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB_CONSOLE___GET_ARG_AS_INT__INT = JobPackage.JOB_CONSOLE___GET_ARG_AS_INT__INT;
+
+	/**
+	 * The operation id for the '<em>Get Arg As Float</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB_CONSOLE___GET_ARG_AS_FLOAT__INT = JobPackage.JOB_CONSOLE___GET_ARG_AS_FLOAT__INT;
+
+	/**
+	 * The operation id for the '<em>Get Arg As Date</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB_CONSOLE___GET_ARG_AS_DATE__INT = JobPackage.JOB_CONSOLE___GET_ARG_AS_DATE__INT;
+
+	/**
+	 * The operation id for the '<em>Get Arg As Date</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB_CONSOLE___GET_ARG_AS_DATE__INT_STRING = JobPackage.JOB_CONSOLE___GET_ARG_AS_DATE__INT_STRING;
+
+	/**
+	 * The operation id for the '<em>Set Args</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB_CONSOLE___SET_ARGS = JobPackage.JOB_CONSOLE___SET_ARGS;
+
+	/**
+	 * The number of operations of the '<em>To Use Job Console</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB_CONSOLE_OPERATION_COUNT = JobPackage.JOB_CONSOLE_OPERATION_COUNT + 0;
+
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousejob.Domain <em>Domain</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -683,6 +1064,27 @@ public interface TousejobPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getDummyToHoldRefToModel();
+
+	/**
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousejob.ToUseJobConsole <em>To Use Job Console</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>To Use Job Console</em>'.
+	 * @see com.misc.touse.moplaf.tousejob.ToUseJobConsole
+	 * @generated
+	 */
+	EClass getToUseJobConsole();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.tousejob.ToUseJobConsole#getCallerName <em>Caller Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Caller Name</em>'.
+	 * @see com.misc.touse.moplaf.tousejob.ToUseJobConsole#getCallerName()
+	 * @see #getToUseJobConsole()
+	 * @generated
+	 */
+	EAttribute getToUseJobConsole_CallerName();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -794,6 +1196,24 @@ public interface TousejobPackage extends EPackage {
 		 * @generated
 		 */
 		EClass DUMMY_TO_HOLD_REF_TO_MODEL = eINSTANCE.getDummyToHoldRefToModel();
+
+		/**
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousejob.impl.ToUseJobConsoleImpl <em>To Use Job Console</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.touse.moplaf.tousejob.impl.ToUseJobConsoleImpl
+		 * @see com.misc.touse.moplaf.tousejob.impl.TousejobPackageImpl#getToUseJobConsole()
+		 * @generated
+		 */
+		EClass TO_USE_JOB_CONSOLE = eINSTANCE.getToUseJobConsole();
+
+		/**
+		 * The meta object literal for the '<em><b>Caller Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TO_USE_JOB_CONSOLE__CALLER_NAME = eINSTANCE.getToUseJobConsole_CallerName();
 
 	}
 
