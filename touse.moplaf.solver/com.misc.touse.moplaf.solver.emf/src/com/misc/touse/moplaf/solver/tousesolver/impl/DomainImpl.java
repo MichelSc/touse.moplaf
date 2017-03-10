@@ -4,7 +4,6 @@ package com.misc.touse.moplaf.solver.tousesolver.impl;
 
 import com.misc.touse.moplaf.solver.tousesolver.Domain;
 import com.misc.touse.moplaf.solver.tousesolver.DomainObjectFolder;
-import com.misc.touse.moplaf.solver.tousesolver.SolveKnapsack;
 import com.misc.touse.moplaf.solver.tousesolver.TousesolverPackage;
 
 import java.util.Collection;
@@ -30,7 +29,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.DomainImpl#getRootFolder <em>Root Folder</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.solver.tousesolver.impl.DomainImpl#getJobs <em>Jobs</em>}</li>
  * </ul>
  *
  * @generated
@@ -45,15 +43,6 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	 * @ordered
 	 */
 	protected EList<DomainObjectFolder> rootFolder;
-	/**
-	 * The cached value of the '{@link #getJobs() <em>Jobs</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getJobs()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<SolveKnapsack> jobs;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -90,25 +79,11 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<SolveKnapsack> getJobs() {
-		if (jobs == null) {
-			jobs = new EObjectContainmentEList<SolveKnapsack>(SolveKnapsack.class, this, TousesolverPackage.DOMAIN__JOBS);
-		}
-		return jobs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case TousesolverPackage.DOMAIN__ROOT_FOLDER:
 				return ((InternalEList<?>)getRootFolder()).basicRemove(otherEnd, msgs);
-			case TousesolverPackage.DOMAIN__JOBS:
-				return ((InternalEList<?>)getJobs()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -123,8 +98,6 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 		switch (featureID) {
 			case TousesolverPackage.DOMAIN__ROOT_FOLDER:
 				return getRootFolder();
-			case TousesolverPackage.DOMAIN__JOBS:
-				return getJobs();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -142,10 +115,6 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 				getRootFolder().clear();
 				getRootFolder().addAll((Collection<? extends DomainObjectFolder>)newValue);
 				return;
-			case TousesolverPackage.DOMAIN__JOBS:
-				getJobs().clear();
-				getJobs().addAll((Collection<? extends SolveKnapsack>)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -161,9 +130,6 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 			case TousesolverPackage.DOMAIN__ROOT_FOLDER:
 				getRootFolder().clear();
 				return;
-			case TousesolverPackage.DOMAIN__JOBS:
-				getJobs().clear();
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -178,8 +144,6 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 		switch (featureID) {
 			case TousesolverPackage.DOMAIN__ROOT_FOLDER:
 				return rootFolder != null && !rootFolder.isEmpty();
-			case TousesolverPackage.DOMAIN__JOBS:
-				return jobs != null && !jobs.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

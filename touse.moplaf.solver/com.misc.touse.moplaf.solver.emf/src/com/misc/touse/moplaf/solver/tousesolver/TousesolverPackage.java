@@ -2,7 +2,6 @@
  */
 package com.misc.touse.moplaf.solver.tousesolver;
 
-import com.misc.common.moplaf.job.JobPackage;
 import com.misc.common.moplaf.solver.SolverPackage;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -78,22 +77,13 @@ public interface TousesolverPackage extends EPackage {
 	int DOMAIN__ROOT_FOLDER = 0;
 
 	/**
-	 * The feature id for the '<em><b>Jobs</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN__JOBS = 1;
-
-	/**
 	 * The number of structural features of the '<em>Domain</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_FEATURE_COUNT = 2;
+	int DOMAIN_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Domain</em>' class.
@@ -1475,340 +1465,6 @@ public interface TousesolverPackage extends EPackage {
 	int LP_ITEM_OPERATION_COUNT = SolverPackage.GENERATOR_TUPLE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link com.misc.touse.moplaf.solver.tousesolver.impl.SolveKnapsackImpl <em>Solve Knapsack</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.misc.touse.moplaf.solver.tousesolver.impl.SolveKnapsackImpl
-	 * @see com.misc.touse.moplaf.solver.tousesolver.impl.TousesolverPackageImpl#getSolveKnapsack()
-	 * @generated
-	 */
-	int SOLVE_KNAPSACK = 11;
-
-	/**
-	 * The feature id for the '<em><b>Run Feedback</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVE_KNAPSACK__RUN_FEEDBACK = JobPackage.JOB_CONSOLE__RUN_FEEDBACK;
-
-	/**
-	 * The feature id for the '<em><b>Cancel Feedback</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVE_KNAPSACK__CANCEL_FEEDBACK = JobPackage.JOB_CONSOLE__CANCEL_FEEDBACK;
-
-	/**
-	 * The feature id for the '<em><b>Reset Feedback</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVE_KNAPSACK__RESET_FEEDBACK = JobPackage.JOB_CONSOLE__RESET_FEEDBACK;
-
-	/**
-	 * The feature id for the '<em><b>Canceled</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVE_KNAPSACK__CANCELED = JobPackage.JOB_CONSOLE__CANCELED;
-
-	/**
-	 * The feature id for the '<em><b>Return Success</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVE_KNAPSACK__RETURN_SUCCESS = JobPackage.JOB_CONSOLE__RETURN_SUCCESS;
-
-	/**
-	 * The feature id for the '<em><b>Return Feedback</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVE_KNAPSACK__RETURN_FEEDBACK = JobPackage.JOB_CONSOLE__RETURN_FEEDBACK;
-
-	/**
-	 * The feature id for the '<em><b>Return Information</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVE_KNAPSACK__RETURN_INFORMATION = JobPackage.JOB_CONSOLE__RETURN_INFORMATION;
-
-	/**
-	 * The feature id for the '<em><b>Status</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVE_KNAPSACK__STATUS = JobPackage.JOB_CONSOLE__STATUS;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVE_KNAPSACK__DESCRIPTION = JobPackage.JOB_CONSOLE__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Start Time</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVE_KNAPSACK__START_TIME = JobPackage.JOB_CONSOLE__START_TIME;
-
-	/**
-	 * The feature id for the '<em><b>End Time</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVE_KNAPSACK__END_TIME = JobPackage.JOB_CONSOLE__END_TIME;
-
-	/**
-	 * The feature id for the '<em><b>Duration</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVE_KNAPSACK__DURATION = JobPackage.JOB_CONSOLE__DURATION;
-
-	/**
-	 * The feature id for the '<em><b>Started</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVE_KNAPSACK__STARTED = JobPackage.JOB_CONSOLE__STARTED;
-
-	/**
-	 * The feature id for the '<em><b>Finished</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVE_KNAPSACK__FINISHED = JobPackage.JOB_CONSOLE__FINISHED;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVE_KNAPSACK__NAME = JobPackage.JOB_CONSOLE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVE_KNAPSACK__PARAMETERS = JobPackage.JOB_CONSOLE__PARAMETERS;
-
-	/**
-	 * The feature id for the '<em><b>Help Text</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVE_KNAPSACK__HELP_TEXT = JobPackage.JOB_CONSOLE__HELP_TEXT;
-
-	/**
-	 * The feature id for the '<em><b>Args</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVE_KNAPSACK__ARGS = JobPackage.JOB_CONSOLE__ARGS;
-
-	/**
-	 * The number of structural features of the '<em>Solve Knapsack</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVE_KNAPSACK_FEATURE_COUNT = JobPackage.JOB_CONSOLE_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Reset</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVE_KNAPSACK___RESET = JobPackage.JOB_CONSOLE___RESET;
-
-	/**
-	 * The operation id for the '<em>Run</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVE_KNAPSACK___RUN = JobPackage.JOB_CONSOLE___RUN;
-
-	/**
-	 * The operation id for the '<em>Run</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVE_KNAPSACK___RUN__RUNCONTEXT = JobPackage.JOB_CONSOLE___RUN__RUNCONTEXT;
-
-	/**
-	 * The operation id for the '<em>Cancel</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVE_KNAPSACK___CANCEL = JobPackage.JOB_CONSOLE___CANCEL;
-
-	/**
-	 * The operation id for the '<em>Set Progress</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVE_KNAPSACK___SET_PROGRESS__STRING_FLOAT = JobPackage.JOB_CONSOLE___SET_PROGRESS__STRING_FLOAT;
-
-	/**
-	 * The operation id for the '<em>Set Progress</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVE_KNAPSACK___SET_PROGRESS__PROGRESSFEEDBACK = JobPackage.JOB_CONSOLE___SET_PROGRESS__PROGRESSFEEDBACK;
-
-	/**
-	 * The operation id for the '<em>Get Return</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVE_KNAPSACK___GET_RETURN = JobPackage.JOB_CONSOLE___GET_RETURN;
-
-	/**
-	 * The operation id for the '<em>Set Return</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVE_KNAPSACK___SET_RETURN__RETURNFEEDBACK = JobPackage.JOB_CONSOLE___SET_RETURN__RETURNFEEDBACK;
-
-	/**
-	 * The operation id for the '<em>Add Parameter</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVE_KNAPSACK___ADD_PARAMETER__STRING_JOBPARAMETERTYPE_EATTRIBUTE_STRING = JobPackage.JOB_CONSOLE___ADD_PARAMETER__STRING_JOBPARAMETERTYPE_EATTRIBUTE_STRING;
-
-	/**
-	 * The operation id for the '<em>Refresh Parameters</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVE_KNAPSACK___REFRESH_PARAMETERS = JobPackage.JOB_CONSOLE___REFRESH_PARAMETERS;
-
-	/**
-	 * The operation id for the '<em>Get Arg As String</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVE_KNAPSACK___GET_ARG_AS_STRING__INT = JobPackage.JOB_CONSOLE___GET_ARG_AS_STRING__INT;
-
-	/**
-	 * The operation id for the '<em>Get Arg As Int</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVE_KNAPSACK___GET_ARG_AS_INT__INT = JobPackage.JOB_CONSOLE___GET_ARG_AS_INT__INT;
-
-	/**
-	 * The operation id for the '<em>Get Arg As Float</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVE_KNAPSACK___GET_ARG_AS_FLOAT__INT = JobPackage.JOB_CONSOLE___GET_ARG_AS_FLOAT__INT;
-
-	/**
-	 * The operation id for the '<em>Get Arg As Date</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVE_KNAPSACK___GET_ARG_AS_DATE__INT = JobPackage.JOB_CONSOLE___GET_ARG_AS_DATE__INT;
-
-	/**
-	 * The operation id for the '<em>Get Arg As Date</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVE_KNAPSACK___GET_ARG_AS_DATE__INT_STRING = JobPackage.JOB_CONSOLE___GET_ARG_AS_DATE__INT_STRING;
-
-	/**
-	 * The operation id for the '<em>Set Args</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVE_KNAPSACK___SET_ARGS = JobPackage.JOB_CONSOLE___SET_ARGS;
-
-	/**
-	 * The number of operations of the '<em>Solve Knapsack</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLVE_KNAPSACK_OPERATION_COUNT = JobPackage.JOB_CONSOLE_OPERATION_COUNT + 0;
-
-	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.solver.tousesolver.Domain <em>Domain</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1828,17 +1484,6 @@ public interface TousesolverPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getDomain_RootFolder();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.solver.tousesolver.Domain#getJobs <em>Jobs</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Jobs</em>'.
-	 * @see com.misc.touse.moplaf.solver.tousesolver.Domain#getJobs()
-	 * @see #getDomain()
-	 * @generated
-	 */
-	EReference getDomain_Jobs();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.solver.tousesolver.Knapsack <em>Knapsack</em>}'.
@@ -2293,16 +1938,6 @@ public interface TousesolverPackage extends EPackage {
 	EReference getLpItem_VarInKnapsack();
 
 	/**
-	 * Returns the meta object for class '{@link com.misc.touse.moplaf.solver.tousesolver.SolveKnapsack <em>Solve Knapsack</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Solve Knapsack</em>'.
-	 * @see com.misc.touse.moplaf.solver.tousesolver.SolveKnapsack
-	 * @generated
-	 */
-	EClass getSolveKnapsack();
-
-	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2342,14 +1977,6 @@ public interface TousesolverPackage extends EPackage {
 		 * @generated
 		 */
 		EReference DOMAIN__ROOT_FOLDER = eINSTANCE.getDomain_RootFolder();
-
-		/**
-		 * The meta object literal for the '<em><b>Jobs</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DOMAIN__JOBS = eINSTANCE.getDomain_Jobs();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.solver.tousesolver.impl.KnapsackImpl <em>Knapsack</em>}' class.
@@ -2706,16 +2333,6 @@ public interface TousesolverPackage extends EPackage {
 		 * @generated
 		 */
 		EReference LP_ITEM__VAR_IN_KNAPSACK = eINSTANCE.getLpItem_VarInKnapsack();
-
-		/**
-		 * The meta object literal for the '{@link com.misc.touse.moplaf.solver.tousesolver.impl.SolveKnapsackImpl <em>Solve Knapsack</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see com.misc.touse.moplaf.solver.tousesolver.impl.SolveKnapsackImpl
-		 * @see com.misc.touse.moplaf.solver.tousesolver.impl.TousesolverPackageImpl#getSolveKnapsack()
-		 * @generated
-		 */
-		EClass SOLVE_KNAPSACK = eINSTANCE.getSolveKnapsack();
 
 	}
 

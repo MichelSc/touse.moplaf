@@ -2,7 +2,6 @@
  */
 package com.misc.touse.moplaf.solver.tousesolver.impl;
 
-import com.misc.common.moplaf.job.JobPackage;
 import com.misc.common.moplaf.solver.SolverPackage;
 import com.misc.touse.moplaf.solver.tousesolver.Domain;
 import com.misc.touse.moplaf.solver.tousesolver.DomainObject;
@@ -15,7 +14,6 @@ import com.misc.touse.moplaf.solver.tousesolver.LpItem;
 import com.misc.touse.moplaf.solver.tousesolver.LpKnapsack;
 import com.misc.touse.moplaf.solver.tousesolver.LpRoot;
 import com.misc.touse.moplaf.solver.tousesolver.Scenario;
-import com.misc.touse.moplaf.solver.tousesolver.SolveKnapsack;
 import com.misc.touse.moplaf.solver.tousesolver.TousesolverFactory;
 import com.misc.touse.moplaf.solver.tousesolver.TousesolverPackage;
 import org.eclipse.emf.ecore.EAttribute;
@@ -109,13 +107,6 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 	private EClass lpItemEClass = null;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass solveKnapsackEClass = null;
-
-	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -195,15 +186,6 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 	 */
 	public EReference getDomain_RootFolder() {
 		return (EReference)domainEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getDomain_Jobs() {
-		return (EReference)domainEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -589,15 +571,6 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSolveKnapsack() {
-		return solveKnapsackEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public TousesolverFactory getTousesolverFactory() {
 		return (TousesolverFactory)getEFactoryInstance();
 	}
@@ -623,7 +596,6 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 		// Create classes and their features
 		domainEClass = createEClass(DOMAIN);
 		createEReference(domainEClass, DOMAIN__ROOT_FOLDER);
-		createEReference(domainEClass, DOMAIN__JOBS);
 
 		knapsackEClass = createEClass(KNAPSACK);
 		createEAttribute(knapsackEClass, KNAPSACK__CAPACITY);
@@ -676,8 +648,6 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 		lpItemEClass = createEClass(LP_ITEM);
 		createEReference(lpItemEClass, LP_ITEM__ITEM);
 		createEReference(lpItemEClass, LP_ITEM__VAR_IN_KNAPSACK);
-
-		solveKnapsackEClass = createEClass(SOLVE_KNAPSACK);
 	}
 
 	/**
@@ -705,7 +675,6 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 
 		// Obtain other dependent packages
 		SolverPackage theSolverPackage = (SolverPackage)EPackage.Registry.INSTANCE.getEPackage(SolverPackage.eNS_URI);
-		JobPackage theJobPackage = (JobPackage)EPackage.Registry.INSTANCE.getEPackage(JobPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -718,12 +687,10 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 		lpRootEClass.getESuperTypes().add(theSolverPackage.getGeneratorTuple());
 		lpKnapsackEClass.getESuperTypes().add(theSolverPackage.getGeneratorTuple());
 		lpItemEClass.getESuperTypes().add(theSolverPackage.getGeneratorTuple());
-		solveKnapsackEClass.getESuperTypes().add(theJobPackage.getJobConsole());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDomain_RootFolder(), this.getDomainObjectFolder(), null, "RootFolder", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDomain_Jobs(), this.getSolveKnapsack(), null, "Jobs", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(knapsackEClass, Knapsack.class, "Knapsack", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getKnapsack_Capacity(), ecorePackage.getEFloat(), "Capacity", null, 0, 1, Knapsack.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -776,8 +743,6 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 		initEClass(lpItemEClass, LpItem.class, "LpItem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLpItem_Item(), this.getItem(), null, "Item", null, 1, 1, LpItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLpItem_VarInKnapsack(), theSolverPackage.getGeneratorLpVar(), null, "VarInKnapsack", null, 1, 1, LpItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(solveKnapsackEClass, SolveKnapsack.class, "SolveKnapsack", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);
