@@ -5,12 +5,10 @@ package com.misc.touse.moplaf.macroplanner.impl;
 import com.misc.common.moplaf.macroplanner.SupplyChainData;
 import com.misc.common.moplaf.macroplanner.SupplyChainMasterData;
 import com.misc.common.moplaf.macroplanner.SupplyChainRoutings;
-
-import com.misc.common.moplaf.macroplanner.solver.Scenario;
-
 import com.misc.touse.moplaf.macroplanner.Domain;
 import com.misc.touse.moplaf.macroplanner.ToUseMacroPlannerPackage;
 
+import com.misc.touse.moplaf.macroplanner.ToUseScenario;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -80,7 +78,7 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Scenario> scenarios;
+	protected EList<ToUseScenario> scenarios;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -142,9 +140,9 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Scenario> getScenarios() {
+	public EList<ToUseScenario> getScenarios() {
 		if (scenarios == null) {
-			scenarios = new EObjectContainmentEList<Scenario>(Scenario.class, this, ToUseMacroPlannerPackage.DOMAIN__SCENARIOS);
+			scenarios = new EObjectContainmentEList<ToUseScenario>(ToUseScenario.class, this, ToUseMacroPlannerPackage.DOMAIN__SCENARIOS);
 		}
 		return scenarios;
 	}
@@ -212,7 +210,7 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 				return;
 			case ToUseMacroPlannerPackage.DOMAIN__SCENARIOS:
 				getScenarios().clear();
-				getScenarios().addAll((Collection<? extends Scenario>)newValue);
+				getScenarios().addAll((Collection<? extends ToUseScenario>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

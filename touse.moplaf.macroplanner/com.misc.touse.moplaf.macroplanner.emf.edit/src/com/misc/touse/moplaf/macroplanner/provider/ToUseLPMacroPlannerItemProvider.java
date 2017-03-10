@@ -3,11 +3,15 @@
 package com.misc.touse.moplaf.macroplanner.provider;
 
 
-import com.misc.common.moplaf.macroplanner.MacroPlannerFactory;
-import com.misc.touse.moplaf.macroplanner.Domain;
-import com.misc.touse.moplaf.macroplanner.ToUseMacroPlannerFactory;
-import com.misc.touse.moplaf.macroplanner.ToUseMacroPlannerPackage;
+import com.misc.common.moplaf.common.EnabledFeedback;
 
+import com.misc.common.moplaf.macroplanner.solver.MacroPlannerSolverPackage;
+
+import com.misc.common.moplaf.macroplanner.solver.provider.LPMacroPlannerItemProvider;
+import com.misc.common.moplaf.solver.provider.Util;
+import com.misc.touse.moplaf.macroplanner.ToUseLPMacroPlanner;
+
+import com.misc.touse.moplaf.macroplanner.ToUseMacroPlannerPackage;
 import java.util.Collection;
 import java.util.List;
 
@@ -17,37 +21,23 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
-
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link com.misc.touse.moplaf.macroplanner.Domain} object.
+ * This is the item provider adapter for a {@link com.misc.touse.moplaf.macroplanner.ToUseLPMacroPlanner} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class DomainItemProvider 
-	extends ItemProviderAdapter
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+public class ToUseLPMacroPlannerItemProvider extends LPMacroPlannerItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DomainItemProvider(AdapterFactory adapterFactory) {
+	public ToUseLPMacroPlannerItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -78,10 +68,7 @@ public class DomainItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ToUseMacroPlannerPackage.Literals.DOMAIN__MASTER_DATA);
-			childrenFeatures.add(ToUseMacroPlannerPackage.Literals.DOMAIN__DATA);
-			childrenFeatures.add(ToUseMacroPlannerPackage.Literals.DOMAIN__CHAINS);
-			childrenFeatures.add(ToUseMacroPlannerPackage.Literals.DOMAIN__SCENARIOS);
+			childrenFeatures.add(ToUseMacroPlannerPackage.Literals.TO_USE_LP_MACRO_PLANNER__SOLVERS);
 		}
 		return childrenFeatures;
 	}
@@ -100,14 +87,14 @@ public class DomainItemProvider
 	}
 
 	/**
-	 * This returns Domain.gif.
+	 * This returns ToUseLPMacroPlanner.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Domain"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ToUseLPMacroPlanner"));
 	}
 
 	/**
@@ -118,7 +105,11 @@ public class DomainItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Domain_type");
+		EnabledFeedback labelValue = ((ToUseLPMacroPlanner)object).getRunFeedback();
+		String label = labelValue == null ? null : labelValue.toString();
+		return label == null || label.length() == 0 ?
+			getString("_UI_ToUseLPMacroPlanner_type") :
+			getString("_UI_ToUseLPMacroPlanner_type") + " " + label;
 	}
 	
 
@@ -133,11 +124,8 @@ public class DomainItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Domain.class)) {
-			case ToUseMacroPlannerPackage.DOMAIN__MASTER_DATA:
-			case ToUseMacroPlannerPackage.DOMAIN__DATA:
-			case ToUseMacroPlannerPackage.DOMAIN__CHAINS:
-			case ToUseMacroPlannerPackage.DOMAIN__SCENARIOS:
+		switch (notification.getFeatureID(ToUseLPMacroPlanner.class)) {
+			case ToUseMacroPlannerPackage.TO_USE_LP_MACRO_PLANNER__SOLVERS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -149,31 +137,39 @@ public class DomainItemProvider
 	 * that can be created under this object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+		
+		Util.collectNewChildSolverDescriptors2(newChildDescriptors, object, ToUseMacroPlannerPackage.TO_USE_LP_MACRO_PLANNER__SOLVERS);
+	}
 
-		newChildDescriptors.add
-			(createChildParameter
-				(ToUseMacroPlannerPackage.Literals.DOMAIN__MASTER_DATA,
-				 MacroPlannerFactory.eINSTANCE.createSupplyChainMasterData()));
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
 
-		newChildDescriptors.add
-			(createChildParameter
-				(ToUseMacroPlannerPackage.Literals.DOMAIN__DATA,
-				 MacroPlannerFactory.eINSTANCE.createSupplyChainData()));
+		boolean qualify =
+			childFeature == MacroPlannerSolverPackage.Literals.LP_MACRO_PLANNER__COST_ROUTINGS ||
+			childFeature == MacroPlannerSolverPackage.Literals.LP_MACRO_PLANNER__COST_SUPPLIES ||
+			childFeature == MacroPlannerSolverPackage.Literals.LP_MACRO_PLANNER__COST_CAPACITIES ||
+			childFeature == MacroPlannerSolverPackage.Literals.LP_MACRO_PLANNER__COST_AVAILABILITIES ||
+			childFeature == MacroPlannerSolverPackage.Literals.LP_MACRO_PLANNER__PENALTY_CAPACITIES ||
+			childFeature == MacroPlannerSolverPackage.Literals.LP_MACRO_PLANNER__PENALTY_AVAILABILITIES;
 
-		newChildDescriptors.add
-			(createChildParameter
-				(ToUseMacroPlannerPackage.Literals.DOMAIN__CHAINS,
-				 MacroPlannerFactory.eINSTANCE.createSupplyChainRoutings()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ToUseMacroPlannerPackage.Literals.DOMAIN__SCENARIOS,
-				 ToUseMacroPlannerFactory.eINSTANCE.createToUseScenario()));
+		if (qualify) {
+			return getString
+				("_UI_CreateChild_text2",
+				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 	/**

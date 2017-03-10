@@ -5,9 +5,6 @@ package com.misc.touse.moplaf.macroplanner;
 import com.misc.common.moplaf.macroplanner.SupplyChainData;
 import com.misc.common.moplaf.macroplanner.SupplyChainMasterData;
 import com.misc.common.moplaf.macroplanner.SupplyChainRoutings;
-
-import com.misc.common.moplaf.macroplanner.solver.Scenario;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -82,7 +79,7 @@ public interface Domain extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Scenarios</b></em>' containment reference list.
-	 * The list contents are of type {@link com.misc.common.moplaf.macroplanner.solver.Scenario}.
+	 * The list contents are of type {@link com.misc.touse.moplaf.macroplanner.ToUseScenario}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Scenarios</em>' containment reference list isn't clear,
@@ -94,6 +91,6 @@ public interface Domain extends EObject {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Scenario> getScenarios();
+	EList<ToUseScenario> getScenarios();
 
 } // Domain

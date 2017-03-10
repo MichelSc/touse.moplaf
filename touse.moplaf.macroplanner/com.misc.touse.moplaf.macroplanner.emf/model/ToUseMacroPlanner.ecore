@@ -12,7 +12,12 @@
         eType="ecore:EClass ../../com.misc.common.moplaf.macroplanner.emf/model/MacroPlanner.ecore#//SupplyChainRoutings"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Scenarios" upperBound="-1"
-        eType="ecore:EClass ../../com.misc.common.moplaf.macroplanner.solver.emf/model/MacroPlannerSolver.ecore#//Scenario"
+        eType="#//ToUseScenario" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ToUseLPMacroPlanner" eSuperTypes="../../com.misc.common.moplaf.macroplanner.solver.emf/model/MacroPlannerSolver.ecore#//LPMacroPlanner">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Solvers" upperBound="-1"
+        eType="ecore:EClass ../../com.misc.common.moplaf.solver.emf/model/solver.ecore#//Solver"
         containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ToUseScenario" eSuperTypes="../../com.misc.common.moplaf.macroplanner.solver.emf/model/MacroPlannerSolver.ecore#//Scenario"/>
 </ecore:EPackage>
