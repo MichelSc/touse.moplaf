@@ -135,7 +135,7 @@ public class ToUseMacroPlannerPackageImpl extends EPackageImpl implements ToUseM
 	 * @generated
 	 */
 	public EReference getDomain_Data() {
-		return (EReference)domainEClass.getEStructuralFeatures().get(1);
+		return (EReference)domainEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -143,7 +143,7 @@ public class ToUseMacroPlannerPackageImpl extends EPackageImpl implements ToUseM
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDomain_Chains() {
+	public EReference getDomain_Routings() {
 		return (EReference)domainEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -153,7 +153,16 @@ public class ToUseMacroPlannerPackageImpl extends EPackageImpl implements ToUseM
 	 * @generated
 	 */
 	public EReference getDomain_Scenarios() {
-		return (EReference)domainEClass.getEStructuralFeatures().get(3);
+		return (EReference)domainEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDomain_Limits() {
+		return (EReference)domainEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -213,8 +222,9 @@ public class ToUseMacroPlannerPackageImpl extends EPackageImpl implements ToUseM
 		// Create classes and their features
 		domainEClass = createEClass(DOMAIN);
 		createEReference(domainEClass, DOMAIN__MASTER_DATA);
+		createEReference(domainEClass, DOMAIN__LIMITS);
+		createEReference(domainEClass, DOMAIN__ROUTINGS);
 		createEReference(domainEClass, DOMAIN__DATA);
-		createEReference(domainEClass, DOMAIN__CHAINS);
 		createEReference(domainEClass, DOMAIN__SCENARIOS);
 
 		toUseLPMacroPlannerEClass = createEClass(TO_USE_LP_MACRO_PLANNER);
@@ -262,8 +272,9 @@ public class ToUseMacroPlannerPackageImpl extends EPackageImpl implements ToUseM
 		// Initialize classes, features, and operations; add parameters
 		initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDomain_MasterData(), theMacroPlannerPackage.getSupplyChainMasterData(), null, "MasterData", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDomain_Limits(), theMacroPlannerPackage.getSupplyChainLimits(), null, "Limits", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDomain_Routings(), theMacroPlannerPackage.getSupplyChainRoutings(), null, "Routings", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDomain_Data(), theMacroPlannerPackage.getSupplyChainData(), null, "Data", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDomain_Chains(), theMacroPlannerPackage.getSupplyChainRoutings(), null, "Chains", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDomain_Scenarios(), this.getToUseScenario(), null, "Scenarios", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(toUseLPMacroPlannerEClass, ToUseLPMacroPlanner.class, "ToUseLPMacroPlanner", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

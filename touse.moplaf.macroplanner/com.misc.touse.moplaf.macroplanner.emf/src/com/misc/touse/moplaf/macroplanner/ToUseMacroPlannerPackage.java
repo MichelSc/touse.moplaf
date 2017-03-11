@@ -76,22 +76,31 @@ public interface ToUseMacroPlannerPackage extends EPackage {
 	int DOMAIN__MASTER_DATA = 0;
 
 	/**
+	 * The feature id for the '<em><b>Limits</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN__LIMITS = 1;
+
+	/**
+	 * The feature id for the '<em><b>Routings</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN__ROUTINGS = 2;
+
+	/**
 	 * The feature id for the '<em><b>Data</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN__DATA = 1;
-
-	/**
-	 * The feature id for the '<em><b>Chains</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN__CHAINS = 2;
+	int DOMAIN__DATA = 3;
 
 	/**
 	 * The feature id for the '<em><b>Scenarios</b></em>' containment reference list.
@@ -100,7 +109,7 @@ public interface ToUseMacroPlannerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN__SCENARIOS = 3;
+	int DOMAIN__SCENARIOS = 4;
 
 	/**
 	 * The number of structural features of the '<em>Domain</em>' class.
@@ -109,7 +118,7 @@ public interface ToUseMacroPlannerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_FEATURE_COUNT = 4;
+	int DOMAIN_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Domain</em>' class.
@@ -752,15 +761,15 @@ public interface ToUseMacroPlannerPackage extends EPackage {
 	EReference getDomain_Data();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.macroplanner.Domain#getChains <em>Chains</em>}'.
+	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.macroplanner.Domain#getRoutings <em>Routings</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Chains</em>'.
-	 * @see com.misc.touse.moplaf.macroplanner.Domain#getChains()
+	 * @return the meta object for the containment reference list '<em>Routings</em>'.
+	 * @see com.misc.touse.moplaf.macroplanner.Domain#getRoutings()
 	 * @see #getDomain()
 	 * @generated
 	 */
-	EReference getDomain_Chains();
+	EReference getDomain_Routings();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.macroplanner.Domain#getScenarios <em>Scenarios</em>}'.
@@ -772,6 +781,17 @@ public interface ToUseMacroPlannerPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getDomain_Scenarios();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.macroplanner.Domain#getLimits <em>Limits</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Limits</em>'.
+	 * @see com.misc.touse.moplaf.macroplanner.Domain#getLimits()
+	 * @see #getDomain()
+	 * @generated
+	 */
+	EReference getDomain_Limits();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.macroplanner.ToUseLPMacroPlanner <em>To Use LP Macro Planner</em>}'.
@@ -854,12 +874,12 @@ public interface ToUseMacroPlannerPackage extends EPackage {
 		EReference DOMAIN__DATA = eINSTANCE.getDomain_Data();
 
 		/**
-		 * The meta object literal for the '<em><b>Chains</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Routings</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DOMAIN__CHAINS = eINSTANCE.getDomain_Chains();
+		EReference DOMAIN__ROUTINGS = eINSTANCE.getDomain_Routings();
 
 		/**
 		 * The meta object literal for the '<em><b>Scenarios</b></em>' containment reference list feature.
@@ -868,6 +888,14 @@ public interface ToUseMacroPlannerPackage extends EPackage {
 		 * @generated
 		 */
 		EReference DOMAIN__SCENARIOS = eINSTANCE.getDomain_Scenarios();
+
+		/**
+		 * The meta object literal for the '<em><b>Limits</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DOMAIN__LIMITS = eINSTANCE.getDomain_Limits();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.macroplanner.impl.ToUseLPMacroPlannerImpl <em>To Use LP Macro Planner</em>}' class.

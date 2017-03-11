@@ -3,6 +3,7 @@
 package com.misc.touse.moplaf.macroplanner;
 
 import com.misc.common.moplaf.macroplanner.SupplyChainData;
+import com.misc.common.moplaf.macroplanner.SupplyChainLimits;
 import com.misc.common.moplaf.macroplanner.SupplyChainMasterData;
 import com.misc.common.moplaf.macroplanner.SupplyChainRoutings;
 import org.eclipse.emf.common.util.EList;
@@ -19,8 +20,9 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.macroplanner.Domain#getMasterData <em>Master Data</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.macroplanner.Domain#getLimits <em>Limits</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.macroplanner.Domain#getRoutings <em>Routings</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.macroplanner.Domain#getData <em>Data</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.macroplanner.Domain#getChains <em>Chains</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.macroplanner.Domain#getScenarios <em>Scenarios</em>}</li>
  * </ul>
  *
@@ -62,20 +64,20 @@ public interface Domain extends EObject {
 	EList<SupplyChainData> getData();
 
 	/**
-	 * Returns the value of the '<em><b>Chains</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Routings</b></em>' containment reference list.
 	 * The list contents are of type {@link com.misc.common.moplaf.macroplanner.SupplyChainRoutings}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Chains</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Routings</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Chains</em>' containment reference list.
-	 * @see com.misc.touse.moplaf.macroplanner.ToUseMacroPlannerPackage#getDomain_Chains()
+	 * @return the value of the '<em>Routings</em>' containment reference list.
+	 * @see com.misc.touse.moplaf.macroplanner.ToUseMacroPlannerPackage#getDomain_Routings()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<SupplyChainRoutings> getChains();
+	EList<SupplyChainRoutings> getRoutings();
 
 	/**
 	 * Returns the value of the '<em><b>Scenarios</b></em>' containment reference list.
@@ -92,5 +94,21 @@ public interface Domain extends EObject {
 	 * @generated
 	 */
 	EList<ToUseScenario> getScenarios();
+
+	/**
+	 * Returns the value of the '<em><b>Limits</b></em>' containment reference list.
+	 * The list contents are of type {@link com.misc.common.moplaf.macroplanner.SupplyChainLimits}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Limits</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Limits</em>' containment reference list.
+	 * @see com.misc.touse.moplaf.macroplanner.ToUseMacroPlannerPackage#getDomain_Limits()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<SupplyChainLimits> getLimits();
 
 } // Domain

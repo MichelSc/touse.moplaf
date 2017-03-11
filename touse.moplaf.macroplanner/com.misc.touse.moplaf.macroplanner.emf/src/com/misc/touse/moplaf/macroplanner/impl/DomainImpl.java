@@ -3,6 +3,7 @@
 package com.misc.touse.moplaf.macroplanner.impl;
 
 import com.misc.common.moplaf.macroplanner.SupplyChainData;
+import com.misc.common.moplaf.macroplanner.SupplyChainLimits;
 import com.misc.common.moplaf.macroplanner.SupplyChainMasterData;
 import com.misc.common.moplaf.macroplanner.SupplyChainRoutings;
 import com.misc.touse.moplaf.macroplanner.Domain;
@@ -32,8 +33,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.macroplanner.impl.DomainImpl#getMasterData <em>Master Data</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.macroplanner.impl.DomainImpl#getLimits <em>Limits</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.macroplanner.impl.DomainImpl#getRoutings <em>Routings</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.macroplanner.impl.DomainImpl#getData <em>Data</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.macroplanner.impl.DomainImpl#getChains <em>Chains</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.macroplanner.impl.DomainImpl#getScenarios <em>Scenarios</em>}</li>
  * </ul>
  *
@@ -51,6 +53,26 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	protected EList<SupplyChainMasterData> masterData;
 
 	/**
+	 * The cached value of the '{@link #getLimits() <em>Limits</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLimits()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<SupplyChainLimits> limits;
+
+	/**
+	 * The cached value of the '{@link #getRoutings() <em>Routings</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRoutings()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<SupplyChainRoutings> routings;
+
+	/**
 	 * The cached value of the '{@link #getData() <em>Data</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -59,16 +81,6 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	 * @ordered
 	 */
 	protected EList<SupplyChainData> data;
-
-	/**
-	 * The cached value of the '{@link #getChains() <em>Chains</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getChains()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<SupplyChainRoutings> chains;
 
 	/**
 	 * The cached value of the '{@link #getScenarios() <em>Scenarios</em>}' containment reference list.
@@ -128,11 +140,11 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<SupplyChainRoutings> getChains() {
-		if (chains == null) {
-			chains = new EObjectContainmentEList<SupplyChainRoutings>(SupplyChainRoutings.class, this, ToUseMacroPlannerPackage.DOMAIN__CHAINS);
+	public EList<SupplyChainRoutings> getRoutings() {
+		if (routings == null) {
+			routings = new EObjectContainmentEList<SupplyChainRoutings>(SupplyChainRoutings.class, this, ToUseMacroPlannerPackage.DOMAIN__ROUTINGS);
 		}
-		return chains;
+		return routings;
 	}
 
 	/**
@@ -152,15 +164,29 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<SupplyChainLimits> getLimits() {
+		if (limits == null) {
+			limits = new EObjectContainmentEList<SupplyChainLimits>(SupplyChainLimits.class, this, ToUseMacroPlannerPackage.DOMAIN__LIMITS);
+		}
+		return limits;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case ToUseMacroPlannerPackage.DOMAIN__MASTER_DATA:
 				return ((InternalEList<?>)getMasterData()).basicRemove(otherEnd, msgs);
+			case ToUseMacroPlannerPackage.DOMAIN__LIMITS:
+				return ((InternalEList<?>)getLimits()).basicRemove(otherEnd, msgs);
+			case ToUseMacroPlannerPackage.DOMAIN__ROUTINGS:
+				return ((InternalEList<?>)getRoutings()).basicRemove(otherEnd, msgs);
 			case ToUseMacroPlannerPackage.DOMAIN__DATA:
 				return ((InternalEList<?>)getData()).basicRemove(otherEnd, msgs);
-			case ToUseMacroPlannerPackage.DOMAIN__CHAINS:
-				return ((InternalEList<?>)getChains()).basicRemove(otherEnd, msgs);
 			case ToUseMacroPlannerPackage.DOMAIN__SCENARIOS:
 				return ((InternalEList<?>)getScenarios()).basicRemove(otherEnd, msgs);
 		}
@@ -177,10 +203,12 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 		switch (featureID) {
 			case ToUseMacroPlannerPackage.DOMAIN__MASTER_DATA:
 				return getMasterData();
+			case ToUseMacroPlannerPackage.DOMAIN__LIMITS:
+				return getLimits();
+			case ToUseMacroPlannerPackage.DOMAIN__ROUTINGS:
+				return getRoutings();
 			case ToUseMacroPlannerPackage.DOMAIN__DATA:
 				return getData();
-			case ToUseMacroPlannerPackage.DOMAIN__CHAINS:
-				return getChains();
 			case ToUseMacroPlannerPackage.DOMAIN__SCENARIOS:
 				return getScenarios();
 		}
@@ -200,13 +228,17 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 				getMasterData().clear();
 				getMasterData().addAll((Collection<? extends SupplyChainMasterData>)newValue);
 				return;
+			case ToUseMacroPlannerPackage.DOMAIN__LIMITS:
+				getLimits().clear();
+				getLimits().addAll((Collection<? extends SupplyChainLimits>)newValue);
+				return;
+			case ToUseMacroPlannerPackage.DOMAIN__ROUTINGS:
+				getRoutings().clear();
+				getRoutings().addAll((Collection<? extends SupplyChainRoutings>)newValue);
+				return;
 			case ToUseMacroPlannerPackage.DOMAIN__DATA:
 				getData().clear();
 				getData().addAll((Collection<? extends SupplyChainData>)newValue);
-				return;
-			case ToUseMacroPlannerPackage.DOMAIN__CHAINS:
-				getChains().clear();
-				getChains().addAll((Collection<? extends SupplyChainRoutings>)newValue);
 				return;
 			case ToUseMacroPlannerPackage.DOMAIN__SCENARIOS:
 				getScenarios().clear();
@@ -227,11 +259,14 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 			case ToUseMacroPlannerPackage.DOMAIN__MASTER_DATA:
 				getMasterData().clear();
 				return;
+			case ToUseMacroPlannerPackage.DOMAIN__LIMITS:
+				getLimits().clear();
+				return;
+			case ToUseMacroPlannerPackage.DOMAIN__ROUTINGS:
+				getRoutings().clear();
+				return;
 			case ToUseMacroPlannerPackage.DOMAIN__DATA:
 				getData().clear();
-				return;
-			case ToUseMacroPlannerPackage.DOMAIN__CHAINS:
-				getChains().clear();
 				return;
 			case ToUseMacroPlannerPackage.DOMAIN__SCENARIOS:
 				getScenarios().clear();
@@ -250,10 +285,12 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 		switch (featureID) {
 			case ToUseMacroPlannerPackage.DOMAIN__MASTER_DATA:
 				return masterData != null && !masterData.isEmpty();
+			case ToUseMacroPlannerPackage.DOMAIN__LIMITS:
+				return limits != null && !limits.isEmpty();
+			case ToUseMacroPlannerPackage.DOMAIN__ROUTINGS:
+				return routings != null && !routings.isEmpty();
 			case ToUseMacroPlannerPackage.DOMAIN__DATA:
 				return data != null && !data.isEmpty();
-			case ToUseMacroPlannerPackage.DOMAIN__CHAINS:
-				return chains != null && !chains.isEmpty();
 			case ToUseMacroPlannerPackage.DOMAIN__SCENARIOS:
 				return scenarios != null && !scenarios.isEmpty();
 		}

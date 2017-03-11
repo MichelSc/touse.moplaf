@@ -6,10 +6,13 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="MasterData" upperBound="-1"
         eType="ecore:EClass ../../com.misc.common.moplaf.macroplanner.emf/model/MacroPlanner.ecore#//SupplyChainMasterData"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Data" upperBound="-1" eType="ecore:EClass ../../com.misc.common.moplaf.macroplanner.emf/model/MacroPlanner.ecore#//SupplyChainData"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Limits" upperBound="-1"
+        eType="ecore:EClass ../../com.misc.common.moplaf.macroplanner.emf/model/MacroPlanner.ecore#//SupplyChainLimits"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Chains" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Routings" upperBound="-1"
         eType="ecore:EClass ../../com.misc.common.moplaf.macroplanner.emf/model/MacroPlanner.ecore#//SupplyChainRoutings"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Data" upperBound="-1" eType="ecore:EClass ../../com.misc.common.moplaf.macroplanner.emf/model/MacroPlanner.ecore#//SupplyChainData"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Scenarios" upperBound="-1"
         eType="#//ToUseScenario" containment="true"/>

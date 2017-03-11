@@ -79,8 +79,9 @@ public class DomainItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ToUseMacroPlannerPackage.Literals.DOMAIN__MASTER_DATA);
+			childrenFeatures.add(ToUseMacroPlannerPackage.Literals.DOMAIN__LIMITS);
+			childrenFeatures.add(ToUseMacroPlannerPackage.Literals.DOMAIN__ROUTINGS);
 			childrenFeatures.add(ToUseMacroPlannerPackage.Literals.DOMAIN__DATA);
-			childrenFeatures.add(ToUseMacroPlannerPackage.Literals.DOMAIN__CHAINS);
 			childrenFeatures.add(ToUseMacroPlannerPackage.Literals.DOMAIN__SCENARIOS);
 		}
 		return childrenFeatures;
@@ -135,8 +136,9 @@ public class DomainItemProvider
 
 		switch (notification.getFeatureID(Domain.class)) {
 			case ToUseMacroPlannerPackage.DOMAIN__MASTER_DATA:
+			case ToUseMacroPlannerPackage.DOMAIN__LIMITS:
+			case ToUseMacroPlannerPackage.DOMAIN__ROUTINGS:
 			case ToUseMacroPlannerPackage.DOMAIN__DATA:
-			case ToUseMacroPlannerPackage.DOMAIN__CHAINS:
 			case ToUseMacroPlannerPackage.DOMAIN__SCENARIOS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -162,13 +164,18 @@ public class DomainItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ToUseMacroPlannerPackage.Literals.DOMAIN__DATA,
-				 MacroPlannerFactory.eINSTANCE.createSupplyChainData()));
+				(ToUseMacroPlannerPackage.Literals.DOMAIN__LIMITS,
+				 MacroPlannerFactory.eINSTANCE.createSupplyChainLimits()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ToUseMacroPlannerPackage.Literals.DOMAIN__CHAINS,
+				(ToUseMacroPlannerPackage.Literals.DOMAIN__ROUTINGS,
 				 MacroPlannerFactory.eINSTANCE.createSupplyChainRoutings()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ToUseMacroPlannerPackage.Literals.DOMAIN__DATA,
+				 MacroPlannerFactory.eINSTANCE.createSupplyChainData()));
 
 		newChildDescriptors.add
 			(createChildParameter
