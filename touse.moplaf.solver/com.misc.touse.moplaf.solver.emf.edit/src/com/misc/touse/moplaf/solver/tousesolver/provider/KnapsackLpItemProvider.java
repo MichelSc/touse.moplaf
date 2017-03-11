@@ -3,7 +3,6 @@
 package com.misc.touse.moplaf.solver.tousesolver.provider;
 
 
-import com.misc.common.moplaf.solver.SolverFactory;
 import com.misc.common.moplaf.solver.provider.GeneratorItemProvider;
 import com.misc.common.moplaf.solver.provider.Util;
 import com.misc.touse.moplaf.solver.tousesolver.KnapsackLp;
@@ -128,11 +127,6 @@ public class KnapsackLpItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TousesolverPackage.Literals.KNAPSACK_LP__VALUE,
-				 SolverFactory.eINSTANCE.createGeneratorLpGoal()));
 
 		Util.collectNewChildSolverDescriptors2(newChildDescriptors, 
                 object, 

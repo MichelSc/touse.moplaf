@@ -3,8 +3,6 @@
 package com.misc.touse.moplaf.macroplanner.provider;
 
 
-import com.misc.common.moplaf.common.EnabledFeedback;
-
 import com.misc.common.moplaf.macroplanner.solver.MacroPlannerSolverPackage;
 
 import com.misc.common.moplaf.macroplanner.solver.provider.LPMacroPlannerItemProvider;
@@ -21,6 +19,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -52,8 +51,31 @@ public class ToUseLPMacroPlannerItemProvider extends LPMacroPlannerItemProvider 
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addSolversPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Solvers feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSolversPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ToUseLPMacroPlanner_Solvers_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseLPMacroPlanner_Solvers_feature", "_UI_ToUseLPMacroPlanner_type"),
+				 ToUseMacroPlannerPackage.Literals.TO_USE_LP_MACRO_PLANNER__SOLVERS,
+				 false,
+				 false,
+				 false,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -87,17 +109,6 @@ public class ToUseLPMacroPlannerItemProvider extends LPMacroPlannerItemProvider 
 	}
 
 	/**
-	 * This returns ToUseLPMacroPlanner.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/ToUseLPMacroPlanner"));
-	}
-
-	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -105,8 +116,7 @@ public class ToUseLPMacroPlannerItemProvider extends LPMacroPlannerItemProvider 
 	 */
 	@Override
 	public String getText(Object object) {
-		EnabledFeedback labelValue = ((ToUseLPMacroPlanner)object).getRunFeedback();
-		String label = labelValue == null ? null : labelValue.toString();
+		String label = ((ToUseLPMacroPlanner)object).getCode();
 		return label == null || label.length() == 0 ?
 			getString("_UI_ToUseLPMacroPlanner_type") :
 			getString("_UI_ToUseLPMacroPlanner_type") + " " + label;
@@ -142,7 +152,9 @@ public class ToUseLPMacroPlannerItemProvider extends LPMacroPlannerItemProvider 
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 		
-		Util.collectNewChildSolverDescriptors2(newChildDescriptors, object, ToUseMacroPlannerPackage.TO_USE_LP_MACRO_PLANNER__SOLVERS);
+		Util.collectNewChildSolverDescriptors2(newChildDescriptors, 
+				                               object, 
+				                               ToUseMacroPlannerPackage.Literals.TO_USE_LP_MACRO_PLANNER__SOLVERS);
 	}
 
 	/**

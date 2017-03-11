@@ -14,5 +14,10 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseMacroPlanner.ecore#//Domain/Chains"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseMacroPlanner.ecore#//Domain/Scenarios"/>
     </genClasses>
+    <genClasses image="false" ecoreClass="ToUseMacroPlanner.ecore#//ToUseLPMacroPlanner"
+        labelFeature="../../com.misc.common.moplaf.solver.emf/model/solver.genmodel#//solver/Generator/Code">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseMacroPlanner.ecore#//ToUseLPMacroPlanner/Solvers"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="ToUseMacroPlanner.ecore#//ToUseScenario"/>
   </genPackages>
 </genmodel:GenModel>

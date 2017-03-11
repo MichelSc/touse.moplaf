@@ -7,7 +7,6 @@ import com.misc.common.moplaf.macroplanner.solver.impl.LPMacroPlannerImpl;
 import com.misc.common.moplaf.solver.Solver;
 import com.misc.touse.moplaf.macroplanner.ToUseLPMacroPlanner;
 import com.misc.touse.moplaf.macroplanner.ToUseMacroPlannerPackage;
-
 import java.util.Collection;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;

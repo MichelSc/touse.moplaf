@@ -116,6 +116,7 @@ import org.eclipse.emf.edit.ui.util.EditUIMarkerHelper;
 import org.eclipse.emf.edit.ui.util.EditUIUtil;
 import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 import com.misc.touse.moplaf.solver.tousesolver.provider.TousesolverItemProviderAdapterFactory;
+import com.misc.common.moplaf.job.provider.JobItemProviderAdapterFactory;
 import com.misc.common.moplaf.solver.provider.SolverItemProviderAdapterFactory;
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 
@@ -664,6 +665,7 @@ public class TousesolverEditor
 		adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new TousesolverItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new SolverItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new JobItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
 		// Create the command stack that will notify this editor as commands are executed.
