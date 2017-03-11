@@ -2,10 +2,10 @@
  */
 package com.misc.touse.moplaf.solver.tousesolver.impl;
 
-import com.misc.common.moplaf.solver.EnumLpVarType;
+
 import com.misc.common.moplaf.solver.GeneratorLpVar;
-import com.misc.common.moplaf.solver.SolverFactory;
 import com.misc.common.moplaf.solver.impl.GeneratorTupleImpl;
+import com.misc.common.moplaf.solver.util.Util;
 import com.misc.touse.moplaf.solver.tousesolver.Item;
 import com.misc.touse.moplaf.solver.tousesolver.LpItem;
 import com.misc.touse.moplaf.solver.tousesolver.TousesolverPackage;
@@ -239,11 +239,7 @@ public class LpItemImpl extends GeneratorTupleImpl implements LpItem {
 		super.generateVars();
 		
 		//Item lpitem = this.getItem();
-		GeneratorLpVar var = SolverFactory.eINSTANCE.createGeneratorLpVar();
-    	var.setType(EnumLpVarType.ENUM_LITERAL_LP_VAR_INTEGER);;
-    	var.setLowerBound(0.0f);
-    	var.setUpperBound(1.0f);
-    	var.setName("itemin");
+		GeneratorLpVar var = Util.createGeneratorLpVarIntegerBinary("itmein");
     	this.setVarInKnapsack(var);  // owning
 	}
 	
