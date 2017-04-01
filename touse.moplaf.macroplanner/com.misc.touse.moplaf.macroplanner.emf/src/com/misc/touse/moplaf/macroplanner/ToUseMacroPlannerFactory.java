@@ -31,24 +31,6 @@ public interface ToUseMacroPlannerFactory extends EFactory {
 	Domain createDomain();
 
 	/**
-	 * Returns a new object of class '<em>To Use LP Macro Planner</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>To Use LP Macro Planner</em>'.
-	 * @generated
-	 */
-	ToUseLPMacroPlanner createToUseLPMacroPlanner();
-
-	/**
-	 * Returns a new object of class '<em>To Use Scenario</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>To Use Scenario</em>'.
-	 * @generated
-	 */
-	ToUseScenario createToUseScenario();
-
-	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

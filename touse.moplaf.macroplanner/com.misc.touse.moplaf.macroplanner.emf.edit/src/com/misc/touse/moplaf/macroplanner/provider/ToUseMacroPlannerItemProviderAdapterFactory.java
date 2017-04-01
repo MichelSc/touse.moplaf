@@ -95,52 +95,6 @@ public class ToUseMacroPlannerItemProviderAdapterFactory extends ToUseMacroPlann
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.macroplanner.ToUseLPMacroPlanner} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ToUseLPMacroPlannerItemProvider toUseLPMacroPlannerItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.misc.touse.moplaf.macroplanner.ToUseLPMacroPlanner}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createToUseLPMacroPlannerAdapter() {
-		if (toUseLPMacroPlannerItemProvider == null) {
-			toUseLPMacroPlannerItemProvider = new ToUseLPMacroPlannerItemProvider(this);
-		}
-
-		return toUseLPMacroPlannerItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.macroplanner.ToUseScenario} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ToUseScenarioItemProvider toUseScenarioItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.misc.touse.moplaf.macroplanner.ToUseScenario}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createToUseScenarioAdapter() {
-		if (toUseScenarioItemProvider == null) {
-			toUseScenarioItemProvider = new ToUseScenarioItemProvider(this);
-		}
-
-		return toUseScenarioItemProvider;
-	}
-
-	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -240,8 +194,6 @@ public class ToUseMacroPlannerItemProviderAdapterFactory extends ToUseMacroPlann
 	 */
 	public void dispose() {
 		if (domainItemProvider != null) domainItemProvider.dispose();
-		if (toUseLPMacroPlannerItemProvider != null) toUseLPMacroPlannerItemProvider.dispose();
-		if (toUseScenarioItemProvider != null) toUseScenarioItemProvider.dispose();
 	}
 
 }

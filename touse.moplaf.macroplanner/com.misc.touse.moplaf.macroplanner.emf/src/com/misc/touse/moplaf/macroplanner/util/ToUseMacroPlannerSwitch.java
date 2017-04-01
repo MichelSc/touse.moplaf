@@ -2,10 +2,6 @@
  */
 package com.misc.touse.moplaf.macroplanner.util;
 
-import com.misc.common.moplaf.job.Run;
-import com.misc.common.moplaf.macroplanner.solver.LPMacroPlanner;
-import com.misc.common.moplaf.macroplanner.solver.Scenario;
-import com.misc.common.moplaf.solver.Generator;
 import com.misc.touse.moplaf.macroplanner.*;
 
 import org.eclipse.emf.ecore.EObject;
@@ -76,22 +72,6 @@ public class ToUseMacroPlannerSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ToUseMacroPlannerPackage.TO_USE_LP_MACRO_PLANNER: {
-				ToUseLPMacroPlanner toUseLPMacroPlanner = (ToUseLPMacroPlanner)theEObject;
-				T result = caseToUseLPMacroPlanner(toUseLPMacroPlanner);
-				if (result == null) result = caseLPMacroPlanner(toUseLPMacroPlanner);
-				if (result == null) result = caseGenerator(toUseLPMacroPlanner);
-				if (result == null) result = caseRun(toUseLPMacroPlanner);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ToUseMacroPlannerPackage.TO_USE_SCENARIO: {
-				ToUseScenario toUseScenario = (ToUseScenario)theEObject;
-				T result = caseToUseScenario(toUseScenario);
-				if (result == null) result = caseScenario(toUseScenario);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -108,96 +88,6 @@ public class ToUseMacroPlannerSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseDomain(Domain object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>To Use LP Macro Planner</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>To Use LP Macro Planner</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseToUseLPMacroPlanner(ToUseLPMacroPlanner object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>To Use Scenario</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>To Use Scenario</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseToUseScenario(ToUseScenario object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Run</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Run</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseRun(Run object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Generator</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Generator</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGenerator(Generator object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>LP Macro Planner</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>LP Macro Planner</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseLPMacroPlanner(LPMacroPlanner object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Scenario</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Scenario</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseScenario(Scenario object) {
 		return null;
 	}
 

@@ -57,8 +57,6 @@ public class ToUseMacroPlannerFactoryImpl extends EFactoryImpl implements ToUseM
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case ToUseMacroPlannerPackage.DOMAIN: return createDomain();
-			case ToUseMacroPlannerPackage.TO_USE_LP_MACRO_PLANNER: return createToUseLPMacroPlanner();
-			case ToUseMacroPlannerPackage.TO_USE_SCENARIO: return createToUseScenario();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -72,26 +70,6 @@ public class ToUseMacroPlannerFactoryImpl extends EFactoryImpl implements ToUseM
 	public Domain createDomain() {
 		DomainImpl domain = new DomainImpl();
 		return domain;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ToUseLPMacroPlanner createToUseLPMacroPlanner() {
-		ToUseLPMacroPlannerImpl toUseLPMacroPlanner = new ToUseLPMacroPlannerImpl();
-		return toUseLPMacroPlanner;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ToUseScenario createToUseScenario() {
-		ToUseScenarioImpl toUseScenario = new ToUseScenarioImpl();
-		return toUseScenario;
 	}
 
 	/**

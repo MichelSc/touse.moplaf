@@ -12,6 +12,7 @@ import com.misc.common.moplaf.solver.provider.SolverEditPlugin;
 
 import com.misc.common.moplaf.time.discrete.provider.TimeDiscreteEditPlugin;
 
+import com.misc.common.moplaf.time.provider.TimeEditPlugin;
 import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
@@ -53,6 +54,7 @@ public final class ToUseMacroPlannerEditPlugin extends EMFPlugin {
 		     MacroPlannerSolverEditPlugin.INSTANCE,
 		     SolverEditPlugin.INSTANCE,
 		     TimeDiscreteEditPlugin.INSTANCE,
+		     TimeEditPlugin.INSTANCE,
 		   });
 	}
 

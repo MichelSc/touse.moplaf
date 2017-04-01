@@ -4,8 +4,8 @@ package com.misc.touse.moplaf.macroplanner.provider;
 
 
 import com.misc.common.moplaf.macroplanner.MacroPlannerFactory;
+import com.misc.common.moplaf.macroplanner.solver.MacroPlannerSolverFactory;
 import com.misc.touse.moplaf.macroplanner.Domain;
-import com.misc.touse.moplaf.macroplanner.ToUseMacroPlannerFactory;
 import com.misc.touse.moplaf.macroplanner.ToUseMacroPlannerPackage;
 
 import java.util.Collection;
@@ -78,9 +78,6 @@ public class DomainItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ToUseMacroPlannerPackage.Literals.DOMAIN__MASTER_DATA);
-			childrenFeatures.add(ToUseMacroPlannerPackage.Literals.DOMAIN__LIMITS);
-			childrenFeatures.add(ToUseMacroPlannerPackage.Literals.DOMAIN__ROUTINGS);
 			childrenFeatures.add(ToUseMacroPlannerPackage.Literals.DOMAIN__DATA);
 			childrenFeatures.add(ToUseMacroPlannerPackage.Literals.DOMAIN__SCENARIOS);
 		}
@@ -135,9 +132,6 @@ public class DomainItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Domain.class)) {
-			case ToUseMacroPlannerPackage.DOMAIN__MASTER_DATA:
-			case ToUseMacroPlannerPackage.DOMAIN__LIMITS:
-			case ToUseMacroPlannerPackage.DOMAIN__ROUTINGS:
 			case ToUseMacroPlannerPackage.DOMAIN__DATA:
 			case ToUseMacroPlannerPackage.DOMAIN__SCENARIOS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
@@ -159,17 +153,17 @@ public class DomainItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ToUseMacroPlannerPackage.Literals.DOMAIN__MASTER_DATA,
+				(ToUseMacroPlannerPackage.Literals.DOMAIN__DATA,
 				 MacroPlannerFactory.eINSTANCE.createSupplyChainMasterData()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ToUseMacroPlannerPackage.Literals.DOMAIN__LIMITS,
+				(ToUseMacroPlannerPackage.Literals.DOMAIN__DATA,
 				 MacroPlannerFactory.eINSTANCE.createSupplyChainLimits()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ToUseMacroPlannerPackage.Literals.DOMAIN__ROUTINGS,
+				(ToUseMacroPlannerPackage.Literals.DOMAIN__DATA,
 				 MacroPlannerFactory.eINSTANCE.createSupplyChainRoutings()));
 
 		newChildDescriptors.add
@@ -180,7 +174,7 @@ public class DomainItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(ToUseMacroPlannerPackage.Literals.DOMAIN__SCENARIOS,
-				 ToUseMacroPlannerFactory.eINSTANCE.createToUseScenario()));
+				 MacroPlannerSolverFactory.eINSTANCE.createScenario()));
 	}
 
 	/**

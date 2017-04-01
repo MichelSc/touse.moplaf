@@ -2,10 +2,6 @@
  */
 package com.misc.touse.moplaf.macroplanner.util;
 
-import com.misc.common.moplaf.job.Run;
-import com.misc.common.moplaf.macroplanner.solver.LPMacroPlanner;
-import com.misc.common.moplaf.macroplanner.solver.Scenario;
-import com.misc.common.moplaf.solver.Generator;
 import com.misc.touse.moplaf.macroplanner.*;
 
 import org.eclipse.emf.common.notify.Adapter;
@@ -76,30 +72,6 @@ public class ToUseMacroPlannerAdapterFactory extends AdapterFactoryImpl {
 				return createDomainAdapter();
 			}
 			@Override
-			public Adapter caseToUseLPMacroPlanner(ToUseLPMacroPlanner object) {
-				return createToUseLPMacroPlannerAdapter();
-			}
-			@Override
-			public Adapter caseToUseScenario(ToUseScenario object) {
-				return createToUseScenarioAdapter();
-			}
-			@Override
-			public Adapter caseRun(Run object) {
-				return createRunAdapter();
-			}
-			@Override
-			public Adapter caseGenerator(Generator object) {
-				return createGeneratorAdapter();
-			}
-			@Override
-			public Adapter caseLPMacroPlanner(LPMacroPlanner object) {
-				return createLPMacroPlannerAdapter();
-			}
-			@Override
-			public Adapter caseScenario(Scenario object) {
-				return createScenarioAdapter();
-			}
-			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -130,90 +102,6 @@ public class ToUseMacroPlannerAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDomainAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.macroplanner.ToUseLPMacroPlanner <em>To Use LP Macro Planner</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.touse.moplaf.macroplanner.ToUseLPMacroPlanner
-	 * @generated
-	 */
-	public Adapter createToUseLPMacroPlannerAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.macroplanner.ToUseScenario <em>To Use Scenario</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.touse.moplaf.macroplanner.ToUseScenario
-	 * @generated
-	 */
-	public Adapter createToUseScenarioAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.job.Run <em>Run</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.job.Run
-	 * @generated
-	 */
-	public Adapter createRunAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.solver.Generator <em>Generator</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.solver.Generator
-	 * @generated
-	 */
-	public Adapter createGeneratorAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.macroplanner.solver.LPMacroPlanner <em>LP Macro Planner</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.macroplanner.solver.LPMacroPlanner
-	 * @generated
-	 */
-	public Adapter createLPMacroPlannerAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.macroplanner.solver.Scenario <em>Scenario</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.macroplanner.solver.Scenario
-	 * @generated
-	 */
-	public Adapter createScenarioAdapter() {
 		return null;
 	}
 
