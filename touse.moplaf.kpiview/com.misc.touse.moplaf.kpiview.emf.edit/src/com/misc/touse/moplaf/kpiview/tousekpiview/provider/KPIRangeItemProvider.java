@@ -4,7 +4,6 @@ package com.misc.touse.moplaf.kpiview.tousekpiview.provider;
 
 
 import com.misc.common.moplaf.common.Color;
-import com.misc.common.moplaf.kpiview.emf.edit.IItemKPIRangeProvider;
 import com.misc.touse.moplaf.kpiview.tousekpiview.KPIRange;
 import com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewPackage;
 
@@ -31,7 +30,6 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 /**
  * This is the item provider adapter for a {@link com.misc.touse.moplaf.kpiview.tousekpiview.KPIRange} object.
  * <!-- begin-user-doc -->
- * @implements IItemKPIRangeProvider
  * @implements IItemColorProvider 
  * <!-- end-user-doc -->
  * @generated
@@ -39,7 +37,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 public class KPIRangeItemProvider 
 	extends ItemProviderAdapter
 	implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource, IItemKPIRangeProvider, IItemColorProvider {
+		IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource, IItemColorProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -228,25 +226,6 @@ public class KPIRangeItemProvider
 		return TousekpiviewEditPlugin.INSTANCE;
 	}
 
-	/**
-	 * Specified by IItemKPIRangeProvider
-	 */
-	@Override
-	public float getLowAmount(Object element) {
-		KPIRange range = (KPIRange)element;
-		return range.getLowValue();
-	}
-
-	/**
-	 * Specified by IItemKPIRangeProvider
-	 */
-	@Override
-	public float getHighAmount(Object element) {
-		KPIRange range = (KPIRange)element;
-		return range.getHighValue();
-	}
-
-	
 	/**
 	 * Specified by  IItemColorProvider
 	 */

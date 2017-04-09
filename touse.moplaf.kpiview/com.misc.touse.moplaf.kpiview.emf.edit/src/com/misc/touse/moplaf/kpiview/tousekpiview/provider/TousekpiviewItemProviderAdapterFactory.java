@@ -2,8 +2,6 @@
  */
 package com.misc.touse.moplaf.kpiview.tousekpiview.provider;
 
-import com.misc.common.moplaf.kpiview.emf.edit.IItemKPIProvider;
-import com.misc.common.moplaf.kpiview.emf.edit.IItemKPIRangeProvider;
 import com.misc.common.moplaf.kpiview.emf.edit.IItemKPIsProvider;
 import com.misc.touse.moplaf.kpiview.tousekpiview.util.TousekpiviewAdapterFactory;
 
@@ -74,8 +72,6 @@ public class TousekpiviewItemProviderAdapterFactory extends TousekpiviewAdapterF
 		supportedTypes.add(IItemPropertySource.class);
 		supportedTypes.add(IItemColorProvider.class);
 		supportedTypes.add(IItemKPIsProvider.class);
-		supportedTypes.add(IItemKPIProvider.class);
-		supportedTypes.add(IItemKPIRangeProvider.class);
 	}
 
 	/**

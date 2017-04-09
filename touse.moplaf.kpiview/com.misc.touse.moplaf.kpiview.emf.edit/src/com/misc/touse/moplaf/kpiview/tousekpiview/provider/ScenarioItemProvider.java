@@ -5,6 +5,8 @@ package com.misc.touse.moplaf.kpiview.tousekpiview.provider;
 
 import com.misc.common.moplaf.common.Color;
 import com.misc.common.moplaf.kpiview.emf.edit.IItemKPIsProvider;
+import com.misc.touse.moplaf.kpiview.tousekpiview.KPI;
+import com.misc.touse.moplaf.kpiview.tousekpiview.KPIRange;
 import com.misc.touse.moplaf.kpiview.tousekpiview.Scenario;
 import com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewFactory;
 import com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewPackage;
@@ -240,6 +242,78 @@ public class ScenarioItemProvider
 		int rgb = scenario.getColor();
 		Color color = new Color(rgb); 
 		return color.toURI();
+	}
+
+	/**
+	 * Specified by IItemKPIsProvider
+	 */
+	@Override
+	public float getKPIAmount(Object element, Object kpi) {
+		KPI kpiItem = (KPI) kpi;
+		return kpiItem.getValue();
+	}
+
+	/**
+	 * Specified by IItemKPIsProvider
+	 */
+	@Override
+	public float getKPIMinAmount(Object element, Object kpi) {
+		KPI kpiItem = (KPI) kpi;
+		return kpiItem.getMinValue();
+	}
+
+	/**
+	 * Specified by IItemKPIsProvider
+	 */
+	@Override
+	public float getKPIMaxAmount(Object element, Object kpi) {
+		KPI kpiItem = (KPI) kpi;
+		return kpiItem.getMaxValue();
+	}
+
+	/**
+	 * Specified by IItemKPIsProvider
+	 */
+	@Override
+	public String getKPIID(Object element, Object kpi) {
+		KPI kpiItem = (KPI) kpi;
+		return kpiItem.getName();
+	}
+
+	/**
+	 * Specified by IItemKPIsProvider
+	 */
+	@Override
+	public String getKPIUnit(Object element, Object kpi) {
+		KPI kpiItem = (KPI) kpi;
+		return kpiItem.getUnit();
+	}
+
+	/**
+	 * Specified by IItemKPIsProvider
+	 */
+	@Override
+	public Collection<?> getKPIRanges(Object element, Object kpi) {
+		KPI kpiItem = (KPI) kpi;
+		return kpiItem.getRanges();
+	}
+
+	/**
+	 * Specified by IItemKPIsProvider
+	 */
+	@Override
+	public float getKPIRangeLowAmount(Object element, Object kpi, Object range) {
+		KPIRange itemrange = (KPIRange)range;
+		return itemrange.getLowValue();
+	}
+
+	/**
+	 * Specified by IItemKPIsProvider
+	 */
+	@Override
+	public float getKPIRangeHighAmount(Object element, Object kpi, Object range) {
+		KPIRange itemrange = (KPIRange)range;
+		return itemrange.getHighValue();
 	}
 
 }

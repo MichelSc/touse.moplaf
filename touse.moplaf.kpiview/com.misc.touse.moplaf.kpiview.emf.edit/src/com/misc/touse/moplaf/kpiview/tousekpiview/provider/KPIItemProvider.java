@@ -3,7 +3,6 @@
 package com.misc.touse.moplaf.kpiview.tousekpiview.provider;
 
 
-import com.misc.common.moplaf.kpiview.emf.edit.IItemKPIProvider;
 import com.misc.touse.moplaf.kpiview.tousekpiview.KPI;
 import com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewFactory;
 import com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewPackage;
@@ -32,14 +31,13 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 /**
  * This is the item provider adapter for a {@link com.misc.touse.moplaf.kpiview.tousekpiview.KPI} object.
  * <!-- begin-user-doc -->
- * @implements IItemKPIProvider
  * <!-- end-user-doc -->
  * @generated
  */
 public class KPIItemProvider 
 	extends ItemProviderAdapter
 	implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource, IItemKPIProvider {
+		IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -312,60 +310,6 @@ public class KPIItemProvider
 	@Override
 	public ResourceLocator getResourceLocator() {
 		return TousekpiviewEditPlugin.INSTANCE;
-	}
-
-	/**
-	 * Specified by IItemKPIProvider
-	 */
-	@Override
-	public float getKPIAmount(Object element) {
-		KPI kpi = (KPI)element;
-		return kpi.getValue();
-	}
-
-	/**
-	 * Specified by IItemKPIProvider
-	 */
-	@Override
-	public float getMinAmount(Object element) {
-		KPI kpi = (KPI)element;
-		return kpi.getMinValue();
-	}
-
-	/**
-	 * Specified by IItemKPIProvider
-	 */
-	@Override
-	public float getMaxAmount(Object element) {
-		KPI kpi = (KPI)element;
-		return kpi.getMaxValue();
-	}
-
-	/**
-	 * Specified by IItemKPIProvider
-	 */
-	@Override
-	public String getKPIID(Object element) {
-		KPI kpi = (KPI)element;
-		return kpi.getName();
-	}
-
-	/**
-	 * Specified by IItemKPIProvider
-	 */
-	@Override
-	public Collection<?> getKPIRanges(Object element) {
-		KPI kpi = (KPI)element;
-		return kpi.getRanges();
-	}
-
-	/**
-	 * Specified by IItemKPIProvider
-	 */
-	@Override
-	public String getUnit(Object element) {
-		KPI kpi = (KPI)element;
-		return kpi.getUnit();
 	}
 
 }
