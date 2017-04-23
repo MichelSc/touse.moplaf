@@ -3,6 +3,9 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="macroplanner" nsURI="http://www.misc.com/touse/moplaf/macroplanner/model/0.1"
     nsPrefix="mptu">
   <eClassifiers xsi:type="ecore:EClass" name="Domain">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="StaticData" upperBound="-1"
+        eType="ecore:EClass ../../com.misc.common.moplaf.macroplanner.emf/model/MacroPlanner.ecore#//MacroPlannerStaticData"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Data" upperBound="-1" eType="ecore:EClass ../../com.misc.common.moplaf.macroplanner.emf/model/MacroPlanner.ecore#//MacroPlannerData"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Scenarios" upperBound="-1"

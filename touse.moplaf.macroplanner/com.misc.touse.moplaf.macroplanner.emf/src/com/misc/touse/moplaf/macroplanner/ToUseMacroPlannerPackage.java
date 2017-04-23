@@ -76,13 +76,22 @@ public interface ToUseMacroPlannerPackage extends EPackage {
 	int DOMAIN = 0;
 
 	/**
+	 * The feature id for the '<em><b>Static Data</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN__STATIC_DATA = 0;
+
+	/**
 	 * The feature id for the '<em><b>Data</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN__DATA = 0;
+	int DOMAIN__DATA = 1;
 
 	/**
 	 * The feature id for the '<em><b>Scenarios</b></em>' containment reference list.
@@ -91,7 +100,7 @@ public interface ToUseMacroPlannerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN__SCENARIOS = 1;
+	int DOMAIN__SCENARIOS = 2;
 
 	/**
 	 * The number of structural features of the '<em>Domain</em>' class.
@@ -100,7 +109,7 @@ public interface ToUseMacroPlannerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_FEATURE_COUNT = 2;
+	int DOMAIN_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Domain</em>' class.
@@ -143,6 +152,17 @@ public interface ToUseMacroPlannerPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getDomain_Scenarios();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.macroplanner.Domain#getStaticData <em>Static Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Static Data</em>'.
+	 * @see com.misc.touse.moplaf.macroplanner.Domain#getStaticData()
+	 * @see #getDomain()
+	 * @generated
+	 */
+	EReference getDomain_StaticData();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -192,6 +212,14 @@ public interface ToUseMacroPlannerPackage extends EPackage {
 		 * @generated
 		 */
 		EReference DOMAIN__SCENARIOS = eINSTANCE.getDomain_Scenarios();
+
+		/**
+		 * The meta object literal for the '<em><b>Static Data</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DOMAIN__STATIC_DATA = eINSTANCE.getDomain_StaticData();
 
 	}
 

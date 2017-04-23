@@ -88,6 +88,7 @@ public class DomainItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
+			childrenFeatures.add(ToUseMacroPlannerPackage.Literals.DOMAIN__STATIC_DATA);
 			childrenFeatures.add(ToUseMacroPlannerPackage.Literals.DOMAIN__DATA);
 			childrenFeatures.add(ToUseMacroPlannerPackage.Literals.DOMAIN__SCENARIOS);
 		}
@@ -142,6 +143,7 @@ public class DomainItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Domain.class)) {
+			case ToUseMacroPlannerPackage.DOMAIN__STATIC_DATA:
 			case ToUseMacroPlannerPackage.DOMAIN__DATA:
 			case ToUseMacroPlannerPackage.DOMAIN__SCENARIOS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
@@ -163,23 +165,13 @@ public class DomainItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ToUseMacroPlannerPackage.Literals.DOMAIN__DATA,
-				 MacroPlannerFactory.eINSTANCE.createSupplyChainMasterData()));
+				(ToUseMacroPlannerPackage.Literals.DOMAIN__STATIC_DATA,
+				 MacroPlannerFactory.eINSTANCE.createMacroPlannerStaticData()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(ToUseMacroPlannerPackage.Literals.DOMAIN__DATA,
-				 MacroPlannerFactory.eINSTANCE.createSupplyChainLimits()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ToUseMacroPlannerPackage.Literals.DOMAIN__DATA,
-				 MacroPlannerFactory.eINSTANCE.createSupplyChainRoutings()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ToUseMacroPlannerPackage.Literals.DOMAIN__DATA,
-				 MacroPlannerFactory.eINSTANCE.createSupplyChainData()));
+				 MacroPlannerFactory.eINSTANCE.createMacroPlannerData()));
 
 		newChildDescriptors.add
 			(createChildParameter

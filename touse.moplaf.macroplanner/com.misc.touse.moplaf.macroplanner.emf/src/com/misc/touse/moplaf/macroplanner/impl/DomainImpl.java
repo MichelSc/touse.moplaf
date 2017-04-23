@@ -13,6 +13,7 @@
 package com.misc.touse.moplaf.macroplanner.impl;
 
 import com.misc.common.moplaf.macroplanner.MacroPlannerData;
+import com.misc.common.moplaf.macroplanner.MacroPlannerStaticData;
 import com.misc.common.moplaf.macroplanner.solver.Scenario;
 import com.misc.touse.moplaf.macroplanner.Domain;
 import com.misc.touse.moplaf.macroplanner.ToUseMacroPlannerPackage;
@@ -38,6 +39,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link com.misc.touse.moplaf.macroplanner.impl.DomainImpl#getStaticData <em>Static Data</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.macroplanner.impl.DomainImpl#getData <em>Data</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.macroplanner.impl.DomainImpl#getScenarios <em>Scenarios</em>}</li>
  * </ul>
@@ -45,6 +47,16 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
+	/**
+	 * The cached value of the '{@link #getStaticData() <em>Static Data</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStaticData()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<MacroPlannerStaticData> staticData;
+
 	/**
 	 * The cached value of the '{@link #getData() <em>Data</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -113,9 +125,23 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<MacroPlannerStaticData> getStaticData() {
+		if (staticData == null) {
+			staticData = new EObjectContainmentEList<MacroPlannerStaticData>(MacroPlannerStaticData.class, this, ToUseMacroPlannerPackage.DOMAIN__STATIC_DATA);
+		}
+		return staticData;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case ToUseMacroPlannerPackage.DOMAIN__STATIC_DATA:
+				return ((InternalEList<?>)getStaticData()).basicRemove(otherEnd, msgs);
 			case ToUseMacroPlannerPackage.DOMAIN__DATA:
 				return ((InternalEList<?>)getData()).basicRemove(otherEnd, msgs);
 			case ToUseMacroPlannerPackage.DOMAIN__SCENARIOS:
@@ -132,6 +158,8 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case ToUseMacroPlannerPackage.DOMAIN__STATIC_DATA:
+				return getStaticData();
 			case ToUseMacroPlannerPackage.DOMAIN__DATA:
 				return getData();
 			case ToUseMacroPlannerPackage.DOMAIN__SCENARIOS:
@@ -149,6 +177,10 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case ToUseMacroPlannerPackage.DOMAIN__STATIC_DATA:
+				getStaticData().clear();
+				getStaticData().addAll((Collection<? extends MacroPlannerStaticData>)newValue);
+				return;
 			case ToUseMacroPlannerPackage.DOMAIN__DATA:
 				getData().clear();
 				getData().addAll((Collection<? extends MacroPlannerData>)newValue);
@@ -169,6 +201,9 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case ToUseMacroPlannerPackage.DOMAIN__STATIC_DATA:
+				getStaticData().clear();
+				return;
 			case ToUseMacroPlannerPackage.DOMAIN__DATA:
 				getData().clear();
 				return;
@@ -187,6 +222,8 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case ToUseMacroPlannerPackage.DOMAIN__STATIC_DATA:
+				return staticData != null && !staticData.isEmpty();
 			case ToUseMacroPlannerPackage.DOMAIN__DATA:
 				return data != null && !data.isEmpty();
 			case ToUseMacroPlannerPackage.DOMAIN__SCENARIOS:

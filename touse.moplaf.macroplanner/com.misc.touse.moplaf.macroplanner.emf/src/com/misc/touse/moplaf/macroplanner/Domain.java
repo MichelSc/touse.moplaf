@@ -13,6 +13,7 @@
 package com.misc.touse.moplaf.macroplanner;
 
 import com.misc.common.moplaf.macroplanner.MacroPlannerData;
+import com.misc.common.moplaf.macroplanner.MacroPlannerStaticData;
 import com.misc.common.moplaf.macroplanner.solver.Scenario;
 import org.eclipse.emf.common.util.EList;
 
@@ -27,6 +28,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link com.misc.touse.moplaf.macroplanner.Domain#getStaticData <em>Static Data</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.macroplanner.Domain#getData <em>Data</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.macroplanner.Domain#getScenarios <em>Scenarios</em>}</li>
  * </ul>
@@ -67,5 +69,21 @@ public interface Domain extends EObject {
 	 * @generated
 	 */
 	EList<Scenario> getScenarios();
+
+	/**
+	 * Returns the value of the '<em><b>Static Data</b></em>' containment reference list.
+	 * The list contents are of type {@link com.misc.common.moplaf.macroplanner.MacroPlannerStaticData}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Static Data</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Static Data</em>' containment reference list.
+	 * @see com.misc.touse.moplaf.macroplanner.ToUseMacroPlannerPackage#getDomain_StaticData()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<MacroPlannerStaticData> getStaticData();
 
 } // Domain

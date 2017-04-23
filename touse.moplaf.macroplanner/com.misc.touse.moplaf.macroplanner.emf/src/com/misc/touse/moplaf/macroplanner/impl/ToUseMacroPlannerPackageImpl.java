@@ -117,7 +117,7 @@ public class ToUseMacroPlannerPackageImpl extends EPackageImpl implements ToUseM
 	 * @generated
 	 */
 	public EReference getDomain_Data() {
-		return (EReference)domainEClass.getEStructuralFeatures().get(0);
+		return (EReference)domainEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -126,7 +126,16 @@ public class ToUseMacroPlannerPackageImpl extends EPackageImpl implements ToUseM
 	 * @generated
 	 */
 	public EReference getDomain_Scenarios() {
-		return (EReference)domainEClass.getEStructuralFeatures().get(1);
+		return (EReference)domainEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDomain_StaticData() {
+		return (EReference)domainEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -158,6 +167,7 @@ public class ToUseMacroPlannerPackageImpl extends EPackageImpl implements ToUseM
 
 		// Create classes and their features
 		domainEClass = createEClass(DOMAIN);
+		createEReference(domainEClass, DOMAIN__STATIC_DATA);
 		createEReference(domainEClass, DOMAIN__DATA);
 		createEReference(domainEClass, DOMAIN__SCENARIOS);
 	}
@@ -197,6 +207,7 @@ public class ToUseMacroPlannerPackageImpl extends EPackageImpl implements ToUseM
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDomain_StaticData(), theMacroPlannerPackage.getMacroPlannerStaticData(), null, "StaticData", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDomain_Data(), theMacroPlannerPackage.getMacroPlannerData(), null, "Data", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDomain_Scenarios(), theMacroPlannerSolverPackage.getScenario(), null, "Scenarios", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
