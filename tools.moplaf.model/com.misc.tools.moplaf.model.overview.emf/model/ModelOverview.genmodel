@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.misc.tools.moplaf.model.overview.emf/src"
+    modelPluginID="com.misc.tools.moplaf.model.overview.emf" modelName="ModelOverview"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>ModelOverview.ecore</foreignModel>
+  <genPackages prefix="ModelOverview" basePackage="com.misc.tools.moplaf.model" disposableProviderFactory="true"
+      ecorePackage="ModelOverview.ecore#/">
+    <genClasses ecoreClass="ModelOverview.ecore#//Overviews">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ModelOverview.ecore#//Overviews/RootObjects"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ModelOverview.ecore#//Overviews/SubOverviews"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ModelOverview.ecore#//Overviews/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ModelOverview.ecore#//Overviews/Remarks"/>
+      <genOperations ecoreOperation="ModelOverview.ecore#//Overviews/addObject">
+        <genParameters ecoreParameter="ModelOverview.ecore#//Overviews/addObject/object"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="ModelOverview.ecore#//OverviewObject">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ModelOverview.ecore#//OverviewObject/Object"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ModelOverview.ecore#//OverviewObject/Remarks"/>
+      <genOperations ecoreOperation="ModelOverview.ecore#//OverviewObject/refresh"/>
+    </genClasses>
+    <genClasses ecoreClass="ModelOverview.ecore#//OverviewCount">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ModelOverview.ecore#//OverviewCount/Count"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ModelOverview.ecore#//OverviewCount/Class"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ModelOverview.ecore#//OverviewCount/SubTypes"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

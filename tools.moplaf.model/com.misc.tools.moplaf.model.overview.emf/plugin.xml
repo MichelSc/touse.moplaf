@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ModelOverview -->
+      <package
+            uri="http://www.misc.com/tools/moplaf/model/overview/model/0.1"
+            class="com.misc.tools.moplaf.model.overview.ModelOverviewPackage"
+            genModel="model/ModelOverview.genmodel"/>
+   </extension>
+
+</plugin>
