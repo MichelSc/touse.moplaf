@@ -75,7 +75,6 @@ public class ModelOverviewSwitch<T> extends Switch<T> {
 			case ModelOverviewPackage.OVERVIEW_OBJECT: {
 				OverviewObject overviewObject = (OverviewObject)theEObject;
 				T result = caseOverviewObject(overviewObject);
-				if (result == null) result = caseOverviewCount(overviewObject);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

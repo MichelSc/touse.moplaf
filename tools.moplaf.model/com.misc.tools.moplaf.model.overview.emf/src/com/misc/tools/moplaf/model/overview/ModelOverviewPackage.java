@@ -141,51 +141,6 @@ public interface ModelOverviewPackage extends EPackage {
 	int OVERVIEW_COUNT = 2;
 
 	/**
-	 * The feature id for the '<em><b>Count</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OVERVIEW_COUNT__COUNT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Class</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OVERVIEW_COUNT__CLASS = 1;
-
-	/**
-	 * The feature id for the '<em><b>Sub Types</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OVERVIEW_COUNT__SUB_TYPES = 2;
-
-	/**
-	 * The number of structural features of the '<em>Overview Count</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OVERVIEW_COUNT_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Overview Count</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OVERVIEW_COUNT_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link com.misc.tools.moplaf.model.overview.impl.OverviewObjectImpl <em>Overview Object</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -196,40 +151,13 @@ public interface ModelOverviewPackage extends EPackage {
 	int OVERVIEW_OBJECT = 1;
 
 	/**
-	 * The feature id for the '<em><b>Count</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OVERVIEW_OBJECT__COUNT = OVERVIEW_COUNT__COUNT;
-
-	/**
-	 * The feature id for the '<em><b>Class</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OVERVIEW_OBJECT__CLASS = OVERVIEW_COUNT__CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Sub Types</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OVERVIEW_OBJECT__SUB_TYPES = OVERVIEW_COUNT__SUB_TYPES;
-
-	/**
 	 * The feature id for the '<em><b>Root Object</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OVERVIEW_OBJECT__ROOT_OBJECT = OVERVIEW_COUNT_FEATURE_COUNT + 0;
+	int OVERVIEW_OBJECT__ROOT_OBJECT = 0;
 
 	/**
 	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
@@ -238,7 +166,34 @@ public interface ModelOverviewPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OVERVIEW_OBJECT__REMARKS = OVERVIEW_COUNT_FEATURE_COUNT + 1;
+	int OVERVIEW_OBJECT__REMARKS = 1;
+
+	/**
+	 * The feature id for the '<em><b>Count</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OVERVIEW_OBJECT__COUNT = 2;
+
+	/**
+	 * The feature id for the '<em><b>Overview Counts</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OVERVIEW_OBJECT__OVERVIEW_COUNTS = 3;
+
+	/**
+	 * The feature id for the '<em><b>Root Overview Counts</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OVERVIEW_OBJECT__ROOT_OVERVIEW_COUNTS = 4;
 
 	/**
 	 * The number of structural features of the '<em>Overview Object</em>' class.
@@ -247,7 +202,7 @@ public interface ModelOverviewPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OVERVIEW_OBJECT_FEATURE_COUNT = OVERVIEW_COUNT_FEATURE_COUNT + 2;
+	int OVERVIEW_OBJECT_FEATURE_COUNT = 5;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -256,16 +211,7 @@ public interface ModelOverviewPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OVERVIEW_OBJECT___REFRESH = OVERVIEW_COUNT_OPERATION_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Book Instance</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OVERVIEW_OBJECT___BOOK_INSTANCE__EOBJECT = OVERVIEW_COUNT_OPERATION_COUNT + 1;
+	int OVERVIEW_OBJECT___REFRESH = 0;
 
 	/**
 	 * The number of operations of the '<em>Overview Object</em>' class.
@@ -274,7 +220,61 @@ public interface ModelOverviewPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OVERVIEW_OBJECT_OPERATION_COUNT = OVERVIEW_COUNT_OPERATION_COUNT + 2;
+	int OVERVIEW_OBJECT_OPERATION_COUNT = 1;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OVERVIEW_COUNT__CLASS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Sub Types</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OVERVIEW_COUNT__SUB_TYPES = 1;
+
+	/**
+	 * The feature id for the '<em><b>Super Types</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OVERVIEW_COUNT__SUPER_TYPES = 2;
+
+	/**
+	 * The feature id for the '<em><b>Count</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OVERVIEW_COUNT__COUNT = 3;
+
+	/**
+	 * The number of structural features of the '<em>Overview Count</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OVERVIEW_COUNT_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Overview Count</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OVERVIEW_COUNT_OPERATION_COUNT = 0;
 
 
 	/**
@@ -374,6 +374,39 @@ public interface ModelOverviewPackage extends EPackage {
 	EAttribute getOverviewObject_Remarks();
 
 	/**
+	 * Returns the meta object for the attribute '{@link com.misc.tools.moplaf.model.overview.OverviewObject#getCount <em>Count</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Count</em>'.
+	 * @see com.misc.tools.moplaf.model.overview.OverviewObject#getCount()
+	 * @see #getOverviewObject()
+	 * @generated
+	 */
+	EAttribute getOverviewObject_Count();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link com.misc.tools.moplaf.model.overview.OverviewObject#getOverviewCounts <em>Overview Counts</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Overview Counts</em>'.
+	 * @see com.misc.tools.moplaf.model.overview.OverviewObject#getOverviewCounts()
+	 * @see #getOverviewObject()
+	 * @generated
+	 */
+	EReference getOverviewObject_OverviewCounts();
+
+	/**
+	 * Returns the meta object for the reference list '{@link com.misc.tools.moplaf.model.overview.OverviewObject#getRootOverviewCounts <em>Root Overview Counts</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Root Overview Counts</em>'.
+	 * @see com.misc.tools.moplaf.model.overview.OverviewObject#getRootOverviewCounts()
+	 * @see #getOverviewObject()
+	 * @generated
+	 */
+	EReference getOverviewObject_RootOverviewCounts();
+
+	/**
 	 * Returns the meta object for the '{@link com.misc.tools.moplaf.model.overview.OverviewObject#refresh() <em>Refresh</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -382,16 +415,6 @@ public interface ModelOverviewPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getOverviewObject__Refresh();
-
-	/**
-	 * Returns the meta object for the '{@link com.misc.tools.moplaf.model.overview.OverviewObject#bookInstance(org.eclipse.emf.ecore.EObject) <em>Book Instance</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Book Instance</em>' operation.
-	 * @see com.misc.tools.moplaf.model.overview.OverviewObject#bookInstance(org.eclipse.emf.ecore.EObject)
-	 * @generated
-	 */
-	EOperation getOverviewObject__BookInstance__EObject();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.tools.moplaf.model.overview.OverviewCount <em>Overview Count</em>}'.
@@ -426,15 +449,26 @@ public interface ModelOverviewPackage extends EPackage {
 	EReference getOverviewCount_Class();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link com.misc.tools.moplaf.model.overview.OverviewCount#getSubTypes <em>Sub Types</em>}'.
+	 * Returns the meta object for the reference list '{@link com.misc.tools.moplaf.model.overview.OverviewCount#getSubTypes <em>Sub Types</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Sub Types</em>'.
+	 * @return the meta object for the reference list '<em>Sub Types</em>'.
 	 * @see com.misc.tools.moplaf.model.overview.OverviewCount#getSubTypes()
 	 * @see #getOverviewCount()
 	 * @generated
 	 */
 	EReference getOverviewCount_SubTypes();
+
+	/**
+	 * Returns the meta object for the reference list '{@link com.misc.tools.moplaf.model.overview.OverviewCount#getSuperTypes <em>Super Types</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Super Types</em>'.
+	 * @see com.misc.tools.moplaf.model.overview.OverviewCount#getSuperTypes()
+	 * @see #getOverviewCount()
+	 * @generated
+	 */
+	EReference getOverviewCount_SuperTypes();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -536,20 +570,36 @@ public interface ModelOverviewPackage extends EPackage {
 		EAttribute OVERVIEW_OBJECT__REMARKS = eINSTANCE.getOverviewObject_Remarks();
 
 		/**
+		 * The meta object literal for the '<em><b>Count</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute OVERVIEW_OBJECT__COUNT = eINSTANCE.getOverviewObject_Count();
+
+		/**
+		 * The meta object literal for the '<em><b>Overview Counts</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OVERVIEW_OBJECT__OVERVIEW_COUNTS = eINSTANCE.getOverviewObject_OverviewCounts();
+
+		/**
+		 * The meta object literal for the '<em><b>Root Overview Counts</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OVERVIEW_OBJECT__ROOT_OVERVIEW_COUNTS = eINSTANCE.getOverviewObject_RootOverviewCounts();
+
+		/**
 		 * The meta object literal for the '<em><b>Refresh</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EOperation OVERVIEW_OBJECT___REFRESH = eINSTANCE.getOverviewObject__Refresh();
-
-		/**
-		 * The meta object literal for the '<em><b>Book Instance</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation OVERVIEW_OBJECT___BOOK_INSTANCE__EOBJECT = eINSTANCE.getOverviewObject__BookInstance__EObject();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.tools.moplaf.model.overview.impl.OverviewCountImpl <em>Overview Count</em>}' class.
@@ -578,12 +628,20 @@ public interface ModelOverviewPackage extends EPackage {
 		EReference OVERVIEW_COUNT__CLASS = eINSTANCE.getOverviewCount_Class();
 
 		/**
-		 * The meta object literal for the '<em><b>Sub Types</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Sub Types</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference OVERVIEW_COUNT__SUB_TYPES = eINSTANCE.getOverviewCount_SubTypes();
+
+		/**
+		 * The meta object literal for the '<em><b>Super Types</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OVERVIEW_COUNT__SUPER_TYPES = eINSTANCE.getOverviewCount_SuperTypes();
 
 	}
 

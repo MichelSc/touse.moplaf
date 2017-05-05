@@ -16,9 +16,10 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link com.misc.tools.moplaf.model.overview.OverviewCount#getCount <em>Count</em>}</li>
  *   <li>{@link com.misc.tools.moplaf.model.overview.OverviewCount#getClass_ <em>Class</em>}</li>
  *   <li>{@link com.misc.tools.moplaf.model.overview.OverviewCount#getSubTypes <em>Sub Types</em>}</li>
+ *   <li>{@link com.misc.tools.moplaf.model.overview.OverviewCount#getSuperTypes <em>Super Types</em>}</li>
+ *   <li>{@link com.misc.tools.moplaf.model.overview.OverviewCount#getCount <em>Count</em>}</li>
  * </ul>
  *
  * @see com.misc.tools.moplaf.model.overview.ModelOverviewPackage#getOverviewCount()
@@ -79,19 +80,39 @@ public interface OverviewCount extends EObject {
 	void setClass(EClass value);
 
 	/**
-	 * Returns the value of the '<em><b>Sub Types</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Sub Types</b></em>' reference list.
 	 * The list contents are of type {@link com.misc.tools.moplaf.model.overview.OverviewCount}.
+	 * It is bidirectional and its opposite is '{@link com.misc.tools.moplaf.model.overview.OverviewCount#getSuperTypes <em>Super Types</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Sub Types</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Sub Types</em>' containment reference list.
+	 * @return the value of the '<em>Sub Types</em>' reference list.
 	 * @see com.misc.tools.moplaf.model.overview.ModelOverviewPackage#getOverviewCount_SubTypes()
-	 * @model containment="true"
+	 * @see com.misc.tools.moplaf.model.overview.OverviewCount#getSuperTypes
+	 * @model opposite="SuperTypes"
 	 * @generated
 	 */
 	EList<OverviewCount> getSubTypes();
+
+	/**
+	 * Returns the value of the '<em><b>Super Types</b></em>' reference list.
+	 * The list contents are of type {@link com.misc.tools.moplaf.model.overview.OverviewCount}.
+	 * It is bidirectional and its opposite is '{@link com.misc.tools.moplaf.model.overview.OverviewCount#getSubTypes <em>Sub Types</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Super Types</em>' container reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Super Types</em>' reference list.
+	 * @see com.misc.tools.moplaf.model.overview.ModelOverviewPackage#getOverviewCount_SuperTypes()
+	 * @see com.misc.tools.moplaf.model.overview.OverviewCount#getSubTypes
+	 * @model opposite="SubTypes"
+	 * @generated
+	 */
+	EList<OverviewCount> getSuperTypes();
 
 } // OverviewCount

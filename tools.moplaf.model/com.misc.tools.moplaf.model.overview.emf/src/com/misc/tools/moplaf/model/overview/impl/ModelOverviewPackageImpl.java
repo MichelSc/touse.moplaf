@@ -191,8 +191,8 @@ public class ModelOverviewPackageImpl extends EPackageImpl implements ModelOverv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getOverviewObject__Refresh() {
-		return overviewObjectEClass.getEOperations().get(0);
+	public EAttribute getOverviewObject_Count() {
+		return (EAttribute)overviewObjectEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -200,8 +200,26 @@ public class ModelOverviewPackageImpl extends EPackageImpl implements ModelOverv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getOverviewObject__BookInstance__EObject() {
-		return overviewObjectEClass.getEOperations().get(1);
+	public EReference getOverviewObject_OverviewCounts() {
+		return (EReference)overviewObjectEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOverviewObject_RootOverviewCounts() {
+		return (EReference)overviewObjectEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getOverviewObject__Refresh() {
+		return overviewObjectEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -219,7 +237,7 @@ public class ModelOverviewPackageImpl extends EPackageImpl implements ModelOverv
 	 * @generated
 	 */
 	public EAttribute getOverviewCount_Count() {
-		return (EAttribute)overviewCountEClass.getEStructuralFeatures().get(0);
+		return (EAttribute)overviewCountEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -228,7 +246,7 @@ public class ModelOverviewPackageImpl extends EPackageImpl implements ModelOverv
 	 * @generated
 	 */
 	public EReference getOverviewCount_Class() {
-		return (EReference)overviewCountEClass.getEStructuralFeatures().get(1);
+		return (EReference)overviewCountEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -237,6 +255,15 @@ public class ModelOverviewPackageImpl extends EPackageImpl implements ModelOverv
 	 * @generated
 	 */
 	public EReference getOverviewCount_SubTypes() {
+		return (EReference)overviewCountEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOverviewCount_SuperTypes() {
 		return (EReference)overviewCountEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -278,13 +305,16 @@ public class ModelOverviewPackageImpl extends EPackageImpl implements ModelOverv
 		overviewObjectEClass = createEClass(OVERVIEW_OBJECT);
 		createEReference(overviewObjectEClass, OVERVIEW_OBJECT__ROOT_OBJECT);
 		createEAttribute(overviewObjectEClass, OVERVIEW_OBJECT__REMARKS);
+		createEAttribute(overviewObjectEClass, OVERVIEW_OBJECT__COUNT);
+		createEReference(overviewObjectEClass, OVERVIEW_OBJECT__OVERVIEW_COUNTS);
+		createEReference(overviewObjectEClass, OVERVIEW_OBJECT__ROOT_OVERVIEW_COUNTS);
 		createEOperation(overviewObjectEClass, OVERVIEW_OBJECT___REFRESH);
-		createEOperation(overviewObjectEClass, OVERVIEW_OBJECT___BOOK_INSTANCE__EOBJECT);
 
 		overviewCountEClass = createEClass(OVERVIEW_COUNT);
-		createEAttribute(overviewCountEClass, OVERVIEW_COUNT__COUNT);
 		createEReference(overviewCountEClass, OVERVIEW_COUNT__CLASS);
 		createEReference(overviewCountEClass, OVERVIEW_COUNT__SUB_TYPES);
+		createEReference(overviewCountEClass, OVERVIEW_COUNT__SUPER_TYPES);
+		createEAttribute(overviewCountEClass, OVERVIEW_COUNT__COUNT);
 	}
 
 	/**
@@ -315,7 +345,6 @@ public class ModelOverviewPackageImpl extends EPackageImpl implements ModelOverv
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		overviewObjectEClass.getESuperTypes().add(this.getOverviewCount());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(overviewsEClass, Overviews.class, "Overviews", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -330,16 +359,17 @@ public class ModelOverviewPackageImpl extends EPackageImpl implements ModelOverv
 		initEClass(overviewObjectEClass, OverviewObject.class, "OverviewObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getOverviewObject_RootObject(), ecorePackage.getEObject(), null, "RootObject", null, 0, 1, OverviewObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getOverviewObject_Remarks(), ecorePackage.getEString(), "Remarks", null, 0, 1, OverviewObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getOverviewObject_Count(), ecorePackage.getEInt(), "Count", null, 0, 1, OverviewObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOverviewObject_OverviewCounts(), this.getOverviewCount(), null, "OverviewCounts", null, 0, -1, OverviewObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOverviewObject_RootOverviewCounts(), this.getOverviewCount(), null, "RootOverviewCounts", null, 0, -1, OverviewObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getOverviewObject__Refresh(), null, "refresh", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getOverviewObject__BookInstance__EObject(), null, "bookInstance", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEObject(), "instance", 0, 1, IS_UNIQUE, IS_ORDERED);
-
 		initEClass(overviewCountEClass, OverviewCount.class, "OverviewCount", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getOverviewCount_Count(), ecorePackage.getEInt(), "Count", null, 0, 1, OverviewCount.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getOverviewCount_Class(), ecorePackage.getEClass(), null, "Class", null, 0, 1, OverviewCount.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getOverviewCount_SubTypes(), this.getOverviewCount(), null, "SubTypes", null, 0, -1, OverviewCount.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOverviewCount_SubTypes(), this.getOverviewCount(), this.getOverviewCount_SuperTypes(), "SubTypes", null, 0, -1, OverviewCount.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOverviewCount_SuperTypes(), this.getOverviewCount(), this.getOverviewCount_SubTypes(), "SuperTypes", null, 0, -1, OverviewCount.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getOverviewCount_Count(), ecorePackage.getEInt(), "Count", null, 0, 1, OverviewCount.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

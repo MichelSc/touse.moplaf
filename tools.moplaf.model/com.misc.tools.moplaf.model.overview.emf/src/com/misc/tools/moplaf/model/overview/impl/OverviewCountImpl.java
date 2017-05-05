@@ -17,8 +17,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -29,14 +28,45 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link com.misc.tools.moplaf.model.overview.impl.OverviewCountImpl#getCount <em>Count</em>}</li>
  *   <li>{@link com.misc.tools.moplaf.model.overview.impl.OverviewCountImpl#getClass_ <em>Class</em>}</li>
  *   <li>{@link com.misc.tools.moplaf.model.overview.impl.OverviewCountImpl#getSubTypes <em>Sub Types</em>}</li>
+ *   <li>{@link com.misc.tools.moplaf.model.overview.impl.OverviewCountImpl#getSuperTypes <em>Super Types</em>}</li>
+ *   <li>{@link com.misc.tools.moplaf.model.overview.impl.OverviewCountImpl#getCount <em>Count</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class OverviewCountImpl extends MinimalEObjectImpl.Container implements OverviewCount {
+	/**
+	 * The cached value of the '{@link #getClass_() <em>Class</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getClass_()
+	 * @generated
+	 * @ordered
+	 */
+	protected EClass class_;
+
+	/**
+	 * The cached value of the '{@link #getSubTypes() <em>Sub Types</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSubTypes()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<OverviewCount> subTypes;
+
+	/**
+	 * The cached value of the '{@link #getSuperTypes() <em>Super Types</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSuperTypes()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<OverviewCount> superTypes;
+
 	/**
 	 * The default value of the '{@link #getCount() <em>Count</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -56,26 +86,6 @@ public class OverviewCountImpl extends MinimalEObjectImpl.Container implements O
 	 * @ordered
 	 */
 	protected int count = COUNT_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getClass_() <em>Class</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getClass_()
-	 * @generated
-	 * @ordered
-	 */
-	protected EClass class_;
-
-	/**
-	 * The cached value of the '{@link #getSubTypes() <em>Sub Types</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSubTypes()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<OverviewCount> subTypes;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -115,6 +125,23 @@ public class OverviewCountImpl extends MinimalEObjectImpl.Container implements O
 		count = newCount;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ModelOverviewPackage.OVERVIEW_COUNT__COUNT, oldCount, count));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ModelOverviewPackage.OVERVIEW_COUNT__SUB_TYPES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getSubTypes()).basicAdd(otherEnd, msgs);
+			case ModelOverviewPackage.OVERVIEW_COUNT__SUPER_TYPES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getSuperTypes()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -162,9 +189,21 @@ public class OverviewCountImpl extends MinimalEObjectImpl.Container implements O
 	 */
 	public EList<OverviewCount> getSubTypes() {
 		if (subTypes == null) {
-			subTypes = new EObjectContainmentEList<OverviewCount>(OverviewCount.class, this, ModelOverviewPackage.OVERVIEW_COUNT__SUB_TYPES);
+			subTypes = new EObjectWithInverseResolvingEList.ManyInverse<OverviewCount>(OverviewCount.class, this, ModelOverviewPackage.OVERVIEW_COUNT__SUB_TYPES, ModelOverviewPackage.OVERVIEW_COUNT__SUPER_TYPES);
 		}
 		return subTypes;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<OverviewCount> getSuperTypes() {
+		if (superTypes == null) {
+			superTypes = new EObjectWithInverseResolvingEList.ManyInverse<OverviewCount>(OverviewCount.class, this, ModelOverviewPackage.OVERVIEW_COUNT__SUPER_TYPES, ModelOverviewPackage.OVERVIEW_COUNT__SUB_TYPES);
+		}
+		return superTypes;
 	}
 
 	/**
@@ -177,6 +216,8 @@ public class OverviewCountImpl extends MinimalEObjectImpl.Container implements O
 		switch (featureID) {
 			case ModelOverviewPackage.OVERVIEW_COUNT__SUB_TYPES:
 				return ((InternalEList<?>)getSubTypes()).basicRemove(otherEnd, msgs);
+			case ModelOverviewPackage.OVERVIEW_COUNT__SUPER_TYPES:
+				return ((InternalEList<?>)getSuperTypes()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -189,13 +230,15 @@ public class OverviewCountImpl extends MinimalEObjectImpl.Container implements O
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ModelOverviewPackage.OVERVIEW_COUNT__COUNT:
-				return getCount();
 			case ModelOverviewPackage.OVERVIEW_COUNT__CLASS:
 				if (resolve) return getClass_();
 				return basicGetClass();
 			case ModelOverviewPackage.OVERVIEW_COUNT__SUB_TYPES:
 				return getSubTypes();
+			case ModelOverviewPackage.OVERVIEW_COUNT__SUPER_TYPES:
+				return getSuperTypes();
+			case ModelOverviewPackage.OVERVIEW_COUNT__COUNT:
+				return getCount();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -209,15 +252,19 @@ public class OverviewCountImpl extends MinimalEObjectImpl.Container implements O
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ModelOverviewPackage.OVERVIEW_COUNT__COUNT:
-				setCount((Integer)newValue);
-				return;
 			case ModelOverviewPackage.OVERVIEW_COUNT__CLASS:
 				setClass((EClass)newValue);
 				return;
 			case ModelOverviewPackage.OVERVIEW_COUNT__SUB_TYPES:
 				getSubTypes().clear();
 				getSubTypes().addAll((Collection<? extends OverviewCount>)newValue);
+				return;
+			case ModelOverviewPackage.OVERVIEW_COUNT__SUPER_TYPES:
+				getSuperTypes().clear();
+				getSuperTypes().addAll((Collection<? extends OverviewCount>)newValue);
+				return;
+			case ModelOverviewPackage.OVERVIEW_COUNT__COUNT:
+				setCount((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -231,14 +278,17 @@ public class OverviewCountImpl extends MinimalEObjectImpl.Container implements O
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ModelOverviewPackage.OVERVIEW_COUNT__COUNT:
-				setCount(COUNT_EDEFAULT);
-				return;
 			case ModelOverviewPackage.OVERVIEW_COUNT__CLASS:
 				setClass((EClass)null);
 				return;
 			case ModelOverviewPackage.OVERVIEW_COUNT__SUB_TYPES:
 				getSubTypes().clear();
+				return;
+			case ModelOverviewPackage.OVERVIEW_COUNT__SUPER_TYPES:
+				getSuperTypes().clear();
+				return;
+			case ModelOverviewPackage.OVERVIEW_COUNT__COUNT:
+				setCount(COUNT_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -252,12 +302,14 @@ public class OverviewCountImpl extends MinimalEObjectImpl.Container implements O
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ModelOverviewPackage.OVERVIEW_COUNT__COUNT:
-				return count != COUNT_EDEFAULT;
 			case ModelOverviewPackage.OVERVIEW_COUNT__CLASS:
 				return class_ != null;
 			case ModelOverviewPackage.OVERVIEW_COUNT__SUB_TYPES:
 				return subTypes != null && !subTypes.isEmpty();
+			case ModelOverviewPackage.OVERVIEW_COUNT__SUPER_TYPES:
+				return superTypes != null && !superTypes.isEmpty();
+			case ModelOverviewPackage.OVERVIEW_COUNT__COUNT:
+				return count != COUNT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
