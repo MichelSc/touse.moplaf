@@ -252,9 +252,12 @@ public class OverviewObjectImpl extends MinimalEObjectImpl.Container implements 
 		TreeIterator<EObject> tree_iterator = rootObject.eAllContents();
 		// and it is gone
 		RefreshContext context = new RefreshContext(); 
+		int count = 0;
 		while ( tree_iterator.hasNext()){
 			this.bookInstance(context, tree_iterator.next());
+			count++;
 		}
+		this.setCount(count);
 	}
 	
 	private class RefreshContext{
@@ -270,13 +273,20 @@ public class OverviewObjectImpl extends MinimalEObjectImpl.Container implements 
 	private OverviewCount getOrCreateOverviewCount(RefreshContext context, EClass anEClass){
 		OverviewCount count = context.classes.get(anEClass);
 		if ( count == null){
+			// create the count
 			count = ModelOverviewFactory.eINSTANCE.createOverviewCount();
 			this.getOverviewCounts().add(count);
 			count.setClass(anEClass); //owning
 			context.classes.put(anEClass, count);
-			for (EClass superType : anEClass.getESuperTypes()){
+			// attache to super types
+			EList<EClass> direct_super_types = anEClass.getESuperTypes();
+			for (EClass superType : direct_super_types){
 				OverviewCount supercount = this.getOrCreateOverviewCount(context, superType);
 				count.getSuperTypes().add(supercount);
+			}
+			// attach to the root
+			if ( direct_super_types.size()==0){
+				this.getRootOverviewCounts().add(count);
 			}
 		}
 		return count;
@@ -287,12 +297,16 @@ public class OverviewObjectImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 */
 	private void bookInstance(RefreshContext context, EObject instance) {
-		EClass instace_class = instance.eClass();
-		EList<EClass> all_super_types = instace_class.getEAllSuperTypes();
+		EClass instance_class = instance.eClass();
+		// super types
+		EList<EClass> all_super_types = instance_class.getEAllSuperTypes();
 		for ( EClass super_type : all_super_types){
 			OverviewCount count = this.getOrCreateOverviewCount(context, super_type);
 			count.setCount(count.getCount()+1);
 		}
+		// this type
+		OverviewCount instance_count = this.getOrCreateOverviewCount(context, instance_class);
+		instance_count.setCount(instance_count.getCount()+1);
 	}
 
 	/**

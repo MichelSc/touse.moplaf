@@ -2,6 +2,7 @@
  */
 package com.misc.tools.moplaf.model.overview.impl;
 
+import com.misc.tools.moplaf.model.overview.ModelOverviewFactory;
 import com.misc.tools.moplaf.model.overview.ModelOverviewPackage;
 import com.misc.tools.moplaf.model.overview.OverviewObject;
 import com.misc.tools.moplaf.model.overview.Overviews;
@@ -190,12 +191,12 @@ public class OverviewsImpl extends MinimalEObjectImpl.Container implements Overv
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	public void addObject(EObject root) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		OverviewObject overview = ModelOverviewFactory.eINSTANCE.createOverviewObject();
+		this.getRootObjects().add(overview); // owning
+		overview.setRootObject(root);;
+		overview.refresh();
 	}
 
 	/**
