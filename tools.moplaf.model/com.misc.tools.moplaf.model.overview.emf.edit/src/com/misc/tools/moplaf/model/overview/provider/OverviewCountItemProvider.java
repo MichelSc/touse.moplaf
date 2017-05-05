@@ -62,27 +62,28 @@ public class OverviewCountItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addClassPropertyDescriptor(object);
+			addCountedClassPropertyDescriptor(object);
 			addSuperTypesPropertyDescriptor(object);
 			addCountPropertyDescriptor(object);
+			addDescriptionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Class feature.
+	 * This adds a property descriptor for the Counted Class feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addClassPropertyDescriptor(Object object) {
+	protected void addCountedClassPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_OverviewCount_Class_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_OverviewCount_Class_feature", "_UI_OverviewCount_type"),
-				 ModelOverviewPackage.Literals.OVERVIEW_COUNT__CLASS,
+				 getString("_UI_OverviewCount_CountedClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OverviewCount_CountedClass_feature", "_UI_OverviewCount_type"),
+				 ModelOverviewPackage.Literals.OVERVIEW_COUNT__COUNTED_CLASS,
 				 true,
 				 false,
 				 true,
@@ -136,6 +137,28 @@ public class OverviewCountItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Description feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDescriptionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_OverviewCount_Description_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OverviewCount_Description_feature", "_UI_OverviewCount_type"),
+				 ModelOverviewPackage.Literals.OVERVIEW_COUNT__DESCRIPTION,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -184,8 +207,10 @@ public class OverviewCountItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		OverviewCount overviewCount = (OverviewCount)object;
-		return getString("_UI_OverviewCount_type") + " " + overviewCount.getCount();
+		String label = ((OverviewCount)object).getDescription();
+		return label == null || label.length() == 0 ?
+			getString("_UI_OverviewCount_type") :
+			getString("_UI_OverviewCount_type") + " " + label;
 	}
 	
 
@@ -202,6 +227,7 @@ public class OverviewCountItemProvider
 
 		switch (notification.getFeatureID(OverviewCount.class)) {
 			case ModelOverviewPackage.OVERVIEW_COUNT__COUNT:
+			case ModelOverviewPackage.OVERVIEW_COUNT__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case ModelOverviewPackage.OVERVIEW_COUNT__SUB_TYPES:

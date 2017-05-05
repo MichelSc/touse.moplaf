@@ -39,6 +39,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.misc.tools.moplaf.model.overview.impl.OverviewObjectImpl#getCount <em>Count</em>}</li>
  *   <li>{@link com.misc.tools.moplaf.model.overview.impl.OverviewObjectImpl#getOverviewCounts <em>Overview Counts</em>}</li>
  *   <li>{@link com.misc.tools.moplaf.model.overview.impl.OverviewObjectImpl#getRootOverviewCounts <em>Root Overview Counts</em>}</li>
+ *   <li>{@link com.misc.tools.moplaf.model.overview.impl.OverviewObjectImpl#getDescription <em>Description</em>}</li>
  * </ul>
  *
  * @generated
@@ -113,6 +114,16 @@ public class OverviewObjectImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected EList<OverviewCount> rootOverviewCounts;
+
+	/**
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DESCRIPTION_EDEFAULT = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -241,6 +252,15 @@ public class OverviewObjectImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 */
+	public String getDescription() {
+		String description = String.format("%s:%d", this.getRootObject().eClass().getName(), this.getCount());
+		return description;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
 	public void refresh() {
 		// flush
 		this.getOverviewCounts().clear();
@@ -252,7 +272,8 @@ public class OverviewObjectImpl extends MinimalEObjectImpl.Container implements 
 		TreeIterator<EObject> tree_iterator = rootObject.eAllContents();
 		// and it is gone
 		RefreshContext context = new RefreshContext(); 
-		int count = 0;
+		int count = 1; // the root object
+		this.bookInstance(context, rootObject);
 		while ( tree_iterator.hasNext()){
 			this.bookInstance(context, tree_iterator.next());
 			count++;
@@ -276,7 +297,7 @@ public class OverviewObjectImpl extends MinimalEObjectImpl.Container implements 
 			// create the count
 			count = ModelOverviewFactory.eINSTANCE.createOverviewCount();
 			this.getOverviewCounts().add(count);
-			count.setClass(anEClass); //owning
+			count.setCountedClass(anEClass); //owning
 			context.classes.put(anEClass, count);
 			// attache to super types
 			EList<EClass> direct_super_types = anEClass.getESuperTypes();
@@ -342,6 +363,8 @@ public class OverviewObjectImpl extends MinimalEObjectImpl.Container implements 
 				return getOverviewCounts();
 			case ModelOverviewPackage.OVERVIEW_OBJECT__ROOT_OVERVIEW_COUNTS:
 				return getRootOverviewCounts();
+			case ModelOverviewPackage.OVERVIEW_OBJECT__DESCRIPTION:
+				return getDescription();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -421,6 +444,8 @@ public class OverviewObjectImpl extends MinimalEObjectImpl.Container implements 
 				return overviewCounts != null && !overviewCounts.isEmpty();
 			case ModelOverviewPackage.OVERVIEW_OBJECT__ROOT_OVERVIEW_COUNTS:
 				return rootOverviewCounts != null && !rootOverviewCounts.isEmpty();
+			case ModelOverviewPackage.OVERVIEW_OBJECT__DESCRIPTION:
+				return DESCRIPTION_EDEFAULT == null ? getDescription() != null : !DESCRIPTION_EDEFAULT.equals(getDescription());
 		}
 		return super.eIsSet(featureID);
 	}

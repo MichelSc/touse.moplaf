@@ -16,10 +16,11 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link com.misc.tools.moplaf.model.overview.OverviewCount#getClass_ <em>Class</em>}</li>
+ *   <li>{@link com.misc.tools.moplaf.model.overview.OverviewCount#getCountedClass <em>Counted Class</em>}</li>
  *   <li>{@link com.misc.tools.moplaf.model.overview.OverviewCount#getSubTypes <em>Sub Types</em>}</li>
  *   <li>{@link com.misc.tools.moplaf.model.overview.OverviewCount#getSuperTypes <em>Super Types</em>}</li>
  *   <li>{@link com.misc.tools.moplaf.model.overview.OverviewCount#getCount <em>Count</em>}</li>
+ *   <li>{@link com.misc.tools.moplaf.model.overview.OverviewCount#getDescription <em>Description</em>}</li>
  * </ul>
  *
  * @see com.misc.tools.moplaf.model.overview.ModelOverviewPackage#getOverviewCount()
@@ -27,6 +28,32 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface OverviewCount extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Counted Class</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Counted Class</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Counted Class</em>' reference.
+	 * @see #setCountedClass(EClass)
+	 * @see com.misc.tools.moplaf.model.overview.ModelOverviewPackage#getOverviewCount_CountedClass()
+	 * @model
+	 * @generated
+	 */
+	EClass getCountedClass();
+
+	/**
+	 * Sets the value of the '{@link com.misc.tools.moplaf.model.overview.OverviewCount#getCountedClass <em>Counted Class</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Counted Class</em>' reference.
+	 * @see #getCountedClass()
+	 * @generated
+	 */
+	void setCountedClass(EClass value);
+
 	/**
 	 * Returns the value of the '<em><b>Count</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -54,30 +81,19 @@ public interface OverviewCount extends EObject {
 	void setCount(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Class</b></em>' reference.
+	 * Returns the value of the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Class</em>' reference isn't clear,
+	 * If the meaning of the '<em>Description</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Class</em>' reference.
-	 * @see #setClass(EClass)
-	 * @see com.misc.tools.moplaf.model.overview.ModelOverviewPackage#getOverviewCount_Class()
-	 * @model
+	 * @return the value of the '<em>Description</em>' attribute.
+	 * @see com.misc.tools.moplaf.model.overview.ModelOverviewPackage#getOverviewCount_Description()
+	 * @model transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
-	EClass getClass_();
-
-	/**
-	 * Sets the value of the '{@link com.misc.tools.moplaf.model.overview.OverviewCount#getClass_ <em>Class</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Class</em>' reference.
-	 * @see #getClass_()
-	 * @generated
-	 */
-	void setClass(EClass value);
+	String getDescription();
 
 	/**
 	 * Returns the value of the '<em><b>Sub Types</b></em>' reference list.

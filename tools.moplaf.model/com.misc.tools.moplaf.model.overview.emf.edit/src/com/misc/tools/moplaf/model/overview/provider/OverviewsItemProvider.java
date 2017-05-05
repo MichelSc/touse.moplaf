@@ -2,7 +2,6 @@
  */
 package com.misc.tools.moplaf.model.overview.provider;
 
-
 import com.misc.tools.moplaf.model.overview.ModelOverviewFactory;
 import com.misc.tools.moplaf.model.overview.ModelOverviewPackage;
 import com.misc.tools.moplaf.model.overview.Overviews;
@@ -10,13 +9,17 @@ import com.misc.tools.moplaf.model.overview.Overviews;
 import java.util.Collection;
 import java.util.List;
 
+import org.eclipse.emf.common.command.AbstractCommand;
+import org.eclipse.emf.common.command.Command;
+import org.eclipse.emf.common.command.CompoundCommand;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
-
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
-
+import org.eclipse.emf.edit.command.DragAndDropCommand;
+import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -106,7 +109,7 @@ public class OverviewsItemProvider
 				 getString("_UI_PropertyDescriptor_description", "_UI_Overviews_Remarks_feature", "_UI_Overviews_type"),
 				 ModelOverviewPackage.Literals.OVERVIEWS__REMARKS,
 				 true,
-				 false,
+				 true,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
@@ -226,5 +229,87 @@ public class OverviewsItemProvider
 	public ResourceLocator getResourceLocator() {
 		return ModelOverviewEditPlugin.INSTANCE;
 	}
+	
+	/**
+	 * Implements Command constructGoal
+	 */
+	public abstract class OverviewsCommand extends AbstractCommand {
 
-}
+		protected Overviews overview;
+		
+		public OverviewsCommand(Overviews overview) {
+			super();
+			this.overview = overview;
+		}
+
+		protected boolean prepare(){
+			isExecutable = true;
+			return isExecutable;
+		}
+
+		public boolean canUndo() { 
+			return false; 
+		}
+
+		@Override
+		public void redo() {
+			execute();		
+		}
+
+	}
+
+
+	public  class OverviewsAddObject extends OverviewsCommand {
+		private EObject object;
+
+		public OverviewsAddObject(Overviews overviews, EObject anObject) {
+			super(overviews);
+			this.object = anObject;
+		}
+
+		@Override
+		public void execute() {
+			this.overview.addObject(this.object);
+		}
+	};
+		
+
+	/**
+	 * Create a drag and drop command for this Solver
+	 */
+	public class OverviewsDragAndDropCommand extends DragAndDropCommand{
+		// constructor
+	   	public OverviewsDragAndDropCommand(EditingDomain domain, Object owner, float location, int operations,
+				int operation, Collection<?> collection) {
+			super(domain, owner, location, operations, operation, collection);
+		}
+	   	
+	    /**
+	     * This implementation of prepare is called again to implement {@link #validate validate}.
+	     * The method {@link #reset} will have been called before doing so.
+	     */
+	    @Override
+	    protected boolean prepare(){
+	    	CompoundCommand compound = new CompoundCommand();
+			Overviews thisOverviews = (Overviews) this.owner;
+			for (Object element : collection){
+				if ( element instanceof EObject){
+		  	   		EObject droppedObject = (EObject) element;
+				   	OverviewsAddObject cmd = new OverviewsAddObject(thisOverviews, droppedObject);
+				   	compound.append(cmd);
+				} 
+			}
+	    	this.dragCommand = null;
+			this.dropCommand = compound;
+	    	return true;
+	    } // prepare
+	};
+
+	/**
+	 * Create a command for a drag and drop on this Solver
+	 */
+	@Override
+	protected Command createDragAndDropCommand(EditingDomain domain, Object owner, float location, int operations,
+			int operation, Collection<?> collection) {
+		return new OverviewsDragAndDropCommand(domain, owner, location, operations, operation, collection);
+	}}

@@ -11,25 +11,27 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ModelOverview.ecore#//Overviews/RootObjects"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ModelOverview.ecore#//Overviews/SubOverviews"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ModelOverview.ecore#//Overviews/Name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ModelOverview.ecore#//Overviews/Remarks"/>
+      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute ModelOverview.ecore#//Overviews/Remarks"/>
       <genOperations ecoreOperation="ModelOverview.ecore#//Overviews/addObject">
         <genParameters ecoreParameter="ModelOverview.ecore#//Overviews/addObject/root"/>
       </genOperations>
     </genClasses>
-    <genClasses ecoreClass="ModelOverview.ecore#//OverviewObject">
+    <genClasses ecoreClass="ModelOverview.ecore#//OverviewObject" labelFeature="#//overview/OverviewObject/Description">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ModelOverview.ecore#//OverviewObject/RootObject"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ModelOverview.ecore#//OverviewObject/Remarks"/>
+      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute ModelOverview.ecore#//OverviewObject/Remarks"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ModelOverview.ecore#//OverviewObject/Count"/>
       <genFeatures property="None" createChild="false" ecoreFeature="ecore:EReference ModelOverview.ecore#//OverviewObject/OverviewCounts"/>
       <genFeatures notify="false" children="true" createChild="false" propertySortChoices="true"
           ecoreFeature="ecore:EReference ModelOverview.ecore#//OverviewObject/RootOverviewCounts"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute ModelOverview.ecore#//OverviewObject/Description"/>
       <genOperations ecoreOperation="ModelOverview.ecore#//OverviewObject/refresh"/>
     </genClasses>
-    <genClasses ecoreClass="ModelOverview.ecore#//OverviewCount">
+    <genClasses ecoreClass="ModelOverview.ecore#//OverviewCount" labelFeature="#//overview/OverviewCount/Description">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ModelOverview.ecore#//OverviewCount/Class"/>
       <genFeatures property="None" children="true" createChild="false" ecoreFeature="ecore:EReference ModelOverview.ecore#//OverviewCount/SubTypes"/>
       <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference ModelOverview.ecore#//OverviewCount/SuperTypes"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ModelOverview.ecore#//OverviewCount/Count"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute ModelOverview.ecore#//OverviewCount/Description"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

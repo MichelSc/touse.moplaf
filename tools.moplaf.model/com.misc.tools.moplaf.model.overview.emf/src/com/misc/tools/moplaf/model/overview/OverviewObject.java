@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.misc.tools.moplaf.model.overview.OverviewObject#getCount <em>Count</em>}</li>
  *   <li>{@link com.misc.tools.moplaf.model.overview.OverviewObject#getOverviewCounts <em>Overview Counts</em>}</li>
  *   <li>{@link com.misc.tools.moplaf.model.overview.OverviewObject#getRootOverviewCounts <em>Root Overview Counts</em>}</li>
+ *   <li>{@link com.misc.tools.moplaf.model.overview.OverviewObject#getDescription <em>Description</em>}</li>
  * </ul>
  *
  * @see com.misc.tools.moplaf.model.overview.ModelOverviewPackage#getOverviewObject()
@@ -135,6 +136,21 @@ public interface OverviewObject extends EObject {
 	 * @generated
 	 */
 	EList<OverviewCount> getRootOverviewCounts();
+
+	/**
+	 * Returns the value of the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Description</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Description</em>' attribute.
+	 * @see com.misc.tools.moplaf.model.overview.ModelOverviewPackage#getOverviewObject_Description()
+	 * @model transient="true" changeable="false" volatile="true" derived="true"
+	 * @generated
+	 */
+	String getDescription();
 
 	/**
 	 * <!-- begin-user-doc -->

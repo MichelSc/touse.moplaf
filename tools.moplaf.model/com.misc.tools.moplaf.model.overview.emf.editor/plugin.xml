@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated ModelOverview -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="com.misc.tools.moplaf.model.overview.presentation.ModelOverviewModelWizardID"
+            name="%_UI_ModelOverviewModelWizard_label"
+            class="com.misc.tools.moplaf.model.overview.presentation.ModelOverviewModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ModelOverviewModelFile.gif">
+         <description>%_UI_ModelOverviewModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated ModelOverview -->
+      <editor
+            id="com.misc.tools.moplaf.model.overview.presentation.ModelOverviewEditorID"
+            name="%_UI_ModelOverviewEditor_label"
+            icon="icons/full/obj16/ModelOverviewModelFile.gif"
+            extensions="modeloverview"
+            class="com.misc.tools.moplaf.model.overview.presentation.ModelOverviewEditor"
+            contributorClass="com.misc.tools.moplaf.model.overview.presentation.ModelOverviewActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

@@ -2,20 +2,22 @@
  */
 package com.misc.tools.moplaf.model.overview.provider;
 
-
+import com.misc.common.moplaf.emf.edit.command.RefreshCommand;
 import com.misc.tools.moplaf.model.overview.ModelOverviewPackage;
 import com.misc.tools.moplaf.model.overview.OverviewObject;
 
 import java.util.Collection;
 import java.util.List;
 
+import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
-
+import org.eclipse.emf.edit.command.CommandParameter;
+import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -66,6 +68,7 @@ public class OverviewObjectItemProvider
 			addRemarksPropertyDescriptor(object);
 			addCountPropertyDescriptor(object);
 			addRootOverviewCountsPropertyDescriptor(object);
+			addDescriptionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -107,7 +110,7 @@ public class OverviewObjectItemProvider
 				 getString("_UI_PropertyDescriptor_description", "_UI_OverviewObject_Remarks_feature", "_UI_OverviewObject_type"),
 				 ModelOverviewPackage.Literals.OVERVIEW_OBJECT__REMARKS,
 				 true,
-				 false,
+				 true,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
@@ -154,6 +157,28 @@ public class OverviewObjectItemProvider
 				 false,
 				 true,
 				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Description feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDescriptionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_OverviewObject_Description_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OverviewObject_Description_feature", "_UI_OverviewObject_type"),
+				 ModelOverviewPackage.Literals.OVERVIEW_OBJECT__DESCRIPTION,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -207,7 +232,7 @@ public class OverviewObjectItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((OverviewObject)object).getRemarks();
+		String label = ((OverviewObject)object).getDescription();
 		return label == null || label.length() == 0 ?
 			getString("_UI_OverviewObject_type") :
 			getString("_UI_OverviewObject_type") + " " + label;
@@ -229,6 +254,7 @@ public class OverviewObjectItemProvider
 			case ModelOverviewPackage.OVERVIEW_OBJECT__REMARKS:
 			case ModelOverviewPackage.OVERVIEW_OBJECT__COUNT:
 			case ModelOverviewPackage.OVERVIEW_OBJECT__OVERVIEW_COUNTS:
+			case ModelOverviewPackage.OVERVIEW_OBJECT__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -258,4 +284,39 @@ public class OverviewObjectItemProvider
 		return ModelOverviewEditPlugin.INSTANCE;
 	}
 
+	/*
+	 * RunResetCommand
+	 */
+	public class OverviewObjectRefresh extends RefreshCommand{
+		private OverviewObject overviewObject;
+		
+		// constructor
+		public OverviewObjectRefresh(OverviewObject anOverview)	{
+			this.overviewObject = anOverview;
+		}
+
+		@Override
+		protected boolean prepare(){
+			boolean isExecutable = true;
+			return isExecutable;
+		}
+
+		@Override
+		public void execute() {
+			this.overviewObject.refresh();
+		}
+	} // class RunResetCommand
+	
+	/**
+	 * 
+	 */
+	@Override
+	public Command createCommand(Object object, EditingDomain domain,
+			Class<? extends Command> commandClass,
+			CommandParameter commandParameter) {
+		if ( commandClass == RefreshCommand.class){
+			return new OverviewObjectRefresh((OverviewObject) object); 
+		}
+		return super.createCommand(object, domain, commandClass, commandParameter);
+	} //method createCommand
 }

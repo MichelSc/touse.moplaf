@@ -22,13 +22,17 @@
         eType="#//OverviewCount" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="RootOverviewCounts" upperBound="-1"
         eType="#//OverviewCount"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        changeable="false" volatile="true" transient="true" derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="OverviewCount">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Class" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EClass"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CountedClass" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EClass"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="SubTypes" upperBound="-1"
         eType="#//OverviewCount" eOpposite="#//OverviewCount/SuperTypes"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="SuperTypes" upperBound="-1"
         eType="#//OverviewCount" eOpposite="#//OverviewCount/SubTypes"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Count" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        changeable="false" volatile="true" transient="true" derived="true"/>
   </eClassifiers>
 </ecore:EPackage>
