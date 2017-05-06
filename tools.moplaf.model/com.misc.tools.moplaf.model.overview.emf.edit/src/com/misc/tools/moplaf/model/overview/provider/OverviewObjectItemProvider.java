@@ -3,6 +3,7 @@
 package com.misc.tools.moplaf.model.overview.provider;
 
 import com.misc.common.moplaf.emf.edit.command.RefreshCommand;
+import com.misc.common.moplaf.emf.edit.command.ResetCommand;
 import com.misc.tools.moplaf.model.overview.ModelOverviewPackage;
 import com.misc.tools.moplaf.model.overview.OverviewObject;
 
@@ -285,7 +286,7 @@ public class OverviewObjectItemProvider
 	}
 
 	/*
-	 * RunResetCommand
+	 * RunRefreshCommand
 	 */
 	public class OverviewObjectRefresh extends RefreshCommand{
 		private OverviewObject overviewObject;
@@ -305,6 +306,29 @@ public class OverviewObjectItemProvider
 		public void execute() {
 			this.overviewObject.refresh();
 		}
+	} // class RunRefreshCommand
+	
+	/*
+	 * RunResetCommand
+	 */
+	public class OverviewObjectReset extends ResetCommand{
+		private OverviewObject overviewObject;
+		
+		// constructor
+		public OverviewObjectReset(OverviewObject anOverview)	{
+			this.overviewObject = anOverview;
+		}
+
+		@Override
+		protected boolean prepare(){
+			boolean isExecutable = true;
+			return isExecutable;
+		}
+
+		@Override
+		public void execute() {
+			this.overviewObject.reset();
+		}
 	} // class RunResetCommand
 	
 	/**
@@ -316,6 +340,8 @@ public class OverviewObjectItemProvider
 			CommandParameter commandParameter) {
 		if ( commandClass == RefreshCommand.class){
 			return new OverviewObjectRefresh((OverviewObject) object); 
+		} else if ( commandClass == ResetCommand.class){
+			return new OverviewObjectReset((OverviewObject) object); 
 		}
 		return super.createCommand(object, domain, commandClass, commandParameter);
 	} //method createCommand

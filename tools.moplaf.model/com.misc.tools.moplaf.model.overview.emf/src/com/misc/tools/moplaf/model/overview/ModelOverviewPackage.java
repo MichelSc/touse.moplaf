@@ -223,13 +223,22 @@ public interface ModelOverviewPackage extends EPackage {
 	int OVERVIEW_OBJECT___REFRESH = 0;
 
 	/**
+	 * The operation id for the '<em>Reset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OVERVIEW_OBJECT___RESET = 1;
+
+	/**
 	 * The number of operations of the '<em>Overview Object</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OVERVIEW_OBJECT_OPERATION_COUNT = 1;
+	int OVERVIEW_OBJECT_OPERATION_COUNT = 2;
 
 	/**
 	 * The feature id for the '<em><b>Counted Class</b></em>' reference.
@@ -446,6 +455,16 @@ public interface ModelOverviewPackage extends EPackage {
 	EOperation getOverviewObject__Refresh();
 
 	/**
+	 * Returns the meta object for the '{@link com.misc.tools.moplaf.model.overview.OverviewObject#reset() <em>Reset</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Reset</em>' operation.
+	 * @see com.misc.tools.moplaf.model.overview.OverviewObject#reset()
+	 * @generated
+	 */
+	EOperation getOverviewObject__Reset();
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.tools.moplaf.model.overview.OverviewCount <em>Overview Count</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -648,6 +667,14 @@ public interface ModelOverviewPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation OVERVIEW_OBJECT___REFRESH = eINSTANCE.getOverviewObject__Refresh();
+
+		/**
+		 * The meta object literal for the '<em><b>Reset</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation OVERVIEW_OBJECT___RESET = eINSTANCE.getOverviewObject__Reset();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.tools.moplaf.model.overview.impl.OverviewCountImpl <em>Overview Count</em>}' class.

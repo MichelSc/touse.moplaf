@@ -160,4 +160,12 @@ public interface OverviewObject extends EObject {
 	 */
 	void refresh();
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void reset();
+
 } // OverviewObject

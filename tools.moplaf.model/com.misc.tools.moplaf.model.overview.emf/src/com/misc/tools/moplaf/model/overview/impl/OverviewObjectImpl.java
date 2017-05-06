@@ -253,7 +253,8 @@ public class OverviewObjectImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 */
 	public String getDescription() {
-		String description = String.format("%s:%d", this.getRootObject().eClass().getName(), this.getCount());
+		String name = this.getRootObject()==null ? "null" : this.basicGetRootObject().eClass().getName();
+		String description = String.format("%s: %,d", name, this.getCount());
 		return description;
 	}
 
@@ -281,6 +282,14 @@ public class OverviewObjectImpl extends MinimalEObjectImpl.Container implements 
 		this.setCount(count);
 	}
 	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	public void reset() {
+		this.setRootObject(null);
+	}
+
 	private class RefreshContext{
 		private HashMap<EClass, OverviewCount> classes = new HashMap<EClass, OverviewCount>(); 
 	}
@@ -460,6 +469,9 @@ public class OverviewObjectImpl extends MinimalEObjectImpl.Container implements 
 		switch (operationID) {
 			case ModelOverviewPackage.OVERVIEW_OBJECT___REFRESH:
 				refresh();
+				return null;
+			case ModelOverviewPackage.OVERVIEW_OBJECT___RESET:
+				reset();
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

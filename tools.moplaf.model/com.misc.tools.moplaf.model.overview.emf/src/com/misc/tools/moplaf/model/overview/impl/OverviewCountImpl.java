@@ -181,7 +181,7 @@ public class OverviewCountImpl extends MinimalEObjectImpl.Container implements O
 	 * <!-- end-user-doc -->
 	 */
 	public String getDescription() {
-		String description = String.format("%s:%d", this.getCountedClass().getName(), this.getCount());
+		String description = String.format("%s: %,d", this.getCountedClass().getName(), this.getCount());
 		return description;
 	}
 

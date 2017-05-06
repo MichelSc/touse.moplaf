@@ -15,6 +15,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="OverviewObject">
     <eOperations name="refresh"/>
+    <eOperations name="reset"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="RootObject" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Remarks" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Count" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>

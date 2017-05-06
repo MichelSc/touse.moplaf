@@ -42,6 +42,7 @@ import org.eclipse.ui.PartInitException;
 
 import com.misc.common.moplaf.emf.editor.Util;
 import com.misc.common.moplaf.emf.editor.action.RefreshAction;
+import com.misc.common.moplaf.emf.editor.action.ResetAction;
 
 /**
  * This is the action bar contributor for the ModelOverview model editor.
@@ -303,7 +304,8 @@ public class ModelOverviewActionBarContributor
 
 		applicationPopUpMenuActions = new ArrayList<IAction>();
 		applicationPopUpMenuActions.add(new RefreshAction(activeEditorPart, selection));
-
+		applicationPopUpMenuActions.add(new ResetAction  (activeEditorPart, selection));
+ 
 		if (createChildMenuManager != null) {
 			populateManager(createChildMenuManager, createChildActions, null);
 			createChildMenuManager.update(true);
