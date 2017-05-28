@@ -13,6 +13,7 @@
 package com.misc.touse.moplaf.macroplanner.provider;
 
 
+import com.misc.common.moplaf.job.JobFactory;
 import com.misc.common.moplaf.macroplanner.MacroPlannerFactory;
 import com.misc.common.moplaf.macroplanner.solver.MacroPlannerSolverFactory;
 import com.misc.touse.moplaf.macroplanner.Domain;
@@ -91,6 +92,7 @@ public class DomainItemProvider
 			childrenFeatures.add(ToUseMacroPlannerPackage.Literals.DOMAIN__STATIC_DATA);
 			childrenFeatures.add(ToUseMacroPlannerPackage.Literals.DOMAIN__DATA);
 			childrenFeatures.add(ToUseMacroPlannerPackage.Literals.DOMAIN__SCENARIOS);
+			childrenFeatures.add(ToUseMacroPlannerPackage.Literals.DOMAIN__PARMAMS_HOLDERS);
 		}
 		return childrenFeatures;
 	}
@@ -146,6 +148,7 @@ public class DomainItemProvider
 			case ToUseMacroPlannerPackage.DOMAIN__STATIC_DATA:
 			case ToUseMacroPlannerPackage.DOMAIN__DATA:
 			case ToUseMacroPlannerPackage.DOMAIN__SCENARIOS:
+			case ToUseMacroPlannerPackage.DOMAIN__PARMAMS_HOLDERS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -177,6 +180,11 @@ public class DomainItemProvider
 			(createChildParameter
 				(ToUseMacroPlannerPackage.Literals.DOMAIN__SCENARIOS,
 				 MacroPlannerSolverFactory.eINSTANCE.createScenario()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ToUseMacroPlannerPackage.Literals.DOMAIN__PARMAMS_HOLDERS,
+				 JobFactory.eINSTANCE.createParamsHolder()));
 	}
 
 	/**

@@ -103,13 +103,22 @@ public interface ToUseMacroPlannerPackage extends EPackage {
 	int DOMAIN__SCENARIOS = 2;
 
 	/**
+	 * The feature id for the '<em><b>Parmams Holders</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN__PARMAMS_HOLDERS = 3;
+
+	/**
 	 * The number of structural features of the '<em>Domain</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_FEATURE_COUNT = 3;
+	int DOMAIN_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Domain</em>' class.
@@ -152,6 +161,17 @@ public interface ToUseMacroPlannerPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getDomain_Scenarios();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.macroplanner.Domain#getParmamsHolders <em>Parmams Holders</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Parmams Holders</em>'.
+	 * @see com.misc.touse.moplaf.macroplanner.Domain#getParmamsHolders()
+	 * @see #getDomain()
+	 * @generated
+	 */
+	EReference getDomain_ParmamsHolders();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.macroplanner.Domain#getStaticData <em>Static Data</em>}'.
@@ -212,6 +232,14 @@ public interface ToUseMacroPlannerPackage extends EPackage {
 		 * @generated
 		 */
 		EReference DOMAIN__SCENARIOS = eINSTANCE.getDomain_Scenarios();
+
+		/**
+		 * The meta object literal for the '<em><b>Parmams Holders</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DOMAIN__PARMAMS_HOLDERS = eINSTANCE.getDomain_ParmamsHolders();
 
 		/**
 		 * The meta object literal for the '<em><b>Static Data</b></em>' containment reference list feature.

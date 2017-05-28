@@ -12,6 +12,7 @@
  */
 package com.misc.touse.moplaf.macroplanner.impl;
 
+import com.misc.common.moplaf.job.JobPackage;
 import com.misc.common.moplaf.macroplanner.MacroPlannerPackage;
 
 import com.misc.common.moplaf.macroplanner.solver.MacroPlannerSolverPackage;
@@ -134,6 +135,15 @@ public class ToUseMacroPlannerPackageImpl extends EPackageImpl implements ToUseM
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getDomain_ParmamsHolders() {
+		return (EReference)domainEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getDomain_StaticData() {
 		return (EReference)domainEClass.getEStructuralFeatures().get(0);
 	}
@@ -170,6 +180,7 @@ public class ToUseMacroPlannerPackageImpl extends EPackageImpl implements ToUseM
 		createEReference(domainEClass, DOMAIN__STATIC_DATA);
 		createEReference(domainEClass, DOMAIN__DATA);
 		createEReference(domainEClass, DOMAIN__SCENARIOS);
+		createEReference(domainEClass, DOMAIN__PARMAMS_HOLDERS);
 	}
 
 	/**
@@ -198,6 +209,7 @@ public class ToUseMacroPlannerPackageImpl extends EPackageImpl implements ToUseM
 		// Obtain other dependent packages
 		MacroPlannerPackage theMacroPlannerPackage = (MacroPlannerPackage)EPackage.Registry.INSTANCE.getEPackage(MacroPlannerPackage.eNS_URI);
 		MacroPlannerSolverPackage theMacroPlannerSolverPackage = (MacroPlannerSolverPackage)EPackage.Registry.INSTANCE.getEPackage(MacroPlannerSolverPackage.eNS_URI);
+		JobPackage theJobPackage = (JobPackage)EPackage.Registry.INSTANCE.getEPackage(JobPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -210,6 +222,7 @@ public class ToUseMacroPlannerPackageImpl extends EPackageImpl implements ToUseM
 		initEReference(getDomain_StaticData(), theMacroPlannerPackage.getMacroPlannerStaticData(), null, "StaticData", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDomain_Data(), theMacroPlannerPackage.getMacroPlannerData(), null, "Data", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDomain_Scenarios(), theMacroPlannerSolverPackage.getScenario(), null, "Scenarios", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDomain_ParmamsHolders(), theJobPackage.getParamsHolder(), null, "ParmamsHolders", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

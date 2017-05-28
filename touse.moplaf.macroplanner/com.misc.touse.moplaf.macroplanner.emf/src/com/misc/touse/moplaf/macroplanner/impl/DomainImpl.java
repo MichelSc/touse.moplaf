@@ -12,6 +12,7 @@
  */
 package com.misc.touse.moplaf.macroplanner.impl;
 
+import com.misc.common.moplaf.job.ParamsHolder;
 import com.misc.common.moplaf.macroplanner.MacroPlannerData;
 import com.misc.common.moplaf.macroplanner.MacroPlannerStaticData;
 import com.misc.common.moplaf.macroplanner.solver.Scenario;
@@ -42,6 +43,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.misc.touse.moplaf.macroplanner.impl.DomainImpl#getStaticData <em>Static Data</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.macroplanner.impl.DomainImpl#getData <em>Data</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.macroplanner.impl.DomainImpl#getScenarios <em>Scenarios</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.macroplanner.impl.DomainImpl#getParmamsHolders <em>Parmams Holders</em>}</li>
  * </ul>
  *
  * @generated
@@ -76,6 +78,16 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	 * @ordered
 	 */
 	protected EList<Scenario> scenarios;
+
+	/**
+	 * The cached value of the '{@link #getParmamsHolders() <em>Parmams Holders</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getParmamsHolders()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ParamsHolder> parmamsHolders;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -125,6 +137,18 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<ParamsHolder> getParmamsHolders() {
+		if (parmamsHolders == null) {
+			parmamsHolders = new EObjectContainmentEList<ParamsHolder>(ParamsHolder.class, this, ToUseMacroPlannerPackage.DOMAIN__PARMAMS_HOLDERS);
+		}
+		return parmamsHolders;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList<MacroPlannerStaticData> getStaticData() {
 		if (staticData == null) {
 			staticData = new EObjectContainmentEList<MacroPlannerStaticData>(MacroPlannerStaticData.class, this, ToUseMacroPlannerPackage.DOMAIN__STATIC_DATA);
@@ -146,6 +170,8 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 				return ((InternalEList<?>)getData()).basicRemove(otherEnd, msgs);
 			case ToUseMacroPlannerPackage.DOMAIN__SCENARIOS:
 				return ((InternalEList<?>)getScenarios()).basicRemove(otherEnd, msgs);
+			case ToUseMacroPlannerPackage.DOMAIN__PARMAMS_HOLDERS:
+				return ((InternalEList<?>)getParmamsHolders()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -164,6 +190,8 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 				return getData();
 			case ToUseMacroPlannerPackage.DOMAIN__SCENARIOS:
 				return getScenarios();
+			case ToUseMacroPlannerPackage.DOMAIN__PARMAMS_HOLDERS:
+				return getParmamsHolders();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -189,6 +217,10 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 				getScenarios().clear();
 				getScenarios().addAll((Collection<? extends Scenario>)newValue);
 				return;
+			case ToUseMacroPlannerPackage.DOMAIN__PARMAMS_HOLDERS:
+				getParmamsHolders().clear();
+				getParmamsHolders().addAll((Collection<? extends ParamsHolder>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -210,6 +242,9 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 			case ToUseMacroPlannerPackage.DOMAIN__SCENARIOS:
 				getScenarios().clear();
 				return;
+			case ToUseMacroPlannerPackage.DOMAIN__PARMAMS_HOLDERS:
+				getParmamsHolders().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -228,6 +263,8 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 				return data != null && !data.isEmpty();
 			case ToUseMacroPlannerPackage.DOMAIN__SCENARIOS:
 				return scenarios != null && !scenarios.isEmpty();
+			case ToUseMacroPlannerPackage.DOMAIN__PARMAMS_HOLDERS:
+				return parmamsHolders != null && !parmamsHolders.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

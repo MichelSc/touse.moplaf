@@ -20,5 +20,6 @@ Require-Bundle: org.eclipse.core.runtime,
  com.misc.common.moplaf.macroplanner.solver.emf.edit;visibility:=reexport,
  com.misc.common.moplaf.solver.emf.edit;visibility:=reexport,
  com.misc.common.moplaf.time.discrete.emf.edit;visibility:=reexport,
+ com.misc.common.moplaf.time.emf.edit;visibility:=reexport,
  com.misc.common.moplaf.emf.editor;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy

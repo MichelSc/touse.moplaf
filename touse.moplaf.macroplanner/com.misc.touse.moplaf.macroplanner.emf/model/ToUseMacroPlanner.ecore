@@ -11,5 +11,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="Scenarios" upperBound="-1"
         eType="ecore:EClass ../../com.misc.common.moplaf.macroplanner.solver.emf/model/MacroPlannerSolver.ecore#//Scenario"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ParmamsHolders" upperBound="-1"
+        eType="ecore:EClass ../../com.misc.common.moplaf.job.emf/model/job.ecore#//ParamsHolder"
+        containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

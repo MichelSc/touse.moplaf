@@ -12,6 +12,7 @@
  */
 package com.misc.touse.moplaf.macroplanner;
 
+import com.misc.common.moplaf.job.ParamsHolder;
 import com.misc.common.moplaf.macroplanner.MacroPlannerData;
 import com.misc.common.moplaf.macroplanner.MacroPlannerStaticData;
 import com.misc.common.moplaf.macroplanner.solver.Scenario;
@@ -31,6 +32,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.misc.touse.moplaf.macroplanner.Domain#getStaticData <em>Static Data</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.macroplanner.Domain#getData <em>Data</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.macroplanner.Domain#getScenarios <em>Scenarios</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.macroplanner.Domain#getParmamsHolders <em>Parmams Holders</em>}</li>
  * </ul>
  *
  * @see com.misc.touse.moplaf.macroplanner.ToUseMacroPlannerPackage#getDomain()
@@ -69,6 +71,22 @@ public interface Domain extends EObject {
 	 * @generated
 	 */
 	EList<Scenario> getScenarios();
+
+	/**
+	 * Returns the value of the '<em><b>Parmams Holders</b></em>' containment reference list.
+	 * The list contents are of type {@link com.misc.common.moplaf.job.ParamsHolder}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Parmams Holders</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Parmams Holders</em>' containment reference list.
+	 * @see com.misc.touse.moplaf.macroplanner.ToUseMacroPlannerPackage#getDomain_ParmamsHolders()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<ParamsHolder> getParmamsHolders();
 
 	/**
 	 * Returns the value of the '<em><b>Static Data</b></em>' containment reference list.
