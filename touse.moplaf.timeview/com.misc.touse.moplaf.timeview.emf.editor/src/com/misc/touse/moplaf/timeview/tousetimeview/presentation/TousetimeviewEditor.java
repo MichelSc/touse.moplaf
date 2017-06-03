@@ -154,7 +154,7 @@ import org.eclipse.emf.edit.ui.util.EditUIUtil;
 
 import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 
-import com.misc.common.moplaf.emf.editor.AdapterFactoryContentProviderExtended;
+import com.misc.common.moplaf.emf.editor.provider.AdapterFactoryContentProviderExtended;
 import com.misc.touse.moplaf.timeview.tousetimeview.TousetimeviewPackage;
 import com.misc.touse.moplaf.timeview.tousetimeview.provider.TousetimeviewItemProviderAdapterFactory;
 

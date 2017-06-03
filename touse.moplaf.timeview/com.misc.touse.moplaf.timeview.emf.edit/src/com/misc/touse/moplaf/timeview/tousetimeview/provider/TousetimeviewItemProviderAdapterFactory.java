@@ -2,8 +2,7 @@
  */
 package com.misc.touse.moplaf.timeview.tousetimeview.provider;
 
-import com.misc.common.moplaf.timeview.impl.IItemIntervalEventProvider;
-import com.misc.common.moplaf.timeview.impl.IItemIntervalEventsProvider;
+import com.misc.common.moplaf.timeview.emf.edit.IItemTimeLinesProvider;
 import com.misc.touse.moplaf.timeview.tousetimeview.util.TousetimeviewAdapterFactory;
 
 import java.util.ArrayList;
@@ -19,7 +18,6 @@ import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.provider.IChangeNotifier;
 import org.eclipse.emf.edit.provider.IDisposable;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemColorProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
@@ -71,9 +69,7 @@ public class TousetimeviewItemProviderAdapterFactory extends TousetimeviewAdapte
 		supportedTypes.add(ITreeItemContentProvider.class);
 		supportedTypes.add(IItemLabelProvider.class);
 		supportedTypes.add(IItemPropertySource.class);
-		supportedTypes.add(IItemIntervalEventProvider.class); // non emf interface
-		supportedTypes.add(IItemIntervalEventsProvider.class); // non emf interface
-		supportedTypes.add(IItemColorProvider.class); // non emf interface
+		supportedTypes.add(IItemTimeLinesProvider.class); // moplaf interface
 	}
 
 	/**

@@ -3,12 +3,15 @@
 package com.misc.touse.moplaf.timeview.tousetimeview.provider;
 
 
-import com.misc.common.moplaf.timeview.impl.IItemIntervalEventsProvider;
+import com.misc.common.moplaf.common.Color;
+import com.misc.common.moplaf.timeview.emf.edit.IItemTimeLinesEventsProvider;
+import com.misc.touse.moplaf.timeview.tousetimeview.Node;
 import com.misc.touse.moplaf.timeview.tousetimeview.Row;
 import com.misc.touse.moplaf.timeview.tousetimeview.TousetimeviewFactory;
 import com.misc.touse.moplaf.timeview.tousetimeview.TousetimeviewPackage;
 
 import java.util.Collection;
+import java.util.Date;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
@@ -32,14 +35,14 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 /**
  * This is the item provider adapter for a {@link com.misc.touse.moplaf.timeview.tousetimeview.Row} object.
  * <!-- begin-user-doc -->
- * @implements IItemIntervalEventsProvider
+ * @implements IItemTimeLinesEventsProvider
  * <!-- end-user-doc -->
  * @generated
  */
 public class RowItemProvider 
 	extends ItemProviderAdapter
 	implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource, IItemIntervalEventsProvider {
+		IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource, IItemTimeLinesEventsProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -50,16 +53,16 @@ public class RowItemProvider
 		super(adapterFactory);
 	}
 
-	/* (non-Javadoc)
-	 * @see org.eclipse.emf.edit.provider.ItemProviderAdapter#isAdapterForType(java.lang.Object)
-	 */
-	@Override
-	public boolean isAdapterForType(Object type) {
-		if ( super.isAdapterForType(type) ){ return true; }
-		if ( type == IItemIntervalEventsProvider.class) { return true; }
-		return false;
-	}
-
+//	/* (non-Javadoc)
+//	 * @see org.eclipse.emf.edit.provider.ItemProviderAdapter#isAdapterForType(java.lang.Object)
+//	 */
+//	@Override
+//	public boolean isAdapterForType(Object type) {
+//		if ( super.isAdapterForType(type) ){ return true; }
+//		if ( type == IItemIntervalEventsProvider.class) { return true; }
+//		return false;
+//	}
+//
 	/**
 	 * This returns the property descriptors for the adapted class.
 	 * <!-- begin-user-doc -->
@@ -260,9 +263,57 @@ public class RowItemProvider
 	}
 
 	@Override
-	public Collection<?> getIntervalEvents(Object element) {
+	public Collection<?> getTimeLines(Object element) {
+		// one time line for this object
+		return null;
+	}
+	
+	@Override
+	public String getText(Object element, Object timeline) {
+		Row row = (Row)element;
+		return row.getText(); 
+	}
+
+
+	@Override
+	public Collection<?> getEvents(Object element, Object timeline) {
 		Row row = (Row)element;
 		return row.getNodes(); 
 	}
+
+	@Override
+	public Date getStart(Object element, Object timeline, Object event) {
+		Node node = (Node) event;
+		return node.getStart();
+	}
+
+	@Override
+	public Date getEnd(Object element, Object timeline, Object event) {
+		Node node = (Node) event;
+		return node.getEnd();
+	}
+
+	@Override
+	public Object getForeground(Object element, Object timeline, Object event) {
+		Node node = (Node) event;
+		int rgb = node.getForeground();
+		Color color = new Color(rgb);
+		return color.toURI();
+	}
+
+	@Override
+	public Object getBackground(Object element, Object timeline, Object event) {
+		Node node = (Node) event;
+		int rgb = node.getBackground();
+		Color color = new Color(rgb);
+		return color.toURI();
+	}
+
+	@Override
+	public String getText(Object element, Object timeline, Object event) {
+		Node node = (Node) event;
+		return node.getText();
+	}
+
 
 }

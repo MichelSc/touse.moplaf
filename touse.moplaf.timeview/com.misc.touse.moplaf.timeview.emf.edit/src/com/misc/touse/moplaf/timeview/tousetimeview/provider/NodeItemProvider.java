@@ -3,13 +3,11 @@
 package com.misc.touse.moplaf.timeview.tousetimeview.provider;
 
 
-import com.misc.common.moplaf.emf.Util;
-import com.misc.common.moplaf.timeview.impl.IItemIntervalEventProvider;
+
 import com.misc.touse.moplaf.timeview.tousetimeview.Node;
 import com.misc.touse.moplaf.timeview.tousetimeview.TousetimeviewPackage;
 
 import java.util.Collection;
-import java.util.Date;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
@@ -28,22 +26,17 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.swt.graphics.Color;
-import org.eclipse.swt.graphics.RGB;
-import org.eclipse.swt.widgets.Display;
 
 /**
  * This is the item provider adapter for a {@link com.misc.touse.moplaf.timeview.tousetimeview.Node} object.
  * <!-- begin-user-doc -->
- * @implements IItemIntervalEventProvider
- * @implements IItemColorProvider
  * <!-- end-user-doc -->
  * @generated
  */
 public class NodeItemProvider 
 	extends ItemProviderAdapter
 	implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource, IItemIntervalEventProvider, IItemColorProvider {
+		IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource, IItemColorProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -54,19 +47,6 @@ public class NodeItemProvider
 		super(adapterFactory);
 	}
 
-	
-	/* (non-Javadoc)
-	 * @see org.eclipse.emf.edit.provider.ItemProviderAdapter#isAdapterForType(java.lang.Object)
-	 */
-	@Override
-	public boolean isAdapterForType(Object type) {
-		if ( super.isAdapterForType(type) ){ return true; }
-		if ( type == IItemIntervalEventProvider.class) { return true; }
-		if ( type == IItemColorProvider.class) { return true; }
-		return false;
-	}
-
-	
 	/**
 	 * This returns the property descriptors for the adapted class.
 	 * <!-- begin-user-doc -->
@@ -267,32 +247,6 @@ public class NodeItemProvider
 	@Override
 	public ResourceLocator getResourceLocator() {
 		return ToUseTimeViewEditPlugin.INSTANCE;
-	}
-
-	@Override
-	public Date getIntervalEventStart(Object element) {
-		Node node = (Node) element;
-		return node.getStart();
-	}
-
-	@Override
-	public Date getIntervalEventEnd(Object element) {
-		Node node = (Node) element;
-		return node.getEnd();
-	}
-	
-	@Override
-	public Object getForeground(Object element) {
-		Node node = (Node) element;
-		RGB rgb = Util.integerToRgb(node.getForeground());
-		return new Color(Display.getCurrent(), rgb);
-	}
-	
-	@Override
-	public Object getBackground(Object element) {
-		Node node = (Node) element;
-		RGB rgb = Util.integerToRgb(node.getBackground());
-		return new Color(Display.getCurrent(), rgb);
 	}
 
 }
