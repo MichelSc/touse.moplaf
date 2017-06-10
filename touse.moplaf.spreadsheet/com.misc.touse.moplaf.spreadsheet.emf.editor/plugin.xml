@@ -34,4 +34,32 @@
       </editor>
    </extension>
 
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated tousespreadsheet -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="spreadsheetcsv.presentation.SpreadsheetcsvModelWizardID"
+            name="%_UI_SpreadsheetcsvModelWizard_label"
+            class="spreadsheetcsv.presentation.SpreadsheetcsvModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/SpreadsheetcsvModelFile.gif">
+         <description>%_UI_SpreadsheetcsvModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated tousespreadsheet -->
+      <editor
+            id="spreadsheetcsv.presentation.SpreadsheetcsvEditorID"
+            name="%_UI_SpreadsheetcsvEditor_label"
+            icon="icons/full/obj16/SpreadsheetcsvModelFile.gif"
+            extensions="spreadsheetcsv"
+            class="spreadsheetcsv.presentation.SpreadsheetcsvEditor"
+            contributorClass="spreadsheetcsv.presentation.SpreadsheetcsvActionBarContributor">
+      </editor>
+   </extension>
+
 </plugin>

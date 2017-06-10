@@ -1,6 +1,6 @@
 /**
  */
-package com.misc.touse.moplaf.spreadsheet.tousespreadsheet.presentation;
+package spreadsheetcsv.presentation;
 
 
 import java.util.ArrayList;
@@ -69,10 +69,12 @@ import org.eclipse.ui.dialogs.WizardNewFileCreationPage;
 import org.eclipse.ui.part.FileEditorInput;
 import org.eclipse.ui.part.ISetSelectionTarget;
 
-import com.misc.touse.moplaf.spreadsheet.tousespreadsheet.ToUseSpreadsheetFactory;
-import com.misc.touse.moplaf.spreadsheet.tousespreadsheet.ToUseSpreadsheetPackage;
+import spreadsheetcsv.SpreadsheetcsvFactory;
+import spreadsheetcsv.SpreadsheetcsvPackage;
 import com.misc.touse.moplaf.spreadsheet.tousespreadsheet.provider.TousespreadsheetEditPlugin;
 
+
+import com.misc.touse.moplaf.spreadsheet.tousespreadsheet.presentation.TousespreadsheetEditorPlugin;
 
 import org.eclipse.core.runtime.Path;
 
@@ -91,7 +93,7 @@ import org.eclipse.ui.PartInitException;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ToUseSpreadsheetModelWizard extends Wizard implements INewWizard {
+public class SpreadsheetcsvModelWizard extends Wizard implements INewWizard {
 	/**
 	 * The supported extensions for created files.
 	 * <!-- begin-user-doc -->
@@ -99,7 +101,7 @@ public class ToUseSpreadsheetModelWizard extends Wizard implements INewWizard {
 	 * @generated
 	 */
 	public static final List<String> FILE_EXTENSIONS =
-		Collections.unmodifiableList(Arrays.asList(TousespreadsheetEditorPlugin.INSTANCE.getString("_UI_ToUseSpreadsheetEditorFilenameExtensions").split("\\s*,\\s*")));
+		Collections.unmodifiableList(Arrays.asList(TousespreadsheetEditorPlugin.INSTANCE.getString("_UI_SpreadsheetcsvEditorFilenameExtensions").split("\\s*,\\s*")));
 
 	/**
 	 * A formatted list of supported file extensions, suitable for display.
@@ -108,7 +110,7 @@ public class ToUseSpreadsheetModelWizard extends Wizard implements INewWizard {
 	 * @generated
 	 */
 	public static final String FORMATTED_FILE_EXTENSIONS =
-		TousespreadsheetEditorPlugin.INSTANCE.getString("_UI_ToUseSpreadsheetEditorFilenameExtensions").replaceAll("\\s*,\\s*", ", ");
+		TousespreadsheetEditorPlugin.INSTANCE.getString("_UI_SpreadsheetcsvEditorFilenameExtensions").replaceAll("\\s*,\\s*", ", ");
 
 	/**
 	 * This caches an instance of the model package.
@@ -116,7 +118,7 @@ public class ToUseSpreadsheetModelWizard extends Wizard implements INewWizard {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ToUseSpreadsheetPackage toUseSpreadsheetPackage = ToUseSpreadsheetPackage.eINSTANCE;
+	protected SpreadsheetcsvPackage spreadsheetcsvPackage = SpreadsheetcsvPackage.eINSTANCE;
 
 	/**
 	 * This caches an instance of the model factory.
@@ -124,7 +126,7 @@ public class ToUseSpreadsheetModelWizard extends Wizard implements INewWizard {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ToUseSpreadsheetFactory toUseSpreadsheetFactory = toUseSpreadsheetPackage.getToUseSpreadsheetFactory();
+	protected SpreadsheetcsvFactory spreadsheetcsvFactory = spreadsheetcsvPackage.getSpreadsheetcsvFactory();
 
 	/**
 	 * This is the file creation page.
@@ -132,7 +134,7 @@ public class ToUseSpreadsheetModelWizard extends Wizard implements INewWizard {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ToUseSpreadsheetModelWizardNewFileCreationPage newFileCreationPage;
+	protected SpreadsheetcsvModelWizardNewFileCreationPage newFileCreationPage;
 
 	/**
 	 * This is the initial object creation page.
@@ -140,7 +142,7 @@ public class ToUseSpreadsheetModelWizard extends Wizard implements INewWizard {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ToUseSpreadsheetModelWizardInitialObjectCreationPage initialObjectCreationPage;
+	protected SpreadsheetcsvModelWizardInitialObjectCreationPage initialObjectCreationPage;
 
 	/**
 	 * Remember the selection during initialization for populating the default container.
@@ -176,7 +178,7 @@ public class ToUseSpreadsheetModelWizard extends Wizard implements INewWizard {
 		this.workbench = workbench;
 		this.selection = selection;
 		setWindowTitle(TousespreadsheetEditorPlugin.INSTANCE.getString("_UI_Wizard_label"));
-		setDefaultPageImageDescriptor(ExtendedImageRegistry.INSTANCE.getImageDescriptor(TousespreadsheetEditorPlugin.INSTANCE.getImage("full/wizban/NewToUseSpreadsheet")));
+		setDefaultPageImageDescriptor(ExtendedImageRegistry.INSTANCE.getImageDescriptor(TousespreadsheetEditorPlugin.INSTANCE.getImage("full/wizban/NewSpreadsheetcsv")));
 	}
 
 	/**
@@ -188,7 +190,7 @@ public class ToUseSpreadsheetModelWizard extends Wizard implements INewWizard {
 	protected Collection<String> getInitialObjectNames() {
 		if (initialObjectNames == null) {
 			initialObjectNames = new ArrayList<String>();
-			for (EClassifier eClassifier : toUseSpreadsheetPackage.getEClassifiers()) {
+			for (EClassifier eClassifier : spreadsheetcsvPackage.getEClassifiers()) {
 				if (eClassifier instanceof EClass) {
 					EClass eClass = (EClass)eClassifier;
 					if (!eClass.isAbstract()) {
@@ -208,8 +210,8 @@ public class ToUseSpreadsheetModelWizard extends Wizard implements INewWizard {
 	 * @generated
 	 */
 	protected EObject createInitialModel() {
-		EClass eClass = (EClass)toUseSpreadsheetPackage.getEClassifier(initialObjectCreationPage.getInitialObjectName());
-		EObject rootObject = toUseSpreadsheetFactory.create(eClass);
+		EClass eClass = (EClass)spreadsheetcsvPackage.getEClassifier(initialObjectCreationPage.getInitialObjectName());
+		EObject rootObject = spreadsheetcsvFactory.create(eClass);
 		return rootObject;
 	}
 
@@ -310,14 +312,14 @@ public class ToUseSpreadsheetModelWizard extends Wizard implements INewWizard {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public class ToUseSpreadsheetModelWizardNewFileCreationPage extends WizardNewFileCreationPage {
+	public class SpreadsheetcsvModelWizardNewFileCreationPage extends WizardNewFileCreationPage {
 		/**
 		 * Pass in the selection.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		public ToUseSpreadsheetModelWizardNewFileCreationPage(String pageId, IStructuredSelection selection) {
+		public SpreadsheetcsvModelWizardNewFileCreationPage(String pageId, IStructuredSelection selection) {
 			super(pageId, selection);
 		}
 
@@ -357,7 +359,7 @@ public class ToUseSpreadsheetModelWizard extends Wizard implements INewWizard {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public class ToUseSpreadsheetModelWizardInitialObjectCreationPage extends WizardPage {
+	public class SpreadsheetcsvModelWizardInitialObjectCreationPage extends WizardPage {
 		/**
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -385,7 +387,7 @@ public class ToUseSpreadsheetModelWizard extends Wizard implements INewWizard {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		public ToUseSpreadsheetModelWizardInitialObjectCreationPage(String pageId) {
+		public SpreadsheetcsvModelWizardInitialObjectCreationPage(String pageId) {
 			super(pageId);
 		}
 
@@ -569,10 +571,10 @@ public class ToUseSpreadsheetModelWizard extends Wizard implements INewWizard {
 	public void addPages() {
 		// Create a page, set the title, and the initial model file name.
 		//
-		newFileCreationPage = new ToUseSpreadsheetModelWizardNewFileCreationPage("Whatever", selection);
-		newFileCreationPage.setTitle(TousespreadsheetEditorPlugin.INSTANCE.getString("_UI_ToUseSpreadsheetModelWizard_label"));
-		newFileCreationPage.setDescription(TousespreadsheetEditorPlugin.INSTANCE.getString("_UI_ToUseSpreadsheetModelWizard_description"));
-		newFileCreationPage.setFileName(TousespreadsheetEditorPlugin.INSTANCE.getString("_UI_ToUseSpreadsheetEditorFilenameDefaultBase") + "." + FILE_EXTENSIONS.get(0));
+		newFileCreationPage = new SpreadsheetcsvModelWizardNewFileCreationPage("Whatever", selection);
+		newFileCreationPage.setTitle(TousespreadsheetEditorPlugin.INSTANCE.getString("_UI_SpreadsheetcsvModelWizard_label"));
+		newFileCreationPage.setDescription(TousespreadsheetEditorPlugin.INSTANCE.getString("_UI_SpreadsheetcsvModelWizard_description"));
+		newFileCreationPage.setFileName(TousespreadsheetEditorPlugin.INSTANCE.getString("_UI_SpreadsheetcsvEditorFilenameDefaultBase") + "." + FILE_EXTENSIONS.get(0));
 		addPage(newFileCreationPage);
 
 		// Try and get the resource selection to determine a current directory for the file dialog.
@@ -598,7 +600,7 @@ public class ToUseSpreadsheetModelWizard extends Wizard implements INewWizard {
 
 					// Make up a unique new name here.
 					//
-					String defaultModelBaseFilename = TousespreadsheetEditorPlugin.INSTANCE.getString("_UI_ToUseSpreadsheetEditorFilenameDefaultBase");
+					String defaultModelBaseFilename = TousespreadsheetEditorPlugin.INSTANCE.getString("_UI_SpreadsheetcsvEditorFilenameDefaultBase");
 					String defaultModelFilenameExtension = FILE_EXTENSIONS.get(0);
 					String modelFilename = defaultModelBaseFilename + "." + defaultModelFilenameExtension;
 					for (int i = 1; ((IContainer)selectedResource).findMember(modelFilename) != null; ++i) {
@@ -608,8 +610,8 @@ public class ToUseSpreadsheetModelWizard extends Wizard implements INewWizard {
 				}
 			}
 		}
-		initialObjectCreationPage = new ToUseSpreadsheetModelWizardInitialObjectCreationPage("Whatever2");
-		initialObjectCreationPage.setTitle(TousespreadsheetEditorPlugin.INSTANCE.getString("_UI_ToUseSpreadsheetModelWizard_label"));
+		initialObjectCreationPage = new SpreadsheetcsvModelWizardInitialObjectCreationPage("Whatever2");
+		initialObjectCreationPage.setTitle(TousespreadsheetEditorPlugin.INSTANCE.getString("_UI_SpreadsheetcsvModelWizard_label"));
 		initialObjectCreationPage.setDescription(TousespreadsheetEditorPlugin.INSTANCE.getString("_UI_Wizard_initial_object_description"));
 		addPage(initialObjectCreationPage);
 	}

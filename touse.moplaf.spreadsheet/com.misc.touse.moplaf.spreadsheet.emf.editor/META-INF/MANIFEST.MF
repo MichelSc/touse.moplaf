@@ -8,7 +8,8 @@ Bundle-Activator: com.misc.touse.moplaf.spreadsheet.tousespreadsheet.presentatio
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: com.misc.touse.moplaf.spreadsheet.tousespreadsheet.presentation
+Export-Package: com.misc.touse.moplaf.spreadsheet.tousespreadsheet.presentation,
+ spreadsheetcsv.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,
  com.misc.touse.moplaf.spreadsheet.emf.edit;visibility:=reexport,

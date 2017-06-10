@@ -26,6 +26,7 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import spreadsheetcsv.SpreadsheetcsvFactory;
 
 /**
  * This is the item provider adapter for a {@link com.misc.touse.moplaf.spreadsheet.tousespreadsheet.Domain} object.
@@ -79,6 +80,7 @@ public class DomainItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ToUseSpreadsheetPackage.Literals.DOMAIN__SPREADSHEETS_POI);
+			childrenFeatures.add(ToUseSpreadsheetPackage.Literals.DOMAIN__SPREADSHEETS_CSV);
 		}
 		return childrenFeatures;
 	}
@@ -132,6 +134,7 @@ public class DomainItemProvider
 
 		switch (notification.getFeatureID(Domain.class)) {
 			case ToUseSpreadsheetPackage.DOMAIN__SPREADSHEETS_POI:
+			case ToUseSpreadsheetPackage.DOMAIN__SPREADSHEETS_CSV:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -153,6 +156,11 @@ public class DomainItemProvider
 			(createChildParameter
 				(ToUseSpreadsheetPackage.Literals.DOMAIN__SPREADSHEETS_POI,
 				 SpreadsheetPOIFactory.eINSTANCE.createSpreadsheetPOI()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ToUseSpreadsheetPackage.Literals.DOMAIN__SPREADSHEETS_CSV,
+				 SpreadsheetcsvFactory.eINSTANCE.createSpreadsheetCSV()));
 	}
 
 	/**

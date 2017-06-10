@@ -1,6 +1,6 @@
 /**
  */
-package com.misc.touse.moplaf.spreadsheet.tousespreadsheet.presentation;
+package spreadsheetcsv.presentation;
 
 
 import java.io.IOException;
@@ -154,23 +154,26 @@ import org.eclipse.emf.edit.ui.util.EditUIUtil;
 
 import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 
-import com.misc.touse.moplaf.spreadsheet.tousespreadsheet.provider.ToUseSpreadsheetItemProviderAdapterFactory;
+import spreadsheetcsv.provider.SpreadsheetcsvItemProviderAdapterFactory;
 
 import com.misc.common.moplaf.spreadsheet.provider.SpreadsheetItemProviderAdapterFactory;
 
 import com.misc.common.moplaf.spreadsheet.spreadsheetpoi.provider.SpreadsheetPOIItemProviderAdapterFactory;
 
+import com.misc.touse.moplaf.spreadsheet.tousespreadsheet.presentation.TousespreadsheetEditorPlugin;
+
+import com.misc.touse.moplaf.spreadsheet.tousespreadsheet.provider.ToUseSpreadsheetItemProviderAdapterFactory;
+
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
-import spreadsheetcsv.provider.SpreadsheetcsvItemProviderAdapterFactory;
 
 
 /**
- * This is an example of a ToUseSpreadsheet model editor.
+ * This is an example of a Spreadsheetcsv model editor.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ToUseSpreadsheetEditor
+public class SpreadsheetcsvEditor
 	extends MultiPageEditorPart
 	implements IEditingDomainProvider, ISelectionProvider, IMenuListener, IViewerProvider, IGotoMarker {
 	/**
@@ -332,18 +335,18 @@ public class ToUseSpreadsheetEditor
 			public void partActivated(IWorkbenchPart p) {
 				if (p instanceof ContentOutline) {
 					if (((ContentOutline)p).getCurrentPage() == contentOutlinePage) {
-						getActionBarContributor().setActiveEditor(ToUseSpreadsheetEditor.this);
+						getActionBarContributor().setActiveEditor(SpreadsheetcsvEditor.this);
 
 						setCurrentViewer(contentOutlineViewer);
 					}
 				}
 				else if (p instanceof PropertySheet) {
 					if (propertySheetPages.contains(((PropertySheet)p).getCurrentPage())) {
-						getActionBarContributor().setActiveEditor(ToUseSpreadsheetEditor.this);
+						getActionBarContributor().setActiveEditor(SpreadsheetcsvEditor.this);
 						handleActivate();
 					}
 				}
-				else if (p == ToUseSpreadsheetEditor.this) {
+				else if (p == SpreadsheetcsvEditor.this) {
 					handleActivate();
 				}
 			}
@@ -516,7 +519,7 @@ public class ToUseSpreadsheetEditor
 								 public void run() {
 									 removedResources.addAll(visitor.getRemovedResources());
 									 if (!isDirty()) {
-										 getSite().getPage().closeEditor(ToUseSpreadsheetEditor.this, false);
+										 getSite().getPage().closeEditor(SpreadsheetcsvEditor.this, false);
 									 }
 								 }
 							 });
@@ -527,7 +530,7 @@ public class ToUseSpreadsheetEditor
 							(new Runnable() {
 								 public void run() {
 									 changedResources.addAll(visitor.getChangedResources());
-									 if (getSite().getPage().getActiveEditor() == ToUseSpreadsheetEditor.this) {
+									 if (getSite().getPage().getActiveEditor() == SpreadsheetcsvEditor.this) {
 										 handleActivate();
 									 }
 								 }
@@ -559,7 +562,7 @@ public class ToUseSpreadsheetEditor
 
 		if (!removedResources.isEmpty()) {
 			if (handleDirtyConflict()) {
-				getSite().getPage().closeEditor(ToUseSpreadsheetEditor.this, false);
+				getSite().getPage().closeEditor(SpreadsheetcsvEditor.this, false);
 			}
 			else {
 				removedResources.clear();
@@ -689,7 +692,7 @@ public class ToUseSpreadsheetEditor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ToUseSpreadsheetEditor() {
+	public SpreadsheetcsvEditor() {
 		super();
 		initializeEditingDomain();
 	}
@@ -1030,7 +1033,7 @@ public class ToUseSpreadsheetEditor
 			//
 			{
 				ViewerPane viewerPane =
-					new ViewerPane(getSite().getPage(), ToUseSpreadsheetEditor.this) {
+					new ViewerPane(getSite().getPage(), SpreadsheetcsvEditor.this) {
 						@Override
 						public Viewer createViewer(Composite composite) {
 							Tree tree = new Tree(composite, SWT.MULTI);
@@ -1064,7 +1067,7 @@ public class ToUseSpreadsheetEditor
 			//
 			{
 				ViewerPane viewerPane =
-					new ViewerPane(getSite().getPage(), ToUseSpreadsheetEditor.this) {
+					new ViewerPane(getSite().getPage(), SpreadsheetcsvEditor.this) {
 						@Override
 						public Viewer createViewer(Composite composite) {
 							Tree tree = new Tree(composite, SWT.MULTI);
@@ -1093,7 +1096,7 @@ public class ToUseSpreadsheetEditor
 			//
 			{
 				ViewerPane viewerPane =
-					new ViewerPane(getSite().getPage(), ToUseSpreadsheetEditor.this) {
+					new ViewerPane(getSite().getPage(), SpreadsheetcsvEditor.this) {
 						@Override
 						public Viewer createViewer(Composite composite) {
 							return new ListViewer(composite);
@@ -1118,7 +1121,7 @@ public class ToUseSpreadsheetEditor
 			//
 			{
 				ViewerPane viewerPane =
-					new ViewerPane(getSite().getPage(), ToUseSpreadsheetEditor.this) {
+					new ViewerPane(getSite().getPage(), SpreadsheetcsvEditor.this) {
 						@Override
 						public Viewer createViewer(Composite composite) {
 							return new TreeViewer(composite);
@@ -1145,7 +1148,7 @@ public class ToUseSpreadsheetEditor
 			//
 			{
 				ViewerPane viewerPane =
-					new ViewerPane(getSite().getPage(), ToUseSpreadsheetEditor.this) {
+					new ViewerPane(getSite().getPage(), SpreadsheetcsvEditor.this) {
 						@Override
 						public Viewer createViewer(Composite composite) {
 							return new TableViewer(composite);
@@ -1188,7 +1191,7 @@ public class ToUseSpreadsheetEditor
 			//
 			{
 				ViewerPane viewerPane =
-					new ViewerPane(getSite().getPage(), ToUseSpreadsheetEditor.this) {
+					new ViewerPane(getSite().getPage(), SpreadsheetcsvEditor.this) {
 						@Override
 						public Viewer createViewer(Composite composite) {
 							return new TreeViewer(composite);
@@ -1408,8 +1411,8 @@ public class ToUseSpreadsheetEditor
 			new ExtendedPropertySheetPage(editingDomain) {
 				@Override
 				public void setSelectionToViewer(List<?> selection) {
-					ToUseSpreadsheetEditor.this.setSelectionToViewer(selection);
-					ToUseSpreadsheetEditor.this.setFocus();
+					SpreadsheetcsvEditor.this.setSelectionToViewer(selection);
+					SpreadsheetcsvEditor.this.setFocus();
 				}
 
 				@Override

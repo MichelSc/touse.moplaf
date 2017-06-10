@@ -3,7 +3,11 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="tousespreadsheet" nsURI="http://www.misc.com/touse/moplaf/spreadsheet/model/0.1"
     nsPrefix="tusp">
   <eClassifiers xsi:type="ecore:EClass" name="Domain">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="SpreadsheetsPOI" eType="ecore:EClass ../../com.misc.common.moplaf.spreadsheet.poi.emf/model/spreadsheetpoi.ecore#//SpreadsheetPOI"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SpreadsheetsPOI" upperBound="-1"
+        eType="ecore:EClass ../../com.misc.common.moplaf.spreadsheet.poi.emf/model/spreadsheetpoi.ecore#//SpreadsheetPOI"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SpreadsheetsCSV" upperBound="-1"
+        eType="ecore:EClass ../../com.misc.common.moplaf.spreadsheet.csv.emf/model/spreadsheetcsv.ecore#//SpreadsheetCSV"
         containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

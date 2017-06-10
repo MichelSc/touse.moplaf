@@ -1,20 +1,26 @@
 /**
  */
-package com.misc.touse.moplaf.spreadsheet.tousespreadsheet.impl;
+package spreadsheetcsv.impl;
+
+import com.misc.common.moplaf.spreadsheet.SpreadsheetPackage;
 
 import com.misc.common.moplaf.spreadsheet.spreadsheetpoi.SpreadsheetPOIPackage;
 
-import com.misc.touse.moplaf.spreadsheet.tousespreadsheet.Domain;
-import com.misc.touse.moplaf.spreadsheet.tousespreadsheet.ToUseSpreadsheetFactory;
 import com.misc.touse.moplaf.spreadsheet.tousespreadsheet.ToUseSpreadsheetPackage;
 
+import com.misc.touse.moplaf.spreadsheet.tousespreadsheet.impl.ToUseSpreadsheetPackageImpl;
+
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+
+import spreadsheetcsv.CSVFormat;
+import spreadsheetcsv.SpreadsheetCSV;
+import spreadsheetcsv.SpreadsheetcsvFactory;
 import spreadsheetcsv.SpreadsheetcsvPackage;
-import spreadsheetcsv.impl.SpreadsheetcsvPackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,13 +28,20 @@ import spreadsheetcsv.impl.SpreadsheetcsvPackageImpl;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ToUseSpreadsheetPackageImpl extends EPackageImpl implements ToUseSpreadsheetPackage {
+public class SpreadsheetcsvPackageImpl extends EPackageImpl implements SpreadsheetcsvPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass domainEClass = null;
+	private EClass spreadsheetCSVEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum csvFormatEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -41,12 +54,12 @@ public class ToUseSpreadsheetPackageImpl extends EPackageImpl implements ToUseSp
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see com.misc.touse.moplaf.spreadsheet.tousespreadsheet.ToUseSpreadsheetPackage#eNS_URI
+	 * @see spreadsheetcsv.SpreadsheetcsvPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private ToUseSpreadsheetPackageImpl() {
-		super(eNS_URI, ToUseSpreadsheetFactory.eINSTANCE);
+	private SpreadsheetcsvPackageImpl() {
+		super(eNS_URI, SpreadsheetcsvFactory.eINSTANCE);
 	}
 
 	/**
@@ -59,7 +72,7 @@ public class ToUseSpreadsheetPackageImpl extends EPackageImpl implements ToUseSp
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link ToUseSpreadsheetPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link SpreadsheetcsvPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -68,11 +81,11 @@ public class ToUseSpreadsheetPackageImpl extends EPackageImpl implements ToUseSp
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static ToUseSpreadsheetPackage init() {
-		if (isInited) return (ToUseSpreadsheetPackage)EPackage.Registry.INSTANCE.getEPackage(ToUseSpreadsheetPackage.eNS_URI);
+	public static SpreadsheetcsvPackage init() {
+		if (isInited) return (SpreadsheetcsvPackage)EPackage.Registry.INSTANCE.getEPackage(SpreadsheetcsvPackage.eNS_URI);
 
 		// Obtain or create and register package
-		ToUseSpreadsheetPackageImpl theToUseSpreadsheetPackage = (ToUseSpreadsheetPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ToUseSpreadsheetPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ToUseSpreadsheetPackageImpl());
+		SpreadsheetcsvPackageImpl theSpreadsheetcsvPackage = (SpreadsheetcsvPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof SpreadsheetcsvPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new SpreadsheetcsvPackageImpl());
 
 		isInited = true;
 
@@ -80,23 +93,23 @@ public class ToUseSpreadsheetPackageImpl extends EPackageImpl implements ToUseSp
 		SpreadsheetPOIPackage.eINSTANCE.eClass();
 
 		// Obtain or create and register interdependencies
-		SpreadsheetcsvPackageImpl theSpreadsheetcsvPackage = (SpreadsheetcsvPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(SpreadsheetcsvPackage.eNS_URI) instanceof SpreadsheetcsvPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(SpreadsheetcsvPackage.eNS_URI) : SpreadsheetcsvPackage.eINSTANCE);
+		ToUseSpreadsheetPackageImpl theToUseSpreadsheetPackage = (ToUseSpreadsheetPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ToUseSpreadsheetPackage.eNS_URI) instanceof ToUseSpreadsheetPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ToUseSpreadsheetPackage.eNS_URI) : ToUseSpreadsheetPackage.eINSTANCE);
 
 		// Create package meta-data objects
-		theToUseSpreadsheetPackage.createPackageContents();
 		theSpreadsheetcsvPackage.createPackageContents();
+		theToUseSpreadsheetPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theToUseSpreadsheetPackage.initializePackageContents();
 		theSpreadsheetcsvPackage.initializePackageContents();
+		theToUseSpreadsheetPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theToUseSpreadsheetPackage.freeze();
+		theSpreadsheetcsvPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(ToUseSpreadsheetPackage.eNS_URI, theToUseSpreadsheetPackage);
-		return theToUseSpreadsheetPackage;
+		EPackage.Registry.INSTANCE.put(SpreadsheetcsvPackage.eNS_URI, theSpreadsheetcsvPackage);
+		return theSpreadsheetcsvPackage;
 	}
 
 	/**
@@ -104,8 +117,8 @@ public class ToUseSpreadsheetPackageImpl extends EPackageImpl implements ToUseSp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getDomain() {
-		return domainEClass;
+	public EClass getSpreadsheetCSV() {
+		return spreadsheetCSVEClass;
 	}
 
 	/**
@@ -113,8 +126,8 @@ public class ToUseSpreadsheetPackageImpl extends EPackageImpl implements ToUseSp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDomain_SpreadsheetsPOI() {
-		return (EReference)domainEClass.getEStructuralFeatures().get(0);
+	public EAttribute getSpreadsheetCSV_Format() {
+		return (EAttribute)spreadsheetCSVEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -122,8 +135,8 @@ public class ToUseSpreadsheetPackageImpl extends EPackageImpl implements ToUseSp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDomain_SpreadsheetsCSV() {
-		return (EReference)domainEClass.getEStructuralFeatures().get(1);
+	public EEnum getCSVFormat() {
+		return csvFormatEEnum;
 	}
 
 	/**
@@ -131,8 +144,8 @@ public class ToUseSpreadsheetPackageImpl extends EPackageImpl implements ToUseSp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ToUseSpreadsheetFactory getToUseSpreadsheetFactory() {
-		return (ToUseSpreadsheetFactory)getEFactoryInstance();
+	public SpreadsheetcsvFactory getSpreadsheetcsvFactory() {
+		return (SpreadsheetcsvFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -154,9 +167,11 @@ public class ToUseSpreadsheetPackageImpl extends EPackageImpl implements ToUseSp
 		isCreated = true;
 
 		// Create classes and their features
-		domainEClass = createEClass(DOMAIN);
-		createEReference(domainEClass, DOMAIN__SPREADSHEETS_POI);
-		createEReference(domainEClass, DOMAIN__SPREADSHEETS_CSV);
+		spreadsheetCSVEClass = createEClass(SPREADSHEET_CSV);
+		createEAttribute(spreadsheetCSVEClass, SPREADSHEET_CSV__FORMAT);
+
+		// Create enums
+		csvFormatEEnum = createEEnum(CSV_FORMAT);
 	}
 
 	/**
@@ -183,22 +198,25 @@ public class ToUseSpreadsheetPackageImpl extends EPackageImpl implements ToUseSp
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		SpreadsheetPOIPackage theSpreadsheetPOIPackage = (SpreadsheetPOIPackage)EPackage.Registry.INSTANCE.getEPackage(SpreadsheetPOIPackage.eNS_URI);
-		SpreadsheetcsvPackage theSpreadsheetcsvPackage = (SpreadsheetcsvPackage)EPackage.Registry.INSTANCE.getEPackage(SpreadsheetcsvPackage.eNS_URI);
+		SpreadsheetPackage theSpreadsheetPackage = (SpreadsheetPackage)EPackage.Registry.INSTANCE.getEPackage(SpreadsheetPackage.eNS_URI);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		spreadsheetCSVEClass.getESuperTypes().add(theSpreadsheetPackage.getSpreadsheet());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDomain_SpreadsheetsPOI(), theSpreadsheetPOIPackage.getSpreadsheetPOI(), null, "SpreadsheetsPOI", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDomain_SpreadsheetsCSV(), theSpreadsheetcsvPackage.getSpreadsheetCSV(), null, "SpreadsheetsCSV", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(spreadsheetCSVEClass, SpreadsheetCSV.class, "SpreadsheetCSV", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getSpreadsheetCSV_Format(), this.getCSVFormat(), "Format", null, 0, 1, SpreadsheetCSV.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		// Initialize enums and add enum literals
+		initEEnum(csvFormatEEnum, CSVFormat.class, "CSVFormat");
+		addEEnumLiteral(csvFormatEEnum, CSVFormat.ENUM_LITERAL_CSV_FORMAT_DEFAULT);
 
 		// Create resource
 		createResource(eNS_URI);
 	}
 
-} //ToUseSpreadsheetPackageImpl
+} //SpreadsheetcsvPackageImpl

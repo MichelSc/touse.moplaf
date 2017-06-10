@@ -4,7 +4,9 @@ package com.misc.touse.moplaf.spreadsheet.tousespreadsheet;
 
 import com.misc.common.moplaf.spreadsheet.spreadsheetpoi.SpreadsheetPOI;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
+import spreadsheetcsv.SpreadsheetCSV;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.spreadsheet.tousespreadsheet.Domain#getSpreadsheetsPOI <em>Spreadsheets POI</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.spreadsheet.tousespreadsheet.Domain#getSpreadsheetsCSV <em>Spreadsheets CSV</em>}</li>
  * </ul>
  *
  * @see com.misc.touse.moplaf.spreadsheet.tousespreadsheet.ToUseSpreadsheetPackage#getDomain()
@@ -24,29 +27,35 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Domain extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Spreadsheets POI</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Spreadsheets POI</b></em>' containment reference list.
+	 * The list contents are of type {@link com.misc.common.moplaf.spreadsheet.spreadsheetpoi.SpreadsheetPOI}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Spreadsheets POI</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Spreadsheets POI</em>' containment reference.
-	 * @see #setSpreadsheetsPOI(SpreadsheetPOI)
+	 * @return the value of the '<em>Spreadsheets POI</em>' containment reference list.
 	 * @see com.misc.touse.moplaf.spreadsheet.tousespreadsheet.ToUseSpreadsheetPackage#getDomain_SpreadsheetsPOI()
 	 * @model containment="true"
 	 * @generated
 	 */
-	SpreadsheetPOI getSpreadsheetsPOI();
+	EList<SpreadsheetPOI> getSpreadsheetsPOI();
 
 	/**
-	 * Sets the value of the '{@link com.misc.touse.moplaf.spreadsheet.tousespreadsheet.Domain#getSpreadsheetsPOI <em>Spreadsheets POI</em>}' containment reference.
+	 * Returns the value of the '<em><b>Spreadsheets CSV</b></em>' containment reference list.
+	 * The list contents are of type {@link spreadsheetcsv.SpreadsheetCSV}.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Spreadsheets CSV</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Spreadsheets POI</em>' containment reference.
-	 * @see #getSpreadsheetsPOI()
+	 * @return the value of the '<em>Spreadsheets CSV</em>' containment reference list.
+	 * @see com.misc.touse.moplaf.spreadsheet.tousespreadsheet.ToUseSpreadsheetPackage#getDomain_SpreadsheetsCSV()
+	 * @model containment="true"
 	 * @generated
 	 */
-	void setSpreadsheetsPOI(SpreadsheetPOI value);
+	EList<SpreadsheetCSV> getSpreadsheetsCSV();
 
 } // Domain
