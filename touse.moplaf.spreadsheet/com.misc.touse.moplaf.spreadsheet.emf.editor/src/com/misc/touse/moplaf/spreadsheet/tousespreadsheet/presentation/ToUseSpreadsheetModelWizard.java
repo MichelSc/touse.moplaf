@@ -99,7 +99,7 @@ public class ToUseSpreadsheetModelWizard extends Wizard implements INewWizard {
 	 * @generated
 	 */
 	public static final List<String> FILE_EXTENSIONS =
-		Collections.unmodifiableList(Arrays.asList(TousespreadsheetEditorPlugin.INSTANCE.getString("_UI_ToUseSpreadsheetEditorFilenameExtensions").split("\\s*,\\s*")));
+		Collections.unmodifiableList(Arrays.asList(ToUseSpreadsheetEditorPlugin.INSTANCE.getString("_UI_ToUseSpreadsheetEditorFilenameExtensions").split("\\s*,\\s*")));
 
 	/**
 	 * A formatted list of supported file extensions, suitable for display.
@@ -108,7 +108,7 @@ public class ToUseSpreadsheetModelWizard extends Wizard implements INewWizard {
 	 * @generated
 	 */
 	public static final String FORMATTED_FILE_EXTENSIONS =
-		TousespreadsheetEditorPlugin.INSTANCE.getString("_UI_ToUseSpreadsheetEditorFilenameExtensions").replaceAll("\\s*,\\s*", ", ");
+		ToUseSpreadsheetEditorPlugin.INSTANCE.getString("_UI_ToUseSpreadsheetEditorFilenameExtensions").replaceAll("\\s*,\\s*", ", ");
 
 	/**
 	 * This caches an instance of the model package.
@@ -175,8 +175,8 @@ public class ToUseSpreadsheetModelWizard extends Wizard implements INewWizard {
 	public void init(IWorkbench workbench, IStructuredSelection selection) {
 		this.workbench = workbench;
 		this.selection = selection;
-		setWindowTitle(TousespreadsheetEditorPlugin.INSTANCE.getString("_UI_Wizard_label"));
-		setDefaultPageImageDescriptor(ExtendedImageRegistry.INSTANCE.getImageDescriptor(TousespreadsheetEditorPlugin.INSTANCE.getImage("full/wizban/NewToUseSpreadsheet")));
+		setWindowTitle(ToUseSpreadsheetEditorPlugin.INSTANCE.getString("_UI_Wizard_label"));
+		setDefaultPageImageDescriptor(ExtendedImageRegistry.INSTANCE.getImageDescriptor(ToUseSpreadsheetEditorPlugin.INSTANCE.getImage("full/wizban/NewToUseSpreadsheet")));
 	}
 
 	/**
@@ -259,7 +259,7 @@ public class ToUseSpreadsheetModelWizard extends Wizard implements INewWizard {
 							resource.save(options);
 						}
 						catch (Exception exception) {
-							TousespreadsheetEditorPlugin.INSTANCE.log(exception);
+							ToUseSpreadsheetEditorPlugin.INSTANCE.log(exception);
 						}
 						finally {
 							progressMonitor.done();
@@ -292,14 +292,14 @@ public class ToUseSpreadsheetModelWizard extends Wizard implements INewWizard {
 					 workbench.getEditorRegistry().getDefaultEditor(modelFile.getFullPath().toString()).getId());					 	 
 			}
 			catch (PartInitException exception) {
-				MessageDialog.openError(workbenchWindow.getShell(), TousespreadsheetEditorPlugin.INSTANCE.getString("_UI_OpenEditorError_label"), exception.getMessage());
+				MessageDialog.openError(workbenchWindow.getShell(), ToUseSpreadsheetEditorPlugin.INSTANCE.getString("_UI_OpenEditorError_label"), exception.getMessage());
 				return false;
 			}
 
 			return true;
 		}
 		catch (Exception exception) {
-			TousespreadsheetEditorPlugin.INSTANCE.log(exception);
+			ToUseSpreadsheetEditorPlugin.INSTANCE.log(exception);
 			return false;
 		}
 	}
@@ -333,7 +333,7 @@ public class ToUseSpreadsheetModelWizard extends Wizard implements INewWizard {
 				String extension = new Path(getFileName()).getFileExtension();
 				if (extension == null || !FILE_EXTENSIONS.contains(extension)) {
 					String key = FILE_EXTENSIONS.size() > 1 ? "_WARN_FilenameExtensions" : "_WARN_FilenameExtension";
-					setErrorMessage(TousespreadsheetEditorPlugin.INSTANCE.getString(key, new Object [] { FORMATTED_FILE_EXTENSIONS }));
+					setErrorMessage(ToUseSpreadsheetEditorPlugin.INSTANCE.getString(key, new Object [] { FORMATTED_FILE_EXTENSIONS }));
 					return false;
 				}
 				return true;
@@ -410,7 +410,7 @@ public class ToUseSpreadsheetModelWizard extends Wizard implements INewWizard {
 
 			Label containerLabel = new Label(composite, SWT.LEFT);
 			{
-				containerLabel.setText(TousespreadsheetEditorPlugin.INSTANCE.getString("_UI_ModelObject"));
+				containerLabel.setText(ToUseSpreadsheetEditorPlugin.INSTANCE.getString("_UI_ModelObject"));
 
 				GridData data = new GridData();
 				data.horizontalAlignment = GridData.FILL;
@@ -436,7 +436,7 @@ public class ToUseSpreadsheetModelWizard extends Wizard implements INewWizard {
 
 			Label encodingLabel = new Label(composite, SWT.LEFT);
 			{
-				encodingLabel.setText(TousespreadsheetEditorPlugin.INSTANCE.getString("_UI_XMLEncoding"));
+				encodingLabel.setText(ToUseSpreadsheetEditorPlugin.INSTANCE.getString("_UI_XMLEncoding"));
 
 				GridData data = new GridData();
 				data.horizontalAlignment = GridData.FILL;
@@ -538,7 +538,7 @@ public class ToUseSpreadsheetModelWizard extends Wizard implements INewWizard {
 				return TousespreadsheetEditPlugin.INSTANCE.getString("_UI_" + typeName + "_type");
 			}
 			catch(MissingResourceException mre) {
-				TousespreadsheetEditorPlugin.INSTANCE.log(mre);
+				ToUseSpreadsheetEditorPlugin.INSTANCE.log(mre);
 			}
 			return typeName;
 		}
@@ -551,7 +551,7 @@ public class ToUseSpreadsheetModelWizard extends Wizard implements INewWizard {
 		protected Collection<String> getEncodings() {
 			if (encodings == null) {
 				encodings = new ArrayList<String>();
-				for (StringTokenizer stringTokenizer = new StringTokenizer(TousespreadsheetEditorPlugin.INSTANCE.getString("_UI_XMLEncodingChoices")); stringTokenizer.hasMoreTokens(); ) {
+				for (StringTokenizer stringTokenizer = new StringTokenizer(ToUseSpreadsheetEditorPlugin.INSTANCE.getString("_UI_XMLEncodingChoices")); stringTokenizer.hasMoreTokens(); ) {
 					encodings.add(stringTokenizer.nextToken());
 				}
 			}
@@ -570,9 +570,9 @@ public class ToUseSpreadsheetModelWizard extends Wizard implements INewWizard {
 		// Create a page, set the title, and the initial model file name.
 		//
 		newFileCreationPage = new ToUseSpreadsheetModelWizardNewFileCreationPage("Whatever", selection);
-		newFileCreationPage.setTitle(TousespreadsheetEditorPlugin.INSTANCE.getString("_UI_ToUseSpreadsheetModelWizard_label"));
-		newFileCreationPage.setDescription(TousespreadsheetEditorPlugin.INSTANCE.getString("_UI_ToUseSpreadsheetModelWizard_description"));
-		newFileCreationPage.setFileName(TousespreadsheetEditorPlugin.INSTANCE.getString("_UI_ToUseSpreadsheetEditorFilenameDefaultBase") + "." + FILE_EXTENSIONS.get(0));
+		newFileCreationPage.setTitle(ToUseSpreadsheetEditorPlugin.INSTANCE.getString("_UI_ToUseSpreadsheetModelWizard_label"));
+		newFileCreationPage.setDescription(ToUseSpreadsheetEditorPlugin.INSTANCE.getString("_UI_ToUseSpreadsheetModelWizard_description"));
+		newFileCreationPage.setFileName(ToUseSpreadsheetEditorPlugin.INSTANCE.getString("_UI_ToUseSpreadsheetEditorFilenameDefaultBase") + "." + FILE_EXTENSIONS.get(0));
 		addPage(newFileCreationPage);
 
 		// Try and get the resource selection to determine a current directory for the file dialog.
@@ -598,7 +598,7 @@ public class ToUseSpreadsheetModelWizard extends Wizard implements INewWizard {
 
 					// Make up a unique new name here.
 					//
-					String defaultModelBaseFilename = TousespreadsheetEditorPlugin.INSTANCE.getString("_UI_ToUseSpreadsheetEditorFilenameDefaultBase");
+					String defaultModelBaseFilename = ToUseSpreadsheetEditorPlugin.INSTANCE.getString("_UI_ToUseSpreadsheetEditorFilenameDefaultBase");
 					String defaultModelFilenameExtension = FILE_EXTENSIONS.get(0);
 					String modelFilename = defaultModelBaseFilename + "." + defaultModelFilenameExtension;
 					for (int i = 1; ((IContainer)selectedResource).findMember(modelFilename) != null; ++i) {
@@ -609,8 +609,8 @@ public class ToUseSpreadsheetModelWizard extends Wizard implements INewWizard {
 			}
 		}
 		initialObjectCreationPage = new ToUseSpreadsheetModelWizardInitialObjectCreationPage("Whatever2");
-		initialObjectCreationPage.setTitle(TousespreadsheetEditorPlugin.INSTANCE.getString("_UI_ToUseSpreadsheetModelWizard_label"));
-		initialObjectCreationPage.setDescription(TousespreadsheetEditorPlugin.INSTANCE.getString("_UI_Wizard_initial_object_description"));
+		initialObjectCreationPage.setTitle(ToUseSpreadsheetEditorPlugin.INSTANCE.getString("_UI_ToUseSpreadsheetModelWizard_label"));
+		initialObjectCreationPage.setDescription(ToUseSpreadsheetEditorPlugin.INSTANCE.getString("_UI_Wizard_initial_object_description"));
 		addPage(initialObjectCreationPage);
 	}
 

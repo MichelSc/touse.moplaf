@@ -2,6 +2,7 @@
  */
 package com.misc.touse.moplaf.spreadsheet.tousespreadsheet.impl;
 
+import com.misc.common.moplaf.spreadsheet.spreadsheetcsv.SpreadsheetCSV;
 import com.misc.common.moplaf.spreadsheet.spreadsheetpoi.SpreadsheetPOI;
 
 import com.misc.touse.moplaf.spreadsheet.tousespreadsheet.Domain;
@@ -16,7 +17,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import spreadsheetcsv.SpreadsheetCSV;
 
 /**
  * <!-- begin-user-doc -->

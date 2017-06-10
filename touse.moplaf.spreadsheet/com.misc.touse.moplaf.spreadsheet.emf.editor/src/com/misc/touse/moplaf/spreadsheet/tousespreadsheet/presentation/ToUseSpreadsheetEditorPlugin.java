@@ -4,6 +4,8 @@ package com.misc.touse.moplaf.spreadsheet.tousespreadsheet.presentation;
 
 import com.misc.common.moplaf.spreadsheet.provider.SpreadsheetEditPlugin;
 
+import com.misc.common.moplaf.spreadsheet.spreadsheetcsv.provider.SpreadsheetCSVEditPlugin;
+
 import com.misc.common.moplaf.spreadsheet.spreadsheetpoi.provider.SpreadsheetpoiEditPlugin;
 
 import org.eclipse.emf.common.EMFPlugin;
@@ -18,14 +20,14 @@ import org.eclipse.emf.common.util.ResourceLocator;
  * <!-- end-user-doc -->
  * @generated
  */
-public final class TousespreadsheetEditorPlugin extends EMFPlugin {
+public final class ToUseSpreadsheetEditorPlugin extends EMFPlugin {
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final TousespreadsheetEditorPlugin INSTANCE = new TousespreadsheetEditorPlugin();
+	public static final ToUseSpreadsheetEditorPlugin INSTANCE = new ToUseSpreadsheetEditorPlugin();
 	
 	/**
 	 * Keep track of the singleton.
@@ -41,10 +43,11 @@ public final class TousespreadsheetEditorPlugin extends EMFPlugin {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TousespreadsheetEditorPlugin() {
+	public ToUseSpreadsheetEditorPlugin() {
 		super
 			(new ResourceLocator [] {
 				SpreadsheetEditPlugin.INSTANCE,
+				SpreadsheetCSVEditPlugin.INSTANCE,
 				SpreadsheetpoiEditPlugin.INSTANCE,
 			});
 	}

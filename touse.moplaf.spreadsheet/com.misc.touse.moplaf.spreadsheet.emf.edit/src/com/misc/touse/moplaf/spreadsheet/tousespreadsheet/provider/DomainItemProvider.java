@@ -3,6 +3,7 @@
 package com.misc.touse.moplaf.spreadsheet.tousespreadsheet.provider;
 
 
+import com.misc.common.moplaf.spreadsheet.spreadsheetcsv.SpreadsheetCSVFactory;
 import com.misc.common.moplaf.spreadsheet.spreadsheetpoi.SpreadsheetPOIFactory;
 
 import com.misc.touse.moplaf.spreadsheet.tousespreadsheet.Domain;
@@ -26,7 +27,6 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import spreadsheetcsv.SpreadsheetcsvFactory;
 
 /**
  * This is the item provider adapter for a {@link com.misc.touse.moplaf.spreadsheet.tousespreadsheet.Domain} object.
@@ -160,7 +160,7 @@ public class DomainItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(ToUseSpreadsheetPackage.Literals.DOMAIN__SPREADSHEETS_CSV,
-				 SpreadsheetcsvFactory.eINSTANCE.createSpreadsheetCSV()));
+				 SpreadsheetCSVFactory.eINSTANCE.createSpreadsheetCSV()));
 	}
 
 	/**

@@ -158,10 +158,10 @@ import com.misc.touse.moplaf.spreadsheet.tousespreadsheet.provider.ToUseSpreadsh
 
 import com.misc.common.moplaf.spreadsheet.provider.SpreadsheetItemProviderAdapterFactory;
 
+import com.misc.common.moplaf.spreadsheet.spreadsheetcsv.provider.SpreadsheetCSVItemProviderAdapterFactory;
 import com.misc.common.moplaf.spreadsheet.spreadsheetpoi.provider.SpreadsheetPOIItemProviderAdapterFactory;
 
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
-import spreadsheetcsv.provider.SpreadsheetcsvItemProviderAdapterFactory;
 
 
 /**
@@ -535,7 +535,7 @@ public class ToUseSpreadsheetEditor
 					}
 				}
 				catch (CoreException exception) {
-					TousespreadsheetEditorPlugin.INSTANCE.log(exception);
+					ToUseSpreadsheetEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 		};
@@ -651,7 +651,7 @@ public class ToUseSpreadsheetEditor
 					showTabs();
 				}
 				catch (PartInitException exception) {
-					TousespreadsheetEditorPlugin.INSTANCE.log(exception);
+					ToUseSpreadsheetEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 
@@ -662,7 +662,7 @@ public class ToUseSpreadsheetEditor
 						markerHelper.createMarkers(diagnostic);
 					}
 					catch (CoreException exception) {
-						TousespreadsheetEditorPlugin.INSTANCE.log(exception);
+						ToUseSpreadsheetEditorPlugin.INSTANCE.log(exception);
 					}
 				}
 			}
@@ -707,8 +707,8 @@ public class ToUseSpreadsheetEditor
 
 		adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ToUseSpreadsheetItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new SpreadsheetcsvItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new SpreadsheetItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new SpreadsheetCSVItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new SpreadsheetPOIItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
@@ -1531,7 +1531,7 @@ public class ToUseSpreadsheetEditor
 		catch (Exception exception) {
 			// Something went wrong that shouldn't.
 			//
-			TousespreadsheetEditorPlugin.INSTANCE.log(exception);
+			ToUseSpreadsheetEditorPlugin.INSTANCE.log(exception);
 		}
 		updateProblemIndication = true;
 		updateProblemIndication();
@@ -1735,7 +1735,7 @@ public class ToUseSpreadsheetEditor
 	 * @generated
 	 */
 	private static String getString(String key) {
-		return TousespreadsheetEditorPlugin.INSTANCE.getString(key);
+		return ToUseSpreadsheetEditorPlugin.INSTANCE.getString(key);
 	}
 
 	/**
@@ -1745,7 +1745,7 @@ public class ToUseSpreadsheetEditor
 	 * @generated
 	 */
 	private static String getString(String key, Object s1) {
-		return TousespreadsheetEditorPlugin.INSTANCE.getString(key, new Object [] { s1 });
+		return ToUseSpreadsheetEditorPlugin.INSTANCE.getString(key, new Object [] { s1 });
 	}
 
 	/**

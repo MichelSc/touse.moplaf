@@ -3,7 +3,7 @@
 package com.misc.touse.moplaf.spreadsheet.tousespreadsheet.provider;
 
 import com.misc.common.moplaf.spreadsheet.provider.SpreadsheetEditPlugin;
-
+import com.misc.common.moplaf.spreadsheet.spreadsheetcsv.provider.SpreadsheetCSVEditPlugin;
 import com.misc.common.moplaf.spreadsheet.spreadsheetpoi.provider.SpreadsheetpoiEditPlugin;
 
 import org.eclipse.emf.common.EMFPlugin;
@@ -43,6 +43,7 @@ public final class TousespreadsheetEditPlugin extends EMFPlugin {
 		super
 		  (new ResourceLocator [] {
 		     SpreadsheetEditPlugin.INSTANCE,
+		     SpreadsheetCSVEditPlugin.INSTANCE,
 		     SpreadsheetpoiEditPlugin.INSTANCE,
 		   });
 	}

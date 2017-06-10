@@ -2,11 +2,11 @@
  */
 package com.misc.touse.moplaf.spreadsheet.tousespreadsheet;
 
+import com.misc.common.moplaf.spreadsheet.spreadsheetcsv.SpreadsheetCSV;
 import com.misc.common.moplaf.spreadsheet.spreadsheetpoi.SpreadsheetPOI;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
-import spreadsheetcsv.SpreadsheetCSV;
 
 /**
  * <!-- begin-user-doc -->
@@ -44,7 +44,7 @@ public interface Domain extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Spreadsheets CSV</b></em>' containment reference list.
-	 * The list contents are of type {@link spreadsheetcsv.SpreadsheetCSV}.
+	 * The list contents are of type {@link com.misc.common.moplaf.spreadsheet.spreadsheetcsv.SpreadsheetCSV}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Spreadsheets CSV</em>' containment reference isn't clear,

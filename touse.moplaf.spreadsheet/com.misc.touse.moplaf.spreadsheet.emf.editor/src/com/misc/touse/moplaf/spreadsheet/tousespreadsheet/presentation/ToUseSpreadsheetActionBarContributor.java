@@ -75,14 +75,14 @@ public class ToUseSpreadsheetActionBarContributor
 	 * @generated
 	 */
 	protected IAction showPropertiesViewAction =
-		new Action(TousespreadsheetEditorPlugin.INSTANCE.getString("_UI_ShowPropertiesView_menu_item")) {
+		new Action(ToUseSpreadsheetEditorPlugin.INSTANCE.getString("_UI_ShowPropertiesView_menu_item")) {
 			@Override
 			public void run() {
 				try {
 					getPage().showView("org.eclipse.ui.views.PropertySheet");
 				}
 				catch (PartInitException exception) {
-					TousespreadsheetEditorPlugin.INSTANCE.log(exception);
+					ToUseSpreadsheetEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 		};
@@ -95,7 +95,7 @@ public class ToUseSpreadsheetActionBarContributor
 	 * @generated
 	 */
 	protected IAction refreshViewerAction =
-		new Action(TousespreadsheetEditorPlugin.INSTANCE.getString("_UI_RefreshViewer_menu_item")) {
+		new Action(ToUseSpreadsheetEditorPlugin.INSTANCE.getString("_UI_RefreshViewer_menu_item")) {
 			@Override
 			public boolean isEnabled() {
 				return activeEditorPart instanceof IViewerProvider;
@@ -197,7 +197,7 @@ public class ToUseSpreadsheetActionBarContributor
 	public void contributeToMenu(IMenuManager menuManager) {
 		super.contributeToMenu(menuManager);
 
-		IMenuManager submenuManager = new MenuManager(TousespreadsheetEditorPlugin.INSTANCE.getString("_UI_ToUseSpreadsheetEditor_menu"), "com.misc.touse.moplaf.spreadsheet.tousespreadsheetMenuID");
+		IMenuManager submenuManager = new MenuManager(ToUseSpreadsheetEditorPlugin.INSTANCE.getString("_UI_ToUseSpreadsheetEditor_menu"), "com.misc.touse.moplaf.spreadsheet.tousespreadsheetMenuID");
 		menuManager.insertAfter("additions", submenuManager);
 		submenuManager.add(new Separator("settings"));
 		submenuManager.add(new Separator("actions"));
@@ -206,12 +206,12 @@ public class ToUseSpreadsheetActionBarContributor
 
 		// Prepare for CreateChild item addition or removal.
 		//
-		createChildMenuManager = new MenuManager(TousespreadsheetEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
+		createChildMenuManager = new MenuManager(ToUseSpreadsheetEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
 		submenuManager.insertBefore("additions", createChildMenuManager);
 
 		// Prepare for CreateSibling item addition or removal.
 		//
-		createSiblingMenuManager = new MenuManager(TousespreadsheetEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
+		createSiblingMenuManager = new MenuManager(ToUseSpreadsheetEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
 		submenuManager.insertBefore("additions", createSiblingMenuManager);
 
 		// Prepare for ToUseSpreadsheet item addition or removal.
@@ -415,11 +415,11 @@ public class ToUseSpreadsheetActionBarContributor
 		super.menuAboutToShow(menuManager);
 		MenuManager submenuManager = null;
 
-		submenuManager = new MenuManager(TousespreadsheetEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
+		submenuManager = new MenuManager(ToUseSpreadsheetEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
 		populateManager(submenuManager, createChildActions, null);
 		menuManager.insertBefore("edit", submenuManager);
 
-		submenuManager = new MenuManager(TousespreadsheetEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
+		submenuManager = new MenuManager(ToUseSpreadsheetEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
 		populateManager(submenuManager, createSiblingActions, null);
 		menuManager.insertBefore("edit", submenuManager);
 

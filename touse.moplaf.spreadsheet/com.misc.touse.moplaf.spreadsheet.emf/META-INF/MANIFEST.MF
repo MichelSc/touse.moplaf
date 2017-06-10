@@ -9,12 +9,10 @@ Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: com.misc.touse.moplaf.spreadsheet.tousespreadsheet,
  com.misc.touse.moplaf.spreadsheet.tousespreadsheet.impl,
- com.misc.touse.moplaf.spreadsheet.tousespreadsheet.util,
- spreadsheetcsv,
- spreadsheetcsv.impl,
- spreadsheetcsv.util
+ com.misc.touse.moplaf.spreadsheet.tousespreadsheet.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  com.misc.common.moplaf.spreadsheet.emf;visibility:=reexport,
+ com.misc.common.moplaf.spreadsheet.csv.emf;visibility:=reexport,
  com.misc.common.moplaf.spreadsheet.poi.emf;visibility:=reexport
 Bundle-ActivationPolicy: lazy
