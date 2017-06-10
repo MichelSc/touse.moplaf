@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated tousespreadsheet -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="com.misc.touse.moplaf.spreadsheet.tousespreadsheet.presentation.ToUseSpreadsheetModelWizardID"
+            name="%_UI_ToUseSpreadsheetModelWizard_label"
+            class="com.misc.touse.moplaf.spreadsheet.tousespreadsheet.presentation.ToUseSpreadsheetModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ToUseSpreadsheetModelFile.gif">
+         <description>%_UI_ToUseSpreadsheetModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated tousespreadsheet -->
+      <editor
+            id="com.misc.touse.moplaf.spreadsheet.tousespreadsheet.presentation.ToUseSpreadsheetEditorID"
+            name="%_UI_ToUseSpreadsheetEditor_label"
+            icon="icons/full/obj16/ToUseSpreadsheetModelFile.gif"
+            extensions="tousespreadsheet"
+            class="com.misc.touse.moplaf.spreadsheet.tousespreadsheet.presentation.ToUseSpreadsheetEditor"
+            contributorClass="com.misc.touse.moplaf.spreadsheet.tousespreadsheet.presentation.ToUseSpreadsheetActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="tousespreadsheet" nsURI="http://www.misc.com/touse/moplaf/spreadsheet/model/0.1"
+    nsPrefix="tusp">
+  <eClassifiers xsi:type="ecore:EClass" name="Domain">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SpreadsheetsPOI" eType="ecore:EClass ../../com.misc.common.moplaf.spreadsheet.poi.emf/model/spreadsheetpoi.ecore#//SpreadsheetPOI"
+        containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>
