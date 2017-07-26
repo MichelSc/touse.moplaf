@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: com.misc.touse.moplaf.replica.emf;singleton:=true
+Bundle-Version: 0.1.0.qualifier
+Bundle-ClassPath: .
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: com.misc.touse.moplaf.tousereplica,
+ com.misc.touse.moplaf.tousereplica.impl,
+ com.misc.touse.moplaf.tousereplica.util
+Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
+ com.misc.common.moplaf.replica.emf;visibility:=reexport,
+ org.eclipse.core.runtime
+Bundle-ActivationPolicy: lazy

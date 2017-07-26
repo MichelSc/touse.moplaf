@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="tousereplica" nsURI="http://www.misc.com/touse/moplaf/replica/model/0.1"
+    nsPrefix="tousereplica">
+  <eClassifiers xsi:type="ecore:EClass" name="TimeLineAbstract">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        changeable="false" volatile="true" transient="true" derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TimeLine" eSuperTypes="#//TimeLineAbstract">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Buckets" upperBound="-1"
+        eType="#//TimeLineBucket" containment="true" eOpposite="#//TimeLineBucket/TimeLine"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TimeLineBucket" eSuperTypes="#//TimeLineAbstract">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="TimeLine" lowerBound="1"
+        eType="#//TimeLine" eOpposite="#//TimeLine/Buckets"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="PreviousBucket" eType="#//TimeLineBucket"
+        eOpposite="#//TimeLineBucket/NextBucket"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="NextBucket" eType="#//TimeLineBucket"
+        eOpposite="#//TimeLineBucket/PreviousBucket"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="BucketNr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RTimeLineAbstract" eSuperTypes="../../com.misc.common.moplaf.replica.emf/model/replica.ecore#//Replica"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Domain">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="TimeLines" upperBound="-1"
+        eType="#//TimeLine" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="TimeLineReplicas" upperBound="-1"
+        eType="#//RTimeLine" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="TimeLineReplica2s" upperBound="-1"
+        eType="#//TimeLineReplicator" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RTimeLine" eSuperTypes="#//RTimeLineAbstract"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RTimeLineBucket" eSuperTypes="#//RTimeLineAbstract">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="NextBucket" eType="#//RTimeLineBucket"
+        eOpposite="#//RTimeLineBucket/PreviousBucket"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="PreviousBucket" eType="#//RTimeLineBucket"
+        eOpposite="#//RTimeLineBucket/NextBucket"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TimeLineReplicator" eSuperTypes="../../com.misc.common.moplaf.replica.emf/model/replica.ecore#//Replicator">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="TimeLine" lowerBound="1"
+        eType="#//TimeLine"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Buckets" upperBound="-1"
+        eType="#//TimeLineReplicatorBucket" eOpposite="#//TimeLineReplicatorBucket/TimeLine"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TimeLineReplicatorBucket" eSuperTypes="../../com.misc.common.moplaf.replica.emf/model/replica.ecore#//ReplicatorReplica">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Next" eType="#//TimeLineReplicatorBucket"
+        eOpposite="#//TimeLineReplicatorBucket/Previous"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Previous" eType="#//TimeLineReplicatorBucket"
+        eOpposite="#//TimeLineReplicatorBucket/Next"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Bucket" lowerBound="1"
+        eType="#//TimeLineBucket"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="TimeLine" lowerBound="1"
+        eType="#//TimeLineReplicator" eOpposite="#//TimeLineReplicator/Buckets"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        changeable="false" volatile="true" transient="true" derived="true"/>
+  </eClassifiers>
+</ecore:EPackage>
