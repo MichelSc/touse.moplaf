@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated ToUseScheduler -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="com.misc.touse.moplaf.tousescheduler.presentation.ToUseSchedulerModelWizardID"
+            name="%_UI_ToUseSchedulerModelWizard_label"
+            class="com.misc.touse.moplaf.tousescheduler.presentation.ToUseSchedulerModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ToUseSchedulerModelFile.gif">
+         <description>%_UI_ToUseSchedulerModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated ToUseScheduler -->
+      <editor
+            id="com.misc.touse.moplaf.tousescheduler.presentation.ToUseSchedulerEditorID"
+            name="%_UI_ToUseSchedulerEditor_label"
+            icon="icons/full/obj16/ToUseSchedulerModelFile.gif"
+            extensions="tousescheduler"
+            class="com.misc.touse.moplaf.tousescheduler.presentation.ToUseSchedulerEditor"
+            contributorClass="com.misc.touse.moplaf.tousescheduler.presentation.ToUseSchedulerActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
