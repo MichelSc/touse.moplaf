@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Function</b></em>'.
@@ -26,6 +27,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * @generated
  */
 public class ToUsePropagatorFunctionImpl extends PropagatorFunctionBindingsImpl implements ToUsePropagatorFunction {
+
 	/**
 	 * The default value of the '{@link #isCalculated() <em>Calculated</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -169,6 +171,13 @@ public class ToUsePropagatorFunctionImpl extends PropagatorFunctionBindingsImpl 
 		super.doRefreshImpl();
 		this.setCalculated(true); 
 	}
+
+	@Override
+	public String getFactoryID() {
+		return ToUsePropagatorFunction.factoryID;
+	}
+	
+	
 	
 	
 	

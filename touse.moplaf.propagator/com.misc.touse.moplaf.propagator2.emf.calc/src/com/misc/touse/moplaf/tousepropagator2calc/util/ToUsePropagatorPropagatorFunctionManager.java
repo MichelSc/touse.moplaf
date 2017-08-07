@@ -8,6 +8,7 @@ import com.misc.common.moplaf.propagator2.util.PropagatorFunctionManagerAdapter;
 import com.misc.common.moplaf.propagator2.util.PropagatorFunctionsConstructors;
 import com.misc.common.moplaf.propagator2.util.PropagatorFunctionsFactory;
 import com.misc.touse.moplaf.tousepropagator2.Project;
+import com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFunction;
 import com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorPackage;
 import com.misc.touse.moplaf.tousepropagator2calc.ScopeProject;
 import com.misc.touse.moplaf.tousepropagator2calc.ToUsePropagatorCalcPackage;
@@ -18,7 +19,7 @@ public class ToUsePropagatorPropagatorFunctionManager extends PropagatorFunction
 	 * Constructor
 	 */
 	public ToUsePropagatorPropagatorFunctionManager() {
-		super( ToUsePropagatorPropagatorFunctionManager.constructor);
+		super( ToUsePropagatorPropagatorFunctionManager.propagatorFunctionFactory);
 	}
 
 	/**
@@ -34,11 +35,11 @@ public class ToUsePropagatorPropagatorFunctionManager extends PropagatorFunction
 			 CommonPlugin.INSTANCE.log( "ToUsePropagator, refresh done: project "+ project.getProjectName());
 		 }
 	}
-
-	static PropagatorFunctionsFactory constructor = PropagatorFunctionsFactory.constructPropagatorFunctionsFactory();
+	
+	static PropagatorFunctionsFactory propagatorFunctionFactory = PropagatorFunctionsFactory.constructPropagatorFunctionsFactory(ToUsePropagatorFunction.factoryID);
 	
 	static PropagatorFunctionsConstructors projectPropagatorFunctionsConstructors =  
-			constructor.constructPropagatorFunctionsConstructors(ToUsePropagatorPackage.Literals.PROJECT)
+			propagatorFunctionFactory.constructPropagatorFunctionsConstructors(ToUsePropagatorPackage.Literals.PROJECT)
 			.addConstructor(ToUsePropagatorCalcPackage.Literals.SCOPE_PROJECT)
 			.addConstructor(ToUsePropagatorCalcPackage.Literals.LAYER_TASK_HOURS_VAR)
 			.addConstructor(ToUsePropagatorCalcPackage.Literals.LAYER_TASK_HOURS_ITEM)
@@ -49,7 +50,7 @@ public class ToUsePropagatorPropagatorFunctionManager extends PropagatorFunction
 			;
 
 	static PropagatorFunctionsConstructors taskPropagatorFunctionsConstructors =   
-			constructor.constructPropagatorFunctionsConstructors(ToUsePropagatorPackage.Literals.TASK) 
+			propagatorFunctionFactory.constructPropagatorFunctionsConstructors(ToUsePropagatorPackage.Literals.TASK) 
 			.addConstructor(ToUsePropagatorCalcPackage.Literals.CALC_TASK_HOURS_VAR)
 			.addConstructor(ToUsePropagatorCalcPackage.Literals.CALC_TASK_HOURS_ITEM)
 			.addConstructor(ToUsePropagatorCalcPackage.Literals.CALC_TASK_HOURS)
@@ -59,7 +60,7 @@ public class ToUsePropagatorPropagatorFunctionManager extends PropagatorFunction
 			;
 
 	static PropagatorFunctionsConstructors taskWithOverheadPropagatorFunctionsConstructors = 
-			constructor.constructPropagatorFunctionsConstructors(ToUsePropagatorPackage.Literals.TASK_WITH_OVERHEAD) 
+			propagatorFunctionFactory.constructPropagatorFunctionsConstructors(ToUsePropagatorPackage.Literals.TASK_WITH_OVERHEAD) 
 			.addConstructor(ToUsePropagatorCalcPackage.Literals.CALC_TASK_WITH_OVERHEAD_HOURS_VAR)
 			;
 

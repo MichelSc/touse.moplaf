@@ -22,6 +22,11 @@ import com.misc.common.moplaf.propagator2.PropagatorFunctionBindings;
  */
 public interface ToUsePropagatorFunction extends PropagatorFunctionBindings {
 	/**
+	 * the Id for the factory
+	 */
+	public static String factoryID = "com.misc.touse.moplaf.propagator.factory1";
+
+	/**
 	 * Returns the value of the '<em><b>Calculated</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
