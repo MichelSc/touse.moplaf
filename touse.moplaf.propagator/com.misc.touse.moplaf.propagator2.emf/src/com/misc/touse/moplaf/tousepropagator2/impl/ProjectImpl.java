@@ -10,10 +10,13 @@ import com.misc.touse.moplaf.tousepropagator2.Project;
 import com.misc.touse.moplaf.tousepropagator2.Resource;
 import com.misc.touse.moplaf.tousepropagator2.Task;
 import com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorPackage;
+import com.misc.touse.moplaf.tousepropagator2calc.util.ToUsePropagatorPropagatorFunctionManager;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import java.util.Date;
+
+import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -356,6 +359,25 @@ public class ProjectImpl extends ObjectWithPropagatorFunctionsImpl implements Pr
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 */
+	public void enable() {
+		Util.adapt(this, ToUsePropagatorPropagatorFunctionManager.class, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	public void disable() {
+		Adapter adapter = Util.adapt(this, ToUsePropagatorPropagatorFunctionManager.class, false);
+		if ( adapter!=null) {
+			this.eAdapters().remove(adapter);
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
@@ -532,6 +554,12 @@ public class ProjectImpl extends ObjectWithPropagatorFunctionsImpl implements Pr
 		switch (operationID) {
 			case ToUsePropagatorPackage.PROJECT___REFRESH_END:
 				refreshEnd();
+				return null;
+			case ToUsePropagatorPackage.PROJECT___ENABLE:
+				enable();
+				return null;
+			case ToUsePropagatorPackage.PROJECT___DISABLE:
+				disable();
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

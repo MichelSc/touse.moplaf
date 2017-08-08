@@ -215,4 +215,20 @@ public interface Project extends ObjectWithPropagatorFunctions {
 	 */
 	void refreshEnd();
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void enable();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void disable();
+
 } // Project

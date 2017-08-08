@@ -3,10 +3,11 @@
 package com.misc.touse.moplaf.tousepropagator2.provider;
 
 
+import com.misc.common.moplaf.emf.edit.command.DisableCommand;
+import com.misc.common.moplaf.emf.edit.command.EnableCommand;
 import com.misc.common.moplaf.emf.edit.command.RefreshCommand;
 import com.misc.common.moplaf.emf.edit.command.ResetCommand;
 import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
-import com.misc.common.moplaf.propagator2.PropagatorPackage;
 import com.misc.common.moplaf.propagator2.provider.ObjectWithPropagatorFunctionsItemProvider;
 import com.misc.touse.moplaf.tousepropagator2.Project;
 import com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFactory;
@@ -275,21 +276,6 @@ public class ProjectItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(PropagatorPackage.Literals.OBJECT_WITH_PROPAGATOR_FUNCTIONS__PROPAGATOR_FUNCTIONS,
-				 ToUsePropagatorFactory.eINSTANCE.createToUsePropagatorFunction()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PropagatorPackage.Literals.OBJECT_WITH_PROPAGATOR_FUNCTIONS__PROPAGATOR_FUNCTIONS,
-				 ToUsePropagatorFactory.eINSTANCE.createToUsePropagatorFunctionTask()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PropagatorPackage.Literals.OBJECT_WITH_PROPAGATOR_FUNCTIONS__PROPAGATOR_FUNCTIONS,
-				 ToUsePropagatorFactory.eINSTANCE.createToUsePropagatorFunctionProject()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(ToUsePropagatorPackage.Literals.PROJECT__TASKS,
 				 ToUsePropagatorFactory.eINSTANCE.createTask()));
 
@@ -320,6 +306,11 @@ public class ProjectItemProvider
 		return ToUsePropagatorEditPlugin.INSTANCE;
 	}
 	
+	/**
+	 * 
+	 * @author michel
+	 *
+	 */
 	public class ProjectResetCommand extends ResetCommand{
 		private Project project;
 		
@@ -330,23 +321,59 @@ public class ProjectItemProvider
 		}
 
 		@Override
-		protected boolean prepare(){
-			boolean isExecutable = true;
-			return isExecutable;
-			}
-
-		@Override
 		public void execute() {
 			Util.reset(this.project);
 		}
 	} // class ProjectResetCommand
+	/**
+	 * 
+	 * @author michel
+	 *
+	 */
+	public class ProjectEnableCommand extends EnableCommand{
+		private Project project;
+		
+		public ProjectEnableCommand(Project aProject)	{
+			super();
+			this.project = aProject;
+			
+		}
+
+		@Override
+		public void execute() {
+			this.project.enable();
+		}
+	} // class ProjectEnableCommand
+	/**
+	 * 
+	 * @author michel
+	 *
+	 */
+	public class ProjectDisableCommand extends DisableCommand{
+		private Project project;
+		
+		public ProjectDisableCommand(Project aProject)	{
+			super();
+			this.project = aProject;
+			
+		}
+
+		@Override
+		public void execute() {
+			this.project.disable();
+		}
+	} // class ProjectDisableCommand
 
 	@Override
 	public Command createCommand(Object object, EditingDomain domain,
 			Class<? extends Command> commandClass,
 			CommandParameter commandParameter) {
 		if ( commandClass == ResetCommand.class){
-			return new ProjectResetCommand((Project) object); 
+			return new ProjectResetCommand((Project) object);
+		} else if ( commandClass == EnableCommand.class){
+			return new ProjectEnableCommand((Project) object); 
+		} else if ( commandClass == DisableCommand.class){
+			return new ProjectDisableCommand((Project) object); 
 		} else if  ( commandClass == RefreshCommand.class){
 			return new ObjectRefreshCommand((ObjectWithPropagatorFunctions) object); 
 		}

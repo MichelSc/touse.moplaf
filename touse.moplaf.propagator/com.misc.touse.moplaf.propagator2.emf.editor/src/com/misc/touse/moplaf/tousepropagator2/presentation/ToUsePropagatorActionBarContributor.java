@@ -40,6 +40,8 @@ import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.PartInitException;
 
 import com.misc.common.moplaf.emf.editor.Util;
+import com.misc.common.moplaf.emf.editor.action.DisableAction;
+import com.misc.common.moplaf.emf.editor.action.EnableAction;
 import com.misc.common.moplaf.emf.editor.action.RefreshAction;
 import com.misc.common.moplaf.emf.editor.action.ResetAction;
 
@@ -307,6 +309,8 @@ public class ToUsePropagatorActionBarContributor
 		applicationPopUpMenuActions = new ArrayList<IAction>();
 		applicationPopUpMenuActions.add(new RefreshAction(activeEditorPart, selection));
 		applicationPopUpMenuActions.add(new ResetAction  (activeEditorPart, selection));
+		applicationPopUpMenuActions.add(new EnableAction  (activeEditorPart, selection));
+		applicationPopUpMenuActions.add(new DisableAction  (activeEditorPart, selection));
 
 
 		if (createChildMenuManager != null) {

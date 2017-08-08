@@ -121,7 +121,6 @@ import com.misc.common.moplaf.propagator2.util.Util;
 import com.misc.touse.moplaf.tousepropagator2.Domain;
 import com.misc.touse.moplaf.tousepropagator2.Project;
 import com.misc.touse.moplaf.tousepropagator2.provider.ToUsePropagatorItemProviderAdapterFactory;
-import com.misc.touse.moplaf.tousepropagator2calc.util.ToUsePropagatorPropagatorFunctionManager;
 
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 
@@ -933,7 +932,7 @@ public class ToUsePropagatorEditor
 			// Load the resource through the editing domain.
 			//
 			resource = editingDomain.getResourceSet().getResource(resourceURI, true);
-			resource.eAdapters().add(new ToUsePropagatorPropagatorFunctionManager());
+//			resource.eAdapters().add(new ToUsePropagatorPropagatorFunctionManager());
 		}
 		catch (Exception e) {
 			exception = e;

@@ -16,6 +16,5 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.edit.ui;visibility:=reexport,
  org.eclipse.ui.ide;visibility:=reexport,
  com.misc.common.moplaf.propagator2.edit;visibility:=reexport,
- com.misc.common.moplaf.emf.editor;bundle-version="1.0.0",
- com.misc.touse.moplaf.propagator2.emf.calc;bundle-version="0.1.0"
+ com.misc.common.moplaf.emf.editor;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy

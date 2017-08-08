@@ -16,6 +16,8 @@ import com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFunction;
 import com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFunctionProject;
 import com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFunctionTask;
 import com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorPackage;
+import com.misc.touse.moplaf.tousepropagator2calc.ToUsePropagatorCalcPackage;
+import com.misc.touse.moplaf.tousepropagator2calc.impl.ToUsePropagatorCalcPackageImpl;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
@@ -156,11 +158,16 @@ public class ToUsePropagatorPackageImpl extends EPackageImpl implements ToUsePro
 		// Initialize simple dependencies
 		PropagatorPackage.eINSTANCE.eClass();
 
+		// Obtain or create and register interdependencies
+		ToUsePropagatorCalcPackageImpl theToUsePropagatorCalcPackage = (ToUsePropagatorCalcPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ToUsePropagatorCalcPackage.eNS_URI) instanceof ToUsePropagatorCalcPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ToUsePropagatorCalcPackage.eNS_URI) : ToUsePropagatorCalcPackage.eINSTANCE);
+
 		// Create package meta-data objects
 		theToUsePropagatorPackage.createPackageContents();
+		theToUsePropagatorCalcPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theToUsePropagatorPackage.initializePackageContents();
+		theToUsePropagatorCalcPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theToUsePropagatorPackage.freeze();
@@ -259,6 +266,24 @@ public class ToUsePropagatorPackageImpl extends EPackageImpl implements ToUsePro
 	 */
 	public EOperation getProject__RefreshEnd() {
 		return projectEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getProject__Enable() {
+		return projectEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getProject__Disable() {
+		return projectEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -779,6 +804,8 @@ public class ToUsePropagatorPackageImpl extends EPackageImpl implements ToUsePro
 		createEReference(projectEClass, PROJECT__RESOURCES);
 		createEAttribute(projectEClass, PROJECT__AUTOMATIC_REFRESH);
 		createEOperation(projectEClass, PROJECT___REFRESH_END);
+		createEOperation(projectEClass, PROJECT___ENABLE);
+		createEOperation(projectEClass, PROJECT___DISABLE);
 
 		taskEClass = createEClass(TASK);
 		createEAttribute(taskEClass, TASK__START);
@@ -895,6 +922,10 @@ public class ToUsePropagatorPackageImpl extends EPackageImpl implements ToUsePro
 		initEAttribute(getProject_AutomaticRefresh(), ecorePackage.getEBoolean(), "AutomaticRefresh", "true", 0, 1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getProject__RefreshEnd(), null, "refreshEnd", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getProject__Enable(), null, "enable", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getProject__Disable(), null, "disable", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(taskEClass, Task.class, "Task", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTask_Start(), ecorePackage.getEDate(), "Start", "2001-01-01", 0, 1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

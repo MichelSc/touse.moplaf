@@ -3,10 +3,8 @@
 package com.misc.touse.moplaf.tousepropagator2.provider;
 
 
-import com.misc.common.moplaf.propagator2.PropagatorPackage;
 import com.misc.common.moplaf.propagator2.provider.ObjectWithPropagatorFunctionsItemProvider;
 import com.misc.touse.moplaf.tousepropagator2.Dependence;
-import com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFactory;
 import com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorPackage;
 
 import java.util.Collection;
@@ -228,21 +226,6 @@ public class DependenceItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PropagatorPackage.Literals.OBJECT_WITH_PROPAGATOR_FUNCTIONS__PROPAGATOR_FUNCTIONS,
-				 ToUsePropagatorFactory.eINSTANCE.createToUsePropagatorFunction()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PropagatorPackage.Literals.OBJECT_WITH_PROPAGATOR_FUNCTIONS__PROPAGATOR_FUNCTIONS,
-				 ToUsePropagatorFactory.eINSTANCE.createToUsePropagatorFunctionTask()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PropagatorPackage.Literals.OBJECT_WITH_PROPAGATOR_FUNCTIONS__PROPAGATOR_FUNCTIONS,
-				 ToUsePropagatorFactory.eINSTANCE.createToUsePropagatorFunctionProject()));
 	}
 
 	/**

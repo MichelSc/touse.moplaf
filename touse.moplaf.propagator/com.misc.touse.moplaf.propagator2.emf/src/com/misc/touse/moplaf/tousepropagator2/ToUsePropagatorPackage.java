@@ -284,13 +284,31 @@ public interface ToUsePropagatorPackage extends EPackage {
 	int PROJECT___REFRESH_END = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 0;
 
 	/**
+	 * The operation id for the '<em>Enable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT___ENABLE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Disable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT___DISABLE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 2;
+
+	/**
 	 * The number of operations of the '<em>Project</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROJECT_OPERATION_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 1;
+	int PROJECT_OPERATION_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Propagator Functions</b></em>' containment reference list.
@@ -1185,6 +1203,15 @@ public interface ToUsePropagatorPackage extends EPackage {
 	int TO_USE_PROPAGATOR_FUNCTION___DISABLE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DISABLE;
 
 	/**
+	 * The operation id for the '<em>Reset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION___RESET = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___RESET;
+
+	/**
 	 * The operation id for the '<em>Touch</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1282,6 +1309,15 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_PROPAGATOR_FUNCTION___GET_SCOPE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___GET_SCOPE;
+
+	/**
+	 * The operation id for the '<em>Get Factory ID</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION___GET_FACTORY_ID = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___GET_FACTORY_ID;
 
 	/**
 	 * The operation id for the '<em>Do Get Bindings</em>' operation.
@@ -1484,6 +1520,15 @@ public interface ToUsePropagatorPackage extends EPackage {
 	int TO_USE_PROPAGATOR_FUNCTION_TASK___DISABLE = TO_USE_PROPAGATOR_FUNCTION___DISABLE;
 
 	/**
+	 * The operation id for the '<em>Reset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_TASK___RESET = TO_USE_PROPAGATOR_FUNCTION___RESET;
+
+	/**
 	 * The operation id for the '<em>Touch</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1581,6 +1626,15 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_PROPAGATOR_FUNCTION_TASK___GET_SCOPE = TO_USE_PROPAGATOR_FUNCTION___GET_SCOPE;
+
+	/**
+	 * The operation id for the '<em>Get Factory ID</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_TASK___GET_FACTORY_ID = TO_USE_PROPAGATOR_FUNCTION___GET_FACTORY_ID;
 
 	/**
 	 * The operation id for the '<em>Do Get Bindings</em>' operation.
@@ -1782,6 +1836,15 @@ public interface ToUsePropagatorPackage extends EPackage {
 	int TO_USE_PROPAGATOR_FUNCTION_PROJECT___DISABLE = TO_USE_PROPAGATOR_FUNCTION___DISABLE;
 
 	/**
+	 * The operation id for the '<em>Reset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_PROJECT___RESET = TO_USE_PROPAGATOR_FUNCTION___RESET;
+
+	/**
 	 * The operation id for the '<em>Touch</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1879,6 +1942,15 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_PROPAGATOR_FUNCTION_PROJECT___GET_SCOPE = TO_USE_PROPAGATOR_FUNCTION___GET_SCOPE;
+
+	/**
+	 * The operation id for the '<em>Get Factory ID</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_PROJECT___GET_FACTORY_ID = TO_USE_PROPAGATOR_FUNCTION___GET_FACTORY_ID;
 
 	/**
 	 * The operation id for the '<em>Do Get Bindings</em>' operation.
@@ -2015,6 +2087,26 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getProject__RefreshEnd();
+
+	/**
+	 * Returns the meta object for the '{@link com.misc.touse.moplaf.tousepropagator2.Project#enable() <em>Enable</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Enable</em>' operation.
+	 * @see com.misc.touse.moplaf.tousepropagator2.Project#enable()
+	 * @generated
+	 */
+	EOperation getProject__Enable();
+
+	/**
+	 * Returns the meta object for the '{@link com.misc.touse.moplaf.tousepropagator2.Project#disable() <em>Disable</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Disable</em>' operation.
+	 * @see com.misc.touse.moplaf.tousepropagator2.Project#disable()
+	 * @generated
+	 */
+	EOperation getProject__Disable();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousepropagator2.Task <em>Task</em>}'.
@@ -2683,6 +2775,22 @@ public interface ToUsePropagatorPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation PROJECT___REFRESH_END = eINSTANCE.getProject__RefreshEnd();
+
+		/**
+		 * The meta object literal for the '<em><b>Enable</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation PROJECT___ENABLE = eINSTANCE.getProject__Enable();
+
+		/**
+		 * The meta object literal for the '<em><b>Disable</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation PROJECT___DISABLE = eINSTANCE.getProject__Disable();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousepropagator2.impl.TaskImpl <em>Task</em>}' class.

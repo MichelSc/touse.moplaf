@@ -11,7 +11,6 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.sirius.common.acceleo.aql,
  org.eclipse.sirius.common;bundle-version="4.0.0",
  org.eclipse.emf.transaction;bundle-version="1.9.0",
- com.misc.touse.moplaf.propagator2.emf;bundle-version="0.1.0",
- com.misc.touse.moplaf.propagator2.emf.calc;bundle-version="0.1.0"
+ com.misc.touse.moplaf.propagator2.emf;bundle-version="0.1.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7

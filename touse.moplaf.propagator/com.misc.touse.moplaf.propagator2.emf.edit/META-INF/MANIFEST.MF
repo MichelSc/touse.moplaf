@@ -8,7 +8,8 @@ Bundle-Activator: com.misc.touse.moplaf.tousepropagator2.provider.ToUsePropagato
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
-Export-Package: com.misc.touse.moplaf.tousepropagator2.provider
+Export-Package: com.misc.touse.moplaf.tousepropagator2.provider,
+ com.misc.touse.moplaf.tousepropagator2calc.provider
 Require-Bundle: org.eclipse.core.runtime,
  com.misc.touse.moplaf.propagator2.emf;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,

@@ -8,6 +8,7 @@
     complianceLevel="7.0" copyrightFields="false" usedGenPackages="../../com.misc.common.moplaf.propagator2/model/propagator.genmodel#//propagator2"
     operationReflection="true" importOrganizing="true">
   <foreignModel>ToUsePropagator.ecore</foreignModel>
+  <foreignModel>ToUsePropagatorCalc.ecore</foreignModel>
   <genPackages prefix="ToUsePropagator" basePackage="com.misc.touse.moplaf" disposableProviderFactory="true"
       ecorePackage="ToUsePropagator.ecore#/">
     <genClasses ecoreClass="ToUsePropagator.ecore#//Domain">
@@ -25,6 +26,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//Project/Resources"/>
       <genFeatures createChild="false" propertyCategory="10 Project" ecoreFeature="ecore:EAttribute ToUsePropagator.ecore#//Project/AutomaticRefresh"/>
       <genOperations ecoreOperation="ToUsePropagator.ecore#//Project/refreshEnd"/>
+      <genOperations ecoreOperation="ToUsePropagator.ecore#//Project/enable"/>
+      <genOperations ecoreOperation="ToUsePropagator.ecore#//Project/disable"/>
     </genClasses>
     <genClasses ecoreClass="ToUsePropagator.ecore#//Task">
       <genFeatures property="Readonly" createChild="false" propertyCategory="20 Derived"
@@ -100,6 +103,52 @@
     </genClasses>
     <genClasses ecoreClass="ToUsePropagator.ecore#//ToUsePropagatorFunctionProject">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ToUsePropagator.ecore#//ToUsePropagatorFunctionProject/Project"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="ToUsePropagatorCalc" basePackage="com.misc.touse.moplaf" disposableProviderFactory="true"
+      ecorePackage="ToUsePropagatorCalc.ecore#/">
+    <genClasses ecoreClass="ToUsePropagatorCalc.ecore#//ScopeProject"/>
+    <genClasses ecoreClass="ToUsePropagatorCalc.ecore#//LayerTaskHoursItem">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUsePropagatorCalc.ecore#//LayerTaskHoursItem/ConcreteParent"/>
+    </genClasses>
+    <genClasses ecoreClass="ToUsePropagatorCalc.ecore#//LayerTaskHoursVar">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUsePropagatorCalc.ecore#//LayerTaskHoursVar/ConcreteParent"/>
+    </genClasses>
+    <genClasses ecoreClass="ToUsePropagatorCalc.ecore#//LayerTaskHours">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUsePropagatorCalc.ecore#//LayerTaskHours/ConcreteParent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUsePropagatorCalc.ecore#//LayerTaskHours/AntecedentLayerTaskHoursItem"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUsePropagatorCalc.ecore#//LayerTaskHours/AntecedentLayerTaskHoursVar"/>
+    </genClasses>
+    <genClasses ecoreClass="ToUsePropagatorCalc.ecore#//LayerTaskTimes">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUsePropagatorCalc.ecore#//LayerTaskTimes/ConcreteParent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUsePropagatorCalc.ecore#//LayerTaskTimes/AntecedentLayerTaskHours"/>
+    </genClasses>
+    <genClasses ecoreClass="ToUsePropagatorCalc.ecore#//LayerTaskResources">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUsePropagatorCalc.ecore#//LayerTaskResources/AntecedentLayerTaskTimes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUsePropagatorCalc.ecore#//LayerTaskResources/ConcreteParent"/>
+    </genClasses>
+    <genClasses ecoreClass="ToUsePropagatorCalc.ecore#//CalcProjectEnd">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUsePropagatorCalc.ecore#//CalcProjectEnd/ConcreteParent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUsePropagatorCalc.ecore#//CalcProjectEnd/AntecedentLayerTaskTimes"/>
+    </genClasses>
+    <genClasses ecoreClass="ToUsePropagatorCalc.ecore#//CalcTaskHoursItem">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUsePropagatorCalc.ecore#//CalcTaskHoursItem/ConcreteParent"/>
+    </genClasses>
+    <genClasses ecoreClass="ToUsePropagatorCalc.ecore#//CalcTaskHoursVar">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUsePropagatorCalc.ecore#//CalcTaskHoursVar/ConcreteParent"/>
+    </genClasses>
+    <genClasses ecoreClass="ToUsePropagatorCalc.ecore#//CalcTaskWithOverheadHoursVar"/>
+    <genClasses ecoreClass="ToUsePropagatorCalc.ecore#//CalcTaskHours">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUsePropagatorCalc.ecore#//CalcTaskHours/ConcreteParent"/>
+    </genClasses>
+    <genClasses ecoreClass="ToUsePropagatorCalc.ecore#//CalcTaskStart">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUsePropagatorCalc.ecore#//CalcTaskStart/ConcreteParent"/>
+    </genClasses>
+    <genClasses ecoreClass="ToUsePropagatorCalc.ecore#//CalcTaskEnd">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUsePropagatorCalc.ecore#//CalcTaskEnd/ConcreteParent"/>
+    </genClasses>
+    <genClasses ecoreClass="ToUsePropagatorCalc.ecore#//CalcTaskResources">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUsePropagatorCalc.ecore#//CalcTaskResources/ConcreteParent"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
