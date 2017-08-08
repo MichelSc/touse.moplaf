@@ -4,7 +4,25 @@
     nsPrefix="tus">
   <eClassifiers xsi:type="ecore:EClass" name="Domain">
     <eStructuralFeatures xsi:type="ecore:EReference" name="Schedulers" upperBound="-1"
-        eType="ecore:EClass ../../com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//Scheduler"
-        containment="true"/>
+        eType="#//ToUseScheduler" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Resources" upperBound="-1"
+        eType="#//ToUseResource" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Tasks" upperBound="-1"
+        eType="#//ToUseTask" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ToUseScheduler" eSuperTypes="../../com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//Scheduler"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ToUseTask">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ToUseResource">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ToUseSolutionTask" eSuperTypes="../../com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//SolutionTask">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ToUseTask" lowerBound="1"
+        eType="#//ToUseTask"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ToUseSolutionResource" eSuperTypes="../../com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//SolutionResource">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ToUseResource" lowerBound="1"
+        eType="#//ToUseResource"/>
   </eClassifiers>
 </ecore:EPackage>

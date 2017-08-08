@@ -3,9 +3,8 @@
 package com.misc.touse.moplaf.tousescheduler.provider;
 
 
-import com.misc.common.moplaf.scheduler.SchedulerFactory;
-
 import com.misc.touse.moplaf.tousescheduler.Domain;
+import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerFactory;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
 
 import java.util.Collection;
@@ -79,6 +78,8 @@ public class DomainItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ToUseSchedulerPackage.Literals.DOMAIN__SCHEDULERS);
+			childrenFeatures.add(ToUseSchedulerPackage.Literals.DOMAIN__RESOURCES);
+			childrenFeatures.add(ToUseSchedulerPackage.Literals.DOMAIN__TASKS);
 		}
 		return childrenFeatures;
 	}
@@ -132,6 +133,8 @@ public class DomainItemProvider
 
 		switch (notification.getFeatureID(Domain.class)) {
 			case ToUseSchedulerPackage.DOMAIN__SCHEDULERS:
+			case ToUseSchedulerPackage.DOMAIN__RESOURCES:
+			case ToUseSchedulerPackage.DOMAIN__TASKS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -152,7 +155,17 @@ public class DomainItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(ToUseSchedulerPackage.Literals.DOMAIN__SCHEDULERS,
-				 SchedulerFactory.eINSTANCE.createScheduler()));
+				 ToUseSchedulerFactory.eINSTANCE.createToUseScheduler()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ToUseSchedulerPackage.Literals.DOMAIN__RESOURCES,
+				 ToUseSchedulerFactory.eINSTANCE.createToUseResource()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ToUseSchedulerPackage.Literals.DOMAIN__TASKS,
+				 ToUseSchedulerFactory.eINSTANCE.createToUseTask()));
 	}
 
 	/**

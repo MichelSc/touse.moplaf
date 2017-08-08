@@ -31,6 +31,51 @@ public interface ToUseSchedulerFactory extends EFactory {
 	Domain createDomain();
 
 	/**
+	 * Returns a new object of class '<em>To Use Scheduler</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>To Use Scheduler</em>'.
+	 * @generated
+	 */
+	ToUseScheduler createToUseScheduler();
+
+	/**
+	 * Returns a new object of class '<em>To Use Task</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>To Use Task</em>'.
+	 * @generated
+	 */
+	ToUseTask createToUseTask();
+
+	/**
+	 * Returns a new object of class '<em>To Use Resource</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>To Use Resource</em>'.
+	 * @generated
+	 */
+	ToUseResource createToUseResource();
+
+	/**
+	 * Returns a new object of class '<em>To Use Solution Task</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>To Use Solution Task</em>'.
+	 * @generated
+	 */
+	ToUseSolutionTask createToUseSolutionTask();
+
+	/**
+	 * Returns a new object of class '<em>To Use Solution Resource</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>To Use Solution Resource</em>'.
+	 * @generated
+	 */
+	ToUseSolutionResource createToUseSolutionResource();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

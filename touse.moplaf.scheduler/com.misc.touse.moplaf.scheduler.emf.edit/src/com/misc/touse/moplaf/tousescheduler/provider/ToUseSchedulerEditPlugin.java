@@ -3,9 +3,7 @@
 package com.misc.touse.moplaf.tousescheduler.provider;
 
 import com.misc.common.moplaf.propagator2.provider.PropagatorEditPlugin;
-
-import com.misc.common.moplaf.scheduler.provider.SchedulerEditPlugin;
-
+import com.misc.common.moplaf.schedulercalc.provider.SchedulerEditPlugin;
 import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;

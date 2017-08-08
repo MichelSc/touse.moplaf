@@ -95,6 +95,121 @@ public class ToUseSchedulerItemProviderAdapterFactory extends ToUseSchedulerAdap
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.ToUseScheduler} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ToUseSchedulerItemProvider toUseSchedulerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousescheduler.ToUseScheduler}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createToUseSchedulerAdapter() {
+		if (toUseSchedulerItemProvider == null) {
+			toUseSchedulerItemProvider = new ToUseSchedulerItemProvider(this);
+		}
+
+		return toUseSchedulerItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.ToUseTask} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ToUseTaskItemProvider toUseTaskItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousescheduler.ToUseTask}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createToUseTaskAdapter() {
+		if (toUseTaskItemProvider == null) {
+			toUseTaskItemProvider = new ToUseTaskItemProvider(this);
+		}
+
+		return toUseTaskItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.ToUseResource} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ToUseResourceItemProvider toUseResourceItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousescheduler.ToUseResource}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createToUseResourceAdapter() {
+		if (toUseResourceItemProvider == null) {
+			toUseResourceItemProvider = new ToUseResourceItemProvider(this);
+		}
+
+		return toUseResourceItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.ToUseSolutionTask} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ToUseSolutionTaskItemProvider toUseSolutionTaskItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousescheduler.ToUseSolutionTask}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createToUseSolutionTaskAdapter() {
+		if (toUseSolutionTaskItemProvider == null) {
+			toUseSolutionTaskItemProvider = new ToUseSolutionTaskItemProvider(this);
+		}
+
+		return toUseSolutionTaskItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.ToUseSolutionResource} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ToUseSolutionResourceItemProvider toUseSolutionResourceItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousescheduler.ToUseSolutionResource}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createToUseSolutionResourceAdapter() {
+		if (toUseSolutionResourceItemProvider == null) {
+			toUseSolutionResourceItemProvider = new ToUseSolutionResourceItemProvider(this);
+		}
+
+		return toUseSolutionResourceItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -194,6 +309,11 @@ public class ToUseSchedulerItemProviderAdapterFactory extends ToUseSchedulerAdap
 	 */
 	public void dispose() {
 		if (domainItemProvider != null) domainItemProvider.dispose();
+		if (toUseSchedulerItemProvider != null) toUseSchedulerItemProvider.dispose();
+		if (toUseTaskItemProvider != null) toUseTaskItemProvider.dispose();
+		if (toUseResourceItemProvider != null) toUseResourceItemProvider.dispose();
+		if (toUseSolutionTaskItemProvider != null) toUseSolutionTaskItemProvider.dispose();
+		if (toUseSolutionResourceItemProvider != null) toUseSolutionResourceItemProvider.dispose();
 	}
 
 }

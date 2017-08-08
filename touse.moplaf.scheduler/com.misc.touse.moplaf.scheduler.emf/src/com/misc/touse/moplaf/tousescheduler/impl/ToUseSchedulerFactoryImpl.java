@@ -57,6 +57,11 @@ public class ToUseSchedulerFactoryImpl extends EFactoryImpl implements ToUseSche
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case ToUseSchedulerPackage.DOMAIN: return createDomain();
+			case ToUseSchedulerPackage.TO_USE_SCHEDULER: return createToUseScheduler();
+			case ToUseSchedulerPackage.TO_USE_TASK: return createToUseTask();
+			case ToUseSchedulerPackage.TO_USE_RESOURCE: return createToUseResource();
+			case ToUseSchedulerPackage.TO_USE_SOLUTION_TASK: return createToUseSolutionTask();
+			case ToUseSchedulerPackage.TO_USE_SOLUTION_RESOURCE: return createToUseSolutionResource();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -70,6 +75,56 @@ public class ToUseSchedulerFactoryImpl extends EFactoryImpl implements ToUseSche
 	public Domain createDomain() {
 		DomainImpl domain = new DomainImpl();
 		return domain;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ToUseScheduler createToUseScheduler() {
+		ToUseSchedulerImpl toUseScheduler = new ToUseSchedulerImpl();
+		return toUseScheduler;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ToUseTask createToUseTask() {
+		ToUseTaskImpl toUseTask = new ToUseTaskImpl();
+		return toUseTask;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ToUseResource createToUseResource() {
+		ToUseResourceImpl toUseResource = new ToUseResourceImpl();
+		return toUseResource;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ToUseSolutionTask createToUseSolutionTask() {
+		ToUseSolutionTaskImpl toUseSolutionTask = new ToUseSolutionTaskImpl();
+		return toUseSolutionTask;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ToUseSolutionResource createToUseSolutionResource() {
+		ToUseSolutionResourceImpl toUseSolutionResource = new ToUseSolutionResourceImpl();
+		return toUseSolutionResource;
 	}
 
 	/**
