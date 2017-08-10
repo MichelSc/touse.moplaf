@@ -48,6 +48,8 @@ public class ToUseSolutionResourceItemProvider extends SolutionResourceItemProvi
 			super.getPropertyDescriptors(object);
 
 			addToUseResourcePropertyDescriptor(object);
+			addTotalDistancePropertyDescriptor(object);
+			addEndTimePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -66,6 +68,50 @@ public class ToUseSolutionResourceItemProvider extends SolutionResourceItemProvi
 				 getString("_UI_ToUseSolutionResource_ToUseResource_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseSolutionResource_ToUseResource_feature", "_UI_ToUseSolutionResource_type"),
 				 ToUseSchedulerPackage.Literals.TO_USE_SOLUTION_RESOURCE__TO_USE_RESOURCE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Total Distance feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTotalDistancePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ToUseSolutionResource_TotalDistance_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseSolutionResource_TotalDistance_feature", "_UI_ToUseSolutionResource_type"),
+				 ToUseSchedulerPackage.Literals.TO_USE_SOLUTION_RESOURCE__TOTAL_DISTANCE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the End Time feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addEndTimePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ToUseSolutionResource_EndTime_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseSolutionResource_EndTime_feature", "_UI_ToUseSolutionResource_type"),
+				 ToUseSchedulerPackage.Literals.TO_USE_SOLUTION_RESOURCE__END_TIME,
 				 true,
 				 false,
 				 true,

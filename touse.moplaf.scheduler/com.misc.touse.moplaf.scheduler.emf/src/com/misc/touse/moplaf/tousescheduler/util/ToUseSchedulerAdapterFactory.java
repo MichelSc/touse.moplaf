@@ -2,6 +2,7 @@
  */
 package com.misc.touse.moplaf.tousescheduler.util;
 
+import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
 import com.misc.common.moplaf.scheduler.Scheduler;
 import com.misc.common.moplaf.scheduler.SolutionResource;
 import com.misc.common.moplaf.scheduler.SolutionTask;
@@ -97,6 +98,10 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseScheduler(Scheduler object) {
 				return createSchedulerAdapter();
+			}
+			@Override
+			public Adapter caseObjectWithPropagatorFunctions(ObjectWithPropagatorFunctions object) {
+				return createObjectWithPropagatorFunctionsAdapter();
 			}
 			@Override
 			public Adapter caseSolutionTask(SolutionTask object) {
@@ -221,6 +226,20 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSchedulerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions <em>Object With Propagator Functions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions
+	 * @generated
+	 */
+	public Adapter createObjectWithPropagatorFunctionsAdapter() {
 		return null;
 	}
 

@@ -3,6 +3,8 @@
 package com.misc.touse.moplaf.tousescheduler;
 
 import com.misc.common.moplaf.scheduler.SolutionTask;
+import com.misc.common.moplaf.scheduler.TaskCandidateDateExpression;
+import com.misc.common.moplaf.scheduler.TaskCandidateFloatExpression;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,6 +16,8 @@ import com.misc.common.moplaf.scheduler.SolutionTask;
  * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.ToUseSolutionTask#getToUseTask <em>To Use Task</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.ToUseSolutionTask#getDistance <em>Distance</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.ToUseSolutionTask#getTime <em>Time</em>}</li>
  * </ul>
  *
  * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getToUseSolutionTask()
@@ -46,5 +50,57 @@ public interface ToUseSolutionTask extends SolutionTask {
 	 * @generated
 	 */
 	void setToUseTask(ToUseTask value);
+
+	/**
+	 * Returns the value of the '<em><b>Distance</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Distance</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Distance</em>' reference.
+	 * @see #setDistance(TaskCandidateFloatExpression)
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getToUseSolutionTask_Distance()
+	 * @model
+	 * @generated
+	 */
+	TaskCandidateFloatExpression getDistance();
+
+	/**
+	 * Sets the value of the '{@link com.misc.touse.moplaf.tousescheduler.ToUseSolutionTask#getDistance <em>Distance</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Distance</em>' reference.
+	 * @see #getDistance()
+	 * @generated
+	 */
+	void setDistance(TaskCandidateFloatExpression value);
+
+	/**
+	 * Returns the value of the '<em><b>Time</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Time</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Time</em>' reference.
+	 * @see #setTime(TaskCandidateDateExpression)
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getToUseSolutionTask_Time()
+	 * @model
+	 * @generated
+	 */
+	TaskCandidateDateExpression getTime();
+
+	/**
+	 * Sets the value of the '{@link com.misc.touse.moplaf.tousescheduler.ToUseSolutionTask#getTime <em>Time</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Time</em>' reference.
+	 * @see #getTime()
+	 * @generated
+	 */
+	void setTime(TaskCandidateDateExpression value);
 
 } // ToUseSolutionTask

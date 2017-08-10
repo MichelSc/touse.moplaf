@@ -238,6 +238,24 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getToUseSolutionTask_Distance() {
+		return (EReference)toUseSolutionTaskEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getToUseSolutionTask_Time() {
+		return (EReference)toUseSolutionTaskEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getToUseSolutionResource() {
 		return toUseSolutionResourceEClass;
 	}
@@ -249,6 +267,24 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 */
 	public EReference getToUseSolutionResource_ToUseResource() {
 		return (EReference)toUseSolutionResourceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getToUseSolutionResource_TotalDistance() {
+		return (EReference)toUseSolutionResourceEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getToUseSolutionResource_EndTime() {
+		return (EReference)toUseSolutionResourceEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -294,9 +330,13 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 
 		toUseSolutionTaskEClass = createEClass(TO_USE_SOLUTION_TASK);
 		createEReference(toUseSolutionTaskEClass, TO_USE_SOLUTION_TASK__TO_USE_TASK);
+		createEReference(toUseSolutionTaskEClass, TO_USE_SOLUTION_TASK__DISTANCE);
+		createEReference(toUseSolutionTaskEClass, TO_USE_SOLUTION_TASK__TIME);
 
 		toUseSolutionResourceEClass = createEClass(TO_USE_SOLUTION_RESOURCE);
 		createEReference(toUseSolutionResourceEClass, TO_USE_SOLUTION_RESOURCE__TO_USE_RESOURCE);
+		createEReference(toUseSolutionResourceEClass, TO_USE_SOLUTION_RESOURCE__TOTAL_DISTANCE);
+		createEReference(toUseSolutionResourceEClass, TO_USE_SOLUTION_RESOURCE__END_TIME);
 	}
 
 	/**
@@ -350,9 +390,13 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 
 		initEClass(toUseSolutionTaskEClass, ToUseSolutionTask.class, "ToUseSolutionTask", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getToUseSolutionTask_ToUseTask(), this.getToUseTask(), null, "ToUseTask", null, 1, 1, ToUseSolutionTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getToUseSolutionTask_Distance(), theSchedulerPackage.getTaskCandidateFloatExpression(), null, "Distance", null, 0, 1, ToUseSolutionTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getToUseSolutionTask_Time(), theSchedulerPackage.getTaskCandidateDateExpression(), null, "Time", null, 0, 1, ToUseSolutionTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(toUseSolutionResourceEClass, ToUseSolutionResource.class, "ToUseSolutionResource", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getToUseSolutionResource_ToUseResource(), this.getToUseResource(), null, "ToUseResource", null, 1, 1, ToUseSolutionResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getToUseSolutionResource_TotalDistance(), theSchedulerPackage.getResourceCandidateFloatExpression(), null, "TotalDistance", null, 0, 1, ToUseSolutionResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getToUseSolutionResource_EndTime(), theSchedulerPackage.getResourceCandidateDateExpression(), null, "EndTime", null, 0, 1, ToUseSolutionResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

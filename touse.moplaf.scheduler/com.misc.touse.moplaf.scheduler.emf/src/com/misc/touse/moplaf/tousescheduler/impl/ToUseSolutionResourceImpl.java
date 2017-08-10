@@ -2,6 +2,8 @@
  */
 package com.misc.touse.moplaf.tousescheduler.impl;
 
+import com.misc.common.moplaf.scheduler.ResourceCandidateDateExpression;
+import com.misc.common.moplaf.scheduler.ResourceCandidateFloatExpression;
 import com.misc.common.moplaf.scheduler.impl.SolutionResourceImpl;
 
 import com.misc.touse.moplaf.tousescheduler.ToUseResource;
@@ -24,6 +26,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseSolutionResourceImpl#getToUseResource <em>To Use Resource</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseSolutionResourceImpl#getTotalDistance <em>Total Distance</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseSolutionResourceImpl#getEndTime <em>End Time</em>}</li>
  * </ul>
  *
  * @generated
@@ -38,6 +42,25 @@ public class ToUseSolutionResourceImpl extends SolutionResourceImpl implements T
 	 * @ordered
 	 */
 	protected ToUseResource toUseResource;
+
+	/**
+	 * The cached value of the '{@link #getTotalDistance() <em>Total Distance</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTotalDistance()
+	 * @generated
+	 * @ordered
+	 */
+	protected ResourceCandidateFloatExpression totalDistance;
+	/**
+	 * The cached value of the '{@link #getEndTime() <em>End Time</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEndTime()
+	 * @generated
+	 * @ordered
+	 */
+	protected ResourceCandidateDateExpression endTime;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -101,12 +124,94 @@ public class ToUseSolutionResourceImpl extends SolutionResourceImpl implements T
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public ResourceCandidateFloatExpression getTotalDistance() {
+		if (totalDistance != null && totalDistance.eIsProxy()) {
+			InternalEObject oldTotalDistance = (InternalEObject)totalDistance;
+			totalDistance = (ResourceCandidateFloatExpression)eResolveProxy(oldTotalDistance);
+			if (totalDistance != oldTotalDistance) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ToUseSchedulerPackage.TO_USE_SOLUTION_RESOURCE__TOTAL_DISTANCE, oldTotalDistance, totalDistance));
+			}
+		}
+		return totalDistance;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ResourceCandidateFloatExpression basicGetTotalDistance() {
+		return totalDistance;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTotalDistance(ResourceCandidateFloatExpression newTotalDistance) {
+		ResourceCandidateFloatExpression oldTotalDistance = totalDistance;
+		totalDistance = newTotalDistance;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseSchedulerPackage.TO_USE_SOLUTION_RESOURCE__TOTAL_DISTANCE, oldTotalDistance, totalDistance));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ResourceCandidateDateExpression getEndTime() {
+		if (endTime != null && endTime.eIsProxy()) {
+			InternalEObject oldEndTime = (InternalEObject)endTime;
+			endTime = (ResourceCandidateDateExpression)eResolveProxy(oldEndTime);
+			if (endTime != oldEndTime) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ToUseSchedulerPackage.TO_USE_SOLUTION_RESOURCE__END_TIME, oldEndTime, endTime));
+			}
+		}
+		return endTime;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ResourceCandidateDateExpression basicGetEndTime() {
+		return endTime;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setEndTime(ResourceCandidateDateExpression newEndTime) {
+		ResourceCandidateDateExpression oldEndTime = endTime;
+		endTime = newEndTime;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseSchedulerPackage.TO_USE_SOLUTION_RESOURCE__END_TIME, oldEndTime, endTime));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case ToUseSchedulerPackage.TO_USE_SOLUTION_RESOURCE__TO_USE_RESOURCE:
 				if (resolve) return getToUseResource();
 				return basicGetToUseResource();
+			case ToUseSchedulerPackage.TO_USE_SOLUTION_RESOURCE__TOTAL_DISTANCE:
+				if (resolve) return getTotalDistance();
+				return basicGetTotalDistance();
+			case ToUseSchedulerPackage.TO_USE_SOLUTION_RESOURCE__END_TIME:
+				if (resolve) return getEndTime();
+				return basicGetEndTime();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -121,6 +226,12 @@ public class ToUseSolutionResourceImpl extends SolutionResourceImpl implements T
 		switch (featureID) {
 			case ToUseSchedulerPackage.TO_USE_SOLUTION_RESOURCE__TO_USE_RESOURCE:
 				setToUseResource((ToUseResource)newValue);
+				return;
+			case ToUseSchedulerPackage.TO_USE_SOLUTION_RESOURCE__TOTAL_DISTANCE:
+				setTotalDistance((ResourceCandidateFloatExpression)newValue);
+				return;
+			case ToUseSchedulerPackage.TO_USE_SOLUTION_RESOURCE__END_TIME:
+				setEndTime((ResourceCandidateDateExpression)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -137,6 +248,12 @@ public class ToUseSolutionResourceImpl extends SolutionResourceImpl implements T
 			case ToUseSchedulerPackage.TO_USE_SOLUTION_RESOURCE__TO_USE_RESOURCE:
 				setToUseResource((ToUseResource)null);
 				return;
+			case ToUseSchedulerPackage.TO_USE_SOLUTION_RESOURCE__TOTAL_DISTANCE:
+				setTotalDistance((ResourceCandidateFloatExpression)null);
+				return;
+			case ToUseSchedulerPackage.TO_USE_SOLUTION_RESOURCE__END_TIME:
+				setEndTime((ResourceCandidateDateExpression)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -151,6 +268,10 @@ public class ToUseSolutionResourceImpl extends SolutionResourceImpl implements T
 		switch (featureID) {
 			case ToUseSchedulerPackage.TO_USE_SOLUTION_RESOURCE__TO_USE_RESOURCE:
 				return toUseResource != null;
+			case ToUseSchedulerPackage.TO_USE_SOLUTION_RESOURCE__TOTAL_DISTANCE:
+				return totalDistance != null;
+			case ToUseSchedulerPackage.TO_USE_SOLUTION_RESOURCE__END_TIME:
+				return endTime != null;
 		}
 		return super.eIsSet(featureID);
 	}

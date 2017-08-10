@@ -196,6 +196,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULER___CONSTRUCT_RESOURCE__EOBJECT = SchedulerPackage.SCHEDULER___CONSTRUCT_RESOURCE__EOBJECT;
 
 	/**
+	 * The operation id for the '<em>Enable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULER___ENABLE = SchedulerPackage.SCHEDULER___ENABLE;
+
+	/**
 	 * The number of operations of the '<em>To Use Scheduler</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -287,6 +296,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 */
 	int TO_USE_SOLUTION_TASK = 4;
+
+	/**
+	 * The feature id for the '<em><b>Propagator Functions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLUTION_TASK__PROPAGATOR_FUNCTIONS = SchedulerPackage.SOLUTION_TASK__PROPAGATOR_FUNCTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Task</b></em>' reference.
@@ -415,13 +433,49 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SOLUTION_TASK__TO_USE_TASK = SchedulerPackage.SOLUTION_TASK_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Distance</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLUTION_TASK__DISTANCE = SchedulerPackage.SOLUTION_TASK_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Time</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLUTION_TASK__TIME = SchedulerPackage.SOLUTION_TASK_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>To Use Solution Task</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SOLUTION_TASK_FEATURE_COUNT = SchedulerPackage.SOLUTION_TASK_FEATURE_COUNT + 1;
+	int TO_USE_SOLUTION_TASK_FEATURE_COUNT = SchedulerPackage.SOLUTION_TASK_FEATURE_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLUTION_TASK___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION = SchedulerPackage.SOLUTION_TASK___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION;
+
+	/**
+	 * The operation id for the '<em>Get Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLUTION_TASK___GET_PROPAGATOR_FUNCTION__ECLASS = SchedulerPackage.SOLUTION_TASK___GET_PROPAGATOR_FUNCTION__ECLASS;
 
 	/**
 	 * The operation id for the '<em>Unset Candidate Previous Next</em>' operation.
@@ -442,6 +496,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SOLUTION_TASK___SET_CANDIDATE_PREVIOUS_NEXT__SOLUTIONRESOURCE_SOLUTIONTASK_SOLUTIONTASK = SchedulerPackage.SOLUTION_TASK___SET_CANDIDATE_PREVIOUS_NEXT__SOLUTIONRESOURCE_SOLUTIONTASK_SOLUTIONTASK;
 
 	/**
+	 * The operation id for the '<em>Construct Expressions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLUTION_TASK___CONSTRUCT_EXPRESSIONS = SchedulerPackage.SOLUTION_TASK___CONSTRUCT_EXPRESSIONS;
+
+	/**
 	 * The number of operations of the '<em>To Use Solution Task</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -459,6 +522,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 */
 	int TO_USE_SOLUTION_RESOURCE = 5;
+
+	/**
+	 * The feature id for the '<em><b>Propagator Functions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLUTION_RESOURCE__PROPAGATOR_FUNCTIONS = SchedulerPackage.SOLUTION_RESOURCE__PROPAGATOR_FUNCTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Resource</b></em>' reference.
@@ -551,13 +623,58 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SOLUTION_RESOURCE__TO_USE_RESOURCE = SchedulerPackage.SOLUTION_RESOURCE_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Total Distance</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLUTION_RESOURCE__TOTAL_DISTANCE = SchedulerPackage.SOLUTION_RESOURCE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>End Time</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLUTION_RESOURCE__END_TIME = SchedulerPackage.SOLUTION_RESOURCE_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>To Use Solution Resource</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SOLUTION_RESOURCE_FEATURE_COUNT = SchedulerPackage.SOLUTION_RESOURCE_FEATURE_COUNT + 1;
+	int TO_USE_SOLUTION_RESOURCE_FEATURE_COUNT = SchedulerPackage.SOLUTION_RESOURCE_FEATURE_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLUTION_RESOURCE___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION = SchedulerPackage.SOLUTION_RESOURCE___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION;
+
+	/**
+	 * The operation id for the '<em>Get Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLUTION_RESOURCE___GET_PROPAGATOR_FUNCTION__ECLASS = SchedulerPackage.SOLUTION_RESOURCE___GET_PROPAGATOR_FUNCTION__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Construct Expressions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLUTION_RESOURCE___CONSTRUCT_EXPRESSIONS = SchedulerPackage.SOLUTION_RESOURCE___CONSTRUCT_EXPRESSIONS;
 
 	/**
 	 * The number of operations of the '<em>To Use Solution Resource</em>' class.
@@ -685,6 +802,28 @@ public interface ToUseSchedulerPackage extends EPackage {
 	EReference getToUseSolutionTask_ToUseTask();
 
 	/**
+	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.tousescheduler.ToUseSolutionTask#getDistance <em>Distance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Distance</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSolutionTask#getDistance()
+	 * @see #getToUseSolutionTask()
+	 * @generated
+	 */
+	EReference getToUseSolutionTask_Distance();
+
+	/**
+	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.tousescheduler.ToUseSolutionTask#getTime <em>Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Time</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSolutionTask#getTime()
+	 * @see #getToUseSolutionTask()
+	 * @generated
+	 */
+	EReference getToUseSolutionTask_Time();
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.ToUseSolutionResource <em>To Use Solution Resource</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -704,6 +843,28 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getToUseSolutionResource_ToUseResource();
+
+	/**
+	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.tousescheduler.ToUseSolutionResource#getTotalDistance <em>Total Distance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Total Distance</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSolutionResource#getTotalDistance()
+	 * @see #getToUseSolutionResource()
+	 * @generated
+	 */
+	EReference getToUseSolutionResource_TotalDistance();
+
+	/**
+	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.tousescheduler.ToUseSolutionResource#getEndTime <em>End Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>End Time</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSolutionResource#getEndTime()
+	 * @see #getToUseSolutionResource()
+	 * @generated
+	 */
+	EReference getToUseSolutionResource_EndTime();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -827,6 +988,22 @@ public interface ToUseSchedulerPackage extends EPackage {
 		EReference TO_USE_SOLUTION_TASK__TO_USE_TASK = eINSTANCE.getToUseSolutionTask_ToUseTask();
 
 		/**
+		 * The meta object literal for the '<em><b>Distance</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TO_USE_SOLUTION_TASK__DISTANCE = eINSTANCE.getToUseSolutionTask_Distance();
+
+		/**
+		 * The meta object literal for the '<em><b>Time</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TO_USE_SOLUTION_TASK__TIME = eINSTANCE.getToUseSolutionTask_Time();
+
+		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseSolutionResourceImpl <em>To Use Solution Resource</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -843,6 +1020,22 @@ public interface ToUseSchedulerPackage extends EPackage {
 		 * @generated
 		 */
 		EReference TO_USE_SOLUTION_RESOURCE__TO_USE_RESOURCE = eINSTANCE.getToUseSolutionResource_ToUseResource();
+
+		/**
+		 * The meta object literal for the '<em><b>Total Distance</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TO_USE_SOLUTION_RESOURCE__TOTAL_DISTANCE = eINSTANCE.getToUseSolutionResource_TotalDistance();
+
+		/**
+		 * The meta object literal for the '<em><b>End Time</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TO_USE_SOLUTION_RESOURCE__END_TIME = eINSTANCE.getToUseSolutionResource_EndTime();
 
 	}
 

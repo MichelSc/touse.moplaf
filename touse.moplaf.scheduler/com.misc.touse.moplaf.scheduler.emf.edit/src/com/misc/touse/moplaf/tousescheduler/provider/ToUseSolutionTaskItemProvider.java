@@ -48,6 +48,8 @@ public class ToUseSolutionTaskItemProvider extends SolutionTaskItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addToUseTaskPropertyDescriptor(object);
+			addDistancePropertyDescriptor(object);
+			addTimePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -66,6 +68,50 @@ public class ToUseSolutionTaskItemProvider extends SolutionTaskItemProvider {
 				 getString("_UI_ToUseSolutionTask_ToUseTask_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseSolutionTask_ToUseTask_feature", "_UI_ToUseSolutionTask_type"),
 				 ToUseSchedulerPackage.Literals.TO_USE_SOLUTION_TASK__TO_USE_TASK,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Distance feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDistancePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ToUseSolutionTask_Distance_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseSolutionTask_Distance_feature", "_UI_ToUseSolutionTask_type"),
+				 ToUseSchedulerPackage.Literals.TO_USE_SOLUTION_TASK__DISTANCE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Time feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTimePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ToUseSolutionTask_Time_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseSolutionTask_Time_feature", "_UI_ToUseSolutionTask_type"),
+				 ToUseSchedulerPackage.Literals.TO_USE_SOLUTION_TASK__TIME,
 				 true,
 				 false,
 				 true,

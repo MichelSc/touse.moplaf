@@ -2,6 +2,7 @@
  */
 package com.misc.touse.moplaf.tousescheduler.util;
 
+import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
 import com.misc.common.moplaf.scheduler.Scheduler;
 import com.misc.common.moplaf.scheduler.SolutionResource;
 import com.misc.common.moplaf.scheduler.SolutionTask;
@@ -98,6 +99,7 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 				ToUseSolutionTask toUseSolutionTask = (ToUseSolutionTask)theEObject;
 				T result = caseToUseSolutionTask(toUseSolutionTask);
 				if (result == null) result = caseSolutionTask(toUseSolutionTask);
+				if (result == null) result = caseObjectWithPropagatorFunctions(toUseSolutionTask);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -105,6 +107,7 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 				ToUseSolutionResource toUseSolutionResource = (ToUseSolutionResource)theEObject;
 				T result = caseToUseSolutionResource(toUseSolutionResource);
 				if (result == null) result = caseSolutionResource(toUseSolutionResource);
+				if (result == null) result = caseObjectWithPropagatorFunctions(toUseSolutionResource);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -214,6 +217,21 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseScheduler(Scheduler object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Object With Propagator Functions</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Object With Propagator Functions</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseObjectWithPropagatorFunctions(ObjectWithPropagatorFunctions object) {
 		return null;
 	}
 

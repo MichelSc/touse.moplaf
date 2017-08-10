@@ -20,9 +20,13 @@
   <eClassifiers xsi:type="ecore:EClass" name="ToUseSolutionTask" eSuperTypes="../../com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//SolutionTask">
     <eStructuralFeatures xsi:type="ecore:EReference" name="ToUseTask" lowerBound="1"
         eType="#//ToUseTask"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Distance" eType="ecore:EClass ../../com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//TaskCandidateFloatExpression"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Time" eType="ecore:EClass ../../com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//TaskCandidateDateExpression"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ToUseSolutionResource" eSuperTypes="../../com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//SolutionResource">
     <eStructuralFeatures xsi:type="ecore:EReference" name="ToUseResource" lowerBound="1"
         eType="#//ToUseResource"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="TotalDistance" eType="ecore:EClass ../../com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//ResourceCandidateFloatExpression"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="EndTime" eType="ecore:EClass ../../com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//ResourceCandidateDateExpression"/>
   </eClassifiers>
 </ecore:EPackage>
