@@ -309,6 +309,7 @@ public class ToUseSolutionTaskImpl extends SolutionTaskImpl implements ToUseSolu
 		super.constructExpressions();
 
 		this.setDistance(Util.addFloatExpression(this, "distance"));
+		this.setTime(Util.addDateExpression(this, "time"));
 	}
 	
 	

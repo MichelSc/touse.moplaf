@@ -676,7 +676,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_YSGkmnxCEee_nccCgARQhA" name=" Expressions : TaskExpression" visible="false" tooltipText="">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_YSGkmnxCEee_nccCgARQhA" name=" Expressions : CandidateValueExpression" visible="false" tooltipText="">
         <target xmi:type="ecore:EReference" href="platform:/resource/com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//SolutionTask/Expressions"/>
         <semanticElements xmi:type="ecore:EReference" href="platform:/resource/com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//SolutionTask/Expressions"/>
         <graphicalFilters xmi:type="diagram:AppliedCompositeFilters" xmi:id="_6hgBeX3UEeeMRK6AqhMd1A">
@@ -797,7 +797,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_cNvTtHxCEee_nccCgARQhA" name=" Expressions : ResourceExpression" visible="false" tooltipText="">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_cNvTtHxCEee_nccCgARQhA" name=" Expressions : CandidateValueExpression" visible="false" tooltipText="">
         <target xmi:type="ecore:EReference" href="platform:/resource/com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//SolutionResource/Expressions"/>
         <semanticElements xmi:type="ecore:EReference" href="platform:/resource/com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//SolutionResource/Expressions"/>
         <graphicalFilters xmi:type="diagram:AppliedCompositeFilters" xmi:id="_6hgBgX3UEeeMRK6AqhMd1A">

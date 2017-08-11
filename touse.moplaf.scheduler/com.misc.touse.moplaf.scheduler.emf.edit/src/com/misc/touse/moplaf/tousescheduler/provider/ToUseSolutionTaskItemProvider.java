@@ -3,7 +3,6 @@
 package com.misc.touse.moplaf.tousescheduler.provider;
 
 
-import com.misc.common.moplaf.scheduler.SchedulerFactory;
 import com.misc.common.moplaf.scheduler.provider.SolutionTaskItemProvider;
 
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
@@ -16,8 +15,6 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
-
-import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
@@ -78,37 +75,6 @@ public class ToUseSolutionTaskItemProvider extends SolutionTaskItemProvider {
 	}
 
 	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(ToUseSchedulerPackage.Literals.TO_USE_SOLUTION_TASK__DISTANCE);
-			childrenFeatures.add(ToUseSchedulerPackage.Literals.TO_USE_SOLUTION_TASK__TIME);
-		}
-		return childrenFeatures;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EStructuralFeature getChildFeature(Object object, Object child) {
-		// Check the type of the specified child object and return the proper feature to use for
-		// adding (see {@link AddCommand}) it as a child.
-
-		return super.getChildFeature(object, child);
-	}
-
-	/**
 	 * This returns ToUseSolutionTask.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -148,7 +114,7 @@ public class ToUseSolutionTaskItemProvider extends SolutionTaskItemProvider {
 		switch (notification.getFeatureID(ToUseSolutionTask.class)) {
 			case ToUseSchedulerPackage.TO_USE_SOLUTION_TASK__DISTANCE:
 			case ToUseSchedulerPackage.TO_USE_SOLUTION_TASK__TIME:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
 		super.notifyChanged(notification);
@@ -164,16 +130,6 @@ public class ToUseSolutionTaskItemProvider extends SolutionTaskItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ToUseSchedulerPackage.Literals.TO_USE_SOLUTION_TASK__DISTANCE,
-				 SchedulerFactory.eINSTANCE.createTaskCandidateFloatExpression()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ToUseSchedulerPackage.Literals.TO_USE_SOLUTION_TASK__TIME,
-				 SchedulerFactory.eINSTANCE.createTaskCandidateDateExpression()));
 	}
 
 	/**
