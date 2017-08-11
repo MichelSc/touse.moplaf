@@ -52,52 +52,52 @@ public interface ToUseSolutionTask extends SolutionTask {
 	void setToUseTask(ToUseTask value);
 
 	/**
-	 * Returns the value of the '<em><b>Distance</b></em>' reference.
+	 * Returns the value of the '<em><b>Distance</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Distance</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Distance</em>' reference.
+	 * @return the value of the '<em>Distance</em>' containment reference.
 	 * @see #setDistance(TaskCandidateFloatExpression)
 	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getToUseSolutionTask_Distance()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	TaskCandidateFloatExpression getDistance();
 
 	/**
-	 * Sets the value of the '{@link com.misc.touse.moplaf.tousescheduler.ToUseSolutionTask#getDistance <em>Distance</em>}' reference.
+	 * Sets the value of the '{@link com.misc.touse.moplaf.tousescheduler.ToUseSolutionTask#getDistance <em>Distance</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Distance</em>' reference.
+	 * @param value the new value of the '<em>Distance</em>' containment reference.
 	 * @see #getDistance()
 	 * @generated
 	 */
 	void setDistance(TaskCandidateFloatExpression value);
 
 	/**
-	 * Returns the value of the '<em><b>Time</b></em>' reference.
+	 * Returns the value of the '<em><b>Time</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Time</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Time</em>' reference.
+	 * @return the value of the '<em>Time</em>' containment reference.
 	 * @see #setTime(TaskCandidateDateExpression)
 	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getToUseSolutionTask_Time()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	TaskCandidateDateExpression getTime();
 
 	/**
-	 * Sets the value of the '{@link com.misc.touse.moplaf.tousescheduler.ToUseSolutionTask#getTime <em>Time</em>}' reference.
+	 * Sets the value of the '{@link com.misc.touse.moplaf.tousescheduler.ToUseSolutionTask#getTime <em>Time</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Time</em>' reference.
+	 * @param value the new value of the '<em>Time</em>' containment reference.
 	 * @see #getTime()
 	 * @generated
 	 */

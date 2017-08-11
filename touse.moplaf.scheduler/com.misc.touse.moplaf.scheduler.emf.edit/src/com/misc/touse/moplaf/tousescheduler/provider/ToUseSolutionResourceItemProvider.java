@@ -3,6 +3,7 @@
 package com.misc.touse.moplaf.tousescheduler.provider;
 
 
+import com.misc.common.moplaf.scheduler.SchedulerFactory;
 import com.misc.common.moplaf.scheduler.provider.SolutionResourceItemProvider;
 
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
@@ -16,8 +17,10 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link com.misc.touse.moplaf.tousescheduler.ToUseSolutionResource} object.
@@ -48,8 +51,6 @@ public class ToUseSolutionResourceItemProvider extends SolutionResourceItemProvi
 			super.getPropertyDescriptors(object);
 
 			addToUseResourcePropertyDescriptor(object);
-			addTotalDistancePropertyDescriptor(object);
-			addEndTimePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -77,47 +78,34 @@ public class ToUseSolutionResourceItemProvider extends SolutionResourceItemProvi
 	}
 
 	/**
-	 * This adds a property descriptor for the Total Distance feature.
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addTotalDistancePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ToUseSolutionResource_TotalDistance_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseSolutionResource_TotalDistance_feature", "_UI_ToUseSolutionResource_type"),
-				 ToUseSchedulerPackage.Literals.TO_USE_SOLUTION_RESOURCE__TOTAL_DISTANCE,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
+	@Override
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
+		if (childrenFeatures == null) {
+			super.getChildrenFeatures(object);
+			childrenFeatures.add(ToUseSchedulerPackage.Literals.TO_USE_SOLUTION_RESOURCE__TOTAL_DISTANCE);
+			childrenFeatures.add(ToUseSchedulerPackage.Literals.TO_USE_SOLUTION_RESOURCE__END_TIME);
+		}
+		return childrenFeatures;
 	}
 
 	/**
-	 * This adds a property descriptor for the End Time feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addEndTimePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ToUseSolutionResource_EndTime_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseSolutionResource_EndTime_feature", "_UI_ToUseSolutionResource_type"),
-				 ToUseSchedulerPackage.Literals.TO_USE_SOLUTION_RESOURCE__END_TIME,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
+	@Override
+	protected EStructuralFeature getChildFeature(Object object, Object child) {
+		// Check the type of the specified child object and return the proper feature to use for
+		// adding (see {@link AddCommand}) it as a child.
+
+		return super.getChildFeature(object, child);
 	}
 
 	/**
@@ -156,6 +144,13 @@ public class ToUseSolutionResourceItemProvider extends SolutionResourceItemProvi
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(ToUseSolutionResource.class)) {
+			case ToUseSchedulerPackage.TO_USE_SOLUTION_RESOURCE__TOTAL_DISTANCE:
+			case ToUseSchedulerPackage.TO_USE_SOLUTION_RESOURCE__END_TIME:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 
@@ -169,6 +164,16 @@ public class ToUseSolutionResourceItemProvider extends SolutionResourceItemProvi
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ToUseSchedulerPackage.Literals.TO_USE_SOLUTION_RESOURCE__TOTAL_DISTANCE,
+				 SchedulerFactory.eINSTANCE.createResourceCandidateFloatExpression()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ToUseSchedulerPackage.Literals.TO_USE_SOLUTION_RESOURCE__END_TIME,
+				 SchedulerFactory.eINSTANCE.createResourceCandidateDateExpression()));
 	}
 
 	/**

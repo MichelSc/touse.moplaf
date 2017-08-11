@@ -2,7 +2,6 @@
  */
 package com.misc.touse.moplaf.tousescheduler.impl;
 
-import com.misc.common.moplaf.scheduler.SchedulerFactory;
 import com.misc.common.moplaf.scheduler.TaskCandidateDateExpression;
 import com.misc.common.moplaf.scheduler.TaskCandidateFloatExpression;
 import com.misc.common.moplaf.scheduler.impl.SolutionTaskImpl;
@@ -13,6 +12,7 @@ import com.misc.touse.moplaf.tousescheduler.ToUseTask;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -45,7 +45,7 @@ public class ToUseSolutionTaskImpl extends SolutionTaskImpl implements ToUseSolu
 	protected ToUseTask toUseTask;
 
 	/**
-	 * The cached value of the '{@link #getDistance() <em>Distance</em>}' reference.
+	 * The cached value of the '{@link #getDistance() <em>Distance</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDistance()
@@ -54,7 +54,7 @@ public class ToUseSolutionTaskImpl extends SolutionTaskImpl implements ToUseSolu
 	 */
 	protected TaskCandidateFloatExpression distance;
 	/**
-	 * The cached value of the '{@link #getTime() <em>Time</em>}' reference.
+	 * The cached value of the '{@link #getTime() <em>Time</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTime()
@@ -126,14 +126,6 @@ public class ToUseSolutionTaskImpl extends SolutionTaskImpl implements ToUseSolu
 	 * @generated
 	 */
 	public TaskCandidateFloatExpression getDistance() {
-		if (distance != null && distance.eIsProxy()) {
-			InternalEObject oldDistance = (InternalEObject)distance;
-			distance = (TaskCandidateFloatExpression)eResolveProxy(oldDistance);
-			if (distance != oldDistance) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ToUseSchedulerPackage.TO_USE_SOLUTION_TASK__DISTANCE, oldDistance, distance));
-			}
-		}
 		return distance;
 	}
 
@@ -142,8 +134,14 @@ public class ToUseSolutionTaskImpl extends SolutionTaskImpl implements ToUseSolu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TaskCandidateFloatExpression basicGetDistance() {
-		return distance;
+	public NotificationChain basicSetDistance(TaskCandidateFloatExpression newDistance, NotificationChain msgs) {
+		TaskCandidateFloatExpression oldDistance = distance;
+		distance = newDistance;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ToUseSchedulerPackage.TO_USE_SOLUTION_TASK__DISTANCE, oldDistance, newDistance);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -152,10 +150,17 @@ public class ToUseSolutionTaskImpl extends SolutionTaskImpl implements ToUseSolu
 	 * @generated
 	 */
 	public void setDistance(TaskCandidateFloatExpression newDistance) {
-		TaskCandidateFloatExpression oldDistance = distance;
-		distance = newDistance;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToUseSchedulerPackage.TO_USE_SOLUTION_TASK__DISTANCE, oldDistance, distance));
+		if (newDistance != distance) {
+			NotificationChain msgs = null;
+			if (distance != null)
+				msgs = ((InternalEObject)distance).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ToUseSchedulerPackage.TO_USE_SOLUTION_TASK__DISTANCE, null, msgs);
+			if (newDistance != null)
+				msgs = ((InternalEObject)newDistance).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ToUseSchedulerPackage.TO_USE_SOLUTION_TASK__DISTANCE, null, msgs);
+			msgs = basicSetDistance(newDistance, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseSchedulerPackage.TO_USE_SOLUTION_TASK__DISTANCE, newDistance, newDistance));
 	}
 
 	/**
@@ -164,14 +169,6 @@ public class ToUseSolutionTaskImpl extends SolutionTaskImpl implements ToUseSolu
 	 * @generated
 	 */
 	public TaskCandidateDateExpression getTime() {
-		if (time != null && time.eIsProxy()) {
-			InternalEObject oldTime = (InternalEObject)time;
-			time = (TaskCandidateDateExpression)eResolveProxy(oldTime);
-			if (time != oldTime) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ToUseSchedulerPackage.TO_USE_SOLUTION_TASK__TIME, oldTime, time));
-			}
-		}
 		return time;
 	}
 
@@ -180,8 +177,14 @@ public class ToUseSolutionTaskImpl extends SolutionTaskImpl implements ToUseSolu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TaskCandidateDateExpression basicGetTime() {
-		return time;
+	public NotificationChain basicSetTime(TaskCandidateDateExpression newTime, NotificationChain msgs) {
+		TaskCandidateDateExpression oldTime = time;
+		time = newTime;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ToUseSchedulerPackage.TO_USE_SOLUTION_TASK__TIME, oldTime, newTime);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -190,10 +193,33 @@ public class ToUseSolutionTaskImpl extends SolutionTaskImpl implements ToUseSolu
 	 * @generated
 	 */
 	public void setTime(TaskCandidateDateExpression newTime) {
-		TaskCandidateDateExpression oldTime = time;
-		time = newTime;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToUseSchedulerPackage.TO_USE_SOLUTION_TASK__TIME, oldTime, time));
+		if (newTime != time) {
+			NotificationChain msgs = null;
+			if (time != null)
+				msgs = ((InternalEObject)time).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ToUseSchedulerPackage.TO_USE_SOLUTION_TASK__TIME, null, msgs);
+			if (newTime != null)
+				msgs = ((InternalEObject)newTime).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ToUseSchedulerPackage.TO_USE_SOLUTION_TASK__TIME, null, msgs);
+			msgs = basicSetTime(newTime, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseSchedulerPackage.TO_USE_SOLUTION_TASK__TIME, newTime, newTime));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ToUseSchedulerPackage.TO_USE_SOLUTION_TASK__DISTANCE:
+				return basicSetDistance(null, msgs);
+			case ToUseSchedulerPackage.TO_USE_SOLUTION_TASK__TIME:
+				return basicSetTime(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -208,11 +234,9 @@ public class ToUseSolutionTaskImpl extends SolutionTaskImpl implements ToUseSolu
 				if (resolve) return getToUseTask();
 				return basicGetToUseTask();
 			case ToUseSchedulerPackage.TO_USE_SOLUTION_TASK__DISTANCE:
-				if (resolve) return getDistance();
-				return basicGetDistance();
+				return getDistance();
 			case ToUseSchedulerPackage.TO_USE_SOLUTION_TASK__TIME:
-				if (resolve) return getTime();
-				return basicGetTime();
+				return getTime();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}

@@ -388,7 +388,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SOLUTION_TASK__CANDIDATE_SCHEDULED_RESOURCE = SchedulerPackage.SOLUTION_TASK__CANDIDATE_SCHEDULED_RESOURCE;
 
 	/**
-	 * The feature id for the '<em><b>Expressions</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Expressions</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -433,7 +433,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SOLUTION_TASK__TO_USE_TASK = SchedulerPackage.SOLUTION_TASK_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Distance</b></em>' reference.
+	 * The feature id for the '<em><b>Distance</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -442,7 +442,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SOLUTION_TASK__DISTANCE = SchedulerPackage.SOLUTION_TASK_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Time</b></em>' reference.
+	 * The feature id for the '<em><b>Time</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -578,7 +578,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SOLUTION_RESOURCE__CANDIDATE_LAST_TASK = SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_LAST_TASK;
 
 	/**
-	 * The feature id for the '<em><b>Expressions</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Expressions</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -623,7 +623,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SOLUTION_RESOURCE__TO_USE_RESOURCE = SchedulerPackage.SOLUTION_RESOURCE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Total Distance</b></em>' reference.
+	 * The feature id for the '<em><b>Total Distance</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -632,7 +632,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SOLUTION_RESOURCE__TOTAL_DISTANCE = SchedulerPackage.SOLUTION_RESOURCE_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>End Time</b></em>' reference.
+	 * The feature id for the '<em><b>End Time</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -802,10 +802,10 @@ public interface ToUseSchedulerPackage extends EPackage {
 	EReference getToUseSolutionTask_ToUseTask();
 
 	/**
-	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.tousescheduler.ToUseSolutionTask#getDistance <em>Distance</em>}'.
+	 * Returns the meta object for the containment reference '{@link com.misc.touse.moplaf.tousescheduler.ToUseSolutionTask#getDistance <em>Distance</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Distance</em>'.
+	 * @return the meta object for the containment reference '<em>Distance</em>'.
 	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSolutionTask#getDistance()
 	 * @see #getToUseSolutionTask()
 	 * @generated
@@ -813,10 +813,10 @@ public interface ToUseSchedulerPackage extends EPackage {
 	EReference getToUseSolutionTask_Distance();
 
 	/**
-	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.tousescheduler.ToUseSolutionTask#getTime <em>Time</em>}'.
+	 * Returns the meta object for the containment reference '{@link com.misc.touse.moplaf.tousescheduler.ToUseSolutionTask#getTime <em>Time</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Time</em>'.
+	 * @return the meta object for the containment reference '<em>Time</em>'.
 	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSolutionTask#getTime()
 	 * @see #getToUseSolutionTask()
 	 * @generated
@@ -845,10 +845,10 @@ public interface ToUseSchedulerPackage extends EPackage {
 	EReference getToUseSolutionResource_ToUseResource();
 
 	/**
-	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.tousescheduler.ToUseSolutionResource#getTotalDistance <em>Total Distance</em>}'.
+	 * Returns the meta object for the containment reference '{@link com.misc.touse.moplaf.tousescheduler.ToUseSolutionResource#getTotalDistance <em>Total Distance</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Total Distance</em>'.
+	 * @return the meta object for the containment reference '<em>Total Distance</em>'.
 	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSolutionResource#getTotalDistance()
 	 * @see #getToUseSolutionResource()
 	 * @generated
@@ -856,10 +856,10 @@ public interface ToUseSchedulerPackage extends EPackage {
 	EReference getToUseSolutionResource_TotalDistance();
 
 	/**
-	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.tousescheduler.ToUseSolutionResource#getEndTime <em>End Time</em>}'.
+	 * Returns the meta object for the containment reference '{@link com.misc.touse.moplaf.tousescheduler.ToUseSolutionResource#getEndTime <em>End Time</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>End Time</em>'.
+	 * @return the meta object for the containment reference '<em>End Time</em>'.
 	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSolutionResource#getEndTime()
 	 * @see #getToUseSolutionResource()
 	 * @generated
@@ -988,7 +988,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 		EReference TO_USE_SOLUTION_TASK__TO_USE_TASK = eINSTANCE.getToUseSolutionTask_ToUseTask();
 
 		/**
-		 * The meta object literal for the '<em><b>Distance</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Distance</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -996,7 +996,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 		EReference TO_USE_SOLUTION_TASK__DISTANCE = eINSTANCE.getToUseSolutionTask_Distance();
 
 		/**
-		 * The meta object literal for the '<em><b>Time</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Time</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1022,7 +1022,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 		EReference TO_USE_SOLUTION_RESOURCE__TO_USE_RESOURCE = eINSTANCE.getToUseSolutionResource_ToUseResource();
 
 		/**
-		 * The meta object literal for the '<em><b>Total Distance</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Total Distance</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1030,7 +1030,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 		EReference TO_USE_SOLUTION_RESOURCE__TOTAL_DISTANCE = eINSTANCE.getToUseSolutionResource_TotalDistance();
 
 		/**
-		 * The meta object literal for the '<em><b>End Time</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>End Time</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

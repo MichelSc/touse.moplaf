@@ -52,52 +52,52 @@ public interface ToUseSolutionResource extends SolutionResource {
 	void setToUseResource(ToUseResource value);
 
 	/**
-	 * Returns the value of the '<em><b>Total Distance</b></em>' reference.
+	 * Returns the value of the '<em><b>Total Distance</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Total Distance</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Total Distance</em>' reference.
+	 * @return the value of the '<em>Total Distance</em>' containment reference.
 	 * @see #setTotalDistance(ResourceCandidateFloatExpression)
 	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getToUseSolutionResource_TotalDistance()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	ResourceCandidateFloatExpression getTotalDistance();
 
 	/**
-	 * Sets the value of the '{@link com.misc.touse.moplaf.tousescheduler.ToUseSolutionResource#getTotalDistance <em>Total Distance</em>}' reference.
+	 * Sets the value of the '{@link com.misc.touse.moplaf.tousescheduler.ToUseSolutionResource#getTotalDistance <em>Total Distance</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Total Distance</em>' reference.
+	 * @param value the new value of the '<em>Total Distance</em>' containment reference.
 	 * @see #getTotalDistance()
 	 * @generated
 	 */
 	void setTotalDistance(ResourceCandidateFloatExpression value);
 
 	/**
-	 * Returns the value of the '<em><b>End Time</b></em>' reference.
+	 * Returns the value of the '<em><b>End Time</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>End Time</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>End Time</em>' reference.
+	 * @return the value of the '<em>End Time</em>' containment reference.
 	 * @see #setEndTime(ResourceCandidateDateExpression)
 	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getToUseSolutionResource_EndTime()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	ResourceCandidateDateExpression getEndTime();
 
 	/**
-	 * Sets the value of the '{@link com.misc.touse.moplaf.tousescheduler.ToUseSolutionResource#getEndTime <em>End Time</em>}' reference.
+	 * Sets the value of the '{@link com.misc.touse.moplaf.tousescheduler.ToUseSolutionResource#getEndTime <em>End Time</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>End Time</em>' reference.
+	 * @param value the new value of the '<em>End Time</em>' containment reference.
 	 * @see #getEndTime()
 	 * @generated
 	 */

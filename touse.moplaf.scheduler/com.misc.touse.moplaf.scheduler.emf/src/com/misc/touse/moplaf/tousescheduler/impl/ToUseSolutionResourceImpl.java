@@ -12,6 +12,7 @@ import com.misc.touse.moplaf.tousescheduler.ToUseSolutionResource;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -44,7 +45,7 @@ public class ToUseSolutionResourceImpl extends SolutionResourceImpl implements T
 	protected ToUseResource toUseResource;
 
 	/**
-	 * The cached value of the '{@link #getTotalDistance() <em>Total Distance</em>}' reference.
+	 * The cached value of the '{@link #getTotalDistance() <em>Total Distance</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTotalDistance()
@@ -53,7 +54,7 @@ public class ToUseSolutionResourceImpl extends SolutionResourceImpl implements T
 	 */
 	protected ResourceCandidateFloatExpression totalDistance;
 	/**
-	 * The cached value of the '{@link #getEndTime() <em>End Time</em>}' reference.
+	 * The cached value of the '{@link #getEndTime() <em>End Time</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getEndTime()
@@ -125,14 +126,6 @@ public class ToUseSolutionResourceImpl extends SolutionResourceImpl implements T
 	 * @generated
 	 */
 	public ResourceCandidateFloatExpression getTotalDistance() {
-		if (totalDistance != null && totalDistance.eIsProxy()) {
-			InternalEObject oldTotalDistance = (InternalEObject)totalDistance;
-			totalDistance = (ResourceCandidateFloatExpression)eResolveProxy(oldTotalDistance);
-			if (totalDistance != oldTotalDistance) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ToUseSchedulerPackage.TO_USE_SOLUTION_RESOURCE__TOTAL_DISTANCE, oldTotalDistance, totalDistance));
-			}
-		}
 		return totalDistance;
 	}
 
@@ -141,8 +134,14 @@ public class ToUseSolutionResourceImpl extends SolutionResourceImpl implements T
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ResourceCandidateFloatExpression basicGetTotalDistance() {
-		return totalDistance;
+	public NotificationChain basicSetTotalDistance(ResourceCandidateFloatExpression newTotalDistance, NotificationChain msgs) {
+		ResourceCandidateFloatExpression oldTotalDistance = totalDistance;
+		totalDistance = newTotalDistance;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ToUseSchedulerPackage.TO_USE_SOLUTION_RESOURCE__TOTAL_DISTANCE, oldTotalDistance, newTotalDistance);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -151,10 +150,17 @@ public class ToUseSolutionResourceImpl extends SolutionResourceImpl implements T
 	 * @generated
 	 */
 	public void setTotalDistance(ResourceCandidateFloatExpression newTotalDistance) {
-		ResourceCandidateFloatExpression oldTotalDistance = totalDistance;
-		totalDistance = newTotalDistance;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToUseSchedulerPackage.TO_USE_SOLUTION_RESOURCE__TOTAL_DISTANCE, oldTotalDistance, totalDistance));
+		if (newTotalDistance != totalDistance) {
+			NotificationChain msgs = null;
+			if (totalDistance != null)
+				msgs = ((InternalEObject)totalDistance).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ToUseSchedulerPackage.TO_USE_SOLUTION_RESOURCE__TOTAL_DISTANCE, null, msgs);
+			if (newTotalDistance != null)
+				msgs = ((InternalEObject)newTotalDistance).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ToUseSchedulerPackage.TO_USE_SOLUTION_RESOURCE__TOTAL_DISTANCE, null, msgs);
+			msgs = basicSetTotalDistance(newTotalDistance, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseSchedulerPackage.TO_USE_SOLUTION_RESOURCE__TOTAL_DISTANCE, newTotalDistance, newTotalDistance));
 	}
 
 	/**
@@ -163,14 +169,6 @@ public class ToUseSolutionResourceImpl extends SolutionResourceImpl implements T
 	 * @generated
 	 */
 	public ResourceCandidateDateExpression getEndTime() {
-		if (endTime != null && endTime.eIsProxy()) {
-			InternalEObject oldEndTime = (InternalEObject)endTime;
-			endTime = (ResourceCandidateDateExpression)eResolveProxy(oldEndTime);
-			if (endTime != oldEndTime) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ToUseSchedulerPackage.TO_USE_SOLUTION_RESOURCE__END_TIME, oldEndTime, endTime));
-			}
-		}
 		return endTime;
 	}
 
@@ -179,8 +177,14 @@ public class ToUseSolutionResourceImpl extends SolutionResourceImpl implements T
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ResourceCandidateDateExpression basicGetEndTime() {
-		return endTime;
+	public NotificationChain basicSetEndTime(ResourceCandidateDateExpression newEndTime, NotificationChain msgs) {
+		ResourceCandidateDateExpression oldEndTime = endTime;
+		endTime = newEndTime;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ToUseSchedulerPackage.TO_USE_SOLUTION_RESOURCE__END_TIME, oldEndTime, newEndTime);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -189,10 +193,33 @@ public class ToUseSolutionResourceImpl extends SolutionResourceImpl implements T
 	 * @generated
 	 */
 	public void setEndTime(ResourceCandidateDateExpression newEndTime) {
-		ResourceCandidateDateExpression oldEndTime = endTime;
-		endTime = newEndTime;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToUseSchedulerPackage.TO_USE_SOLUTION_RESOURCE__END_TIME, oldEndTime, endTime));
+		if (newEndTime != endTime) {
+			NotificationChain msgs = null;
+			if (endTime != null)
+				msgs = ((InternalEObject)endTime).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ToUseSchedulerPackage.TO_USE_SOLUTION_RESOURCE__END_TIME, null, msgs);
+			if (newEndTime != null)
+				msgs = ((InternalEObject)newEndTime).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ToUseSchedulerPackage.TO_USE_SOLUTION_RESOURCE__END_TIME, null, msgs);
+			msgs = basicSetEndTime(newEndTime, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseSchedulerPackage.TO_USE_SOLUTION_RESOURCE__END_TIME, newEndTime, newEndTime));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ToUseSchedulerPackage.TO_USE_SOLUTION_RESOURCE__TOTAL_DISTANCE:
+				return basicSetTotalDistance(null, msgs);
+			case ToUseSchedulerPackage.TO_USE_SOLUTION_RESOURCE__END_TIME:
+				return basicSetEndTime(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -207,11 +234,9 @@ public class ToUseSolutionResourceImpl extends SolutionResourceImpl implements T
 				if (resolve) return getToUseResource();
 				return basicGetToUseResource();
 			case ToUseSchedulerPackage.TO_USE_SOLUTION_RESOURCE__TOTAL_DISTANCE:
-				if (resolve) return getTotalDistance();
-				return basicGetTotalDistance();
+				return getTotalDistance();
 			case ToUseSchedulerPackage.TO_USE_SOLUTION_RESOURCE__END_TIME:
-				if (resolve) return getEndTime();
-				return basicGetEndTime();
+				return getEndTime();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}

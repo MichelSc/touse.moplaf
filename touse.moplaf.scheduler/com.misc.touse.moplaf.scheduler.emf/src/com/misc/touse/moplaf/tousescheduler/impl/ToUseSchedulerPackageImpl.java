@@ -390,13 +390,13 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 
 		initEClass(toUseSolutionTaskEClass, ToUseSolutionTask.class, "ToUseSolutionTask", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getToUseSolutionTask_ToUseTask(), this.getToUseTask(), null, "ToUseTask", null, 1, 1, ToUseSolutionTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getToUseSolutionTask_Distance(), theSchedulerPackage.getTaskCandidateFloatExpression(), null, "Distance", null, 0, 1, ToUseSolutionTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getToUseSolutionTask_Time(), theSchedulerPackage.getTaskCandidateDateExpression(), null, "Time", null, 0, 1, ToUseSolutionTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getToUseSolutionTask_Distance(), theSchedulerPackage.getTaskCandidateFloatExpression(), null, "Distance", null, 0, 1, ToUseSolutionTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getToUseSolutionTask_Time(), theSchedulerPackage.getTaskCandidateDateExpression(), null, "Time", null, 0, 1, ToUseSolutionTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(toUseSolutionResourceEClass, ToUseSolutionResource.class, "ToUseSolutionResource", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getToUseSolutionResource_ToUseResource(), this.getToUseResource(), null, "ToUseResource", null, 1, 1, ToUseSolutionResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getToUseSolutionResource_TotalDistance(), theSchedulerPackage.getResourceCandidateFloatExpression(), null, "TotalDistance", null, 0, 1, ToUseSolutionResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getToUseSolutionResource_EndTime(), theSchedulerPackage.getResourceCandidateDateExpression(), null, "EndTime", null, 0, 1, ToUseSolutionResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getToUseSolutionResource_TotalDistance(), theSchedulerPackage.getResourceCandidateFloatExpression(), null, "TotalDistance", null, 0, 1, ToUseSolutionResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getToUseSolutionResource_EndTime(), theSchedulerPackage.getResourceCandidateDateExpression(), null, "EndTime", null, 0, 1, ToUseSolutionResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
