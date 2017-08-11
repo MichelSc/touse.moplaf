@@ -3,6 +3,7 @@
 package com.misc.touse.moplaf.tousescheduler;
 
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
+import com.misc.common.moplaf.schedulercalc.SchedulerCalcPackage;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -686,6 +687,331 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SOLUTION_RESOURCE_OPERATION_COUNT = SchedulerPackage.SOLUTION_RESOURCE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.CalcToUseSolutionTaskExpressionDistanceImpl <em>Calc To Use Solution Task Expression Distance</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.CalcToUseSolutionTaskExpressionDistanceImpl
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getCalcToUseSolutionTaskExpressionDistance()
+	 * @generated
+	 */
+	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE = 6;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE__PARENT = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Antecedents</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE__ANTECEDENTS = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE__ANTECEDENTS;
+
+	/**
+	 * The feature id for the '<em><b>Antecedents Sibling</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE__ANTECEDENTS_SIBLING = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE__ANTECEDENTS_SIBLING;
+
+	/**
+	 * The feature id for the '<em><b>Touched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE__TOUCHED = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE__TOUCHED;
+
+	/**
+	 * The feature id for the '<em><b>Touched Children</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE__TOUCHED_CHILDREN = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE__TOUCHED_CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Touchers</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE__TOUCHERS = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE__TOUCHERS;
+
+	/**
+	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE__ENABLED = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE__ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Object With Propagator Functions</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE__OBJECT_WITH_PROPAGATOR_FUNCTIONS = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE__OBJECT_WITH_PROPAGATOR_FUNCTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE__TYPE = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Object</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE__OBJECT = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE__OBJECT;
+
+	/**
+	 * The feature id for the '<em><b>Instance</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE__INSTANCE = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE__INSTANCE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE__DESCRIPTION = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE__TOUCHED_PARENT = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE__TOUCHED_PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Task Expression</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE__TASK_EXPRESSION = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE__TASK_EXPRESSION;
+
+	/**
+	 * The feature id for the '<em><b>Concrete Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE__CONCRETE_PARENT = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE__CONCRETE_PARENT;
+
+	/**
+	 * The number of structural features of the '<em>Calc To Use Solution Task Expression Distance</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE_FEATURE_COUNT = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Init</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE___INIT = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE___INIT;
+
+	/**
+	 * The operation id for the '<em>Enable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE___ENABLE = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE___ENABLE;
+
+	/**
+	 * The operation id for the '<em>Disable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE___DISABLE = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE___DISABLE;
+
+	/**
+	 * The operation id for the '<em>Reset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE___RESET = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE___RESET;
+
+	/**
+	 * The operation id for the '<em>Touch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE___TOUCH__EOBJECT = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE___TOUCH__EOBJECT;
+
+	/**
+	 * The operation id for the '<em>Untouch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE___UNTOUCH = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE___UNTOUCH;
+
+	/**
+	 * The operation id for the '<em>Refresh Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE___REFRESH_ANTECEDENTS = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE___REFRESH_ANTECEDENTS;
+
+	/**
+	 * The operation id for the '<em>Refresh This</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE___REFRESH_THIS = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE___REFRESH_THIS;
+
+	/**
+	 * The operation id for the '<em>Refresh Children And This</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE___REFRESH_CHILDREN_AND_THIS = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE___REFRESH_CHILDREN_AND_THIS;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE___REFRESH = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE___DO_GET_ANTECEDENTS = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE___DO_GET_ANTECEDENTS;
+
+	/**
+	 * The operation id for the '<em>Do Get Parent</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE___DO_GET_PARENT = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE___DO_GET_PARENT;
+
+	/**
+	 * The operation id for the '<em>Do Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE___DO_REFRESH = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE___DO_REFRESH;
+
+	/**
+	 * The operation id for the '<em>Do Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE___DO_REFRESH__EOBJECT = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE___DO_REFRESH__EOBJECT;
+
+	/**
+	 * The operation id for the '<em>Get Scope</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE___GET_SCOPE = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE___GET_SCOPE;
+
+	/**
+	 * The operation id for the '<em>Get Factory ID</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE___GET_FACTORY_ID = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE___GET_FACTORY_ID;
+
+	/**
+	 * The operation id for the '<em>Do Get Bindings</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE___DO_GET_BINDINGS = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE___DO_GET_BINDINGS;
+
+	/**
+	 * The operation id for the '<em>Do Collect Explicit Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST;
+
+	/**
+	 * The number of operations of the '<em>Calc To Use Solution Task Expression Distance</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE_OPERATION_COUNT = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE_OPERATION_COUNT + 0;
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.Domain <em>Domain</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -867,6 +1193,16 @@ public interface ToUseSchedulerPackage extends EPackage {
 	EReference getToUseSolutionResource_EndTime();
 
 	/**
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.CalcToUseSolutionTaskExpressionDistance <em>Calc To Use Solution Task Expression Distance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Calc To Use Solution Task Expression Distance</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.CalcToUseSolutionTaskExpressionDistance
+	 * @generated
+	 */
+	EClass getCalcToUseSolutionTaskExpressionDistance();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1036,6 +1372,16 @@ public interface ToUseSchedulerPackage extends EPackage {
 		 * @generated
 		 */
 		EReference TO_USE_SOLUTION_RESOURCE__END_TIME = eINSTANCE.getToUseSolutionResource_EndTime();
+
+		/**
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.CalcToUseSolutionTaskExpressionDistanceImpl <em>Calc To Use Solution Task Expression Distance</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.touse.moplaf.tousescheduler.impl.CalcToUseSolutionTaskExpressionDistanceImpl
+		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getCalcToUseSolutionTaskExpressionDistance()
+		 * @generated
+		 */
+		EClass CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE = eINSTANCE.getCalcToUseSolutionTaskExpressionDistance();
 
 	}
 

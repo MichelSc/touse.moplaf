@@ -3,9 +3,13 @@
 package com.misc.touse.moplaf.tousescheduler.util;
 
 import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
+import com.misc.common.moplaf.propagator2.PropagatorFunction;
+import com.misc.common.moplaf.propagator2.PropagatorFunctionBindings;
 import com.misc.common.moplaf.scheduler.Scheduler;
 import com.misc.common.moplaf.scheduler.SolutionResource;
 import com.misc.common.moplaf.scheduler.SolutionTask;
+import com.misc.common.moplaf.schedulercalc.SetTaskExpressionCandidateValue;
+import com.misc.common.moplaf.schedulercalc.TaskExpressionPropagatorFunction;
 import com.misc.touse.moplaf.tousescheduler.*;
 
 import org.eclipse.emf.ecore.EObject;
@@ -111,6 +115,16 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ToUseSchedulerPackage.CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE: {
+				CalcToUseSolutionTaskExpressionDistance calcToUseSolutionTaskExpressionDistance = (CalcToUseSolutionTaskExpressionDistance)theEObject;
+				T result = caseCalcToUseSolutionTaskExpressionDistance(calcToUseSolutionTaskExpressionDistance);
+				if (result == null) result = caseSetTaskExpressionCandidateValue(calcToUseSolutionTaskExpressionDistance);
+				if (result == null) result = caseTaskExpressionPropagatorFunction(calcToUseSolutionTaskExpressionDistance);
+				if (result == null) result = casePropagatorFunctionBindings(calcToUseSolutionTaskExpressionDistance);
+				if (result == null) result = casePropagatorFunction(calcToUseSolutionTaskExpressionDistance);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -206,6 +220,21 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Calc To Use Solution Task Expression Distance</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Calc To Use Solution Task Expression Distance</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCalcToUseSolutionTaskExpressionDistance(CalcToUseSolutionTaskExpressionDistance object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Scheduler</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -262,6 +291,66 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSolutionResource(SolutionResource object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Function</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Function</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePropagatorFunction(PropagatorFunction object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Function Bindings</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Function Bindings</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePropagatorFunctionBindings(PropagatorFunctionBindings object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Task Expression Propagator Function</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Task Expression Propagator Function</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTaskExpressionPropagatorFunction(TaskExpressionPropagatorFunction object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Set Task Expression Candidate Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Set Task Expression Candidate Value</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSetTaskExpressionCandidateValue(SetTaskExpressionCandidateValue object) {
 		return null;
 	}
 

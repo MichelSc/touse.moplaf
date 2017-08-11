@@ -3,9 +3,13 @@
 package com.misc.touse.moplaf.tousescheduler.util;
 
 import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
+import com.misc.common.moplaf.propagator2.PropagatorFunction;
+import com.misc.common.moplaf.propagator2.PropagatorFunctionBindings;
 import com.misc.common.moplaf.scheduler.Scheduler;
 import com.misc.common.moplaf.scheduler.SolutionResource;
 import com.misc.common.moplaf.scheduler.SolutionTask;
+import com.misc.common.moplaf.schedulercalc.SetTaskExpressionCandidateValue;
+import com.misc.common.moplaf.schedulercalc.TaskExpressionPropagatorFunction;
 import com.misc.touse.moplaf.tousescheduler.*;
 
 import org.eclipse.emf.common.notify.Adapter;
@@ -96,6 +100,10 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 				return createToUseSolutionResourceAdapter();
 			}
 			@Override
+			public Adapter caseCalcToUseSolutionTaskExpressionDistance(CalcToUseSolutionTaskExpressionDistance object) {
+				return createCalcToUseSolutionTaskExpressionDistanceAdapter();
+			}
+			@Override
 			public Adapter caseScheduler(Scheduler object) {
 				return createSchedulerAdapter();
 			}
@@ -110,6 +118,22 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseSolutionResource(SolutionResource object) {
 				return createSolutionResourceAdapter();
+			}
+			@Override
+			public Adapter casePropagatorFunction(PropagatorFunction object) {
+				return createPropagatorFunctionAdapter();
+			}
+			@Override
+			public Adapter casePropagatorFunctionBindings(PropagatorFunctionBindings object) {
+				return createPropagatorFunctionBindingsAdapter();
+			}
+			@Override
+			public Adapter caseTaskExpressionPropagatorFunction(TaskExpressionPropagatorFunction object) {
+				return createTaskExpressionPropagatorFunctionAdapter();
+			}
+			@Override
+			public Adapter caseSetTaskExpressionCandidateValue(SetTaskExpressionCandidateValue object) {
+				return createSetTaskExpressionCandidateValueAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -216,6 +240,20 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.tousescheduler.CalcToUseSolutionTaskExpressionDistance <em>Calc To Use Solution Task Expression Distance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.touse.moplaf.tousescheduler.CalcToUseSolutionTaskExpressionDistance
+	 * @generated
+	 */
+	public Adapter createCalcToUseSolutionTaskExpressionDistanceAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.scheduler.Scheduler <em>Scheduler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -268,6 +306,62 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSolutionResourceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.propagator2.PropagatorFunction <em>Function</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.propagator2.PropagatorFunction
+	 * @generated
+	 */
+	public Adapter createPropagatorFunctionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.propagator2.PropagatorFunctionBindings <em>Function Bindings</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.propagator2.PropagatorFunctionBindings
+	 * @generated
+	 */
+	public Adapter createPropagatorFunctionBindingsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.schedulercalc.TaskExpressionPropagatorFunction <em>Task Expression Propagator Function</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.schedulercalc.TaskExpressionPropagatorFunction
+	 * @generated
+	 */
+	public Adapter createTaskExpressionPropagatorFunctionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.schedulercalc.SetTaskExpressionCandidateValue <em>Set Task Expression Candidate Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.schedulercalc.SetTaskExpressionCandidateValue
+	 * @generated
+	 */
+	public Adapter createSetTaskExpressionCandidateValueAdapter() {
 		return null;
 	}
 

@@ -5,6 +5,7 @@
     <semanticResources>platform:/resource/com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore</semanticResources>
     <semanticResources>http://www.eclipse.org/emf/2002/Ecore</semanticResources>
     <semanticResources>platform:/resource/com.misc.common.moplaf.propagator2/model/propagator.ecore</semanticResources>
+    <semanticResources>platform:/resource/com.misc.common.moplaf.scheduler.emf/model/SchedulerCalc.ecore</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" xmi:id="_0GsycHoJEee7qYlKG39UKw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_01RIp3oJEee7qYlKG39UKw" name="tousescheduler class diagram" repPath="#_01RIoHoJEee7qYlKG39UKw">

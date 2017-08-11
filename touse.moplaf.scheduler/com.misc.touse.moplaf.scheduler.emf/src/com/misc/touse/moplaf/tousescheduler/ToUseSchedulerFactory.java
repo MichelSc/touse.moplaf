@@ -76,6 +76,15 @@ public interface ToUseSchedulerFactory extends EFactory {
 	ToUseSolutionResource createToUseSolutionResource();
 
 	/**
+	 * Returns a new object of class '<em>Calc To Use Solution Task Expression Distance</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Calc To Use Solution Task Expression Distance</em>'.
+	 * @generated
+	 */
+	CalcToUseSolutionTaskExpressionDistance createCalcToUseSolutionTaskExpressionDistance();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

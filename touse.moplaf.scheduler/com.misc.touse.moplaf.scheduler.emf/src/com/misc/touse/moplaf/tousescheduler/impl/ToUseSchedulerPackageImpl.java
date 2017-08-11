@@ -6,6 +6,8 @@ import com.misc.common.moplaf.propagator2.PropagatorPackage;
 
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
 
+import com.misc.common.moplaf.schedulercalc.SchedulerCalcPackage;
+import com.misc.touse.moplaf.tousescheduler.CalcToUseSolutionTaskExpressionDistance;
 import com.misc.touse.moplaf.tousescheduler.Domain;
 import com.misc.touse.moplaf.tousescheduler.ToUseResource;
 import com.misc.touse.moplaf.tousescheduler.ToUseScheduler;
@@ -70,6 +72,13 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	private EClass toUseSolutionResourceEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass calcToUseSolutionTaskExpressionDistanceEClass = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -118,6 +127,7 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		// Initialize simple dependencies
 		PropagatorPackage.eINSTANCE.eClass();
 		SchedulerPackage.eINSTANCE.eClass();
+		SchedulerCalcPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theToUseSchedulerPackage.createPackageContents();
@@ -292,6 +302,15 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getCalcToUseSolutionTaskExpressionDistance() {
+		return calcToUseSolutionTaskExpressionDistanceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ToUseSchedulerFactory getToUseSchedulerFactory() {
 		return (ToUseSchedulerFactory)getEFactoryInstance();
 	}
@@ -337,6 +356,8 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		createEReference(toUseSolutionResourceEClass, TO_USE_SOLUTION_RESOURCE__TO_USE_RESOURCE);
 		createEReference(toUseSolutionResourceEClass, TO_USE_SOLUTION_RESOURCE__TOTAL_DISTANCE);
 		createEReference(toUseSolutionResourceEClass, TO_USE_SOLUTION_RESOURCE__END_TIME);
+
+		calcToUseSolutionTaskExpressionDistanceEClass = createEClass(CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE);
 	}
 
 	/**
@@ -364,6 +385,7 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 
 		// Obtain other dependent packages
 		SchedulerPackage theSchedulerPackage = (SchedulerPackage)EPackage.Registry.INSTANCE.getEPackage(SchedulerPackage.eNS_URI);
+		SchedulerCalcPackage theSchedulerCalcPackage = (SchedulerCalcPackage)EPackage.Registry.INSTANCE.getEPackage(SchedulerCalcPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -373,6 +395,7 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		toUseSchedulerEClass.getESuperTypes().add(theSchedulerPackage.getScheduler());
 		toUseSolutionTaskEClass.getESuperTypes().add(theSchedulerPackage.getSolutionTask());
 		toUseSolutionResourceEClass.getESuperTypes().add(theSchedulerPackage.getSolutionResource());
+		calcToUseSolutionTaskExpressionDistanceEClass.getESuperTypes().add(theSchedulerCalcPackage.getSetTaskExpressionCandidateValue());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -397,6 +420,8 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		initEReference(getToUseSolutionResource_ToUseResource(), this.getToUseResource(), null, "ToUseResource", null, 1, 1, ToUseSolutionResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getToUseSolutionResource_TotalDistance(), theSchedulerPackage.getResourceCandidateFloatExpression(), null, "TotalDistance", null, 0, 1, ToUseSolutionResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getToUseSolutionResource_EndTime(), theSchedulerPackage.getResourceCandidateDateExpression(), null, "EndTime", null, 0, 1, ToUseSolutionResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(calcToUseSolutionTaskExpressionDistanceEClass, CalcToUseSolutionTaskExpressionDistance.class, "CalcToUseSolutionTaskExpressionDistance", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

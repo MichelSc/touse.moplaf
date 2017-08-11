@@ -62,6 +62,7 @@ public class ToUseSchedulerFactoryImpl extends EFactoryImpl implements ToUseSche
 			case ToUseSchedulerPackage.TO_USE_RESOURCE: return createToUseResource();
 			case ToUseSchedulerPackage.TO_USE_SOLUTION_TASK: return createToUseSolutionTask();
 			case ToUseSchedulerPackage.TO_USE_SOLUTION_RESOURCE: return createToUseSolutionResource();
+			case ToUseSchedulerPackage.CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE: return createCalcToUseSolutionTaskExpressionDistance();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -125,6 +126,16 @@ public class ToUseSchedulerFactoryImpl extends EFactoryImpl implements ToUseSche
 	public ToUseSolutionResource createToUseSolutionResource() {
 		ToUseSolutionResourceImpl toUseSolutionResource = new ToUseSolutionResourceImpl();
 		return toUseSolutionResource;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CalcToUseSolutionTaskExpressionDistance createCalcToUseSolutionTaskExpressionDistance() {
+		CalcToUseSolutionTaskExpressionDistanceImpl calcToUseSolutionTaskExpressionDistance = new CalcToUseSolutionTaskExpressionDistanceImpl();
+		return calcToUseSolutionTaskExpressionDistance;
 	}
 
 	/**

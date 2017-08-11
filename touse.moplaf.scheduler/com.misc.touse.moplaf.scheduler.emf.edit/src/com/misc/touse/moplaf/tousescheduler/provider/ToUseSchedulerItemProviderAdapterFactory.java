@@ -210,6 +210,29 @@ public class ToUseSchedulerItemProviderAdapterFactory extends ToUseSchedulerAdap
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.CalcToUseSolutionTaskExpressionDistance} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CalcToUseSolutionTaskExpressionDistanceItemProvider calcToUseSolutionTaskExpressionDistanceItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousescheduler.CalcToUseSolutionTaskExpressionDistance}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCalcToUseSolutionTaskExpressionDistanceAdapter() {
+		if (calcToUseSolutionTaskExpressionDistanceItemProvider == null) {
+			calcToUseSolutionTaskExpressionDistanceItemProvider = new CalcToUseSolutionTaskExpressionDistanceItemProvider(this);
+		}
+
+		return calcToUseSolutionTaskExpressionDistanceItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -314,6 +337,7 @@ public class ToUseSchedulerItemProviderAdapterFactory extends ToUseSchedulerAdap
 		if (toUseResourceItemProvider != null) toUseResourceItemProvider.dispose();
 		if (toUseSolutionTaskItemProvider != null) toUseSolutionTaskItemProvider.dispose();
 		if (toUseSolutionResourceItemProvider != null) toUseSolutionResourceItemProvider.dispose();
+		if (calcToUseSolutionTaskExpressionDistanceItemProvider != null) calcToUseSolutionTaskExpressionDistanceItemProvider.dispose();
 	}
 
 }

@@ -33,4 +33,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="EndTime" eType="ecore:EClass ../../com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//ResourceCandidateDateExpression"
         containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CalcToUseSolutionTaskExpressionDistance"
+      eSuperTypes="../../com.misc.common.moplaf.scheduler.emf/model/SchedulerCalc.ecore#//SetTaskExpressionCandidateValue"/>
 </ecore:EPackage>
