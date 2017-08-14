@@ -2,6 +2,7 @@
  */
 package com.misc.touse.moplaf.tousescheduler.impl;
 
+import com.misc.common.moplaf.common.util.Util;
 import com.misc.common.moplaf.scheduler.SolutionResource;
 import com.misc.common.moplaf.scheduler.SolutionTask;
 import com.misc.common.moplaf.scheduler.impl.SchedulerImpl;
@@ -12,6 +13,7 @@ import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
 import com.misc.touse.moplaf.tousescheduler.ToUseSolutionResource;
 import com.misc.touse.moplaf.tousescheduler.ToUseSolutionTask;
 import com.misc.touse.moplaf.tousescheduler.ToUseTask;
+import com.misc.touse.moplaf.tousescheduler.util.ToUseSetCandidateValuePropagatorFunctionManager;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -67,6 +69,16 @@ public class ToUseSchedulerImpl extends SchedulerImpl implements ToUseScheduler 
 		return null;
 	}
 	
-	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	@Override
+	public void enable() {
+		super.enable();
+		Util.adapt(this, ToUseSetCandidateValuePropagatorFunctionManager.class, true ); // true = create
+	}
+
+
 
 } //ToUseSchedulerImpl

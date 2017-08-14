@@ -6,7 +6,6 @@ import com.misc.common.moplaf.propagator2.util.Bindings;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
 import com.misc.common.moplaf.scheduler.SolutionTask;
 import com.misc.common.moplaf.scheduler.TaskCandidateFloatExpression;
-import com.misc.common.moplaf.scheduler.TaskExpression;
 import com.misc.common.moplaf.schedulercalc.impl.SetTaskExpressionCandidateValueImpl;
 import com.misc.touse.moplaf.tousescheduler.CalcToUseSolutionTaskExpressionDistance;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
