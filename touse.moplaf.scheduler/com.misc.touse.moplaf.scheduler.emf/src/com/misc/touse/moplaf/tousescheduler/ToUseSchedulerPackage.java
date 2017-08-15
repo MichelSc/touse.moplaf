@@ -143,13 +143,13 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULER__NAME = SchedulerPackage.SCHEDULER__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Current Solutionntr</b></em>' attribute.
+	 * The feature id for the '<em><b>Current Solution Nr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULER__CURRENT_SOLUTIONNTR = SchedulerPackage.SCHEDULER__CURRENT_SOLUTIONNTR;
+	int TO_USE_SCHEDULER__CURRENT_SOLUTION_NR = SchedulerPackage.SCHEDULER__CURRENT_SOLUTION_NR;
 
 	/**
 	 * The feature id for the '<em><b>Tasks</b></em>' reference list.
@@ -479,6 +479,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SOLUTION_TASK___GET_PROPAGATOR_FUNCTION__ECLASS = SchedulerPackage.SOLUTION_TASK___GET_PROPAGATOR_FUNCTION__ECLASS;
 
 	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLUTION_TASK___ADD_PROPAGATOR_FUNCTIONS__STRING = SchedulerPackage.SOLUTION_TASK___ADD_PROPAGATOR_FUNCTIONS__STRING;
+
+	/**
 	 * The operation id for the '<em>Unset Candidate Previous Next</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -667,6 +676,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_SOLUTION_RESOURCE___GET_PROPAGATOR_FUNCTION__ECLASS = SchedulerPackage.SOLUTION_RESOURCE___GET_PROPAGATOR_FUNCTION__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLUTION_RESOURCE___ADD_PROPAGATOR_FUNCTIONS__STRING = SchedulerPackage.SOLUTION_RESOURCE___ADD_PROPAGATOR_FUNCTIONS__STRING;
 
 	/**
 	 * The operation id for the '<em>Construct Expressions</em>' operation.
@@ -901,7 +919,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE___REFRESH_ANTECEDENTS = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE___REFRESH_ANTECEDENTS;
+	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE___REFRESH_ANTECEDENTS__REFRESHER = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE___REFRESH_ANTECEDENTS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh This</em>' operation.
@@ -910,7 +928,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE___REFRESH_THIS = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE___REFRESH_THIS;
+	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE___REFRESH_THIS__REFRESHER = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE___REFRESH_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh Children And This</em>' operation.
@@ -919,7 +937,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE___REFRESH_CHILDREN_AND_THIS = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE___REFRESH_CHILDREN_AND_THIS;
+	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE___REFRESH_CHILDREN_AND_THIS__REFRESHER = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE___REFRESH_CHILDREN_AND_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -929,6 +947,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE___REFRESH = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE___REFRESH__REFRESHER = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE___REFRESH__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
