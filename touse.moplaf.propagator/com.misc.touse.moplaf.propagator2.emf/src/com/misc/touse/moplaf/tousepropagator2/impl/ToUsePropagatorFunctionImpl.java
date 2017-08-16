@@ -2,6 +2,7 @@
  */
 package com.misc.touse.moplaf.tousepropagator2.impl;
 
+import com.misc.common.moplaf.propagator2.Refresher;
 import com.misc.common.moplaf.propagator2.impl.PropagatorFunctionBindingsImpl;
 import com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorFunction;
 import com.misc.touse.moplaf.tousepropagator2.ToUsePropagatorPackage;
@@ -166,9 +167,9 @@ public class ToUsePropagatorFunctionImpl extends PropagatorFunctionBindingsImpl 
 	 * This will be called by the framework every time so function must be calculated
 	 */
 	@Override
-	protected void doRefreshImpl() {
+	protected void doRefreshImpl(Refresher refresher) {
 		// TODO Auto-generated method stub
-		super.doRefreshImpl();
+		super.doRefreshImpl(refresher);
 		this.setCalculated(true); 
 	}
 

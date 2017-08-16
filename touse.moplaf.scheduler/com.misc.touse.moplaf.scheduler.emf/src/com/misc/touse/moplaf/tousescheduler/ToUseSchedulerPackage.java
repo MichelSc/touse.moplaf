@@ -362,24 +362,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SOLUTION_TASK__CANDIDATE_PREVIOUS_TASK = SchedulerPackage.SOLUTION_TASK__CANDIDATE_PREVIOUS_TASK;
 
 	/**
-	 * The feature id for the '<em><b>Resource As Candidate First Task</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SOLUTION_TASK__RESOURCE_AS_CANDIDATE_FIRST_TASK = SchedulerPackage.SOLUTION_TASK__RESOURCE_AS_CANDIDATE_FIRST_TASK;
-
-	/**
-	 * The feature id for the '<em><b>Resource As Candidate Last Task</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SOLUTION_TASK__RESOURCE_AS_CANDIDATE_LAST_TASK = SchedulerPackage.SOLUTION_TASK__RESOURCE_AS_CANDIDATE_LAST_TASK;
-
-	/**
 	 * The feature id for the '<em><b>Candidate Scheduled Resource</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -515,6 +497,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SOLUTION_TASK___CONSTRUCT_EXPRESSIONS = SchedulerPackage.SOLUTION_TASK___CONSTRUCT_EXPRESSIONS;
 
 	/**
+	 * The operation id for the '<em>Schedule Candidate Resource</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLUTION_TASK___SCHEDULE_CANDIDATE_RESOURCE__SOLUTIONRESOURCE = SchedulerPackage.SOLUTION_TASK___SCHEDULE_CANDIDATE_RESOURCE__SOLUTIONRESOURCE;
+
+	/**
 	 * The number of operations of the '<em>To Use Solution Task</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -622,6 +613,42 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_SOLUTION_RESOURCE__NAME = SchedulerPackage.SOLUTION_RESOURCE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Nr Scheduled Tasks</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLUTION_RESOURCE__NR_SCHEDULED_TASKS = SchedulerPackage.SOLUTION_RESOURCE__NR_SCHEDULED_TASKS;
+
+	/**
+	 * The feature id for the '<em><b>Nr Candidate Scheduled Tasks</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLUTION_RESOURCE__NR_CANDIDATE_SCHEDULED_TASKS = SchedulerPackage.SOLUTION_RESOURCE__NR_CANDIDATE_SCHEDULED_TASKS;
+
+	/**
+	 * The feature id for the '<em><b>First Task</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLUTION_RESOURCE__FIRST_TASK = SchedulerPackage.SOLUTION_RESOURCE__FIRST_TASK;
+
+	/**
+	 * The feature id for the '<em><b>Last Task</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLUTION_RESOURCE__LAST_TASK = SchedulerPackage.SOLUTION_RESOURCE__LAST_TASK;
 
 	/**
 	 * The feature id for the '<em><b>To Use Resource</b></em>' reference.

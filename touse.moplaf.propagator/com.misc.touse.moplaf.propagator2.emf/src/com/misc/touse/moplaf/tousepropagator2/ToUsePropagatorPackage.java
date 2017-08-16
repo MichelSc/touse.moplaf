@@ -275,6 +275,15 @@ public interface ToUsePropagatorPackage extends EPackage {
 	int PROJECT___GET_PROPAGATOR_FUNCTION__ECLASS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___GET_PROPAGATOR_FUNCTION__ECLASS;
 
 	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT___ADD_PROPAGATOR_FUNCTIONS__STRING = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ADD_PROPAGATOR_FUNCTIONS__STRING;
+
+	/**
 	 * The operation id for the '<em>Refresh End</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -453,6 +462,15 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @ordered
 	 */
 	int TASK___GET_PROPAGATOR_FUNCTION__ECLASS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___GET_PROPAGATOR_FUNCTION__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK___ADD_PROPAGATOR_FUNCTIONS__STRING = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ADD_PROPAGATOR_FUNCTIONS__STRING;
 
 	/**
 	 * The operation id for the '<em>Refresh Start</em>' operation.
@@ -708,6 +726,15 @@ public interface ToUsePropagatorPackage extends EPackage {
 	int TASK_WITH_OVERHEAD___GET_PROPAGATOR_FUNCTION__ECLASS = TASK___GET_PROPAGATOR_FUNCTION__ECLASS;
 
 	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_WITH_OVERHEAD___ADD_PROPAGATOR_FUNCTIONS__STRING = TASK___ADD_PROPAGATOR_FUNCTIONS__STRING;
+
+	/**
 	 * The operation id for the '<em>Refresh Start</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -886,6 +913,15 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @ordered
 	 */
 	int DEPENDENCE___GET_PROPAGATOR_FUNCTION__ECLASS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___GET_PROPAGATOR_FUNCTION__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEPENDENCE___ADD_PROPAGATOR_FUNCTIONS__STRING = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ADD_PROPAGATOR_FUNCTIONS__STRING;
 
 	/**
 	 * The operation id for the '<em>Dispose</em>' operation.
@@ -1158,6 +1194,15 @@ public interface ToUsePropagatorPackage extends EPackage {
 	int TO_USE_PROPAGATOR_FUNCTION__DESCRIPTION = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION__TOUCHED_PARENT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TOUCHED_PARENT;
+
+	/**
 	 * The feature id for the '<em><b>Calculated</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1236,7 +1281,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_PROPAGATOR_FUNCTION___REFRESH_ANTECEDENTS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_ANTECEDENTS;
+	int TO_USE_PROPAGATOR_FUNCTION___REFRESH_ANTECEDENTS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_ANTECEDENTS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh This</em>' operation.
@@ -1245,7 +1290,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_PROPAGATOR_FUNCTION___REFRESH_THIS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_THIS;
+	int TO_USE_PROPAGATOR_FUNCTION___REFRESH_THIS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh Children And This</em>' operation.
@@ -1254,7 +1299,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_PROPAGATOR_FUNCTION___REFRESH_CHILDREN_AND_THIS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_CHILDREN_AND_THIS;
+	int TO_USE_PROPAGATOR_FUNCTION___REFRESH_CHILDREN_AND_THIS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_CHILDREN_AND_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -1264,6 +1309,15 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_PROPAGATOR_FUNCTION___REFRESH = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION___REFRESH__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
@@ -1466,6 +1520,15 @@ public interface ToUsePropagatorPackage extends EPackage {
 	int TO_USE_PROPAGATOR_FUNCTION_TASK__DESCRIPTION = TO_USE_PROPAGATOR_FUNCTION__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_TASK__TOUCHED_PARENT = TO_USE_PROPAGATOR_FUNCTION__TOUCHED_PARENT;
+
+	/**
 	 * The feature id for the '<em><b>Calculated</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1553,7 +1616,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH_ANTECEDENTS = TO_USE_PROPAGATOR_FUNCTION___REFRESH_ANTECEDENTS;
+	int TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH_ANTECEDENTS__REFRESHER = TO_USE_PROPAGATOR_FUNCTION___REFRESH_ANTECEDENTS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh This</em>' operation.
@@ -1562,7 +1625,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH_THIS = TO_USE_PROPAGATOR_FUNCTION___REFRESH_THIS;
+	int TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH_THIS__REFRESHER = TO_USE_PROPAGATOR_FUNCTION___REFRESH_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh Children And This</em>' operation.
@@ -1571,7 +1634,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH_CHILDREN_AND_THIS = TO_USE_PROPAGATOR_FUNCTION___REFRESH_CHILDREN_AND_THIS;
+	int TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH_CHILDREN_AND_THIS__REFRESHER = TO_USE_PROPAGATOR_FUNCTION___REFRESH_CHILDREN_AND_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -1581,6 +1644,15 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH = TO_USE_PROPAGATOR_FUNCTION___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH__REFRESHER = TO_USE_PROPAGATOR_FUNCTION___REFRESH__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
@@ -1782,6 +1854,15 @@ public interface ToUsePropagatorPackage extends EPackage {
 	int TO_USE_PROPAGATOR_FUNCTION_PROJECT__DESCRIPTION = TO_USE_PROPAGATOR_FUNCTION__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_PROJECT__TOUCHED_PARENT = TO_USE_PROPAGATOR_FUNCTION__TOUCHED_PARENT;
+
+	/**
 	 * The feature id for the '<em><b>Calculated</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1869,7 +1950,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_ANTECEDENTS = TO_USE_PROPAGATOR_FUNCTION___REFRESH_ANTECEDENTS;
+	int TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_ANTECEDENTS__REFRESHER = TO_USE_PROPAGATOR_FUNCTION___REFRESH_ANTECEDENTS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh This</em>' operation.
@@ -1878,7 +1959,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_THIS = TO_USE_PROPAGATOR_FUNCTION___REFRESH_THIS;
+	int TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_THIS__REFRESHER = TO_USE_PROPAGATOR_FUNCTION___REFRESH_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh Children And This</em>' operation.
@@ -1887,7 +1968,7 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_CHILDREN_AND_THIS = TO_USE_PROPAGATOR_FUNCTION___REFRESH_CHILDREN_AND_THIS;
+	int TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_CHILDREN_AND_THIS__REFRESHER = TO_USE_PROPAGATOR_FUNCTION___REFRESH_CHILDREN_AND_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -1897,6 +1978,15 @@ public interface ToUsePropagatorPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH = TO_USE_PROPAGATOR_FUNCTION___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH__REFRESHER = TO_USE_PROPAGATOR_FUNCTION___REFRESH__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Do Get Antecedents</em>' operation.

@@ -50,7 +50,7 @@ public class CalcToUseSolutionTaskExpressionDistanceImpl extends SetTaskExpressi
 		
 	private static Bindings thisTaskBindings = Bindings.constructBindings()
 			.addInboundBinding(SchedulerPackage.Literals.SOLUTION_TASK__CANDIDATE_PREVIOUS_TASK, taskBeforeBindings)	
-			.addInboundBinding(SchedulerPackage.Literals.SOLUTION_TASK__RESOURCE_AS_CANDIDATE_FIRST_TASK)	
+			.addInboundBinding(SchedulerPackage.Literals.SOLUTION_TASK__CANDIDATE_SCHEDULED_RESOURCE)	
 			;
 
 	private static Bindings thisTaskExpressionDistanceBindings = Bindings.constructBindings()

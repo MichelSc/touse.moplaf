@@ -176,6 +176,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	int SCOPE_PROJECT__DESCRIPTION = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCOPE_PROJECT__TOUCHED_PARENT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT__TOUCHED_PARENT;
+
+	/**
 	 * The feature id for the '<em><b>Calculated</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -263,7 +272,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCOPE_PROJECT___REFRESH_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_ANTECEDENTS;
+	int SCOPE_PROJECT___REFRESH_ANTECEDENTS__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_ANTECEDENTS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh This</em>' operation.
@@ -272,7 +281,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCOPE_PROJECT___REFRESH_THIS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_THIS;
+	int SCOPE_PROJECT___REFRESH_THIS__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh Children And This</em>' operation.
@@ -281,7 +290,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCOPE_PROJECT___REFRESH_CHILDREN_AND_THIS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_CHILDREN_AND_THIS;
+	int SCOPE_PROJECT___REFRESH_CHILDREN_AND_THIS__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_CHILDREN_AND_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -291,6 +300,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int SCOPE_PROJECT___REFRESH = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCOPE_PROJECT___REFRESH__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
@@ -492,6 +510,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	int LAYER_TASK_HOURS_ITEM__DESCRIPTION = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_TASK_HOURS_ITEM__TOUCHED_PARENT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT__TOUCHED_PARENT;
+
+	/**
 	 * The feature id for the '<em><b>Calculated</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -588,7 +615,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAYER_TASK_HOURS_ITEM___REFRESH_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_ANTECEDENTS;
+	int LAYER_TASK_HOURS_ITEM___REFRESH_ANTECEDENTS__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_ANTECEDENTS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh This</em>' operation.
@@ -597,7 +624,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAYER_TASK_HOURS_ITEM___REFRESH_THIS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_THIS;
+	int LAYER_TASK_HOURS_ITEM___REFRESH_THIS__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh Children And This</em>' operation.
@@ -606,7 +633,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAYER_TASK_HOURS_ITEM___REFRESH_CHILDREN_AND_THIS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_CHILDREN_AND_THIS;
+	int LAYER_TASK_HOURS_ITEM___REFRESH_CHILDREN_AND_THIS__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_CHILDREN_AND_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -616,6 +643,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int LAYER_TASK_HOURS_ITEM___REFRESH = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_TASK_HOURS_ITEM___REFRESH__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
@@ -817,6 +853,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	int LAYER_TASK_HOURS_VAR__DESCRIPTION = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_TASK_HOURS_VAR__TOUCHED_PARENT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT__TOUCHED_PARENT;
+
+	/**
 	 * The feature id for the '<em><b>Calculated</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -913,7 +958,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAYER_TASK_HOURS_VAR___REFRESH_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_ANTECEDENTS;
+	int LAYER_TASK_HOURS_VAR___REFRESH_ANTECEDENTS__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_ANTECEDENTS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh This</em>' operation.
@@ -922,7 +967,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAYER_TASK_HOURS_VAR___REFRESH_THIS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_THIS;
+	int LAYER_TASK_HOURS_VAR___REFRESH_THIS__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh Children And This</em>' operation.
@@ -931,7 +976,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAYER_TASK_HOURS_VAR___REFRESH_CHILDREN_AND_THIS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_CHILDREN_AND_THIS;
+	int LAYER_TASK_HOURS_VAR___REFRESH_CHILDREN_AND_THIS__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_CHILDREN_AND_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -941,6 +986,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int LAYER_TASK_HOURS_VAR___REFRESH = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_TASK_HOURS_VAR___REFRESH__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
@@ -1142,6 +1196,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	int LAYER_TASK_HOURS__DESCRIPTION = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_TASK_HOURS__TOUCHED_PARENT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT__TOUCHED_PARENT;
+
+	/**
 	 * The feature id for the '<em><b>Calculated</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1256,7 +1319,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAYER_TASK_HOURS___REFRESH_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_ANTECEDENTS;
+	int LAYER_TASK_HOURS___REFRESH_ANTECEDENTS__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_ANTECEDENTS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh This</em>' operation.
@@ -1265,7 +1328,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAYER_TASK_HOURS___REFRESH_THIS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_THIS;
+	int LAYER_TASK_HOURS___REFRESH_THIS__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh Children And This</em>' operation.
@@ -1274,7 +1337,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAYER_TASK_HOURS___REFRESH_CHILDREN_AND_THIS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_CHILDREN_AND_THIS;
+	int LAYER_TASK_HOURS___REFRESH_CHILDREN_AND_THIS__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_CHILDREN_AND_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -1284,6 +1347,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int LAYER_TASK_HOURS___REFRESH = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_TASK_HOURS___REFRESH__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
@@ -1485,6 +1557,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	int LAYER_TASK_TIMES__DESCRIPTION = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_TASK_TIMES__TOUCHED_PARENT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT__TOUCHED_PARENT;
+
+	/**
 	 * The feature id for the '<em><b>Calculated</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1590,7 +1671,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAYER_TASK_TIMES___REFRESH_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_ANTECEDENTS;
+	int LAYER_TASK_TIMES___REFRESH_ANTECEDENTS__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_ANTECEDENTS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh This</em>' operation.
@@ -1599,7 +1680,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAYER_TASK_TIMES___REFRESH_THIS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_THIS;
+	int LAYER_TASK_TIMES___REFRESH_THIS__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh Children And This</em>' operation.
@@ -1608,7 +1689,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAYER_TASK_TIMES___REFRESH_CHILDREN_AND_THIS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_CHILDREN_AND_THIS;
+	int LAYER_TASK_TIMES___REFRESH_CHILDREN_AND_THIS__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_CHILDREN_AND_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -1618,6 +1699,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int LAYER_TASK_TIMES___REFRESH = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_TASK_TIMES___REFRESH__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
@@ -1819,6 +1909,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	int LAYER_TASK_RESOURCES__DESCRIPTION = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_TASK_RESOURCES__TOUCHED_PARENT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT__TOUCHED_PARENT;
+
+	/**
 	 * The feature id for the '<em><b>Calculated</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1924,7 +2023,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAYER_TASK_RESOURCES___REFRESH_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_ANTECEDENTS;
+	int LAYER_TASK_RESOURCES___REFRESH_ANTECEDENTS__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_ANTECEDENTS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh This</em>' operation.
@@ -1933,7 +2032,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAYER_TASK_RESOURCES___REFRESH_THIS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_THIS;
+	int LAYER_TASK_RESOURCES___REFRESH_THIS__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh Children And This</em>' operation.
@@ -1942,7 +2041,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAYER_TASK_RESOURCES___REFRESH_CHILDREN_AND_THIS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_CHILDREN_AND_THIS;
+	int LAYER_TASK_RESOURCES___REFRESH_CHILDREN_AND_THIS__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_CHILDREN_AND_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -1952,6 +2051,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int LAYER_TASK_RESOURCES___REFRESH = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_TASK_RESOURCES___REFRESH__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
@@ -2153,6 +2261,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	int CALC_PROJECT_END__DESCRIPTION = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_PROJECT_END__TOUCHED_PARENT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT__TOUCHED_PARENT;
+
+	/**
 	 * The feature id for the '<em><b>Calculated</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2258,7 +2375,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_PROJECT_END___REFRESH_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_ANTECEDENTS;
+	int CALC_PROJECT_END___REFRESH_ANTECEDENTS__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_ANTECEDENTS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh This</em>' operation.
@@ -2267,7 +2384,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_PROJECT_END___REFRESH_THIS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_THIS;
+	int CALC_PROJECT_END___REFRESH_THIS__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh Children And This</em>' operation.
@@ -2276,7 +2393,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_PROJECT_END___REFRESH_CHILDREN_AND_THIS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_CHILDREN_AND_THIS;
+	int CALC_PROJECT_END___REFRESH_CHILDREN_AND_THIS__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH_CHILDREN_AND_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -2286,6 +2403,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int CALC_PROJECT_END___REFRESH = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_PROJECT_END___REFRESH__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_PROJECT___REFRESH__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
@@ -2487,6 +2613,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	int CALC_TASK_HOURS_ITEM__DESCRIPTION = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_HOURS_ITEM__TOUCHED_PARENT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK__TOUCHED_PARENT;
+
+	/**
 	 * The feature id for the '<em><b>Calculated</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2583,7 +2718,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TASK_HOURS_ITEM___REFRESH_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH_ANTECEDENTS;
+	int CALC_TASK_HOURS_ITEM___REFRESH_ANTECEDENTS__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH_ANTECEDENTS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh This</em>' operation.
@@ -2592,7 +2727,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TASK_HOURS_ITEM___REFRESH_THIS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH_THIS;
+	int CALC_TASK_HOURS_ITEM___REFRESH_THIS__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh Children And This</em>' operation.
@@ -2601,7 +2736,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TASK_HOURS_ITEM___REFRESH_CHILDREN_AND_THIS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH_CHILDREN_AND_THIS;
+	int CALC_TASK_HOURS_ITEM___REFRESH_CHILDREN_AND_THIS__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH_CHILDREN_AND_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -2611,6 +2746,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int CALC_TASK_HOURS_ITEM___REFRESH = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_HOURS_ITEM___REFRESH__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
@@ -2812,6 +2956,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	int CALC_TASK_HOURS_VAR__DESCRIPTION = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_HOURS_VAR__TOUCHED_PARENT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK__TOUCHED_PARENT;
+
+	/**
 	 * The feature id for the '<em><b>Calculated</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2908,7 +3061,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TASK_HOURS_VAR___REFRESH_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH_ANTECEDENTS;
+	int CALC_TASK_HOURS_VAR___REFRESH_ANTECEDENTS__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH_ANTECEDENTS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh This</em>' operation.
@@ -2917,7 +3070,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TASK_HOURS_VAR___REFRESH_THIS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH_THIS;
+	int CALC_TASK_HOURS_VAR___REFRESH_THIS__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh Children And This</em>' operation.
@@ -2926,7 +3079,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TASK_HOURS_VAR___REFRESH_CHILDREN_AND_THIS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH_CHILDREN_AND_THIS;
+	int CALC_TASK_HOURS_VAR___REFRESH_CHILDREN_AND_THIS__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH_CHILDREN_AND_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -2936,6 +3089,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int CALC_TASK_HOURS_VAR___REFRESH = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_HOURS_VAR___REFRESH__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
@@ -3137,6 +3299,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR__DESCRIPTION = CALC_TASK_HOURS_VAR__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR__TOUCHED_PARENT = CALC_TASK_HOURS_VAR__TOUCHED_PARENT;
+
+	/**
 	 * The feature id for the '<em><b>Calculated</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3233,7 +3404,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR___REFRESH_ANTECEDENTS = CALC_TASK_HOURS_VAR___REFRESH_ANTECEDENTS;
+	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR___REFRESH_ANTECEDENTS__REFRESHER = CALC_TASK_HOURS_VAR___REFRESH_ANTECEDENTS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh This</em>' operation.
@@ -3242,7 +3413,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR___REFRESH_THIS = CALC_TASK_HOURS_VAR___REFRESH_THIS;
+	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR___REFRESH_THIS__REFRESHER = CALC_TASK_HOURS_VAR___REFRESH_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh Children And This</em>' operation.
@@ -3251,7 +3422,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR___REFRESH_CHILDREN_AND_THIS = CALC_TASK_HOURS_VAR___REFRESH_CHILDREN_AND_THIS;
+	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR___REFRESH_CHILDREN_AND_THIS__REFRESHER = CALC_TASK_HOURS_VAR___REFRESH_CHILDREN_AND_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -3261,6 +3432,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR___REFRESH = CALC_TASK_HOURS_VAR___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_WITH_OVERHEAD_HOURS_VAR___REFRESH__REFRESHER = CALC_TASK_HOURS_VAR___REFRESH__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
@@ -3462,6 +3642,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	int CALC_TASK_HOURS__DESCRIPTION = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_HOURS__TOUCHED_PARENT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK__TOUCHED_PARENT;
+
+	/**
 	 * The feature id for the '<em><b>Calculated</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3558,7 +3747,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TASK_HOURS___REFRESH_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH_ANTECEDENTS;
+	int CALC_TASK_HOURS___REFRESH_ANTECEDENTS__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH_ANTECEDENTS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh This</em>' operation.
@@ -3567,7 +3756,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TASK_HOURS___REFRESH_THIS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH_THIS;
+	int CALC_TASK_HOURS___REFRESH_THIS__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh Children And This</em>' operation.
@@ -3576,7 +3765,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TASK_HOURS___REFRESH_CHILDREN_AND_THIS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH_CHILDREN_AND_THIS;
+	int CALC_TASK_HOURS___REFRESH_CHILDREN_AND_THIS__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH_CHILDREN_AND_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -3586,6 +3775,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int CALC_TASK_HOURS___REFRESH = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_HOURS___REFRESH__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
@@ -3787,6 +3985,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	int CALC_TASK_START__DESCRIPTION = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_START__TOUCHED_PARENT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK__TOUCHED_PARENT;
+
+	/**
 	 * The feature id for the '<em><b>Calculated</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3883,7 +4090,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TASK_START___REFRESH_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH_ANTECEDENTS;
+	int CALC_TASK_START___REFRESH_ANTECEDENTS__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH_ANTECEDENTS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh This</em>' operation.
@@ -3892,7 +4099,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TASK_START___REFRESH_THIS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH_THIS;
+	int CALC_TASK_START___REFRESH_THIS__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh Children And This</em>' operation.
@@ -3901,7 +4108,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TASK_START___REFRESH_CHILDREN_AND_THIS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH_CHILDREN_AND_THIS;
+	int CALC_TASK_START___REFRESH_CHILDREN_AND_THIS__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH_CHILDREN_AND_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -3911,6 +4118,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int CALC_TASK_START___REFRESH = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_START___REFRESH__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
@@ -4112,6 +4328,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	int CALC_TASK_END__DESCRIPTION = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_END__TOUCHED_PARENT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK__TOUCHED_PARENT;
+
+	/**
 	 * The feature id for the '<em><b>Calculated</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4208,7 +4433,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TASK_END___REFRESH_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH_ANTECEDENTS;
+	int CALC_TASK_END___REFRESH_ANTECEDENTS__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH_ANTECEDENTS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh This</em>' operation.
@@ -4217,7 +4442,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TASK_END___REFRESH_THIS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH_THIS;
+	int CALC_TASK_END___REFRESH_THIS__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh Children And This</em>' operation.
@@ -4226,7 +4451,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TASK_END___REFRESH_CHILDREN_AND_THIS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH_CHILDREN_AND_THIS;
+	int CALC_TASK_END___REFRESH_CHILDREN_AND_THIS__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH_CHILDREN_AND_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -4236,6 +4461,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int CALC_TASK_END___REFRESH = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_END___REFRESH__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
@@ -4437,6 +4671,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	int CALC_TASK_RESOURCES__DESCRIPTION = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_RESOURCES__TOUCHED_PARENT = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK__TOUCHED_PARENT;
+
+	/**
 	 * The feature id for the '<em><b>Calculated</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4533,7 +4776,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TASK_RESOURCES___REFRESH_ANTECEDENTS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH_ANTECEDENTS;
+	int CALC_TASK_RESOURCES___REFRESH_ANTECEDENTS__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH_ANTECEDENTS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh This</em>' operation.
@@ -4542,7 +4785,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TASK_RESOURCES___REFRESH_THIS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH_THIS;
+	int CALC_TASK_RESOURCES___REFRESH_THIS__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh Children And This</em>' operation.
@@ -4551,7 +4794,7 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TASK_RESOURCES___REFRESH_CHILDREN_AND_THIS = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH_CHILDREN_AND_THIS;
+	int CALC_TASK_RESOURCES___REFRESH_CHILDREN_AND_THIS__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH_CHILDREN_AND_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -4561,6 +4804,15 @@ public interface ToUsePropagatorCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int CALC_TASK_RESOURCES___REFRESH = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_RESOURCES___REFRESH__REFRESHER = ToUsePropagatorPackage.TO_USE_PROPAGATOR_FUNCTION_TASK___REFRESH__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
