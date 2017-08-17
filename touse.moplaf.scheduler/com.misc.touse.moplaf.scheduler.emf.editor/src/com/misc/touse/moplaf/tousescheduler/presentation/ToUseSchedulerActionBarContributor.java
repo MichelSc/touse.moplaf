@@ -43,6 +43,7 @@ import com.misc.common.moplaf.emf.editor.Util;
 import com.misc.common.moplaf.emf.editor.action.AcceptAction;
 import com.misc.common.moplaf.emf.editor.action.CloneAction;
 import com.misc.common.moplaf.emf.editor.action.EnableAction;
+import com.misc.common.moplaf.emf.editor.action.InitializeAction;
 import com.misc.common.moplaf.emf.editor.action.ResetAction;
 
 /**
@@ -303,10 +304,11 @@ public class ToUseSchedulerActionBarContributor
 		createSiblingActions = generateCreateSiblingActions(newSiblingDescriptors, selection);
 
 		applicationPopUpMenuActions = new ArrayList<IAction>();
-		applicationPopUpMenuActions.add(new EnableAction (activeEditorPart, selection));
-		applicationPopUpMenuActions.add(new ResetAction  (activeEditorPart, selection));
-		applicationPopUpMenuActions.add(new CloneAction  (activeEditorPart, selection));
-		applicationPopUpMenuActions.add(new AcceptAction (activeEditorPart, selection));
+		applicationPopUpMenuActions.add(new InitializeAction(activeEditorPart, selection));
+		applicationPopUpMenuActions.add(new EnableAction    (activeEditorPart, selection));
+		applicationPopUpMenuActions.add(new CloneAction     (activeEditorPart, selection));
+		applicationPopUpMenuActions.add(new ResetAction     (activeEditorPart, selection));
+		applicationPopUpMenuActions.add(new AcceptAction    (activeEditorPart, selection));
 
 		if (createChildMenuManager != null) {
 			populateManager(createChildMenuManager, createChildActions, null);
