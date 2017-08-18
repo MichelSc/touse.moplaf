@@ -74,7 +74,7 @@ public class CalcToUseSolutionTaskExpressionDistanceImpl extends SetTaskExpressi
 		TaskCandidateFloatExpression task_expression = (TaskCandidateFloatExpression)this.getTaskExpression();
 		SolutionTask task = task_expression.getTask();
 		ToUseSolutionTask previous_task = (ToUseSolutionTask) task.getCandidatePreviousTask();
-		float distance = 0.0f; 
+		float distance = 1.0f; 
 		if ( previous_task != null) {
 			TaskCandidateFloatExpression previous_task_expression = previous_task.getDistance();
 			distance = previous_task_expression.getCandidateValue()+1.5f; 
