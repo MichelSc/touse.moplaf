@@ -141,6 +141,14 @@
               <styles xmi:type="notation:FontStyle" xmi:id="_nypaMYfbEeelbZwEnNEPBQ" fontName="Segoe UI" fontHeight="8"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_nypaMofbEeelbZwEnNEPBQ"/>
             </children>
+            <children xmi:type="notation:Node" xmi:id="_XB3FwIyKEeev3740CSFUMw" type="3010" element="_XBAxMIyKEeev3740CSFUMw">
+              <styles xmi:type="notation:FontStyle" xmi:id="_XB3FwYyKEeev3740CSFUMw" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_XB3FwoyKEeev3740CSFUMw"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_XB7XMIyKEeev3740CSFUMw" type="3010" element="_XBCmYIyKEeev3740CSFUMw">
+              <styles xmi:type="notation:FontStyle" xmi:id="_XB7XMYyKEeev3740CSFUMw" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_XB7XMoyKEeev3740CSFUMw"/>
+            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_nyheYYfbEeelbZwEnNEPBQ"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_nyheYofbEeelbZwEnNEPBQ"/>
           </children>
@@ -516,12 +524,10 @@
         <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_nxoGgIfbEeelbZwEnNEPBQ" labelColor="39,76,114" labelAlignment="LEFT" description="_nxnfcIfbEeelbZwEnNEPBQ"/>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_nxoGgYfbEeelbZwEnNEPBQ" name="ValueFormatted : EString" tooltipText="">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_nxoGgYfbEeelbZwEnNEPBQ" name="/ValueFormatted : EString" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="platform:/resource/com.misc.common.moplaf.spreadsheet.emf/model/spreadsheet.ecore#//Cell/ValueFormatted"/>
         <semanticElements xmi:type="ecore:EAttribute" href="platform:/resource/com.misc.common.moplaf.spreadsheet.emf/model/spreadsheet.ecore#//Cell/ValueFormatted"/>
-        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_nxotkIfbEeelbZwEnNEPBQ" labelAlignment="LEFT">
-          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
-        </ownedStyle>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_XA9t4IyKEeev3740CSFUMw" labelColor="39,76,114" labelAlignment="LEFT" description="_nxnfcIfbEeelbZwEnNEPBQ"/>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
       <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_nxotkYfbEeelbZwEnNEPBQ" name="CellType : CellType = CellTypeNumeric" tooltipText="">
@@ -544,6 +550,22 @@
         <target xmi:type="ecore:EAttribute" href="platform:/resource/com.misc.common.moplaf.spreadsheet.emf/model/spreadsheet.ecore#//Cell/StringValue"/>
         <semanticElements xmi:type="ecore:EAttribute" href="platform:/resource/com.misc.common.moplaf.spreadsheet.emf/model/spreadsheet.ecore#//Cell/StringValue"/>
         <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_nxrJ0IfbEeelbZwEnNEPBQ" labelAlignment="LEFT">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_XBAxMIyKEeev3740CSFUMw" name="BooleanValue : EBoolean = false" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="platform:/resource/com.misc.common.moplaf.spreadsheet.emf/model/spreadsheet.ecore#//Cell/BooleanValue"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="platform:/resource/com.misc.common.moplaf.spreadsheet.emf/model/spreadsheet.ecore#//Cell/BooleanValue"/>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_XBB_UIyKEeev3740CSFUMw" labelAlignment="LEFT">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_XBCmYIyKEeev3740CSFUMw" name="DateValue : EDate" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="platform:/resource/com.misc.common.moplaf.spreadsheet.emf/model/spreadsheet.ecore#//Cell/DateValue"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="platform:/resource/com.misc.common.moplaf.spreadsheet.emf/model/spreadsheet.ecore#//Cell/DateValue"/>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_XBDNcIyKEeev3740CSFUMw" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
