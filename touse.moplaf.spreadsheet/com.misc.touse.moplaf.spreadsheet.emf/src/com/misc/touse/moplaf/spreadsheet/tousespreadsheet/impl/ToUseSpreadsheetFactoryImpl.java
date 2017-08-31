@@ -57,6 +57,8 @@ public class ToUseSpreadsheetFactoryImpl extends EFactoryImpl implements ToUseSp
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case ToUseSpreadsheetPackage.DOMAIN: return createDomain();
+			case ToUseSpreadsheetPackage.TO_USE_TABLE: return createToUseTable();
+			case ToUseSpreadsheetPackage.TO_USE_TABLE_ITEM: return createToUseTableItem();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -70,6 +72,26 @@ public class ToUseSpreadsheetFactoryImpl extends EFactoryImpl implements ToUseSp
 	public Domain createDomain() {
 		DomainImpl domain = new DomainImpl();
 		return domain;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ToUseTable createToUseTable() {
+		ToUseTableImpl toUseTable = new ToUseTableImpl();
+		return toUseTable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ToUseTableItem createToUseTableItem() {
+		ToUseTableItemImpl toUseTableItem = new ToUseTableItemImpl();
+		return toUseTableItem;
 	}
 
 	/**

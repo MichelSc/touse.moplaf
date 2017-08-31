@@ -8,6 +8,7 @@ import com.misc.common.moplaf.spreadsheet.spreadsheetpoi.SpreadsheetPOI;
 import com.misc.touse.moplaf.spreadsheet.tousespreadsheet.Domain;
 import com.misc.touse.moplaf.spreadsheet.tousespreadsheet.ToUseSpreadsheetPackage;
 
+import com.misc.touse.moplaf.spreadsheet.tousespreadsheet.ToUseTable;
 import java.util.Collection;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -28,6 +29,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.spreadsheet.tousespreadsheet.impl.DomainImpl#getSpreadsheetsPOI <em>Spreadsheets POI</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.spreadsheet.tousespreadsheet.impl.DomainImpl#getSpreadsheetsCSV <em>Spreadsheets CSV</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.spreadsheet.tousespreadsheet.impl.DomainImpl#getTables <em>Tables</em>}</li>
  * </ul>
  *
  * @generated
@@ -52,6 +54,16 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	 * @ordered
 	 */
 	protected EList<SpreadsheetCSV> spreadsheetsCSV;
+
+	/**
+	 * The cached value of the '{@link #getTables() <em>Tables</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTables()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ToUseTable> tables;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -101,6 +113,18 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<ToUseTable> getTables() {
+		if (tables == null) {
+			tables = new EObjectContainmentEList<ToUseTable>(ToUseTable.class, this, ToUseSpreadsheetPackage.DOMAIN__TABLES);
+		}
+		return tables;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -108,6 +132,8 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 				return ((InternalEList<?>)getSpreadsheetsPOI()).basicRemove(otherEnd, msgs);
 			case ToUseSpreadsheetPackage.DOMAIN__SPREADSHEETS_CSV:
 				return ((InternalEList<?>)getSpreadsheetsCSV()).basicRemove(otherEnd, msgs);
+			case ToUseSpreadsheetPackage.DOMAIN__TABLES:
+				return ((InternalEList<?>)getTables()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -124,6 +150,8 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 				return getSpreadsheetsPOI();
 			case ToUseSpreadsheetPackage.DOMAIN__SPREADSHEETS_CSV:
 				return getSpreadsheetsCSV();
+			case ToUseSpreadsheetPackage.DOMAIN__TABLES:
+				return getTables();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -145,6 +173,10 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 				getSpreadsheetsCSV().clear();
 				getSpreadsheetsCSV().addAll((Collection<? extends SpreadsheetCSV>)newValue);
 				return;
+			case ToUseSpreadsheetPackage.DOMAIN__TABLES:
+				getTables().clear();
+				getTables().addAll((Collection<? extends ToUseTable>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -163,6 +195,9 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 			case ToUseSpreadsheetPackage.DOMAIN__SPREADSHEETS_CSV:
 				getSpreadsheetsCSV().clear();
 				return;
+			case ToUseSpreadsheetPackage.DOMAIN__TABLES:
+				getTables().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -179,6 +214,8 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 				return spreadsheetsPOI != null && !spreadsheetsPOI.isEmpty();
 			case ToUseSpreadsheetPackage.DOMAIN__SPREADSHEETS_CSV:
 				return spreadsheetsCSV != null && !spreadsheetsCSV.isEmpty();
+			case ToUseSpreadsheetPackage.DOMAIN__TABLES:
+				return tables != null && !tables.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

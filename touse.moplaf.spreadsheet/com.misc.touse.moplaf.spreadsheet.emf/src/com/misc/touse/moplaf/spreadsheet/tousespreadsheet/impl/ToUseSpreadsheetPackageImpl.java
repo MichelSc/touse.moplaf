@@ -2,6 +2,7 @@
  */
 package com.misc.touse.moplaf.spreadsheet.tousespreadsheet.impl;
 
+import com.misc.common.moplaf.spreadsheet.SpreadsheetPackage;
 import com.misc.common.moplaf.spreadsheet.spreadsheetcsv.SpreadsheetCSVPackage;
 import com.misc.common.moplaf.spreadsheet.spreadsheetpoi.SpreadsheetPOIPackage;
 
@@ -9,6 +10,9 @@ import com.misc.touse.moplaf.spreadsheet.tousespreadsheet.Domain;
 import com.misc.touse.moplaf.spreadsheet.tousespreadsheet.ToUseSpreadsheetFactory;
 import com.misc.touse.moplaf.spreadsheet.tousespreadsheet.ToUseSpreadsheetPackage;
 
+import com.misc.touse.moplaf.spreadsheet.tousespreadsheet.ToUseTable;
+import com.misc.touse.moplaf.spreadsheet.tousespreadsheet.ToUseTableItem;
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -28,6 +32,19 @@ public class ToUseSpreadsheetPackageImpl extends EPackageImpl implements ToUseSp
 	 * @generated
 	 */
 	private EClass domainEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass toUseTableEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass toUseTableItemEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -76,6 +93,7 @@ public class ToUseSpreadsheetPackageImpl extends EPackageImpl implements ToUseSp
 		isInited = true;
 
 		// Initialize simple dependencies
+		SpreadsheetPackage.eINSTANCE.eClass();
 		SpreadsheetCSVPackage.eINSTANCE.eClass();
 		SpreadsheetPOIPackage.eINSTANCE.eClass();
 
@@ -126,6 +144,78 @@ public class ToUseSpreadsheetPackageImpl extends EPackageImpl implements ToUseSp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getDomain_Tables() {
+		return (EReference)domainEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getToUseTable() {
+		return toUseTableEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getToUseTable_Items() {
+		return (EReference)toUseTableEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getToUseTable_TableName() {
+		return (EAttribute)toUseTableEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getToUseTableItem() {
+		return toUseTableItemEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getToUseTableItem_LongAttribute() {
+		return (EAttribute)toUseTableItemEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getToUseTableItem_LongAttributeColor() {
+		return (EAttribute)toUseTableItemEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getToUseTableItem_ItemName() {
+		return (EAttribute)toUseTableItemEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ToUseSpreadsheetFactory getToUseSpreadsheetFactory() {
 		return (ToUseSpreadsheetFactory)getEFactoryInstance();
 	}
@@ -152,6 +242,16 @@ public class ToUseSpreadsheetPackageImpl extends EPackageImpl implements ToUseSp
 		domainEClass = createEClass(DOMAIN);
 		createEReference(domainEClass, DOMAIN__SPREADSHEETS_POI);
 		createEReference(domainEClass, DOMAIN__SPREADSHEETS_CSV);
+		createEReference(domainEClass, DOMAIN__TABLES);
+
+		toUseTableEClass = createEClass(TO_USE_TABLE);
+		createEReference(toUseTableEClass, TO_USE_TABLE__ITEMS);
+		createEAttribute(toUseTableEClass, TO_USE_TABLE__TABLE_NAME);
+
+		toUseTableItemEClass = createEClass(TO_USE_TABLE_ITEM);
+		createEAttribute(toUseTableItemEClass, TO_USE_TABLE_ITEM__LONG_ATTRIBUTE);
+		createEAttribute(toUseTableItemEClass, TO_USE_TABLE_ITEM__LONG_ATTRIBUTE_COLOR);
+		createEAttribute(toUseTableItemEClass, TO_USE_TABLE_ITEM__ITEM_NAME);
 	}
 
 	/**
@@ -191,6 +291,16 @@ public class ToUseSpreadsheetPackageImpl extends EPackageImpl implements ToUseSp
 		initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDomain_SpreadsheetsPOI(), theSpreadsheetPOIPackage.getSpreadsheetPOI(), null, "SpreadsheetsPOI", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDomain_SpreadsheetsCSV(), theSpreadsheetCSVPackage.getSpreadsheetCSV(), null, "SpreadsheetsCSV", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDomain_Tables(), this.getToUseTable(), null, "Tables", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(toUseTableEClass, ToUseTable.class, "ToUseTable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getToUseTable_Items(), this.getToUseTableItem(), null, "Items", null, 0, -1, ToUseTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getToUseTable_TableName(), ecorePackage.getEString(), "TableName", null, 0, 1, ToUseTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(toUseTableItemEClass, ToUseTableItem.class, "ToUseTableItem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getToUseTableItem_LongAttribute(), ecorePackage.getELong(), "LongAttribute", null, 0, 1, ToUseTableItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getToUseTableItem_LongAttributeColor(), ecorePackage.getEInt(), "LongAttributeColor", null, 0, 1, ToUseTableItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getToUseTableItem_ItemName(), ecorePackage.getEString(), "ItemName", null, 0, 1, ToUseTableItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

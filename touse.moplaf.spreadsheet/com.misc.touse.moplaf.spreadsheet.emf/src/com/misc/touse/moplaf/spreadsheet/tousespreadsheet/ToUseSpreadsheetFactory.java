@@ -31,6 +31,24 @@ public interface ToUseSpreadsheetFactory extends EFactory {
 	Domain createDomain();
 
 	/**
+	 * Returns a new object of class '<em>To Use Table</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>To Use Table</em>'.
+	 * @generated
+	 */
+	ToUseTable createToUseTable();
+
+	/**
+	 * Returns a new object of class '<em>To Use Table Item</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>To Use Table Item</em>'.
+	 * @generated
+	 */
+	ToUseTableItem createToUseTableItem();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

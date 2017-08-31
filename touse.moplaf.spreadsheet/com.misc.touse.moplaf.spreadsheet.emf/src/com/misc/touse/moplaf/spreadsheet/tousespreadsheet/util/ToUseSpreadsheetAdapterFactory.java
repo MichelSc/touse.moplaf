@@ -72,6 +72,14 @@ public class ToUseSpreadsheetAdapterFactory extends AdapterFactoryImpl {
 				return createDomainAdapter();
 			}
 			@Override
+			public Adapter caseToUseTable(ToUseTable object) {
+				return createToUseTableAdapter();
+			}
+			@Override
+			public Adapter caseToUseTableItem(ToUseTableItem object) {
+				return createToUseTableItemAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -102,6 +110,34 @@ public class ToUseSpreadsheetAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDomainAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.spreadsheet.tousespreadsheet.ToUseTable <em>To Use Table</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.touse.moplaf.spreadsheet.tousespreadsheet.ToUseTable
+	 * @generated
+	 */
+	public Adapter createToUseTableAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.spreadsheet.tousespreadsheet.ToUseTableItem <em>To Use Table Item</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.touse.moplaf.spreadsheet.tousespreadsheet.ToUseTableItem
+	 * @generated
+	 */
+	public Adapter createToUseTableItemAdapter() {
 		return null;
 	}
 

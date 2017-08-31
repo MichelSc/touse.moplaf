@@ -2,6 +2,8 @@
  */
 package com.misc.touse.moplaf.spreadsheet.tousespreadsheet.provider;
 
+
+import com.misc.common.moplaf.gridview.emf.edit.IItemGridsProvider;
 import com.misc.touse.moplaf.spreadsheet.tousespreadsheet.util.ToUseSpreadsheetAdapterFactory;
 
 import java.util.ArrayList;
@@ -69,6 +71,7 @@ public class ToUseSpreadsheetItemProviderAdapterFactory extends ToUseSpreadsheet
 		supportedTypes.add(ITreeItemContentProvider.class);
 		supportedTypes.add(IItemLabelProvider.class);
 		supportedTypes.add(IItemPropertySource.class);
+		supportedTypes.add(IItemGridsProvider.class);
 	}
 
 	/**
@@ -92,6 +95,52 @@ public class ToUseSpreadsheetItemProviderAdapterFactory extends ToUseSpreadsheet
 		}
 
 		return domainItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.spreadsheet.tousespreadsheet.ToUseTable} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ToUseTableItemProvider toUseTableItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.spreadsheet.tousespreadsheet.ToUseTable}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createToUseTableAdapter() {
+		if (toUseTableItemProvider == null) {
+			toUseTableItemProvider = new ToUseTableItemProvider(this);
+		}
+
+		return toUseTableItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.spreadsheet.tousespreadsheet.ToUseTableItem} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ToUseTableItemItemProvider toUseTableItemItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.spreadsheet.tousespreadsheet.ToUseTableItem}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createToUseTableItemAdapter() {
+		if (toUseTableItemItemProvider == null) {
+			toUseTableItemItemProvider = new ToUseTableItemItemProvider(this);
+		}
+
+		return toUseTableItemItemProvider;
 	}
 
 	/**
@@ -194,6 +243,8 @@ public class ToUseSpreadsheetItemProviderAdapterFactory extends ToUseSpreadsheet
 	 */
 	public void dispose() {
 		if (domainItemProvider != null) domainItemProvider.dispose();
+		if (toUseTableItemProvider != null) toUseTableItemProvider.dispose();
+		if (toUseTableItemItemProvider != null) toUseTableItemItemProvider.dispose();
 	}
 
 }

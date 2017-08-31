@@ -7,6 +7,7 @@ import com.misc.common.moplaf.spreadsheet.spreadsheetcsv.SpreadsheetCSVFactory;
 import com.misc.common.moplaf.spreadsheet.spreadsheetpoi.SpreadsheetPOIFactory;
 
 import com.misc.touse.moplaf.spreadsheet.tousespreadsheet.Domain;
+import com.misc.touse.moplaf.spreadsheet.tousespreadsheet.ToUseSpreadsheetFactory;
 import com.misc.touse.moplaf.spreadsheet.tousespreadsheet.ToUseSpreadsheetPackage;
 
 import java.util.Collection;
@@ -81,6 +82,7 @@ public class DomainItemProvider
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ToUseSpreadsheetPackage.Literals.DOMAIN__SPREADSHEETS_POI);
 			childrenFeatures.add(ToUseSpreadsheetPackage.Literals.DOMAIN__SPREADSHEETS_CSV);
+			childrenFeatures.add(ToUseSpreadsheetPackage.Literals.DOMAIN__TABLES);
 		}
 		return childrenFeatures;
 	}
@@ -135,6 +137,7 @@ public class DomainItemProvider
 		switch (notification.getFeatureID(Domain.class)) {
 			case ToUseSpreadsheetPackage.DOMAIN__SPREADSHEETS_POI:
 			case ToUseSpreadsheetPackage.DOMAIN__SPREADSHEETS_CSV:
+			case ToUseSpreadsheetPackage.DOMAIN__TABLES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -161,6 +164,11 @@ public class DomainItemProvider
 			(createChildParameter
 				(ToUseSpreadsheetPackage.Literals.DOMAIN__SPREADSHEETS_CSV,
 				 SpreadsheetCSVFactory.eINSTANCE.createSpreadsheetCSV()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ToUseSpreadsheetPackage.Literals.DOMAIN__TABLES,
+				 ToUseSpreadsheetFactory.eINSTANCE.createToUseTable()));
 	}
 
 	/**

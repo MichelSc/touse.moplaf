@@ -72,6 +72,18 @@ public class ToUseSpreadsheetSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ToUseSpreadsheetPackage.TO_USE_TABLE: {
+				ToUseTable toUseTable = (ToUseTable)theEObject;
+				T result = caseToUseTable(toUseTable);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ToUseSpreadsheetPackage.TO_USE_TABLE_ITEM: {
+				ToUseTableItem toUseTableItem = (ToUseTableItem)theEObject;
+				T result = caseToUseTableItem(toUseTableItem);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -88,6 +100,36 @@ public class ToUseSpreadsheetSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseDomain(Domain object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>To Use Table</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>To Use Table</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseToUseTable(ToUseTable object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>To Use Table Item</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>To Use Table Item</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseToUseTableItem(ToUseTableItem object) {
 		return null;
 	}
 

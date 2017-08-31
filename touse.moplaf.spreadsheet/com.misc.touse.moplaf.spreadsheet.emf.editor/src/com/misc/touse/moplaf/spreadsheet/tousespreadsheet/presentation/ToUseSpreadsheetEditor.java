@@ -154,8 +154,10 @@ import org.eclipse.emf.edit.ui.util.EditUIUtil;
 
 import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 
+import com.misc.touse.moplaf.spreadsheet.tousespreadsheet.ToUseSpreadsheetPackage;
 import com.misc.touse.moplaf.spreadsheet.tousespreadsheet.provider.ToUseSpreadsheetItemProviderAdapterFactory;
-
+import com.misc.common.moplaf.emf.editor.provider.AdapterFactoryContentProviderExtended;
+import com.misc.common.moplaf.spreadsheet.SpreadsheetPackage;
 import com.misc.common.moplaf.spreadsheet.provider.SpreadsheetItemProviderAdapterFactory;
 
 import com.misc.common.moplaf.spreadsheet.spreadsheetcsv.provider.SpreadsheetCSVItemProviderAdapterFactory;
@@ -1401,7 +1403,6 @@ public class ToUseSpreadsheetEditor
 	 * This accesses a cached version of the property sheet.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	public IPropertySheetPage getPropertySheetPage() {
 		PropertySheetPage propertySheetPage =
@@ -1418,7 +1419,11 @@ public class ToUseSpreadsheetEditor
 					getActionBarContributor().shareGlobalActions(this, actionBars);
 				}
 			};
-		propertySheetPage.setPropertySourceProvider(new AdapterFactoryContentProvider(adapterFactory));
+		AdapterFactoryContentProviderExtended contentProvider =new AdapterFactoryContentProviderExtended(this.adapterFactory);	
+		contentProvider.editFilePaths.addSelector(SpreadsheetPackage.Literals.SPREADSHEET__FILE_PATH);
+		contentProvider.editColors.addSelector(ToUseSpreadsheetPackage.Literals.TO_USE_TABLE_ITEM__LONG_ATTRIBUTE_COLOR);
+		
+		propertySheetPage.setPropertySourceProvider(contentProvider);
 		propertySheetPages.add(propertySheetPage);
 
 		return propertySheetPage;

@@ -9,5 +9,17 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="SpreadsheetsCSV" upperBound="-1"
         eType="ecore:EClass ../../com.misc.common.moplaf.spreadsheet.csv.emf/model/spreadsheetcsv.ecore#//SpreadsheetCSV"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Tables" upperBound="-1"
+        eType="#//ToUseTable" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ToUseTable">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Items" upperBound="-1"
+        eType="#//ToUseTableItem" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="TableName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ToUseTableItem">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="LongAttribute" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="LongAttributeColor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ItemName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>
