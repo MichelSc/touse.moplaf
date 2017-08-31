@@ -196,13 +196,22 @@ public interface ToUseSpreadsheetPackage extends EPackage {
 	int TO_USE_TABLE_ITEM__ITEM_NAME = 2;
 
 	/**
+	 * The feature id for the '<em><b>Long Attribute Text Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_TABLE_ITEM__LONG_ATTRIBUTE_TEXT_COLOR = 3;
+
+	/**
 	 * The number of structural features of the '<em>To Use Table Item</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_TABLE_ITEM_FEATURE_COUNT = 3;
+	int TO_USE_TABLE_ITEM_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>To Use Table Item</em>' class.
@@ -333,6 +342,17 @@ public interface ToUseSpreadsheetPackage extends EPackage {
 	EAttribute getToUseTableItem_ItemName();
 
 	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.spreadsheet.tousespreadsheet.ToUseTableItem#getLongAttributeTextColor <em>Long Attribute Text Color</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Long Attribute Text Color</em>'.
+	 * @see com.misc.touse.moplaf.spreadsheet.tousespreadsheet.ToUseTableItem#getLongAttributeTextColor()
+	 * @see #getToUseTableItem()
+	 * @generated
+	 */
+	EAttribute getToUseTableItem_LongAttributeTextColor();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -448,6 +468,14 @@ public interface ToUseSpreadsheetPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TO_USE_TABLE_ITEM__ITEM_NAME = eINSTANCE.getToUseTableItem_ItemName();
+
+		/**
+		 * The meta object literal for the '<em><b>Long Attribute Text Color</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TO_USE_TABLE_ITEM__LONG_ATTRIBUTE_TEXT_COLOR = eINSTANCE.getToUseTableItem_LongAttributeTextColor();
 
 	}
 

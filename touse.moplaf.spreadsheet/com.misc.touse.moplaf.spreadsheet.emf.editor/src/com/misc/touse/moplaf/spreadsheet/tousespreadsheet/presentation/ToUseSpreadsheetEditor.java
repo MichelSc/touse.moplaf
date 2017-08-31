@@ -1422,6 +1422,7 @@ public class ToUseSpreadsheetEditor
 		AdapterFactoryContentProviderExtended contentProvider =new AdapterFactoryContentProviderExtended(this.adapterFactory);	
 		contentProvider.editFilePaths.addSelector(SpreadsheetPackage.Literals.SPREADSHEET__FILE_PATH);
 		contentProvider.editColors.addSelector(ToUseSpreadsheetPackage.Literals.TO_USE_TABLE_ITEM__LONG_ATTRIBUTE_COLOR);
+		contentProvider.editColors.addSelector(ToUseSpreadsheetPackage.Literals.TO_USE_TABLE_ITEM__LONG_ATTRIBUTE_TEXT_COLOR);
 		
 		propertySheetPage.setPropertySourceProvider(contentProvider);
 		propertySheetPages.add(propertySheetPage);

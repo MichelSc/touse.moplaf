@@ -3,7 +3,6 @@
 package com.misc.touse.moplaf.spreadsheet.tousespreadsheet.provider;
 
 
-import com.misc.common.moplaf.gridview.emf.edit.IItemGridsProvider;
 import com.misc.touse.moplaf.spreadsheet.tousespreadsheet.util.ToUseSpreadsheetAdapterFactory;
 
 import java.util.ArrayList;
@@ -71,7 +70,6 @@ public class ToUseSpreadsheetItemProviderAdapterFactory extends ToUseSpreadsheet
 		supportedTypes.add(ITreeItemContentProvider.class);
 		supportedTypes.add(IItemLabelProvider.class);
 		supportedTypes.add(IItemPropertySource.class);
-		supportedTypes.add(IItemGridsProvider.class);
 	}
 
 	/**

@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link com.misc.touse.moplaf.spreadsheet.tousespreadsheet.impl.ToUseTableItemImpl#getLongAttribute <em>Long Attribute</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.spreadsheet.tousespreadsheet.impl.ToUseTableItemImpl#getLongAttributeColor <em>Long Attribute Color</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.spreadsheet.tousespreadsheet.impl.ToUseTableItemImpl#getItemName <em>Item Name</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.spreadsheet.tousespreadsheet.impl.ToUseTableItemImpl#getLongAttributeTextColor <em>Long Attribute Text Color</em>}</li>
  * </ul>
  *
  * @generated
@@ -87,6 +88,26 @@ public class ToUseTableItemImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected String itemName = ITEM_NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getLongAttributeTextColor() <em>Long Attribute Text Color</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLongAttributeTextColor()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int LONG_ATTRIBUTE_TEXT_COLOR_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getLongAttributeTextColor() <em>Long Attribute Text Color</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLongAttributeTextColor()
+	 * @generated
+	 * @ordered
+	 */
+	protected int longAttributeTextColor = LONG_ATTRIBUTE_TEXT_COLOR_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -175,6 +196,27 @@ public class ToUseTableItemImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getLongAttributeTextColor() {
+		return longAttributeTextColor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLongAttributeTextColor(int newLongAttributeTextColor) {
+		int oldLongAttributeTextColor = longAttributeTextColor;
+		longAttributeTextColor = newLongAttributeTextColor;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseSpreadsheetPackage.TO_USE_TABLE_ITEM__LONG_ATTRIBUTE_TEXT_COLOR, oldLongAttributeTextColor, longAttributeTextColor));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -184,6 +226,8 @@ public class ToUseTableItemImpl extends MinimalEObjectImpl.Container implements 
 				return getLongAttributeColor();
 			case ToUseSpreadsheetPackage.TO_USE_TABLE_ITEM__ITEM_NAME:
 				return getItemName();
+			case ToUseSpreadsheetPackage.TO_USE_TABLE_ITEM__LONG_ATTRIBUTE_TEXT_COLOR:
+				return getLongAttributeTextColor();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -204,6 +248,9 @@ public class ToUseTableItemImpl extends MinimalEObjectImpl.Container implements 
 				return;
 			case ToUseSpreadsheetPackage.TO_USE_TABLE_ITEM__ITEM_NAME:
 				setItemName((String)newValue);
+				return;
+			case ToUseSpreadsheetPackage.TO_USE_TABLE_ITEM__LONG_ATTRIBUTE_TEXT_COLOR:
+				setLongAttributeTextColor((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -226,6 +273,9 @@ public class ToUseTableItemImpl extends MinimalEObjectImpl.Container implements 
 			case ToUseSpreadsheetPackage.TO_USE_TABLE_ITEM__ITEM_NAME:
 				setItemName(ITEM_NAME_EDEFAULT);
 				return;
+			case ToUseSpreadsheetPackage.TO_USE_TABLE_ITEM__LONG_ATTRIBUTE_TEXT_COLOR:
+				setLongAttributeTextColor(LONG_ATTRIBUTE_TEXT_COLOR_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -244,6 +294,8 @@ public class ToUseTableItemImpl extends MinimalEObjectImpl.Container implements 
 				return longAttributeColor != LONG_ATTRIBUTE_COLOR_EDEFAULT;
 			case ToUseSpreadsheetPackage.TO_USE_TABLE_ITEM__ITEM_NAME:
 				return ITEM_NAME_EDEFAULT == null ? itemName != null : !ITEM_NAME_EDEFAULT.equals(itemName);
+			case ToUseSpreadsheetPackage.TO_USE_TABLE_ITEM__LONG_ATTRIBUTE_TEXT_COLOR:
+				return longAttributeTextColor != LONG_ATTRIBUTE_TEXT_COLOR_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -264,6 +316,8 @@ public class ToUseTableItemImpl extends MinimalEObjectImpl.Container implements 
 		result.append(longAttributeColor);
 		result.append(", ItemName: ");
 		result.append(itemName);
+		result.append(", LongAttributeTextColor: ");
+		result.append(longAttributeTextColor);
 		result.append(')');
 		return result.toString();
 	}

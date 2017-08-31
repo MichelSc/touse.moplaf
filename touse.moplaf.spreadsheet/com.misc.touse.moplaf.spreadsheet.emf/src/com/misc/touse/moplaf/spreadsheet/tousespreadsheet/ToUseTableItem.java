@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.misc.touse.moplaf.spreadsheet.tousespreadsheet.ToUseTableItem#getLongAttribute <em>Long Attribute</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.spreadsheet.tousespreadsheet.ToUseTableItem#getLongAttributeColor <em>Long Attribute Color</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.spreadsheet.tousespreadsheet.ToUseTableItem#getItemName <em>Item Name</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.spreadsheet.tousespreadsheet.ToUseTableItem#getLongAttributeTextColor <em>Long Attribute Text Color</em>}</li>
  * </ul>
  *
  * @see com.misc.touse.moplaf.spreadsheet.tousespreadsheet.ToUseSpreadsheetPackage#getToUseTableItem()
@@ -100,5 +101,31 @@ public interface ToUseTableItem extends EObject {
 	 * @generated
 	 */
 	void setItemName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Long Attribute Text Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Long Attribute Text Color</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Long Attribute Text Color</em>' attribute.
+	 * @see #setLongAttributeTextColor(int)
+	 * @see com.misc.touse.moplaf.spreadsheet.tousespreadsheet.ToUseSpreadsheetPackage#getToUseTableItem_LongAttributeTextColor()
+	 * @model
+	 * @generated
+	 */
+	int getLongAttributeTextColor();
+
+	/**
+	 * Sets the value of the '{@link com.misc.touse.moplaf.spreadsheet.tousespreadsheet.ToUseTableItem#getLongAttributeTextColor <em>Long Attribute Text Color</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Long Attribute Text Color</em>' attribute.
+	 * @see #getLongAttributeTextColor()
+	 * @generated
+	 */
+	void setLongAttributeTextColor(int value);
 
 } // ToUseTableItem

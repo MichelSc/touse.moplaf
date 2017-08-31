@@ -63,6 +63,7 @@ public class ToUseTableItemItemProvider
 			addLongAttributePropertyDescriptor(object);
 			addLongAttributeColorPropertyDescriptor(object);
 			addItemNamePropertyDescriptor(object);
+			addLongAttributeTextColorPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -134,6 +135,28 @@ public class ToUseTableItemItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Long Attribute Text Color feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLongAttributeTextColorPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ToUseTableItem_LongAttributeTextColor_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseTableItem_LongAttributeTextColor_feature", "_UI_ToUseTableItem_type"),
+				 ToUseSpreadsheetPackage.Literals.TO_USE_TABLE_ITEM__LONG_ATTRIBUTE_TEXT_COLOR,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns ToUseTableItem.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -174,6 +197,7 @@ public class ToUseTableItemItemProvider
 			case ToUseSpreadsheetPackage.TO_USE_TABLE_ITEM__LONG_ATTRIBUTE:
 			case ToUseSpreadsheetPackage.TO_USE_TABLE_ITEM__LONG_ATTRIBUTE_COLOR:
 			case ToUseSpreadsheetPackage.TO_USE_TABLE_ITEM__ITEM_NAME:
+			case ToUseSpreadsheetPackage.TO_USE_TABLE_ITEM__LONG_ATTRIBUTE_TEXT_COLOR:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

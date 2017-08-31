@@ -243,5 +243,12 @@ public class ToUseTableItemProvider
 		Color color = new Color(tableItem.getLongAttributeColor());
 		return color.toURI();
 	}
+	
+	@Override
+	public Object getCellForeground(Object element, Object grid, Object row, Object column) {
+		ToUseTableItem tableItem = (ToUseTableItem) row;
+		Color color = new Color(tableItem.getLongAttributeTextColor());
+		return color.toURI();
+	}
 
 }

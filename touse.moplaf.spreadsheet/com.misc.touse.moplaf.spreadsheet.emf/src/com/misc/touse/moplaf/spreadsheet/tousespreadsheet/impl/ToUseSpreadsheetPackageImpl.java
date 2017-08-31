@@ -216,6 +216,15 @@ public class ToUseSpreadsheetPackageImpl extends EPackageImpl implements ToUseSp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getToUseTableItem_LongAttributeTextColor() {
+		return (EAttribute)toUseTableItemEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ToUseSpreadsheetFactory getToUseSpreadsheetFactory() {
 		return (ToUseSpreadsheetFactory)getEFactoryInstance();
 	}
@@ -252,6 +261,7 @@ public class ToUseSpreadsheetPackageImpl extends EPackageImpl implements ToUseSp
 		createEAttribute(toUseTableItemEClass, TO_USE_TABLE_ITEM__LONG_ATTRIBUTE);
 		createEAttribute(toUseTableItemEClass, TO_USE_TABLE_ITEM__LONG_ATTRIBUTE_COLOR);
 		createEAttribute(toUseTableItemEClass, TO_USE_TABLE_ITEM__ITEM_NAME);
+		createEAttribute(toUseTableItemEClass, TO_USE_TABLE_ITEM__LONG_ATTRIBUTE_TEXT_COLOR);
 	}
 
 	/**
@@ -301,6 +311,7 @@ public class ToUseSpreadsheetPackageImpl extends EPackageImpl implements ToUseSp
 		initEAttribute(getToUseTableItem_LongAttribute(), ecorePackage.getELong(), "LongAttribute", null, 0, 1, ToUseTableItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getToUseTableItem_LongAttributeColor(), ecorePackage.getEInt(), "LongAttributeColor", null, 0, 1, ToUseTableItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getToUseTableItem_ItemName(), ecorePackage.getEString(), "ItemName", null, 0, 1, ToUseTableItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getToUseTableItem_LongAttributeTextColor(), ecorePackage.getEInt(), "LongAttributeTextColor", null, 0, 1, ToUseTableItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

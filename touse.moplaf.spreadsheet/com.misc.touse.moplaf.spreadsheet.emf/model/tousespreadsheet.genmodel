@@ -11,15 +11,17 @@
     <genClasses ecoreClass="tousespreadsheet.ecore#//Domain">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousespreadsheet.ecore#//Domain/SpreadsheetsPOI"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousespreadsheet.ecore#//Domain/SpreadsheetsCSV"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousespreadsheet.ecore#//Domain/tousetable"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousespreadsheet.ecore#//Domain/Tables"/>
     </genClasses>
     <genClasses ecoreClass="tousespreadsheet.ecore#//ToUseTable">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousespreadsheet.ecore#//ToUseTable/tousetableitem"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousespreadsheet.ecore#//ToUseTable/Items"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousespreadsheet.ecore#//ToUseTable/TableName"/>
     </genClasses>
     <genClasses ecoreClass="tousespreadsheet.ecore#//ToUseTableItem">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousespreadsheet.ecore#//ToUseTableItem/LongAttribute"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousespreadsheet.ecore#//ToUseTableItem/LongAttributeColor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousespreadsheet.ecore#//ToUseTableItem/ItemName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousespreadsheet.ecore#//ToUseTableItem/LongAttributeTextColor"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
