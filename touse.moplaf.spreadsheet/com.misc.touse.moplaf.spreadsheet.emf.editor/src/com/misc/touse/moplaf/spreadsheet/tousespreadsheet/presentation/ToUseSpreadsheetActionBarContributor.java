@@ -280,6 +280,9 @@ public class ToUseSpreadsheetActionBarContributor
 		if (createSiblingMenuManager != null) {
 			depopulateManager(createSiblingMenuManager, createSiblingActions);
 		}
+		if (applicationPopUpMenuManager != null) {
+			depopulateManager(applicationPopUpMenuManager, applicationPopUpMenuActions);
+		}
 
 		// Query the new selection for appropriate new child/sibling descriptors
 		//
