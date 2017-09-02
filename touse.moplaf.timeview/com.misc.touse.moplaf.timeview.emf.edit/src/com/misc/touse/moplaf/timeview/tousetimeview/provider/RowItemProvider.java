@@ -4,7 +4,7 @@ package com.misc.touse.moplaf.timeview.tousetimeview.provider;
 
 
 import com.misc.common.moplaf.common.Color;
-import com.misc.common.moplaf.timeview.emf.edit.IItemTimeLinesEventsProvider;
+import com.misc.common.moplaf.timeview.emf.edit.IItemTimeLinesProvider;
 import com.misc.touse.moplaf.timeview.tousetimeview.Node;
 import com.misc.touse.moplaf.timeview.tousetimeview.Row;
 import com.misc.touse.moplaf.timeview.tousetimeview.TousetimeviewFactory;
@@ -35,14 +35,14 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 /**
  * This is the item provider adapter for a {@link com.misc.touse.moplaf.timeview.tousetimeview.Row} object.
  * <!-- begin-user-doc -->
- * @implements IItemTimeLinesEventsProvider
+ * @implements IItemTimeLinesProvider
  * <!-- end-user-doc -->
  * @generated
  */
 public class RowItemProvider 
 	extends ItemProviderAdapter
 	implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource, IItemTimeLinesEventsProvider {
+		IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource, IItemTimeLinesProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -282,19 +282,19 @@ public class RowItemProvider
 	}
 
 	@Override
-	public Date getStart(Object element, Object timeline, Object event) {
+	public Date getStart(Object element, Object timeline, Object event, Object interval) {
 		Node node = (Node) event;
 		return node.getStart();
 	}
 
 	@Override
-	public Date getEnd(Object element, Object timeline, Object event) {
+	public Date getEnd(Object element, Object timeline, Object event, Object interval) {
 		Node node = (Node) event;
 		return node.getEnd();
 	}
 
 	@Override
-	public Object getForeground(Object element, Object timeline, Object event) {
+	public Object getForeground(Object element, Object timeline, Object event, Object interval) {
 		Node node = (Node) event;
 		int rgb = node.getForeground();
 		Color color = new Color(rgb);
@@ -302,7 +302,7 @@ public class RowItemProvider
 	}
 
 	@Override
-	public Object getBackground(Object element, Object timeline, Object event) {
+	public Object getBackground(Object element, Object timeline, Object event, Object interval) {
 		Node node = (Node) event;
 		int rgb = node.getBackground();
 		Color color = new Color(rgb);
@@ -310,10 +310,9 @@ public class RowItemProvider
 	}
 
 	@Override
-	public String getText(Object element, Object timeline, Object event) {
+	public String getText(Object element, Object timeline, Object event, Object interval) {
 		Node node = (Node) event;
 		return node.getText();
 	}
-
 
 }
