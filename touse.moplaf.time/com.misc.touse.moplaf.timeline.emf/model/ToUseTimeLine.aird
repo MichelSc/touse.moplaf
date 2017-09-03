@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:filter="http://www.eclipse.org/sirius/diagram/description/filter/1.1.0" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:table="http://www.eclipse.org/sirius/table/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/table/description/1.1.0 http://www.eclipse.org/sirius/table/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/filter/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/filter http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
-  <viewpoint:DAnalysis xmi:id="_bweyMLVzEeWJRIileii1Yw" selectedViews="_b0d6ULVzEeWJRIileii1Yw _b0quoLVzEeWJRIileii1Yw _b0xcULVzEeWJRIileii1Yw _b0zRgLVzEeWJRIileii1Yw" version="11.1.0.201608251200">
+  <viewpoint:DAnalysis xmi:id="_bweyMLVzEeWJRIileii1Yw" selectedViews="_b0d6ULVzEeWJRIileii1Yw _b0quoLVzEeWJRIileii1Yw _b0xcULVzEeWJRIileii1Yw _b0zRgLVzEeWJRIileii1Yw" version="12.0.0.201704271200">
     <semanticResources>ToUseTimeLine.ecore</semanticResources>
     <semanticResources>platform:/resource/com.misc.common.moplaf.propagator/model/propagator.ecore</semanticResources>
     <semanticResources>platform:/resource/com.misc.common.moplaf.timeline.emf/model/timeline.ecore</semanticResources>
@@ -16,18 +16,18 @@
     <semanticResources>platform:/resource/com.misc.common.moplaf.propagator2/model/propagator.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" xmi:id="_b0d6ULVzEeWJRIileii1Yw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_2kftUfaxEeaieOKC6-MeYQ" name="tousetimeline class diagram" representation="_dJB5gLVzEeWJRIileii1Yw">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_2kftUfaxEeaieOKC6-MeYQ" name="tousetimeline class diagram" repPath="#_dJB5gLVzEeWJRIileii1Yw">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="ToUseTimeLine.ecore#/"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_2kftUvaxEeaieOKC6-MeYQ" name="tousetimeline class diagram time discrete" representation="_Q2zycGuoEeaBCZ_-0MO6fw">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_2kftUvaxEeaieOKC6-MeYQ" name="tousetimeline class diagram time discrete" repPath="#_Q2zycGuoEeaBCZ_-0MO6fw">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="ToUseTimeLine.ecore#/"/>
       </ownedRepresentationDescriptors>
     </ownedViews>
     <ownedViews xmi:type="viewpoint:DView" xmi:id="_b0quoLVzEeWJRIileii1Yw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_2kftUPaxEeaieOKC6-MeYQ" name="tousetimeline package dependencies" representation="_YsjQkIGqEeao-6UyO1OEEw">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_2kftUPaxEeaieOKC6-MeYQ" name="tousetimeline package dependencies" repPath="#_YsjQkIGqEeao-6UyO1OEEw">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Dependencies']"/>
         <target xmi:type="ecore:EPackage" href="ToUseTimeLine.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -37,7 +37,7 @@
     </ownedViews>
     <ownedViews xmi:type="viewpoint:DView" xmi:id="_b0zRgLVzEeWJRIileii1Yw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_2kgUYPaxEeaieOKC6-MeYQ" name="Tousetimeline generation table" representation="_4Ppq8IGqEeao-6UyO1OEEw">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_2kgUYPaxEeaieOKC6-MeYQ" name="Tousetimeline generation table" repPath="#_4Ppq8IGqEeao-6UyO1OEEw">
         <description xmi:type="description_2:EditionTableDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']/@ownedRepresentations[name='GenPackage%20Attributes']"/>
         <target xmi:type="genmodel:GenPackage" href="ToUseTimeLine.genmodel#//tousetimeline"/>
       </ownedRepresentationDescriptors>
@@ -1359,8 +1359,9 @@
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="__ur6EfazEeaieOKC6-MeYQ" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_N2PSUJB9Eeejfc_TWX2T7w" iconPath="/org.eclipse.emf.ecoretools.design/icons/full/obj16/EClass_abstract.gif" borderSize="1" borderSizeComputationExpression="1" borderColor="125,125,125" backgroundStyle="Liquid" foregroundColor="228,228,228">
+        <labelFormat>italic</labelFormat>
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@conditionnalStyles.1/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
       <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_PQBHML0GEeWjtoioB99Whw" name="from : EDate" tooltipText="">
@@ -1444,7 +1445,7 @@
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_dClfML0GEeWjtoioB99Whw" sourceNode="_Z9ogcL0GEeWjtoioB99Whw" targetNode="_CuA_ML0GEeWjtoioB99Whw">
       <target xmi:type="ecore:EClass" href="ToUseTimeLine.ecore#//FunctionCumulated"/>
-      <semanticElements xmi:type="ecore:EGenericType" href="ToUseTimeLine.ecore#//FunctionCumulated/@eGenericSuperTypes.0"/>
+      <semanticElements xmi:type="ecore:EClass" href="ToUseTimeLine.ecore#//FunctionCumulated"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="__uwykPazEeaieOKC6-MeYQ" targetArrow="InputClosedArrow">
         <customFeatures>routingStyle</customFeatures>
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']/@style"/>
@@ -1488,7 +1489,7 @@
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_eeRaEL0GEeWjtoioB99Whw" sourceNode="_dlpI8L0GEeWjtoioB99Whw" targetNode="_CuA_ML0GEeWjtoioB99Whw">
       <target xmi:type="ecore:EClass" href="ToUseTimeLine.ecore#//FunctionAverage"/>
-      <semanticElements xmi:type="ecore:EGenericType" href="ToUseTimeLine.ecore#//FunctionAverage/@eGenericSuperTypes.0"/>
+      <semanticElements xmi:type="ecore:EClass" href="ToUseTimeLine.ecore#//FunctionAverage"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="__uwyk_azEeaieOKC6-MeYQ" targetArrow="InputClosedArrow">
         <customFeatures>routingStyle</customFeatures>
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']/@style"/>
@@ -1501,7 +1502,7 @@
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_YEPgcL0HEeWjtoioB99Whw" sourceNode="_8IljUL0FEeWjtoioB99Whw" targetNode="_CuA_ML0GEeWjtoioB99Whw">
       <target xmi:type="ecore:EClass" href="ToUseTimeLine.ecore#//FunctionMinimum"/>
-      <semanticElements xmi:type="ecore:EGenericType" href="ToUseTimeLine.ecore#//FunctionMinimum/@eGenericSuperTypes.0"/>
+      <semanticElements xmi:type="ecore:EClass" href="ToUseTimeLine.ecore#//FunctionMinimum"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="__uwLgPazEeaieOKC6-MeYQ" targetArrow="InputClosedArrow">
         <customFeatures>routingStyle</customFeatures>
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']/@style"/>
@@ -1518,8 +1519,9 @@
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_9GoSsPazEeaieOKC6-MeYQ" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_N2VY8JB9Eeejfc_TWX2T7w" iconPath="/org.eclipse.emf.ecoretools.design/icons/full/obj16/EClass_abstract.gif" borderSize="1" borderSizeComputationExpression="1" borderColor="125,125,125" backgroundStyle="Liquid" foregroundColor="228,228,228">
+        <labelFormat>italic</labelFormat>
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@conditionnalStyles.1/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
       <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_vHJwgL0JEeWjtoioB99Whw" name="limitMoment : EDate" tooltipText="">
@@ -1611,7 +1613,7 @@
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_HVQ6UL0KEeWjtoioB99Whw" sourceNode="_GqL9AL0KEeWjtoioB99Whw" targetNode="_p6bM8L0JEeWjtoioB99Whw">
       <target xmi:type="ecore:EClass" href="ToUseTimeLine.ecore#//FunctionEarliestBelow"/>
-      <semanticElements xmi:type="ecore:EGenericType" href="ToUseTimeLine.ecore#//FunctionEarliestBelow/@eGenericSuperTypes.0"/>
+      <semanticElements xmi:type="ecore:EClass" href="ToUseTimeLine.ecore#//FunctionEarliestBelow"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_9GtLMPazEeaieOKC6-MeYQ" targetArrow="InputClosedArrow">
         <customFeatures>routingStyle</customFeatures>
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']/@style"/>
@@ -1655,7 +1657,7 @@
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_S72y0L3iEeWjr8dRyibc1Q" sourceNode="_PtmHEL3iEeWjr8dRyibc1Q" targetNode="_p6bM8L0JEeWjtoioB99Whw">
       <target xmi:type="ecore:EClass" href="ToUseTimeLine.ecore#//FunctionEarliestOutput"/>
-      <semanticElements xmi:type="ecore:EGenericType" href="ToUseTimeLine.ecore#//FunctionEarliestOutput/@eGenericSuperTypes.0"/>
+      <semanticElements xmi:type="ecore:EClass" href="ToUseTimeLine.ecore#//FunctionEarliestOutput"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_9GtyQPazEeaieOKC6-MeYQ" targetArrow="InputClosedArrow">
         <customFeatures>routingStyle</customFeatures>
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']/@style"/>
@@ -2060,8 +2062,7 @@
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_5k4HkGuoEeaBCZ_-0MO6fw" sourceNode="_TmEOAGuoEeaBCZ_-0MO6fw" targetNode="_b1u-IGuoEeaBCZ_-0MO6fw">
       <target xmi:type="ecore:EClass" href="ToUseTimeLine.ecore#//ConcreteObjectWithTimeLine"/>
-      <semanticElements xmi:type="ecore:EGenericType" href="ToUseTimeLine.ecore#//ConcreteObjectWithTimeLine/@eGenericSuperTypes.0"/>
-      <semanticElements xmi:type="ecore:EGenericType" href="ToUseTimeLine.ecore#//ConcreteObjectWithTimeLine/@eGenericSuperTypes.1"/>
+      <semanticElements xmi:type="ecore:EClass" href="ToUseTimeLine.ecore#//ConcreteObjectWithTimeLine"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_5k4HkWuoEeaBCZ_-0MO6fw" targetArrow="InputClosedArrow">
         <customFeatures>routingStyle</customFeatures>
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']/@style"/>
@@ -2129,8 +2130,7 @@
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_-nQ8AGurEeaBCZ_-0MO6fw" sourceNode="_TmEOAGuoEeaBCZ_-0MO6fw" targetNode="_-nEHsGurEeaBCZ_-0MO6fw">
       <target xmi:type="ecore:EClass" href="ToUseTimeLine.ecore#//ConcreteObjectWithTimeLine"/>
-      <semanticElements xmi:type="ecore:EGenericType" href="ToUseTimeLine.ecore#//ConcreteObjectWithTimeLine/@eGenericSuperTypes.0"/>
-      <semanticElements xmi:type="ecore:EGenericType" href="ToUseTimeLine.ecore#//ConcreteObjectWithTimeLine/@eGenericSuperTypes.1"/>
+      <semanticElements xmi:type="ecore:EClass" href="ToUseTimeLine.ecore#//ConcreteObjectWithTimeLine"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_-nQ8AWurEeaBCZ_-0MO6fw" targetArrow="InputClosedArrow">
         <customFeatures>routingStyle</customFeatures>
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']/@style"/>
@@ -2222,8 +2222,7 @@
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_GvPvwGusEeaBCZ_-0MO6fw" sourceNode="_CNqa8GusEeaBCZ_-0MO6fw" targetNode="_GvCUYGusEeaBCZ_-0MO6fw">
       <target xmi:type="ecore:EClass" href="ToUseTimeLine.ecore#//ConcreteObjectTimeBucket"/>
-      <semanticElements xmi:type="ecore:EGenericType" href="ToUseTimeLine.ecore#//ConcreteObjectTimeBucket/@eGenericSuperTypes.0"/>
-      <semanticElements xmi:type="ecore:EGenericType" href="ToUseTimeLine.ecore#//ConcreteObjectTimeBucket/@eGenericSuperTypes.1"/>
+      <semanticElements xmi:type="ecore:EClass" href="ToUseTimeLine.ecore#//ConcreteObjectTimeBucket"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_GvPvwWusEeaBCZ_-0MO6fw" targetArrow="InputClosedArrow">
         <customFeatures>routingStyle</customFeatures>
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']/@style"/>
@@ -2247,8 +2246,7 @@
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_PLMoYGusEeaBCZ_-0MO6fw" sourceNode="_CNqa8GusEeaBCZ_-0MO6fw" targetNode="_b1u-IGuoEeaBCZ_-0MO6fw">
       <target xmi:type="ecore:EClass" href="ToUseTimeLine.ecore#//ConcreteObjectTimeBucket"/>
-      <semanticElements xmi:type="ecore:EGenericType" href="ToUseTimeLine.ecore#//ConcreteObjectTimeBucket/@eGenericSuperTypes.0"/>
-      <semanticElements xmi:type="ecore:EGenericType" href="ToUseTimeLine.ecore#//ConcreteObjectTimeBucket/@eGenericSuperTypes.1"/>
+      <semanticElements xmi:type="ecore:EClass" href="ToUseTimeLine.ecore#//ConcreteObjectTimeBucket"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_PLMoYWusEeaBCZ_-0MO6fw" targetArrow="InputClosedArrow">
         <customFeatures>routingStyle</customFeatures>
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']/@style"/>

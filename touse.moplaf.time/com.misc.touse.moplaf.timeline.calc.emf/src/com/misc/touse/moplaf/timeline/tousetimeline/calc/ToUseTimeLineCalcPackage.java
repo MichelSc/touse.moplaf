@@ -179,6 +179,15 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	int PROPAGATOR_SCOPE_DOMAIN__DESCRIPTION = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPAGATOR_SCOPE_DOMAIN__TOUCHED_PARENT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TOUCHED_PARENT;
+
+	/**
 	 * The number of structural features of the '<em>Propagator Scope Domain</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -215,6 +224,15 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	int PROPAGATOR_SCOPE_DOMAIN___DISABLE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DISABLE;
 
 	/**
+	 * The operation id for the '<em>Reset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPAGATOR_SCOPE_DOMAIN___RESET = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___RESET;
+
+	/**
 	 * The operation id for the '<em>Touch</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -239,7 +257,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_SCOPE_DOMAIN___REFRESH_ANTECEDENTS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_ANTECEDENTS;
+	int PROPAGATOR_SCOPE_DOMAIN___REFRESH_ANTECEDENTS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_ANTECEDENTS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh This</em>' operation.
@@ -248,7 +266,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_SCOPE_DOMAIN___REFRESH_THIS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_THIS;
+	int PROPAGATOR_SCOPE_DOMAIN___REFRESH_THIS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh Children And This</em>' operation.
@@ -257,7 +275,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_SCOPE_DOMAIN___REFRESH_CHILDREN_AND_THIS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_CHILDREN_AND_THIS;
+	int PROPAGATOR_SCOPE_DOMAIN___REFRESH_CHILDREN_AND_THIS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_CHILDREN_AND_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -267,6 +285,15 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int PROPAGATOR_SCOPE_DOMAIN___REFRESH = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPAGATOR_SCOPE_DOMAIN___REFRESH__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
@@ -312,6 +339,15 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int PROPAGATOR_SCOPE_DOMAIN___GET_SCOPE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___GET_SCOPE;
+
+	/**
+	 * The operation id for the '<em>Get Factory ID</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPAGATOR_SCOPE_DOMAIN___GET_FACTORY_ID = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___GET_FACTORY_ID;
 
 	/**
 	 * The operation id for the '<em>Do Get Bindings</em>' operation.
@@ -459,6 +495,15 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	int PROPAGATOR_SCOPE_DOMAIN_DISTRIBUTION__DESCRIPTION = TimeContinuousCalcPackage.PROPAGATOR_SCOPE_DISTRIBUTION__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPAGATOR_SCOPE_DOMAIN_DISTRIBUTION__TOUCHED_PARENT = TimeContinuousCalcPackage.PROPAGATOR_SCOPE_DISTRIBUTION__TOUCHED_PARENT;
+
+	/**
 	 * The feature id for the '<em><b>Distribution</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -504,6 +549,15 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	int PROPAGATOR_SCOPE_DOMAIN_DISTRIBUTION___DISABLE = TimeContinuousCalcPackage.PROPAGATOR_SCOPE_DISTRIBUTION___DISABLE;
 
 	/**
+	 * The operation id for the '<em>Reset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPAGATOR_SCOPE_DOMAIN_DISTRIBUTION___RESET = TimeContinuousCalcPackage.PROPAGATOR_SCOPE_DISTRIBUTION___RESET;
+
+	/**
 	 * The operation id for the '<em>Touch</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -528,7 +582,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_SCOPE_DOMAIN_DISTRIBUTION___REFRESH_ANTECEDENTS = TimeContinuousCalcPackage.PROPAGATOR_SCOPE_DISTRIBUTION___REFRESH_ANTECEDENTS;
+	int PROPAGATOR_SCOPE_DOMAIN_DISTRIBUTION___REFRESH_ANTECEDENTS__REFRESHER = TimeContinuousCalcPackage.PROPAGATOR_SCOPE_DISTRIBUTION___REFRESH_ANTECEDENTS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh This</em>' operation.
@@ -537,7 +591,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_SCOPE_DOMAIN_DISTRIBUTION___REFRESH_THIS = TimeContinuousCalcPackage.PROPAGATOR_SCOPE_DISTRIBUTION___REFRESH_THIS;
+	int PROPAGATOR_SCOPE_DOMAIN_DISTRIBUTION___REFRESH_THIS__REFRESHER = TimeContinuousCalcPackage.PROPAGATOR_SCOPE_DISTRIBUTION___REFRESH_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh Children And This</em>' operation.
@@ -546,7 +600,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_SCOPE_DOMAIN_DISTRIBUTION___REFRESH_CHILDREN_AND_THIS = TimeContinuousCalcPackage.PROPAGATOR_SCOPE_DISTRIBUTION___REFRESH_CHILDREN_AND_THIS;
+	int PROPAGATOR_SCOPE_DOMAIN_DISTRIBUTION___REFRESH_CHILDREN_AND_THIS__REFRESHER = TimeContinuousCalcPackage.PROPAGATOR_SCOPE_DISTRIBUTION___REFRESH_CHILDREN_AND_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -556,6 +610,15 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int PROPAGATOR_SCOPE_DOMAIN_DISTRIBUTION___REFRESH = TimeContinuousCalcPackage.PROPAGATOR_SCOPE_DISTRIBUTION___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPAGATOR_SCOPE_DOMAIN_DISTRIBUTION___REFRESH__REFRESHER = TimeContinuousCalcPackage.PROPAGATOR_SCOPE_DISTRIBUTION___REFRESH__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
@@ -601,6 +664,15 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int PROPAGATOR_SCOPE_DOMAIN_DISTRIBUTION___GET_SCOPE = TimeContinuousCalcPackage.PROPAGATOR_SCOPE_DISTRIBUTION___GET_SCOPE;
+
+	/**
+	 * The operation id for the '<em>Get Factory ID</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPAGATOR_SCOPE_DOMAIN_DISTRIBUTION___GET_FACTORY_ID = TimeContinuousCalcPackage.PROPAGATOR_SCOPE_DISTRIBUTION___GET_FACTORY_ID;
 
 	/**
 	 * The operation id for the '<em>Do Get Bindings</em>' operation.
@@ -748,6 +820,15 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	int PROPAGATOR_LAYER_DOMAIN_DISTRIBUTION_FUNCTIONS__DESCRIPTION = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPAGATOR_LAYER_DOMAIN_DISTRIBUTION_FUNCTIONS__TOUCHED_PARENT = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION__TOUCHED_PARENT;
+
+	/**
 	 * The feature id for the '<em><b>Distribution</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -793,6 +874,15 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	int PROPAGATOR_LAYER_DOMAIN_DISTRIBUTION_FUNCTIONS___DISABLE = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION___DISABLE;
 
 	/**
+	 * The operation id for the '<em>Reset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPAGATOR_LAYER_DOMAIN_DISTRIBUTION_FUNCTIONS___RESET = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION___RESET;
+
+	/**
 	 * The operation id for the '<em>Touch</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -817,7 +907,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_LAYER_DOMAIN_DISTRIBUTION_FUNCTIONS___REFRESH_ANTECEDENTS = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION___REFRESH_ANTECEDENTS;
+	int PROPAGATOR_LAYER_DOMAIN_DISTRIBUTION_FUNCTIONS___REFRESH_ANTECEDENTS__REFRESHER = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION___REFRESH_ANTECEDENTS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh This</em>' operation.
@@ -826,7 +916,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_LAYER_DOMAIN_DISTRIBUTION_FUNCTIONS___REFRESH_THIS = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION___REFRESH_THIS;
+	int PROPAGATOR_LAYER_DOMAIN_DISTRIBUTION_FUNCTIONS___REFRESH_THIS__REFRESHER = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION___REFRESH_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh Children And This</em>' operation.
@@ -835,7 +925,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_LAYER_DOMAIN_DISTRIBUTION_FUNCTIONS___REFRESH_CHILDREN_AND_THIS = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION___REFRESH_CHILDREN_AND_THIS;
+	int PROPAGATOR_LAYER_DOMAIN_DISTRIBUTION_FUNCTIONS___REFRESH_CHILDREN_AND_THIS__REFRESHER = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION___REFRESH_CHILDREN_AND_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -845,6 +935,15 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int PROPAGATOR_LAYER_DOMAIN_DISTRIBUTION_FUNCTIONS___REFRESH = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPAGATOR_LAYER_DOMAIN_DISTRIBUTION_FUNCTIONS___REFRESH__REFRESHER = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION___REFRESH__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
@@ -890,6 +989,15 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int PROPAGATOR_LAYER_DOMAIN_DISTRIBUTION_FUNCTIONS___GET_SCOPE = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION___GET_SCOPE;
+
+	/**
+	 * The operation id for the '<em>Get Factory ID</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPAGATOR_LAYER_DOMAIN_DISTRIBUTION_FUNCTIONS___GET_FACTORY_ID = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION___GET_FACTORY_ID;
 
 	/**
 	 * The operation id for the '<em>Do Get Bindings</em>' operation.
@@ -1037,6 +1145,15 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL__DESCRIPTION = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL__TOUCHED_PARENT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TOUCHED_PARENT;
+
+	/**
 	 * The number of structural features of the '<em>Propagator Calc Domain Distribution Function Interval</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1073,6 +1190,15 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___DISABLE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DISABLE;
 
 	/**
+	 * The operation id for the '<em>Reset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___RESET = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___RESET;
+
+	/**
 	 * The operation id for the '<em>Touch</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1097,7 +1223,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___REFRESH_ANTECEDENTS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_ANTECEDENTS;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___REFRESH_ANTECEDENTS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_ANTECEDENTS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh This</em>' operation.
@@ -1106,7 +1232,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___REFRESH_THIS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_THIS;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___REFRESH_THIS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh Children And This</em>' operation.
@@ -1115,7 +1241,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___REFRESH_CHILDREN_AND_THIS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_CHILDREN_AND_THIS;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___REFRESH_CHILDREN_AND_THIS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_CHILDREN_AND_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -1125,6 +1251,15 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___REFRESH = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___REFRESH__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
@@ -1170,6 +1305,15 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___GET_SCOPE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___GET_SCOPE;
+
+	/**
+	 * The operation id for the '<em>Get Factory ID</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___GET_FACTORY_ID = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___GET_FACTORY_ID;
 
 	/**
 	 * The operation id for the '<em>Do Get Bindings</em>' operation.
@@ -1317,6 +1461,15 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE__DESCRIPTION = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE__TOUCHED_PARENT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TOUCHED_PARENT;
+
+	/**
 	 * The number of structural features of the '<em>Propagator Calc Domain Distribution Function Possible</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1353,6 +1506,15 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___DISABLE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DISABLE;
 
 	/**
+	 * The operation id for the '<em>Reset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___RESET = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___RESET;
+
+	/**
 	 * The operation id for the '<em>Touch</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1377,7 +1539,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___REFRESH_ANTECEDENTS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_ANTECEDENTS;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___REFRESH_ANTECEDENTS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_ANTECEDENTS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh This</em>' operation.
@@ -1386,7 +1548,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___REFRESH_THIS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_THIS;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___REFRESH_THIS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh Children And This</em>' operation.
@@ -1395,7 +1557,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___REFRESH_CHILDREN_AND_THIS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_CHILDREN_AND_THIS;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___REFRESH_CHILDREN_AND_THIS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_CHILDREN_AND_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -1405,6 +1567,15 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___REFRESH = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___REFRESH__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
@@ -1450,6 +1621,15 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___GET_SCOPE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___GET_SCOPE;
+
+	/**
+	 * The operation id for the '<em>Get Factory ID</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___GET_FACTORY_ID = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___GET_FACTORY_ID;
 
 	/**
 	 * The operation id for the '<em>Do Get Bindings</em>' operation.

@@ -35,23 +35,23 @@ public class ToUseTimeLinePropagatorFunctionManager extends PropagatorFunctionMa
 	static PropagatorFunctionsFactory constructor = TimeContinuousPropagatorFunctionManager.constructor.copy();
 
 	static PropagatorFunctionsConstructors domainPropagatorFunctionsConstructors = 
-			constructor.consructPropagatorFunctionsConstructors(ToUseTimeLinePackage.Literals.DOMAIN)
+			constructor.constructPropagatorFunctionsConstructors(ToUseTimeLinePackage.Literals.DOMAIN)
 			.addConstructor(ToUseTimeLineCalcPackage.Literals.PROPAGATOR_SCOPE_DOMAIN)
 			;
 
 	static PropagatorFunctionsConstructors domainDistributionPropagatorFunctionsConstructors = 
-			constructor.consructPropagatorFunctionsConstructors(ToUseTimeLinePackage.Literals.DOMAIN_DISTRIBUTION)
+			constructor.constructPropagatorFunctionsConstructors(ToUseTimeLinePackage.Literals.DOMAIN_DISTRIBUTION)
 			.addConstructor(ToUseTimeLineCalcPackage.Literals.PROPAGATOR_SCOPE_DOMAIN_DISTRIBUTION)
 			.addConstructor(ToUseTimeLineCalcPackage.Literals.PROPAGATOR_LAYER_DOMAIN_DISTRIBUTION_FUNCTIONS)
 			;
 
 	static PropagatorFunctionsConstructors functionPossiblePropagatorFunctionsConstructors = 
-			constructor.consructPropagatorFunctionsConstructors(ToUseTimeLinePackage.Literals.FUNCTION_POSSIBLE)
+			constructor.constructPropagatorFunctionsConstructors(ToUseTimeLinePackage.Literals.FUNCTION_POSSIBLE)
 			.addConstructor(ToUseTimeLineCalcPackage.Literals.PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE)
 			;
 
 	static PropagatorFunctionsConstructors functionIntervalPropagatorFunctionsConstructors = 
-			constructor.consructPropagatorFunctionsConstructors(ToUseTimeLinePackage.Literals.FUNCTION_INTERVAL)
+			constructor.constructPropagatorFunctionsConstructors(ToUseTimeLinePackage.Literals.FUNCTION_INTERVAL)
 			.addConstructor(ToUseTimeLineCalcPackage.Literals.PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL)
 			;
 

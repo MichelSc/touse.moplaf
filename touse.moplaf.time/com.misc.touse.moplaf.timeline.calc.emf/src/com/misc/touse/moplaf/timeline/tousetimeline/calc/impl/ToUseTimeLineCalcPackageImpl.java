@@ -110,6 +110,8 @@ public class ToUseTimeLineCalcPackageImpl extends EPackageImpl implements ToUseT
 		isInited = true;
 
 		// Initialize simple dependencies
+		PropagatorPackage.eINSTANCE.eClass();
+		TimeContinuousPackage.eINSTANCE.eClass();
 		TimeContinuousCalcPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
