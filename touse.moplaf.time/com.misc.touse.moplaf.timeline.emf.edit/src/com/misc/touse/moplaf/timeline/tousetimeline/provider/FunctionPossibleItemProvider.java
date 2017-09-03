@@ -3,9 +3,7 @@
 package com.misc.touse.moplaf.timeline.tousetimeline.provider;
 
 
-import com.misc.common.moplaf.propagator2.PropagatorPackage;
 import com.misc.common.moplaf.propagator2.provider.ObjectWithPropagatorFunctionsItemProvider;
-import com.misc.common.moplaf.time.continuous.TimeContinuousFactory;
 import com.misc.touse.moplaf.timeline.tousetimeline.FunctionPossible;
 import com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage;
 import java.util.Collection;
@@ -182,21 +180,6 @@ public class FunctionPossibleItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PropagatorPackage.Literals.OBJECT_WITH_PROPAGATOR_FUNCTIONS__PROPAGATOR_FUNCTIONS,
-				 TimeContinuousFactory.eINSTANCE.createPropagatorFunctionDistribution()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PropagatorPackage.Literals.OBJECT_WITH_PROPAGATOR_FUNCTIONS__PROPAGATOR_FUNCTIONS,
-				 TimeContinuousFactory.eINSTANCE.createPropagatorFunctionDistributionEvent()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PropagatorPackage.Literals.OBJECT_WITH_PROPAGATOR_FUNCTIONS__PROPAGATOR_FUNCTIONS,
-				 TimeContinuousFactory.eINSTANCE.createPropagatorFunctionEventsProvider()));
 	}
 
 	/**

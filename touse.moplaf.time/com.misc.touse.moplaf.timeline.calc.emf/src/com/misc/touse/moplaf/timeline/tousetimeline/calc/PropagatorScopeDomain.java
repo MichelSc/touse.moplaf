@@ -2,7 +2,7 @@
  */
 package com.misc.touse.moplaf.timeline.tousetimeline.calc;
 
-import com.misc.common.moplaf.propagator2.PropagatorFunctionBindings;
+import com.misc.common.moplaf.time.continuous.PropagatorFunctionDistributionAbstract;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,5 +14,5 @@ import com.misc.common.moplaf.propagator2.PropagatorFunctionBindings;
  * @model
  * @generated
  */
-public interface PropagatorScopeDomain extends PropagatorFunctionBindings {
+public interface PropagatorScopeDomain extends PropagatorFunctionDistributionAbstract {
 } // PropagatorScopeDomain

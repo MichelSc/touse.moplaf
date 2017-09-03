@@ -153,6 +153,15 @@ public interface ToUseTimeLinePackage extends EPackage {
 	int DOMAIN___GET_PROPAGATOR_FUNCTION__ECLASS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___GET_PROPAGATOR_FUNCTION__ECLASS;
 
 	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN___ADD_PROPAGATOR_FUNCTIONS__STRING = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ADD_PROPAGATOR_FUNCTIONS__STRING;
+
+	/**
 	 * The number of operations of the '<em>Domain</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -341,6 +350,15 @@ public interface ToUseTimeLinePackage extends EPackage {
 	 * @ordered
 	 */
 	int DOMAIN_DISTRIBUTION___GET_PROPAGATOR_FUNCTION__ECLASS = TimeContinuousPackage.DISTRIBUTION___GET_PROPAGATOR_FUNCTION__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_DISTRIBUTION___ADD_PROPAGATOR_FUNCTIONS__STRING = TimeContinuousPackage.DISTRIBUTION___ADD_PROPAGATOR_FUNCTIONS__STRING;
 
 	/**
 	 * The operation id for the '<em>Get Duration</em>' operation.
@@ -650,6 +668,15 @@ public interface ToUseTimeLinePackage extends EPackage {
 	int FUNCTION_INTERVAL___GET_PROPAGATOR_FUNCTION__ECLASS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___GET_PROPAGATOR_FUNCTION__ECLASS;
 
 	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_INTERVAL___ADD_PROPAGATOR_FUNCTIONS__STRING = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ADD_PROPAGATOR_FUNCTIONS__STRING;
+
+	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -748,6 +775,15 @@ public interface ToUseTimeLinePackage extends EPackage {
 	 * @ordered
 	 */
 	int FUNCTION_MINIMUM___GET_PROPAGATOR_FUNCTION__ECLASS = FUNCTION_INTERVAL___GET_PROPAGATOR_FUNCTION__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_MINIMUM___ADD_PROPAGATOR_FUNCTIONS__STRING = FUNCTION_INTERVAL___ADD_PROPAGATOR_FUNCTIONS__STRING;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -850,6 +886,15 @@ public interface ToUseTimeLinePackage extends EPackage {
 	int FUNCTION_CUMULATED___GET_PROPAGATOR_FUNCTION__ECLASS = FUNCTION_INTERVAL___GET_PROPAGATOR_FUNCTION__ECLASS;
 
 	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_CUMULATED___ADD_PROPAGATOR_FUNCTIONS__STRING = FUNCTION_INTERVAL___ADD_PROPAGATOR_FUNCTIONS__STRING;
+
+	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -950,6 +995,15 @@ public interface ToUseTimeLinePackage extends EPackage {
 	int FUNCTION_AVERAGE___GET_PROPAGATOR_FUNCTION__ECLASS = FUNCTION_INTERVAL___GET_PROPAGATOR_FUNCTION__ECLASS;
 
 	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_AVERAGE___ADD_PROPAGATOR_FUNCTIONS__STRING = FUNCTION_INTERVAL___ADD_PROPAGATOR_FUNCTIONS__STRING;
+
+	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1048,6 +1102,15 @@ public interface ToUseTimeLinePackage extends EPackage {
 	 * @ordered
 	 */
 	int FUNCTION_POSSIBLE___GET_PROPAGATOR_FUNCTION__ECLASS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___GET_PROPAGATOR_FUNCTION__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_POSSIBLE___ADD_PROPAGATOR_FUNCTIONS__STRING = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ADD_PROPAGATOR_FUNCTIONS__STRING;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -1159,6 +1222,15 @@ public interface ToUseTimeLinePackage extends EPackage {
 	int FUNCTION_EARLIEST_BELOW___GET_PROPAGATOR_FUNCTION__ECLASS = FUNCTION_POSSIBLE___GET_PROPAGATOR_FUNCTION__ECLASS;
 
 	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_EARLIEST_BELOW___ADD_PROPAGATOR_FUNCTIONS__STRING = FUNCTION_POSSIBLE___ADD_PROPAGATOR_FUNCTIONS__STRING;
+
+	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1266,6 +1338,15 @@ public interface ToUseTimeLinePackage extends EPackage {
 	 * @ordered
 	 */
 	int FUNCTION_EARLIEST_OUTPUT___GET_PROPAGATOR_FUNCTION__ECLASS = FUNCTION_POSSIBLE___GET_PROPAGATOR_FUNCTION__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_EARLIEST_OUTPUT___ADD_PROPAGATOR_FUNCTIONS__STRING = FUNCTION_POSSIBLE___ADD_PROPAGATOR_FUNCTIONS__STRING;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.

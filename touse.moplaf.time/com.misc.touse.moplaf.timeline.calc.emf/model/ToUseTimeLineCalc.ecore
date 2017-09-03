@@ -2,12 +2,26 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="calc" nsURI="http://www.misc.com/touse/moplaf/timeline/calc/model/0.1"
     nsPrefix="ttmc">
-  <eClassifiers xsi:type="ecore:EClass" name="PropagatorScopeDomain" eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//PropagatorFunctionBindings"/>
-  <eClassifiers xsi:type="ecore:EClass" name="PropagatorScopeDomainDistribution" eSuperTypes="../../com.misc.common.moplaf.time.continuous.calc.emf/model/TimeContinuousCalc.ecore#//PropagatorScopeDistribution"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PropagatorScopeDomain" eSuperTypes="../../com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//PropagatorFunctionDistributionAbstract"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PropagatorScopeDomainDistribution" eSuperTypes="../../com.misc.common.moplaf.time.continuous.calc.emf/model/TimeContinuousCalc.ecore#//PropagatorScopeDistribution">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ConcreteParent" lowerBound="1"
+        eType="#//PropagatorScopeDomain"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PropagatorLayerDomainDistributionFunctions"
-      eSuperTypes="../../com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//PropagatorFunctionDistribution"/>
+      eSuperTypes="../../com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//PropagatorFunctionDistribution">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ConcreteParent" lowerBound="1"
+        eType="#//PropagatorScopeDomainDistribution"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="AntecedentLayerDistributionAmounts"
+        lowerBound="1" eType="ecore:EClass ../../com.misc.common.moplaf.time.continuous.calc.emf/model/TimeContinuousCalc.ecore#//PropagatorLayerDistributionAmounts"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PropagatorCalcDomainDistributionFunctionInterval"
-      eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//PropagatorFunctionBindings"/>
+      eSuperTypes="../../com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//PropagatorFunctionDistributionAbstract">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ConcreteParent" lowerBound="1"
+        eType="#//PropagatorLayerDomainDistributionFunctions"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PropagatorCalcDomainDistributionFunctionPossible"
-      eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//PropagatorFunctionBindings"/>
+      eSuperTypes="../../com.misc.common.moplaf.time.continuous.emf/model/timecontinuous.ecore#//PropagatorFunctionDistributionAbstract">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ConcreteParent" lowerBound="1"
+        eType="#//PropagatorLayerDomainDistributionFunctions"/>
+  </eClassifiers>
 </ecore:EPackage>

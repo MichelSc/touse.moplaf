@@ -19,6 +19,7 @@ import com.misc.touse.moplaf.timeline.tousetimeline.calc.ToUseTimeLineCalcPackag
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 
+import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 /**
@@ -152,6 +153,15 @@ public class ToUseTimeLineCalcPackageImpl extends EPackageImpl implements ToUseT
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getPropagatorScopeDomainDistribution_ConcreteParent() {
+		return (EReference)propagatorScopeDomainDistributionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getPropagatorLayerDomainDistributionFunctions() {
 		return propagatorLayerDomainDistributionFunctionsEClass;
 	}
@@ -205,6 +215,7 @@ public class ToUseTimeLineCalcPackageImpl extends EPackageImpl implements ToUseT
 		propagatorScopeDomainEClass = createEClass(PROPAGATOR_SCOPE_DOMAIN);
 
 		propagatorScopeDomainDistributionEClass = createEClass(PROPAGATOR_SCOPE_DOMAIN_DISTRIBUTION);
+		createEReference(propagatorScopeDomainDistributionEClass, PROPAGATOR_SCOPE_DOMAIN_DISTRIBUTION__CONCRETE_PARENT);
 
 		propagatorLayerDomainDistributionFunctionsEClass = createEClass(PROPAGATOR_LAYER_DOMAIN_DISTRIBUTION_FUNCTIONS);
 
@@ -237,25 +248,25 @@ public class ToUseTimeLineCalcPackageImpl extends EPackageImpl implements ToUseT
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		PropagatorPackage thePropagatorPackage = (PropagatorPackage)EPackage.Registry.INSTANCE.getEPackage(PropagatorPackage.eNS_URI);
-		TimeContinuousCalcPackage theTimeContinuousCalcPackage = (TimeContinuousCalcPackage)EPackage.Registry.INSTANCE.getEPackage(TimeContinuousCalcPackage.eNS_URI);
 		TimeContinuousPackage theTimeContinuousPackage = (TimeContinuousPackage)EPackage.Registry.INSTANCE.getEPackage(TimeContinuousPackage.eNS_URI);
+		TimeContinuousCalcPackage theTimeContinuousCalcPackage = (TimeContinuousCalcPackage)EPackage.Registry.INSTANCE.getEPackage(TimeContinuousCalcPackage.eNS_URI);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		propagatorScopeDomainEClass.getESuperTypes().add(thePropagatorPackage.getPropagatorFunctionBindings());
+		propagatorScopeDomainEClass.getESuperTypes().add(theTimeContinuousPackage.getPropagatorFunctionDistributionAbstract());
 		propagatorScopeDomainDistributionEClass.getESuperTypes().add(theTimeContinuousCalcPackage.getPropagatorScopeDistribution());
 		propagatorLayerDomainDistributionFunctionsEClass.getESuperTypes().add(theTimeContinuousPackage.getPropagatorFunctionDistribution());
-		propagatorCalcDomainDistributionFunctionIntervalEClass.getESuperTypes().add(thePropagatorPackage.getPropagatorFunctionBindings());
-		propagatorCalcDomainDistributionFunctionPossibleEClass.getESuperTypes().add(thePropagatorPackage.getPropagatorFunctionBindings());
+		propagatorCalcDomainDistributionFunctionIntervalEClass.getESuperTypes().add(theTimeContinuousPackage.getPropagatorFunctionDistributionAbstract());
+		propagatorCalcDomainDistributionFunctionPossibleEClass.getESuperTypes().add(theTimeContinuousPackage.getPropagatorFunctionDistributionAbstract());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(propagatorScopeDomainEClass, PropagatorScopeDomain.class, "PropagatorScopeDomain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(propagatorScopeDomainDistributionEClass, PropagatorScopeDomainDistribution.class, "PropagatorScopeDomainDistribution", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPropagatorScopeDomainDistribution_ConcreteParent(), this.getPropagatorScopeDomain(), null, "ConcreteParent", null, 1, 1, PropagatorScopeDomainDistribution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(propagatorLayerDomainDistributionFunctionsEClass, PropagatorLayerDomainDistributionFunctions.class, "PropagatorLayerDomainDistributionFunctions", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

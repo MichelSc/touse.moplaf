@@ -2,8 +2,7 @@
  */
 package com.misc.touse.moplaf.timeline.tousetimeline.calc.impl;
 
-import com.misc.common.moplaf.propagator2.impl.PropagatorFunctionBindingsImpl;
-
+import com.misc.common.moplaf.time.continuous.impl.PropagatorFunctionDistributionAbstractImpl;
 import com.misc.touse.moplaf.timeline.tousetimeline.calc.PropagatorScopeDomain;
 import com.misc.touse.moplaf.timeline.tousetimeline.calc.ToUseTimeLineCalcPackage;
 
@@ -16,7 +15,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class PropagatorScopeDomainImpl extends PropagatorFunctionBindingsImpl implements PropagatorScopeDomain {
+public class PropagatorScopeDomainImpl extends PropagatorFunctionDistributionAbstractImpl implements PropagatorScopeDomain {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -3,9 +3,9 @@
 package com.misc.touse.moplaf.timeline.tousetimeline.calc.impl;
 
 import com.misc.common.moplaf.propagator2.PropagatorFunction;
-import com.misc.common.moplaf.propagator2.impl.PropagatorFunctionBindingsImpl;
 import com.misc.common.moplaf.propagator2.util.Bindings;
 import com.misc.common.moplaf.time.continuous.Distribution;
+import com.misc.common.moplaf.time.continuous.impl.PropagatorFunctionDistributionAbstractImpl;
 import com.misc.touse.moplaf.timeline.tousetimeline.FunctionPossible;
 import com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage;
 import com.misc.touse.moplaf.timeline.tousetimeline.calc.PropagatorCalcDomainDistributionFunctionPossible;
@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class PropagatorCalcDomainDistributionFunctionPossibleImpl extends PropagatorFunctionBindingsImpl implements PropagatorCalcDomainDistributionFunctionPossible {
+public class PropagatorCalcDomainDistributionFunctionPossibleImpl extends PropagatorFunctionDistributionAbstractImpl implements PropagatorCalcDomainDistributionFunctionPossible {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

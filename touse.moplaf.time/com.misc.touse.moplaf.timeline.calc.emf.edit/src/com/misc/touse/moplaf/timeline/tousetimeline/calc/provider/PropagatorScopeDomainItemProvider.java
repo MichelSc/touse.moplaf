@@ -3,8 +3,7 @@
 package com.misc.touse.moplaf.timeline.tousetimeline.calc.provider;
 
 
-import com.misc.common.moplaf.propagator2.provider.PropagatorFunctionBindingsItemProvider;
-
+import com.misc.common.moplaf.time.continuous.provider.PropagatorFunctionDistributionAbstractItemProvider;
 import com.misc.touse.moplaf.timeline.tousetimeline.calc.PropagatorScopeDomain;
 
 import java.util.Collection;
@@ -23,7 +22,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
  * <!-- end-user-doc -->
  * @generated
  */
-public class PropagatorScopeDomainItemProvider extends PropagatorFunctionBindingsItemProvider {
+public class PropagatorScopeDomainItemProvider extends PropagatorFunctionDistributionAbstractItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

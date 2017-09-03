@@ -2,14 +2,13 @@
  */
 package com.misc.touse.moplaf.timeline.tousetimeline.calc;
 
-import com.misc.common.moplaf.propagator2.PropagatorPackage;
-
 import com.misc.common.moplaf.time.continuous.TimeContinuousPackage;
 
 import com.misc.common.moplaf.time.continuous.calc.TimeContinuousCalcPackage;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
 
 /**
  * <!-- begin-user-doc -->
@@ -77,7 +76,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_SCOPE_DOMAIN__PARENT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__PARENT;
+	int PROPAGATOR_SCOPE_DOMAIN__PARENT = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Antecedents</b></em>' reference list.
@@ -86,7 +85,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_SCOPE_DOMAIN__ANTECEDENTS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__ANTECEDENTS;
+	int PROPAGATOR_SCOPE_DOMAIN__ANTECEDENTS = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT__ANTECEDENTS;
 
 	/**
 	 * The feature id for the '<em><b>Antecedents Sibling</b></em>' reference list.
@@ -95,7 +94,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_SCOPE_DOMAIN__ANTECEDENTS_SIBLING = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__ANTECEDENTS_SIBLING;
+	int PROPAGATOR_SCOPE_DOMAIN__ANTECEDENTS_SIBLING = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT__ANTECEDENTS_SIBLING;
 
 	/**
 	 * The feature id for the '<em><b>Touched</b></em>' attribute.
@@ -104,7 +103,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_SCOPE_DOMAIN__TOUCHED = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TOUCHED;
+	int PROPAGATOR_SCOPE_DOMAIN__TOUCHED = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT__TOUCHED;
 
 	/**
 	 * The feature id for the '<em><b>Touched Children</b></em>' reference list.
@@ -113,7 +112,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_SCOPE_DOMAIN__TOUCHED_CHILDREN = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TOUCHED_CHILDREN;
+	int PROPAGATOR_SCOPE_DOMAIN__TOUCHED_CHILDREN = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT__TOUCHED_CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Touchers</b></em>' reference list.
@@ -122,7 +121,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_SCOPE_DOMAIN__TOUCHERS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TOUCHERS;
+	int PROPAGATOR_SCOPE_DOMAIN__TOUCHERS = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT__TOUCHERS;
 
 	/**
 	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
@@ -131,7 +130,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_SCOPE_DOMAIN__ENABLED = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__ENABLED;
+	int PROPAGATOR_SCOPE_DOMAIN__ENABLED = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT__ENABLED;
 
 	/**
 	 * The feature id for the '<em><b>Object With Propagator Functions</b></em>' container reference.
@@ -140,7 +139,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_SCOPE_DOMAIN__OBJECT_WITH_PROPAGATOR_FUNCTIONS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__OBJECT_WITH_PROPAGATOR_FUNCTIONS;
+	int PROPAGATOR_SCOPE_DOMAIN__OBJECT_WITH_PROPAGATOR_FUNCTIONS = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT__OBJECT_WITH_PROPAGATOR_FUNCTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -149,7 +148,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_SCOPE_DOMAIN__TYPE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TYPE;
+	int PROPAGATOR_SCOPE_DOMAIN__TYPE = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Object</b></em>' attribute.
@@ -158,7 +157,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_SCOPE_DOMAIN__OBJECT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__OBJECT;
+	int PROPAGATOR_SCOPE_DOMAIN__OBJECT = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT__OBJECT;
 
 	/**
 	 * The feature id for the '<em><b>Instance</b></em>' attribute.
@@ -167,7 +166,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_SCOPE_DOMAIN__INSTANCE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__INSTANCE;
+	int PROPAGATOR_SCOPE_DOMAIN__INSTANCE = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT__INSTANCE;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -176,7 +175,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_SCOPE_DOMAIN__DESCRIPTION = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__DESCRIPTION;
+	int PROPAGATOR_SCOPE_DOMAIN__DESCRIPTION = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
@@ -185,7 +184,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_SCOPE_DOMAIN__TOUCHED_PARENT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TOUCHED_PARENT;
+	int PROPAGATOR_SCOPE_DOMAIN__TOUCHED_PARENT = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT__TOUCHED_PARENT;
 
 	/**
 	 * The number of structural features of the '<em>Propagator Scope Domain</em>' class.
@@ -194,7 +193,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_SCOPE_DOMAIN_FEATURE_COUNT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS_FEATURE_COUNT + 0;
+	int PROPAGATOR_SCOPE_DOMAIN_FEATURE_COUNT = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Init</em>' operation.
@@ -203,7 +202,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_SCOPE_DOMAIN___INIT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___INIT;
+	int PROPAGATOR_SCOPE_DOMAIN___INIT = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___INIT;
 
 	/**
 	 * The operation id for the '<em>Enable</em>' operation.
@@ -212,7 +211,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_SCOPE_DOMAIN___ENABLE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___ENABLE;
+	int PROPAGATOR_SCOPE_DOMAIN___ENABLE = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___ENABLE;
 
 	/**
 	 * The operation id for the '<em>Disable</em>' operation.
@@ -221,7 +220,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_SCOPE_DOMAIN___DISABLE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DISABLE;
+	int PROPAGATOR_SCOPE_DOMAIN___DISABLE = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___DISABLE;
 
 	/**
 	 * The operation id for the '<em>Reset</em>' operation.
@@ -230,7 +229,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_SCOPE_DOMAIN___RESET = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___RESET;
+	int PROPAGATOR_SCOPE_DOMAIN___RESET = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___RESET;
 
 	/**
 	 * The operation id for the '<em>Touch</em>' operation.
@@ -239,7 +238,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_SCOPE_DOMAIN___TOUCH__EOBJECT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___TOUCH__EOBJECT;
+	int PROPAGATOR_SCOPE_DOMAIN___TOUCH__EOBJECT = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___TOUCH__EOBJECT;
 
 	/**
 	 * The operation id for the '<em>Untouch</em>' operation.
@@ -248,7 +247,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_SCOPE_DOMAIN___UNTOUCH = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___UNTOUCH;
+	int PROPAGATOR_SCOPE_DOMAIN___UNTOUCH = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___UNTOUCH;
 
 	/**
 	 * The operation id for the '<em>Refresh Antecedents</em>' operation.
@@ -257,7 +256,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_SCOPE_DOMAIN___REFRESH_ANTECEDENTS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_ANTECEDENTS__REFRESHER;
+	int PROPAGATOR_SCOPE_DOMAIN___REFRESH_ANTECEDENTS__REFRESHER = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___REFRESH_ANTECEDENTS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh This</em>' operation.
@@ -266,7 +265,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_SCOPE_DOMAIN___REFRESH_THIS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_THIS__REFRESHER;
+	int PROPAGATOR_SCOPE_DOMAIN___REFRESH_THIS__REFRESHER = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___REFRESH_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh Children And This</em>' operation.
@@ -275,7 +274,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_SCOPE_DOMAIN___REFRESH_CHILDREN_AND_THIS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_CHILDREN_AND_THIS__REFRESHER;
+	int PROPAGATOR_SCOPE_DOMAIN___REFRESH_CHILDREN_AND_THIS__REFRESHER = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___REFRESH_CHILDREN_AND_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -284,7 +283,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_SCOPE_DOMAIN___REFRESH = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH;
+	int PROPAGATOR_SCOPE_DOMAIN___REFRESH = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___REFRESH;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -293,7 +292,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_SCOPE_DOMAIN___REFRESH__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH__REFRESHER;
+	int PROPAGATOR_SCOPE_DOMAIN___REFRESH__REFRESHER = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___REFRESH__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
@@ -302,7 +301,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_SCOPE_DOMAIN___DO_GET_ANTECEDENTS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_GET_ANTECEDENTS;
+	int PROPAGATOR_SCOPE_DOMAIN___DO_GET_ANTECEDENTS = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___DO_GET_ANTECEDENTS;
 
 	/**
 	 * The operation id for the '<em>Do Get Parent</em>' operation.
@@ -311,7 +310,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_SCOPE_DOMAIN___DO_GET_PARENT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_GET_PARENT;
+	int PROPAGATOR_SCOPE_DOMAIN___DO_GET_PARENT = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___DO_GET_PARENT;
 
 	/**
 	 * The operation id for the '<em>Do Refresh</em>' operation.
@@ -320,7 +319,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_SCOPE_DOMAIN___DO_REFRESH = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_REFRESH;
+	int PROPAGATOR_SCOPE_DOMAIN___DO_REFRESH = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___DO_REFRESH;
 
 	/**
 	 * The operation id for the '<em>Do Refresh</em>' operation.
@@ -329,7 +328,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_SCOPE_DOMAIN___DO_REFRESH__EOBJECT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_REFRESH__EOBJECT;
+	int PROPAGATOR_SCOPE_DOMAIN___DO_REFRESH__EOBJECT = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___DO_REFRESH__EOBJECT;
 
 	/**
 	 * The operation id for the '<em>Get Scope</em>' operation.
@@ -338,7 +337,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_SCOPE_DOMAIN___GET_SCOPE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___GET_SCOPE;
+	int PROPAGATOR_SCOPE_DOMAIN___GET_SCOPE = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___GET_SCOPE;
 
 	/**
 	 * The operation id for the '<em>Get Factory ID</em>' operation.
@@ -347,7 +346,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_SCOPE_DOMAIN___GET_FACTORY_ID = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___GET_FACTORY_ID;
+	int PROPAGATOR_SCOPE_DOMAIN___GET_FACTORY_ID = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___GET_FACTORY_ID;
 
 	/**
 	 * The operation id for the '<em>Do Get Bindings</em>' operation.
@@ -356,7 +355,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_SCOPE_DOMAIN___DO_GET_BINDINGS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_GET_BINDINGS;
+	int PROPAGATOR_SCOPE_DOMAIN___DO_GET_BINDINGS = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___DO_GET_BINDINGS;
 
 	/**
 	 * The operation id for the '<em>Do Collect Explicit Antecedents</em>' operation.
@@ -365,7 +364,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_SCOPE_DOMAIN___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST;
+	int PROPAGATOR_SCOPE_DOMAIN___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST;
 
 	/**
 	 * The number of operations of the '<em>Propagator Scope Domain</em>' class.
@@ -374,7 +373,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_SCOPE_DOMAIN_OPERATION_COUNT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS_OPERATION_COUNT + 0;
+	int PROPAGATOR_SCOPE_DOMAIN_OPERATION_COUNT = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.timeline.tousetimeline.calc.impl.PropagatorScopeDomainDistributionImpl <em>Propagator Scope Domain Distribution</em>}' class.
@@ -513,13 +512,22 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	int PROPAGATOR_SCOPE_DOMAIN_DISTRIBUTION__DISTRIBUTION = TimeContinuousCalcPackage.PROPAGATOR_SCOPE_DISTRIBUTION__DISTRIBUTION;
 
 	/**
+	 * The feature id for the '<em><b>Concrete Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPAGATOR_SCOPE_DOMAIN_DISTRIBUTION__CONCRETE_PARENT = TimeContinuousCalcPackage.PROPAGATOR_SCOPE_DISTRIBUTION_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Propagator Scope Domain Distribution</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_SCOPE_DOMAIN_DISTRIBUTION_FEATURE_COUNT = TimeContinuousCalcPackage.PROPAGATOR_SCOPE_DISTRIBUTION_FEATURE_COUNT + 0;
+	int PROPAGATOR_SCOPE_DOMAIN_DISTRIBUTION_FEATURE_COUNT = TimeContinuousCalcPackage.PROPAGATOR_SCOPE_DISTRIBUTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Init</em>' operation.
@@ -1043,7 +1051,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL__PARENT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__PARENT;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL__PARENT = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Antecedents</b></em>' reference list.
@@ -1052,7 +1060,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL__ANTECEDENTS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__ANTECEDENTS;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL__ANTECEDENTS = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT__ANTECEDENTS;
 
 	/**
 	 * The feature id for the '<em><b>Antecedents Sibling</b></em>' reference list.
@@ -1061,7 +1069,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL__ANTECEDENTS_SIBLING = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__ANTECEDENTS_SIBLING;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL__ANTECEDENTS_SIBLING = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT__ANTECEDENTS_SIBLING;
 
 	/**
 	 * The feature id for the '<em><b>Touched</b></em>' attribute.
@@ -1070,7 +1078,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL__TOUCHED = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TOUCHED;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL__TOUCHED = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT__TOUCHED;
 
 	/**
 	 * The feature id for the '<em><b>Touched Children</b></em>' reference list.
@@ -1079,7 +1087,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL__TOUCHED_CHILDREN = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TOUCHED_CHILDREN;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL__TOUCHED_CHILDREN = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT__TOUCHED_CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Touchers</b></em>' reference list.
@@ -1088,7 +1096,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL__TOUCHERS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TOUCHERS;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL__TOUCHERS = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT__TOUCHERS;
 
 	/**
 	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
@@ -1097,7 +1105,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL__ENABLED = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__ENABLED;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL__ENABLED = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT__ENABLED;
 
 	/**
 	 * The feature id for the '<em><b>Object With Propagator Functions</b></em>' container reference.
@@ -1106,7 +1114,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL__OBJECT_WITH_PROPAGATOR_FUNCTIONS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__OBJECT_WITH_PROPAGATOR_FUNCTIONS;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL__OBJECT_WITH_PROPAGATOR_FUNCTIONS = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT__OBJECT_WITH_PROPAGATOR_FUNCTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -1115,7 +1123,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL__TYPE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TYPE;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL__TYPE = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Object</b></em>' attribute.
@@ -1124,7 +1132,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL__OBJECT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__OBJECT;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL__OBJECT = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT__OBJECT;
 
 	/**
 	 * The feature id for the '<em><b>Instance</b></em>' attribute.
@@ -1133,7 +1141,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL__INSTANCE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__INSTANCE;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL__INSTANCE = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT__INSTANCE;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1142,7 +1150,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL__DESCRIPTION = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__DESCRIPTION;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL__DESCRIPTION = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
@@ -1151,7 +1159,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL__TOUCHED_PARENT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TOUCHED_PARENT;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL__TOUCHED_PARENT = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT__TOUCHED_PARENT;
 
 	/**
 	 * The number of structural features of the '<em>Propagator Calc Domain Distribution Function Interval</em>' class.
@@ -1160,7 +1168,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL_FEATURE_COUNT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS_FEATURE_COUNT + 0;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL_FEATURE_COUNT = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Init</em>' operation.
@@ -1169,7 +1177,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___INIT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___INIT;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___INIT = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___INIT;
 
 	/**
 	 * The operation id for the '<em>Enable</em>' operation.
@@ -1178,7 +1186,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___ENABLE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___ENABLE;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___ENABLE = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___ENABLE;
 
 	/**
 	 * The operation id for the '<em>Disable</em>' operation.
@@ -1187,7 +1195,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___DISABLE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DISABLE;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___DISABLE = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___DISABLE;
 
 	/**
 	 * The operation id for the '<em>Reset</em>' operation.
@@ -1196,7 +1204,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___RESET = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___RESET;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___RESET = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___RESET;
 
 	/**
 	 * The operation id for the '<em>Touch</em>' operation.
@@ -1205,7 +1213,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___TOUCH__EOBJECT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___TOUCH__EOBJECT;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___TOUCH__EOBJECT = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___TOUCH__EOBJECT;
 
 	/**
 	 * The operation id for the '<em>Untouch</em>' operation.
@@ -1214,7 +1222,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___UNTOUCH = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___UNTOUCH;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___UNTOUCH = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___UNTOUCH;
 
 	/**
 	 * The operation id for the '<em>Refresh Antecedents</em>' operation.
@@ -1223,7 +1231,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___REFRESH_ANTECEDENTS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_ANTECEDENTS__REFRESHER;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___REFRESH_ANTECEDENTS__REFRESHER = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___REFRESH_ANTECEDENTS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh This</em>' operation.
@@ -1232,7 +1240,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___REFRESH_THIS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_THIS__REFRESHER;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___REFRESH_THIS__REFRESHER = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___REFRESH_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh Children And This</em>' operation.
@@ -1241,7 +1249,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___REFRESH_CHILDREN_AND_THIS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_CHILDREN_AND_THIS__REFRESHER;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___REFRESH_CHILDREN_AND_THIS__REFRESHER = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___REFRESH_CHILDREN_AND_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -1250,7 +1258,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___REFRESH = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___REFRESH = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___REFRESH;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -1259,7 +1267,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___REFRESH__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH__REFRESHER;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___REFRESH__REFRESHER = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___REFRESH__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
@@ -1268,7 +1276,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___DO_GET_ANTECEDENTS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_GET_ANTECEDENTS;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___DO_GET_ANTECEDENTS = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___DO_GET_ANTECEDENTS;
 
 	/**
 	 * The operation id for the '<em>Do Get Parent</em>' operation.
@@ -1277,7 +1285,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___DO_GET_PARENT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_GET_PARENT;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___DO_GET_PARENT = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___DO_GET_PARENT;
 
 	/**
 	 * The operation id for the '<em>Do Refresh</em>' operation.
@@ -1286,7 +1294,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___DO_REFRESH = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_REFRESH;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___DO_REFRESH = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___DO_REFRESH;
 
 	/**
 	 * The operation id for the '<em>Do Refresh</em>' operation.
@@ -1295,7 +1303,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___DO_REFRESH__EOBJECT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_REFRESH__EOBJECT;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___DO_REFRESH__EOBJECT = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___DO_REFRESH__EOBJECT;
 
 	/**
 	 * The operation id for the '<em>Get Scope</em>' operation.
@@ -1304,7 +1312,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___GET_SCOPE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___GET_SCOPE;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___GET_SCOPE = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___GET_SCOPE;
 
 	/**
 	 * The operation id for the '<em>Get Factory ID</em>' operation.
@@ -1313,7 +1321,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___GET_FACTORY_ID = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___GET_FACTORY_ID;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___GET_FACTORY_ID = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___GET_FACTORY_ID;
 
 	/**
 	 * The operation id for the '<em>Do Get Bindings</em>' operation.
@@ -1322,7 +1330,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___DO_GET_BINDINGS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_GET_BINDINGS;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___DO_GET_BINDINGS = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___DO_GET_BINDINGS;
 
 	/**
 	 * The operation id for the '<em>Do Collect Explicit Antecedents</em>' operation.
@@ -1331,7 +1339,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST;
 
 	/**
 	 * The number of operations of the '<em>Propagator Calc Domain Distribution Function Interval</em>' class.
@@ -1340,7 +1348,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL_OPERATION_COUNT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS_OPERATION_COUNT + 0;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL_OPERATION_COUNT = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.timeline.tousetimeline.calc.impl.PropagatorCalcDomainDistributionFunctionPossibleImpl <em>Propagator Calc Domain Distribution Function Possible</em>}' class.
@@ -1359,7 +1367,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE__PARENT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__PARENT;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE__PARENT = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Antecedents</b></em>' reference list.
@@ -1368,7 +1376,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE__ANTECEDENTS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__ANTECEDENTS;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE__ANTECEDENTS = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT__ANTECEDENTS;
 
 	/**
 	 * The feature id for the '<em><b>Antecedents Sibling</b></em>' reference list.
@@ -1377,7 +1385,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE__ANTECEDENTS_SIBLING = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__ANTECEDENTS_SIBLING;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE__ANTECEDENTS_SIBLING = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT__ANTECEDENTS_SIBLING;
 
 	/**
 	 * The feature id for the '<em><b>Touched</b></em>' attribute.
@@ -1386,7 +1394,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE__TOUCHED = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TOUCHED;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE__TOUCHED = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT__TOUCHED;
 
 	/**
 	 * The feature id for the '<em><b>Touched Children</b></em>' reference list.
@@ -1395,7 +1403,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE__TOUCHED_CHILDREN = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TOUCHED_CHILDREN;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE__TOUCHED_CHILDREN = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT__TOUCHED_CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Touchers</b></em>' reference list.
@@ -1404,7 +1412,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE__TOUCHERS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TOUCHERS;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE__TOUCHERS = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT__TOUCHERS;
 
 	/**
 	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
@@ -1413,7 +1421,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE__ENABLED = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__ENABLED;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE__ENABLED = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT__ENABLED;
 
 	/**
 	 * The feature id for the '<em><b>Object With Propagator Functions</b></em>' container reference.
@@ -1422,7 +1430,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE__OBJECT_WITH_PROPAGATOR_FUNCTIONS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__OBJECT_WITH_PROPAGATOR_FUNCTIONS;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE__OBJECT_WITH_PROPAGATOR_FUNCTIONS = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT__OBJECT_WITH_PROPAGATOR_FUNCTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -1431,7 +1439,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE__TYPE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TYPE;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE__TYPE = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Object</b></em>' attribute.
@@ -1440,7 +1448,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE__OBJECT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__OBJECT;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE__OBJECT = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT__OBJECT;
 
 	/**
 	 * The feature id for the '<em><b>Instance</b></em>' attribute.
@@ -1449,7 +1457,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE__INSTANCE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__INSTANCE;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE__INSTANCE = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT__INSTANCE;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1458,7 +1466,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE__DESCRIPTION = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__DESCRIPTION;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE__DESCRIPTION = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
@@ -1467,7 +1475,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE__TOUCHED_PARENT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TOUCHED_PARENT;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE__TOUCHED_PARENT = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT__TOUCHED_PARENT;
 
 	/**
 	 * The number of structural features of the '<em>Propagator Calc Domain Distribution Function Possible</em>' class.
@@ -1476,7 +1484,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE_FEATURE_COUNT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS_FEATURE_COUNT + 0;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE_FEATURE_COUNT = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Init</em>' operation.
@@ -1485,7 +1493,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___INIT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___INIT;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___INIT = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___INIT;
 
 	/**
 	 * The operation id for the '<em>Enable</em>' operation.
@@ -1494,7 +1502,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___ENABLE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___ENABLE;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___ENABLE = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___ENABLE;
 
 	/**
 	 * The operation id for the '<em>Disable</em>' operation.
@@ -1503,7 +1511,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___DISABLE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DISABLE;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___DISABLE = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___DISABLE;
 
 	/**
 	 * The operation id for the '<em>Reset</em>' operation.
@@ -1512,7 +1520,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___RESET = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___RESET;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___RESET = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___RESET;
 
 	/**
 	 * The operation id for the '<em>Touch</em>' operation.
@@ -1521,7 +1529,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___TOUCH__EOBJECT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___TOUCH__EOBJECT;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___TOUCH__EOBJECT = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___TOUCH__EOBJECT;
 
 	/**
 	 * The operation id for the '<em>Untouch</em>' operation.
@@ -1530,7 +1538,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___UNTOUCH = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___UNTOUCH;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___UNTOUCH = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___UNTOUCH;
 
 	/**
 	 * The operation id for the '<em>Refresh Antecedents</em>' operation.
@@ -1539,7 +1547,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___REFRESH_ANTECEDENTS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_ANTECEDENTS__REFRESHER;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___REFRESH_ANTECEDENTS__REFRESHER = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___REFRESH_ANTECEDENTS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh This</em>' operation.
@@ -1548,7 +1556,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___REFRESH_THIS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_THIS__REFRESHER;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___REFRESH_THIS__REFRESHER = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___REFRESH_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh Children And This</em>' operation.
@@ -1557,7 +1565,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___REFRESH_CHILDREN_AND_THIS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_CHILDREN_AND_THIS__REFRESHER;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___REFRESH_CHILDREN_AND_THIS__REFRESHER = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___REFRESH_CHILDREN_AND_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -1566,7 +1574,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___REFRESH = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___REFRESH = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___REFRESH;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -1575,7 +1583,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___REFRESH__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH__REFRESHER;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___REFRESH__REFRESHER = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___REFRESH__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
@@ -1584,7 +1592,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___DO_GET_ANTECEDENTS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_GET_ANTECEDENTS;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___DO_GET_ANTECEDENTS = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___DO_GET_ANTECEDENTS;
 
 	/**
 	 * The operation id for the '<em>Do Get Parent</em>' operation.
@@ -1593,7 +1601,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___DO_GET_PARENT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_GET_PARENT;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___DO_GET_PARENT = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___DO_GET_PARENT;
 
 	/**
 	 * The operation id for the '<em>Do Refresh</em>' operation.
@@ -1602,7 +1610,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___DO_REFRESH = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_REFRESH;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___DO_REFRESH = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___DO_REFRESH;
 
 	/**
 	 * The operation id for the '<em>Do Refresh</em>' operation.
@@ -1611,7 +1619,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___DO_REFRESH__EOBJECT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_REFRESH__EOBJECT;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___DO_REFRESH__EOBJECT = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___DO_REFRESH__EOBJECT;
 
 	/**
 	 * The operation id for the '<em>Get Scope</em>' operation.
@@ -1620,7 +1628,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___GET_SCOPE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___GET_SCOPE;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___GET_SCOPE = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___GET_SCOPE;
 
 	/**
 	 * The operation id for the '<em>Get Factory ID</em>' operation.
@@ -1629,7 +1637,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___GET_FACTORY_ID = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___GET_FACTORY_ID;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___GET_FACTORY_ID = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___GET_FACTORY_ID;
 
 	/**
 	 * The operation id for the '<em>Do Get Bindings</em>' operation.
@@ -1638,7 +1646,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___DO_GET_BINDINGS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_GET_BINDINGS;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___DO_GET_BINDINGS = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___DO_GET_BINDINGS;
 
 	/**
 	 * The operation id for the '<em>Do Collect Explicit Antecedents</em>' operation.
@@ -1647,7 +1655,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST;
 
 	/**
 	 * The number of operations of the '<em>Propagator Calc Domain Distribution Function Possible</em>' class.
@@ -1656,7 +1664,7 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE_OPERATION_COUNT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS_OPERATION_COUNT + 0;
+	int PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE_OPERATION_COUNT = TimeContinuousPackage.PROPAGATOR_FUNCTION_DISTRIBUTION_ABSTRACT_OPERATION_COUNT + 0;
 
 
 	/**
@@ -1678,6 +1686,17 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getPropagatorScopeDomainDistribution();
+
+	/**
+	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.timeline.tousetimeline.calc.PropagatorScopeDomainDistribution#getConcreteParent <em>Concrete Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Concrete Parent</em>'.
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.calc.PropagatorScopeDomainDistribution#getConcreteParent()
+	 * @see #getPropagatorScopeDomainDistribution()
+	 * @generated
+	 */
+	EReference getPropagatorScopeDomainDistribution_ConcreteParent();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.timeline.tousetimeline.calc.PropagatorLayerDomainDistributionFunctions <em>Propagator Layer Domain Distribution Functions</em>}'.
@@ -1751,6 +1770,14 @@ public interface ToUseTimeLineCalcPackage extends EPackage {
 		 * @generated
 		 */
 		EClass PROPAGATOR_SCOPE_DOMAIN_DISTRIBUTION = eINSTANCE.getPropagatorScopeDomainDistribution();
+
+		/**
+		 * The meta object literal for the '<em><b>Concrete Parent</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PROPAGATOR_SCOPE_DOMAIN_DISTRIBUTION__CONCRETE_PARENT = eINSTANCE.getPropagatorScopeDomainDistribution_ConcreteParent();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.timeline.tousetimeline.calc.impl.PropagatorLayerDomainDistributionFunctionsImpl <em>Propagator Layer Domain Distribution Functions</em>}' class.

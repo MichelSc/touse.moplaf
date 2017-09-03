@@ -171,6 +171,7 @@ public class ToUseTimeLinePackageImpl extends EPackageImpl implements ToUseTimeL
 		// Initialize simple dependencies
 		TimeContinuousPackage.eINSTANCE.eClass();
 		TimeDiscretePackage.eINSTANCE.eClass();
+		PropagatorPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theToUseTimeLinePackage.createPackageContents();

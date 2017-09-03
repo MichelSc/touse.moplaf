@@ -7,6 +7,7 @@ import com.misc.common.moplaf.propagator2.PropagatorFunctionBindings;
 
 import com.misc.common.moplaf.time.continuous.PropagatorFunctionDistribution;
 
+import com.misc.common.moplaf.time.continuous.PropagatorFunctionDistributionAbstract;
 import com.misc.common.moplaf.time.continuous.calc.PropagatorScopeDistribution;
 
 import com.misc.touse.moplaf.timeline.tousetimeline.calc.*;
@@ -76,6 +77,7 @@ public class ToUseTimeLineCalcSwitch<T> extends Switch<T> {
 			case ToUseTimeLineCalcPackage.PROPAGATOR_SCOPE_DOMAIN: {
 				PropagatorScopeDomain propagatorScopeDomain = (PropagatorScopeDomain)theEObject;
 				T result = casePropagatorScopeDomain(propagatorScopeDomain);
+				if (result == null) result = casePropagatorFunctionDistributionAbstract(propagatorScopeDomain);
 				if (result == null) result = casePropagatorFunctionBindings(propagatorScopeDomain);
 				if (result == null) result = casePropagatorFunction(propagatorScopeDomain);
 				if (result == null) result = defaultCase(theEObject);
@@ -86,6 +88,7 @@ public class ToUseTimeLineCalcSwitch<T> extends Switch<T> {
 				T result = casePropagatorScopeDomainDistribution(propagatorScopeDomainDistribution);
 				if (result == null) result = casePropagatorScopeDistribution(propagatorScopeDomainDistribution);
 				if (result == null) result = casePropagatorFunctionDistribution(propagatorScopeDomainDistribution);
+				if (result == null) result = casePropagatorFunctionDistributionAbstract(propagatorScopeDomainDistribution);
 				if (result == null) result = casePropagatorFunctionBindings(propagatorScopeDomainDistribution);
 				if (result == null) result = casePropagatorFunction(propagatorScopeDomainDistribution);
 				if (result == null) result = defaultCase(theEObject);
@@ -95,6 +98,7 @@ public class ToUseTimeLineCalcSwitch<T> extends Switch<T> {
 				PropagatorLayerDomainDistributionFunctions propagatorLayerDomainDistributionFunctions = (PropagatorLayerDomainDistributionFunctions)theEObject;
 				T result = casePropagatorLayerDomainDistributionFunctions(propagatorLayerDomainDistributionFunctions);
 				if (result == null) result = casePropagatorFunctionDistribution(propagatorLayerDomainDistributionFunctions);
+				if (result == null) result = casePropagatorFunctionDistributionAbstract(propagatorLayerDomainDistributionFunctions);
 				if (result == null) result = casePropagatorFunctionBindings(propagatorLayerDomainDistributionFunctions);
 				if (result == null) result = casePropagatorFunction(propagatorLayerDomainDistributionFunctions);
 				if (result == null) result = defaultCase(theEObject);
@@ -103,6 +107,7 @@ public class ToUseTimeLineCalcSwitch<T> extends Switch<T> {
 			case ToUseTimeLineCalcPackage.PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL: {
 				PropagatorCalcDomainDistributionFunctionInterval propagatorCalcDomainDistributionFunctionInterval = (PropagatorCalcDomainDistributionFunctionInterval)theEObject;
 				T result = casePropagatorCalcDomainDistributionFunctionInterval(propagatorCalcDomainDistributionFunctionInterval);
+				if (result == null) result = casePropagatorFunctionDistributionAbstract(propagatorCalcDomainDistributionFunctionInterval);
 				if (result == null) result = casePropagatorFunctionBindings(propagatorCalcDomainDistributionFunctionInterval);
 				if (result == null) result = casePropagatorFunction(propagatorCalcDomainDistributionFunctionInterval);
 				if (result == null) result = defaultCase(theEObject);
@@ -111,6 +116,7 @@ public class ToUseTimeLineCalcSwitch<T> extends Switch<T> {
 			case ToUseTimeLineCalcPackage.PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE: {
 				PropagatorCalcDomainDistributionFunctionPossible propagatorCalcDomainDistributionFunctionPossible = (PropagatorCalcDomainDistributionFunctionPossible)theEObject;
 				T result = casePropagatorCalcDomainDistributionFunctionPossible(propagatorCalcDomainDistributionFunctionPossible);
+				if (result == null) result = casePropagatorFunctionDistributionAbstract(propagatorCalcDomainDistributionFunctionPossible);
 				if (result == null) result = casePropagatorFunctionBindings(propagatorCalcDomainDistributionFunctionPossible);
 				if (result == null) result = casePropagatorFunction(propagatorCalcDomainDistributionFunctionPossible);
 				if (result == null) result = defaultCase(theEObject);
@@ -222,6 +228,21 @@ public class ToUseTimeLineCalcSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePropagatorFunctionBindings(PropagatorFunctionBindings object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Propagator Function Distribution Abstract</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Propagator Function Distribution Abstract</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePropagatorFunctionDistributionAbstract(PropagatorFunctionDistributionAbstract object) {
 		return null;
 	}
 
