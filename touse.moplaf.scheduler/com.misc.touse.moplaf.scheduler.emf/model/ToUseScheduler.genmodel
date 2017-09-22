@@ -3,7 +3,7 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.misc.touse.moplaf.scheduler.emf/src" modelPluginID="com.misc.touse.moplaf.scheduler.emf"
     modelName="ToUseScheduler" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
-    usedGenPackages="../../com.misc.common.moplaf.propagator2/model/propagator.genmodel#//propagator2 ../../com.misc.common.moplaf.scheduler.emf/model/scheduler.genmodel#//scheduler"
+    providerRootExtendsClass="" language="" usedGenPackages="../../com.misc.common.moplaf.propagator2/model/propagator.genmodel#//propagator2 ../../com.misc.common.moplaf.scheduler.emf/model/scheduler.genmodel#//scheduler ../../com.misc.common.moplaf.scheduler.emf/model/scheduler.genmodel#//schedulercalc"
     operationReflection="true" importOrganizing="true">
   <foreignModel>ToUseScheduler.ecore</foreignModel>
   <genPackages prefix="ToUseScheduler" basePackage="com.misc.touse.moplaf" disposableProviderFactory="true"
@@ -30,5 +30,6 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//ToUseSolutionResource/TotalDistance"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//ToUseSolutionResource/EndTime"/>
     </genClasses>
+    <genClasses ecoreClass="ToUseScheduler.ecore#//CalcToUseSolutionTaskExpressionDistance"/>
   </genPackages>
 </genmodel:GenModel>
