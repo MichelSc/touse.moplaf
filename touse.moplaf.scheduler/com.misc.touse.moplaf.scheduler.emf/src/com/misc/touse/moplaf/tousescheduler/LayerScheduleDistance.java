@@ -2,8 +2,6 @@
  */
 package com.misc.touse.moplaf.tousescheduler;
 
-import com.misc.common.moplaf.propagator2.PropagatorFunctionBindings;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Layer Schedule Distance</b></em>'.
@@ -20,7 +18,7 @@ import com.misc.common.moplaf.propagator2.PropagatorFunctionBindings;
  * @model
  * @generated
  */
-public interface LayerScheduleDistance extends PropagatorFunctionBindings {
+public interface LayerScheduleDistance extends CalcSchedule {
 	/**
 	 * Returns the value of the '<em><b>Concrete Parent</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -30,21 +28,10 @@ public interface LayerScheduleDistance extends PropagatorFunctionBindings {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Concrete Parent</em>' reference.
-	 * @see #setConcreteParent(ScopeScheduleScore)
 	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getLayerScheduleDistance_ConcreteParent()
-	 * @model required="true"
+	 * @model required="true" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
 	ScopeScheduleScore getConcreteParent();
-
-	/**
-	 * Sets the value of the '{@link com.misc.touse.moplaf.tousescheduler.LayerScheduleDistance#getConcreteParent <em>Concrete Parent</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Concrete Parent</em>' reference.
-	 * @see #getConcreteParent()
-	 * @generated
-	 */
-	void setConcreteParent(ScopeScheduleScore value);
 
 } // LayerScheduleDistance

@@ -447,17 +447,17 @@ public class ToUseSchedulerItemProviderAdapterFactory extends ToUseSchedulerAdap
 	 */
 	public void dispose() {
 		if (domainItemProvider != null) domainItemProvider.dispose();
-		if (toUseScoreItemProvider != null) toUseScoreItemProvider.dispose();
-		if (toUseSchedulerItemProvider != null) toUseSchedulerItemProvider.dispose();
-		if (toUseTaskItemProvider != null) toUseTaskItemProvider.dispose();
 		if (toUseResourceItemProvider != null) toUseResourceItemProvider.dispose();
-		if (toUseScheduleTaskItemProvider != null) toUseScheduleTaskItemProvider.dispose();
+		if (toUseTaskItemProvider != null) toUseTaskItemProvider.dispose();
+		if (toUseSchedulerItemProvider != null) toUseSchedulerItemProvider.dispose();
+		if (toUseScheduleItemProvider != null) toUseScheduleItemProvider.dispose();
+		if (toUseScoreItemProvider != null) toUseScoreItemProvider.dispose();
 		if (toUseScheduleResourceItemProvider != null) toUseScheduleResourceItemProvider.dispose();
+		if (toUseScheduleTaskItemProvider != null) toUseScheduleTaskItemProvider.dispose();
 		if (scopeScheduleScoreItemProvider != null) scopeScheduleScoreItemProvider.dispose();
 		if (layerScheduleDistanceItemProvider != null) layerScheduleDistanceItemProvider.dispose();
 		if (calcTaskDistanceItemProvider != null) calcTaskDistanceItemProvider.dispose();
 		if (calcResourceDistanceItemProvider != null) calcResourceDistanceItemProvider.dispose();
-		if (toUseScheduleItemProvider != null) toUseScheduleItemProvider.dispose();
 	}
 
 }

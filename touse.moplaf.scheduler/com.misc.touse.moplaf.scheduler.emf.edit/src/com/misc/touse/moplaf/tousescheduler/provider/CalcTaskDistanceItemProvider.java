@@ -3,8 +3,6 @@
 package com.misc.touse.moplaf.tousescheduler.provider;
 
 
-import com.misc.common.moplaf.propagator2.provider.PropagatorFunctionBindingsItemProvider;
-
 import com.misc.touse.moplaf.tousescheduler.CalcTaskDistance;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
 
@@ -13,9 +11,6 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
@@ -25,7 +20,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
  * <!-- end-user-doc -->
  * @generated
  */
-public class CalcTaskDistanceItemProvider extends PropagatorFunctionBindingsItemProvider {
+public class CalcTaskDistanceItemProvider extends CalcTaskItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -47,32 +42,9 @@ public class CalcTaskDistanceItemProvider extends PropagatorFunctionBindingsItem
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addTaskPropertyDescriptor(object);
 			addConcreteParentPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Task feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTaskPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_CalcTaskDistance_Task_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CalcTaskDistance_Task_feature", "_UI_CalcTaskDistance_type"),
-				 ToUseSchedulerPackage.Literals.CALC_TASK_DISTANCE__TASK,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**
@@ -144,17 +116,6 @@ public class CalcTaskDistanceItemProvider extends PropagatorFunctionBindingsItem
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return ToUseSchedulerEditPlugin.INSTANCE;
 	}
 
 }

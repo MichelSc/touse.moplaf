@@ -3,7 +3,7 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.misc.touse.moplaf.scheduler.emf/src" modelPluginID="com.misc.touse.moplaf.scheduler.emf"
     modelName="ToUseScheduler" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
-    providerRootExtendsClass="" language="" usedGenPackages="../../com.misc.common.moplaf.propagator2/model/propagator.genmodel#//propagator2 ../../com.misc.common.moplaf.scheduler.emf/model/scheduler.genmodel#//scheduler ../../com.misc.common.moplaf.scheduler.emf/model/scheduler.genmodel#//schedulercalc"
+    providerRootExtendsClass="" language="" usedGenPackages="../../com.misc.common.moplaf.propagator2/model/propagator.genmodel#//propagator2 ../../com.misc.common.moplaf.scheduler.emf/model/scheduler.genmodel#//scheduler ../../com.misc.common.moplaf.localsearch.emf/model/localsearch.genmodel#//localsearch"
     operationReflection="true" importOrganizing="true">
   <foreignModel>ToUseScheduler.ecore</foreignModel>
   <genPackages prefix="ToUseScheduler" basePackage="com.misc.touse.moplaf" disposableProviderFactory="true"
@@ -13,23 +13,47 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//Domain/Resources"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//Domain/Tasks"/>
     </genClasses>
-    <genClasses ecoreClass="ToUseScheduler.ecore#//ToUseScheduler"/>
-    <genClasses ecoreClass="ToUseScheduler.ecore#//ToUseTask">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUseTask/Name"/>
-    </genClasses>
     <genClasses ecoreClass="ToUseScheduler.ecore#//ToUseResource">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUseResource/Name"/>
     </genClasses>
-    <genClasses ecoreClass="ToUseScheduler.ecore#//ToUseSolutionTask">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//ToUseSolutionTask/ToUseTask"/>
-      <genFeatures property="None" createChild="false" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//ToUseSolutionTask/Distance"/>
-      <genFeatures property="None" createChild="false" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//ToUseSolutionTask/Time"/>
+    <genClasses ecoreClass="ToUseScheduler.ecore#//ToUseTask">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUseTask/Name"/>
     </genClasses>
-    <genClasses ecoreClass="ToUseScheduler.ecore#//ToUseSolutionResource">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//ToUseSolutionResource/ToUseResource"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//ToUseSolutionResource/TotalDistance"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//ToUseSolutionResource/EndTime"/>
+    <genClasses ecoreClass="ToUseScheduler.ecore#//ToUseScheduler">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//ToUseScheduler/SchedulerResources"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//ToUseScheduler/SchedulerTasks"/>
     </genClasses>
-    <genClasses ecoreClass="ToUseScheduler.ecore#//CalcToUseSolutionTaskExpressionDistance"/>
+    <genClasses ecoreClass="ToUseScheduler.ecore#//ToUseSchedule"/>
+    <genClasses ecoreClass="ToUseScheduler.ecore#//ToUseScore">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUseScore/TotalDistance"/>
+    </genClasses>
+    <genClasses ecoreClass="ToUseScheduler.ecore#//ToUseScheduleResource">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//ToUseScheduleResource/ToUseResource"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUseScheduleResource/TotalDistance"/>
+    </genClasses>
+    <genClasses ecoreClass="ToUseScheduler.ecore#//ToUseScheduleTask">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//ToUseScheduleTask/ToUseTask"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUseScheduleTask/Distance"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//CalcScheduler"/>
+    <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//CalcSchedule">
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//CalcSchedule/Schedule"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//CalcResource">
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//CalcResource/Resource"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//CalcTask">
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//CalcTask/Task"/>
+    </genClasses>
+    <genClasses ecoreClass="ToUseScheduler.ecore#//ScopeScheduleScore"/>
+    <genClasses ecoreClass="ToUseScheduler.ecore#//LayerScheduleDistance">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//LayerScheduleDistance/ConcreteParent"/>
+    </genClasses>
+    <genClasses ecoreClass="ToUseScheduler.ecore#//CalcTaskDistance">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//CalcTaskDistance/ConcreteParent"/>
+    </genClasses>
+    <genClasses ecoreClass="ToUseScheduler.ecore#//CalcResourceDistance">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//CalcResourceDistance/ConcreteParent"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

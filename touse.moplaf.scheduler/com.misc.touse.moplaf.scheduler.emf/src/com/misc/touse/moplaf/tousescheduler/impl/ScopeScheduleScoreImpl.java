@@ -2,8 +2,6 @@
  */
 package com.misc.touse.moplaf.tousescheduler.impl;
 
-import com.misc.common.moplaf.propagator2.impl.PropagatorFunctionBindingsImpl;
-
 import com.misc.touse.moplaf.tousescheduler.ScopeScheduleScore;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
 
@@ -16,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class ScopeScheduleScoreImpl extends PropagatorFunctionBindingsImpl implements ScopeScheduleScore {
+public class ScopeScheduleScoreImpl extends CalcScheduleImpl implements ScopeScheduleScore {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

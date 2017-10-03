@@ -2,19 +2,16 @@
  */
 package com.misc.touse.moplaf.tousescheduler.impl;
 
-import com.misc.common.moplaf.propagator2.impl.PropagatorFunctionBindingsImpl;
-
+import com.misc.common.moplaf.propagator2.PropagatorFunction;
+import com.misc.common.moplaf.propagator2.util.Bindings;
+import com.misc.common.moplaf.scheduler.SchedulerPackage;
 import com.misc.touse.moplaf.tousescheduler.CalcTaskDistance;
 import com.misc.touse.moplaf.tousescheduler.LayerScheduleDistance;
+import com.misc.touse.moplaf.tousescheduler.ToUseSchedule;
 import com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
-
-import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,33 +21,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.CalcTaskDistanceImpl#getTask <em>Task</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.CalcTaskDistanceImpl#getConcreteParent <em>Concrete Parent</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class CalcTaskDistanceImpl extends PropagatorFunctionBindingsImpl implements CalcTaskDistance {
-	/**
-	 * The cached value of the '{@link #getTask() <em>Task</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTask()
-	 * @generated
-	 * @ordered
-	 */
-	protected ToUseScheduleTask task;
-
-	/**
-	 * The cached value of the '{@link #getConcreteParent() <em>Concrete Parent</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getConcreteParent()
-	 * @generated
-	 * @ordered
-	 */
-	protected LayerScheduleDistance concreteParent;
-
+public class CalcTaskDistanceImpl extends CalcTaskImpl implements CalcTaskDistance {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -75,75 +51,20 @@ public class CalcTaskDistanceImpl extends PropagatorFunctionBindingsImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ToUseScheduleTask getTask() {
-		if (task != null && task.eIsProxy()) {
-			InternalEObject oldTask = (InternalEObject)task;
-			task = (ToUseScheduleTask)eResolveProxy(oldTask);
-			if (task != oldTask) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ToUseSchedulerPackage.CALC_TASK_DISTANCE__TASK, oldTask, task));
-			}
-		}
-		return task;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ToUseScheduleTask basicGetTask() {
-		return task;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTask(ToUseScheduleTask newTask) {
-		ToUseScheduleTask oldTask = task;
-		task = newTask;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToUseSchedulerPackage.CALC_TASK_DISTANCE__TASK, oldTask, task));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public LayerScheduleDistance getConcreteParent() {
-		if (concreteParent != null && concreteParent.eIsProxy()) {
-			InternalEObject oldConcreteParent = (InternalEObject)concreteParent;
-			concreteParent = (LayerScheduleDistance)eResolveProxy(oldConcreteParent);
-			if (concreteParent != oldConcreteParent) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ToUseSchedulerPackage.CALC_TASK_DISTANCE__CONCRETE_PARENT, oldConcreteParent, concreteParent));
-			}
-		}
-		return concreteParent;
+		LayerScheduleDistance concreteParent = basicGetConcreteParent();
+		return concreteParent != null && concreteParent.eIsProxy() ? (LayerScheduleDistance)eResolveProxy((InternalEObject)concreteParent) : concreteParent;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	public LayerScheduleDistance basicGetConcreteParent() {
-		return concreteParent;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setConcreteParent(LayerScheduleDistance newConcreteParent) {
-		LayerScheduleDistance oldConcreteParent = concreteParent;
-		concreteParent = newConcreteParent;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToUseSchedulerPackage.CALC_TASK_DISTANCE__CONCRETE_PARENT, oldConcreteParent, concreteParent));
+		ToUseScheduleTask task = this.getTask();
+		ToUseSchedule schedule = (ToUseSchedule) task.getSchedule();
+		LayerScheduleDistance  parent = schedule.getPropagatorFunction(LayerScheduleDistance.class);
+		return parent;
 	}
 
 	/**
@@ -154,9 +75,6 @@ public class CalcTaskDistanceImpl extends PropagatorFunctionBindingsImpl impleme
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ToUseSchedulerPackage.CALC_TASK_DISTANCE__TASK:
-				if (resolve) return getTask();
-				return basicGetTask();
 			case ToUseSchedulerPackage.CALC_TASK_DISTANCE__CONCRETE_PARENT:
 				if (resolve) return getConcreteParent();
 				return basicGetConcreteParent();
@@ -170,50 +88,49 @@ public class CalcTaskDistanceImpl extends PropagatorFunctionBindingsImpl impleme
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case ToUseSchedulerPackage.CALC_TASK_DISTANCE__TASK:
-				setTask((ToUseScheduleTask)newValue);
-				return;
-			case ToUseSchedulerPackage.CALC_TASK_DISTANCE__CONCRETE_PARENT:
-				setConcreteParent((LayerScheduleDistance)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-			case ToUseSchedulerPackage.CALC_TASK_DISTANCE__TASK:
-				setTask((ToUseScheduleTask)null);
-				return;
-			case ToUseSchedulerPackage.CALC_TASK_DISTANCE__CONCRETE_PARENT:
-				setConcreteParent((LayerScheduleDistance)null);
-				return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ToUseSchedulerPackage.CALC_TASK_DISTANCE__TASK:
-				return task != null;
 			case ToUseSchedulerPackage.CALC_TASK_DISTANCE__CONCRETE_PARENT:
-				return concreteParent != null;
+				return basicGetConcreteParent() != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
+	private static Bindings taskBeforeBindings = Bindings.constructBindings()
+			.addInboundBinding(ToUseSchedulerPackage.Literals.TO_USE_SCHEDULE_TASK__DISTANCE)
+			;
+		
+	private static Bindings thisTaskBindings = Bindings.constructBindings()
+			.addInboundBinding(SchedulerPackage.Literals.TASK__PREVIOUS_TASK, taskBeforeBindings)	
+			.addInboundBinding(SchedulerPackage.Literals.TASK__SCHEDULED_RESOURCE)	
+			.addOutboundBinding(ToUseSchedulerPackage.Literals.TO_USE_SCHEDULE_TASK__DISTANCE)
+			;
+		
+	/**
+	 * 
+	 */
+	@Override
+	public Bindings doGetBindings() {
+		return thisTaskBindings;
+	}
+
+	/**
+	 * 
+	 */
+	@Override
+	public void doRefresh() {
+		ToUseScheduleTask task = this.getTask();
+		ToUseScheduleTask previous_task = (ToUseScheduleTask) task.getPreviousTask();
+		float distance = 1.0f; 
+		if ( previous_task != null) {
+			float previous_task_distance= previous_task.getDistance();
+			distance = previous_task_distance+1.5f; 
+		}
+		task.setDistance(distance);
+	}
+	
+	@Override
+	public PropagatorFunction doGetParent() {
+		return this.getConcreteParent();
+	}
 } //CalcTaskDistanceImpl

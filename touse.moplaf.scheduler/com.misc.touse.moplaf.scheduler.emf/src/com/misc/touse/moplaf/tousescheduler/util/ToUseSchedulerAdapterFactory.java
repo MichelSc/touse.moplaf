@@ -81,28 +81,48 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 				return createDomainAdapter();
 			}
 			@Override
-			public Adapter caseToUseScore(ToUseScore object) {
-				return createToUseScoreAdapter();
-			}
-			@Override
-			public Adapter caseToUseScheduler(ToUseScheduler object) {
-				return createToUseSchedulerAdapter();
+			public Adapter caseToUseResource(ToUseResource object) {
+				return createToUseResourceAdapter();
 			}
 			@Override
 			public Adapter caseToUseTask(ToUseTask object) {
 				return createToUseTaskAdapter();
 			}
 			@Override
-			public Adapter caseToUseResource(ToUseResource object) {
-				return createToUseResourceAdapter();
+			public Adapter caseToUseScheduler(ToUseScheduler object) {
+				return createToUseSchedulerAdapter();
+			}
+			@Override
+			public Adapter caseToUseSchedule(ToUseSchedule object) {
+				return createToUseScheduleAdapter();
+			}
+			@Override
+			public Adapter caseToUseScore(ToUseScore object) {
+				return createToUseScoreAdapter();
+			}
+			@Override
+			public Adapter caseToUseScheduleResource(ToUseScheduleResource object) {
+				return createToUseScheduleResourceAdapter();
 			}
 			@Override
 			public Adapter caseToUseScheduleTask(ToUseScheduleTask object) {
 				return createToUseScheduleTaskAdapter();
 			}
 			@Override
-			public Adapter caseToUseScheduleResource(ToUseScheduleResource object) {
-				return createToUseScheduleResourceAdapter();
+			public Adapter caseCalcScheduler(CalcScheduler object) {
+				return createCalcSchedulerAdapter();
+			}
+			@Override
+			public Adapter caseCalcSchedule(CalcSchedule object) {
+				return createCalcScheduleAdapter();
+			}
+			@Override
+			public Adapter caseCalcResource(CalcResource object) {
+				return createCalcResourceAdapter();
+			}
+			@Override
+			public Adapter caseCalcTask(CalcTask object) {
+				return createCalcTaskAdapter();
 			}
 			@Override
 			public Adapter caseScopeScheduleScore(ScopeScheduleScore object) {
@@ -121,14 +141,6 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 				return createCalcResourceDistanceAdapter();
 			}
 			@Override
-			public Adapter caseToUseSchedule(ToUseSchedule object) {
-				return createToUseScheduleAdapter();
-			}
-			@Override
-			public Adapter caseScore(Score object) {
-				return createScoreAdapter();
-			}
-			@Override
 			public Adapter caseScheduler(Scheduler object) {
 				return createSchedulerAdapter();
 			}
@@ -137,12 +149,24 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 				return createObjectWithPropagatorFunctionsAdapter();
 			}
 			@Override
-			public Adapter caseTask(Task object) {
-				return createTaskAdapter();
+			public Adapter caseSolution(Solution object) {
+				return createSolutionAdapter();
+			}
+			@Override
+			public Adapter caseSchedule(Schedule object) {
+				return createScheduleAdapter();
+			}
+			@Override
+			public Adapter caseScore(Score object) {
+				return createScoreAdapter();
 			}
 			@Override
 			public Adapter caseResource(Resource object) {
 				return createResourceAdapter();
+			}
+			@Override
+			public Adapter caseTask(Task object) {
+				return createTaskAdapter();
 			}
 			@Override
 			public Adapter casePropagatorFunction(PropagatorFunction object) {
@@ -151,14 +175,6 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter casePropagatorFunctionBindings(PropagatorFunctionBindings object) {
 				return createPropagatorFunctionBindingsAdapter();
-			}
-			@Override
-			public Adapter caseSolution(Solution object) {
-				return createSolutionAdapter();
-			}
-			@Override
-			public Adapter caseSchedule(Schedule object) {
-				return createScheduleAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -261,6 +277,62 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createToUseScheduleTaskAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.tousescheduler.CalcScheduler <em>Calc Scheduler</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.touse.moplaf.tousescheduler.CalcScheduler
+	 * @generated
+	 */
+	public Adapter createCalcSchedulerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.tousescheduler.CalcSchedule <em>Calc Schedule</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.touse.moplaf.tousescheduler.CalcSchedule
+	 * @generated
+	 */
+	public Adapter createCalcScheduleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.tousescheduler.CalcResource <em>Calc Resource</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.touse.moplaf.tousescheduler.CalcResource
+	 * @generated
+	 */
+	public Adapter createCalcResourceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.tousescheduler.CalcTask <em>Calc Task</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.touse.moplaf.tousescheduler.CalcTask
+	 * @generated
+	 */
+	public Adapter createCalcTaskAdapter() {
 		return null;
 	}
 

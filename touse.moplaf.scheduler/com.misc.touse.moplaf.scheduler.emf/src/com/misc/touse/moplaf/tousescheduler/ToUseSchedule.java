@@ -14,5 +14,5 @@ import com.misc.common.moplaf.scheduler.Schedule;
  * @model
  * @generated
  */
-public interface ToUseSchedule extends Schedule, ToUseScore {
+public interface ToUseSchedule extends Schedule {
 } // ToUseSchedule

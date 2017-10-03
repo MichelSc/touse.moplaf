@@ -81,10 +81,15 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ToUseSchedulerPackage.TO_USE_SCORE: {
-				ToUseScore toUseScore = (ToUseScore)theEObject;
-				T result = caseToUseScore(toUseScore);
-				if (result == null) result = caseScore(toUseScore);
+			case ToUseSchedulerPackage.TO_USE_RESOURCE: {
+				ToUseResource toUseResource = (ToUseResource)theEObject;
+				T result = caseToUseResource(toUseResource);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ToUseSchedulerPackage.TO_USE_TASK: {
+				ToUseTask toUseTask = (ToUseTask)theEObject;
+				T result = caseToUseTask(toUseTask);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -95,23 +100,19 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ToUseSchedulerPackage.TO_USE_TASK: {
-				ToUseTask toUseTask = (ToUseTask)theEObject;
-				T result = caseToUseTask(toUseTask);
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE: {
+				ToUseSchedule toUseSchedule = (ToUseSchedule)theEObject;
+				T result = caseToUseSchedule(toUseSchedule);
+				if (result == null) result = caseSchedule(toUseSchedule);
+				if (result == null) result = caseSolution(toUseSchedule);
+				if (result == null) result = caseObjectWithPropagatorFunctions(toUseSchedule);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ToUseSchedulerPackage.TO_USE_RESOURCE: {
-				ToUseResource toUseResource = (ToUseResource)theEObject;
-				T result = caseToUseResource(toUseResource);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK: {
-				ToUseScheduleTask toUseScheduleTask = (ToUseScheduleTask)theEObject;
-				T result = caseToUseScheduleTask(toUseScheduleTask);
-				if (result == null) result = caseTask(toUseScheduleTask);
-				if (result == null) result = caseObjectWithPropagatorFunctions(toUseScheduleTask);
+			case ToUseSchedulerPackage.TO_USE_SCORE: {
+				ToUseScore toUseScore = (ToUseScore)theEObject;
+				T result = caseToUseScore(toUseScore);
+				if (result == null) result = caseScore(toUseScore);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -123,9 +124,54 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK: {
+				ToUseScheduleTask toUseScheduleTask = (ToUseScheduleTask)theEObject;
+				T result = caseToUseScheduleTask(toUseScheduleTask);
+				if (result == null) result = caseTask(toUseScheduleTask);
+				if (result == null) result = caseObjectWithPropagatorFunctions(toUseScheduleTask);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ToUseSchedulerPackage.CALC_SCHEDULER: {
+				CalcScheduler calcScheduler = (CalcScheduler)theEObject;
+				T result = caseCalcScheduler(calcScheduler);
+				if (result == null) result = casePropagatorFunctionBindings(calcScheduler);
+				if (result == null) result = casePropagatorFunction(calcScheduler);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ToUseSchedulerPackage.CALC_SCHEDULE: {
+				CalcSchedule calcSchedule = (CalcSchedule)theEObject;
+				T result = caseCalcSchedule(calcSchedule);
+				if (result == null) result = caseCalcScheduler(calcSchedule);
+				if (result == null) result = casePropagatorFunctionBindings(calcSchedule);
+				if (result == null) result = casePropagatorFunction(calcSchedule);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ToUseSchedulerPackage.CALC_RESOURCE: {
+				CalcResource calcResource = (CalcResource)theEObject;
+				T result = caseCalcResource(calcResource);
+				if (result == null) result = caseCalcScheduler(calcResource);
+				if (result == null) result = casePropagatorFunctionBindings(calcResource);
+				if (result == null) result = casePropagatorFunction(calcResource);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ToUseSchedulerPackage.CALC_TASK: {
+				CalcTask calcTask = (CalcTask)theEObject;
+				T result = caseCalcTask(calcTask);
+				if (result == null) result = caseCalcScheduler(calcTask);
+				if (result == null) result = casePropagatorFunctionBindings(calcTask);
+				if (result == null) result = casePropagatorFunction(calcTask);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ToUseSchedulerPackage.SCOPE_SCHEDULE_SCORE: {
 				ScopeScheduleScore scopeScheduleScore = (ScopeScheduleScore)theEObject;
 				T result = caseScopeScheduleScore(scopeScheduleScore);
+				if (result == null) result = caseCalcSchedule(scopeScheduleScore);
+				if (result == null) result = caseCalcScheduler(scopeScheduleScore);
 				if (result == null) result = casePropagatorFunctionBindings(scopeScheduleScore);
 				if (result == null) result = casePropagatorFunction(scopeScheduleScore);
 				if (result == null) result = defaultCase(theEObject);
@@ -134,6 +180,8 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 			case ToUseSchedulerPackage.LAYER_SCHEDULE_DISTANCE: {
 				LayerScheduleDistance layerScheduleDistance = (LayerScheduleDistance)theEObject;
 				T result = caseLayerScheduleDistance(layerScheduleDistance);
+				if (result == null) result = caseCalcSchedule(layerScheduleDistance);
+				if (result == null) result = caseCalcScheduler(layerScheduleDistance);
 				if (result == null) result = casePropagatorFunctionBindings(layerScheduleDistance);
 				if (result == null) result = casePropagatorFunction(layerScheduleDistance);
 				if (result == null) result = defaultCase(theEObject);
@@ -142,6 +190,8 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 			case ToUseSchedulerPackage.CALC_TASK_DISTANCE: {
 				CalcTaskDistance calcTaskDistance = (CalcTaskDistance)theEObject;
 				T result = caseCalcTaskDistance(calcTaskDistance);
+				if (result == null) result = caseCalcTask(calcTaskDistance);
+				if (result == null) result = caseCalcScheduler(calcTaskDistance);
 				if (result == null) result = casePropagatorFunctionBindings(calcTaskDistance);
 				if (result == null) result = casePropagatorFunction(calcTaskDistance);
 				if (result == null) result = defaultCase(theEObject);
@@ -150,19 +200,10 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 			case ToUseSchedulerPackage.CALC_RESOURCE_DISTANCE: {
 				CalcResourceDistance calcResourceDistance = (CalcResourceDistance)theEObject;
 				T result = caseCalcResourceDistance(calcResourceDistance);
+				if (result == null) result = caseCalcResource(calcResourceDistance);
+				if (result == null) result = caseCalcScheduler(calcResourceDistance);
 				if (result == null) result = casePropagatorFunctionBindings(calcResourceDistance);
 				if (result == null) result = casePropagatorFunction(calcResourceDistance);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ToUseSchedulerPackage.TO_USE_SCHEDULE: {
-				ToUseSchedule toUseSchedule = (ToUseSchedule)theEObject;
-				T result = caseToUseSchedule(toUseSchedule);
-				if (result == null) result = caseSchedule(toUseSchedule);
-				if (result == null) result = caseToUseScore(toUseSchedule);
-				if (result == null) result = caseSolution(toUseSchedule);
-				if (result == null) result = caseScore(toUseSchedule);
-				if (result == null) result = caseObjectWithPropagatorFunctions(toUseSchedule);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -257,6 +298,66 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseToUseScheduleTask(ToUseScheduleTask object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Calc Scheduler</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Calc Scheduler</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCalcScheduler(CalcScheduler object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Calc Schedule</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Calc Schedule</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCalcSchedule(CalcSchedule object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Calc Resource</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Calc Resource</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCalcResource(CalcResource object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Calc Task</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Calc Task</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCalcTask(CalcTask object) {
 		return null;
 	}
 

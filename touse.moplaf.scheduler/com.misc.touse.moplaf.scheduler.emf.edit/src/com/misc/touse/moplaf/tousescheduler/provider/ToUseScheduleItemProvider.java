@@ -11,8 +11,6 @@ import com.misc.common.moplaf.scheduler.provider.ScheduleItemProvider;
 
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedule;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerFactory;
-import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
-
 import java.util.Collection;
 import java.util.List;
 
@@ -20,11 +18,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
-
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link com.misc.touse.moplaf.tousescheduler.ToUseSchedule} object.
@@ -54,31 +48,8 @@ public class ToUseScheduleItemProvider extends ScheduleItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addTotalDistancePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Total Distance feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTotalDistancePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ToUseScore_TotalDistance_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseScore_TotalDistance_feature", "_UI_ToUseScore_type"),
-				 ToUseSchedulerPackage.Literals.TO_USE_SCORE__TOTAL_DISTANCE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
-				 null));
 	}
 
 	/**
@@ -115,12 +86,6 @@ public class ToUseScheduleItemProvider extends ScheduleItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(ToUseSchedule.class)) {
-			case ToUseSchedulerPackage.TO_USE_SCHEDULE__TOTAL_DISTANCE:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-		}
 		super.notifyChanged(notification);
 	}
 
@@ -139,11 +104,6 @@ public class ToUseScheduleItemProvider extends ScheduleItemProvider {
 			(createChildParameter
 				(LocalSearchPackage.Literals.SOLUTION__SCORE,
 				 ToUseSchedulerFactory.eINSTANCE.createToUseScore()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LocalSearchPackage.Literals.SOLUTION__SCORE,
-				 ToUseSchedulerFactory.eINSTANCE.createToUseSchedule()));
 
 		newChildDescriptors.add
 			(createChildParameter

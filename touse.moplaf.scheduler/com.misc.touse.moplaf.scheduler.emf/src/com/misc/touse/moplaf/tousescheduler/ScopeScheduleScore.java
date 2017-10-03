@@ -2,8 +2,6 @@
  */
 package com.misc.touse.moplaf.tousescheduler;
 
-import com.misc.common.moplaf.propagator2.PropagatorFunctionBindings;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Scope Schedule Score</b></em>'.
@@ -14,5 +12,5 @@ import com.misc.common.moplaf.propagator2.PropagatorFunctionBindings;
  * @model
  * @generated
  */
-public interface ScopeScheduleScore extends PropagatorFunctionBindings {
+public interface ScopeScheduleScore extends CalcSchedule {
 } // ScopeScheduleScore
