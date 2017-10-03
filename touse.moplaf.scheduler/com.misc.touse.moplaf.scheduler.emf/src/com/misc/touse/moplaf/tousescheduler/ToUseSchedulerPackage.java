@@ -2,8 +2,9 @@
  */
 package com.misc.touse.moplaf.tousescheduler;
 
+import com.misc.common.moplaf.localsearch.LocalSearchPackage;
+import com.misc.common.moplaf.propagator2.PropagatorPackage;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
-import com.misc.common.moplaf.schedulercalc.SchedulerCalcPackage;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -115,6 +116,61 @@ public interface ToUseSchedulerPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScoreImpl <em>To Use Score</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseScoreImpl
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseScore()
+	 * @generated
+	 */
+	int TO_USE_SCORE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Total Distance</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCORE__TOTAL_DISTANCE = LocalSearchPackage.SCORE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>To Use Score</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCORE_FEATURE_COUNT = LocalSearchPackage.SCORE_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Compare</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCORE___COMPARE__SCORE = LocalSearchPackage.SCORE___COMPARE__SCORE;
+
+	/**
+	 * The operation id for the '<em>Copy</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCORE___COPY__SCORE = LocalSearchPackage.SCORE___COPY__SCORE;
+
+	/**
+	 * The number of operations of the '<em>To Use Score</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCORE_OPERATION_COUNT = LocalSearchPackage.SCORE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerImpl <em>To Use Scheduler</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -122,16 +178,16 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseScheduler()
 	 * @generated
 	 */
-	int TO_USE_SCHEDULER = 1;
+	int TO_USE_SCHEDULER = 2;
 
 	/**
-	 * The feature id for the '<em><b>Solutions</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Schedulers</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULER__SOLUTIONS = SchedulerPackage.SCHEDULER__SOLUTIONS;
+	int TO_USE_SCHEDULER__SCHEDULERS = SchedulerPackage.SCHEDULER__SCHEDULERS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -170,13 +226,49 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULER__RESOURCES = SchedulerPackage.SCHEDULER__RESOURCES;
 
 	/**
+	 * The feature id for the '<em><b>Scheduler Resources</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULER__SCHEDULER_RESOURCES = SchedulerPackage.SCHEDULER_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Scheduler Tasks</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULER__SCHEDULER_TASKS = SchedulerPackage.SCHEDULER_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>To Use Scheduler</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULER_FEATURE_COUNT = SchedulerPackage.SCHEDULER_FEATURE_COUNT + 0;
+	int TO_USE_SCHEDULER_FEATURE_COUNT = SchedulerPackage.SCHEDULER_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Construct Schedule</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULER___CONSTRUCT_SCHEDULE = SchedulerPackage.SCHEDULER___CONSTRUCT_SCHEDULE;
+
+	/**
+	 * The operation id for the '<em>Construct Score</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULER___CONSTRUCT_SCORE = SchedulerPackage.SCHEDULER___CONSTRUCT_SCORE;
 
 	/**
 	 * The operation id for the '<em>Construct Task</em>' operation.
@@ -222,7 +314,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseTask()
 	 * @generated
 	 */
-	int TO_USE_TASK = 2;
+	int TO_USE_TASK = 3;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -259,7 +351,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseResource()
 	 * @generated
 	 */
-	int TO_USE_RESOURCE = 3;
+	int TO_USE_RESOURCE = 4;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -289,14 +381,14 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_RESOURCE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseSolutionTaskImpl <em>To Use Solution Task</em>}' class.
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleTaskImpl <em>To Use Schedule Task</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSolutionTaskImpl
-	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseSolutionTask()
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleTaskImpl
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseScheduleTask()
 	 * @generated
 	 */
-	int TO_USE_SOLUTION_TASK = 4;
+	int TO_USE_SCHEDULE_TASK = 5;
 
 	/**
 	 * The feature id for the '<em><b>Propagator Functions</b></em>' containment reference list.
@@ -305,7 +397,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SOLUTION_TASK__PROPAGATOR_FUNCTIONS = SchedulerPackage.SOLUTION_TASK__PROPAGATOR_FUNCTIONS;
+	int TO_USE_SCHEDULE_TASK__PROPAGATOR_FUNCTIONS = SchedulerPackage.TASK__PROPAGATOR_FUNCTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Task</b></em>' reference.
@@ -314,7 +406,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SOLUTION_TASK__TASK = SchedulerPackage.SOLUTION_TASK__TASK;
+	int TO_USE_SCHEDULE_TASK__TASK = SchedulerPackage.TASK__TASK;
 
 	/**
 	 * The feature id for the '<em><b>Next Task</b></em>' reference.
@@ -323,7 +415,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SOLUTION_TASK__NEXT_TASK = SchedulerPackage.SOLUTION_TASK__NEXT_TASK;
+	int TO_USE_SCHEDULE_TASK__NEXT_TASK = SchedulerPackage.TASK__NEXT_TASK;
 
 	/**
 	 * The feature id for the '<em><b>Previous Task</b></em>' reference.
@@ -332,7 +424,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SOLUTION_TASK__PREVIOUS_TASK = SchedulerPackage.SOLUTION_TASK__PREVIOUS_TASK;
+	int TO_USE_SCHEDULE_TASK__PREVIOUS_TASK = SchedulerPackage.TASK__PREVIOUS_TASK;
 
 	/**
 	 * The feature id for the '<em><b>Scheduled Resource</b></em>' reference.
@@ -341,43 +433,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SOLUTION_TASK__SCHEDULED_RESOURCE = SchedulerPackage.SOLUTION_TASK__SCHEDULED_RESOURCE;
-
-	/**
-	 * The feature id for the '<em><b>Candidate Next Task</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SOLUTION_TASK__CANDIDATE_NEXT_TASK = SchedulerPackage.SOLUTION_TASK__CANDIDATE_NEXT_TASK;
-
-	/**
-	 * The feature id for the '<em><b>Candidate Previous Task</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SOLUTION_TASK__CANDIDATE_PREVIOUS_TASK = SchedulerPackage.SOLUTION_TASK__CANDIDATE_PREVIOUS_TASK;
-
-	/**
-	 * The feature id for the '<em><b>Candidate Scheduled Resource</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SOLUTION_TASK__CANDIDATE_SCHEDULED_RESOURCE = SchedulerPackage.SOLUTION_TASK__CANDIDATE_SCHEDULED_RESOURCE;
-
-	/**
-	 * The feature id for the '<em><b>Expressions</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SOLUTION_TASK__EXPRESSIONS = SchedulerPackage.SOLUTION_TASK__EXPRESSIONS;
+	int TO_USE_SCHEDULE_TASK__SCHEDULED_RESOURCE = SchedulerPackage.TASK__SCHEDULED_RESOURCE;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -386,16 +442,16 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SOLUTION_TASK__DESCRIPTION = SchedulerPackage.SOLUTION_TASK__DESCRIPTION;
+	int TO_USE_SCHEDULE_TASK__DESCRIPTION = SchedulerPackage.TASK__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Solution</b></em>' container reference.
+	 * The feature id for the '<em><b>Schedule</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SOLUTION_TASK__SOLUTION = SchedulerPackage.SOLUTION_TASK__SOLUTION;
+	int TO_USE_SCHEDULE_TASK__SCHEDULE = SchedulerPackage.TASK__SCHEDULE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -404,7 +460,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SOLUTION_TASK__NAME = SchedulerPackage.SOLUTION_TASK__NAME;
+	int TO_USE_SCHEDULE_TASK__NAME = SchedulerPackage.TASK__NAME;
 
 	/**
 	 * The feature id for the '<em><b>To Use Task</b></em>' reference.
@@ -413,34 +469,25 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SOLUTION_TASK__TO_USE_TASK = SchedulerPackage.SOLUTION_TASK_FEATURE_COUNT + 0;
+	int TO_USE_SCHEDULE_TASK__TO_USE_TASK = SchedulerPackage.TASK_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Distance</b></em>' containment reference.
+	 * The feature id for the '<em><b>Distance</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SOLUTION_TASK__DISTANCE = SchedulerPackage.SOLUTION_TASK_FEATURE_COUNT + 1;
+	int TO_USE_SCHEDULE_TASK__DISTANCE = SchedulerPackage.TASK_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Time</b></em>' containment reference.
+	 * The number of structural features of the '<em>To Use Schedule Task</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SOLUTION_TASK__TIME = SchedulerPackage.SOLUTION_TASK_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of structural features of the '<em>To Use Solution Task</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SOLUTION_TASK_FEATURE_COUNT = SchedulerPackage.SOLUTION_TASK_FEATURE_COUNT + 3;
+	int TO_USE_SCHEDULE_TASK_FEATURE_COUNT = SchedulerPackage.TASK_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Add Propagator Function</em>' operation.
@@ -449,7 +496,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SOLUTION_TASK___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION = SchedulerPackage.SOLUTION_TASK___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION;
+	int TO_USE_SCHEDULE_TASK___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION = SchedulerPackage.TASK___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION;
 
 	/**
 	 * The operation id for the '<em>Get Propagator Function</em>' operation.
@@ -458,7 +505,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SOLUTION_TASK___GET_PROPAGATOR_FUNCTION__ECLASS = SchedulerPackage.SOLUTION_TASK___GET_PROPAGATOR_FUNCTION__ECLASS;
+	int TO_USE_SCHEDULE_TASK___GET_PROPAGATOR_FUNCTION__ECLASS = SchedulerPackage.TASK___GET_PROPAGATOR_FUNCTION__ECLASS;
 
 	/**
 	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
@@ -467,62 +514,53 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SOLUTION_TASK___ADD_PROPAGATOR_FUNCTIONS__STRING = SchedulerPackage.SOLUTION_TASK___ADD_PROPAGATOR_FUNCTIONS__STRING;
+	int TO_USE_SCHEDULE_TASK___ADD_PROPAGATOR_FUNCTIONS__STRING = SchedulerPackage.TASK___ADD_PROPAGATOR_FUNCTIONS__STRING;
 
 	/**
-	 * The operation id for the '<em>Unset Candidate Previous Next</em>' operation.
+	 * The operation id for the '<em>Unset Previous Next</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SOLUTION_TASK___UNSET_CANDIDATE_PREVIOUS_NEXT = SchedulerPackage.SOLUTION_TASK___UNSET_CANDIDATE_PREVIOUS_NEXT;
+	int TO_USE_SCHEDULE_TASK___UNSET_PREVIOUS_NEXT = SchedulerPackage.TASK___UNSET_PREVIOUS_NEXT;
 
 	/**
-	 * The operation id for the '<em>Set Candidate Previous Next</em>' operation.
+	 * The operation id for the '<em>Set Previous Next</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SOLUTION_TASK___SET_CANDIDATE_PREVIOUS_NEXT__SOLUTIONRESOURCE_SOLUTIONTASK_SOLUTIONTASK = SchedulerPackage.SOLUTION_TASK___SET_CANDIDATE_PREVIOUS_NEXT__SOLUTIONRESOURCE_SOLUTIONTASK_SOLUTIONTASK;
+	int TO_USE_SCHEDULE_TASK___SET_PREVIOUS_NEXT__RESOURCE_TASK_TASK = SchedulerPackage.TASK___SET_PREVIOUS_NEXT__RESOURCE_TASK_TASK;
 
 	/**
-	 * The operation id for the '<em>Construct Expressions</em>' operation.
+	 * The operation id for the '<em>Schedule Resource</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SOLUTION_TASK___CONSTRUCT_EXPRESSIONS = SchedulerPackage.SOLUTION_TASK___CONSTRUCT_EXPRESSIONS;
+	int TO_USE_SCHEDULE_TASK___SCHEDULE_RESOURCE__RESOURCE = SchedulerPackage.TASK___SCHEDULE_RESOURCE__RESOURCE;
 
 	/**
-	 * The operation id for the '<em>Schedule Candidate Resource</em>' operation.
+	 * The number of operations of the '<em>To Use Schedule Task</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SOLUTION_TASK___SCHEDULE_CANDIDATE_RESOURCE__SOLUTIONRESOURCE = SchedulerPackage.SOLUTION_TASK___SCHEDULE_CANDIDATE_RESOURCE__SOLUTIONRESOURCE;
+	int TO_USE_SCHEDULE_TASK_OPERATION_COUNT = SchedulerPackage.TASK_OPERATION_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>To Use Solution Task</em>' class.
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleResourceImpl <em>To Use Schedule Resource</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SOLUTION_TASK_OPERATION_COUNT = SchedulerPackage.SOLUTION_TASK_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseSolutionResourceImpl <em>To Use Solution Resource</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSolutionResourceImpl
-	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseSolutionResource()
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleResourceImpl
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseScheduleResource()
 	 * @generated
 	 */
-	int TO_USE_SOLUTION_RESOURCE = 5;
+	int TO_USE_SCHEDULE_RESOURCE = 6;
 
 	/**
 	 * The feature id for the '<em><b>Propagator Functions</b></em>' containment reference list.
@@ -531,7 +569,16 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SOLUTION_RESOURCE__PROPAGATOR_FUNCTIONS = SchedulerPackage.SOLUTION_RESOURCE__PROPAGATOR_FUNCTIONS;
+	int TO_USE_SCHEDULE_RESOURCE__PROPAGATOR_FUNCTIONS = SchedulerPackage.RESOURCE__PROPAGATOR_FUNCTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Schedule</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_RESOURCE__SCHEDULE = SchedulerPackage.RESOURCE__SCHEDULE;
 
 	/**
 	 * The feature id for the '<em><b>Resource</b></em>' reference.
@@ -540,70 +587,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SOLUTION_RESOURCE__RESOURCE = SchedulerPackage.SOLUTION_RESOURCE__RESOURCE;
-
-	/**
-	 * The feature id for the '<em><b>Scheduled Tasks</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SOLUTION_RESOURCE__SCHEDULED_TASKS = SchedulerPackage.SOLUTION_RESOURCE__SCHEDULED_TASKS;
-
-	/**
-	 * The feature id for the '<em><b>Candidate Scheduled Tasks</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SOLUTION_RESOURCE__CANDIDATE_SCHEDULED_TASKS = SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_SCHEDULED_TASKS;
-
-	/**
-	 * The feature id for the '<em><b>Candidate First Task</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SOLUTION_RESOURCE__CANDIDATE_FIRST_TASK = SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_FIRST_TASK;
-
-	/**
-	 * The feature id for the '<em><b>Candidate Last Task</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SOLUTION_RESOURCE__CANDIDATE_LAST_TASK = SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_LAST_TASK;
-
-	/**
-	 * The feature id for the '<em><b>Expressions</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SOLUTION_RESOURCE__EXPRESSIONS = SchedulerPackage.SOLUTION_RESOURCE__EXPRESSIONS;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SOLUTION_RESOURCE__DESCRIPTION = SchedulerPackage.SOLUTION_RESOURCE__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Solution</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SOLUTION_RESOURCE__SOLUTION = SchedulerPackage.SOLUTION_RESOURCE__SOLUTION;
+	int TO_USE_SCHEDULE_RESOURCE__RESOURCE = SchedulerPackage.RESOURCE__RESOURCE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -612,233 +596,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SOLUTION_RESOURCE__NAME = SchedulerPackage.SOLUTION_RESOURCE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Nr Scheduled Tasks</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SOLUTION_RESOURCE__NR_SCHEDULED_TASKS = SchedulerPackage.SOLUTION_RESOURCE__NR_SCHEDULED_TASKS;
-
-	/**
-	 * The feature id for the '<em><b>Nr Candidate Scheduled Tasks</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SOLUTION_RESOURCE__NR_CANDIDATE_SCHEDULED_TASKS = SchedulerPackage.SOLUTION_RESOURCE__NR_CANDIDATE_SCHEDULED_TASKS;
-
-	/**
-	 * The feature id for the '<em><b>First Task</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SOLUTION_RESOURCE__FIRST_TASK = SchedulerPackage.SOLUTION_RESOURCE__FIRST_TASK;
-
-	/**
-	 * The feature id for the '<em><b>Last Task</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SOLUTION_RESOURCE__LAST_TASK = SchedulerPackage.SOLUTION_RESOURCE__LAST_TASK;
-
-	/**
-	 * The feature id for the '<em><b>To Use Resource</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SOLUTION_RESOURCE__TO_USE_RESOURCE = SchedulerPackage.SOLUTION_RESOURCE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Total Distance</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SOLUTION_RESOURCE__TOTAL_DISTANCE = SchedulerPackage.SOLUTION_RESOURCE_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>End Time</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SOLUTION_RESOURCE__END_TIME = SchedulerPackage.SOLUTION_RESOURCE_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of structural features of the '<em>To Use Solution Resource</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SOLUTION_RESOURCE_FEATURE_COUNT = SchedulerPackage.SOLUTION_RESOURCE_FEATURE_COUNT + 3;
-
-	/**
-	 * The operation id for the '<em>Add Propagator Function</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SOLUTION_RESOURCE___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION = SchedulerPackage.SOLUTION_RESOURCE___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION;
-
-	/**
-	 * The operation id for the '<em>Get Propagator Function</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SOLUTION_RESOURCE___GET_PROPAGATOR_FUNCTION__ECLASS = SchedulerPackage.SOLUTION_RESOURCE___GET_PROPAGATOR_FUNCTION__ECLASS;
-
-	/**
-	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SOLUTION_RESOURCE___ADD_PROPAGATOR_FUNCTIONS__STRING = SchedulerPackage.SOLUTION_RESOURCE___ADD_PROPAGATOR_FUNCTIONS__STRING;
-
-	/**
-	 * The operation id for the '<em>Construct Expressions</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SOLUTION_RESOURCE___CONSTRUCT_EXPRESSIONS = SchedulerPackage.SOLUTION_RESOURCE___CONSTRUCT_EXPRESSIONS;
-
-	/**
-	 * The number of operations of the '<em>To Use Solution Resource</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SOLUTION_RESOURCE_OPERATION_COUNT = SchedulerPackage.SOLUTION_RESOURCE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.CalcToUseSolutionTaskExpressionDistanceImpl <em>Calc To Use Solution Task Expression Distance</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.misc.touse.moplaf.tousescheduler.impl.CalcToUseSolutionTaskExpressionDistanceImpl
-	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getCalcToUseSolutionTaskExpressionDistance()
-	 * @generated
-	 */
-	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE = 6;
-
-	/**
-	 * The feature id for the '<em><b>Parent</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE__PARENT = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE__PARENT;
-
-	/**
-	 * The feature id for the '<em><b>Antecedents</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE__ANTECEDENTS = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE__ANTECEDENTS;
-
-	/**
-	 * The feature id for the '<em><b>Antecedents Sibling</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE__ANTECEDENTS_SIBLING = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE__ANTECEDENTS_SIBLING;
-
-	/**
-	 * The feature id for the '<em><b>Touched</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE__TOUCHED = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE__TOUCHED;
-
-	/**
-	 * The feature id for the '<em><b>Touched Children</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE__TOUCHED_CHILDREN = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE__TOUCHED_CHILDREN;
-
-	/**
-	 * The feature id for the '<em><b>Touchers</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE__TOUCHERS = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE__TOUCHERS;
-
-	/**
-	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE__ENABLED = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE__ENABLED;
-
-	/**
-	 * The feature id for the '<em><b>Object With Propagator Functions</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE__OBJECT_WITH_PROPAGATOR_FUNCTIONS = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE__OBJECT_WITH_PROPAGATOR_FUNCTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE__TYPE = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE__TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Object</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE__OBJECT = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE__OBJECT;
-
-	/**
-	 * The feature id for the '<em><b>Instance</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE__INSTANCE = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE__INSTANCE;
+	int TO_USE_SCHEDULE_RESOURCE__NAME = SchedulerPackage.RESOURCE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -847,7 +605,233 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE__DESCRIPTION = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE__DESCRIPTION;
+	int TO_USE_SCHEDULE_RESOURCE__DESCRIPTION = SchedulerPackage.RESOURCE__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Nr Candidate Scheduled Tasks</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_RESOURCE__NR_CANDIDATE_SCHEDULED_TASKS = SchedulerPackage.RESOURCE__NR_CANDIDATE_SCHEDULED_TASKS;
+
+	/**
+	 * The feature id for the '<em><b>Scheduled Tasks</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_RESOURCE__SCHEDULED_TASKS = SchedulerPackage.RESOURCE__SCHEDULED_TASKS;
+
+	/**
+	 * The feature id for the '<em><b>First Task</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_RESOURCE__FIRST_TASK = SchedulerPackage.RESOURCE__FIRST_TASK;
+
+	/**
+	 * The feature id for the '<em><b>Last Task</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_RESOURCE__LAST_TASK = SchedulerPackage.RESOURCE__LAST_TASK;
+
+	/**
+	 * The feature id for the '<em><b>Nr Scheduled Tasks</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_RESOURCE__NR_SCHEDULED_TASKS = SchedulerPackage.RESOURCE__NR_SCHEDULED_TASKS;
+
+	/**
+	 * The feature id for the '<em><b>To Use Resource</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_RESOURCE__TO_USE_RESOURCE = SchedulerPackage.RESOURCE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Total Distance</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_RESOURCE__TOTAL_DISTANCE = SchedulerPackage.RESOURCE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>To Use Schedule Resource</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_RESOURCE_FEATURE_COUNT = SchedulerPackage.RESOURCE_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_RESOURCE___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION = SchedulerPackage.RESOURCE___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION;
+
+	/**
+	 * The operation id for the '<em>Get Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_RESOURCE___GET_PROPAGATOR_FUNCTION__ECLASS = SchedulerPackage.RESOURCE___GET_PROPAGATOR_FUNCTION__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_RESOURCE___ADD_PROPAGATOR_FUNCTIONS__STRING = SchedulerPackage.RESOURCE___ADD_PROPAGATOR_FUNCTIONS__STRING;
+
+	/**
+	 * The number of operations of the '<em>To Use Schedule Resource</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_RESOURCE_OPERATION_COUNT = SchedulerPackage.RESOURCE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ScopeScheduleScoreImpl <em>Scope Schedule Score</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ScopeScheduleScoreImpl
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getScopeScheduleScore()
+	 * @generated
+	 */
+	int SCOPE_SCHEDULE_SCORE = 7;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCOPE_SCHEDULE_SCORE__PARENT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Antecedents</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCOPE_SCHEDULE_SCORE__ANTECEDENTS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__ANTECEDENTS;
+
+	/**
+	 * The feature id for the '<em><b>Antecedents Sibling</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCOPE_SCHEDULE_SCORE__ANTECEDENTS_SIBLING = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__ANTECEDENTS_SIBLING;
+
+	/**
+	 * The feature id for the '<em><b>Touched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCOPE_SCHEDULE_SCORE__TOUCHED = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TOUCHED;
+
+	/**
+	 * The feature id for the '<em><b>Touched Children</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCOPE_SCHEDULE_SCORE__TOUCHED_CHILDREN = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TOUCHED_CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Touchers</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCOPE_SCHEDULE_SCORE__TOUCHERS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TOUCHERS;
+
+	/**
+	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCOPE_SCHEDULE_SCORE__ENABLED = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Object With Propagator Functions</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCOPE_SCHEDULE_SCORE__OBJECT_WITH_PROPAGATOR_FUNCTIONS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__OBJECT_WITH_PROPAGATOR_FUNCTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCOPE_SCHEDULE_SCORE__TYPE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Object</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCOPE_SCHEDULE_SCORE__OBJECT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__OBJECT;
+
+	/**
+	 * The feature id for the '<em><b>Instance</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCOPE_SCHEDULE_SCORE__INSTANCE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__INSTANCE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCOPE_SCHEDULE_SCORE__DESCRIPTION = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
@@ -856,34 +840,16 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE__TOUCHED_PARENT = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE__TOUCHED_PARENT;
+	int SCOPE_SCHEDULE_SCORE__TOUCHED_PARENT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TOUCHED_PARENT;
 
 	/**
-	 * The feature id for the '<em><b>Task Expression</b></em>' reference.
+	 * The number of structural features of the '<em>Scope Schedule Score</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE__TASK_EXPRESSION = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE__TASK_EXPRESSION;
-
-	/**
-	 * The feature id for the '<em><b>Concrete Parent</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE__CONCRETE_PARENT = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE__CONCRETE_PARENT;
-
-	/**
-	 * The number of structural features of the '<em>Calc To Use Solution Task Expression Distance</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE_FEATURE_COUNT = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE_FEATURE_COUNT + 0;
+	int SCOPE_SCHEDULE_SCORE_FEATURE_COUNT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Init</em>' operation.
@@ -892,7 +858,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE___INIT = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE___INIT;
+	int SCOPE_SCHEDULE_SCORE___INIT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___INIT;
 
 	/**
 	 * The operation id for the '<em>Enable</em>' operation.
@@ -901,7 +867,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE___ENABLE = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE___ENABLE;
+	int SCOPE_SCHEDULE_SCORE___ENABLE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___ENABLE;
 
 	/**
 	 * The operation id for the '<em>Disable</em>' operation.
@@ -910,7 +876,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE___DISABLE = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE___DISABLE;
+	int SCOPE_SCHEDULE_SCORE___DISABLE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DISABLE;
 
 	/**
 	 * The operation id for the '<em>Reset</em>' operation.
@@ -919,7 +885,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE___RESET = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE___RESET;
+	int SCOPE_SCHEDULE_SCORE___RESET = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___RESET;
 
 	/**
 	 * The operation id for the '<em>Touch</em>' operation.
@@ -928,7 +894,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE___TOUCH__EOBJECT = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE___TOUCH__EOBJECT;
+	int SCOPE_SCHEDULE_SCORE___TOUCH__EOBJECT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___TOUCH__EOBJECT;
 
 	/**
 	 * The operation id for the '<em>Untouch</em>' operation.
@@ -937,7 +903,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE___UNTOUCH = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE___UNTOUCH;
+	int SCOPE_SCHEDULE_SCORE___UNTOUCH = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___UNTOUCH;
 
 	/**
 	 * The operation id for the '<em>Refresh Antecedents</em>' operation.
@@ -946,7 +912,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE___REFRESH_ANTECEDENTS__REFRESHER = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE___REFRESH_ANTECEDENTS__REFRESHER;
+	int SCOPE_SCHEDULE_SCORE___REFRESH_ANTECEDENTS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_ANTECEDENTS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh This</em>' operation.
@@ -955,7 +921,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE___REFRESH_THIS__REFRESHER = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE___REFRESH_THIS__REFRESHER;
+	int SCOPE_SCHEDULE_SCORE___REFRESH_THIS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh Children And This</em>' operation.
@@ -964,7 +930,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE___REFRESH_CHILDREN_AND_THIS__REFRESHER = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE___REFRESH_CHILDREN_AND_THIS__REFRESHER;
+	int SCOPE_SCHEDULE_SCORE___REFRESH_CHILDREN_AND_THIS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_CHILDREN_AND_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -973,7 +939,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE___REFRESH = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE___REFRESH;
+	int SCOPE_SCHEDULE_SCORE___REFRESH = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -982,7 +948,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE___REFRESH__REFRESHER = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE___REFRESH__REFRESHER;
+	int SCOPE_SCHEDULE_SCORE___REFRESH__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
@@ -991,7 +957,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE___DO_GET_ANTECEDENTS = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE___DO_GET_ANTECEDENTS;
+	int SCOPE_SCHEDULE_SCORE___DO_GET_ANTECEDENTS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_GET_ANTECEDENTS;
 
 	/**
 	 * The operation id for the '<em>Do Get Parent</em>' operation.
@@ -1000,7 +966,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE___DO_GET_PARENT = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE___DO_GET_PARENT;
+	int SCOPE_SCHEDULE_SCORE___DO_GET_PARENT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_GET_PARENT;
 
 	/**
 	 * The operation id for the '<em>Do Refresh</em>' operation.
@@ -1009,7 +975,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE___DO_REFRESH = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE___DO_REFRESH;
+	int SCOPE_SCHEDULE_SCORE___DO_REFRESH = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_REFRESH;
 
 	/**
 	 * The operation id for the '<em>Do Refresh</em>' operation.
@@ -1018,7 +984,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE___DO_REFRESH__EOBJECT = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE___DO_REFRESH__EOBJECT;
+	int SCOPE_SCHEDULE_SCORE___DO_REFRESH__EOBJECT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_REFRESH__EOBJECT;
 
 	/**
 	 * The operation id for the '<em>Get Scope</em>' operation.
@@ -1027,7 +993,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE___GET_SCOPE = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE___GET_SCOPE;
+	int SCOPE_SCHEDULE_SCORE___GET_SCOPE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___GET_SCOPE;
 
 	/**
 	 * The operation id for the '<em>Get Factory ID</em>' operation.
@@ -1036,7 +1002,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE___GET_FACTORY_ID = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE___GET_FACTORY_ID;
+	int SCOPE_SCHEDULE_SCORE___GET_FACTORY_ID = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___GET_FACTORY_ID;
 
 	/**
 	 * The operation id for the '<em>Do Get Bindings</em>' operation.
@@ -1045,7 +1011,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE___DO_GET_BINDINGS = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE___DO_GET_BINDINGS;
+	int SCOPE_SCHEDULE_SCORE___DO_GET_BINDINGS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_GET_BINDINGS;
 
 	/**
 	 * The operation id for the '<em>Do Collect Explicit Antecedents</em>' operation.
@@ -1054,16 +1020,1190 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST;
+	int SCOPE_SCHEDULE_SCORE___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST;
 
 	/**
-	 * The number of operations of the '<em>Calc To Use Solution Task Expression Distance</em>' class.
+	 * The number of operations of the '<em>Scope Schedule Score</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE_OPERATION_COUNT = SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE_OPERATION_COUNT + 0;
+	int SCOPE_SCHEDULE_SCORE_OPERATION_COUNT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.LayerScheduleDistanceImpl <em>Layer Schedule Distance</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.LayerScheduleDistanceImpl
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getLayerScheduleDistance()
+	 * @generated
+	 */
+	int LAYER_SCHEDULE_DISTANCE = 8;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_DISTANCE__PARENT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Antecedents</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_DISTANCE__ANTECEDENTS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__ANTECEDENTS;
+
+	/**
+	 * The feature id for the '<em><b>Antecedents Sibling</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_DISTANCE__ANTECEDENTS_SIBLING = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__ANTECEDENTS_SIBLING;
+
+	/**
+	 * The feature id for the '<em><b>Touched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_DISTANCE__TOUCHED = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TOUCHED;
+
+	/**
+	 * The feature id for the '<em><b>Touched Children</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_DISTANCE__TOUCHED_CHILDREN = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TOUCHED_CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Touchers</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_DISTANCE__TOUCHERS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TOUCHERS;
+
+	/**
+	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_DISTANCE__ENABLED = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Object With Propagator Functions</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_DISTANCE__OBJECT_WITH_PROPAGATOR_FUNCTIONS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__OBJECT_WITH_PROPAGATOR_FUNCTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_DISTANCE__TYPE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Object</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_DISTANCE__OBJECT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__OBJECT;
+
+	/**
+	 * The feature id for the '<em><b>Instance</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_DISTANCE__INSTANCE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__INSTANCE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_DISTANCE__DESCRIPTION = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_DISTANCE__TOUCHED_PARENT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TOUCHED_PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Concrete Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_DISTANCE__CONCRETE_PARENT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Layer Schedule Distance</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_DISTANCE_FEATURE_COUNT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Init</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_DISTANCE___INIT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___INIT;
+
+	/**
+	 * The operation id for the '<em>Enable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_DISTANCE___ENABLE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___ENABLE;
+
+	/**
+	 * The operation id for the '<em>Disable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_DISTANCE___DISABLE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DISABLE;
+
+	/**
+	 * The operation id for the '<em>Reset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_DISTANCE___RESET = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___RESET;
+
+	/**
+	 * The operation id for the '<em>Touch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_DISTANCE___TOUCH__EOBJECT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___TOUCH__EOBJECT;
+
+	/**
+	 * The operation id for the '<em>Untouch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_DISTANCE___UNTOUCH = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___UNTOUCH;
+
+	/**
+	 * The operation id for the '<em>Refresh Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_DISTANCE___REFRESH_ANTECEDENTS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_ANTECEDENTS__REFRESHER;
+
+	/**
+	 * The operation id for the '<em>Refresh This</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_DISTANCE___REFRESH_THIS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_THIS__REFRESHER;
+
+	/**
+	 * The operation id for the '<em>Refresh Children And This</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_DISTANCE___REFRESH_CHILDREN_AND_THIS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_CHILDREN_AND_THIS__REFRESHER;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_DISTANCE___REFRESH = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_DISTANCE___REFRESH__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH__REFRESHER;
+
+	/**
+	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_DISTANCE___DO_GET_ANTECEDENTS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_GET_ANTECEDENTS;
+
+	/**
+	 * The operation id for the '<em>Do Get Parent</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_DISTANCE___DO_GET_PARENT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_GET_PARENT;
+
+	/**
+	 * The operation id for the '<em>Do Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_DISTANCE___DO_REFRESH = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_REFRESH;
+
+	/**
+	 * The operation id for the '<em>Do Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_DISTANCE___DO_REFRESH__EOBJECT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_REFRESH__EOBJECT;
+
+	/**
+	 * The operation id for the '<em>Get Scope</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_DISTANCE___GET_SCOPE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___GET_SCOPE;
+
+	/**
+	 * The operation id for the '<em>Get Factory ID</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_DISTANCE___GET_FACTORY_ID = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___GET_FACTORY_ID;
+
+	/**
+	 * The operation id for the '<em>Do Get Bindings</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_DISTANCE___DO_GET_BINDINGS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_GET_BINDINGS;
+
+	/**
+	 * The operation id for the '<em>Do Collect Explicit Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_DISTANCE___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST;
+
+	/**
+	 * The number of operations of the '<em>Layer Schedule Distance</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_DISTANCE_OPERATION_COUNT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.CalcTaskDistanceImpl <em>Calc Task Distance</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.CalcTaskDistanceImpl
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getCalcTaskDistance()
+	 * @generated
+	 */
+	int CALC_TASK_DISTANCE = 9;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_DISTANCE__PARENT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Antecedents</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_DISTANCE__ANTECEDENTS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__ANTECEDENTS;
+
+	/**
+	 * The feature id for the '<em><b>Antecedents Sibling</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_DISTANCE__ANTECEDENTS_SIBLING = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__ANTECEDENTS_SIBLING;
+
+	/**
+	 * The feature id for the '<em><b>Touched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_DISTANCE__TOUCHED = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TOUCHED;
+
+	/**
+	 * The feature id for the '<em><b>Touched Children</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_DISTANCE__TOUCHED_CHILDREN = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TOUCHED_CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Touchers</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_DISTANCE__TOUCHERS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TOUCHERS;
+
+	/**
+	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_DISTANCE__ENABLED = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Object With Propagator Functions</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_DISTANCE__OBJECT_WITH_PROPAGATOR_FUNCTIONS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__OBJECT_WITH_PROPAGATOR_FUNCTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_DISTANCE__TYPE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Object</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_DISTANCE__OBJECT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__OBJECT;
+
+	/**
+	 * The feature id for the '<em><b>Instance</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_DISTANCE__INSTANCE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__INSTANCE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_DISTANCE__DESCRIPTION = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_DISTANCE__TOUCHED_PARENT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TOUCHED_PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Task</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_DISTANCE__TASK = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Concrete Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_DISTANCE__CONCRETE_PARENT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Calc Task Distance</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_DISTANCE_FEATURE_COUNT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Init</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_DISTANCE___INIT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___INIT;
+
+	/**
+	 * The operation id for the '<em>Enable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_DISTANCE___ENABLE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___ENABLE;
+
+	/**
+	 * The operation id for the '<em>Disable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_DISTANCE___DISABLE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DISABLE;
+
+	/**
+	 * The operation id for the '<em>Reset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_DISTANCE___RESET = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___RESET;
+
+	/**
+	 * The operation id for the '<em>Touch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_DISTANCE___TOUCH__EOBJECT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___TOUCH__EOBJECT;
+
+	/**
+	 * The operation id for the '<em>Untouch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_DISTANCE___UNTOUCH = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___UNTOUCH;
+
+	/**
+	 * The operation id for the '<em>Refresh Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_DISTANCE___REFRESH_ANTECEDENTS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_ANTECEDENTS__REFRESHER;
+
+	/**
+	 * The operation id for the '<em>Refresh This</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_DISTANCE___REFRESH_THIS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_THIS__REFRESHER;
+
+	/**
+	 * The operation id for the '<em>Refresh Children And This</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_DISTANCE___REFRESH_CHILDREN_AND_THIS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_CHILDREN_AND_THIS__REFRESHER;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_DISTANCE___REFRESH = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_DISTANCE___REFRESH__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH__REFRESHER;
+
+	/**
+	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_DISTANCE___DO_GET_ANTECEDENTS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_GET_ANTECEDENTS;
+
+	/**
+	 * The operation id for the '<em>Do Get Parent</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_DISTANCE___DO_GET_PARENT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_GET_PARENT;
+
+	/**
+	 * The operation id for the '<em>Do Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_DISTANCE___DO_REFRESH = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_REFRESH;
+
+	/**
+	 * The operation id for the '<em>Do Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_DISTANCE___DO_REFRESH__EOBJECT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_REFRESH__EOBJECT;
+
+	/**
+	 * The operation id for the '<em>Get Scope</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_DISTANCE___GET_SCOPE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___GET_SCOPE;
+
+	/**
+	 * The operation id for the '<em>Get Factory ID</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_DISTANCE___GET_FACTORY_ID = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___GET_FACTORY_ID;
+
+	/**
+	 * The operation id for the '<em>Do Get Bindings</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_DISTANCE___DO_GET_BINDINGS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_GET_BINDINGS;
+
+	/**
+	 * The operation id for the '<em>Do Collect Explicit Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_DISTANCE___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST;
+
+	/**
+	 * The number of operations of the '<em>Calc Task Distance</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_DISTANCE_OPERATION_COUNT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.CalcResourceDistanceImpl <em>Calc Resource Distance</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.CalcResourceDistanceImpl
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getCalcResourceDistance()
+	 * @generated
+	 */
+	int CALC_RESOURCE_DISTANCE = 10;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_DISTANCE__PARENT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Antecedents</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_DISTANCE__ANTECEDENTS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__ANTECEDENTS;
+
+	/**
+	 * The feature id for the '<em><b>Antecedents Sibling</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_DISTANCE__ANTECEDENTS_SIBLING = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__ANTECEDENTS_SIBLING;
+
+	/**
+	 * The feature id for the '<em><b>Touched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_DISTANCE__TOUCHED = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TOUCHED;
+
+	/**
+	 * The feature id for the '<em><b>Touched Children</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_DISTANCE__TOUCHED_CHILDREN = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TOUCHED_CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Touchers</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_DISTANCE__TOUCHERS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TOUCHERS;
+
+	/**
+	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_DISTANCE__ENABLED = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Object With Propagator Functions</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_DISTANCE__OBJECT_WITH_PROPAGATOR_FUNCTIONS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__OBJECT_WITH_PROPAGATOR_FUNCTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_DISTANCE__TYPE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Object</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_DISTANCE__OBJECT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__OBJECT;
+
+	/**
+	 * The feature id for the '<em><b>Instance</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_DISTANCE__INSTANCE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__INSTANCE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_DISTANCE__DESCRIPTION = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_DISTANCE__TOUCHED_PARENT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TOUCHED_PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Resource</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_DISTANCE__RESOURCE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Concrete Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_DISTANCE__CONCRETE_PARENT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Calc Resource Distance</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_DISTANCE_FEATURE_COUNT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Init</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_DISTANCE___INIT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___INIT;
+
+	/**
+	 * The operation id for the '<em>Enable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_DISTANCE___ENABLE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___ENABLE;
+
+	/**
+	 * The operation id for the '<em>Disable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_DISTANCE___DISABLE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DISABLE;
+
+	/**
+	 * The operation id for the '<em>Reset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_DISTANCE___RESET = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___RESET;
+
+	/**
+	 * The operation id for the '<em>Touch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_DISTANCE___TOUCH__EOBJECT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___TOUCH__EOBJECT;
+
+	/**
+	 * The operation id for the '<em>Untouch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_DISTANCE___UNTOUCH = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___UNTOUCH;
+
+	/**
+	 * The operation id for the '<em>Refresh Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_DISTANCE___REFRESH_ANTECEDENTS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_ANTECEDENTS__REFRESHER;
+
+	/**
+	 * The operation id for the '<em>Refresh This</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_DISTANCE___REFRESH_THIS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_THIS__REFRESHER;
+
+	/**
+	 * The operation id for the '<em>Refresh Children And This</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_DISTANCE___REFRESH_CHILDREN_AND_THIS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_CHILDREN_AND_THIS__REFRESHER;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_DISTANCE___REFRESH = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_DISTANCE___REFRESH__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH__REFRESHER;
+
+	/**
+	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_DISTANCE___DO_GET_ANTECEDENTS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_GET_ANTECEDENTS;
+
+	/**
+	 * The operation id for the '<em>Do Get Parent</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_DISTANCE___DO_GET_PARENT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_GET_PARENT;
+
+	/**
+	 * The operation id for the '<em>Do Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_DISTANCE___DO_REFRESH = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_REFRESH;
+
+	/**
+	 * The operation id for the '<em>Do Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_DISTANCE___DO_REFRESH__EOBJECT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_REFRESH__EOBJECT;
+
+	/**
+	 * The operation id for the '<em>Get Scope</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_DISTANCE___GET_SCOPE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___GET_SCOPE;
+
+	/**
+	 * The operation id for the '<em>Get Factory ID</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_DISTANCE___GET_FACTORY_ID = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___GET_FACTORY_ID;
+
+	/**
+	 * The operation id for the '<em>Do Get Bindings</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_DISTANCE___DO_GET_BINDINGS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_GET_BINDINGS;
+
+	/**
+	 * The operation id for the '<em>Do Collect Explicit Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_DISTANCE___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST;
+
+	/**
+	 * The number of operations of the '<em>Calc Resource Distance</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_DISTANCE_OPERATION_COUNT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleImpl <em>To Use Schedule</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleImpl
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseSchedule()
+	 * @generated
+	 */
+	int TO_USE_SCHEDULE = 11;
+
+	/**
+	 * The feature id for the '<em><b>Propagator Functions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE__PROPAGATOR_FUNCTIONS = SchedulerPackage.SCHEDULE__PROPAGATOR_FUNCTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Score</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE__SCORE = SchedulerPackage.SCHEDULE__SCORE;
+
+	/**
+	 * The feature id for the '<em><b>Tasks</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE__TASKS = SchedulerPackage.SCHEDULE__TASKS;
+
+	/**
+	 * The feature id for the '<em><b>Resources</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE__RESOURCES = SchedulerPackage.SCHEDULE__RESOURCES;
+
+	/**
+	 * The feature id for the '<em><b>Solution Nr</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE__SOLUTION_NR = SchedulerPackage.SCHEDULE__SOLUTION_NR;
+
+	/**
+	 * The feature id for the '<em><b>Scheduler</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE__SCHEDULER = SchedulerPackage.SCHEDULE__SCHEDULER;
+
+	/**
+	 * The feature id for the '<em><b>Nr Candidate Scheduled Tasks</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE__NR_CANDIDATE_SCHEDULED_TASKS = SchedulerPackage.SCHEDULE__NR_CANDIDATE_SCHEDULED_TASKS;
+
+	/**
+	 * The feature id for the '<em><b>Nr Scheduled Tasks</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE__NR_SCHEDULED_TASKS = SchedulerPackage.SCHEDULE__NR_SCHEDULED_TASKS;
+
+	/**
+	 * The feature id for the '<em><b>Total Distance</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE__TOTAL_DISTANCE = SchedulerPackage.SCHEDULE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>To Use Schedule</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_FEATURE_COUNT = SchedulerPackage.SCHEDULE_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION = SchedulerPackage.SCHEDULE___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION;
+
+	/**
+	 * The operation id for the '<em>Get Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE___GET_PROPAGATOR_FUNCTION__ECLASS = SchedulerPackage.SCHEDULE___GET_PROPAGATOR_FUNCTION__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE___ADD_PROPAGATOR_FUNCTIONS__STRING = SchedulerPackage.SCHEDULE___ADD_PROPAGATOR_FUNCTIONS__STRING;
+
+	/**
+	 * The operation id for the '<em>Replicate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE___REPLICATE = SchedulerPackage.SCHEDULE___REPLICATE;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE___REFRESH = SchedulerPackage.SCHEDULE___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Initialize</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE___INITIALIZE = SchedulerPackage.SCHEDULE___INITIALIZE;
+
+	/**
+	 * The operation id for the '<em>Compare</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE___COMPARE__SCORE = SchedulerPackage.SCHEDULE_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Copy</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE___COPY__SCORE = SchedulerPackage.SCHEDULE_OPERATION_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>To Use Schedule</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_OPERATION_COUNT = SchedulerPackage.SCHEDULE_OPERATION_COUNT + 2;
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.Domain <em>Domain</em>}'.
@@ -1109,6 +2249,27 @@ public interface ToUseSchedulerPackage extends EPackage {
 	EReference getDomain_Tasks();
 
 	/**
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.ToUseScore <em>To Use Score</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>To Use Score</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseScore
+	 * @generated
+	 */
+	EClass getToUseScore();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.tousescheduler.ToUseScore#getTotalDistance <em>Total Distance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Total Distance</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseScore#getTotalDistance()
+	 * @see #getToUseScore()
+	 * @generated
+	 */
+	EAttribute getToUseScore_TotalDistance();
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduler <em>To Use Scheduler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1117,6 +2278,28 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getToUseScheduler();
+
+	/**
+	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduler#getSchedulerResources <em>Scheduler Resources</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Scheduler Resources</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseScheduler#getSchedulerResources()
+	 * @see #getToUseScheduler()
+	 * @generated
+	 */
+	EReference getToUseScheduler_SchedulerResources();
+
+	/**
+	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduler#getSchedulerTasks <em>Scheduler Tasks</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Scheduler Tasks</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseScheduler#getSchedulerTasks()
+	 * @see #getToUseScheduler()
+	 * @generated
+	 */
+	EReference getToUseScheduler_SchedulerTasks();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.ToUseTask <em>To Use Task</em>}'.
@@ -1161,100 +2344,173 @@ public interface ToUseSchedulerPackage extends EPackage {
 	EAttribute getToUseResource_Name();
 
 	/**
-	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.ToUseSolutionTask <em>To Use Solution Task</em>}'.
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask <em>To Use Schedule Task</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>To Use Solution Task</em>'.
-	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSolutionTask
+	 * @return the meta object for class '<em>To Use Schedule Task</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask
 	 * @generated
 	 */
-	EClass getToUseSolutionTask();
+	EClass getToUseScheduleTask();
 
 	/**
-	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.tousescheduler.ToUseSolutionTask#getToUseTask <em>To Use Task</em>}'.
+	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask#getToUseTask <em>To Use Task</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>To Use Task</em>'.
-	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSolutionTask#getToUseTask()
-	 * @see #getToUseSolutionTask()
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask#getToUseTask()
+	 * @see #getToUseScheduleTask()
 	 * @generated
 	 */
-	EReference getToUseSolutionTask_ToUseTask();
+	EReference getToUseScheduleTask_ToUseTask();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link com.misc.touse.moplaf.tousescheduler.ToUseSolutionTask#getDistance <em>Distance</em>}'.
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask#getDistance <em>Distance</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Distance</em>'.
-	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSolutionTask#getDistance()
-	 * @see #getToUseSolutionTask()
+	 * @return the meta object for the attribute '<em>Distance</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask#getDistance()
+	 * @see #getToUseScheduleTask()
 	 * @generated
 	 */
-	EReference getToUseSolutionTask_Distance();
+	EAttribute getToUseScheduleTask_Distance();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link com.misc.touse.moplaf.tousescheduler.ToUseSolutionTask#getTime <em>Time</em>}'.
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource <em>To Use Schedule Resource</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Time</em>'.
-	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSolutionTask#getTime()
-	 * @see #getToUseSolutionTask()
+	 * @return the meta object for class '<em>To Use Schedule Resource</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource
 	 * @generated
 	 */
-	EReference getToUseSolutionTask_Time();
+	EClass getToUseScheduleResource();
 
 	/**
-	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.ToUseSolutionResource <em>To Use Solution Resource</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>To Use Solution Resource</em>'.
-	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSolutionResource
-	 * @generated
-	 */
-	EClass getToUseSolutionResource();
-
-	/**
-	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.tousescheduler.ToUseSolutionResource#getToUseResource <em>To Use Resource</em>}'.
+	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource#getToUseResource <em>To Use Resource</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>To Use Resource</em>'.
-	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSolutionResource#getToUseResource()
-	 * @see #getToUseSolutionResource()
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource#getToUseResource()
+	 * @see #getToUseScheduleResource()
 	 * @generated
 	 */
-	EReference getToUseSolutionResource_ToUseResource();
+	EReference getToUseScheduleResource_ToUseResource();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link com.misc.touse.moplaf.tousescheduler.ToUseSolutionResource#getTotalDistance <em>Total Distance</em>}'.
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource#getTotalDistance <em>Total Distance</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Total Distance</em>'.
-	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSolutionResource#getTotalDistance()
-	 * @see #getToUseSolutionResource()
+	 * @return the meta object for the attribute '<em>Total Distance</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource#getTotalDistance()
+	 * @see #getToUseScheduleResource()
 	 * @generated
 	 */
-	EReference getToUseSolutionResource_TotalDistance();
+	EAttribute getToUseScheduleResource_TotalDistance();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link com.misc.touse.moplaf.tousescheduler.ToUseSolutionResource#getEndTime <em>End Time</em>}'.
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.ScopeScheduleScore <em>Scope Schedule Score</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>End Time</em>'.
-	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSolutionResource#getEndTime()
-	 * @see #getToUseSolutionResource()
+	 * @return the meta object for class '<em>Scope Schedule Score</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.ScopeScheduleScore
 	 * @generated
 	 */
-	EReference getToUseSolutionResource_EndTime();
+	EClass getScopeScheduleScore();
 
 	/**
-	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.CalcToUseSolutionTaskExpressionDistance <em>Calc To Use Solution Task Expression Distance</em>}'.
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.LayerScheduleDistance <em>Layer Schedule Distance</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Calc To Use Solution Task Expression Distance</em>'.
-	 * @see com.misc.touse.moplaf.tousescheduler.CalcToUseSolutionTaskExpressionDistance
+	 * @return the meta object for class '<em>Layer Schedule Distance</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.LayerScheduleDistance
 	 * @generated
 	 */
-	EClass getCalcToUseSolutionTaskExpressionDistance();
+	EClass getLayerScheduleDistance();
+
+	/**
+	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.tousescheduler.LayerScheduleDistance#getConcreteParent <em>Concrete Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Concrete Parent</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.LayerScheduleDistance#getConcreteParent()
+	 * @see #getLayerScheduleDistance()
+	 * @generated
+	 */
+	EReference getLayerScheduleDistance_ConcreteParent();
+
+	/**
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.CalcTaskDistance <em>Calc Task Distance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Calc Task Distance</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.CalcTaskDistance
+	 * @generated
+	 */
+	EClass getCalcTaskDistance();
+
+	/**
+	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.tousescheduler.CalcTaskDistance#getTask <em>Task</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Task</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.CalcTaskDistance#getTask()
+	 * @see #getCalcTaskDistance()
+	 * @generated
+	 */
+	EReference getCalcTaskDistance_Task();
+
+	/**
+	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.tousescheduler.CalcTaskDistance#getConcreteParent <em>Concrete Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Concrete Parent</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.CalcTaskDistance#getConcreteParent()
+	 * @see #getCalcTaskDistance()
+	 * @generated
+	 */
+	EReference getCalcTaskDistance_ConcreteParent();
+
+	/**
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.CalcResourceDistance <em>Calc Resource Distance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Calc Resource Distance</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.CalcResourceDistance
+	 * @generated
+	 */
+	EClass getCalcResourceDistance();
+
+	/**
+	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.tousescheduler.CalcResourceDistance#getResource <em>Resource</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Resource</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.CalcResourceDistance#getResource()
+	 * @see #getCalcResourceDistance()
+	 * @generated
+	 */
+	EReference getCalcResourceDistance_Resource();
+
+	/**
+	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.tousescheduler.CalcResourceDistance#getConcreteParent <em>Concrete Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Concrete Parent</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.CalcResourceDistance#getConcreteParent()
+	 * @see #getCalcResourceDistance()
+	 * @generated
+	 */
+	EReference getCalcResourceDistance_ConcreteParent();
+
+	/**
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.ToUseSchedule <em>To Use Schedule</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>To Use Schedule</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedule
+	 * @generated
+	 */
+	EClass getToUseSchedule();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1314,6 +2570,24 @@ public interface ToUseSchedulerPackage extends EPackage {
 		EReference DOMAIN__TASKS = eINSTANCE.getDomain_Tasks();
 
 		/**
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScoreImpl <em>To Use Score</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseScoreImpl
+		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseScore()
+		 * @generated
+		 */
+		EClass TO_USE_SCORE = eINSTANCE.getToUseScore();
+
+		/**
+		 * The meta object literal for the '<em><b>Total Distance</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TO_USE_SCORE__TOTAL_DISTANCE = eINSTANCE.getToUseScore_TotalDistance();
+
+		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerImpl <em>To Use Scheduler</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1322,6 +2596,22 @@ public interface ToUseSchedulerPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TO_USE_SCHEDULER = eINSTANCE.getToUseScheduler();
+
+		/**
+		 * The meta object literal for the '<em><b>Scheduler Resources</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TO_USE_SCHEDULER__SCHEDULER_RESOURCES = eINSTANCE.getToUseScheduler_SchedulerResources();
+
+		/**
+		 * The meta object literal for the '<em><b>Scheduler Tasks</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TO_USE_SCHEDULER__SCHEDULER_TASKS = eINSTANCE.getToUseScheduler_SchedulerTasks();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseTaskImpl <em>To Use Task</em>}' class.
@@ -1360,14 +2650,14 @@ public interface ToUseSchedulerPackage extends EPackage {
 		EAttribute TO_USE_RESOURCE__NAME = eINSTANCE.getToUseResource_Name();
 
 		/**
-		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseSolutionTaskImpl <em>To Use Solution Task</em>}' class.
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleTaskImpl <em>To Use Schedule Task</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSolutionTaskImpl
-		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseSolutionTask()
+		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleTaskImpl
+		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseScheduleTask()
 		 * @generated
 		 */
-		EClass TO_USE_SOLUTION_TASK = eINSTANCE.getToUseSolutionTask();
+		EClass TO_USE_SCHEDULE_TASK = eINSTANCE.getToUseScheduleTask();
 
 		/**
 		 * The meta object literal for the '<em><b>To Use Task</b></em>' reference feature.
@@ -1375,33 +2665,25 @@ public interface ToUseSchedulerPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TO_USE_SOLUTION_TASK__TO_USE_TASK = eINSTANCE.getToUseSolutionTask_ToUseTask();
+		EReference TO_USE_SCHEDULE_TASK__TO_USE_TASK = eINSTANCE.getToUseScheduleTask_ToUseTask();
 
 		/**
-		 * The meta object literal for the '<em><b>Distance</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Distance</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TO_USE_SOLUTION_TASK__DISTANCE = eINSTANCE.getToUseSolutionTask_Distance();
+		EAttribute TO_USE_SCHEDULE_TASK__DISTANCE = eINSTANCE.getToUseScheduleTask_Distance();
 
 		/**
-		 * The meta object literal for the '<em><b>Time</b></em>' containment reference feature.
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleResourceImpl <em>To Use Schedule Resource</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleResourceImpl
+		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseScheduleResource()
 		 * @generated
 		 */
-		EReference TO_USE_SOLUTION_TASK__TIME = eINSTANCE.getToUseSolutionTask_Time();
-
-		/**
-		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseSolutionResourceImpl <em>To Use Solution Resource</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSolutionResourceImpl
-		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseSolutionResource()
-		 * @generated
-		 */
-		EClass TO_USE_SOLUTION_RESOURCE = eINSTANCE.getToUseSolutionResource();
+		EClass TO_USE_SCHEDULE_RESOURCE = eINSTANCE.getToUseScheduleResource();
 
 		/**
 		 * The meta object literal for the '<em><b>To Use Resource</b></em>' reference feature.
@@ -1409,33 +2691,105 @@ public interface ToUseSchedulerPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TO_USE_SOLUTION_RESOURCE__TO_USE_RESOURCE = eINSTANCE.getToUseSolutionResource_ToUseResource();
+		EReference TO_USE_SCHEDULE_RESOURCE__TO_USE_RESOURCE = eINSTANCE.getToUseScheduleResource_ToUseResource();
 
 		/**
-		 * The meta object literal for the '<em><b>Total Distance</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Total Distance</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TO_USE_SOLUTION_RESOURCE__TOTAL_DISTANCE = eINSTANCE.getToUseSolutionResource_TotalDistance();
+		EAttribute TO_USE_SCHEDULE_RESOURCE__TOTAL_DISTANCE = eINSTANCE.getToUseScheduleResource_TotalDistance();
 
 		/**
-		 * The meta object literal for the '<em><b>End Time</b></em>' containment reference feature.
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ScopeScheduleScoreImpl <em>Scope Schedule Score</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.touse.moplaf.tousescheduler.impl.ScopeScheduleScoreImpl
+		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getScopeScheduleScore()
+		 * @generated
+		 */
+		EClass SCOPE_SCHEDULE_SCORE = eINSTANCE.getScopeScheduleScore();
+
+		/**
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.LayerScheduleDistanceImpl <em>Layer Schedule Distance</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.touse.moplaf.tousescheduler.impl.LayerScheduleDistanceImpl
+		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getLayerScheduleDistance()
+		 * @generated
+		 */
+		EClass LAYER_SCHEDULE_DISTANCE = eINSTANCE.getLayerScheduleDistance();
+
+		/**
+		 * The meta object literal for the '<em><b>Concrete Parent</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TO_USE_SOLUTION_RESOURCE__END_TIME = eINSTANCE.getToUseSolutionResource_EndTime();
+		EReference LAYER_SCHEDULE_DISTANCE__CONCRETE_PARENT = eINSTANCE.getLayerScheduleDistance_ConcreteParent();
 
 		/**
-		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.CalcToUseSolutionTaskExpressionDistanceImpl <em>Calc To Use Solution Task Expression Distance</em>}' class.
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.CalcTaskDistanceImpl <em>Calc Task Distance</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see com.misc.touse.moplaf.tousescheduler.impl.CalcToUseSolutionTaskExpressionDistanceImpl
-		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getCalcToUseSolutionTaskExpressionDistance()
+		 * @see com.misc.touse.moplaf.tousescheduler.impl.CalcTaskDistanceImpl
+		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getCalcTaskDistance()
 		 * @generated
 		 */
-		EClass CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE = eINSTANCE.getCalcToUseSolutionTaskExpressionDistance();
+		EClass CALC_TASK_DISTANCE = eINSTANCE.getCalcTaskDistance();
+
+		/**
+		 * The meta object literal for the '<em><b>Task</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CALC_TASK_DISTANCE__TASK = eINSTANCE.getCalcTaskDistance_Task();
+
+		/**
+		 * The meta object literal for the '<em><b>Concrete Parent</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CALC_TASK_DISTANCE__CONCRETE_PARENT = eINSTANCE.getCalcTaskDistance_ConcreteParent();
+
+		/**
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.CalcResourceDistanceImpl <em>Calc Resource Distance</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.touse.moplaf.tousescheduler.impl.CalcResourceDistanceImpl
+		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getCalcResourceDistance()
+		 * @generated
+		 */
+		EClass CALC_RESOURCE_DISTANCE = eINSTANCE.getCalcResourceDistance();
+
+		/**
+		 * The meta object literal for the '<em><b>Resource</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CALC_RESOURCE_DISTANCE__RESOURCE = eINSTANCE.getCalcResourceDistance_Resource();
+
+		/**
+		 * The meta object literal for the '<em><b>Concrete Parent</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CALC_RESOURCE_DISTANCE__CONCRETE_PARENT = eINSTANCE.getCalcResourceDistance_ConcreteParent();
+
+		/**
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleImpl <em>To Use Schedule</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleImpl
+		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseSchedule()
+		 * @generated
+		 */
+		EClass TO_USE_SCHEDULE = eINSTANCE.getToUseSchedule();
 
 	}
 

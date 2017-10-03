@@ -2,14 +2,15 @@
  */
 package com.misc.touse.moplaf.tousescheduler.util;
 
+import com.misc.common.moplaf.localsearch.Score;
+import com.misc.common.moplaf.localsearch.Solution;
 import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
 import com.misc.common.moplaf.propagator2.PropagatorFunction;
 import com.misc.common.moplaf.propagator2.PropagatorFunctionBindings;
+import com.misc.common.moplaf.scheduler.Resource;
+import com.misc.common.moplaf.scheduler.Schedule;
 import com.misc.common.moplaf.scheduler.Scheduler;
-import com.misc.common.moplaf.scheduler.SolutionResource;
-import com.misc.common.moplaf.scheduler.SolutionTask;
-import com.misc.common.moplaf.schedulercalc.SetTaskExpressionCandidateValue;
-import com.misc.common.moplaf.schedulercalc.TaskExpressionPropagatorFunction;
+import com.misc.common.moplaf.scheduler.Task;
 import com.misc.touse.moplaf.tousescheduler.*;
 
 import org.eclipse.emf.ecore.EObject;
@@ -80,6 +81,13 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ToUseSchedulerPackage.TO_USE_SCORE: {
+				ToUseScore toUseScore = (ToUseScore)theEObject;
+				T result = caseToUseScore(toUseScore);
+				if (result == null) result = caseScore(toUseScore);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ToUseSchedulerPackage.TO_USE_SCHEDULER: {
 				ToUseScheduler toUseScheduler = (ToUseScheduler)theEObject;
 				T result = caseToUseScheduler(toUseScheduler);
@@ -99,29 +107,62 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ToUseSchedulerPackage.TO_USE_SOLUTION_TASK: {
-				ToUseSolutionTask toUseSolutionTask = (ToUseSolutionTask)theEObject;
-				T result = caseToUseSolutionTask(toUseSolutionTask);
-				if (result == null) result = caseSolutionTask(toUseSolutionTask);
-				if (result == null) result = caseObjectWithPropagatorFunctions(toUseSolutionTask);
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK: {
+				ToUseScheduleTask toUseScheduleTask = (ToUseScheduleTask)theEObject;
+				T result = caseToUseScheduleTask(toUseScheduleTask);
+				if (result == null) result = caseTask(toUseScheduleTask);
+				if (result == null) result = caseObjectWithPropagatorFunctions(toUseScheduleTask);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ToUseSchedulerPackage.TO_USE_SOLUTION_RESOURCE: {
-				ToUseSolutionResource toUseSolutionResource = (ToUseSolutionResource)theEObject;
-				T result = caseToUseSolutionResource(toUseSolutionResource);
-				if (result == null) result = caseSolutionResource(toUseSolutionResource);
-				if (result == null) result = caseObjectWithPropagatorFunctions(toUseSolutionResource);
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE: {
+				ToUseScheduleResource toUseScheduleResource = (ToUseScheduleResource)theEObject;
+				T result = caseToUseScheduleResource(toUseScheduleResource);
+				if (result == null) result = caseResource(toUseScheduleResource);
+				if (result == null) result = caseObjectWithPropagatorFunctions(toUseScheduleResource);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ToUseSchedulerPackage.CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE: {
-				CalcToUseSolutionTaskExpressionDistance calcToUseSolutionTaskExpressionDistance = (CalcToUseSolutionTaskExpressionDistance)theEObject;
-				T result = caseCalcToUseSolutionTaskExpressionDistance(calcToUseSolutionTaskExpressionDistance);
-				if (result == null) result = caseSetTaskExpressionCandidateValue(calcToUseSolutionTaskExpressionDistance);
-				if (result == null) result = caseTaskExpressionPropagatorFunction(calcToUseSolutionTaskExpressionDistance);
-				if (result == null) result = casePropagatorFunctionBindings(calcToUseSolutionTaskExpressionDistance);
-				if (result == null) result = casePropagatorFunction(calcToUseSolutionTaskExpressionDistance);
+			case ToUseSchedulerPackage.SCOPE_SCHEDULE_SCORE: {
+				ScopeScheduleScore scopeScheduleScore = (ScopeScheduleScore)theEObject;
+				T result = caseScopeScheduleScore(scopeScheduleScore);
+				if (result == null) result = casePropagatorFunctionBindings(scopeScheduleScore);
+				if (result == null) result = casePropagatorFunction(scopeScheduleScore);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ToUseSchedulerPackage.LAYER_SCHEDULE_DISTANCE: {
+				LayerScheduleDistance layerScheduleDistance = (LayerScheduleDistance)theEObject;
+				T result = caseLayerScheduleDistance(layerScheduleDistance);
+				if (result == null) result = casePropagatorFunctionBindings(layerScheduleDistance);
+				if (result == null) result = casePropagatorFunction(layerScheduleDistance);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ToUseSchedulerPackage.CALC_TASK_DISTANCE: {
+				CalcTaskDistance calcTaskDistance = (CalcTaskDistance)theEObject;
+				T result = caseCalcTaskDistance(calcTaskDistance);
+				if (result == null) result = casePropagatorFunctionBindings(calcTaskDistance);
+				if (result == null) result = casePropagatorFunction(calcTaskDistance);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ToUseSchedulerPackage.CALC_RESOURCE_DISTANCE: {
+				CalcResourceDistance calcResourceDistance = (CalcResourceDistance)theEObject;
+				T result = caseCalcResourceDistance(calcResourceDistance);
+				if (result == null) result = casePropagatorFunctionBindings(calcResourceDistance);
+				if (result == null) result = casePropagatorFunction(calcResourceDistance);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE: {
+				ToUseSchedule toUseSchedule = (ToUseSchedule)theEObject;
+				T result = caseToUseSchedule(toUseSchedule);
+				if (result == null) result = caseSchedule(toUseSchedule);
+				if (result == null) result = caseToUseScore(toUseSchedule);
+				if (result == null) result = caseSolution(toUseSchedule);
+				if (result == null) result = caseScore(toUseSchedule);
+				if (result == null) result = caseObjectWithPropagatorFunctions(toUseSchedule);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -141,6 +182,21 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseDomain(Domain object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>To Use Score</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>To Use Score</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseToUseScore(ToUseScore object) {
 		return null;
 	}
 
@@ -190,47 +246,122 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>To Use Solution Task</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>To Use Schedule Task</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>To Use Solution Task</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>To Use Schedule Task</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseToUseSolutionTask(ToUseSolutionTask object) {
+	public T caseToUseScheduleTask(ToUseScheduleTask object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>To Use Solution Resource</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>To Use Schedule Resource</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>To Use Solution Resource</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>To Use Schedule Resource</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseToUseSolutionResource(ToUseSolutionResource object) {
+	public T caseToUseScheduleResource(ToUseScheduleResource object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Calc To Use Solution Task Expression Distance</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Scope Schedule Score</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Calc To Use Solution Task Expression Distance</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Scope Schedule Score</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseCalcToUseSolutionTaskExpressionDistance(CalcToUseSolutionTaskExpressionDistance object) {
+	public T caseScopeScheduleScore(ScopeScheduleScore object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Layer Schedule Distance</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Layer Schedule Distance</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLayerScheduleDistance(LayerScheduleDistance object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Calc Task Distance</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Calc Task Distance</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCalcTaskDistance(CalcTaskDistance object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Calc Resource Distance</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Calc Resource Distance</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCalcResourceDistance(CalcResourceDistance object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>To Use Schedule</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>To Use Schedule</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseToUseSchedule(ToUseSchedule object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Score</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Score</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseScore(Score object) {
 		return null;
 	}
 
@@ -265,32 +396,32 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Solution Task</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Task</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Solution Task</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Task</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSolutionTask(SolutionTask object) {
+	public T caseTask(Task object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Solution Resource</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Resource</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Solution Resource</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Resource</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSolutionResource(SolutionResource object) {
+	public T caseResource(Resource object) {
 		return null;
 	}
 
@@ -325,32 +456,32 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Task Expression Propagator Function</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Solution</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Task Expression Propagator Function</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Solution</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTaskExpressionPropagatorFunction(TaskExpressionPropagatorFunction object) {
+	public T caseSolution(Solution object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Set Task Expression Candidate Value</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Schedule</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Set Task Expression Candidate Value</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Schedule</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSetTaskExpressionCandidateValue(SetTaskExpressionCandidateValue object) {
+	public T caseSchedule(Schedule object) {
 		return null;
 	}
 

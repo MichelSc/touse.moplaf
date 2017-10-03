@@ -3,12 +3,16 @@
 package com.misc.touse.moplaf.tousescheduler.provider;
 
 
-import com.misc.common.moplaf.scheduler.SchedulerPackage;
-import com.misc.common.moplaf.scheduler.provider.SchedulerItemProvider;
+import com.misc.common.moplaf.localsearch.LocalSearchPackage;
 
-import com.misc.touse.moplaf.tousescheduler.ToUseScheduler;
+import com.misc.common.moplaf.scheduler.SchedulerPackage;
+
+import com.misc.common.moplaf.scheduler.provider.ScheduleItemProvider;
+
+import com.misc.touse.moplaf.tousescheduler.ToUseSchedule;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerFactory;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -19,21 +23,23 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link com.misc.touse.moplaf.tousescheduler.ToUseScheduler} object.
+ * This is the item provider adapter for a {@link com.misc.touse.moplaf.tousescheduler.ToUseSchedule} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ToUseSchedulerItemProvider extends SchedulerItemProvider {
+public class ToUseScheduleItemProvider extends ScheduleItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ToUseSchedulerItemProvider(AdapterFactory adapterFactory) {
+	public ToUseScheduleItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -48,65 +54,42 @@ public class ToUseSchedulerItemProvider extends SchedulerItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addSchedulerResourcesPropertyDescriptor(object);
-			addSchedulerTasksPropertyDescriptor(object);
+			addTotalDistancePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Scheduler Resources feature.
+	 * This adds a property descriptor for the Total Distance feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addSchedulerResourcesPropertyDescriptor(Object object) {
+	protected void addTotalDistancePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ToUseScheduler_SchedulerResources_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseScheduler_SchedulerResources_feature", "_UI_ToUseScheduler_type"),
-				 ToUseSchedulerPackage.Literals.TO_USE_SCHEDULER__SCHEDULER_RESOURCES,
+				 getString("_UI_ToUseScore_TotalDistance_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseScore_TotalDistance_feature", "_UI_ToUseScore_type"),
+				 ToUseSchedulerPackage.Literals.TO_USE_SCORE__TOTAL_DISTANCE,
 				 true,
 				 false,
-				 true,
-				 null,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
 				 null,
 				 null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Scheduler Tasks feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addSchedulerTasksPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ToUseScheduler_SchedulerTasks_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseScheduler_SchedulerTasks_feature", "_UI_ToUseScheduler_type"),
-				 ToUseSchedulerPackage.Literals.TO_USE_SCHEDULER__SCHEDULER_TASKS,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This returns ToUseScheduler.gif.
+	 * This returns ToUseSchedule.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/ToUseScheduler"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ToUseSchedule"));
 	}
 
 	/**
@@ -117,10 +100,8 @@ public class ToUseSchedulerItemProvider extends SchedulerItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ToUseScheduler)object).getName();
-		return label == null || label.length() == 0 ?
-			getString("_UI_ToUseScheduler_type") :
-			getString("_UI_ToUseScheduler_type") + " " + label;
+		ToUseSchedule toUseSchedule = (ToUseSchedule)object;
+		return getString("_UI_ToUseSchedule_type") + " " + toUseSchedule.getSolutionNr();
 	}
 	
 
@@ -134,6 +115,12 @@ public class ToUseSchedulerItemProvider extends SchedulerItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(ToUseSchedule.class)) {
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE__TOTAL_DISTANCE:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 
@@ -150,8 +137,23 @@ public class ToUseSchedulerItemProvider extends SchedulerItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__SCHEDULERS,
+				(LocalSearchPackage.Literals.SOLUTION__SCORE,
+				 ToUseSchedulerFactory.eINSTANCE.createToUseScore()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(LocalSearchPackage.Literals.SOLUTION__SCORE,
 				 ToUseSchedulerFactory.eINSTANCE.createToUseSchedule()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULE__TASKS,
+				 ToUseSchedulerFactory.eINSTANCE.createToUseScheduleTask()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULE__RESOURCES,
+				 ToUseSchedulerFactory.eINSTANCE.createToUseScheduleResource()));
 	}
 
 	/**

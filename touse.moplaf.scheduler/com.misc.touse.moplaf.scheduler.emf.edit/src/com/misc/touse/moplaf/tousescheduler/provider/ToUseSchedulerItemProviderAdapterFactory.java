@@ -95,6 +95,29 @@ public class ToUseSchedulerItemProviderAdapterFactory extends ToUseSchedulerAdap
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.ToUseScore} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ToUseScoreItemProvider toUseScoreItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousescheduler.ToUseScore}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createToUseScoreAdapter() {
+		if (toUseScoreItemProvider == null) {
+			toUseScoreItemProvider = new ToUseScoreItemProvider(this);
+		}
+
+		return toUseScoreItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.ToUseScheduler} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -164,72 +187,164 @@ public class ToUseSchedulerItemProviderAdapterFactory extends ToUseSchedulerAdap
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.ToUseSolutionTask} instances.
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ToUseSolutionTaskItemProvider toUseSolutionTaskItemProvider;
+	protected ToUseScheduleTaskItemProvider toUseScheduleTaskItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousescheduler.ToUseSolutionTask}.
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createToUseSolutionTaskAdapter() {
-		if (toUseSolutionTaskItemProvider == null) {
-			toUseSolutionTaskItemProvider = new ToUseSolutionTaskItemProvider(this);
+	public Adapter createToUseScheduleTaskAdapter() {
+		if (toUseScheduleTaskItemProvider == null) {
+			toUseScheduleTaskItemProvider = new ToUseScheduleTaskItemProvider(this);
 		}
 
-		return toUseSolutionTaskItemProvider;
+		return toUseScheduleTaskItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.ToUseSolutionResource} instances.
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ToUseSolutionResourceItemProvider toUseSolutionResourceItemProvider;
+	protected ToUseScheduleResourceItemProvider toUseScheduleResourceItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousescheduler.ToUseSolutionResource}.
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createToUseSolutionResourceAdapter() {
-		if (toUseSolutionResourceItemProvider == null) {
-			toUseSolutionResourceItemProvider = new ToUseSolutionResourceItemProvider(this);
+	public Adapter createToUseScheduleResourceAdapter() {
+		if (toUseScheduleResourceItemProvider == null) {
+			toUseScheduleResourceItemProvider = new ToUseScheduleResourceItemProvider(this);
 		}
 
-		return toUseSolutionResourceItemProvider;
+		return toUseScheduleResourceItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.CalcToUseSolutionTaskExpressionDistance} instances.
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.ScopeScheduleScore} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected CalcToUseSolutionTaskExpressionDistanceItemProvider calcToUseSolutionTaskExpressionDistanceItemProvider;
+	protected ScopeScheduleScoreItemProvider scopeScheduleScoreItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousescheduler.CalcToUseSolutionTaskExpressionDistance}.
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousescheduler.ScopeScheduleScore}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createCalcToUseSolutionTaskExpressionDistanceAdapter() {
-		if (calcToUseSolutionTaskExpressionDistanceItemProvider == null) {
-			calcToUseSolutionTaskExpressionDistanceItemProvider = new CalcToUseSolutionTaskExpressionDistanceItemProvider(this);
+	public Adapter createScopeScheduleScoreAdapter() {
+		if (scopeScheduleScoreItemProvider == null) {
+			scopeScheduleScoreItemProvider = new ScopeScheduleScoreItemProvider(this);
 		}
 
-		return calcToUseSolutionTaskExpressionDistanceItemProvider;
+		return scopeScheduleScoreItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.LayerScheduleDistance} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected LayerScheduleDistanceItemProvider layerScheduleDistanceItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousescheduler.LayerScheduleDistance}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createLayerScheduleDistanceAdapter() {
+		if (layerScheduleDistanceItemProvider == null) {
+			layerScheduleDistanceItemProvider = new LayerScheduleDistanceItemProvider(this);
+		}
+
+		return layerScheduleDistanceItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.CalcTaskDistance} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CalcTaskDistanceItemProvider calcTaskDistanceItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousescheduler.CalcTaskDistance}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCalcTaskDistanceAdapter() {
+		if (calcTaskDistanceItemProvider == null) {
+			calcTaskDistanceItemProvider = new CalcTaskDistanceItemProvider(this);
+		}
+
+		return calcTaskDistanceItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.CalcResourceDistance} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CalcResourceDistanceItemProvider calcResourceDistanceItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousescheduler.CalcResourceDistance}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCalcResourceDistanceAdapter() {
+		if (calcResourceDistanceItemProvider == null) {
+			calcResourceDistanceItemProvider = new CalcResourceDistanceItemProvider(this);
+		}
+
+		return calcResourceDistanceItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.ToUseSchedule} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ToUseScheduleItemProvider toUseScheduleItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousescheduler.ToUseSchedule}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createToUseScheduleAdapter() {
+		if (toUseScheduleItemProvider == null) {
+			toUseScheduleItemProvider = new ToUseScheduleItemProvider(this);
+		}
+
+		return toUseScheduleItemProvider;
 	}
 
 	/**
@@ -332,12 +447,17 @@ public class ToUseSchedulerItemProviderAdapterFactory extends ToUseSchedulerAdap
 	 */
 	public void dispose() {
 		if (domainItemProvider != null) domainItemProvider.dispose();
+		if (toUseScoreItemProvider != null) toUseScoreItemProvider.dispose();
 		if (toUseSchedulerItemProvider != null) toUseSchedulerItemProvider.dispose();
 		if (toUseTaskItemProvider != null) toUseTaskItemProvider.dispose();
 		if (toUseResourceItemProvider != null) toUseResourceItemProvider.dispose();
-		if (toUseSolutionTaskItemProvider != null) toUseSolutionTaskItemProvider.dispose();
-		if (toUseSolutionResourceItemProvider != null) toUseSolutionResourceItemProvider.dispose();
-		if (calcToUseSolutionTaskExpressionDistanceItemProvider != null) calcToUseSolutionTaskExpressionDistanceItemProvider.dispose();
+		if (toUseScheduleTaskItemProvider != null) toUseScheduleTaskItemProvider.dispose();
+		if (toUseScheduleResourceItemProvider != null) toUseScheduleResourceItemProvider.dispose();
+		if (scopeScheduleScoreItemProvider != null) scopeScheduleScoreItemProvider.dispose();
+		if (layerScheduleDistanceItemProvider != null) layerScheduleDistanceItemProvider.dispose();
+		if (calcTaskDistanceItemProvider != null) calcTaskDistanceItemProvider.dispose();
+		if (calcResourceDistanceItemProvider != null) calcResourceDistanceItemProvider.dispose();
+		if (toUseScheduleItemProvider != null) toUseScheduleItemProvider.dispose();
 	}
 
 }

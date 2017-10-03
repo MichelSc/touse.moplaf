@@ -2,19 +2,23 @@
  */
 package com.misc.touse.moplaf.tousescheduler.impl;
 
+import com.misc.common.moplaf.localsearch.LocalSearchPackage;
 import com.misc.common.moplaf.propagator2.PropagatorPackage;
 
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
-
-import com.misc.common.moplaf.schedulercalc.SchedulerCalcPackage;
-import com.misc.touse.moplaf.tousescheduler.CalcToUseSolutionTaskExpressionDistance;
+import com.misc.touse.moplaf.tousescheduler.CalcResourceDistance;
+import com.misc.touse.moplaf.tousescheduler.CalcTaskDistance;
 import com.misc.touse.moplaf.tousescheduler.Domain;
+import com.misc.touse.moplaf.tousescheduler.LayerScheduleDistance;
+import com.misc.touse.moplaf.tousescheduler.ScopeScheduleScore;
 import com.misc.touse.moplaf.tousescheduler.ToUseResource;
+import com.misc.touse.moplaf.tousescheduler.ToUseSchedule;
+import com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource;
+import com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask;
 import com.misc.touse.moplaf.tousescheduler.ToUseScheduler;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerFactory;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
-import com.misc.touse.moplaf.tousescheduler.ToUseSolutionResource;
-import com.misc.touse.moplaf.tousescheduler.ToUseSolutionTask;
+import com.misc.touse.moplaf.tousescheduler.ToUseScore;
 import com.misc.touse.moplaf.tousescheduler.ToUseTask;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -42,6 +46,13 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass toUseScoreEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass toUseSchedulerEClass = null;
 	/**
 	 * <!-- begin-user-doc -->
@@ -62,21 +73,49 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass toUseSolutionTaskEClass = null;
+	private EClass toUseScheduleTaskEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass toUseSolutionResourceEClass = null;
+	private EClass toUseScheduleResourceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass calcToUseSolutionTaskExpressionDistanceEClass = null;
+	private EClass scopeScheduleScoreEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass layerScheduleDistanceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass calcTaskDistanceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass calcResourceDistanceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass toUseScheduleEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -127,7 +166,7 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		// Initialize simple dependencies
 		PropagatorPackage.eINSTANCE.eClass();
 		SchedulerPackage.eINSTANCE.eClass();
-		SchedulerCalcPackage.eINSTANCE.eClass();
+		LocalSearchPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theToUseSchedulerPackage.createPackageContents();
@@ -185,8 +224,44 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getToUseScore() {
+		return toUseScoreEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getToUseScore_TotalDistance() {
+		return (EAttribute)toUseScoreEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getToUseScheduler() {
 		return toUseSchedulerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getToUseScheduler_SchedulerResources() {
+		return (EReference)toUseSchedulerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getToUseScheduler_SchedulerTasks() {
+		return (EReference)toUseSchedulerEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -230,8 +305,8 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getToUseSolutionTask() {
-		return toUseSolutionTaskEClass;
+	public EClass getToUseScheduleTask() {
+		return toUseScheduleTaskEClass;
 	}
 
 	/**
@@ -239,8 +314,8 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getToUseSolutionTask_ToUseTask() {
-		return (EReference)toUseSolutionTaskEClass.getEStructuralFeatures().get(0);
+	public EReference getToUseScheduleTask_ToUseTask() {
+		return (EReference)toUseScheduleTaskEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -248,8 +323,8 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getToUseSolutionTask_Distance() {
-		return (EReference)toUseSolutionTaskEClass.getEStructuralFeatures().get(1);
+	public EAttribute getToUseScheduleTask_Distance() {
+		return (EAttribute)toUseScheduleTaskEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -257,8 +332,8 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getToUseSolutionTask_Time() {
-		return (EReference)toUseSolutionTaskEClass.getEStructuralFeatures().get(2);
+	public EClass getToUseScheduleResource() {
+		return toUseScheduleResourceEClass;
 	}
 
 	/**
@@ -266,8 +341,8 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getToUseSolutionResource() {
-		return toUseSolutionResourceEClass;
+	public EReference getToUseScheduleResource_ToUseResource() {
+		return (EReference)toUseScheduleResourceEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -275,8 +350,8 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getToUseSolutionResource_ToUseResource() {
-		return (EReference)toUseSolutionResourceEClass.getEStructuralFeatures().get(0);
+	public EAttribute getToUseScheduleResource_TotalDistance() {
+		return (EAttribute)toUseScheduleResourceEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -284,8 +359,8 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getToUseSolutionResource_TotalDistance() {
-		return (EReference)toUseSolutionResourceEClass.getEStructuralFeatures().get(1);
+	public EClass getScopeScheduleScore() {
+		return scopeScheduleScoreEClass;
 	}
 
 	/**
@@ -293,8 +368,8 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getToUseSolutionResource_EndTime() {
-		return (EReference)toUseSolutionResourceEClass.getEStructuralFeatures().get(2);
+	public EClass getLayerScheduleDistance() {
+		return layerScheduleDistanceEClass;
 	}
 
 	/**
@@ -302,8 +377,71 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getCalcToUseSolutionTaskExpressionDistance() {
-		return calcToUseSolutionTaskExpressionDistanceEClass;
+	public EReference getLayerScheduleDistance_ConcreteParent() {
+		return (EReference)layerScheduleDistanceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCalcTaskDistance() {
+		return calcTaskDistanceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCalcTaskDistance_Task() {
+		return (EReference)calcTaskDistanceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCalcTaskDistance_ConcreteParent() {
+		return (EReference)calcTaskDistanceEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCalcResourceDistance() {
+		return calcResourceDistanceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCalcResourceDistance_Resource() {
+		return (EReference)calcResourceDistanceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCalcResourceDistance_ConcreteParent() {
+		return (EReference)calcResourceDistanceEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getToUseSchedule() {
+		return toUseScheduleEClass;
 	}
 
 	/**
@@ -339,7 +477,12 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		createEReference(domainEClass, DOMAIN__RESOURCES);
 		createEReference(domainEClass, DOMAIN__TASKS);
 
+		toUseScoreEClass = createEClass(TO_USE_SCORE);
+		createEAttribute(toUseScoreEClass, TO_USE_SCORE__TOTAL_DISTANCE);
+
 		toUseSchedulerEClass = createEClass(TO_USE_SCHEDULER);
+		createEReference(toUseSchedulerEClass, TO_USE_SCHEDULER__SCHEDULER_RESOURCES);
+		createEReference(toUseSchedulerEClass, TO_USE_SCHEDULER__SCHEDULER_TASKS);
 
 		toUseTaskEClass = createEClass(TO_USE_TASK);
 		createEAttribute(toUseTaskEClass, TO_USE_TASK__NAME);
@@ -347,17 +490,28 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		toUseResourceEClass = createEClass(TO_USE_RESOURCE);
 		createEAttribute(toUseResourceEClass, TO_USE_RESOURCE__NAME);
 
-		toUseSolutionTaskEClass = createEClass(TO_USE_SOLUTION_TASK);
-		createEReference(toUseSolutionTaskEClass, TO_USE_SOLUTION_TASK__TO_USE_TASK);
-		createEReference(toUseSolutionTaskEClass, TO_USE_SOLUTION_TASK__DISTANCE);
-		createEReference(toUseSolutionTaskEClass, TO_USE_SOLUTION_TASK__TIME);
+		toUseScheduleTaskEClass = createEClass(TO_USE_SCHEDULE_TASK);
+		createEReference(toUseScheduleTaskEClass, TO_USE_SCHEDULE_TASK__TO_USE_TASK);
+		createEAttribute(toUseScheduleTaskEClass, TO_USE_SCHEDULE_TASK__DISTANCE);
 
-		toUseSolutionResourceEClass = createEClass(TO_USE_SOLUTION_RESOURCE);
-		createEReference(toUseSolutionResourceEClass, TO_USE_SOLUTION_RESOURCE__TO_USE_RESOURCE);
-		createEReference(toUseSolutionResourceEClass, TO_USE_SOLUTION_RESOURCE__TOTAL_DISTANCE);
-		createEReference(toUseSolutionResourceEClass, TO_USE_SOLUTION_RESOURCE__END_TIME);
+		toUseScheduleResourceEClass = createEClass(TO_USE_SCHEDULE_RESOURCE);
+		createEReference(toUseScheduleResourceEClass, TO_USE_SCHEDULE_RESOURCE__TO_USE_RESOURCE);
+		createEAttribute(toUseScheduleResourceEClass, TO_USE_SCHEDULE_RESOURCE__TOTAL_DISTANCE);
 
-		calcToUseSolutionTaskExpressionDistanceEClass = createEClass(CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE);
+		scopeScheduleScoreEClass = createEClass(SCOPE_SCHEDULE_SCORE);
+
+		layerScheduleDistanceEClass = createEClass(LAYER_SCHEDULE_DISTANCE);
+		createEReference(layerScheduleDistanceEClass, LAYER_SCHEDULE_DISTANCE__CONCRETE_PARENT);
+
+		calcTaskDistanceEClass = createEClass(CALC_TASK_DISTANCE);
+		createEReference(calcTaskDistanceEClass, CALC_TASK_DISTANCE__TASK);
+		createEReference(calcTaskDistanceEClass, CALC_TASK_DISTANCE__CONCRETE_PARENT);
+
+		calcResourceDistanceEClass = createEClass(CALC_RESOURCE_DISTANCE);
+		createEReference(calcResourceDistanceEClass, CALC_RESOURCE_DISTANCE__RESOURCE);
+		createEReference(calcResourceDistanceEClass, CALC_RESOURCE_DISTANCE__CONCRETE_PARENT);
+
+		toUseScheduleEClass = createEClass(TO_USE_SCHEDULE);
 	}
 
 	/**
@@ -384,18 +538,25 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
+		LocalSearchPackage theLocalSearchPackage = (LocalSearchPackage)EPackage.Registry.INSTANCE.getEPackage(LocalSearchPackage.eNS_URI);
 		SchedulerPackage theSchedulerPackage = (SchedulerPackage)EPackage.Registry.INSTANCE.getEPackage(SchedulerPackage.eNS_URI);
-		SchedulerCalcPackage theSchedulerCalcPackage = (SchedulerCalcPackage)EPackage.Registry.INSTANCE.getEPackage(SchedulerCalcPackage.eNS_URI);
+		PropagatorPackage thePropagatorPackage = (PropagatorPackage)EPackage.Registry.INSTANCE.getEPackage(PropagatorPackage.eNS_URI);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		toUseScoreEClass.getESuperTypes().add(theLocalSearchPackage.getScore());
 		toUseSchedulerEClass.getESuperTypes().add(theSchedulerPackage.getScheduler());
-		toUseSolutionTaskEClass.getESuperTypes().add(theSchedulerPackage.getSolutionTask());
-		toUseSolutionResourceEClass.getESuperTypes().add(theSchedulerPackage.getSolutionResource());
-		calcToUseSolutionTaskExpressionDistanceEClass.getESuperTypes().add(theSchedulerCalcPackage.getSetTaskExpressionCandidateValue());
+		toUseScheduleTaskEClass.getESuperTypes().add(theSchedulerPackage.getTask());
+		toUseScheduleResourceEClass.getESuperTypes().add(theSchedulerPackage.getResource());
+		scopeScheduleScoreEClass.getESuperTypes().add(thePropagatorPackage.getPropagatorFunctionBindings());
+		layerScheduleDistanceEClass.getESuperTypes().add(thePropagatorPackage.getPropagatorFunctionBindings());
+		calcTaskDistanceEClass.getESuperTypes().add(thePropagatorPackage.getPropagatorFunctionBindings());
+		calcResourceDistanceEClass.getESuperTypes().add(thePropagatorPackage.getPropagatorFunctionBindings());
+		toUseScheduleEClass.getESuperTypes().add(theSchedulerPackage.getSchedule());
+		toUseScheduleEClass.getESuperTypes().add(this.getToUseScore());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -403,7 +564,12 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		initEReference(getDomain_Resources(), this.getToUseResource(), null, "Resources", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDomain_Tasks(), this.getToUseTask(), null, "Tasks", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(toUseScoreEClass, ToUseScore.class, "ToUseScore", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getToUseScore_TotalDistance(), ecorePackage.getEFloat(), "TotalDistance", null, 0, 1, ToUseScore.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(toUseSchedulerEClass, ToUseScheduler.class, "ToUseScheduler", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getToUseScheduler_SchedulerResources(), this.getToUseScheduleResource(), null, "SchedulerResources", null, 0, 1, ToUseScheduler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getToUseScheduler_SchedulerTasks(), this.getToUseScheduleTask(), null, "SchedulerTasks", null, 0, 1, ToUseScheduler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(toUseTaskEClass, ToUseTask.class, "ToUseTask", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getToUseTask_Name(), ecorePackage.getEString(), "Name", null, 0, 1, ToUseTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -411,17 +577,28 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		initEClass(toUseResourceEClass, ToUseResource.class, "ToUseResource", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getToUseResource_Name(), ecorePackage.getEString(), "Name", null, 0, 1, ToUseResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(toUseSolutionTaskEClass, ToUseSolutionTask.class, "ToUseSolutionTask", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getToUseSolutionTask_ToUseTask(), this.getToUseTask(), null, "ToUseTask", null, 1, 1, ToUseSolutionTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getToUseSolutionTask_Distance(), theSchedulerPackage.getTaskCandidateFloatExpression(), null, "Distance", null, 0, 1, ToUseSolutionTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getToUseSolutionTask_Time(), theSchedulerPackage.getTaskCandidateDateExpression(), null, "Time", null, 0, 1, ToUseSolutionTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(toUseScheduleTaskEClass, ToUseScheduleTask.class, "ToUseScheduleTask", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getToUseScheduleTask_ToUseTask(), this.getToUseTask(), null, "ToUseTask", null, 1, 1, ToUseScheduleTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getToUseScheduleTask_Distance(), ecorePackage.getEFloat(), "Distance", null, 0, 1, ToUseScheduleTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(toUseSolutionResourceEClass, ToUseSolutionResource.class, "ToUseSolutionResource", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getToUseSolutionResource_ToUseResource(), this.getToUseResource(), null, "ToUseResource", null, 1, 1, ToUseSolutionResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getToUseSolutionResource_TotalDistance(), theSchedulerPackage.getResourceCandidateFloatExpression(), null, "TotalDistance", null, 0, 1, ToUseSolutionResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getToUseSolutionResource_EndTime(), theSchedulerPackage.getResourceCandidateDateExpression(), null, "EndTime", null, 0, 1, ToUseSolutionResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(toUseScheduleResourceEClass, ToUseScheduleResource.class, "ToUseScheduleResource", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getToUseScheduleResource_ToUseResource(), this.getToUseResource(), null, "ToUseResource", null, 1, 1, ToUseScheduleResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getToUseScheduleResource_TotalDistance(), ecorePackage.getEFloat(), "TotalDistance", null, 0, 1, ToUseScheduleResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(calcToUseSolutionTaskExpressionDistanceEClass, CalcToUseSolutionTaskExpressionDistance.class, "CalcToUseSolutionTaskExpressionDistance", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(scopeScheduleScoreEClass, ScopeScheduleScore.class, "ScopeScheduleScore", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(layerScheduleDistanceEClass, LayerScheduleDistance.class, "LayerScheduleDistance", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getLayerScheduleDistance_ConcreteParent(), this.getScopeScheduleScore(), null, "ConcreteParent", null, 1, 1, LayerScheduleDistance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(calcTaskDistanceEClass, CalcTaskDistance.class, "CalcTaskDistance", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCalcTaskDistance_Task(), this.getToUseScheduleTask(), null, "Task", null, 1, 1, CalcTaskDistance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCalcTaskDistance_ConcreteParent(), this.getLayerScheduleDistance(), null, "ConcreteParent", null, 1, 1, CalcTaskDistance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(calcResourceDistanceEClass, CalcResourceDistance.class, "CalcResourceDistance", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCalcResourceDistance_Resource(), this.getToUseScheduleResource(), null, "Resource", null, 1, 1, CalcResourceDistance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCalcResourceDistance_ConcreteParent(), this.getLayerScheduleDistance(), null, "ConcreteParent", null, 1, 1, CalcResourceDistance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(toUseScheduleEClass, ToUseSchedule.class, "ToUseSchedule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

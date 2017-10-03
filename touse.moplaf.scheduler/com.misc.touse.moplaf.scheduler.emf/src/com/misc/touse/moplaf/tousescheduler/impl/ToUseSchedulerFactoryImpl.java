@@ -57,12 +57,17 @@ public class ToUseSchedulerFactoryImpl extends EFactoryImpl implements ToUseSche
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case ToUseSchedulerPackage.DOMAIN: return createDomain();
+			case ToUseSchedulerPackage.TO_USE_SCORE: return createToUseScore();
 			case ToUseSchedulerPackage.TO_USE_SCHEDULER: return createToUseScheduler();
 			case ToUseSchedulerPackage.TO_USE_TASK: return createToUseTask();
 			case ToUseSchedulerPackage.TO_USE_RESOURCE: return createToUseResource();
-			case ToUseSchedulerPackage.TO_USE_SOLUTION_TASK: return createToUseSolutionTask();
-			case ToUseSchedulerPackage.TO_USE_SOLUTION_RESOURCE: return createToUseSolutionResource();
-			case ToUseSchedulerPackage.CALC_TO_USE_SOLUTION_TASK_EXPRESSION_DISTANCE: return createCalcToUseSolutionTaskExpressionDistance();
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK: return createToUseScheduleTask();
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE: return createToUseScheduleResource();
+			case ToUseSchedulerPackage.SCOPE_SCHEDULE_SCORE: return createScopeScheduleScore();
+			case ToUseSchedulerPackage.LAYER_SCHEDULE_DISTANCE: return createLayerScheduleDistance();
+			case ToUseSchedulerPackage.CALC_TASK_DISTANCE: return createCalcTaskDistance();
+			case ToUseSchedulerPackage.CALC_RESOURCE_DISTANCE: return createCalcResourceDistance();
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE: return createToUseSchedule();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -76,6 +81,16 @@ public class ToUseSchedulerFactoryImpl extends EFactoryImpl implements ToUseSche
 	public Domain createDomain() {
 		DomainImpl domain = new DomainImpl();
 		return domain;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ToUseScore createToUseScore() {
+		ToUseScoreImpl toUseScore = new ToUseScoreImpl();
+		return toUseScore;
 	}
 
 	/**
@@ -113,9 +128,9 @@ public class ToUseSchedulerFactoryImpl extends EFactoryImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ToUseSolutionTask createToUseSolutionTask() {
-		ToUseSolutionTaskImpl toUseSolutionTask = new ToUseSolutionTaskImpl();
-		return toUseSolutionTask;
+	public ToUseScheduleTask createToUseScheduleTask() {
+		ToUseScheduleTaskImpl toUseScheduleTask = new ToUseScheduleTaskImpl();
+		return toUseScheduleTask;
 	}
 
 	/**
@@ -123,9 +138,9 @@ public class ToUseSchedulerFactoryImpl extends EFactoryImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ToUseSolutionResource createToUseSolutionResource() {
-		ToUseSolutionResourceImpl toUseSolutionResource = new ToUseSolutionResourceImpl();
-		return toUseSolutionResource;
+	public ToUseScheduleResource createToUseScheduleResource() {
+		ToUseScheduleResourceImpl toUseScheduleResource = new ToUseScheduleResourceImpl();
+		return toUseScheduleResource;
 	}
 
 	/**
@@ -133,9 +148,49 @@ public class ToUseSchedulerFactoryImpl extends EFactoryImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CalcToUseSolutionTaskExpressionDistance createCalcToUseSolutionTaskExpressionDistance() {
-		CalcToUseSolutionTaskExpressionDistanceImpl calcToUseSolutionTaskExpressionDistance = new CalcToUseSolutionTaskExpressionDistanceImpl();
-		return calcToUseSolutionTaskExpressionDistance;
+	public ScopeScheduleScore createScopeScheduleScore() {
+		ScopeScheduleScoreImpl scopeScheduleScore = new ScopeScheduleScoreImpl();
+		return scopeScheduleScore;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LayerScheduleDistance createLayerScheduleDistance() {
+		LayerScheduleDistanceImpl layerScheduleDistance = new LayerScheduleDistanceImpl();
+		return layerScheduleDistance;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CalcTaskDistance createCalcTaskDistance() {
+		CalcTaskDistanceImpl calcTaskDistance = new CalcTaskDistanceImpl();
+		return calcTaskDistance;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CalcResourceDistance createCalcResourceDistance() {
+		CalcResourceDistanceImpl calcResourceDistance = new CalcResourceDistanceImpl();
+		return calcResourceDistance;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ToUseSchedule createToUseSchedule() {
+		ToUseScheduleImpl toUseSchedule = new ToUseScheduleImpl();
+		return toUseSchedule;
 	}
 
 	/**

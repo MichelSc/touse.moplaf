@@ -13,5 +13,6 @@ Export-Package: com.misc.touse.moplaf.tousescheduler,
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  com.misc.common.moplaf.propagator2;visibility:=reexport,
- com.misc.common.moplaf.scheduler.emf;visibility:=reexport
+ com.misc.common.moplaf.scheduler.emf;visibility:=reexport,
+ com.misc.common.moplaf.localsearch.emf;visibility:=reexport
 Bundle-ActivationPolicy: lazy

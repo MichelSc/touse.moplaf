@@ -31,6 +31,15 @@ public interface ToUseSchedulerFactory extends EFactory {
 	Domain createDomain();
 
 	/**
+	 * Returns a new object of class '<em>To Use Score</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>To Use Score</em>'.
+	 * @generated
+	 */
+	ToUseScore createToUseScore();
+
+	/**
 	 * Returns a new object of class '<em>To Use Scheduler</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -58,31 +67,67 @@ public interface ToUseSchedulerFactory extends EFactory {
 	ToUseResource createToUseResource();
 
 	/**
-	 * Returns a new object of class '<em>To Use Solution Task</em>'.
+	 * Returns a new object of class '<em>To Use Schedule Task</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>To Use Solution Task</em>'.
+	 * @return a new object of class '<em>To Use Schedule Task</em>'.
 	 * @generated
 	 */
-	ToUseSolutionTask createToUseSolutionTask();
+	ToUseScheduleTask createToUseScheduleTask();
 
 	/**
-	 * Returns a new object of class '<em>To Use Solution Resource</em>'.
+	 * Returns a new object of class '<em>To Use Schedule Resource</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>To Use Solution Resource</em>'.
+	 * @return a new object of class '<em>To Use Schedule Resource</em>'.
 	 * @generated
 	 */
-	ToUseSolutionResource createToUseSolutionResource();
+	ToUseScheduleResource createToUseScheduleResource();
 
 	/**
-	 * Returns a new object of class '<em>Calc To Use Solution Task Expression Distance</em>'.
+	 * Returns a new object of class '<em>Scope Schedule Score</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Calc To Use Solution Task Expression Distance</em>'.
+	 * @return a new object of class '<em>Scope Schedule Score</em>'.
 	 * @generated
 	 */
-	CalcToUseSolutionTaskExpressionDistance createCalcToUseSolutionTaskExpressionDistance();
+	ScopeScheduleScore createScopeScheduleScore();
+
+	/**
+	 * Returns a new object of class '<em>Layer Schedule Distance</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Layer Schedule Distance</em>'.
+	 * @generated
+	 */
+	LayerScheduleDistance createLayerScheduleDistance();
+
+	/**
+	 * Returns a new object of class '<em>Calc Task Distance</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Calc Task Distance</em>'.
+	 * @generated
+	 */
+	CalcTaskDistance createCalcTaskDistance();
+
+	/**
+	 * Returns a new object of class '<em>Calc Resource Distance</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Calc Resource Distance</em>'.
+	 * @generated
+	 */
+	CalcResourceDistance createCalcResourceDistance();
+
+	/**
+	 * Returns a new object of class '<em>To Use Schedule</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>To Use Schedule</em>'.
+	 * @generated
+	 */
+	ToUseSchedule createToUseSchedule();
 
 	/**
 	 * Returns the package supported by this factory.
