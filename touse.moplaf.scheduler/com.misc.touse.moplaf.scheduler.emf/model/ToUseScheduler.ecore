@@ -19,6 +19,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="ToUseScheduler" eSuperTypes="../../com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//Scheduler">
     <eStructuralFeatures xsi:type="ecore:EReference" name="SchedulerResources" eType="#//ToUseScheduleResource"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="SchedulerTasks" eType="#//ToUseScheduleTask"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Actions" upperBound="-1"
+        eType="#//ToUseAction" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ToUseSchedule" eSuperTypes="../../com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//Schedule">
     <eOperations name="enable"/>
@@ -67,4 +69,5 @@
         eType="#//LayerScheduleDistance" changeable="false" volatile="true" transient="true"
         derived="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ToUseAction" eSuperTypes="../../com.misc.common.moplaf.localsearch.emf/model/localsearch.ecore#//Action"/>
 </ecore:EPackage>
