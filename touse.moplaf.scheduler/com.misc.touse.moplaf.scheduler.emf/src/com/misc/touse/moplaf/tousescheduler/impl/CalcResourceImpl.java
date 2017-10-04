@@ -2,7 +2,7 @@
  */
 package com.misc.touse.moplaf.tousescheduler.impl;
 
-import com.misc.common.moplaf.scheduler.Plugin;
+import com.misc.common.moplaf.localsearch.Plugin;
 import com.misc.touse.moplaf.tousescheduler.CalcResource;
 import com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
