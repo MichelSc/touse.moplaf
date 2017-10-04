@@ -2,11 +2,13 @@
  */
 package com.misc.touse.moplaf.tousescheduler.impl;
 
+import com.misc.common.moplaf.scheduler.Plugin;
 import com.misc.touse.moplaf.tousescheduler.CalcTask;
 import com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 /**
@@ -55,13 +57,19 @@ public abstract class CalcTaskImpl extends CalcSchedulerImpl implements CalcTask
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	public ToUseScheduleTask basicGetTask() {
-		// TODO: implement this method to return the 'Task' reference
-		// -> do not perform proxy resolution
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		EObject container = this.eContainer;
+		if ( container instanceof ToUseScheduleTask){
+			return (ToUseScheduleTask) container;
+		}
+
+		String logMessage = String.format("The owner of the CalcTask %s must be a ToUseScheduleTask and not %s",
+                this.getClass().getName(),
+                container == null ? "null" : container.getClass().getName());
+		Plugin.INSTANCE.logError(logMessage);
+
+		return null;	
 	}
 
 	/**

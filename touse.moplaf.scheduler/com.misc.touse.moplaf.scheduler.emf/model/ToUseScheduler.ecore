@@ -20,7 +20,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="SchedulerResources" eType="#//ToUseScheduleResource"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="SchedulerTasks" eType="#//ToUseScheduleTask"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ToUseSchedule" eSuperTypes="../../com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//Schedule"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ToUseSchedule" eSuperTypes="../../com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//Schedule">
+    <eOperations name="enable"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ToUseScore" eSuperTypes="../../com.misc.common.moplaf.localsearch.emf/model/localsearch.ecore#//Score">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="TotalDistance" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
   </eClassifiers>

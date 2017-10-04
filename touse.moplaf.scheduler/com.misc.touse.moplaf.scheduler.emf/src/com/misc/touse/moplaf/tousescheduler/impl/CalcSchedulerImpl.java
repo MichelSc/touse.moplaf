@@ -6,6 +6,7 @@ import com.misc.common.moplaf.propagator2.impl.PropagatorFunctionBindingsImpl;
 
 import com.misc.touse.moplaf.tousescheduler.CalcScheduler;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
+import com.misc.touse.moplaf.tousescheduler.util.ToUseSchedulerPropagatorFunctionManager;
 
 import org.eclipse.emf.ecore.EClass;
 
@@ -39,7 +40,7 @@ public abstract class CalcSchedulerImpl extends PropagatorFunctionBindingsImpl i
 	
 	@Override
 	public String getFactoryID() {
-		return "to.find a good id here";
+		return ToUseSchedulerPropagatorFunctionManager.FACTORY_ID;
 	}
 
 

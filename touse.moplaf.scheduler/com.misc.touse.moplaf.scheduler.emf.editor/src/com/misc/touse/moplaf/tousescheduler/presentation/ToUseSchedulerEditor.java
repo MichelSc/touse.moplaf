@@ -156,6 +156,7 @@ import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 
 import com.misc.touse.moplaf.tousescheduler.provider.ToUseSchedulerItemProviderAdapterFactory;
 
+import com.misc.common.moplaf.localsearch.provider.LocalSearchItemProviderAdapterFactory;
 import com.misc.common.moplaf.propagator2.provider.PropagatorItemProviderAdapterFactory;
 
 import com.misc.common.moplaf.scheduler.provider.SchedulerItemProviderAdapterFactory;
@@ -705,6 +706,7 @@ public class ToUseSchedulerEditor
 		adapterFactory.addAdapterFactory(new ToUseSchedulerItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new PropagatorItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new SchedulerItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new LocalSearchItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
 		// Create the command stack that will notify this editor as commands are executed.

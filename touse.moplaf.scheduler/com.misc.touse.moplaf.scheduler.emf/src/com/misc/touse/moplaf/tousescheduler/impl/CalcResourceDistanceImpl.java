@@ -2,8 +2,15 @@
  */
 package com.misc.touse.moplaf.tousescheduler.impl;
 
+
+import com.misc.common.moplaf.propagator2.PropagatorFunction;
+import com.misc.common.moplaf.propagator2.util.Bindings;
+import com.misc.common.moplaf.scheduler.SchedulerPackage;
 import com.misc.touse.moplaf.tousescheduler.CalcResourceDistance;
 import com.misc.touse.moplaf.tousescheduler.LayerScheduleDistance;
+import com.misc.touse.moplaf.tousescheduler.ToUseSchedule;
+import com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource;
+import com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -54,13 +61,12 @@ public class CalcResourceDistanceImpl extends CalcResourceImpl implements CalcRe
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	public LayerScheduleDistance basicGetConcreteParent() {
-		// TODO: implement this method to return the 'Concrete Parent' reference
-		// -> do not perform proxy resolution
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		ToUseScheduleResource resource = this.getResource();
+		ToUseSchedule schedule = (ToUseSchedule) resource.getSchedule();
+		LayerScheduleDistance  parent = schedule.getPropagatorFunction(LayerScheduleDistance.class);
+		return parent;
 	}
 
 	/**
@@ -92,4 +98,40 @@ public class CalcResourceDistanceImpl extends CalcResourceImpl implements CalcRe
 		return super.eIsSet(featureID);
 	}
 
+	private static Bindings taskLastBindings = Bindings.constructBindings()
+			.addInboundBinding(ToUseSchedulerPackage.Literals.TO_USE_SCHEDULE_TASK__DISTANCE)
+			;
+		
+	private static Bindings thisResourceBindings = Bindings.constructBindings()
+			.addInboundBinding(SchedulerPackage.Literals.RESOURCE__LAST_TASK, taskLastBindings)	
+			.addOutboundBinding(ToUseSchedulerPackage.Literals.TO_USE_SCHEDULE_RESOURCE__TOTAL_DISTANCE)
+			;
+		
+	/**
+	 * 
+	 */
+	@Override
+	public Bindings doGetBindings() {
+		return thisResourceBindings;
+	}
+
+	/**
+	 * 
+	 */
+	@Override
+	public void doRefresh() {
+		ToUseScheduleResource resource = this.getResource();
+		ToUseScheduleTask last_task = (ToUseScheduleTask) resource.getLastTask();
+		float distance = 0.0f; 
+		if ( last_task != null) {
+			float last_task_distance= last_task.getDistance();
+			distance = last_task_distance; 
+		}
+		resource.setTotalDistance(distance);
+	}
+	
+	@Override
+	public PropagatorFunction doGetParent() {
+		return this.getConcreteParent();
+	}
 } //CalcResourceDistanceImpl

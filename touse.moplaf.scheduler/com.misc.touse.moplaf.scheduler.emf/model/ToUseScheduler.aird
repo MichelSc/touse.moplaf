@@ -135,10 +135,6 @@
               <styles xmi:type="notation:FontStyle" xmi:id="_ULMWYXw-Eee_nccCgARQhA" fontName="Segoe UI" fontHeight="8"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_ULMWYnw-Eee_nccCgARQhA"/>
             </children>
-            <children xmi:type="notation:Node" xmi:id="_9omWQH3JEeeMRK6AqhMd1A" type="3010" element="_9oIcMH3JEeeMRK6AqhMd1A">
-              <styles xmi:type="notation:FontStyle" xmi:id="_9omWQX3JEeeMRK6AqhMd1A" fontName="Segoe UI" fontHeight="8"/>
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_9omWQn3JEeeMRK6AqhMd1A"/>
-            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_3ydSgnoJEee7qYlKG39UKw"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_3ydSg3oJEee7qYlKG39UKw"/>
           </children>
@@ -307,6 +303,10 @@
             <children xmi:type="notation:Node" xmi:id="_nUfpEKhdEeeRe6wvf2hSmA" visible="false" type="3010" element="_nUXGMKhdEeeRe6wvf2hSmA">
               <styles xmi:type="notation:FontStyle" xmi:id="_nUfpEahdEeeRe6wvf2hSmA" fontColor="8224125" fontName="Oxygen-Sans" fontHeight="8" bold="true"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_nUfpEqhdEeeRe6wvf2hSmA"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_fSGPwKjoEee-9pdMEei3KQ" type="3010" element="_fRfLwKjoEee-9pdMEei3KQ">
+              <styles xmi:type="notation:FontStyle" xmi:id="_fSGPwajoEee-9pdMEei3KQ" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_fSGPwqjoEee-9pdMEei3KQ"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_nO06M6hCEeefHcOEkF7e9A"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_nO06NKhCEeefHcOEkF7e9A"/>
@@ -639,17 +639,17 @@
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_wAdH4qhCEeefHcOEkF7e9A" type="4001" element="_wASIwKhCEeefHcOEkF7e9A" source="_3ycrcHoJEee7qYlKG39UKw" target="_wAY2cqhCEeefHcOEkF7e9A">
           <children xmi:type="notation:Node" xmi:id="_wAdH5qhCEeefHcOEkF7e9A" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wAdH56hCEeefHcOEkF7e9A" x="19" y="-5"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wAdH56hCEeefHcOEkF7e9A" x="-10" y="-1"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_wAdu8KhCEeefHcOEkF7e9A" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wAdu8ahCEeefHcOEkF7e9A" x="6" y="-3"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wAdu8ahCEeefHcOEkF7e9A" x="10" y="1"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_wAdu8qhCEeefHcOEkF7e9A" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wAdu86hCEeefHcOEkF7e9A" x="-10" y="-13"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wAdu86hCEeefHcOEkF7e9A" x="10" y="1"/>
           </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_wAdH46hCEeefHcOEkF7e9A" routing="Rectilinear"/>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_wAdH46hCEeefHcOEkF7e9A"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_wAdH5KhCEeefHcOEkF7e9A" fontName="Segoe UI" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_wAdH5ahCEeefHcOEkF7e9A" points="[-18, 87, -41, -152]$[-18, 178, -41, -61]$[17, 178, -6, -61]$[17, 190, -6, -49]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_wAdH5ahCEeefHcOEkF7e9A" points="[7, 79, -16, -168]$[17, 183, -6, -64]$[17, 198, -6, -49]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_wAdu9KhCEeefHcOEkF7e9A" id="(0.5,0.5)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_wAdu9ahCEeefHcOEkF7e9A" id="(0.3903846153846154,0.5)"/>
         </edges>
@@ -778,14 +778,6 @@
         <semanticElements xmi:type="ecore:EOperation" href="platform:/resource/com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//Scheduler/constructResource"/>
         <semanticElements xmi:type="ecore:EParameter" href="platform:/resource/com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//Scheduler/constructResource/resource"/>
         <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_ULJTEnw-Eee_nccCgARQhA" labelAlignment="LEFT">
-          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']"/>
-      </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_9oIcMH3JEeeMRK6AqhMd1A" name="enable()" tooltipText="enable()">
-        <target xmi:type="ecore:EOperation" href="platform:/resource/com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//Scheduler/enable"/>
-        <semanticElements xmi:type="ecore:EOperation" href="platform:/resource/com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//Scheduler/enable"/>
-        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_9oLfgH3JEeeMRK6AqhMd1A" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']"/>
@@ -1326,6 +1318,14 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']"/>
       </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_fRfLwKjoEee-9pdMEei3KQ" name="enable()" tooltipText="enable()">
+        <target xmi:type="ecore:EOperation" href="ToUseScheduler.ecore#//ToUseSchedule/enable"/>
+        <semanticElements xmi:type="ecore:EOperation" href="ToUseScheduler.ecore#//ToUseSchedule/enable"/>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_fRgZ4KjoEee-9pdMEei3KQ" labelAlignment="LEFT">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']"/>
+      </ownedElements>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_v_vWMKhCEeefHcOEkF7e9A" name="Score" tooltipText="" incomingEdges="_3wbEQKhCEeefHcOEkF7e9A" width="12" height="10">
       <target xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.localsearch.emf/model/localsearch.ecore#//Score"/>
@@ -1463,7 +1463,8 @@
       <target xmi:type="ecore:EReference" href="platform:/resource/com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//Scheduler/Schedulers"/>
       <semanticElements xmi:type="ecore:EReference" href="platform:/resource/com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//Schedule/Scheduler"/>
       <semanticElements xmi:type="ecore:EReference" href="platform:/resource/com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//Scheduler/Schedulers"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_wASv0KhCEeefHcOEkF7e9A" description="_wASIwahCEeefHcOEkF7e9A" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_wASv0KhCEeefHcOEkF7e9A" description="_wASIwahCEeefHcOEkF7e9A" sourceArrow="FillDiamond" strokeColor="0,0,0">
+        <customFeatures>routingStyle</customFeatures>
         <beginLabelStyle xmi:type="diagram:BeginLabelStyle" xmi:id="_wASv0ahCEeefHcOEkF7e9A" showIcon="false"/>
         <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_wASv0qhCEeefHcOEkF7e9A" showIcon="false"/>
       </ownedStyle>

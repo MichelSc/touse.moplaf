@@ -15,4 +15,12 @@ import com.misc.common.moplaf.scheduler.Schedule;
  * @generated
  */
 public interface ToUseSchedule extends Schedule {
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void enable();
 } // ToUseSchedule

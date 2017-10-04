@@ -2,11 +2,13 @@
  */
 package com.misc.touse.moplaf.tousescheduler.impl;
 
+import com.misc.common.moplaf.scheduler.Plugin;
 import com.misc.touse.moplaf.tousescheduler.CalcResource;
 import com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 /**
@@ -55,13 +57,19 @@ public abstract class CalcResourceImpl extends CalcSchedulerImpl implements Calc
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	public ToUseScheduleResource basicGetResource() {
-		// TODO: implement this method to return the 'Resource' reference
-		// -> do not perform proxy resolution
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		EObject container = this.eContainer;
+		if ( container instanceof ToUseScheduleResource){
+			return (ToUseScheduleResource) container;
+		}
+
+		String logMessage = String.format("The owner of the CalcResource %s must be a ToUseScheduleResource and not %s",
+                this.getClass().getName(),
+                container == null ? "null" : container.getClass().getName());
+		Plugin.INSTANCE.logError(logMessage);
+
+		return null;	
 	}
 
 	/**

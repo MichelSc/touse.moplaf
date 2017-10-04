@@ -2,9 +2,15 @@
  */
 package com.misc.touse.moplaf.tousescheduler.impl;
 
+import com.misc.common.moplaf.propagator2.PropagatorFunction;
+import com.misc.common.moplaf.scheduler.Resource;
 import com.misc.touse.moplaf.tousescheduler.LayerScheduleDistance;
 import com.misc.touse.moplaf.tousescheduler.ScopeScheduleScore;
+import com.misc.touse.moplaf.tousescheduler.ToUseSchedule;
+import com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
+import com.misc.touse.moplaf.tousescheduler.ToUseScore;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -54,13 +60,11 @@ public class LayerScheduleDistanceImpl extends CalcScheduleImpl implements Layer
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	public ScopeScheduleScore basicGetConcreteParent() {
-		// TODO: implement this method to return the 'Concrete Parent' reference
-		// -> do not perform proxy resolution
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		ToUseSchedule schedule = this.getSchedule();
+		ScopeScheduleScore  parent = schedule.getPropagatorFunction(ScopeScheduleScore.class);
+		return parent;
 	}
 
 	/**
@@ -92,4 +96,24 @@ public class LayerScheduleDistanceImpl extends CalcScheduleImpl implements Layer
 		return super.eIsSet(featureID);
 	}
 
+	@Override
+	public PropagatorFunction doGetParent() {
+		return this.getConcreteParent();
+	}
+	
+	/**
+	 * 
+	 */
+	@Override
+	public void doRefresh() {
+		ToUseSchedule schedule= this.getSchedule();
+		float distance = 1.0f;
+		for ( Resource resource : schedule.getResources()) {
+			ToUseScheduleResource scheduler_resource =  (ToUseScheduleResource)resource;
+			distance += scheduler_resource.getTotalDistance();
+		}
+		ToUseScore score = (ToUseScore)schedule.getScore();
+		score.setTotalDistance(distance);
+	}
+	
 } //LayerScheduleDistanceImpl
