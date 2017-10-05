@@ -2,6 +2,7 @@
  */
 package com.misc.touse.moplaf.tousescheduler.util;
 
+import com.misc.common.moplaf.localsearch.Action;
 import com.misc.common.moplaf.localsearch.Score;
 import com.misc.common.moplaf.localsearch.Solution;
 import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
@@ -141,6 +142,10 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 				return createCalcResourceDistanceAdapter();
 			}
 			@Override
+			public Adapter caseToUseAction(ToUseAction object) {
+				return createToUseActionAdapter();
+			}
+			@Override
 			public Adapter caseScheduler(Scheduler object) {
 				return createSchedulerAdapter();
 			}
@@ -175,6 +180,10 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter casePropagatorFunctionBindings(PropagatorFunctionBindings object) {
 				return createPropagatorFunctionBindingsAdapter();
+			}
+			@Override
+			public Adapter caseAction(Action object) {
+				return createActionAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -407,6 +416,20 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.tousescheduler.ToUseAction <em>To Use Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseAction
+	 * @generated
+	 */
+	public Adapter createToUseActionAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.tousescheduler.ToUseSchedule <em>To Use Schedule</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -515,6 +538,20 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPropagatorFunctionBindingsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.localsearch.Action <em>Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.localsearch.Action
+	 * @generated
+	 */
+	public Adapter createActionAdapter() {
 		return null;
 	}
 

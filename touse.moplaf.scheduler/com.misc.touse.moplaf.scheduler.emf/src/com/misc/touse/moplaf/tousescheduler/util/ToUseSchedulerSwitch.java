@@ -2,6 +2,7 @@
  */
 package com.misc.touse.moplaf.tousescheduler.util;
 
+import com.misc.common.moplaf.localsearch.Action;
 import com.misc.common.moplaf.localsearch.Score;
 import com.misc.common.moplaf.localsearch.Solution;
 import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
@@ -204,6 +205,13 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 				if (result == null) result = caseCalcScheduler(calcResourceDistance);
 				if (result == null) result = casePropagatorFunctionBindings(calcResourceDistance);
 				if (result == null) result = casePropagatorFunction(calcResourceDistance);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ToUseSchedulerPackage.TO_USE_ACTION: {
+				ToUseAction toUseAction = (ToUseAction)theEObject;
+				T result = caseToUseAction(toUseAction);
+				if (result == null) result = caseAction(toUseAction);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -437,6 +445,21 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>To Use Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>To Use Action</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseToUseAction(ToUseAction object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>To Use Schedule</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -553,6 +576,21 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePropagatorFunctionBindings(PropagatorFunctionBindings object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Action</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAction(Action object) {
 		return null;
 	}
 

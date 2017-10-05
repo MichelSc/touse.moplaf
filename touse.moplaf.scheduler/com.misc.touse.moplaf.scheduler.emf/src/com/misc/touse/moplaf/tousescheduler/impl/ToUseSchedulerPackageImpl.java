@@ -15,6 +15,7 @@ import com.misc.touse.moplaf.tousescheduler.CalcTaskDistance;
 import com.misc.touse.moplaf.tousescheduler.Domain;
 import com.misc.touse.moplaf.tousescheduler.LayerScheduleDistance;
 import com.misc.touse.moplaf.tousescheduler.ScopeScheduleScore;
+import com.misc.touse.moplaf.tousescheduler.ToUseAction;
 import com.misc.touse.moplaf.tousescheduler.ToUseResource;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedule;
 import com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource;
@@ -142,6 +143,13 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 * @generated
 	 */
 	private EClass calcResourceDistanceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass toUseActionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -518,8 +526,26 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getToUseAction() {
+		return toUseActionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getToUseSchedule() {
 		return toUseScheduleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getToUseSchedule_Actions() {
+		return (EReference)toUseScheduleEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -575,6 +601,7 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		createEReference(toUseSchedulerEClass, TO_USE_SCHEDULER__SCHEDULER_TASKS);
 
 		toUseScheduleEClass = createEClass(TO_USE_SCHEDULE);
+		createEReference(toUseScheduleEClass, TO_USE_SCHEDULE__ACTIONS);
 		createEOperation(toUseScheduleEClass, TO_USE_SCHEDULE___ENABLE);
 
 		toUseScoreEClass = createEClass(TO_USE_SCORE);
@@ -609,6 +636,8 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 
 		calcResourceDistanceEClass = createEClass(CALC_RESOURCE_DISTANCE);
 		createEReference(calcResourceDistanceEClass, CALC_RESOURCE_DISTANCE__CONCRETE_PARENT);
+
+		toUseActionEClass = createEClass(TO_USE_ACTION);
 	}
 
 	/**
@@ -657,6 +686,7 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		layerScheduleDistanceEClass.getESuperTypes().add(this.getCalcSchedule());
 		calcTaskDistanceEClass.getESuperTypes().add(this.getCalcTask());
 		calcResourceDistanceEClass.getESuperTypes().add(this.getCalcResource());
+		toUseActionEClass.getESuperTypes().add(theLocalSearchPackage.getAction());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -675,6 +705,7 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		initEReference(getToUseScheduler_SchedulerTasks(), this.getToUseScheduleTask(), null, "SchedulerTasks", null, 0, 1, ToUseScheduler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(toUseScheduleEClass, ToUseSchedule.class, "ToUseSchedule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getToUseSchedule_Actions(), this.getToUseAction(), null, "Actions", null, 0, -1, ToUseSchedule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getToUseSchedule__Enable(), null, "enable", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -710,6 +741,8 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 
 		initEClass(calcResourceDistanceEClass, CalcResourceDistance.class, "CalcResourceDistance", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCalcResourceDistance_ConcreteParent(), this.getLayerScheduleDistance(), null, "ConcreteParent", null, 1, 1, CalcResourceDistance.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+
+		initEClass(toUseActionEClass, ToUseAction.class, "ToUseAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

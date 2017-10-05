@@ -510,13 +510,22 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE__NR_SCHEDULED_TASKS = SchedulerPackage.SCHEDULE__NR_SCHEDULED_TASKS;
 
 	/**
+	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE__ACTIONS = SchedulerPackage.SCHEDULE_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>To Use Schedule</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_FEATURE_COUNT = SchedulerPackage.SCHEDULE_FEATURE_COUNT + 0;
+	int TO_USE_SCHEDULE_FEATURE_COUNT = SchedulerPackage.SCHEDULE_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Add Propagator Function</em>' operation.
@@ -3480,6 +3489,97 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int CALC_RESOURCE_DISTANCE_OPERATION_COUNT = CALC_RESOURCE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseActionImpl <em>To Use Action</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseActionImpl
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseAction()
+	 * @generated
+	 */
+	int TO_USE_ACTION = 16;
+
+	/**
+	 * The feature id for the '<em><b>Root Moves</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_ACTION__ROOT_MOVES = LocalSearchPackage.ACTION__ROOT_MOVES;
+
+	/**
+	 * The feature id for the '<em><b>Current Move</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_ACTION__CURRENT_MOVE = LocalSearchPackage.ACTION__CURRENT_MOVE;
+
+	/**
+	 * The feature id for the '<em><b>Current Solution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_ACTION__CURRENT_SOLUTION = LocalSearchPackage.ACTION__CURRENT_SOLUTION;
+
+	/**
+	 * The number of structural features of the '<em>To Use Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_ACTION_FEATURE_COUNT = LocalSearchPackage.ACTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Create Moves</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_ACTION___CREATE_MOVES = LocalSearchPackage.ACTION___CREATE_MOVES;
+
+	/**
+	 * The operation id for the '<em>Score Moves</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_ACTION___SCORE_MOVES = LocalSearchPackage.ACTION___SCORE_MOVES;
+
+	/**
+	 * The operation id for the '<em>Select Move</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_ACTION___SELECT_MOVE = LocalSearchPackage.ACTION___SELECT_MOVE;
+
+	/**
+	 * The operation id for the '<em>Do Action</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_ACTION___DO_ACTION = LocalSearchPackage.ACTION___DO_ACTION;
+
+	/**
+	 * The number of operations of the '<em>To Use Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_ACTION_OPERATION_COUNT = LocalSearchPackage.ACTION_OPERATION_COUNT + 0;
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.Domain <em>Domain</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3828,6 +3928,16 @@ public interface ToUseSchedulerPackage extends EPackage {
 	EReference getCalcResourceDistance_ConcreteParent();
 
 	/**
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.ToUseAction <em>To Use Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>To Use Action</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseAction
+	 * @generated
+	 */
+	EClass getToUseAction();
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.ToUseSchedule <em>To Use Schedule</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3836,6 +3946,17 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getToUseSchedule();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.tousescheduler.ToUseSchedule#getActions <em>Actions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Actions</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedule#getActions()
+	 * @see #getToUseSchedule()
+	 * @generated
+	 */
+	EReference getToUseSchedule_Actions();
 
 	/**
 	 * Returns the meta object for the '{@link com.misc.touse.moplaf.tousescheduler.ToUseSchedule#enable() <em>Enable</em>}' operation.
@@ -4165,6 +4286,16 @@ public interface ToUseSchedulerPackage extends EPackage {
 		EReference CALC_RESOURCE_DISTANCE__CONCRETE_PARENT = eINSTANCE.getCalcResourceDistance_ConcreteParent();
 
 		/**
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseActionImpl <em>To Use Action</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseActionImpl
+		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseAction()
+		 * @generated
+		 */
+		EClass TO_USE_ACTION = eINSTANCE.getToUseAction();
+
+		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleImpl <em>To Use Schedule</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4173,6 +4304,14 @@ public interface ToUseSchedulerPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TO_USE_SCHEDULE = eINSTANCE.getToUseSchedule();
+
+		/**
+		 * The meta object literal for the '<em><b>Actions</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TO_USE_SCHEDULE__ACTIONS = eINSTANCE.getToUseSchedule_Actions();
 
 		/**
 		 * The meta object literal for the '<em><b>Enable</b></em>' operation.

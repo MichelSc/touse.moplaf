@@ -68,6 +68,7 @@ public class ToUseSchedulerFactoryImpl extends EFactoryImpl implements ToUseSche
 			case ToUseSchedulerPackage.LAYER_SCHEDULE_DISTANCE: return createLayerScheduleDistance();
 			case ToUseSchedulerPackage.CALC_TASK_DISTANCE: return createCalcTaskDistance();
 			case ToUseSchedulerPackage.CALC_RESOURCE_DISTANCE: return createCalcResourceDistance();
+			case ToUseSchedulerPackage.TO_USE_ACTION: return createToUseAction();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -181,6 +182,16 @@ public class ToUseSchedulerFactoryImpl extends EFactoryImpl implements ToUseSche
 	public CalcResourceDistance createCalcResourceDistance() {
 		CalcResourceDistanceImpl calcResourceDistance = new CalcResourceDistanceImpl();
 		return calcResourceDistance;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ToUseAction createToUseAction() {
+		ToUseActionImpl toUseAction = new ToUseActionImpl();
+		return toUseAction;
 	}
 
 	/**

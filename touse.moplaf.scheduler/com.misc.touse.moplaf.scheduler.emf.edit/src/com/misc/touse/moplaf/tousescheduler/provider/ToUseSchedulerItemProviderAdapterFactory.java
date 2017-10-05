@@ -325,6 +325,29 @@ public class ToUseSchedulerItemProviderAdapterFactory extends ToUseSchedulerAdap
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.ToUseAction} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ToUseActionItemProvider toUseActionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousescheduler.ToUseAction}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createToUseActionAdapter() {
+		if (toUseActionItemProvider == null) {
+			toUseActionItemProvider = new ToUseActionItemProvider(this);
+		}
+
+		return toUseActionItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.ToUseSchedule} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -458,6 +481,7 @@ public class ToUseSchedulerItemProviderAdapterFactory extends ToUseSchedulerAdap
 		if (layerScheduleDistanceItemProvider != null) layerScheduleDistanceItemProvider.dispose();
 		if (calcTaskDistanceItemProvider != null) calcTaskDistanceItemProvider.dispose();
 		if (calcResourceDistanceItemProvider != null) calcResourceDistanceItemProvider.dispose();
+		if (toUseActionItemProvider != null) toUseActionItemProvider.dispose();
 	}
 
 }
