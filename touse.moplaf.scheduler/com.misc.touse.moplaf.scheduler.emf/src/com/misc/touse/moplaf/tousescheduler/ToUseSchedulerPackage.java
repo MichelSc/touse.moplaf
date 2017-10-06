@@ -681,15 +681,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE_RESOURCE__DESCRIPTION = SchedulerPackage.RESOURCE__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Nr Candidate Scheduled Tasks</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULE_RESOURCE__NR_CANDIDATE_SCHEDULED_TASKS = SchedulerPackage.RESOURCE__NR_CANDIDATE_SCHEDULED_TASKS;
-
-	/**
 	 * The feature id for the '<em><b>Scheduled Tasks</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
