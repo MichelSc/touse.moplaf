@@ -49,32 +49,9 @@ public class ToUseScheduleResourceItemProvider extends ResourceItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addToUseResourcePropertyDescriptor(object);
 			addTotalDistancePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the To Use Resource feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addToUseResourcePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ToUseScheduleResource_ToUseResource_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseScheduleResource_ToUseResource_feature", "_UI_ToUseScheduleResource_type"),
-				 ToUseSchedulerPackage.Literals.TO_USE_SCHEDULE_RESOURCE__TO_USE_RESOURCE,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**
@@ -95,7 +72,7 @@ public class ToUseScheduleResourceItemProvider extends ResourceItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI__40ToUseSchedulePropertyCategory"),
 				 null));
 	}
 

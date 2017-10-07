@@ -31,22 +31,11 @@ public interface ToUseScheduleResource extends Resource {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>To Use Resource</em>' reference.
-	 * @see #setToUseResource(ToUseResource)
 	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getToUseScheduleResource_ToUseResource()
-	 * @model required="true"
+	 * @model required="true" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
 	ToUseResource getToUseResource();
-
-	/**
-	 * Sets the value of the '{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource#getToUseResource <em>To Use Resource</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>To Use Resource</em>' reference.
-	 * @see #getToUseResource()
-	 * @generated
-	 */
-	void setToUseResource(ToUseResource value);
 
 	/**
 	 * Returns the value of the '<em><b>Total Distance</b></em>' attribute.

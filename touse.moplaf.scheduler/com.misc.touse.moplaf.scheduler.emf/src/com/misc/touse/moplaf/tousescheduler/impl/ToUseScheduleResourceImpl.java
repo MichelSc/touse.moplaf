@@ -31,16 +31,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class ToUseScheduleResourceImpl extends ResourceImpl implements ToUseScheduleResource {
 	/**
-	 * The cached value of the '{@link #getToUseResource() <em>To Use Resource</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getToUseResource()
-	 * @generated
-	 * @ordered
-	 */
-	protected ToUseResource toUseResource;
-
-	/**
 	 * The default value of the '{@link #getTotalDistance() <em>Total Distance</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -85,36 +75,17 @@ public class ToUseScheduleResourceImpl extends ResourceImpl implements ToUseSche
 	 * @generated
 	 */
 	public ToUseResource getToUseResource() {
-		if (toUseResource != null && toUseResource.eIsProxy()) {
-			InternalEObject oldToUseResource = (InternalEObject)toUseResource;
-			toUseResource = (ToUseResource)eResolveProxy(oldToUseResource);
-			if (toUseResource != oldToUseResource) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__TO_USE_RESOURCE, oldToUseResource, toUseResource));
-			}
-		}
-		return toUseResource;
+		ToUseResource toUseResource = basicGetToUseResource();
+		return toUseResource != null && toUseResource.eIsProxy() ? (ToUseResource)eResolveProxy((InternalEObject)toUseResource) : toUseResource;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	public ToUseResource basicGetToUseResource() {
-		return toUseResource;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setToUseResource(ToUseResource newToUseResource) {
-		ToUseResource oldToUseResource = toUseResource;
-		toUseResource = newToUseResource;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__TO_USE_RESOURCE, oldToUseResource, toUseResource));
+		ToUseResource toUseScheduleResource = (ToUseResource)this.getResource();
+		return toUseScheduleResource;
 	}
 
 	/**
@@ -163,9 +134,6 @@ public class ToUseScheduleResourceImpl extends ResourceImpl implements ToUseSche
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__TO_USE_RESOURCE:
-				setToUseResource((ToUseResource)newValue);
-				return;
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__TOTAL_DISTANCE:
 				setTotalDistance((Float)newValue);
 				return;
@@ -181,9 +149,6 @@ public class ToUseScheduleResourceImpl extends ResourceImpl implements ToUseSche
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__TO_USE_RESOURCE:
-				setToUseResource((ToUseResource)null);
-				return;
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__TOTAL_DISTANCE:
 				setTotalDistance(TOTAL_DISTANCE_EDEFAULT);
 				return;
@@ -200,7 +165,7 @@ public class ToUseScheduleResourceImpl extends ResourceImpl implements ToUseSche
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__TO_USE_RESOURCE:
-				return toUseResource != null;
+				return basicGetToUseResource() != null;
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__TOTAL_DISTANCE:
 				return totalDistance != TOTAL_DISTANCE_EDEFAULT;
 		}

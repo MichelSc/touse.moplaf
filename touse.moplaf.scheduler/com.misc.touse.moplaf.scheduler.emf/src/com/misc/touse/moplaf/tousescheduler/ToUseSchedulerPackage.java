@@ -564,6 +564,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE___CLONE = SchedulerPackage.SCHEDULE___CLONE;
 
 	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE___REFRESH = SchedulerPackage.SCHEDULE___REFRESH;
+
+	/**
 	 * The operation id for the '<em>Initialize</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -625,6 +634,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_SCORE___CLONE = LocalSearchPackage.SCORE___CLONE;
+
+	/**
+	 * The operation id for the '<em>Copy</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCORE___COPY__SCORE = LocalSearchPackage.SCORE___COPY__SCORE;
 
 	/**
 	 * The number of operations of the '<em>To Use Score</em>' class.

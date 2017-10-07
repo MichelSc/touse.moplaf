@@ -49,32 +49,9 @@ public class ToUseScheduleTaskItemProvider extends TaskItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addToUseTaskPropertyDescriptor(object);
 			addDistancePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the To Use Task feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addToUseTaskPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ToUseScheduleTask_ToUseTask_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseScheduleTask_ToUseTask_feature", "_UI_ToUseScheduleTask_type"),
-				 ToUseSchedulerPackage.Literals.TO_USE_SCHEDULE_TASK__TO_USE_TASK,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**
@@ -95,7 +72,7 @@ public class ToUseScheduleTaskItemProvider extends TaskItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI__40ToUseSchedulePropertyCategory"),
 				 null));
 	}
 

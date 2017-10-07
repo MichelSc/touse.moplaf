@@ -3,7 +3,6 @@
 package com.misc.touse.moplaf.tousescheduler.impl;
 
 import com.misc.common.moplaf.scheduler.impl.TaskImpl;
-
 import com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
 import com.misc.touse.moplaf.tousescheduler.ToUseTask;
@@ -30,16 +29,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * @generated
  */
 public class ToUseScheduleTaskImpl extends TaskImpl implements ToUseScheduleTask {
-	/**
-	 * The cached value of the '{@link #getToUseTask() <em>To Use Task</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getToUseTask()
-	 * @generated
-	 * @ordered
-	 */
-	protected ToUseTask toUseTask;
-
 	/**
 	 * The default value of the '{@link #getDistance() <em>Distance</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -85,36 +74,17 @@ public class ToUseScheduleTaskImpl extends TaskImpl implements ToUseScheduleTask
 	 * @generated
 	 */
 	public ToUseTask getToUseTask() {
-		if (toUseTask != null && toUseTask.eIsProxy()) {
-			InternalEObject oldToUseTask = (InternalEObject)toUseTask;
-			toUseTask = (ToUseTask)eResolveProxy(oldToUseTask);
-			if (toUseTask != oldToUseTask) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__TO_USE_TASK, oldToUseTask, toUseTask));
-			}
-		}
-		return toUseTask;
+		ToUseTask toUseTask = basicGetToUseTask();
+		return toUseTask != null && toUseTask.eIsProxy() ? (ToUseTask)eResolveProxy((InternalEObject)toUseTask) : toUseTask;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	public ToUseTask basicGetToUseTask() {
-		return toUseTask;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setToUseTask(ToUseTask newToUseTask) {
-		ToUseTask oldToUseTask = toUseTask;
-		toUseTask = newToUseTask;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__TO_USE_TASK, oldToUseTask, toUseTask));
+		ToUseTask toUseScheduleTask = (ToUseTask)this.getTask();
+		return toUseScheduleTask;
 	}
 
 	/**
@@ -163,9 +133,6 @@ public class ToUseScheduleTaskImpl extends TaskImpl implements ToUseScheduleTask
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__TO_USE_TASK:
-				setToUseTask((ToUseTask)newValue);
-				return;
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__DISTANCE:
 				setDistance((Float)newValue);
 				return;
@@ -181,9 +148,6 @@ public class ToUseScheduleTaskImpl extends TaskImpl implements ToUseScheduleTask
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__TO_USE_TASK:
-				setToUseTask((ToUseTask)null);
-				return;
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__DISTANCE:
 				setDistance(DISTANCE_EDEFAULT);
 				return;
@@ -200,7 +164,7 @@ public class ToUseScheduleTaskImpl extends TaskImpl implements ToUseScheduleTask
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__TO_USE_TASK:
-				return toUseTask != null;
+				return basicGetToUseTask() != null;
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__DISTANCE:
 				return distance != DISTANCE_EDEFAULT;
 		}

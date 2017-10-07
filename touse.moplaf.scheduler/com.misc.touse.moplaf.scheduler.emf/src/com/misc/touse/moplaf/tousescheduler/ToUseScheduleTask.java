@@ -31,22 +31,11 @@ public interface ToUseScheduleTask extends Task {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>To Use Task</em>' reference.
-	 * @see #setToUseTask(ToUseTask)
 	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getToUseScheduleTask_ToUseTask()
-	 * @model required="true"
+	 * @model required="true" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
 	ToUseTask getToUseTask();
-
-	/**
-	 * Sets the value of the '{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask#getToUseTask <em>To Use Task</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>To Use Task</em>' reference.
-	 * @see #getToUseTask()
-	 * @generated
-	 */
-	void setToUseTask(ToUseTask value);
 
 	/**
 	 * Returns the value of the '<em><b>Distance</b></em>' attribute.

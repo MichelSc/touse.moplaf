@@ -224,7 +224,6 @@ public class ToUseSchedulerImpl extends SchedulerImpl implements ToUseScheduler 
 			ToUseScheduleTask new_solution_task = ToUseSchedulerFactory.eINSTANCE.createToUseScheduleTask();
 			new_solution_task.setName(to_use_task.getName());
 			new_solution_task.setTask(to_use_task);
-			new_solution_task.setToUseTask(to_use_task);
 			return new_solution_task;
 		}
 		return null;
@@ -237,7 +236,6 @@ public class ToUseSchedulerImpl extends SchedulerImpl implements ToUseScheduler 
 			ToUseScheduleResource new_solution_resource = ToUseSchedulerFactory.eINSTANCE.createToUseScheduleResource();
 			new_solution_resource.setName(to_use_resource.getName());
 			new_solution_resource.setResource(to_use_resource);
-			new_solution_resource.setToUseResource(to_use_resource);
 			return new_solution_resource;
 		}
 		return null;
