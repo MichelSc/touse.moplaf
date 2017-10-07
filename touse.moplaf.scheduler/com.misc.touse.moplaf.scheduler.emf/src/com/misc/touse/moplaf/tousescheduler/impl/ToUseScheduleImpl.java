@@ -4,7 +4,7 @@ package com.misc.touse.moplaf.tousescheduler.impl;
 
 import com.misc.common.moplaf.common.util.Util;
 import com.misc.common.moplaf.scheduler.impl.ScheduleImpl;
-
+import com.misc.touse.moplaf.tousescheduler.ScopeScheduleScore;
 import com.misc.touse.moplaf.tousescheduler.ToUseAction;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedule;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
@@ -80,6 +80,16 @@ public class ToUseScheduleImpl extends ScheduleImpl implements ToUseSchedule {
 	 */
 	public void enable() {
 		Util.adapt(this, ToUseSchedulerPropagatorFunctionManager.class, true ); // true = create
+	}
+	
+	
+
+	@Override
+	public void refresh() {
+		ScopeScheduleScore scope = this.getPropagatorFunction(ScopeScheduleScore.class);
+		if ( scope!=null) {
+			scope.refresh();
+		}
 	}
 
 	/**

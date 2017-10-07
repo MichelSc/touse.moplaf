@@ -5,8 +5,6 @@ package com.misc.touse.moplaf.tousescheduler.provider;
 
 import com.misc.common.moplaf.emf.edit.command.EnableCommand;
 import com.misc.common.moplaf.localsearch.LocalSearchPackage;
-import com.misc.common.moplaf.scheduler.SchedulerPackage;
-
 import com.misc.common.moplaf.scheduler.provider.ScheduleItemProvider;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedule;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerFactory;
@@ -145,16 +143,6 @@ public class ToUseScheduleItemProvider extends ScheduleItemProvider {
 			(createChildParameter
 				(LocalSearchPackage.Literals.SOLUTION__SCORE,
 				 ToUseSchedulerFactory.eINSTANCE.createToUseScore()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULE__TASKS,
-				 ToUseSchedulerFactory.eINSTANCE.createToUseScheduleTask()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULE__RESOURCES,
-				 ToUseSchedulerFactory.eINSTANCE.createToUseScheduleResource()));
 
 		newChildDescriptors.add
 			(createChildParameter

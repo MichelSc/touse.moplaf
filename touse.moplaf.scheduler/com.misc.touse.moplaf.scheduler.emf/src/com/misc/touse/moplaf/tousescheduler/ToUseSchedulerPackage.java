@@ -555,13 +555,13 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE___ADD_PROPAGATOR_FUNCTIONS__STRING = SchedulerPackage.SCHEDULE___ADD_PROPAGATOR_FUNCTIONS__STRING;
 
 	/**
-	 * The operation id for the '<em>Replicate</em>' operation.
+	 * The operation id for the '<em>Clone</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE___REPLICATE = SchedulerPackage.SCHEDULE___REPLICATE;
+	int TO_USE_SCHEDULE___CLONE = SchedulerPackage.SCHEDULE___CLONE;
 
 	/**
 	 * The operation id for the '<em>Initialize</em>' operation.
@@ -618,13 +618,13 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCORE___COMPARE__SCORE = LocalSearchPackage.SCORE___COMPARE__SCORE;
 
 	/**
-	 * The operation id for the '<em>Copy</em>' operation.
+	 * The operation id for the '<em>Clone</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCORE___COPY__SCORE = LocalSearchPackage.SCORE___COPY__SCORE;
+	int TO_USE_SCORE___CLONE = LocalSearchPackage.SCORE___CLONE;
 
 	/**
 	 * The number of operations of the '<em>To Use Score</em>' class.

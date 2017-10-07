@@ -2,8 +2,9 @@
  */
 package com.misc.touse.moplaf.tousescheduler.impl;
 
+import com.misc.common.moplaf.localsearch.Score;
 import com.misc.common.moplaf.localsearch.impl.ScoreImpl;
-
+import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerFactory;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
 import com.misc.touse.moplaf.tousescheduler.ToUseScore;
 
@@ -160,5 +161,25 @@ public class ToUseScoreImpl extends ScoreImpl implements ToUseScore {
 		result.append(')');
 		return result.toString();
 	}
+
+	@Override
+	public Score clone() {
+		ToUseScore new_score = ToUseSchedulerFactory.eINSTANCE.createToUseScore();
+		new_score.copy(this);
+		return new_score;
+	}
+
+	@Override
+	public void copy(Score other) {
+		super.copy(other);
+		
+		// copy the attributes in this class
+		if ( other instanceof ToUseScore) {
+			ToUseScore other_score = (ToUseScore)other;
+			this.setTotalDistance(other_score.getTotalDistance());
+		}
+	}
+	
+	
 
 } //ToUseScoreImpl
