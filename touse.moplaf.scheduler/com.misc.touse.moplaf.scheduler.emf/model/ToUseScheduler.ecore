@@ -71,4 +71,10 @@
         derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ToUseAction" eSuperTypes="../../com.misc.common.moplaf.localsearch.emf/model/localsearch.ecore#//Action"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ToUseScheduleLoadUnload" eSuperTypes="#//ToUseAction">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="LoadTask" lowerBound="1"
+        eType="#//ToUseScheduleTask"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="UnloadTask" lowerBound="1"
+        eType="#//ToUseScheduleTask"/>
+  </eClassifiers>
 </ecore:EPackage>

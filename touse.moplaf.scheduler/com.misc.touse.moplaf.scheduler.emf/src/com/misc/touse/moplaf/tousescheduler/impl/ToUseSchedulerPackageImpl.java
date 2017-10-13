@@ -18,6 +18,7 @@ import com.misc.touse.moplaf.tousescheduler.ScopeScheduleScore;
 import com.misc.touse.moplaf.tousescheduler.ToUseAction;
 import com.misc.touse.moplaf.tousescheduler.ToUseResource;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedule;
+import com.misc.touse.moplaf.tousescheduler.ToUseScheduleLoadUnload;
 import com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource;
 import com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask;
 import com.misc.touse.moplaf.tousescheduler.ToUseScheduler;
@@ -150,6 +151,13 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 * @generated
 	 */
 	private EClass toUseActionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass toUseScheduleLoadUnloadEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -535,6 +543,33 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getToUseScheduleLoadUnload() {
+		return toUseScheduleLoadUnloadEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getToUseScheduleLoadUnload_LoadTask() {
+		return (EReference)toUseScheduleLoadUnloadEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getToUseScheduleLoadUnload_UnloadTask() {
+		return (EReference)toUseScheduleLoadUnloadEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getToUseSchedule() {
 		return toUseScheduleEClass;
 	}
@@ -638,6 +673,10 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		createEReference(calcResourceDistanceEClass, CALC_RESOURCE_DISTANCE__CONCRETE_PARENT);
 
 		toUseActionEClass = createEClass(TO_USE_ACTION);
+
+		toUseScheduleLoadUnloadEClass = createEClass(TO_USE_SCHEDULE_LOAD_UNLOAD);
+		createEReference(toUseScheduleLoadUnloadEClass, TO_USE_SCHEDULE_LOAD_UNLOAD__LOAD_TASK);
+		createEReference(toUseScheduleLoadUnloadEClass, TO_USE_SCHEDULE_LOAD_UNLOAD__UNLOAD_TASK);
 	}
 
 	/**
@@ -687,6 +726,7 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		calcTaskDistanceEClass.getESuperTypes().add(this.getCalcTask());
 		calcResourceDistanceEClass.getESuperTypes().add(this.getCalcResource());
 		toUseActionEClass.getESuperTypes().add(theLocalSearchPackage.getAction());
+		toUseScheduleLoadUnloadEClass.getESuperTypes().add(this.getToUseAction());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -743,6 +783,10 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		initEReference(getCalcResourceDistance_ConcreteParent(), this.getLayerScheduleDistance(), null, "ConcreteParent", null, 1, 1, CalcResourceDistance.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(toUseActionEClass, ToUseAction.class, "ToUseAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(toUseScheduleLoadUnloadEClass, ToUseScheduleLoadUnload.class, "ToUseScheduleLoadUnload", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getToUseScheduleLoadUnload_LoadTask(), this.getToUseScheduleTask(), null, "LoadTask", null, 1, 1, ToUseScheduleLoadUnload.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getToUseScheduleLoadUnload_UnloadTask(), this.getToUseScheduleTask(), null, "UnloadTask", null, 1, 1, ToUseScheduleLoadUnload.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

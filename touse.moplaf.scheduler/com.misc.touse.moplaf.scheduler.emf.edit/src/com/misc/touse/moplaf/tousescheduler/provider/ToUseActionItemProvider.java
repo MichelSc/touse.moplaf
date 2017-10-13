@@ -9,6 +9,7 @@ import com.misc.common.moplaf.localsearch.provider.ActionItemProvider;
 
 import com.misc.common.moplaf.scheduler.SchedulerFactory;
 
+import com.misc.touse.moplaf.tousescheduler.ToUseAction;
 import java.util.Collection;
 import java.util.List;
 
@@ -70,7 +71,8 @@ public class ToUseActionItemProvider extends ActionItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_ToUseAction_type");
+		ToUseAction toUseAction = (ToUseAction)object;
+		return getString("_UI_ToUseAction_type") + " " + toUseAction.isValid();
 	}
 	
 

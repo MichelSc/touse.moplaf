@@ -130,6 +130,15 @@ public interface ToUseSchedulerFactory extends EFactory {
 	ToUseAction createToUseAction();
 
 	/**
+	 * Returns a new object of class '<em>To Use Schedule Load Unload</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>To Use Schedule Load Unload</em>'.
+	 * @generated
+	 */
+	ToUseScheduleLoadUnload createToUseScheduleLoadUnload();
+
+	/**
 	 * Returns a new object of class '<em>To Use Schedule</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

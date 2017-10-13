@@ -215,6 +215,14 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_LOAD_UNLOAD: {
+				ToUseScheduleLoadUnload toUseScheduleLoadUnload = (ToUseScheduleLoadUnload)theEObject;
+				T result = caseToUseScheduleLoadUnload(toUseScheduleLoadUnload);
+				if (result == null) result = caseToUseAction(toUseScheduleLoadUnload);
+				if (result == null) result = caseAction(toUseScheduleLoadUnload);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -456,6 +464,21 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseToUseAction(ToUseAction object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>To Use Schedule Load Unload</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>To Use Schedule Load Unload</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseToUseScheduleLoadUnload(ToUseScheduleLoadUnload object) {
 		return null;
 	}
 
