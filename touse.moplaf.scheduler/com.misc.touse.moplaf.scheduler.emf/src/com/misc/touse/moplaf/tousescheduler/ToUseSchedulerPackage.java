@@ -3517,13 +3517,22 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_ACTION__CURRENT_MOVE = LocalSearchPackage.ACTION__CURRENT_MOVE;
 
 	/**
-	 * The feature id for the '<em><b>Current Solution</b></em>' reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_ACTION__CURRENT_SOLUTION = LocalSearchPackage.ACTION__CURRENT_SOLUTION;
+	int TO_USE_ACTION__DESCRIPTION = LocalSearchPackage.ACTION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Valid Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_ACTION__VALID_FEEDBACK = LocalSearchPackage.ACTION__VALID_FEEDBACK;
 
 	/**
 	 * The feature id for the '<em><b>Valid</b></em>' attribute.
@@ -3535,13 +3544,13 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_ACTION__VALID = LocalSearchPackage.ACTION__VALID;
 
 	/**
-	 * The feature id for the '<em><b>Valid Feedback</b></em>' attribute.
+	 * The feature id for the '<em><b>Current Solution</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_ACTION__VALID_FEEDBACK = LocalSearchPackage.ACTION__VALID_FEEDBACK;
+	int TO_USE_ACTION__CURRENT_SOLUTION = LocalSearchPackage.ACTION__CURRENT_SOLUTION;
 
 	/**
 	 * The number of structural features of the '<em>To Use Action</em>' class.
@@ -3617,13 +3626,22 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE_LOAD_UNLOAD__CURRENT_MOVE = TO_USE_ACTION__CURRENT_MOVE;
 
 	/**
-	 * The feature id for the '<em><b>Current Solution</b></em>' reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD__CURRENT_SOLUTION = TO_USE_ACTION__CURRENT_SOLUTION;
+	int TO_USE_SCHEDULE_LOAD_UNLOAD__DESCRIPTION = TO_USE_ACTION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Valid Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_LOAD_UNLOAD__VALID_FEEDBACK = TO_USE_ACTION__VALID_FEEDBACK;
 
 	/**
 	 * The feature id for the '<em><b>Valid</b></em>' attribute.
@@ -3635,13 +3653,13 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE_LOAD_UNLOAD__VALID = TO_USE_ACTION__VALID;
 
 	/**
-	 * The feature id for the '<em><b>Valid Feedback</b></em>' attribute.
+	 * The feature id for the '<em><b>Current Solution</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD__VALID_FEEDBACK = TO_USE_ACTION__VALID_FEEDBACK;
+	int TO_USE_SCHEDULE_LOAD_UNLOAD__CURRENT_SOLUTION = TO_USE_ACTION__CURRENT_SOLUTION;
 
 	/**
 	 * The feature id for the '<em><b>Load Task</b></em>' reference.

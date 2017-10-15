@@ -71,8 +71,10 @@ public class ToUseActionItemProvider extends ActionItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		ToUseAction toUseAction = (ToUseAction)object;
-		return getString("_UI_ToUseAction_type") + " " + toUseAction.isValid();
+		String label = ((ToUseAction)object).getDescription();
+		return label == null || label.length() == 0 ?
+			getString("_UI_ToUseAction_type") :
+			getString("_UI_ToUseAction_type") + " " + label;
 	}
 	
 
@@ -109,16 +111,6 @@ public class ToUseActionItemProvider extends ActionItemProvider {
 			(createChildParameter
 				(LocalSearchPackage.Literals.ACTION__ROOT_MOVES,
 				 SchedulerFactory.eINSTANCE.createScheduleBefore()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LocalSearchPackage.Literals.ACTION__ROOT_MOVES,
-				 SchedulerFactory.eINSTANCE.createScheduleFirst()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LocalSearchPackage.Literals.ACTION__ROOT_MOVES,
-				 SchedulerFactory.eINSTANCE.createScheduleLast()));
 
 		newChildDescriptors.add
 			(createChildParameter

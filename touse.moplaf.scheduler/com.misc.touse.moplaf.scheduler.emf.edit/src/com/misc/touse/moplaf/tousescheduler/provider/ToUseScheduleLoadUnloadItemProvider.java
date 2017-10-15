@@ -112,8 +112,10 @@ public class ToUseScheduleLoadUnloadItemProvider extends ToUseActionItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		ToUseScheduleLoadUnload toUseScheduleLoadUnload = (ToUseScheduleLoadUnload)object;
-		return getString("_UI_ToUseScheduleLoadUnload_type") + " " + toUseScheduleLoadUnload.isValid();
+		String label = ((ToUseScheduleLoadUnload)object).getDescription();
+		return label == null || label.length() == 0 ?
+			getString("_UI_ToUseScheduleLoadUnload_type") :
+			getString("_UI_ToUseScheduleLoadUnload_type") + " " + label;
 	}
 	
 

@@ -4,7 +4,6 @@ package com.misc.touse.moplaf.tousescheduler.impl;
 
 import com.misc.common.moplaf.scheduler.Resource;
 import com.misc.common.moplaf.scheduler.ScheduleAfter;
-import com.misc.common.moplaf.scheduler.ScheduleFirst;
 import com.misc.common.moplaf.scheduler.SchedulerFactory;
 import com.misc.common.moplaf.scheduler.Task;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedule;
@@ -249,25 +248,35 @@ public class ToUseScheduleLoadUnloadImpl extends ToUseActionImpl implements ToUs
 		ToUseScheduleTask unloadTask= this.getUnloadTask();
 		
 		for (Resource resource : schedule.getResources() ) {
-			
-			ScheduleFirst scheduleLoad = SchedulerFactory.eINSTANCE.createScheduleFirst();
-			scheduleLoad.setInsertionPoint(resource);
-			scheduleLoad.setTaskToSchedule(loadTask);
-			this.getRootMoves().add(scheduleLoad);
-			
-			ScheduleAfter scheduleUnload = SchedulerFactory.eINSTANCE.createScheduleAfter();
-			scheduleUnload.setInsertionPoint(loadTask);
-			scheduleUnload.setTaskToSchedule(unloadTask);
-			scheduleLoad.getNextMoves().add(scheduleUnload);
-			
-			current_before = 
-		}
-		
-	}
-	
-	
-	
-	
-	
+			Task loadInsertionPoint = null;
+			do {
+				// schedule load
+				ScheduleAfter scheduleLoad = SchedulerFactory.eINSTANCE.createScheduleAfter();
+				scheduleLoad.setInsertionPoint(loadInsertionPoint);
+				scheduleLoad.setResource(resource);
+				scheduleLoad.setTaskToSchedule(loadTask);
+				this.getRootMoves().add(scheduleLoad);
+				
+				// schedule unload
+				Task unloadInsertionPoint = loadTask;
+				do {
+					ScheduleAfter scheduleUnload = SchedulerFactory.eINSTANCE.createScheduleAfter();
+					scheduleUnload.setInsertionPoint(unloadInsertionPoint);
+					scheduleUnload.setResource(resource);
+					scheduleUnload.setTaskToSchedule(unloadTask);
+					scheduleLoad.getNextMoves().add(scheduleLoad);
+					// loop control over the unload insertion points
+					unloadInsertionPoint = unloadInsertionPoint == loadTask
+							             ? loadInsertionPoint
+							             : unloadInsertionPoint.getNextTask();
+				} while ( unloadInsertionPoint !=null );
+				
+				// loop control over the load insertions points
+				loadInsertionPoint = loadInsertionPoint==null
+						           ? resource.getFirstTask()
+						           : loadInsertionPoint.getNextTask();
+			} while (loadInsertionPoint !=null);
+		}  // traverse the Resources 
+	} // crerateMovesImpl
 
 } //ToUseScheduleLoadUnloadImpl
