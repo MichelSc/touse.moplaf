@@ -44,7 +44,6 @@ public class ToUseScheduleLoadUnloadItemProvider extends ToUseActionItemProvider
 			super.getPropertyDescriptors(object);
 
 			addLoadTaskPropertyDescriptor(object);
-			addUnloadTaskPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -63,28 +62,6 @@ public class ToUseScheduleLoadUnloadItemProvider extends ToUseActionItemProvider
 				 getString("_UI_ToUseScheduleLoadUnload_LoadTask_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseScheduleLoadUnload_LoadTask_feature", "_UI_ToUseScheduleLoadUnload_type"),
 				 ToUseSchedulerPackage.Literals.TO_USE_SCHEDULE_LOAD_UNLOAD__LOAD_TASK,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Unload Task feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addUnloadTaskPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ToUseScheduleLoadUnload_UnloadTask_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseScheduleLoadUnload_UnloadTask_feature", "_UI_ToUseScheduleLoadUnload_type"),
-				 ToUseSchedulerPackage.Literals.TO_USE_SCHEDULE_LOAD_UNLOAD__UNLOAD_TASK,
 				 true,
 				 false,
 				 true,

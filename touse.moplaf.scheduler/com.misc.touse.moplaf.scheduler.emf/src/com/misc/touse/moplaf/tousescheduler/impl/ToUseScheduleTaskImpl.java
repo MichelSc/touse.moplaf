@@ -3,9 +3,9 @@
 package com.misc.touse.moplaf.tousescheduler.impl;
 
 import com.misc.common.moplaf.scheduler.impl.TaskImpl;
+import com.misc.touse.moplaf.tousescheduler.Shipment;
 import com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
-import com.misc.touse.moplaf.tousescheduler.ToUseTask;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleTaskImpl#getToUseTask <em>To Use Task</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleTaskImpl#getShipment <em>Shipment</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleTaskImpl#getDistance <em>Distance</em>}</li>
  * </ul>
  *
@@ -73,18 +73,21 @@ public class ToUseScheduleTaskImpl extends TaskImpl implements ToUseScheduleTask
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ToUseTask getToUseTask() {
-		ToUseTask toUseTask = basicGetToUseTask();
-		return toUseTask != null && toUseTask.eIsProxy() ? (ToUseTask)eResolveProxy((InternalEObject)toUseTask) : toUseTask;
+	public Shipment getShipment() {
+		Shipment shipment = basicGetShipment();
+		return shipment != null && shipment.eIsProxy() ? (Shipment)eResolveProxy((InternalEObject)shipment) : shipment;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
 	 */
-	public ToUseTask basicGetToUseTask() {
-		ToUseTask toUseScheduleTask = (ToUseTask)this.getTask();
-		return toUseScheduleTask;
+	public Shipment basicGetShipment() {
+		// TODO: implement this method to return the 'Shipment' reference
+		// -> do not perform proxy resolution
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -116,9 +119,9 @@ public class ToUseScheduleTaskImpl extends TaskImpl implements ToUseScheduleTask
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__TO_USE_TASK:
-				if (resolve) return getToUseTask();
-				return basicGetToUseTask();
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__SHIPMENT:
+				if (resolve) return getShipment();
+				return basicGetShipment();
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__DISTANCE:
 				return getDistance();
 		}
@@ -163,8 +166,8 @@ public class ToUseScheduleTaskImpl extends TaskImpl implements ToUseScheduleTask
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__TO_USE_TASK:
-				return basicGetToUseTask() != null;
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__SHIPMENT:
+				return basicGetShipment() != null;
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__DISTANCE:
 				return distance != DISTANCE_EDEFAULT;
 		}

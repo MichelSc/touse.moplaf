@@ -13,7 +13,7 @@ import com.misc.common.moplaf.scheduler.Resource;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource#getToUseResource <em>To Use Resource</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource#getVehicle <em>Vehicle</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource#getTotalDistance <em>Total Distance</em>}</li>
  * </ul>
  *
@@ -23,19 +23,30 @@ import com.misc.common.moplaf.scheduler.Resource;
  */
 public interface ToUseScheduleResource extends Resource {
 	/**
-	 * Returns the value of the '<em><b>To Use Resource</b></em>' reference.
+	 * Returns the value of the '<em><b>Vehicle</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>To Use Resource</em>' reference isn't clear,
+	 * If the meaning of the '<em>Vehicle</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>To Use Resource</em>' reference.
-	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getToUseScheduleResource_ToUseResource()
-	 * @model required="true" transient="true" changeable="false" volatile="true" derived="true"
+	 * @return the value of the '<em>Vehicle</em>' reference.
+	 * @see #setVehicle(Vehicle)
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getToUseScheduleResource_Vehicle()
+	 * @model required="true"
 	 * @generated
 	 */
-	ToUseResource getToUseResource();
+	Vehicle getVehicle();
+
+	/**
+	 * Sets the value of the '{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource#getVehicle <em>Vehicle</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Vehicle</em>' reference.
+	 * @see #getVehicle()
+	 * @generated
+	 */
+	void setVehicle(Vehicle value);
 
 	/**
 	 * Returns the value of the '<em><b>Total Distance</b></em>' attribute.

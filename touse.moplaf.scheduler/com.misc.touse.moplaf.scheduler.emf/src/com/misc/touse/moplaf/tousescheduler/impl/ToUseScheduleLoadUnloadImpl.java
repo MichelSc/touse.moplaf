@@ -6,10 +6,11 @@ import com.misc.common.moplaf.scheduler.Resource;
 import com.misc.common.moplaf.scheduler.ScheduleAfter;
 import com.misc.common.moplaf.scheduler.SchedulerFactory;
 import com.misc.common.moplaf.scheduler.Task;
+import com.misc.touse.moplaf.tousescheduler.ToUseLoadShipment;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedule;
 import com.misc.touse.moplaf.tousescheduler.ToUseScheduleLoadUnload;
-import com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
+import com.misc.touse.moplaf.tousescheduler.ToUseUnloadShipment;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -27,7 +28,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleLoadUnloadImpl#getLoadTask <em>Load Task</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleLoadUnloadImpl#getUnloadTask <em>Unload Task</em>}</li>
  * </ul>
  *
  * @generated
@@ -41,17 +41,7 @@ public class ToUseScheduleLoadUnloadImpl extends ToUseActionImpl implements ToUs
 	 * @generated
 	 * @ordered
 	 */
-	protected ToUseScheduleTask loadTask;
-
-	/**
-	 * The cached value of the '{@link #getUnloadTask() <em>Unload Task</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUnloadTask()
-	 * @generated
-	 * @ordered
-	 */
-	protected ToUseScheduleTask unloadTask;
+	protected ToUseLoadShipment loadTask;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -77,10 +67,10 @@ public class ToUseScheduleLoadUnloadImpl extends ToUseActionImpl implements ToUs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ToUseScheduleTask getLoadTask() {
+	public ToUseLoadShipment getLoadTask() {
 		if (loadTask != null && loadTask.eIsProxy()) {
 			InternalEObject oldLoadTask = (InternalEObject)loadTask;
-			loadTask = (ToUseScheduleTask)eResolveProxy(oldLoadTask);
+			loadTask = (ToUseLoadShipment)eResolveProxy(oldLoadTask);
 			if (loadTask != oldLoadTask) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ToUseSchedulerPackage.TO_USE_SCHEDULE_LOAD_UNLOAD__LOAD_TASK, oldLoadTask, loadTask));
@@ -94,7 +84,7 @@ public class ToUseScheduleLoadUnloadImpl extends ToUseActionImpl implements ToUs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ToUseScheduleTask basicGetLoadTask() {
+	public ToUseLoadShipment basicGetLoadTask() {
 		return loadTask;
 	}
 
@@ -103,49 +93,11 @@ public class ToUseScheduleLoadUnloadImpl extends ToUseActionImpl implements ToUs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLoadTask(ToUseScheduleTask newLoadTask) {
-		ToUseScheduleTask oldLoadTask = loadTask;
+	public void setLoadTask(ToUseLoadShipment newLoadTask) {
+		ToUseLoadShipment oldLoadTask = loadTask;
 		loadTask = newLoadTask;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ToUseSchedulerPackage.TO_USE_SCHEDULE_LOAD_UNLOAD__LOAD_TASK, oldLoadTask, loadTask));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ToUseScheduleTask getUnloadTask() {
-		if (unloadTask != null && unloadTask.eIsProxy()) {
-			InternalEObject oldUnloadTask = (InternalEObject)unloadTask;
-			unloadTask = (ToUseScheduleTask)eResolveProxy(oldUnloadTask);
-			if (unloadTask != oldUnloadTask) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ToUseSchedulerPackage.TO_USE_SCHEDULE_LOAD_UNLOAD__UNLOAD_TASK, oldUnloadTask, unloadTask));
-			}
-		}
-		return unloadTask;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ToUseScheduleTask basicGetUnloadTask() {
-		return unloadTask;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setUnloadTask(ToUseScheduleTask newUnloadTask) {
-		ToUseScheduleTask oldUnloadTask = unloadTask;
-		unloadTask = newUnloadTask;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToUseSchedulerPackage.TO_USE_SCHEDULE_LOAD_UNLOAD__UNLOAD_TASK, oldUnloadTask, unloadTask));
 	}
 
 	/**
@@ -159,9 +111,6 @@ public class ToUseScheduleLoadUnloadImpl extends ToUseActionImpl implements ToUs
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_LOAD_UNLOAD__LOAD_TASK:
 				if (resolve) return getLoadTask();
 				return basicGetLoadTask();
-			case ToUseSchedulerPackage.TO_USE_SCHEDULE_LOAD_UNLOAD__UNLOAD_TASK:
-				if (resolve) return getUnloadTask();
-				return basicGetUnloadTask();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -175,10 +124,7 @@ public class ToUseScheduleLoadUnloadImpl extends ToUseActionImpl implements ToUs
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_LOAD_UNLOAD__LOAD_TASK:
-				setLoadTask((ToUseScheduleTask)newValue);
-				return;
-			case ToUseSchedulerPackage.TO_USE_SCHEDULE_LOAD_UNLOAD__UNLOAD_TASK:
-				setUnloadTask((ToUseScheduleTask)newValue);
+				setLoadTask((ToUseLoadShipment)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -193,10 +139,7 @@ public class ToUseScheduleLoadUnloadImpl extends ToUseActionImpl implements ToUs
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_LOAD_UNLOAD__LOAD_TASK:
-				setLoadTask((ToUseScheduleTask)null);
-				return;
-			case ToUseSchedulerPackage.TO_USE_SCHEDULE_LOAD_UNLOAD__UNLOAD_TASK:
-				setUnloadTask((ToUseScheduleTask)null);
+				setLoadTask((ToUseLoadShipment)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -212,8 +155,6 @@ public class ToUseScheduleLoadUnloadImpl extends ToUseActionImpl implements ToUs
 		switch (featureID) {
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_LOAD_UNLOAD__LOAD_TASK:
 				return loadTask != null;
-			case ToUseSchedulerPackage.TO_USE_SCHEDULE_LOAD_UNLOAD__UNLOAD_TASK:
-				return unloadTask != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -226,9 +167,6 @@ public class ToUseScheduleLoadUnloadImpl extends ToUseActionImpl implements ToUs
 		}
 		if ( this.getLoadTask()==null) {
 			return "No load task";
-		}
-		if ( this.getUnloadTask()==null) {
-			return "No unload task";
 		}
 		return null;
 	}
@@ -244,8 +182,8 @@ public class ToUseScheduleLoadUnloadImpl extends ToUseActionImpl implements ToUs
 		assert this.isValid() : "Action is not valid";
 		
 		ToUseSchedule schedule = (ToUseSchedule) this.getCurrentSolution();
-		ToUseScheduleTask loadTask= this.getLoadTask();
-		ToUseScheduleTask unloadTask= this.getUnloadTask();
+		ToUseLoadShipment loadTask = this.getLoadTask();
+		ToUseUnloadShipment unloadTask = loadTask.getUnloadShipment();
 		
 		for (Resource resource : schedule.getResources() ) {
 			Task loadInsertionPoint = null;

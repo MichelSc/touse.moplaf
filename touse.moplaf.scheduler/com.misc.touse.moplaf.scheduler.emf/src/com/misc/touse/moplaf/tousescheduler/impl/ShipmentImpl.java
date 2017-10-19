@@ -2,7 +2,7 @@
  */
 package com.misc.touse.moplaf.tousescheduler.impl;
 
-import com.misc.touse.moplaf.tousescheduler.ToUseResource;
+import com.misc.touse.moplaf.tousescheduler.Shipment;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -14,18 +14,18 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>To Use Resource</b></em>'.
+ * An implementation of the model object '<em><b>Shipment</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseResourceImpl#getName <em>Name</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ShipmentImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ToUseResourceImpl extends MinimalEObjectImpl.Container implements ToUseResource {
+public class ShipmentImpl extends MinimalEObjectImpl.Container implements Shipment {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -51,7 +51,7 @@ public class ToUseResourceImpl extends MinimalEObjectImpl.Container implements T
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ToUseResourceImpl() {
+	protected ShipmentImpl() {
 		super();
 	}
 
@@ -62,7 +62,7 @@ public class ToUseResourceImpl extends MinimalEObjectImpl.Container implements T
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ToUseSchedulerPackage.Literals.TO_USE_RESOURCE;
+		return ToUseSchedulerPackage.Literals.SHIPMENT;
 	}
 
 	/**
@@ -83,7 +83,7 @@ public class ToUseResourceImpl extends MinimalEObjectImpl.Container implements T
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToUseSchedulerPackage.TO_USE_RESOURCE__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseSchedulerPackage.SHIPMENT__NAME, oldName, name));
 	}
 
 	/**
@@ -94,7 +94,7 @@ public class ToUseResourceImpl extends MinimalEObjectImpl.Container implements T
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ToUseSchedulerPackage.TO_USE_RESOURCE__NAME:
+			case ToUseSchedulerPackage.SHIPMENT__NAME:
 				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -108,7 +108,7 @@ public class ToUseResourceImpl extends MinimalEObjectImpl.Container implements T
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ToUseSchedulerPackage.TO_USE_RESOURCE__NAME:
+			case ToUseSchedulerPackage.SHIPMENT__NAME:
 				setName((String)newValue);
 				return;
 		}
@@ -123,7 +123,7 @@ public class ToUseResourceImpl extends MinimalEObjectImpl.Container implements T
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ToUseSchedulerPackage.TO_USE_RESOURCE__NAME:
+			case ToUseSchedulerPackage.SHIPMENT__NAME:
 				setName(NAME_EDEFAULT);
 				return;
 		}
@@ -138,7 +138,7 @@ public class ToUseResourceImpl extends MinimalEObjectImpl.Container implements T
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ToUseSchedulerPackage.TO_USE_RESOURCE__NAME:
+			case ToUseSchedulerPackage.SHIPMENT__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
@@ -160,4 +160,4 @@ public class ToUseResourceImpl extends MinimalEObjectImpl.Container implements T
 		return result.toString();
 	}
 
-} //ToUseResourceImpl
+} //ShipmentImpl

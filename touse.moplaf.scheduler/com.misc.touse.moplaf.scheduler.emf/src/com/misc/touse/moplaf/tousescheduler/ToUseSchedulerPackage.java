@@ -80,22 +80,22 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int DOMAIN__SCHEDULERS = 0;
 
 	/**
-	 * The feature id for the '<em><b>Resources</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Vehicles</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN__RESOURCES = 1;
+	int DOMAIN__VEHICLES = 1;
 
 	/**
-	 * The feature id for the '<em><b>Tasks</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Shipments</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN__TASKS = 2;
+	int DOMAIN__SHIPMENTS = 2;
 
 	/**
 	 * The number of structural features of the '<em>Domain</em>' class.
@@ -115,6 +115,43 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 */
 	int DOMAIN_OPERATION_COUNT = 0;
 
+
+	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.VehicleImpl <em>Vehicle</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.VehicleImpl
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getVehicle()
+	 * @generated
+	 */
+	int VEHICLE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VEHICLE__NAME = 0;
+
+	/**
+	 * The number of structural features of the '<em>Vehicle</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VEHICLE_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Vehicle</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VEHICLE_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScoreImpl <em>To Use Score</em>}' class.
@@ -137,24 +174,14 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULER = 3;
 
 	/**
-	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseTaskImpl <em>To Use Task</em>}' class.
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ShipmentImpl <em>Shipment</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseTaskImpl
-	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseTask()
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ShipmentImpl
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getShipment()
 	 * @generated
 	 */
-	int TO_USE_TASK = 2;
-
-	/**
-	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseResourceImpl <em>To Use Resource</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseResourceImpl
-	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseResource()
-	 * @generated
-	 */
-	int TO_USE_RESOURCE = 1;
+	int SHIPMENT = 2;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -163,61 +190,34 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_RESOURCE__NAME = 0;
+	int SHIPMENT__NAME = 0;
 
 	/**
-	 * The number of structural features of the '<em>To Use Resource</em>' class.
+	 * The number of structural features of the '<em>Shipment</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_RESOURCE_FEATURE_COUNT = 1;
+	int SHIPMENT_FEATURE_COUNT = 1;
 
 	/**
-	 * The number of operations of the '<em>To Use Resource</em>' class.
+	 * The number of operations of the '<em>Shipment</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_RESOURCE_OPERATION_COUNT = 0;
+	int SHIPMENT_OPERATION_COUNT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Schedules</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_TASK__NAME = 0;
-
-	/**
-	 * The number of structural features of the '<em>To Use Task</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_TASK_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>To Use Task</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_TASK_OPERATION_COUNT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Schedulers</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULER__SCHEDULERS = SchedulerPackage.SCHEDULER__SCHEDULERS;
+	int TO_USE_SCHEDULER__SCHEDULES = SchedulerPackage.SCHEDULER__SCHEDULES;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -238,40 +238,22 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULER__CURRENT_SOLUTION_NR = SchedulerPackage.SCHEDULER__CURRENT_SOLUTION_NR;
 
 	/**
-	 * The feature id for the '<em><b>Tasks</b></em>' reference list.
+	 * The feature id for the '<em><b>Selected Vehicles</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULER__TASKS = SchedulerPackage.SCHEDULER__TASKS;
+	int TO_USE_SCHEDULER__SELECTED_VEHICLES = SchedulerPackage.SCHEDULER_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Resources</b></em>' reference list.
+	 * The feature id for the '<em><b>Selected Shipments</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULER__RESOURCES = SchedulerPackage.SCHEDULER__RESOURCES;
-
-	/**
-	 * The feature id for the '<em><b>Scheduler Resources</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULER__SCHEDULER_RESOURCES = SchedulerPackage.SCHEDULER_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Scheduler Tasks</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULER__SCHEDULER_TASKS = SchedulerPackage.SCHEDULER_FEATURE_COUNT + 1;
+	int TO_USE_SCHEDULER__SELECTED_SHIPMENTS = SchedulerPackage.SCHEDULER_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>To Use Scheduler</em>' class.
@@ -301,22 +283,22 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULER___CONSTRUCT_SCORE = SchedulerPackage.SCHEDULER___CONSTRUCT_SCORE;
 
 	/**
-	 * The operation id for the '<em>Construct Task</em>' operation.
+	 * The operation id for the '<em>Generate Tasks</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULER___CONSTRUCT_TASK__EOBJECT = SchedulerPackage.SCHEDULER___CONSTRUCT_TASK__EOBJECT;
+	int TO_USE_SCHEDULER___GENERATE_TASKS__SCHEDULE_1 = SchedulerPackage.SCHEDULER___GENERATE_TASKS__SCHEDULE;
 
 	/**
-	 * The operation id for the '<em>Construct Resource</em>' operation.
+	 * The operation id for the '<em>Generate Resources</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULER___CONSTRUCT_RESOURCE__EOBJECT = SchedulerPackage.SCHEDULER___CONSTRUCT_RESOURCE__EOBJECT;
+	int TO_USE_SCHEDULER___GENERATE_RESOURCES__SCHEDULE_1 = SchedulerPackage.SCHEDULER___GENERATE_RESOURCES__SCHEDULE;
 
 	/**
 	 * The number of operations of the '<em>To Use Scheduler</em>' class.
@@ -663,15 +645,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE_RESOURCE__SCHEDULE = SchedulerPackage.RESOURCE__SCHEDULE;
 
 	/**
-	 * The feature id for the '<em><b>Resource</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULE_RESOURCE__RESOURCE = SchedulerPackage.RESOURCE__RESOURCE;
-
-	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -726,13 +699,13 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE_RESOURCE__NAME = SchedulerPackage.RESOURCE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>To Use Resource</b></em>' reference.
+	 * The feature id for the '<em><b>Vehicle</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_RESOURCE__TO_USE_RESOURCE = SchedulerPackage.RESOURCE_FEATURE_COUNT + 0;
+	int TO_USE_SCHEDULE_RESOURCE__VEHICLE = SchedulerPackage.RESOURCE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Total Distance</b></em>' attribute.
@@ -798,15 +771,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE_TASK__PROPAGATOR_FUNCTIONS = SchedulerPackage.TASK__PROPAGATOR_FUNCTIONS;
 
 	/**
-	 * The feature id for the '<em><b>Task</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULE_TASK__TASK = SchedulerPackage.TASK__TASK;
-
-	/**
 	 * The feature id for the '<em><b>Next Task</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -861,13 +825,13 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE_TASK__NAME = SchedulerPackage.TASK__NAME;
 
 	/**
-	 * The feature id for the '<em><b>To Use Task</b></em>' reference.
+	 * The feature id for the '<em><b>Shipment</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_TASK__TO_USE_TASK = SchedulerPackage.TASK_FEATURE_COUNT + 0;
+	int TO_USE_SCHEDULE_TASK__SHIPMENT = SchedulerPackage.TASK_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Distance</b></em>' attribute.
@@ -930,7 +894,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_TASK___SET_PREVIOUS_NEXT__RESOURCE_TASK_TASK = SchedulerPackage.TASK___SET_PREVIOUS_NEXT__RESOURCE_TASK_TASK;
+	int TO_USE_SCHEDULE_TASK___SET_PREVIOUS_NEXT__RESOURCE_TASK_TASK_1 = SchedulerPackage.TASK___SET_PREVIOUS_NEXT__RESOURCE_TASK_TASK;
 
 	/**
 	 * The operation id for the '<em>Schedule Resource</em>' operation.
@@ -939,7 +903,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_TASK___SCHEDULE_RESOURCE__RESOURCE = SchedulerPackage.TASK___SCHEDULE_RESOURCE__RESOURCE;
+	int TO_USE_SCHEDULE_TASK___SCHEDULE_RESOURCE__RESOURCE_1 = SchedulerPackage.TASK___SCHEDULE_RESOURCE__RESOURCE;
 
 	/**
 	 * The number of operations of the '<em>To Use Schedule Task</em>' class.
@@ -3671,22 +3635,13 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE_LOAD_UNLOAD__LOAD_TASK = TO_USE_ACTION_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Unload Task</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD__UNLOAD_TASK = TO_USE_ACTION_FEATURE_COUNT + 1;
-
-	/**
 	 * The number of structural features of the '<em>To Use Schedule Load Unload</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD_FEATURE_COUNT = TO_USE_ACTION_FEATURE_COUNT + 2;
+	int TO_USE_SCHEDULE_LOAD_UNLOAD_FEATURE_COUNT = TO_USE_ACTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Initialize</em>' operation.
@@ -3725,6 +3680,368 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE_LOAD_UNLOAD_OPERATION_COUNT = TO_USE_ACTION_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseLoadShipmentImpl <em>To Use Load Shipment</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseLoadShipmentImpl
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseLoadShipment()
+	 * @generated
+	 */
+	int TO_USE_LOAD_SHIPMENT = 18;
+
+	/**
+	 * The feature id for the '<em><b>Propagator Functions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT__PROPAGATOR_FUNCTIONS = TO_USE_SCHEDULE_TASK__PROPAGATOR_FUNCTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Next Task</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT__NEXT_TASK = TO_USE_SCHEDULE_TASK__NEXT_TASK;
+
+	/**
+	 * The feature id for the '<em><b>Previous Task</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT__PREVIOUS_TASK = TO_USE_SCHEDULE_TASK__PREVIOUS_TASK;
+
+	/**
+	 * The feature id for the '<em><b>Scheduled Resource</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT__SCHEDULED_RESOURCE = TO_USE_SCHEDULE_TASK__SCHEDULED_RESOURCE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT__DESCRIPTION = TO_USE_SCHEDULE_TASK__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Schedule</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT__SCHEDULE = TO_USE_SCHEDULE_TASK__SCHEDULE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT__NAME = TO_USE_SCHEDULE_TASK__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Shipment</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT__SHIPMENT = TO_USE_SCHEDULE_TASK__SHIPMENT;
+
+	/**
+	 * The feature id for the '<em><b>Distance</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT__DISTANCE = TO_USE_SCHEDULE_TASK__DISTANCE;
+
+	/**
+	 * The feature id for the '<em><b>Shipment Loaded</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT__SHIPMENT_LOADED = TO_USE_SCHEDULE_TASK_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Unload Shipment</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT__UNLOAD_SHIPMENT = TO_USE_SCHEDULE_TASK_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>To Use Load Shipment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT_FEATURE_COUNT = TO_USE_SCHEDULE_TASK_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION = TO_USE_SCHEDULE_TASK___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION;
+
+	/**
+	 * The operation id for the '<em>Get Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT___GET_PROPAGATOR_FUNCTION__ECLASS = TO_USE_SCHEDULE_TASK___GET_PROPAGATOR_FUNCTION__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT___ADD_PROPAGATOR_FUNCTIONS__STRING = TO_USE_SCHEDULE_TASK___ADD_PROPAGATOR_FUNCTIONS__STRING;
+
+	/**
+	 * The operation id for the '<em>Unset Previous Next</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT___UNSET_PREVIOUS_NEXT = TO_USE_SCHEDULE_TASK___UNSET_PREVIOUS_NEXT;
+
+	/**
+	 * The operation id for the '<em>Set Previous Next</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT___SET_PREVIOUS_NEXT__RESOURCE_TASK_TASK_1 = TO_USE_SCHEDULE_TASK___SET_PREVIOUS_NEXT__RESOURCE_TASK_TASK_1;
+
+	/**
+	 * The operation id for the '<em>Schedule Resource</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT___SCHEDULE_RESOURCE__RESOURCE_1 = TO_USE_SCHEDULE_TASK___SCHEDULE_RESOURCE__RESOURCE_1;
+
+	/**
+	 * The number of operations of the '<em>To Use Load Shipment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT_OPERATION_COUNT = TO_USE_SCHEDULE_TASK_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseUnloadShipmentImpl <em>To Use Unload Shipment</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseUnloadShipmentImpl
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseUnloadShipment()
+	 * @generated
+	 */
+	int TO_USE_UNLOAD_SHIPMENT = 19;
+
+	/**
+	 * The feature id for the '<em><b>Propagator Functions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT__PROPAGATOR_FUNCTIONS = TO_USE_SCHEDULE_TASK__PROPAGATOR_FUNCTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Next Task</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT__NEXT_TASK = TO_USE_SCHEDULE_TASK__NEXT_TASK;
+
+	/**
+	 * The feature id for the '<em><b>Previous Task</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT__PREVIOUS_TASK = TO_USE_SCHEDULE_TASK__PREVIOUS_TASK;
+
+	/**
+	 * The feature id for the '<em><b>Scheduled Resource</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT__SCHEDULED_RESOURCE = TO_USE_SCHEDULE_TASK__SCHEDULED_RESOURCE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT__DESCRIPTION = TO_USE_SCHEDULE_TASK__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Schedule</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT__SCHEDULE = TO_USE_SCHEDULE_TASK__SCHEDULE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT__NAME = TO_USE_SCHEDULE_TASK__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Shipment</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT__SHIPMENT = TO_USE_SCHEDULE_TASK__SHIPMENT;
+
+	/**
+	 * The feature id for the '<em><b>Distance</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT__DISTANCE = TO_USE_SCHEDULE_TASK__DISTANCE;
+
+	/**
+	 * The feature id for the '<em><b>Shipment Unloaded</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT__SHIPMENT_UNLOADED = TO_USE_SCHEDULE_TASK_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Load Shipment</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT__LOAD_SHIPMENT = TO_USE_SCHEDULE_TASK_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>To Use Unload Shipment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT_FEATURE_COUNT = TO_USE_SCHEDULE_TASK_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION = TO_USE_SCHEDULE_TASK___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION;
+
+	/**
+	 * The operation id for the '<em>Get Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT___GET_PROPAGATOR_FUNCTION__ECLASS = TO_USE_SCHEDULE_TASK___GET_PROPAGATOR_FUNCTION__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT___ADD_PROPAGATOR_FUNCTIONS__STRING = TO_USE_SCHEDULE_TASK___ADD_PROPAGATOR_FUNCTIONS__STRING;
+
+	/**
+	 * The operation id for the '<em>Unset Previous Next</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT___UNSET_PREVIOUS_NEXT = TO_USE_SCHEDULE_TASK___UNSET_PREVIOUS_NEXT;
+
+	/**
+	 * The operation id for the '<em>Set Previous Next</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT___SET_PREVIOUS_NEXT__RESOURCE_TASK_TASK_1 = TO_USE_SCHEDULE_TASK___SET_PREVIOUS_NEXT__RESOURCE_TASK_TASK_1;
+
+	/**
+	 * The operation id for the '<em>Schedule Resource</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT___SCHEDULE_RESOURCE__RESOURCE_1 = TO_USE_SCHEDULE_TASK___SCHEDULE_RESOURCE__RESOURCE_1;
+
+	/**
+	 * The number of operations of the '<em>To Use Unload Shipment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT_OPERATION_COUNT = TO_USE_SCHEDULE_TASK_OPERATION_COUNT + 0;
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.Domain <em>Domain</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3746,26 +4063,47 @@ public interface ToUseSchedulerPackage extends EPackage {
 	EReference getDomain_Schedulers();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.tousescheduler.Domain#getResources <em>Resources</em>}'.
+	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.tousescheduler.Domain#getVehicles <em>Vehicles</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Resources</em>'.
-	 * @see com.misc.touse.moplaf.tousescheduler.Domain#getResources()
+	 * @return the meta object for the containment reference list '<em>Vehicles</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.Domain#getVehicles()
 	 * @see #getDomain()
 	 * @generated
 	 */
-	EReference getDomain_Resources();
+	EReference getDomain_Vehicles();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.tousescheduler.Domain#getTasks <em>Tasks</em>}'.
+	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.tousescheduler.Domain#getShipments <em>Shipments</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Tasks</em>'.
-	 * @see com.misc.touse.moplaf.tousescheduler.Domain#getTasks()
+	 * @return the meta object for the containment reference list '<em>Shipments</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.Domain#getShipments()
 	 * @see #getDomain()
 	 * @generated
 	 */
-	EReference getDomain_Tasks();
+	EReference getDomain_Shipments();
+
+	/**
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.Vehicle <em>Vehicle</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Vehicle</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.Vehicle
+	 * @generated
+	 */
+	EClass getVehicle();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.tousescheduler.Vehicle#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.Vehicle#getName()
+	 * @see #getVehicle()
+	 * @generated
+	 */
+	EAttribute getVehicle_Name();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.ToUseScore <em>To Use Score</em>}'.
@@ -3799,68 +4137,47 @@ public interface ToUseSchedulerPackage extends EPackage {
 	EClass getToUseScheduler();
 
 	/**
-	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduler#getSchedulerResources <em>Scheduler Resources</em>}'.
+	 * Returns the meta object for the reference list '{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduler#getSelectedVehicles <em>Selected Vehicles</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Scheduler Resources</em>'.
-	 * @see com.misc.touse.moplaf.tousescheduler.ToUseScheduler#getSchedulerResources()
+	 * @return the meta object for the reference list '<em>Selected Vehicles</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseScheduler#getSelectedVehicles()
 	 * @see #getToUseScheduler()
 	 * @generated
 	 */
-	EReference getToUseScheduler_SchedulerResources();
+	EReference getToUseScheduler_SelectedVehicles();
 
 	/**
-	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduler#getSchedulerTasks <em>Scheduler Tasks</em>}'.
+	 * Returns the meta object for the reference list '{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduler#getSelectedShipments <em>Selected Shipments</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Scheduler Tasks</em>'.
-	 * @see com.misc.touse.moplaf.tousescheduler.ToUseScheduler#getSchedulerTasks()
+	 * @return the meta object for the reference list '<em>Selected Shipments</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseScheduler#getSelectedShipments()
 	 * @see #getToUseScheduler()
 	 * @generated
 	 */
-	EReference getToUseScheduler_SchedulerTasks();
+	EReference getToUseScheduler_SelectedShipments();
 
 	/**
-	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.ToUseTask <em>To Use Task</em>}'.
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.Shipment <em>Shipment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>To Use Task</em>'.
-	 * @see com.misc.touse.moplaf.tousescheduler.ToUseTask
+	 * @return the meta object for class '<em>Shipment</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.Shipment
 	 * @generated
 	 */
-	EClass getToUseTask();
+	EClass getShipment();
 
 	/**
-	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.tousescheduler.ToUseTask#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see com.misc.touse.moplaf.tousescheduler.ToUseTask#getName()
-	 * @see #getToUseTask()
-	 * @generated
-	 */
-	EAttribute getToUseTask_Name();
-
-	/**
-	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.ToUseResource <em>To Use Resource</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>To Use Resource</em>'.
-	 * @see com.misc.touse.moplaf.tousescheduler.ToUseResource
-	 * @generated
-	 */
-	EClass getToUseResource();
-
-	/**
-	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.tousescheduler.ToUseResource#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.tousescheduler.Shipment#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see com.misc.touse.moplaf.tousescheduler.ToUseResource#getName()
-	 * @see #getToUseResource()
+	 * @see com.misc.touse.moplaf.tousescheduler.Shipment#getName()
+	 * @see #getShipment()
 	 * @generated
 	 */
-	EAttribute getToUseResource_Name();
+	EAttribute getShipment_Name();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask <em>To Use Schedule Task</em>}'.
@@ -3873,15 +4190,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	EClass getToUseScheduleTask();
 
 	/**
-	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask#getToUseTask <em>To Use Task</em>}'.
+	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask#getShipment <em>Shipment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>To Use Task</em>'.
-	 * @see com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask#getToUseTask()
+	 * @return the meta object for the reference '<em>Shipment</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask#getShipment()
 	 * @see #getToUseScheduleTask()
 	 * @generated
 	 */
-	EReference getToUseScheduleTask_ToUseTask();
+	EReference getToUseScheduleTask_Shipment();
 
 	/**
 	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask#getDistance <em>Distance</em>}'.
@@ -3978,15 +4295,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	EClass getToUseScheduleResource();
 
 	/**
-	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource#getToUseResource <em>To Use Resource</em>}'.
+	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource#getVehicle <em>Vehicle</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>To Use Resource</em>'.
-	 * @see com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource#getToUseResource()
+	 * @return the meta object for the reference '<em>Vehicle</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource#getVehicle()
 	 * @see #getToUseScheduleResource()
 	 * @generated
 	 */
-	EReference getToUseScheduleResource_ToUseResource();
+	EReference getToUseScheduleResource_Vehicle();
 
 	/**
 	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource#getTotalDistance <em>Total Distance</em>}'.
@@ -4104,15 +4421,68 @@ public interface ToUseSchedulerPackage extends EPackage {
 	EReference getToUseScheduleLoadUnload_LoadTask();
 
 	/**
-	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleLoadUnload#getUnloadTask <em>Unload Task</em>}'.
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.ToUseLoadShipment <em>To Use Load Shipment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Unload Task</em>'.
-	 * @see com.misc.touse.moplaf.tousescheduler.ToUseScheduleLoadUnload#getUnloadTask()
-	 * @see #getToUseScheduleLoadUnload()
+	 * @return the meta object for class '<em>To Use Load Shipment</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseLoadShipment
 	 * @generated
 	 */
-	EReference getToUseScheduleLoadUnload_UnloadTask();
+	EClass getToUseLoadShipment();
+
+	/**
+	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.tousescheduler.ToUseLoadShipment#getShipmentLoaded <em>Shipment Loaded</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Shipment Loaded</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseLoadShipment#getShipmentLoaded()
+	 * @see #getToUseLoadShipment()
+	 * @generated
+	 */
+	EReference getToUseLoadShipment_ShipmentLoaded();
+
+	/**
+	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.tousescheduler.ToUseLoadShipment#getUnloadShipment <em>Unload Shipment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Unload Shipment</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseLoadShipment#getUnloadShipment()
+	 * @see #getToUseLoadShipment()
+	 * @generated
+	 */
+	EReference getToUseLoadShipment_UnloadShipment();
+
+	/**
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.ToUseUnloadShipment <em>To Use Unload Shipment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>To Use Unload Shipment</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseUnloadShipment
+	 * @generated
+	 */
+	EClass getToUseUnloadShipment();
+
+	/**
+	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.tousescheduler.ToUseUnloadShipment#getShipmentUnloaded <em>Shipment Unloaded</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Shipment Unloaded</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseUnloadShipment#getShipmentUnloaded()
+	 * @see #getToUseUnloadShipment()
+	 * @generated
+	 */
+	EReference getToUseUnloadShipment_ShipmentUnloaded();
+
+	/**
+	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.tousescheduler.ToUseUnloadShipment#getLoadShipment <em>Load Shipment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Load Shipment</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseUnloadShipment#getLoadShipment()
+	 * @see #getToUseUnloadShipment()
+	 * @generated
+	 */
+	EReference getToUseUnloadShipment_LoadShipment();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.ToUseSchedule <em>To Use Schedule</em>}'.
@@ -4187,20 +4557,38 @@ public interface ToUseSchedulerPackage extends EPackage {
 		EReference DOMAIN__SCHEDULERS = eINSTANCE.getDomain_Schedulers();
 
 		/**
-		 * The meta object literal for the '<em><b>Resources</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Vehicles</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DOMAIN__RESOURCES = eINSTANCE.getDomain_Resources();
+		EReference DOMAIN__VEHICLES = eINSTANCE.getDomain_Vehicles();
 
 		/**
-		 * The meta object literal for the '<em><b>Tasks</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Shipments</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DOMAIN__TASKS = eINSTANCE.getDomain_Tasks();
+		EReference DOMAIN__SHIPMENTS = eINSTANCE.getDomain_Shipments();
+
+		/**
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.VehicleImpl <em>Vehicle</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.touse.moplaf.tousescheduler.impl.VehicleImpl
+		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getVehicle()
+		 * @generated
+		 */
+		EClass VEHICLE = eINSTANCE.getVehicle();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VEHICLE__NAME = eINSTANCE.getVehicle_Name();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScoreImpl <em>To Use Score</em>}' class.
@@ -4231,48 +4619,30 @@ public interface ToUseSchedulerPackage extends EPackage {
 		EClass TO_USE_SCHEDULER = eINSTANCE.getToUseScheduler();
 
 		/**
-		 * The meta object literal for the '<em><b>Scheduler Resources</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Selected Vehicles</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TO_USE_SCHEDULER__SCHEDULER_RESOURCES = eINSTANCE.getToUseScheduler_SchedulerResources();
+		EReference TO_USE_SCHEDULER__SELECTED_VEHICLES = eINSTANCE.getToUseScheduler_SelectedVehicles();
 
 		/**
-		 * The meta object literal for the '<em><b>Scheduler Tasks</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Selected Shipments</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TO_USE_SCHEDULER__SCHEDULER_TASKS = eINSTANCE.getToUseScheduler_SchedulerTasks();
+		EReference TO_USE_SCHEDULER__SELECTED_SHIPMENTS = eINSTANCE.getToUseScheduler_SelectedShipments();
 
 		/**
-		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseTaskImpl <em>To Use Task</em>}' class.
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ShipmentImpl <em>Shipment</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseTaskImpl
-		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseTask()
+		 * @see com.misc.touse.moplaf.tousescheduler.impl.ShipmentImpl
+		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getShipment()
 		 * @generated
 		 */
-		EClass TO_USE_TASK = eINSTANCE.getToUseTask();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TO_USE_TASK__NAME = eINSTANCE.getToUseTask_Name();
-
-		/**
-		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseResourceImpl <em>To Use Resource</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseResourceImpl
-		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseResource()
-		 * @generated
-		 */
-		EClass TO_USE_RESOURCE = eINSTANCE.getToUseResource();
+		EClass SHIPMENT = eINSTANCE.getShipment();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -4280,7 +4650,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TO_USE_RESOURCE__NAME = eINSTANCE.getToUseResource_Name();
+		EAttribute SHIPMENT__NAME = eINSTANCE.getShipment_Name();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleTaskImpl <em>To Use Schedule Task</em>}' class.
@@ -4293,12 +4663,12 @@ public interface ToUseSchedulerPackage extends EPackage {
 		EClass TO_USE_SCHEDULE_TASK = eINSTANCE.getToUseScheduleTask();
 
 		/**
-		 * The meta object literal for the '<em><b>To Use Task</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Shipment</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TO_USE_SCHEDULE_TASK__TO_USE_TASK = eINSTANCE.getToUseScheduleTask_ToUseTask();
+		EReference TO_USE_SCHEDULE_TASK__SHIPMENT = eINSTANCE.getToUseScheduleTask_Shipment();
 
 		/**
 		 * The meta object literal for the '<em><b>Distance</b></em>' attribute feature.
@@ -4383,12 +4753,12 @@ public interface ToUseSchedulerPackage extends EPackage {
 		EClass TO_USE_SCHEDULE_RESOURCE = eINSTANCE.getToUseScheduleResource();
 
 		/**
-		 * The meta object literal for the '<em><b>To Use Resource</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Vehicle</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TO_USE_SCHEDULE_RESOURCE__TO_USE_RESOURCE = eINSTANCE.getToUseScheduleResource_ToUseResource();
+		EReference TO_USE_SCHEDULE_RESOURCE__VEHICLE = eINSTANCE.getToUseScheduleResource_Vehicle();
 
 		/**
 		 * The meta object literal for the '<em><b>Total Distance</b></em>' attribute feature.
@@ -4491,12 +4861,56 @@ public interface ToUseSchedulerPackage extends EPackage {
 		EReference TO_USE_SCHEDULE_LOAD_UNLOAD__LOAD_TASK = eINSTANCE.getToUseScheduleLoadUnload_LoadTask();
 
 		/**
-		 * The meta object literal for the '<em><b>Unload Task</b></em>' reference feature.
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseLoadShipmentImpl <em>To Use Load Shipment</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseLoadShipmentImpl
+		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseLoadShipment()
+		 * @generated
+		 */
+		EClass TO_USE_LOAD_SHIPMENT = eINSTANCE.getToUseLoadShipment();
+
+		/**
+		 * The meta object literal for the '<em><b>Shipment Loaded</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TO_USE_SCHEDULE_LOAD_UNLOAD__UNLOAD_TASK = eINSTANCE.getToUseScheduleLoadUnload_UnloadTask();
+		EReference TO_USE_LOAD_SHIPMENT__SHIPMENT_LOADED = eINSTANCE.getToUseLoadShipment_ShipmentLoaded();
+
+		/**
+		 * The meta object literal for the '<em><b>Unload Shipment</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TO_USE_LOAD_SHIPMENT__UNLOAD_SHIPMENT = eINSTANCE.getToUseLoadShipment_UnloadShipment();
+
+		/**
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseUnloadShipmentImpl <em>To Use Unload Shipment</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseUnloadShipmentImpl
+		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseUnloadShipment()
+		 * @generated
+		 */
+		EClass TO_USE_UNLOAD_SHIPMENT = eINSTANCE.getToUseUnloadShipment();
+
+		/**
+		 * The meta object literal for the '<em><b>Shipment Unloaded</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TO_USE_UNLOAD_SHIPMENT__SHIPMENT_UNLOADED = eINSTANCE.getToUseUnloadShipment_ShipmentUnloaded();
+
+		/**
+		 * The meta object literal for the '<em><b>Load Shipment</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TO_USE_UNLOAD_SHIPMENT__LOAD_SHIPMENT = eINSTANCE.getToUseUnloadShipment_LoadShipment();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleImpl <em>To Use Schedule</em>}' class.

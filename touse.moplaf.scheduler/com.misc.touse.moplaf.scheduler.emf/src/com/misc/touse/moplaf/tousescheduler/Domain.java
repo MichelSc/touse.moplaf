@@ -16,8 +16,8 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.Domain#getSchedulers <em>Schedulers</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.tousescheduler.Domain#getResources <em>Resources</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.tousescheduler.Domain#getTasks <em>Tasks</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.Domain#getVehicles <em>Vehicles</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.Domain#getShipments <em>Shipments</em>}</li>
  * </ul>
  *
  * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getDomain()
@@ -42,35 +42,35 @@ public interface Domain extends EObject {
 	EList<ToUseScheduler> getSchedulers();
 
 	/**
-	 * Returns the value of the '<em><b>Resources</b></em>' containment reference list.
-	 * The list contents are of type {@link com.misc.touse.moplaf.tousescheduler.ToUseResource}.
+	 * Returns the value of the '<em><b>Vehicles</b></em>' containment reference list.
+	 * The list contents are of type {@link com.misc.touse.moplaf.tousescheduler.Vehicle}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Resources</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Vehicles</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Resources</em>' containment reference list.
-	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getDomain_Resources()
+	 * @return the value of the '<em>Vehicles</em>' containment reference list.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getDomain_Vehicles()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<ToUseResource> getResources();
+	EList<Vehicle> getVehicles();
 
 	/**
-	 * Returns the value of the '<em><b>Tasks</b></em>' containment reference list.
-	 * The list contents are of type {@link com.misc.touse.moplaf.tousescheduler.ToUseTask}.
+	 * Returns the value of the '<em><b>Shipments</b></em>' containment reference list.
+	 * The list contents are of type {@link com.misc.touse.moplaf.tousescheduler.Shipment}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Tasks</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Shipments</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Tasks</em>' containment reference list.
-	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getDomain_Tasks()
+	 * @return the value of the '<em>Shipments</em>' containment reference list.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getDomain_Shipments()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<ToUseTask> getTasks();
+	EList<Shipment> getShipments();
 
 } // Domain

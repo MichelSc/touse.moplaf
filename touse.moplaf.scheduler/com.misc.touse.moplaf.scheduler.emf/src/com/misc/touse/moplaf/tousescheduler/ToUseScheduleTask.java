@@ -13,7 +13,7 @@ import com.misc.common.moplaf.scheduler.Task;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask#getToUseTask <em>To Use Task</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask#getShipment <em>Shipment</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask#getDistance <em>Distance</em>}</li>
  * </ul>
  *
@@ -23,19 +23,19 @@ import com.misc.common.moplaf.scheduler.Task;
  */
 public interface ToUseScheduleTask extends Task {
 	/**
-	 * Returns the value of the '<em><b>To Use Task</b></em>' reference.
+	 * Returns the value of the '<em><b>Shipment</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>To Use Task</em>' reference isn't clear,
+	 * If the meaning of the '<em>Shipment</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>To Use Task</em>' reference.
-	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getToUseScheduleTask_ToUseTask()
+	 * @return the value of the '<em>Shipment</em>' reference.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getToUseScheduleTask_Shipment()
 	 * @model required="true" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
-	ToUseTask getToUseTask();
+	Shipment getShipment();
 
 	/**
 	 * Returns the value of the '<em><b>Distance</b></em>' attribute.

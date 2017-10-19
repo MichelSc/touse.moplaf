@@ -31,6 +31,15 @@ public interface ToUseSchedulerFactory extends EFactory {
 	Domain createDomain();
 
 	/**
+	 * Returns a new object of class '<em>Vehicle</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Vehicle</em>'.
+	 * @generated
+	 */
+	Vehicle createVehicle();
+
+	/**
 	 * Returns a new object of class '<em>To Use Score</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -49,22 +58,13 @@ public interface ToUseSchedulerFactory extends EFactory {
 	ToUseScheduler createToUseScheduler();
 
 	/**
-	 * Returns a new object of class '<em>To Use Task</em>'.
+	 * Returns a new object of class '<em>Shipment</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>To Use Task</em>'.
+	 * @return a new object of class '<em>Shipment</em>'.
 	 * @generated
 	 */
-	ToUseTask createToUseTask();
-
-	/**
-	 * Returns a new object of class '<em>To Use Resource</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>To Use Resource</em>'.
-	 * @generated
-	 */
-	ToUseResource createToUseResource();
+	Shipment createShipment();
 
 	/**
 	 * Returns a new object of class '<em>To Use Schedule Task</em>'.
@@ -137,6 +137,24 @@ public interface ToUseSchedulerFactory extends EFactory {
 	 * @generated
 	 */
 	ToUseScheduleLoadUnload createToUseScheduleLoadUnload();
+
+	/**
+	 * Returns a new object of class '<em>To Use Load Shipment</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>To Use Load Shipment</em>'.
+	 * @generated
+	 */
+	ToUseLoadShipment createToUseLoadShipment();
+
+	/**
+	 * Returns a new object of class '<em>To Use Unload Shipment</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>To Use Unload Shipment</em>'.
+	 * @generated
+	 */
+	ToUseUnloadShipment createToUseUnloadShipment();
 
 	/**
 	 * Returns a new object of class '<em>To Use Schedule</em>'.

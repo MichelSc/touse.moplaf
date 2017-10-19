@@ -5,20 +5,22 @@
   <eClassifiers xsi:type="ecore:EClass" name="Domain">
     <eStructuralFeatures xsi:type="ecore:EReference" name="Schedulers" upperBound="-1"
         eType="#//ToUseScheduler" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Resources" upperBound="-1"
-        eType="#//ToUseResource" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Tasks" upperBound="-1"
-        eType="#//ToUseTask" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Vehicles" upperBound="-1"
+        eType="#//Vehicle" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Shipments" upperBound="-1"
+        eType="#//Shipment" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ToUseResource">
+  <eClassifiers xsi:type="ecore:EClass" name="Vehicle">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ToUseTask">
+  <eClassifiers xsi:type="ecore:EClass" name="Shipment">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ToUseScheduler" eSuperTypes="../../com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//Scheduler">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="SchedulerResources" eType="#//ToUseScheduleResource"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="SchedulerTasks" eType="#//ToUseScheduleTask"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SelectedVehicles" upperBound="-1"
+        eType="#//Vehicle"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SelectedShipments" upperBound="-1"
+        eType="#//Shipment"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ToUseSchedule" eSuperTypes="../../com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//Schedule">
     <eOperations name="enable"/>
@@ -29,15 +31,28 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="TotalDistance" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ToUseScheduleResource" eSuperTypes="../../com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//Resource">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ToUseResource" lowerBound="1"
-        eType="#//ToUseResource" changeable="false" volatile="true" transient="true"
-        derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Vehicle" lowerBound="1"
+        eType="#//Vehicle"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="TotalDistance" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ToUseScheduleTask" eSuperTypes="../../com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//Task">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ToUseTask" lowerBound="1"
-        eType="#//ToUseTask" changeable="false" volatile="true" transient="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Shipment" lowerBound="1"
+        eType="#//Shipment" changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Distance" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ToUseLoadShipment" eSuperTypes="#//ToUseScheduleTask">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ShipmentLoaded" eType="#//Shipment"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="UnloadShipment" lowerBound="1"
+        eType="#//ToUseUnloadShipment" eOpposite="#//ToUseUnloadShipment/LoadShipment"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ToUseUnloadShipment" eSuperTypes="#//ToUseScheduleTask">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ShipmentUnloaded" eType="#//Shipment"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="LoadShipment" lowerBound="1"
+        eType="#//ToUseLoadShipment" eOpposite="#//ToUseLoadShipment/UnloadShipment"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ToUseScheduleLoadUnload" eSuperTypes="#//ToUseAction">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="LoadTask" lowerBound="1"
+        eType="#//ToUseLoadShipment"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CalcScheduler" abstract="true" eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//PropagatorFunctionBindings"/>
   <eClassifiers xsi:type="ecore:EClass" name="CalcSchedule" abstract="true" eSuperTypes="#//CalcScheduler">
@@ -71,10 +86,4 @@
         derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ToUseAction" eSuperTypes="../../com.misc.common.moplaf.localsearch.emf/model/localsearch.ecore#//Action"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ToUseScheduleLoadUnload" eSuperTypes="#//ToUseAction">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="LoadTask" lowerBound="1"
-        eType="#//ToUseScheduleTask"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="UnloadTask" lowerBound="1"
-        eType="#//ToUseScheduleTask"/>
-  </eClassifiers>
 </ecore:EPackage>

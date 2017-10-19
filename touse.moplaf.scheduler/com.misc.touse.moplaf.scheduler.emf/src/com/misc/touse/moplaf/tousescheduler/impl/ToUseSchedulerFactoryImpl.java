@@ -57,8 +57,8 @@ public class ToUseSchedulerFactoryImpl extends EFactoryImpl implements ToUseSche
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case ToUseSchedulerPackage.DOMAIN: return createDomain();
-			case ToUseSchedulerPackage.TO_USE_RESOURCE: return createToUseResource();
-			case ToUseSchedulerPackage.TO_USE_TASK: return createToUseTask();
+			case ToUseSchedulerPackage.VEHICLE: return createVehicle();
+			case ToUseSchedulerPackage.SHIPMENT: return createShipment();
 			case ToUseSchedulerPackage.TO_USE_SCHEDULER: return createToUseScheduler();
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE: return createToUseSchedule();
 			case ToUseSchedulerPackage.TO_USE_SCORE: return createToUseScore();
@@ -70,6 +70,8 @@ public class ToUseSchedulerFactoryImpl extends EFactoryImpl implements ToUseSche
 			case ToUseSchedulerPackage.CALC_RESOURCE_DISTANCE: return createCalcResourceDistance();
 			case ToUseSchedulerPackage.TO_USE_ACTION: return createToUseAction();
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_LOAD_UNLOAD: return createToUseScheduleLoadUnload();
+			case ToUseSchedulerPackage.TO_USE_LOAD_SHIPMENT: return createToUseLoadShipment();
+			case ToUseSchedulerPackage.TO_USE_UNLOAD_SHIPMENT: return createToUseUnloadShipment();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -83,6 +85,16 @@ public class ToUseSchedulerFactoryImpl extends EFactoryImpl implements ToUseSche
 	public Domain createDomain() {
 		DomainImpl domain = new DomainImpl();
 		return domain;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Vehicle createVehicle() {
+		VehicleImpl vehicle = new VehicleImpl();
+		return vehicle;
 	}
 
 	/**
@@ -110,19 +122,9 @@ public class ToUseSchedulerFactoryImpl extends EFactoryImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ToUseTask createToUseTask() {
-		ToUseTaskImpl toUseTask = new ToUseTaskImpl();
-		return toUseTask;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ToUseResource createToUseResource() {
-		ToUseResourceImpl toUseResource = new ToUseResourceImpl();
-		return toUseResource;
+	public Shipment createShipment() {
+		ShipmentImpl shipment = new ShipmentImpl();
+		return shipment;
 	}
 
 	/**
@@ -203,6 +205,26 @@ public class ToUseSchedulerFactoryImpl extends EFactoryImpl implements ToUseSche
 	public ToUseScheduleLoadUnload createToUseScheduleLoadUnload() {
 		ToUseScheduleLoadUnloadImpl toUseScheduleLoadUnload = new ToUseScheduleLoadUnloadImpl();
 		return toUseScheduleLoadUnload;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ToUseLoadShipment createToUseLoadShipment() {
+		ToUseLoadShipmentImpl toUseLoadShipment = new ToUseLoadShipmentImpl();
+		return toUseLoadShipment;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ToUseUnloadShipment createToUseUnloadShipment() {
+		ToUseUnloadShipmentImpl toUseUnloadShipment = new ToUseUnloadShipmentImpl();
+		return toUseUnloadShipment;
 	}
 
 	/**

@@ -82,15 +82,15 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ToUseSchedulerPackage.TO_USE_RESOURCE: {
-				ToUseResource toUseResource = (ToUseResource)theEObject;
-				T result = caseToUseResource(toUseResource);
+			case ToUseSchedulerPackage.VEHICLE: {
+				Vehicle vehicle = (Vehicle)theEObject;
+				T result = caseVehicle(vehicle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ToUseSchedulerPackage.TO_USE_TASK: {
-				ToUseTask toUseTask = (ToUseTask)theEObject;
-				T result = caseToUseTask(toUseTask);
+			case ToUseSchedulerPackage.SHIPMENT: {
+				Shipment shipment = (Shipment)theEObject;
+				T result = caseShipment(shipment);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -223,6 +223,24 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ToUseSchedulerPackage.TO_USE_LOAD_SHIPMENT: {
+				ToUseLoadShipment toUseLoadShipment = (ToUseLoadShipment)theEObject;
+				T result = caseToUseLoadShipment(toUseLoadShipment);
+				if (result == null) result = caseToUseScheduleTask(toUseLoadShipment);
+				if (result == null) result = caseTask(toUseLoadShipment);
+				if (result == null) result = caseObjectWithPropagatorFunctions(toUseLoadShipment);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ToUseSchedulerPackage.TO_USE_UNLOAD_SHIPMENT: {
+				ToUseUnloadShipment toUseUnloadShipment = (ToUseUnloadShipment)theEObject;
+				T result = caseToUseUnloadShipment(toUseUnloadShipment);
+				if (result == null) result = caseToUseScheduleTask(toUseUnloadShipment);
+				if (result == null) result = caseTask(toUseUnloadShipment);
+				if (result == null) result = caseObjectWithPropagatorFunctions(toUseUnloadShipment);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -239,6 +257,21 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseDomain(Domain object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Vehicle</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Vehicle</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVehicle(Vehicle object) {
 		return null;
 	}
 
@@ -273,32 +306,17 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>To Use Task</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Shipment</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>To Use Task</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Shipment</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseToUseTask(ToUseTask object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>To Use Resource</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>To Use Resource</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseToUseResource(ToUseResource object) {
+	public T caseShipment(Shipment object) {
 		return null;
 	}
 
@@ -479,6 +497,36 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseToUseScheduleLoadUnload(ToUseScheduleLoadUnload object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>To Use Load Shipment</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>To Use Load Shipment</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseToUseLoadShipment(ToUseLoadShipment object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>To Use Unload Shipment</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>To Use Unload Shipment</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseToUseUnloadShipment(ToUseUnloadShipment object) {
 		return null;
 	}
 

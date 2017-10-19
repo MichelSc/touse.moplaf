@@ -4,10 +4,10 @@ package com.misc.touse.moplaf.tousescheduler.impl;
 
 import com.misc.common.moplaf.scheduler.impl.ResourceImpl;
 
-import com.misc.touse.moplaf.tousescheduler.ToUseResource;
 import com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
 
+import com.misc.touse.moplaf.tousescheduler.Vehicle;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -23,13 +23,23 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleResourceImpl#getToUseResource <em>To Use Resource</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleResourceImpl#getVehicle <em>Vehicle</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleResourceImpl#getTotalDistance <em>Total Distance</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ToUseScheduleResourceImpl extends ResourceImpl implements ToUseScheduleResource {
+	/**
+	 * The cached value of the '{@link #getVehicle() <em>Vehicle</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getVehicle()
+	 * @generated
+	 * @ordered
+	 */
+	protected Vehicle vehicle;
+
 	/**
 	 * The default value of the '{@link #getTotalDistance() <em>Total Distance</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -74,18 +84,37 @@ public class ToUseScheduleResourceImpl extends ResourceImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ToUseResource getToUseResource() {
-		ToUseResource toUseResource = basicGetToUseResource();
-		return toUseResource != null && toUseResource.eIsProxy() ? (ToUseResource)eResolveProxy((InternalEObject)toUseResource) : toUseResource;
+	public Vehicle getVehicle() {
+		if (vehicle != null && vehicle.eIsProxy()) {
+			InternalEObject oldVehicle = (InternalEObject)vehicle;
+			vehicle = (Vehicle)eResolveProxy(oldVehicle);
+			if (vehicle != oldVehicle) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__VEHICLE, oldVehicle, vehicle));
+			}
+		}
+		return vehicle;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
 	 */
-	public ToUseResource basicGetToUseResource() {
-		ToUseResource toUseScheduleResource = (ToUseResource)this.getResource();
-		return toUseScheduleResource;
+	public Vehicle basicGetVehicle() {
+		return vehicle;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setVehicle(Vehicle newVehicle) {
+		Vehicle oldVehicle = vehicle;
+		vehicle = newVehicle;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__VEHICLE, oldVehicle, vehicle));
 	}
 
 	/**
@@ -117,9 +146,9 @@ public class ToUseScheduleResourceImpl extends ResourceImpl implements ToUseSche
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__TO_USE_RESOURCE:
-				if (resolve) return getToUseResource();
-				return basicGetToUseResource();
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__VEHICLE:
+				if (resolve) return getVehicle();
+				return basicGetVehicle();
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__TOTAL_DISTANCE:
 				return getTotalDistance();
 		}
@@ -134,6 +163,9 @@ public class ToUseScheduleResourceImpl extends ResourceImpl implements ToUseSche
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__VEHICLE:
+				setVehicle((Vehicle)newValue);
+				return;
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__TOTAL_DISTANCE:
 				setTotalDistance((Float)newValue);
 				return;
@@ -149,6 +181,9 @@ public class ToUseScheduleResourceImpl extends ResourceImpl implements ToUseSche
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__VEHICLE:
+				setVehicle((Vehicle)null);
+				return;
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__TOTAL_DISTANCE:
 				setTotalDistance(TOTAL_DISTANCE_EDEFAULT);
 				return;
@@ -164,8 +199,8 @@ public class ToUseScheduleResourceImpl extends ResourceImpl implements ToUseSche
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__TO_USE_RESOURCE:
-				return basicGetToUseResource() != null;
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__VEHICLE:
+				return vehicle != null;
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__TOTAL_DISTANCE:
 				return totalDistance != TOTAL_DISTANCE_EDEFAULT;
 		}

@@ -95,6 +95,29 @@ public class ToUseSchedulerItemProviderAdapterFactory extends ToUseSchedulerAdap
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.Vehicle} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected VehicleItemProvider vehicleItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousescheduler.Vehicle}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createVehicleAdapter() {
+		if (vehicleItemProvider == null) {
+			vehicleItemProvider = new VehicleItemProvider(this);
+		}
+
+		return vehicleItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.ToUseScore} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -141,49 +164,26 @@ public class ToUseSchedulerItemProviderAdapterFactory extends ToUseSchedulerAdap
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.ToUseTask} instances.
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.Shipment} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ToUseTaskItemProvider toUseTaskItemProvider;
+	protected ShipmentItemProvider shipmentItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousescheduler.ToUseTask}.
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousescheduler.Shipment}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createToUseTaskAdapter() {
-		if (toUseTaskItemProvider == null) {
-			toUseTaskItemProvider = new ToUseTaskItemProvider(this);
+	public Adapter createShipmentAdapter() {
+		if (shipmentItemProvider == null) {
+			shipmentItemProvider = new ShipmentItemProvider(this);
 		}
 
-		return toUseTaskItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.ToUseResource} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ToUseResourceItemProvider toUseResourceItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousescheduler.ToUseResource}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createToUseResourceAdapter() {
-		if (toUseResourceItemProvider == null) {
-			toUseResourceItemProvider = new ToUseResourceItemProvider(this);
-		}
-
-		return toUseResourceItemProvider;
+		return shipmentItemProvider;
 	}
 
 	/**
@@ -371,6 +371,52 @@ public class ToUseSchedulerItemProviderAdapterFactory extends ToUseSchedulerAdap
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.ToUseLoadShipment} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ToUseLoadShipmentItemProvider toUseLoadShipmentItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousescheduler.ToUseLoadShipment}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createToUseLoadShipmentAdapter() {
+		if (toUseLoadShipmentItemProvider == null) {
+			toUseLoadShipmentItemProvider = new ToUseLoadShipmentItemProvider(this);
+		}
+
+		return toUseLoadShipmentItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.ToUseUnloadShipment} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ToUseUnloadShipmentItemProvider toUseUnloadShipmentItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousescheduler.ToUseUnloadShipment}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createToUseUnloadShipmentAdapter() {
+		if (toUseUnloadShipmentItemProvider == null) {
+			toUseUnloadShipmentItemProvider = new ToUseUnloadShipmentItemProvider(this);
+		}
+
+		return toUseUnloadShipmentItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.ToUseSchedule} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -493,8 +539,8 @@ public class ToUseSchedulerItemProviderAdapterFactory extends ToUseSchedulerAdap
 	 */
 	public void dispose() {
 		if (domainItemProvider != null) domainItemProvider.dispose();
-		if (toUseResourceItemProvider != null) toUseResourceItemProvider.dispose();
-		if (toUseTaskItemProvider != null) toUseTaskItemProvider.dispose();
+		if (vehicleItemProvider != null) vehicleItemProvider.dispose();
+		if (shipmentItemProvider != null) shipmentItemProvider.dispose();
 		if (toUseSchedulerItemProvider != null) toUseSchedulerItemProvider.dispose();
 		if (toUseScheduleItemProvider != null) toUseScheduleItemProvider.dispose();
 		if (toUseScoreItemProvider != null) toUseScoreItemProvider.dispose();
@@ -506,6 +552,8 @@ public class ToUseSchedulerItemProviderAdapterFactory extends ToUseSchedulerAdap
 		if (calcResourceDistanceItemProvider != null) calcResourceDistanceItemProvider.dispose();
 		if (toUseActionItemProvider != null) toUseActionItemProvider.dispose();
 		if (toUseScheduleLoadUnloadItemProvider != null) toUseScheduleLoadUnloadItemProvider.dispose();
+		if (toUseLoadShipmentItemProvider != null) toUseLoadShipmentItemProvider.dispose();
+		if (toUseUnloadShipmentItemProvider != null) toUseUnloadShipmentItemProvider.dispose();
 	}
 
 }

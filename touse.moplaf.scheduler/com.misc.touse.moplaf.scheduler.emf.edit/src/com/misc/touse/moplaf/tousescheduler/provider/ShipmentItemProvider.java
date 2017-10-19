@@ -3,8 +3,8 @@
 package com.misc.touse.moplaf.tousescheduler.provider;
 
 
+import com.misc.touse.moplaf.tousescheduler.Shipment;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
-import com.misc.touse.moplaf.tousescheduler.ToUseTask;
 
 import java.util.Collection;
 import java.util.List;
@@ -26,12 +26,12 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link com.misc.touse.moplaf.tousescheduler.ToUseTask} object.
+ * This is the item provider adapter for a {@link com.misc.touse.moplaf.tousescheduler.Shipment} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ToUseTaskItemProvider 
+public class ShipmentItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -45,7 +45,7 @@ public class ToUseTaskItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ToUseTaskItemProvider(AdapterFactory adapterFactory) {
+	public ShipmentItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -76,26 +76,26 @@ public class ToUseTaskItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ToUseTask_Name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseTask_Name_feature", "_UI_ToUseTask_type"),
-				 ToUseSchedulerPackage.Literals.TO_USE_TASK__NAME,
+				 getString("_UI_Shipment_Name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Shipment_Name_feature", "_UI_Shipment_type"),
+				 ToUseSchedulerPackage.Literals.SHIPMENT__NAME,
 				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI__20ToUseSchedulerPropertyCategory"),
 				 null));
 	}
 
 	/**
-	 * This returns ToUseTask.gif.
+	 * This returns Shipment.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/ToUseTask"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Shipment"));
 	}
 
 	/**
@@ -106,10 +106,10 @@ public class ToUseTaskItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ToUseTask)object).getName();
+		String label = ((Shipment)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_ToUseTask_type") :
-			getString("_UI_ToUseTask_type") + " " + label;
+			getString("_UI_Shipment_type") :
+			getString("_UI_Shipment_type") + " " + label;
 	}
 	
 
@@ -124,8 +124,8 @@ public class ToUseTaskItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(ToUseTask.class)) {
-			case ToUseSchedulerPackage.TO_USE_TASK__NAME:
+		switch (notification.getFeatureID(Shipment.class)) {
+			case ToUseSchedulerPackage.SHIPMENT__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

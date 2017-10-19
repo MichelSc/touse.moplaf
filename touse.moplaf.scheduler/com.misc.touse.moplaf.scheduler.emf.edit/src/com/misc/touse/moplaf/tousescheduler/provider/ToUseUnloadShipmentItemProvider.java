@@ -3,36 +3,32 @@
 package com.misc.touse.moplaf.tousescheduler.provider;
 
 
-import com.misc.common.moplaf.scheduler.SchedulerPackage;
-import com.misc.common.moplaf.scheduler.provider.SchedulerItemProvider;
-
-import com.misc.touse.moplaf.tousescheduler.ToUseScheduler;
-import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerFactory;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
+import com.misc.touse.moplaf.tousescheduler.ToUseUnloadShipment;
+
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
- * This is the item provider adapter for a {@link com.misc.touse.moplaf.tousescheduler.ToUseScheduler} object.
+ * This is the item provider adapter for a {@link com.misc.touse.moplaf.tousescheduler.ToUseUnloadShipment} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ToUseSchedulerItemProvider extends SchedulerItemProvider {
+public class ToUseUnloadShipmentItemProvider extends ToUseScheduleTaskItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ToUseSchedulerItemProvider(AdapterFactory adapterFactory) {
+	public ToUseUnloadShipmentItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -47,26 +43,26 @@ public class ToUseSchedulerItemProvider extends SchedulerItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addSelectedVehiclesPropertyDescriptor(object);
-			addSelectedShipmentsPropertyDescriptor(object);
+			addShipmentUnloadedPropertyDescriptor(object);
+			addLoadShipmentPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Selected Vehicles feature.
+	 * This adds a property descriptor for the Shipment Unloaded feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addSelectedVehiclesPropertyDescriptor(Object object) {
+	protected void addShipmentUnloadedPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ToUseScheduler_SelectedVehicles_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseScheduler_SelectedVehicles_feature", "_UI_ToUseScheduler_type"),
-				 ToUseSchedulerPackage.Literals.TO_USE_SCHEDULER__SELECTED_VEHICLES,
+				 getString("_UI_ToUseUnloadShipment_ShipmentUnloaded_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseUnloadShipment_ShipmentUnloaded_feature", "_UI_ToUseUnloadShipment_type"),
+				 ToUseSchedulerPackage.Literals.TO_USE_UNLOAD_SHIPMENT__SHIPMENT_UNLOADED,
 				 true,
 				 false,
 				 true,
@@ -76,19 +72,19 @@ public class ToUseSchedulerItemProvider extends SchedulerItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Selected Shipments feature.
+	 * This adds a property descriptor for the Load Shipment feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addSelectedShipmentsPropertyDescriptor(Object object) {
+	protected void addLoadShipmentPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ToUseScheduler_SelectedShipments_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseScheduler_SelectedShipments_feature", "_UI_ToUseScheduler_type"),
-				 ToUseSchedulerPackage.Literals.TO_USE_SCHEDULER__SELECTED_SHIPMENTS,
+				 getString("_UI_ToUseUnloadShipment_LoadShipment_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseUnloadShipment_LoadShipment_feature", "_UI_ToUseUnloadShipment_type"),
+				 ToUseSchedulerPackage.Literals.TO_USE_UNLOAD_SHIPMENT__LOAD_SHIPMENT,
 				 true,
 				 false,
 				 true,
@@ -98,14 +94,14 @@ public class ToUseSchedulerItemProvider extends SchedulerItemProvider {
 	}
 
 	/**
-	 * This returns ToUseScheduler.gif.
+	 * This returns ToUseUnloadShipment.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/ToUseScheduler"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ToUseUnloadShipment"));
 	}
 
 	/**
@@ -116,10 +112,10 @@ public class ToUseSchedulerItemProvider extends SchedulerItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ToUseScheduler)object).getName();
+		String label = ((ToUseUnloadShipment)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_ToUseScheduler_type") :
-			getString("_UI_ToUseScheduler_type") + " " + label;
+			getString("_UI_ToUseUnloadShipment_type") :
+			getString("_UI_ToUseUnloadShipment_type") + " " + label;
 	}
 	
 
@@ -146,22 +142,6 @@ public class ToUseSchedulerItemProvider extends SchedulerItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__SCHEDULES,
-				 ToUseSchedulerFactory.eINSTANCE.createToUseSchedule()));
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return ToUseSchedulerEditPlugin.INSTANCE;
 	}
 
 }

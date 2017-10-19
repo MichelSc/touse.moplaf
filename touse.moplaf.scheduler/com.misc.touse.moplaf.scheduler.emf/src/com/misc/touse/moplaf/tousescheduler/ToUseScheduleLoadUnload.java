@@ -13,7 +13,6 @@ package com.misc.touse.moplaf.tousescheduler;
  * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleLoadUnload#getLoadTask <em>Load Task</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleLoadUnload#getUnloadTask <em>Unload Task</em>}</li>
  * </ul>
  *
  * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getToUseScheduleLoadUnload()
@@ -30,12 +29,12 @@ public interface ToUseScheduleLoadUnload extends ToUseAction {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Load Task</em>' reference.
-	 * @see #setLoadTask(ToUseScheduleTask)
+	 * @see #setLoadTask(ToUseLoadShipment)
 	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getToUseScheduleLoadUnload_LoadTask()
 	 * @model required="true"
 	 * @generated
 	 */
-	ToUseScheduleTask getLoadTask();
+	ToUseLoadShipment getLoadTask();
 
 	/**
 	 * Sets the value of the '{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleLoadUnload#getLoadTask <em>Load Task</em>}' reference.
@@ -45,32 +44,6 @@ public interface ToUseScheduleLoadUnload extends ToUseAction {
 	 * @see #getLoadTask()
 	 * @generated
 	 */
-	void setLoadTask(ToUseScheduleTask value);
-
-	/**
-	 * Returns the value of the '<em><b>Unload Task</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Unload Task</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Unload Task</em>' reference.
-	 * @see #setUnloadTask(ToUseScheduleTask)
-	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getToUseScheduleLoadUnload_UnloadTask()
-	 * @model required="true"
-	 * @generated
-	 */
-	ToUseScheduleTask getUnloadTask();
-
-	/**
-	 * Sets the value of the '{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleLoadUnload#getUnloadTask <em>Unload Task</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Unload Task</em>' reference.
-	 * @see #getUnloadTask()
-	 * @generated
-	 */
-	void setUnloadTask(ToUseScheduleTask value);
+	void setLoadTask(ToUseLoadShipment value);
 
 } // ToUseScheduleLoadUnload

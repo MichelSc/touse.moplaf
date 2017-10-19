@@ -3,6 +3,7 @@
 package com.misc.touse.moplaf.tousescheduler;
 
 import com.misc.common.moplaf.scheduler.Scheduler;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,8 +14,8 @@ import com.misc.common.moplaf.scheduler.Scheduler;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduler#getSchedulerResources <em>Scheduler Resources</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduler#getSchedulerTasks <em>Scheduler Tasks</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduler#getSelectedVehicles <em>Selected Vehicles</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduler#getSelectedShipments <em>Selected Shipments</em>}</li>
  * </ul>
  *
  * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getToUseScheduler()
@@ -24,54 +25,34 @@ import com.misc.common.moplaf.scheduler.Scheduler;
 public interface ToUseScheduler extends Scheduler {
 
 	/**
-	 * Returns the value of the '<em><b>Scheduler Resources</b></em>' reference.
+	 * Returns the value of the '<em><b>Selected Vehicles</b></em>' reference list.
+	 * The list contents are of type {@link com.misc.touse.moplaf.tousescheduler.Vehicle}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Scheduler Resources</em>' reference isn't clear,
+	 * If the meaning of the '<em>Selected Vehicles</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Scheduler Resources</em>' reference.
-	 * @see #setSchedulerResources(ToUseScheduleResource)
-	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getToUseScheduler_SchedulerResources()
+	 * @return the value of the '<em>Selected Vehicles</em>' reference list.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getToUseScheduler_SelectedVehicles()
 	 * @model
 	 * @generated
 	 */
-	ToUseScheduleResource getSchedulerResources();
+	EList<Vehicle> getSelectedVehicles();
 
 	/**
-	 * Sets the value of the '{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduler#getSchedulerResources <em>Scheduler Resources</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Scheduler Resources</em>' reference.
-	 * @see #getSchedulerResources()
-	 * @generated
-	 */
-	void setSchedulerResources(ToUseScheduleResource value);
-
-	/**
-	 * Returns the value of the '<em><b>Scheduler Tasks</b></em>' reference.
+	 * Returns the value of the '<em><b>Selected Shipments</b></em>' reference list.
+	 * The list contents are of type {@link com.misc.touse.moplaf.tousescheduler.Shipment}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Scheduler Tasks</em>' reference isn't clear,
+	 * If the meaning of the '<em>Selected Shipments</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Scheduler Tasks</em>' reference.
-	 * @see #setSchedulerTasks(ToUseScheduleTask)
-	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getToUseScheduler_SchedulerTasks()
+	 * @return the value of the '<em>Selected Shipments</em>' reference list.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getToUseScheduler_SelectedShipments()
 	 * @model
 	 * @generated
 	 */
-	ToUseScheduleTask getSchedulerTasks();
-
-	/**
-	 * Sets the value of the '{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduler#getSchedulerTasks <em>Scheduler Tasks</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Scheduler Tasks</em>' reference.
-	 * @see #getSchedulerTasks()
-	 * @generated
-	 */
-	void setSchedulerTasks(ToUseScheduleTask value);
+	EList<Shipment> getSelectedShipments();
 } // ToUseScheduler

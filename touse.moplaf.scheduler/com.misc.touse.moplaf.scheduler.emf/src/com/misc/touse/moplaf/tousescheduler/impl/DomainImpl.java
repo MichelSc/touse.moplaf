@@ -3,10 +3,10 @@
 package com.misc.touse.moplaf.tousescheduler.impl;
 
 import com.misc.touse.moplaf.tousescheduler.Domain;
-import com.misc.touse.moplaf.tousescheduler.ToUseResource;
+import com.misc.touse.moplaf.tousescheduler.Shipment;
 import com.misc.touse.moplaf.tousescheduler.ToUseScheduler;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
-import com.misc.touse.moplaf.tousescheduler.ToUseTask;
+import com.misc.touse.moplaf.tousescheduler.Vehicle;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -30,8 +30,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.DomainImpl#getSchedulers <em>Schedulers</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.DomainImpl#getResources <em>Resources</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.DomainImpl#getTasks <em>Tasks</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.DomainImpl#getVehicles <em>Vehicles</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.DomainImpl#getShipments <em>Shipments</em>}</li>
  * </ul>
  *
  * @generated
@@ -48,23 +48,24 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	protected EList<ToUseScheduler> schedulers;
 
 	/**
-	 * The cached value of the '{@link #getResources() <em>Resources</em>}' containment reference list.
+	 * The cached value of the '{@link #getVehicles() <em>Vehicles</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getResources()
+	 * @see #getVehicles()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ToUseResource> resources;
+	protected EList<Vehicle> vehicles;
+
 	/**
-	 * The cached value of the '{@link #getTasks() <em>Tasks</em>}' containment reference list.
+	 * The cached value of the '{@link #getShipments() <em>Shipments</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTasks()
+	 * @see #getShipments()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ToUseTask> tasks;
+	protected EList<Shipment> shipments;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -102,11 +103,11 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ToUseResource> getResources() {
-		if (resources == null) {
-			resources = new EObjectContainmentEList<ToUseResource>(ToUseResource.class, this, ToUseSchedulerPackage.DOMAIN__RESOURCES);
+	public EList<Vehicle> getVehicles() {
+		if (vehicles == null) {
+			vehicles = new EObjectContainmentEList<Vehicle>(Vehicle.class, this, ToUseSchedulerPackage.DOMAIN__VEHICLES);
 		}
-		return resources;
+		return vehicles;
 	}
 
 	/**
@@ -114,11 +115,11 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ToUseTask> getTasks() {
-		if (tasks == null) {
-			tasks = new EObjectContainmentEList<ToUseTask>(ToUseTask.class, this, ToUseSchedulerPackage.DOMAIN__TASKS);
+	public EList<Shipment> getShipments() {
+		if (shipments == null) {
+			shipments = new EObjectContainmentEList<Shipment>(Shipment.class, this, ToUseSchedulerPackage.DOMAIN__SHIPMENTS);
 		}
-		return tasks;
+		return shipments;
 	}
 
 	/**
@@ -131,10 +132,10 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 		switch (featureID) {
 			case ToUseSchedulerPackage.DOMAIN__SCHEDULERS:
 				return ((InternalEList<?>)getSchedulers()).basicRemove(otherEnd, msgs);
-			case ToUseSchedulerPackage.DOMAIN__RESOURCES:
-				return ((InternalEList<?>)getResources()).basicRemove(otherEnd, msgs);
-			case ToUseSchedulerPackage.DOMAIN__TASKS:
-				return ((InternalEList<?>)getTasks()).basicRemove(otherEnd, msgs);
+			case ToUseSchedulerPackage.DOMAIN__VEHICLES:
+				return ((InternalEList<?>)getVehicles()).basicRemove(otherEnd, msgs);
+			case ToUseSchedulerPackage.DOMAIN__SHIPMENTS:
+				return ((InternalEList<?>)getShipments()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -149,10 +150,10 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 		switch (featureID) {
 			case ToUseSchedulerPackage.DOMAIN__SCHEDULERS:
 				return getSchedulers();
-			case ToUseSchedulerPackage.DOMAIN__RESOURCES:
-				return getResources();
-			case ToUseSchedulerPackage.DOMAIN__TASKS:
-				return getTasks();
+			case ToUseSchedulerPackage.DOMAIN__VEHICLES:
+				return getVehicles();
+			case ToUseSchedulerPackage.DOMAIN__SHIPMENTS:
+				return getShipments();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -170,13 +171,13 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 				getSchedulers().clear();
 				getSchedulers().addAll((Collection<? extends ToUseScheduler>)newValue);
 				return;
-			case ToUseSchedulerPackage.DOMAIN__RESOURCES:
-				getResources().clear();
-				getResources().addAll((Collection<? extends ToUseResource>)newValue);
+			case ToUseSchedulerPackage.DOMAIN__VEHICLES:
+				getVehicles().clear();
+				getVehicles().addAll((Collection<? extends Vehicle>)newValue);
 				return;
-			case ToUseSchedulerPackage.DOMAIN__TASKS:
-				getTasks().clear();
-				getTasks().addAll((Collection<? extends ToUseTask>)newValue);
+			case ToUseSchedulerPackage.DOMAIN__SHIPMENTS:
+				getShipments().clear();
+				getShipments().addAll((Collection<? extends Shipment>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -193,11 +194,11 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 			case ToUseSchedulerPackage.DOMAIN__SCHEDULERS:
 				getSchedulers().clear();
 				return;
-			case ToUseSchedulerPackage.DOMAIN__RESOURCES:
-				getResources().clear();
+			case ToUseSchedulerPackage.DOMAIN__VEHICLES:
+				getVehicles().clear();
 				return;
-			case ToUseSchedulerPackage.DOMAIN__TASKS:
-				getTasks().clear();
+			case ToUseSchedulerPackage.DOMAIN__SHIPMENTS:
+				getShipments().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -213,10 +214,10 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 		switch (featureID) {
 			case ToUseSchedulerPackage.DOMAIN__SCHEDULERS:
 				return schedulers != null && !schedulers.isEmpty();
-			case ToUseSchedulerPackage.DOMAIN__RESOURCES:
-				return resources != null && !resources.isEmpty();
-			case ToUseSchedulerPackage.DOMAIN__TASKS:
-				return tasks != null && !tasks.isEmpty();
+			case ToUseSchedulerPackage.DOMAIN__VEHICLES:
+				return vehicles != null && !vehicles.isEmpty();
+			case ToUseSchedulerPackage.DOMAIN__SHIPMENTS:
+				return shipments != null && !shipments.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

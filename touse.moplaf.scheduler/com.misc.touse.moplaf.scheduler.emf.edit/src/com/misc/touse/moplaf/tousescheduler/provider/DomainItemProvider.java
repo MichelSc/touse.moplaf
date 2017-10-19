@@ -78,8 +78,8 @@ public class DomainItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ToUseSchedulerPackage.Literals.DOMAIN__SCHEDULERS);
-			childrenFeatures.add(ToUseSchedulerPackage.Literals.DOMAIN__RESOURCES);
-			childrenFeatures.add(ToUseSchedulerPackage.Literals.DOMAIN__TASKS);
+			childrenFeatures.add(ToUseSchedulerPackage.Literals.DOMAIN__VEHICLES);
+			childrenFeatures.add(ToUseSchedulerPackage.Literals.DOMAIN__SHIPMENTS);
 		}
 		return childrenFeatures;
 	}
@@ -133,8 +133,8 @@ public class DomainItemProvider
 
 		switch (notification.getFeatureID(Domain.class)) {
 			case ToUseSchedulerPackage.DOMAIN__SCHEDULERS:
-			case ToUseSchedulerPackage.DOMAIN__RESOURCES:
-			case ToUseSchedulerPackage.DOMAIN__TASKS:
+			case ToUseSchedulerPackage.DOMAIN__VEHICLES:
+			case ToUseSchedulerPackage.DOMAIN__SHIPMENTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -159,13 +159,13 @@ public class DomainItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ToUseSchedulerPackage.Literals.DOMAIN__RESOURCES,
-				 ToUseSchedulerFactory.eINSTANCE.createToUseResource()));
+				(ToUseSchedulerPackage.Literals.DOMAIN__VEHICLES,
+				 ToUseSchedulerFactory.eINSTANCE.createVehicle()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ToUseSchedulerPackage.Literals.DOMAIN__TASKS,
-				 ToUseSchedulerFactory.eINSTANCE.createToUseTask()));
+				(ToUseSchedulerPackage.Literals.DOMAIN__SHIPMENTS,
+				 ToUseSchedulerFactory.eINSTANCE.createShipment()));
 	}
 
 	/**
