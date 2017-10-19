@@ -14,6 +14,7 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleLoadUnload} object.
@@ -66,7 +67,7 @@ public class ToUseScheduleLoadUnloadItemProvider extends ToUseActionItemProvider
 				 false,
 				 true,
 				 null,
-				 null,
+				 getString("_UI__20ActionToUsePropertyCategory"),
 				 null));
 	}
 
@@ -106,6 +107,12 @@ public class ToUseScheduleLoadUnloadItemProvider extends ToUseActionItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(ToUseScheduleLoadUnload.class)) {
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_LOAD_UNLOAD__LOAD_TASK:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 

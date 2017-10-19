@@ -173,7 +173,9 @@ public class ToUseScheduleLoadUnloadImpl extends ToUseActionImpl implements ToUs
 
 	@Override
 	public String getDescription() {
-		String description = "Schedule load/unload";
+		ToUseLoadShipment task = this.getLoadTask();
+		String description = String.format("Schedule(%s)", 
+				                           task==null ? "null" : task.getName());
 		return description;
 	}
 

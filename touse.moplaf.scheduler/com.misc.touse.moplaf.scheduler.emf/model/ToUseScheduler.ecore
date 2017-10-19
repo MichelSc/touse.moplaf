@@ -50,6 +50,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="LoadShipment" lowerBound="1"
         eType="#//ToUseLoadShipment" eOpposite="#//ToUseLoadShipment/UnloadShipment"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ToUseAction" eSuperTypes="../../com.misc.common.moplaf.localsearch.emf/model/localsearch.ecore#//Action"/>
   <eClassifiers xsi:type="ecore:EClass" name="ToUseScheduleLoadUnload" eSuperTypes="#//ToUseAction">
     <eStructuralFeatures xsi:type="ecore:EReference" name="LoadTask" lowerBound="1"
         eType="#//ToUseLoadShipment"/>
@@ -85,5 +86,4 @@
         eType="#//LayerScheduleDistance" changeable="false" volatile="true" transient="true"
         derived="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ToUseAction" eSuperTypes="../../com.misc.common.moplaf.localsearch.emf/model/localsearch.ecore#//Action"/>
 </ecore:EPackage>

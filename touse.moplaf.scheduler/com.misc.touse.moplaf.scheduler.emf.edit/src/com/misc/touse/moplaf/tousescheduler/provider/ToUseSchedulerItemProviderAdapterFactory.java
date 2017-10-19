@@ -546,14 +546,14 @@ public class ToUseSchedulerItemProviderAdapterFactory extends ToUseSchedulerAdap
 		if (toUseScoreItemProvider != null) toUseScoreItemProvider.dispose();
 		if (toUseScheduleResourceItemProvider != null) toUseScheduleResourceItemProvider.dispose();
 		if (toUseScheduleTaskItemProvider != null) toUseScheduleTaskItemProvider.dispose();
+		if (toUseLoadShipmentItemProvider != null) toUseLoadShipmentItemProvider.dispose();
+		if (toUseUnloadShipmentItemProvider != null) toUseUnloadShipmentItemProvider.dispose();
+		if (toUseActionItemProvider != null) toUseActionItemProvider.dispose();
+		if (toUseScheduleLoadUnloadItemProvider != null) toUseScheduleLoadUnloadItemProvider.dispose();
 		if (scopeScheduleScoreItemProvider != null) scopeScheduleScoreItemProvider.dispose();
 		if (layerScheduleDistanceItemProvider != null) layerScheduleDistanceItemProvider.dispose();
 		if (calcTaskDistanceItemProvider != null) calcTaskDistanceItemProvider.dispose();
 		if (calcResourceDistanceItemProvider != null) calcResourceDistanceItemProvider.dispose();
-		if (toUseActionItemProvider != null) toUseActionItemProvider.dispose();
-		if (toUseScheduleLoadUnloadItemProvider != null) toUseScheduleLoadUnloadItemProvider.dispose();
-		if (toUseLoadShipmentItemProvider != null) toUseLoadShipmentItemProvider.dispose();
-		if (toUseUnloadShipmentItemProvider != null) toUseUnloadShipmentItemProvider.dispose();
 	}
 
 }

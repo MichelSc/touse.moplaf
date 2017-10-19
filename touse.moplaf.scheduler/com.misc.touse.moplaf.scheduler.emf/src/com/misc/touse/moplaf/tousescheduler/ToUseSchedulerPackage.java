@@ -289,7 +289,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULER___GENERATE_TASKS__SCHEDULE_1 = SchedulerPackage.SCHEDULER___GENERATE_TASKS__SCHEDULE;
+	int TO_USE_SCHEDULER___GENERATE_TASKS__SCHEDULE = SchedulerPackage.SCHEDULER___GENERATE_TASKS__SCHEDULE;
 
 	/**
 	 * The operation id for the '<em>Generate Resources</em>' operation.
@@ -298,7 +298,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULER___GENERATE_RESOURCES__SCHEDULE_1 = SchedulerPackage.SCHEDULER___GENERATE_RESOURCES__SCHEDULE;
+	int TO_USE_SCHEDULER___GENERATE_RESOURCES__SCHEDULE = SchedulerPackage.SCHEDULER___GENERATE_RESOURCES__SCHEDULE;
 
 	/**
 	 * The number of operations of the '<em>To Use Scheduler</em>' class.
@@ -327,7 +327,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getCalcScheduler()
 	 * @generated
 	 */
-	int CALC_SCHEDULER = 8;
+	int CALC_SCHEDULER = 12;
 
 	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.CalcScheduleImpl <em>Calc Schedule</em>}' class.
@@ -337,7 +337,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getCalcSchedule()
 	 * @generated
 	 */
-	int CALC_SCHEDULE = 9;
+	int CALC_SCHEDULE = 13;
 
 	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.CalcResourceImpl <em>Calc Resource</em>}' class.
@@ -347,7 +347,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getCalcResource()
 	 * @generated
 	 */
-	int CALC_RESOURCE = 10;
+	int CALC_RESOURCE = 14;
 
 	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.CalcTaskImpl <em>Calc Task</em>}' class.
@@ -357,7 +357,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getCalcTask()
 	 * @generated
 	 */
-	int CALC_TASK = 11;
+	int CALC_TASK = 15;
 
 	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleResourceImpl <em>To Use Schedule Resource</em>}' class.
@@ -377,7 +377,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getScopeScheduleScore()
 	 * @generated
 	 */
-	int SCOPE_SCHEDULE_SCORE = 12;
+	int SCOPE_SCHEDULE_SCORE = 16;
 
 	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.LayerScheduleDistanceImpl <em>Layer Schedule Distance</em>}' class.
@@ -387,7 +387,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getLayerScheduleDistance()
 	 * @generated
 	 */
-	int LAYER_SCHEDULE_DISTANCE = 13;
+	int LAYER_SCHEDULE_DISTANCE = 17;
 
 	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.CalcTaskDistanceImpl <em>Calc Task Distance</em>}' class.
@@ -397,7 +397,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getCalcTaskDistance()
 	 * @generated
 	 */
-	int CALC_TASK_DISTANCE = 14;
+	int CALC_TASK_DISTANCE = 18;
 
 	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.CalcResourceDistanceImpl <em>Calc Resource Distance</em>}' class.
@@ -407,7 +407,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getCalcResourceDistance()
 	 * @generated
 	 */
-	int CALC_RESOURCE_DISTANCE = 15;
+	int CALC_RESOURCE_DISTANCE = 19;
 
 	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleImpl <em>To Use Schedule</em>}' class.
@@ -894,7 +894,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_TASK___SET_PREVIOUS_NEXT__RESOURCE_TASK_TASK_1 = SchedulerPackage.TASK___SET_PREVIOUS_NEXT__RESOURCE_TASK_TASK;
+	int TO_USE_SCHEDULE_TASK___SET_PREVIOUS_NEXT__RESOURCE_TASK_TASK = SchedulerPackage.TASK___SET_PREVIOUS_NEXT__RESOURCE_TASK_TASK;
 
 	/**
 	 * The operation id for the '<em>Schedule Resource</em>' operation.
@@ -903,7 +903,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_TASK___SCHEDULE_RESOURCE__RESOURCE_1 = SchedulerPackage.TASK___SCHEDULE_RESOURCE__RESOURCE;
+	int TO_USE_SCHEDULE_TASK___SCHEDULE_RESOURCE__RESOURCE = SchedulerPackage.TASK___SCHEDULE_RESOURCE__RESOURCE;
 
 	/**
 	 * The number of operations of the '<em>To Use Schedule Task</em>' class.
@@ -913,6 +913,595 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_SCHEDULE_TASK_OPERATION_COUNT = SchedulerPackage.TASK_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseActionImpl <em>To Use Action</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseActionImpl
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseAction()
+	 * @generated
+	 */
+	int TO_USE_ACTION = 10;
+
+	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleLoadUnloadImpl <em>To Use Schedule Load Unload</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleLoadUnloadImpl
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseScheduleLoadUnload()
+	 * @generated
+	 */
+	int TO_USE_SCHEDULE_LOAD_UNLOAD = 11;
+
+	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseLoadShipmentImpl <em>To Use Load Shipment</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseLoadShipmentImpl
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseLoadShipment()
+	 * @generated
+	 */
+	int TO_USE_LOAD_SHIPMENT = 8;
+
+	/**
+	 * The feature id for the '<em><b>Propagator Functions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT__PROPAGATOR_FUNCTIONS = TO_USE_SCHEDULE_TASK__PROPAGATOR_FUNCTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Next Task</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT__NEXT_TASK = TO_USE_SCHEDULE_TASK__NEXT_TASK;
+
+	/**
+	 * The feature id for the '<em><b>Previous Task</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT__PREVIOUS_TASK = TO_USE_SCHEDULE_TASK__PREVIOUS_TASK;
+
+	/**
+	 * The feature id for the '<em><b>Scheduled Resource</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT__SCHEDULED_RESOURCE = TO_USE_SCHEDULE_TASK__SCHEDULED_RESOURCE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT__DESCRIPTION = TO_USE_SCHEDULE_TASK__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Schedule</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT__SCHEDULE = TO_USE_SCHEDULE_TASK__SCHEDULE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT__NAME = TO_USE_SCHEDULE_TASK__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Shipment</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT__SHIPMENT = TO_USE_SCHEDULE_TASK__SHIPMENT;
+
+	/**
+	 * The feature id for the '<em><b>Distance</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT__DISTANCE = TO_USE_SCHEDULE_TASK__DISTANCE;
+
+	/**
+	 * The feature id for the '<em><b>Shipment Loaded</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT__SHIPMENT_LOADED = TO_USE_SCHEDULE_TASK_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Unload Shipment</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT__UNLOAD_SHIPMENT = TO_USE_SCHEDULE_TASK_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>To Use Load Shipment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT_FEATURE_COUNT = TO_USE_SCHEDULE_TASK_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION = TO_USE_SCHEDULE_TASK___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION;
+
+	/**
+	 * The operation id for the '<em>Get Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT___GET_PROPAGATOR_FUNCTION__ECLASS = TO_USE_SCHEDULE_TASK___GET_PROPAGATOR_FUNCTION__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT___ADD_PROPAGATOR_FUNCTIONS__STRING = TO_USE_SCHEDULE_TASK___ADD_PROPAGATOR_FUNCTIONS__STRING;
+
+	/**
+	 * The operation id for the '<em>Unset Previous Next</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT___UNSET_PREVIOUS_NEXT = TO_USE_SCHEDULE_TASK___UNSET_PREVIOUS_NEXT;
+
+	/**
+	 * The operation id for the '<em>Set Previous Next</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT___SET_PREVIOUS_NEXT__RESOURCE_TASK_TASK = TO_USE_SCHEDULE_TASK___SET_PREVIOUS_NEXT__RESOURCE_TASK_TASK;
+
+	/**
+	 * The operation id for the '<em>Schedule Resource</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT___SCHEDULE_RESOURCE__RESOURCE = TO_USE_SCHEDULE_TASK___SCHEDULE_RESOURCE__RESOURCE;
+
+	/**
+	 * The number of operations of the '<em>To Use Load Shipment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT_OPERATION_COUNT = TO_USE_SCHEDULE_TASK_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseUnloadShipmentImpl <em>To Use Unload Shipment</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseUnloadShipmentImpl
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseUnloadShipment()
+	 * @generated
+	 */
+	int TO_USE_UNLOAD_SHIPMENT = 9;
+
+	/**
+	 * The feature id for the '<em><b>Propagator Functions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT__PROPAGATOR_FUNCTIONS = TO_USE_SCHEDULE_TASK__PROPAGATOR_FUNCTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Next Task</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT__NEXT_TASK = TO_USE_SCHEDULE_TASK__NEXT_TASK;
+
+	/**
+	 * The feature id for the '<em><b>Previous Task</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT__PREVIOUS_TASK = TO_USE_SCHEDULE_TASK__PREVIOUS_TASK;
+
+	/**
+	 * The feature id for the '<em><b>Scheduled Resource</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT__SCHEDULED_RESOURCE = TO_USE_SCHEDULE_TASK__SCHEDULED_RESOURCE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT__DESCRIPTION = TO_USE_SCHEDULE_TASK__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Schedule</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT__SCHEDULE = TO_USE_SCHEDULE_TASK__SCHEDULE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT__NAME = TO_USE_SCHEDULE_TASK__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Shipment</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT__SHIPMENT = TO_USE_SCHEDULE_TASK__SHIPMENT;
+
+	/**
+	 * The feature id for the '<em><b>Distance</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT__DISTANCE = TO_USE_SCHEDULE_TASK__DISTANCE;
+
+	/**
+	 * The feature id for the '<em><b>Shipment Unloaded</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT__SHIPMENT_UNLOADED = TO_USE_SCHEDULE_TASK_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Load Shipment</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT__LOAD_SHIPMENT = TO_USE_SCHEDULE_TASK_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>To Use Unload Shipment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT_FEATURE_COUNT = TO_USE_SCHEDULE_TASK_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION = TO_USE_SCHEDULE_TASK___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION;
+
+	/**
+	 * The operation id for the '<em>Get Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT___GET_PROPAGATOR_FUNCTION__ECLASS = TO_USE_SCHEDULE_TASK___GET_PROPAGATOR_FUNCTION__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT___ADD_PROPAGATOR_FUNCTIONS__STRING = TO_USE_SCHEDULE_TASK___ADD_PROPAGATOR_FUNCTIONS__STRING;
+
+	/**
+	 * The operation id for the '<em>Unset Previous Next</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT___UNSET_PREVIOUS_NEXT = TO_USE_SCHEDULE_TASK___UNSET_PREVIOUS_NEXT;
+
+	/**
+	 * The operation id for the '<em>Set Previous Next</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT___SET_PREVIOUS_NEXT__RESOURCE_TASK_TASK = TO_USE_SCHEDULE_TASK___SET_PREVIOUS_NEXT__RESOURCE_TASK_TASK;
+
+	/**
+	 * The operation id for the '<em>Schedule Resource</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT___SCHEDULE_RESOURCE__RESOURCE = TO_USE_SCHEDULE_TASK___SCHEDULE_RESOURCE__RESOURCE;
+
+	/**
+	 * The number of operations of the '<em>To Use Unload Shipment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT_OPERATION_COUNT = TO_USE_SCHEDULE_TASK_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Root Moves</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_ACTION__ROOT_MOVES = LocalSearchPackage.ACTION__ROOT_MOVES;
+
+	/**
+	 * The feature id for the '<em><b>Current Move</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_ACTION__CURRENT_MOVE = LocalSearchPackage.ACTION__CURRENT_MOVE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_ACTION__DESCRIPTION = LocalSearchPackage.ACTION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Valid Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_ACTION__VALID_FEEDBACK = LocalSearchPackage.ACTION__VALID_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Valid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_ACTION__VALID = LocalSearchPackage.ACTION__VALID;
+
+	/**
+	 * The feature id for the '<em><b>Current Solution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_ACTION__CURRENT_SOLUTION = LocalSearchPackage.ACTION__CURRENT_SOLUTION;
+
+	/**
+	 * The number of structural features of the '<em>To Use Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_ACTION_FEATURE_COUNT = LocalSearchPackage.ACTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Initialize</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_ACTION___INITIALIZE = LocalSearchPackage.ACTION___INITIALIZE;
+
+	/**
+	 * The operation id for the '<em>Run</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_ACTION___RUN = LocalSearchPackage.ACTION___RUN;
+
+	/**
+	 * The operation id for the '<em>Finalize</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_ACTION___FINALIZE = LocalSearchPackage.ACTION___FINALIZE;
+
+	/**
+	 * The number of operations of the '<em>To Use Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_ACTION_OPERATION_COUNT = LocalSearchPackage.ACTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Root Moves</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_LOAD_UNLOAD__ROOT_MOVES = TO_USE_ACTION__ROOT_MOVES;
+
+	/**
+	 * The feature id for the '<em><b>Current Move</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_LOAD_UNLOAD__CURRENT_MOVE = TO_USE_ACTION__CURRENT_MOVE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_LOAD_UNLOAD__DESCRIPTION = TO_USE_ACTION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Valid Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_LOAD_UNLOAD__VALID_FEEDBACK = TO_USE_ACTION__VALID_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Valid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_LOAD_UNLOAD__VALID = TO_USE_ACTION__VALID;
+
+	/**
+	 * The feature id for the '<em><b>Current Solution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_LOAD_UNLOAD__CURRENT_SOLUTION = TO_USE_ACTION__CURRENT_SOLUTION;
+
+	/**
+	 * The feature id for the '<em><b>Load Task</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_LOAD_UNLOAD__LOAD_TASK = TO_USE_ACTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>To Use Schedule Load Unload</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_LOAD_UNLOAD_FEATURE_COUNT = TO_USE_ACTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Initialize</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_LOAD_UNLOAD___INITIALIZE = TO_USE_ACTION___INITIALIZE;
+
+	/**
+	 * The operation id for the '<em>Run</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_LOAD_UNLOAD___RUN = TO_USE_ACTION___RUN;
+
+	/**
+	 * The operation id for the '<em>Finalize</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_LOAD_UNLOAD___FINALIZE = TO_USE_ACTION___FINALIZE;
+
+	/**
+	 * The number of operations of the '<em>To Use Schedule Load Unload</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_LOAD_UNLOAD_OPERATION_COUNT = TO_USE_ACTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -3451,595 +4040,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int CALC_RESOURCE_DISTANCE_OPERATION_COUNT = CALC_RESOURCE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseActionImpl <em>To Use Action</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseActionImpl
-	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseAction()
-	 * @generated
-	 */
-	int TO_USE_ACTION = 16;
-
-	/**
-	 * The feature id for the '<em><b>Root Moves</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_ACTION__ROOT_MOVES = LocalSearchPackage.ACTION__ROOT_MOVES;
-
-	/**
-	 * The feature id for the '<em><b>Current Move</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_ACTION__CURRENT_MOVE = LocalSearchPackage.ACTION__CURRENT_MOVE;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_ACTION__DESCRIPTION = LocalSearchPackage.ACTION__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Valid Feedback</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_ACTION__VALID_FEEDBACK = LocalSearchPackage.ACTION__VALID_FEEDBACK;
-
-	/**
-	 * The feature id for the '<em><b>Valid</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_ACTION__VALID = LocalSearchPackage.ACTION__VALID;
-
-	/**
-	 * The feature id for the '<em><b>Current Solution</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_ACTION__CURRENT_SOLUTION = LocalSearchPackage.ACTION__CURRENT_SOLUTION;
-
-	/**
-	 * The number of structural features of the '<em>To Use Action</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_ACTION_FEATURE_COUNT = LocalSearchPackage.ACTION_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Initialize</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_ACTION___INITIALIZE = LocalSearchPackage.ACTION___INITIALIZE;
-
-	/**
-	 * The operation id for the '<em>Run</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_ACTION___RUN = LocalSearchPackage.ACTION___RUN;
-
-	/**
-	 * The operation id for the '<em>Finalize</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_ACTION___FINALIZE = LocalSearchPackage.ACTION___FINALIZE;
-
-	/**
-	 * The number of operations of the '<em>To Use Action</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_ACTION_OPERATION_COUNT = LocalSearchPackage.ACTION_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleLoadUnloadImpl <em>To Use Schedule Load Unload</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleLoadUnloadImpl
-	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseScheduleLoadUnload()
-	 * @generated
-	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD = 17;
-
-	/**
-	 * The feature id for the '<em><b>Root Moves</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD__ROOT_MOVES = TO_USE_ACTION__ROOT_MOVES;
-
-	/**
-	 * The feature id for the '<em><b>Current Move</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD__CURRENT_MOVE = TO_USE_ACTION__CURRENT_MOVE;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD__DESCRIPTION = TO_USE_ACTION__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Valid Feedback</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD__VALID_FEEDBACK = TO_USE_ACTION__VALID_FEEDBACK;
-
-	/**
-	 * The feature id for the '<em><b>Valid</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD__VALID = TO_USE_ACTION__VALID;
-
-	/**
-	 * The feature id for the '<em><b>Current Solution</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD__CURRENT_SOLUTION = TO_USE_ACTION__CURRENT_SOLUTION;
-
-	/**
-	 * The feature id for the '<em><b>Load Task</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD__LOAD_TASK = TO_USE_ACTION_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>To Use Schedule Load Unload</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD_FEATURE_COUNT = TO_USE_ACTION_FEATURE_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Initialize</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD___INITIALIZE = TO_USE_ACTION___INITIALIZE;
-
-	/**
-	 * The operation id for the '<em>Run</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD___RUN = TO_USE_ACTION___RUN;
-
-	/**
-	 * The operation id for the '<em>Finalize</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD___FINALIZE = TO_USE_ACTION___FINALIZE;
-
-	/**
-	 * The number of operations of the '<em>To Use Schedule Load Unload</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD_OPERATION_COUNT = TO_USE_ACTION_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseLoadShipmentImpl <em>To Use Load Shipment</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseLoadShipmentImpl
-	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseLoadShipment()
-	 * @generated
-	 */
-	int TO_USE_LOAD_SHIPMENT = 18;
-
-	/**
-	 * The feature id for the '<em><b>Propagator Functions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_LOAD_SHIPMENT__PROPAGATOR_FUNCTIONS = TO_USE_SCHEDULE_TASK__PROPAGATOR_FUNCTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Next Task</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_LOAD_SHIPMENT__NEXT_TASK = TO_USE_SCHEDULE_TASK__NEXT_TASK;
-
-	/**
-	 * The feature id for the '<em><b>Previous Task</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_LOAD_SHIPMENT__PREVIOUS_TASK = TO_USE_SCHEDULE_TASK__PREVIOUS_TASK;
-
-	/**
-	 * The feature id for the '<em><b>Scheduled Resource</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_LOAD_SHIPMENT__SCHEDULED_RESOURCE = TO_USE_SCHEDULE_TASK__SCHEDULED_RESOURCE;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_LOAD_SHIPMENT__DESCRIPTION = TO_USE_SCHEDULE_TASK__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Schedule</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_LOAD_SHIPMENT__SCHEDULE = TO_USE_SCHEDULE_TASK__SCHEDULE;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_LOAD_SHIPMENT__NAME = TO_USE_SCHEDULE_TASK__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Shipment</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_LOAD_SHIPMENT__SHIPMENT = TO_USE_SCHEDULE_TASK__SHIPMENT;
-
-	/**
-	 * The feature id for the '<em><b>Distance</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_LOAD_SHIPMENT__DISTANCE = TO_USE_SCHEDULE_TASK__DISTANCE;
-
-	/**
-	 * The feature id for the '<em><b>Shipment Loaded</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_LOAD_SHIPMENT__SHIPMENT_LOADED = TO_USE_SCHEDULE_TASK_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Unload Shipment</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_LOAD_SHIPMENT__UNLOAD_SHIPMENT = TO_USE_SCHEDULE_TASK_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>To Use Load Shipment</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_LOAD_SHIPMENT_FEATURE_COUNT = TO_USE_SCHEDULE_TASK_FEATURE_COUNT + 2;
-
-	/**
-	 * The operation id for the '<em>Add Propagator Function</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_LOAD_SHIPMENT___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION = TO_USE_SCHEDULE_TASK___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION;
-
-	/**
-	 * The operation id for the '<em>Get Propagator Function</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_LOAD_SHIPMENT___GET_PROPAGATOR_FUNCTION__ECLASS = TO_USE_SCHEDULE_TASK___GET_PROPAGATOR_FUNCTION__ECLASS;
-
-	/**
-	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_LOAD_SHIPMENT___ADD_PROPAGATOR_FUNCTIONS__STRING = TO_USE_SCHEDULE_TASK___ADD_PROPAGATOR_FUNCTIONS__STRING;
-
-	/**
-	 * The operation id for the '<em>Unset Previous Next</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_LOAD_SHIPMENT___UNSET_PREVIOUS_NEXT = TO_USE_SCHEDULE_TASK___UNSET_PREVIOUS_NEXT;
-
-	/**
-	 * The operation id for the '<em>Set Previous Next</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_LOAD_SHIPMENT___SET_PREVIOUS_NEXT__RESOURCE_TASK_TASK_1 = TO_USE_SCHEDULE_TASK___SET_PREVIOUS_NEXT__RESOURCE_TASK_TASK_1;
-
-	/**
-	 * The operation id for the '<em>Schedule Resource</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_LOAD_SHIPMENT___SCHEDULE_RESOURCE__RESOURCE_1 = TO_USE_SCHEDULE_TASK___SCHEDULE_RESOURCE__RESOURCE_1;
-
-	/**
-	 * The number of operations of the '<em>To Use Load Shipment</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_LOAD_SHIPMENT_OPERATION_COUNT = TO_USE_SCHEDULE_TASK_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseUnloadShipmentImpl <em>To Use Unload Shipment</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseUnloadShipmentImpl
-	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseUnloadShipment()
-	 * @generated
-	 */
-	int TO_USE_UNLOAD_SHIPMENT = 19;
-
-	/**
-	 * The feature id for the '<em><b>Propagator Functions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_UNLOAD_SHIPMENT__PROPAGATOR_FUNCTIONS = TO_USE_SCHEDULE_TASK__PROPAGATOR_FUNCTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Next Task</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_UNLOAD_SHIPMENT__NEXT_TASK = TO_USE_SCHEDULE_TASK__NEXT_TASK;
-
-	/**
-	 * The feature id for the '<em><b>Previous Task</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_UNLOAD_SHIPMENT__PREVIOUS_TASK = TO_USE_SCHEDULE_TASK__PREVIOUS_TASK;
-
-	/**
-	 * The feature id for the '<em><b>Scheduled Resource</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_UNLOAD_SHIPMENT__SCHEDULED_RESOURCE = TO_USE_SCHEDULE_TASK__SCHEDULED_RESOURCE;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_UNLOAD_SHIPMENT__DESCRIPTION = TO_USE_SCHEDULE_TASK__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Schedule</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_UNLOAD_SHIPMENT__SCHEDULE = TO_USE_SCHEDULE_TASK__SCHEDULE;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_UNLOAD_SHIPMENT__NAME = TO_USE_SCHEDULE_TASK__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Shipment</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_UNLOAD_SHIPMENT__SHIPMENT = TO_USE_SCHEDULE_TASK__SHIPMENT;
-
-	/**
-	 * The feature id for the '<em><b>Distance</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_UNLOAD_SHIPMENT__DISTANCE = TO_USE_SCHEDULE_TASK__DISTANCE;
-
-	/**
-	 * The feature id for the '<em><b>Shipment Unloaded</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_UNLOAD_SHIPMENT__SHIPMENT_UNLOADED = TO_USE_SCHEDULE_TASK_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Load Shipment</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_UNLOAD_SHIPMENT__LOAD_SHIPMENT = TO_USE_SCHEDULE_TASK_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>To Use Unload Shipment</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_UNLOAD_SHIPMENT_FEATURE_COUNT = TO_USE_SCHEDULE_TASK_FEATURE_COUNT + 2;
-
-	/**
-	 * The operation id for the '<em>Add Propagator Function</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_UNLOAD_SHIPMENT___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION = TO_USE_SCHEDULE_TASK___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION;
-
-	/**
-	 * The operation id for the '<em>Get Propagator Function</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_UNLOAD_SHIPMENT___GET_PROPAGATOR_FUNCTION__ECLASS = TO_USE_SCHEDULE_TASK___GET_PROPAGATOR_FUNCTION__ECLASS;
-
-	/**
-	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_UNLOAD_SHIPMENT___ADD_PROPAGATOR_FUNCTIONS__STRING = TO_USE_SCHEDULE_TASK___ADD_PROPAGATOR_FUNCTIONS__STRING;
-
-	/**
-	 * The operation id for the '<em>Unset Previous Next</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_UNLOAD_SHIPMENT___UNSET_PREVIOUS_NEXT = TO_USE_SCHEDULE_TASK___UNSET_PREVIOUS_NEXT;
-
-	/**
-	 * The operation id for the '<em>Set Previous Next</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_UNLOAD_SHIPMENT___SET_PREVIOUS_NEXT__RESOURCE_TASK_TASK_1 = TO_USE_SCHEDULE_TASK___SET_PREVIOUS_NEXT__RESOURCE_TASK_TASK_1;
-
-	/**
-	 * The operation id for the '<em>Schedule Resource</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_UNLOAD_SHIPMENT___SCHEDULE_RESOURCE__RESOURCE_1 = TO_USE_SCHEDULE_TASK___SCHEDULE_RESOURCE__RESOURCE_1;
-
-	/**
-	 * The number of operations of the '<em>To Use Unload Shipment</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_UNLOAD_SHIPMENT_OPERATION_COUNT = TO_USE_SCHEDULE_TASK_OPERATION_COUNT + 0;
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.Domain <em>Domain</em>}'.

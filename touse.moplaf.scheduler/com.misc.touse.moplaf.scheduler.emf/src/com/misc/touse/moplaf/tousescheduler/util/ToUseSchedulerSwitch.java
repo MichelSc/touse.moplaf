@@ -133,6 +133,39 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ToUseSchedulerPackage.TO_USE_LOAD_SHIPMENT: {
+				ToUseLoadShipment toUseLoadShipment = (ToUseLoadShipment)theEObject;
+				T result = caseToUseLoadShipment(toUseLoadShipment);
+				if (result == null) result = caseToUseScheduleTask(toUseLoadShipment);
+				if (result == null) result = caseTask(toUseLoadShipment);
+				if (result == null) result = caseObjectWithPropagatorFunctions(toUseLoadShipment);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ToUseSchedulerPackage.TO_USE_UNLOAD_SHIPMENT: {
+				ToUseUnloadShipment toUseUnloadShipment = (ToUseUnloadShipment)theEObject;
+				T result = caseToUseUnloadShipment(toUseUnloadShipment);
+				if (result == null) result = caseToUseScheduleTask(toUseUnloadShipment);
+				if (result == null) result = caseTask(toUseUnloadShipment);
+				if (result == null) result = caseObjectWithPropagatorFunctions(toUseUnloadShipment);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ToUseSchedulerPackage.TO_USE_ACTION: {
+				ToUseAction toUseAction = (ToUseAction)theEObject;
+				T result = caseToUseAction(toUseAction);
+				if (result == null) result = caseAction(toUseAction);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_LOAD_UNLOAD: {
+				ToUseScheduleLoadUnload toUseScheduleLoadUnload = (ToUseScheduleLoadUnload)theEObject;
+				T result = caseToUseScheduleLoadUnload(toUseScheduleLoadUnload);
+				if (result == null) result = caseToUseAction(toUseScheduleLoadUnload);
+				if (result == null) result = caseAction(toUseScheduleLoadUnload);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ToUseSchedulerPackage.CALC_SCHEDULER: {
 				CalcScheduler calcScheduler = (CalcScheduler)theEObject;
 				T result = caseCalcScheduler(calcScheduler);
@@ -205,39 +238,6 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 				if (result == null) result = caseCalcScheduler(calcResourceDistance);
 				if (result == null) result = casePropagatorFunctionBindings(calcResourceDistance);
 				if (result == null) result = casePropagatorFunction(calcResourceDistance);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ToUseSchedulerPackage.TO_USE_ACTION: {
-				ToUseAction toUseAction = (ToUseAction)theEObject;
-				T result = caseToUseAction(toUseAction);
-				if (result == null) result = caseAction(toUseAction);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ToUseSchedulerPackage.TO_USE_SCHEDULE_LOAD_UNLOAD: {
-				ToUseScheduleLoadUnload toUseScheduleLoadUnload = (ToUseScheduleLoadUnload)theEObject;
-				T result = caseToUseScheduleLoadUnload(toUseScheduleLoadUnload);
-				if (result == null) result = caseToUseAction(toUseScheduleLoadUnload);
-				if (result == null) result = caseAction(toUseScheduleLoadUnload);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ToUseSchedulerPackage.TO_USE_LOAD_SHIPMENT: {
-				ToUseLoadShipment toUseLoadShipment = (ToUseLoadShipment)theEObject;
-				T result = caseToUseLoadShipment(toUseLoadShipment);
-				if (result == null) result = caseToUseScheduleTask(toUseLoadShipment);
-				if (result == null) result = caseTask(toUseLoadShipment);
-				if (result == null) result = caseObjectWithPropagatorFunctions(toUseLoadShipment);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ToUseSchedulerPackage.TO_USE_UNLOAD_SHIPMENT: {
-				ToUseUnloadShipment toUseUnloadShipment = (ToUseUnloadShipment)theEObject;
-				T result = caseToUseUnloadShipment(toUseUnloadShipment);
-				if (result == null) result = caseToUseScheduleTask(toUseUnloadShipment);
-				if (result == null) result = caseTask(toUseUnloadShipment);
-				if (result == null) result = caseObjectWithPropagatorFunctions(toUseUnloadShipment);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

@@ -110,6 +110,22 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 				return createToUseScheduleTaskAdapter();
 			}
 			@Override
+			public Adapter caseToUseLoadShipment(ToUseLoadShipment object) {
+				return createToUseLoadShipmentAdapter();
+			}
+			@Override
+			public Adapter caseToUseUnloadShipment(ToUseUnloadShipment object) {
+				return createToUseUnloadShipmentAdapter();
+			}
+			@Override
+			public Adapter caseToUseAction(ToUseAction object) {
+				return createToUseActionAdapter();
+			}
+			@Override
+			public Adapter caseToUseScheduleLoadUnload(ToUseScheduleLoadUnload object) {
+				return createToUseScheduleLoadUnloadAdapter();
+			}
+			@Override
 			public Adapter caseCalcScheduler(CalcScheduler object) {
 				return createCalcSchedulerAdapter();
 			}
@@ -142,22 +158,6 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 				return createCalcResourceDistanceAdapter();
 			}
 			@Override
-			public Adapter caseToUseAction(ToUseAction object) {
-				return createToUseActionAdapter();
-			}
-			@Override
-			public Adapter caseToUseScheduleLoadUnload(ToUseScheduleLoadUnload object) {
-				return createToUseScheduleLoadUnloadAdapter();
-			}
-			@Override
-			public Adapter caseToUseLoadShipment(ToUseLoadShipment object) {
-				return createToUseLoadShipmentAdapter();
-			}
-			@Override
-			public Adapter caseToUseUnloadShipment(ToUseUnloadShipment object) {
-				return createToUseUnloadShipmentAdapter();
-			}
-			@Override
 			public Adapter caseScheduler(Scheduler object) {
 				return createSchedulerAdapter();
 			}
@@ -186,16 +186,16 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 				return createTaskAdapter();
 			}
 			@Override
+			public Adapter caseAction(Action object) {
+				return createActionAdapter();
+			}
+			@Override
 			public Adapter casePropagatorFunction(PropagatorFunction object) {
 				return createPropagatorFunctionAdapter();
 			}
 			@Override
 			public Adapter casePropagatorFunctionBindings(PropagatorFunctionBindings object) {
 				return createPropagatorFunctionBindingsAdapter();
-			}
-			@Override
-			public Adapter caseAction(Action object) {
-				return createActionAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {

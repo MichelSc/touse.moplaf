@@ -55,9 +55,10 @@
       <genFeatures notify="false" createChild="false" propertyCategory="20 ToUseScheduler"
           propertySortChoices="true" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//ToUseUnloadShipment/LoadShipment"/>
     </genClasses>
+    <genClasses ecoreClass="ToUseScheduler.ecore#//ToUseAction"/>
     <genClasses ecoreClass="ToUseScheduler.ecore#//ToUseScheduleLoadUnload">
-      <genFeatures notify="false" createChild="false" propertyCategory="20 Action ToUse"
-          propertySortChoices="true" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//ToUseScheduleLoadUnload/LoadTask"/>
+      <genFeatures createChild="false" propertyCategory="20 Action ToUse" propertySortChoices="true"
+          ecoreFeature="ecore:EReference ToUseScheduler.ecore#//ToUseScheduleLoadUnload/LoadTask"/>
     </genClasses>
     <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//CalcScheduler"/>
     <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//CalcSchedule">
@@ -79,6 +80,5 @@
     <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//CalcResourceDistance">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//CalcResourceDistance/ConcreteParent"/>
     </genClasses>
-    <genClasses ecoreClass="ToUseScheduler.ecore#//ToUseAction"/>
   </genPackages>
 </genmodel:GenModel>

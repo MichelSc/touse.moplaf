@@ -64,14 +64,14 @@ public class ToUseSchedulerFactoryImpl extends EFactoryImpl implements ToUseSche
 			case ToUseSchedulerPackage.TO_USE_SCORE: return createToUseScore();
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE: return createToUseScheduleResource();
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK: return createToUseScheduleTask();
+			case ToUseSchedulerPackage.TO_USE_LOAD_SHIPMENT: return createToUseLoadShipment();
+			case ToUseSchedulerPackage.TO_USE_UNLOAD_SHIPMENT: return createToUseUnloadShipment();
+			case ToUseSchedulerPackage.TO_USE_ACTION: return createToUseAction();
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_LOAD_UNLOAD: return createToUseScheduleLoadUnload();
 			case ToUseSchedulerPackage.SCOPE_SCHEDULE_SCORE: return createScopeScheduleScore();
 			case ToUseSchedulerPackage.LAYER_SCHEDULE_DISTANCE: return createLayerScheduleDistance();
 			case ToUseSchedulerPackage.CALC_TASK_DISTANCE: return createCalcTaskDistance();
 			case ToUseSchedulerPackage.CALC_RESOURCE_DISTANCE: return createCalcResourceDistance();
-			case ToUseSchedulerPackage.TO_USE_ACTION: return createToUseAction();
-			case ToUseSchedulerPackage.TO_USE_SCHEDULE_LOAD_UNLOAD: return createToUseScheduleLoadUnload();
-			case ToUseSchedulerPackage.TO_USE_LOAD_SHIPMENT: return createToUseLoadShipment();
-			case ToUseSchedulerPackage.TO_USE_UNLOAD_SHIPMENT: return createToUseUnloadShipment();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
