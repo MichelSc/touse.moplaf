@@ -257,6 +257,11 @@ public class ToUseScheduleLoadUnloadImpl extends ToUseActionImpl implements ToUs
 				scheduleLoad.setTaskToSchedule(loadTask);
 				this.getRootMoves().add(scheduleLoad);
 				
+				// loop control over the load insertions points
+				loadInsertionPoint = loadInsertionPoint==null
+						           ? resource.getFirstTask()
+							       : loadInsertionPoint.getNextTask();
+
 				// schedule unload
 				Task unloadInsertionPoint = loadTask;
 				do {
@@ -264,17 +269,13 @@ public class ToUseScheduleLoadUnloadImpl extends ToUseActionImpl implements ToUs
 					scheduleUnload.setInsertionPoint(unloadInsertionPoint);
 					scheduleUnload.setResource(resource);
 					scheduleUnload.setTaskToSchedule(unloadTask);
-					scheduleLoad.getNextMoves().add(scheduleLoad);
+					scheduleLoad.getNextMoves().add(scheduleUnload);
 					// loop control over the unload insertion points
 					unloadInsertionPoint = unloadInsertionPoint == loadTask
 							             ? loadInsertionPoint
 							             : unloadInsertionPoint.getNextTask();
 				} while ( unloadInsertionPoint !=null );
 				
-				// loop control over the load insertions points
-				loadInsertionPoint = loadInsertionPoint==null
-						           ? resource.getFirstTask()
-						           : loadInsertionPoint.getNextTask();
 			} while (loadInsertionPoint !=null);
 		}  // traverse the Resources 
 	} // crerateMovesImpl
