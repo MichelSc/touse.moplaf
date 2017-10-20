@@ -136,13 +136,31 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int VEHICLE__NAME = 0;
 
 	/**
+	 * The feature id for the '<em><b>Home Location X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VEHICLE__HOME_LOCATION_X = 1;
+
+	/**
+	 * The feature id for the '<em><b>Home Location Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VEHICLE__HOME_LOCATION_Y = 2;
+
+	/**
 	 * The number of structural features of the '<em>Vehicle</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VEHICLE_FEATURE_COUNT = 1;
+	int VEHICLE_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Vehicle</em>' class.
@@ -193,13 +211,49 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int SHIPMENT__NAME = 0;
 
 	/**
+	 * The feature id for the '<em><b>Load Location X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SHIPMENT__LOAD_LOCATION_X = 1;
+
+	/**
+	 * The feature id for the '<em><b>Load Location Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SHIPMENT__LOAD_LOCATION_Y = 2;
+
+	/**
+	 * The feature id for the '<em><b>Unoad Location X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SHIPMENT__UNOAD_LOCATION_X = 3;
+
+	/**
+	 * The feature id for the '<em><b>Unoad Location Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SHIPMENT__UNOAD_LOCATION_Y = 4;
+
+	/**
 	 * The number of structural features of the '<em>Shipment</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SHIPMENT_FEATURE_COUNT = 1;
+	int SHIPMENT_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Shipment</em>' class.
@@ -843,13 +897,31 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE_TASK__DISTANCE = SchedulerPackage.TASK_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Location X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_TASK__LOCATION_X = SchedulerPackage.TASK_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Location Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_TASK__LOCATION_Y = SchedulerPackage.TASK_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>To Use Schedule Task</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_TASK_FEATURE_COUNT = SchedulerPackage.TASK_FEATURE_COUNT + 2;
+	int TO_USE_SCHEDULE_TASK_FEATURE_COUNT = SchedulerPackage.TASK_FEATURE_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Add Propagator Function</em>' operation.
@@ -1024,6 +1096,24 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_LOAD_SHIPMENT__DISTANCE = TO_USE_SCHEDULE_TASK__DISTANCE;
+
+	/**
+	 * The feature id for the '<em><b>Location X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT__LOCATION_X = TO_USE_SCHEDULE_TASK__LOCATION_X;
+
+	/**
+	 * The feature id for the '<em><b>Location Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT__LOCATION_Y = TO_USE_SCHEDULE_TASK__LOCATION_Y;
 
 	/**
 	 * The feature id for the '<em><b>Shipment Loaded</b></em>' reference.
@@ -1205,6 +1295,24 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_UNLOAD_SHIPMENT__DISTANCE = TO_USE_SCHEDULE_TASK__DISTANCE;
+
+	/**
+	 * The feature id for the '<em><b>Location X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT__LOCATION_X = TO_USE_SCHEDULE_TASK__LOCATION_X;
+
+	/**
+	 * The feature id for the '<em><b>Location Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT__LOCATION_Y = TO_USE_SCHEDULE_TASK__LOCATION_Y;
 
 	/**
 	 * The feature id for the '<em><b>Shipment Unloaded</b></em>' reference.
@@ -4106,6 +4214,28 @@ public interface ToUseSchedulerPackage extends EPackage {
 	EAttribute getVehicle_Name();
 
 	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.tousescheduler.Vehicle#getHomeLocationX <em>Home Location X</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Home Location X</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.Vehicle#getHomeLocationX()
+	 * @see #getVehicle()
+	 * @generated
+	 */
+	EAttribute getVehicle_HomeLocationX();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.tousescheduler.Vehicle#getHomeLocationY <em>Home Location Y</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Home Location Y</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.Vehicle#getHomeLocationY()
+	 * @see #getVehicle()
+	 * @generated
+	 */
+	EAttribute getVehicle_HomeLocationY();
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.ToUseScore <em>To Use Score</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4180,6 +4310,50 @@ public interface ToUseSchedulerPackage extends EPackage {
 	EAttribute getShipment_Name();
 
 	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.tousescheduler.Shipment#getLoadLocationX <em>Load Location X</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Load Location X</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.Shipment#getLoadLocationX()
+	 * @see #getShipment()
+	 * @generated
+	 */
+	EAttribute getShipment_LoadLocationX();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.tousescheduler.Shipment#getLoadLocationY <em>Load Location Y</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Load Location Y</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.Shipment#getLoadLocationY()
+	 * @see #getShipment()
+	 * @generated
+	 */
+	EAttribute getShipment_LoadLocationY();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.tousescheduler.Shipment#getUnoadLocationX <em>Unoad Location X</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Unoad Location X</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.Shipment#getUnoadLocationX()
+	 * @see #getShipment()
+	 * @generated
+	 */
+	EAttribute getShipment_UnoadLocationX();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.tousescheduler.Shipment#getUnoadLocationY <em>Unoad Location Y</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Unoad Location Y</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.Shipment#getUnoadLocationY()
+	 * @see #getShipment()
+	 * @generated
+	 */
+	EAttribute getShipment_UnoadLocationY();
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask <em>To Use Schedule Task</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4210,6 +4384,28 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getToUseScheduleTask_Distance();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask#getLocationX <em>Location X</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Location X</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask#getLocationX()
+	 * @see #getToUseScheduleTask()
+	 * @generated
+	 */
+	EAttribute getToUseScheduleTask_LocationX();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask#getLocationY <em>Location Y</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Location Y</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask#getLocationY()
+	 * @see #getToUseScheduleTask()
+	 * @generated
+	 */
+	EAttribute getToUseScheduleTask_LocationY();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.CalcScheduler <em>Calc Scheduler</em>}'.
@@ -4591,6 +4787,22 @@ public interface ToUseSchedulerPackage extends EPackage {
 		EAttribute VEHICLE__NAME = eINSTANCE.getVehicle_Name();
 
 		/**
+		 * The meta object literal for the '<em><b>Home Location X</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VEHICLE__HOME_LOCATION_X = eINSTANCE.getVehicle_HomeLocationX();
+
+		/**
+		 * The meta object literal for the '<em><b>Home Location Y</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VEHICLE__HOME_LOCATION_Y = eINSTANCE.getVehicle_HomeLocationY();
+
+		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScoreImpl <em>To Use Score</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4653,6 +4865,38 @@ public interface ToUseSchedulerPackage extends EPackage {
 		EAttribute SHIPMENT__NAME = eINSTANCE.getShipment_Name();
 
 		/**
+		 * The meta object literal for the '<em><b>Load Location X</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SHIPMENT__LOAD_LOCATION_X = eINSTANCE.getShipment_LoadLocationX();
+
+		/**
+		 * The meta object literal for the '<em><b>Load Location Y</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SHIPMENT__LOAD_LOCATION_Y = eINSTANCE.getShipment_LoadLocationY();
+
+		/**
+		 * The meta object literal for the '<em><b>Unoad Location X</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SHIPMENT__UNOAD_LOCATION_X = eINSTANCE.getShipment_UnoadLocationX();
+
+		/**
+		 * The meta object literal for the '<em><b>Unoad Location Y</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SHIPMENT__UNOAD_LOCATION_Y = eINSTANCE.getShipment_UnoadLocationY();
+
+		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleTaskImpl <em>To Use Schedule Task</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4677,6 +4921,22 @@ public interface ToUseSchedulerPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TO_USE_SCHEDULE_TASK__DISTANCE = eINSTANCE.getToUseScheduleTask_Distance();
+
+		/**
+		 * The meta object literal for the '<em><b>Location X</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TO_USE_SCHEDULE_TASK__LOCATION_X = eINSTANCE.getToUseScheduleTask_LocationX();
+
+		/**
+		 * The meta object literal for the '<em><b>Location Y</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TO_USE_SCHEDULE_TASK__LOCATION_Y = eINSTANCE.getToUseScheduleTask_LocationY();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.CalcSchedulerImpl <em>Calc Scheduler</em>}' class.

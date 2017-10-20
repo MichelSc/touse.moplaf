@@ -61,6 +61,10 @@ public class ShipmentItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
+			addLoadLocationXPropertyDescriptor(object);
+			addLoadLocationYPropertyDescriptor(object);
+			addUnoadLocationXPropertyDescriptor(object);
+			addUnoadLocationYPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -84,6 +88,94 @@ public class ShipmentItemProvider
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 getString("_UI__20ToUseSchedulerPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Load Location X feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLoadLocationXPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Shipment_LoadLocationX_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Shipment_LoadLocationX_feature", "_UI_Shipment_type"),
+				 ToUseSchedulerPackage.Literals.SHIPMENT__LOAD_LOCATION_X,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Load Location Y feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLoadLocationYPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Shipment_LoadLocationY_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Shipment_LoadLocationY_feature", "_UI_Shipment_type"),
+				 ToUseSchedulerPackage.Literals.SHIPMENT__LOAD_LOCATION_Y,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Unoad Location X feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addUnoadLocationXPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Shipment_UnoadLocationX_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Shipment_UnoadLocationX_feature", "_UI_Shipment_type"),
+				 ToUseSchedulerPackage.Literals.SHIPMENT__UNOAD_LOCATION_X,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Unoad Location Y feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addUnoadLocationYPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Shipment_UnoadLocationY_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Shipment_UnoadLocationY_feature", "_UI_Shipment_type"),
+				 ToUseSchedulerPackage.Literals.SHIPMENT__UNOAD_LOCATION_Y,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 null,
 				 null));
 	}
 
@@ -126,6 +218,10 @@ public class ShipmentItemProvider
 
 		switch (notification.getFeatureID(Shipment.class)) {
 			case ToUseSchedulerPackage.SHIPMENT__NAME:
+			case ToUseSchedulerPackage.SHIPMENT__LOAD_LOCATION_X:
+			case ToUseSchedulerPackage.SHIPMENT__LOAD_LOCATION_Y:
+			case ToUseSchedulerPackage.SHIPMENT__UNOAD_LOCATION_X:
+			case ToUseSchedulerPackage.SHIPMENT__UNOAD_LOCATION_Y:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

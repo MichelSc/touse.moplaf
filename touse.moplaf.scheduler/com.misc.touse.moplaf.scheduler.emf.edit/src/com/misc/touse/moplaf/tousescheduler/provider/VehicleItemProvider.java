@@ -61,6 +61,8 @@ public class VehicleItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
+			addHomeLocationXPropertyDescriptor(object);
+			addHomeLocationYPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -84,6 +86,50 @@ public class VehicleItemProvider
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 getString("_UI__20ToUseSchedulerPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Home Location X feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addHomeLocationXPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Vehicle_HomeLocationX_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Vehicle_HomeLocationX_feature", "_UI_Vehicle_type"),
+				 ToUseSchedulerPackage.Literals.VEHICLE__HOME_LOCATION_X,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Home Location Y feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addHomeLocationYPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Vehicle_HomeLocationY_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Vehicle_HomeLocationY_feature", "_UI_Vehicle_type"),
+				 ToUseSchedulerPackage.Literals.VEHICLE__HOME_LOCATION_Y,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 null,
 				 null));
 	}
 
@@ -126,6 +172,8 @@ public class VehicleItemProvider
 
 		switch (notification.getFeatureID(Vehicle.class)) {
 			case ToUseSchedulerPackage.VEHICLE__NAME:
+			case ToUseSchedulerPackage.VEHICLE__HOME_LOCATION_X:
+			case ToUseSchedulerPackage.VEHICLE__HOME_LOCATION_Y:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

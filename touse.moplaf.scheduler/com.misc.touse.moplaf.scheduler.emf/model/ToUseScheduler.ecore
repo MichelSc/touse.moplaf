@@ -12,9 +12,15 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Vehicle">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="HomeLocationX" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="HomeLocationY" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Shipment">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="LoadLocationX" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="LoadLocationY" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="UnoadLocationX" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="UnoadLocationY" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ToUseScheduler" eSuperTypes="../../com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//Scheduler">
     <eStructuralFeatures xsi:type="ecore:EReference" name="SelectedVehicles" upperBound="-1"
@@ -39,6 +45,10 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="Shipment" lowerBound="1"
         eType="#//Shipment" changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Distance" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="locationX" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
+        changeable="false" volatile="true" transient="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="locationY" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
+        changeable="false" volatile="true" transient="true" derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ToUseLoadShipment" eSuperTypes="#//ToUseScheduleTask">
     <eStructuralFeatures xsi:type="ecore:EReference" name="ShipmentLoaded" eType="#//Shipment"/>

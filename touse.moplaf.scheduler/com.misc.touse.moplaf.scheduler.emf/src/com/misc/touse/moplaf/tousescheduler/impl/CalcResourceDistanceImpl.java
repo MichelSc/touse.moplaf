@@ -3,6 +3,7 @@
 package com.misc.touse.moplaf.tousescheduler.impl;
 
 
+import com.misc.common.moplaf.common.util.GisUtil;
 import com.misc.common.moplaf.propagator2.PropagatorFunction;
 import com.misc.common.moplaf.propagator2.util.Bindings;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
@@ -12,6 +13,8 @@ import com.misc.touse.moplaf.tousescheduler.ToUseSchedule;
 import com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource;
 import com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
+import com.misc.touse.moplaf.tousescheduler.Vehicle;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -124,8 +127,15 @@ public class CalcResourceDistanceImpl extends CalcResourceImpl implements CalcRe
 		ToUseScheduleTask last_task = (ToUseScheduleTask) resource.getLastTask();
 		float distance = 0.0f; 
 		if ( last_task != null) {
-			float last_task_distance= last_task.getDistance();
-			distance = last_task_distance; 
+			// distance last leg: from this task to vehicle home location 
+			Vehicle vehicle = resource.getVehicle();
+			double distance_to_home_vehicle = GisUtil.getDistance(
+					last_task.getLocationX(),
+					last_task.getLocationY(),
+					vehicle.getHomeLocationX(), 
+					vehicle.getHomeLocationY());
+			// total distance
+			distance= last_task.getDistance()+ (float)distance_to_home_vehicle;
 		}
 		resource.setTotalDistance(distance);
 	}

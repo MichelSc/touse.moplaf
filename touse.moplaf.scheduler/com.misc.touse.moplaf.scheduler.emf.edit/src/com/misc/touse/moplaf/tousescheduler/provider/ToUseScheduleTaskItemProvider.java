@@ -51,6 +51,8 @@ public class ToUseScheduleTaskItemProvider extends TaskItemProvider {
 
 			addShipmentPropertyDescriptor(object);
 			addDistancePropertyDescriptor(object);
+			addLocationXPropertyDescriptor(object);
+			addLocationYPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -100,6 +102,50 @@ public class ToUseScheduleTaskItemProvider extends TaskItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Location X feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLocationXPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ToUseScheduleTask_locationX_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseScheduleTask_locationX_feature", "_UI_ToUseScheduleTask_type"),
+				 ToUseSchedulerPackage.Literals.TO_USE_SCHEDULE_TASK__LOCATION_X,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Location Y feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLocationYPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ToUseScheduleTask_locationY_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseScheduleTask_locationY_feature", "_UI_ToUseScheduleTask_type"),
+				 ToUseSchedulerPackage.Literals.TO_USE_SCHEDULE_TASK__LOCATION_Y,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns ToUseScheduleTask.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -138,6 +184,8 @@ public class ToUseScheduleTaskItemProvider extends TaskItemProvider {
 
 		switch (notification.getFeatureID(ToUseScheduleTask.class)) {
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__DISTANCE:
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__LOCATION_X:
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__LOCATION_Y:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

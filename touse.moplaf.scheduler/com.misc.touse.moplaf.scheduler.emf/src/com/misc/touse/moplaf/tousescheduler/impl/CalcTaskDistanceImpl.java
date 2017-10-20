@@ -2,14 +2,18 @@
  */
 package com.misc.touse.moplaf.tousescheduler.impl;
 
+import com.misc.common.moplaf.common.util.GisUtil;
 import com.misc.common.moplaf.propagator2.PropagatorFunction;
 import com.misc.common.moplaf.propagator2.util.Bindings;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
 import com.misc.touse.moplaf.tousescheduler.CalcTaskDistance;
 import com.misc.touse.moplaf.tousescheduler.LayerScheduleDistance;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedule;
+import com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource;
 import com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
+import com.misc.touse.moplaf.tousescheduler.Vehicle;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -121,12 +125,30 @@ public class CalcTaskDistanceImpl extends CalcTaskImpl implements CalcTaskDistan
 	public void doRefresh() {
 		ToUseScheduleTask task = this.getTask();
 		ToUseScheduleTask previous_task = (ToUseScheduleTask) task.getPreviousTask();
-		float distance = 1.0f; 
+		float distance = 0.0f; 
 		if ( previous_task != null) {
+			// distance some normal leg: from previous task to this task
+			double distance_from_previous = GisUtil.getDistance(
+					previous_task.getLocationX(), 
+					previous_task.getLocationY(),
+					task.getLocationX(),
+					task.getLocationY());
 			float previous_task_distance= previous_task.getDistance();
-			distance = previous_task_distance+1.5f; 
+			// total distance
+			distance = previous_task_distance+(float)distance_from_previous; 
+		} else {
+			// distance first leg: from vehicle home location to this task
+			ToUseScheduleResource resource = (ToUseScheduleResource) task.getScheduledResource();
+			Vehicle vehicle = resource.getVehicle();
+			double distance_from_home_vehicle = GisUtil.getDistance(
+					vehicle.getHomeLocationX(), 
+					vehicle.getHomeLocationY(),
+					task.getLocationX(),
+					task.getLocationY());
+			// total distance
+			distance = (float)distance_from_home_vehicle; 
 		}
-		task.setDistance(distance);
+		task.setDistance((float)distance);
 	}
 	
 	@Override

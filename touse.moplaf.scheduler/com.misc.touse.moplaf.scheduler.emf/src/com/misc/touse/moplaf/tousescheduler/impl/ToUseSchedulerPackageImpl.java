@@ -307,6 +307,24 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getVehicle_HomeLocationX() {
+		return (EAttribute)vehicleEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVehicle_HomeLocationY() {
+		return (EAttribute)vehicleEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getToUseScore() {
 		return toUseScoreEClass;
 	}
@@ -370,6 +388,42 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getShipment_LoadLocationX() {
+		return (EAttribute)shipmentEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getShipment_LoadLocationY() {
+		return (EAttribute)shipmentEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getShipment_UnoadLocationX() {
+		return (EAttribute)shipmentEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getShipment_UnoadLocationY() {
+		return (EAttribute)shipmentEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getToUseScheduleTask() {
 		return toUseScheduleTaskEClass;
 	}
@@ -390,6 +444,24 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 */
 	public EAttribute getToUseScheduleTask_Distance() {
 		return (EAttribute)toUseScheduleTaskEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getToUseScheduleTask_LocationX() {
+		return (EAttribute)toUseScheduleTaskEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getToUseScheduleTask_LocationY() {
+		return (EAttribute)toUseScheduleTaskEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -688,9 +760,15 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 
 		vehicleEClass = createEClass(VEHICLE);
 		createEAttribute(vehicleEClass, VEHICLE__NAME);
+		createEAttribute(vehicleEClass, VEHICLE__HOME_LOCATION_X);
+		createEAttribute(vehicleEClass, VEHICLE__HOME_LOCATION_Y);
 
 		shipmentEClass = createEClass(SHIPMENT);
 		createEAttribute(shipmentEClass, SHIPMENT__NAME);
+		createEAttribute(shipmentEClass, SHIPMENT__LOAD_LOCATION_X);
+		createEAttribute(shipmentEClass, SHIPMENT__LOAD_LOCATION_Y);
+		createEAttribute(shipmentEClass, SHIPMENT__UNOAD_LOCATION_X);
+		createEAttribute(shipmentEClass, SHIPMENT__UNOAD_LOCATION_Y);
 
 		toUseSchedulerEClass = createEClass(TO_USE_SCHEDULER);
 		createEReference(toUseSchedulerEClass, TO_USE_SCHEDULER__SELECTED_VEHICLES);
@@ -710,6 +788,8 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		toUseScheduleTaskEClass = createEClass(TO_USE_SCHEDULE_TASK);
 		createEReference(toUseScheduleTaskEClass, TO_USE_SCHEDULE_TASK__SHIPMENT);
 		createEAttribute(toUseScheduleTaskEClass, TO_USE_SCHEDULE_TASK__DISTANCE);
+		createEAttribute(toUseScheduleTaskEClass, TO_USE_SCHEDULE_TASK__LOCATION_X);
+		createEAttribute(toUseScheduleTaskEClass, TO_USE_SCHEDULE_TASK__LOCATION_Y);
 
 		toUseLoadShipmentEClass = createEClass(TO_USE_LOAD_SHIPMENT);
 		createEReference(toUseLoadShipmentEClass, TO_USE_LOAD_SHIPMENT__SHIPMENT_LOADED);
@@ -806,9 +886,15 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 
 		initEClass(vehicleEClass, Vehicle.class, "Vehicle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVehicle_Name(), ecorePackage.getEString(), "Name", null, 0, 1, Vehicle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVehicle_HomeLocationX(), ecorePackage.getEFloat(), "HomeLocationX", null, 0, 1, Vehicle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVehicle_HomeLocationY(), ecorePackage.getEFloat(), "HomeLocationY", null, 0, 1, Vehicle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(shipmentEClass, Shipment.class, "Shipment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getShipment_Name(), ecorePackage.getEString(), "Name", null, 0, 1, Shipment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getShipment_LoadLocationX(), ecorePackage.getEFloat(), "LoadLocationX", null, 0, 1, Shipment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getShipment_LoadLocationY(), ecorePackage.getEFloat(), "LoadLocationY", null, 0, 1, Shipment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getShipment_UnoadLocationX(), ecorePackage.getEFloat(), "UnoadLocationX", null, 0, 1, Shipment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getShipment_UnoadLocationY(), ecorePackage.getEFloat(), "UnoadLocationY", null, 0, 1, Shipment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(toUseSchedulerEClass, ToUseScheduler.class, "ToUseScheduler", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getToUseScheduler_SelectedVehicles(), this.getVehicle(), null, "SelectedVehicles", null, 0, -1, ToUseScheduler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -829,6 +915,8 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		initEClass(toUseScheduleTaskEClass, ToUseScheduleTask.class, "ToUseScheduleTask", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getToUseScheduleTask_Shipment(), this.getShipment(), null, "Shipment", null, 1, 1, ToUseScheduleTask.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getToUseScheduleTask_Distance(), ecorePackage.getEFloat(), "Distance", null, 0, 1, ToUseScheduleTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getToUseScheduleTask_LocationX(), ecorePackage.getEFloat(), "locationX", null, 0, 1, ToUseScheduleTask.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getToUseScheduleTask_LocationY(), ecorePackage.getEFloat(), "locationY", null, 0, 1, ToUseScheduleTask.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(toUseLoadShipmentEClass, ToUseLoadShipment.class, "ToUseLoadShipment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getToUseLoadShipment_ShipmentLoaded(), this.getShipment(), null, "ShipmentLoaded", null, 0, 1, ToUseLoadShipment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

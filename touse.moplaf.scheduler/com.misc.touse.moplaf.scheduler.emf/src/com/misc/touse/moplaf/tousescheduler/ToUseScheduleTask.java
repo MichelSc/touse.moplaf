@@ -15,6 +15,8 @@ import com.misc.common.moplaf.scheduler.Task;
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask#getShipment <em>Shipment</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask#getDistance <em>Distance</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask#getLocationX <em>Location X</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask#getLocationY <em>Location Y</em>}</li>
  * </ul>
  *
  * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getToUseScheduleTask()
@@ -62,5 +64,35 @@ public interface ToUseScheduleTask extends Task {
 	 * @generated
 	 */
 	void setDistance(float value);
+
+	/**
+	 * Returns the value of the '<em><b>Location X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Location X</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Location X</em>' attribute.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getToUseScheduleTask_LocationX()
+	 * @model transient="true" changeable="false" volatile="true" derived="true"
+	 * @generated
+	 */
+	float getLocationX();
+
+	/**
+	 * Returns the value of the '<em><b>Location Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Location Y</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Location Y</em>' attribute.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getToUseScheduleTask_LocationY()
+	 * @model transient="true" changeable="false" volatile="true" derived="true"
+	 * @generated
+	 */
+	float getLocationY();
 
 } // ToUseScheduleTask

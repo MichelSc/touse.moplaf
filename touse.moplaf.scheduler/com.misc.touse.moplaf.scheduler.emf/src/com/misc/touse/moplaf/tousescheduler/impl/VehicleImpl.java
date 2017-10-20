@@ -21,6 +21,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.VehicleImpl#getName <em>Name</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.VehicleImpl#getHomeLocationX <em>Home Location X</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.VehicleImpl#getHomeLocationY <em>Home Location Y</em>}</li>
  * </ul>
  *
  * @generated
@@ -45,6 +47,46 @@ public class VehicleImpl extends MinimalEObjectImpl.Container implements Vehicle
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getHomeLocationX() <em>Home Location X</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getHomeLocationX()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final float HOME_LOCATION_X_EDEFAULT = 0.0F;
+
+	/**
+	 * The cached value of the '{@link #getHomeLocationX() <em>Home Location X</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getHomeLocationX()
+	 * @generated
+	 * @ordered
+	 */
+	protected float homeLocationX = HOME_LOCATION_X_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getHomeLocationY() <em>Home Location Y</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getHomeLocationY()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final float HOME_LOCATION_Y_EDEFAULT = 0.0F;
+
+	/**
+	 * The cached value of the '{@link #getHomeLocationY() <em>Home Location Y</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getHomeLocationY()
+	 * @generated
+	 * @ordered
+	 */
+	protected float homeLocationY = HOME_LOCATION_Y_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -91,11 +133,57 @@ public class VehicleImpl extends MinimalEObjectImpl.Container implements Vehicle
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public float getHomeLocationX() {
+		return homeLocationX;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setHomeLocationX(float newHomeLocationX) {
+		float oldHomeLocationX = homeLocationX;
+		homeLocationX = newHomeLocationX;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseSchedulerPackage.VEHICLE__HOME_LOCATION_X, oldHomeLocationX, homeLocationX));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public float getHomeLocationY() {
+		return homeLocationY;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setHomeLocationY(float newHomeLocationY) {
+		float oldHomeLocationY = homeLocationY;
+		homeLocationY = newHomeLocationY;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseSchedulerPackage.VEHICLE__HOME_LOCATION_Y, oldHomeLocationY, homeLocationY));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case ToUseSchedulerPackage.VEHICLE__NAME:
 				return getName();
+			case ToUseSchedulerPackage.VEHICLE__HOME_LOCATION_X:
+				return getHomeLocationX();
+			case ToUseSchedulerPackage.VEHICLE__HOME_LOCATION_Y:
+				return getHomeLocationY();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -110,6 +198,12 @@ public class VehicleImpl extends MinimalEObjectImpl.Container implements Vehicle
 		switch (featureID) {
 			case ToUseSchedulerPackage.VEHICLE__NAME:
 				setName((String)newValue);
+				return;
+			case ToUseSchedulerPackage.VEHICLE__HOME_LOCATION_X:
+				setHomeLocationX((Float)newValue);
+				return;
+			case ToUseSchedulerPackage.VEHICLE__HOME_LOCATION_Y:
+				setHomeLocationY((Float)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -126,6 +220,12 @@ public class VehicleImpl extends MinimalEObjectImpl.Container implements Vehicle
 			case ToUseSchedulerPackage.VEHICLE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case ToUseSchedulerPackage.VEHICLE__HOME_LOCATION_X:
+				setHomeLocationX(HOME_LOCATION_X_EDEFAULT);
+				return;
+			case ToUseSchedulerPackage.VEHICLE__HOME_LOCATION_Y:
+				setHomeLocationY(HOME_LOCATION_Y_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -140,6 +240,10 @@ public class VehicleImpl extends MinimalEObjectImpl.Container implements Vehicle
 		switch (featureID) {
 			case ToUseSchedulerPackage.VEHICLE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case ToUseSchedulerPackage.VEHICLE__HOME_LOCATION_X:
+				return homeLocationX != HOME_LOCATION_X_EDEFAULT;
+			case ToUseSchedulerPackage.VEHICLE__HOME_LOCATION_Y:
+				return homeLocationY != HOME_LOCATION_Y_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -156,6 +260,10 @@ public class VehicleImpl extends MinimalEObjectImpl.Container implements Vehicle
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (Name: ");
 		result.append(name);
+		result.append(", HomeLocationX: ");
+		result.append(homeLocationX);
+		result.append(", HomeLocationY: ");
+		result.append(homeLocationY);
 		result.append(')');
 		return result.toString();
 	}

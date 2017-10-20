@@ -271,4 +271,16 @@ public class ToUseLoadShipmentImpl extends ToUseScheduleTaskImpl implements ToUs
 	public Shipment basicGetShipment() {
 		return this.getShipmentLoaded();
 	}
+
+	@Override
+	public float getLocationX() {
+		return this.getShipmentLoaded().getLoadLocationX();
+	}
+
+	@Override
+	public float getLocationY() {
+		return this.getShipmentLoaded().getLoadLocationY();
+	}
+	
+	
 } //ToUseLoadShipmentImpl

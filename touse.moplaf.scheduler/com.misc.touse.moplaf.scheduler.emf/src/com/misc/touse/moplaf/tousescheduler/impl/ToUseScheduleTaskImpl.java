@@ -24,6 +24,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleTaskImpl#getShipment <em>Shipment</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleTaskImpl#getDistance <em>Distance</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleTaskImpl#getLocationX <em>Location X</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleTaskImpl#getLocationY <em>Location Y</em>}</li>
  * </ul>
  *
  * @generated
@@ -48,6 +50,26 @@ public class ToUseScheduleTaskImpl extends TaskImpl implements ToUseScheduleTask
 	 * @ordered
 	 */
 	protected float distance = DISTANCE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getLocationX() <em>Location X</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLocationX()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final float LOCATION_X_EDEFAULT = 0.0F;
+
+	/**
+	 * The default value of the '{@link #getLocationY() <em>Location Y</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLocationY()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final float LOCATION_Y_EDEFAULT = 0.0F;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -116,6 +138,28 @@ public class ToUseScheduleTaskImpl extends TaskImpl implements ToUseScheduleTask
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public float getLocationX() {
+		// TODO: implement this method to return the 'Location X' attribute
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public float getLocationY() {
+		// TODO: implement this method to return the 'Location Y' attribute
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -124,6 +168,10 @@ public class ToUseScheduleTaskImpl extends TaskImpl implements ToUseScheduleTask
 				return basicGetShipment();
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__DISTANCE:
 				return getDistance();
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__LOCATION_X:
+				return getLocationX();
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__LOCATION_Y:
+				return getLocationY();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -170,6 +218,10 @@ public class ToUseScheduleTaskImpl extends TaskImpl implements ToUseScheduleTask
 				return basicGetShipment() != null;
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__DISTANCE:
 				return distance != DISTANCE_EDEFAULT;
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__LOCATION_X:
+				return getLocationX() != LOCATION_X_EDEFAULT;
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__LOCATION_Y:
+				return getLocationY() != LOCATION_Y_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
