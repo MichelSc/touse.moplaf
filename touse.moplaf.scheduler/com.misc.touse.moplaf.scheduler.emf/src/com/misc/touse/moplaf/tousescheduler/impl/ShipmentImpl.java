@@ -23,8 +23,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ShipmentImpl#getName <em>Name</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ShipmentImpl#getLoadLocationX <em>Load Location X</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ShipmentImpl#getLoadLocationY <em>Load Location Y</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ShipmentImpl#getUnoadLocationX <em>Unoad Location X</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ShipmentImpl#getUnoadLocationY <em>Unoad Location Y</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ShipmentImpl#getUnloadLocationX <em>Unload Location X</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ShipmentImpl#getUnloadLocationY <em>Unload Location Y</em>}</li>
  * </ul>
  *
  * @generated
@@ -91,44 +91,44 @@ public class ShipmentImpl extends MinimalEObjectImpl.Container implements Shipme
 	protected float loadLocationY = LOAD_LOCATION_Y_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getUnoadLocationX() <em>Unoad Location X</em>}' attribute.
+	 * The default value of the '{@link #getUnloadLocationX() <em>Unload Location X</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUnoadLocationX()
+	 * @see #getUnloadLocationX()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final float UNOAD_LOCATION_X_EDEFAULT = 0.0F;
+	protected static final float UNLOAD_LOCATION_X_EDEFAULT = 0.0F;
 
 	/**
-	 * The cached value of the '{@link #getUnoadLocationX() <em>Unoad Location X</em>}' attribute.
+	 * The cached value of the '{@link #getUnloadLocationX() <em>Unload Location X</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUnoadLocationX()
+	 * @see #getUnloadLocationX()
 	 * @generated
 	 * @ordered
 	 */
-	protected float unoadLocationX = UNOAD_LOCATION_X_EDEFAULT;
+	protected float unloadLocationX = UNLOAD_LOCATION_X_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getUnoadLocationY() <em>Unoad Location Y</em>}' attribute.
+	 * The default value of the '{@link #getUnloadLocationY() <em>Unload Location Y</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUnoadLocationY()
+	 * @see #getUnloadLocationY()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final float UNOAD_LOCATION_Y_EDEFAULT = 0.0F;
+	protected static final float UNLOAD_LOCATION_Y_EDEFAULT = 0.0F;
 
 	/**
-	 * The cached value of the '{@link #getUnoadLocationY() <em>Unoad Location Y</em>}' attribute.
+	 * The cached value of the '{@link #getUnloadLocationY() <em>Unload Location Y</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUnoadLocationY()
+	 * @see #getUnloadLocationY()
 	 * @generated
 	 * @ordered
 	 */
-	protected float unoadLocationY = UNOAD_LOCATION_Y_EDEFAULT;
+	protected float unloadLocationY = UNLOAD_LOCATION_Y_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -217,8 +217,8 @@ public class ShipmentImpl extends MinimalEObjectImpl.Container implements Shipme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getUnoadLocationX() {
-		return unoadLocationX;
+	public float getUnloadLocationX() {
+		return unloadLocationX;
 	}
 
 	/**
@@ -226,11 +226,11 @@ public class ShipmentImpl extends MinimalEObjectImpl.Container implements Shipme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUnoadLocationX(float newUnoadLocationX) {
-		float oldUnoadLocationX = unoadLocationX;
-		unoadLocationX = newUnoadLocationX;
+	public void setUnloadLocationX(float newUnloadLocationX) {
+		float oldUnloadLocationX = unloadLocationX;
+		unloadLocationX = newUnloadLocationX;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToUseSchedulerPackage.SHIPMENT__UNOAD_LOCATION_X, oldUnoadLocationX, unoadLocationX));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseSchedulerPackage.SHIPMENT__UNLOAD_LOCATION_X, oldUnloadLocationX, unloadLocationX));
 	}
 
 	/**
@@ -238,8 +238,8 @@ public class ShipmentImpl extends MinimalEObjectImpl.Container implements Shipme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getUnoadLocationY() {
-		return unoadLocationY;
+	public float getUnloadLocationY() {
+		return unloadLocationY;
 	}
 
 	/**
@@ -247,11 +247,11 @@ public class ShipmentImpl extends MinimalEObjectImpl.Container implements Shipme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUnoadLocationY(float newUnoadLocationY) {
-		float oldUnoadLocationY = unoadLocationY;
-		unoadLocationY = newUnoadLocationY;
+	public void setUnloadLocationY(float newUnloadLocationY) {
+		float oldUnloadLocationY = unloadLocationY;
+		unloadLocationY = newUnloadLocationY;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToUseSchedulerPackage.SHIPMENT__UNOAD_LOCATION_Y, oldUnoadLocationY, unoadLocationY));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseSchedulerPackage.SHIPMENT__UNLOAD_LOCATION_Y, oldUnloadLocationY, unloadLocationY));
 	}
 
 	/**
@@ -268,10 +268,10 @@ public class ShipmentImpl extends MinimalEObjectImpl.Container implements Shipme
 				return getLoadLocationX();
 			case ToUseSchedulerPackage.SHIPMENT__LOAD_LOCATION_Y:
 				return getLoadLocationY();
-			case ToUseSchedulerPackage.SHIPMENT__UNOAD_LOCATION_X:
-				return getUnoadLocationX();
-			case ToUseSchedulerPackage.SHIPMENT__UNOAD_LOCATION_Y:
-				return getUnoadLocationY();
+			case ToUseSchedulerPackage.SHIPMENT__UNLOAD_LOCATION_X:
+				return getUnloadLocationX();
+			case ToUseSchedulerPackage.SHIPMENT__UNLOAD_LOCATION_Y:
+				return getUnloadLocationY();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -293,11 +293,11 @@ public class ShipmentImpl extends MinimalEObjectImpl.Container implements Shipme
 			case ToUseSchedulerPackage.SHIPMENT__LOAD_LOCATION_Y:
 				setLoadLocationY((Float)newValue);
 				return;
-			case ToUseSchedulerPackage.SHIPMENT__UNOAD_LOCATION_X:
-				setUnoadLocationX((Float)newValue);
+			case ToUseSchedulerPackage.SHIPMENT__UNLOAD_LOCATION_X:
+				setUnloadLocationX((Float)newValue);
 				return;
-			case ToUseSchedulerPackage.SHIPMENT__UNOAD_LOCATION_Y:
-				setUnoadLocationY((Float)newValue);
+			case ToUseSchedulerPackage.SHIPMENT__UNLOAD_LOCATION_Y:
+				setUnloadLocationY((Float)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -320,11 +320,11 @@ public class ShipmentImpl extends MinimalEObjectImpl.Container implements Shipme
 			case ToUseSchedulerPackage.SHIPMENT__LOAD_LOCATION_Y:
 				setLoadLocationY(LOAD_LOCATION_Y_EDEFAULT);
 				return;
-			case ToUseSchedulerPackage.SHIPMENT__UNOAD_LOCATION_X:
-				setUnoadLocationX(UNOAD_LOCATION_X_EDEFAULT);
+			case ToUseSchedulerPackage.SHIPMENT__UNLOAD_LOCATION_X:
+				setUnloadLocationX(UNLOAD_LOCATION_X_EDEFAULT);
 				return;
-			case ToUseSchedulerPackage.SHIPMENT__UNOAD_LOCATION_Y:
-				setUnoadLocationY(UNOAD_LOCATION_Y_EDEFAULT);
+			case ToUseSchedulerPackage.SHIPMENT__UNLOAD_LOCATION_Y:
+				setUnloadLocationY(UNLOAD_LOCATION_Y_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -344,10 +344,10 @@ public class ShipmentImpl extends MinimalEObjectImpl.Container implements Shipme
 				return loadLocationX != LOAD_LOCATION_X_EDEFAULT;
 			case ToUseSchedulerPackage.SHIPMENT__LOAD_LOCATION_Y:
 				return loadLocationY != LOAD_LOCATION_Y_EDEFAULT;
-			case ToUseSchedulerPackage.SHIPMENT__UNOAD_LOCATION_X:
-				return unoadLocationX != UNOAD_LOCATION_X_EDEFAULT;
-			case ToUseSchedulerPackage.SHIPMENT__UNOAD_LOCATION_Y:
-				return unoadLocationY != UNOAD_LOCATION_Y_EDEFAULT;
+			case ToUseSchedulerPackage.SHIPMENT__UNLOAD_LOCATION_X:
+				return unloadLocationX != UNLOAD_LOCATION_X_EDEFAULT;
+			case ToUseSchedulerPackage.SHIPMENT__UNLOAD_LOCATION_Y:
+				return unloadLocationY != UNLOAD_LOCATION_Y_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -368,10 +368,10 @@ public class ShipmentImpl extends MinimalEObjectImpl.Container implements Shipme
 		result.append(loadLocationX);
 		result.append(", LoadLocationY: ");
 		result.append(loadLocationY);
-		result.append(", UnoadLocationX: ");
-		result.append(unoadLocationX);
-		result.append(", UnoadLocationY: ");
-		result.append(unoadLocationY);
+		result.append(", UnloadLocationX: ");
+		result.append(unloadLocationX);
+		result.append(", UnloadLocationY: ");
+		result.append(unloadLocationY);
 		result.append(')');
 		return result.toString();
 	}

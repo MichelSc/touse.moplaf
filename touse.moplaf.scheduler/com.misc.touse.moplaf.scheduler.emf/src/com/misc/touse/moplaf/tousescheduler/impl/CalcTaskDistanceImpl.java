@@ -139,14 +139,16 @@ public class CalcTaskDistanceImpl extends CalcTaskImpl implements CalcTaskDistan
 		} else {
 			// distance first leg: from vehicle home location to this task
 			ToUseScheduleResource resource = (ToUseScheduleResource) task.getScheduledResource();
-			Vehicle vehicle = resource.getVehicle();
-			double distance_from_home_vehicle = GisUtil.getDistance(
-					vehicle.getHomeLocationX(), 
-					vehicle.getHomeLocationY(),
-					task.getLocationX(),
-					task.getLocationY());
-			// total distance
-			distance = (float)distance_from_home_vehicle; 
+			if ( resource!=null) {
+				Vehicle vehicle = resource.getVehicle();
+				double distance_from_home_vehicle = GisUtil.getDistance(
+						vehicle.getHomeLocationX(), 
+						vehicle.getHomeLocationY(),
+						task.getLocationX(),
+						task.getLocationY());
+				// total distance
+				distance = (float)distance_from_home_vehicle; 
+			}
 		}
 		task.setDistance((float)distance);
 	}

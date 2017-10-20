@@ -229,22 +229,22 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int SHIPMENT__LOAD_LOCATION_Y = 2;
 
 	/**
-	 * The feature id for the '<em><b>Unoad Location X</b></em>' attribute.
+	 * The feature id for the '<em><b>Unload Location X</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SHIPMENT__UNOAD_LOCATION_X = 3;
+	int SHIPMENT__UNLOAD_LOCATION_X = 3;
 
 	/**
-	 * The feature id for the '<em><b>Unoad Location Y</b></em>' attribute.
+	 * The feature id for the '<em><b>Unload Location Y</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SHIPMENT__UNOAD_LOCATION_Y = 4;
+	int SHIPMENT__UNLOAD_LOCATION_Y = 4;
 
 	/**
 	 * The number of structural features of the '<em>Shipment</em>' class.
@@ -4332,26 +4332,26 @@ public interface ToUseSchedulerPackage extends EPackage {
 	EAttribute getShipment_LoadLocationY();
 
 	/**
-	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.tousescheduler.Shipment#getUnoadLocationX <em>Unoad Location X</em>}'.
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.tousescheduler.Shipment#getUnloadLocationX <em>Unload Location X</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Unoad Location X</em>'.
-	 * @see com.misc.touse.moplaf.tousescheduler.Shipment#getUnoadLocationX()
+	 * @return the meta object for the attribute '<em>Unload Location X</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.Shipment#getUnloadLocationX()
 	 * @see #getShipment()
 	 * @generated
 	 */
-	EAttribute getShipment_UnoadLocationX();
+	EAttribute getShipment_UnloadLocationX();
 
 	/**
-	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.tousescheduler.Shipment#getUnoadLocationY <em>Unoad Location Y</em>}'.
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.tousescheduler.Shipment#getUnloadLocationY <em>Unload Location Y</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Unoad Location Y</em>'.
-	 * @see com.misc.touse.moplaf.tousescheduler.Shipment#getUnoadLocationY()
+	 * @return the meta object for the attribute '<em>Unload Location Y</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.Shipment#getUnloadLocationY()
 	 * @see #getShipment()
 	 * @generated
 	 */
-	EAttribute getShipment_UnoadLocationY();
+	EAttribute getShipment_UnloadLocationY();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask <em>To Use Schedule Task</em>}'.
@@ -4881,20 +4881,20 @@ public interface ToUseSchedulerPackage extends EPackage {
 		EAttribute SHIPMENT__LOAD_LOCATION_Y = eINSTANCE.getShipment_LoadLocationY();
 
 		/**
-		 * The meta object literal for the '<em><b>Unoad Location X</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Unload Location X</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SHIPMENT__UNOAD_LOCATION_X = eINSTANCE.getShipment_UnoadLocationX();
+		EAttribute SHIPMENT__UNLOAD_LOCATION_X = eINSTANCE.getShipment_UnloadLocationX();
 
 		/**
-		 * The meta object literal for the '<em><b>Unoad Location Y</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Unload Location Y</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SHIPMENT__UNOAD_LOCATION_Y = eINSTANCE.getShipment_UnoadLocationY();
+		EAttribute SHIPMENT__UNLOAD_LOCATION_Y = eINSTANCE.getShipment_UnloadLocationY();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleTaskImpl <em>To Use Schedule Task</em>}' class.

@@ -406,7 +406,7 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getShipment_UnoadLocationX() {
+	public EAttribute getShipment_UnloadLocationX() {
 		return (EAttribute)shipmentEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -415,7 +415,7 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getShipment_UnoadLocationY() {
+	public EAttribute getShipment_UnloadLocationY() {
 		return (EAttribute)shipmentEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -767,8 +767,8 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		createEAttribute(shipmentEClass, SHIPMENT__NAME);
 		createEAttribute(shipmentEClass, SHIPMENT__LOAD_LOCATION_X);
 		createEAttribute(shipmentEClass, SHIPMENT__LOAD_LOCATION_Y);
-		createEAttribute(shipmentEClass, SHIPMENT__UNOAD_LOCATION_X);
-		createEAttribute(shipmentEClass, SHIPMENT__UNOAD_LOCATION_Y);
+		createEAttribute(shipmentEClass, SHIPMENT__UNLOAD_LOCATION_X);
+		createEAttribute(shipmentEClass, SHIPMENT__UNLOAD_LOCATION_Y);
 
 		toUseSchedulerEClass = createEClass(TO_USE_SCHEDULER);
 		createEReference(toUseSchedulerEClass, TO_USE_SCHEDULER__SELECTED_VEHICLES);
@@ -893,8 +893,8 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		initEAttribute(getShipment_Name(), ecorePackage.getEString(), "Name", null, 0, 1, Shipment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getShipment_LoadLocationX(), ecorePackage.getEFloat(), "LoadLocationX", null, 0, 1, Shipment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getShipment_LoadLocationY(), ecorePackage.getEFloat(), "LoadLocationY", null, 0, 1, Shipment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getShipment_UnoadLocationX(), ecorePackage.getEFloat(), "UnoadLocationX", null, 0, 1, Shipment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getShipment_UnoadLocationY(), ecorePackage.getEFloat(), "UnoadLocationY", null, 0, 1, Shipment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getShipment_UnloadLocationX(), ecorePackage.getEFloat(), "UnloadLocationX", null, 0, 1, Shipment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getShipment_UnloadLocationY(), ecorePackage.getEFloat(), "UnloadLocationY", null, 0, 1, Shipment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(toUseSchedulerEClass, ToUseScheduler.class, "ToUseScheduler", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getToUseScheduler_SelectedVehicles(), this.getVehicle(), null, "SelectedVehicles", null, 0, -1, ToUseScheduler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

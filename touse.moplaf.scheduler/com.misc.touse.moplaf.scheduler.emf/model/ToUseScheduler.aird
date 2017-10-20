@@ -172,13 +172,13 @@
               <styles xmi:type="notation:FontStyle" xmi:id="_Kcw80bVjEeewiqVj0fhZOA" fontName="Segoe UI" fontHeight="8"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_Kcw80rVjEeewiqVj0fhZOA"/>
             </children>
-            <children xmi:type="notation:Node" xmi:id="_L750ULVjEeewiqVj0fhZOA" type="3010" element="_L7gywLVjEeewiqVj0fhZOA">
-              <styles xmi:type="notation:FontStyle" xmi:id="_L750UbVjEeewiqVj0fhZOA" fontName="Segoe UI" fontHeight="8"/>
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_L750UrVjEeewiqVj0fhZOA"/>
+            <children xmi:type="notation:Node" xmi:id="_gMbf4LWzEeep7L-ULLqa_Q" type="3010" element="_gLfEsLWzEeep7L-ULLqa_Q">
+              <styles xmi:type="notation:FontStyle" xmi:id="_gMbf4bWzEeep7L-ULLqa_Q" fontName="Oxygen-Sans" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_gMbf4rWzEeep7L-ULLqa_Q"/>
             </children>
-            <children xmi:type="notation:Node" xmi:id="_OliJALVjEeewiqVj0fhZOA" type="3010" element="_OlMKwLVjEeewiqVj0fhZOA">
-              <styles xmi:type="notation:FontStyle" xmi:id="_OliJAbVjEeewiqVj0fhZOA" fontName="Segoe UI" fontHeight="8"/>
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_OliJArVjEeewiqVj0fhZOA"/>
+            <children xmi:type="notation:Node" xmi:id="_gMejMLWzEeep7L-ULLqa_Q" type="3010" element="_gLhg8LWzEeep7L-ULLqa_Q">
+              <styles xmi:type="notation:FontStyle" xmi:id="_gMejMbWzEeep7L-ULLqa_Q" fontName="Oxygen-Sans" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_gMejMrWzEeep7L-ULLqa_Q"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_LoACxXw9Eee_nccCgARQhA"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_LoACxnw9Eee_nccCgARQhA"/>
@@ -1037,18 +1037,18 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_L7gywLVjEeewiqVj0fhZOA" name="UnoadLocationX : EFloat = 0.0" tooltipText="">
-        <target xmi:type="ecore:EAttribute" href="ToUseScheduler.ecore#//Shipment/UnoadLocationX"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="ToUseScheduler.ecore#//Shipment/UnoadLocationX"/>
-        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_L7hZ0LVjEeewiqVj0fhZOA" labelAlignment="LEFT">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_gLfEsLWzEeep7L-ULLqa_Q" name="UnloadLocationX : EFloat = 0.0" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="ToUseScheduler.ecore#//Shipment/UnloadLocationX"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="ToUseScheduler.ecore#//Shipment/UnloadLocationX"/>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_gLgS0LWzEeep7L-ULLqa_Q" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_OlMKwLVjEeewiqVj0fhZOA" name="UnoadLocationY : EFloat = 0.0" tooltipText="">
-        <target xmi:type="ecore:EAttribute" href="ToUseScheduler.ecore#//Shipment/UnoadLocationY"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="ToUseScheduler.ecore#//Shipment/UnoadLocationY"/>
-        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_OlMKwbVjEeewiqVj0fhZOA" labelAlignment="LEFT">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_gLhg8LWzEeep7L-ULLqa_Q" name="UnloadLocationY : EFloat = 0.0" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="ToUseScheduler.ecore#//Shipment/UnloadLocationY"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="ToUseScheduler.ecore#//Shipment/UnloadLocationY"/>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_gLiIALWzEeep7L-ULLqa_Q" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>

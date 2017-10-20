@@ -275,11 +275,11 @@ public class ToUseUnloadShipmentImpl extends ToUseScheduleTaskImpl implements To
 	
 	@Override
 	public float getLocationX() {
-		return this.getShipmentUnloaded().getUnoadLocationX();
+		return this.getShipmentUnloaded().getUnloadLocationX();
 	}
 
 	@Override
 	public float getLocationY() {
-		return this.getShipmentUnloaded().getUnoadLocationY();
+		return this.getShipmentUnloaded().getUnloadLocationY();
 	}
 } //ToUseUnloadShipmentImpl

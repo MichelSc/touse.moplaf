@@ -16,8 +16,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.Shipment#getName <em>Name</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.Shipment#getLoadLocationX <em>Load Location X</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.Shipment#getLoadLocationY <em>Load Location Y</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.tousescheduler.Shipment#getUnoadLocationX <em>Unoad Location X</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.tousescheduler.Shipment#getUnoadLocationY <em>Unoad Location Y</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.Shipment#getUnloadLocationX <em>Unload Location X</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.Shipment#getUnloadLocationY <em>Unload Location Y</em>}</li>
  * </ul>
  *
  * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getShipment()
@@ -104,55 +104,55 @@ public interface Shipment extends EObject {
 	void setLoadLocationY(float value);
 
 	/**
-	 * Returns the value of the '<em><b>Unoad Location X</b></em>' attribute.
+	 * Returns the value of the '<em><b>Unload Location X</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Unoad Location X</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Unload Location X</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Unoad Location X</em>' attribute.
-	 * @see #setUnoadLocationX(float)
-	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getShipment_UnoadLocationX()
+	 * @return the value of the '<em>Unload Location X</em>' attribute.
+	 * @see #setUnloadLocationX(float)
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getShipment_UnloadLocationX()
 	 * @model
 	 * @generated
 	 */
-	float getUnoadLocationX();
+	float getUnloadLocationX();
 
 	/**
-	 * Sets the value of the '{@link com.misc.touse.moplaf.tousescheduler.Shipment#getUnoadLocationX <em>Unoad Location X</em>}' attribute.
+	 * Sets the value of the '{@link com.misc.touse.moplaf.tousescheduler.Shipment#getUnloadLocationX <em>Unload Location X</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Unoad Location X</em>' attribute.
-	 * @see #getUnoadLocationX()
+	 * @param value the new value of the '<em>Unload Location X</em>' attribute.
+	 * @see #getUnloadLocationX()
 	 * @generated
 	 */
-	void setUnoadLocationX(float value);
+	void setUnloadLocationX(float value);
 
 	/**
-	 * Returns the value of the '<em><b>Unoad Location Y</b></em>' attribute.
+	 * Returns the value of the '<em><b>Unload Location Y</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Unoad Location Y</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Unload Location Y</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Unoad Location Y</em>' attribute.
-	 * @see #setUnoadLocationY(float)
-	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getShipment_UnoadLocationY()
+	 * @return the value of the '<em>Unload Location Y</em>' attribute.
+	 * @see #setUnloadLocationY(float)
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getShipment_UnloadLocationY()
 	 * @model
 	 * @generated
 	 */
-	float getUnoadLocationY();
+	float getUnloadLocationY();
 
 	/**
-	 * Sets the value of the '{@link com.misc.touse.moplaf.tousescheduler.Shipment#getUnoadLocationY <em>Unoad Location Y</em>}' attribute.
+	 * Sets the value of the '{@link com.misc.touse.moplaf.tousescheduler.Shipment#getUnloadLocationY <em>Unload Location Y</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Unoad Location Y</em>' attribute.
-	 * @see #getUnoadLocationY()
+	 * @param value the new value of the '<em>Unload Location Y</em>' attribute.
+	 * @see #getUnloadLocationY()
 	 * @generated
 	 */
-	void setUnoadLocationY(float value);
+	void setUnloadLocationY(float value);
 
 } // Shipment
