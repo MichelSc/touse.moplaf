@@ -3,6 +3,10 @@
 package com.misc.touse.moplaf.tousescheduler.provider;
 
 
+import com.misc.common.moplaf.localsearch.Solution;
+import com.misc.common.moplaf.scheduler.Task;
+import com.misc.touse.moplaf.tousescheduler.ToUseLoadShipment;
+import com.misc.touse.moplaf.tousescheduler.ToUseSchedule;
 import com.misc.touse.moplaf.tousescheduler.ToUseScheduleLoadUnload;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
 
@@ -11,9 +15,11 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
+import org.eclipse.emf.common.util.BasicEList;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
@@ -53,11 +59,10 @@ public class ToUseScheduleLoadUnloadItemProvider extends ToUseActionItemProvider
 	 * This adds a property descriptor for the Load Task feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	protected void addLoadTaskPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new ItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_ToUseScheduleLoadUnload_LoadTask_feature"),
@@ -68,7 +73,25 @@ public class ToUseScheduleLoadUnloadItemProvider extends ToUseActionItemProvider
 				 true,
 				 null,
 				 getString("_UI__20ActionToUsePropertyCategory"),
-				 null));
+				 null) {
+
+					@Override
+					public Collection<?> getChoiceOfValues(Object object) {
+						EList<ToUseLoadShipment> choices = new BasicEList<ToUseLoadShipment>();
+						ToUseScheduleLoadUnload action = (ToUseScheduleLoadUnload) object;
+						Solution solution = action.getSolution();
+						if ( solution instanceof ToUseSchedule) {
+							ToUseSchedule schedule = (ToUseSchedule) solution;
+							for ( Task task : schedule.getTasks()) {
+								if ( task instanceof ToUseLoadShipment) {
+									choices.add((ToUseLoadShipment)task);
+								}
+							}
+						}
+						return choices;
+					}
+				
+			});
 	}
 
 	/**

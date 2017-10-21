@@ -5,6 +5,7 @@ package com.misc.touse.moplaf.tousescheduler.util;
 import com.misc.common.moplaf.localsearch.Action;
 import com.misc.common.moplaf.localsearch.Score;
 import com.misc.common.moplaf.localsearch.Solution;
+import com.misc.common.moplaf.localsearch.Strategy;
 import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
 import com.misc.common.moplaf.propagator2.PropagatorFunction;
 import com.misc.common.moplaf.propagator2.PropagatorFunctionBindings;
@@ -98,6 +99,7 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 				ToUseScheduler toUseScheduler = (ToUseScheduler)theEObject;
 				T result = caseToUseScheduler(toUseScheduler);
 				if (result == null) result = caseScheduler(toUseScheduler);
+				if (result == null) result = caseStrategy(toUseScheduler);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -467,6 +469,21 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseCalcResourceDistance(CalcResourceDistance object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Strategy</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Strategy</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStrategy(Strategy object) {
 		return null;
 	}
 

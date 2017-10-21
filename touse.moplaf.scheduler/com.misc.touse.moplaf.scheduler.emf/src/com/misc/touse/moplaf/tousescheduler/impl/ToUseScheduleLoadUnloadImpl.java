@@ -183,7 +183,7 @@ public class ToUseScheduleLoadUnloadImpl extends ToUseActionImpl implements ToUs
 	protected void createMovesImpl() {
 		assert this.isValid() : "Action is not valid";
 		
-		ToUseSchedule schedule = (ToUseSchedule) this.getCurrentSolution();
+		ToUseSchedule schedule = (ToUseSchedule) this.getSolution();
 		ToUseLoadShipment loadTask = this.getLoadTask();
 		ToUseUnloadShipment unloadTask = loadTask.getUnloadShipment();
 		

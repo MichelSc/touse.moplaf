@@ -11,7 +11,7 @@ import com.misc.common.moplaf.localsearch.Action;
  *
  *
  * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getToUseAction()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface ToUseAction extends Action {

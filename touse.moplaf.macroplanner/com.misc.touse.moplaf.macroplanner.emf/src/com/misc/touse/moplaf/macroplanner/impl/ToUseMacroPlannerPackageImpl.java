@@ -16,6 +16,9 @@ import com.misc.common.moplaf.job.JobPackage;
 import com.misc.common.moplaf.macroplanner.MacroPlannerPackage;
 
 import com.misc.common.moplaf.macroplanner.solver.MacroPlannerSolverPackage;
+import com.misc.common.moplaf.solver.SolverPackage;
+import com.misc.common.moplaf.time.TimePackage;
+import com.misc.common.moplaf.time.discrete.TimeDiscretePackage;
 import com.misc.touse.moplaf.macroplanner.Domain;
 import com.misc.touse.moplaf.macroplanner.ToUseMacroPlannerFactory;
 import com.misc.touse.moplaf.macroplanner.ToUseMacroPlannerPackage;
@@ -86,7 +89,12 @@ public class ToUseMacroPlannerPackageImpl extends EPackageImpl implements ToUseM
 		isInited = true;
 
 		// Initialize simple dependencies
+		JobPackage.eINSTANCE.eClass();
+		MacroPlannerPackage.eINSTANCE.eClass();
 		MacroPlannerSolverPackage.eINSTANCE.eClass();
+		SolverPackage.eINSTANCE.eClass();
+		TimeDiscretePackage.eINSTANCE.eClass();
+		TimePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theToUseMacroPlannerPackage.createPackageContents();

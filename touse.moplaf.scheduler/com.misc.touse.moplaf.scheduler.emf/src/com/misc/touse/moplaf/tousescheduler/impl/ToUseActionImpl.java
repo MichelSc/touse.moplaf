@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class ToUseActionImpl extends ActionImpl implements ToUseAction {
+public abstract class ToUseActionImpl extends ActionImpl implements ToUseAction {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

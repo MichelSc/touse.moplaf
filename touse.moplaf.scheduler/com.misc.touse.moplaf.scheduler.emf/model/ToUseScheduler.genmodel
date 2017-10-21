@@ -31,9 +31,9 @@
           propertySortChoices="true" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//ToUseScheduler/SelectedVehicles"/>
       <genFeatures notify="false" createChild="false" propertyCategory="20 ToUseScheduler"
           propertySortChoices="true" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//ToUseScheduler/SelectedShipments"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//ToUseScheduler/Actions"/>
     </genClasses>
     <genClasses ecoreClass="ToUseScheduler.ecore#//ToUseSchedule">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//ToUseSchedule/Actions"/>
       <genOperations ecoreOperation="ToUseScheduler.ecore#//ToUseSchedule/enable"/>
     </genClasses>
     <genClasses ecoreClass="ToUseScheduler.ecore#//ToUseScore">
@@ -45,12 +45,14 @@
           ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUseScheduleResource/TotalDistance"/>
     </genClasses>
     <genClasses ecoreClass="ToUseScheduler.ecore#//ToUseScheduleTask">
-      <genFeatures property="Readonly" notify="false" createChild="false" propertyCategory="20 ToUseScheduler"
+      <genFeatures property="None" notify="false" createChild="false" propertyCategory="20 ToUseScheduler"
           ecoreFeature="ecore:EReference ToUseScheduler.ecore#//ToUseScheduleTask/Shipment"/>
       <genFeatures createChild="false" propertyCategory="20 ToUseScheduler" propertyDescription=""
           ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUseScheduleTask/Distance"/>
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUseScheduleTask/locationX"/>
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUseScheduleTask/locationY"/>
+      <genFeatures property="Readonly" createChild="false" propertyCategory="20 ToUseScheduler"
+          ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUseScheduleTask/locationX"/>
+      <genFeatures property="Readonly" createChild="false" propertyCategory="20 ToUseScheduler"
+          ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUseScheduleTask/locationY"/>
     </genClasses>
     <genClasses ecoreClass="ToUseScheduler.ecore#//ToUseLoadShipment">
       <genFeatures notify="false" createChild="false" propertyCategory="20 ToUseScheduler"

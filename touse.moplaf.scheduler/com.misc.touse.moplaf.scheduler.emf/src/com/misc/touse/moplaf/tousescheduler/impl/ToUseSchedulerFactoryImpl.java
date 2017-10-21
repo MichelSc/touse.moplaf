@@ -66,7 +66,6 @@ public class ToUseSchedulerFactoryImpl extends EFactoryImpl implements ToUseSche
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK: return createToUseScheduleTask();
 			case ToUseSchedulerPackage.TO_USE_LOAD_SHIPMENT: return createToUseLoadShipment();
 			case ToUseSchedulerPackage.TO_USE_UNLOAD_SHIPMENT: return createToUseUnloadShipment();
-			case ToUseSchedulerPackage.TO_USE_ACTION: return createToUseAction();
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_LOAD_UNLOAD: return createToUseScheduleLoadUnload();
 			case ToUseSchedulerPackage.SCOPE_SCHEDULE_SCORE: return createScopeScheduleScore();
 			case ToUseSchedulerPackage.LAYER_SCHEDULE_DISTANCE: return createLayerScheduleDistance();
@@ -185,16 +184,6 @@ public class ToUseSchedulerFactoryImpl extends EFactoryImpl implements ToUseSche
 	public CalcResourceDistance createCalcResourceDistance() {
 		CalcResourceDistanceImpl calcResourceDistance = new CalcResourceDistanceImpl();
 		return calcResourceDistance;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ToUseAction createToUseAction() {
-		ToUseActionImpl toUseAction = new ToUseActionImpl();
-		return toUseAction;
 	}
 
 	/**

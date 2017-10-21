@@ -265,13 +265,40 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int SHIPMENT_OPERATION_COUNT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Schedules</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Improvments</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULER__SCHEDULES = SchedulerPackage.SCHEDULER__SCHEDULES;
+	int TO_USE_SCHEDULER__IMPROVMENTS = SchedulerPackage.SCHEDULER__IMPROVMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Best Solution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULER__BEST_SOLUTION = SchedulerPackage.SCHEDULER__BEST_SOLUTION;
+
+	/**
+	 * The feature id for the '<em><b>Solutions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULER__SOLUTIONS = SchedulerPackage.SCHEDULER__SOLUTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Current Solution Nr</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULER__CURRENT_SOLUTION_NR = SchedulerPackage.SCHEDULER__CURRENT_SOLUTION_NR;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -283,13 +310,13 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULER__NAME = SchedulerPackage.SCHEDULER__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Current Solution Nr</b></em>' attribute.
+	 * The feature id for the '<em><b>Schedules</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULER__CURRENT_SOLUTION_NR = SchedulerPackage.SCHEDULER__CURRENT_SOLUTION_NR;
+	int TO_USE_SCHEDULER__SCHEDULES = SchedulerPackage.SCHEDULER__SCHEDULES;
 
 	/**
 	 * The feature id for the '<em><b>Selected Vehicles</b></em>' reference list.
@@ -310,22 +337,40 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULER__SELECTED_SHIPMENTS = SchedulerPackage.SCHEDULER_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULER__ACTIONS = SchedulerPackage.SCHEDULER_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>To Use Scheduler</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULER_FEATURE_COUNT = SchedulerPackage.SCHEDULER_FEATURE_COUNT + 2;
+	int TO_USE_SCHEDULER_FEATURE_COUNT = SchedulerPackage.SCHEDULER_FEATURE_COUNT + 3;
 
 	/**
-	 * The operation id for the '<em>Construct Schedule</em>' operation.
+	 * The operation id for the '<em>Select Solutions To Improve</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULER___CONSTRUCT_SCHEDULE = SchedulerPackage.SCHEDULER___CONSTRUCT_SCHEDULE;
+	int TO_USE_SCHEDULER___SELECT_SOLUTIONS_TO_IMPROVE = SchedulerPackage.SCHEDULER___SELECT_SOLUTIONS_TO_IMPROVE;
+
+	/**
+	 * The operation id for the '<em>Prune Solution</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULER___PRUNE_SOLUTION = SchedulerPackage.SCHEDULER___PRUNE_SOLUTION;
 
 	/**
 	 * The operation id for the '<em>Construct Score</em>' operation.
@@ -492,6 +537,42 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE__SCORE = SchedulerPackage.SCHEDULE__SCORE;
 
 	/**
+	 * The feature id for the '<em><b>Solution Nr</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE__SOLUTION_NR = SchedulerPackage.SCHEDULE__SOLUTION_NR;
+
+	/**
+	 * The feature id for the '<em><b>Ancestor</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE__ANCESTOR = SchedulerPackage.SCHEDULE__ANCESTOR;
+
+	/**
+	 * The feature id for the '<em><b>Descendants</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE__DESCENDANTS = SchedulerPackage.SCHEDULE__DESCENDANTS;
+
+	/**
+	 * The feature id for the '<em><b>Strategy</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE__STRATEGY = SchedulerPackage.SCHEDULE__STRATEGY;
+
+	/**
 	 * The feature id for the '<em><b>Tasks</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -510,24 +591,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE__RESOURCES = SchedulerPackage.SCHEDULE__RESOURCES;
 
 	/**
-	 * The feature id for the '<em><b>Solution Nr</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULE__SOLUTION_NR = SchedulerPackage.SCHEDULE__SOLUTION_NR;
-
-	/**
-	 * The feature id for the '<em><b>Scheduler</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULE__SCHEDULER = SchedulerPackage.SCHEDULE__SCHEDULER;
-
-	/**
 	 * The feature id for the '<em><b>Nr Scheduled Tasks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -537,13 +600,13 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE__NR_SCHEDULED_TASKS = SchedulerPackage.SCHEDULE__NR_SCHEDULED_TASKS;
 
 	/**
-	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Scheduler</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE__ACTIONS = SchedulerPackage.SCHEDULE_FEATURE_COUNT + 0;
+	int TO_USE_SCHEDULE__SCHEDULER = SchedulerPackage.SCHEDULE__SCHEDULER;
 
 	/**
 	 * The number of structural features of the '<em>To Use Schedule</em>' class.
@@ -552,7 +615,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_FEATURE_COUNT = SchedulerPackage.SCHEDULE_FEATURE_COUNT + 1;
+	int TO_USE_SCHEDULE_FEATURE_COUNT = SchedulerPackage.SCHEDULE_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Add Propagator Function</em>' operation.
@@ -1450,13 +1513,13 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_ACTION__VALID = LocalSearchPackage.ACTION__VALID;
 
 	/**
-	 * The feature id for the '<em><b>Current Solution</b></em>' reference.
+	 * The feature id for the '<em><b>Solution</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_ACTION__CURRENT_SOLUTION = LocalSearchPackage.ACTION__CURRENT_SOLUTION;
+	int TO_USE_ACTION__SOLUTION = LocalSearchPackage.ACTION__SOLUTION;
 
 	/**
 	 * The number of structural features of the '<em>To Use Action</em>' class.
@@ -1549,13 +1612,13 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE_LOAD_UNLOAD__VALID = TO_USE_ACTION__VALID;
 
 	/**
-	 * The feature id for the '<em><b>Current Solution</b></em>' reference.
+	 * The feature id for the '<em><b>Solution</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD__CURRENT_SOLUTION = TO_USE_ACTION__CURRENT_SOLUTION;
+	int TO_USE_SCHEDULE_LOAD_UNLOAD__SOLUTION = TO_USE_ACTION__SOLUTION;
 
 	/**
 	 * The feature id for the '<em><b>Load Task</b></em>' reference.
@@ -4289,6 +4352,17 @@ public interface ToUseSchedulerPackage extends EPackage {
 	EReference getToUseScheduler_SelectedShipments();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduler#getActions <em>Actions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Actions</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseScheduler#getActions()
+	 * @see #getToUseScheduler()
+	 * @generated
+	 */
+	EReference getToUseScheduler_Actions();
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.Shipment <em>Shipment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4691,17 +4765,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	EClass getToUseSchedule();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.tousescheduler.ToUseSchedule#getActions <em>Actions</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Actions</em>'.
-	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedule#getActions()
-	 * @see #getToUseSchedule()
-	 * @generated
-	 */
-	EReference getToUseSchedule_Actions();
-
-	/**
 	 * Returns the meta object for the '{@link com.misc.touse.moplaf.tousescheduler.ToUseSchedule#enable() <em>Enable</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4845,6 +4908,14 @@ public interface ToUseSchedulerPackage extends EPackage {
 		 * @generated
 		 */
 		EReference TO_USE_SCHEDULER__SELECTED_SHIPMENTS = eINSTANCE.getToUseScheduler_SelectedShipments();
+
+		/**
+		 * The meta object literal for the '<em><b>Actions</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TO_USE_SCHEDULER__ACTIONS = eINSTANCE.getToUseScheduler_Actions();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ShipmentImpl <em>Shipment</em>}' class.
@@ -5181,14 +5252,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TO_USE_SCHEDULE = eINSTANCE.getToUseSchedule();
-
-		/**
-		 * The meta object literal for the '<em><b>Actions</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TO_USE_SCHEDULE__ACTIONS = eINSTANCE.getToUseSchedule_Actions();
 
 		/**
 		 * The meta object literal for the '<em><b>Enable</b></em>' operation.

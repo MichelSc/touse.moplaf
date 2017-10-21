@@ -370,6 +370,15 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getToUseScheduler_Actions() {
+		return (EReference)toUseSchedulerEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getShipment() {
 		return shipmentEClass;
 	}
@@ -712,15 +721,6 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getToUseSchedule_Actions() {
-		return (EReference)toUseScheduleEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EOperation getToUseSchedule__Enable() {
 		return toUseScheduleEClass.getEOperations().get(0);
 	}
@@ -773,9 +773,9 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		toUseSchedulerEClass = createEClass(TO_USE_SCHEDULER);
 		createEReference(toUseSchedulerEClass, TO_USE_SCHEDULER__SELECTED_VEHICLES);
 		createEReference(toUseSchedulerEClass, TO_USE_SCHEDULER__SELECTED_SHIPMENTS);
+		createEReference(toUseSchedulerEClass, TO_USE_SCHEDULER__ACTIONS);
 
 		toUseScheduleEClass = createEClass(TO_USE_SCHEDULE);
-		createEReference(toUseScheduleEClass, TO_USE_SCHEDULE__ACTIONS);
 		createEOperation(toUseScheduleEClass, TO_USE_SCHEDULE___ENABLE);
 
 		toUseScoreEClass = createEClass(TO_USE_SCORE);
@@ -899,9 +899,9 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		initEClass(toUseSchedulerEClass, ToUseScheduler.class, "ToUseScheduler", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getToUseScheduler_SelectedVehicles(), this.getVehicle(), null, "SelectedVehicles", null, 0, -1, ToUseScheduler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getToUseScheduler_SelectedShipments(), this.getShipment(), null, "SelectedShipments", null, 0, -1, ToUseScheduler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getToUseScheduler_Actions(), this.getToUseAction(), null, "Actions", null, 0, -1, ToUseScheduler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(toUseScheduleEClass, ToUseSchedule.class, "ToUseSchedule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getToUseSchedule_Actions(), this.getToUseAction(), null, "Actions", null, 0, -1, ToUseSchedule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getToUseSchedule__Enable(), null, "enable", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -926,7 +926,7 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		initEReference(getToUseUnloadShipment_ShipmentUnloaded(), this.getShipment(), null, "ShipmentUnloaded", null, 0, 1, ToUseUnloadShipment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getToUseUnloadShipment_LoadShipment(), this.getToUseLoadShipment(), this.getToUseLoadShipment_UnloadShipment(), "LoadShipment", null, 1, 1, ToUseUnloadShipment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(toUseActionEClass, ToUseAction.class, "ToUseAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(toUseActionEClass, ToUseAction.class, "ToUseAction", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(toUseScheduleLoadUnloadEClass, ToUseScheduleLoadUnload.class, "ToUseScheduleLoadUnload", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getToUseScheduleLoadUnload_LoadTask(), this.getToUseLoadShipment(), null, "LoadTask", null, 1, 1, ToUseScheduleLoadUnload.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

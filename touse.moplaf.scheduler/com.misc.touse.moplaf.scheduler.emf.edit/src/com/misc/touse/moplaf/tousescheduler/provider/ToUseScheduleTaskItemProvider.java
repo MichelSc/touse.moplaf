@@ -49,34 +49,11 @@ public class ToUseScheduleTaskItemProvider extends TaskItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addShipmentPropertyDescriptor(object);
 			addDistancePropertyDescriptor(object);
 			addLocationXPropertyDescriptor(object);
 			addLocationYPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Shipment feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addShipmentPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ToUseScheduleTask_Shipment_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseScheduleTask_Shipment_feature", "_UI_ToUseScheduleTask_type"),
-				 ToUseSchedulerPackage.Literals.TO_USE_SCHEDULE_TASK__SHIPMENT,
-				 false,
-				 false,
-				 false,
-				 null,
-				 getString("_UI__20ToUseSchedulerPropertyCategory"),
-				 null));
 	}
 
 	/**
@@ -119,7 +96,7 @@ public class ToUseScheduleTaskItemProvider extends TaskItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI__20ToUseSchedulerPropertyCategory"),
 				 null));
 	}
 
@@ -141,7 +118,7 @@ public class ToUseScheduleTaskItemProvider extends TaskItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI__20ToUseSchedulerPropertyCategory"),
 				 null));
 	}
 

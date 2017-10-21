@@ -121,15 +121,6 @@ public interface ToUseSchedulerFactory extends EFactory {
 	CalcResourceDistance createCalcResourceDistance();
 
 	/**
-	 * Returns a new object of class '<em>To Use Action</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>To Use Action</em>'.
-	 * @generated
-	 */
-	ToUseAction createToUseAction();
-
-	/**
 	 * Returns a new object of class '<em>To Use Schedule Load Unload</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
