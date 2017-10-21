@@ -1050,16 +1050,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE_TASK_OPERATION_COUNT = SchedulerPackage.TASK_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseActionImpl <em>To Use Action</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseActionImpl
-	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseAction()
-	 * @generated
-	 */
-	int TO_USE_ACTION = 10;
-
-	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleLoadUnloadImpl <em>To Use Schedule Load Unload</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1468,103 +1458,14 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_UNLOAD_SHIPMENT_OPERATION_COUNT = TO_USE_SCHEDULE_TASK_OPERATION_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Root Moves</b></em>' containment reference list.
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseActionLoadUnloadImpl <em>To Use Action Load Unload</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseActionLoadUnloadImpl
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseActionLoadUnload()
 	 * @generated
-	 * @ordered
 	 */
-	int TO_USE_ACTION__ROOT_MOVES = LocalSearchPackage.ACTION__ROOT_MOVES;
-
-	/**
-	 * The feature id for the '<em><b>Current Move</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_ACTION__CURRENT_MOVE = LocalSearchPackage.ACTION__CURRENT_MOVE;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_ACTION__DESCRIPTION = LocalSearchPackage.ACTION__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Valid Feedback</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_ACTION__VALID_FEEDBACK = LocalSearchPackage.ACTION__VALID_FEEDBACK;
-
-	/**
-	 * The feature id for the '<em><b>Valid</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_ACTION__VALID = LocalSearchPackage.ACTION__VALID;
-
-	/**
-	 * The feature id for the '<em><b>Solution</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_ACTION__SOLUTION = LocalSearchPackage.ACTION__SOLUTION;
-
-	/**
-	 * The number of structural features of the '<em>To Use Action</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_ACTION_FEATURE_COUNT = LocalSearchPackage.ACTION_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Initialize</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_ACTION___INITIALIZE = LocalSearchPackage.ACTION___INITIALIZE;
-
-	/**
-	 * The operation id for the '<em>Run</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_ACTION___RUN = LocalSearchPackage.ACTION___RUN;
-
-	/**
-	 * The operation id for the '<em>Finalize</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_ACTION___FINALIZE = LocalSearchPackage.ACTION___FINALIZE;
-
-	/**
-	 * The number of operations of the '<em>To Use Action</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_ACTION_OPERATION_COUNT = LocalSearchPackage.ACTION_OPERATION_COUNT + 0;
+	int TO_USE_ACTION_LOAD_UNLOAD = 10;
 
 	/**
 	 * The feature id for the '<em><b>Root Moves</b></em>' containment reference list.
@@ -1573,7 +1474,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD__ROOT_MOVES = TO_USE_ACTION__ROOT_MOVES;
+	int TO_USE_ACTION_LOAD_UNLOAD__ROOT_MOVES = LocalSearchPackage.ACTION__ROOT_MOVES;
 
 	/**
 	 * The feature id for the '<em><b>Current Move</b></em>' reference.
@@ -1582,7 +1483,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD__CURRENT_MOVE = TO_USE_ACTION__CURRENT_MOVE;
+	int TO_USE_ACTION_LOAD_UNLOAD__CURRENT_MOVE = LocalSearchPackage.ACTION__CURRENT_MOVE;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1591,7 +1492,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD__DESCRIPTION = TO_USE_ACTION__DESCRIPTION;
+	int TO_USE_ACTION_LOAD_UNLOAD__DESCRIPTION = LocalSearchPackage.ACTION__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Valid Feedback</b></em>' attribute.
@@ -1600,7 +1501,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD__VALID_FEEDBACK = TO_USE_ACTION__VALID_FEEDBACK;
+	int TO_USE_ACTION_LOAD_UNLOAD__VALID_FEEDBACK = LocalSearchPackage.ACTION__VALID_FEEDBACK;
 
 	/**
 	 * The feature id for the '<em><b>Valid</b></em>' attribute.
@@ -1609,7 +1510,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD__VALID = TO_USE_ACTION__VALID;
+	int TO_USE_ACTION_LOAD_UNLOAD__VALID = LocalSearchPackage.ACTION__VALID;
 
 	/**
 	 * The feature id for the '<em><b>Solution</b></em>' reference.
@@ -1618,7 +1519,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD__SOLUTION = TO_USE_ACTION__SOLUTION;
+	int TO_USE_ACTION_LOAD_UNLOAD__SOLUTION = LocalSearchPackage.ACTION__SOLUTION;
 
 	/**
 	 * The feature id for the '<em><b>Load Task</b></em>' reference.
@@ -1627,16 +1528,16 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD__LOAD_TASK = TO_USE_ACTION_FEATURE_COUNT + 0;
+	int TO_USE_ACTION_LOAD_UNLOAD__LOAD_TASK = LocalSearchPackage.ACTION_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>To Use Schedule Load Unload</em>' class.
+	 * The number of structural features of the '<em>To Use Action Load Unload</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD_FEATURE_COUNT = TO_USE_ACTION_FEATURE_COUNT + 1;
+	int TO_USE_ACTION_LOAD_UNLOAD_FEATURE_COUNT = LocalSearchPackage.ACTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Initialize</em>' operation.
@@ -1645,7 +1546,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD___INITIALIZE = TO_USE_ACTION___INITIALIZE;
+	int TO_USE_ACTION_LOAD_UNLOAD___INITIALIZE = LocalSearchPackage.ACTION___INITIALIZE;
 
 	/**
 	 * The operation id for the '<em>Run</em>' operation.
@@ -1654,7 +1555,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD___RUN = TO_USE_ACTION___RUN;
+	int TO_USE_ACTION_LOAD_UNLOAD___RUN = LocalSearchPackage.ACTION___RUN;
 
 	/**
 	 * The operation id for the '<em>Finalize</em>' operation.
@@ -1663,7 +1564,115 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD___FINALIZE = TO_USE_ACTION___FINALIZE;
+	int TO_USE_ACTION_LOAD_UNLOAD___FINALIZE = LocalSearchPackage.ACTION___FINALIZE;
+
+	/**
+	 * The number of operations of the '<em>To Use Action Load Unload</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_ACTION_LOAD_UNLOAD_OPERATION_COUNT = LocalSearchPackage.ACTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Root Moves</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_LOAD_UNLOAD__ROOT_MOVES = TO_USE_ACTION_LOAD_UNLOAD__ROOT_MOVES;
+
+	/**
+	 * The feature id for the '<em><b>Current Move</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_LOAD_UNLOAD__CURRENT_MOVE = TO_USE_ACTION_LOAD_UNLOAD__CURRENT_MOVE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_LOAD_UNLOAD__DESCRIPTION = TO_USE_ACTION_LOAD_UNLOAD__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Valid Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_LOAD_UNLOAD__VALID_FEEDBACK = TO_USE_ACTION_LOAD_UNLOAD__VALID_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Valid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_LOAD_UNLOAD__VALID = TO_USE_ACTION_LOAD_UNLOAD__VALID;
+
+	/**
+	 * The feature id for the '<em><b>Solution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_LOAD_UNLOAD__SOLUTION = TO_USE_ACTION_LOAD_UNLOAD__SOLUTION;
+
+	/**
+	 * The feature id for the '<em><b>Load Task</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_LOAD_UNLOAD__LOAD_TASK = TO_USE_ACTION_LOAD_UNLOAD__LOAD_TASK;
+
+	/**
+	 * The number of structural features of the '<em>To Use Schedule Load Unload</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_LOAD_UNLOAD_FEATURE_COUNT = TO_USE_ACTION_LOAD_UNLOAD_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Initialize</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_LOAD_UNLOAD___INITIALIZE = TO_USE_ACTION_LOAD_UNLOAD___INITIALIZE;
+
+	/**
+	 * The operation id for the '<em>Run</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_LOAD_UNLOAD___RUN = TO_USE_ACTION_LOAD_UNLOAD___RUN;
+
+	/**
+	 * The operation id for the '<em>Finalize</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_LOAD_UNLOAD___FINALIZE = TO_USE_ACTION_LOAD_UNLOAD___FINALIZE;
 
 	/**
 	 * The number of operations of the '<em>To Use Schedule Load Unload</em>' class.
@@ -1672,7 +1681,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD_OPERATION_COUNT = TO_USE_ACTION_OPERATION_COUNT + 0;
+	int TO_USE_SCHEDULE_LOAD_UNLOAD_OPERATION_COUNT = TO_USE_ACTION_LOAD_UNLOAD_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -4213,6 +4222,124 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int CALC_RESOURCE_DISTANCE_OPERATION_COUNT = CALC_RESOURCE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseUnscheduleLoadUnloadImpl <em>To Use Unschedule Load Unload</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseUnscheduleLoadUnloadImpl
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseUnscheduleLoadUnload()
+	 * @generated
+	 */
+	int TO_USE_UNSCHEDULE_LOAD_UNLOAD = 20;
+
+	/**
+	 * The feature id for the '<em><b>Root Moves</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__ROOT_MOVES = TO_USE_ACTION_LOAD_UNLOAD__ROOT_MOVES;
+
+	/**
+	 * The feature id for the '<em><b>Current Move</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__CURRENT_MOVE = TO_USE_ACTION_LOAD_UNLOAD__CURRENT_MOVE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__DESCRIPTION = TO_USE_ACTION_LOAD_UNLOAD__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Valid Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__VALID_FEEDBACK = TO_USE_ACTION_LOAD_UNLOAD__VALID_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Valid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__VALID = TO_USE_ACTION_LOAD_UNLOAD__VALID;
+
+	/**
+	 * The feature id for the '<em><b>Solution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__SOLUTION = TO_USE_ACTION_LOAD_UNLOAD__SOLUTION;
+
+	/**
+	 * The feature id for the '<em><b>Load Task</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__LOAD_TASK = TO_USE_ACTION_LOAD_UNLOAD__LOAD_TASK;
+
+	/**
+	 * The number of structural features of the '<em>To Use Unschedule Load Unload</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNSCHEDULE_LOAD_UNLOAD_FEATURE_COUNT = TO_USE_ACTION_LOAD_UNLOAD_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Initialize</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNSCHEDULE_LOAD_UNLOAD___INITIALIZE = TO_USE_ACTION_LOAD_UNLOAD___INITIALIZE;
+
+	/**
+	 * The operation id for the '<em>Run</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNSCHEDULE_LOAD_UNLOAD___RUN = TO_USE_ACTION_LOAD_UNLOAD___RUN;
+
+	/**
+	 * The operation id for the '<em>Finalize</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNSCHEDULE_LOAD_UNLOAD___FINALIZE = TO_USE_ACTION_LOAD_UNLOAD___FINALIZE;
+
+	/**
+	 * The number of operations of the '<em>To Use Unschedule Load Unload</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNSCHEDULE_LOAD_UNLOAD_OPERATION_COUNT = TO_USE_ACTION_LOAD_UNLOAD_OPERATION_COUNT + 0;
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.Domain <em>Domain</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4660,14 +4787,14 @@ public interface ToUseSchedulerPackage extends EPackage {
 	EReference getCalcResourceDistance_ConcreteParent();
 
 	/**
-	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.ToUseAction <em>To Use Action</em>}'.
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.ToUseUnscheduleLoadUnload <em>To Use Unschedule Load Unload</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>To Use Action</em>'.
-	 * @see com.misc.touse.moplaf.tousescheduler.ToUseAction
+	 * @return the meta object for class '<em>To Use Unschedule Load Unload</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseUnscheduleLoadUnload
 	 * @generated
 	 */
-	EClass getToUseAction();
+	EClass getToUseUnscheduleLoadUnload();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleLoadUnload <em>To Use Schedule Load Unload</em>}'.
@@ -4678,17 +4805,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getToUseScheduleLoadUnload();
-
-	/**
-	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleLoadUnload#getLoadTask <em>Load Task</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Load Task</em>'.
-	 * @see com.misc.touse.moplaf.tousescheduler.ToUseScheduleLoadUnload#getLoadTask()
-	 * @see #getToUseScheduleLoadUnload()
-	 * @generated
-	 */
-	EReference getToUseScheduleLoadUnload_LoadTask();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.ToUseLoadShipment <em>To Use Load Shipment</em>}'.
@@ -4753,6 +4869,27 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getToUseUnloadShipment_LoadShipment();
+
+	/**
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.ToUseActionLoadUnload <em>To Use Action Load Unload</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>To Use Action Load Unload</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseActionLoadUnload
+	 * @generated
+	 */
+	EClass getToUseActionLoadUnload();
+
+	/**
+	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.tousescheduler.ToUseActionLoadUnload#getLoadTask <em>Load Task</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Load Task</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseActionLoadUnload#getLoadTask()
+	 * @see #getToUseActionLoadUnload()
+	 * @generated
+	 */
+	EReference getToUseActionLoadUnload_LoadTask();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.ToUseSchedule <em>To Use Schedule</em>}'.
@@ -5164,14 +5301,14 @@ public interface ToUseSchedulerPackage extends EPackage {
 		EReference CALC_RESOURCE_DISTANCE__CONCRETE_PARENT = eINSTANCE.getCalcResourceDistance_ConcreteParent();
 
 		/**
-		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseActionImpl <em>To Use Action</em>}' class.
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseUnscheduleLoadUnloadImpl <em>To Use Unschedule Load Unload</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseActionImpl
-		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseAction()
+		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseUnscheduleLoadUnloadImpl
+		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseUnscheduleLoadUnload()
 		 * @generated
 		 */
-		EClass TO_USE_ACTION = eINSTANCE.getToUseAction();
+		EClass TO_USE_UNSCHEDULE_LOAD_UNLOAD = eINSTANCE.getToUseUnscheduleLoadUnload();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleLoadUnloadImpl <em>To Use Schedule Load Unload</em>}' class.
@@ -5182,14 +5319,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TO_USE_SCHEDULE_LOAD_UNLOAD = eINSTANCE.getToUseScheduleLoadUnload();
-
-		/**
-		 * The meta object literal for the '<em><b>Load Task</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TO_USE_SCHEDULE_LOAD_UNLOAD__LOAD_TASK = eINSTANCE.getToUseScheduleLoadUnload_LoadTask();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseLoadShipmentImpl <em>To Use Load Shipment</em>}' class.
@@ -5242,6 +5371,24 @@ public interface ToUseSchedulerPackage extends EPackage {
 		 * @generated
 		 */
 		EReference TO_USE_UNLOAD_SHIPMENT__LOAD_SHIPMENT = eINSTANCE.getToUseUnloadShipment_LoadShipment();
+
+		/**
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseActionLoadUnloadImpl <em>To Use Action Load Unload</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseActionLoadUnloadImpl
+		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseActionLoadUnload()
+		 * @generated
+		 */
+		EClass TO_USE_ACTION_LOAD_UNLOAD = eINSTANCE.getToUseActionLoadUnload();
+
+		/**
+		 * The meta object literal for the '<em><b>Load Task</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TO_USE_ACTION_LOAD_UNLOAD__LOAD_TASK = eINSTANCE.getToUseActionLoadUnload_LoadTask();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleImpl <em>To Use Schedule</em>}' class.

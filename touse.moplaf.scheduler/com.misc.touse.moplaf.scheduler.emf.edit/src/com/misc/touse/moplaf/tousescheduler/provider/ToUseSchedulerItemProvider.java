@@ -194,6 +194,11 @@ public class ToUseSchedulerItemProvider extends SchedulerItemProvider {
 			(createChildParameter
 				(ToUseSchedulerPackage.Literals.TO_USE_SCHEDULER__ACTIONS,
 				 ToUseSchedulerFactory.eINSTANCE.createToUseScheduleLoadUnload()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ToUseSchedulerPackage.Literals.TO_USE_SCHEDULER__ACTIONS,
+				 ToUseSchedulerFactory.eINSTANCE.createToUseUnscheduleLoadUnload()));
 	}
 
 	/**

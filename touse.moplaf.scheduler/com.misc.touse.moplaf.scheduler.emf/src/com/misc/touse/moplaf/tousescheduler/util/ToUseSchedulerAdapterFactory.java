@@ -119,8 +119,8 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 				return createToUseUnloadShipmentAdapter();
 			}
 			@Override
-			public Adapter caseToUseAction(ToUseAction object) {
-				return createToUseActionAdapter();
+			public Adapter caseToUseActionLoadUnload(ToUseActionLoadUnload object) {
+				return createToUseActionLoadUnloadAdapter();
 			}
 			@Override
 			public Adapter caseToUseScheduleLoadUnload(ToUseScheduleLoadUnload object) {
@@ -157,6 +157,10 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseCalcResourceDistance(CalcResourceDistance object) {
 				return createCalcResourceDistanceAdapter();
+			}
+			@Override
+			public Adapter caseToUseUnscheduleLoadUnload(ToUseUnscheduleLoadUnload object) {
+				return createToUseUnscheduleLoadUnloadAdapter();
 			}
 			@Override
 			public Adapter caseStrategy(Strategy object) {
@@ -433,6 +437,20 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.tousescheduler.ToUseUnscheduleLoadUnload <em>To Use Unschedule Load Unload</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseUnscheduleLoadUnload
+	 * @generated
+	 */
+	public Adapter createToUseUnscheduleLoadUnloadAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.localsearch.Strategy <em>Strategy</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -443,20 +461,6 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createStrategyAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.tousescheduler.ToUseAction <em>To Use Action</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.touse.moplaf.tousescheduler.ToUseAction
-	 * @generated
-	 */
-	public Adapter createToUseActionAdapter() {
 		return null;
 	}
 
@@ -499,6 +503,20 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createToUseUnloadShipmentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.tousescheduler.ToUseActionLoadUnload <em>To Use Action Load Unload</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseActionLoadUnload
+	 * @generated
+	 */
+	public Adapter createToUseActionLoadUnloadAdapter() {
 		return null;
 	}
 

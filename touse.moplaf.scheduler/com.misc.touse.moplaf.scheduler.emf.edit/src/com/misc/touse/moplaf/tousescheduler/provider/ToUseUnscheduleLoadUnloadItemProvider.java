@@ -3,37 +3,30 @@
 package com.misc.touse.moplaf.tousescheduler.provider;
 
 
-import com.misc.common.moplaf.localsearch.LocalSearchPackage;
+import com.misc.touse.moplaf.tousescheduler.ToUseUnscheduleLoadUnload;
 
-import com.misc.common.moplaf.localsearch.provider.ActionItemProvider;
-
-import com.misc.common.moplaf.scheduler.SchedulerFactory;
-
-import com.misc.touse.moplaf.tousescheduler.ToUseAction;
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
- * This is the item provider adapter for a {@link com.misc.touse.moplaf.tousescheduler.ToUseAction} object.
+ * This is the item provider adapter for a {@link com.misc.touse.moplaf.tousescheduler.ToUseUnscheduleLoadUnload} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ToUseActionItemProvider extends ActionItemProvider {
+public class ToUseUnscheduleLoadUnloadItemProvider extends ToUseActionLoadUnloadItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ToUseActionItemProvider(AdapterFactory adapterFactory) {
+	public ToUseUnscheduleLoadUnloadItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -53,14 +46,14 @@ public class ToUseActionItemProvider extends ActionItemProvider {
 	}
 
 	/**
-	 * This returns ToUseAction.gif.
+	 * This returns ToUseUnscheduleLoadUnload.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/ToUseAction"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ToUseUnscheduleLoadUnload"));
 	}
 
 	/**
@@ -71,10 +64,10 @@ public class ToUseActionItemProvider extends ActionItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ToUseAction)object).getDescription();
+		String label = ((ToUseUnscheduleLoadUnload)object).getDescription();
 		return label == null || label.length() == 0 ?
-			getString("_UI_ToUseAction_type") :
-			getString("_UI_ToUseAction_type") + " " + label;
+			getString("_UI_ToUseUnscheduleLoadUnload_type") :
+			getString("_UI_ToUseUnscheduleLoadUnload_type") + " " + label;
 	}
 	
 
@@ -101,32 +94,6 @@ public class ToUseActionItemProvider extends ActionItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LocalSearchPackage.Literals.ACTION__ROOT_MOVES,
-				 SchedulerFactory.eINSTANCE.createScheduleAfter()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LocalSearchPackage.Literals.ACTION__ROOT_MOVES,
-				 SchedulerFactory.eINSTANCE.createScheduleBefore()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LocalSearchPackage.Literals.ACTION__ROOT_MOVES,
-				 SchedulerFactory.eINSTANCE.createUnschedule()));
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return ToUseSchedulerEditPlugin.INSTANCE;
 	}
 
 }

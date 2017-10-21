@@ -153,17 +153,17 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ToUseSchedulerPackage.TO_USE_ACTION: {
-				ToUseAction toUseAction = (ToUseAction)theEObject;
-				T result = caseToUseAction(toUseAction);
-				if (result == null) result = caseAction(toUseAction);
+			case ToUseSchedulerPackage.TO_USE_ACTION_LOAD_UNLOAD: {
+				ToUseActionLoadUnload toUseActionLoadUnload = (ToUseActionLoadUnload)theEObject;
+				T result = caseToUseActionLoadUnload(toUseActionLoadUnload);
+				if (result == null) result = caseAction(toUseActionLoadUnload);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_LOAD_UNLOAD: {
 				ToUseScheduleLoadUnload toUseScheduleLoadUnload = (ToUseScheduleLoadUnload)theEObject;
 				T result = caseToUseScheduleLoadUnload(toUseScheduleLoadUnload);
-				if (result == null) result = caseToUseAction(toUseScheduleLoadUnload);
+				if (result == null) result = caseToUseActionLoadUnload(toUseScheduleLoadUnload);
 				if (result == null) result = caseAction(toUseScheduleLoadUnload);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -240,6 +240,14 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 				if (result == null) result = caseCalcScheduler(calcResourceDistance);
 				if (result == null) result = casePropagatorFunctionBindings(calcResourceDistance);
 				if (result == null) result = casePropagatorFunction(calcResourceDistance);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ToUseSchedulerPackage.TO_USE_UNSCHEDULE_LOAD_UNLOAD: {
+				ToUseUnscheduleLoadUnload toUseUnscheduleLoadUnload = (ToUseUnscheduleLoadUnload)theEObject;
+				T result = caseToUseUnscheduleLoadUnload(toUseUnscheduleLoadUnload);
+				if (result == null) result = caseToUseActionLoadUnload(toUseUnscheduleLoadUnload);
+				if (result == null) result = caseAction(toUseUnscheduleLoadUnload);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -473,6 +481,21 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>To Use Unschedule Load Unload</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>To Use Unschedule Load Unload</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseToUseUnscheduleLoadUnload(ToUseUnscheduleLoadUnload object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Strategy</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -484,21 +507,6 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseStrategy(Strategy object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>To Use Action</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>To Use Action</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseToUseAction(ToUseAction object) {
 		return null;
 	}
 
@@ -544,6 +552,21 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseToUseUnloadShipment(ToUseUnloadShipment object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>To Use Action Load Unload</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>To Use Action Load Unload</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseToUseActionLoadUnload(ToUseActionLoadUnload object) {
 		return null;
 	}
 

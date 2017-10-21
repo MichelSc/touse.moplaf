@@ -6,7 +6,7 @@ import com.misc.common.moplaf.localsearch.Score;
 import com.misc.common.moplaf.scheduler.Schedule;
 import com.misc.common.moplaf.scheduler.impl.SchedulerImpl;
 import com.misc.touse.moplaf.tousescheduler.Shipment;
-import com.misc.touse.moplaf.tousescheduler.ToUseAction;
+import com.misc.touse.moplaf.tousescheduler.ToUseActionLoadUnload;
 import com.misc.touse.moplaf.tousescheduler.ToUseLoadShipment;
 import com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource;
 import com.misc.touse.moplaf.tousescheduler.ToUseScheduler;
@@ -65,7 +65,7 @@ public class ToUseSchedulerImpl extends SchedulerImpl implements ToUseScheduler 
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ToUseAction> actions;
+	protected EList<ToUseActionLoadUnload> actions;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -114,9 +114,9 @@ public class ToUseSchedulerImpl extends SchedulerImpl implements ToUseScheduler 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ToUseAction> getActions() {
+	public EList<ToUseActionLoadUnload> getActions() {
 		if (actions == null) {
-			actions = new EObjectContainmentEList<ToUseAction>(ToUseAction.class, this, ToUseSchedulerPackage.TO_USE_SCHEDULER__ACTIONS);
+			actions = new EObjectContainmentEList<ToUseActionLoadUnload>(ToUseActionLoadUnload.class, this, ToUseSchedulerPackage.TO_USE_SCHEDULER__ACTIONS);
 		}
 		return actions;
 	}
@@ -172,7 +172,7 @@ public class ToUseSchedulerImpl extends SchedulerImpl implements ToUseScheduler 
 				return;
 			case ToUseSchedulerPackage.TO_USE_SCHEDULER__ACTIONS:
 				getActions().clear();
-				getActions().addAll((Collection<? extends ToUseAction>)newValue);
+				getActions().addAll((Collection<? extends ToUseActionLoadUnload>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

@@ -59,7 +59,7 @@ public interface ToUseScheduler extends Scheduler {
 
 	/**
 	 * Returns the value of the '<em><b>Actions</b></em>' containment reference list.
-	 * The list contents are of type {@link com.misc.touse.moplaf.tousescheduler.ToUseAction}.
+	 * The list contents are of type {@link com.misc.touse.moplaf.tousescheduler.ToUseActionLoadUnload}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Actions</em>' containment reference list isn't clear,
@@ -71,5 +71,5 @@ public interface ToUseScheduler extends Scheduler {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<ToUseAction> getActions();
+	EList<ToUseActionLoadUnload> getActions();
 } // ToUseScheduler

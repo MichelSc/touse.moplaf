@@ -325,6 +325,29 @@ public class ToUseSchedulerItemProviderAdapterFactory extends ToUseSchedulerAdap
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.ToUseUnscheduleLoadUnload} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ToUseUnscheduleLoadUnloadItemProvider toUseUnscheduleLoadUnloadItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousescheduler.ToUseUnscheduleLoadUnload}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createToUseUnscheduleLoadUnloadAdapter() {
+		if (toUseUnscheduleLoadUnloadItemProvider == null) {
+			toUseUnscheduleLoadUnloadItemProvider = new ToUseUnscheduleLoadUnloadItemProvider(this);
+		}
+
+		return toUseUnscheduleLoadUnloadItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleLoadUnload} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -530,6 +553,7 @@ public class ToUseSchedulerItemProviderAdapterFactory extends ToUseSchedulerAdap
 		if (layerScheduleDistanceItemProvider != null) layerScheduleDistanceItemProvider.dispose();
 		if (calcTaskDistanceItemProvider != null) calcTaskDistanceItemProvider.dispose();
 		if (calcResourceDistanceItemProvider != null) calcResourceDistanceItemProvider.dispose();
+		if (toUseUnscheduleLoadUnloadItemProvider != null) toUseUnscheduleLoadUnloadItemProvider.dispose();
 	}
 
 }

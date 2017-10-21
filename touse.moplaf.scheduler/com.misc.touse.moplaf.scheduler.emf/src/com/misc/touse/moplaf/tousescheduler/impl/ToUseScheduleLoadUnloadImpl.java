@@ -11,38 +11,16 @@ import com.misc.touse.moplaf.tousescheduler.ToUseSchedule;
 import com.misc.touse.moplaf.tousescheduler.ToUseScheduleLoadUnload;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
 import com.misc.touse.moplaf.tousescheduler.ToUseUnloadShipment;
-
-import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>To Use Schedule Load Unload</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * The following features are implemented:
- * </p>
- * <ul>
- *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleLoadUnloadImpl#getLoadTask <em>Load Task</em>}</li>
- * </ul>
  *
  * @generated
  */
-public class ToUseScheduleLoadUnloadImpl extends ToUseActionImpl implements ToUseScheduleLoadUnload {
-	/**
-	 * The cached value of the '{@link #getLoadTask() <em>Load Task</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLoadTask()
-	 * @generated
-	 * @ordered
-	 */
-	protected ToUseLoadShipment loadTask;
-
+public class ToUseScheduleLoadUnloadImpl extends ToUseActionLoadUnloadImpl implements ToUseScheduleLoadUnload {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -60,115 +38,6 @@ public class ToUseScheduleLoadUnloadImpl extends ToUseActionImpl implements ToUs
 	@Override
 	protected EClass eStaticClass() {
 		return ToUseSchedulerPackage.Literals.TO_USE_SCHEDULE_LOAD_UNLOAD;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ToUseLoadShipment getLoadTask() {
-		if (loadTask != null && loadTask.eIsProxy()) {
-			InternalEObject oldLoadTask = (InternalEObject)loadTask;
-			loadTask = (ToUseLoadShipment)eResolveProxy(oldLoadTask);
-			if (loadTask != oldLoadTask) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ToUseSchedulerPackage.TO_USE_SCHEDULE_LOAD_UNLOAD__LOAD_TASK, oldLoadTask, loadTask));
-			}
-		}
-		return loadTask;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ToUseLoadShipment basicGetLoadTask() {
-		return loadTask;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setLoadTask(ToUseLoadShipment newLoadTask) {
-		ToUseLoadShipment oldLoadTask = loadTask;
-		loadTask = newLoadTask;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToUseSchedulerPackage.TO_USE_SCHEDULE_LOAD_UNLOAD__LOAD_TASK, oldLoadTask, loadTask));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case ToUseSchedulerPackage.TO_USE_SCHEDULE_LOAD_UNLOAD__LOAD_TASK:
-				if (resolve) return getLoadTask();
-				return basicGetLoadTask();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case ToUseSchedulerPackage.TO_USE_SCHEDULE_LOAD_UNLOAD__LOAD_TASK:
-				setLoadTask((ToUseLoadShipment)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-			case ToUseSchedulerPackage.TO_USE_SCHEDULE_LOAD_UNLOAD__LOAD_TASK:
-				setLoadTask((ToUseLoadShipment)null);
-				return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case ToUseSchedulerPackage.TO_USE_SCHEDULE_LOAD_UNLOAD__LOAD_TASK:
-				return loadTask != null;
-		}
-		return super.eIsSet(featureID);
-	}
-
-	@Override
-	public String getValidFeedback() {
-		String superFeedback = super.getValidFeedback();
-		if ( superFeedback!=null) {
-			return superFeedback;
-		}
-		if ( this.getLoadTask()==null) {
-			return "No load task";
-		}
-		return null;
 	}
 
 	@Override
