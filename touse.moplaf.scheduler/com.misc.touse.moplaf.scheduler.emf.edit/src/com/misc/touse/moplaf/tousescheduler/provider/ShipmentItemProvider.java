@@ -183,11 +183,10 @@ public class ShipmentItemProvider
 	 * This returns Shipment.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Shipment"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/shipment.png"));
 	}
 
 	/**

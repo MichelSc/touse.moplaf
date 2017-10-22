@@ -53,17 +53,6 @@ public class ToUseScheduleItemProvider extends ScheduleItemProvider {
 	}
 
 	/**
-	 * This returns ToUseSchedule.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/ToUseSchedule"));
-	}
-
-	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

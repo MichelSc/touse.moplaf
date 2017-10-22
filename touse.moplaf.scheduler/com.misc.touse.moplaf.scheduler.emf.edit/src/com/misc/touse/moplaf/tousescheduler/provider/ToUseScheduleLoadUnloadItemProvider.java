@@ -47,17 +47,6 @@ public class ToUseScheduleLoadUnloadItemProvider extends ToUseActionLoadUnloadIt
 
 
 	/**
-	 * This returns ToUseScheduleLoadUnload.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/ToUseScheduleLoadUnload"));
-	}
-
-	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
