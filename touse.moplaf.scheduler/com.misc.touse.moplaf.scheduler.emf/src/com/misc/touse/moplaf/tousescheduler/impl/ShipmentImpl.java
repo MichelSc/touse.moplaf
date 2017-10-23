@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ShipmentImpl#getLoadLocationY <em>Load Location Y</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ShipmentImpl#getUnloadLocationX <em>Unload Location X</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ShipmentImpl#getUnloadLocationY <em>Unload Location Y</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ShipmentImpl#getVolume <em>Volume</em>}</li>
  * </ul>
  *
  * @generated
@@ -129,6 +130,26 @@ public class ShipmentImpl extends MinimalEObjectImpl.Container implements Shipme
 	 * @ordered
 	 */
 	protected float unloadLocationY = UNLOAD_LOCATION_Y_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getVolume() <em>Volume</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getVolume()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final float VOLUME_EDEFAULT = 0.0F;
+
+	/**
+	 * The cached value of the '{@link #getVolume() <em>Volume</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getVolume()
+	 * @generated
+	 * @ordered
+	 */
+	protected float volume = VOLUME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -259,6 +280,27 @@ public class ShipmentImpl extends MinimalEObjectImpl.Container implements Shipme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public float getVolume() {
+		return volume;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setVolume(float newVolume) {
+		float oldVolume = volume;
+		volume = newVolume;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseSchedulerPackage.SHIPMENT__VOLUME, oldVolume, volume));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -272,6 +314,8 @@ public class ShipmentImpl extends MinimalEObjectImpl.Container implements Shipme
 				return getUnloadLocationX();
 			case ToUseSchedulerPackage.SHIPMENT__UNLOAD_LOCATION_Y:
 				return getUnloadLocationY();
+			case ToUseSchedulerPackage.SHIPMENT__VOLUME:
+				return getVolume();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -298,6 +342,9 @@ public class ShipmentImpl extends MinimalEObjectImpl.Container implements Shipme
 				return;
 			case ToUseSchedulerPackage.SHIPMENT__UNLOAD_LOCATION_Y:
 				setUnloadLocationY((Float)newValue);
+				return;
+			case ToUseSchedulerPackage.SHIPMENT__VOLUME:
+				setVolume((Float)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -326,6 +373,9 @@ public class ShipmentImpl extends MinimalEObjectImpl.Container implements Shipme
 			case ToUseSchedulerPackage.SHIPMENT__UNLOAD_LOCATION_Y:
 				setUnloadLocationY(UNLOAD_LOCATION_Y_EDEFAULT);
 				return;
+			case ToUseSchedulerPackage.SHIPMENT__VOLUME:
+				setVolume(VOLUME_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -348,6 +398,8 @@ public class ShipmentImpl extends MinimalEObjectImpl.Container implements Shipme
 				return unloadLocationX != UNLOAD_LOCATION_X_EDEFAULT;
 			case ToUseSchedulerPackage.SHIPMENT__UNLOAD_LOCATION_Y:
 				return unloadLocationY != UNLOAD_LOCATION_Y_EDEFAULT;
+			case ToUseSchedulerPackage.SHIPMENT__VOLUME:
+				return volume != VOLUME_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -372,6 +424,8 @@ public class ShipmentImpl extends MinimalEObjectImpl.Container implements Shipme
 		result.append(unloadLocationX);
 		result.append(", UnloadLocationY: ");
 		result.append(unloadLocationY);
+		result.append(", Volume: ");
+		result.append(volume);
 		result.append(')');
 		return result.toString();
 	}

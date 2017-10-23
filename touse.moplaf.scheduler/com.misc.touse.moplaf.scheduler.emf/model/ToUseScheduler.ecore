@@ -14,6 +14,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="HomeLocationX" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="HomeLocationY" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="MaxVolumeLoaded" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Shipment">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -21,6 +22,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="LoadLocationY" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="UnloadLocationX" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="UnloadLocationY" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Volume" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ToUseScheduler" eSuperTypes="../../com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//Scheduler">
     <eStructuralFeatures xsi:type="ecore:EReference" name="SelectedVehicles" upperBound="-1"
@@ -35,20 +37,29 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ToUseScore" eSuperTypes="../../com.misc.common.moplaf.localsearch.emf/model/localsearch.ecore#//Score">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="TotalDistance" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="VolumeOverload" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ToUseScheduleResource" eSuperTypes="../../com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//Resource">
     <eStructuralFeatures xsi:type="ecore:EReference" name="Vehicle" lowerBound="1"
         eType="#//Vehicle"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="DistanceFromLast" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="TotalDistance" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="VolumeOverload" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ToUseScheduleTask" eSuperTypes="../../com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//Task">
     <eStructuralFeatures xsi:type="ecore:EReference" name="Shipment" lowerBound="1"
         eType="#//Shipment" changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Distance" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="DistanceFromPrevious" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="StartVolumeLoaded" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="EndVolumeLoaded" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="locationX" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
         changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="locationY" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
         changeable="false" volatile="true" transient="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="LoadFactor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
+        changeable="false" volatile="true" transient="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="VolumeOverload" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ToUseLoadShipment" eSuperTypes="#//ToUseScheduleTask">
     <eStructuralFeatures xsi:type="ecore:EReference" name="ShipmentLoaded" lowerBound="1"
@@ -68,6 +79,7 @@
         eType="#//ToUseLoadShipment"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ToUseScheduleLoadUnload" eSuperTypes="#//ToUseActionLoadUnload"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ToUseUnscheduleLoadUnload" eSuperTypes="#//ToUseActionLoadUnload"/>
   <eClassifiers xsi:type="ecore:EClass" name="CalcScheduler" abstract="true" eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//PropagatorFunctionBindings"/>
   <eClassifiers xsi:type="ecore:EClass" name="CalcSchedule" abstract="true" eSuperTypes="#//CalcScheduler">
     <eStructuralFeatures xsi:type="ecore:EReference" name="Schedule" lowerBound="1"
@@ -89,7 +101,17 @@
         eType="#//ScopeScheduleScore" changeable="false" volatile="true" transient="true"
         derived="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CalcTaskDistanceFromPrevious" eSuperTypes="#//CalcTask">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ConcreteParent" lowerBound="1"
+        eType="#//LayerScheduleDistance" changeable="false" volatile="true" transient="true"
+        derived="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CalcTaskDistance" eSuperTypes="#//CalcTask">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ConcreteParent" lowerBound="1"
+        eType="#//LayerScheduleDistance" changeable="false" volatile="true" transient="true"
+        derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CalcResourceDistanceFromLast" eSuperTypes="#//CalcResource">
     <eStructuralFeatures xsi:type="ecore:EReference" name="ConcreteParent" lowerBound="1"
         eType="#//LayerScheduleDistance" changeable="false" volatile="true" transient="true"
         derived="true"/>
@@ -99,5 +121,24 @@
         eType="#//LayerScheduleDistance" changeable="false" volatile="true" transient="true"
         derived="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ToUseUnscheduleLoadUnload" eSuperTypes="#//ToUseActionLoadUnload"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LayerScheduleVolumeLoaded" eSuperTypes="#//CalcSchedule">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ConcreteParent" lowerBound="1"
+        eType="#//ScopeScheduleScore" changeable="false" volatile="true" transient="true"
+        derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CalcTaskStartVolumeLoaded" eSuperTypes="#//CalcTask">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ConcreteParent" lowerBound="1"
+        eType="#//LayerScheduleVolumeLoaded" changeable="false" volatile="true" transient="true"
+        derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CalcTaskEndVolumeLoaded" eSuperTypes="#//CalcTask">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ConcreteParent" lowerBound="1"
+        eType="#//LayerScheduleVolumeLoaded" changeable="false" volatile="true" transient="true"
+        derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CalcResourceVolumeOverload" eSuperTypes="#//CalcResource">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ConcreteParent" lowerBound="1"
+        eType="#//LayerScheduleVolumeLoaded" changeable="false" volatile="true" transient="true"
+        derived="true"/>
+  </eClassifiers>
 </ecore:EPackage>

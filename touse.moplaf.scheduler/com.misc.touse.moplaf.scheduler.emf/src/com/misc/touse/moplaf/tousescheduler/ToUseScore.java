@@ -14,6 +14,7 @@ import com.misc.common.moplaf.localsearch.Score;
  * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.ToUseScore#getTotalDistance <em>Total Distance</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.ToUseScore#isVolumeOverload <em>Volume Overload</em>}</li>
  * </ul>
  *
  * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getToUseScore()
@@ -46,5 +47,31 @@ public interface ToUseScore extends Score {
 	 * @generated
 	 */
 	void setTotalDistance(float value);
+
+	/**
+	 * Returns the value of the '<em><b>Volume Overload</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Volume Overload</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Volume Overload</em>' attribute.
+	 * @see #setVolumeOverload(boolean)
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getToUseScore_VolumeOverload()
+	 * @model
+	 * @generated
+	 */
+	boolean isVolumeOverload();
+
+	/**
+	 * Sets the value of the '{@link com.misc.touse.moplaf.tousescheduler.ToUseScore#isVolumeOverload <em>Volume Overload</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Volume Overload</em>' attribute.
+	 * @see #isVolumeOverload()
+	 * @generated
+	 */
+	void setVolumeOverload(boolean value);
 
 } // ToUseScore

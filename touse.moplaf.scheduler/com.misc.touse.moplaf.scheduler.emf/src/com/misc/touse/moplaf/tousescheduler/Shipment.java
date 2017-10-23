@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.Shipment#getLoadLocationY <em>Load Location Y</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.Shipment#getUnloadLocationX <em>Unload Location X</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.Shipment#getUnloadLocationY <em>Unload Location Y</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.Shipment#getVolume <em>Volume</em>}</li>
  * </ul>
  *
  * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getShipment()
@@ -154,5 +155,31 @@ public interface Shipment extends EObject {
 	 * @generated
 	 */
 	void setUnloadLocationY(float value);
+
+	/**
+	 * Returns the value of the '<em><b>Volume</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Volume</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Volume</em>' attribute.
+	 * @see #setVolume(float)
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getShipment_Volume()
+	 * @model
+	 * @generated
+	 */
+	float getVolume();
+
+	/**
+	 * Sets the value of the '{@link com.misc.touse.moplaf.tousescheduler.Shipment#getVolume <em>Volume</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Volume</em>' attribute.
+	 * @see #getVolume()
+	 * @generated
+	 */
+	void setVolume(float value);
 
 } // Shipment

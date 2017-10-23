@@ -32,7 +32,7 @@ public interface ToUseUnloadShipment extends ToUseScheduleTask {
 	 * @return the value of the '<em>Shipment Unloaded</em>' reference.
 	 * @see #setShipmentUnloaded(Shipment)
 	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getToUseUnloadShipment_ShipmentUnloaded()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	Shipment getShipmentUnloaded();

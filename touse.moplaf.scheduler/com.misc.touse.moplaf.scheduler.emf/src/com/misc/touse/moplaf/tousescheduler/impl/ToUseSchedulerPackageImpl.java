@@ -8,12 +8,18 @@ import com.misc.common.moplaf.propagator2.PropagatorPackage;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
 import com.misc.touse.moplaf.tousescheduler.CalcResource;
 import com.misc.touse.moplaf.tousescheduler.CalcResourceDistance;
+import com.misc.touse.moplaf.tousescheduler.CalcResourceDistanceFromLast;
+import com.misc.touse.moplaf.tousescheduler.CalcResourceVolumeOverload;
 import com.misc.touse.moplaf.tousescheduler.CalcSchedule;
 import com.misc.touse.moplaf.tousescheduler.CalcScheduler;
 import com.misc.touse.moplaf.tousescheduler.CalcTask;
 import com.misc.touse.moplaf.tousescheduler.CalcTaskDistance;
+import com.misc.touse.moplaf.tousescheduler.CalcTaskDistanceFromPrevious;
+import com.misc.touse.moplaf.tousescheduler.CalcTaskEndVolumeLoaded;
+import com.misc.touse.moplaf.tousescheduler.CalcTaskStartVolumeLoaded;
 import com.misc.touse.moplaf.tousescheduler.Domain;
 import com.misc.touse.moplaf.tousescheduler.LayerScheduleDistance;
+import com.misc.touse.moplaf.tousescheduler.LayerScheduleVolumeLoaded;
 import com.misc.touse.moplaf.tousescheduler.ScopeScheduleScore;
 import com.misc.touse.moplaf.tousescheduler.Shipment;
 import com.misc.touse.moplaf.tousescheduler.ToUseActionLoadUnload;
@@ -139,6 +145,13 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass calcTaskDistanceFromPreviousEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass calcTaskDistanceEClass = null;
 
 	/**
@@ -146,7 +159,42 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass calcResourceDistanceFromLastEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass calcResourceDistanceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass layerScheduleVolumeLoadedEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass calcResourceVolumeOverloadEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass calcTaskStartVolumeLoadedEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass calcTaskEndVolumeLoadedEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -333,6 +381,15 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getVehicle_MaxVolumeLoaded() {
+		return (EAttribute)vehicleEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getToUseScore() {
 		return toUseScoreEClass;
 	}
@@ -344,6 +401,15 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 */
 	public EAttribute getToUseScore_TotalDistance() {
 		return (EAttribute)toUseScoreEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getToUseScore_VolumeOverload() {
+		return (EAttribute)toUseScoreEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -441,6 +507,15 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getShipment_Volume() {
+		return (EAttribute)shipmentEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getToUseScheduleTask() {
 		return toUseScheduleTaskEClass;
 	}
@@ -468,7 +543,7 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getToUseScheduleTask_LocationX() {
+	public EAttribute getToUseScheduleTask_DistanceFromPrevious() {
 		return (EAttribute)toUseScheduleTaskEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -477,8 +552,53 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getToUseScheduleTask_LocationY() {
+	public EAttribute getToUseScheduleTask_StartVolumeLoaded() {
 		return (EAttribute)toUseScheduleTaskEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getToUseScheduleTask_EndVolumeLoaded() {
+		return (EAttribute)toUseScheduleTaskEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getToUseScheduleTask_LocationX() {
+		return (EAttribute)toUseScheduleTaskEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getToUseScheduleTask_LocationY() {
+		return (EAttribute)toUseScheduleTaskEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getToUseScheduleTask_LoadFactor() {
+		return (EAttribute)toUseScheduleTaskEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getToUseScheduleTask_VolumeOverload() {
+		return (EAttribute)toUseScheduleTaskEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -567,8 +687,26 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getToUseScheduleResource_TotalDistance() {
+	public EAttribute getToUseScheduleResource_DistanceFromLast() {
 		return (EAttribute)toUseScheduleResourceEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getToUseScheduleResource_TotalDistance() {
+		return (EAttribute)toUseScheduleResourceEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getToUseScheduleResource_VolumeOverload() {
+		return (EAttribute)toUseScheduleResourceEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -603,6 +741,24 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getCalcTaskDistanceFromPrevious() {
+		return calcTaskDistanceFromPreviousEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCalcTaskDistanceFromPrevious_ConcreteParent() {
+		return (EReference)calcTaskDistanceFromPreviousEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getCalcTaskDistance() {
 		return calcTaskDistanceEClass;
 	}
@@ -621,6 +777,24 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getCalcResourceDistanceFromLast() {
+		return calcResourceDistanceFromLastEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCalcResourceDistanceFromLast_ConcreteParent() {
+		return (EReference)calcResourceDistanceFromLastEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getCalcResourceDistance() {
 		return calcResourceDistanceEClass;
 	}
@@ -632,6 +806,78 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 */
 	public EReference getCalcResourceDistance_ConcreteParent() {
 		return (EReference)calcResourceDistanceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getLayerScheduleVolumeLoaded() {
+		return layerScheduleVolumeLoadedEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getLayerScheduleVolumeLoaded_ConcreteParent() {
+		return (EReference)layerScheduleVolumeLoadedEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCalcResourceVolumeOverload() {
+		return calcResourceVolumeOverloadEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCalcResourceVolumeOverload_ConcreteParent() {
+		return (EReference)calcResourceVolumeOverloadEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCalcTaskStartVolumeLoaded() {
+		return calcTaskStartVolumeLoadedEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCalcTaskStartVolumeLoaded_ConcreteParent() {
+		return (EReference)calcTaskStartVolumeLoadedEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCalcTaskEndVolumeLoaded() {
+		return calcTaskEndVolumeLoadedEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCalcTaskEndVolumeLoaded_ConcreteParent() {
+		return (EReference)calcTaskEndVolumeLoadedEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -779,6 +1025,7 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		createEAttribute(vehicleEClass, VEHICLE__NAME);
 		createEAttribute(vehicleEClass, VEHICLE__HOME_LOCATION_X);
 		createEAttribute(vehicleEClass, VEHICLE__HOME_LOCATION_Y);
+		createEAttribute(vehicleEClass, VEHICLE__MAX_VOLUME_LOADED);
 
 		shipmentEClass = createEClass(SHIPMENT);
 		createEAttribute(shipmentEClass, SHIPMENT__NAME);
@@ -786,6 +1033,7 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		createEAttribute(shipmentEClass, SHIPMENT__LOAD_LOCATION_Y);
 		createEAttribute(shipmentEClass, SHIPMENT__UNLOAD_LOCATION_X);
 		createEAttribute(shipmentEClass, SHIPMENT__UNLOAD_LOCATION_Y);
+		createEAttribute(shipmentEClass, SHIPMENT__VOLUME);
 
 		toUseSchedulerEClass = createEClass(TO_USE_SCHEDULER);
 		createEReference(toUseSchedulerEClass, TO_USE_SCHEDULER__SELECTED_VEHICLES);
@@ -797,16 +1045,24 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 
 		toUseScoreEClass = createEClass(TO_USE_SCORE);
 		createEAttribute(toUseScoreEClass, TO_USE_SCORE__TOTAL_DISTANCE);
+		createEAttribute(toUseScoreEClass, TO_USE_SCORE__VOLUME_OVERLOAD);
 
 		toUseScheduleResourceEClass = createEClass(TO_USE_SCHEDULE_RESOURCE);
 		createEReference(toUseScheduleResourceEClass, TO_USE_SCHEDULE_RESOURCE__VEHICLE);
+		createEAttribute(toUseScheduleResourceEClass, TO_USE_SCHEDULE_RESOURCE__DISTANCE_FROM_LAST);
 		createEAttribute(toUseScheduleResourceEClass, TO_USE_SCHEDULE_RESOURCE__TOTAL_DISTANCE);
+		createEAttribute(toUseScheduleResourceEClass, TO_USE_SCHEDULE_RESOURCE__VOLUME_OVERLOAD);
 
 		toUseScheduleTaskEClass = createEClass(TO_USE_SCHEDULE_TASK);
 		createEReference(toUseScheduleTaskEClass, TO_USE_SCHEDULE_TASK__SHIPMENT);
 		createEAttribute(toUseScheduleTaskEClass, TO_USE_SCHEDULE_TASK__DISTANCE);
+		createEAttribute(toUseScheduleTaskEClass, TO_USE_SCHEDULE_TASK__DISTANCE_FROM_PREVIOUS);
+		createEAttribute(toUseScheduleTaskEClass, TO_USE_SCHEDULE_TASK__START_VOLUME_LOADED);
+		createEAttribute(toUseScheduleTaskEClass, TO_USE_SCHEDULE_TASK__END_VOLUME_LOADED);
 		createEAttribute(toUseScheduleTaskEClass, TO_USE_SCHEDULE_TASK__LOCATION_X);
 		createEAttribute(toUseScheduleTaskEClass, TO_USE_SCHEDULE_TASK__LOCATION_Y);
+		createEAttribute(toUseScheduleTaskEClass, TO_USE_SCHEDULE_TASK__LOAD_FACTOR);
+		createEAttribute(toUseScheduleTaskEClass, TO_USE_SCHEDULE_TASK__VOLUME_OVERLOAD);
 
 		toUseLoadShipmentEClass = createEClass(TO_USE_LOAD_SHIPMENT);
 		createEReference(toUseLoadShipmentEClass, TO_USE_LOAD_SHIPMENT__SHIPMENT_LOADED);
@@ -820,6 +1076,8 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		createEReference(toUseActionLoadUnloadEClass, TO_USE_ACTION_LOAD_UNLOAD__LOAD_TASK);
 
 		toUseScheduleLoadUnloadEClass = createEClass(TO_USE_SCHEDULE_LOAD_UNLOAD);
+
+		toUseUnscheduleLoadUnloadEClass = createEClass(TO_USE_UNSCHEDULE_LOAD_UNLOAD);
 
 		calcSchedulerEClass = createEClass(CALC_SCHEDULER);
 
@@ -837,13 +1095,29 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		layerScheduleDistanceEClass = createEClass(LAYER_SCHEDULE_DISTANCE);
 		createEReference(layerScheduleDistanceEClass, LAYER_SCHEDULE_DISTANCE__CONCRETE_PARENT);
 
+		calcTaskDistanceFromPreviousEClass = createEClass(CALC_TASK_DISTANCE_FROM_PREVIOUS);
+		createEReference(calcTaskDistanceFromPreviousEClass, CALC_TASK_DISTANCE_FROM_PREVIOUS__CONCRETE_PARENT);
+
 		calcTaskDistanceEClass = createEClass(CALC_TASK_DISTANCE);
 		createEReference(calcTaskDistanceEClass, CALC_TASK_DISTANCE__CONCRETE_PARENT);
+
+		calcResourceDistanceFromLastEClass = createEClass(CALC_RESOURCE_DISTANCE_FROM_LAST);
+		createEReference(calcResourceDistanceFromLastEClass, CALC_RESOURCE_DISTANCE_FROM_LAST__CONCRETE_PARENT);
 
 		calcResourceDistanceEClass = createEClass(CALC_RESOURCE_DISTANCE);
 		createEReference(calcResourceDistanceEClass, CALC_RESOURCE_DISTANCE__CONCRETE_PARENT);
 
-		toUseUnscheduleLoadUnloadEClass = createEClass(TO_USE_UNSCHEDULE_LOAD_UNLOAD);
+		layerScheduleVolumeLoadedEClass = createEClass(LAYER_SCHEDULE_VOLUME_LOADED);
+		createEReference(layerScheduleVolumeLoadedEClass, LAYER_SCHEDULE_VOLUME_LOADED__CONCRETE_PARENT);
+
+		calcTaskStartVolumeLoadedEClass = createEClass(CALC_TASK_START_VOLUME_LOADED);
+		createEReference(calcTaskStartVolumeLoadedEClass, CALC_TASK_START_VOLUME_LOADED__CONCRETE_PARENT);
+
+		calcTaskEndVolumeLoadedEClass = createEClass(CALC_TASK_END_VOLUME_LOADED);
+		createEReference(calcTaskEndVolumeLoadedEClass, CALC_TASK_END_VOLUME_LOADED__CONCRETE_PARENT);
+
+		calcResourceVolumeOverloadEClass = createEClass(CALC_RESOURCE_VOLUME_OVERLOAD);
+		createEReference(calcResourceVolumeOverloadEClass, CALC_RESOURCE_VOLUME_OVERLOAD__CONCRETE_PARENT);
 	}
 
 	/**
@@ -888,15 +1162,21 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		toUseUnloadShipmentEClass.getESuperTypes().add(this.getToUseScheduleTask());
 		toUseActionLoadUnloadEClass.getESuperTypes().add(theLocalSearchPackage.getAction());
 		toUseScheduleLoadUnloadEClass.getESuperTypes().add(this.getToUseActionLoadUnload());
+		toUseUnscheduleLoadUnloadEClass.getESuperTypes().add(this.getToUseActionLoadUnload());
 		calcSchedulerEClass.getESuperTypes().add(thePropagatorPackage.getPropagatorFunctionBindings());
 		calcScheduleEClass.getESuperTypes().add(this.getCalcScheduler());
 		calcResourceEClass.getESuperTypes().add(this.getCalcScheduler());
 		calcTaskEClass.getESuperTypes().add(this.getCalcScheduler());
 		scopeScheduleScoreEClass.getESuperTypes().add(this.getCalcSchedule());
 		layerScheduleDistanceEClass.getESuperTypes().add(this.getCalcSchedule());
+		calcTaskDistanceFromPreviousEClass.getESuperTypes().add(this.getCalcTask());
 		calcTaskDistanceEClass.getESuperTypes().add(this.getCalcTask());
+		calcResourceDistanceFromLastEClass.getESuperTypes().add(this.getCalcResource());
 		calcResourceDistanceEClass.getESuperTypes().add(this.getCalcResource());
-		toUseUnscheduleLoadUnloadEClass.getESuperTypes().add(this.getToUseActionLoadUnload());
+		layerScheduleVolumeLoadedEClass.getESuperTypes().add(this.getCalcSchedule());
+		calcTaskStartVolumeLoadedEClass.getESuperTypes().add(this.getCalcTask());
+		calcTaskEndVolumeLoadedEClass.getESuperTypes().add(this.getCalcTask());
+		calcResourceVolumeOverloadEClass.getESuperTypes().add(this.getCalcResource());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -908,6 +1188,7 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		initEAttribute(getVehicle_Name(), ecorePackage.getEString(), "Name", null, 0, 1, Vehicle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVehicle_HomeLocationX(), ecorePackage.getEFloat(), "HomeLocationX", null, 0, 1, Vehicle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVehicle_HomeLocationY(), ecorePackage.getEFloat(), "HomeLocationY", null, 0, 1, Vehicle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVehicle_MaxVolumeLoaded(), ecorePackage.getEFloat(), "MaxVolumeLoaded", null, 0, 1, Vehicle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(shipmentEClass, Shipment.class, "Shipment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getShipment_Name(), ecorePackage.getEString(), "Name", null, 0, 1, Shipment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -915,6 +1196,7 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		initEAttribute(getShipment_LoadLocationY(), ecorePackage.getEFloat(), "LoadLocationY", null, 0, 1, Shipment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getShipment_UnloadLocationX(), ecorePackage.getEFloat(), "UnloadLocationX", null, 0, 1, Shipment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getShipment_UnloadLocationY(), ecorePackage.getEFloat(), "UnloadLocationY", null, 0, 1, Shipment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getShipment_Volume(), ecorePackage.getEFloat(), "Volume", null, 0, 1, Shipment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(toUseSchedulerEClass, ToUseScheduler.class, "ToUseScheduler", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getToUseScheduler_SelectedVehicles(), this.getVehicle(), null, "SelectedVehicles", null, 0, -1, ToUseScheduler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -927,29 +1209,39 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 
 		initEClass(toUseScoreEClass, ToUseScore.class, "ToUseScore", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getToUseScore_TotalDistance(), ecorePackage.getEFloat(), "TotalDistance", null, 0, 1, ToUseScore.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getToUseScore_VolumeOverload(), ecorePackage.getEBoolean(), "VolumeOverload", null, 0, 1, ToUseScore.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(toUseScheduleResourceEClass, ToUseScheduleResource.class, "ToUseScheduleResource", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getToUseScheduleResource_Vehicle(), this.getVehicle(), null, "Vehicle", null, 1, 1, ToUseScheduleResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getToUseScheduleResource_DistanceFromLast(), ecorePackage.getEFloat(), "DistanceFromLast", null, 0, 1, ToUseScheduleResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getToUseScheduleResource_TotalDistance(), ecorePackage.getEFloat(), "TotalDistance", null, 0, 1, ToUseScheduleResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getToUseScheduleResource_VolumeOverload(), ecorePackage.getEBoolean(), "VolumeOverload", null, 0, 1, ToUseScheduleResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(toUseScheduleTaskEClass, ToUseScheduleTask.class, "ToUseScheduleTask", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getToUseScheduleTask_Shipment(), this.getShipment(), null, "Shipment", null, 1, 1, ToUseScheduleTask.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getToUseScheduleTask_Distance(), ecorePackage.getEFloat(), "Distance", null, 0, 1, ToUseScheduleTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getToUseScheduleTask_DistanceFromPrevious(), ecorePackage.getEFloat(), "DistanceFromPrevious", null, 0, 1, ToUseScheduleTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getToUseScheduleTask_StartVolumeLoaded(), ecorePackage.getEFloat(), "StartVolumeLoaded", null, 0, 1, ToUseScheduleTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getToUseScheduleTask_EndVolumeLoaded(), ecorePackage.getEFloat(), "EndVolumeLoaded", null, 0, 1, ToUseScheduleTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getToUseScheduleTask_LocationX(), ecorePackage.getEFloat(), "locationX", null, 0, 1, ToUseScheduleTask.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getToUseScheduleTask_LocationY(), ecorePackage.getEFloat(), "locationY", null, 0, 1, ToUseScheduleTask.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getToUseScheduleTask_LoadFactor(), ecorePackage.getEFloat(), "LoadFactor", null, 0, 1, ToUseScheduleTask.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getToUseScheduleTask_VolumeOverload(), ecorePackage.getEBoolean(), "VolumeOverload", null, 0, 1, ToUseScheduleTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(toUseLoadShipmentEClass, ToUseLoadShipment.class, "ToUseLoadShipment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getToUseLoadShipment_ShipmentLoaded(), this.getShipment(), null, "ShipmentLoaded", null, 0, 1, ToUseLoadShipment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getToUseLoadShipment_ShipmentLoaded(), this.getShipment(), null, "ShipmentLoaded", null, 1, 1, ToUseLoadShipment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getToUseLoadShipment_UnloadShipment(), this.getToUseUnloadShipment(), this.getToUseUnloadShipment_LoadShipment(), "UnloadShipment", null, 1, 1, ToUseLoadShipment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(toUseUnloadShipmentEClass, ToUseUnloadShipment.class, "ToUseUnloadShipment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getToUseUnloadShipment_ShipmentUnloaded(), this.getShipment(), null, "ShipmentUnloaded", null, 0, 1, ToUseUnloadShipment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getToUseUnloadShipment_ShipmentUnloaded(), this.getShipment(), null, "ShipmentUnloaded", null, 1, 1, ToUseUnloadShipment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getToUseUnloadShipment_LoadShipment(), this.getToUseLoadShipment(), this.getToUseLoadShipment_UnloadShipment(), "LoadShipment", null, 1, 1, ToUseUnloadShipment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(toUseActionLoadUnloadEClass, ToUseActionLoadUnload.class, "ToUseActionLoadUnload", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getToUseActionLoadUnload_LoadTask(), this.getToUseLoadShipment(), null, "LoadTask", null, 1, 1, ToUseActionLoadUnload.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(toUseScheduleLoadUnloadEClass, ToUseScheduleLoadUnload.class, "ToUseScheduleLoadUnload", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(toUseUnscheduleLoadUnloadEClass, ToUseUnscheduleLoadUnload.class, "ToUseUnscheduleLoadUnload", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(calcSchedulerEClass, CalcScheduler.class, "CalcScheduler", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -967,13 +1259,29 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		initEClass(layerScheduleDistanceEClass, LayerScheduleDistance.class, "LayerScheduleDistance", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLayerScheduleDistance_ConcreteParent(), this.getScopeScheduleScore(), null, "ConcreteParent", null, 1, 1, LayerScheduleDistance.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
+		initEClass(calcTaskDistanceFromPreviousEClass, CalcTaskDistanceFromPrevious.class, "CalcTaskDistanceFromPrevious", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCalcTaskDistanceFromPrevious_ConcreteParent(), this.getLayerScheduleDistance(), null, "ConcreteParent", null, 1, 1, CalcTaskDistanceFromPrevious.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+
 		initEClass(calcTaskDistanceEClass, CalcTaskDistance.class, "CalcTaskDistance", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCalcTaskDistance_ConcreteParent(), this.getLayerScheduleDistance(), null, "ConcreteParent", null, 1, 1, CalcTaskDistance.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+
+		initEClass(calcResourceDistanceFromLastEClass, CalcResourceDistanceFromLast.class, "CalcResourceDistanceFromLast", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCalcResourceDistanceFromLast_ConcreteParent(), this.getLayerScheduleDistance(), null, "ConcreteParent", null, 1, 1, CalcResourceDistanceFromLast.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(calcResourceDistanceEClass, CalcResourceDistance.class, "CalcResourceDistance", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCalcResourceDistance_ConcreteParent(), this.getLayerScheduleDistance(), null, "ConcreteParent", null, 1, 1, CalcResourceDistance.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
-		initEClass(toUseUnscheduleLoadUnloadEClass, ToUseUnscheduleLoadUnload.class, "ToUseUnscheduleLoadUnload", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(layerScheduleVolumeLoadedEClass, LayerScheduleVolumeLoaded.class, "LayerScheduleVolumeLoaded", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getLayerScheduleVolumeLoaded_ConcreteParent(), this.getScopeScheduleScore(), null, "ConcreteParent", null, 1, 1, LayerScheduleVolumeLoaded.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+
+		initEClass(calcTaskStartVolumeLoadedEClass, CalcTaskStartVolumeLoaded.class, "CalcTaskStartVolumeLoaded", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCalcTaskStartVolumeLoaded_ConcreteParent(), this.getLayerScheduleVolumeLoaded(), null, "ConcreteParent", null, 1, 1, CalcTaskStartVolumeLoaded.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+
+		initEClass(calcTaskEndVolumeLoadedEClass, CalcTaskEndVolumeLoaded.class, "CalcTaskEndVolumeLoaded", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCalcTaskEndVolumeLoaded_ConcreteParent(), this.getLayerScheduleVolumeLoaded(), null, "ConcreteParent", null, 1, 1, CalcTaskEndVolumeLoaded.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+
+		initEClass(calcResourceVolumeOverloadEClass, CalcResourceVolumeOverload.class, "CalcResourceVolumeOverload", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCalcResourceVolumeOverload_ConcreteParent(), this.getLayerScheduleVolumeLoaded(), null, "ConcreteParent", null, 1, 1, CalcResourceVolumeOverload.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -32,7 +32,7 @@ public interface ToUseLoadShipment extends ToUseScheduleTask {
 	 * @return the value of the '<em>Shipment Loaded</em>' reference.
 	 * @see #setShipmentLoaded(Shipment)
 	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getToUseLoadShipment_ShipmentLoaded()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	Shipment getShipmentLoaded();

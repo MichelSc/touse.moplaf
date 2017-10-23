@@ -67,11 +67,17 @@ public class ToUseSchedulerFactoryImpl extends EFactoryImpl implements ToUseSche
 			case ToUseSchedulerPackage.TO_USE_LOAD_SHIPMENT: return createToUseLoadShipment();
 			case ToUseSchedulerPackage.TO_USE_UNLOAD_SHIPMENT: return createToUseUnloadShipment();
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_LOAD_UNLOAD: return createToUseScheduleLoadUnload();
+			case ToUseSchedulerPackage.TO_USE_UNSCHEDULE_LOAD_UNLOAD: return createToUseUnscheduleLoadUnload();
 			case ToUseSchedulerPackage.SCOPE_SCHEDULE_SCORE: return createScopeScheduleScore();
 			case ToUseSchedulerPackage.LAYER_SCHEDULE_DISTANCE: return createLayerScheduleDistance();
+			case ToUseSchedulerPackage.CALC_TASK_DISTANCE_FROM_PREVIOUS: return createCalcTaskDistanceFromPrevious();
 			case ToUseSchedulerPackage.CALC_TASK_DISTANCE: return createCalcTaskDistance();
+			case ToUseSchedulerPackage.CALC_RESOURCE_DISTANCE_FROM_LAST: return createCalcResourceDistanceFromLast();
 			case ToUseSchedulerPackage.CALC_RESOURCE_DISTANCE: return createCalcResourceDistance();
-			case ToUseSchedulerPackage.TO_USE_UNSCHEDULE_LOAD_UNLOAD: return createToUseUnscheduleLoadUnload();
+			case ToUseSchedulerPackage.LAYER_SCHEDULE_VOLUME_LOADED: return createLayerScheduleVolumeLoaded();
+			case ToUseSchedulerPackage.CALC_TASK_START_VOLUME_LOADED: return createCalcTaskStartVolumeLoaded();
+			case ToUseSchedulerPackage.CALC_TASK_END_VOLUME_LOADED: return createCalcTaskEndVolumeLoaded();
+			case ToUseSchedulerPackage.CALC_RESOURCE_VOLUME_OVERLOAD: return createCalcResourceVolumeOverload();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -172,6 +178,16 @@ public class ToUseSchedulerFactoryImpl extends EFactoryImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public CalcTaskDistanceFromPrevious createCalcTaskDistanceFromPrevious() {
+		CalcTaskDistanceFromPreviousImpl calcTaskDistanceFromPrevious = new CalcTaskDistanceFromPreviousImpl();
+		return calcTaskDistanceFromPrevious;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public CalcTaskDistance createCalcTaskDistance() {
 		CalcTaskDistanceImpl calcTaskDistance = new CalcTaskDistanceImpl();
 		return calcTaskDistance;
@@ -182,9 +198,59 @@ public class ToUseSchedulerFactoryImpl extends EFactoryImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public CalcResourceDistanceFromLast createCalcResourceDistanceFromLast() {
+		CalcResourceDistanceFromLastImpl calcResourceDistanceFromLast = new CalcResourceDistanceFromLastImpl();
+		return calcResourceDistanceFromLast;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public CalcResourceDistance createCalcResourceDistance() {
 		CalcResourceDistanceImpl calcResourceDistance = new CalcResourceDistanceImpl();
 		return calcResourceDistance;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LayerScheduleVolumeLoaded createLayerScheduleVolumeLoaded() {
+		LayerScheduleVolumeLoadedImpl layerScheduleVolumeLoaded = new LayerScheduleVolumeLoadedImpl();
+		return layerScheduleVolumeLoaded;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CalcResourceVolumeOverload createCalcResourceVolumeOverload() {
+		CalcResourceVolumeOverloadImpl calcResourceVolumeOverload = new CalcResourceVolumeOverloadImpl();
+		return calcResourceVolumeOverload;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CalcTaskStartVolumeLoaded createCalcTaskStartVolumeLoaded() {
+		CalcTaskStartVolumeLoadedImpl calcTaskStartVolumeLoaded = new CalcTaskStartVolumeLoadedImpl();
+		return calcTaskStartVolumeLoaded;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CalcTaskEndVolumeLoaded createCalcTaskEndVolumeLoaded() {
+		CalcTaskEndVolumeLoadedImpl calcTaskEndVolumeLoaded = new CalcTaskEndVolumeLoadedImpl();
+		return calcTaskEndVolumeLoaded;
 	}
 
 	/**

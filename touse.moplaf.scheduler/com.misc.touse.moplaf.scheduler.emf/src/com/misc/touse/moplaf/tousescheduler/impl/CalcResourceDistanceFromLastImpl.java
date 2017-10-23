@@ -2,39 +2,41 @@
  */
 package com.misc.touse.moplaf.tousescheduler.impl;
 
-
+import com.misc.common.moplaf.common.util.GisUtil;
 import com.misc.common.moplaf.propagator2.PropagatorFunction;
 import com.misc.common.moplaf.propagator2.util.Bindings;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
-import com.misc.touse.moplaf.tousescheduler.CalcResourceDistance;
+import com.misc.touse.moplaf.tousescheduler.CalcResourceDistanceFromLast;
 import com.misc.touse.moplaf.tousescheduler.LayerScheduleDistance;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedule;
 import com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource;
 import com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
+import com.misc.touse.moplaf.tousescheduler.Vehicle;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Calc Resource Distance</b></em>'.
+ * An implementation of the model object '<em><b>Calc Resource Distance From Last</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.CalcResourceDistanceImpl#getConcreteParent <em>Concrete Parent</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.CalcResourceDistanceFromLastImpl#getConcreteParent <em>Concrete Parent</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class CalcResourceDistanceImpl extends CalcResourceImpl implements CalcResourceDistance {
+public class CalcResourceDistanceFromLastImpl extends CalcResourceImpl implements CalcResourceDistanceFromLast {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected CalcResourceDistanceImpl() {
+	protected CalcResourceDistanceFromLastImpl() {
 		super();
 	}
 
@@ -45,7 +47,7 @@ public class CalcResourceDistanceImpl extends CalcResourceImpl implements CalcRe
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ToUseSchedulerPackage.Literals.CALC_RESOURCE_DISTANCE;
+		return ToUseSchedulerPackage.Literals.CALC_RESOURCE_DISTANCE_FROM_LAST;
 	}
 
 	/**
@@ -77,7 +79,7 @@ public class CalcResourceDistanceImpl extends CalcResourceImpl implements CalcRe
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ToUseSchedulerPackage.CALC_RESOURCE_DISTANCE__CONCRETE_PARENT:
+			case ToUseSchedulerPackage.CALC_RESOURCE_DISTANCE_FROM_LAST__CONCRETE_PARENT:
 				if (resolve) return getConcreteParent();
 				return basicGetConcreteParent();
 		}
@@ -92,19 +94,15 @@ public class CalcResourceDistanceImpl extends CalcResourceImpl implements CalcRe
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ToUseSchedulerPackage.CALC_RESOURCE_DISTANCE__CONCRETE_PARENT:
+			case ToUseSchedulerPackage.CALC_RESOURCE_DISTANCE_FROM_LAST__CONCRETE_PARENT:
 				return basicGetConcreteParent() != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
-	private static Bindings taskLastBindings = Bindings.constructBindings()
-			.addInboundBinding(ToUseSchedulerPackage.Literals.TO_USE_SCHEDULE_TASK__DISTANCE)
-			;
-		
 	private static Bindings thisResourceBindings = Bindings.constructBindings()
-			.addInboundBinding(SchedulerPackage.Literals.RESOURCE__LAST_TASK, taskLastBindings)	
-			.addOutboundBinding(ToUseSchedulerPackage.Literals.TO_USE_SCHEDULE_RESOURCE__TOTAL_DISTANCE)
+			.addInboundBinding(SchedulerPackage.Literals.RESOURCE__LAST_TASK)	
+			.addOutboundBinding(ToUseSchedulerPackage.Literals.TO_USE_SCHEDULE_RESOURCE__DISTANCE_FROM_LAST)
 			;
 		
 	/**
@@ -122,15 +120,21 @@ public class CalcResourceDistanceImpl extends CalcResourceImpl implements CalcRe
 	public void doRefresh() {
 		ToUseScheduleResource resource = this.getResource();
 		ToUseScheduleTask last_task = (ToUseScheduleTask) resource.getLastTask();
-		float distance = resource.getDistanceFromLast(); 
+		float distance = 0.0f; 
 		if ( last_task != null) {
-			distance += last_task.getDistance();
+			// distance last leg: from this task to vehicle home location 
+			Vehicle vehicle = resource.getVehicle();
+			distance = (float) GisUtil.getDistance(
+					last_task.getLocationX(),
+					last_task.getLocationY(),
+					vehicle.getHomeLocationX(), 
+					vehicle.getHomeLocationY());
 		}
-		resource.setTotalDistance(distance);
+		resource.setDistanceFromLast(distance);
 	}
 	
 	@Override
 	public PropagatorFunction doGetParent() {
 		return this.getConcreteParent();
 	}
-} //CalcResourceDistanceImpl
+} //CalcResourceDistanceFromLastImpl

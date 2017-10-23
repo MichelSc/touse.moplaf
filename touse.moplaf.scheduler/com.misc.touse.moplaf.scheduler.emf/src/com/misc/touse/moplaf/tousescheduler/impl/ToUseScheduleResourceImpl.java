@@ -24,7 +24,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleResourceImpl#getVehicle <em>Vehicle</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleResourceImpl#getDistanceFromLast <em>Distance From Last</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleResourceImpl#getTotalDistance <em>Total Distance</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleResourceImpl#isVolumeOverload <em>Volume Overload</em>}</li>
  * </ul>
  *
  * @generated
@@ -39,6 +41,26 @@ public class ToUseScheduleResourceImpl extends ResourceImpl implements ToUseSche
 	 * @ordered
 	 */
 	protected Vehicle vehicle;
+
+	/**
+	 * The default value of the '{@link #getDistanceFromLast() <em>Distance From Last</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDistanceFromLast()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final float DISTANCE_FROM_LAST_EDEFAULT = 0.0F;
+
+	/**
+	 * The cached value of the '{@link #getDistanceFromLast() <em>Distance From Last</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDistanceFromLast()
+	 * @generated
+	 * @ordered
+	 */
+	protected float distanceFromLast = DISTANCE_FROM_LAST_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getTotalDistance() <em>Total Distance</em>}' attribute.
@@ -59,6 +81,26 @@ public class ToUseScheduleResourceImpl extends ResourceImpl implements ToUseSche
 	 * @ordered
 	 */
 	protected float totalDistance = TOTAL_DISTANCE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isVolumeOverload() <em>Volume Overload</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isVolumeOverload()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean VOLUME_OVERLOAD_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isVolumeOverload() <em>Volume Overload</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isVolumeOverload()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean volumeOverload = VOLUME_OVERLOAD_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -122,6 +164,27 @@ public class ToUseScheduleResourceImpl extends ResourceImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public float getDistanceFromLast() {
+		return distanceFromLast;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDistanceFromLast(float newDistanceFromLast) {
+		float oldDistanceFromLast = distanceFromLast;
+		distanceFromLast = newDistanceFromLast;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__DISTANCE_FROM_LAST, oldDistanceFromLast, distanceFromLast));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public float getTotalDistance() {
 		return totalDistance;
 	}
@@ -143,14 +206,39 @@ public class ToUseScheduleResourceImpl extends ResourceImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isVolumeOverload() {
+		return volumeOverload;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setVolumeOverload(boolean newVolumeOverload) {
+		boolean oldVolumeOverload = volumeOverload;
+		volumeOverload = newVolumeOverload;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__VOLUME_OVERLOAD, oldVolumeOverload, volumeOverload));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__VEHICLE:
 				if (resolve) return getVehicle();
 				return basicGetVehicle();
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__DISTANCE_FROM_LAST:
+				return getDistanceFromLast();
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__TOTAL_DISTANCE:
 				return getTotalDistance();
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__VOLUME_OVERLOAD:
+				return isVolumeOverload();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -166,8 +254,14 @@ public class ToUseScheduleResourceImpl extends ResourceImpl implements ToUseSche
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__VEHICLE:
 				setVehicle((Vehicle)newValue);
 				return;
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__DISTANCE_FROM_LAST:
+				setDistanceFromLast((Float)newValue);
+				return;
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__TOTAL_DISTANCE:
 				setTotalDistance((Float)newValue);
+				return;
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__VOLUME_OVERLOAD:
+				setVolumeOverload((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -184,8 +278,14 @@ public class ToUseScheduleResourceImpl extends ResourceImpl implements ToUseSche
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__VEHICLE:
 				setVehicle((Vehicle)null);
 				return;
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__DISTANCE_FROM_LAST:
+				setDistanceFromLast(DISTANCE_FROM_LAST_EDEFAULT);
+				return;
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__TOTAL_DISTANCE:
 				setTotalDistance(TOTAL_DISTANCE_EDEFAULT);
+				return;
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__VOLUME_OVERLOAD:
+				setVolumeOverload(VOLUME_OVERLOAD_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -201,8 +301,12 @@ public class ToUseScheduleResourceImpl extends ResourceImpl implements ToUseSche
 		switch (featureID) {
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__VEHICLE:
 				return vehicle != null;
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__DISTANCE_FROM_LAST:
+				return distanceFromLast != DISTANCE_FROM_LAST_EDEFAULT;
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__TOTAL_DISTANCE:
 				return totalDistance != TOTAL_DISTANCE_EDEFAULT;
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__VOLUME_OVERLOAD:
+				return volumeOverload != VOLUME_OVERLOAD_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -217,8 +321,12 @@ public class ToUseScheduleResourceImpl extends ResourceImpl implements ToUseSche
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (TotalDistance: ");
+		result.append(" (DistanceFromLast: ");
+		result.append(distanceFromLast);
+		result.append(", TotalDistance: ");
 		result.append(totalDistance);
+		result.append(", VolumeOverload: ");
+		result.append(volumeOverload);
 		result.append(')');
 		return result.toString();
 	}

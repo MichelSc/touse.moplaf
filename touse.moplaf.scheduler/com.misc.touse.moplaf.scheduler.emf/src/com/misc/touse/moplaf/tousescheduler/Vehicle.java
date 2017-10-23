@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.Vehicle#getName <em>Name</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.Vehicle#getHomeLocationX <em>Home Location X</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.Vehicle#getHomeLocationY <em>Home Location Y</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.Vehicle#getMaxVolumeLoaded <em>Max Volume Loaded</em>}</li>
  * </ul>
  *
  * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getVehicle()
@@ -100,5 +101,31 @@ public interface Vehicle extends EObject {
 	 * @generated
 	 */
 	void setHomeLocationY(float value);
+
+	/**
+	 * Returns the value of the '<em><b>Max Volume Loaded</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Max Volume Loaded</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Max Volume Loaded</em>' attribute.
+	 * @see #setMaxVolumeLoaded(float)
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getVehicle_MaxVolumeLoaded()
+	 * @model
+	 * @generated
+	 */
+	float getMaxVolumeLoaded();
+
+	/**
+	 * Sets the value of the '{@link com.misc.touse.moplaf.tousescheduler.Vehicle#getMaxVolumeLoaded <em>Max Volume Loaded</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Max Volume Loaded</em>' attribute.
+	 * @see #getMaxVolumeLoaded()
+	 * @generated
+	 */
+	void setMaxVolumeLoaded(float value);
 
 } // Vehicle

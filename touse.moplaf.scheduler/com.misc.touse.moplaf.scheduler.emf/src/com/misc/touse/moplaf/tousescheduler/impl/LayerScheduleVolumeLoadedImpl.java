@@ -4,7 +4,7 @@ package com.misc.touse.moplaf.tousescheduler.impl;
 
 import com.misc.common.moplaf.propagator2.PropagatorFunction;
 import com.misc.common.moplaf.scheduler.Resource;
-import com.misc.touse.moplaf.tousescheduler.LayerScheduleDistance;
+import com.misc.touse.moplaf.tousescheduler.LayerScheduleVolumeLoaded;
 import com.misc.touse.moplaf.tousescheduler.ScopeScheduleScore;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedule;
 import com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource;
@@ -16,24 +16,24 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Layer Schedule Distance</b></em>'.
+ * An implementation of the model object '<em><b>Layer Schedule Volume Loaded</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.LayerScheduleDistanceImpl#getConcreteParent <em>Concrete Parent</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.LayerScheduleVolumeLoadedImpl#getConcreteParent <em>Concrete Parent</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class LayerScheduleDistanceImpl extends CalcScheduleImpl implements LayerScheduleDistance {
+public class LayerScheduleVolumeLoadedImpl extends CalcScheduleImpl implements LayerScheduleVolumeLoaded {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected LayerScheduleDistanceImpl() {
+	protected LayerScheduleVolumeLoadedImpl() {
 		super();
 	}
 
@@ -44,7 +44,7 @@ public class LayerScheduleDistanceImpl extends CalcScheduleImpl implements Layer
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ToUseSchedulerPackage.Literals.LAYER_SCHEDULE_DISTANCE;
+		return ToUseSchedulerPackage.Literals.LAYER_SCHEDULE_VOLUME_LOADED;
 	}
 
 	/**
@@ -75,7 +75,7 @@ public class LayerScheduleDistanceImpl extends CalcScheduleImpl implements Layer
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ToUseSchedulerPackage.LAYER_SCHEDULE_DISTANCE__CONCRETE_PARENT:
+			case ToUseSchedulerPackage.LAYER_SCHEDULE_VOLUME_LOADED__CONCRETE_PARENT:
 				if (resolve) return getConcreteParent();
 				return basicGetConcreteParent();
 		}
@@ -90,7 +90,7 @@ public class LayerScheduleDistanceImpl extends CalcScheduleImpl implements Layer
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ToUseSchedulerPackage.LAYER_SCHEDULE_DISTANCE__CONCRETE_PARENT:
+			case ToUseSchedulerPackage.LAYER_SCHEDULE_VOLUME_LOADED__CONCRETE_PARENT:
 				return basicGetConcreteParent() != null;
 		}
 		return super.eIsSet(featureID);
@@ -107,13 +107,16 @@ public class LayerScheduleDistanceImpl extends CalcScheduleImpl implements Layer
 	@Override
 	public void doRefresh() {
 		ToUseSchedule schedule= this.getSchedule();
-		float distance = 0.0f;
+		boolean overload = false;
 		for ( Resource resource : schedule.getResources()) {
 			ToUseScheduleResource scheduler_resource =  (ToUseScheduleResource)resource;
-			distance += scheduler_resource.getTotalDistance();
+			if ( scheduler_resource.isVolumeOverload() ) {
+				overload = true;
+				break;
+			}
 		}
 		ToUseScore score = (ToUseScore)schedule.getScore();
-		score.setTotalDistance(distance);
+		score.setVolumeOverload(overload);
 	}
-	
-} //LayerScheduleDistanceImpl
+
+} //LayerScheduleVolumeLoadedImpl

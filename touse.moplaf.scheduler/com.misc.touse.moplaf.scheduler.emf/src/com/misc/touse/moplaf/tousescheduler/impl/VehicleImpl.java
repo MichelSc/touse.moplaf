@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.VehicleImpl#getName <em>Name</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.VehicleImpl#getHomeLocationX <em>Home Location X</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.VehicleImpl#getHomeLocationY <em>Home Location Y</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.VehicleImpl#getMaxVolumeLoaded <em>Max Volume Loaded</em>}</li>
  * </ul>
  *
  * @generated
@@ -87,6 +88,26 @@ public class VehicleImpl extends MinimalEObjectImpl.Container implements Vehicle
 	 * @ordered
 	 */
 	protected float homeLocationY = HOME_LOCATION_Y_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getMaxVolumeLoaded() <em>Max Volume Loaded</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMaxVolumeLoaded()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final float MAX_VOLUME_LOADED_EDEFAULT = 0.0F;
+
+	/**
+	 * The cached value of the '{@link #getMaxVolumeLoaded() <em>Max Volume Loaded</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMaxVolumeLoaded()
+	 * @generated
+	 * @ordered
+	 */
+	protected float maxVolumeLoaded = MAX_VOLUME_LOADED_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -175,6 +196,27 @@ public class VehicleImpl extends MinimalEObjectImpl.Container implements Vehicle
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public float getMaxVolumeLoaded() {
+		return maxVolumeLoaded;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setMaxVolumeLoaded(float newMaxVolumeLoaded) {
+		float oldMaxVolumeLoaded = maxVolumeLoaded;
+		maxVolumeLoaded = newMaxVolumeLoaded;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseSchedulerPackage.VEHICLE__MAX_VOLUME_LOADED, oldMaxVolumeLoaded, maxVolumeLoaded));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -184,6 +226,8 @@ public class VehicleImpl extends MinimalEObjectImpl.Container implements Vehicle
 				return getHomeLocationX();
 			case ToUseSchedulerPackage.VEHICLE__HOME_LOCATION_Y:
 				return getHomeLocationY();
+			case ToUseSchedulerPackage.VEHICLE__MAX_VOLUME_LOADED:
+				return getMaxVolumeLoaded();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -204,6 +248,9 @@ public class VehicleImpl extends MinimalEObjectImpl.Container implements Vehicle
 				return;
 			case ToUseSchedulerPackage.VEHICLE__HOME_LOCATION_Y:
 				setHomeLocationY((Float)newValue);
+				return;
+			case ToUseSchedulerPackage.VEHICLE__MAX_VOLUME_LOADED:
+				setMaxVolumeLoaded((Float)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -226,6 +273,9 @@ public class VehicleImpl extends MinimalEObjectImpl.Container implements Vehicle
 			case ToUseSchedulerPackage.VEHICLE__HOME_LOCATION_Y:
 				setHomeLocationY(HOME_LOCATION_Y_EDEFAULT);
 				return;
+			case ToUseSchedulerPackage.VEHICLE__MAX_VOLUME_LOADED:
+				setMaxVolumeLoaded(MAX_VOLUME_LOADED_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -244,6 +294,8 @@ public class VehicleImpl extends MinimalEObjectImpl.Container implements Vehicle
 				return homeLocationX != HOME_LOCATION_X_EDEFAULT;
 			case ToUseSchedulerPackage.VEHICLE__HOME_LOCATION_Y:
 				return homeLocationY != HOME_LOCATION_Y_EDEFAULT;
+			case ToUseSchedulerPackage.VEHICLE__MAX_VOLUME_LOADED:
+				return maxVolumeLoaded != MAX_VOLUME_LOADED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -264,6 +316,8 @@ public class VehicleImpl extends MinimalEObjectImpl.Container implements Vehicle
 		result.append(homeLocationX);
 		result.append(", HomeLocationY: ");
 		result.append(homeLocationY);
+		result.append(", MaxVolumeLoaded: ");
+		result.append(maxVolumeLoaded);
 		result.append(')');
 		return result.toString();
 	}

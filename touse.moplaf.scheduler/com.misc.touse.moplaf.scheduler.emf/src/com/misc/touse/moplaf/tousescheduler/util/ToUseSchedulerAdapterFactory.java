@@ -127,6 +127,10 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 				return createToUseScheduleLoadUnloadAdapter();
 			}
 			@Override
+			public Adapter caseToUseUnscheduleLoadUnload(ToUseUnscheduleLoadUnload object) {
+				return createToUseUnscheduleLoadUnloadAdapter();
+			}
+			@Override
 			public Adapter caseCalcScheduler(CalcScheduler object) {
 				return createCalcSchedulerAdapter();
 			}
@@ -151,16 +155,36 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 				return createLayerScheduleDistanceAdapter();
 			}
 			@Override
+			public Adapter caseCalcTaskDistanceFromPrevious(CalcTaskDistanceFromPrevious object) {
+				return createCalcTaskDistanceFromPreviousAdapter();
+			}
+			@Override
 			public Adapter caseCalcTaskDistance(CalcTaskDistance object) {
 				return createCalcTaskDistanceAdapter();
+			}
+			@Override
+			public Adapter caseCalcResourceDistanceFromLast(CalcResourceDistanceFromLast object) {
+				return createCalcResourceDistanceFromLastAdapter();
 			}
 			@Override
 			public Adapter caseCalcResourceDistance(CalcResourceDistance object) {
 				return createCalcResourceDistanceAdapter();
 			}
 			@Override
-			public Adapter caseToUseUnscheduleLoadUnload(ToUseUnscheduleLoadUnload object) {
-				return createToUseUnscheduleLoadUnloadAdapter();
+			public Adapter caseLayerScheduleVolumeLoaded(LayerScheduleVolumeLoaded object) {
+				return createLayerScheduleVolumeLoadedAdapter();
+			}
+			@Override
+			public Adapter caseCalcTaskStartVolumeLoaded(CalcTaskStartVolumeLoaded object) {
+				return createCalcTaskStartVolumeLoadedAdapter();
+			}
+			@Override
+			public Adapter caseCalcTaskEndVolumeLoaded(CalcTaskEndVolumeLoaded object) {
+				return createCalcTaskEndVolumeLoadedAdapter();
+			}
+			@Override
+			public Adapter caseCalcResourceVolumeOverload(CalcResourceVolumeOverload object) {
+				return createCalcResourceVolumeOverloadAdapter();
 			}
 			@Override
 			public Adapter caseStrategy(Strategy object) {
@@ -409,6 +433,20 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.tousescheduler.CalcTaskDistanceFromPrevious <em>Calc Task Distance From Previous</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.touse.moplaf.tousescheduler.CalcTaskDistanceFromPrevious
+	 * @generated
+	 */
+	public Adapter createCalcTaskDistanceFromPreviousAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.tousescheduler.CalcTaskDistance <em>Calc Task Distance</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -423,6 +461,20 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.tousescheduler.CalcResourceDistanceFromLast <em>Calc Resource Distance From Last</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.touse.moplaf.tousescheduler.CalcResourceDistanceFromLast
+	 * @generated
+	 */
+	public Adapter createCalcResourceDistanceFromLastAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.tousescheduler.CalcResourceDistance <em>Calc Resource Distance</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -433,6 +485,62 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCalcResourceDistanceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.tousescheduler.LayerScheduleVolumeLoaded <em>Layer Schedule Volume Loaded</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.touse.moplaf.tousescheduler.LayerScheduleVolumeLoaded
+	 * @generated
+	 */
+	public Adapter createLayerScheduleVolumeLoadedAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.tousescheduler.CalcResourceVolumeOverload <em>Calc Resource Volume Overload</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.touse.moplaf.tousescheduler.CalcResourceVolumeOverload
+	 * @generated
+	 */
+	public Adapter createCalcResourceVolumeOverloadAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.tousescheduler.CalcTaskStartVolumeLoaded <em>Calc Task Start Volume Loaded</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.touse.moplaf.tousescheduler.CalcTaskStartVolumeLoaded
+	 * @generated
+	 */
+	public Adapter createCalcTaskStartVolumeLoadedAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.tousescheduler.CalcTaskEndVolumeLoaded <em>Calc Task End Volume Loaded</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.touse.moplaf.tousescheduler.CalcTaskEndVolumeLoaded
+	 * @generated
+	 */
+	public Adapter createCalcTaskEndVolumeLoadedAdapter() {
 		return null;
 	}
 
