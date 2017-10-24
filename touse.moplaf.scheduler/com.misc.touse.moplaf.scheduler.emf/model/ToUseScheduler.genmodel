@@ -98,28 +98,28 @@
     <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//LayerScheduleDistance">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//LayerScheduleDistance/ConcreteParent"/>
     </genClasses>
-    <genClasses ecoreClass="ToUseScheduler.ecore#//CalcTaskDistanceFromPrevious">
+    <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//CalcTaskDistanceFromPrevious">
       <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//CalcTaskDistanceFromPrevious/ConcreteParent"/>
     </genClasses>
     <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//CalcTaskDistance">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//CalcTaskDistance/ConcreteParent"/>
     </genClasses>
-    <genClasses ecoreClass="ToUseScheduler.ecore#//CalcResourceDistanceFromLast">
+    <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//CalcResourceDistanceFromLast">
       <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//CalcResourceDistanceFromLast/ConcreteParent"/>
     </genClasses>
     <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//CalcResourceDistance">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//CalcResourceDistance/ConcreteParent"/>
     </genClasses>
-    <genClasses ecoreClass="ToUseScheduler.ecore#//LayerScheduleVolumeLoaded">
+    <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//LayerScheduleVolumeLoaded">
       <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//LayerScheduleVolumeLoaded/ConcreteParent"/>
     </genClasses>
-    <genClasses ecoreClass="ToUseScheduler.ecore#//CalcTaskStartVolumeLoaded">
+    <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//CalcTaskStartVolumeLoaded">
       <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//CalcTaskStartVolumeLoaded/ConcreteParent"/>
     </genClasses>
-    <genClasses ecoreClass="ToUseScheduler.ecore#//CalcTaskEndVolumeLoaded">
+    <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//CalcTaskEndVolumeLoaded">
       <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//CalcTaskEndVolumeLoaded/ConcreteParent"/>
     </genClasses>
-    <genClasses ecoreClass="ToUseScheduler.ecore#//CalcResourceVolumeOverload">
+    <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//CalcResourceVolumeOverload">
       <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//CalcResourceVolumeOverload/ConcreteParent"/>
     </genClasses>
   </genPackages>

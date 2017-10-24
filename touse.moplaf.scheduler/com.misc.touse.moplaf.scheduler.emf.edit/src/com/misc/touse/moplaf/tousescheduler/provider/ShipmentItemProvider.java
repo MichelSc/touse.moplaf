@@ -65,6 +65,7 @@ public class ShipmentItemProvider
 			addLoadLocationYPropertyDescriptor(object);
 			addUnloadLocationXPropertyDescriptor(object);
 			addUnloadLocationYPropertyDescriptor(object);
+			addVolumePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -180,6 +181,28 @@ public class ShipmentItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Volume feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addVolumePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Shipment_Volume_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Shipment_Volume_feature", "_UI_Shipment_type"),
+				 ToUseSchedulerPackage.Literals.SHIPMENT__VOLUME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 getString("_UI__20ToUseSchedulerPropertyCategory"),
+				 null));
+	}
+
+	/**
 	 * This returns Shipment.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -221,6 +244,7 @@ public class ShipmentItemProvider
 			case ToUseSchedulerPackage.SHIPMENT__LOAD_LOCATION_Y:
 			case ToUseSchedulerPackage.SHIPMENT__UNLOAD_LOCATION_X:
 			case ToUseSchedulerPackage.SHIPMENT__UNLOAD_LOCATION_Y:
+			case ToUseSchedulerPackage.SHIPMENT__VOLUME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

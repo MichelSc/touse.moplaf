@@ -1104,31 +1104,22 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE_TASK___ADD_PROPAGATOR_FUNCTIONS__STRING = SchedulerPackage.TASK___ADD_PROPAGATOR_FUNCTIONS__STRING;
 
 	/**
-	 * The operation id for the '<em>Unset Previous Next</em>' operation.
+	 * The operation id for the '<em>Schedule</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_TASK___UNSET_PREVIOUS_NEXT = SchedulerPackage.TASK___UNSET_PREVIOUS_NEXT;
+	int TO_USE_SCHEDULE_TASK___SCHEDULE__RESOURCE_TASK_TASK = SchedulerPackage.TASK___SCHEDULE__RESOURCE_TASK_TASK;
 
 	/**
-	 * The operation id for the '<em>Set Previous Next</em>' operation.
+	 * The operation id for the '<em>Unschedule</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_TASK___SET_PREVIOUS_NEXT__RESOURCE_TASK_TASK = SchedulerPackage.TASK___SET_PREVIOUS_NEXT__RESOURCE_TASK_TASK;
-
-	/**
-	 * The operation id for the '<em>Schedule Resource</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULE_TASK___SCHEDULE_RESOURCE__RESOURCE = SchedulerPackage.TASK___SCHEDULE_RESOURCE__RESOURCE;
+	int TO_USE_SCHEDULE_TASK___UNSCHEDULE = SchedulerPackage.TASK___UNSCHEDULE;
 
 	/**
 	 * The number of operations of the '<em>To Use Schedule Task</em>' class.
@@ -1358,31 +1349,22 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_LOAD_SHIPMENT___ADD_PROPAGATOR_FUNCTIONS__STRING = TO_USE_SCHEDULE_TASK___ADD_PROPAGATOR_FUNCTIONS__STRING;
 
 	/**
-	 * The operation id for the '<em>Unset Previous Next</em>' operation.
+	 * The operation id for the '<em>Schedule</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_LOAD_SHIPMENT___UNSET_PREVIOUS_NEXT = TO_USE_SCHEDULE_TASK___UNSET_PREVIOUS_NEXT;
+	int TO_USE_LOAD_SHIPMENT___SCHEDULE__RESOURCE_TASK_TASK = TO_USE_SCHEDULE_TASK___SCHEDULE__RESOURCE_TASK_TASK;
 
 	/**
-	 * The operation id for the '<em>Set Previous Next</em>' operation.
+	 * The operation id for the '<em>Unschedule</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_LOAD_SHIPMENT___SET_PREVIOUS_NEXT__RESOURCE_TASK_TASK = TO_USE_SCHEDULE_TASK___SET_PREVIOUS_NEXT__RESOURCE_TASK_TASK;
-
-	/**
-	 * The operation id for the '<em>Schedule Resource</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_LOAD_SHIPMENT___SCHEDULE_RESOURCE__RESOURCE = TO_USE_SCHEDULE_TASK___SCHEDULE_RESOURCE__RESOURCE;
+	int TO_USE_LOAD_SHIPMENT___UNSCHEDULE = TO_USE_SCHEDULE_TASK___UNSCHEDULE;
 
 	/**
 	 * The number of operations of the '<em>To Use Load Shipment</em>' class.
@@ -1602,31 +1584,22 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_UNLOAD_SHIPMENT___ADD_PROPAGATOR_FUNCTIONS__STRING = TO_USE_SCHEDULE_TASK___ADD_PROPAGATOR_FUNCTIONS__STRING;
 
 	/**
-	 * The operation id for the '<em>Unset Previous Next</em>' operation.
+	 * The operation id for the '<em>Schedule</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_UNLOAD_SHIPMENT___UNSET_PREVIOUS_NEXT = TO_USE_SCHEDULE_TASK___UNSET_PREVIOUS_NEXT;
+	int TO_USE_UNLOAD_SHIPMENT___SCHEDULE__RESOURCE_TASK_TASK = TO_USE_SCHEDULE_TASK___SCHEDULE__RESOURCE_TASK_TASK;
 
 	/**
-	 * The operation id for the '<em>Set Previous Next</em>' operation.
+	 * The operation id for the '<em>Unschedule</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_UNLOAD_SHIPMENT___SET_PREVIOUS_NEXT__RESOURCE_TASK_TASK = TO_USE_SCHEDULE_TASK___SET_PREVIOUS_NEXT__RESOURCE_TASK_TASK;
-
-	/**
-	 * The operation id for the '<em>Schedule Resource</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_UNLOAD_SHIPMENT___SCHEDULE_RESOURCE__RESOURCE = TO_USE_SCHEDULE_TASK___SCHEDULE_RESOURCE__RESOURCE;
+	int TO_USE_UNLOAD_SHIPMENT___UNSCHEDULE = TO_USE_SCHEDULE_TASK___UNSCHEDULE;
 
 	/**
 	 * The number of operations of the '<em>To Use Unload Shipment</em>' class.

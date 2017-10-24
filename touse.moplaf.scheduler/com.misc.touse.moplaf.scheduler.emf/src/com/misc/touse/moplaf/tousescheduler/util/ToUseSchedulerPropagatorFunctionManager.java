@@ -23,16 +23,22 @@ public class ToUseSchedulerPropagatorFunctionManager extends PropagatorFunctionM
 			propagatorFunctionFactory.constructPropagatorFunctionsConstructors(ToUseSchedulerPackage.Literals.TO_USE_SCHEDULE)
 			.addConstructor(ToUseSchedulerPackage.Literals.SCOPE_SCHEDULE_SCORE)
 			.addConstructor(ToUseSchedulerPackage.Literals.LAYER_SCHEDULE_DISTANCE)
+			.addConstructor(ToUseSchedulerPackage.Literals.LAYER_SCHEDULE_VOLUME_LOADED)
 			;
 
 	static PropagatorFunctionsConstructors ResourcePropagatorFunctionsConstructors =  
 			propagatorFunctionFactory.constructPropagatorFunctionsConstructors(ToUseSchedulerPackage.Literals.TO_USE_SCHEDULE_RESOURCE)
-			.addConstructor(ToUseSchedulerPackage.Literals.CALC_RESOURCE_DISTANCE);
+			.addConstructor(ToUseSchedulerPackage.Literals.CALC_RESOURCE_DISTANCE)
+			.addConstructor(ToUseSchedulerPackage.Literals.CALC_RESOURCE_DISTANCE_FROM_LAST)
+			.addConstructor(ToUseSchedulerPackage.Literals.CALC_RESOURCE_VOLUME_OVERLOAD)
 			;
 
 	static PropagatorFunctionsConstructors TaskPropagatorFunctionsConstructors =  
 			propagatorFunctionFactory.constructPropagatorFunctionsConstructors(ToUseSchedulerPackage.Literals.TO_USE_SCHEDULE_TASK)
-			.addConstructor(ToUseSchedulerPackage.Literals.CALC_TASK_DISTANCE);
+			.addConstructor(ToUseSchedulerPackage.Literals.CALC_TASK_DISTANCE)
+			.addConstructor(ToUseSchedulerPackage.Literals.CALC_TASK_DISTANCE_FROM_PREVIOUS)
+			.addConstructor(ToUseSchedulerPackage.Literals.CALC_TASK_START_VOLUME_LOADED)
+			.addConstructor(ToUseSchedulerPackage.Literals.CALC_TASK_END_VOLUME_LOADED)
 			;
 
 }

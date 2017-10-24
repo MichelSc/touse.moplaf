@@ -279,6 +279,29 @@ public class ToUseSchedulerItemProviderAdapterFactory extends ToUseSchedulerAdap
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.CalcTaskDistanceFromPrevious} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CalcTaskDistanceFromPreviousItemProvider calcTaskDistanceFromPreviousItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousescheduler.CalcTaskDistanceFromPrevious}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCalcTaskDistanceFromPreviousAdapter() {
+		if (calcTaskDistanceFromPreviousItemProvider == null) {
+			calcTaskDistanceFromPreviousItemProvider = new CalcTaskDistanceFromPreviousItemProvider(this);
+		}
+
+		return calcTaskDistanceFromPreviousItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.CalcTaskDistance} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -302,6 +325,29 @@ public class ToUseSchedulerItemProviderAdapterFactory extends ToUseSchedulerAdap
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.CalcResourceDistanceFromLast} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CalcResourceDistanceFromLastItemProvider calcResourceDistanceFromLastItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousescheduler.CalcResourceDistanceFromLast}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCalcResourceDistanceFromLastAdapter() {
+		if (calcResourceDistanceFromLastItemProvider == null) {
+			calcResourceDistanceFromLastItemProvider = new CalcResourceDistanceFromLastItemProvider(this);
+		}
+
+		return calcResourceDistanceFromLastItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.CalcResourceDistance} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -322,6 +368,98 @@ public class ToUseSchedulerItemProviderAdapterFactory extends ToUseSchedulerAdap
 		}
 
 		return calcResourceDistanceItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.LayerScheduleVolumeLoaded} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected LayerScheduleVolumeLoadedItemProvider layerScheduleVolumeLoadedItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousescheduler.LayerScheduleVolumeLoaded}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createLayerScheduleVolumeLoadedAdapter() {
+		if (layerScheduleVolumeLoadedItemProvider == null) {
+			layerScheduleVolumeLoadedItemProvider = new LayerScheduleVolumeLoadedItemProvider(this);
+		}
+
+		return layerScheduleVolumeLoadedItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.CalcTaskStartVolumeLoaded} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CalcTaskStartVolumeLoadedItemProvider calcTaskStartVolumeLoadedItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousescheduler.CalcTaskStartVolumeLoaded}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCalcTaskStartVolumeLoadedAdapter() {
+		if (calcTaskStartVolumeLoadedItemProvider == null) {
+			calcTaskStartVolumeLoadedItemProvider = new CalcTaskStartVolumeLoadedItemProvider(this);
+		}
+
+		return calcTaskStartVolumeLoadedItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.CalcTaskEndVolumeLoaded} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CalcTaskEndVolumeLoadedItemProvider calcTaskEndVolumeLoadedItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousescheduler.CalcTaskEndVolumeLoaded}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCalcTaskEndVolumeLoadedAdapter() {
+		if (calcTaskEndVolumeLoadedItemProvider == null) {
+			calcTaskEndVolumeLoadedItemProvider = new CalcTaskEndVolumeLoadedItemProvider(this);
+		}
+
+		return calcTaskEndVolumeLoadedItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.CalcResourceVolumeOverload} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CalcResourceVolumeOverloadItemProvider calcResourceVolumeOverloadItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousescheduler.CalcResourceVolumeOverload}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCalcResourceVolumeOverloadAdapter() {
+		if (calcResourceVolumeOverloadItemProvider == null) {
+			calcResourceVolumeOverloadItemProvider = new CalcResourceVolumeOverloadItemProvider(this);
+		}
+
+		return calcResourceVolumeOverloadItemProvider;
 	}
 
 	/**
@@ -549,11 +687,17 @@ public class ToUseSchedulerItemProviderAdapterFactory extends ToUseSchedulerAdap
 		if (toUseLoadShipmentItemProvider != null) toUseLoadShipmentItemProvider.dispose();
 		if (toUseUnloadShipmentItemProvider != null) toUseUnloadShipmentItemProvider.dispose();
 		if (toUseScheduleLoadUnloadItemProvider != null) toUseScheduleLoadUnloadItemProvider.dispose();
+		if (toUseUnscheduleLoadUnloadItemProvider != null) toUseUnscheduleLoadUnloadItemProvider.dispose();
 		if (scopeScheduleScoreItemProvider != null) scopeScheduleScoreItemProvider.dispose();
 		if (layerScheduleDistanceItemProvider != null) layerScheduleDistanceItemProvider.dispose();
+		if (calcTaskDistanceFromPreviousItemProvider != null) calcTaskDistanceFromPreviousItemProvider.dispose();
 		if (calcTaskDistanceItemProvider != null) calcTaskDistanceItemProvider.dispose();
+		if (calcResourceDistanceFromLastItemProvider != null) calcResourceDistanceFromLastItemProvider.dispose();
 		if (calcResourceDistanceItemProvider != null) calcResourceDistanceItemProvider.dispose();
-		if (toUseUnscheduleLoadUnloadItemProvider != null) toUseUnscheduleLoadUnloadItemProvider.dispose();
+		if (layerScheduleVolumeLoadedItemProvider != null) layerScheduleVolumeLoadedItemProvider.dispose();
+		if (calcTaskStartVolumeLoadedItemProvider != null) calcTaskStartVolumeLoadedItemProvider.dispose();
+		if (calcTaskEndVolumeLoadedItemProvider != null) calcTaskEndVolumeLoadedItemProvider.dispose();
+		if (calcResourceVolumeOverloadItemProvider != null) calcResourceVolumeOverloadItemProvider.dispose();
 	}
 
 }

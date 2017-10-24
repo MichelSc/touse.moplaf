@@ -2,11 +2,15 @@
  */
 package com.misc.touse.moplaf.tousescheduler.impl;
 
+import com.misc.common.moplaf.propagator2.PropagatorFunction;
+import com.misc.common.moplaf.propagator2.util.Bindings;
+import com.misc.common.moplaf.scheduler.SchedulerPackage;
+import com.misc.common.moplaf.scheduler.Task;
 import com.misc.touse.moplaf.tousescheduler.CalcResourceVolumeOverload;
-import com.misc.touse.moplaf.tousescheduler.LayerScheduleDistance;
 import com.misc.touse.moplaf.tousescheduler.LayerScheduleVolumeLoaded;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedule;
 import com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource;
+import com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
 
 import org.eclipse.emf.ecore.EClass;
@@ -94,5 +98,45 @@ public class CalcResourceVolumeOverloadImpl extends CalcResourceImpl implements 
 		}
 		return super.eIsSet(featureID);
 	}
+	
+	private static Bindings taskBindings = Bindings.constructBindings()
+			.addInboundBinding(ToUseSchedulerPackage.Literals.TO_USE_SCHEDULE_TASK__VOLUME_OVERLOAD)
+			;
+		
+	private static Bindings thisResourceBindings = Bindings.constructBindings()
+			.addInboundBinding(SchedulerPackage.Literals.RESOURCE__SCHEDULED_TASKS, taskBindings)	
+			.addOutboundBinding(ToUseSchedulerPackage.Literals.TO_USE_SCHEDULE_RESOURCE__VOLUME_OVERLOAD)
+			;
+		
+	/**
+	 * 
+	 */
+	@Override
+	public Bindings doGetBindings() {
+		return thisResourceBindings;
+	}
+
+	/**
+	 * 
+	 */
+	@Override
+	public void doRefresh() {
+		ToUseScheduleResource resource = this.getResource();
+		boolean overload = false;
+		for ( Task t : resource.getScheduledTasks()) {
+			ToUseScheduleTask task = (ToUseScheduleTask)t;
+			if ( task.isVolumeOverload() ) {
+				overload = true;
+				break;
+			}
+		}
+		resource.setVolumeOverload(overload);
+	}
+	
+	@Override
+	public PropagatorFunction doGetParent() {
+		return this.getConcreteParent();
+	}
+	
 
 } //CalcResourceVolumeOverloadImpl

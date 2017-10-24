@@ -50,6 +50,7 @@ public class ToUseScoreItemProvider extends ScoreItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addTotalDistancePropertyDescriptor(object);
+			addVolumeOverloadPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -72,6 +73,28 @@ public class ToUseScoreItemProvider extends ScoreItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 getString("_UI__20ToUseSchedulerPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Volume Overload feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addVolumeOverloadPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ToUseScore_VolumeOverload_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseScore_VolumeOverload_feature", "_UI_ToUseScore_type"),
+				 ToUseSchedulerPackage.Literals.TO_USE_SCORE__VOLUME_OVERLOAD,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 getString("_UI__20ToUseSchedulerPropertyCategory"),
 				 null));
 	}
@@ -102,6 +125,7 @@ public class ToUseScoreItemProvider extends ScoreItemProvider {
 
 		switch (notification.getFeatureID(ToUseScore.class)) {
 			case ToUseSchedulerPackage.TO_USE_SCORE__TOTAL_DISTANCE:
+			case ToUseSchedulerPackage.TO_USE_SCORE__VOLUME_OVERLOAD:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

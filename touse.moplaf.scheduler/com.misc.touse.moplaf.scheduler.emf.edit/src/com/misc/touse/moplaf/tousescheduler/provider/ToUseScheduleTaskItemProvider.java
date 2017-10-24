@@ -50,8 +50,13 @@ public class ToUseScheduleTaskItemProvider extends TaskItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addDistancePropertyDescriptor(object);
+			addDistanceFromPreviousPropertyDescriptor(object);
+			addStartVolumeLoadedPropertyDescriptor(object);
+			addEndVolumeLoadedPropertyDescriptor(object);
 			addLocationXPropertyDescriptor(object);
 			addLocationYPropertyDescriptor(object);
+			addLoadFactorPropertyDescriptor(object);
+			addVolumeOverloadPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -70,6 +75,72 @@ public class ToUseScheduleTaskItemProvider extends TaskItemProvider {
 				 getString("_UI_ToUseScheduleTask_Distance_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseScheduleTask_Distance_feature", "_UI_ToUseScheduleTask_type"),
 				 ToUseSchedulerPackage.Literals.TO_USE_SCHEDULE_TASK__DISTANCE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 getString("_UI__20ToUseSchedulerPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Distance From Previous feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDistanceFromPreviousPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ToUseScheduleTask_DistanceFromPrevious_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseScheduleTask_DistanceFromPrevious_feature", "_UI_ToUseScheduleTask_type"),
+				 ToUseSchedulerPackage.Literals.TO_USE_SCHEDULE_TASK__DISTANCE_FROM_PREVIOUS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 getString("_UI__20ToUseSchedulerPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Start Volume Loaded feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addStartVolumeLoadedPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ToUseScheduleTask_StartVolumeLoaded_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseScheduleTask_StartVolumeLoaded_feature", "_UI_ToUseScheduleTask_type"),
+				 ToUseSchedulerPackage.Literals.TO_USE_SCHEDULE_TASK__START_VOLUME_LOADED,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 getString("_UI__20ToUseSchedulerPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the End Volume Loaded feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addEndVolumeLoadedPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ToUseScheduleTask_EndVolumeLoaded_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseScheduleTask_EndVolumeLoaded_feature", "_UI_ToUseScheduleTask_type"),
+				 ToUseSchedulerPackage.Literals.TO_USE_SCHEDULE_TASK__END_VOLUME_LOADED,
 				 true,
 				 false,
 				 false,
@@ -123,6 +194,50 @@ public class ToUseScheduleTaskItemProvider extends TaskItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Load Factor feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLoadFactorPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ToUseScheduleTask_LoadFactor_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseScheduleTask_LoadFactor_feature", "_UI_ToUseScheduleTask_type"),
+				 ToUseSchedulerPackage.Literals.TO_USE_SCHEDULE_TASK__LOAD_FACTOR,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 getString("_UI__20ToUseSchedulerPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Volume Overload feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addVolumeOverloadPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ToUseScheduleTask_VolumeOverload_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseScheduleTask_VolumeOverload_feature", "_UI_ToUseScheduleTask_type"),
+				 ToUseSchedulerPackage.Literals.TO_USE_SCHEDULE_TASK__VOLUME_OVERLOAD,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 getString("_UI__20ToUseSchedulerPropertyCategory"),
+				 null));
+	}
+
+	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -150,8 +265,13 @@ public class ToUseScheduleTaskItemProvider extends TaskItemProvider {
 
 		switch (notification.getFeatureID(ToUseScheduleTask.class)) {
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__DISTANCE:
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__DISTANCE_FROM_PREVIOUS:
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__START_VOLUME_LOADED:
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__END_VOLUME_LOADED:
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__LOCATION_X:
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__LOCATION_Y:
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__LOAD_FACTOR:
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__VOLUME_OVERLOAD:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

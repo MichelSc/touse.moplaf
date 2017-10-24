@@ -104,6 +104,7 @@ public class CalcResourceDistanceImpl extends CalcResourceImpl implements CalcRe
 		
 	private static Bindings thisResourceBindings = Bindings.constructBindings()
 			.addInboundBinding(SchedulerPackage.Literals.RESOURCE__LAST_TASK, taskLastBindings)	
+			.addInboundBinding(ToUseSchedulerPackage.Literals.TO_USE_SCHEDULE_RESOURCE__DISTANCE_FROM_LAST)	
 			.addOutboundBinding(ToUseSchedulerPackage.Literals.TO_USE_SCHEDULE_RESOURCE__TOTAL_DISTANCE)
 			;
 		

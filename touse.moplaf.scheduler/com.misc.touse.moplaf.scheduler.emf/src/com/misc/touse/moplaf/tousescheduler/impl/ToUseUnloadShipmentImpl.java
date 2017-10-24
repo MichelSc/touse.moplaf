@@ -282,4 +282,10 @@ public class ToUseUnloadShipmentImpl extends ToUseScheduleTaskImpl implements To
 	public float getLocationY() {
 		return this.getShipmentUnloaded().getUnloadLocationY();
 	}
+	
+	@Override
+	public float getLoadFactor() {
+		return 1.0f;
+	}
+	
 } //ToUseUnloadShipmentImpl

@@ -50,7 +50,9 @@ public class ToUseScheduleResourceItemProvider extends ResourceItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addVehiclePropertyDescriptor(object);
+			addDistanceFromLastPropertyDescriptor(object);
 			addTotalDistancePropertyDescriptor(object);
+			addVolumeOverloadPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -78,6 +80,28 @@ public class ToUseScheduleResourceItemProvider extends ResourceItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Distance From Last feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDistanceFromLastPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ToUseScheduleResource_DistanceFromLast_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseScheduleResource_DistanceFromLast_feature", "_UI_ToUseScheduleResource_type"),
+				 ToUseSchedulerPackage.Literals.TO_USE_SCHEDULE_RESOURCE__DISTANCE_FROM_LAST,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 getString("_UI__20ToUseSchedulerPropertyCategory"),
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Total Distance feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -95,6 +119,28 @@ public class ToUseScheduleResourceItemProvider extends ResourceItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 getString("_UI__40ToUseSchedulePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Volume Overload feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addVolumeOverloadPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ToUseScheduleResource_VolumeOverload_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseScheduleResource_VolumeOverload_feature", "_UI_ToUseScheduleResource_type"),
+				 ToUseSchedulerPackage.Literals.TO_USE_SCHEDULE_RESOURCE__VOLUME_OVERLOAD,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 getString("_UI__40ToUseSchedulePropertyCategory"),
 				 null));
 	}
@@ -126,7 +172,9 @@ public class ToUseScheduleResourceItemProvider extends ResourceItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ToUseScheduleResource.class)) {
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__DISTANCE_FROM_LAST:
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__TOTAL_DISTANCE:
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__VOLUME_OVERLOAD:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
