@@ -285,7 +285,7 @@ public class ToUseUnloadShipmentImpl extends ToUseScheduleTaskImpl implements To
 	
 	@Override
 	public float getLoadFactor() {
-		return 1.0f;
+		return -1.0f;
 	}
 	
 } //ToUseUnloadShipmentImpl

@@ -284,6 +284,6 @@ public class ToUseLoadShipmentImpl extends ToUseScheduleTaskImpl implements ToUs
 
 	@Override
 	public float getLoadFactor() {
-		return -1.0f;
+		return 1.0f;
 	}
 } //ToUseLoadShipmentImpl

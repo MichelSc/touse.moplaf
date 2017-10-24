@@ -97,7 +97,7 @@ public class ToUseScheduleResourceItemProvider extends ResourceItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 getString("_UI__20ToUseSchedulerPropertyCategory"),
+				 getString("_UI__23ToUseSchedulerLocationPropertyCategory"),
 				 null));
 	}
 
@@ -119,7 +119,7 @@ public class ToUseScheduleResourceItemProvider extends ResourceItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 getString("_UI__40ToUseSchedulePropertyCategory"),
+				 getString("_UI__23ToUseSchedulerLocationPropertyCategory"),
 				 null));
 	}
 
@@ -141,7 +141,7 @@ public class ToUseScheduleResourceItemProvider extends ResourceItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
-				 getString("_UI__40ToUseSchedulePropertyCategory"),
+				 getString("_UI__26ToUseSchedulerVolumePropertyCategory"),
 				 null));
 	}
 

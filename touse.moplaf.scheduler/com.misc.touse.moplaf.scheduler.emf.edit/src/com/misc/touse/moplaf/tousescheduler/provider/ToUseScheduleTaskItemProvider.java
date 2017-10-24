@@ -79,7 +79,7 @@ public class ToUseScheduleTaskItemProvider extends TaskItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 getString("_UI__20ToUseSchedulerPropertyCategory"),
+				 getString("_UI__23ToUseSchedulerLocationPropertyCategory"),
 				 null));
 	}
 
@@ -101,7 +101,7 @@ public class ToUseScheduleTaskItemProvider extends TaskItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 getString("_UI__20ToUseSchedulerPropertyCategory"),
+				 getString("_UI__23ToUseSchedulerLocationPropertyCategory"),
 				 null));
 	}
 
@@ -123,7 +123,7 @@ public class ToUseScheduleTaskItemProvider extends TaskItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 getString("_UI__20ToUseSchedulerPropertyCategory"),
+				 getString("_UI__26ToUseSchedulerVolumePropertyCategory"),
 				 null));
 	}
 
@@ -145,7 +145,7 @@ public class ToUseScheduleTaskItemProvider extends TaskItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 getString("_UI__20ToUseSchedulerPropertyCategory"),
+				 getString("_UI__26ToUseSchedulerVolumePropertyCategory"),
 				 null));
 	}
 
@@ -167,7 +167,7 @@ public class ToUseScheduleTaskItemProvider extends TaskItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 getString("_UI__20ToUseSchedulerPropertyCategory"),
+				 getString("_UI__23ToUseSchedulerLocationPropertyCategory"),
 				 null));
 	}
 
@@ -189,7 +189,7 @@ public class ToUseScheduleTaskItemProvider extends TaskItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 getString("_UI__20ToUseSchedulerPropertyCategory"),
+				 getString("_UI__23ToUseSchedulerLocationPropertyCategory"),
 				 null));
 	}
 
@@ -211,7 +211,7 @@ public class ToUseScheduleTaskItemProvider extends TaskItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 getString("_UI__20ToUseSchedulerPropertyCategory"),
+				 getString("_UI__26ToUseSchedulerVolumePropertyCategory"),
 				 null));
 	}
 
@@ -233,7 +233,7 @@ public class ToUseScheduleTaskItemProvider extends TaskItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
-				 getString("_UI__20ToUseSchedulerPropertyCategory"),
+				 getString("_UI__26ToUseSchedulerVolumePropertyCategory"),
 				 null));
 	}
 

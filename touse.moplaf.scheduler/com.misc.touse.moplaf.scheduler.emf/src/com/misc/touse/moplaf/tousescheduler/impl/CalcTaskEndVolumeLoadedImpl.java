@@ -102,8 +102,8 @@ public class CalcTaskEndVolumeLoadedImpl extends CalcTaskImpl implements CalcTas
 
 	private static Bindings thisTaskBindings = Bindings.constructBindings()
 			.addInboundBinding(SchedulerPackage.Literals.TASK__SCHEDULED_RESOURCE)	
-			.addInboundBinding(ToUseSchedulerPackage.Literals.TO_USE_SCHEDULE_TASK__END_VOLUME_LOADED)	
-			.addOutboundBinding(ToUseSchedulerPackage.Literals.TO_USE_SCHEDULE_TASK__START_VOLUME_LOADED)
+			.addInboundBinding(ToUseSchedulerPackage.Literals.TO_USE_SCHEDULE_TASK__START_VOLUME_LOADED)	
+			.addOutboundBinding(ToUseSchedulerPackage.Literals.TO_USE_SCHEDULE_TASK__END_VOLUME_LOADED)
 			.addOutboundBinding(ToUseSchedulerPackage.Literals.TO_USE_SCHEDULE_TASK__VOLUME_OVERLOAD)
 			;
 		
