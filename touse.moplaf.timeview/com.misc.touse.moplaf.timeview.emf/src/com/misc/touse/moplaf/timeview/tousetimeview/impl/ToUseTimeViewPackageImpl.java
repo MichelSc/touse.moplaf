@@ -344,11 +344,6 @@ public class ToUseTimeViewPackageImpl extends EPackageImpl implements ToUseTimeV
 		createEReference(folderEClass, FOLDER__OBJECTS);
 		createEAttribute(folderEClass, FOLDER__NAME);
 
-		objectEClass = createEClass(OBJECT);
-		createEReference(objectEClass, OBJECT__SUB_OBJECTS);
-		createEReference(objectEClass, OBJECT__TIME_LINES);
-		createEAttribute(objectEClass, OBJECT__NAME);
-
 		timeLineEClass = createEClass(TIME_LINE);
 		createEReference(timeLineEClass, TIME_LINE__NODES);
 		createEAttribute(timeLineEClass, TIME_LINE__TEXT);
@@ -361,6 +356,11 @@ public class ToUseTimeViewPackageImpl extends EPackageImpl implements ToUseTimeV
 		createEAttribute(nodeEClass, NODE__BACKGROUND);
 		createEAttribute(nodeEClass, NODE__START);
 		createEAttribute(nodeEClass, NODE__END);
+
+		objectEClass = createEClass(OBJECT);
+		createEReference(objectEClass, OBJECT__SUB_OBJECTS);
+		createEReference(objectEClass, OBJECT__TIME_LINES);
+		createEAttribute(objectEClass, OBJECT__NAME);
 	}
 
 	/**
@@ -401,11 +401,6 @@ public class ToUseTimeViewPackageImpl extends EPackageImpl implements ToUseTimeV
 		initEReference(getFolder_Objects(), this.getObject(), null, "Objects", null, 0, -1, Folder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFolder_Name(), ecorePackage.getEString(), "Name", null, 0, 1, Folder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(objectEClass, com.misc.touse.moplaf.timeview.tousetimeview.Object.class, "Object", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getObject_SubObjects(), this.getObject(), null, "SubObjects", null, 0, -1, com.misc.touse.moplaf.timeview.tousetimeview.Object.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getObject_TimeLines(), this.getTimeLine(), null, "TimeLines", null, 0, -1, com.misc.touse.moplaf.timeview.tousetimeview.Object.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getObject_Name(), ecorePackage.getEString(), "Name", null, 0, 1, com.misc.touse.moplaf.timeview.tousetimeview.Object.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(timeLineEClass, TimeLine.class, "TimeLine", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTimeLine_Nodes(), this.getNode(), null, "Nodes", null, 0, -1, TimeLine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTimeLine_Text(), ecorePackage.getEString(), "Text", null, 0, 1, TimeLine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -418,6 +413,11 @@ public class ToUseTimeViewPackageImpl extends EPackageImpl implements ToUseTimeV
 		initEAttribute(getNode_Background(), ecorePackage.getEInt(), "Background", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNode_Start(), ecorePackage.getEDate(), "Start", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNode_End(), ecorePackage.getEDate(), "End", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(objectEClass, com.misc.touse.moplaf.timeview.tousetimeview.Object.class, "Object", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getObject_SubObjects(), this.getObject(), null, "SubObjects", null, 0, -1, com.misc.touse.moplaf.timeview.tousetimeview.Object.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getObject_TimeLines(), this.getTimeLine(), null, "TimeLines", null, 0, -1, com.misc.touse.moplaf.timeview.tousetimeview.Object.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getObject_Name(), ecorePackage.getEString(), "Name", null, 0, 1, com.misc.touse.moplaf.timeview.tousetimeview.Object.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

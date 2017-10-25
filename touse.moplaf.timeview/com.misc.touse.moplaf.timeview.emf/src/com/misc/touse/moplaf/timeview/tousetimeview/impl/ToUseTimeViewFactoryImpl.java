@@ -63,9 +63,9 @@ public class ToUseTimeViewFactoryImpl extends EFactoryImpl implements ToUseTimeV
 		switch (eClass.getClassifierID()) {
 			case ToUseTimeViewPackage.DOMAIN: return createDomain();
 			case ToUseTimeViewPackage.FOLDER: return createFolder();
-			case ToUseTimeViewPackage.OBJECT: return createObject();
 			case ToUseTimeViewPackage.TIME_LINE: return createTimeLine();
 			case ToUseTimeViewPackage.NODE: return createNode();
+			case ToUseTimeViewPackage.OBJECT: return createObject();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}

@@ -82,12 +82,6 @@ public class ToUseTimeViewSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ToUseTimeViewPackage.OBJECT: {
-				com.misc.touse.moplaf.timeview.tousetimeview.Object object = (com.misc.touse.moplaf.timeview.tousetimeview.Object)theEObject;
-				T result = caseObject(object);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case ToUseTimeViewPackage.TIME_LINE: {
 				TimeLine timeLine = (TimeLine)theEObject;
 				T result = caseTimeLine(timeLine);
@@ -97,6 +91,12 @@ public class ToUseTimeViewSwitch<T> extends Switch<T> {
 			case ToUseTimeViewPackage.NODE: {
 				Node node = (Node)theEObject;
 				T result = caseNode(node);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ToUseTimeViewPackage.OBJECT: {
+				com.misc.touse.moplaf.timeview.tousetimeview.Object object = (com.misc.touse.moplaf.timeview.tousetimeview.Object)theEObject;
+				T result = caseObject(object);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

@@ -288,9 +288,9 @@ public class ToUseTimeViewItemProviderAdapterFactory extends ToUseTimeViewAdapte
 	public void dispose() {
 		if (domainItemProvider != null) domainItemProvider.dispose();
 		if (folderItemProvider != null) folderItemProvider.dispose();
-		if (objectItemProvider != null) objectItemProvider.dispose();
 		if (timeLineItemProvider != null) timeLineItemProvider.dispose();
 		if (nodeItemProvider != null) nodeItemProvider.dispose();
+		if (objectItemProvider != null) objectItemProvider.dispose();
 	}
 
 }

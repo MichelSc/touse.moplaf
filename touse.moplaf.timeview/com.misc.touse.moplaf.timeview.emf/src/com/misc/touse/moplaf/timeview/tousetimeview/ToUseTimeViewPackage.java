@@ -156,52 +156,7 @@ public interface ToUseTimeViewPackage extends EPackage {
 	 * @see com.misc.touse.moplaf.timeview.tousetimeview.impl.ToUseTimeViewPackageImpl#getObject()
 	 * @generated
 	 */
-	int OBJECT = 2;
-
-	/**
-	 * The feature id for the '<em><b>Sub Objects</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OBJECT__SUB_OBJECTS = 0;
-
-	/**
-	 * The feature id for the '<em><b>Time Lines</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OBJECT__TIME_LINES = 1;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OBJECT__NAME = 2;
-
-	/**
-	 * The number of structural features of the '<em>Object</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OBJECT_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Object</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OBJECT_OPERATION_COUNT = 0;
+	int OBJECT = 4;
 
 	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.timeview.tousetimeview.impl.TimeLineImpl <em>Time Line</em>}' class.
@@ -211,7 +166,7 @@ public interface ToUseTimeViewPackage extends EPackage {
 	 * @see com.misc.touse.moplaf.timeview.tousetimeview.impl.ToUseTimeViewPackageImpl#getTimeLine()
 	 * @generated
 	 */
-	int TIME_LINE = 3;
+	int TIME_LINE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Nodes</b></em>' containment reference list.
@@ -275,7 +230,7 @@ public interface ToUseTimeViewPackage extends EPackage {
 	 * @see com.misc.touse.moplaf.timeview.tousetimeview.impl.ToUseTimeViewPackageImpl#getNode()
 	 * @generated
 	 */
-	int NODE = 4;
+	int NODE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -339,6 +294,51 @@ public interface ToUseTimeViewPackage extends EPackage {
 	 * @ordered
 	 */
 	int NODE_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Sub Objects</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OBJECT__SUB_OBJECTS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Time Lines</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OBJECT__TIME_LINES = 1;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OBJECT__NAME = 2;
+
+	/**
+	 * The number of structural features of the '<em>Object</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OBJECT_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Object</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OBJECT_OPERATION_COUNT = 0;
 
 
 	/**

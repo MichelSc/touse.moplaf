@@ -80,16 +80,16 @@ public class ToUseTimeViewAdapterFactory extends AdapterFactoryImpl {
 				return createFolderAdapter();
 			}
 			@Override
-			public Adapter caseObject(com.misc.touse.moplaf.timeview.tousetimeview.Object object) {
-				return createObjectAdapter();
-			}
-			@Override
 			public Adapter caseTimeLine(TimeLine object) {
 				return createTimeLineAdapter();
 			}
 			@Override
 			public Adapter caseNode(Node object) {
 				return createNodeAdapter();
+			}
+			@Override
+			public Adapter caseObject(com.misc.touse.moplaf.timeview.tousetimeview.Object object) {
+				return createObjectAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
