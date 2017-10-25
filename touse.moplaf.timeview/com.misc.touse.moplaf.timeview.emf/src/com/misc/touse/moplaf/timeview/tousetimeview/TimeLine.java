@@ -8,41 +8,24 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Row</b></em>'.
+ * A representation of the model object '<em><b>Time Line</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link com.misc.touse.moplaf.timeview.tousetimeview.Row#getSubRows <em>Sub Rows</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.timeview.tousetimeview.Row#getNodes <em>Nodes</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.timeview.tousetimeview.Row#getText <em>Text</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.timeview.tousetimeview.Row#getForeground <em>Foreground</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.timeview.tousetimeview.Row#getBackground <em>Background</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.timeview.tousetimeview.TimeLine#getNodes <em>Nodes</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.timeview.tousetimeview.TimeLine#getText <em>Text</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.timeview.tousetimeview.TimeLine#getForeground <em>Foreground</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.timeview.tousetimeview.TimeLine#getBackground <em>Background</em>}</li>
  * </ul>
  *
- * @see com.misc.touse.moplaf.timeview.tousetimeview.TousetimeviewPackage#getRow()
+ * @see com.misc.touse.moplaf.timeview.tousetimeview.ToUseTimeViewPackage#getTimeLine()
  * @model
  * @generated
  */
-public interface Row extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Sub Rows</b></em>' containment reference list.
-	 * The list contents are of type {@link com.misc.touse.moplaf.timeview.tousetimeview.Row}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Sub Rows</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Sub Rows</em>' containment reference list.
-	 * @see com.misc.touse.moplaf.timeview.tousetimeview.TousetimeviewPackage#getRow_SubRows()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Row> getSubRows();
-
+public interface TimeLine extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Nodes</b></em>' containment reference list.
 	 * The list contents are of type {@link com.misc.touse.moplaf.timeview.tousetimeview.Node}.
@@ -53,7 +36,7 @@ public interface Row extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Nodes</em>' containment reference list.
-	 * @see com.misc.touse.moplaf.timeview.tousetimeview.TousetimeviewPackage#getRow_Nodes()
+	 * @see com.misc.touse.moplaf.timeview.tousetimeview.ToUseTimeViewPackage#getTimeLine_Nodes()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -69,14 +52,14 @@ public interface Row extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Text</em>' attribute.
 	 * @see #setText(String)
-	 * @see com.misc.touse.moplaf.timeview.tousetimeview.TousetimeviewPackage#getRow_Text()
+	 * @see com.misc.touse.moplaf.timeview.tousetimeview.ToUseTimeViewPackage#getTimeLine_Text()
 	 * @model
 	 * @generated
 	 */
 	String getText();
 
 	/**
-	 * Sets the value of the '{@link com.misc.touse.moplaf.timeview.tousetimeview.Row#getText <em>Text</em>}' attribute.
+	 * Sets the value of the '{@link com.misc.touse.moplaf.timeview.tousetimeview.TimeLine#getText <em>Text</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Text</em>' attribute.
@@ -95,14 +78,14 @@ public interface Row extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Foreground</em>' attribute.
 	 * @see #setForeground(int)
-	 * @see com.misc.touse.moplaf.timeview.tousetimeview.TousetimeviewPackage#getRow_Foreground()
+	 * @see com.misc.touse.moplaf.timeview.tousetimeview.ToUseTimeViewPackage#getTimeLine_Foreground()
 	 * @model
 	 * @generated
 	 */
 	int getForeground();
 
 	/**
-	 * Sets the value of the '{@link com.misc.touse.moplaf.timeview.tousetimeview.Row#getForeground <em>Foreground</em>}' attribute.
+	 * Sets the value of the '{@link com.misc.touse.moplaf.timeview.tousetimeview.TimeLine#getForeground <em>Foreground</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Foreground</em>' attribute.
@@ -121,14 +104,14 @@ public interface Row extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Background</em>' attribute.
 	 * @see #setBackground(int)
-	 * @see com.misc.touse.moplaf.timeview.tousetimeview.TousetimeviewPackage#getRow_Background()
+	 * @see com.misc.touse.moplaf.timeview.tousetimeview.ToUseTimeViewPackage#getTimeLine_Background()
 	 * @model
 	 * @generated
 	 */
 	int getBackground();
 
 	/**
-	 * Sets the value of the '{@link com.misc.touse.moplaf.timeview.tousetimeview.Row#getBackground <em>Background</em>}' attribute.
+	 * Sets the value of the '{@link com.misc.touse.moplaf.timeview.tousetimeview.TimeLine#getBackground <em>Background</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Background</em>' attribute.
@@ -137,4 +120,4 @@ public interface Row extends EObject {
 	 */
 	void setBackground(int value);
 
-} // Row
+} // TimeLine

@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.misc.touse.moplaf.timeview.tousetimeview.Node#getEnd <em>End</em>}</li>
  * </ul>
  *
- * @see com.misc.touse.moplaf.timeview.tousetimeview.TousetimeviewPackage#getNode()
+ * @see com.misc.touse.moplaf.timeview.tousetimeview.ToUseTimeViewPackage#getNode()
  * @model
  * @generated
  */
@@ -37,7 +37,7 @@ public interface Node extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Text</em>' attribute.
 	 * @see #setText(String)
-	 * @see com.misc.touse.moplaf.timeview.tousetimeview.TousetimeviewPackage#getNode_Text()
+	 * @see com.misc.touse.moplaf.timeview.tousetimeview.ToUseTimeViewPackage#getNode_Text()
 	 * @model
 	 * @generated
 	 */
@@ -63,7 +63,7 @@ public interface Node extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Foreground</em>' attribute.
 	 * @see #setForeground(int)
-	 * @see com.misc.touse.moplaf.timeview.tousetimeview.TousetimeviewPackage#getNode_Foreground()
+	 * @see com.misc.touse.moplaf.timeview.tousetimeview.ToUseTimeViewPackage#getNode_Foreground()
 	 * @model
 	 * @generated
 	 */
@@ -89,7 +89,7 @@ public interface Node extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Background</em>' attribute.
 	 * @see #setBackground(int)
-	 * @see com.misc.touse.moplaf.timeview.tousetimeview.TousetimeviewPackage#getNode_Background()
+	 * @see com.misc.touse.moplaf.timeview.tousetimeview.ToUseTimeViewPackage#getNode_Background()
 	 * @model
 	 * @generated
 	 */
@@ -115,7 +115,7 @@ public interface Node extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Start</em>' attribute.
 	 * @see #setStart(Date)
-	 * @see com.misc.touse.moplaf.timeview.tousetimeview.TousetimeviewPackage#getNode_Start()
+	 * @see com.misc.touse.moplaf.timeview.tousetimeview.ToUseTimeViewPackage#getNode_Start()
 	 * @model
 	 * @generated
 	 */
@@ -141,7 +141,7 @@ public interface Node extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>End</em>' attribute.
 	 * @see #setEnd(Date)
-	 * @see com.misc.touse.moplaf.timeview.tousetimeview.TousetimeviewPackage#getNode_End()
+	 * @see com.misc.touse.moplaf.timeview.tousetimeview.ToUseTimeViewPackage#getNode_End()
 	 * @model
 	 * @generated
 	 */

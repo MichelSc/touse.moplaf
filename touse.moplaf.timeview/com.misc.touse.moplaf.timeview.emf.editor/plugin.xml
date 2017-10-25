@@ -6,32 +6,111 @@
 
 <plugin>
 
-   <extension point="org.eclipse.ui.newWizards">
+   <extension
+         point="org.eclipse.core.runtime.applications"
+         id="ToUseTimeViewEditorAdvisorApplication">
       <!-- @generated ToUseTimeView -->
-      <category
-            id="org.eclipse.emf.ecore.Wizard.category.ID"
-            name="%_UI_Wizard_category"/>
-      <wizard
-            id="com.misc.touse.moplaf.timeview.tousetimeview.presentation.TousetimeviewModelWizardID"
-            name="%_UI_TousetimeviewModelWizard_label"
-            class="com.misc.touse.moplaf.timeview.tousetimeview.presentation.TousetimeviewModelWizard"
-            category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/TousetimeviewModelFile.gif">
-         <description>%_UI_TousetimeviewModelWizard_description</description>
-         <selection class="org.eclipse.core.resources.IResource"/>
-      </wizard>
+      <application>
+         <run class="com.misc.touse.moplaf.timeview.tousetimeview.presentation.ToUseTimeViewEditorAdvisor$Application"/>
+      </application>
    </extension>
 
+
+   <extension point="org.eclipse.ui.perspectives">
+      <!-- @generated ToUseTimeView -->
+      <perspective
+            name="%_UI_Perspective_label"
+            class="com.misc.touse.moplaf.timeview.tousetimeview.presentation.ToUseTimeViewEditorAdvisor$Perspective"
+            id="com.misc.touse.moplaf.timeview.tousetimeview.presentation.ToUseTimeViewEditorAdvisorPerspective">
+      </perspective>
+   </extension>
+
+   <extension point="org.eclipse.ui.commands">
+      <!-- @generated ToUseTimeView -->
+      <command
+            name="%_UI_Menu_OpenURI_label"
+            description="%_UI_Menu_OpenURI_description"
+            categoryId="org.eclipse.ui.category.file"
+            id="com.misc.touse.moplaf.timeview.tousetimeview.presentation.ToUseTimeViewEditorAdvisorOpenURICommand"/>
+      <command
+            name="%_UI_Menu_Open_label"
+            description="%_UI_Menu_Open_description"
+            categoryId="org.eclipse.ui.category.file"
+            id="com.misc.touse.moplaf.timeview.tousetimeview.presentation.ToUseTimeViewEditorAdvisorOpenCommand"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.bindings">
+      <!-- @generated ToUseTimeView -->
+      <key
+            commandId="com.misc.touse.moplaf.timeview.tousetimeview.presentation.ToUseTimeViewEditorAdvisorOpenURICommand"
+            sequence="M1+U"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+      <key
+            commandId="com.misc.touse.moplaf.timeview.tousetimeview.presentation.ToUseTimeViewEditorAdvisorOpenCommand"
+            sequence="M1+O"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.actionSets">
+      <!-- @generated ToUseTimeView -->
+      <actionSet
+            label="%_UI_ToUseTimeViewEditorAdvisor_ActionSet_label"
+            visible="true"
+            id="ToUseTimeViewEditorAdvisorActionSet">
+         <action
+               label="%_UI_Menu_About_label"
+               class="com.misc.touse.moplaf.timeview.tousetimeview.presentation.ToUseTimeViewEditorAdvisor$AboutAction"
+               menubarPath="help/additions"
+               id="com.misc.touse.moplaf.timeview.tousetimeview.presentation.ToUseTimeViewEditorAdvisorAboutAction"/>
+         <action
+               label="%_UI_Menu_OpenURI_label"
+               definitionId="com.misc.touse.moplaf.timeview.tousetimeview.presentation.ToUseTimeViewEditorAdvisorOpenURICommand"
+               class="com.misc.touse.moplaf.timeview.tousetimeview.presentation.ToUseTimeViewEditorAdvisor$OpenURIAction"
+               menubarPath="file/additions"
+               id="com.misc.touse.moplaf.timeview.tousetimeview.presentation.ToUseTimeViewEditorAdvisorOpenURIAction"/>
+         <action
+               label="%_UI_Menu_Open_label"
+               definitionId="com.misc.touse.moplaf.timeview.tousetimeview.presentation.ToUseTimeViewEditorAdvisorOpenCommand"
+               class="com.misc.touse.moplaf.timeview.tousetimeview.presentation.ToUseTimeViewEditorAdvisor$OpenAction"
+               menubarPath="file/additions"
+               id="com.misc.touse.moplaf.timeview.tousetimeview.presentation.ToUseTimeViewEditorAdvisorOpenAction"/>
+      </actionSet>
+   </extension>
+
+   <extension point="org.eclipse.ui.actionSets">
+      <!-- @generated ToUseTimeView -->
+      <actionSet
+            label="%_UI_ToUseTimeViewModelWizard_ActionSet_label"
+            visible="true"
+            id="com.misc.touse.moplaf.timeview.tousetimeview.presentation.ToUseTimeViewActionBarContributorActionSet">
+         <action
+               label="%_UI_ToUseTimeViewModelWizard_label"
+               class="com.misc.touse.moplaf.timeview.tousetimeview.presentation.ToUseTimeViewActionBarContributor$NewAction"
+               menubarPath="file/new/additions"
+               id="com.misc.touse.moplaf.timeview.tousetimeview.presentation.ToUseTimeViewActionBarContributorNewAction"/>
+      </actionSet>
+   </extension>
    <extension point="org.eclipse.ui.editors">
       <!-- @generated ToUseTimeView -->
       <editor
-            id="com.misc.touse.moplaf.timeview.tousetimeview.presentation.TousetimeviewEditorID"
-            name="%_UI_TousetimeviewEditor_label"
-            icon="icons/full/obj16/TousetimeviewModelFile.gif"
+            id="com.misc.touse.moplaf.timeview.tousetimeview.presentation.ToUseTimeViewEditorID"
+            name="%_UI_ToUseTimeViewEditor_label"
+            icon="icons/full/obj16/ToUseTimeViewModelFile.gif"
             extensions="tousetimeview"
-            class="com.misc.touse.moplaf.timeview.tousetimeview.presentation.TousetimeviewEditor"
-            contributorClass="com.misc.touse.moplaf.timeview.tousetimeview.presentation.TousetimeviewActionBarContributor">
+            class="com.misc.touse.moplaf.timeview.tousetimeview.presentation.ToUseTimeViewEditor"
+            contributorClass="com.misc.touse.moplaf.timeview.tousetimeview.presentation.ToUseTimeViewActionBarContributor">
       </editor>
    </extension>
-
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="com.misc.touse.moplaf.timeview.emf.editor.ToUseTimeViewEditorAdvisorApplication"
+            name="ToUseGanttAsRCP">
+         <property
+               name="appName"
+               value="ToUseGanttAsRCP">
+         </property>
+      </product>
+   </extension>
 </plugin>

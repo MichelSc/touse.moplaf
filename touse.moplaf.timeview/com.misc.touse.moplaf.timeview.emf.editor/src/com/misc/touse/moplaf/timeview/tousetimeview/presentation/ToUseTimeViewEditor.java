@@ -15,18 +15,6 @@ import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-
-import org.eclipse.core.resources.IFile;
-import org.eclipse.core.resources.IMarker;
-import org.eclipse.core.resources.IResource;
-import org.eclipse.core.resources.IResourceChangeEvent;
-import org.eclipse.core.resources.IResourceChangeListener;
-import org.eclipse.core.resources.IResourceDelta;
-import org.eclipse.core.resources.IResourceDeltaVisitor;
-import org.eclipse.core.resources.ResourcesPlugin;
-
-import org.eclipse.core.runtime.CoreException;
-import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.NullProgressMonitor;
 
@@ -85,12 +73,6 @@ import org.eclipse.ui.IEditorSite;
 import org.eclipse.ui.IPartListener;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.PartInitException;
-
-import org.eclipse.ui.dialogs.SaveAsDialog;
-
-import org.eclipse.ui.ide.IGotoMarker;
-
-import org.eclipse.ui.part.FileEditorInput;
 import org.eclipse.ui.part.MultiPageEditorPart;
 
 import org.eclipse.ui.views.contentoutline.ContentOutline;
@@ -108,8 +90,7 @@ import org.eclipse.emf.common.command.CommandStackListener;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.ui.MarkerHelper;
+import org.eclipse.emf.common.ui.URIEditorInput;
 import org.eclipse.emf.common.ui.ViewerPane;
 
 import org.eclipse.emf.common.ui.editor.ProblemEditorPart;
@@ -122,8 +103,6 @@ import org.eclipse.emf.common.util.URI;
 
 
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.emf.ecore.resource.ResourceSet;
-
 import org.eclipse.emf.ecore.util.EContentAdapter;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
@@ -148,28 +127,47 @@ import org.eclipse.emf.edit.ui.dnd.ViewerDragAdapter;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
 import org.eclipse.emf.edit.ui.provider.UnwrappingSelectionProvider;
-
-import org.eclipse.emf.edit.ui.util.EditUIMarkerHelper;
+import org.eclipse.jface.operation.IRunnableWithProgress;
 import org.eclipse.emf.edit.ui.util.EditUIUtil;
 
 import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 
 import com.misc.common.moplaf.emf.editor.provider.AdapterFactoryContentProviderExtended;
-import com.misc.touse.moplaf.timeview.tousetimeview.TousetimeviewPackage;
-import com.misc.touse.moplaf.timeview.tousetimeview.provider.TousetimeviewItemProviderAdapterFactory;
-
-import org.eclipse.ui.actions.WorkspaceModifyOperation;
+import com.misc.touse.moplaf.timeview.tousetimeview.ToUseTimeViewPackage;
+import com.misc.touse.moplaf.timeview.tousetimeview.provider.ToUseTimeViewItemProviderAdapterFactory;
 
 
 /**
- * This is an example of a Tousetimeview model editor.
+ * This is an example of a ToUseTimeView model editor.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class TousetimeviewEditor
+public class ToUseTimeViewEditor
 	extends MultiPageEditorPart
-	implements IEditingDomainProvider, ISelectionProvider, IMenuListener, IViewerProvider, IGotoMarker {
+	implements IEditingDomainProvider, ISelectionProvider, IMenuListener, IViewerProvider {
+	/**
+	 * The filters for file extensions supported by the editor.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final List<String> FILE_EXTENSION_FILTERS = prefixExtensions(ToUseTimeViewModelWizard.FILE_EXTENSIONS, "*.");
+
+	/**
+	 * Returns a new unmodifiable list containing prefixed versions of the extensions in the given list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private static List<String> prefixExtensions(List<String> extensions, String prefix) {
+		List<String> result = new ArrayList<String>();
+		for (String extension : extensions) {
+			result.add(prefix + extension);
+		}
+		return Collections.unmodifiableList(result);
+	}
+
 	/**
 	 * This keeps track of the editing domain that is used to track all changes to the model.
 	 * <!-- begin-user-doc -->
@@ -310,15 +308,6 @@ public class TousetimeviewEditor
 	protected ISelection editorSelection = StructuredSelection.EMPTY;
 
 	/**
-	 * The MarkerHelper is responsible for creating workspace resource markers presented
-	 * in Eclipse's Problems View.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected MarkerHelper markerHelper = new EditUIMarkerHelper();
-
-	/**
 	 * This listens for when the outline becomes active
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -329,18 +318,18 @@ public class TousetimeviewEditor
 			public void partActivated(IWorkbenchPart p) {
 				if (p instanceof ContentOutline) {
 					if (((ContentOutline)p).getCurrentPage() == contentOutlinePage) {
-						getActionBarContributor().setActiveEditor(TousetimeviewEditor.this);
+						getActionBarContributor().setActiveEditor(ToUseTimeViewEditor.this);
 
 						setCurrentViewer(contentOutlineViewer);
 					}
 				}
 				else if (p instanceof PropertySheet) {
 					if (propertySheetPages.contains(((PropertySheet)p).getCurrentPage())) {
-						getActionBarContributor().setActiveEditor(TousetimeviewEditor.this);
+						getActionBarContributor().setActiveEditor(ToUseTimeViewEditor.this);
 						handleActivate();
 					}
 				}
-				else if (p == TousetimeviewEditor.this) {
+				else if (p == ToUseTimeViewEditor.this) {
 					handleActivate();
 				}
 			}
@@ -406,6 +395,8 @@ public class TousetimeviewEditor
 	 */
 	protected EContentAdapter problemIndicationAdapter =
 		new EContentAdapter() {
+			protected boolean dispatching;
+
 			@Override
 			public void notifyChanged(Notification notification) {
 				if (notification.getNotifier() instanceof Resource) {
@@ -421,21 +412,26 @@ public class TousetimeviewEditor
 							else {
 								resourceToDiagnosticMap.remove(resource);
 							}
-
-							if (updateProblemIndication) {
-								getSite().getShell().getDisplay().asyncExec
-									(new Runnable() {
-										 public void run() {
-											 updateProblemIndication();
-										 }
-									 });
-							}
+							dispatchUpdateProblemIndication();
 							break;
 						}
 					}
 				}
 				else {
 					super.notifyChanged(notification);
+				}
+			}
+
+			protected void dispatchUpdateProblemIndication() {
+				if (updateProblemIndication && !dispatching) {
+					dispatching = true;
+					getSite().getShell().getDisplay().asyncExec
+						(new Runnable() {
+							 public void run() {
+								 dispatching = false;
+								 updateProblemIndication();
+							 }
+						 });
 				}
 			}
 
@@ -448,92 +444,7 @@ public class TousetimeviewEditor
 			protected void unsetTarget(Resource target) {
 				basicUnsetTarget(target);
 				resourceToDiagnosticMap.remove(target);
-				if (updateProblemIndication) {
-					getSite().getShell().getDisplay().asyncExec
-						(new Runnable() {
-							 public void run() {
-								 updateProblemIndication();
-							 }
-						 });
-				}
-			}
-		};
-
-	/**
-	 * This listens for workspace changes.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IResourceChangeListener resourceChangeListener =
-		new IResourceChangeListener() {
-			public void resourceChanged(IResourceChangeEvent event) {
-				IResourceDelta delta = event.getDelta();
-				try {
-					class ResourceDeltaVisitor implements IResourceDeltaVisitor {
-						protected ResourceSet resourceSet = editingDomain.getResourceSet();
-						protected Collection<Resource> changedResources = new ArrayList<Resource>();
-						protected Collection<Resource> removedResources = new ArrayList<Resource>();
-
-						public boolean visit(IResourceDelta delta) {
-							if (delta.getResource().getType() == IResource.FILE) {
-								if (delta.getKind() == IResourceDelta.REMOVED ||
-								    delta.getKind() == IResourceDelta.CHANGED && delta.getFlags() != IResourceDelta.MARKERS) {
-									Resource resource = resourceSet.getResource(URI.createPlatformResourceURI(delta.getFullPath().toString(), true), false);
-									if (resource != null) {
-										if (delta.getKind() == IResourceDelta.REMOVED) {
-											removedResources.add(resource);
-										}
-										else if (!savedResources.remove(resource)) {
-											changedResources.add(resource);
-										}
-									}
-								}
-								return false;
-							}
-
-							return true;
-						}
-
-						public Collection<Resource> getChangedResources() {
-							return changedResources;
-						}
-
-						public Collection<Resource> getRemovedResources() {
-							return removedResources;
-						}
-					}
-
-					final ResourceDeltaVisitor visitor = new ResourceDeltaVisitor();
-					delta.accept(visitor);
-
-					if (!visitor.getRemovedResources().isEmpty()) {
-						getSite().getShell().getDisplay().asyncExec
-							(new Runnable() {
-								 public void run() {
-									 removedResources.addAll(visitor.getRemovedResources());
-									 if (!isDirty()) {
-										 getSite().getPage().closeEditor(TousetimeviewEditor.this, false);
-									 }
-								 }
-							 });
-					}
-
-					if (!visitor.getChangedResources().isEmpty()) {
-						getSite().getShell().getDisplay().asyncExec
-							(new Runnable() {
-								 public void run() {
-									 changedResources.addAll(visitor.getChangedResources());
-									 if (getSite().getPage().getActiveEditor() == TousetimeviewEditor.this) {
-										 handleActivate();
-									 }
-								 }
-							 });
-					}
-				}
-				catch (CoreException exception) {
-					ToUseTimeViewEditorPlugin.INSTANCE.log(exception);
-				}
+				dispatchUpdateProblemIndication();
 			}
 		};
 
@@ -556,7 +467,7 @@ public class TousetimeviewEditor
 
 		if (!removedResources.isEmpty()) {
 			if (handleDirtyConflict()) {
-				getSite().getPage().closeEditor(TousetimeviewEditor.this, false);
+				getSite().getPage().closeEditor(ToUseTimeViewEditor.this, false);
 			}
 			else {
 				removedResources.clear();
@@ -640,7 +551,6 @@ public class TousetimeviewEditor
 			else if (diagnostic.getSeverity() != Diagnostic.OK) {
 				ProblemEditorPart problemEditorPart = new ProblemEditorPart();
 				problemEditorPart.setDiagnostic(diagnostic);
-				problemEditorPart.setMarkerHelper(markerHelper);
 				try {
 					addPage(++lastEditorPage, problemEditorPart, getEditorInput());
 					setPageText(lastEditorPage, problemEditorPart.getPartName());
@@ -649,18 +559,6 @@ public class TousetimeviewEditor
 				}
 				catch (PartInitException exception) {
 					ToUseTimeViewEditorPlugin.INSTANCE.log(exception);
-				}
-			}
-
-			if (markerHelper.hasMarkers(editingDomain.getResourceSet())) {
-				markerHelper.deleteMarkers(editingDomain.getResourceSet());
-				if (diagnostic.getSeverity() != Diagnostic.OK) {
-					try {
-						markerHelper.createMarkers(diagnostic);
-					}
-					catch (CoreException exception) {
-						ToUseTimeViewEditorPlugin.INSTANCE.log(exception);
-					}
 				}
 			}
 		}
@@ -686,7 +584,7 @@ public class TousetimeviewEditor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TousetimeviewEditor() {
+	public ToUseTimeViewEditor() {
 		super();
 		initializeEditingDomain();
 	}
@@ -703,7 +601,7 @@ public class TousetimeviewEditor
 		adapterFactory = new ComposedAdapterFactory(ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
 
 		adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new TousetimeviewItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new ToUseTimeViewItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
 		// Create the command stack that will notify this editor as commands are executed.
@@ -1024,7 +922,7 @@ public class TousetimeviewEditor
 			//
 			{
 				ViewerPane viewerPane =
-					new ViewerPane(getSite().getPage(), TousetimeviewEditor.this) {
+					new ViewerPane(getSite().getPage(), ToUseTimeViewEditor.this) {
 						@Override
 						public Viewer createViewer(Composite composite) {
 							Tree tree = new Tree(composite, SWT.MULTI);
@@ -1041,6 +939,7 @@ public class TousetimeviewEditor
 
 				selectionViewer = (TreeViewer)viewerPane.getViewer();
 				selectionViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory));
+				selectionViewer.setUseHashlookup(true);
 
 				selectionViewer.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory));
 				selectionViewer.setInput(editingDomain.getResourceSet());
@@ -1058,7 +957,7 @@ public class TousetimeviewEditor
 			//
 			{
 				ViewerPane viewerPane =
-					new ViewerPane(getSite().getPage(), TousetimeviewEditor.this) {
+					new ViewerPane(getSite().getPage(), ToUseTimeViewEditor.this) {
 						@Override
 						public Viewer createViewer(Composite composite) {
 							Tree tree = new Tree(composite, SWT.MULTI);
@@ -1087,7 +986,7 @@ public class TousetimeviewEditor
 			//
 			{
 				ViewerPane viewerPane =
-					new ViewerPane(getSite().getPage(), TousetimeviewEditor.this) {
+					new ViewerPane(getSite().getPage(), ToUseTimeViewEditor.this) {
 						@Override
 						public Viewer createViewer(Composite composite) {
 							return new ListViewer(composite);
@@ -1112,7 +1011,7 @@ public class TousetimeviewEditor
 			//
 			{
 				ViewerPane viewerPane =
-					new ViewerPane(getSite().getPage(), TousetimeviewEditor.this) {
+					new ViewerPane(getSite().getPage(), ToUseTimeViewEditor.this) {
 						@Override
 						public Viewer createViewer(Composite composite) {
 							return new TreeViewer(composite);
@@ -1139,7 +1038,7 @@ public class TousetimeviewEditor
 			//
 			{
 				ViewerPane viewerPane =
-					new ViewerPane(getSite().getPage(), TousetimeviewEditor.this) {
+					new ViewerPane(getSite().getPage(), ToUseTimeViewEditor.this) {
 						@Override
 						public Viewer createViewer(Composite composite) {
 							return new TableViewer(composite);
@@ -1182,7 +1081,7 @@ public class TousetimeviewEditor
 			//
 			{
 				ViewerPane viewerPane =
-					new ViewerPane(getSite().getPage(), TousetimeviewEditor.this) {
+					new ViewerPane(getSite().getPage(), ToUseTimeViewEditor.this) {
 						@Override
 						public Viewer createViewer(Composite composite) {
 							return new TreeViewer(composite);
@@ -1319,9 +1218,6 @@ public class TousetimeviewEditor
 		else if (key.equals(IPropertySheetPage.class)) {
 			return getPropertySheetPage();
 		}
-		else if (key.equals(IGotoMarker.class)) {
-			return this;
-		}
 		else {
 			return super.getAdapter(key);
 		}
@@ -1346,6 +1242,7 @@ public class TousetimeviewEditor
 
 					// Set up the tree viewer.
 					//
+					contentOutlineViewer.setUseHashlookup(true);
 					contentOutlineViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory));
 					contentOutlineViewer.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory));
 					contentOutlineViewer.setInput(editingDomain.getResourceSet());
@@ -1401,8 +1298,8 @@ public class TousetimeviewEditor
 			new ExtendedPropertySheetPage(editingDomain) {
 				@Override
 				public void setSelectionToViewer(List<?> selection) {
-					TousetimeviewEditor.this.setSelectionToViewer(selection);
-					TousetimeviewEditor.this.setFocus();
+					ToUseTimeViewEditor.this.setSelectionToViewer(selection);
+					ToUseTimeViewEditor.this.setFocus();
 				}
 
 				@Override
@@ -1411,13 +1308,15 @@ public class TousetimeviewEditor
 					getActionBarContributor().shareGlobalActions(this, actionBars);
 				}
 			};
+		propertySheetPage.setPropertySourceProvider(new AdapterFactoryContentProvider(adapterFactory));
+		propertySheetPages.add(propertySheetPage);
 
 		AdapterFactoryContentProviderExtended propertySourceProvider = new AdapterFactoryContentProviderExtended(adapterFactory);
 		propertySourceProvider.editDateTimes.addSelectorAll();
-		propertySourceProvider.editColors.addSelector(TousetimeviewPackage.Literals.NODE__BACKGROUND);
-		propertySourceProvider.editColors.addSelector(TousetimeviewPackage.Literals.NODE__FOREGROUND);
-		propertySourceProvider.editColors.addSelector(TousetimeviewPackage.Literals.ROW__BACKGROUND);
-		propertySourceProvider.editColors.addSelector(TousetimeviewPackage.Literals.ROW__FOREGROUND);
+		propertySourceProvider.editColors.addSelector(ToUseTimeViewPackage.Literals.NODE__BACKGROUND);
+		propertySourceProvider.editColors.addSelector(ToUseTimeViewPackage.Literals.NODE__FOREGROUND);
+		propertySourceProvider.editColors.addSelector(ToUseTimeViewPackage.Literals.TIME_LINE__BACKGROUND);
+		propertySourceProvider.editColors.addSelector(ToUseTimeViewPackage.Literals.TIME_LINE__FOREGROUND);
 
 		propertySheetPage.setPropertySourceProvider(propertySourceProvider);
 	    propertySheetPages.add(propertySheetPage);
@@ -1491,16 +1390,17 @@ public class TousetimeviewEditor
 
 		// Do the work within an operation because this is a long running activity that modifies the workbench.
 		//
-		WorkspaceModifyOperation operation =
-			new WorkspaceModifyOperation() {
+		IRunnableWithProgress operation =
+			new IRunnableWithProgress() {
 				// This is the method that gets invoked when the operation runs.
 				//
-				@Override
-				public void execute(IProgressMonitor monitor) {
+				public void run(IProgressMonitor monitor) {
 					// Save the resources to the file system.
 					//
 					boolean first = true;
-					for (Resource resource : editingDomain.getResourceSet().getResources()) {
+					List<Resource> resources = editingDomain.getResourceSet().getResources();
+					for (int i = 0; i < resources.size(); ++i) {
+						Resource resource = resources.get(i);
 						if ((first || !resource.getContents().isEmpty() || isPersisted(resource)) && !editingDomain.isReadOnly(resource)) {
 							try {
 								long timeStamp = resource.getTimeStamp();
@@ -1579,14 +1479,11 @@ public class TousetimeviewEditor
 	 */
 	@Override
 	public void doSaveAs() {
-		SaveAsDialog saveAsDialog = new SaveAsDialog(getSite().getShell());
-		saveAsDialog.open();
-		IPath path = saveAsDialog.getResult();
-		if (path != null) {
-			IFile file = ResourcesPlugin.getWorkspace().getRoot().getFile(path);
-			if (file != null) {
-				doSaveAs(URI.createPlatformResourceURI(file.getFullPath().toString(), true), new FileEditorInput(file));
-			}
+		String[] filters = FILE_EXTENSION_FILTERS.toArray(new String[FILE_EXTENSION_FILTERS.size()]);
+		String[] files = ToUseTimeViewEditorAdvisor.openFilePathDialog(getSite().getShell(), SWT.SAVE, filters);
+		if (files.length > 0) {
+			URI uri = URI.createFileURI(files[0]);
+			doSaveAs(uri, new URIEditorInput(uri));
 		}
 	}
 
@@ -1607,18 +1504,6 @@ public class TousetimeviewEditor
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void gotoMarker(IMarker marker) {
-		List<?> targetObjects = markerHelper.getTargetObjects(editingDomain, marker);
-		if (!targetObjects.isEmpty()) {
-			setSelectionToViewer(targetObjects);
-		}
-	}
-
-	/**
 	 * This is called during startup.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1631,7 +1516,6 @@ public class TousetimeviewEditor
 		setPartName(editorInput.getName());
 		site.setSelectionProvider(this);
 		site.getPage().addPartListener(partListener);
-		ResourcesPlugin.getWorkspace().addResourceChangeListener(resourceChangeListener, IResourceChangeEvent.POST_CHANGE);
 	}
 
 	/**
@@ -1794,8 +1678,6 @@ public class TousetimeviewEditor
 	@Override
 	public void dispose() {
 		updateProblemIndication = false;
-
-		ResourcesPlugin.getWorkspace().removeResourceChangeListener(resourceChangeListener);
 
 		getSite().getPage().removePartListener(partListener);
 

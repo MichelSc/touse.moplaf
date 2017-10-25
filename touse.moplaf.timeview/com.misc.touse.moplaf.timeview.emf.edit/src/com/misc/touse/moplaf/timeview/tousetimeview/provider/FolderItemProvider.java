@@ -4,9 +4,8 @@ package com.misc.touse.moplaf.timeview.tousetimeview.provider;
 
 
 import com.misc.touse.moplaf.timeview.tousetimeview.Folder;
-import com.misc.touse.moplaf.timeview.tousetimeview.TousetimeviewFactory;
-import com.misc.touse.moplaf.timeview.tousetimeview.TousetimeviewPackage;
-
+import com.misc.touse.moplaf.timeview.tousetimeview.ToUseTimeViewFactory;
+import com.misc.touse.moplaf.timeview.tousetimeview.ToUseTimeViewPackage;
 import java.util.Collection;
 import java.util.List;
 
@@ -81,7 +80,7 @@ public class FolderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Folder_Name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Folder_Name_feature", "_UI_Folder_type"),
-				 TousetimeviewPackage.Literals.FOLDER__NAME,
+				 ToUseTimeViewPackage.Literals.FOLDER__NAME,
 				 true,
 				 false,
 				 false,
@@ -102,8 +101,8 @@ public class FolderItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(TousetimeviewPackage.Literals.FOLDER__SUB_FOLDERS);
-			childrenFeatures.add(TousetimeviewPackage.Literals.FOLDER__ROWS);
+			childrenFeatures.add(ToUseTimeViewPackage.Literals.FOLDER__SUB_FOLDERS);
+			childrenFeatures.add(ToUseTimeViewPackage.Literals.FOLDER__OBJECTS);
 		}
 		return childrenFeatures;
 	}
@@ -159,11 +158,11 @@ public class FolderItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Folder.class)) {
-			case TousetimeviewPackage.FOLDER__NAME:
+			case ToUseTimeViewPackage.FOLDER__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case TousetimeviewPackage.FOLDER__SUB_FOLDERS:
-			case TousetimeviewPackage.FOLDER__ROWS:
+			case ToUseTimeViewPackage.FOLDER__SUB_FOLDERS:
+			case ToUseTimeViewPackage.FOLDER__OBJECTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -183,13 +182,13 @@ public class FolderItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TousetimeviewPackage.Literals.FOLDER__SUB_FOLDERS,
-				 TousetimeviewFactory.eINSTANCE.createFolder()));
+				(ToUseTimeViewPackage.Literals.FOLDER__SUB_FOLDERS,
+				 ToUseTimeViewFactory.eINSTANCE.createFolder()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TousetimeviewPackage.Literals.FOLDER__ROWS,
-				 TousetimeviewFactory.eINSTANCE.createRow()));
+				(ToUseTimeViewPackage.Literals.FOLDER__OBJECTS,
+				 ToUseTimeViewFactory.eINSTANCE.createObject()));
 	}
 
 	/**

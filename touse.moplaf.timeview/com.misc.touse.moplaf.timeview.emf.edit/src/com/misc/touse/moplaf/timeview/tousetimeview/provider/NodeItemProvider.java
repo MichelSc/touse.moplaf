@@ -5,8 +5,7 @@ package com.misc.touse.moplaf.timeview.tousetimeview.provider;
 
 
 import com.misc.touse.moplaf.timeview.tousetimeview.Node;
-import com.misc.touse.moplaf.timeview.tousetimeview.TousetimeviewPackage;
-
+import com.misc.touse.moplaf.timeview.tousetimeview.ToUseTimeViewPackage;
 import java.util.Collection;
 import java.util.List;
 
@@ -17,7 +16,6 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemColorProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
@@ -36,7 +34,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 public class NodeItemProvider 
 	extends ItemProviderAdapter
 	implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource, IItemColorProvider {
+		IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -80,7 +78,7 @@ public class NodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Node_Text_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Node_Text_feature", "_UI_Node_type"),
-				 TousetimeviewPackage.Literals.NODE__TEXT,
+				 ToUseTimeViewPackage.Literals.NODE__TEXT,
 				 true,
 				 true,
 				 false,
@@ -102,7 +100,7 @@ public class NodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Node_Foreground_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Node_Foreground_feature", "_UI_Node_type"),
-				 TousetimeviewPackage.Literals.NODE__FOREGROUND,
+				 ToUseTimeViewPackage.Literals.NODE__FOREGROUND,
 				 true,
 				 false,
 				 false,
@@ -124,7 +122,7 @@ public class NodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Node_Background_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Node_Background_feature", "_UI_Node_type"),
-				 TousetimeviewPackage.Literals.NODE__BACKGROUND,
+				 ToUseTimeViewPackage.Literals.NODE__BACKGROUND,
 				 true,
 				 false,
 				 false,
@@ -146,7 +144,7 @@ public class NodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Node_Start_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Node_Start_feature", "_UI_Node_type"),
-				 TousetimeviewPackage.Literals.NODE__START,
+				 ToUseTimeViewPackage.Literals.NODE__START,
 				 true,
 				 false,
 				 false,
@@ -168,7 +166,7 @@ public class NodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Node_End_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Node_End_feature", "_UI_Node_type"),
-				 TousetimeviewPackage.Literals.NODE__END,
+				 ToUseTimeViewPackage.Literals.NODE__END,
 				 true,
 				 false,
 				 false,
@@ -215,11 +213,11 @@ public class NodeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Node.class)) {
-			case TousetimeviewPackage.NODE__TEXT:
-			case TousetimeviewPackage.NODE__FOREGROUND:
-			case TousetimeviewPackage.NODE__BACKGROUND:
-			case TousetimeviewPackage.NODE__START:
-			case TousetimeviewPackage.NODE__END:
+			case ToUseTimeViewPackage.NODE__TEXT:
+			case ToUseTimeViewPackage.NODE__FOREGROUND:
+			case ToUseTimeViewPackage.NODE__BACKGROUND:
+			case ToUseTimeViewPackage.NODE__START:
+			case ToUseTimeViewPackage.NODE__END:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

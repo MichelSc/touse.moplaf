@@ -5,9 +5,9 @@ package com.misc.touse.moplaf.timeview.tousetimeview.impl;
 import com.misc.touse.moplaf.timeview.tousetimeview.Domain;
 import com.misc.touse.moplaf.timeview.tousetimeview.Folder;
 import com.misc.touse.moplaf.timeview.tousetimeview.Node;
-import com.misc.touse.moplaf.timeview.tousetimeview.Row;
-import com.misc.touse.moplaf.timeview.tousetimeview.TousetimeviewFactory;
-import com.misc.touse.moplaf.timeview.tousetimeview.TousetimeviewPackage;
+import com.misc.touse.moplaf.timeview.tousetimeview.TimeLine;
+import com.misc.touse.moplaf.timeview.tousetimeview.ToUseTimeViewFactory;
+import com.misc.touse.moplaf.timeview.tousetimeview.ToUseTimeViewPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
  * <!-- end-user-doc -->
  * @generated
  */
-public class TousetimeviewPackageImpl extends EPackageImpl implements TousetimeviewPackage {
+public class ToUseTimeViewPackageImpl extends EPackageImpl implements ToUseTimeViewPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -42,7 +42,14 @@ public class TousetimeviewPackageImpl extends EPackageImpl implements Tousetimev
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass rowEClass = null;
+	private EClass objectEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass timeLineEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -62,12 +69,12 @@ public class TousetimeviewPackageImpl extends EPackageImpl implements Tousetimev
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see com.misc.touse.moplaf.timeview.tousetimeview.TousetimeviewPackage#eNS_URI
+	 * @see com.misc.touse.moplaf.timeview.tousetimeview.ToUseTimeViewPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private TousetimeviewPackageImpl() {
-		super(eNS_URI, TousetimeviewFactory.eINSTANCE);
+	private ToUseTimeViewPackageImpl() {
+		super(eNS_URI, ToUseTimeViewFactory.eINSTANCE);
 	}
 
 	/**
@@ -80,7 +87,7 @@ public class TousetimeviewPackageImpl extends EPackageImpl implements Tousetimev
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link TousetimeviewPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ToUseTimeViewPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -89,27 +96,27 @@ public class TousetimeviewPackageImpl extends EPackageImpl implements Tousetimev
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static TousetimeviewPackage init() {
-		if (isInited) return (TousetimeviewPackage)EPackage.Registry.INSTANCE.getEPackage(TousetimeviewPackage.eNS_URI);
+	public static ToUseTimeViewPackage init() {
+		if (isInited) return (ToUseTimeViewPackage)EPackage.Registry.INSTANCE.getEPackage(ToUseTimeViewPackage.eNS_URI);
 
 		// Obtain or create and register package
-		TousetimeviewPackageImpl theTousetimeviewPackage = (TousetimeviewPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof TousetimeviewPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new TousetimeviewPackageImpl());
+		ToUseTimeViewPackageImpl theToUseTimeViewPackage = (ToUseTimeViewPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ToUseTimeViewPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ToUseTimeViewPackageImpl());
 
 		isInited = true;
 
 		// Create package meta-data objects
-		theTousetimeviewPackage.createPackageContents();
+		theToUseTimeViewPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theTousetimeviewPackage.initializePackageContents();
+		theToUseTimeViewPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theTousetimeviewPackage.freeze();
+		theToUseTimeViewPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(TousetimeviewPackage.eNS_URI, theTousetimeviewPackage);
-		return theTousetimeviewPackage;
+		EPackage.Registry.INSTANCE.put(ToUseTimeViewPackage.eNS_URI, theToUseTimeViewPackage);
+		return theToUseTimeViewPackage;
 	}
 
 	/**
@@ -153,7 +160,7 @@ public class TousetimeviewPackageImpl extends EPackageImpl implements Tousetimev
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getFolder_Rows() {
+	public EReference getFolder_Objects() {
 		return (EReference)folderEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -171,8 +178,8 @@ public class TousetimeviewPackageImpl extends EPackageImpl implements Tousetimev
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getRow() {
-		return rowEClass;
+	public EClass getObject() {
+		return objectEClass;
 	}
 
 	/**
@@ -180,8 +187,8 @@ public class TousetimeviewPackageImpl extends EPackageImpl implements Tousetimev
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getRow_SubRows() {
-		return (EReference)rowEClass.getEStructuralFeatures().get(0);
+	public EReference getObject_SubObjects() {
+		return (EReference)objectEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -189,8 +196,8 @@ public class TousetimeviewPackageImpl extends EPackageImpl implements Tousetimev
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getRow_Nodes() {
-		return (EReference)rowEClass.getEStructuralFeatures().get(1);
+	public EReference getObject_TimeLines() {
+		return (EReference)objectEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -198,8 +205,8 @@ public class TousetimeviewPackageImpl extends EPackageImpl implements Tousetimev
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRow_Text() {
-		return (EAttribute)rowEClass.getEStructuralFeatures().get(2);
+	public EAttribute getObject_Name() {
+		return (EAttribute)objectEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -207,8 +214,8 @@ public class TousetimeviewPackageImpl extends EPackageImpl implements Tousetimev
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRow_Foreground() {
-		return (EAttribute)rowEClass.getEStructuralFeatures().get(3);
+	public EClass getTimeLine() {
+		return timeLineEClass;
 	}
 
 	/**
@@ -216,8 +223,35 @@ public class TousetimeviewPackageImpl extends EPackageImpl implements Tousetimev
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRow_Background() {
-		return (EAttribute)rowEClass.getEStructuralFeatures().get(4);
+	public EReference getTimeLine_Nodes() {
+		return (EReference)timeLineEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTimeLine_Text() {
+		return (EAttribute)timeLineEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTimeLine_Foreground() {
+		return (EAttribute)timeLineEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTimeLine_Background() {
+		return (EAttribute)timeLineEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -279,8 +313,8 @@ public class TousetimeviewPackageImpl extends EPackageImpl implements Tousetimev
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TousetimeviewFactory getTousetimeviewFactory() {
-		return (TousetimeviewFactory)getEFactoryInstance();
+	public ToUseTimeViewFactory getToUseTimeViewFactory() {
+		return (ToUseTimeViewFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -307,15 +341,19 @@ public class TousetimeviewPackageImpl extends EPackageImpl implements Tousetimev
 
 		folderEClass = createEClass(FOLDER);
 		createEReference(folderEClass, FOLDER__SUB_FOLDERS);
-		createEReference(folderEClass, FOLDER__ROWS);
+		createEReference(folderEClass, FOLDER__OBJECTS);
 		createEAttribute(folderEClass, FOLDER__NAME);
 
-		rowEClass = createEClass(ROW);
-		createEReference(rowEClass, ROW__SUB_ROWS);
-		createEReference(rowEClass, ROW__NODES);
-		createEAttribute(rowEClass, ROW__TEXT);
-		createEAttribute(rowEClass, ROW__FOREGROUND);
-		createEAttribute(rowEClass, ROW__BACKGROUND);
+		objectEClass = createEClass(OBJECT);
+		createEReference(objectEClass, OBJECT__SUB_OBJECTS);
+		createEReference(objectEClass, OBJECT__TIME_LINES);
+		createEAttribute(objectEClass, OBJECT__NAME);
+
+		timeLineEClass = createEClass(TIME_LINE);
+		createEReference(timeLineEClass, TIME_LINE__NODES);
+		createEAttribute(timeLineEClass, TIME_LINE__TEXT);
+		createEAttribute(timeLineEClass, TIME_LINE__FOREGROUND);
+		createEAttribute(timeLineEClass, TIME_LINE__BACKGROUND);
 
 		nodeEClass = createEClass(NODE);
 		createEAttribute(nodeEClass, NODE__TEXT);
@@ -360,15 +398,19 @@ public class TousetimeviewPackageImpl extends EPackageImpl implements Tousetimev
 
 		initEClass(folderEClass, Folder.class, "Folder", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getFolder_SubFolders(), this.getFolder(), null, "SubFolders", null, 0, -1, Folder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFolder_Rows(), this.getRow(), null, "Rows", null, 0, -1, Folder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFolder_Objects(), this.getObject(), null, "Objects", null, 0, -1, Folder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFolder_Name(), ecorePackage.getEString(), "Name", null, 0, 1, Folder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(rowEClass, Row.class, "Row", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRow_SubRows(), this.getRow(), null, "SubRows", null, 0, -1, Row.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRow_Nodes(), this.getNode(), null, "Nodes", null, 0, -1, Row.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRow_Text(), ecorePackage.getEString(), "Text", null, 0, 1, Row.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRow_Foreground(), ecorePackage.getEInt(), "Foreground", null, 0, 1, Row.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRow_Background(), ecorePackage.getEInt(), "Background", null, 0, 1, Row.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(objectEClass, com.misc.touse.moplaf.timeview.tousetimeview.Object.class, "Object", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getObject_SubObjects(), this.getObject(), null, "SubObjects", null, 0, -1, com.misc.touse.moplaf.timeview.tousetimeview.Object.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getObject_TimeLines(), this.getTimeLine(), null, "TimeLines", null, 0, -1, com.misc.touse.moplaf.timeview.tousetimeview.Object.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getObject_Name(), ecorePackage.getEString(), "Name", null, 0, 1, com.misc.touse.moplaf.timeview.tousetimeview.Object.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(timeLineEClass, TimeLine.class, "TimeLine", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTimeLine_Nodes(), this.getNode(), null, "Nodes", null, 0, -1, TimeLine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTimeLine_Text(), ecorePackage.getEString(), "Text", null, 0, 1, TimeLine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTimeLine_Foreground(), ecorePackage.getEInt(), "Foreground", null, 0, 1, TimeLine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTimeLine_Background(), ecorePackage.getEInt(), "Background", null, 0, 1, TimeLine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(nodeEClass, Node.class, "Node", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getNode_Text(), ecorePackage.getEString(), "Text", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -381,4 +423,4 @@ public class TousetimeviewPackageImpl extends EPackageImpl implements Tousetimev
 		createResource(eNS_URI);
 	}
 
-} //TousetimeviewPackageImpl
+} //ToUseTimeViewPackageImpl

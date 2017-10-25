@@ -3,7 +3,7 @@
 package com.misc.touse.moplaf.timeview.tousetimeview.provider;
 
 import com.misc.common.moplaf.timeview.emf.edit.IItemTimeLinesProvider;
-import com.misc.touse.moplaf.timeview.tousetimeview.util.TousetimeviewAdapterFactory;
+import com.misc.touse.moplaf.timeview.tousetimeview.util.ToUseTimeViewAdapterFactory;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -33,7 +33,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class TousetimeviewItemProviderAdapterFactory extends TousetimeviewAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable {
+public class ToUseTimeViewItemProviderAdapterFactory extends ToUseTimeViewAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -63,7 +63,7 @@ public class TousetimeviewItemProviderAdapterFactory extends TousetimeviewAdapte
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 */
-	public TousetimeviewItemProviderAdapterFactory() {
+	public ToUseTimeViewItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -119,26 +119,49 @@ public class TousetimeviewItemProviderAdapterFactory extends TousetimeviewAdapte
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.timeview.tousetimeview.Row} instances.
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.timeview.tousetimeview.Object} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected RowItemProvider rowItemProvider;
+	protected ObjectItemProvider objectItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link com.misc.touse.moplaf.timeview.tousetimeview.Row}.
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.timeview.tousetimeview.Object}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createRowAdapter() {
-		if (rowItemProvider == null) {
-			rowItemProvider = new RowItemProvider(this);
+	public Adapter createObjectAdapter() {
+		if (objectItemProvider == null) {
+			objectItemProvider = new ObjectItemProvider(this);
 		}
 
-		return rowItemProvider;
+		return objectItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.timeview.tousetimeview.TimeLine} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TimeLineItemProvider timeLineItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.timeview.tousetimeview.TimeLine}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTimeLineAdapter() {
+		if (timeLineItemProvider == null) {
+			timeLineItemProvider = new TimeLineItemProvider(this);
+		}
+
+		return timeLineItemProvider;
 	}
 
 	/**
@@ -265,7 +288,8 @@ public class TousetimeviewItemProviderAdapterFactory extends TousetimeviewAdapte
 	public void dispose() {
 		if (domainItemProvider != null) domainItemProvider.dispose();
 		if (folderItemProvider != null) folderItemProvider.dispose();
-		if (rowItemProvider != null) rowItemProvider.dispose();
+		if (objectItemProvider != null) objectItemProvider.dispose();
+		if (timeLineItemProvider != null) timeLineItemProvider.dispose();
 		if (nodeItemProvider != null) nodeItemProvider.dispose();
 	}
 

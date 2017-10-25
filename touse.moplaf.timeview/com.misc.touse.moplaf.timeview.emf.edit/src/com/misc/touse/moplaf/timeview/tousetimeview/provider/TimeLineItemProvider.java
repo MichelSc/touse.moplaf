@@ -3,15 +3,11 @@
 package com.misc.touse.moplaf.timeview.tousetimeview.provider;
 
 
-import com.misc.common.moplaf.common.Color;
-import com.misc.common.moplaf.timeview.emf.edit.IItemTimeLinesProvider;
-import com.misc.touse.moplaf.timeview.tousetimeview.Node;
-import com.misc.touse.moplaf.timeview.tousetimeview.Row;
-import com.misc.touse.moplaf.timeview.tousetimeview.TousetimeviewFactory;
-import com.misc.touse.moplaf.timeview.tousetimeview.TousetimeviewPackage;
+import com.misc.touse.moplaf.timeview.tousetimeview.TimeLine;
+import com.misc.touse.moplaf.timeview.tousetimeview.ToUseTimeViewFactory;
+import com.misc.touse.moplaf.timeview.tousetimeview.ToUseTimeViewPackage;
 
 import java.util.Collection;
-import java.util.Date;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
@@ -33,36 +29,29 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link com.misc.touse.moplaf.timeview.tousetimeview.Row} object.
+ * This is the item provider adapter for a {@link com.misc.touse.moplaf.timeview.tousetimeview.TimeLine} object.
  * <!-- begin-user-doc -->
- * @implements IItemTimeLinesProvider
  * <!-- end-user-doc -->
  * @generated
  */
-public class RowItemProvider 
+public class TimeLineItemProvider 
 	extends ItemProviderAdapter
 	implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource, IItemTimeLinesProvider {
+		IEditingDomainItemProvider,
+		IStructuredItemContentProvider,
+		ITreeItemContentProvider,
+		IItemLabelProvider,
+		IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RowItemProvider(AdapterFactory adapterFactory) {
+	public TimeLineItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
-//	/* (non-Javadoc)
-//	 * @see org.eclipse.emf.edit.provider.ItemProviderAdapter#isAdapterForType(java.lang.Object)
-//	 */
-//	@Override
-//	public boolean isAdapterForType(Object type) {
-//		if ( super.isAdapterForType(type) ){ return true; }
-//		if ( type == IItemIntervalEventsProvider.class) { return true; }
-//		return false;
-//	}
-//
 	/**
 	 * This returns the property descriptors for the adapted class.
 	 * <!-- begin-user-doc -->
@@ -92,11 +81,11 @@ public class RowItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Row_Text_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Row_Text_feature", "_UI_Row_type"),
-				 TousetimeviewPackage.Literals.ROW__TEXT,
+				 getString("_UI_TimeLine_Text_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_TimeLine_Text_feature", "_UI_TimeLine_type"),
+				 ToUseTimeViewPackage.Literals.TIME_LINE__TEXT,
 				 true,
-				 true,
+				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
@@ -114,9 +103,9 @@ public class RowItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Row_Foreground_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Row_Foreground_feature", "_UI_Row_type"),
-				 TousetimeviewPackage.Literals.ROW__FOREGROUND,
+				 getString("_UI_TimeLine_Foreground_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_TimeLine_Foreground_feature", "_UI_TimeLine_type"),
+				 ToUseTimeViewPackage.Literals.TIME_LINE__FOREGROUND,
 				 true,
 				 false,
 				 false,
@@ -136,9 +125,9 @@ public class RowItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Row_Background_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Row_Background_feature", "_UI_Row_type"),
-				 TousetimeviewPackage.Literals.ROW__BACKGROUND,
+				 getString("_UI_TimeLine_Background_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_TimeLine_Background_feature", "_UI_TimeLine_type"),
+				 ToUseTimeViewPackage.Literals.TIME_LINE__BACKGROUND,
 				 true,
 				 false,
 				 false,
@@ -159,8 +148,7 @@ public class RowItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(TousetimeviewPackage.Literals.ROW__SUB_ROWS);
-			childrenFeatures.add(TousetimeviewPackage.Literals.ROW__NODES);
+			childrenFeatures.add(ToUseTimeViewPackage.Literals.TIME_LINE__NODES);
 		}
 		return childrenFeatures;
 	}
@@ -179,14 +167,14 @@ public class RowItemProvider
 	}
 
 	/**
-	 * This returns Row.gif.
+	 * This returns TimeLine.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Row"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/TimeLine"));
 	}
 
 	/**
@@ -197,10 +185,10 @@ public class RowItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = crop(((Row)object).getText());
+		String label = ((TimeLine)object).getText();
 		return label == null || label.length() == 0 ?
-			getString("_UI_Row_type") :
-			getString("_UI_Row_type") + " " + label;
+			getString("_UI_TimeLine_type") :
+			getString("_UI_TimeLine_type") + " " + label;
 	}
 	
 
@@ -215,14 +203,13 @@ public class RowItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Row.class)) {
-			case TousetimeviewPackage.ROW__TEXT:
-			case TousetimeviewPackage.ROW__FOREGROUND:
-			case TousetimeviewPackage.ROW__BACKGROUND:
+		switch (notification.getFeatureID(TimeLine.class)) {
+			case ToUseTimeViewPackage.TIME_LINE__TEXT:
+			case ToUseTimeViewPackage.TIME_LINE__FOREGROUND:
+			case ToUseTimeViewPackage.TIME_LINE__BACKGROUND:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case TousetimeviewPackage.ROW__SUB_ROWS:
-			case TousetimeviewPackage.ROW__NODES:
+			case ToUseTimeViewPackage.TIME_LINE__NODES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -242,13 +229,8 @@ public class RowItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TousetimeviewPackage.Literals.ROW__SUB_ROWS,
-				 TousetimeviewFactory.eINSTANCE.createRow()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TousetimeviewPackage.Literals.ROW__NODES,
-				 TousetimeviewFactory.eINSTANCE.createNode()));
+				(ToUseTimeViewPackage.Literals.TIME_LINE__NODES,
+				 ToUseTimeViewFactory.eINSTANCE.createNode()));
 	}
 
 	/**
@@ -260,59 +242,6 @@ public class RowItemProvider
 	@Override
 	public ResourceLocator getResourceLocator() {
 		return ToUseTimeViewEditPlugin.INSTANCE;
-	}
-
-	@Override
-	public Collection<?> getTimeLines(Object element) {
-		// one time line for this object
-		return null;
-	}
-	
-	@Override
-	public String getText(Object element, Object timeline) {
-		Row row = (Row)element;
-		return row.getText(); 
-	}
-
-
-	@Override
-	public Collection<?> getEvents(Object element, Object timeline) {
-		Row row = (Row)element;
-		return row.getNodes(); 
-	}
-
-	@Override
-	public Date getStart(Object element, Object timeline, Object event, Object interval) {
-		Node node = (Node) event;
-		return node.getStart();
-	}
-
-	@Override
-	public Date getEnd(Object element, Object timeline, Object event, Object interval) {
-		Node node = (Node) event;
-		return node.getEnd();
-	}
-
-	@Override
-	public Object getForeground(Object element, Object timeline, Object event, Object interval) {
-		Node node = (Node) event;
-		int rgb = node.getForeground();
-		Color color = new Color(rgb);
-		return color.toURI();
-	}
-
-	@Override
-	public Object getBackground(Object element, Object timeline, Object event, Object interval) {
-		Node node = (Node) event;
-		int rgb = node.getBackground();
-		Color color = new Color(rgb);
-		return color.toURI();
-	}
-
-	@Override
-	public String getText(Object element, Object timeline, Object event, Object interval) {
-		Node node = (Node) event;
-		return node.getText();
 	}
 
 }

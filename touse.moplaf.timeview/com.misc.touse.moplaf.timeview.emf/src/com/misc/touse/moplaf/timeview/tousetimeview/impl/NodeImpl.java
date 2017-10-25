@@ -3,8 +3,7 @@
 package com.misc.touse.moplaf.timeview.tousetimeview.impl;
 
 import com.misc.touse.moplaf.timeview.tousetimeview.Node;
-import com.misc.touse.moplaf.timeview.tousetimeview.TousetimeviewPackage;
-
+import com.misc.touse.moplaf.timeview.tousetimeview.ToUseTimeViewPackage;
 import java.util.Date;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -148,7 +147,7 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TousetimeviewPackage.Literals.NODE;
+		return ToUseTimeViewPackage.Literals.NODE;
 	}
 
 	/**
@@ -169,7 +168,7 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 		String oldText = text;
 		text = newText;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousetimeviewPackage.NODE__TEXT, oldText, text));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseTimeViewPackage.NODE__TEXT, oldText, text));
 	}
 
 	/**
@@ -190,7 +189,7 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 		int oldForeground = foreground;
 		foreground = newForeground;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousetimeviewPackage.NODE__FOREGROUND, oldForeground, foreground));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseTimeViewPackage.NODE__FOREGROUND, oldForeground, foreground));
 	}
 
 	/**
@@ -211,7 +210,7 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 		int oldBackground = background;
 		background = newBackground;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousetimeviewPackage.NODE__BACKGROUND, oldBackground, background));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseTimeViewPackage.NODE__BACKGROUND, oldBackground, background));
 	}
 
 	/**
@@ -232,7 +231,7 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 		Date oldStart = start;
 		start = newStart;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousetimeviewPackage.NODE__START, oldStart, start));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseTimeViewPackage.NODE__START, oldStart, start));
 	}
 
 	/**
@@ -253,7 +252,7 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 		Date oldEnd = end;
 		end = newEnd;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousetimeviewPackage.NODE__END, oldEnd, end));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseTimeViewPackage.NODE__END, oldEnd, end));
 	}
 
 	/**
@@ -264,15 +263,15 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TousetimeviewPackage.NODE__TEXT:
+			case ToUseTimeViewPackage.NODE__TEXT:
 				return getText();
-			case TousetimeviewPackage.NODE__FOREGROUND:
+			case ToUseTimeViewPackage.NODE__FOREGROUND:
 				return getForeground();
-			case TousetimeviewPackage.NODE__BACKGROUND:
+			case ToUseTimeViewPackage.NODE__BACKGROUND:
 				return getBackground();
-			case TousetimeviewPackage.NODE__START:
+			case ToUseTimeViewPackage.NODE__START:
 				return getStart();
-			case TousetimeviewPackage.NODE__END:
+			case ToUseTimeViewPackage.NODE__END:
 				return getEnd();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -286,19 +285,19 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TousetimeviewPackage.NODE__TEXT:
+			case ToUseTimeViewPackage.NODE__TEXT:
 				setText((String)newValue);
 				return;
-			case TousetimeviewPackage.NODE__FOREGROUND:
+			case ToUseTimeViewPackage.NODE__FOREGROUND:
 				setForeground((Integer)newValue);
 				return;
-			case TousetimeviewPackage.NODE__BACKGROUND:
+			case ToUseTimeViewPackage.NODE__BACKGROUND:
 				setBackground((Integer)newValue);
 				return;
-			case TousetimeviewPackage.NODE__START:
+			case ToUseTimeViewPackage.NODE__START:
 				setStart((Date)newValue);
 				return;
-			case TousetimeviewPackage.NODE__END:
+			case ToUseTimeViewPackage.NODE__END:
 				setEnd((Date)newValue);
 				return;
 		}
@@ -313,19 +312,19 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TousetimeviewPackage.NODE__TEXT:
+			case ToUseTimeViewPackage.NODE__TEXT:
 				setText(TEXT_EDEFAULT);
 				return;
-			case TousetimeviewPackage.NODE__FOREGROUND:
+			case ToUseTimeViewPackage.NODE__FOREGROUND:
 				setForeground(FOREGROUND_EDEFAULT);
 				return;
-			case TousetimeviewPackage.NODE__BACKGROUND:
+			case ToUseTimeViewPackage.NODE__BACKGROUND:
 				setBackground(BACKGROUND_EDEFAULT);
 				return;
-			case TousetimeviewPackage.NODE__START:
+			case ToUseTimeViewPackage.NODE__START:
 				setStart(START_EDEFAULT);
 				return;
-			case TousetimeviewPackage.NODE__END:
+			case ToUseTimeViewPackage.NODE__END:
 				setEnd(END_EDEFAULT);
 				return;
 		}
@@ -340,15 +339,15 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TousetimeviewPackage.NODE__TEXT:
+			case ToUseTimeViewPackage.NODE__TEXT:
 				return TEXT_EDEFAULT == null ? text != null : !TEXT_EDEFAULT.equals(text);
-			case TousetimeviewPackage.NODE__FOREGROUND:
+			case ToUseTimeViewPackage.NODE__FOREGROUND:
 				return foreground != FOREGROUND_EDEFAULT;
-			case TousetimeviewPackage.NODE__BACKGROUND:
+			case ToUseTimeViewPackage.NODE__BACKGROUND:
 				return background != BACKGROUND_EDEFAULT;
-			case TousetimeviewPackage.NODE__START:
+			case ToUseTimeViewPackage.NODE__START:
 				return START_EDEFAULT == null ? start != null : !START_EDEFAULT.equals(start);
-			case TousetimeviewPackage.NODE__END:
+			case ToUseTimeViewPackage.NODE__END:
 				return END_EDEFAULT == null ? end != null : !END_EDEFAULT.equals(end);
 		}
 		return super.eIsSet(featureID);

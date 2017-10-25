@@ -5,6 +5,7 @@ package com.misc.touse.moplaf.timeview.tousetimeview.presentation;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import org.eclipse.emf.common.ui.action.WorkbenchWindowActionDelegate;
 import org.eclipse.emf.common.ui.viewer.IViewerProvider;
 
 import org.eclipse.emf.edit.domain.EditingDomain;
@@ -34,20 +35,43 @@ import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.ISelectionProvider;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
+import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.viewers.Viewer;
 
+import org.eclipse.jface.wizard.WizardDialog;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.PartInitException;
 
 /**
- * This is the action bar contributor for the Tousetimeview model editor.
+ * This is the action bar contributor for the ToUseTimeView model editor.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class TousetimeviewActionBarContributor
+public class ToUseTimeViewActionBarContributor
 	extends EditingDomainActionBarContributor
 	implements ISelectionChangedListener {
+	/**
+	 * Action to create objects from the ToUseTimeView model.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static class NewAction extends WorkbenchWindowActionDelegate {
+		/**
+		 * @see org.eclipse.ui.IActionDelegate#run(org.eclipse.jface.action.IAction)
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public void run(IAction action) {
+			ToUseTimeViewModelWizard wizard = new ToUseTimeViewModelWizard();
+			wizard.init(getWindow().getWorkbench(), StructuredSelection.EMPTY);
+			WizardDialog wizardDialog = new WizardDialog(getWindow().getShell(), wizard);
+			wizardDialog.open();
+		}
+	}
+
 	/**
 	 * This keeps track of the active editor.
 	 * <!-- begin-user-doc -->
@@ -83,6 +107,24 @@ public class TousetimeviewActionBarContributor
 			}
 		};
 
+	/**
+	 * This action opens the Moplaf Gantt view.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	protected IAction showMoplafGanttViewAction =
+			new Action("Show Gantt View") {
+			@Override
+			public void run() {
+				try {
+					getPage().showView("com.misc.common.moplaf.timeview.jaret.views.GanttView");
+				}
+				catch (PartInitException exception) {
+					ToUseTimeViewEditorPlugin.INSTANCE.log(exception);
+				}
+			}
+		};
+		
 	/**
 	 * This action refreshes the viewer of the current editor if the editor
 	 * implements {@link org.eclipse.emf.common.ui.viewer.IViewerProvider}.
@@ -148,7 +190,7 @@ public class TousetimeviewActionBarContributor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TousetimeviewActionBarContributor() {
+	public ToUseTimeViewActionBarContributor() {
 		super(ADDITIONS_LAST_STYLE);
 		loadResourceAction = new LoadResourceAction();
 		validateAction = new ValidateAction();
@@ -178,7 +220,7 @@ public class TousetimeviewActionBarContributor
 	public void contributeToMenu(IMenuManager menuManager) {
 		super.contributeToMenu(menuManager);
 
-		IMenuManager submenuManager = new MenuManager(ToUseTimeViewEditorPlugin.INSTANCE.getString("_UI_TousetimeviewEditor_menu"), "com.misc.touse.moplaf.timeview.tousetimeviewMenuID");
+		IMenuManager submenuManager = new MenuManager(ToUseTimeViewEditorPlugin.INSTANCE.getString("_UI_ToUseTimeViewEditor_menu"), "com.misc.touse.moplaf.timeview.tousetimeviewMenuID");
 		menuManager.insertAfter("additions", submenuManager);
 		submenuManager.add(new Separator("settings"));
 		submenuManager.add(new Separator("actions"));
@@ -396,15 +438,17 @@ public class TousetimeviewActionBarContributor
 	 * This inserts global actions before the "additions-end" separator.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	@Override
 	protected void addGlobalActions(IMenuManager menuManager) {
+		menuManager.insertAfter("additions-end", new Separator("ui-actions2"));
 		menuManager.insertAfter("additions-end", new Separator("ui-actions"));
-		menuManager.insertAfter("ui-actions", showPropertiesViewAction);
 
 		refreshViewerAction.setEnabled(refreshViewerAction.isEnabled());		
 		menuManager.insertAfter("ui-actions", refreshViewerAction);
+
+		menuManager.insertAfter("ui-actions2", this.showPropertiesViewAction);
+		menuManager.insertAfter("ui-actions2", this.showMoplafGanttViewAction);
 
 		super.addGlobalActions(menuManager);
 	}

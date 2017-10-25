@@ -2,8 +2,9 @@
  */
 package com.misc.touse.moplaf.timeview.tousetimeview.impl;
 
-import com.misc.touse.moplaf.timeview.tousetimeview.Folder;
+import com.misc.touse.moplaf.timeview.tousetimeview.TimeLine;
 import com.misc.touse.moplaf.timeview.tousetimeview.ToUseTimeViewPackage;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -22,39 +23,39 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Folder</b></em>'.
+ * An implementation of the model object '<em><b>Object</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link com.misc.touse.moplaf.timeview.tousetimeview.impl.FolderImpl#getSubFolders <em>Sub Folders</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.timeview.tousetimeview.impl.FolderImpl#getObjects <em>Objects</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.timeview.tousetimeview.impl.FolderImpl#getName <em>Name</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.timeview.tousetimeview.impl.ObjectImpl#getSubObjects <em>Sub Objects</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.timeview.tousetimeview.impl.ObjectImpl#getTimeLines <em>Time Lines</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.timeview.tousetimeview.impl.ObjectImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class FolderImpl extends MinimalEObjectImpl.Container implements Folder {
+public class ObjectImpl extends MinimalEObjectImpl.Container implements com.misc.touse.moplaf.timeview.tousetimeview.Object {
 	/**
-	 * The cached value of the '{@link #getSubFolders() <em>Sub Folders</em>}' containment reference list.
+	 * The cached value of the '{@link #getSubObjects() <em>Sub Objects</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSubFolders()
+	 * @see #getSubObjects()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Folder> subFolders;
+	protected EList<com.misc.touse.moplaf.timeview.tousetimeview.Object> subObjects;
 
 	/**
-	 * The cached value of the '{@link #getObjects() <em>Objects</em>}' containment reference list.
+	 * The cached value of the '{@link #getTimeLines() <em>Time Lines</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getObjects()
+	 * @see #getTimeLines()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<com.misc.touse.moplaf.timeview.tousetimeview.Object> objects;
+	protected EList<TimeLine> timeLines;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -81,7 +82,7 @@ public class FolderImpl extends MinimalEObjectImpl.Container implements Folder {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected FolderImpl() {
+	protected ObjectImpl() {
 		super();
 	}
 
@@ -92,7 +93,7 @@ public class FolderImpl extends MinimalEObjectImpl.Container implements Folder {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ToUseTimeViewPackage.Literals.FOLDER;
+		return ToUseTimeViewPackage.Literals.OBJECT;
 	}
 
 	/**
@@ -100,11 +101,11 @@ public class FolderImpl extends MinimalEObjectImpl.Container implements Folder {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Folder> getSubFolders() {
-		if (subFolders == null) {
-			subFolders = new EObjectContainmentEList<Folder>(Folder.class, this, ToUseTimeViewPackage.FOLDER__SUB_FOLDERS);
+	public EList<com.misc.touse.moplaf.timeview.tousetimeview.Object> getSubObjects() {
+		if (subObjects == null) {
+			subObjects = new EObjectContainmentEList<com.misc.touse.moplaf.timeview.tousetimeview.Object>(com.misc.touse.moplaf.timeview.tousetimeview.Object.class, this, ToUseTimeViewPackage.OBJECT__SUB_OBJECTS);
 		}
-		return subFolders;
+		return subObjects;
 	}
 
 	/**
@@ -112,11 +113,11 @@ public class FolderImpl extends MinimalEObjectImpl.Container implements Folder {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<com.misc.touse.moplaf.timeview.tousetimeview.Object> getObjects() {
-		if (objects == null) {
-			objects = new EObjectContainmentEList<com.misc.touse.moplaf.timeview.tousetimeview.Object>(com.misc.touse.moplaf.timeview.tousetimeview.Object.class, this, ToUseTimeViewPackage.FOLDER__OBJECTS);
+	public EList<TimeLine> getTimeLines() {
+		if (timeLines == null) {
+			timeLines = new EObjectContainmentEList<TimeLine>(TimeLine.class, this, ToUseTimeViewPackage.OBJECT__TIME_LINES);
 		}
-		return objects;
+		return timeLines;
 	}
 
 	/**
@@ -137,7 +138,7 @@ public class FolderImpl extends MinimalEObjectImpl.Container implements Folder {
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToUseTimeViewPackage.FOLDER__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseTimeViewPackage.OBJECT__NAME, oldName, name));
 	}
 
 	/**
@@ -148,10 +149,10 @@ public class FolderImpl extends MinimalEObjectImpl.Container implements Folder {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ToUseTimeViewPackage.FOLDER__SUB_FOLDERS:
-				return ((InternalEList<?>)getSubFolders()).basicRemove(otherEnd, msgs);
-			case ToUseTimeViewPackage.FOLDER__OBJECTS:
-				return ((InternalEList<?>)getObjects()).basicRemove(otherEnd, msgs);
+			case ToUseTimeViewPackage.OBJECT__SUB_OBJECTS:
+				return ((InternalEList<?>)getSubObjects()).basicRemove(otherEnd, msgs);
+			case ToUseTimeViewPackage.OBJECT__TIME_LINES:
+				return ((InternalEList<?>)getTimeLines()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -164,11 +165,11 @@ public class FolderImpl extends MinimalEObjectImpl.Container implements Folder {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ToUseTimeViewPackage.FOLDER__SUB_FOLDERS:
-				return getSubFolders();
-			case ToUseTimeViewPackage.FOLDER__OBJECTS:
-				return getObjects();
-			case ToUseTimeViewPackage.FOLDER__NAME:
+			case ToUseTimeViewPackage.OBJECT__SUB_OBJECTS:
+				return getSubObjects();
+			case ToUseTimeViewPackage.OBJECT__TIME_LINES:
+				return getTimeLines();
+			case ToUseTimeViewPackage.OBJECT__NAME:
 				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -183,15 +184,15 @@ public class FolderImpl extends MinimalEObjectImpl.Container implements Folder {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ToUseTimeViewPackage.FOLDER__SUB_FOLDERS:
-				getSubFolders().clear();
-				getSubFolders().addAll((Collection<? extends Folder>)newValue);
+			case ToUseTimeViewPackage.OBJECT__SUB_OBJECTS:
+				getSubObjects().clear();
+				getSubObjects().addAll((Collection<? extends com.misc.touse.moplaf.timeview.tousetimeview.Object>)newValue);
 				return;
-			case ToUseTimeViewPackage.FOLDER__OBJECTS:
-				getObjects().clear();
-				getObjects().addAll((Collection<? extends com.misc.touse.moplaf.timeview.tousetimeview.Object>)newValue);
+			case ToUseTimeViewPackage.OBJECT__TIME_LINES:
+				getTimeLines().clear();
+				getTimeLines().addAll((Collection<? extends TimeLine>)newValue);
 				return;
-			case ToUseTimeViewPackage.FOLDER__NAME:
+			case ToUseTimeViewPackage.OBJECT__NAME:
 				setName((String)newValue);
 				return;
 		}
@@ -206,13 +207,13 @@ public class FolderImpl extends MinimalEObjectImpl.Container implements Folder {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ToUseTimeViewPackage.FOLDER__SUB_FOLDERS:
-				getSubFolders().clear();
+			case ToUseTimeViewPackage.OBJECT__SUB_OBJECTS:
+				getSubObjects().clear();
 				return;
-			case ToUseTimeViewPackage.FOLDER__OBJECTS:
-				getObjects().clear();
+			case ToUseTimeViewPackage.OBJECT__TIME_LINES:
+				getTimeLines().clear();
 				return;
-			case ToUseTimeViewPackage.FOLDER__NAME:
+			case ToUseTimeViewPackage.OBJECT__NAME:
 				setName(NAME_EDEFAULT);
 				return;
 		}
@@ -227,11 +228,11 @@ public class FolderImpl extends MinimalEObjectImpl.Container implements Folder {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ToUseTimeViewPackage.FOLDER__SUB_FOLDERS:
-				return subFolders != null && !subFolders.isEmpty();
-			case ToUseTimeViewPackage.FOLDER__OBJECTS:
-				return objects != null && !objects.isEmpty();
-			case ToUseTimeViewPackage.FOLDER__NAME:
+			case ToUseTimeViewPackage.OBJECT__SUB_OBJECTS:
+				return subObjects != null && !subObjects.isEmpty();
+			case ToUseTimeViewPackage.OBJECT__TIME_LINES:
+				return timeLines != null && !timeLines.isEmpty();
+			case ToUseTimeViewPackage.OBJECT__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
@@ -253,4 +254,4 @@ public class FolderImpl extends MinimalEObjectImpl.Container implements Folder {
 		return result.toString();
 	}
 
-} //FolderImpl
+} //ObjectImpl

@@ -16,11 +16,11 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.timeview.tousetimeview.Folder#getSubFolders <em>Sub Folders</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.timeview.tousetimeview.Folder#getRows <em>Rows</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.timeview.tousetimeview.Folder#getObjects <em>Objects</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.timeview.tousetimeview.Folder#getName <em>Name</em>}</li>
  * </ul>
  *
- * @see com.misc.touse.moplaf.timeview.tousetimeview.TousetimeviewPackage#getFolder()
+ * @see com.misc.touse.moplaf.timeview.tousetimeview.ToUseTimeViewPackage#getFolder()
  * @model
  * @generated
  */
@@ -35,27 +35,27 @@ public interface Folder extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Sub Folders</em>' containment reference list.
-	 * @see com.misc.touse.moplaf.timeview.tousetimeview.TousetimeviewPackage#getFolder_SubFolders()
+	 * @see com.misc.touse.moplaf.timeview.tousetimeview.ToUseTimeViewPackage#getFolder_SubFolders()
 	 * @model containment="true"
 	 * @generated
 	 */
 	EList<Folder> getSubFolders();
 
 	/**
-	 * Returns the value of the '<em><b>Rows</b></em>' containment reference list.
-	 * The list contents are of type {@link com.misc.touse.moplaf.timeview.tousetimeview.Row}.
+	 * Returns the value of the '<em><b>Objects</b></em>' containment reference list.
+	 * The list contents are of type {@link com.misc.touse.moplaf.timeview.tousetimeview.Object}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Rows</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Objects</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Rows</em>' containment reference list.
-	 * @see com.misc.touse.moplaf.timeview.tousetimeview.TousetimeviewPackage#getFolder_Rows()
+	 * @return the value of the '<em>Objects</em>' containment reference list.
+	 * @see com.misc.touse.moplaf.timeview.tousetimeview.ToUseTimeViewPackage#getFolder_Objects()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Row> getRows();
+	EList<com.misc.touse.moplaf.timeview.tousetimeview.Object> getObjects();
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -67,7 +67,7 @@ public interface Folder extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see com.misc.touse.moplaf.timeview.tousetimeview.TousetimeviewPackage#getFolder_Name()
+	 * @see com.misc.touse.moplaf.timeview.tousetimeview.ToUseTimeViewPackage#getFolder_Name()
 	 * @model
 	 * @generated
 	 */

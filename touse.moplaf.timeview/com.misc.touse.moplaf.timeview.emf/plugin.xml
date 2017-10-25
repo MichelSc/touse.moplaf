@@ -10,7 +10,7 @@
       <!-- @generated ToUseTimeView -->
       <package
             uri="http://www.misc.com/touse/moplaf/timeview/model/0.1"
-            class="com.misc.touse.moplaf.timeview.tousetimeview.TousetimeviewPackage"
+            class="com.misc.touse.moplaf.timeview.tousetimeview.ToUseTimeViewPackage"
             genModel="model/ToUseTimeView.genmodel"/>
    </extension>
 

@@ -4,8 +4,7 @@ package com.misc.touse.moplaf.timeview.tousetimeview.impl;
 
 import com.misc.touse.moplaf.timeview.tousetimeview.Domain;
 import com.misc.touse.moplaf.timeview.tousetimeview.Folder;
-import com.misc.touse.moplaf.timeview.tousetimeview.TousetimeviewPackage;
-
+import com.misc.touse.moplaf.timeview.tousetimeview.ToUseTimeViewPackage;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -60,7 +59,7 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TousetimeviewPackage.Literals.DOMAIN;
+		return ToUseTimeViewPackage.Literals.DOMAIN;
 	}
 
 	/**
@@ -70,7 +69,7 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	 */
 	public EList<Folder> getRootFolders() {
 		if (rootFolders == null) {
-			rootFolders = new EObjectContainmentEList<Folder>(Folder.class, this, TousetimeviewPackage.DOMAIN__ROOT_FOLDERS);
+			rootFolders = new EObjectContainmentEList<Folder>(Folder.class, this, ToUseTimeViewPackage.DOMAIN__ROOT_FOLDERS);
 		}
 		return rootFolders;
 	}
@@ -83,7 +82,7 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case TousetimeviewPackage.DOMAIN__ROOT_FOLDERS:
+			case ToUseTimeViewPackage.DOMAIN__ROOT_FOLDERS:
 				return ((InternalEList<?>)getRootFolders()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -97,7 +96,7 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TousetimeviewPackage.DOMAIN__ROOT_FOLDERS:
+			case ToUseTimeViewPackage.DOMAIN__ROOT_FOLDERS:
 				return getRootFolders();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -112,7 +111,7 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TousetimeviewPackage.DOMAIN__ROOT_FOLDERS:
+			case ToUseTimeViewPackage.DOMAIN__ROOT_FOLDERS:
 				getRootFolders().clear();
 				getRootFolders().addAll((Collection<? extends Folder>)newValue);
 				return;
@@ -128,7 +127,7 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TousetimeviewPackage.DOMAIN__ROOT_FOLDERS:
+			case ToUseTimeViewPackage.DOMAIN__ROOT_FOLDERS:
 				getRootFolders().clear();
 				return;
 		}
@@ -143,7 +142,7 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TousetimeviewPackage.DOMAIN__ROOT_FOLDERS:
+			case ToUseTimeViewPackage.DOMAIN__ROOT_FOLDERS:
 				return rootFolders != null && !rootFolders.isEmpty();
 		}
 		return super.eIsSet(featureID);

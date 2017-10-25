@@ -2,7 +2,11 @@
  */
 package com.misc.touse.moplaf.timeview.tousetimeview.util;
 
-import com.misc.touse.moplaf.timeview.tousetimeview.*;
+import com.misc.touse.moplaf.timeview.tousetimeview.Domain;
+import com.misc.touse.moplaf.timeview.tousetimeview.Folder;
+import com.misc.touse.moplaf.timeview.tousetimeview.Node;
+import com.misc.touse.moplaf.timeview.tousetimeview.TimeLine;
+import com.misc.touse.moplaf.timeview.tousetimeview.ToUseTimeViewPackage;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -16,17 +20,17 @@ import org.eclipse.emf.ecore.EObject;
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see com.misc.touse.moplaf.timeview.tousetimeview.TousetimeviewPackage
+ * @see com.misc.touse.moplaf.timeview.tousetimeview.ToUseTimeViewPackage
  * @generated
  */
-public class TousetimeviewAdapterFactory extends AdapterFactoryImpl {
+public class ToUseTimeViewAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static TousetimeviewPackage modelPackage;
+	protected static ToUseTimeViewPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -34,9 +38,9 @@ public class TousetimeviewAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TousetimeviewAdapterFactory() {
+	public ToUseTimeViewAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = TousetimeviewPackage.eINSTANCE;
+			modelPackage = ToUseTimeViewPackage.eINSTANCE;
 		}
 	}
 
@@ -65,8 +69,8 @@ public class TousetimeviewAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TousetimeviewSwitch<Adapter> modelSwitch =
-		new TousetimeviewSwitch<Adapter>() {
+	protected ToUseTimeViewSwitch<Adapter> modelSwitch =
+		new ToUseTimeViewSwitch<Adapter>() {
 			@Override
 			public Adapter caseDomain(Domain object) {
 				return createDomainAdapter();
@@ -76,8 +80,12 @@ public class TousetimeviewAdapterFactory extends AdapterFactoryImpl {
 				return createFolderAdapter();
 			}
 			@Override
-			public Adapter caseRow(Row object) {
-				return createRowAdapter();
+			public Adapter caseObject(com.misc.touse.moplaf.timeview.tousetimeview.Object object) {
+				return createObjectAdapter();
+			}
+			@Override
+			public Adapter caseTimeLine(TimeLine object) {
+				return createTimeLineAdapter();
 			}
 			@Override
 			public Adapter caseNode(Node object) {
@@ -132,16 +140,30 @@ public class TousetimeviewAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.timeview.tousetimeview.Row <em>Row</em>}'.
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.timeview.tousetimeview.Object <em>Object</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see com.misc.touse.moplaf.timeview.tousetimeview.Row
+	 * @see com.misc.touse.moplaf.timeview.tousetimeview.Object
 	 * @generated
 	 */
-	public Adapter createRowAdapter() {
+	public Adapter createObjectAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.timeview.tousetimeview.TimeLine <em>Time Line</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.touse.moplaf.timeview.tousetimeview.TimeLine
+	 * @generated
+	 */
+	public Adapter createTimeLineAdapter() {
 		return null;
 	}
 
@@ -171,4 +193,4 @@ public class TousetimeviewAdapterFactory extends AdapterFactoryImpl {
 		return null;
 	}
 
-} //TousetimeviewAdapterFactory
+} //ToUseTimeViewAdapterFactory

@@ -2,7 +2,12 @@
  */
 package com.misc.touse.moplaf.timeview.tousetimeview.impl;
 
-import com.misc.touse.moplaf.timeview.tousetimeview.*;
+import com.misc.touse.moplaf.timeview.tousetimeview.Domain;
+import com.misc.touse.moplaf.timeview.tousetimeview.Folder;
+import com.misc.touse.moplaf.timeview.tousetimeview.Node;
+import com.misc.touse.moplaf.timeview.tousetimeview.TimeLine;
+import com.misc.touse.moplaf.timeview.tousetimeview.ToUseTimeViewFactory;
+import com.misc.touse.moplaf.timeview.tousetimeview.ToUseTimeViewPackage;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -18,24 +23,24 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
  * <!-- end-user-doc -->
  * @generated
  */
-public class TousetimeviewFactoryImpl extends EFactoryImpl implements TousetimeviewFactory {
+public class ToUseTimeViewFactoryImpl extends EFactoryImpl implements ToUseTimeViewFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static TousetimeviewFactory init() {
+	public static ToUseTimeViewFactory init() {
 		try {
-			TousetimeviewFactory theTousetimeviewFactory = (TousetimeviewFactory)EPackage.Registry.INSTANCE.getEFactory(TousetimeviewPackage.eNS_URI);
-			if (theTousetimeviewFactory != null) {
-				return theTousetimeviewFactory;
+			ToUseTimeViewFactory theToUseTimeViewFactory = (ToUseTimeViewFactory)EPackage.Registry.INSTANCE.getEFactory(ToUseTimeViewPackage.eNS_URI);
+			if (theToUseTimeViewFactory != null) {
+				return theToUseTimeViewFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new TousetimeviewFactoryImpl();
+		return new ToUseTimeViewFactoryImpl();
 	}
 
 	/**
@@ -44,7 +49,7 @@ public class TousetimeviewFactoryImpl extends EFactoryImpl implements Tousetimev
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TousetimeviewFactoryImpl() {
+	public ToUseTimeViewFactoryImpl() {
 		super();
 	}
 
@@ -56,10 +61,11 @@ public class TousetimeviewFactoryImpl extends EFactoryImpl implements Tousetimev
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case TousetimeviewPackage.DOMAIN: return createDomain();
-			case TousetimeviewPackage.FOLDER: return createFolder();
-			case TousetimeviewPackage.ROW: return createRow();
-			case TousetimeviewPackage.NODE: return createNode();
+			case ToUseTimeViewPackage.DOMAIN: return createDomain();
+			case ToUseTimeViewPackage.FOLDER: return createFolder();
+			case ToUseTimeViewPackage.OBJECT: return createObject();
+			case ToUseTimeViewPackage.TIME_LINE: return createTimeLine();
+			case ToUseTimeViewPackage.NODE: return createNode();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -90,9 +96,19 @@ public class TousetimeviewFactoryImpl extends EFactoryImpl implements Tousetimev
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Row createRow() {
-		RowImpl row = new RowImpl();
-		return row;
+	public com.misc.touse.moplaf.timeview.tousetimeview.Object createObject() {
+		ObjectImpl object = new ObjectImpl();
+		return object;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TimeLine createTimeLine() {
+		TimeLineImpl timeLine = new TimeLineImpl();
+		return timeLine;
 	}
 
 	/**
@@ -110,8 +126,8 @@ public class TousetimeviewFactoryImpl extends EFactoryImpl implements Tousetimev
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TousetimeviewPackage getTousetimeviewPackage() {
-		return (TousetimeviewPackage)getEPackage();
+	public ToUseTimeViewPackage getToUseTimeViewPackage() {
+		return (ToUseTimeViewPackage)getEPackage();
 	}
 
 	/**
@@ -121,8 +137,8 @@ public class TousetimeviewFactoryImpl extends EFactoryImpl implements Tousetimev
 	 * @generated
 	 */
 	@Deprecated
-	public static TousetimeviewPackage getPackage() {
-		return TousetimeviewPackage.eINSTANCE;
+	public static ToUseTimeViewPackage getPackage() {
+		return ToUseTimeViewPackage.eINSTANCE;
 	}
 
-} //TousetimeviewFactoryImpl
+} //ToUseTimeViewFactoryImpl

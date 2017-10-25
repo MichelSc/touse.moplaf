@@ -9,17 +9,17 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see com.misc.touse.moplaf.timeview.tousetimeview.TousetimeviewPackage
+ * @see com.misc.touse.moplaf.timeview.tousetimeview.ToUseTimeViewPackage
  * @generated
  */
-public interface TousetimeviewFactory extends EFactory {
+public interface ToUseTimeViewFactory extends EFactory {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	TousetimeviewFactory eINSTANCE = com.misc.touse.moplaf.timeview.tousetimeview.impl.TousetimeviewFactoryImpl.init();
+	ToUseTimeViewFactory eINSTANCE = com.misc.touse.moplaf.timeview.tousetimeview.impl.ToUseTimeViewFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>Domain</em>'.
@@ -40,13 +40,22 @@ public interface TousetimeviewFactory extends EFactory {
 	Folder createFolder();
 
 	/**
-	 * Returns a new object of class '<em>Row</em>'.
+	 * Returns a new object of class '<em>Object</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Row</em>'.
+	 * @return a new object of class '<em>Object</em>'.
 	 * @generated
 	 */
-	Row createRow();
+	Object createObject();
+
+	/**
+	 * Returns a new object of class '<em>Time Line</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Time Line</em>'.
+	 * @generated
+	 */
+	TimeLine createTimeLine();
 
 	/**
 	 * Returns a new object of class '<em>Node</em>'.
@@ -64,6 +73,6 @@ public interface TousetimeviewFactory extends EFactory {
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	TousetimeviewPackage getTousetimeviewPackage();
+	ToUseTimeViewPackage getToUseTimeViewPackage();
 
-} //TousetimeviewFactory
+} //ToUseTimeViewFactory

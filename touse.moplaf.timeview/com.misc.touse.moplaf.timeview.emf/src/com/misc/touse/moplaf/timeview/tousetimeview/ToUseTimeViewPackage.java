@@ -19,11 +19,11 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see com.misc.touse.moplaf.timeview.tousetimeview.TousetimeviewFactory
+ * @see com.misc.touse.moplaf.timeview.tousetimeview.ToUseTimeViewFactory
  * @model kind="package"
  * @generated
  */
-public interface TousetimeviewPackage extends EPackage {
+public interface ToUseTimeViewPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -54,14 +54,14 @@ public interface TousetimeviewPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	TousetimeviewPackage eINSTANCE = com.misc.touse.moplaf.timeview.tousetimeview.impl.TousetimeviewPackageImpl.init();
+	ToUseTimeViewPackage eINSTANCE = com.misc.touse.moplaf.timeview.tousetimeview.impl.ToUseTimeViewPackageImpl.init();
 
 	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.timeview.tousetimeview.impl.DomainImpl <em>Domain</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see com.misc.touse.moplaf.timeview.tousetimeview.impl.DomainImpl
-	 * @see com.misc.touse.moplaf.timeview.tousetimeview.impl.TousetimeviewPackageImpl#getDomain()
+	 * @see com.misc.touse.moplaf.timeview.tousetimeview.impl.ToUseTimeViewPackageImpl#getDomain()
 	 * @generated
 	 */
 	int DOMAIN = 0;
@@ -98,7 +98,7 @@ public interface TousetimeviewPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see com.misc.touse.moplaf.timeview.tousetimeview.impl.FolderImpl
-	 * @see com.misc.touse.moplaf.timeview.tousetimeview.impl.TousetimeviewPackageImpl#getFolder()
+	 * @see com.misc.touse.moplaf.timeview.tousetimeview.impl.ToUseTimeViewPackageImpl#getFolder()
 	 * @generated
 	 */
 	int FOLDER = 1;
@@ -113,13 +113,13 @@ public interface TousetimeviewPackage extends EPackage {
 	int FOLDER__SUB_FOLDERS = 0;
 
 	/**
-	 * The feature id for the '<em><b>Rows</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Objects</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FOLDER__ROWS = 1;
+	int FOLDER__OBJECTS = 1;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -149,23 +149,69 @@ public interface TousetimeviewPackage extends EPackage {
 	int FOLDER_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link com.misc.touse.moplaf.timeview.tousetimeview.impl.RowImpl <em>Row</em>}' class.
+	 * The meta object id for the '{@link com.misc.touse.moplaf.timeview.tousetimeview.impl.ObjectImpl <em>Object</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see com.misc.touse.moplaf.timeview.tousetimeview.impl.RowImpl
-	 * @see com.misc.touse.moplaf.timeview.tousetimeview.impl.TousetimeviewPackageImpl#getRow()
+	 * @see com.misc.touse.moplaf.timeview.tousetimeview.impl.ObjectImpl
+	 * @see com.misc.touse.moplaf.timeview.tousetimeview.impl.ToUseTimeViewPackageImpl#getObject()
 	 * @generated
 	 */
-	int ROW = 2;
+	int OBJECT = 2;
 
 	/**
-	 * The feature id for the '<em><b>Sub Rows</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Sub Objects</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROW__SUB_ROWS = 0;
+	int OBJECT__SUB_OBJECTS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Time Lines</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OBJECT__TIME_LINES = 1;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OBJECT__NAME = 2;
+
+	/**
+	 * The number of structural features of the '<em>Object</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OBJECT_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Object</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OBJECT_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.timeview.tousetimeview.impl.TimeLineImpl <em>Time Line</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.timeview.tousetimeview.impl.TimeLineImpl
+	 * @see com.misc.touse.moplaf.timeview.tousetimeview.impl.ToUseTimeViewPackageImpl#getTimeLine()
+	 * @generated
+	 */
+	int TIME_LINE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Nodes</b></em>' containment reference list.
@@ -174,7 +220,7 @@ public interface TousetimeviewPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROW__NODES = 1;
+	int TIME_LINE__NODES = 0;
 
 	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -183,7 +229,7 @@ public interface TousetimeviewPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROW__TEXT = 2;
+	int TIME_LINE__TEXT = 1;
 
 	/**
 	 * The feature id for the '<em><b>Foreground</b></em>' attribute.
@@ -192,7 +238,7 @@ public interface TousetimeviewPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROW__FOREGROUND = 3;
+	int TIME_LINE__FOREGROUND = 2;
 
 	/**
 	 * The feature id for the '<em><b>Background</b></em>' attribute.
@@ -201,35 +247,35 @@ public interface TousetimeviewPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROW__BACKGROUND = 4;
+	int TIME_LINE__BACKGROUND = 3;
 
 	/**
-	 * The number of structural features of the '<em>Row</em>' class.
+	 * The number of structural features of the '<em>Time Line</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROW_FEATURE_COUNT = 5;
+	int TIME_LINE_FEATURE_COUNT = 4;
 
 	/**
-	 * The number of operations of the '<em>Row</em>' class.
+	 * The number of operations of the '<em>Time Line</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROW_OPERATION_COUNT = 0;
+	int TIME_LINE_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.timeview.tousetimeview.impl.NodeImpl <em>Node</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see com.misc.touse.moplaf.timeview.tousetimeview.impl.NodeImpl
-	 * @see com.misc.touse.moplaf.timeview.tousetimeview.impl.TousetimeviewPackageImpl#getNode()
+	 * @see com.misc.touse.moplaf.timeview.tousetimeview.impl.ToUseTimeViewPackageImpl#getNode()
 	 * @generated
 	 */
-	int NODE = 3;
+	int NODE = 4;
 
 	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -338,15 +384,15 @@ public interface TousetimeviewPackage extends EPackage {
 	EReference getFolder_SubFolders();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.timeview.tousetimeview.Folder#getRows <em>Rows</em>}'.
+	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.timeview.tousetimeview.Folder#getObjects <em>Objects</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Rows</em>'.
-	 * @see com.misc.touse.moplaf.timeview.tousetimeview.Folder#getRows()
+	 * @return the meta object for the containment reference list '<em>Objects</em>'.
+	 * @see com.misc.touse.moplaf.timeview.tousetimeview.Folder#getObjects()
 	 * @see #getFolder()
 	 * @generated
 	 */
-	EReference getFolder_Rows();
+	EReference getFolder_Objects();
 
 	/**
 	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.timeview.tousetimeview.Folder#getName <em>Name</em>}'.
@@ -360,69 +406,101 @@ public interface TousetimeviewPackage extends EPackage {
 	EAttribute getFolder_Name();
 
 	/**
-	 * Returns the meta object for class '{@link com.misc.touse.moplaf.timeview.tousetimeview.Row <em>Row</em>}'.
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.timeview.tousetimeview.Object <em>Object</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Row</em>'.
-	 * @see com.misc.touse.moplaf.timeview.tousetimeview.Row
+	 * @return the meta object for class '<em>Object</em>'.
+	 * @see com.misc.touse.moplaf.timeview.tousetimeview.Object
 	 * @generated
 	 */
-	EClass getRow();
+	EClass getObject();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.timeview.tousetimeview.Row#getSubRows <em>Sub Rows</em>}'.
+	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.timeview.tousetimeview.Object#getSubObjects <em>Sub Objects</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Sub Rows</em>'.
-	 * @see com.misc.touse.moplaf.timeview.tousetimeview.Row#getSubRows()
-	 * @see #getRow()
+	 * @return the meta object for the containment reference list '<em>Sub Objects</em>'.
+	 * @see com.misc.touse.moplaf.timeview.tousetimeview.Object#getSubObjects()
+	 * @see #getObject()
 	 * @generated
 	 */
-	EReference getRow_SubRows();
+	EReference getObject_SubObjects();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.timeview.tousetimeview.Row#getNodes <em>Nodes</em>}'.
+	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.timeview.tousetimeview.Object#getTimeLines <em>Time Lines</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Time Lines</em>'.
+	 * @see com.misc.touse.moplaf.timeview.tousetimeview.Object#getTimeLines()
+	 * @see #getObject()
+	 * @generated
+	 */
+	EReference getObject_TimeLines();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.timeview.tousetimeview.Object#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see com.misc.touse.moplaf.timeview.tousetimeview.Object#getName()
+	 * @see #getObject()
+	 * @generated
+	 */
+	EAttribute getObject_Name();
+
+	/**
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.timeview.tousetimeview.TimeLine <em>Time Line</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Time Line</em>'.
+	 * @see com.misc.touse.moplaf.timeview.tousetimeview.TimeLine
+	 * @generated
+	 */
+	EClass getTimeLine();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.timeview.tousetimeview.TimeLine#getNodes <em>Nodes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Nodes</em>'.
-	 * @see com.misc.touse.moplaf.timeview.tousetimeview.Row#getNodes()
-	 * @see #getRow()
+	 * @see com.misc.touse.moplaf.timeview.tousetimeview.TimeLine#getNodes()
+	 * @see #getTimeLine()
 	 * @generated
 	 */
-	EReference getRow_Nodes();
+	EReference getTimeLine_Nodes();
 
 	/**
-	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.timeview.tousetimeview.Row#getText <em>Text</em>}'.
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.timeview.tousetimeview.TimeLine#getText <em>Text</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Text</em>'.
-	 * @see com.misc.touse.moplaf.timeview.tousetimeview.Row#getText()
-	 * @see #getRow()
+	 * @see com.misc.touse.moplaf.timeview.tousetimeview.TimeLine#getText()
+	 * @see #getTimeLine()
 	 * @generated
 	 */
-	EAttribute getRow_Text();
+	EAttribute getTimeLine_Text();
 
 	/**
-	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.timeview.tousetimeview.Row#getForeground <em>Foreground</em>}'.
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.timeview.tousetimeview.TimeLine#getForeground <em>Foreground</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Foreground</em>'.
-	 * @see com.misc.touse.moplaf.timeview.tousetimeview.Row#getForeground()
-	 * @see #getRow()
+	 * @see com.misc.touse.moplaf.timeview.tousetimeview.TimeLine#getForeground()
+	 * @see #getTimeLine()
 	 * @generated
 	 */
-	EAttribute getRow_Foreground();
+	EAttribute getTimeLine_Foreground();
 
 	/**
-	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.timeview.tousetimeview.Row#getBackground <em>Background</em>}'.
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.timeview.tousetimeview.TimeLine#getBackground <em>Background</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Background</em>'.
-	 * @see com.misc.touse.moplaf.timeview.tousetimeview.Row#getBackground()
-	 * @see #getRow()
+	 * @see com.misc.touse.moplaf.timeview.tousetimeview.TimeLine#getBackground()
+	 * @see #getTimeLine()
 	 * @generated
 	 */
-	EAttribute getRow_Background();
+	EAttribute getTimeLine_Background();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.timeview.tousetimeview.Node <em>Node</em>}'.
@@ -496,7 +574,7 @@ public interface TousetimeviewPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	TousetimeviewFactory getTousetimeviewFactory();
+	ToUseTimeViewFactory getToUseTimeViewFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -517,7 +595,7 @@ public interface TousetimeviewPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see com.misc.touse.moplaf.timeview.tousetimeview.impl.DomainImpl
-		 * @see com.misc.touse.moplaf.timeview.tousetimeview.impl.TousetimeviewPackageImpl#getDomain()
+		 * @see com.misc.touse.moplaf.timeview.tousetimeview.impl.ToUseTimeViewPackageImpl#getDomain()
 		 * @generated
 		 */
 		EClass DOMAIN = eINSTANCE.getDomain();
@@ -535,7 +613,7 @@ public interface TousetimeviewPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see com.misc.touse.moplaf.timeview.tousetimeview.impl.FolderImpl
-		 * @see com.misc.touse.moplaf.timeview.tousetimeview.impl.TousetimeviewPackageImpl#getFolder()
+		 * @see com.misc.touse.moplaf.timeview.tousetimeview.impl.ToUseTimeViewPackageImpl#getFolder()
 		 * @generated
 		 */
 		EClass FOLDER = eINSTANCE.getFolder();
@@ -549,12 +627,12 @@ public interface TousetimeviewPackage extends EPackage {
 		EReference FOLDER__SUB_FOLDERS = eINSTANCE.getFolder_SubFolders();
 
 		/**
-		 * The meta object literal for the '<em><b>Rows</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Objects</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference FOLDER__ROWS = eINSTANCE.getFolder_Rows();
+		EReference FOLDER__OBJECTS = eINSTANCE.getFolder_Objects();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -565,22 +643,48 @@ public interface TousetimeviewPackage extends EPackage {
 		EAttribute FOLDER__NAME = eINSTANCE.getFolder_Name();
 
 		/**
-		 * The meta object literal for the '{@link com.misc.touse.moplaf.timeview.tousetimeview.impl.RowImpl <em>Row</em>}' class.
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.timeview.tousetimeview.impl.ObjectImpl <em>Object</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see com.misc.touse.moplaf.timeview.tousetimeview.impl.RowImpl
-		 * @see com.misc.touse.moplaf.timeview.tousetimeview.impl.TousetimeviewPackageImpl#getRow()
+		 * @see com.misc.touse.moplaf.timeview.tousetimeview.impl.ObjectImpl
+		 * @see com.misc.touse.moplaf.timeview.tousetimeview.impl.ToUseTimeViewPackageImpl#getObject()
 		 * @generated
 		 */
-		EClass ROW = eINSTANCE.getRow();
+		EClass OBJECT = eINSTANCE.getObject();
 
 		/**
-		 * The meta object literal for the '<em><b>Sub Rows</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Sub Objects</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ROW__SUB_ROWS = eINSTANCE.getRow_SubRows();
+		EReference OBJECT__SUB_OBJECTS = eINSTANCE.getObject_SubObjects();
+
+		/**
+		 * The meta object literal for the '<em><b>Time Lines</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OBJECT__TIME_LINES = eINSTANCE.getObject_TimeLines();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute OBJECT__NAME = eINSTANCE.getObject_Name();
+
+		/**
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.timeview.tousetimeview.impl.TimeLineImpl <em>Time Line</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.touse.moplaf.timeview.tousetimeview.impl.TimeLineImpl
+		 * @see com.misc.touse.moplaf.timeview.tousetimeview.impl.ToUseTimeViewPackageImpl#getTimeLine()
+		 * @generated
+		 */
+		EClass TIME_LINE = eINSTANCE.getTimeLine();
 
 		/**
 		 * The meta object literal for the '<em><b>Nodes</b></em>' containment reference list feature.
@@ -588,7 +692,7 @@ public interface TousetimeviewPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ROW__NODES = eINSTANCE.getRow_Nodes();
+		EReference TIME_LINE__NODES = eINSTANCE.getTimeLine_Nodes();
 
 		/**
 		 * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
@@ -596,7 +700,7 @@ public interface TousetimeviewPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ROW__TEXT = eINSTANCE.getRow_Text();
+		EAttribute TIME_LINE__TEXT = eINSTANCE.getTimeLine_Text();
 
 		/**
 		 * The meta object literal for the '<em><b>Foreground</b></em>' attribute feature.
@@ -604,7 +708,7 @@ public interface TousetimeviewPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ROW__FOREGROUND = eINSTANCE.getRow_Foreground();
+		EAttribute TIME_LINE__FOREGROUND = eINSTANCE.getTimeLine_Foreground();
 
 		/**
 		 * The meta object literal for the '<em><b>Background</b></em>' attribute feature.
@@ -612,14 +716,14 @@ public interface TousetimeviewPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ROW__BACKGROUND = eINSTANCE.getRow_Background();
+		EAttribute TIME_LINE__BACKGROUND = eINSTANCE.getTimeLine_Background();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.timeview.tousetimeview.impl.NodeImpl <em>Node</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see com.misc.touse.moplaf.timeview.tousetimeview.impl.NodeImpl
-		 * @see com.misc.touse.moplaf.timeview.tousetimeview.impl.TousetimeviewPackageImpl#getNode()
+		 * @see com.misc.touse.moplaf.timeview.tousetimeview.impl.ToUseTimeViewPackageImpl#getNode()
 		 * @generated
 		 */
 		EClass NODE = eINSTANCE.getNode();
@@ -666,4 +770,4 @@ public interface TousetimeviewPackage extends EPackage {
 
 	}
 
-} //TousetimeviewPackage
+} //ToUseTimeViewPackage

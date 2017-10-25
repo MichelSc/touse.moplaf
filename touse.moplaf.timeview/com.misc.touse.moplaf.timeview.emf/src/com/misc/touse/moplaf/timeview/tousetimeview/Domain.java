@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.misc.touse.moplaf.timeview.tousetimeview.Domain#getRootFolders <em>Root Folders</em>}</li>
  * </ul>
  *
- * @see com.misc.touse.moplaf.timeview.tousetimeview.TousetimeviewPackage#getDomain()
+ * @see com.misc.touse.moplaf.timeview.tousetimeview.ToUseTimeViewPackage#getDomain()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface Domain extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Root Folders</em>' containment reference list.
-	 * @see com.misc.touse.moplaf.timeview.tousetimeview.TousetimeviewPackage#getDomain_RootFolders()
+	 * @see com.misc.touse.moplaf.timeview.tousetimeview.ToUseTimeViewPackage#getDomain_RootFolders()
 	 * @model containment="true"
 	 * @generated
 	 */

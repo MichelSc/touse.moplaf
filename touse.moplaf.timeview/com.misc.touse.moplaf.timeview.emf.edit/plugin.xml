@@ -20,4 +20,17 @@
                com.misc.common.moplaf.timeview.emf.edit.IItemTimeLinesProvider"/>
    </extension>
 
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated ToUseTimeView -->
+      <factory
+            uri="http://www.misc.com/touse/moplaf/timeview/model/0.1"
+            class="com.misc.touse.moplaf.timeview.tousetimeview.provider.ToUseTimeViewItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
 </plugin>
