@@ -4,9 +4,8 @@ package com.misc.touse.moplaf.kpiview.tousekpiview.provider;
 
 
 import com.misc.touse.moplaf.kpiview.tousekpiview.KPI;
-import com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewFactory;
-import com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewPackage;
-
+import com.misc.touse.moplaf.kpiview.tousekpiview.ToUseKpiViewFactory;
+import com.misc.touse.moplaf.kpiview.tousekpiview.ToUseKpiViewPackage;
 import java.util.Collection;
 import java.util.List;
 
@@ -82,7 +81,7 @@ public class KPIItemProvider
 				 getResourceLocator(),
 				 getString("_UI_KPI_Name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_KPI_Name_feature", "_UI_KPI_type"),
-				 TousekpiviewPackage.Literals.KPI__NAME,
+				 ToUseKpiViewPackage.Literals.KPI__NAME,
 				 true,
 				 false,
 				 false,
@@ -104,7 +103,7 @@ public class KPIItemProvider
 				 getResourceLocator(),
 				 getString("_UI_KPI_Value_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_KPI_Value_feature", "_UI_KPI_type"),
-				 TousekpiviewPackage.Literals.KPI__VALUE,
+				 ToUseKpiViewPackage.Literals.KPI__VALUE,
 				 true,
 				 false,
 				 false,
@@ -126,7 +125,7 @@ public class KPIItemProvider
 				 getResourceLocator(),
 				 getString("_UI_KPI_Color_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_KPI_Color_feature", "_UI_KPI_type"),
-				 TousekpiviewPackage.Literals.KPI__COLOR,
+				 ToUseKpiViewPackage.Literals.KPI__COLOR,
 				 true,
 				 false,
 				 false,
@@ -148,7 +147,7 @@ public class KPIItemProvider
 				 getResourceLocator(),
 				 getString("_UI_KPI_MinValue_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_KPI_MinValue_feature", "_UI_KPI_type"),
-				 TousekpiviewPackage.Literals.KPI__MIN_VALUE,
+				 ToUseKpiViewPackage.Literals.KPI__MIN_VALUE,
 				 true,
 				 false,
 				 false,
@@ -170,7 +169,7 @@ public class KPIItemProvider
 				 getResourceLocator(),
 				 getString("_UI_KPI_MaxValue_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_KPI_MaxValue_feature", "_UI_KPI_type"),
-				 TousekpiviewPackage.Literals.KPI__MAX_VALUE,
+				 ToUseKpiViewPackage.Literals.KPI__MAX_VALUE,
 				 true,
 				 false,
 				 false,
@@ -192,7 +191,7 @@ public class KPIItemProvider
 				 getResourceLocator(),
 				 getString("_UI_KPI_Unit_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_KPI_Unit_feature", "_UI_KPI_type"),
-				 TousekpiviewPackage.Literals.KPI__UNIT,
+				 ToUseKpiViewPackage.Literals.KPI__UNIT,
 				 true,
 				 false,
 				 false,
@@ -213,7 +212,7 @@ public class KPIItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(TousekpiviewPackage.Literals.KPI__RANGES);
+			childrenFeatures.add(ToUseKpiViewPackage.Literals.KPI__RANGES);
 		}
 		return childrenFeatures;
 	}
@@ -269,15 +268,15 @@ public class KPIItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(KPI.class)) {
-			case TousekpiviewPackage.KPI__NAME:
-			case TousekpiviewPackage.KPI__COLOR:
-			case TousekpiviewPackage.KPI__VALUE:
-			case TousekpiviewPackage.KPI__MIN_VALUE:
-			case TousekpiviewPackage.KPI__MAX_VALUE:
-			case TousekpiviewPackage.KPI__UNIT:
+			case ToUseKpiViewPackage.KPI__NAME:
+			case ToUseKpiViewPackage.KPI__COLOR:
+			case ToUseKpiViewPackage.KPI__VALUE:
+			case ToUseKpiViewPackage.KPI__MIN_VALUE:
+			case ToUseKpiViewPackage.KPI__MAX_VALUE:
+			case ToUseKpiViewPackage.KPI__UNIT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case TousekpiviewPackage.KPI__RANGES:
+			case ToUseKpiViewPackage.KPI__RANGES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -297,8 +296,8 @@ public class KPIItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TousekpiviewPackage.Literals.KPI__RANGES,
-				 TousekpiviewFactory.eINSTANCE.createKPIRange()));
+				(ToUseKpiViewPackage.Literals.KPI__RANGES,
+				 ToUseKpiViewFactory.eINSTANCE.createKPIRange()));
 	}
 
 	/**

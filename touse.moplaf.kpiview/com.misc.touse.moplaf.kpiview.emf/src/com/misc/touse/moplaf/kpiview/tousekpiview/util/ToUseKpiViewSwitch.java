@@ -19,17 +19,17 @@ import org.eclipse.emf.ecore.util.Switch;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewPackage
+ * @see com.misc.touse.moplaf.kpiview.tousekpiview.ToUseKpiViewPackage
  * @generated
  */
-public class TousekpiviewSwitch<T> extends Switch<T> {
+public class ToUseKpiViewSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static TousekpiviewPackage modelPackage;
+	protected static ToUseKpiViewPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -37,9 +37,9 @@ public class TousekpiviewSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TousekpiviewSwitch() {
+	public ToUseKpiViewSwitch() {
 		if (modelPackage == null) {
-			modelPackage = TousekpiviewPackage.eINSTANCE;
+			modelPackage = ToUseKpiViewPackage.eINSTANCE;
 		}
 	}
 
@@ -66,25 +66,25 @@ public class TousekpiviewSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case TousekpiviewPackage.DOMAIN: {
+			case ToUseKpiViewPackage.DOMAIN: {
 				Domain domain = (Domain)theEObject;
 				T result = caseDomain(domain);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case TousekpiviewPackage.SCENARIO: {
+			case ToUseKpiViewPackage.SCENARIO: {
 				Scenario scenario = (Scenario)theEObject;
 				T result = caseScenario(scenario);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case TousekpiviewPackage.KPI: {
+			case ToUseKpiViewPackage.KPI: {
 				KPI kpi = (KPI)theEObject;
 				T result = caseKPI(kpi);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case TousekpiviewPackage.KPI_RANGE: {
+			case ToUseKpiViewPackage.KPI_RANGE: {
 				KPIRange kpiRange = (KPIRange)theEObject;
 				T result = caseKPIRange(kpiRange);
 				if (result == null) result = defaultCase(theEObject);
@@ -170,4 +170,4 @@ public class TousekpiviewSwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //TousekpiviewSwitch
+} //ToUseKpiViewSwitch

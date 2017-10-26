@@ -5,8 +5,7 @@ package com.misc.touse.moplaf.kpiview.tousekpiview.provider;
 
 import com.misc.common.moplaf.common.Color;
 import com.misc.touse.moplaf.kpiview.tousekpiview.KPIRange;
-import com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewPackage;
-
+import com.misc.touse.moplaf.kpiview.tousekpiview.ToUseKpiViewPackage;
 import java.util.Collection;
 import java.util.List;
 
@@ -80,7 +79,7 @@ public class KPIRangeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_KPIRange_LowValue_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_KPIRange_LowValue_feature", "_UI_KPIRange_type"),
-				 TousekpiviewPackage.Literals.KPI_RANGE__LOW_VALUE,
+				 ToUseKpiViewPackage.Literals.KPI_RANGE__LOW_VALUE,
 				 true,
 				 false,
 				 false,
@@ -102,7 +101,7 @@ public class KPIRangeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_KPIRange_HighValue_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_KPIRange_HighValue_feature", "_UI_KPIRange_type"),
-				 TousekpiviewPackage.Literals.KPI_RANGE__HIGH_VALUE,
+				 ToUseKpiViewPackage.Literals.KPI_RANGE__HIGH_VALUE,
 				 true,
 				 false,
 				 false,
@@ -124,7 +123,7 @@ public class KPIRangeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_KPIRange_Color_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_KPIRange_Color_feature", "_UI_KPIRange_type"),
-				 TousekpiviewPackage.Literals.KPI_RANGE__COLOR,
+				 ToUseKpiViewPackage.Literals.KPI_RANGE__COLOR,
 				 true,
 				 false,
 				 false,
@@ -146,7 +145,7 @@ public class KPIRangeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_KPIRange_Name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_KPIRange_Name_feature", "_UI_KPIRange_type"),
-				 TousekpiviewPackage.Literals.KPI_RANGE__NAME,
+				 ToUseKpiViewPackage.Literals.KPI_RANGE__NAME,
 				 true,
 				 false,
 				 false,
@@ -193,10 +192,10 @@ public class KPIRangeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(KPIRange.class)) {
-			case TousekpiviewPackage.KPI_RANGE__NAME:
-			case TousekpiviewPackage.KPI_RANGE__COLOR:
-			case TousekpiviewPackage.KPI_RANGE__LOW_VALUE:
-			case TousekpiviewPackage.KPI_RANGE__HIGH_VALUE:
+			case ToUseKpiViewPackage.KPI_RANGE__NAME:
+			case ToUseKpiViewPackage.KPI_RANGE__COLOR:
+			case ToUseKpiViewPackage.KPI_RANGE__LOW_VALUE:
+			case ToUseKpiViewPackage.KPI_RANGE__HIGH_VALUE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

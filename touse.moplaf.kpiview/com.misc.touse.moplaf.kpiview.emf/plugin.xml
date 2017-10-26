@@ -10,7 +10,7 @@
       <!-- @generated tousekpiview -->
       <package
             uri="http://www.misc.com/touse/moplaf/kpiview/model/0.1"
-            class="com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewPackage"
+            class="com.misc.touse.moplaf.kpiview.tousekpiview.ToUseKpiViewPackage"
             genModel="model/tousekpiview.genmodel"/>
    </extension>
 

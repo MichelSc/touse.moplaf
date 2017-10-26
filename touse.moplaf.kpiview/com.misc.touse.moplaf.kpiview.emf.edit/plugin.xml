@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
             uri="http://www.misc.com/touse/moplaf/kpiview/model/0.1"
-            class="com.misc.touse.moplaf.kpiview.tousekpiview.provider.TousekpiviewItemProviderAdapterFactory"
+            class="com.misc.touse.moplaf.kpiview.tousekpiview.provider.ToUseKpiViewItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -19,5 +19,6 @@
                org.eclipse.emf.edit.provider.IItemColorProvider
                com.misc.common.moplaf.kpiview.emf.edit.IItemKPIsProvider "/>
    </extension>
+
 
 </plugin>

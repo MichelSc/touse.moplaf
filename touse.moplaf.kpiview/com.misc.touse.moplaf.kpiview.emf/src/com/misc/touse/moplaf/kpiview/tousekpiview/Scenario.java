@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.misc.touse.moplaf.kpiview.tousekpiview.Scenario#getKPIs <em>KP Is</em>}</li>
  * </ul>
  *
- * @see com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewPackage#getScenario()
+ * @see com.misc.touse.moplaf.kpiview.tousekpiview.ToUseKpiViewPackage#getScenario()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface Scenario extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>KP Is</em>' containment reference list.
-	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewPackage#getScenario_KPIs()
+	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.ToUseKpiViewPackage#getScenario_KPIs()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -51,7 +51,7 @@ public interface Scenario extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewPackage#getScenario_Name()
+	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.ToUseKpiViewPackage#getScenario_Name()
 	 * @model
 	 * @generated
 	 */
@@ -77,7 +77,7 @@ public interface Scenario extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Color</em>' attribute.
 	 * @see #setColor(int)
-	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewPackage#getScenario_Color()
+	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.ToUseKpiViewPackage#getScenario_Color()
 	 * @model
 	 * @generated
 	 */

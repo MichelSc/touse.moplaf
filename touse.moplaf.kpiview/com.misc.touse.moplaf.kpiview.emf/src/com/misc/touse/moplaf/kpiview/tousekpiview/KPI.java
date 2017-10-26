@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.misc.touse.moplaf.kpiview.tousekpiview.KPI#getUnit <em>Unit</em>}</li>
  * </ul>
  *
- * @see com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewPackage#getKPI()
+ * @see com.misc.touse.moplaf.kpiview.tousekpiview.ToUseKpiViewPackage#getKPI()
  * @model
  * @generated
  */
@@ -39,7 +39,7 @@ public interface KPI extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewPackage#getKPI_Name()
+	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.ToUseKpiViewPackage#getKPI_Name()
 	 * @model
 	 * @generated
 	 */
@@ -65,7 +65,7 @@ public interface KPI extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
 	 * @see #setValue(float)
-	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewPackage#getKPI_Value()
+	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.ToUseKpiViewPackage#getKPI_Value()
 	 * @model
 	 * @generated
 	 */
@@ -91,7 +91,7 @@ public interface KPI extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ranges</em>' containment reference list.
-	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewPackage#getKPI_Ranges()
+	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.ToUseKpiViewPackage#getKPI_Ranges()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -107,7 +107,7 @@ public interface KPI extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Unit</em>' attribute.
 	 * @see #setUnit(String)
-	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewPackage#getKPI_Unit()
+	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.ToUseKpiViewPackage#getKPI_Unit()
 	 * @model
 	 * @generated
 	 */
@@ -133,7 +133,7 @@ public interface KPI extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Color</em>' attribute.
 	 * @see #setColor(int)
-	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewPackage#getKPI_Color()
+	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.ToUseKpiViewPackage#getKPI_Color()
 	 * @model
 	 * @generated
 	 */
@@ -159,7 +159,7 @@ public interface KPI extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Min Value</em>' attribute.
 	 * @see #setMinValue(float)
-	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewPackage#getKPI_MinValue()
+	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.ToUseKpiViewPackage#getKPI_MinValue()
 	 * @model
 	 * @generated
 	 */
@@ -185,7 +185,7 @@ public interface KPI extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Max Value</em>' attribute.
 	 * @see #setMaxValue(float)
-	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewPackage#getKPI_MaxValue()
+	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.ToUseKpiViewPackage#getKPI_MaxValue()
 	 * @model
 	 * @generated
 	 */

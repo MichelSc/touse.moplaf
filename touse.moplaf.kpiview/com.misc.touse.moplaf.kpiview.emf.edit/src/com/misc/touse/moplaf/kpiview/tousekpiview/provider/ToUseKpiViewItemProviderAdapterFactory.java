@@ -3,7 +3,7 @@
 package com.misc.touse.moplaf.kpiview.tousekpiview.provider;
 
 import com.misc.common.moplaf.kpiview.emf.edit.IItemKPIsProvider;
-import com.misc.touse.moplaf.kpiview.tousekpiview.util.TousekpiviewAdapterFactory;
+import com.misc.touse.moplaf.kpiview.tousekpiview.util.ToUseKpiViewAdapterFactory;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -34,7 +34,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class TousekpiviewItemProviderAdapterFactory extends TousekpiviewAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable {
+public class ToUseKpiViewItemProviderAdapterFactory extends ToUseKpiViewAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -64,14 +64,14 @@ public class TousekpiviewItemProviderAdapterFactory extends TousekpiviewAdapterF
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 */
-	public TousekpiviewItemProviderAdapterFactory() {
+	public ToUseKpiViewItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
 		supportedTypes.add(IItemLabelProvider.class);
 		supportedTypes.add(IItemPropertySource.class);
-		supportedTypes.add(IItemColorProvider.class);
-		supportedTypes.add(IItemKPIsProvider.class);
+		supportedTypes.add(IItemColorProvider.class);  // added, not generated
+		supportedTypes.add(IItemKPIsProvider.class); // non emf class
 	}
 
 	/**

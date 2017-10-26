@@ -18,24 +18,24 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
  * <!-- end-user-doc -->
  * @generated
  */
-public class TousekpiviewFactoryImpl extends EFactoryImpl implements TousekpiviewFactory {
+public class ToUseKpiViewFactoryImpl extends EFactoryImpl implements ToUseKpiViewFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static TousekpiviewFactory init() {
+	public static ToUseKpiViewFactory init() {
 		try {
-			TousekpiviewFactory theTousekpiviewFactory = (TousekpiviewFactory)EPackage.Registry.INSTANCE.getEFactory(TousekpiviewPackage.eNS_URI);
-			if (theTousekpiviewFactory != null) {
-				return theTousekpiviewFactory;
+			ToUseKpiViewFactory theToUseKpiViewFactory = (ToUseKpiViewFactory)EPackage.Registry.INSTANCE.getEFactory(ToUseKpiViewPackage.eNS_URI);
+			if (theToUseKpiViewFactory != null) {
+				return theToUseKpiViewFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new TousekpiviewFactoryImpl();
+		return new ToUseKpiViewFactoryImpl();
 	}
 
 	/**
@@ -44,7 +44,7 @@ public class TousekpiviewFactoryImpl extends EFactoryImpl implements Tousekpivie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TousekpiviewFactoryImpl() {
+	public ToUseKpiViewFactoryImpl() {
 		super();
 	}
 
@@ -56,10 +56,10 @@ public class TousekpiviewFactoryImpl extends EFactoryImpl implements Tousekpivie
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case TousekpiviewPackage.DOMAIN: return createDomain();
-			case TousekpiviewPackage.SCENARIO: return createScenario();
-			case TousekpiviewPackage.KPI: return createKPI();
-			case TousekpiviewPackage.KPI_RANGE: return createKPIRange();
+			case ToUseKpiViewPackage.DOMAIN: return createDomain();
+			case ToUseKpiViewPackage.SCENARIO: return createScenario();
+			case ToUseKpiViewPackage.KPI: return createKPI();
+			case ToUseKpiViewPackage.KPI_RANGE: return createKPIRange();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -110,8 +110,8 @@ public class TousekpiviewFactoryImpl extends EFactoryImpl implements Tousekpivie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TousekpiviewPackage getTousekpiviewPackage() {
-		return (TousekpiviewPackage)getEPackage();
+	public ToUseKpiViewPackage getToUseKpiViewPackage() {
+		return (ToUseKpiViewPackage)getEPackage();
 	}
 
 	/**
@@ -121,8 +121,8 @@ public class TousekpiviewFactoryImpl extends EFactoryImpl implements Tousekpivie
 	 * @generated
 	 */
 	@Deprecated
-	public static TousekpiviewPackage getPackage() {
-		return TousekpiviewPackage.eINSTANCE;
+	public static ToUseKpiViewPackage getPackage() {
+		return ToUseKpiViewPackage.eINSTANCE;
 	}
 
-} //TousekpiviewFactoryImpl
+} //ToUseKpiViewFactoryImpl

@@ -6,32 +6,99 @@
 
 <plugin>
 
-   <extension point="org.eclipse.ui.newWizards">
+   <extension
+         point="org.eclipse.core.runtime.applications"
+         id="TousekpiviewEditorAdvisorApplication">
       <!-- @generated tousekpiview -->
-      <category
-            id="org.eclipse.emf.ecore.Wizard.category.ID"
-            name="%_UI_Wizard_category"/>
-      <wizard
-            id="com.misc.touse.moplaf.kpiview.tousekpiview.presentation.TousekpiviewModelWizardID"
-            name="%_UI_TousekpiviewModelWizard_label"
-            class="com.misc.touse.moplaf.kpiview.tousekpiview.presentation.TousekpiviewModelWizard"
-            category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/TousekpiviewModelFile.gif">
-         <description>%_UI_TousekpiviewModelWizard_description</description>
-         <selection class="org.eclipse.core.resources.IResource"/>
-      </wizard>
+      <application>
+         <run class="com.misc.touse.moplaf.kpiview.tousekpiview.presentation.TousekpiviewEditorAdvisor$Application"/>
+      </application>
    </extension>
 
+
+   <extension point="org.eclipse.ui.perspectives">
+      <!-- @generated tousekpiview -->
+      <perspective
+            name="%_UI_Perspective_label"
+            class="com.misc.touse.moplaf.kpiview.tousekpiview.presentation.TousekpiviewEditorAdvisor$Perspective"
+            id="com.misc.touse.moplaf.kpiview.tousekpiview.presentation.TousekpiviewEditorAdvisorPerspective">
+      </perspective>
+   </extension>
+
+   <extension point="org.eclipse.ui.commands">
+      <!-- @generated tousekpiview -->
+      <command
+            name="%_UI_Menu_OpenURI_label"
+            description="%_UI_Menu_OpenURI_description"
+            categoryId="org.eclipse.ui.category.file"
+            id="com.misc.touse.moplaf.kpiview.tousekpiview.presentation.TousekpiviewEditorAdvisorOpenURICommand"/>
+      <command
+            name="%_UI_Menu_Open_label"
+            description="%_UI_Menu_Open_description"
+            categoryId="org.eclipse.ui.category.file"
+            id="com.misc.touse.moplaf.kpiview.tousekpiview.presentation.TousekpiviewEditorAdvisorOpenCommand"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.bindings">
+      <!-- @generated tousekpiview -->
+      <key
+            commandId="com.misc.touse.moplaf.kpiview.tousekpiview.presentation.TousekpiviewEditorAdvisorOpenURICommand"
+            sequence="M1+U"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+      <key
+            commandId="com.misc.touse.moplaf.kpiview.tousekpiview.presentation.TousekpiviewEditorAdvisorOpenCommand"
+            sequence="M1+O"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.actionSets">
+      <!-- @generated tousekpiview -->
+      <actionSet
+            label="%_UI_TousekpiviewEditorAdvisor_ActionSet_label"
+            visible="true"
+            id="TousekpiviewEditorAdvisorActionSet">
+         <action
+               label="%_UI_Menu_About_label"
+               class="com.misc.touse.moplaf.kpiview.tousekpiview.presentation.TousekpiviewEditorAdvisor$AboutAction"
+               menubarPath="help/additions"
+               id="com.misc.touse.moplaf.kpiview.tousekpiview.presentation.TousekpiviewEditorAdvisorAboutAction"/>
+         <action
+               label="%_UI_Menu_OpenURI_label"
+               definitionId="com.misc.touse.moplaf.kpiview.tousekpiview.presentation.TousekpiviewEditorAdvisorOpenURICommand"
+               class="com.misc.touse.moplaf.kpiview.tousekpiview.presentation.TousekpiviewEditorAdvisor$OpenURIAction"
+               menubarPath="file/additions"
+               id="com.misc.touse.moplaf.kpiview.tousekpiview.presentation.TousekpiviewEditorAdvisorOpenURIAction"/>
+         <action
+               label="%_UI_Menu_Open_label"
+               definitionId="com.misc.touse.moplaf.kpiview.tousekpiview.presentation.TousekpiviewEditorAdvisorOpenCommand"
+               class="com.misc.touse.moplaf.kpiview.tousekpiview.presentation.TousekpiviewEditorAdvisor$OpenAction"
+               menubarPath="file/additions"
+               id="com.misc.touse.moplaf.kpiview.tousekpiview.presentation.TousekpiviewEditorAdvisorOpenAction"/>
+      </actionSet>
+   </extension>
+
+   <extension point="org.eclipse.ui.actionSets">
+      <!-- @generated tousekpiview -->
+      <actionSet
+            label="%_UI_ToUseKpiViewModelWizard_ActionSet_label"
+            visible="true"
+            id="com.misc.touse.moplaf.kpiview.tousekpiview.presentation.ToUseKpiViewActionBarContributorActionSet">
+         <action
+               label="%_UI_ToUseKpiViewModelWizard_label"
+               class="com.misc.touse.moplaf.kpiview.tousekpiview.presentation.ToUseKpiViewActionBarContributor$NewAction"
+               menubarPath="file/new/additions"
+               id="com.misc.touse.moplaf.kpiview.tousekpiview.presentation.ToUseKpiViewActionBarContributorNewAction"/>
+      </actionSet>
+   </extension>
    <extension point="org.eclipse.ui.editors">
       <!-- @generated tousekpiview -->
       <editor
-            id="com.misc.touse.moplaf.kpiview.tousekpiview.presentation.TousekpiviewEditorID"
-            name="%_UI_TousekpiviewEditor_label"
-            icon="icons/full/obj16/TousekpiviewModelFile.gif"
+            id="com.misc.touse.moplaf.kpiview.tousekpiview.presentation.ToUseKpiViewEditorID"
+            name="%_UI_ToUseKpiViewEditor_label"
+            icon="icons/full/obj16/ToUseKpiViewModelFile.gif"
             extensions="tousekpiview"
-            class="com.misc.touse.moplaf.kpiview.tousekpiview.presentation.TousekpiviewEditor"
-            contributorClass="com.misc.touse.moplaf.kpiview.tousekpiview.presentation.TousekpiviewActionBarContributor">
+            class="com.misc.touse.moplaf.kpiview.tousekpiview.presentation.ToUseKpiViewEditor"
+            contributorClass="com.misc.touse.moplaf.kpiview.tousekpiview.presentation.ToUseKpiViewActionBarContributor">
       </editor>
    </extension>
-
 </plugin>

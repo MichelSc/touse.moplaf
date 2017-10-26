@@ -4,8 +4,7 @@ package com.misc.touse.moplaf.kpiview.tousekpiview.impl;
 
 import com.misc.touse.moplaf.kpiview.tousekpiview.KPI;
 import com.misc.touse.moplaf.kpiview.tousekpiview.Scenario;
-import com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewPackage;
-
+import com.misc.touse.moplaf.kpiview.tousekpiview.ToUseKpiViewPackage;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -104,7 +103,7 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TousekpiviewPackage.Literals.SCENARIO;
+		return ToUseKpiViewPackage.Literals.SCENARIO;
 	}
 
 	/**
@@ -114,7 +113,7 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 	 */
 	public EList<KPI> getKPIs() {
 		if (kpIs == null) {
-			kpIs = new EObjectContainmentEList<KPI>(KPI.class, this, TousekpiviewPackage.SCENARIO__KP_IS);
+			kpIs = new EObjectContainmentEList<KPI>(KPI.class, this, ToUseKpiViewPackage.SCENARIO__KP_IS);
 		}
 		return kpIs;
 	}
@@ -137,7 +136,7 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousekpiviewPackage.SCENARIO__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseKpiViewPackage.SCENARIO__NAME, oldName, name));
 	}
 
 	/**
@@ -158,7 +157,7 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 		int oldColor = color;
 		color = newColor;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousekpiviewPackage.SCENARIO__COLOR, oldColor, color));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseKpiViewPackage.SCENARIO__COLOR, oldColor, color));
 	}
 
 	/**
@@ -169,7 +168,7 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case TousekpiviewPackage.SCENARIO__KP_IS:
+			case ToUseKpiViewPackage.SCENARIO__KP_IS:
 				return ((InternalEList<?>)getKPIs()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -183,11 +182,11 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TousekpiviewPackage.SCENARIO__NAME:
+			case ToUseKpiViewPackage.SCENARIO__NAME:
 				return getName();
-			case TousekpiviewPackage.SCENARIO__COLOR:
+			case ToUseKpiViewPackage.SCENARIO__COLOR:
 				return getColor();
-			case TousekpiviewPackage.SCENARIO__KP_IS:
+			case ToUseKpiViewPackage.SCENARIO__KP_IS:
 				return getKPIs();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -202,13 +201,13 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TousekpiviewPackage.SCENARIO__NAME:
+			case ToUseKpiViewPackage.SCENARIO__NAME:
 				setName((String)newValue);
 				return;
-			case TousekpiviewPackage.SCENARIO__COLOR:
+			case ToUseKpiViewPackage.SCENARIO__COLOR:
 				setColor((Integer)newValue);
 				return;
-			case TousekpiviewPackage.SCENARIO__KP_IS:
+			case ToUseKpiViewPackage.SCENARIO__KP_IS:
 				getKPIs().clear();
 				getKPIs().addAll((Collection<? extends KPI>)newValue);
 				return;
@@ -224,13 +223,13 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TousekpiviewPackage.SCENARIO__NAME:
+			case ToUseKpiViewPackage.SCENARIO__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case TousekpiviewPackage.SCENARIO__COLOR:
+			case ToUseKpiViewPackage.SCENARIO__COLOR:
 				setColor(COLOR_EDEFAULT);
 				return;
-			case TousekpiviewPackage.SCENARIO__KP_IS:
+			case ToUseKpiViewPackage.SCENARIO__KP_IS:
 				getKPIs().clear();
 				return;
 		}
@@ -245,11 +244,11 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TousekpiviewPackage.SCENARIO__NAME:
+			case ToUseKpiViewPackage.SCENARIO__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case TousekpiviewPackage.SCENARIO__COLOR:
+			case ToUseKpiViewPackage.SCENARIO__COLOR:
 				return color != COLOR_EDEFAULT;
-			case TousekpiviewPackage.SCENARIO__KP_IS:
+			case ToUseKpiViewPackage.SCENARIO__KP_IS:
 				return kpIs != null && !kpIs.isEmpty();
 		}
 		return super.eIsSet(featureID);

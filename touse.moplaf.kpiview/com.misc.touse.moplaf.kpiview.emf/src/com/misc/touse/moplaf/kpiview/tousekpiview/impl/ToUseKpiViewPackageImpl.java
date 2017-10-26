@@ -5,8 +5,8 @@ package com.misc.touse.moplaf.kpiview.tousekpiview.impl;
 import com.misc.touse.moplaf.kpiview.tousekpiview.Domain;
 import com.misc.touse.moplaf.kpiview.tousekpiview.KPIRange;
 import com.misc.touse.moplaf.kpiview.tousekpiview.Scenario;
-import com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewFactory;
-import com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewPackage;
+import com.misc.touse.moplaf.kpiview.tousekpiview.ToUseKpiViewFactory;
+import com.misc.touse.moplaf.kpiview.tousekpiview.ToUseKpiViewPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
  * <!-- end-user-doc -->
  * @generated
  */
-public class TousekpiviewPackageImpl extends EPackageImpl implements TousekpiviewPackage {
+public class ToUseKpiViewPackageImpl extends EPackageImpl implements ToUseKpiViewPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -61,12 +61,12 @@ public class TousekpiviewPackageImpl extends EPackageImpl implements Tousekpivie
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewPackage#eNS_URI
+	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.ToUseKpiViewPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private TousekpiviewPackageImpl() {
-		super(eNS_URI, TousekpiviewFactory.eINSTANCE);
+	private ToUseKpiViewPackageImpl() {
+		super(eNS_URI, ToUseKpiViewFactory.eINSTANCE);
 	}
 
 	/**
@@ -79,7 +79,7 @@ public class TousekpiviewPackageImpl extends EPackageImpl implements Tousekpivie
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link TousekpiviewPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ToUseKpiViewPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -88,27 +88,27 @@ public class TousekpiviewPackageImpl extends EPackageImpl implements Tousekpivie
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static TousekpiviewPackage init() {
-		if (isInited) return (TousekpiviewPackage)EPackage.Registry.INSTANCE.getEPackage(TousekpiviewPackage.eNS_URI);
+	public static ToUseKpiViewPackage init() {
+		if (isInited) return (ToUseKpiViewPackage)EPackage.Registry.INSTANCE.getEPackage(ToUseKpiViewPackage.eNS_URI);
 
 		// Obtain or create and register package
-		TousekpiviewPackageImpl theTousekpiviewPackage = (TousekpiviewPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof TousekpiviewPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new TousekpiviewPackageImpl());
+		ToUseKpiViewPackageImpl theToUseKpiViewPackage = (ToUseKpiViewPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ToUseKpiViewPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ToUseKpiViewPackageImpl());
 
 		isInited = true;
 
 		// Create package meta-data objects
-		theTousekpiviewPackage.createPackageContents();
+		theToUseKpiViewPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theTousekpiviewPackage.initializePackageContents();
+		theToUseKpiViewPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theTousekpiviewPackage.freeze();
+		theToUseKpiViewPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(TousekpiviewPackage.eNS_URI, theTousekpiviewPackage);
-		return theTousekpiviewPackage;
+		EPackage.Registry.INSTANCE.put(ToUseKpiViewPackage.eNS_URI, theToUseKpiViewPackage);
+		return theToUseKpiViewPackage;
 	}
 
 	/**
@@ -143,15 +143,6 @@ public class TousekpiviewPackageImpl extends EPackageImpl implements Tousekpivie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getScenario_KPIs() {
-		return (EReference)scenarioEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getScenario_Name() {
 		return (EAttribute)scenarioEClass.getEStructuralFeatures().get(0);
 	}
@@ -163,6 +154,15 @@ public class TousekpiviewPackageImpl extends EPackageImpl implements Tousekpivie
 	 */
 	public EAttribute getScenario_Color() {
 		return (EAttribute)scenarioEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getScenario_KPIs() {
+		return (EReference)scenarioEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -188,35 +188,17 @@ public class TousekpiviewPackageImpl extends EPackageImpl implements Tousekpivie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getKPI_Value() {
-		return (EAttribute)kpiEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getKPI_Ranges() {
-		return (EReference)kpiEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getKPI_Unit() {
-		return (EAttribute)kpiEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getKPI_Color() {
 		return (EAttribute)kpiEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getKPI_Value() {
+		return (EAttribute)kpiEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -242,8 +224,44 @@ public class TousekpiviewPackageImpl extends EPackageImpl implements Tousekpivie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getKPI_Ranges() {
+		return (EReference)kpiEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getKPI_Unit() {
+		return (EAttribute)kpiEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getKPIRange() {
 		return kpiRangeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getKPIRange_Name() {
+		return (EAttribute)kpiRangeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getKPIRange_Color() {
+		return (EAttribute)kpiRangeEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -269,26 +287,8 @@ public class TousekpiviewPackageImpl extends EPackageImpl implements Tousekpivie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getKPIRange_Color() {
-		return (EAttribute)kpiRangeEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getKPIRange_Name() {
-		return (EAttribute)kpiRangeEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TousekpiviewFactory getTousekpiviewFactory() {
-		return (TousekpiviewFactory)getEFactoryInstance();
+	public ToUseKpiViewFactory getToUseKpiViewFactory() {
+		return (ToUseKpiViewFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -391,4 +391,4 @@ public class TousekpiviewPackageImpl extends EPackageImpl implements Tousekpivie
 		createResource(eNS_URI);
 	}
 
-} //TousekpiviewPackageImpl
+} //ToUseKpiViewPackageImpl

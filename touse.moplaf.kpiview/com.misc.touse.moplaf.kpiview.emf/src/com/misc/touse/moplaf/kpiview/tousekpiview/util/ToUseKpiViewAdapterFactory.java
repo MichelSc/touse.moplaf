@@ -16,17 +16,17 @@ import org.eclipse.emf.ecore.EObject;
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewPackage
+ * @see com.misc.touse.moplaf.kpiview.tousekpiview.ToUseKpiViewPackage
  * @generated
  */
-public class TousekpiviewAdapterFactory extends AdapterFactoryImpl {
+public class ToUseKpiViewAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static TousekpiviewPackage modelPackage;
+	protected static ToUseKpiViewPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -34,9 +34,9 @@ public class TousekpiviewAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TousekpiviewAdapterFactory() {
+	public ToUseKpiViewAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = TousekpiviewPackage.eINSTANCE;
+			modelPackage = ToUseKpiViewPackage.eINSTANCE;
 		}
 	}
 
@@ -65,8 +65,8 @@ public class TousekpiviewAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TousekpiviewSwitch<Adapter> modelSwitch =
-		new TousekpiviewSwitch<Adapter>() {
+	protected ToUseKpiViewSwitch<Adapter> modelSwitch =
+		new ToUseKpiViewSwitch<Adapter>() {
 			@Override
 			public Adapter caseDomain(Domain object) {
 				return createDomainAdapter();
@@ -171,4 +171,4 @@ public class TousekpiviewAdapterFactory extends AdapterFactoryImpl {
 		return null;
 	}
 
-} //TousekpiviewAdapterFactory
+} //ToUseKpiViewAdapterFactory

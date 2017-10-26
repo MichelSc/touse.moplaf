@@ -5,6 +5,7 @@ package com.misc.touse.moplaf.kpiview.tousekpiview.presentation;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import org.eclipse.emf.common.ui.action.WorkbenchWindowActionDelegate;
 import org.eclipse.emf.common.ui.viewer.IViewerProvider;
 
 import org.eclipse.emf.edit.domain.EditingDomain;
@@ -34,20 +35,43 @@ import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.ISelectionProvider;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
+import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.viewers.Viewer;
 
+import org.eclipse.jface.wizard.WizardDialog;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.PartInitException;
 
 /**
- * This is the action bar contributor for the Tousekpiview model editor.
+ * This is the action bar contributor for the ToUseKpiView model editor.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class TousekpiviewActionBarContributor
+public class ToUseKpiViewActionBarContributor
 	extends EditingDomainActionBarContributor
 	implements ISelectionChangedListener {
+	/**
+	 * Action to create objects from the ToUseKpiView model.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static class NewAction extends WorkbenchWindowActionDelegate {
+		/**
+		 * @see org.eclipse.ui.IActionDelegate#run(org.eclipse.jface.action.IAction)
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public void run(IAction action) {
+			ToUseKpiViewModelWizard wizard = new ToUseKpiViewModelWizard();
+			wizard.init(getWindow().getWorkbench(), StructuredSelection.EMPTY);
+			WizardDialog wizardDialog = new WizardDialog(getWindow().getShell(), wizard);
+			wizardDialog.open();
+		}
+	}
+
 	/**
 	 * This keeps track of the active editor.
 	 * <!-- begin-user-doc -->
@@ -83,6 +107,25 @@ public class TousekpiviewActionBarContributor
 			}
 		};
 
+	/**
+	 * This action opens the Moplaf KPI view.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	protected IAction showMoplafKPIViewAction =
+			new Action("Show KPI View") {
+			@Override
+			public void run() {
+				try {
+					getPage().showView("com.misc.common.moplaf.kpiview.medusa.views.KPIView");
+				}
+				catch (PartInitException exception) {
+					TousekpiviewEditorPlugin.INSTANCE.log(exception);
+				}
+			}
+	};
+
+		
 	/**
 	 * This action refreshes the viewer of the current editor if the editor
 	 * implements {@link org.eclipse.emf.common.ui.viewer.IViewerProvider}.
@@ -148,7 +191,7 @@ public class TousekpiviewActionBarContributor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TousekpiviewActionBarContributor() {
+	public ToUseKpiViewActionBarContributor() {
 		super(ADDITIONS_LAST_STYLE);
 		loadResourceAction = new LoadResourceAction();
 		validateAction = new ValidateAction();
@@ -178,7 +221,7 @@ public class TousekpiviewActionBarContributor
 	public void contributeToMenu(IMenuManager menuManager) {
 		super.contributeToMenu(menuManager);
 
-		IMenuManager submenuManager = new MenuManager(TousekpiviewEditorPlugin.INSTANCE.getString("_UI_TousekpiviewEditor_menu"), "com.misc.touse.moplaf.kpiview.tousekpiviewMenuID");
+		IMenuManager submenuManager = new MenuManager(TousekpiviewEditorPlugin.INSTANCE.getString("_UI_ToUseKpiViewEditor_menu"), "com.misc.touse.moplaf.kpiview.tousekpiviewMenuID");
 		menuManager.insertAfter("additions", submenuManager);
 		submenuManager.add(new Separator("settings"));
 		submenuManager.add(new Separator("actions"));
@@ -396,15 +439,17 @@ public class TousekpiviewActionBarContributor
 	 * This inserts global actions before the "additions-end" separator.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	@Override
 	protected void addGlobalActions(IMenuManager menuManager) {
+		menuManager.insertAfter("additions-end", new Separator("ui-actions2"));
 		menuManager.insertAfter("additions-end", new Separator("ui-actions"));
-		menuManager.insertAfter("ui-actions", showPropertiesViewAction);
 
 		refreshViewerAction.setEnabled(refreshViewerAction.isEnabled());		
 		menuManager.insertAfter("ui-actions", refreshViewerAction);
+
+		menuManager.insertAfter("ui-actions2", this.showPropertiesViewAction);
+		menuManager.insertAfter("ui-actions2", this.showMoplafKPIViewAction);
 
 		super.addGlobalActions(menuManager);
 	}

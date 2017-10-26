@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.misc.touse.moplaf.kpiview.tousekpiview.Domain#getScenarios <em>Scenarios</em>}</li>
  * </ul>
  *
- * @see com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewPackage#getDomain()
+ * @see com.misc.touse.moplaf.kpiview.tousekpiview.ToUseKpiViewPackage#getDomain()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface Domain extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Scenarios</em>' containment reference list.
-	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewPackage#getDomain_Scenarios()
+	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.ToUseKpiViewPackage#getDomain_Scenarios()
 	 * @model containment="true"
 	 * @generated
 	 */

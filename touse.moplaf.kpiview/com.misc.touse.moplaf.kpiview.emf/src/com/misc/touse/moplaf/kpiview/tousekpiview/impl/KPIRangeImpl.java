@@ -3,8 +3,7 @@
 package com.misc.touse.moplaf.kpiview.tousekpiview.impl;
 
 import com.misc.touse.moplaf.kpiview.tousekpiview.KPIRange;
-import com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewPackage;
-
+import com.misc.touse.moplaf.kpiview.tousekpiview.ToUseKpiViewPackage;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -125,7 +124,7 @@ public class KPIRangeImpl extends MinimalEObjectImpl.Container implements KPIRan
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TousekpiviewPackage.Literals.KPI_RANGE;
+		return ToUseKpiViewPackage.Literals.KPI_RANGE;
 	}
 
 	/**
@@ -146,7 +145,7 @@ public class KPIRangeImpl extends MinimalEObjectImpl.Container implements KPIRan
 		float oldLowValue = lowValue;
 		lowValue = newLowValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousekpiviewPackage.KPI_RANGE__LOW_VALUE, oldLowValue, lowValue));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseKpiViewPackage.KPI_RANGE__LOW_VALUE, oldLowValue, lowValue));
 	}
 
 	/**
@@ -167,7 +166,7 @@ public class KPIRangeImpl extends MinimalEObjectImpl.Container implements KPIRan
 		float oldHighValue = highValue;
 		highValue = newHighValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousekpiviewPackage.KPI_RANGE__HIGH_VALUE, oldHighValue, highValue));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseKpiViewPackage.KPI_RANGE__HIGH_VALUE, oldHighValue, highValue));
 	}
 
 	/**
@@ -188,7 +187,7 @@ public class KPIRangeImpl extends MinimalEObjectImpl.Container implements KPIRan
 		int oldColor = color;
 		color = newColor;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousekpiviewPackage.KPI_RANGE__COLOR, oldColor, color));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseKpiViewPackage.KPI_RANGE__COLOR, oldColor, color));
 	}
 
 	/**
@@ -209,7 +208,7 @@ public class KPIRangeImpl extends MinimalEObjectImpl.Container implements KPIRan
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousekpiviewPackage.KPI_RANGE__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseKpiViewPackage.KPI_RANGE__NAME, oldName, name));
 	}
 
 	/**
@@ -220,13 +219,13 @@ public class KPIRangeImpl extends MinimalEObjectImpl.Container implements KPIRan
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TousekpiviewPackage.KPI_RANGE__NAME:
+			case ToUseKpiViewPackage.KPI_RANGE__NAME:
 				return getName();
-			case TousekpiviewPackage.KPI_RANGE__COLOR:
+			case ToUseKpiViewPackage.KPI_RANGE__COLOR:
 				return getColor();
-			case TousekpiviewPackage.KPI_RANGE__LOW_VALUE:
+			case ToUseKpiViewPackage.KPI_RANGE__LOW_VALUE:
 				return getLowValue();
-			case TousekpiviewPackage.KPI_RANGE__HIGH_VALUE:
+			case ToUseKpiViewPackage.KPI_RANGE__HIGH_VALUE:
 				return getHighValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -240,16 +239,16 @@ public class KPIRangeImpl extends MinimalEObjectImpl.Container implements KPIRan
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TousekpiviewPackage.KPI_RANGE__NAME:
+			case ToUseKpiViewPackage.KPI_RANGE__NAME:
 				setName((String)newValue);
 				return;
-			case TousekpiviewPackage.KPI_RANGE__COLOR:
+			case ToUseKpiViewPackage.KPI_RANGE__COLOR:
 				setColor((Integer)newValue);
 				return;
-			case TousekpiviewPackage.KPI_RANGE__LOW_VALUE:
+			case ToUseKpiViewPackage.KPI_RANGE__LOW_VALUE:
 				setLowValue((Float)newValue);
 				return;
-			case TousekpiviewPackage.KPI_RANGE__HIGH_VALUE:
+			case ToUseKpiViewPackage.KPI_RANGE__HIGH_VALUE:
 				setHighValue((Float)newValue);
 				return;
 		}
@@ -264,16 +263,16 @@ public class KPIRangeImpl extends MinimalEObjectImpl.Container implements KPIRan
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TousekpiviewPackage.KPI_RANGE__NAME:
+			case ToUseKpiViewPackage.KPI_RANGE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case TousekpiviewPackage.KPI_RANGE__COLOR:
+			case ToUseKpiViewPackage.KPI_RANGE__COLOR:
 				setColor(COLOR_EDEFAULT);
 				return;
-			case TousekpiviewPackage.KPI_RANGE__LOW_VALUE:
+			case ToUseKpiViewPackage.KPI_RANGE__LOW_VALUE:
 				setLowValue(LOW_VALUE_EDEFAULT);
 				return;
-			case TousekpiviewPackage.KPI_RANGE__HIGH_VALUE:
+			case ToUseKpiViewPackage.KPI_RANGE__HIGH_VALUE:
 				setHighValue(HIGH_VALUE_EDEFAULT);
 				return;
 		}
@@ -288,13 +287,13 @@ public class KPIRangeImpl extends MinimalEObjectImpl.Container implements KPIRan
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TousekpiviewPackage.KPI_RANGE__NAME:
+			case ToUseKpiViewPackage.KPI_RANGE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case TousekpiviewPackage.KPI_RANGE__COLOR:
+			case ToUseKpiViewPackage.KPI_RANGE__COLOR:
 				return color != COLOR_EDEFAULT;
-			case TousekpiviewPackage.KPI_RANGE__LOW_VALUE:
+			case ToUseKpiViewPackage.KPI_RANGE__LOW_VALUE:
 				return lowValue != LOW_VALUE_EDEFAULT;
-			case TousekpiviewPackage.KPI_RANGE__HIGH_VALUE:
+			case ToUseKpiViewPackage.KPI_RANGE__HIGH_VALUE:
 				return highValue != HIGH_VALUE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

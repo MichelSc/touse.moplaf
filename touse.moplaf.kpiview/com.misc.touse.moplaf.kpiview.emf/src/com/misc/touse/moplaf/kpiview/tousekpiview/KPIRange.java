@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.misc.touse.moplaf.kpiview.tousekpiview.KPIRange#getHighValue <em>High Value</em>}</li>
  * </ul>
  *
- * @see com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewPackage#getKPIRange()
+ * @see com.misc.touse.moplaf.kpiview.tousekpiview.ToUseKpiViewPackage#getKPIRange()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface KPIRange extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Low Value</em>' attribute.
 	 * @see #setLowValue(float)
-	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewPackage#getKPIRange_LowValue()
+	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.ToUseKpiViewPackage#getKPIRange_LowValue()
 	 * @model
 	 * @generated
 	 */
@@ -60,7 +60,7 @@ public interface KPIRange extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>High Value</em>' attribute.
 	 * @see #setHighValue(float)
-	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewPackage#getKPIRange_HighValue()
+	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.ToUseKpiViewPackage#getKPIRange_HighValue()
 	 * @model
 	 * @generated
 	 */
@@ -86,7 +86,7 @@ public interface KPIRange extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Color</em>' attribute.
 	 * @see #setColor(int)
-	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewPackage#getKPIRange_Color()
+	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.ToUseKpiViewPackage#getKPIRange_Color()
 	 * @model
 	 * @generated
 	 */
@@ -112,7 +112,7 @@ public interface KPIRange extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewPackage#getKPIRange_Name()
+	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.ToUseKpiViewPackage#getKPIRange_Name()
 	 * @model
 	 * @generated
 	 */

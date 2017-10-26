@@ -8,9 +8,8 @@ import com.misc.common.moplaf.kpiview.emf.edit.IItemKPIsProvider;
 import com.misc.touse.moplaf.kpiview.tousekpiview.KPI;
 import com.misc.touse.moplaf.kpiview.tousekpiview.KPIRange;
 import com.misc.touse.moplaf.kpiview.tousekpiview.Scenario;
-import com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewFactory;
-import com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewPackage;
-
+import com.misc.touse.moplaf.kpiview.tousekpiview.ToUseKpiViewFactory;
+import com.misc.touse.moplaf.kpiview.tousekpiview.ToUseKpiViewPackage;
 import java.util.Collection;
 import java.util.List;
 
@@ -85,7 +84,7 @@ public class ScenarioItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Scenario_Name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Scenario_Name_feature", "_UI_Scenario_type"),
-				 TousekpiviewPackage.Literals.SCENARIO__NAME,
+				 ToUseKpiViewPackage.Literals.SCENARIO__NAME,
 				 true,
 				 false,
 				 false,
@@ -107,7 +106,7 @@ public class ScenarioItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Scenario_Color_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Scenario_Color_feature", "_UI_Scenario_type"),
-				 TousekpiviewPackage.Literals.SCENARIO__COLOR,
+				 ToUseKpiViewPackage.Literals.SCENARIO__COLOR,
 				 true,
 				 false,
 				 false,
@@ -128,7 +127,7 @@ public class ScenarioItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(TousekpiviewPackage.Literals.SCENARIO__KP_IS);
+			childrenFeatures.add(ToUseKpiViewPackage.Literals.SCENARIO__KP_IS);
 		}
 		return childrenFeatures;
 	}
@@ -184,11 +183,11 @@ public class ScenarioItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Scenario.class)) {
-			case TousekpiviewPackage.SCENARIO__NAME:
-			case TousekpiviewPackage.SCENARIO__COLOR:
+			case ToUseKpiViewPackage.SCENARIO__NAME:
+			case ToUseKpiViewPackage.SCENARIO__COLOR:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case TousekpiviewPackage.SCENARIO__KP_IS:
+			case ToUseKpiViewPackage.SCENARIO__KP_IS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -208,8 +207,8 @@ public class ScenarioItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TousekpiviewPackage.Literals.SCENARIO__KP_IS,
-				 TousekpiviewFactory.eINSTANCE.createKPI()));
+				(ToUseKpiViewPackage.Literals.SCENARIO__KP_IS,
+				 ToUseKpiViewFactory.eINSTANCE.createKPI()));
 	}
 
 	/**

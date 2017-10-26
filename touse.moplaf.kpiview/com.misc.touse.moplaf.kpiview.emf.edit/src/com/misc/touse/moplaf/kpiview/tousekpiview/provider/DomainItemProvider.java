@@ -4,9 +4,8 @@ package com.misc.touse.moplaf.kpiview.tousekpiview.provider;
 
 
 import com.misc.touse.moplaf.kpiview.tousekpiview.Domain;
-import com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewFactory;
-import com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewPackage;
-
+import com.misc.touse.moplaf.kpiview.tousekpiview.ToUseKpiViewFactory;
+import com.misc.touse.moplaf.kpiview.tousekpiview.ToUseKpiViewPackage;
 import java.util.Collection;
 import java.util.List;
 
@@ -77,7 +76,7 @@ public class DomainItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(TousekpiviewPackage.Literals.DOMAIN__SCENARIOS);
+			childrenFeatures.add(ToUseKpiViewPackage.Literals.DOMAIN__SCENARIOS);
 		}
 		return childrenFeatures;
 	}
@@ -130,7 +129,7 @@ public class DomainItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Domain.class)) {
-			case TousekpiviewPackage.DOMAIN__SCENARIOS:
+			case ToUseKpiViewPackage.DOMAIN__SCENARIOS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -150,8 +149,8 @@ public class DomainItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TousekpiviewPackage.Literals.DOMAIN__SCENARIOS,
-				 TousekpiviewFactory.eINSTANCE.createScenario()));
+				(ToUseKpiViewPackage.Literals.DOMAIN__SCENARIOS,
+				 ToUseKpiViewFactory.eINSTANCE.createScenario()));
 	}
 
 	/**

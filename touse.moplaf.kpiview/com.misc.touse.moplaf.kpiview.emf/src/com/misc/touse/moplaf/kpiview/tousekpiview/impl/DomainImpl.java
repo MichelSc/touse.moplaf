@@ -4,8 +4,7 @@ package com.misc.touse.moplaf.kpiview.tousekpiview.impl;
 
 import com.misc.touse.moplaf.kpiview.tousekpiview.Domain;
 import com.misc.touse.moplaf.kpiview.tousekpiview.Scenario;
-import com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewPackage;
-
+import com.misc.touse.moplaf.kpiview.tousekpiview.ToUseKpiViewPackage;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -60,7 +59,7 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TousekpiviewPackage.Literals.DOMAIN;
+		return ToUseKpiViewPackage.Literals.DOMAIN;
 	}
 
 	/**
@@ -70,7 +69,7 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	 */
 	public EList<Scenario> getScenarios() {
 		if (scenarios == null) {
-			scenarios = new EObjectContainmentEList<Scenario>(Scenario.class, this, TousekpiviewPackage.DOMAIN__SCENARIOS);
+			scenarios = new EObjectContainmentEList<Scenario>(Scenario.class, this, ToUseKpiViewPackage.DOMAIN__SCENARIOS);
 		}
 		return scenarios;
 	}
@@ -83,7 +82,7 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case TousekpiviewPackage.DOMAIN__SCENARIOS:
+			case ToUseKpiViewPackage.DOMAIN__SCENARIOS:
 				return ((InternalEList<?>)getScenarios()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -97,7 +96,7 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TousekpiviewPackage.DOMAIN__SCENARIOS:
+			case ToUseKpiViewPackage.DOMAIN__SCENARIOS:
 				return getScenarios();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -112,7 +111,7 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TousekpiviewPackage.DOMAIN__SCENARIOS:
+			case ToUseKpiViewPackage.DOMAIN__SCENARIOS:
 				getScenarios().clear();
 				getScenarios().addAll((Collection<? extends Scenario>)newValue);
 				return;
@@ -128,7 +127,7 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TousekpiviewPackage.DOMAIN__SCENARIOS:
+			case ToUseKpiViewPackage.DOMAIN__SCENARIOS:
 				getScenarios().clear();
 				return;
 		}
@@ -143,7 +142,7 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TousekpiviewPackage.DOMAIN__SCENARIOS:
+			case ToUseKpiViewPackage.DOMAIN__SCENARIOS:
 				return scenarios != null && !scenarios.isEmpty();
 		}
 		return super.eIsSet(featureID);

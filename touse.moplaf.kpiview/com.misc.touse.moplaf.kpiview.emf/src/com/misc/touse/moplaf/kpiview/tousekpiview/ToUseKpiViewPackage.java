@@ -19,11 +19,11 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see com.misc.touse.moplaf.kpiview.tousekpiview.TousekpiviewFactory
+ * @see com.misc.touse.moplaf.kpiview.tousekpiview.ToUseKpiViewFactory
  * @model kind="package"
  * @generated
  */
-public interface TousekpiviewPackage extends EPackage {
+public interface ToUseKpiViewPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -54,14 +54,14 @@ public interface TousekpiviewPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	TousekpiviewPackage eINSTANCE = com.misc.touse.moplaf.kpiview.tousekpiview.impl.TousekpiviewPackageImpl.init();
+	ToUseKpiViewPackage eINSTANCE = com.misc.touse.moplaf.kpiview.tousekpiview.impl.ToUseKpiViewPackageImpl.init();
 
 	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.kpiview.tousekpiview.impl.DomainImpl <em>Domain</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.impl.DomainImpl
-	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.impl.TousekpiviewPackageImpl#getDomain()
+	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.impl.ToUseKpiViewPackageImpl#getDomain()
 	 * @generated
 	 */
 	int DOMAIN = 0;
@@ -98,7 +98,7 @@ public interface TousekpiviewPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.impl.ScenarioImpl
-	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.impl.TousekpiviewPackageImpl#getScenario()
+	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.impl.ToUseKpiViewPackageImpl#getScenario()
 	 * @generated
 	 */
 	int SCENARIO = 1;
@@ -153,7 +153,7 @@ public interface TousekpiviewPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.impl.KPIImpl
-	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.impl.TousekpiviewPackageImpl#getKPI()
+	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.impl.ToUseKpiViewPackageImpl#getKPI()
 	 * @generated
 	 */
 	int KPI = 2;
@@ -244,7 +244,7 @@ public interface TousekpiviewPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.impl.KPIRangeImpl
-	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.impl.TousekpiviewPackageImpl#getKPIRange()
+	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.impl.ToUseKpiViewPackageImpl#getKPIRange()
 	 * @generated
 	 */
 	int KPI_RANGE = 3;
@@ -336,17 +336,6 @@ public interface TousekpiviewPackage extends EPackage {
 	EClass getScenario();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.kpiview.tousekpiview.Scenario#getKPIs <em>KP Is</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>KP Is</em>'.
-	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.Scenario#getKPIs()
-	 * @see #getScenario()
-	 * @generated
-	 */
-	EReference getScenario_KPIs();
-
-	/**
 	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.kpiview.tousekpiview.Scenario#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -367,6 +356,17 @@ public interface TousekpiviewPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getScenario_Color();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.kpiview.tousekpiview.Scenario#getKPIs <em>KP Is</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>KP Is</em>'.
+	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.Scenario#getKPIs()
+	 * @see #getScenario()
+	 * @generated
+	 */
+	EReference getScenario_KPIs();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.kpiview.tousekpiview.KPI <em>KPI</em>}'.
@@ -390,39 +390,6 @@ public interface TousekpiviewPackage extends EPackage {
 	EAttribute getKPI_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.kpiview.tousekpiview.KPI#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.KPI#getValue()
-	 * @see #getKPI()
-	 * @generated
-	 */
-	EAttribute getKPI_Value();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.kpiview.tousekpiview.KPI#getRanges <em>Ranges</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Ranges</em>'.
-	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.KPI#getRanges()
-	 * @see #getKPI()
-	 * @generated
-	 */
-	EReference getKPI_Ranges();
-
-	/**
-	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.kpiview.tousekpiview.KPI#getUnit <em>Unit</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Unit</em>'.
-	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.KPI#getUnit()
-	 * @see #getKPI()
-	 * @generated
-	 */
-	EAttribute getKPI_Unit();
-
-	/**
 	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.kpiview.tousekpiview.KPI#getColor <em>Color</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -432,6 +399,17 @@ public interface TousekpiviewPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getKPI_Color();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.kpiview.tousekpiview.KPI#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.KPI#getValue()
+	 * @see #getKPI()
+	 * @generated
+	 */
+	EAttribute getKPI_Value();
 
 	/**
 	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.kpiview.tousekpiview.KPI#getMinValue <em>Min Value</em>}'.
@@ -456,6 +434,28 @@ public interface TousekpiviewPackage extends EPackage {
 	EAttribute getKPI_MaxValue();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.kpiview.tousekpiview.KPI#getRanges <em>Ranges</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Ranges</em>'.
+	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.KPI#getRanges()
+	 * @see #getKPI()
+	 * @generated
+	 */
+	EReference getKPI_Ranges();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.kpiview.tousekpiview.KPI#getUnit <em>Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Unit</em>'.
+	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.KPI#getUnit()
+	 * @see #getKPI()
+	 * @generated
+	 */
+	EAttribute getKPI_Unit();
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.kpiview.tousekpiview.KPIRange <em>KPI Range</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -464,6 +464,28 @@ public interface TousekpiviewPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getKPIRange();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.kpiview.tousekpiview.KPIRange#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.KPIRange#getName()
+	 * @see #getKPIRange()
+	 * @generated
+	 */
+	EAttribute getKPIRange_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.kpiview.tousekpiview.KPIRange#getColor <em>Color</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Color</em>'.
+	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.KPIRange#getColor()
+	 * @see #getKPIRange()
+	 * @generated
+	 */
+	EAttribute getKPIRange_Color();
 
 	/**
 	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.kpiview.tousekpiview.KPIRange#getLowValue <em>Low Value</em>}'.
@@ -488,35 +510,13 @@ public interface TousekpiviewPackage extends EPackage {
 	EAttribute getKPIRange_HighValue();
 
 	/**
-	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.kpiview.tousekpiview.KPIRange#getColor <em>Color</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Color</em>'.
-	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.KPIRange#getColor()
-	 * @see #getKPIRange()
-	 * @generated
-	 */
-	EAttribute getKPIRange_Color();
-
-	/**
-	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.kpiview.tousekpiview.KPIRange#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see com.misc.touse.moplaf.kpiview.tousekpiview.KPIRange#getName()
-	 * @see #getKPIRange()
-	 * @generated
-	 */
-	EAttribute getKPIRange_Name();
-
-	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	TousekpiviewFactory getTousekpiviewFactory();
+	ToUseKpiViewFactory getToUseKpiViewFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -537,7 +537,7 @@ public interface TousekpiviewPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see com.misc.touse.moplaf.kpiview.tousekpiview.impl.DomainImpl
-		 * @see com.misc.touse.moplaf.kpiview.tousekpiview.impl.TousekpiviewPackageImpl#getDomain()
+		 * @see com.misc.touse.moplaf.kpiview.tousekpiview.impl.ToUseKpiViewPackageImpl#getDomain()
 		 * @generated
 		 */
 		EClass DOMAIN = eINSTANCE.getDomain();
@@ -555,18 +555,10 @@ public interface TousekpiviewPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see com.misc.touse.moplaf.kpiview.tousekpiview.impl.ScenarioImpl
-		 * @see com.misc.touse.moplaf.kpiview.tousekpiview.impl.TousekpiviewPackageImpl#getScenario()
+		 * @see com.misc.touse.moplaf.kpiview.tousekpiview.impl.ToUseKpiViewPackageImpl#getScenario()
 		 * @generated
 		 */
 		EClass SCENARIO = eINSTANCE.getScenario();
-
-		/**
-		 * The meta object literal for the '<em><b>KP Is</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SCENARIO__KP_IS = eINSTANCE.getScenario_KPIs();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -585,11 +577,19 @@ public interface TousekpiviewPackage extends EPackage {
 		EAttribute SCENARIO__COLOR = eINSTANCE.getScenario_Color();
 
 		/**
+		 * The meta object literal for the '<em><b>KP Is</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SCENARIO__KP_IS = eINSTANCE.getScenario_KPIs();
+
+		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.kpiview.tousekpiview.impl.KPIImpl <em>KPI</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see com.misc.touse.moplaf.kpiview.tousekpiview.impl.KPIImpl
-		 * @see com.misc.touse.moplaf.kpiview.tousekpiview.impl.TousekpiviewPackageImpl#getKPI()
+		 * @see com.misc.touse.moplaf.kpiview.tousekpiview.impl.ToUseKpiViewPackageImpl#getKPI()
 		 * @generated
 		 */
 		EClass KPI = eINSTANCE.getKPI();
@@ -603,36 +603,20 @@ public interface TousekpiviewPackage extends EPackage {
 		EAttribute KPI__NAME = eINSTANCE.getKPI_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute KPI__VALUE = eINSTANCE.getKPI_Value();
-
-		/**
-		 * The meta object literal for the '<em><b>Ranges</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference KPI__RANGES = eINSTANCE.getKPI_Ranges();
-
-		/**
-		 * The meta object literal for the '<em><b>Unit</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute KPI__UNIT = eINSTANCE.getKPI_Unit();
-
-		/**
 		 * The meta object literal for the '<em><b>Color</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute KPI__COLOR = eINSTANCE.getKPI_Color();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute KPI__VALUE = eINSTANCE.getKPI_Value();
 
 		/**
 		 * The meta object literal for the '<em><b>Min Value</b></em>' attribute feature.
@@ -651,14 +635,46 @@ public interface TousekpiviewPackage extends EPackage {
 		EAttribute KPI__MAX_VALUE = eINSTANCE.getKPI_MaxValue();
 
 		/**
+		 * The meta object literal for the '<em><b>Ranges</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference KPI__RANGES = eINSTANCE.getKPI_Ranges();
+
+		/**
+		 * The meta object literal for the '<em><b>Unit</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute KPI__UNIT = eINSTANCE.getKPI_Unit();
+
+		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.kpiview.tousekpiview.impl.KPIRangeImpl <em>KPI Range</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see com.misc.touse.moplaf.kpiview.tousekpiview.impl.KPIRangeImpl
-		 * @see com.misc.touse.moplaf.kpiview.tousekpiview.impl.TousekpiviewPackageImpl#getKPIRange()
+		 * @see com.misc.touse.moplaf.kpiview.tousekpiview.impl.ToUseKpiViewPackageImpl#getKPIRange()
 		 * @generated
 		 */
 		EClass KPI_RANGE = eINSTANCE.getKPIRange();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute KPI_RANGE__NAME = eINSTANCE.getKPIRange_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Color</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute KPI_RANGE__COLOR = eINSTANCE.getKPIRange_Color();
 
 		/**
 		 * The meta object literal for the '<em><b>Low Value</b></em>' attribute feature.
@@ -676,22 +692,6 @@ public interface TousekpiviewPackage extends EPackage {
 		 */
 		EAttribute KPI_RANGE__HIGH_VALUE = eINSTANCE.getKPIRange_HighValue();
 
-		/**
-		 * The meta object literal for the '<em><b>Color</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute KPI_RANGE__COLOR = eINSTANCE.getKPIRange_Color();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute KPI_RANGE__NAME = eINSTANCE.getKPIRange_Name();
-
 	}
 
-} //TousekpiviewPackage
+} //ToUseKpiViewPackage
