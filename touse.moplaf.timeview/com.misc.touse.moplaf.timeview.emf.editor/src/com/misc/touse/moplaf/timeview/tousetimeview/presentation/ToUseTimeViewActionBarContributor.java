@@ -29,7 +29,7 @@ import org.eclipse.jface.action.IToolBarManager;
 import org.eclipse.jface.action.MenuManager;
 import org.eclipse.jface.action.Separator;
 import org.eclipse.jface.action.SubContributionItem;
-
+import org.eclipse.jface.preference.PreferenceDialog;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.ISelectionProvider;
@@ -39,8 +39,11 @@ import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.viewers.Viewer;
 
 import org.eclipse.jface.wizard.WizardDialog;
+import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.PartInitException;
+import org.eclipse.ui.PlatformUI;
+import org.eclipse.ui.dialogs.PreferencesUtil;
 
 /**
  * This is the action bar contributor for the ToUseTimeView model editor.
@@ -88,6 +91,22 @@ public class ToUseTimeViewActionBarContributor
 	 */
 	protected ISelectionProvider selectionProvider;
 
+	/**
+	 * This action opens the Preferences dialog.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	protected IAction showPreferencesDialogAction =
+			new Action("Preferences") {
+			@Override
+			public void run() {
+				Shell shell = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell();
+				PreferenceDialog dialog = PreferencesUtil.createPreferenceDialogOn(shell, null, null, null);
+				dialog.open();
+			}
+		};
+	
+	
 	/**
 	 * This action opens the Properties view.
 	 * <!-- begin-user-doc -->
@@ -220,6 +239,11 @@ public class ToUseTimeViewActionBarContributor
 	public void contributeToMenu(IMenuManager menuManager) {
 		super.contributeToMenu(menuManager);
 
+		IContributionItem windowMenuManager = menuManager.find("window")  ;
+		IMenuManager windowMenuManager2 = (IMenuManager)windowMenuManager;
+		windowMenuManager2.add(new Separator("prefs"));
+		windowMenuManager2.add(this.showPreferencesDialogAction);
+		
 		IMenuManager submenuManager = new MenuManager(ToUseTimeViewEditorPlugin.INSTANCE.getString("_UI_ToUseTimeViewEditor_menu"), "com.misc.touse.moplaf.timeview.tousetimeviewMenuID");
 		menuManager.insertAfter("additions", submenuManager);
 		submenuManager.add(new Separator("settings"));
