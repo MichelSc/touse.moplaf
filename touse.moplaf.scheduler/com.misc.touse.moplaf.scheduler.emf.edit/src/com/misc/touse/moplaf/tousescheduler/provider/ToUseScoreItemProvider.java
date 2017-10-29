@@ -108,7 +108,7 @@ public class ToUseScoreItemProvider extends ScoreItemProvider {
 	@Override
 	public String getText(Object object) {
 		ToUseScore toUseScore = (ToUseScore)object;
-		return getString("_UI_ToUseScore_type") + " " + toUseScore.getTotalDistance();
+		return getString("_UI_ToUseScore_type") + " " + toUseScore.isFeasible();
 	}
 	
 

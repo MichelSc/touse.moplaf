@@ -64,6 +64,7 @@ public class ToUseScheduleLoadUnloadImpl extends ToUseActionLoadUnloadImpl imple
 				scheduleLoad.setInsertionPoint(loadInsertionPoint);
 				scheduleLoad.setResource(resource);
 				scheduleLoad.setTaskToSchedule(loadTask);
+				scheduleLoad.setSolution(false);
 				this.getRootMoves().add(scheduleLoad);
 				
 				// loop control over the load insertions points
@@ -78,6 +79,7 @@ public class ToUseScheduleLoadUnloadImpl extends ToUseActionLoadUnloadImpl imple
 					scheduleUnload.setInsertionPoint(unloadInsertionPoint);
 					scheduleUnload.setResource(resource);
 					scheduleUnload.setTaskToSchedule(unloadTask);
+					scheduleUnload.setSolution(true);
 					scheduleLoad.getNextMoves().add(scheduleUnload);
 					// loop control over the unload insertion points
 					unloadInsertionPoint = unloadInsertionPoint == loadTask

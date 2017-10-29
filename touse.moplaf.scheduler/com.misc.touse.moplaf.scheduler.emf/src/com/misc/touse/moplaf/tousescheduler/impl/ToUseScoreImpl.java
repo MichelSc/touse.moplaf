@@ -233,7 +233,16 @@ public class ToUseScoreImpl extends ScoreImpl implements ToUseScore {
 			this.setTotalDistance(other_score.getTotalDistance());
 		}
 	}
-	
-	
 
+	@Override
+	public boolean isFeasible() {
+		return !this.isVolumeOverload();
+	}
+
+	@Override
+	public boolean isBetter(Score other) {
+		ToUseScore other_score = (ToUseScore)other;
+		boolean is_better = this.getTotalDistance()<other_score.getTotalDistance();
+		return is_better;
+	}
 } //ToUseScoreImpl

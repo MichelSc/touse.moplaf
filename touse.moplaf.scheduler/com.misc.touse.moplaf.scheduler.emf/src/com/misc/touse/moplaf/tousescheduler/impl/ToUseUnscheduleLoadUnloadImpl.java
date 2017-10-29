@@ -5,7 +5,6 @@ package com.misc.touse.moplaf.tousescheduler.impl;
 import com.misc.common.moplaf.scheduler.SchedulerFactory;
 import com.misc.common.moplaf.scheduler.Unschedule;
 import com.misc.touse.moplaf.tousescheduler.ToUseLoadShipment;
-import com.misc.touse.moplaf.tousescheduler.ToUseSchedule;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
 import com.misc.touse.moplaf.tousescheduler.ToUseUnloadShipment;
 import com.misc.touse.moplaf.tousescheduler.ToUseUnscheduleLoadUnload;
@@ -51,18 +50,19 @@ public class ToUseUnscheduleLoadUnloadImpl extends ToUseActionLoadUnloadImpl imp
 	protected void createMovesImpl() {
 		assert this.isValid() : "Action is not valid";
 		
-		ToUseSchedule schedule = (ToUseSchedule) this.getSolution();
 		ToUseLoadShipment loadTask = this.getLoadTask();
 		ToUseUnloadShipment unloadTask = loadTask.getUnloadShipment();
 		
 		// unschedule unload
 		Unschedule unschedule_unload = SchedulerFactory.eINSTANCE.createUnschedule();
 		unschedule_unload.setTaskToSchedule(unloadTask);
+		unschedule_unload.setSolution(false);
 		this.getRootMoves().add(unschedule_unload);
 
 		// unschedule load
 		Unschedule unschedule_load= SchedulerFactory.eINSTANCE.createUnschedule();
 		unschedule_load.setTaskToSchedule(loadTask);
+		unschedule_load.setSolution(false);
 		unschedule_unload.getNextMoves().add(unschedule_load);
 	} // crerateMovesImpl
 

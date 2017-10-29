@@ -708,6 +708,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE_OPERATION_COUNT = SchedulerPackage.SCHEDULE_OPERATION_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Feasible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCORE__FEASIBLE = LocalSearchPackage.SCORE__FEASIBLE;
+
+	/**
 	 * The feature id for the '<em><b>Total Distance</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -735,13 +744,13 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCORE_FEATURE_COUNT = LocalSearchPackage.SCORE_FEATURE_COUNT + 2;
 
 	/**
-	 * The operation id for the '<em>Compare</em>' operation.
+	 * The operation id for the '<em>Is Better</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCORE___COMPARE__SCORE = LocalSearchPackage.SCORE___COMPARE__SCORE;
+	int TO_USE_SCORE___IS_BETTER__SCORE = LocalSearchPackage.SCORE___IS_BETTER__SCORE;
 
 	/**
 	 * The operation id for the '<em>Clone</em>' operation.
@@ -1675,15 +1684,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_ACTION_LOAD_UNLOAD__SOLUTION = LocalSearchPackage.ACTION__SOLUTION;
 
 	/**
-	 * The feature id for the '<em><b>Reset Enabled Feedback</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_ACTION_LOAD_UNLOAD__RESET_ENABLED_FEEDBACK = LocalSearchPackage.ACTION__RESET_ENABLED_FEEDBACK;
-
-	/**
 	 * The feature id for the '<em><b>Load Task</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1799,15 +1799,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_SCHEDULE_LOAD_UNLOAD__SOLUTION = TO_USE_ACTION_LOAD_UNLOAD__SOLUTION;
-
-	/**
-	 * The feature id for the '<em><b>Reset Enabled Feedback</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD__RESET_ENABLED_FEEDBACK = TO_USE_ACTION_LOAD_UNLOAD__RESET_ENABLED_FEEDBACK;
 
 	/**
 	 * The feature id for the '<em><b>Load Task</b></em>' reference.
@@ -1965,15 +1956,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__SOLUTION = TO_USE_ACTION_LOAD_UNLOAD__SOLUTION;
-
-	/**
-	 * The feature id for the '<em><b>Reset Enabled Feedback</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__RESET_ENABLED_FEEDBACK = TO_USE_ACTION_LOAD_UNLOAD__RESET_ENABLED_FEEDBACK;
 
 	/**
 	 * The feature id for the '<em><b>Load Task</b></em>' reference.
