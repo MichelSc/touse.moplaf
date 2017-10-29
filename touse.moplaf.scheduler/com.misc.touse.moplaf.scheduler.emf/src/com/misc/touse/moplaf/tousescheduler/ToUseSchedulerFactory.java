@@ -157,6 +157,24 @@ public interface ToUseSchedulerFactory extends EFactory {
 	CalcResourceVolumeOverload createCalcResourceVolumeOverload();
 
 	/**
+	 * Returns a new object of class '<em>Layer Schedule Planned Benefit</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Layer Schedule Planned Benefit</em>'.
+	 * @generated
+	 */
+	LayerSchedulePlannedBenefit createLayerSchedulePlannedBenefit();
+
+	/**
+	 * Returns a new object of class '<em>Calc Resource Planned Benefit</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Calc Resource Planned Benefit</em>'.
+	 * @generated
+	 */
+	CalcResourcePlannedBenefit createCalcResourcePlannedBenefit();
+
+	/**
 	 * Returns a new object of class '<em>Calc Task Start Volume Loaded</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -187,6 +187,14 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 				return createCalcResourceVolumeOverloadAdapter();
 			}
 			@Override
+			public Adapter caseLayerSchedulePlannedBenefit(LayerSchedulePlannedBenefit object) {
+				return createLayerSchedulePlannedBenefitAdapter();
+			}
+			@Override
+			public Adapter caseCalcResourcePlannedBenefit(CalcResourcePlannedBenefit object) {
+				return createCalcResourcePlannedBenefitAdapter();
+			}
+			@Override
 			public Adapter caseStrategy(Strategy object) {
 				return createStrategyAdapter();
 			}
@@ -513,6 +521,34 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCalcResourceVolumeOverloadAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.tousescheduler.LayerSchedulePlannedBenefit <em>Layer Schedule Planned Benefit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.touse.moplaf.tousescheduler.LayerSchedulePlannedBenefit
+	 * @generated
+	 */
+	public Adapter createLayerSchedulePlannedBenefitAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.tousescheduler.CalcResourcePlannedBenefit <em>Calc Resource Planned Benefit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.touse.moplaf.tousescheduler.CalcResourcePlannedBenefit
+	 * @generated
+	 */
+	public Adapter createCalcResourcePlannedBenefitAdapter() {
 		return null;
 	}
 

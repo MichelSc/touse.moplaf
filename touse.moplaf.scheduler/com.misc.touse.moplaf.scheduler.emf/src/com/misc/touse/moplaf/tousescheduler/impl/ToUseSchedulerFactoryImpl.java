@@ -78,6 +78,8 @@ public class ToUseSchedulerFactoryImpl extends EFactoryImpl implements ToUseSche
 			case ToUseSchedulerPackage.CALC_TASK_START_VOLUME_LOADED: return createCalcTaskStartVolumeLoaded();
 			case ToUseSchedulerPackage.CALC_TASK_END_VOLUME_LOADED: return createCalcTaskEndVolumeLoaded();
 			case ToUseSchedulerPackage.CALC_RESOURCE_VOLUME_OVERLOAD: return createCalcResourceVolumeOverload();
+			case ToUseSchedulerPackage.LAYER_SCHEDULE_PLANNED_BENEFIT: return createLayerSchedulePlannedBenefit();
+			case ToUseSchedulerPackage.CALC_RESOURCE_PLANNED_BENEFIT: return createCalcResourcePlannedBenefit();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -231,6 +233,26 @@ public class ToUseSchedulerFactoryImpl extends EFactoryImpl implements ToUseSche
 	public CalcResourceVolumeOverload createCalcResourceVolumeOverload() {
 		CalcResourceVolumeOverloadImpl calcResourceVolumeOverload = new CalcResourceVolumeOverloadImpl();
 		return calcResourceVolumeOverload;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LayerSchedulePlannedBenefit createLayerSchedulePlannedBenefit() {
+		LayerSchedulePlannedBenefitImpl layerSchedulePlannedBenefit = new LayerSchedulePlannedBenefitImpl();
+		return layerSchedulePlannedBenefit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CalcResourcePlannedBenefit createCalcResourcePlannedBenefit() {
+		CalcResourcePlannedBenefitImpl calcResourcePlannedBenefit = new CalcResourcePlannedBenefitImpl();
+		return calcResourcePlannedBenefit;
 	}
 
 	/**

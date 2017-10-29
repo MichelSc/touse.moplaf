@@ -53,6 +53,7 @@ public class ToUseScheduleResourceItemProvider extends ResourceItemProvider {
 			addDistanceFromLastPropertyDescriptor(object);
 			addTotalDistancePropertyDescriptor(object);
 			addVolumeOverloadPropertyDescriptor(object);
+			addPlannedBenefitPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -146,6 +147,28 @@ public class ToUseScheduleResourceItemProvider extends ResourceItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Planned Benefit feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPlannedBenefitPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ToUseScheduleResource_PlannedBenefit_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseScheduleResource_PlannedBenefit_feature", "_UI_ToUseScheduleResource_type"),
+				 ToUseSchedulerPackage.Literals.TO_USE_SCHEDULE_RESOURCE__PLANNED_BENEFIT,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 getString("_UI__20SchedulePropertyCategory"),
+				 null));
+	}
+
+	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -175,6 +198,7 @@ public class ToUseScheduleResourceItemProvider extends ResourceItemProvider {
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__DISTANCE_FROM_LAST:
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__TOTAL_DISTANCE:
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__VOLUME_OVERLOAD:
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__PLANNED_BENEFIT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

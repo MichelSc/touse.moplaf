@@ -51,6 +51,7 @@ public class ToUseScoreItemProvider extends ScoreItemProvider {
 
 			addTotalDistancePropertyDescriptor(object);
 			addVolumeOverloadPropertyDescriptor(object);
+			addPlannedBenefitPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -100,6 +101,28 @@ public class ToUseScoreItemProvider extends ScoreItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Planned Benefit feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPlannedBenefitPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ToUseScore_PlannedBenefit_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseScore_PlannedBenefit_feature", "_UI_ToUseScore_type"),
+				 ToUseSchedulerPackage.Literals.TO_USE_SCORE__PLANNED_BENEFIT,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 getString("_UI__20ToUseSchedulerPropertyCategory"),
+				 null));
+	}
+
+	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -107,8 +130,10 @@ public class ToUseScoreItemProvider extends ScoreItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		ToUseScore toUseScore = (ToUseScore)object;
-		return getString("_UI_ToUseScore_type") + " " + toUseScore.isFeasible();
+		String label = ((ToUseScore)object).getDescription();
+		return label == null || label.length() == 0 ?
+			getString("_UI_ToUseScore_type") :
+			getString("_UI_ToUseScore_type") + " " + label;
 	}
 	
 
@@ -126,6 +151,7 @@ public class ToUseScoreItemProvider extends ScoreItemProvider {
 		switch (notification.getFeatureID(ToUseScore.class)) {
 			case ToUseSchedulerPackage.TO_USE_SCORE__TOTAL_DISTANCE:
 			case ToUseSchedulerPackage.TO_USE_SCORE__VOLUME_OVERLOAD:
+			case ToUseSchedulerPackage.TO_USE_SCORE__PLANNED_BENEFIT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

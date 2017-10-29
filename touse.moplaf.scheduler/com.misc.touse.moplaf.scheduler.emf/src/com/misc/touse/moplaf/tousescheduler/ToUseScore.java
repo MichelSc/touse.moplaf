@@ -15,6 +15,7 @@ import com.misc.common.moplaf.localsearch.Score;
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.ToUseScore#getTotalDistance <em>Total Distance</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.ToUseScore#isVolumeOverload <em>Volume Overload</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.ToUseScore#getPlannedBenefit <em>Planned Benefit</em>}</li>
  * </ul>
  *
  * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getToUseScore()
@@ -73,5 +74,31 @@ public interface ToUseScore extends Score {
 	 * @generated
 	 */
 	void setVolumeOverload(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Planned Benefit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Planned Benefit</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Planned Benefit</em>' attribute.
+	 * @see #setPlannedBenefit(float)
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getToUseScore_PlannedBenefit()
+	 * @model
+	 * @generated
+	 */
+	float getPlannedBenefit();
+
+	/**
+	 * Sets the value of the '{@link com.misc.touse.moplaf.tousescheduler.ToUseScore#getPlannedBenefit <em>Planned Benefit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Planned Benefit</em>' attribute.
+	 * @see #getPlannedBenefit()
+	 * @generated
+	 */
+	void setPlannedBenefit(float value);
 
 } // ToUseScore

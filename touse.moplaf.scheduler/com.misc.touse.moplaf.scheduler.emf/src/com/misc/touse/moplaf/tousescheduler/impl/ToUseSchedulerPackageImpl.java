@@ -9,6 +9,7 @@ import com.misc.common.moplaf.scheduler.SchedulerPackage;
 import com.misc.touse.moplaf.tousescheduler.CalcResource;
 import com.misc.touse.moplaf.tousescheduler.CalcResourceDistance;
 import com.misc.touse.moplaf.tousescheduler.CalcResourceDistanceFromLast;
+import com.misc.touse.moplaf.tousescheduler.CalcResourcePlannedBenefit;
 import com.misc.touse.moplaf.tousescheduler.CalcResourceVolumeOverload;
 import com.misc.touse.moplaf.tousescheduler.CalcSchedule;
 import com.misc.touse.moplaf.tousescheduler.CalcScheduler;
@@ -19,6 +20,7 @@ import com.misc.touse.moplaf.tousescheduler.CalcTaskEndVolumeLoaded;
 import com.misc.touse.moplaf.tousescheduler.CalcTaskStartVolumeLoaded;
 import com.misc.touse.moplaf.tousescheduler.Domain;
 import com.misc.touse.moplaf.tousescheduler.LayerScheduleDistance;
+import com.misc.touse.moplaf.tousescheduler.LayerSchedulePlannedBenefit;
 import com.misc.touse.moplaf.tousescheduler.LayerScheduleVolumeLoaded;
 import com.misc.touse.moplaf.tousescheduler.ScopeScheduleScore;
 import com.misc.touse.moplaf.tousescheduler.Shipment;
@@ -181,6 +183,20 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 * @generated
 	 */
 	private EClass calcResourceVolumeOverloadEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass layerSchedulePlannedBenefitEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass calcResourcePlannedBenefitEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -417,6 +433,15 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getToUseScore_PlannedBenefit() {
+		return (EAttribute)toUseScoreEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getToUseScheduler() {
 		return toUseSchedulerEClass;
 	}
@@ -509,6 +534,15 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 */
 	public EAttribute getShipment_Volume() {
 		return (EAttribute)shipmentEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getShipment_PlannedBenefit() {
+		return (EAttribute)shipmentEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -714,6 +748,15 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getToUseScheduleResource_PlannedBenefit() {
+		return (EAttribute)toUseScheduleResourceEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getScopeScheduleScore() {
 		return scopeScheduleScoreEClass;
 	}
@@ -842,6 +885,42 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 */
 	public EReference getCalcResourceVolumeOverload_ConcreteParent() {
 		return (EReference)calcResourceVolumeOverloadEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getLayerSchedulePlannedBenefit() {
+		return layerSchedulePlannedBenefitEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getLayerSchedulePlannedBenefit_ConcreteParent() {
+		return (EReference)layerSchedulePlannedBenefitEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCalcResourcePlannedBenefit() {
+		return calcResourcePlannedBenefitEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCalcResourcePlannedBenefit_ConcreteParent() {
+		return (EReference)calcResourcePlannedBenefitEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1034,6 +1113,7 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		createEAttribute(shipmentEClass, SHIPMENT__UNLOAD_LOCATION_X);
 		createEAttribute(shipmentEClass, SHIPMENT__UNLOAD_LOCATION_Y);
 		createEAttribute(shipmentEClass, SHIPMENT__VOLUME);
+		createEAttribute(shipmentEClass, SHIPMENT__PLANNED_BENEFIT);
 
 		toUseSchedulerEClass = createEClass(TO_USE_SCHEDULER);
 		createEReference(toUseSchedulerEClass, TO_USE_SCHEDULER__SELECTED_VEHICLES);
@@ -1046,12 +1126,14 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		toUseScoreEClass = createEClass(TO_USE_SCORE);
 		createEAttribute(toUseScoreEClass, TO_USE_SCORE__TOTAL_DISTANCE);
 		createEAttribute(toUseScoreEClass, TO_USE_SCORE__VOLUME_OVERLOAD);
+		createEAttribute(toUseScoreEClass, TO_USE_SCORE__PLANNED_BENEFIT);
 
 		toUseScheduleResourceEClass = createEClass(TO_USE_SCHEDULE_RESOURCE);
 		createEReference(toUseScheduleResourceEClass, TO_USE_SCHEDULE_RESOURCE__VEHICLE);
 		createEAttribute(toUseScheduleResourceEClass, TO_USE_SCHEDULE_RESOURCE__DISTANCE_FROM_LAST);
 		createEAttribute(toUseScheduleResourceEClass, TO_USE_SCHEDULE_RESOURCE__TOTAL_DISTANCE);
 		createEAttribute(toUseScheduleResourceEClass, TO_USE_SCHEDULE_RESOURCE__VOLUME_OVERLOAD);
+		createEAttribute(toUseScheduleResourceEClass, TO_USE_SCHEDULE_RESOURCE__PLANNED_BENEFIT);
 
 		toUseScheduleTaskEClass = createEClass(TO_USE_SCHEDULE_TASK);
 		createEReference(toUseScheduleTaskEClass, TO_USE_SCHEDULE_TASK__SHIPMENT);
@@ -1118,6 +1200,12 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 
 		calcResourceVolumeOverloadEClass = createEClass(CALC_RESOURCE_VOLUME_OVERLOAD);
 		createEReference(calcResourceVolumeOverloadEClass, CALC_RESOURCE_VOLUME_OVERLOAD__CONCRETE_PARENT);
+
+		layerSchedulePlannedBenefitEClass = createEClass(LAYER_SCHEDULE_PLANNED_BENEFIT);
+		createEReference(layerSchedulePlannedBenefitEClass, LAYER_SCHEDULE_PLANNED_BENEFIT__CONCRETE_PARENT);
+
+		calcResourcePlannedBenefitEClass = createEClass(CALC_RESOURCE_PLANNED_BENEFIT);
+		createEReference(calcResourcePlannedBenefitEClass, CALC_RESOURCE_PLANNED_BENEFIT__CONCRETE_PARENT);
 	}
 
 	/**
@@ -1177,6 +1265,8 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		calcTaskStartVolumeLoadedEClass.getESuperTypes().add(this.getCalcTask());
 		calcTaskEndVolumeLoadedEClass.getESuperTypes().add(this.getCalcTask());
 		calcResourceVolumeOverloadEClass.getESuperTypes().add(this.getCalcResource());
+		layerSchedulePlannedBenefitEClass.getESuperTypes().add(this.getCalcSchedule());
+		calcResourcePlannedBenefitEClass.getESuperTypes().add(this.getCalcResource());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1197,6 +1287,7 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		initEAttribute(getShipment_UnloadLocationX(), ecorePackage.getEFloat(), "UnloadLocationX", null, 0, 1, Shipment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getShipment_UnloadLocationY(), ecorePackage.getEFloat(), "UnloadLocationY", null, 0, 1, Shipment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getShipment_Volume(), ecorePackage.getEFloat(), "Volume", null, 0, 1, Shipment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getShipment_PlannedBenefit(), ecorePackage.getEFloat(), "PlannedBenefit", null, 0, 1, Shipment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(toUseSchedulerEClass, ToUseScheduler.class, "ToUseScheduler", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getToUseScheduler_SelectedVehicles(), this.getVehicle(), null, "SelectedVehicles", null, 0, -1, ToUseScheduler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1210,12 +1301,14 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		initEClass(toUseScoreEClass, ToUseScore.class, "ToUseScore", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getToUseScore_TotalDistance(), ecorePackage.getEFloat(), "TotalDistance", null, 0, 1, ToUseScore.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getToUseScore_VolumeOverload(), ecorePackage.getEBoolean(), "VolumeOverload", null, 0, 1, ToUseScore.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getToUseScore_PlannedBenefit(), ecorePackage.getEFloat(), "PlannedBenefit", null, 0, 1, ToUseScore.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(toUseScheduleResourceEClass, ToUseScheduleResource.class, "ToUseScheduleResource", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getToUseScheduleResource_Vehicle(), this.getVehicle(), null, "Vehicle", null, 1, 1, ToUseScheduleResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getToUseScheduleResource_DistanceFromLast(), ecorePackage.getEFloat(), "DistanceFromLast", null, 0, 1, ToUseScheduleResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getToUseScheduleResource_TotalDistance(), ecorePackage.getEFloat(), "TotalDistance", null, 0, 1, ToUseScheduleResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getToUseScheduleResource_VolumeOverload(), ecorePackage.getEBoolean(), "VolumeOverload", null, 0, 1, ToUseScheduleResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getToUseScheduleResource_PlannedBenefit(), ecorePackage.getEFloat(), "PlannedBenefit", null, 0, 1, ToUseScheduleResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(toUseScheduleTaskEClass, ToUseScheduleTask.class, "ToUseScheduleTask", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getToUseScheduleTask_Shipment(), this.getShipment(), null, "Shipment", null, 1, 1, ToUseScheduleTask.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
@@ -1282,6 +1375,12 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 
 		initEClass(calcResourceVolumeOverloadEClass, CalcResourceVolumeOverload.class, "CalcResourceVolumeOverload", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCalcResourceVolumeOverload_ConcreteParent(), this.getLayerScheduleVolumeLoaded(), null, "ConcreteParent", null, 1, 1, CalcResourceVolumeOverload.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+
+		initEClass(layerSchedulePlannedBenefitEClass, LayerSchedulePlannedBenefit.class, "LayerSchedulePlannedBenefit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getLayerSchedulePlannedBenefit_ConcreteParent(), this.getScopeScheduleScore(), null, "ConcreteParent", null, 1, 1, LayerSchedulePlannedBenefit.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+
+		initEClass(calcResourcePlannedBenefitEClass, CalcResourcePlannedBenefit.class, "CalcResourcePlannedBenefit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCalcResourcePlannedBenefit_ConcreteParent(), this.getLayerSchedulePlannedBenefit(), null, "ConcreteParent", null, 1, 1, CalcResourcePlannedBenefit.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

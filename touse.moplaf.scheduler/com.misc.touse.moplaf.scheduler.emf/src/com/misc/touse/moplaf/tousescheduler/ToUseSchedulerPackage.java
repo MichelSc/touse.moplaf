@@ -265,13 +265,22 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int SHIPMENT__VOLUME = 5;
 
 	/**
+	 * The feature id for the '<em><b>Planned Benefit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SHIPMENT__PLANNED_BENEFIT = 6;
+
+	/**
 	 * The number of structural features of the '<em>Shipment</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SHIPMENT_FEATURE_COUNT = 6;
+	int SHIPMENT_FEATURE_COUNT = 7;
 
 	/**
 	 * The number of operations of the '<em>Shipment</em>' class.
@@ -717,6 +726,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCORE__FEASIBLE = LocalSearchPackage.SCORE__FEASIBLE;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCORE__DESCRIPTION = LocalSearchPackage.SCORE__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Total Distance</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -735,13 +753,22 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCORE__VOLUME_OVERLOAD = LocalSearchPackage.SCORE_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Planned Benefit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCORE__PLANNED_BENEFIT = LocalSearchPackage.SCORE_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>To Use Score</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCORE_FEATURE_COUNT = LocalSearchPackage.SCORE_FEATURE_COUNT + 2;
+	int TO_USE_SCORE_FEATURE_COUNT = LocalSearchPackage.SCORE_FEATURE_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Is Better</em>' operation.
@@ -888,13 +915,22 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE_RESOURCE__VOLUME_OVERLOAD = SchedulerPackage.RESOURCE_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Planned Benefit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_RESOURCE__PLANNED_BENEFIT = SchedulerPackage.RESOURCE_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>To Use Schedule Resource</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_RESOURCE_FEATURE_COUNT = SchedulerPackage.RESOURCE_FEATURE_COUNT + 4;
+	int TO_USE_SCHEDULE_RESOURCE_FEATURE_COUNT = SchedulerPackage.RESOURCE_FEATURE_COUNT + 5;
 
 	/**
 	 * The operation id for the '<em>Add Propagator Function</em>' operation.
@@ -6533,6 +6569,674 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int CALC_RESOURCE_VOLUME_OVERLOAD_OPERATION_COUNT = CALC_RESOURCE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.LayerSchedulePlannedBenefitImpl <em>Layer Schedule Planned Benefit</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.LayerSchedulePlannedBenefitImpl
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getLayerSchedulePlannedBenefit()
+	 * @generated
+	 */
+	int LAYER_SCHEDULE_PLANNED_BENEFIT = 27;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_PLANNED_BENEFIT__PARENT = CALC_SCHEDULE__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Antecedents</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_PLANNED_BENEFIT__ANTECEDENTS = CALC_SCHEDULE__ANTECEDENTS;
+
+	/**
+	 * The feature id for the '<em><b>Antecedents Sibling</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_PLANNED_BENEFIT__ANTECEDENTS_SIBLING = CALC_SCHEDULE__ANTECEDENTS_SIBLING;
+
+	/**
+	 * The feature id for the '<em><b>Touched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_PLANNED_BENEFIT__TOUCHED = CALC_SCHEDULE__TOUCHED;
+
+	/**
+	 * The feature id for the '<em><b>Touched Children</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_PLANNED_BENEFIT__TOUCHED_CHILDREN = CALC_SCHEDULE__TOUCHED_CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Touchers</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_PLANNED_BENEFIT__TOUCHERS = CALC_SCHEDULE__TOUCHERS;
+
+	/**
+	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_PLANNED_BENEFIT__ENABLED = CALC_SCHEDULE__ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Object With Propagator Functions</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_PLANNED_BENEFIT__OBJECT_WITH_PROPAGATOR_FUNCTIONS = CALC_SCHEDULE__OBJECT_WITH_PROPAGATOR_FUNCTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_PLANNED_BENEFIT__TYPE = CALC_SCHEDULE__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Object</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_PLANNED_BENEFIT__OBJECT = CALC_SCHEDULE__OBJECT;
+
+	/**
+	 * The feature id for the '<em><b>Instance</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_PLANNED_BENEFIT__INSTANCE = CALC_SCHEDULE__INSTANCE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_PLANNED_BENEFIT__DESCRIPTION = CALC_SCHEDULE__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_PLANNED_BENEFIT__TOUCHED_PARENT = CALC_SCHEDULE__TOUCHED_PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Schedule</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_PLANNED_BENEFIT__SCHEDULE = CALC_SCHEDULE__SCHEDULE;
+
+	/**
+	 * The feature id for the '<em><b>Concrete Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_PLANNED_BENEFIT__CONCRETE_PARENT = CALC_SCHEDULE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Layer Schedule Planned Benefit</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_PLANNED_BENEFIT_FEATURE_COUNT = CALC_SCHEDULE_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Init</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_PLANNED_BENEFIT___INIT = CALC_SCHEDULE___INIT;
+
+	/**
+	 * The operation id for the '<em>Enable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_PLANNED_BENEFIT___ENABLE = CALC_SCHEDULE___ENABLE;
+
+	/**
+	 * The operation id for the '<em>Disable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_PLANNED_BENEFIT___DISABLE = CALC_SCHEDULE___DISABLE;
+
+	/**
+	 * The operation id for the '<em>Reset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_PLANNED_BENEFIT___RESET = CALC_SCHEDULE___RESET;
+
+	/**
+	 * The operation id for the '<em>Touch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_PLANNED_BENEFIT___TOUCH__EOBJECT = CALC_SCHEDULE___TOUCH__EOBJECT;
+
+	/**
+	 * The operation id for the '<em>Untouch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_PLANNED_BENEFIT___UNTOUCH = CALC_SCHEDULE___UNTOUCH;
+
+	/**
+	 * The operation id for the '<em>Refresh Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_PLANNED_BENEFIT___REFRESH_ANTECEDENTS__REFRESHER = CALC_SCHEDULE___REFRESH_ANTECEDENTS__REFRESHER;
+
+	/**
+	 * The operation id for the '<em>Refresh This</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_PLANNED_BENEFIT___REFRESH_THIS__REFRESHER = CALC_SCHEDULE___REFRESH_THIS__REFRESHER;
+
+	/**
+	 * The operation id for the '<em>Refresh Children And This</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_PLANNED_BENEFIT___REFRESH_CHILDREN_AND_THIS__REFRESHER = CALC_SCHEDULE___REFRESH_CHILDREN_AND_THIS__REFRESHER;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_PLANNED_BENEFIT___REFRESH = CALC_SCHEDULE___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_PLANNED_BENEFIT___REFRESH__REFRESHER = CALC_SCHEDULE___REFRESH__REFRESHER;
+
+	/**
+	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_PLANNED_BENEFIT___DO_GET_ANTECEDENTS = CALC_SCHEDULE___DO_GET_ANTECEDENTS;
+
+	/**
+	 * The operation id for the '<em>Do Get Parent</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_PLANNED_BENEFIT___DO_GET_PARENT = CALC_SCHEDULE___DO_GET_PARENT;
+
+	/**
+	 * The operation id for the '<em>Do Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_PLANNED_BENEFIT___DO_REFRESH = CALC_SCHEDULE___DO_REFRESH;
+
+	/**
+	 * The operation id for the '<em>Do Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_PLANNED_BENEFIT___DO_REFRESH__EOBJECT = CALC_SCHEDULE___DO_REFRESH__EOBJECT;
+
+	/**
+	 * The operation id for the '<em>Get Scope</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_PLANNED_BENEFIT___GET_SCOPE = CALC_SCHEDULE___GET_SCOPE;
+
+	/**
+	 * The operation id for the '<em>Get Factory ID</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_PLANNED_BENEFIT___GET_FACTORY_ID = CALC_SCHEDULE___GET_FACTORY_ID;
+
+	/**
+	 * The operation id for the '<em>Do Get Bindings</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_PLANNED_BENEFIT___DO_GET_BINDINGS = CALC_SCHEDULE___DO_GET_BINDINGS;
+
+	/**
+	 * The operation id for the '<em>Do Collect Explicit Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_PLANNED_BENEFIT___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST = CALC_SCHEDULE___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST;
+
+	/**
+	 * The number of operations of the '<em>Layer Schedule Planned Benefit</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYER_SCHEDULE_PLANNED_BENEFIT_OPERATION_COUNT = CALC_SCHEDULE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.CalcResourcePlannedBenefitImpl <em>Calc Resource Planned Benefit</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.CalcResourcePlannedBenefitImpl
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getCalcResourcePlannedBenefit()
+	 * @generated
+	 */
+	int CALC_RESOURCE_PLANNED_BENEFIT = 28;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_PLANNED_BENEFIT__PARENT = CALC_RESOURCE__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Antecedents</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_PLANNED_BENEFIT__ANTECEDENTS = CALC_RESOURCE__ANTECEDENTS;
+
+	/**
+	 * The feature id for the '<em><b>Antecedents Sibling</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_PLANNED_BENEFIT__ANTECEDENTS_SIBLING = CALC_RESOURCE__ANTECEDENTS_SIBLING;
+
+	/**
+	 * The feature id for the '<em><b>Touched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_PLANNED_BENEFIT__TOUCHED = CALC_RESOURCE__TOUCHED;
+
+	/**
+	 * The feature id for the '<em><b>Touched Children</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_PLANNED_BENEFIT__TOUCHED_CHILDREN = CALC_RESOURCE__TOUCHED_CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Touchers</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_PLANNED_BENEFIT__TOUCHERS = CALC_RESOURCE__TOUCHERS;
+
+	/**
+	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_PLANNED_BENEFIT__ENABLED = CALC_RESOURCE__ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Object With Propagator Functions</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_PLANNED_BENEFIT__OBJECT_WITH_PROPAGATOR_FUNCTIONS = CALC_RESOURCE__OBJECT_WITH_PROPAGATOR_FUNCTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_PLANNED_BENEFIT__TYPE = CALC_RESOURCE__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Object</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_PLANNED_BENEFIT__OBJECT = CALC_RESOURCE__OBJECT;
+
+	/**
+	 * The feature id for the '<em><b>Instance</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_PLANNED_BENEFIT__INSTANCE = CALC_RESOURCE__INSTANCE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_PLANNED_BENEFIT__DESCRIPTION = CALC_RESOURCE__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_PLANNED_BENEFIT__TOUCHED_PARENT = CALC_RESOURCE__TOUCHED_PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Resource</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_PLANNED_BENEFIT__RESOURCE = CALC_RESOURCE__RESOURCE;
+
+	/**
+	 * The feature id for the '<em><b>Concrete Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_PLANNED_BENEFIT__CONCRETE_PARENT = CALC_RESOURCE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Calc Resource Planned Benefit</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_PLANNED_BENEFIT_FEATURE_COUNT = CALC_RESOURCE_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Init</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_PLANNED_BENEFIT___INIT = CALC_RESOURCE___INIT;
+
+	/**
+	 * The operation id for the '<em>Enable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_PLANNED_BENEFIT___ENABLE = CALC_RESOURCE___ENABLE;
+
+	/**
+	 * The operation id for the '<em>Disable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_PLANNED_BENEFIT___DISABLE = CALC_RESOURCE___DISABLE;
+
+	/**
+	 * The operation id for the '<em>Reset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_PLANNED_BENEFIT___RESET = CALC_RESOURCE___RESET;
+
+	/**
+	 * The operation id for the '<em>Touch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_PLANNED_BENEFIT___TOUCH__EOBJECT = CALC_RESOURCE___TOUCH__EOBJECT;
+
+	/**
+	 * The operation id for the '<em>Untouch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_PLANNED_BENEFIT___UNTOUCH = CALC_RESOURCE___UNTOUCH;
+
+	/**
+	 * The operation id for the '<em>Refresh Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_PLANNED_BENEFIT___REFRESH_ANTECEDENTS__REFRESHER = CALC_RESOURCE___REFRESH_ANTECEDENTS__REFRESHER;
+
+	/**
+	 * The operation id for the '<em>Refresh This</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_PLANNED_BENEFIT___REFRESH_THIS__REFRESHER = CALC_RESOURCE___REFRESH_THIS__REFRESHER;
+
+	/**
+	 * The operation id for the '<em>Refresh Children And This</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_PLANNED_BENEFIT___REFRESH_CHILDREN_AND_THIS__REFRESHER = CALC_RESOURCE___REFRESH_CHILDREN_AND_THIS__REFRESHER;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_PLANNED_BENEFIT___REFRESH = CALC_RESOURCE___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_PLANNED_BENEFIT___REFRESH__REFRESHER = CALC_RESOURCE___REFRESH__REFRESHER;
+
+	/**
+	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_PLANNED_BENEFIT___DO_GET_ANTECEDENTS = CALC_RESOURCE___DO_GET_ANTECEDENTS;
+
+	/**
+	 * The operation id for the '<em>Do Get Parent</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_PLANNED_BENEFIT___DO_GET_PARENT = CALC_RESOURCE___DO_GET_PARENT;
+
+	/**
+	 * The operation id for the '<em>Do Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_PLANNED_BENEFIT___DO_REFRESH = CALC_RESOURCE___DO_REFRESH;
+
+	/**
+	 * The operation id for the '<em>Do Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_PLANNED_BENEFIT___DO_REFRESH__EOBJECT = CALC_RESOURCE___DO_REFRESH__EOBJECT;
+
+	/**
+	 * The operation id for the '<em>Get Scope</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_PLANNED_BENEFIT___GET_SCOPE = CALC_RESOURCE___GET_SCOPE;
+
+	/**
+	 * The operation id for the '<em>Get Factory ID</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_PLANNED_BENEFIT___GET_FACTORY_ID = CALC_RESOURCE___GET_FACTORY_ID;
+
+	/**
+	 * The operation id for the '<em>Do Get Bindings</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_PLANNED_BENEFIT___DO_GET_BINDINGS = CALC_RESOURCE___DO_GET_BINDINGS;
+
+	/**
+	 * The operation id for the '<em>Do Collect Explicit Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_PLANNED_BENEFIT___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST = CALC_RESOURCE___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST;
+
+	/**
+	 * The number of operations of the '<em>Calc Resource Planned Benefit</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_PLANNED_BENEFIT_OPERATION_COUNT = CALC_RESOURCE_OPERATION_COUNT + 0;
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.Domain <em>Domain</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6662,6 +7366,17 @@ public interface ToUseSchedulerPackage extends EPackage {
 	EAttribute getToUseScore_VolumeOverload();
 
 	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.tousescheduler.ToUseScore#getPlannedBenefit <em>Planned Benefit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Planned Benefit</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseScore#getPlannedBenefit()
+	 * @see #getToUseScore()
+	 * @generated
+	 */
+	EAttribute getToUseScore_PlannedBenefit();
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduler <em>To Use Scheduler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6779,6 +7494,17 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getShipment_Volume();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.tousescheduler.Shipment#getPlannedBenefit <em>Planned Benefit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Planned Benefit</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.Shipment#getPlannedBenefit()
+	 * @see #getShipment()
+	 * @generated
+	 */
+	EAttribute getShipment_PlannedBenefit();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask <em>To Use Schedule Task</em>}'.
@@ -7017,6 +7743,17 @@ public interface ToUseSchedulerPackage extends EPackage {
 	EAttribute getToUseScheduleResource_VolumeOverload();
 
 	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource#getPlannedBenefit <em>Planned Benefit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Planned Benefit</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource#getPlannedBenefit()
+	 * @see #getToUseScheduleResource()
+	 * @generated
+	 */
+	EAttribute getToUseScheduleResource_PlannedBenefit();
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.ScopeScheduleScore <em>Scope Schedule Score</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7172,6 +7909,48 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getCalcResourceVolumeOverload_ConcreteParent();
+
+	/**
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.LayerSchedulePlannedBenefit <em>Layer Schedule Planned Benefit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Layer Schedule Planned Benefit</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.LayerSchedulePlannedBenefit
+	 * @generated
+	 */
+	EClass getLayerSchedulePlannedBenefit();
+
+	/**
+	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.tousescheduler.LayerSchedulePlannedBenefit#getConcreteParent <em>Concrete Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Concrete Parent</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.LayerSchedulePlannedBenefit#getConcreteParent()
+	 * @see #getLayerSchedulePlannedBenefit()
+	 * @generated
+	 */
+	EReference getLayerSchedulePlannedBenefit_ConcreteParent();
+
+	/**
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.CalcResourcePlannedBenefit <em>Calc Resource Planned Benefit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Calc Resource Planned Benefit</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.CalcResourcePlannedBenefit
+	 * @generated
+	 */
+	EClass getCalcResourcePlannedBenefit();
+
+	/**
+	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.tousescheduler.CalcResourcePlannedBenefit#getConcreteParent <em>Concrete Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Concrete Parent</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.CalcResourcePlannedBenefit#getConcreteParent()
+	 * @see #getCalcResourcePlannedBenefit()
+	 * @generated
+	 */
+	EReference getCalcResourcePlannedBenefit_ConcreteParent();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.CalcTaskStartVolumeLoaded <em>Calc Task Start Volume Loaded</em>}'.
@@ -7466,6 +8245,14 @@ public interface ToUseSchedulerPackage extends EPackage {
 		EAttribute TO_USE_SCORE__VOLUME_OVERLOAD = eINSTANCE.getToUseScore_VolumeOverload();
 
 		/**
+		 * The meta object literal for the '<em><b>Planned Benefit</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TO_USE_SCORE__PLANNED_BENEFIT = eINSTANCE.getToUseScore_PlannedBenefit();
+
+		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerImpl <em>To Use Scheduler</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7556,6 +8343,14 @@ public interface ToUseSchedulerPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute SHIPMENT__VOLUME = eINSTANCE.getShipment_Volume();
+
+		/**
+		 * The meta object literal for the '<em><b>Planned Benefit</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SHIPMENT__PLANNED_BENEFIT = eINSTANCE.getShipment_PlannedBenefit();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleTaskImpl <em>To Use Schedule Task</em>}' class.
@@ -7746,6 +8541,14 @@ public interface ToUseSchedulerPackage extends EPackage {
 		EAttribute TO_USE_SCHEDULE_RESOURCE__VOLUME_OVERLOAD = eINSTANCE.getToUseScheduleResource_VolumeOverload();
 
 		/**
+		 * The meta object literal for the '<em><b>Planned Benefit</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TO_USE_SCHEDULE_RESOURCE__PLANNED_BENEFIT = eINSTANCE.getToUseScheduleResource_PlannedBenefit();
+
+		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ScopeScheduleScoreImpl <em>Scope Schedule Score</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7880,6 +8683,42 @@ public interface ToUseSchedulerPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CALC_RESOURCE_VOLUME_OVERLOAD__CONCRETE_PARENT = eINSTANCE.getCalcResourceVolumeOverload_ConcreteParent();
+
+		/**
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.LayerSchedulePlannedBenefitImpl <em>Layer Schedule Planned Benefit</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.touse.moplaf.tousescheduler.impl.LayerSchedulePlannedBenefitImpl
+		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getLayerSchedulePlannedBenefit()
+		 * @generated
+		 */
+		EClass LAYER_SCHEDULE_PLANNED_BENEFIT = eINSTANCE.getLayerSchedulePlannedBenefit();
+
+		/**
+		 * The meta object literal for the '<em><b>Concrete Parent</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LAYER_SCHEDULE_PLANNED_BENEFIT__CONCRETE_PARENT = eINSTANCE.getLayerSchedulePlannedBenefit_ConcreteParent();
+
+		/**
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.CalcResourcePlannedBenefitImpl <em>Calc Resource Planned Benefit</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.touse.moplaf.tousescheduler.impl.CalcResourcePlannedBenefitImpl
+		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getCalcResourcePlannedBenefit()
+		 * @generated
+		 */
+		EClass CALC_RESOURCE_PLANNED_BENEFIT = eINSTANCE.getCalcResourcePlannedBenefit();
+
+		/**
+		 * The meta object literal for the '<em><b>Concrete Parent</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CALC_RESOURCE_PLANNED_BENEFIT__CONCRETE_PARENT = eINSTANCE.getCalcResourcePlannedBenefit_ConcreteParent();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.CalcTaskStartVolumeLoadedImpl <em>Calc Task Start Volume Loaded</em>}' class.

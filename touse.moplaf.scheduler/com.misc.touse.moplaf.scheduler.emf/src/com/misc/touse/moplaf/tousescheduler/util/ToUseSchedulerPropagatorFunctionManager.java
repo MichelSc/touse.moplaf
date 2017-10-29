@@ -24,6 +24,7 @@ public class ToUseSchedulerPropagatorFunctionManager extends PropagatorFunctionM
 			.addConstructor(ToUseSchedulerPackage.Literals.SCOPE_SCHEDULE_SCORE)
 			.addConstructor(ToUseSchedulerPackage.Literals.LAYER_SCHEDULE_DISTANCE)
 			.addConstructor(ToUseSchedulerPackage.Literals.LAYER_SCHEDULE_VOLUME_LOADED)
+			.addConstructor(ToUseSchedulerPackage.Literals.LAYER_SCHEDULE_PLANNED_BENEFIT)
 			;
 
 	static PropagatorFunctionsConstructors ResourcePropagatorFunctionsConstructors =  
@@ -31,6 +32,7 @@ public class ToUseSchedulerPropagatorFunctionManager extends PropagatorFunctionM
 			.addConstructor(ToUseSchedulerPackage.Literals.CALC_RESOURCE_DISTANCE)
 			.addConstructor(ToUseSchedulerPackage.Literals.CALC_RESOURCE_DISTANCE_FROM_LAST)
 			.addConstructor(ToUseSchedulerPackage.Literals.CALC_RESOURCE_VOLUME_OVERLOAD)
+			.addConstructor(ToUseSchedulerPackage.Literals.CALC_RESOURCE_PLANNED_BENEFIT)
 			;
 
 	static PropagatorFunctionsConstructors TaskPropagatorFunctionsConstructors =  

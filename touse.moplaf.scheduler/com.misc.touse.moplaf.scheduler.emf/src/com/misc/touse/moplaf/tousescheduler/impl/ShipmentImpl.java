@@ -26,6 +26,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ShipmentImpl#getUnloadLocationX <em>Unload Location X</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ShipmentImpl#getUnloadLocationY <em>Unload Location Y</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ShipmentImpl#getVolume <em>Volume</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ShipmentImpl#getPlannedBenefit <em>Planned Benefit</em>}</li>
  * </ul>
  *
  * @generated
@@ -150,6 +151,26 @@ public class ShipmentImpl extends MinimalEObjectImpl.Container implements Shipme
 	 * @ordered
 	 */
 	protected float volume = VOLUME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getPlannedBenefit() <em>Planned Benefit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPlannedBenefit()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final float PLANNED_BENEFIT_EDEFAULT = 0.0F;
+
+	/**
+	 * The cached value of the '{@link #getPlannedBenefit() <em>Planned Benefit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPlannedBenefit()
+	 * @generated
+	 * @ordered
+	 */
+	protected float plannedBenefit = PLANNED_BENEFIT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -301,6 +322,27 @@ public class ShipmentImpl extends MinimalEObjectImpl.Container implements Shipme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public float getPlannedBenefit() {
+		return plannedBenefit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPlannedBenefit(float newPlannedBenefit) {
+		float oldPlannedBenefit = plannedBenefit;
+		plannedBenefit = newPlannedBenefit;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseSchedulerPackage.SHIPMENT__PLANNED_BENEFIT, oldPlannedBenefit, plannedBenefit));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -316,6 +358,8 @@ public class ShipmentImpl extends MinimalEObjectImpl.Container implements Shipme
 				return getUnloadLocationY();
 			case ToUseSchedulerPackage.SHIPMENT__VOLUME:
 				return getVolume();
+			case ToUseSchedulerPackage.SHIPMENT__PLANNED_BENEFIT:
+				return getPlannedBenefit();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -345,6 +389,9 @@ public class ShipmentImpl extends MinimalEObjectImpl.Container implements Shipme
 				return;
 			case ToUseSchedulerPackage.SHIPMENT__VOLUME:
 				setVolume((Float)newValue);
+				return;
+			case ToUseSchedulerPackage.SHIPMENT__PLANNED_BENEFIT:
+				setPlannedBenefit((Float)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -376,6 +423,9 @@ public class ShipmentImpl extends MinimalEObjectImpl.Container implements Shipme
 			case ToUseSchedulerPackage.SHIPMENT__VOLUME:
 				setVolume(VOLUME_EDEFAULT);
 				return;
+			case ToUseSchedulerPackage.SHIPMENT__PLANNED_BENEFIT:
+				setPlannedBenefit(PLANNED_BENEFIT_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -400,6 +450,8 @@ public class ShipmentImpl extends MinimalEObjectImpl.Container implements Shipme
 				return unloadLocationY != UNLOAD_LOCATION_Y_EDEFAULT;
 			case ToUseSchedulerPackage.SHIPMENT__VOLUME:
 				return volume != VOLUME_EDEFAULT;
+			case ToUseSchedulerPackage.SHIPMENT__PLANNED_BENEFIT:
+				return plannedBenefit != PLANNED_BENEFIT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -426,6 +478,8 @@ public class ShipmentImpl extends MinimalEObjectImpl.Container implements Shipme
 		result.append(unloadLocationY);
 		result.append(", Volume: ");
 		result.append(volume);
+		result.append(", PlannedBenefit: ");
+		result.append(plannedBenefit);
 		result.append(')');
 		return result.toString();
 	}

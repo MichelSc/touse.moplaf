@@ -311,6 +311,26 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ToUseSchedulerPackage.LAYER_SCHEDULE_PLANNED_BENEFIT: {
+				LayerSchedulePlannedBenefit layerSchedulePlannedBenefit = (LayerSchedulePlannedBenefit)theEObject;
+				T result = caseLayerSchedulePlannedBenefit(layerSchedulePlannedBenefit);
+				if (result == null) result = caseCalcSchedule(layerSchedulePlannedBenefit);
+				if (result == null) result = caseCalcScheduler(layerSchedulePlannedBenefit);
+				if (result == null) result = casePropagatorFunctionBindings(layerSchedulePlannedBenefit);
+				if (result == null) result = casePropagatorFunction(layerSchedulePlannedBenefit);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ToUseSchedulerPackage.CALC_RESOURCE_PLANNED_BENEFIT: {
+				CalcResourcePlannedBenefit calcResourcePlannedBenefit = (CalcResourcePlannedBenefit)theEObject;
+				T result = caseCalcResourcePlannedBenefit(calcResourcePlannedBenefit);
+				if (result == null) result = caseCalcResource(calcResourcePlannedBenefit);
+				if (result == null) result = caseCalcScheduler(calcResourcePlannedBenefit);
+				if (result == null) result = casePropagatorFunctionBindings(calcResourcePlannedBenefit);
+				if (result == null) result = casePropagatorFunction(calcResourcePlannedBenefit);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -597,6 +617,36 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseCalcResourceVolumeOverload(CalcResourceVolumeOverload object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Layer Schedule Planned Benefit</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Layer Schedule Planned Benefit</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLayerSchedulePlannedBenefit(LayerSchedulePlannedBenefit object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Calc Resource Planned Benefit</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Calc Resource Planned Benefit</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCalcResourcePlannedBenefit(CalcResourcePlannedBenefit object) {
 		return null;
 	}
 

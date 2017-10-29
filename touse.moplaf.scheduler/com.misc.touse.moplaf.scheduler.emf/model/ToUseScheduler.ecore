@@ -23,6 +23,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="UnloadLocationX" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="UnloadLocationY" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Volume" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="PlannedBenefit" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ToUseScheduler" eSuperTypes="../../com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//Scheduler">
     <eStructuralFeatures xsi:type="ecore:EReference" name="SelectedVehicles" upperBound="-1"
@@ -38,6 +39,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="ToUseScore" eSuperTypes="../../com.misc.common.moplaf.localsearch.emf/model/localsearch.ecore#//Score">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="TotalDistance" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="VolumeOverload" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="PlannedBenefit" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ToUseScheduleResource" eSuperTypes="../../com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//Resource">
     <eStructuralFeatures xsi:type="ecore:EReference" name="Vehicle" lowerBound="1"
@@ -45,6 +47,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="DistanceFromLast" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="TotalDistance" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="VolumeOverload" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="PlannedBenefit" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ToUseScheduleTask" eSuperTypes="../../com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//Task">
     <eStructuralFeatures xsi:type="ecore:EReference" name="Shipment" lowerBound="1"
@@ -140,5 +143,15 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="ConcreteParent" lowerBound="1"
         eType="#//LayerScheduleVolumeLoaded" changeable="false" volatile="true" transient="true"
         derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LayerSchedulePlannedBenefit" eSuperTypes="#//CalcSchedule">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ConcreteParent" lowerBound="1"
+        eType="#//ScopeScheduleScore" changeable="false" volatile="true" transient="true"
+        derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CalcResourcePlannedBenefit" eSuperTypes="#//CalcResource">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ConcreteParent" lowerBound="1"
+        eType="#//LayerSchedulePlannedBenefit" changeable="false" volatile="true"
+        transient="true" derived="true"/>
   </eClassifiers>
 </ecore:EPackage>

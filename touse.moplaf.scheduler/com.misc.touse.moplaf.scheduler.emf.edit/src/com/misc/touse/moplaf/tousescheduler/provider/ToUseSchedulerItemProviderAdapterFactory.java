@@ -463,6 +463,52 @@ public class ToUseSchedulerItemProviderAdapterFactory extends ToUseSchedulerAdap
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.LayerSchedulePlannedBenefit} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected LayerSchedulePlannedBenefitItemProvider layerSchedulePlannedBenefitItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousescheduler.LayerSchedulePlannedBenefit}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createLayerSchedulePlannedBenefitAdapter() {
+		if (layerSchedulePlannedBenefitItemProvider == null) {
+			layerSchedulePlannedBenefitItemProvider = new LayerSchedulePlannedBenefitItemProvider(this);
+		}
+
+		return layerSchedulePlannedBenefitItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.CalcResourcePlannedBenefit} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CalcResourcePlannedBenefitItemProvider calcResourcePlannedBenefitItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousescheduler.CalcResourcePlannedBenefit}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCalcResourcePlannedBenefitAdapter() {
+		if (calcResourcePlannedBenefitItemProvider == null) {
+			calcResourcePlannedBenefitItemProvider = new CalcResourcePlannedBenefitItemProvider(this);
+		}
+
+		return calcResourcePlannedBenefitItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.ToUseUnscheduleLoadUnload} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -698,6 +744,8 @@ public class ToUseSchedulerItemProviderAdapterFactory extends ToUseSchedulerAdap
 		if (calcTaskStartVolumeLoadedItemProvider != null) calcTaskStartVolumeLoadedItemProvider.dispose();
 		if (calcTaskEndVolumeLoadedItemProvider != null) calcTaskEndVolumeLoadedItemProvider.dispose();
 		if (calcResourceVolumeOverloadItemProvider != null) calcResourceVolumeOverloadItemProvider.dispose();
+		if (layerSchedulePlannedBenefitItemProvider != null) layerSchedulePlannedBenefitItemProvider.dispose();
+		if (calcResourcePlannedBenefitItemProvider != null) calcResourcePlannedBenefitItemProvider.dispose();
 	}
 
 }

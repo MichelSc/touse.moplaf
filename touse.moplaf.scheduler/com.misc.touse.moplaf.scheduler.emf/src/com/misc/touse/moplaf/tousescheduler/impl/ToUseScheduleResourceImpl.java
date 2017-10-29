@@ -27,6 +27,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleResourceImpl#getDistanceFromLast <em>Distance From Last</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleResourceImpl#getTotalDistance <em>Total Distance</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleResourceImpl#isVolumeOverload <em>Volume Overload</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleResourceImpl#getPlannedBenefit <em>Planned Benefit</em>}</li>
  * </ul>
  *
  * @generated
@@ -101,6 +102,26 @@ public class ToUseScheduleResourceImpl extends ResourceImpl implements ToUseSche
 	 * @ordered
 	 */
 	protected boolean volumeOverload = VOLUME_OVERLOAD_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getPlannedBenefit() <em>Planned Benefit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPlannedBenefit()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final float PLANNED_BENEFIT_EDEFAULT = 0.0F;
+
+	/**
+	 * The cached value of the '{@link #getPlannedBenefit() <em>Planned Benefit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPlannedBenefit()
+	 * @generated
+	 * @ordered
+	 */
+	protected float plannedBenefit = PLANNED_BENEFIT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -227,6 +248,27 @@ public class ToUseScheduleResourceImpl extends ResourceImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public float getPlannedBenefit() {
+		return plannedBenefit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPlannedBenefit(float newPlannedBenefit) {
+		float oldPlannedBenefit = plannedBenefit;
+		plannedBenefit = newPlannedBenefit;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__PLANNED_BENEFIT, oldPlannedBenefit, plannedBenefit));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -239,6 +281,8 @@ public class ToUseScheduleResourceImpl extends ResourceImpl implements ToUseSche
 				return getTotalDistance();
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__VOLUME_OVERLOAD:
 				return isVolumeOverload();
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__PLANNED_BENEFIT:
+				return getPlannedBenefit();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -262,6 +306,9 @@ public class ToUseScheduleResourceImpl extends ResourceImpl implements ToUseSche
 				return;
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__VOLUME_OVERLOAD:
 				setVolumeOverload((Boolean)newValue);
+				return;
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__PLANNED_BENEFIT:
+				setPlannedBenefit((Float)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -287,6 +334,9 @@ public class ToUseScheduleResourceImpl extends ResourceImpl implements ToUseSche
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__VOLUME_OVERLOAD:
 				setVolumeOverload(VOLUME_OVERLOAD_EDEFAULT);
 				return;
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__PLANNED_BENEFIT:
+				setPlannedBenefit(PLANNED_BENEFIT_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -307,6 +357,8 @@ public class ToUseScheduleResourceImpl extends ResourceImpl implements ToUseSche
 				return totalDistance != TOTAL_DISTANCE_EDEFAULT;
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__VOLUME_OVERLOAD:
 				return volumeOverload != VOLUME_OVERLOAD_EDEFAULT;
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__PLANNED_BENEFIT:
+				return plannedBenefit != PLANNED_BENEFIT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -327,6 +379,8 @@ public class ToUseScheduleResourceImpl extends ResourceImpl implements ToUseSche
 		result.append(totalDistance);
 		result.append(", VolumeOverload: ");
 		result.append(volumeOverload);
+		result.append(", PlannedBenefit: ");
+		result.append(plannedBenefit);
 		result.append(')');
 		return result.toString();
 	}

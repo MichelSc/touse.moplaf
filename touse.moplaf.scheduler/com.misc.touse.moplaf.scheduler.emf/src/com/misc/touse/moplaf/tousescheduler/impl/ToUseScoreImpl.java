@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScoreImpl#getTotalDistance <em>Total Distance</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScoreImpl#isVolumeOverload <em>Volume Overload</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScoreImpl#getPlannedBenefit <em>Planned Benefit</em>}</li>
  * </ul>
  *
  * @generated
@@ -68,6 +69,26 @@ public class ToUseScoreImpl extends ScoreImpl implements ToUseScore {
 	 * @ordered
 	 */
 	protected boolean volumeOverload = VOLUME_OVERLOAD_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getPlannedBenefit() <em>Planned Benefit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPlannedBenefit()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final float PLANNED_BENEFIT_EDEFAULT = 0.0F;
+
+	/**
+	 * The cached value of the '{@link #getPlannedBenefit() <em>Planned Benefit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPlannedBenefit()
+	 * @generated
+	 * @ordered
+	 */
+	protected float plannedBenefit = PLANNED_BENEFIT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -135,6 +156,27 @@ public class ToUseScoreImpl extends ScoreImpl implements ToUseScore {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public float getPlannedBenefit() {
+		return plannedBenefit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPlannedBenefit(float newPlannedBenefit) {
+		float oldPlannedBenefit = plannedBenefit;
+		plannedBenefit = newPlannedBenefit;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseSchedulerPackage.TO_USE_SCORE__PLANNED_BENEFIT, oldPlannedBenefit, plannedBenefit));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -142,6 +184,8 @@ public class ToUseScoreImpl extends ScoreImpl implements ToUseScore {
 				return getTotalDistance();
 			case ToUseSchedulerPackage.TO_USE_SCORE__VOLUME_OVERLOAD:
 				return isVolumeOverload();
+			case ToUseSchedulerPackage.TO_USE_SCORE__PLANNED_BENEFIT:
+				return getPlannedBenefit();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -159,6 +203,9 @@ public class ToUseScoreImpl extends ScoreImpl implements ToUseScore {
 				return;
 			case ToUseSchedulerPackage.TO_USE_SCORE__VOLUME_OVERLOAD:
 				setVolumeOverload((Boolean)newValue);
+				return;
+			case ToUseSchedulerPackage.TO_USE_SCORE__PLANNED_BENEFIT:
+				setPlannedBenefit((Float)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -178,6 +225,9 @@ public class ToUseScoreImpl extends ScoreImpl implements ToUseScore {
 			case ToUseSchedulerPackage.TO_USE_SCORE__VOLUME_OVERLOAD:
 				setVolumeOverload(VOLUME_OVERLOAD_EDEFAULT);
 				return;
+			case ToUseSchedulerPackage.TO_USE_SCORE__PLANNED_BENEFIT:
+				setPlannedBenefit(PLANNED_BENEFIT_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -194,6 +244,8 @@ public class ToUseScoreImpl extends ScoreImpl implements ToUseScore {
 				return totalDistance != TOTAL_DISTANCE_EDEFAULT;
 			case ToUseSchedulerPackage.TO_USE_SCORE__VOLUME_OVERLOAD:
 				return volumeOverload != VOLUME_OVERLOAD_EDEFAULT;
+			case ToUseSchedulerPackage.TO_USE_SCORE__PLANNED_BENEFIT:
+				return plannedBenefit != PLANNED_BENEFIT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -212,6 +264,8 @@ public class ToUseScoreImpl extends ScoreImpl implements ToUseScore {
 		result.append(totalDistance);
 		result.append(", VolumeOverload: ");
 		result.append(volumeOverload);
+		result.append(", PlannedBenefit: ");
+		result.append(plannedBenefit);
 		result.append(')');
 		return result.toString();
 	}
@@ -231,7 +285,20 @@ public class ToUseScoreImpl extends ScoreImpl implements ToUseScore {
 		if ( other instanceof ToUseScore) {
 			ToUseScore other_score = (ToUseScore)other;
 			this.setTotalDistance(other_score.getTotalDistance());
+			this.setVolumeOverload(other_score.isVolumeOverload());
+			this.setPlannedBenefit(other_score.getPlannedBenefit());
 		}
+	}
+	
+	@Override
+	public String getDescription() {
+		String description = "";
+		if ( this.isVolumeOverload() ) {
+			description = "nok:overload";
+		} else {
+			description = String.format("dist=%f, benef=%f", this.getTotalDistance(), this.getPlannedBenefit());
+		}
+		return description;
 	}
 
 	@Override
@@ -242,7 +309,12 @@ public class ToUseScoreImpl extends ScoreImpl implements ToUseScore {
 	@Override
 	public boolean isBetter(Score other) {
 		ToUseScore other_score = (ToUseScore)other;
-		boolean is_better = this.getTotalDistance()<other_score.getTotalDistance();
+		boolean is_better = false;
+		if ( this.getPlannedBenefit()>other_score.getPlannedBenefit()) {
+			is_better = true;
+		} else if ( this.getPlannedBenefit()==other_score.getPlannedBenefit()) {
+			is_better = this.getTotalDistance()<other_score.getTotalDistance();
+		}
 		return is_better;
 	}
 } //ToUseScoreImpl
