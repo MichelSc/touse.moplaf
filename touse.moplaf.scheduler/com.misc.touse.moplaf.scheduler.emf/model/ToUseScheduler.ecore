@@ -30,8 +30,6 @@
         eType="#//Vehicle"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="SelectedShipments" upperBound="-1"
         eType="#//Shipment"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Actions" upperBound="-1"
-        eType="#//ToUseActionLoadUnload" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ToUseSchedule" eSuperTypes="../../com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//Schedule">
     <eOperations name="enable"/>
@@ -154,4 +152,5 @@
         eType="#//LayerSchedulePlannedBenefit" changeable="false" volatile="true"
         transient="true" derived="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ToUseImprovmentDestructConstruct"/>
 </ecore:EPackage>
