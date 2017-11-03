@@ -6,7 +6,6 @@ import com.misc.common.moplaf.localsearch.Score;
 import com.misc.common.moplaf.scheduler.Schedule;
 import com.misc.common.moplaf.scheduler.impl.SchedulerImpl;
 import com.misc.touse.moplaf.tousescheduler.Shipment;
-import com.misc.touse.moplaf.tousescheduler.ToUseActionLoadUnload;
 import com.misc.touse.moplaf.tousescheduler.ToUseLoadShipment;
 import com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource;
 import com.misc.touse.moplaf.tousescheduler.ToUseScheduler;
@@ -15,13 +14,9 @@ import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
 import com.misc.touse.moplaf.tousescheduler.ToUseUnloadShipment;
 import com.misc.touse.moplaf.tousescheduler.Vehicle;
 import java.util.Collection;
-import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,7 +28,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerImpl#getSelectedVehicles <em>Selected Vehicles</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerImpl#getSelectedShipments <em>Selected Shipments</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerImpl#getActions <em>Actions</em>}</li>
  * </ul>
  *
  * @generated
@@ -57,15 +51,6 @@ public class ToUseSchedulerImpl extends SchedulerImpl implements ToUseScheduler 
 	 * @ordered
 	 */
 	protected EList<Shipment> selectedShipments;
-	/**
-	 * The cached value of the '{@link #getActions() <em>Actions</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getActions()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ToUseActionLoadUnload> actions;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -114,32 +99,6 @@ public class ToUseSchedulerImpl extends SchedulerImpl implements ToUseScheduler 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ToUseActionLoadUnload> getActions() {
-		if (actions == null) {
-			actions = new EObjectContainmentEList<ToUseActionLoadUnload>(ToUseActionLoadUnload.class, this, ToUseSchedulerPackage.TO_USE_SCHEDULER__ACTIONS);
-		}
-		return actions;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case ToUseSchedulerPackage.TO_USE_SCHEDULER__ACTIONS:
-				return ((InternalEList<?>)getActions()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -147,8 +106,6 @@ public class ToUseSchedulerImpl extends SchedulerImpl implements ToUseScheduler 
 				return getSelectedVehicles();
 			case ToUseSchedulerPackage.TO_USE_SCHEDULER__SELECTED_SHIPMENTS:
 				return getSelectedShipments();
-			case ToUseSchedulerPackage.TO_USE_SCHEDULER__ACTIONS:
-				return getActions();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -170,10 +127,6 @@ public class ToUseSchedulerImpl extends SchedulerImpl implements ToUseScheduler 
 				getSelectedShipments().clear();
 				getSelectedShipments().addAll((Collection<? extends Shipment>)newValue);
 				return;
-			case ToUseSchedulerPackage.TO_USE_SCHEDULER__ACTIONS:
-				getActions().clear();
-				getActions().addAll((Collection<? extends ToUseActionLoadUnload>)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -192,9 +145,6 @@ public class ToUseSchedulerImpl extends SchedulerImpl implements ToUseScheduler 
 			case ToUseSchedulerPackage.TO_USE_SCHEDULER__SELECTED_SHIPMENTS:
 				getSelectedShipments().clear();
 				return;
-			case ToUseSchedulerPackage.TO_USE_SCHEDULER__ACTIONS:
-				getActions().clear();
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -211,8 +161,6 @@ public class ToUseSchedulerImpl extends SchedulerImpl implements ToUseScheduler 
 				return selectedVehicles != null && !selectedVehicles.isEmpty();
 			case ToUseSchedulerPackage.TO_USE_SCHEDULER__SELECTED_SHIPMENTS:
 				return selectedShipments != null && !selectedShipments.isEmpty();
-			case ToUseSchedulerPackage.TO_USE_SCHEDULER__ACTIONS:
-				return actions != null && !actions.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

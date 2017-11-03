@@ -16,7 +16,6 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduler#getSelectedVehicles <em>Selected Vehicles</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduler#getSelectedShipments <em>Selected Shipments</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduler#getActions <em>Actions</em>}</li>
  * </ul>
  *
  * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getToUseScheduler()
@@ -56,20 +55,4 @@ public interface ToUseScheduler extends Scheduler {
 	 * @generated
 	 */
 	EList<Shipment> getSelectedShipments();
-
-	/**
-	 * Returns the value of the '<em><b>Actions</b></em>' containment reference list.
-	 * The list contents are of type {@link com.misc.touse.moplaf.tousescheduler.ToUseActionLoadUnload}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Actions</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Actions</em>' containment reference list.
-	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getToUseScheduler_Actions()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<ToUseActionLoadUnload> getActions();
 } // ToUseScheduler

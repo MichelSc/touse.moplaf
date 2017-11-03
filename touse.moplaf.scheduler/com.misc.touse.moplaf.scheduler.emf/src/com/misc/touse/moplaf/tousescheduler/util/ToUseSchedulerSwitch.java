@@ -3,6 +3,7 @@
 package com.misc.touse.moplaf.tousescheduler.util;
 
 import com.misc.common.moplaf.localsearch.Action;
+import com.misc.common.moplaf.localsearch.Improvment;
 import com.misc.common.moplaf.localsearch.Score;
 import com.misc.common.moplaf.localsearch.Solution;
 import com.misc.common.moplaf.localsearch.Strategy;
@@ -331,6 +332,13 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ToUseSchedulerPackage.TO_USE_IMPROVMENT_DESTRUCT_CONSTRUCT: {
+				ToUseImprovmentDestructConstruct toUseImprovmentDestructConstruct = (ToUseImprovmentDestructConstruct)theEObject;
+				T result = caseToUseImprovmentDestructConstruct(toUseImprovmentDestructConstruct);
+				if (result == null) result = caseImprovment(toUseImprovmentDestructConstruct);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -651,6 +659,21 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>To Use Improvment Destruct Construct</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>To Use Improvment Destruct Construct</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseToUseImprovmentDestructConstruct(ToUseImprovmentDestructConstruct object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Calc Task Start Volume Loaded</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -887,6 +910,21 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePropagatorFunctionBindings(PropagatorFunctionBindings object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Improvment</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Improvment</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseImprovment(Improvment object) {
 		return null;
 	}
 

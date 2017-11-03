@@ -3,6 +3,7 @@
 package com.misc.touse.moplaf.tousescheduler.util;
 
 import com.misc.common.moplaf.localsearch.Action;
+import com.misc.common.moplaf.localsearch.Improvment;
 import com.misc.common.moplaf.localsearch.Score;
 import com.misc.common.moplaf.localsearch.Solution;
 import com.misc.common.moplaf.localsearch.Strategy;
@@ -195,6 +196,10 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 				return createCalcResourcePlannedBenefitAdapter();
 			}
 			@Override
+			public Adapter caseToUseImprovmentDestructConstruct(ToUseImprovmentDestructConstruct object) {
+				return createToUseImprovmentDestructConstructAdapter();
+			}
+			@Override
 			public Adapter caseStrategy(Strategy object) {
 				return createStrategyAdapter();
 			}
@@ -237,6 +242,10 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter casePropagatorFunctionBindings(PropagatorFunctionBindings object) {
 				return createPropagatorFunctionBindingsAdapter();
+			}
+			@Override
+			public Adapter caseImprovment(Improvment object) {
+				return createImprovmentAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -553,6 +562,20 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.tousescheduler.ToUseImprovmentDestructConstruct <em>To Use Improvment Destruct Construct</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseImprovmentDestructConstruct
+	 * @generated
+	 */
+	public Adapter createToUseImprovmentDestructConstructAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.tousescheduler.CalcTaskStartVolumeLoaded <em>Calc Task Start Volume Loaded</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -773,6 +796,20 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPropagatorFunctionBindingsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.localsearch.Improvment <em>Improvment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.localsearch.Improvment
+	 * @generated
+	 */
+	public Adapter createImprovmentAdapter() {
 		return null;
 	}
 

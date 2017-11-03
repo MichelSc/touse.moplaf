@@ -80,6 +80,7 @@ public class ToUseSchedulerFactoryImpl extends EFactoryImpl implements ToUseSche
 			case ToUseSchedulerPackage.CALC_RESOURCE_VOLUME_OVERLOAD: return createCalcResourceVolumeOverload();
 			case ToUseSchedulerPackage.LAYER_SCHEDULE_PLANNED_BENEFIT: return createLayerSchedulePlannedBenefit();
 			case ToUseSchedulerPackage.CALC_RESOURCE_PLANNED_BENEFIT: return createCalcResourcePlannedBenefit();
+			case ToUseSchedulerPackage.TO_USE_IMPROVMENT_DESTRUCT_CONSTRUCT: return createToUseImprovmentDestructConstruct();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -253,6 +254,16 @@ public class ToUseSchedulerFactoryImpl extends EFactoryImpl implements ToUseSche
 	public CalcResourcePlannedBenefit createCalcResourcePlannedBenefit() {
 		CalcResourcePlannedBenefitImpl calcResourcePlannedBenefit = new CalcResourcePlannedBenefitImpl();
 		return calcResourcePlannedBenefit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ToUseImprovmentDestructConstruct createToUseImprovmentDestructConstruct() {
+		ToUseImprovmentDestructConstructImpl toUseImprovmentDestructConstruct = new ToUseImprovmentDestructConstructImpl();
+		return toUseImprovmentDestructConstruct;
 	}
 
 	/**

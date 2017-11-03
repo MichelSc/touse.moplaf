@@ -16,10 +16,8 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
-import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link com.misc.touse.moplaf.tousescheduler.ToUseScheduler} object.
@@ -100,36 +98,6 @@ public class ToUseSchedulerItemProvider extends SchedulerItemProvider {
 	}
 
 	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(ToUseSchedulerPackage.Literals.TO_USE_SCHEDULER__ACTIONS);
-		}
-		return childrenFeatures;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EStructuralFeature getChildFeature(Object object, Object child) {
-		// Check the type of the specified child object and return the proper feature to use for
-		// adding (see {@link AddCommand}) it as a child.
-
-		return super.getChildFeature(object, child);
-	}
-
-	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -154,12 +122,6 @@ public class ToUseSchedulerItemProvider extends SchedulerItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(ToUseScheduler.class)) {
-			case ToUseSchedulerPackage.TO_USE_SCHEDULER__ACTIONS:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-				return;
-		}
 		super.notifyChanged(notification);
 	}
 
@@ -176,18 +138,13 @@ public class ToUseSchedulerItemProvider extends SchedulerItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
+				(LocalSearchPackage.Literals.STRATEGY__IMPROVMENTS,
+				 ToUseSchedulerFactory.eINSTANCE.createToUseImprovmentDestructConstruct()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(LocalSearchPackage.Literals.STRATEGY__SOLUTIONS,
 				 ToUseSchedulerFactory.eINSTANCE.createToUseSchedule()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ToUseSchedulerPackage.Literals.TO_USE_SCHEDULER__ACTIONS,
-				 ToUseSchedulerFactory.eINSTANCE.createToUseScheduleLoadUnload()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ToUseSchedulerPackage.Literals.TO_USE_SCHEDULER__ACTIONS,
-				 ToUseSchedulerFactory.eINSTANCE.createToUseUnscheduleLoadUnload()));
 	}
 
 	/**

@@ -509,6 +509,29 @@ public class ToUseSchedulerItemProviderAdapterFactory extends ToUseSchedulerAdap
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.ToUseImprovmentDestructConstruct} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ToUseImprovmentDestructConstructItemProvider toUseImprovmentDestructConstructItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousescheduler.ToUseImprovmentDestructConstruct}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createToUseImprovmentDestructConstructAdapter() {
+		if (toUseImprovmentDestructConstructItemProvider == null) {
+			toUseImprovmentDestructConstructItemProvider = new ToUseImprovmentDestructConstructItemProvider(this);
+		}
+
+		return toUseImprovmentDestructConstructItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.ToUseUnscheduleLoadUnload} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -746,6 +769,7 @@ public class ToUseSchedulerItemProviderAdapterFactory extends ToUseSchedulerAdap
 		if (calcResourceVolumeOverloadItemProvider != null) calcResourceVolumeOverloadItemProvider.dispose();
 		if (layerSchedulePlannedBenefitItemProvider != null) layerSchedulePlannedBenefitItemProvider.dispose();
 		if (calcResourcePlannedBenefitItemProvider != null) calcResourcePlannedBenefitItemProvider.dispose();
+		if (toUseImprovmentDestructConstructItemProvider != null) toUseImprovmentDestructConstructItemProvider.dispose();
 	}
 
 }

@@ -328,6 +328,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULER__CURRENT_SOLUTION_NR = SchedulerPackage.SCHEDULER__CURRENT_SOLUTION_NR;
 
 	/**
+	 * The feature id for the '<em><b>Max Nr Solutions</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULER__MAX_NR_SOLUTIONS = SchedulerPackage.SCHEDULER__MAX_NR_SOLUTIONS;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -335,6 +344,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_SCHEDULER__NAME = SchedulerPackage.SCHEDULER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Select Chance</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULER__SELECT_CHANCE = SchedulerPackage.SCHEDULER__SELECT_CHANCE;
 
 	/**
 	 * The feature id for the '<em><b>Schedules</b></em>' reference list.
@@ -364,40 +382,40 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULER__SELECTED_SHIPMENTS = SchedulerPackage.SCHEDULER_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULER__ACTIONS = SchedulerPackage.SCHEDULER_FEATURE_COUNT + 2;
-
-	/**
 	 * The number of structural features of the '<em>To Use Scheduler</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULER_FEATURE_COUNT = SchedulerPackage.SCHEDULER_FEATURE_COUNT + 3;
+	int TO_USE_SCHEDULER_FEATURE_COUNT = SchedulerPackage.SCHEDULER_FEATURE_COUNT + 2;
 
 	/**
-	 * The operation id for the '<em>Select Solutions To Improve</em>' operation.
+	 * The operation id for the '<em>Select Solution To Improve</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULER___SELECT_SOLUTIONS_TO_IMPROVE = SchedulerPackage.SCHEDULER___SELECT_SOLUTIONS_TO_IMPROVE;
+	int TO_USE_SCHEDULER___SELECT_SOLUTION_TO_IMPROVE = SchedulerPackage.SCHEDULER___SELECT_SOLUTION_TO_IMPROVE;
 
 	/**
-	 * The operation id for the '<em>Prune Solution</em>' operation.
+	 * The operation id for the '<em>Run</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULER___PRUNE_SOLUTION = SchedulerPackage.SCHEDULER___PRUNE_SOLUTION;
+	int TO_USE_SCHEDULER___RUN = SchedulerPackage.SCHEDULER___RUN;
+
+	/**
+	 * The operation id for the '<em>Prune</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULER___PRUNE = SchedulerPackage.SCHEDULER___PRUNE;
 
 	/**
 	 * The operation id for the '<em>Construct Score</em>' operation.
@@ -733,6 +751,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_SCORE__DESCRIPTION = LocalSearchPackage.SCORE__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Score</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCORE__SCORE = LocalSearchPackage.SCORE__SCORE;
 
 	/**
 	 * The feature id for the '<em><b>Total Distance</b></em>' attribute.
@@ -7237,6 +7264,133 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int CALC_RESOURCE_PLANNED_BENEFIT_OPERATION_COUNT = CALC_RESOURCE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseImprovmentDestructConstructImpl <em>To Use Improvment Destruct Construct</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseImprovmentDestructConstructImpl
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseImprovmentDestructConstruct()
+	 * @generated
+	 */
+	int TO_USE_IMPROVMENT_DESTRUCT_CONSTRUCT = 29;
+
+	/**
+	 * The feature id for the '<em><b>Max Iterations</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_IMPROVMENT_DESTRUCT_CONSTRUCT__MAX_ITERATIONS = LocalSearchPackage.IMPROVMENT__MAX_ITERATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Max Seconds</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_IMPROVMENT_DESTRUCT_CONSTRUCT__MAX_SECONDS = LocalSearchPackage.IMPROVMENT__MAX_SECONDS;
+
+	/**
+	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_IMPROVMENT_DESTRUCT_CONSTRUCT__ACTIONS = LocalSearchPackage.IMPROVMENT__ACTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Solution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_IMPROVMENT_DESTRUCT_CONSTRUCT__SOLUTION = LocalSearchPackage.IMPROVMENT__SOLUTION;
+
+	/**
+	 * The feature id for the '<em><b>Improvments Start</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_IMPROVMENT_DESTRUCT_CONSTRUCT__IMPROVMENTS_START = LocalSearchPackage.IMPROVMENT__IMPROVMENTS_START;
+
+	/**
+	 * The feature id for the '<em><b>Improvments End</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_IMPROVMENT_DESTRUCT_CONSTRUCT__IMPROVMENTS_END = LocalSearchPackage.IMPROVMENT__IMPROVMENTS_END;
+
+	/**
+	 * The feature id for the '<em><b>Iterations</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_IMPROVMENT_DESTRUCT_CONSTRUCT__ITERATIONS = LocalSearchPackage.IMPROVMENT__ITERATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Duration Total</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_IMPROVMENT_DESTRUCT_CONSTRUCT__DURATION_TOTAL = LocalSearchPackage.IMPROVMENT__DURATION_TOTAL;
+
+	/**
+	 * The feature id for the '<em><b>Duration Average</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_IMPROVMENT_DESTRUCT_CONSTRUCT__DURATION_AVERAGE = LocalSearchPackage.IMPROVMENT__DURATION_AVERAGE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_IMPROVMENT_DESTRUCT_CONSTRUCT__NAME = LocalSearchPackage.IMPROVMENT__NAME;
+
+	/**
+	 * The number of structural features of the '<em>To Use Improvment Destruct Construct</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_IMPROVMENT_DESTRUCT_CONSTRUCT_FEATURE_COUNT = LocalSearchPackage.IMPROVMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Do Iteration</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_IMPROVMENT_DESTRUCT_CONSTRUCT___DO_ITERATION = LocalSearchPackage.IMPROVMENT___DO_ITERATION;
+
+	/**
+	 * The number of operations of the '<em>To Use Improvment Destruct Construct</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_IMPROVMENT_DESTRUCT_CONSTRUCT_OPERATION_COUNT = LocalSearchPackage.IMPROVMENT_OPERATION_COUNT + 0;
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.Domain <em>Domain</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7407,17 +7561,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getToUseScheduler_SelectedShipments();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduler#getActions <em>Actions</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Actions</em>'.
-	 * @see com.misc.touse.moplaf.tousescheduler.ToUseScheduler#getActions()
-	 * @see #getToUseScheduler()
-	 * @generated
-	 */
-	EReference getToUseScheduler_Actions();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.Shipment <em>Shipment</em>}'.
@@ -7953,6 +8096,16 @@ public interface ToUseSchedulerPackage extends EPackage {
 	EReference getCalcResourcePlannedBenefit_ConcreteParent();
 
 	/**
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.ToUseImprovmentDestructConstruct <em>To Use Improvment Destruct Construct</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>To Use Improvment Destruct Construct</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseImprovmentDestructConstruct
+	 * @generated
+	 */
+	EClass getToUseImprovmentDestructConstruct();
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.CalcTaskStartVolumeLoaded <em>Calc Task Start Volume Loaded</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8277,14 +8430,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 		 * @generated
 		 */
 		EReference TO_USE_SCHEDULER__SELECTED_SHIPMENTS = eINSTANCE.getToUseScheduler_SelectedShipments();
-
-		/**
-		 * The meta object literal for the '<em><b>Actions</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TO_USE_SCHEDULER__ACTIONS = eINSTANCE.getToUseScheduler_Actions();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ShipmentImpl <em>Shipment</em>}' class.
@@ -8719,6 +8864,16 @@ public interface ToUseSchedulerPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CALC_RESOURCE_PLANNED_BENEFIT__CONCRETE_PARENT = eINSTANCE.getCalcResourcePlannedBenefit_ConcreteParent();
+
+		/**
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseImprovmentDestructConstructImpl <em>To Use Improvment Destruct Construct</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseImprovmentDestructConstructImpl
+		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseImprovmentDestructConstruct()
+		 * @generated
+		 */
+		EClass TO_USE_IMPROVMENT_DESTRUCT_CONSTRUCT = eINSTANCE.getToUseImprovmentDestructConstruct();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.CalcTaskStartVolumeLoadedImpl <em>Calc Task Start Volume Loaded</em>}' class.
