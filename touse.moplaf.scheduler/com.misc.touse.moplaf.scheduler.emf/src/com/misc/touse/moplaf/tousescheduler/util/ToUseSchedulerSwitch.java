@@ -2,6 +2,8 @@
  */
 package com.misc.touse.moplaf.tousescheduler.util;
 
+import com.misc.common.moplaf.job.Run;
+import com.misc.common.moplaf.job.RunParams;
 import com.misc.common.moplaf.localsearch.Action;
 import com.misc.common.moplaf.localsearch.Improvment;
 import com.misc.common.moplaf.localsearch.Score;
@@ -101,6 +103,8 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 				T result = caseToUseScheduler(toUseScheduler);
 				if (result == null) result = caseScheduler(toUseScheduler);
 				if (result == null) result = caseStrategy(toUseScheduler);
+				if (result == null) result = caseRun(toUseScheduler);
+				if (result == null) result = caseRunParams(toUseScheduler);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -174,6 +178,13 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 				T result = caseToUseUnscheduleLoadUnload(toUseUnscheduleLoadUnload);
 				if (result == null) result = caseToUseActionLoadUnload(toUseUnscheduleLoadUnload);
 				if (result == null) result = caseAction(toUseUnscheduleLoadUnload);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ToUseSchedulerPackage.TO_USE_IMPROVMENT_DESTRUCT_CONSTRUCT: {
+				ToUseImprovmentDestructConstruct toUseImprovmentDestructConstruct = (ToUseImprovmentDestructConstruct)theEObject;
+				T result = caseToUseImprovmentDestructConstruct(toUseImprovmentDestructConstruct);
+				if (result == null) result = caseImprovment(toUseImprovmentDestructConstruct);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -329,13 +340,6 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 				if (result == null) result = caseCalcScheduler(calcResourcePlannedBenefit);
 				if (result == null) result = casePropagatorFunctionBindings(calcResourcePlannedBenefit);
 				if (result == null) result = casePropagatorFunction(calcResourcePlannedBenefit);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ToUseSchedulerPackage.TO_USE_IMPROVMENT_DESTRUCT_CONSTRUCT: {
-				ToUseImprovmentDestructConstruct toUseImprovmentDestructConstruct = (ToUseImprovmentDestructConstruct)theEObject;
-				T result = caseToUseImprovmentDestructConstruct(toUseImprovmentDestructConstruct);
-				if (result == null) result = caseImprovment(toUseImprovmentDestructConstruct);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -670,6 +674,36 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseToUseImprovmentDestructConstruct(ToUseImprovmentDestructConstruct object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Run Params</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Run Params</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRunParams(RunParams object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Run</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Run</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRun(Run object) {
 		return null;
 	}
 

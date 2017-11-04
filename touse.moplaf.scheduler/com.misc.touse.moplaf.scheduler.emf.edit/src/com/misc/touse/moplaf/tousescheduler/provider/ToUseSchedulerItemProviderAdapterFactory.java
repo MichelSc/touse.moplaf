@@ -757,6 +757,7 @@ public class ToUseSchedulerItemProviderAdapterFactory extends ToUseSchedulerAdap
 		if (toUseUnloadShipmentItemProvider != null) toUseUnloadShipmentItemProvider.dispose();
 		if (toUseScheduleLoadUnloadItemProvider != null) toUseScheduleLoadUnloadItemProvider.dispose();
 		if (toUseUnscheduleLoadUnloadItemProvider != null) toUseUnscheduleLoadUnloadItemProvider.dispose();
+		if (toUseImprovmentDestructConstructItemProvider != null) toUseImprovmentDestructConstructItemProvider.dispose();
 		if (scopeScheduleScoreItemProvider != null) scopeScheduleScoreItemProvider.dispose();
 		if (layerScheduleDistanceItemProvider != null) layerScheduleDistanceItemProvider.dispose();
 		if (calcTaskDistanceFromPreviousItemProvider != null) calcTaskDistanceFromPreviousItemProvider.dispose();
@@ -769,7 +770,6 @@ public class ToUseSchedulerItemProviderAdapterFactory extends ToUseSchedulerAdap
 		if (calcResourceVolumeOverloadItemProvider != null) calcResourceVolumeOverloadItemProvider.dispose();
 		if (layerSchedulePlannedBenefitItemProvider != null) layerSchedulePlannedBenefitItemProvider.dispose();
 		if (calcResourcePlannedBenefitItemProvider != null) calcResourcePlannedBenefitItemProvider.dispose();
-		if (toUseImprovmentDestructConstructItemProvider != null) toUseImprovmentDestructConstructItemProvider.dispose();
 	}
 
 }

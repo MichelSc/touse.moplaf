@@ -18,5 +18,7 @@ Require-Bundle: org.eclipse.core.runtime,
  com.misc.common.moplaf.scheduler.emf.edit;visibility:=reexport,
  com.misc.common.moplaf.localsearch.emf;visibility:=reexport,
  com.misc.common.moplaf.localsearch.emf.edit;visibility:=reexport,
+ com.misc.common.moplaf.job.emf;visibility:=reexport,
+ com.misc.common.moplaf.job.emf.edit;visibility:=reexport,
  com.misc.common.moplaf.emf.edit;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy

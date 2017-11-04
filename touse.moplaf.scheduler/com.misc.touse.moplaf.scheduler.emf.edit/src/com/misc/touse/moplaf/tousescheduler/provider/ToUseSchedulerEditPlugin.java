@@ -2,6 +2,7 @@
  */
 package com.misc.touse.moplaf.tousescheduler.provider;
 
+import com.misc.common.moplaf.job.provider.JobEditPlugin;
 import com.misc.common.moplaf.localsearch.provider.LocalsearchEditPlugin;
 import com.misc.common.moplaf.propagator2.provider.PropagatorEditPlugin;
 import com.misc.common.moplaf.scheduler.provider.SchedulerEditPlugin;
@@ -44,6 +45,7 @@ public final class ToUseSchedulerEditPlugin extends EMFPlugin {
 		     PropagatorEditPlugin.INSTANCE,
 		     SchedulerEditPlugin.INSTANCE,
 		     LocalsearchEditPlugin.INSTANCE,
+		     JobEditPlugin.INSTANCE,
 		   });
 	}
 
