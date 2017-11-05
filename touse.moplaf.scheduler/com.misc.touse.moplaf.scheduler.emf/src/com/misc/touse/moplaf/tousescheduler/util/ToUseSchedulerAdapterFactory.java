@@ -134,10 +134,6 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 				return createToUseUnscheduleLoadUnloadAdapter();
 			}
 			@Override
-			public Adapter caseToUseImprovmentDestructConstruct(ToUseImprovmentDestructConstruct object) {
-				return createToUseImprovmentDestructConstructAdapter();
-			}
-			@Override
 			public Adapter caseCalcScheduler(CalcScheduler object) {
 				return createCalcSchedulerAdapter();
 			}
@@ -202,6 +198,10 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 				return createCalcResourcePlannedBenefitAdapter();
 			}
 			@Override
+			public Adapter caseToUseImprovmentDestructConstruct(ToUseImprovmentDestructConstruct object) {
+				return createToUseImprovmentDestructConstructAdapter();
+			}
+			@Override
 			public Adapter caseRunParams(RunParams object) {
 				return createRunParamsAdapter();
 			}
@@ -246,16 +246,16 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 				return createActionAdapter();
 			}
 			@Override
-			public Adapter caseImprovment(Improvment object) {
-				return createImprovmentAdapter();
-			}
-			@Override
 			public Adapter casePropagatorFunction(PropagatorFunction object) {
 				return createPropagatorFunctionAdapter();
 			}
 			@Override
 			public Adapter casePropagatorFunctionBindings(PropagatorFunctionBindings object) {
 				return createPropagatorFunctionBindingsAdapter();
+			}
+			@Override
+			public Adapter caseImprovment(Improvment object) {
+				return createImprovmentAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {

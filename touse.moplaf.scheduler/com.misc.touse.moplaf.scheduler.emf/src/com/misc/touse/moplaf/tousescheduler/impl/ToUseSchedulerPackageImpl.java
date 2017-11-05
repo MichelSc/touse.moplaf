@@ -1170,8 +1170,6 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 
 		toUseUnscheduleLoadUnloadEClass = createEClass(TO_USE_UNSCHEDULE_LOAD_UNLOAD);
 
-		toUseImprovmentDestructConstructEClass = createEClass(TO_USE_IMPROVMENT_DESTRUCT_CONSTRUCT);
-
 		calcSchedulerEClass = createEClass(CALC_SCHEDULER);
 
 		calcScheduleEClass = createEClass(CALC_SCHEDULE);
@@ -1217,6 +1215,8 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 
 		calcResourcePlannedBenefitEClass = createEClass(CALC_RESOURCE_PLANNED_BENEFIT);
 		createEReference(calcResourcePlannedBenefitEClass, CALC_RESOURCE_PLANNED_BENEFIT__CONCRETE_PARENT);
+
+		toUseImprovmentDestructConstructEClass = createEClass(TO_USE_IMPROVMENT_DESTRUCT_CONSTRUCT);
 	}
 
 	/**
@@ -1262,7 +1262,6 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		toUseActionLoadUnloadEClass.getESuperTypes().add(theLocalSearchPackage.getAction());
 		toUseScheduleLoadUnloadEClass.getESuperTypes().add(this.getToUseActionLoadUnload());
 		toUseUnscheduleLoadUnloadEClass.getESuperTypes().add(this.getToUseActionLoadUnload());
-		toUseImprovmentDestructConstructEClass.getESuperTypes().add(theLocalSearchPackage.getImprovment());
 		calcSchedulerEClass.getESuperTypes().add(thePropagatorPackage.getPropagatorFunctionBindings());
 		calcScheduleEClass.getESuperTypes().add(this.getCalcScheduler());
 		calcResourceEClass.getESuperTypes().add(this.getCalcScheduler());
@@ -1279,6 +1278,7 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		calcResourceVolumeOverloadEClass.getESuperTypes().add(this.getCalcResource());
 		layerSchedulePlannedBenefitEClass.getESuperTypes().add(this.getCalcSchedule());
 		calcResourcePlannedBenefitEClass.getESuperTypes().add(this.getCalcResource());
+		toUseImprovmentDestructConstructEClass.getESuperTypes().add(theLocalSearchPackage.getImprovment());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1347,8 +1347,6 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 
 		initEClass(toUseUnscheduleLoadUnloadEClass, ToUseUnscheduleLoadUnload.class, "ToUseUnscheduleLoadUnload", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(toUseImprovmentDestructConstructEClass, ToUseImprovmentDestructConstruct.class, "ToUseImprovmentDestructConstruct", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(calcSchedulerEClass, CalcScheduler.class, "CalcScheduler", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(calcScheduleEClass, CalcSchedule.class, "CalcSchedule", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1394,6 +1392,8 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 
 		initEClass(calcResourcePlannedBenefitEClass, CalcResourcePlannedBenefit.class, "CalcResourcePlannedBenefit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCalcResourcePlannedBenefit_ConcreteParent(), this.getLayerSchedulePlannedBenefit(), null, "ConcreteParent", null, 1, 1, CalcResourcePlannedBenefit.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+
+		initEClass(toUseImprovmentDestructConstructEClass, ToUseImprovmentDestructConstruct.class, "ToUseImprovmentDestructConstruct", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

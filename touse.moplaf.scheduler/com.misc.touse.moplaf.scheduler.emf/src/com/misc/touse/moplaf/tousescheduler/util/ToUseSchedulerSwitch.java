@@ -181,13 +181,6 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ToUseSchedulerPackage.TO_USE_IMPROVMENT_DESTRUCT_CONSTRUCT: {
-				ToUseImprovmentDestructConstruct toUseImprovmentDestructConstruct = (ToUseImprovmentDestructConstruct)theEObject;
-				T result = caseToUseImprovmentDestructConstruct(toUseImprovmentDestructConstruct);
-				if (result == null) result = caseImprovment(toUseImprovmentDestructConstruct);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case ToUseSchedulerPackage.CALC_SCHEDULER: {
 				CalcScheduler calcScheduler = (CalcScheduler)theEObject;
 				T result = caseCalcScheduler(calcScheduler);
@@ -340,6 +333,13 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 				if (result == null) result = caseCalcScheduler(calcResourcePlannedBenefit);
 				if (result == null) result = casePropagatorFunctionBindings(calcResourcePlannedBenefit);
 				if (result == null) result = casePropagatorFunction(calcResourcePlannedBenefit);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ToUseSchedulerPackage.TO_USE_IMPROVMENT_DESTRUCT_CONSTRUCT: {
+				ToUseImprovmentDestructConstruct toUseImprovmentDestructConstruct = (ToUseImprovmentDestructConstruct)theEObject;
+				T result = caseToUseImprovmentDestructConstruct(toUseImprovmentDestructConstruct);
+				if (result == null) result = caseImprovment(toUseImprovmentDestructConstruct);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

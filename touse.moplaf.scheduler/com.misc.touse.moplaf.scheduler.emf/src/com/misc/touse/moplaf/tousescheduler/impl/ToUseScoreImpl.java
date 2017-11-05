@@ -318,10 +318,5 @@ public class ToUseScoreImpl extends ScoreImpl implements ToUseScore {
 		return is_better;
 	}
 
-	@Override
-	public float getScore() {
-		return this.getPlannedBenefit();
-	}
-	
 	
 } //ToUseScoreImpl
