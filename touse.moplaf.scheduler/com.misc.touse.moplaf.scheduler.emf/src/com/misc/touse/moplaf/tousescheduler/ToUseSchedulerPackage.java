@@ -915,15 +915,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCORE__DESCRIPTION = LocalSearchPackage.SCORE__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Score</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCORE__SCORE = LocalSearchPackage.SCORE__SCORE;
-
-	/**
 	 * The feature id for the '<em><b>Total Distance</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
