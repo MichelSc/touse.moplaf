@@ -103,17 +103,6 @@ public class ToUseImprovementDestructConstructItemProvider extends ImprovementIt
 	}
 
 	/**
-	 * This returns ToUseImprovementDestructConstruct.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/ToUseImprovementDestructConstruct"));
-	}
-
-	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

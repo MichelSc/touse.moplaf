@@ -231,14 +231,16 @@ public class ToUseImprovementDestructConstructImpl extends ImprovementImpl imple
 	@Override
 	protected void doIterationImpl() {
 		ToUseSchedule schedule = (ToUseSchedule)this.getSolution();
+		schedule.enable(); // activate propagator
 		
 		// destructions
 		for( Task task : schedule.getTasks()) {
 			if ( task.isScheduled() && task instanceof ToUseLoadShipment ){
-				if ( random.nextDouble()>this.getDestructionChance()) {
+				if ( this.getDestructionChance()>=random.nextDouble()) {
 					ToUseUnscheduleLoadUnload new_action = ToUseSchedulerFactory.eINSTANCE.createToUseUnscheduleLoadUnload();
 					int new_nr = this.getCurrentActionNr()+1;
 					this.setCurrentActionNr(new_nr);
+					new_action.setLoadTask((ToUseLoadShipment) task);
 					new_action.setActionNr(new_nr);
 					this.getActions().add(new_action); // owning
 					new_action.setSolution(schedule);
@@ -251,12 +253,13 @@ public class ToUseImprovementDestructConstructImpl extends ImprovementImpl imple
 		
 		// constructions
 		for( Task task : schedule.getTasks()) {
-			if ( task.isScheduled() && task instanceof ToUseLoadShipment ){
-				if ( random.nextDouble()>this.getConstructionChance()) {
+			if ( !task.isScheduled() && task instanceof ToUseLoadShipment ){
+				if ( this.getConstructionChance()>=random.nextDouble()) {
 					ToUseScheduleLoadUnload new_action = ToUseSchedulerFactory.eINSTANCE.createToUseScheduleLoadUnload();
 					int new_nr = this.getCurrentActionNr()+1;
 					this.setCurrentActionNr(new_nr);
 					new_action.setActionNr(new_nr);
+					new_action.setLoadTask((ToUseLoadShipment) task);
 					this.getActions().add(new_action); // owning
 					new_action.setSolution(schedule);
 					new_action.initialize();

@@ -58,6 +58,12 @@
     <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//ToUseScheduleTask">
       <genFeatures property="None" notify="false" createChild="false" propertyCategory="20 ToUseScheduler"
           ecoreFeature="ecore:EReference ToUseScheduler.ecore#//ToUseScheduleTask/Shipment"/>
+      <genFeatures property="Readonly" createChild="false" propertyCategory="23 ToUseScheduler Location"
+          ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUseScheduleTask/locationX"/>
+      <genFeatures property="Readonly" createChild="false" propertyCategory="23 ToUseScheduler Location"
+          ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUseScheduleTask/locationY"/>
+      <genFeatures property="Readonly" createChild="false" propertyCategory="26 ToUseScheduler Volume"
+          ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUseScheduleTask/LoadFactor"/>
       <genFeatures createChild="false" propertyCategory="23 ToUseScheduler Location"
           propertyDescription="" ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUseScheduleTask/Distance"/>
       <genFeatures createChild="false" propertyCategory="23 ToUseScheduler Location"
@@ -66,12 +72,6 @@
           propertyDescription="" ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUseScheduleTask/StartVolumeLoaded"/>
       <genFeatures createChild="false" propertyCategory="26 ToUseScheduler Volume"
           ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUseScheduleTask/EndVolumeLoaded"/>
-      <genFeatures property="Readonly" createChild="false" propertyCategory="23 ToUseScheduler Location"
-          ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUseScheduleTask/locationX"/>
-      <genFeatures property="Readonly" createChild="false" propertyCategory="23 ToUseScheduler Location"
-          ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUseScheduleTask/locationY"/>
-      <genFeatures property="Readonly" createChild="false" propertyCategory="26 ToUseScheduler Volume"
-          ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUseScheduleTask/LoadFactor"/>
       <genFeatures createChild="false" propertyCategory="26 ToUseScheduler Volume"
           ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUseScheduleTask/VolumeOverload"/>
     </genClasses>
@@ -92,7 +92,7 @@
     </genClasses>
     <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//ToUseScheduleLoadUnload"/>
     <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//ToUseUnscheduleLoadUnload"/>
-    <genClasses ecoreClass="ToUseScheduler.ecore#//ToUseImprovementDestructConstruct">
+    <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//ToUseImprovementDestructConstruct">
       <genFeatures createChild="false" propertyCategory="20 ToUseScheduler" ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUseImprovementDestructConstruct/DestructionChance"/>
       <genFeatures createChild="false" propertyCategory="20 ToUseScheduler" propertyDescription=""
           ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUseImprovementDestructConstruct/ConstructionChance"/>
