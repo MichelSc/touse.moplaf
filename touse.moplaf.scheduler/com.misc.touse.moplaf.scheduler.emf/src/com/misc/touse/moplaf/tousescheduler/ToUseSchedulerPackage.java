@@ -571,6 +571,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULER___SELECT_BAD_SOLUTION = SchedulerPackage.SCHEDULER___SELECT_BAD_SOLUTION;
 
 	/**
+	 * The operation id for the '<em>Sort Solutions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULER___SORT_SOLUTIONS = SchedulerPackage.SCHEDULER___SORT_SOLUTIONS;
+
+	/**
 	 * The operation id for the '<em>Construct Score</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -906,6 +915,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCORE__DESCRIPTION = LocalSearchPackage.SCORE__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Score</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCORE__SCORE = LocalSearchPackage.SCORE__SCORE;
+
+	/**
 	 * The feature id for the '<em><b>Total Distance</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -948,7 +966,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCORE___IS_BETTER__SCORE_1 = LocalSearchPackage.SCORE___IS_BETTER__SCORE;
+	int TO_USE_SCORE___IS_BETTER__SCORE = LocalSearchPackage.SCORE___IS_BETTER__SCORE;
 
 	/**
 	 * The operation id for the '<em>Clone</em>' operation.
@@ -966,7 +984,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCORE___COPY__SCORE_1 = LocalSearchPackage.SCORE___COPY__SCORE;
+	int TO_USE_SCORE___COPY__SCORE = LocalSearchPackage.SCORE___COPY__SCORE;
 
 	/**
 	 * The number of operations of the '<em>To Use Score</em>' class.
@@ -1942,7 +1960,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_ACTION_LOAD_UNLOAD___SELECT__MOVE_1 = LocalSearchPackage.ACTION___SELECT__MOVE;
+	int TO_USE_ACTION_LOAD_UNLOAD___SELECT__MOVE = LocalSearchPackage.ACTION___SELECT__MOVE;
 
 	/**
 	 * The number of operations of the '<em>To Use Action Load Unload</em>' class.
@@ -2059,7 +2077,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD___SELECT__MOVE_1 = TO_USE_ACTION_LOAD_UNLOAD___SELECT__MOVE_1;
+	int TO_USE_SCHEDULE_LOAD_UNLOAD___SELECT__MOVE = TO_USE_ACTION_LOAD_UNLOAD___SELECT__MOVE;
 
 	/**
 	 * The number of operations of the '<em>To Use Schedule Load Unload</em>' class.
@@ -2216,7 +2234,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_UNSCHEDULE_LOAD_UNLOAD___SELECT__MOVE_1 = TO_USE_ACTION_LOAD_UNLOAD___SELECT__MOVE_1;
+	int TO_USE_UNSCHEDULE_LOAD_UNLOAD___SELECT__MOVE = TO_USE_ACTION_LOAD_UNLOAD___SELECT__MOVE;
 
 	/**
 	 * The number of operations of the '<em>To Use Unschedule Load Unload</em>' class.

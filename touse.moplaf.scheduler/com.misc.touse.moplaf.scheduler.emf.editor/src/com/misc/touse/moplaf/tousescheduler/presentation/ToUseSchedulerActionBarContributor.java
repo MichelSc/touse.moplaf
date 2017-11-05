@@ -49,6 +49,7 @@ import com.misc.common.moplaf.emf.editor.action.InitializeAction;
 import com.misc.common.moplaf.emf.editor.action.ResetAction;
 import com.misc.common.moplaf.emf.editor.action.RunAction;
 import com.misc.common.moplaf.emf.editor.action.SelectAction;
+import com.misc.common.moplaf.emf.editor.action.SortAction;
 import com.misc.common.moplaf.emf.editor.action.UndoAction;
 
 /**
@@ -322,6 +323,7 @@ public class ToUseSchedulerActionBarContributor
 		applicationPopUpMenuActions.add(new RunAction       (activeEditorPart, selection));
 		applicationPopUpMenuActions.add(new DoAction        (activeEditorPart, selection));
 		applicationPopUpMenuActions.add(new UndoAction      (activeEditorPart, selection));
+		applicationPopUpMenuActions.add(new SortAction      (activeEditorPart, selection));
 
 		if (createChildMenuManager != null) {
 			populateManager(createChildMenuManager, createChildActions, null);
