@@ -175,15 +175,6 @@ public interface ToUseSchedulerFactory extends EFactory {
 	CalcResourcePlannedBenefit createCalcResourcePlannedBenefit();
 
 	/**
-	 * Returns a new object of class '<em>To Use Improvment Destruct Construct</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>To Use Improvment Destruct Construct</em>'.
-	 * @generated
-	 */
-	ToUseImprovmentDestructConstruct createToUseImprovmentDestructConstruct();
-
-	/**
 	 * Returns a new object of class '<em>Calc Task Start Volume Loaded</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -209,6 +200,15 @@ public interface ToUseSchedulerFactory extends EFactory {
 	 * @generated
 	 */
 	ToUseUnscheduleLoadUnload createToUseUnscheduleLoadUnload();
+
+	/**
+	 * Returns a new object of class '<em>To Use Improvement Destruct Construct</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>To Use Improvement Destruct Construct</em>'.
+	 * @generated
+	 */
+	ToUseImprovementDestructConstruct createToUseImprovementDestructConstruct();
 
 	/**
 	 * Returns a new object of class '<em>To Use Schedule Load Unload</em>'.

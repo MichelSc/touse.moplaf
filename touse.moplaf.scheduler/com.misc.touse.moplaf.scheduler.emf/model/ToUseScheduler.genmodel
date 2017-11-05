@@ -92,7 +92,11 @@
     </genClasses>
     <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//ToUseScheduleLoadUnload"/>
     <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//ToUseUnscheduleLoadUnload"/>
-    <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//ToUseImprovmentDestructConstruct"/>
+    <genClasses ecoreClass="ToUseScheduler.ecore#//ToUseImprovementDestructConstruct">
+      <genFeatures createChild="false" propertyCategory="20 ToUseScheduler" ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUseImprovementDestructConstruct/DestructionChance"/>
+      <genFeatures createChild="false" propertyCategory="20 ToUseScheduler" propertyDescription=""
+          ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUseImprovementDestructConstruct/ConstructionChance"/>
+    </genClasses>
     <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//CalcScheduler"/>
     <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//CalcSchedule">
       <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//CalcSchedule/Schedule"/>

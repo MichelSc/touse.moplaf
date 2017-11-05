@@ -50,16 +50,16 @@
   <eClassifiers xsi:type="ecore:EClass" name="ToUseScheduleTask" eSuperTypes="../../com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//Task">
     <eStructuralFeatures xsi:type="ecore:EReference" name="Shipment" lowerBound="1"
         eType="#//Shipment" changeable="false" volatile="true" transient="true" derived="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Distance" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="DistanceFromPrevious" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="StartVolumeLoaded" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="EndVolumeLoaded" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="locationX" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
         changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="locationY" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
         changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="LoadFactor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
         changeable="false" volatile="true" transient="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Distance" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="DistanceFromPrevious" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="StartVolumeLoaded" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="EndVolumeLoaded" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="VolumeOverload" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ToUseLoadShipment" eSuperTypes="#//ToUseScheduleTask">
@@ -81,6 +81,12 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ToUseScheduleLoadUnload" eSuperTypes="#//ToUseActionLoadUnload"/>
   <eClassifiers xsi:type="ecore:EClass" name="ToUseUnscheduleLoadUnload" eSuperTypes="#//ToUseActionLoadUnload"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ToUseImprovementDestructConstruct" eSuperTypes="../../com.misc.common.moplaf.localsearch.emf/model/localsearch.ecore#//Improvement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="DestructionChance" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
+        defaultValueLiteral="0.05"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ConstructionChance" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
+        defaultValueLiteral="1.0"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CalcScheduler" abstract="true" eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//PropagatorFunctionBindings"/>
   <eClassifiers xsi:type="ecore:EClass" name="CalcSchedule" abstract="true" eSuperTypes="#//CalcScheduler">
     <eStructuralFeatures xsi:type="ecore:EReference" name="Schedule" lowerBound="1"
@@ -152,5 +158,4 @@
         eType="#//LayerSchedulePlannedBenefit" changeable="false" volatile="true"
         transient="true" derived="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ToUseImprovmentDestructConstruct" eSuperTypes="../../com.misc.common.moplaf.localsearch.emf/model/localsearch.ecore#//Improvment"/>
 </ecore:EPackage>

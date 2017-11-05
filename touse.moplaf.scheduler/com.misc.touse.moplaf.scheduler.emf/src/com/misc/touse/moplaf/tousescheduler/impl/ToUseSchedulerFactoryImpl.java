@@ -68,6 +68,7 @@ public class ToUseSchedulerFactoryImpl extends EFactoryImpl implements ToUseSche
 			case ToUseSchedulerPackage.TO_USE_UNLOAD_SHIPMENT: return createToUseUnloadShipment();
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_LOAD_UNLOAD: return createToUseScheduleLoadUnload();
 			case ToUseSchedulerPackage.TO_USE_UNSCHEDULE_LOAD_UNLOAD: return createToUseUnscheduleLoadUnload();
+			case ToUseSchedulerPackage.TO_USE_IMPROVEMENT_DESTRUCT_CONSTRUCT: return createToUseImprovementDestructConstruct();
 			case ToUseSchedulerPackage.SCOPE_SCHEDULE_SCORE: return createScopeScheduleScore();
 			case ToUseSchedulerPackage.LAYER_SCHEDULE_DISTANCE: return createLayerScheduleDistance();
 			case ToUseSchedulerPackage.CALC_TASK_DISTANCE_FROM_PREVIOUS: return createCalcTaskDistanceFromPrevious();
@@ -80,7 +81,6 @@ public class ToUseSchedulerFactoryImpl extends EFactoryImpl implements ToUseSche
 			case ToUseSchedulerPackage.CALC_RESOURCE_VOLUME_OVERLOAD: return createCalcResourceVolumeOverload();
 			case ToUseSchedulerPackage.LAYER_SCHEDULE_PLANNED_BENEFIT: return createLayerSchedulePlannedBenefit();
 			case ToUseSchedulerPackage.CALC_RESOURCE_PLANNED_BENEFIT: return createCalcResourcePlannedBenefit();
-			case ToUseSchedulerPackage.TO_USE_IMPROVMENT_DESTRUCT_CONSTRUCT: return createToUseImprovmentDestructConstruct();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -261,16 +261,6 @@ public class ToUseSchedulerFactoryImpl extends EFactoryImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ToUseImprovmentDestructConstruct createToUseImprovmentDestructConstruct() {
-		ToUseImprovmentDestructConstructImpl toUseImprovmentDestructConstruct = new ToUseImprovmentDestructConstructImpl();
-		return toUseImprovmentDestructConstruct;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public CalcTaskStartVolumeLoaded createCalcTaskStartVolumeLoaded() {
 		CalcTaskStartVolumeLoadedImpl calcTaskStartVolumeLoaded = new CalcTaskStartVolumeLoadedImpl();
 		return calcTaskStartVolumeLoaded;
@@ -294,6 +284,16 @@ public class ToUseSchedulerFactoryImpl extends EFactoryImpl implements ToUseSche
 	public ToUseUnscheduleLoadUnload createToUseUnscheduleLoadUnload() {
 		ToUseUnscheduleLoadUnloadImpl toUseUnscheduleLoadUnload = new ToUseUnscheduleLoadUnloadImpl();
 		return toUseUnscheduleLoadUnload;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ToUseImprovementDestructConstruct createToUseImprovementDestructConstruct() {
+		ToUseImprovementDestructConstructImpl toUseImprovementDestructConstruct = new ToUseImprovementDestructConstructImpl();
+		return toUseImprovementDestructConstruct;
 	}
 
 	/**

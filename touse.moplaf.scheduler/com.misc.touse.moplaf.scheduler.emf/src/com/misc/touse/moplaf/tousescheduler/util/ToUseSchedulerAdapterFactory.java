@@ -5,7 +5,7 @@ package com.misc.touse.moplaf.tousescheduler.util;
 import com.misc.common.moplaf.job.Run;
 import com.misc.common.moplaf.job.RunParams;
 import com.misc.common.moplaf.localsearch.Action;
-import com.misc.common.moplaf.localsearch.Improvment;
+import com.misc.common.moplaf.localsearch.Improvement;
 import com.misc.common.moplaf.localsearch.Score;
 import com.misc.common.moplaf.localsearch.Solution;
 import com.misc.common.moplaf.localsearch.Strategy;
@@ -134,6 +134,10 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 				return createToUseUnscheduleLoadUnloadAdapter();
 			}
 			@Override
+			public Adapter caseToUseImprovementDestructConstruct(ToUseImprovementDestructConstruct object) {
+				return createToUseImprovementDestructConstructAdapter();
+			}
+			@Override
 			public Adapter caseCalcScheduler(CalcScheduler object) {
 				return createCalcSchedulerAdapter();
 			}
@@ -198,10 +202,6 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 				return createCalcResourcePlannedBenefitAdapter();
 			}
 			@Override
-			public Adapter caseToUseImprovmentDestructConstruct(ToUseImprovmentDestructConstruct object) {
-				return createToUseImprovmentDestructConstructAdapter();
-			}
-			@Override
 			public Adapter caseRunParams(RunParams object) {
 				return createRunParamsAdapter();
 			}
@@ -246,16 +246,16 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 				return createActionAdapter();
 			}
 			@Override
+			public Adapter caseImprovement(Improvement object) {
+				return createImprovementAdapter();
+			}
+			@Override
 			public Adapter casePropagatorFunction(PropagatorFunction object) {
 				return createPropagatorFunctionAdapter();
 			}
 			@Override
 			public Adapter casePropagatorFunctionBindings(PropagatorFunctionBindings object) {
 				return createPropagatorFunctionBindingsAdapter();
-			}
-			@Override
-			public Adapter caseImprovment(Improvment object) {
-				return createImprovmentAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -572,20 +572,6 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.tousescheduler.ToUseImprovmentDestructConstruct <em>To Use Improvment Destruct Construct</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.touse.moplaf.tousescheduler.ToUseImprovmentDestructConstruct
-	 * @generated
-	 */
-	public Adapter createToUseImprovmentDestructConstructAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.job.RunParams <em>Run Params</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -652,6 +638,20 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createToUseUnscheduleLoadUnloadAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.tousescheduler.ToUseImprovementDestructConstruct <em>To Use Improvement Destruct Construct</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseImprovementDestructConstruct
+	 * @generated
+	 */
+	public Adapter createToUseImprovementDestructConstructAdapter() {
 		return null;
 	}
 
@@ -838,20 +838,6 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.localsearch.Improvment <em>Improvment</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.localsearch.Improvment
-	 * @generated
-	 */
-	public Adapter createImprovmentAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.localsearch.Action <em>Action</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -862,6 +848,20 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createActionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.localsearch.Improvement <em>Improvement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.localsearch.Improvement
+	 * @generated
+	 */
+	public Adapter createImprovementAdapter() {
 		return null;
 	}
 
