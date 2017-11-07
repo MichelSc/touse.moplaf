@@ -5,9 +5,9 @@ package com.misc.touse.moplaf.tousescheduler.provider;
 
 import com.misc.common.moplaf.localsearch.LocalSearchPackage;
 
-import com.misc.common.moplaf.localsearch.provider.ImprovementItemProvider;
+import com.misc.common.moplaf.localsearch.provider.PhaseItemProvider;
 
-import com.misc.touse.moplaf.tousescheduler.ToUseImprovementDestructConstruct;
+import com.misc.touse.moplaf.tousescheduler.ToUsePhaseDestructConstruct;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerFactory;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
 
@@ -25,19 +25,19 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link com.misc.touse.moplaf.tousescheduler.ToUseImprovementDestructConstruct} object.
+ * This is the item provider adapter for a {@link com.misc.touse.moplaf.tousescheduler.ToUsePhaseDestructConstruct} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ToUseImprovementDestructConstructItemProvider extends ImprovementItemProvider {
+public class ToUsePhaseDestructConstructItemProvider extends PhaseItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ToUseImprovementDestructConstructItemProvider(AdapterFactory adapterFactory) {
+	public ToUsePhaseDestructConstructItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -69,14 +69,14 @@ public class ToUseImprovementDestructConstructItemProvider extends ImprovementIt
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ToUseImprovementDestructConstruct_DestructionChance_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseImprovementDestructConstruct_DestructionChance_feature", "_UI_ToUseImprovementDestructConstruct_type"),
-				 ToUseSchedulerPackage.Literals.TO_USE_IMPROVEMENT_DESTRUCT_CONSTRUCT__DESTRUCTION_CHANCE,
+				 getString("_UI_ToUsePhaseDestructConstruct_DestructionChance_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ToUsePhaseDestructConstruct_DestructionChance_feature", "_UI_ToUsePhaseDestructConstruct_type"),
+				 ToUseSchedulerPackage.Literals.TO_USE_PHASE_DESTRUCT_CONSTRUCT__DESTRUCTION_CHANCE,
 				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 getString("_UI__20ToUseSchedulerPropertyCategory"),
+				 null,
 				 null));
 	}
 
@@ -91,15 +91,26 @@ public class ToUseImprovementDestructConstructItemProvider extends ImprovementIt
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ToUseImprovementDestructConstruct_ConstructionChance_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseImprovementDestructConstruct_ConstructionChance_feature", "_UI_ToUseImprovementDestructConstruct_type"),
-				 ToUseSchedulerPackage.Literals.TO_USE_IMPROVEMENT_DESTRUCT_CONSTRUCT__CONSTRUCTION_CHANCE,
+				 getString("_UI_ToUsePhaseDestructConstruct_ConstructionChance_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ToUsePhaseDestructConstruct_ConstructionChance_feature", "_UI_ToUsePhaseDestructConstruct_type"),
+				 ToUseSchedulerPackage.Literals.TO_USE_PHASE_DESTRUCT_CONSTRUCT__CONSTRUCTION_CHANCE,
 				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 getString("_UI__20ToUseSchedulerPropertyCategory"),
+				 null,
 				 null));
+	}
+
+	/**
+	 * This returns ToUsePhaseDestructConstruct.gif.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object getImage(Object object) {
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ToUsePhaseDestructConstruct"));
 	}
 
 	/**
@@ -110,10 +121,10 @@ public class ToUseImprovementDestructConstructItemProvider extends ImprovementIt
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ToUseImprovementDestructConstruct)object).getName();
+		String label = ((ToUsePhaseDestructConstruct)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_ToUseImprovementDestructConstruct_type") :
-			getString("_UI_ToUseImprovementDestructConstruct_type") + " " + label;
+			getString("_UI_ToUsePhaseDestructConstruct_type") :
+			getString("_UI_ToUsePhaseDestructConstruct_type") + " " + label;
 	}
 	
 
@@ -128,9 +139,9 @@ public class ToUseImprovementDestructConstructItemProvider extends ImprovementIt
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(ToUseImprovementDestructConstruct.class)) {
-			case ToUseSchedulerPackage.TO_USE_IMPROVEMENT_DESTRUCT_CONSTRUCT__DESTRUCTION_CHANCE:
-			case ToUseSchedulerPackage.TO_USE_IMPROVEMENT_DESTRUCT_CONSTRUCT__CONSTRUCTION_CHANCE:
+		switch (notification.getFeatureID(ToUsePhaseDestructConstruct.class)) {
+			case ToUseSchedulerPackage.TO_USE_PHASE_DESTRUCT_CONSTRUCT__DESTRUCTION_CHANCE:
+			case ToUseSchedulerPackage.TO_USE_PHASE_DESTRUCT_CONSTRUCT__CONSTRUCTION_CHANCE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -150,13 +161,36 @@ public class ToUseImprovementDestructConstructItemProvider extends ImprovementIt
 
 		newChildDescriptors.add
 			(createChildParameter
-				(LocalSearchPackage.Literals.IMPROVEMENT__ACTIONS,
-				 ToUseSchedulerFactory.eINSTANCE.createToUseScheduleLoadUnload()));
+				(LocalSearchPackage.Literals.SOLUTION_CHANGE__END_SOLUTION_OWNED,
+				 ToUseSchedulerFactory.eINSTANCE.createToUseSchedule()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(LocalSearchPackage.Literals.IMPROVEMENT__ACTIONS,
-				 ToUseSchedulerFactory.eINSTANCE.createToUseUnscheduleLoadUnload()));
+				(LocalSearchPackage.Literals.SOLUTION_CHANGE__START_SOLUTION_OWNED,
+				 ToUseSchedulerFactory.eINSTANCE.createToUseSchedule()));
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify =
+			childFeature == LocalSearchPackage.Literals.SOLUTION_CHANGE__END_SOLUTION_OWNED ||
+			childFeature == LocalSearchPackage.Literals.SOLUTION_CHANGE__START_SOLUTION_OWNED;
+
+		if (qualify) {
+			return getString
+				("_UI_CreateChild_text2",
+				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 	/**

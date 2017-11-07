@@ -23,19 +23,49 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleTaskImpl#getShipment <em>Shipment</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleTaskImpl#getLocationX <em>Location X</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleTaskImpl#getLocationY <em>Location Y</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleTaskImpl#getLoadFactor <em>Load Factor</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleTaskImpl#getDistance <em>Distance</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleTaskImpl#getDistanceFromPrevious <em>Distance From Previous</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleTaskImpl#getStartVolumeLoaded <em>Start Volume Loaded</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleTaskImpl#getEndVolumeLoaded <em>End Volume Loaded</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleTaskImpl#getLocationX <em>Location X</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleTaskImpl#getLocationY <em>Location Y</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleTaskImpl#getLoadFactor <em>Load Factor</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleTaskImpl#isVolumeOverload <em>Volume Overload</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ToUseScheduleTaskImpl extends TaskImpl implements ToUseScheduleTask {
+	/**
+	 * The default value of the '{@link #getLocationX() <em>Location X</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLocationX()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final float LOCATION_X_EDEFAULT = 0.0F;
+
+	/**
+	 * The default value of the '{@link #getLocationY() <em>Location Y</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLocationY()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final float LOCATION_Y_EDEFAULT = 0.0F;
+
+	/**
+	 * The default value of the '{@link #getLoadFactor() <em>Load Factor</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLoadFactor()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final float LOAD_FACTOR_EDEFAULT = 0.0F;
+
 	/**
 	 * The default value of the '{@link #getDistance() <em>Distance</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -115,36 +145,6 @@ public class ToUseScheduleTaskImpl extends TaskImpl implements ToUseScheduleTask
 	 * @ordered
 	 */
 	protected float endVolumeLoaded = END_VOLUME_LOADED_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getLocationX() <em>Location X</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLocationX()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final float LOCATION_X_EDEFAULT = 0.0F;
-
-	/**
-	 * The default value of the '{@link #getLocationY() <em>Location Y</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLocationY()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final float LOCATION_Y_EDEFAULT = 0.0F;
-
-	/**
-	 * The default value of the '{@link #getLoadFactor() <em>Load Factor</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLoadFactor()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final float LOAD_FACTOR_EDEFAULT = 0.0F;
 
 	/**
 	 * The default value of the '{@link #isVolumeOverload() <em>Volume Overload</em>}' attribute.
@@ -356,6 +356,12 @@ public class ToUseScheduleTaskImpl extends TaskImpl implements ToUseScheduleTask
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__SHIPMENT:
 				if (resolve) return getShipment();
 				return basicGetShipment();
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__LOCATION_X:
+				return getLocationX();
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__LOCATION_Y:
+				return getLocationY();
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__LOAD_FACTOR:
+				return getLoadFactor();
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__DISTANCE:
 				return getDistance();
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__DISTANCE_FROM_PREVIOUS:
@@ -364,12 +370,6 @@ public class ToUseScheduleTaskImpl extends TaskImpl implements ToUseScheduleTask
 				return getStartVolumeLoaded();
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__END_VOLUME_LOADED:
 				return getEndVolumeLoaded();
-			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__LOCATION_X:
-				return getLocationX();
-			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__LOCATION_Y:
-				return getLocationY();
-			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__LOAD_FACTOR:
-				return getLoadFactor();
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__VOLUME_OVERLOAD:
 				return isVolumeOverload();
 		}
@@ -440,6 +440,12 @@ public class ToUseScheduleTaskImpl extends TaskImpl implements ToUseScheduleTask
 		switch (featureID) {
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__SHIPMENT:
 				return basicGetShipment() != null;
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__LOCATION_X:
+				return getLocationX() != LOCATION_X_EDEFAULT;
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__LOCATION_Y:
+				return getLocationY() != LOCATION_Y_EDEFAULT;
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__LOAD_FACTOR:
+				return getLoadFactor() != LOAD_FACTOR_EDEFAULT;
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__DISTANCE:
 				return distance != DISTANCE_EDEFAULT;
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__DISTANCE_FROM_PREVIOUS:
@@ -448,12 +454,6 @@ public class ToUseScheduleTaskImpl extends TaskImpl implements ToUseScheduleTask
 				return startVolumeLoaded != START_VOLUME_LOADED_EDEFAULT;
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__END_VOLUME_LOADED:
 				return endVolumeLoaded != END_VOLUME_LOADED_EDEFAULT;
-			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__LOCATION_X:
-				return getLocationX() != LOCATION_X_EDEFAULT;
-			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__LOCATION_Y:
-				return getLocationY() != LOCATION_Y_EDEFAULT;
-			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__LOAD_FACTOR:
-				return getLoadFactor() != LOAD_FACTOR_EDEFAULT;
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__VOLUME_OVERLOAD:
 				return volumeOverload != VOLUME_OVERLOAD_EDEFAULT;
 		}

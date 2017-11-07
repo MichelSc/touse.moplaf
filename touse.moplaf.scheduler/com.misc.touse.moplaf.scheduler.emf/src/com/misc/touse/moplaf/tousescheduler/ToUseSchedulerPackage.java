@@ -355,22 +355,13 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULER__RETURN_INFORMATION = SchedulerPackage.SCHEDULER__RETURN_INFORMATION;
 
 	/**
-	 * The feature id for the '<em><b>Improvements</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Phases</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULER__IMPROVEMENTS = SchedulerPackage.SCHEDULER__IMPROVEMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Best Solution</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULER__BEST_SOLUTION = SchedulerPackage.SCHEDULER__BEST_SOLUTION;
+	int TO_USE_SCHEDULER__PHASES = SchedulerPackage.SCHEDULER__PHASES;
 
 	/**
 	 * The feature id for the '<em><b>Solutions</b></em>' containment reference list.
@@ -771,7 +762,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE__DESCENDANTS = SchedulerPackage.SCHEDULE__DESCENDANTS;
 
 	/**
-	 * The feature id for the '<em><b>Strategy</b></em>' container reference.
+	 * The feature id for the '<em><b>Strategy</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1158,6 +1149,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE_TASK__PROPAGATOR_FUNCTIONS = SchedulerPackage.TASK__PROPAGATOR_FUNCTIONS;
 
 	/**
+	 * The feature id for the '<em><b>Schedule</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_TASK__SCHEDULE = SchedulerPackage.TASK__SCHEDULE;
+
+	/**
 	 * The feature id for the '<em><b>Next Task</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1185,24 +1185,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE_TASK__SCHEDULED_RESOURCE = SchedulerPackage.TASK__SCHEDULED_RESOURCE;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULE_TASK__DESCRIPTION = SchedulerPackage.TASK__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Schedule</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULE_TASK__SCHEDULE = SchedulerPackage.TASK__SCHEDULE;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1210,6 +1192,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_SCHEDULE_TASK__NAME = SchedulerPackage.TASK__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_TASK__DESCRIPTION = SchedulerPackage.TASK__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Scheduled</b></em>' attribute.
@@ -1230,49 +1221,13 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE_TASK__SHIPMENT = SchedulerPackage.TASK_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Distance</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULE_TASK__DISTANCE = SchedulerPackage.TASK_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Distance From Previous</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULE_TASK__DISTANCE_FROM_PREVIOUS = SchedulerPackage.TASK_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Start Volume Loaded</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULE_TASK__START_VOLUME_LOADED = SchedulerPackage.TASK_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>End Volume Loaded</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULE_TASK__END_VOLUME_LOADED = SchedulerPackage.TASK_FEATURE_COUNT + 4;
-
-	/**
 	 * The feature id for the '<em><b>Location X</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_TASK__LOCATION_X = SchedulerPackage.TASK_FEATURE_COUNT + 5;
+	int TO_USE_SCHEDULE_TASK__LOCATION_X = SchedulerPackage.TASK_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Location Y</b></em>' attribute.
@@ -1281,7 +1236,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_TASK__LOCATION_Y = SchedulerPackage.TASK_FEATURE_COUNT + 6;
+	int TO_USE_SCHEDULE_TASK__LOCATION_Y = SchedulerPackage.TASK_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Load Factor</b></em>' attribute.
@@ -1290,7 +1245,43 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_TASK__LOAD_FACTOR = SchedulerPackage.TASK_FEATURE_COUNT + 7;
+	int TO_USE_SCHEDULE_TASK__LOAD_FACTOR = SchedulerPackage.TASK_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Distance</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_TASK__DISTANCE = SchedulerPackage.TASK_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Distance From Previous</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_TASK__DISTANCE_FROM_PREVIOUS = SchedulerPackage.TASK_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Start Volume Loaded</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_TASK__START_VOLUME_LOADED = SchedulerPackage.TASK_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>End Volume Loaded</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_TASK__END_VOLUME_LOADED = SchedulerPackage.TASK_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Volume Overload</b></em>' attribute.
@@ -1394,6 +1385,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_LOAD_SHIPMENT__PROPAGATOR_FUNCTIONS = TO_USE_SCHEDULE_TASK__PROPAGATOR_FUNCTIONS;
 
 	/**
+	 * The feature id for the '<em><b>Schedule</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT__SCHEDULE = TO_USE_SCHEDULE_TASK__SCHEDULE;
+
+	/**
 	 * The feature id for the '<em><b>Next Task</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1421,24 +1421,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_LOAD_SHIPMENT__SCHEDULED_RESOURCE = TO_USE_SCHEDULE_TASK__SCHEDULED_RESOURCE;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_LOAD_SHIPMENT__DESCRIPTION = TO_USE_SCHEDULE_TASK__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Schedule</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_LOAD_SHIPMENT__SCHEDULE = TO_USE_SCHEDULE_TASK__SCHEDULE;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1446,6 +1428,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_LOAD_SHIPMENT__NAME = TO_USE_SCHEDULE_TASK__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT__DESCRIPTION = TO_USE_SCHEDULE_TASK__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Scheduled</b></em>' attribute.
@@ -1464,6 +1455,33 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_LOAD_SHIPMENT__SHIPMENT = TO_USE_SCHEDULE_TASK__SHIPMENT;
+
+	/**
+	 * The feature id for the '<em><b>Location X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT__LOCATION_X = TO_USE_SCHEDULE_TASK__LOCATION_X;
+
+	/**
+	 * The feature id for the '<em><b>Location Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT__LOCATION_Y = TO_USE_SCHEDULE_TASK__LOCATION_Y;
+
+	/**
+	 * The feature id for the '<em><b>Load Factor</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT__LOAD_FACTOR = TO_USE_SCHEDULE_TASK__LOAD_FACTOR;
 
 	/**
 	 * The feature id for the '<em><b>Distance</b></em>' attribute.
@@ -1500,33 +1518,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_LOAD_SHIPMENT__END_VOLUME_LOADED = TO_USE_SCHEDULE_TASK__END_VOLUME_LOADED;
-
-	/**
-	 * The feature id for the '<em><b>Location X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_LOAD_SHIPMENT__LOCATION_X = TO_USE_SCHEDULE_TASK__LOCATION_X;
-
-	/**
-	 * The feature id for the '<em><b>Location Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_LOAD_SHIPMENT__LOCATION_Y = TO_USE_SCHEDULE_TASK__LOCATION_Y;
-
-	/**
-	 * The feature id for the '<em><b>Load Factor</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_LOAD_SHIPMENT__LOAD_FACTOR = TO_USE_SCHEDULE_TASK__LOAD_FACTOR;
 
 	/**
 	 * The feature id for the '<em><b>Volume Overload</b></em>' attribute.
@@ -1638,6 +1629,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_UNLOAD_SHIPMENT__PROPAGATOR_FUNCTIONS = TO_USE_SCHEDULE_TASK__PROPAGATOR_FUNCTIONS;
 
 	/**
+	 * The feature id for the '<em><b>Schedule</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT__SCHEDULE = TO_USE_SCHEDULE_TASK__SCHEDULE;
+
+	/**
 	 * The feature id for the '<em><b>Next Task</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1665,24 +1665,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_UNLOAD_SHIPMENT__SCHEDULED_RESOURCE = TO_USE_SCHEDULE_TASK__SCHEDULED_RESOURCE;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_UNLOAD_SHIPMENT__DESCRIPTION = TO_USE_SCHEDULE_TASK__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Schedule</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_UNLOAD_SHIPMENT__SCHEDULE = TO_USE_SCHEDULE_TASK__SCHEDULE;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1690,6 +1672,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_UNLOAD_SHIPMENT__NAME = TO_USE_SCHEDULE_TASK__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT__DESCRIPTION = TO_USE_SCHEDULE_TASK__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Scheduled</b></em>' attribute.
@@ -1708,6 +1699,33 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_UNLOAD_SHIPMENT__SHIPMENT = TO_USE_SCHEDULE_TASK__SHIPMENT;
+
+	/**
+	 * The feature id for the '<em><b>Location X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT__LOCATION_X = TO_USE_SCHEDULE_TASK__LOCATION_X;
+
+	/**
+	 * The feature id for the '<em><b>Location Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT__LOCATION_Y = TO_USE_SCHEDULE_TASK__LOCATION_Y;
+
+	/**
+	 * The feature id for the '<em><b>Load Factor</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT__LOAD_FACTOR = TO_USE_SCHEDULE_TASK__LOAD_FACTOR;
 
 	/**
 	 * The feature id for the '<em><b>Distance</b></em>' attribute.
@@ -1744,33 +1762,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_UNLOAD_SHIPMENT__END_VOLUME_LOADED = TO_USE_SCHEDULE_TASK__END_VOLUME_LOADED;
-
-	/**
-	 * The feature id for the '<em><b>Location X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_UNLOAD_SHIPMENT__LOCATION_X = TO_USE_SCHEDULE_TASK__LOCATION_X;
-
-	/**
-	 * The feature id for the '<em><b>Location Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_UNLOAD_SHIPMENT__LOCATION_Y = TO_USE_SCHEDULE_TASK__LOCATION_Y;
-
-	/**
-	 * The feature id for the '<em><b>Load Factor</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_UNLOAD_SHIPMENT__LOAD_FACTOR = TO_USE_SCHEDULE_TASK__LOAD_FACTOR;
 
 	/**
 	 * The feature id for the '<em><b>Volume Overload</b></em>' attribute.
@@ -1873,6 +1864,87 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_ACTION_LOAD_UNLOAD = 10;
 
 	/**
+	 * The feature id for the '<em><b>End Solution Owned</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_ACTION_LOAD_UNLOAD__END_SOLUTION_OWNED = LocalSearchPackage.ACTION__END_SOLUTION_OWNED;
+
+	/**
+	 * The feature id for the '<em><b>Start Solution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_ACTION_LOAD_UNLOAD__START_SOLUTION = LocalSearchPackage.ACTION__START_SOLUTION;
+
+	/**
+	 * The feature id for the '<em><b>End Solution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_ACTION_LOAD_UNLOAD__END_SOLUTION = LocalSearchPackage.ACTION__END_SOLUTION;
+
+	/**
+	 * The feature id for the '<em><b>Start Solution Owned</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_ACTION_LOAD_UNLOAD__START_SOLUTION_OWNED = LocalSearchPackage.ACTION__START_SOLUTION_OWNED;
+
+	/**
+	 * The feature id for the '<em><b>Previous Change</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_ACTION_LOAD_UNLOAD__PREVIOUS_CHANGE = LocalSearchPackage.ACTION__PREVIOUS_CHANGE;
+
+	/**
+	 * The feature id for the '<em><b>Level</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_ACTION_LOAD_UNLOAD__LEVEL = LocalSearchPackage.ACTION__LEVEL;
+
+	/**
+	 * The feature id for the '<em><b>Solutions</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_ACTION_LOAD_UNLOAD__SOLUTIONS = LocalSearchPackage.ACTION__SOLUTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Sub Changes</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_ACTION_LOAD_UNLOAD__SUB_CHANGES = LocalSearchPackage.ACTION__SUB_CHANGES;
+
+	/**
+	 * The feature id for the '<em><b>Current Solution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_ACTION_LOAD_UNLOAD__CURRENT_SOLUTION = LocalSearchPackage.ACTION__CURRENT_SOLUTION;
+
+	/**
 	 * The feature id for the '<em><b>Root Moves</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1918,15 +1990,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_ACTION_LOAD_UNLOAD__VALID_FEEDBACK = LocalSearchPackage.ACTION__VALID_FEEDBACK;
 
 	/**
-	 * The feature id for the '<em><b>Solution</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_ACTION_LOAD_UNLOAD__SOLUTION = LocalSearchPackage.ACTION__SOLUTION;
-
-	/**
 	 * The feature id for the '<em><b>Action Nr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1936,13 +1999,13 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_ACTION_LOAD_UNLOAD__ACTION_NR = LocalSearchPackage.ACTION__ACTION_NR;
 
 	/**
-	 * The feature id for the '<em><b>Improvement</b></em>' container reference.
+	 * The feature id for the '<em><b>Step</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_ACTION_LOAD_UNLOAD__IMPROVEMENT = LocalSearchPackage.ACTION__IMPROVEMENT;
+	int TO_USE_ACTION_LOAD_UNLOAD__STEP = LocalSearchPackage.ACTION__STEP;
 
 	/**
 	 * The feature id for the '<em><b>Load Task</b></em>' reference.
@@ -2008,6 +2071,87 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_ACTION_LOAD_UNLOAD_OPERATION_COUNT = LocalSearchPackage.ACTION_OPERATION_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>End Solution Owned</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_LOAD_UNLOAD__END_SOLUTION_OWNED = TO_USE_ACTION_LOAD_UNLOAD__END_SOLUTION_OWNED;
+
+	/**
+	 * The feature id for the '<em><b>Start Solution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_LOAD_UNLOAD__START_SOLUTION = TO_USE_ACTION_LOAD_UNLOAD__START_SOLUTION;
+
+	/**
+	 * The feature id for the '<em><b>End Solution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_LOAD_UNLOAD__END_SOLUTION = TO_USE_ACTION_LOAD_UNLOAD__END_SOLUTION;
+
+	/**
+	 * The feature id for the '<em><b>Start Solution Owned</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_LOAD_UNLOAD__START_SOLUTION_OWNED = TO_USE_ACTION_LOAD_UNLOAD__START_SOLUTION_OWNED;
+
+	/**
+	 * The feature id for the '<em><b>Previous Change</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_LOAD_UNLOAD__PREVIOUS_CHANGE = TO_USE_ACTION_LOAD_UNLOAD__PREVIOUS_CHANGE;
+
+	/**
+	 * The feature id for the '<em><b>Level</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_LOAD_UNLOAD__LEVEL = TO_USE_ACTION_LOAD_UNLOAD__LEVEL;
+
+	/**
+	 * The feature id for the '<em><b>Solutions</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_LOAD_UNLOAD__SOLUTIONS = TO_USE_ACTION_LOAD_UNLOAD__SOLUTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Sub Changes</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_LOAD_UNLOAD__SUB_CHANGES = TO_USE_ACTION_LOAD_UNLOAD__SUB_CHANGES;
+
+	/**
+	 * The feature id for the '<em><b>Current Solution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_LOAD_UNLOAD__CURRENT_SOLUTION = TO_USE_ACTION_LOAD_UNLOAD__CURRENT_SOLUTION;
+
+	/**
 	 * The feature id for the '<em><b>Root Moves</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2053,15 +2197,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE_LOAD_UNLOAD__VALID_FEEDBACK = TO_USE_ACTION_LOAD_UNLOAD__VALID_FEEDBACK;
 
 	/**
-	 * The feature id for the '<em><b>Solution</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD__SOLUTION = TO_USE_ACTION_LOAD_UNLOAD__SOLUTION;
-
-	/**
 	 * The feature id for the '<em><b>Action Nr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2071,13 +2206,13 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE_LOAD_UNLOAD__ACTION_NR = TO_USE_ACTION_LOAD_UNLOAD__ACTION_NR;
 
 	/**
-	 * The feature id for the '<em><b>Improvement</b></em>' container reference.
+	 * The feature id for the '<em><b>Step</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD__IMPROVEMENT = TO_USE_ACTION_LOAD_UNLOAD__IMPROVEMENT;
+	int TO_USE_SCHEDULE_LOAD_UNLOAD__STEP = TO_USE_ACTION_LOAD_UNLOAD__STEP;
 
 	/**
 	 * The feature id for the '<em><b>Load Task</b></em>' reference.
@@ -2183,6 +2318,87 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_UNSCHEDULE_LOAD_UNLOAD = 12;
 
 	/**
+	 * The feature id for the '<em><b>End Solution Owned</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__END_SOLUTION_OWNED = TO_USE_ACTION_LOAD_UNLOAD__END_SOLUTION_OWNED;
+
+	/**
+	 * The feature id for the '<em><b>Start Solution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__START_SOLUTION = TO_USE_ACTION_LOAD_UNLOAD__START_SOLUTION;
+
+	/**
+	 * The feature id for the '<em><b>End Solution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__END_SOLUTION = TO_USE_ACTION_LOAD_UNLOAD__END_SOLUTION;
+
+	/**
+	 * The feature id for the '<em><b>Start Solution Owned</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__START_SOLUTION_OWNED = TO_USE_ACTION_LOAD_UNLOAD__START_SOLUTION_OWNED;
+
+	/**
+	 * The feature id for the '<em><b>Previous Change</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__PREVIOUS_CHANGE = TO_USE_ACTION_LOAD_UNLOAD__PREVIOUS_CHANGE;
+
+	/**
+	 * The feature id for the '<em><b>Level</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__LEVEL = TO_USE_ACTION_LOAD_UNLOAD__LEVEL;
+
+	/**
+	 * The feature id for the '<em><b>Solutions</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__SOLUTIONS = TO_USE_ACTION_LOAD_UNLOAD__SOLUTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Sub Changes</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__SUB_CHANGES = TO_USE_ACTION_LOAD_UNLOAD__SUB_CHANGES;
+
+	/**
+	 * The feature id for the '<em><b>Current Solution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__CURRENT_SOLUTION = TO_USE_ACTION_LOAD_UNLOAD__CURRENT_SOLUTION;
+
+	/**
 	 * The feature id for the '<em><b>Root Moves</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2228,15 +2444,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__VALID_FEEDBACK = TO_USE_ACTION_LOAD_UNLOAD__VALID_FEEDBACK;
 
 	/**
-	 * The feature id for the '<em><b>Solution</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__SOLUTION = TO_USE_ACTION_LOAD_UNLOAD__SOLUTION;
-
-	/**
 	 * The feature id for the '<em><b>Action Nr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2246,13 +2453,13 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__ACTION_NR = TO_USE_ACTION_LOAD_UNLOAD__ACTION_NR;
 
 	/**
-	 * The feature id for the '<em><b>Improvement</b></em>' container reference.
+	 * The feature id for the '<em><b>Step</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__IMPROVEMENT = TO_USE_ACTION_LOAD_UNLOAD__IMPROVEMENT;
+	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__STEP = TO_USE_ACTION_LOAD_UNLOAD__STEP;
 
 	/**
 	 * The feature id for the '<em><b>Load Task</b></em>' reference.
@@ -2318,95 +2525,95 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_UNSCHEDULE_LOAD_UNLOAD_OPERATION_COUNT = TO_USE_ACTION_LOAD_UNLOAD_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseImprovementDestructConstructImpl <em>To Use Improvement Destruct Construct</em>}' class.
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUsePhaseDestructConstructImpl <em>To Use Phase Destruct Construct</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseImprovementDestructConstructImpl
-	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseImprovementDestructConstruct()
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUsePhaseDestructConstructImpl
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUsePhaseDestructConstruct()
 	 * @generated
 	 */
-	int TO_USE_IMPROVEMENT_DESTRUCT_CONSTRUCT = 13;
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT = 13;
 
 	/**
-	 * The feature id for the '<em><b>Max Iterations</b></em>' attribute.
+	 * The feature id for the '<em><b>End Solution Owned</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_IMPROVEMENT_DESTRUCT_CONSTRUCT__MAX_ITERATIONS = LocalSearchPackage.IMPROVEMENT__MAX_ITERATIONS;
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__END_SOLUTION_OWNED = LocalSearchPackage.PHASE__END_SOLUTION_OWNED;
 
 	/**
-	 * The feature id for the '<em><b>Max Seconds</b></em>' attribute.
+	 * The feature id for the '<em><b>Start Solution</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_IMPROVEMENT_DESTRUCT_CONSTRUCT__MAX_SECONDS = LocalSearchPackage.IMPROVEMENT__MAX_SECONDS;
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__START_SOLUTION = LocalSearchPackage.PHASE__START_SOLUTION;
 
 	/**
-	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
+	 * The feature id for the '<em><b>End Solution</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_IMPROVEMENT_DESTRUCT_CONSTRUCT__ACTIONS = LocalSearchPackage.IMPROVEMENT__ACTIONS;
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__END_SOLUTION = LocalSearchPackage.PHASE__END_SOLUTION;
 
 	/**
-	 * The feature id for the '<em><b>Solution</b></em>' reference.
+	 * The feature id for the '<em><b>Start Solution Owned</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_IMPROVEMENT_DESTRUCT_CONSTRUCT__SOLUTION = LocalSearchPackage.IMPROVEMENT__SOLUTION;
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__START_SOLUTION_OWNED = LocalSearchPackage.PHASE__START_SOLUTION_OWNED;
 
 	/**
-	 * The feature id for the '<em><b>Improvments Start</b></em>' attribute.
+	 * The feature id for the '<em><b>Previous Change</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_IMPROVEMENT_DESTRUCT_CONSTRUCT__IMPROVMENTS_START = LocalSearchPackage.IMPROVEMENT__IMPROVMENTS_START;
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__PREVIOUS_CHANGE = LocalSearchPackage.PHASE__PREVIOUS_CHANGE;
 
 	/**
-	 * The feature id for the '<em><b>Improvments End</b></em>' attribute.
+	 * The feature id for the '<em><b>Level</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_IMPROVEMENT_DESTRUCT_CONSTRUCT__IMPROVMENTS_END = LocalSearchPackage.IMPROVEMENT__IMPROVMENTS_END;
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__LEVEL = LocalSearchPackage.PHASE__LEVEL;
 
 	/**
-	 * The feature id for the '<em><b>Iterations</b></em>' attribute.
+	 * The feature id for the '<em><b>Solutions</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_IMPROVEMENT_DESTRUCT_CONSTRUCT__ITERATIONS = LocalSearchPackage.IMPROVEMENT__ITERATIONS;
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__SOLUTIONS = LocalSearchPackage.PHASE__SOLUTIONS;
 
 	/**
-	 * The feature id for the '<em><b>Duration Total</b></em>' attribute.
+	 * The feature id for the '<em><b>Sub Changes</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_IMPROVEMENT_DESTRUCT_CONSTRUCT__DURATION_TOTAL = LocalSearchPackage.IMPROVEMENT__DURATION_TOTAL;
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__SUB_CHANGES = LocalSearchPackage.PHASE__SUB_CHANGES;
 
 	/**
-	 * The feature id for the '<em><b>Duration Average</b></em>' attribute.
+	 * The feature id for the '<em><b>Current Solution</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_IMPROVEMENT_DESTRUCT_CONSTRUCT__DURATION_AVERAGE = LocalSearchPackage.IMPROVEMENT__DURATION_AVERAGE;
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__CURRENT_SOLUTION = LocalSearchPackage.PHASE__CURRENT_SOLUTION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2415,16 +2622,79 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_IMPROVEMENT_DESTRUCT_CONSTRUCT__NAME = LocalSearchPackage.IMPROVEMENT__NAME;
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__NAME = LocalSearchPackage.PHASE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Current Action Nr</b></em>' attribute.
+	 * The feature id for the '<em><b>Keep Level</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_IMPROVEMENT_DESTRUCT_CONSTRUCT__CURRENT_ACTION_NR = LocalSearchPackage.IMPROVEMENT__CURRENT_ACTION_NR;
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__KEEP_LEVEL = LocalSearchPackage.PHASE__KEEP_LEVEL;
+
+	/**
+	 * The feature id for the '<em><b>Max Steps</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__MAX_STEPS = LocalSearchPackage.PHASE__MAX_STEPS;
+
+	/**
+	 * The feature id for the '<em><b>Max Seconds</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__MAX_SECONDS = LocalSearchPackage.PHASE__MAX_SECONDS;
+
+	/**
+	 * The feature id for the '<em><b>Phase Start</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__PHASE_START = LocalSearchPackage.PHASE__PHASE_START;
+
+	/**
+	 * The feature id for the '<em><b>Phase End</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__PHASE_END = LocalSearchPackage.PHASE__PHASE_END;
+
+	/**
+	 * The feature id for the '<em><b>Nr Steps</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__NR_STEPS = LocalSearchPackage.PHASE__NR_STEPS;
+
+	/**
+	 * The feature id for the '<em><b>Duration Total</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__DURATION_TOTAL = LocalSearchPackage.PHASE__DURATION_TOTAL;
+
+	/**
+	 * The feature id for the '<em><b>Duration Average</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__DURATION_AVERAGE = LocalSearchPackage.PHASE__DURATION_AVERAGE;
 
 	/**
 	 * The feature id for the '<em><b>Strategy</b></em>' container reference.
@@ -2433,7 +2703,16 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_IMPROVEMENT_DESTRUCT_CONSTRUCT__STRATEGY = LocalSearchPackage.IMPROVEMENT__STRATEGY;
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__STRATEGY = LocalSearchPackage.PHASE__STRATEGY;
+
+	/**
+	 * The feature id for the '<em><b>Steps</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__STEPS = LocalSearchPackage.PHASE__STEPS;
 
 	/**
 	 * The feature id for the '<em><b>Destruction Chance</b></em>' attribute.
@@ -2442,7 +2721,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_IMPROVEMENT_DESTRUCT_CONSTRUCT__DESTRUCTION_CHANCE = LocalSearchPackage.IMPROVEMENT_FEATURE_COUNT + 0;
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__DESTRUCTION_CHANCE = LocalSearchPackage.PHASE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Construction Chance</b></em>' attribute.
@@ -2451,34 +2730,34 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_IMPROVEMENT_DESTRUCT_CONSTRUCT__CONSTRUCTION_CHANCE = LocalSearchPackage.IMPROVEMENT_FEATURE_COUNT + 1;
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__CONSTRUCTION_CHANCE = LocalSearchPackage.PHASE_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of structural features of the '<em>To Use Improvement Destruct Construct</em>' class.
+	 * The number of structural features of the '<em>To Use Phase Destruct Construct</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_IMPROVEMENT_DESTRUCT_CONSTRUCT_FEATURE_COUNT = LocalSearchPackage.IMPROVEMENT_FEATURE_COUNT + 2;
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT_FEATURE_COUNT = LocalSearchPackage.PHASE_FEATURE_COUNT + 2;
 
 	/**
-	 * The operation id for the '<em>Do Iteration</em>' operation.
+	 * The operation id for the '<em>Do Step</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_IMPROVEMENT_DESTRUCT_CONSTRUCT___DO_ITERATION = LocalSearchPackage.IMPROVEMENT___DO_ITERATION;
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT___DO_STEP__STEP = LocalSearchPackage.PHASE___DO_STEP__STEP;
 
 	/**
-	 * The number of operations of the '<em>To Use Improvement Destruct Construct</em>' class.
+	 * The number of operations of the '<em>To Use Phase Destruct Construct</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_IMPROVEMENT_DESTRUCT_CONSTRUCT_OPERATION_COUNT = LocalSearchPackage.IMPROVEMENT_OPERATION_COUNT + 0;
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT_OPERATION_COUNT = LocalSearchPackage.PHASE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.CalcTaskDistanceFromPreviousImpl <em>Calc Task Distance From Previous</em>}' class.
@@ -8418,36 +8697,36 @@ public interface ToUseSchedulerPackage extends EPackage {
 	EClass getToUseUnscheduleLoadUnload();
 
 	/**
-	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.ToUseImprovementDestructConstruct <em>To Use Improvement Destruct Construct</em>}'.
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.ToUsePhaseDestructConstruct <em>To Use Phase Destruct Construct</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>To Use Improvement Destruct Construct</em>'.
-	 * @see com.misc.touse.moplaf.tousescheduler.ToUseImprovementDestructConstruct
+	 * @return the meta object for class '<em>To Use Phase Destruct Construct</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUsePhaseDestructConstruct
 	 * @generated
 	 */
-	EClass getToUseImprovementDestructConstruct();
+	EClass getToUsePhaseDestructConstruct();
 
 	/**
-	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.tousescheduler.ToUseImprovementDestructConstruct#getDestructionChance <em>Destruction Chance</em>}'.
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.tousescheduler.ToUsePhaseDestructConstruct#getDestructionChance <em>Destruction Chance</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Destruction Chance</em>'.
-	 * @see com.misc.touse.moplaf.tousescheduler.ToUseImprovementDestructConstruct#getDestructionChance()
-	 * @see #getToUseImprovementDestructConstruct()
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUsePhaseDestructConstruct#getDestructionChance()
+	 * @see #getToUsePhaseDestructConstruct()
 	 * @generated
 	 */
-	EAttribute getToUseImprovementDestructConstruct_DestructionChance();
+	EAttribute getToUsePhaseDestructConstruct_DestructionChance();
 
 	/**
-	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.tousescheduler.ToUseImprovementDestructConstruct#getConstructionChance <em>Construction Chance</em>}'.
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.tousescheduler.ToUsePhaseDestructConstruct#getConstructionChance <em>Construction Chance</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Construction Chance</em>'.
-	 * @see com.misc.touse.moplaf.tousescheduler.ToUseImprovementDestructConstruct#getConstructionChance()
-	 * @see #getToUseImprovementDestructConstruct()
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUsePhaseDestructConstruct#getConstructionChance()
+	 * @see #getToUsePhaseDestructConstruct()
 	 * @generated
 	 */
-	EAttribute getToUseImprovementDestructConstruct_ConstructionChance();
+	EAttribute getToUsePhaseDestructConstruct_ConstructionChance();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleLoadUnload <em>To Use Schedule Load Unload</em>}'.
@@ -9204,14 +9483,14 @@ public interface ToUseSchedulerPackage extends EPackage {
 		EClass TO_USE_UNSCHEDULE_LOAD_UNLOAD = eINSTANCE.getToUseUnscheduleLoadUnload();
 
 		/**
-		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseImprovementDestructConstructImpl <em>To Use Improvement Destruct Construct</em>}' class.
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUsePhaseDestructConstructImpl <em>To Use Phase Destruct Construct</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseImprovementDestructConstructImpl
-		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseImprovementDestructConstruct()
+		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUsePhaseDestructConstructImpl
+		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUsePhaseDestructConstruct()
 		 * @generated
 		 */
-		EClass TO_USE_IMPROVEMENT_DESTRUCT_CONSTRUCT = eINSTANCE.getToUseImprovementDestructConstruct();
+		EClass TO_USE_PHASE_DESTRUCT_CONSTRUCT = eINSTANCE.getToUsePhaseDestructConstruct();
 
 		/**
 		 * The meta object literal for the '<em><b>Destruction Chance</b></em>' attribute feature.
@@ -9219,7 +9498,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TO_USE_IMPROVEMENT_DESTRUCT_CONSTRUCT__DESTRUCTION_CHANCE = eINSTANCE.getToUseImprovementDestructConstruct_DestructionChance();
+		EAttribute TO_USE_PHASE_DESTRUCT_CONSTRUCT__DESTRUCTION_CHANCE = eINSTANCE.getToUsePhaseDestructConstruct_DestructionChance();
 
 		/**
 		 * The meta object literal for the '<em><b>Construction Chance</b></em>' attribute feature.
@@ -9227,7 +9506,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TO_USE_IMPROVEMENT_DESTRUCT_CONSTRUCT__CONSTRUCTION_CHANCE = eINSTANCE.getToUseImprovementDestructConstruct_ConstructionChance();
+		EAttribute TO_USE_PHASE_DESTRUCT_CONSTRUCT__CONSTRUCTION_CHANCE = eINSTANCE.getToUsePhaseDestructConstruct_ConstructionChance();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleLoadUnloadImpl <em>To Use Schedule Load Unload</em>}' class.

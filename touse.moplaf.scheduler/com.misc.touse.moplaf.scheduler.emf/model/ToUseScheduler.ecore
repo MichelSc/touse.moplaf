@@ -81,7 +81,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ToUseScheduleLoadUnload" eSuperTypes="#//ToUseActionLoadUnload"/>
   <eClassifiers xsi:type="ecore:EClass" name="ToUseUnscheduleLoadUnload" eSuperTypes="#//ToUseActionLoadUnload"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ToUseImprovementDestructConstruct" eSuperTypes="../../com.misc.common.moplaf.localsearch.emf/model/localsearch.ecore#//Improvement">
+  <eClassifiers xsi:type="ecore:EClass" name="ToUsePhaseDestructConstruct" eSuperTypes="../../com.misc.common.moplaf.localsearch.emf/model/localsearch.ecore#//Phase">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="DestructionChance" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
         defaultValueLiteral="0.05"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ConstructionChance" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"

@@ -68,7 +68,7 @@ public class ToUseSchedulerFactoryImpl extends EFactoryImpl implements ToUseSche
 			case ToUseSchedulerPackage.TO_USE_UNLOAD_SHIPMENT: return createToUseUnloadShipment();
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_LOAD_UNLOAD: return createToUseScheduleLoadUnload();
 			case ToUseSchedulerPackage.TO_USE_UNSCHEDULE_LOAD_UNLOAD: return createToUseUnscheduleLoadUnload();
-			case ToUseSchedulerPackage.TO_USE_IMPROVEMENT_DESTRUCT_CONSTRUCT: return createToUseImprovementDestructConstruct();
+			case ToUseSchedulerPackage.TO_USE_PHASE_DESTRUCT_CONSTRUCT: return createToUsePhaseDestructConstruct();
 			case ToUseSchedulerPackage.SCOPE_SCHEDULE_SCORE: return createScopeScheduleScore();
 			case ToUseSchedulerPackage.LAYER_SCHEDULE_DISTANCE: return createLayerScheduleDistance();
 			case ToUseSchedulerPackage.CALC_TASK_DISTANCE_FROM_PREVIOUS: return createCalcTaskDistanceFromPrevious();
@@ -291,9 +291,9 @@ public class ToUseSchedulerFactoryImpl extends EFactoryImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ToUseImprovementDestructConstruct createToUseImprovementDestructConstruct() {
-		ToUseImprovementDestructConstructImpl toUseImprovementDestructConstruct = new ToUseImprovementDestructConstructImpl();
-		return toUseImprovementDestructConstruct;
+	public ToUsePhaseDestructConstruct createToUsePhaseDestructConstruct() {
+		ToUsePhaseDestructConstructImpl toUsePhaseDestructConstruct = new ToUsePhaseDestructConstructImpl();
+		return toUsePhaseDestructConstruct;
 	}
 
 	/**

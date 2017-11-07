@@ -14,13 +14,13 @@ import com.misc.common.moplaf.scheduler.Task;
  * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask#getShipment <em>Shipment</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask#getLocationX <em>Location X</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask#getLocationY <em>Location Y</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask#getLoadFactor <em>Load Factor</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask#getDistance <em>Distance</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask#getDistanceFromPrevious <em>Distance From Previous</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask#getStartVolumeLoaded <em>Start Volume Loaded</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask#getEndVolumeLoaded <em>End Volume Loaded</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask#getLocationX <em>Location X</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask#getLocationY <em>Location Y</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask#getLoadFactor <em>Load Factor</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask#isVolumeOverload <em>Volume Overload</em>}</li>
  * </ul>
  *

@@ -202,13 +202,13 @@ public interface ToUseSchedulerFactory extends EFactory {
 	ToUseUnscheduleLoadUnload createToUseUnscheduleLoadUnload();
 
 	/**
-	 * Returns a new object of class '<em>To Use Improvement Destruct Construct</em>'.
+	 * Returns a new object of class '<em>To Use Phase Destruct Construct</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>To Use Improvement Destruct Construct</em>'.
+	 * @return a new object of class '<em>To Use Phase Destruct Construct</em>'.
 	 * @generated
 	 */
-	ToUseImprovementDestructConstruct createToUseImprovementDestructConstruct();
+	ToUsePhaseDestructConstruct createToUsePhaseDestructConstruct();
 
 	/**
 	 * Returns a new object of class '<em>To Use Schedule Load Unload</em>'.

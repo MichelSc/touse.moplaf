@@ -532,26 +532,26 @@ public class ToUseSchedulerItemProviderAdapterFactory extends ToUseSchedulerAdap
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.ToUseImprovementDestructConstruct} instances.
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.ToUsePhaseDestructConstruct} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ToUseImprovementDestructConstructItemProvider toUseImprovementDestructConstructItemProvider;
+	protected ToUsePhaseDestructConstructItemProvider toUsePhaseDestructConstructItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousescheduler.ToUseImprovementDestructConstruct}.
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousescheduler.ToUsePhaseDestructConstruct}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createToUseImprovementDestructConstructAdapter() {
-		if (toUseImprovementDestructConstructItemProvider == null) {
-			toUseImprovementDestructConstructItemProvider = new ToUseImprovementDestructConstructItemProvider(this);
+	public Adapter createToUsePhaseDestructConstructAdapter() {
+		if (toUsePhaseDestructConstructItemProvider == null) {
+			toUsePhaseDestructConstructItemProvider = new ToUsePhaseDestructConstructItemProvider(this);
 		}
 
-		return toUseImprovementDestructConstructItemProvider;
+		return toUsePhaseDestructConstructItemProvider;
 	}
 
 	/**
@@ -757,7 +757,7 @@ public class ToUseSchedulerItemProviderAdapterFactory extends ToUseSchedulerAdap
 		if (toUseUnloadShipmentItemProvider != null) toUseUnloadShipmentItemProvider.dispose();
 		if (toUseScheduleLoadUnloadItemProvider != null) toUseScheduleLoadUnloadItemProvider.dispose();
 		if (toUseUnscheduleLoadUnloadItemProvider != null) toUseUnscheduleLoadUnloadItemProvider.dispose();
-		if (toUseImprovementDestructConstructItemProvider != null) toUseImprovementDestructConstructItemProvider.dispose();
+		if (toUsePhaseDestructConstructItemProvider != null) toUsePhaseDestructConstructItemProvider.dispose();
 		if (scopeScheduleScoreItemProvider != null) scopeScheduleScoreItemProvider.dispose();
 		if (layerScheduleDistanceItemProvider != null) layerScheduleDistanceItemProvider.dispose();
 		if (calcTaskDistanceFromPreviousItemProvider != null) calcTaskDistanceFromPreviousItemProvider.dispose();

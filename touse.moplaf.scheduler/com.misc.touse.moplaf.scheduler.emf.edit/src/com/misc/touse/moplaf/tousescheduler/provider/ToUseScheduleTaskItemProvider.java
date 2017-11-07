@@ -49,13 +49,13 @@ public class ToUseScheduleTaskItemProvider extends TaskItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addLocationXPropertyDescriptor(object);
+			addLocationYPropertyDescriptor(object);
+			addLoadFactorPropertyDescriptor(object);
 			addDistancePropertyDescriptor(object);
 			addDistanceFromPreviousPropertyDescriptor(object);
 			addStartVolumeLoadedPropertyDescriptor(object);
 			addEndVolumeLoadedPropertyDescriptor(object);
-			addLocationXPropertyDescriptor(object);
-			addLocationYPropertyDescriptor(object);
-			addLoadFactorPropertyDescriptor(object);
 			addVolumeOverloadPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -264,13 +264,13 @@ public class ToUseScheduleTaskItemProvider extends TaskItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ToUseScheduleTask.class)) {
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__LOCATION_X:
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__LOCATION_Y:
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__LOAD_FACTOR:
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__DISTANCE:
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__DISTANCE_FROM_PREVIOUS:
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__START_VOLUME_LOADED:
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__END_VOLUME_LOADED:
-			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__LOCATION_X:
-			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__LOCATION_Y:
-			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__LOAD_FACTOR:
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__VOLUME_OVERLOAD:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

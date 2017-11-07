@@ -5,9 +5,10 @@ package com.misc.touse.moplaf.tousescheduler.util;
 import com.misc.common.moplaf.job.Run;
 import com.misc.common.moplaf.job.RunParams;
 import com.misc.common.moplaf.localsearch.Action;
-import com.misc.common.moplaf.localsearch.Improvement;
+import com.misc.common.moplaf.localsearch.Phase;
 import com.misc.common.moplaf.localsearch.Score;
 import com.misc.common.moplaf.localsearch.Solution;
+import com.misc.common.moplaf.localsearch.SolutionChange;
 import com.misc.common.moplaf.localsearch.Strategy;
 import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
 import com.misc.common.moplaf.propagator2.PropagatorFunction;
@@ -162,6 +163,7 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 				ToUseActionLoadUnload toUseActionLoadUnload = (ToUseActionLoadUnload)theEObject;
 				T result = caseToUseActionLoadUnload(toUseActionLoadUnload);
 				if (result == null) result = caseAction(toUseActionLoadUnload);
+				if (result == null) result = caseSolutionChange(toUseActionLoadUnload);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -170,6 +172,7 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 				T result = caseToUseScheduleLoadUnload(toUseScheduleLoadUnload);
 				if (result == null) result = caseToUseActionLoadUnload(toUseScheduleLoadUnload);
 				if (result == null) result = caseAction(toUseScheduleLoadUnload);
+				if (result == null) result = caseSolutionChange(toUseScheduleLoadUnload);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -178,13 +181,15 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 				T result = caseToUseUnscheduleLoadUnload(toUseUnscheduleLoadUnload);
 				if (result == null) result = caseToUseActionLoadUnload(toUseUnscheduleLoadUnload);
 				if (result == null) result = caseAction(toUseUnscheduleLoadUnload);
+				if (result == null) result = caseSolutionChange(toUseUnscheduleLoadUnload);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ToUseSchedulerPackage.TO_USE_IMPROVEMENT_DESTRUCT_CONSTRUCT: {
-				ToUseImprovementDestructConstruct toUseImprovementDestructConstruct = (ToUseImprovementDestructConstruct)theEObject;
-				T result = caseToUseImprovementDestructConstruct(toUseImprovementDestructConstruct);
-				if (result == null) result = caseImprovement(toUseImprovementDestructConstruct);
+			case ToUseSchedulerPackage.TO_USE_PHASE_DESTRUCT_CONSTRUCT: {
+				ToUsePhaseDestructConstruct toUsePhaseDestructConstruct = (ToUsePhaseDestructConstruct)theEObject;
+				T result = caseToUsePhaseDestructConstruct(toUsePhaseDestructConstruct);
+				if (result == null) result = casePhase(toUsePhaseDestructConstruct);
+				if (result == null) result = caseSolutionChange(toUsePhaseDestructConstruct);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -738,17 +743,17 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>To Use Improvement Destruct Construct</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>To Use Phase Destruct Construct</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>To Use Improvement Destruct Construct</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>To Use Phase Destruct Construct</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseToUseImprovementDestructConstruct(ToUseImprovementDestructConstruct object) {
+	public T caseToUsePhaseDestructConstruct(ToUsePhaseDestructConstruct object) {
 		return null;
 	}
 
@@ -903,6 +908,21 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Solution Change</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Solution Change</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSolutionChange(SolutionChange object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Resource</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -963,17 +983,17 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Improvement</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Phase</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Improvement</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Phase</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseImprovement(Improvement object) {
+	public T casePhase(Phase object) {
 		return null;
 	}
 

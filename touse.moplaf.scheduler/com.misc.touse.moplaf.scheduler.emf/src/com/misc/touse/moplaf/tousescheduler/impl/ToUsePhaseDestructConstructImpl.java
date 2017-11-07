@@ -2,10 +2,11 @@
  */
 package com.misc.touse.moplaf.tousescheduler.impl;
 
-import com.misc.common.moplaf.localsearch.impl.ImprovementImpl;
+import com.misc.common.moplaf.localsearch.Step;
+import com.misc.common.moplaf.localsearch.impl.PhaseImpl;
 import com.misc.common.moplaf.scheduler.Task;
-import com.misc.touse.moplaf.tousescheduler.ToUseImprovementDestructConstruct;
 import com.misc.touse.moplaf.tousescheduler.ToUseLoadShipment;
+import com.misc.touse.moplaf.tousescheduler.ToUsePhaseDestructConstruct;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedule;
 import com.misc.touse.moplaf.tousescheduler.ToUseScheduleLoadUnload;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerFactory;
@@ -22,19 +23,19 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>To Use Improvement Destruct Construct</b></em>'.
+ * An implementation of the model object '<em><b>To Use Phase Destruct Construct</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseImprovementDestructConstructImpl#getDestructionChance <em>Destruction Chance</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseImprovementDestructConstructImpl#getConstructionChance <em>Construction Chance</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUsePhaseDestructConstructImpl#getDestructionChance <em>Destruction Chance</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUsePhaseDestructConstructImpl#getConstructionChance <em>Construction Chance</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ToUseImprovementDestructConstructImpl extends ImprovementImpl implements ToUseImprovementDestructConstruct {
+public class ToUsePhaseDestructConstructImpl extends PhaseImpl implements ToUsePhaseDestructConstruct {
 	/**
 	 * The default value of the '{@link #getDestructionChance() <em>Destruction Chance</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -80,7 +81,7 @@ public class ToUseImprovementDestructConstructImpl extends ImprovementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ToUseImprovementDestructConstructImpl() {
+	protected ToUsePhaseDestructConstructImpl() {
 		super();
 	}
 
@@ -91,7 +92,7 @@ public class ToUseImprovementDestructConstructImpl extends ImprovementImpl imple
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ToUseSchedulerPackage.Literals.TO_USE_IMPROVEMENT_DESTRUCT_CONSTRUCT;
+		return ToUseSchedulerPackage.Literals.TO_USE_PHASE_DESTRUCT_CONSTRUCT;
 	}
 
 	/**
@@ -112,7 +113,7 @@ public class ToUseImprovementDestructConstructImpl extends ImprovementImpl imple
 		float oldDestructionChance = destructionChance;
 		destructionChance = newDestructionChance;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToUseSchedulerPackage.TO_USE_IMPROVEMENT_DESTRUCT_CONSTRUCT__DESTRUCTION_CHANCE, oldDestructionChance, destructionChance));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseSchedulerPackage.TO_USE_PHASE_DESTRUCT_CONSTRUCT__DESTRUCTION_CHANCE, oldDestructionChance, destructionChance));
 	}
 
 	/**
@@ -133,7 +134,7 @@ public class ToUseImprovementDestructConstructImpl extends ImprovementImpl imple
 		float oldConstructionChance = constructionChance;
 		constructionChance = newConstructionChance;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToUseSchedulerPackage.TO_USE_IMPROVEMENT_DESTRUCT_CONSTRUCT__CONSTRUCTION_CHANCE, oldConstructionChance, constructionChance));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseSchedulerPackage.TO_USE_PHASE_DESTRUCT_CONSTRUCT__CONSTRUCTION_CHANCE, oldConstructionChance, constructionChance));
 	}
 
 	/**
@@ -144,9 +145,9 @@ public class ToUseImprovementDestructConstructImpl extends ImprovementImpl imple
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ToUseSchedulerPackage.TO_USE_IMPROVEMENT_DESTRUCT_CONSTRUCT__DESTRUCTION_CHANCE:
+			case ToUseSchedulerPackage.TO_USE_PHASE_DESTRUCT_CONSTRUCT__DESTRUCTION_CHANCE:
 				return getDestructionChance();
-			case ToUseSchedulerPackage.TO_USE_IMPROVEMENT_DESTRUCT_CONSTRUCT__CONSTRUCTION_CHANCE:
+			case ToUseSchedulerPackage.TO_USE_PHASE_DESTRUCT_CONSTRUCT__CONSTRUCTION_CHANCE:
 				return getConstructionChance();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -160,10 +161,10 @@ public class ToUseImprovementDestructConstructImpl extends ImprovementImpl imple
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ToUseSchedulerPackage.TO_USE_IMPROVEMENT_DESTRUCT_CONSTRUCT__DESTRUCTION_CHANCE:
+			case ToUseSchedulerPackage.TO_USE_PHASE_DESTRUCT_CONSTRUCT__DESTRUCTION_CHANCE:
 				setDestructionChance((Float)newValue);
 				return;
-			case ToUseSchedulerPackage.TO_USE_IMPROVEMENT_DESTRUCT_CONSTRUCT__CONSTRUCTION_CHANCE:
+			case ToUseSchedulerPackage.TO_USE_PHASE_DESTRUCT_CONSTRUCT__CONSTRUCTION_CHANCE:
 				setConstructionChance((Float)newValue);
 				return;
 		}
@@ -178,10 +179,10 @@ public class ToUseImprovementDestructConstructImpl extends ImprovementImpl imple
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ToUseSchedulerPackage.TO_USE_IMPROVEMENT_DESTRUCT_CONSTRUCT__DESTRUCTION_CHANCE:
+			case ToUseSchedulerPackage.TO_USE_PHASE_DESTRUCT_CONSTRUCT__DESTRUCTION_CHANCE:
 				setDestructionChance(DESTRUCTION_CHANCE_EDEFAULT);
 				return;
-			case ToUseSchedulerPackage.TO_USE_IMPROVEMENT_DESTRUCT_CONSTRUCT__CONSTRUCTION_CHANCE:
+			case ToUseSchedulerPackage.TO_USE_PHASE_DESTRUCT_CONSTRUCT__CONSTRUCTION_CHANCE:
 				setConstructionChance(CONSTRUCTION_CHANCE_EDEFAULT);
 				return;
 		}
@@ -196,9 +197,9 @@ public class ToUseImprovementDestructConstructImpl extends ImprovementImpl imple
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ToUseSchedulerPackage.TO_USE_IMPROVEMENT_DESTRUCT_CONSTRUCT__DESTRUCTION_CHANCE:
+			case ToUseSchedulerPackage.TO_USE_PHASE_DESTRUCT_CONSTRUCT__DESTRUCTION_CHANCE:
 				return destructionChance != DESTRUCTION_CHANCE_EDEFAULT;
-			case ToUseSchedulerPackage.TO_USE_IMPROVEMENT_DESTRUCT_CONSTRUCT__CONSTRUCTION_CHANCE:
+			case ToUseSchedulerPackage.TO_USE_PHASE_DESTRUCT_CONSTRUCT__CONSTRUCTION_CHANCE:
 				return constructionChance != CONSTRUCTION_CHANCE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -229,21 +230,20 @@ public class ToUseImprovementDestructConstructImpl extends ImprovementImpl imple
 	 * 
 	 */
 	@Override
-	protected void doIterationImpl() {
-		ToUseSchedule schedule = (ToUseSchedule)this.getSolution();
+	protected void doStepImpl(Step step) {
+		ToUseSchedule schedule = (ToUseSchedule)this.getCurrentSolution();
 		schedule.enable(); // activate propagator
 		
+		int action_nr = 0;
 		// destructions
 		for( Task task : schedule.getTasks()) {
 			if ( task.isScheduled() && task instanceof ToUseLoadShipment ){
 				if ( this.getDestructionChance()>=random.nextDouble()) {
 					ToUseUnscheduleLoadUnload new_action = ToUseSchedulerFactory.eINSTANCE.createToUseUnscheduleLoadUnload();
-					int new_nr = this.getCurrentActionNr()+1;
-					this.setCurrentActionNr(new_nr);
 					new_action.setLoadTask((ToUseLoadShipment) task);
-					new_action.setActionNr(new_nr);
-					this.getActions().add(new_action); // owning
-					new_action.setSolution(schedule);
+					new_action.setActionNr(action_nr++);
+					step.getActions().add(new_action); // owning
+					new_action.setCurrentSolution(schedule);
 					new_action.initialize();
 					new_action.run();
 					new_action.finalize();
@@ -256,12 +256,10 @@ public class ToUseImprovementDestructConstructImpl extends ImprovementImpl imple
 			if ( !task.isScheduled() && task instanceof ToUseLoadShipment ){
 				if ( this.getConstructionChance()>=random.nextDouble()) {
 					ToUseScheduleLoadUnload new_action = ToUseSchedulerFactory.eINSTANCE.createToUseScheduleLoadUnload();
-					int new_nr = this.getCurrentActionNr()+1;
-					this.setCurrentActionNr(new_nr);
-					new_action.setActionNr(new_nr);
+					new_action.setActionNr(action_nr++);
 					new_action.setLoadTask((ToUseLoadShipment) task);
-					this.getActions().add(new_action); // owning
-					new_action.setSolution(schedule);
+					step.getActions().add(new_action); // owning
+					new_action.setCurrentSolution(schedule);
 					new_action.initialize();
 					new_action.run();
 					new_action.finalize();
@@ -270,4 +268,6 @@ public class ToUseImprovementDestructConstructImpl extends ImprovementImpl imple
 		}
 	}
 
-} //ToUseImprovementDestructConstructImpl
+
+} //ToUsePhaseDestructConstructImpl
+

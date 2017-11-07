@@ -138,8 +138,8 @@ public class ToUseSchedulerItemProvider extends SchedulerItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(LocalSearchPackage.Literals.STRATEGY__IMPROVEMENTS,
-				 ToUseSchedulerFactory.eINSTANCE.createToUseImprovementDestructConstruct()));
+				(LocalSearchPackage.Literals.STRATEGY__PHASES,
+				 ToUseSchedulerFactory.eINSTANCE.createToUsePhaseDestructConstruct()));
 
 		newChildDescriptors.add
 			(createChildParameter

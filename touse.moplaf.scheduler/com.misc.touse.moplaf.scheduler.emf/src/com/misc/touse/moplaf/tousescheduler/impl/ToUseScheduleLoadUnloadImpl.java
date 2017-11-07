@@ -52,7 +52,7 @@ public class ToUseScheduleLoadUnloadImpl extends ToUseActionLoadUnloadImpl imple
 	protected void createMovesImpl() {
 		assert this.isValid() : "Action is not valid";
 		
-		ToUseSchedule schedule = (ToUseSchedule) this.getSolution();
+		ToUseSchedule schedule = (ToUseSchedule) this.getCurrentSolution();
 		ToUseLoadShipment loadTask = this.getLoadTask();
 		ToUseUnloadShipment unloadTask = loadTask.getUnloadShipment();
 		
