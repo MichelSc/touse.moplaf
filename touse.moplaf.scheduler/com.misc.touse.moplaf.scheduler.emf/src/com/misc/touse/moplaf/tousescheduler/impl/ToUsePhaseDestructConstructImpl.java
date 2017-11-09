@@ -231,22 +231,16 @@ public class ToUsePhaseDestructConstructImpl extends PhaseImpl implements ToUseP
 	 */
 	@Override
 	protected void doStepImpl(Step step) {
-		ToUseSchedule schedule = (ToUseSchedule)this.getCurrentSolution();
+		ToUseSchedule schedule = (ToUseSchedule)step.getCurrentSolution();
 		schedule.enable(); // activate propagator
 		
-		int action_nr = 0;
 		// destructions
 		for( Task task : schedule.getTasks()) {
 			if ( task.isScheduled() && task instanceof ToUseLoadShipment ){
 				if ( this.getDestructionChance()>=random.nextDouble()) {
 					ToUseUnscheduleLoadUnload new_action = ToUseSchedulerFactory.eINSTANCE.createToUseUnscheduleLoadUnload();
 					new_action.setLoadTask((ToUseLoadShipment) task);
-					new_action.setActionNr(action_nr++);
-					step.getActions().add(new_action); // owning
-					new_action.setCurrentSolution(schedule);
-					new_action.initialize();
-					new_action.run();
-					new_action.finalize();
+					step.doAction(new_action);
 				}
 			}
 		}
@@ -256,13 +250,8 @@ public class ToUsePhaseDestructConstructImpl extends PhaseImpl implements ToUseP
 			if ( !task.isScheduled() && task instanceof ToUseLoadShipment ){
 				if ( this.getConstructionChance()>=random.nextDouble()) {
 					ToUseScheduleLoadUnload new_action = ToUseSchedulerFactory.eINSTANCE.createToUseScheduleLoadUnload();
-					new_action.setActionNr(action_nr++);
 					new_action.setLoadTask((ToUseLoadShipment) task);
-					step.getActions().add(new_action); // owning
-					new_action.setCurrentSolution(schedule);
-					new_action.initialize();
-					new_action.run();
-					new_action.finalize();
+					step.doAction(new_action);
 				}
 			}
 		}
