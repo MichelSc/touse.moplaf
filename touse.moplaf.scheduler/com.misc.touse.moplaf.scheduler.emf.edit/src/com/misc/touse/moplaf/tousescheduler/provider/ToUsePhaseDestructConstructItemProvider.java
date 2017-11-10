@@ -100,17 +100,6 @@ public class ToUsePhaseDestructConstructItemProvider extends PhaseItemProvider {
 	}
 
 	/**
-	 * This returns ToUsePhaseDestructConstruct.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/ToUsePhaseDestructConstruct"));
-	}
-
-	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
