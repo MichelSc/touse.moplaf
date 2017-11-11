@@ -90,6 +90,7 @@
     <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//ToUseActionLoadUnload">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//ToUseActionLoadUnload/LoadTask"/>
     </genClasses>
+<<<<<<< HEAD
     <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//ToUseScheduleLoadUnload"
         labelFeature="../../com.misc.common.moplaf.localsearch.emf/model/localsearch.genmodel#//localsearch/Action/Description"/>
     <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//ToUseUnscheduleLoadUnload"
@@ -97,6 +98,13 @@
     <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//ToUsePhaseDestructConstruct">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUsePhaseDestructConstruct/DestructionChance"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUsePhaseDestructConstruct/ConstructionChance"/>
+=======
+    <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//ToUseScheduleLoadUnload"/>
+    <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//ToUseUnscheduleLoadUnload"/>
+    <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//ToUsePhaseDestructConstruct">
+      <genFeatures createChild="false" propertyCategory="10 Strategy" ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUsePhaseDestructConstruct/DestructionChance"/>
+      <genFeatures createChild="false" propertyCategory="10 Strategy" ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUsePhaseDestructConstruct/ConstructionChance"/>
+>>>>>>> branch 'master' of https://github.com/MichelSc/touse.moplaf.git
     </genClasses>
     <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//CalcScheduler"/>
     <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//CalcSchedule">
