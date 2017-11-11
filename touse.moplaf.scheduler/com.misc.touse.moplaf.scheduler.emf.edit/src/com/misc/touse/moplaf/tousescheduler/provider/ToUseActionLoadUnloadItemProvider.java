@@ -13,7 +13,6 @@ import com.misc.common.moplaf.scheduler.Task;
 import com.misc.touse.moplaf.tousescheduler.ToUseActionLoadUnload;
 import com.misc.touse.moplaf.tousescheduler.ToUseLoadShipment;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedule;
-import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerFactory;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
 
 import java.util.Collection;
@@ -142,16 +141,6 @@ public class ToUseActionLoadUnloadItemProvider extends ActionItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(LocalSearchPackage.Literals.SOLUTION_CHANGE__END_SOLUTION_OWNED,
-				 ToUseSchedulerFactory.eINSTANCE.createToUseSchedule()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LocalSearchPackage.Literals.SOLUTION_CHANGE__START_SOLUTION_OWNED,
-				 ToUseSchedulerFactory.eINSTANCE.createToUseSchedule()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(LocalSearchPackage.Literals.ACTION__ROOT_MOVES,
 				 SchedulerFactory.eINSTANCE.createScheduleAfter()));
 
@@ -164,29 +153,6 @@ public class ToUseActionLoadUnloadItemProvider extends ActionItemProvider {
 			(createChildParameter
 				(LocalSearchPackage.Literals.ACTION__ROOT_MOVES,
 				 SchedulerFactory.eINSTANCE.createUnschedule()));
-	}
-
-	/**
-	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
-		Object childFeature = feature;
-		Object childObject = child;
-
-		boolean qualify =
-			childFeature == LocalSearchPackage.Literals.SOLUTION_CHANGE__END_SOLUTION_OWNED ||
-			childFeature == LocalSearchPackage.Literals.SOLUTION_CHANGE__START_SOLUTION_OWNED;
-
-		if (qualify) {
-			return getString
-				("_UI_CreateChild_text2",
-				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
-		}
-		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 	/**

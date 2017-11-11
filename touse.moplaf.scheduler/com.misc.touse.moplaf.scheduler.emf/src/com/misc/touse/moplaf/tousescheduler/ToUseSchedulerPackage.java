@@ -1945,6 +1945,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_ACTION_LOAD_UNLOAD__CURRENT_SOLUTION = LocalSearchPackage.ACTION__CURRENT_SOLUTION;
 
 	/**
+	 * The feature id for the '<em><b>Keep Solutions</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_ACTION_LOAD_UNLOAD__KEEP_SOLUTIONS = LocalSearchPackage.ACTION__KEEP_SOLUTIONS;
+
+	/**
 	 * The feature id for the '<em><b>Root Moves</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2150,6 +2159,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_SCHEDULE_LOAD_UNLOAD__CURRENT_SOLUTION = TO_USE_ACTION_LOAD_UNLOAD__CURRENT_SOLUTION;
+
+	/**
+	 * The feature id for the '<em><b>Keep Solutions</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_LOAD_UNLOAD__KEEP_SOLUTIONS = TO_USE_ACTION_LOAD_UNLOAD__KEEP_SOLUTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Root Moves</b></em>' containment reference list.
@@ -2397,6 +2415,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__CURRENT_SOLUTION = TO_USE_ACTION_LOAD_UNLOAD__CURRENT_SOLUTION;
+
+	/**
+	 * The feature id for the '<em><b>Keep Solutions</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__KEEP_SOLUTIONS = TO_USE_ACTION_LOAD_UNLOAD__KEEP_SOLUTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Root Moves</b></em>' containment reference list.

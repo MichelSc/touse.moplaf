@@ -221,7 +221,7 @@ public class ShipmentItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI__20ToUseSchedulerPropertyCategory"),
 				 null));
 	}
 
