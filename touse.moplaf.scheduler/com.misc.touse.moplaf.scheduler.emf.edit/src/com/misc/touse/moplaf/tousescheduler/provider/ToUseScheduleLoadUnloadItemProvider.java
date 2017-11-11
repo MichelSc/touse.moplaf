@@ -4,6 +4,7 @@ package com.misc.touse.moplaf.tousescheduler.provider;
 
 
 
+import com.misc.common.moplaf.localsearch.StrategyLevel;
 import com.misc.touse.moplaf.tousescheduler.ToUseScheduleLoadUnload;
 
 import java.util.Collection;
@@ -54,7 +55,8 @@ public class ToUseScheduleLoadUnloadItemProvider extends ToUseActionLoadUnloadIt
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ToUseScheduleLoadUnload)object).getDescription();
+		StrategyLevel labelValue = ((ToUseScheduleLoadUnload)object).getLevel();
+		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ?
 			getString("_UI_ToUseScheduleLoadUnload_type") :
 			getString("_UI_ToUseScheduleLoadUnload_type") + " " + label;

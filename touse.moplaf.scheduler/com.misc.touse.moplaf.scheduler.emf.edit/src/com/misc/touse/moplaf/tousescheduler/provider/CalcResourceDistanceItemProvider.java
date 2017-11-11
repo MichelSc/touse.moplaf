@@ -61,12 +61,23 @@ public class CalcResourceDistanceItemProvider extends CalcResourceItemProvider {
 				 getString("_UI_CalcResourceDistance_ConcreteParent_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CalcResourceDistance_ConcreteParent_feature", "_UI_CalcResourceDistance_type"),
 				 ToUseSchedulerPackage.Literals.CALC_RESOURCE_DISTANCE__CONCRETE_PARENT,
-				 true,
 				 false,
-				 true,
+				 false,
+				 false,
 				 null,
 				 null,
 				 null));
+	}
+
+	/**
+	 * This returns CalcResourceDistance.gif.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object getImage(Object object) {
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/CalcResourceDistance"));
 	}
 
 	/**

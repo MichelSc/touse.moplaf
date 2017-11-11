@@ -61,12 +61,23 @@ public class CalcTaskDistanceItemProvider extends CalcTaskItemProvider {
 				 getString("_UI_CalcTaskDistance_ConcreteParent_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CalcTaskDistance_ConcreteParent_feature", "_UI_CalcTaskDistance_type"),
 				 ToUseSchedulerPackage.Literals.CALC_TASK_DISTANCE__CONCRETE_PARENT,
-				 true,
 				 false,
-				 true,
+				 false,
+				 false,
 				 null,
 				 null,
 				 null));
+	}
+
+	/**
+	 * This returns CalcTaskDistance.gif.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object getImage(Object object) {
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/CalcTaskDistance"));
 	}
 
 	/**

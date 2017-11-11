@@ -571,6 +571,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULER___SORT_SOLUTIONS = SchedulerPackage.SCHEDULER___SORT_SOLUTIONS;
 
 	/**
+	 * The operation id for the '<em>Make New Solution Nr</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULER___MAKE_NEW_SOLUTION_NR = SchedulerPackage.SCHEDULER___MAKE_NEW_SOLUTION_NR;
+
+	/**
 	 * The operation id for the '<em>Construct Score</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -769,6 +778,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_SCHEDULE__STRATEGY = SchedulerPackage.SCHEDULE__STRATEGY;
+
+	/**
+	 * The feature id for the '<em><b>Step</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE__STEP = SchedulerPackage.SCHEDULE__STEP;
 
 	/**
 	 * The feature id for the '<em><b>Tasks</b></em>' containment reference list.
@@ -1954,6 +1972,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_ACTION_LOAD_UNLOAD__KEEP_SOLUTIONS = LocalSearchPackage.ACTION__KEEP_SOLUTIONS;
 
 	/**
+	 * The feature id for the '<em><b>New Solution</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_ACTION_LOAD_UNLOAD__NEW_SOLUTION = LocalSearchPackage.ACTION__NEW_SOLUTION;
+
+	/**
 	 * The feature id for the '<em><b>Root Moves</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2008,7 +2035,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_ACTION_LOAD_UNLOAD__ACTION_NR = LocalSearchPackage.ACTION__ACTION_NR;
 
 	/**
-	 * The feature id for the '<em><b>Step</b></em>' reference.
+	 * The feature id for the '<em><b>Step</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2170,6 +2197,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE_LOAD_UNLOAD__KEEP_SOLUTIONS = TO_USE_ACTION_LOAD_UNLOAD__KEEP_SOLUTIONS;
 
 	/**
+	 * The feature id for the '<em><b>New Solution</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_LOAD_UNLOAD__NEW_SOLUTION = TO_USE_ACTION_LOAD_UNLOAD__NEW_SOLUTION;
+
+	/**
 	 * The feature id for the '<em><b>Root Moves</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2224,7 +2260,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE_LOAD_UNLOAD__ACTION_NR = TO_USE_ACTION_LOAD_UNLOAD__ACTION_NR;
 
 	/**
-	 * The feature id for the '<em><b>Step</b></em>' reference.
+	 * The feature id for the '<em><b>Step</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2426,6 +2462,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__KEEP_SOLUTIONS = TO_USE_ACTION_LOAD_UNLOAD__KEEP_SOLUTIONS;
 
 	/**
+	 * The feature id for the '<em><b>New Solution</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__NEW_SOLUTION = TO_USE_ACTION_LOAD_UNLOAD__NEW_SOLUTION;
+
+	/**
 	 * The feature id for the '<em><b>Root Moves</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2480,7 +2525,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__ACTION_NR = TO_USE_ACTION_LOAD_UNLOAD__ACTION_NR;
 
 	/**
-	 * The feature id for the '<em><b>Step</b></em>' reference.
+	 * The feature id for the '<em><b>Step</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2695,6 +2740,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_PHASE_DESTRUCT_CONSTRUCT___DO_STEP__STEP = LocalSearchPackage.PHASE___DO_STEP__STEP;
+
+	/**
+	 * The operation id for the '<em>Do Action</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT___DO_ACTION__STEP_ACTION = LocalSearchPackage.PHASE___DO_ACTION__STEP_ACTION;
 
 	/**
 	 * The number of operations of the '<em>To Use Phase Destruct Construct</em>' class.

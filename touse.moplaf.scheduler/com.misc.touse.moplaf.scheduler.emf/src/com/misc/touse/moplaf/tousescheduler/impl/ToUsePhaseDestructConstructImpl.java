@@ -240,7 +240,7 @@ public class ToUsePhaseDestructConstructImpl extends PhaseImpl implements ToUseP
 				if ( this.getDestructionChance()>=random.nextDouble()) {
 					ToUseUnscheduleLoadUnload new_action = ToUseSchedulerFactory.eINSTANCE.createToUseUnscheduleLoadUnload();
 					new_action.setLoadTask((ToUseLoadShipment) task);
-					step.doAction(new_action);
+					this.doAction(step, new_action);
 				}
 			}
 		}
@@ -251,7 +251,7 @@ public class ToUsePhaseDestructConstructImpl extends PhaseImpl implements ToUseP
 				if ( this.getConstructionChance()>=random.nextDouble()) {
 					ToUseScheduleLoadUnload new_action = ToUseSchedulerFactory.eINSTANCE.createToUseScheduleLoadUnload();
 					new_action.setLoadTask((ToUseLoadShipment) task);
-					step.doAction(new_action);
+					this.doAction(step, new_action);
 				}
 			}
 		}

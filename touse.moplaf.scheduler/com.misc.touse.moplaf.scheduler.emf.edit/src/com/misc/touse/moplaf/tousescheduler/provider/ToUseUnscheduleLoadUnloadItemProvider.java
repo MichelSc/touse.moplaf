@@ -3,6 +3,7 @@
 package com.misc.touse.moplaf.tousescheduler.provider;
 
 
+import com.misc.common.moplaf.localsearch.StrategyLevel;
 import com.misc.touse.moplaf.tousescheduler.ToUseUnscheduleLoadUnload;
 
 import java.util.Collection;
@@ -53,7 +54,8 @@ public class ToUseUnscheduleLoadUnloadItemProvider extends ToUseActionLoadUnload
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ToUseUnscheduleLoadUnload)object).getDescription();
+		StrategyLevel labelValue = ((ToUseUnscheduleLoadUnload)object).getLevel();
+		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ?
 			getString("_UI_ToUseUnscheduleLoadUnload_type") :
 			getString("_UI_ToUseUnscheduleLoadUnload_type") + " " + label;
