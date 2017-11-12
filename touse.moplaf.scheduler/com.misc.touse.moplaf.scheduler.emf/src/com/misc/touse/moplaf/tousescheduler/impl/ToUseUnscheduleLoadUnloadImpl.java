@@ -62,7 +62,7 @@ public class ToUseUnscheduleLoadUnloadImpl extends ToUseActionLoadUnloadImpl imp
 		// unschedule load
 		Unschedule unschedule_load= SchedulerFactory.eINSTANCE.createUnschedule();
 		unschedule_load.setTaskToSchedule(loadTask);
-		unschedule_load.setSolution(false);
+		unschedule_load.setSolution(true);
 		unschedule_unload.getNextMoves().add(unschedule_load);
 	} // crerateMovesImpl
 
