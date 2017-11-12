@@ -1882,15 +1882,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_ACTION_LOAD_UNLOAD = 10;
 
 	/**
-	 * The feature id for the '<em><b>End Solution Owned</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_ACTION_LOAD_UNLOAD__END_SOLUTION_OWNED = LocalSearchPackage.ACTION__END_SOLUTION_OWNED;
-
-	/**
 	 * The feature id for the '<em><b>Start Solution</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1909,13 +1900,13 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_ACTION_LOAD_UNLOAD__END_SOLUTION = LocalSearchPackage.ACTION__END_SOLUTION;
 
 	/**
-	 * The feature id for the '<em><b>Start Solution Owned</b></em>' containment reference.
+	 * The feature id for the '<em><b>New Solution Owned</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_ACTION_LOAD_UNLOAD__START_SOLUTION_OWNED = LocalSearchPackage.ACTION__START_SOLUTION_OWNED;
+	int TO_USE_ACTION_LOAD_UNLOAD__NEW_SOLUTION_OWNED = LocalSearchPackage.ACTION__NEW_SOLUTION_OWNED;
 
 	/**
 	 * The feature id for the '<em><b>Previous Change</b></em>' reference.
@@ -1979,6 +1970,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_ACTION_LOAD_UNLOAD__NEW_SOLUTION = LocalSearchPackage.ACTION__NEW_SOLUTION;
+
+	/**
+	 * The feature id for the '<em><b>Super Change</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_ACTION_LOAD_UNLOAD__SUPER_CHANGE = LocalSearchPackage.ACTION__SUPER_CHANGE;
 
 	/**
 	 * The feature id for the '<em><b>Root Moves</b></em>' containment reference list.
@@ -2107,15 +2107,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_ACTION_LOAD_UNLOAD_OPERATION_COUNT = LocalSearchPackage.ACTION_OPERATION_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>End Solution Owned</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD__END_SOLUTION_OWNED = TO_USE_ACTION_LOAD_UNLOAD__END_SOLUTION_OWNED;
-
-	/**
 	 * The feature id for the '<em><b>Start Solution</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2134,13 +2125,13 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE_LOAD_UNLOAD__END_SOLUTION = TO_USE_ACTION_LOAD_UNLOAD__END_SOLUTION;
 
 	/**
-	 * The feature id for the '<em><b>Start Solution Owned</b></em>' containment reference.
+	 * The feature id for the '<em><b>New Solution Owned</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD__START_SOLUTION_OWNED = TO_USE_ACTION_LOAD_UNLOAD__START_SOLUTION_OWNED;
+	int TO_USE_SCHEDULE_LOAD_UNLOAD__NEW_SOLUTION_OWNED = TO_USE_ACTION_LOAD_UNLOAD__NEW_SOLUTION_OWNED;
 
 	/**
 	 * The feature id for the '<em><b>Previous Change</b></em>' reference.
@@ -2204,6 +2195,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_SCHEDULE_LOAD_UNLOAD__NEW_SOLUTION = TO_USE_ACTION_LOAD_UNLOAD__NEW_SOLUTION;
+
+	/**
+	 * The feature id for the '<em><b>Super Change</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_LOAD_UNLOAD__SUPER_CHANGE = TO_USE_ACTION_LOAD_UNLOAD__SUPER_CHANGE;
 
 	/**
 	 * The feature id for the '<em><b>Root Moves</b></em>' containment reference list.
@@ -2372,15 +2372,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_UNSCHEDULE_LOAD_UNLOAD = 12;
 
 	/**
-	 * The feature id for the '<em><b>End Solution Owned</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__END_SOLUTION_OWNED = TO_USE_ACTION_LOAD_UNLOAD__END_SOLUTION_OWNED;
-
-	/**
 	 * The feature id for the '<em><b>Start Solution</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2399,13 +2390,13 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__END_SOLUTION = TO_USE_ACTION_LOAD_UNLOAD__END_SOLUTION;
 
 	/**
-	 * The feature id for the '<em><b>Start Solution Owned</b></em>' containment reference.
+	 * The feature id for the '<em><b>New Solution Owned</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__START_SOLUTION_OWNED = TO_USE_ACTION_LOAD_UNLOAD__START_SOLUTION_OWNED;
+	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__NEW_SOLUTION_OWNED = TO_USE_ACTION_LOAD_UNLOAD__NEW_SOLUTION_OWNED;
 
 	/**
 	 * The feature id for the '<em><b>Previous Change</b></em>' reference.
@@ -2469,6 +2460,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__NEW_SOLUTION = TO_USE_ACTION_LOAD_UNLOAD__NEW_SOLUTION;
+
+	/**
+	 * The feature id for the '<em><b>Super Change</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__SUPER_CHANGE = TO_USE_ACTION_LOAD_UNLOAD__SUPER_CHANGE;
 
 	/**
 	 * The feature id for the '<em><b>Root Moves</b></em>' containment reference list.
