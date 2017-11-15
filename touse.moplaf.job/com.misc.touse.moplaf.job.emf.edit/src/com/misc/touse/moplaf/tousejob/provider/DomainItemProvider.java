@@ -94,6 +94,7 @@ public class DomainItemProvider
 			childrenFeatures.add(TousejobPackage.Literals.DOMAIN__ENGINES);
 			childrenFeatures.add(TousejobPackage.Literals.DOMAIN__JOBS);
 			childrenFeatures.add(TousejobPackage.Literals.DOMAIN__PROXIES);
+			childrenFeatures.add(TousejobPackage.Literals.DOMAIN__JOBSCHEDULER);
 		}
 		return childrenFeatures;
 	}
@@ -149,6 +150,7 @@ public class DomainItemProvider
 			case TousejobPackage.DOMAIN__ENGINES:
 			case TousejobPackage.DOMAIN__JOBS:
 			case TousejobPackage.DOMAIN__PROXIES:
+			case TousejobPackage.DOMAIN__JOBSCHEDULER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -174,11 +176,6 @@ public class DomainItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TousejobPackage.Literals.DOMAIN__JOBS,
-				 TousejobFactory.eINSTANCE.createToUseJob()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TousejobPackage.Literals.DOMAIN__JOBS,
 				 TousejobFactory.eINSTANCE.createToUseJobConsole()));
 
 		newChildDescriptors.add
@@ -193,11 +190,6 @@ public class DomainItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TousejobPackage.Literals.DOMAIN__JOBS,
-				 JobclientFactory.eINSTANCE.createJobRemote()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(TousejobPackage.Literals.DOMAIN__PROXIES,
 				 JobclientFactory.eINSTANCE.createJobEngineInProcess()));
 
@@ -205,6 +197,11 @@ public class DomainItemProvider
 			(createChildParameter
 				(TousejobPackage.Literals.DOMAIN__PROXIES,
 				 JobxmlrpcFactory.eINSTANCE.createJobEngineClient()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TousejobPackage.Literals.DOMAIN__JOBSCHEDULER,
+				 JobclientFactory.eINSTANCE.createJobScheduler()));
 	}
 
 	/**

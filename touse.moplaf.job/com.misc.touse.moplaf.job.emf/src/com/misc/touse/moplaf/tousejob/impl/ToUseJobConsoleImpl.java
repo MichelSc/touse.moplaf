@@ -15,14 +15,14 @@ package com.misc.touse.moplaf.tousejob.impl;
 import com.misc.common.moplaf.common.EnabledFeedback;
 import com.misc.common.moplaf.common.ReturnFeedback;
 import com.misc.common.moplaf.job.JobParameterType;
+import com.misc.common.moplaf.job.Plugin;
 import com.misc.common.moplaf.job.RunContext;
 import com.misc.common.moplaf.job.impl.JobConsoleImpl;
-
 import com.misc.touse.moplaf.tousejob.ToUseJobConsole;
 import com.misc.touse.moplaf.tousejob.TousejobPackage;
 
 import java.util.Date;
-
+import java.util.concurrent.TimeUnit;
 import org.eclipse.emf.common.CommonPlugin;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
@@ -229,8 +229,19 @@ public class ToUseJobConsoleImpl extends JobConsoleImpl implements ToUseJobConso
 			jobName = String.format("ToUseJobConsole Run %1$tF %1$tT ", currentTime);
 			this.setName(jobName);
 		}
+
+		int seconds = 2;
+		for (int i=0; i<1; i++){
+			try {
+				TimeUnit.SECONDS.sleep(seconds);
+			} catch (InterruptedException e) {
+				Plugin.INSTANCE.logError("ToUseJob "+this.getName()+" interrupted");
+			}
+			Plugin.INSTANCE.logInfo("ToUseJob iteration "+i);
+		}
 		
 		// read the params
+		/*
 		try {
 			this.setArgs();
 		} catch(Exception e){
@@ -238,10 +249,12 @@ public class ToUseJobConsoleImpl extends JobConsoleImpl implements ToUseJobConso
 			String helpText = this.getHelpText();
 			CommonPlugin.INSTANCE.log(helpText);
 			return new ReturnFeedback("ToUseJobConsole.run", e);
-		}
+		}*/
+		
+
+		
 		
 		CommonPlugin.INSTANCE.log("ToUseJobConsole: called by "+this.getCallerName());
-		
 		return ReturnFeedback.SUCCESS;
 	}	
 

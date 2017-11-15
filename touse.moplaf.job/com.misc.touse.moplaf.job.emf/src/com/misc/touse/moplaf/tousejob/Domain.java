@@ -15,6 +15,7 @@ package com.misc.touse.moplaf.tousejob;
 import com.misc.common.moplaf.job.Job;
 import com.misc.common.moplaf.job.jobclient.JobEngine;
 import com.misc.common.moplaf.job.jobclient.JobEngineProxy;
+import com.misc.common.moplaf.job.jobclient.JobScheduler;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -31,6 +32,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.misc.touse.moplaf.tousejob.Domain#getEngines <em>Engines</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousejob.Domain#getJobs <em>Jobs</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousejob.Domain#getProxies <em>Proxies</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousejob.Domain#getJobscheduler <em>Jobscheduler</em>}</li>
  * </ul>
  *
  * @see com.misc.touse.moplaf.tousejob.TousejobPackage#getDomain()
@@ -95,5 +97,31 @@ public interface Domain extends EObject {
 	 * @generated
 	 */
 	EList<JobEngineProxy> getProxies();
+
+	/**
+	 * Returns the value of the '<em><b>Jobscheduler</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Jobscheduler</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Jobscheduler</em>' containment reference.
+	 * @see #setJobscheduler(JobScheduler)
+	 * @see com.misc.touse.moplaf.tousejob.TousejobPackage#getDomain_Jobscheduler()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	JobScheduler getJobscheduler();
+
+	/**
+	 * Sets the value of the '{@link com.misc.touse.moplaf.tousejob.Domain#getJobscheduler <em>Jobscheduler</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Jobscheduler</em>' containment reference.
+	 * @see #getJobscheduler()
+	 * @generated
+	 */
+	void setJobscheduler(JobScheduler value);
 
 } // Domain

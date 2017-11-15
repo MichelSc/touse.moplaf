@@ -108,13 +108,22 @@ public interface TousejobPackage extends EPackage {
 	int DOMAIN__PROXIES = 2;
 
 	/**
+	 * The feature id for the '<em><b>Jobscheduler</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN__JOBSCHEDULER = 3;
+
+	/**
 	 * The number of structural features of the '<em>Domain</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_FEATURE_COUNT = 3;
+	int DOMAIN_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Domain</em>' class.
@@ -136,141 +145,6 @@ public interface TousejobPackage extends EPackage {
 	int TO_USE_JOB = 1;
 
 	/**
-	 * The feature id for the '<em><b>Run Feedback</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_JOB__RUN_FEEDBACK = JobclientPackage.JOB_REMOTE__RUN_FEEDBACK;
-
-	/**
-	 * The feature id for the '<em><b>Cancel Feedback</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_JOB__CANCEL_FEEDBACK = JobclientPackage.JOB_REMOTE__CANCEL_FEEDBACK;
-
-	/**
-	 * The feature id for the '<em><b>Reset Feedback</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_JOB__RESET_FEEDBACK = JobclientPackage.JOB_REMOTE__RESET_FEEDBACK;
-
-	/**
-	 * The feature id for the '<em><b>Canceled</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_JOB__CANCELED = JobclientPackage.JOB_REMOTE__CANCELED;
-
-	/**
-	 * The feature id for the '<em><b>Return Success</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_JOB__RETURN_SUCCESS = JobclientPackage.JOB_REMOTE__RETURN_SUCCESS;
-
-	/**
-	 * The feature id for the '<em><b>Return Feedback</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_JOB__RETURN_FEEDBACK = JobclientPackage.JOB_REMOTE__RETURN_FEEDBACK;
-
-	/**
-	 * The feature id for the '<em><b>Return Information</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_JOB__RETURN_INFORMATION = JobclientPackage.JOB_REMOTE__RETURN_INFORMATION;
-
-	/**
-	 * The feature id for the '<em><b>Status</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_JOB__STATUS = JobclientPackage.JOB_REMOTE__STATUS;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_JOB__DESCRIPTION = JobclientPackage.JOB_REMOTE__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Start Time</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_JOB__START_TIME = JobclientPackage.JOB_REMOTE__START_TIME;
-
-	/**
-	 * The feature id for the '<em><b>End Time</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_JOB__END_TIME = JobclientPackage.JOB_REMOTE__END_TIME;
-
-	/**
-	 * The feature id for the '<em><b>Duration</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_JOB__DURATION = JobclientPackage.JOB_REMOTE__DURATION;
-
-	/**
-	 * The feature id for the '<em><b>Started</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_JOB__STARTED = JobclientPackage.JOB_REMOTE__STARTED;
-
-	/**
-	 * The feature id for the '<em><b>Finished</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_JOB__FINISHED = JobclientPackage.JOB_REMOTE__FINISHED;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_JOB__NAME = JobclientPackage.JOB_REMOTE__NAME;
-
-	/**
 	 * The feature id for the '<em><b>Submission ID</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -278,15 +152,6 @@ public interface TousejobPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_JOB__SUBMISSION_ID = JobclientPackage.JOB_REMOTE__SUBMISSION_ID;
-
-	/**
-	 * The feature id for the '<em><b>Handling Engine</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_JOB__HANDLING_ENGINE = JobclientPackage.JOB_REMOTE__HANDLING_ENGINE;
 
 	/**
 	 * The feature id for the '<em><b>Result</b></em>' containment reference.
@@ -325,6 +190,60 @@ public interface TousejobPackage extends EPackage {
 	int TO_USE_JOB__LAST_PROGRESS_TASK = JobclientPackage.JOB_REMOTE__LAST_PROGRESS_TASK;
 
 	/**
+	 * The feature id for the '<em><b>Job</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB__JOB = JobclientPackage.JOB_REMOTE__JOB;
+
+	/**
+	 * The feature id for the '<em><b>Jobremote</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB__JOBREMOTE = JobclientPackage.JOB_REMOTE__JOBREMOTE;
+
+	/**
+	 * The feature id for the '<em><b>Jobremotee Opposite</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB__JOBREMOTEE_OPPOSITE = JobclientPackage.JOB_REMOTE__JOBREMOTEE_OPPOSITE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB__NAME = JobclientPackage.JOB_REMOTE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Progress</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB__PROGRESS = JobclientPackage.JOB_REMOTE__PROGRESS;
+
+	/**
+	 * The feature id for the '<em><b>Start Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB__START_TIME = JobclientPackage.JOB_REMOTE__START_TIME;
+
+	/**
 	 * The feature id for the '<em><b>Seconds Waiting</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -352,78 +271,6 @@ public interface TousejobPackage extends EPackage {
 	int TO_USE_JOB_FEATURE_COUNT = JobclientPackage.JOB_REMOTE_FEATURE_COUNT + 2;
 
 	/**
-	 * The operation id for the '<em>Reset</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_JOB___RESET = JobclientPackage.JOB_REMOTE___RESET;
-
-	/**
-	 * The operation id for the '<em>Run</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_JOB___RUN = JobclientPackage.JOB_REMOTE___RUN;
-
-	/**
-	 * The operation id for the '<em>Run</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_JOB___RUN__RUNCONTEXT = JobclientPackage.JOB_REMOTE___RUN__RUNCONTEXT;
-
-	/**
-	 * The operation id for the '<em>Cancel</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_JOB___CANCEL = JobclientPackage.JOB_REMOTE___CANCEL;
-
-	/**
-	 * The operation id for the '<em>Set Progress</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_JOB___SET_PROGRESS__STRING_FLOAT = JobclientPackage.JOB_REMOTE___SET_PROGRESS__STRING_FLOAT;
-
-	/**
-	 * The operation id for the '<em>Set Progress</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_JOB___SET_PROGRESS__PROGRESSFEEDBACK = JobclientPackage.JOB_REMOTE___SET_PROGRESS__PROGRESSFEEDBACK;
-
-	/**
-	 * The operation id for the '<em>Get Return</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_JOB___GET_RETURN = JobclientPackage.JOB_REMOTE___GET_RETURN;
-
-	/**
-	 * The operation id for the '<em>Set Return</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_JOB___SET_RETURN__RETURNFEEDBACK = JobclientPackage.JOB_REMOTE___SET_RETURN__RETURNFEEDBACK;
-
-	/**
 	 * The operation id for the '<em>On Progress</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -449,6 +296,15 @@ public interface TousejobPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_JOB___REFRESH_PROGRESS = JobclientPackage.JOB_REMOTE___REFRESH_PROGRESS;
+
+	/**
+	 * The operation id for the '<em>Run</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB___RUN__SUBMITTEDJOB = JobclientPackage.JOB_REMOTE___RUN__SUBMITTEDJOB;
 
 	/**
 	 * The number of operations of the '<em>To Use Job</em>' class.
@@ -816,6 +672,15 @@ public interface TousejobPackage extends EPackage {
 	int TO_USE_JOB_CONSOLE_FEATURE_COUNT = JobPackage.JOB_CONSOLE_FEATURE_COUNT + 1;
 
 	/**
+	 * The operation id for the '<em>Copy Params</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB_CONSOLE___COPY_PARAMS__RUNPARAMS = JobPackage.JOB_CONSOLE___COPY_PARAMS__RUNPARAMS;
+
+	/**
 	 * The operation id for the '<em>Reset</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -886,6 +751,15 @@ public interface TousejobPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_JOB_CONSOLE___SET_RETURN__RETURNFEEDBACK = JobPackage.JOB_CONSOLE___SET_RETURN__RETURNFEEDBACK;
+
+	/**
+	 * The operation id for the '<em>Construct Params</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB_CONSOLE___CONSTRUCT_PARAMS = JobPackage.JOB_CONSOLE___CONSTRUCT_PARAMS;
 
 	/**
 	 * The operation id for the '<em>Add Parameter</em>' operation.
@@ -1011,6 +885,17 @@ public interface TousejobPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getDomain_Proxies();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link com.misc.touse.moplaf.tousejob.Domain#getJobscheduler <em>Jobscheduler</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Jobscheduler</em>'.
+	 * @see com.misc.touse.moplaf.tousejob.Domain#getJobscheduler()
+	 * @see #getDomain()
+	 * @generated
+	 */
+	EReference getDomain_Jobscheduler();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousejob.ToUseJob <em>To Use Job</em>}'.
@@ -1152,6 +1037,14 @@ public interface TousejobPackage extends EPackage {
 		 * @generated
 		 */
 		EReference DOMAIN__PROXIES = eINSTANCE.getDomain_Proxies();
+
+		/**
+		 * The meta object literal for the '<em><b>Jobscheduler</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DOMAIN__JOBSCHEDULER = eINSTANCE.getDomain_Jobscheduler();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousejob.impl.ToUseJobImpl <em>To Use Job</em>}' class.

@@ -16,6 +16,7 @@ import com.misc.common.moplaf.job.Job;
 import com.misc.common.moplaf.job.JobConsole;
 import com.misc.common.moplaf.job.Run;
 
+import com.misc.common.moplaf.job.RunParams;
 import com.misc.common.moplaf.job.jobclient.JobEngine;
 import com.misc.common.moplaf.job.jobclient.JobRemote;
 import com.misc.common.moplaf.job.jobclient.JobRemoteResult;
@@ -95,8 +96,6 @@ public class TousejobSwitch<T> extends Switch<T> {
 				ToUseJob toUseJob = (ToUseJob)theEObject;
 				T result = caseToUseJob(toUseJob);
 				if (result == null) result = caseJobRemote(toUseJob);
-				if (result == null) result = caseJob(toUseJob);
-				if (result == null) result = caseRun(toUseJob);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -121,6 +120,7 @@ public class TousejobSwitch<T> extends Switch<T> {
 				if (result == null) result = caseJobConsole(toUseJobConsole);
 				if (result == null) result = caseJob(toUseJobConsole);
 				if (result == null) result = caseRun(toUseJobConsole);
+				if (result == null) result = caseRunParams(toUseJobConsole);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -290,6 +290,21 @@ public class TousejobSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseJobEngineServer(JobEngineServer object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Run Params</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Run Params</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRunParams(RunParams object) {
 		return null;
 	}
 

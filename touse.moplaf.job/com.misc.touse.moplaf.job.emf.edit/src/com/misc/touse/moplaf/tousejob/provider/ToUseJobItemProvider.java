@@ -173,6 +173,11 @@ public class ToUseJobItemProvider extends JobRemoteItemProvider {
 			(createChildParameter
 				(JobclientPackage.Literals.JOB_REMOTE__RESULT,
 				 TousejobFactory.eINSTANCE.createToUseJobResult()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(JobclientPackage.Literals.JOB_REMOTE__JOB,
+				 TousejobFactory.eINSTANCE.createToUseJobConsole()));
 	}
 
 	/**

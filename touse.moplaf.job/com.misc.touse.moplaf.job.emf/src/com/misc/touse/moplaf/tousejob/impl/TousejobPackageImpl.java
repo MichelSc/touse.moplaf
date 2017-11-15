@@ -120,6 +120,8 @@ public class TousejobPackageImpl extends EPackageImpl implements TousejobPackage
 		isInited = true;
 
 		// Initialize simple dependencies
+		JobPackage.eINSTANCE.eClass();
+		JobclientPackage.eINSTANCE.eClass();
 		JobxmlrpcPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
@@ -171,6 +173,15 @@ public class TousejobPackageImpl extends EPackageImpl implements TousejobPackage
 	 */
 	public EReference getDomain_Proxies() {
 		return (EReference)domainEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDomain_Jobscheduler() {
+		return (EReference)domainEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -277,6 +288,7 @@ public class TousejobPackageImpl extends EPackageImpl implements TousejobPackage
 		createEReference(domainEClass, DOMAIN__ENGINES);
 		createEReference(domainEClass, DOMAIN__JOBS);
 		createEReference(domainEClass, DOMAIN__PROXIES);
+		createEReference(domainEClass, DOMAIN__JOBSCHEDULER);
 
 		toUseJobEClass = createEClass(TO_USE_JOB);
 		createEAttribute(toUseJobEClass, TO_USE_JOB__SECONDS_WAITING);
@@ -334,6 +346,7 @@ public class TousejobPackageImpl extends EPackageImpl implements TousejobPackage
 		initEReference(getDomain_Engines(), theJobclientPackage.getJobEngine(), null, "Engines", null, 0, 1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDomain_Jobs(), theJobPackage.getJob(), null, "Jobs", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDomain_Proxies(), theJobclientPackage.getJobEngineProxy(), null, "Proxies", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDomain_Jobscheduler(), theJobclientPackage.getJobScheduler(), null, "jobscheduler", null, 1, 1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(toUseJobEClass, ToUseJob.class, "ToUseJob", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getToUseJob_SecondsWaiting(), ecorePackage.getEInt(), "SecondsWaiting", "2", 0, 1, ToUseJob.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

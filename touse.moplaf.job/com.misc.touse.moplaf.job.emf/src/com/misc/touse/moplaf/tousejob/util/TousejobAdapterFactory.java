@@ -16,6 +16,7 @@ import com.misc.common.moplaf.job.Job;
 import com.misc.common.moplaf.job.JobConsole;
 import com.misc.common.moplaf.job.Run;
 
+import com.misc.common.moplaf.job.RunParams;
 import com.misc.common.moplaf.job.jobclient.JobEngine;
 import com.misc.common.moplaf.job.jobclient.JobRemote;
 import com.misc.common.moplaf.job.jobclient.JobRemoteResult;
@@ -107,14 +108,6 @@ public class TousejobAdapterFactory extends AdapterFactoryImpl {
 				return createToUseJobConsoleAdapter();
 			}
 			@Override
-			public Adapter caseRun(Run object) {
-				return createRunAdapter();
-			}
-			@Override
-			public Adapter caseJob(Job object) {
-				return createJobAdapter();
-			}
-			@Override
 			public Adapter caseJobRemote(JobRemote object) {
 				return createJobRemoteAdapter();
 			}
@@ -129,6 +122,18 @@ public class TousejobAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseJobEngineServer(JobEngineServer object) {
 				return createJobEngineServerAdapter();
+			}
+			@Override
+			public Adapter caseRunParams(RunParams object) {
+				return createRunParamsAdapter();
+			}
+			@Override
+			public Adapter caseRun(Run object) {
+				return createRunAdapter();
+			}
+			@Override
+			public Adapter caseJob(Job object) {
+				return createJobAdapter();
 			}
 			@Override
 			public Adapter caseJobConsole(JobConsole object) {
@@ -305,6 +310,20 @@ public class TousejobAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createJobEngineServerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.job.RunParams <em>Run Params</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.job.RunParams
+	 * @generated
+	 */
+	public Adapter createRunParamsAdapter() {
 		return null;
 	}
 
