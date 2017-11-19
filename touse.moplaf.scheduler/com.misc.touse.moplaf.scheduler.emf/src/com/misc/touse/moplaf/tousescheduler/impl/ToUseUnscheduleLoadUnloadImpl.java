@@ -5,6 +5,7 @@ package com.misc.touse.moplaf.tousescheduler.impl;
 import com.misc.common.moplaf.scheduler.SchedulerFactory;
 import com.misc.common.moplaf.scheduler.Unschedule;
 import com.misc.touse.moplaf.tousescheduler.ToUseLoadShipment;
+import com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
 import com.misc.touse.moplaf.tousescheduler.ToUseUnloadShipment;
 import com.misc.touse.moplaf.tousescheduler.ToUseUnscheduleLoadUnload;
@@ -41,8 +42,10 @@ public class ToUseUnscheduleLoadUnloadImpl extends ToUseActionLoadUnloadImpl imp
 	@Override
 	public String getDescription() {
 		ToUseLoadShipment task = this.getLoadTask();
-		String description = String.format("Unschedule(%s)", 
-				                           task==null ? "null" : task.getName());
+		ToUseScheduleResource resource = task==null ? null : (ToUseScheduleResource)task.getScheduledResource();
+		String description = String.format("Unschedule(%s) from %s", 
+				                           task==null ? "null" : task.getName(),
+        								   resource==null ? "null" : resource.getName() );
 		return description;
 	}
 

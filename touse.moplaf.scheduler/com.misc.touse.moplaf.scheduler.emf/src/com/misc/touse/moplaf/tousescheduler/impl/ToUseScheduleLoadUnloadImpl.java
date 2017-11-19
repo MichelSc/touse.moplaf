@@ -9,6 +9,7 @@ import com.misc.common.moplaf.scheduler.Task;
 import com.misc.touse.moplaf.tousescheduler.ToUseLoadShipment;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedule;
 import com.misc.touse.moplaf.tousescheduler.ToUseScheduleLoadUnload;
+import com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
 import com.misc.touse.moplaf.tousescheduler.ToUseUnloadShipment;
 import org.eclipse.emf.ecore.EClass;
@@ -43,8 +44,10 @@ public class ToUseScheduleLoadUnloadImpl extends ToUseActionLoadUnloadImpl imple
 	@Override
 	public String getDescription() {
 		ToUseLoadShipment task = this.getLoadTask();
-		String description = String.format("Schedule(%s)", 
-				                           task==null ? "null" : task.getName());
+		ToUseScheduleResource resource = task==null ? null : (ToUseScheduleResource)task.getScheduledResource();
+		String description = String.format("Schedule(%s) on %s", 
+				                           task==null ? "null" : task.getName(),
+				                           resource==null ? "null" : resource.getName() );
 		return description;
 	}
 
