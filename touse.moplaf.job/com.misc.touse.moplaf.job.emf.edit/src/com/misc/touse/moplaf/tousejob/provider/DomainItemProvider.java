@@ -176,6 +176,11 @@ public class DomainItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TousejobPackage.Literals.DOMAIN__JOBS,
+				 TousejobFactory.eINSTANCE.createToUseJob()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TousejobPackage.Literals.DOMAIN__JOBS,
 				 TousejobFactory.eINSTANCE.createToUseJobConsole()));
 
 		newChildDescriptors.add

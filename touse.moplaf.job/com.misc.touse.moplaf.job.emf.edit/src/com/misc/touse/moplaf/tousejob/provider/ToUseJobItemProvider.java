@@ -13,12 +13,8 @@
 package com.misc.touse.moplaf.tousejob.provider;
 
 
-import com.misc.common.moplaf.job.jobclient.JobclientPackage;
-
-import com.misc.common.moplaf.job.jobclient.provider.JobRemoteItemProvider;
-
+import com.misc.common.moplaf.job.provider.JobItemProvider;
 import com.misc.touse.moplaf.tousejob.ToUseJob;
-import com.misc.touse.moplaf.tousejob.TousejobFactory;
 import com.misc.touse.moplaf.tousejob.TousejobPackage;
 
 import java.util.Collection;
@@ -40,7 +36,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ToUseJobItemProvider extends JobRemoteItemProvider {
+public class ToUseJobItemProvider extends JobItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -168,16 +164,6 @@ public class ToUseJobItemProvider extends JobRemoteItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(JobclientPackage.Literals.JOB_REMOTE__RESULT,
-				 TousejobFactory.eINSTANCE.createToUseJobResult()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(JobclientPackage.Literals.JOB_REMOTE__JOB,
-				 TousejobFactory.eINSTANCE.createToUseJobConsole()));
 	}
 
 	/**

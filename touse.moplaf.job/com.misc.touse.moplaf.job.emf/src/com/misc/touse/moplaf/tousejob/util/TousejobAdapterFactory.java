@@ -18,7 +18,6 @@ import com.misc.common.moplaf.job.Run;
 
 import com.misc.common.moplaf.job.RunParams;
 import com.misc.common.moplaf.job.jobclient.JobEngine;
-import com.misc.common.moplaf.job.jobclient.JobRemote;
 import com.misc.common.moplaf.job.jobclient.JobRemoteResult;
 
 import com.misc.common.moplaf.job.jobxmlrpc.JobEngineServer;
@@ -108,8 +107,16 @@ public class TousejobAdapterFactory extends AdapterFactoryImpl {
 				return createToUseJobConsoleAdapter();
 			}
 			@Override
-			public Adapter caseJobRemote(JobRemote object) {
-				return createJobRemoteAdapter();
+			public Adapter caseRunParams(RunParams object) {
+				return createRunParamsAdapter();
+			}
+			@Override
+			public Adapter caseRun(Run object) {
+				return createRunAdapter();
+			}
+			@Override
+			public Adapter caseJob(Job object) {
+				return createJobAdapter();
 			}
 			@Override
 			public Adapter caseJobRemoteResult(JobRemoteResult object) {
@@ -122,18 +129,6 @@ public class TousejobAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseJobEngineServer(JobEngineServer object) {
 				return createJobEngineServerAdapter();
-			}
-			@Override
-			public Adapter caseRunParams(RunParams object) {
-				return createRunParamsAdapter();
-			}
-			@Override
-			public Adapter caseRun(Run object) {
-				return createRunAdapter();
-			}
-			@Override
-			public Adapter caseJob(Job object) {
-				return createJobAdapter();
 			}
 			@Override
 			public Adapter caseJobConsole(JobConsole object) {
@@ -254,20 +249,6 @@ public class TousejobAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createJobAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.job.jobclient.JobRemote <em>Job Remote</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.job.jobclient.JobRemote
-	 * @generated
-	 */
-	public Adapter createJobRemoteAdapter() {
 		return null;
 	}
 

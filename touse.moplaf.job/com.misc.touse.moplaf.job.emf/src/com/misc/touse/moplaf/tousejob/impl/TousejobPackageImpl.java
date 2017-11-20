@@ -336,7 +336,7 @@ public class TousejobPackageImpl extends EPackageImpl implements TousejobPackage
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		toUseJobEClass.getESuperTypes().add(theJobclientPackage.getJobRemote());
+		toUseJobEClass.getESuperTypes().add(theJobPackage.getJob());
 		toUseJobResultEClass.getESuperTypes().add(theJobclientPackage.getJobRemoteResult());
 		dummyToHoldRefToModelEClass.getESuperTypes().add(theJobxmlrpcPackage.getJobEngineServer());
 		toUseJobConsoleEClass.getESuperTypes().add(theJobPackage.getJobConsole());

@@ -12,7 +12,7 @@
  */
 package com.misc.touse.moplaf.tousejob;
 
-import com.misc.common.moplaf.job.jobclient.JobRemote;
+import com.misc.common.moplaf.job.Job;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,7 +31,7 @@ import com.misc.common.moplaf.job.jobclient.JobRemote;
  * @model
  * @generated
  */
-public interface ToUseJob extends JobRemote {
+public interface ToUseJob extends Job {
 	/**
 	 * Returns the value of the '<em><b>Seconds Waiting</b></em>' attribute.
 	 * The default value is <code>"2"</code>.

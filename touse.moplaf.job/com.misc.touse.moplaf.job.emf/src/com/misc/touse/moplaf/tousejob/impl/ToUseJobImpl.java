@@ -15,7 +15,7 @@ package com.misc.touse.moplaf.tousejob.impl;
 import com.misc.common.moplaf.job.Plugin;
 import com.misc.common.moplaf.job.ProgressFeedback;
 import com.misc.common.moplaf.job.RunContext;
-import com.misc.common.moplaf.job.jobclient.impl.JobRemoteImpl;
+import com.misc.common.moplaf.job.impl.JobImpl;
 import com.misc.common.moplaf.common.ReturnFeedback;
 
 import com.misc.touse.moplaf.tousejob.ToUseJob;
@@ -46,7 +46,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class ToUseJobImpl extends JobRemoteImpl implements ToUseJob {
+public class ToUseJobImpl extends JobImpl implements ToUseJob {
 	/**
 	 * The default value of the '{@link #getSecondsWaiting() <em>Seconds Waiting</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -254,7 +254,7 @@ public class ToUseJobImpl extends JobRemoteImpl implements ToUseJob {
 		long ticks = now.getTime()-this.getStartTime().getTime();
 		ToUseJobResult result = TousejobFactory.eINSTANCE.createToUseJobResult();
 		result.setTicksWaited(ticks);
-		this.setResult(result);
+		//BART TODO this.setResult(result);
 		Plugin.INSTANCE.logInfo("ToUseJob "+this.getName()+" finished");
 		return ReturnFeedback.SUCCESS;
 	}

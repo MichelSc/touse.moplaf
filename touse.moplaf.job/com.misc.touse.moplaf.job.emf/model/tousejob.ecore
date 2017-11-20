@@ -14,7 +14,7 @@
         eType="ecore:EClass ../../com.misc.common.moplaf.job.client.emf/model/jobclient.ecore#//JobScheduler"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ToUseJob" eSuperTypes="../../com.misc.common.moplaf.job.client.emf/model/jobclient.ecore#//JobRemote">
+  <eClassifiers xsi:type="ecore:EClass" name="ToUseJob" eSuperTypes="../../com.misc.common.moplaf.job.emf/model/job.ecore#//Job">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="SecondsWaiting" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         defaultValueLiteral="2"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Iteration" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
