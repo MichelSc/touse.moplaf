@@ -48,6 +48,7 @@ import com.misc.common.moplaf.emf.editor.action.FinalizeAction;
 import com.misc.common.moplaf.emf.editor.action.InitializeAction;
 import com.misc.common.moplaf.emf.editor.action.ResetAction;
 import com.misc.common.moplaf.emf.editor.action.RunAction;
+import com.misc.common.moplaf.emf.editor.action.RunBackgroundAction;
 import com.misc.common.moplaf.emf.editor.action.SelectAction;
 import com.misc.common.moplaf.emf.editor.action.SortAction;
 import com.misc.common.moplaf.emf.editor.action.UndoAction;
@@ -321,6 +322,7 @@ public class ToUseSchedulerActionBarContributor
 		applicationPopUpMenuActions.add(new AcceptAction    (activeEditorPart, selection));
 		applicationPopUpMenuActions.add(new SelectAction    (activeEditorPart, selection));
 		applicationPopUpMenuActions.add(new RunAction       (activeEditorPart, selection));
+		applicationPopUpMenuActions.add(new RunBackgroundAction(activeEditorPart, selection));
 		applicationPopUpMenuActions.add(new DoAction        (activeEditorPart, selection));
 		applicationPopUpMenuActions.add(new UndoAction      (activeEditorPart, selection));
 		applicationPopUpMenuActions.add(new SortAction      (activeEditorPart, selection));
