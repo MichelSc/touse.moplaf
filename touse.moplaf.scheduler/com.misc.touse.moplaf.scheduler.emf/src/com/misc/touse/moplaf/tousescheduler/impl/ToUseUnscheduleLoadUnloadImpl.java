@@ -4,6 +4,7 @@ package com.misc.touse.moplaf.tousescheduler.impl;
 
 import com.misc.common.moplaf.scheduler.SchedulerFactory;
 import com.misc.common.moplaf.scheduler.Unschedule;
+import com.misc.touse.moplaf.tousescheduler.Shipment;
 import com.misc.touse.moplaf.tousescheduler.ToUseLoadShipment;
 import com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
@@ -41,11 +42,9 @@ public class ToUseUnscheduleLoadUnloadImpl extends ToUseActionLoadUnloadImpl imp
 	
 	@Override
 	public String getDescription() {
-		ToUseLoadShipment task = this.getLoadTask();
-		ToUseScheduleResource resource = task==null ? null : (ToUseScheduleResource)task.getScheduledResource();
-		String description = String.format("Unschedule(%s) from %s", 
-				                           task==null ? "null" : task.getName(),
-        								   resource==null ? "null" : resource.getName() );
+		Shipment shipment = this.getShipment();
+		String description = String.format("Unschedule(%s)", 
+				                           shipment==null ? "null" : shipment.getName() );
 		return description;
 	}
 
@@ -53,20 +52,20 @@ public class ToUseUnscheduleLoadUnloadImpl extends ToUseActionLoadUnloadImpl imp
 	protected void createMovesImpl() {
 		assert this.isValid() : "Action is not valid";
 		
-		ToUseLoadShipment loadTask = this.getLoadTask();
-		ToUseUnloadShipment unloadTask = loadTask.getUnloadShipment();
-		
-		// unschedule unload
-		Unschedule unschedule_unload = SchedulerFactory.eINSTANCE.createUnschedule();
-		unschedule_unload.setTaskToSchedule(unloadTask);
-		unschedule_unload.setSolution(false);
-		this.getRootMoves().add(unschedule_unload);
-
-		// unschedule load
-		Unschedule unschedule_load= SchedulerFactory.eINSTANCE.createUnschedule();
-		unschedule_load.setTaskToSchedule(loadTask);
-		unschedule_load.setSolution(true);
-		unschedule_unload.getNextMoves().add(unschedule_load);
+//		ToUseLoadShipment loadTask = this.getLoadTask();
+//		ToUseUnloadShipment unloadTask = loadTask.getUnloadShipment();
+//		
+//		// unschedule unload
+//		Unschedule unschedule_unload = SchedulerFactory.eINSTANCE.createUnschedule();
+//		unschedule_unload.setTaskToSchedule(unloadTask);
+//		unschedule_unload.setSolution(false);
+//		this.getRootMoves().add(unschedule_unload);
+//
+//		// unschedule load
+//		Unschedule unschedule_load= SchedulerFactory.eINSTANCE.createUnschedule();
+//		unschedule_load.setTaskToSchedule(loadTask);
+//		unschedule_load.setSolution(true);
+//		unschedule_unload.getNextMoves().add(unschedule_load);
 	} // crerateMovesImpl
 
 

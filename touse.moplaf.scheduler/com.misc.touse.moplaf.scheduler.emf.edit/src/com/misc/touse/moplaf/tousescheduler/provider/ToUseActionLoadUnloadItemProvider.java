@@ -13,6 +13,7 @@ import com.misc.common.moplaf.scheduler.Task;
 import com.misc.touse.moplaf.tousescheduler.ToUseActionLoadUnload;
 import com.misc.touse.moplaf.tousescheduler.ToUseLoadShipment;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedule;
+import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerFactory;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
 
 import java.util.Collection;
@@ -56,48 +57,33 @@ public class ToUseActionLoadUnloadItemProvider extends ActionItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addLoadTaskPropertyDescriptor(object);
+			addShipmentPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Load Task feature.
+	 * This adds a property descriptor for the Shipment feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
 	 */
-	protected void addLoadTaskPropertyDescriptor(Object object) {
+	protected void addShipmentPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(new ItemPropertyDescriptor
+			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ToUseActionLoadUnload_LoadTask_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseActionLoadUnload_LoadTask_feature", "_UI_ToUseActionLoadUnload_type"),
-				 ToUseSchedulerPackage.Literals.TO_USE_ACTION_LOAD_UNLOAD__LOAD_TASK,
+				 getString("_UI_ToUseActionLoadUnload_Shipment_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseActionLoadUnload_Shipment_feature", "_UI_ToUseActionLoadUnload_type"),
+				 ToUseSchedulerPackage.Literals.TO_USE_ACTION_LOAD_UNLOAD__SHIPMENT,
 				 true,
 				 false,
 				 true,
 				 null,
 				 null,
-				 null) {
-				@Override
-				public Collection<?> getChoiceOfValues(Object object) {
-					EList<ToUseLoadShipment> choices = new BasicEList<ToUseLoadShipment>();
-					ToUseActionLoadUnload action = (ToUseActionLoadUnload) object;
-					Solution solution = action.getCurrentSolution();
-					if ( solution instanceof ToUseSchedule) {
-						ToUseSchedule schedule = (ToUseSchedule) solution;
-						for ( Task task : schedule.getTasks()) {
-							if ( task instanceof ToUseLoadShipment) {
-								choices.add((ToUseLoadShipment)task);
-							}
-						}
-					}
-					return choices;
-				}
-				
-			});
+				 null));
 	}
+
 
 	/**
 	 * This returns the label text for the adapted class.
@@ -138,6 +124,11 @@ public class ToUseActionLoadUnloadItemProvider extends ActionItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(LocalSearchPackage.Literals.SOLUTION_CHANGE__SOLUTION_OWNED,
+				 ToUseSchedulerFactory.eINSTANCE.createToUseSchedule()));
 
 		newChildDescriptors.add
 			(createChildParameter

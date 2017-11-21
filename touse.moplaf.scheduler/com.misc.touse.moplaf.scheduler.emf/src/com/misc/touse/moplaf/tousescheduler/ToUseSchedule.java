@@ -23,4 +23,28 @@ public interface ToUseSchedule extends Schedule {
 	 * @generated
 	 */
 	void enable();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	ToUseLoadShipment getTaskLoad(Shipment shipment);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	ToUseUnloadShipment getTaskUnload(Shipment shipment);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	ToUseScheduleResource getResourceVehicle(Vehicle vehicle);
 } // ToUseSchedule

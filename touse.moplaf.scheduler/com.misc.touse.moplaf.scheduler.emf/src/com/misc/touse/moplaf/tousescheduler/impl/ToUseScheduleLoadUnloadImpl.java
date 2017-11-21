@@ -6,6 +6,7 @@ import com.misc.common.moplaf.scheduler.Resource;
 import com.misc.common.moplaf.scheduler.ScheduleAfter;
 import com.misc.common.moplaf.scheduler.SchedulerFactory;
 import com.misc.common.moplaf.scheduler.Task;
+import com.misc.touse.moplaf.tousescheduler.Shipment;
 import com.misc.touse.moplaf.tousescheduler.ToUseLoadShipment;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedule;
 import com.misc.touse.moplaf.tousescheduler.ToUseScheduleLoadUnload;
@@ -43,11 +44,9 @@ public class ToUseScheduleLoadUnloadImpl extends ToUseActionLoadUnloadImpl imple
 
 	@Override
 	public String getDescription() {
-		ToUseLoadShipment task = this.getLoadTask();
-		ToUseScheduleResource resource = task==null ? null : (ToUseScheduleResource)task.getScheduledResource();
-		String description = String.format("Schedule(%s) on %s", 
-				                           task==null ? "null" : task.getName(),
-				                           resource==null ? "null" : resource.getName() );
+		Shipment shipmenbt = this.getShipment();
+		String description = String.format("Schedule(%s)", 
+				                           shipment==null ? "null" : shipment.getName() );
 		return description;
 	}
 
@@ -56,7 +55,8 @@ public class ToUseScheduleLoadUnloadImpl extends ToUseActionLoadUnloadImpl imple
 		assert this.isValid() : "Action is not valid";
 		
 		ToUseSchedule schedule = (ToUseSchedule) this.getCurrentSolution();
-		ToUseLoadShipment loadTask = this.getLoadTask();
+		Shipment shipment = null;
+		ToUseLoadShipment loadTask = schedule.getTaskLoad(shipment);
 		ToUseUnloadShipment unloadTask = loadTask.getUnloadShipment();
 		
 		for (Resource resource : schedule.getResources() ) {

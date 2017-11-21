@@ -235,26 +235,26 @@ public class ToUsePhaseDestructConstructImpl extends PhaseImpl implements ToUseP
 		schedule.enable(); // activate propagator
 		
 		// destructions
-		for( Task task : schedule.getTasks()) {
-			if ( task.isScheduled() && task instanceof ToUseLoadShipment ){
-				if ( this.getDestructionChance()>=random.nextDouble()) {
-					ToUseUnscheduleLoadUnload new_action = ToUseSchedulerFactory.eINSTANCE.createToUseUnscheduleLoadUnload();
-					new_action.setLoadTask((ToUseLoadShipment) task);
-					this.doAction(step, new_action);
-				}
-			}
-		}
-		
-		// constructions
-		for( Task task : schedule.getTasks()) {
-			if ( !task.isScheduled() && task instanceof ToUseLoadShipment ){
-				if ( this.getConstructionChance()>=random.nextDouble()) {
-					ToUseScheduleLoadUnload new_action = ToUseSchedulerFactory.eINSTANCE.createToUseScheduleLoadUnload();
-					new_action.setLoadTask((ToUseLoadShipment) task);
-					this.doAction(step, new_action);
-				}
-			}
-		}
+//		for( Task task : schedule.getTasks()) {
+//			if ( task.isScheduled() && task instanceof ToUseLoadShipment ){
+//				if ( this.getDestructionChance()>=random.nextDouble()) {
+//					ToUseUnscheduleLoadUnload new_action = ToUseSchedulerFactory.eINSTANCE.createToUseUnscheduleLoadUnload();
+//					new_action.setLoadTask((ToUseLoadShipment) task);
+//					this.doAction(step, new_action);
+//				}
+//			}
+//		}
+//		
+//		// constructions
+//		for( Task task : schedule.getTasks()) {
+//			if ( !task.isScheduled() && task instanceof ToUseLoadShipment ){
+//				if ( this.getConstructionChance()>=random.nextDouble()) {
+//					ToUseScheduleLoadUnload new_action = ToUseSchedulerFactory.eINSTANCE.createToUseScheduleLoadUnload();
+//					new_action.setLoadTask((ToUseLoadShipment) task);
+//					this.doAction(step, new_action);
+//				}
+//			}
+//		}
 	}
 
 

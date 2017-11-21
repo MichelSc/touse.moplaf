@@ -166,38 +166,6 @@ public class ToUseSchedulerImpl extends SchedulerImpl implements ToUseScheduler 
 	}
 
 	@Override
-	public void generateResources(Schedule schedule) {
-		for ( Vehicle vehicle : this.getSelectedVehicles()) {
-			String name = vehicle.getName();
-			ToUseScheduleResource resource = ToUseSchedulerFactory.eINSTANCE.createToUseScheduleResource();
-			resource.setVehicle(vehicle);
-			resource.setName(name);
-			schedule.getResources().add(resource); // owning
-		}
-	}
-
-	
-	@Override
-	public void generateTasks(Schedule schedule) {
-		for ( Shipment shipment: this.getSelectedShipments()) {
-			// load
-			String load_name = String.format("load(%s)", shipment.getName());
-			ToUseLoadShipment load= ToUseSchedulerFactory.eINSTANCE.createToUseLoadShipment();
-			load.setShipmentLoaded(shipment);
-			load.setName(load_name);
-			schedule.getTasks().add(load); // owning
-			// unload
-			String unload_name = String.format("unload(%s)", shipment.getName());
-			ToUseUnloadShipment unload= ToUseSchedulerFactory.eINSTANCE.createToUseUnloadShipment();
-			unload.setShipmentUnloaded(shipment);
-			unload.setName(unload_name);
-			schedule.getTasks().add(unload); // owning
-			// loadunload
-			load.setUnloadShipment(unload);
-		}
-	}
-
-	@Override
 	public Score constructScore() {
 		Score new_score = ToUseSchedulerFactory.eINSTANCE.createToUseScore();
 		return new_score;

@@ -580,6 +580,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULER___MAKE_NEW_SOLUTION_NR = SchedulerPackage.SCHEDULER___MAKE_NEW_SOLUTION_NR;
 
 	/**
+	 * The operation id for the '<em>Prune</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULER___PRUNE = SchedulerPackage.SCHEDULER___PRUNE;
+
+	/**
 	 * The operation id for the '<em>Construct Score</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -587,24 +596,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_SCHEDULER___CONSTRUCT_SCORE = SchedulerPackage.SCHEDULER___CONSTRUCT_SCORE;
-
-	/**
-	 * The operation id for the '<em>Generate Tasks</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULER___GENERATE_TASKS__SCHEDULE = SchedulerPackage.SCHEDULER___GENERATE_TASKS__SCHEDULE;
-
-	/**
-	 * The operation id for the '<em>Generate Resources</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULER___GENERATE_RESOURCES__SCHEDULE = SchedulerPackage.SCHEDULER___GENERATE_RESOURCES__SCHEDULE;
 
 	/**
 	 * The number of operations of the '<em>To Use Scheduler</em>' class.
@@ -879,13 +870,40 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE___ENABLE = SchedulerPackage.SCHEDULE_OPERATION_COUNT + 0;
 
 	/**
+	 * The operation id for the '<em>Get Task Load</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE___GET_TASK_LOAD__SHIPMENT = SchedulerPackage.SCHEDULE_OPERATION_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Get Task Unload</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE___GET_TASK_UNLOAD__SHIPMENT = SchedulerPackage.SCHEDULE_OPERATION_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Get Resource Vehicle</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE___GET_RESOURCE_VEHICLE__VEHICLE = SchedulerPackage.SCHEDULE_OPERATION_COUNT + 3;
+
+	/**
 	 * The number of operations of the '<em>To Use Schedule</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_OPERATION_COUNT = SchedulerPackage.SCHEDULE_OPERATION_COUNT + 1;
+	int TO_USE_SCHEDULE_OPERATION_COUNT = SchedulerPackage.SCHEDULE_OPERATION_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Feasible</b></em>' attribute.
@@ -1882,13 +1900,13 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_ACTION_LOAD_UNLOAD__END_SOLUTION = LocalSearchPackage.ACTION__END_SOLUTION;
 
 	/**
-	 * The feature id for the '<em><b>New Solution Owned</b></em>' containment reference.
+	 * The feature id for the '<em><b>Solution Owned</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_ACTION_LOAD_UNLOAD__NEW_SOLUTION_OWNED = LocalSearchPackage.ACTION__NEW_SOLUTION_OWNED;
+	int TO_USE_ACTION_LOAD_UNLOAD__SOLUTION_OWNED = LocalSearchPackage.ACTION__SOLUTION_OWNED;
 
 	/**
 	 * The feature id for the '<em><b>Previous Change</b></em>' reference.
@@ -2026,13 +2044,13 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_ACTION_LOAD_UNLOAD__STEP = LocalSearchPackage.ACTION__STEP;
 
 	/**
-	 * The feature id for the '<em><b>Load Task</b></em>' reference.
+	 * The feature id for the '<em><b>Shipment</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_ACTION_LOAD_UNLOAD__LOAD_TASK = LocalSearchPackage.ACTION_FEATURE_COUNT + 0;
+	int TO_USE_ACTION_LOAD_UNLOAD__SHIPMENT = LocalSearchPackage.ACTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>To Use Action Load Unload</em>' class.
@@ -2107,13 +2125,13 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE_LOAD_UNLOAD__END_SOLUTION = TO_USE_ACTION_LOAD_UNLOAD__END_SOLUTION;
 
 	/**
-	 * The feature id for the '<em><b>New Solution Owned</b></em>' containment reference.
+	 * The feature id for the '<em><b>Solution Owned</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD__NEW_SOLUTION_OWNED = TO_USE_ACTION_LOAD_UNLOAD__NEW_SOLUTION_OWNED;
+	int TO_USE_SCHEDULE_LOAD_UNLOAD__SOLUTION_OWNED = TO_USE_ACTION_LOAD_UNLOAD__SOLUTION_OWNED;
 
 	/**
 	 * The feature id for the '<em><b>Previous Change</b></em>' reference.
@@ -2251,13 +2269,13 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE_LOAD_UNLOAD__STEP = TO_USE_ACTION_LOAD_UNLOAD__STEP;
 
 	/**
-	 * The feature id for the '<em><b>Load Task</b></em>' reference.
+	 * The feature id for the '<em><b>Shipment</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD__LOAD_TASK = TO_USE_ACTION_LOAD_UNLOAD__LOAD_TASK;
+	int TO_USE_SCHEDULE_LOAD_UNLOAD__SHIPMENT = TO_USE_ACTION_LOAD_UNLOAD__SHIPMENT;
 
 	/**
 	 * The number of structural features of the '<em>To Use Schedule Load Unload</em>' class.
@@ -2372,13 +2390,13 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__END_SOLUTION = TO_USE_ACTION_LOAD_UNLOAD__END_SOLUTION;
 
 	/**
-	 * The feature id for the '<em><b>New Solution Owned</b></em>' containment reference.
+	 * The feature id for the '<em><b>Solution Owned</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__NEW_SOLUTION_OWNED = TO_USE_ACTION_LOAD_UNLOAD__NEW_SOLUTION_OWNED;
+	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__SOLUTION_OWNED = TO_USE_ACTION_LOAD_UNLOAD__SOLUTION_OWNED;
 
 	/**
 	 * The feature id for the '<em><b>Previous Change</b></em>' reference.
@@ -2516,13 +2534,13 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__STEP = TO_USE_ACTION_LOAD_UNLOAD__STEP;
 
 	/**
-	 * The feature id for the '<em><b>Load Task</b></em>' reference.
+	 * The feature id for the '<em><b>Shipment</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__LOAD_TASK = TO_USE_ACTION_LOAD_UNLOAD__LOAD_TASK;
+	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__SHIPMENT = TO_USE_ACTION_LOAD_UNLOAD__SHIPMENT;
 
 	/**
 	 * The number of structural features of the '<em>To Use Unschedule Load Unload</em>' class.
@@ -2713,6 +2731,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_PHASE_DESTRUCT_CONSTRUCT_FEATURE_COUNT = LocalSearchPackage.PHASE_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Do Phase</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT___DO_PHASE = LocalSearchPackage.PHASE___DO_PHASE;
 
 	/**
 	 * The operation id for the '<em>Do Step</em>' operation.
@@ -8795,15 +8822,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	EClass getToUseActionLoadUnload();
 
 	/**
-	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.tousescheduler.ToUseActionLoadUnload#getLoadTask <em>Load Task</em>}'.
+	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.tousescheduler.ToUseActionLoadUnload#getShipment <em>Shipment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Load Task</em>'.
-	 * @see com.misc.touse.moplaf.tousescheduler.ToUseActionLoadUnload#getLoadTask()
+	 * @return the meta object for the reference '<em>Shipment</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseActionLoadUnload#getShipment()
 	 * @see #getToUseActionLoadUnload()
 	 * @generated
 	 */
-	EReference getToUseActionLoadUnload_LoadTask();
+	EReference getToUseActionLoadUnload_Shipment();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.ToUseSchedule <em>To Use Schedule</em>}'.
@@ -8824,6 +8851,36 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getToUseSchedule__Enable();
+
+	/**
+	 * Returns the meta object for the '{@link com.misc.touse.moplaf.tousescheduler.ToUseSchedule#getTaskLoad(com.misc.touse.moplaf.tousescheduler.Shipment) <em>Get Task Load</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Task Load</em>' operation.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedule#getTaskLoad(com.misc.touse.moplaf.tousescheduler.Shipment)
+	 * @generated
+	 */
+	EOperation getToUseSchedule__GetTaskLoad__Shipment();
+
+	/**
+	 * Returns the meta object for the '{@link com.misc.touse.moplaf.tousescheduler.ToUseSchedule#getTaskUnload(com.misc.touse.moplaf.tousescheduler.Shipment) <em>Get Task Unload</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Task Unload</em>' operation.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedule#getTaskUnload(com.misc.touse.moplaf.tousescheduler.Shipment)
+	 * @generated
+	 */
+	EOperation getToUseSchedule__GetTaskUnload__Shipment();
+
+	/**
+	 * Returns the meta object for the '{@link com.misc.touse.moplaf.tousescheduler.ToUseSchedule#getResourceVehicle(com.misc.touse.moplaf.tousescheduler.Vehicle) <em>Get Resource Vehicle</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Resource Vehicle</em>' operation.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedule#getResourceVehicle(com.misc.touse.moplaf.tousescheduler.Vehicle)
+	 * @generated
+	 */
+	EOperation getToUseSchedule__GetResourceVehicle__Vehicle();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -9563,12 +9620,12 @@ public interface ToUseSchedulerPackage extends EPackage {
 		EClass TO_USE_ACTION_LOAD_UNLOAD = eINSTANCE.getToUseActionLoadUnload();
 
 		/**
-		 * The meta object literal for the '<em><b>Load Task</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Shipment</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TO_USE_ACTION_LOAD_UNLOAD__LOAD_TASK = eINSTANCE.getToUseActionLoadUnload_LoadTask();
+		EReference TO_USE_ACTION_LOAD_UNLOAD__SHIPMENT = eINSTANCE.getToUseActionLoadUnload_Shipment();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleImpl <em>To Use Schedule</em>}' class.
@@ -9587,6 +9644,30 @@ public interface ToUseSchedulerPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation TO_USE_SCHEDULE___ENABLE = eINSTANCE.getToUseSchedule__Enable();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Task Load</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TO_USE_SCHEDULE___GET_TASK_LOAD__SHIPMENT = eINSTANCE.getToUseSchedule__GetTaskLoad__Shipment();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Task Unload</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TO_USE_SCHEDULE___GET_TASK_UNLOAD__SHIPMENT = eINSTANCE.getToUseSchedule__GetTaskUnload__Shipment();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Resource Vehicle</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TO_USE_SCHEDULE___GET_RESOURCE_VEHICLE__VEHICLE = eINSTANCE.getToUseSchedule__GetResourceVehicle__Vehicle();
 
 	}
 
