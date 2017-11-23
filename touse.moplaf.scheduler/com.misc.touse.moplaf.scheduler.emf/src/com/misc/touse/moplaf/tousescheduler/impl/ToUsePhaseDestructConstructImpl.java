@@ -252,7 +252,7 @@ public class ToUsePhaseDestructConstructImpl extends PhaseImpl implements ToUseP
           .filter(t -> t instanceof ToUseLoadShipment)
           .map(t-> (ToUseLoadShipment)t)
           .map(t-> t.getShipment())
-          .filter(t ->  this.getDestructionChance()>=random.nextDouble())
+          .filter(t ->  this.getConstructionChance()>=random.nextDouble())
           .forEach(s ->{
 			ToUseScheduleLoadUnload new_action = ToUseSchedulerFactory.eINSTANCE.createToUseScheduleLoadUnload();
 			new_action.setShipment(s);

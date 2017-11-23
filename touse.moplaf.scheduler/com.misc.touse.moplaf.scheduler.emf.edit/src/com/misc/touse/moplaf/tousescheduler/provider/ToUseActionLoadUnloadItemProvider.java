@@ -4,12 +4,10 @@ package com.misc.touse.moplaf.tousescheduler.provider;
 
 
 import com.misc.common.moplaf.localsearch.LocalSearchPackage;
-import com.misc.common.moplaf.localsearch.StrategyLevel;
 import com.misc.common.moplaf.localsearch.provider.ActionItemProvider;
 
 import com.misc.common.moplaf.scheduler.SchedulerFactory;
 import com.misc.touse.moplaf.tousescheduler.ToUseActionLoadUnload;
-import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerFactory;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
 
 import java.util.Collection;
@@ -86,8 +84,7 @@ public class ToUseActionLoadUnloadItemProvider extends ActionItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		StrategyLevel labelValue = ((ToUseActionLoadUnload)object).getLevel();
-		String label = labelValue == null ? null : labelValue.toString();
+		String label = ((ToUseActionLoadUnload)object).getDescription();
 		return label == null || label.length() == 0 ?
 			getString("_UI_ToUseActionLoadUnload_type") :
 			getString("_UI_ToUseActionLoadUnload_type") + " " + label;
@@ -117,11 +114,6 @@ public class ToUseActionLoadUnloadItemProvider extends ActionItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LocalSearchPackage.Literals.SOLUTION_CHANGE__END_SOLUTION_OWNED,
-				 ToUseSchedulerFactory.eINSTANCE.createToUseSchedule()));
 
 		newChildDescriptors.add
 			(createChildParameter
