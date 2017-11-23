@@ -3,15 +3,11 @@
 package com.misc.touse.moplaf.tousescheduler.impl;
 
 import com.misc.common.moplaf.localsearch.Score;
-import com.misc.common.moplaf.scheduler.Schedule;
 import com.misc.common.moplaf.scheduler.impl.SchedulerImpl;
 import com.misc.touse.moplaf.tousescheduler.Shipment;
-import com.misc.touse.moplaf.tousescheduler.ToUseLoadShipment;
-import com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource;
 import com.misc.touse.moplaf.tousescheduler.ToUseScheduler;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerFactory;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
-import com.misc.touse.moplaf.tousescheduler.ToUseUnloadShipment;
 import com.misc.touse.moplaf.tousescheduler.Vehicle;
 import java.util.Collection;
 import org.eclipse.emf.common.util.EList;

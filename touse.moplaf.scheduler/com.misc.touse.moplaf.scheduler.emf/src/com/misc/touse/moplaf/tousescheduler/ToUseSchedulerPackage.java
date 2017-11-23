@@ -328,6 +328,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULER__CANCELED = SchedulerPackage.SCHEDULER__CANCELED;
 
 	/**
+	 * The feature id for the '<em><b>Returned</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULER__RETURNED = SchedulerPackage.SCHEDULER__RETURNED;
+
+	/**
 	 * The feature id for the '<em><b>Return Success</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -490,6 +499,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULER___RUN__RUNCONTEXT = SchedulerPackage.SCHEDULER___RUN__RUNCONTEXT;
 
 	/**
+	 * The operation id for the '<em>Run Asynch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULER___RUN_ASYNCH__RUNCONTEXT = SchedulerPackage.SCHEDULER___RUN_ASYNCH__RUNCONTEXT;
+
+	/**
 	 * The operation id for the '<em>Cancel</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -508,6 +526,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULER___SET_PROGRESS__STRING_FLOAT = SchedulerPackage.SCHEDULER___SET_PROGRESS__STRING_FLOAT;
 
 	/**
+	 * The operation id for the '<em>Set Return</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULER___SET_RETURN__RETURNFEEDBACK = SchedulerPackage.SCHEDULER___SET_RETURN__RETURNFEEDBACK;
+
+	/**
 	 * The operation id for the '<em>Set Progress</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -524,15 +551,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_SCHEDULER___GET_RETURN = SchedulerPackage.SCHEDULER___GET_RETURN;
-
-	/**
-	 * The operation id for the '<em>Set Return</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULER___SET_RETURN__RETURNFEEDBACK = SchedulerPackage.SCHEDULER___SET_RETURN__RETURNFEEDBACK;
 
 	/**
 	 * The operation id for the '<em>Construct Params</em>' operation.
@@ -1900,13 +1918,13 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_ACTION_LOAD_UNLOAD__END_SOLUTION = LocalSearchPackage.ACTION__END_SOLUTION;
 
 	/**
-	 * The feature id for the '<em><b>Solution Owned</b></em>' containment reference.
+	 * The feature id for the '<em><b>End Solution Owned</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_ACTION_LOAD_UNLOAD__SOLUTION_OWNED = LocalSearchPackage.ACTION__SOLUTION_OWNED;
+	int TO_USE_ACTION_LOAD_UNLOAD__END_SOLUTION_OWNED = LocalSearchPackage.ACTION__END_SOLUTION_OWNED;
 
 	/**
 	 * The feature id for the '<em><b>Previous Change</b></em>' reference.
@@ -2125,13 +2143,13 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE_LOAD_UNLOAD__END_SOLUTION = TO_USE_ACTION_LOAD_UNLOAD__END_SOLUTION;
 
 	/**
-	 * The feature id for the '<em><b>Solution Owned</b></em>' containment reference.
+	 * The feature id for the '<em><b>End Solution Owned</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD__SOLUTION_OWNED = TO_USE_ACTION_LOAD_UNLOAD__SOLUTION_OWNED;
+	int TO_USE_SCHEDULE_LOAD_UNLOAD__END_SOLUTION_OWNED = TO_USE_ACTION_LOAD_UNLOAD__END_SOLUTION_OWNED;
 
 	/**
 	 * The feature id for the '<em><b>Previous Change</b></em>' reference.
@@ -2390,13 +2408,13 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__END_SOLUTION = TO_USE_ACTION_LOAD_UNLOAD__END_SOLUTION;
 
 	/**
-	 * The feature id for the '<em><b>Solution Owned</b></em>' containment reference.
+	 * The feature id for the '<em><b>End Solution Owned</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__SOLUTION_OWNED = TO_USE_ACTION_LOAD_UNLOAD__SOLUTION_OWNED;
+	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__END_SOLUTION_OWNED = TO_USE_ACTION_LOAD_UNLOAD__END_SOLUTION_OWNED;
 
 	/**
 	 * The feature id for the '<em><b>Previous Change</b></em>' reference.

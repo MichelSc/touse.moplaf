@@ -4,15 +4,11 @@ package com.misc.touse.moplaf.tousescheduler.provider;
 
 
 import com.misc.common.moplaf.localsearch.LocalSearchPackage;
-import com.misc.common.moplaf.localsearch.Solution;
 import com.misc.common.moplaf.localsearch.StrategyLevel;
 import com.misc.common.moplaf.localsearch.provider.ActionItemProvider;
 
 import com.misc.common.moplaf.scheduler.SchedulerFactory;
-import com.misc.common.moplaf.scheduler.Task;
 import com.misc.touse.moplaf.tousescheduler.ToUseActionLoadUnload;
-import com.misc.touse.moplaf.tousescheduler.ToUseLoadShipment;
-import com.misc.touse.moplaf.tousescheduler.ToUseSchedule;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerFactory;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
 
@@ -21,13 +17,10 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.util.BasicEList;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 
 /**
  * This is the item provider adapter for a {@link com.misc.touse.moplaf.tousescheduler.ToUseActionLoadUnload} object.
@@ -127,7 +120,7 @@ public class ToUseActionLoadUnloadItemProvider extends ActionItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(LocalSearchPackage.Literals.SOLUTION_CHANGE__SOLUTION_OWNED,
+				(LocalSearchPackage.Literals.SOLUTION_CHANGE__END_SOLUTION_OWNED,
 				 ToUseSchedulerFactory.eINSTANCE.createToUseSchedule()));
 
 		newChildDescriptors.add

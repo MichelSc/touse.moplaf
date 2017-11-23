@@ -4,7 +4,6 @@ package com.misc.touse.moplaf.tousescheduler.impl;
 
 import com.misc.common.moplaf.localsearch.Step;
 import com.misc.common.moplaf.localsearch.impl.PhaseImpl;
-import com.misc.common.moplaf.scheduler.Task;
 import com.misc.touse.moplaf.tousescheduler.ToUseLoadShipment;
 import com.misc.touse.moplaf.tousescheduler.ToUsePhaseDestructConstruct;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedule;
@@ -235,28 +234,31 @@ public class ToUsePhaseDestructConstructImpl extends PhaseImpl implements ToUseP
 		schedule.enable(); // activate propagator
 		
 		// destructions
-//		for( Task task : schedule.getTasks()) {
-//			if ( task.isScheduled() && task instanceof ToUseLoadShipment ){
-//				if ( this.getDestructionChance()>=random.nextDouble()) {
-//					ToUseUnscheduleLoadUnload new_action = ToUseSchedulerFactory.eINSTANCE.createToUseUnscheduleLoadUnload();
-//					new_action.setLoadTask((ToUseLoadShipment) task);
-//					this.doAction(step, new_action);
-//				}
-//			}
-//		}
-//		
-//		// constructions
-//		for( Task task : schedule.getTasks()) {
-//			if ( !task.isScheduled() && task instanceof ToUseLoadShipment ){
-//				if ( this.getConstructionChance()>=random.nextDouble()) {
-//					ToUseScheduleLoadUnload new_action = ToUseSchedulerFactory.eINSTANCE.createToUseScheduleLoadUnload();
-//					new_action.setLoadTask((ToUseLoadShipment) task);
-//					this.doAction(step, new_action);
-//				}
-//			}
-//		}
-	}
+		schedule.getTasks().stream()
+          .filter(t -> t.isScheduled())
+          .filter(t -> t instanceof ToUseLoadShipment)
+          .map(t-> (ToUseLoadShipment)t)
+          .map(t-> t.getShipment())
+          .filter(t -> this.getDestructionChance()>=random.nextDouble())
+          .forEach(s ->{
+			ToUseUnscheduleLoadUnload new_action = ToUseSchedulerFactory.eINSTANCE.createToUseUnscheduleLoadUnload();
+			new_action.setShipment(s);
+			this.doAction(step, new_action);
+		  });
 
-
+		// constructions
+		schedule.getTasks().stream()
+          .filter(t -> !t.isScheduled())
+          .filter(t -> t instanceof ToUseLoadShipment)
+          .map(t-> (ToUseLoadShipment)t)
+          .map(t-> t.getShipment())
+          .filter(t ->  this.getDestructionChance()>=random.nextDouble())
+          .forEach(s ->{
+			ToUseScheduleLoadUnload new_action = ToUseSchedulerFactory.eINSTANCE.createToUseScheduleLoadUnload();
+			new_action.setShipment(s);
+			this.doAction(step, new_action);
+		  });
+		
+	} // doStepImpl
 } //ToUsePhaseDestructConstructImpl
 
