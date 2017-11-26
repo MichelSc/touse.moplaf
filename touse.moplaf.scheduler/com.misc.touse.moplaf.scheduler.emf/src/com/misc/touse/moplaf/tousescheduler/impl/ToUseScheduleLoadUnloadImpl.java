@@ -10,7 +10,6 @@ import com.misc.touse.moplaf.tousescheduler.Shipment;
 import com.misc.touse.moplaf.tousescheduler.ToUseLoadShipment;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedule;
 import com.misc.touse.moplaf.tousescheduler.ToUseScheduleLoadUnload;
-import com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
 import com.misc.touse.moplaf.tousescheduler.ToUseUnloadShipment;
 import org.eclipse.emf.ecore.EClass;
@@ -44,7 +43,7 @@ public class ToUseScheduleLoadUnloadImpl extends ToUseActionLoadUnloadImpl imple
 
 	@Override
 	public String getDescription() {
-		Shipment shipmenbt = this.getShipment();
+		Shipment shipment = this.getShipment();
 		String description = String.format("Schedule(%s)", 
 				                           shipment==null ? "null" : shipment.getName() );
 		return description;
@@ -55,7 +54,7 @@ public class ToUseScheduleLoadUnloadImpl extends ToUseActionLoadUnloadImpl imple
 		assert this.isValid() : "Action is not valid";
 		
 		ToUseSchedule schedule = (ToUseSchedule) this.getCurrentSolution();
-		Shipment shipment = null;
+		Shipment shipment = this.getShipment();
 		ToUseLoadShipment loadTask = schedule.getTaskLoad(shipment);
 		ToUseUnloadShipment unloadTask = loadTask.getUnloadShipment();
 		

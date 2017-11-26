@@ -4,16 +4,10 @@ package com.misc.touse.moplaf.tousescheduler.provider;
 
 
 import com.misc.common.moplaf.localsearch.LocalSearchPackage;
-import com.misc.common.moplaf.localsearch.Solution;
-import com.misc.common.moplaf.localsearch.StrategyLevel;
 import com.misc.common.moplaf.localsearch.provider.ActionItemProvider;
 
 import com.misc.common.moplaf.scheduler.SchedulerFactory;
-import com.misc.common.moplaf.scheduler.Task;
 import com.misc.touse.moplaf.tousescheduler.ToUseActionLoadUnload;
-import com.misc.touse.moplaf.tousescheduler.ToUseLoadShipment;
-import com.misc.touse.moplaf.tousescheduler.ToUseSchedule;
-import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerFactory;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
 
 import java.util.Collection;
@@ -21,13 +15,10 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.util.BasicEList;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 
 /**
  * This is the item provider adapter for a {@link com.misc.touse.moplaf.tousescheduler.ToUseActionLoadUnload} object.
@@ -93,8 +84,7 @@ public class ToUseActionLoadUnloadItemProvider extends ActionItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		StrategyLevel labelValue = ((ToUseActionLoadUnload)object).getLevel();
-		String label = labelValue == null ? null : labelValue.toString();
+		String label = ((ToUseActionLoadUnload)object).getDescription();
 		return label == null || label.length() == 0 ?
 			getString("_UI_ToUseActionLoadUnload_type") :
 			getString("_UI_ToUseActionLoadUnload_type") + " " + label;
@@ -124,11 +114,6 @@ public class ToUseActionLoadUnloadItemProvider extends ActionItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LocalSearchPackage.Literals.SOLUTION_CHANGE__SOLUTION_OWNED,
-				 ToUseSchedulerFactory.eINSTANCE.createToUseSchedule()));
 
 		newChildDescriptors.add
 			(createChildParameter

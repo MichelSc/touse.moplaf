@@ -3,7 +3,6 @@
 package com.misc.touse.moplaf.tousescheduler.impl;
 
 import com.misc.common.moplaf.common.util.Util;
-import com.misc.common.moplaf.scheduler.Scheduler;
 import com.misc.common.moplaf.scheduler.impl.ScheduleImpl;
 import com.misc.touse.moplaf.tousescheduler.ScopeScheduleScore;
 import com.misc.touse.moplaf.tousescheduler.Shipment;
@@ -61,34 +60,42 @@ public class ToUseScheduleImpl extends ScheduleImpl implements ToUseSchedule {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	public ToUseLoadShipment getTaskLoad(Shipment shipment) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		ToUseLoadShipment task = this.getTasks().stream()
+				                                .filter(s -> s instanceof ToUseLoadShipment)
+				                                .map ( s -> (ToUseLoadShipment)s)
+				                                .filter( s -> s.getShipment()==shipment)
+				                                .findFirst()
+				                                .orElse(null);
+		return task;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	public ToUseUnloadShipment getTaskUnload(Shipment shipment) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		ToUseUnloadShipment task = this.getTasks().stream()
+								                .filter(s -> s instanceof ToUseUnloadShipment)
+								                .map ( s -> (ToUseUnloadShipment)s)
+								                .filter( s -> s.getShipment()==shipment)
+								                .findFirst()
+								                .orElse(null);
+		return task;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	public ToUseScheduleResource getResourceVehicle(Vehicle vehicle) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		ToUseScheduleResource resource = this.getResources().stream()
+                .map ( s -> (ToUseScheduleResource)s)
+                .filter( s -> s.getVehicle()==vehicle)
+                .findFirst()
+                .orElse(null);
+		return resource;
 	}
 
 	@Override
