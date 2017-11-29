@@ -14,9 +14,8 @@ package com.misc.touse.moplaf.tousejob.impl;
 
 import com.misc.common.moplaf.job.jobclient.impl.JobRemoteResultImpl;
 
+import com.misc.touse.moplaf.tousejob.ToUseJobPackage;
 import com.misc.touse.moplaf.tousejob.ToUseJobResult;
-import com.misc.touse.moplaf.tousejob.TousejobPackage;
-
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -73,7 +72,7 @@ public class ToUseJobResultImpl extends JobRemoteResultImpl implements ToUseJobR
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TousejobPackage.Literals.TO_USE_JOB_RESULT;
+		return ToUseJobPackage.Literals.TO_USE_JOB_RESULT;
 	}
 
 	/**
@@ -94,7 +93,7 @@ public class ToUseJobResultImpl extends JobRemoteResultImpl implements ToUseJobR
 		long oldTicksWaited = ticksWaited;
 		ticksWaited = newTicksWaited;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousejobPackage.TO_USE_JOB_RESULT__TICKS_WAITED, oldTicksWaited, ticksWaited));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseJobPackage.TO_USE_JOB_RESULT__TICKS_WAITED, oldTicksWaited, ticksWaited));
 	}
 
 	/**
@@ -105,7 +104,7 @@ public class ToUseJobResultImpl extends JobRemoteResultImpl implements ToUseJobR
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TousejobPackage.TO_USE_JOB_RESULT__TICKS_WAITED:
+			case ToUseJobPackage.TO_USE_JOB_RESULT__TICKS_WAITED:
 				return getTicksWaited();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -119,7 +118,7 @@ public class ToUseJobResultImpl extends JobRemoteResultImpl implements ToUseJobR
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TousejobPackage.TO_USE_JOB_RESULT__TICKS_WAITED:
+			case ToUseJobPackage.TO_USE_JOB_RESULT__TICKS_WAITED:
 				setTicksWaited((Long)newValue);
 				return;
 		}
@@ -134,7 +133,7 @@ public class ToUseJobResultImpl extends JobRemoteResultImpl implements ToUseJobR
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TousejobPackage.TO_USE_JOB_RESULT__TICKS_WAITED:
+			case ToUseJobPackage.TO_USE_JOB_RESULT__TICKS_WAITED:
 				setTicksWaited(TICKS_WAITED_EDEFAULT);
 				return;
 		}
@@ -149,7 +148,7 @@ public class ToUseJobResultImpl extends JobRemoteResultImpl implements ToUseJobR
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TousejobPackage.TO_USE_JOB_RESULT__TICKS_WAITED:
+			case ToUseJobPackage.TO_USE_JOB_RESULT__TICKS_WAITED:
 				return ticksWaited != TICKS_WAITED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

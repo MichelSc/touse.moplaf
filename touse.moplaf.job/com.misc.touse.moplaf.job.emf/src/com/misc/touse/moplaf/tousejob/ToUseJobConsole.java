@@ -26,7 +26,7 @@ import com.misc.common.moplaf.job.JobConsole;
  *   <li>{@link com.misc.touse.moplaf.tousejob.ToUseJobConsole#getCallerName <em>Caller Name</em>}</li>
  * </ul>
  *
- * @see com.misc.touse.moplaf.tousejob.TousejobPackage#getToUseJobConsole()
+ * @see com.misc.touse.moplaf.tousejob.ToUseJobPackage#getToUseJobConsole()
  * @model
  * @generated
  */
@@ -42,7 +42,7 @@ public interface ToUseJobConsole extends JobConsole {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Caller Name</em>' attribute.
 	 * @see #setCallerName(String)
-	 * @see com.misc.touse.moplaf.tousejob.TousejobPackage#getToUseJobConsole_CallerName()
+	 * @see com.misc.touse.moplaf.tousejob.ToUseJobPackage#getToUseJobConsole_CallerName()
 	 * @model
 	 * @generated
 	 */

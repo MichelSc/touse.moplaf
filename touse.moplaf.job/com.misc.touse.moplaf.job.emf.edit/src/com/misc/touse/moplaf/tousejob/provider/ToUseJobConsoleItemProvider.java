@@ -17,7 +17,7 @@ import com.misc.common.moplaf.job.provider.JobConsoleItemProvider;
 
 import com.misc.touse.moplaf.tousejob.ToUseJobConsole;
 
-import com.misc.touse.moplaf.tousejob.TousejobPackage;
+import com.misc.touse.moplaf.tousejob.ToUseJobPackage;
 import java.util.Collection;
 import java.util.List;
 
@@ -77,7 +77,7 @@ public class ToUseJobConsoleItemProvider extends JobConsoleItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_ToUseJobConsole_CallerName_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseJobConsole_CallerName_feature", "_UI_ToUseJobConsole_type"),
-				 TousejobPackage.Literals.TO_USE_JOB_CONSOLE__CALLER_NAME,
+				 ToUseJobPackage.Literals.TO_USE_JOB_CONSOLE__CALLER_NAME,
 				 true,
 				 false,
 				 false,
@@ -124,7 +124,7 @@ public class ToUseJobConsoleItemProvider extends JobConsoleItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ToUseJobConsole.class)) {
-			case TousejobPackage.TO_USE_JOB_CONSOLE__CALLER_NAME:
+			case ToUseJobPackage.TO_USE_JOB_CONSOLE__CALLER_NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -27,7 +27,7 @@ import com.misc.common.moplaf.job.Job;
  *   <li>{@link com.misc.touse.moplaf.tousejob.ToUseJob#getIteration <em>Iteration</em>}</li>
  * </ul>
  *
- * @see com.misc.touse.moplaf.tousejob.TousejobPackage#getToUseJob()
+ * @see com.misc.touse.moplaf.tousejob.ToUseJobPackage#getToUseJob()
  * @model
  * @generated
  */
@@ -43,7 +43,7 @@ public interface ToUseJob extends Job {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Seconds Waiting</em>' attribute.
 	 * @see #setSecondsWaiting(int)
-	 * @see com.misc.touse.moplaf.tousejob.TousejobPackage#getToUseJob_SecondsWaiting()
+	 * @see com.misc.touse.moplaf.tousejob.ToUseJobPackage#getToUseJob_SecondsWaiting()
 	 * @model default="2"
 	 * @generated
 	 */
@@ -70,7 +70,7 @@ public interface ToUseJob extends Job {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Iteration</em>' attribute.
 	 * @see #setIteration(int)
-	 * @see com.misc.touse.moplaf.tousejob.TousejobPackage#getToUseJob_Iteration()
+	 * @see com.misc.touse.moplaf.tousejob.ToUseJobPackage#getToUseJob_Iteration()
 	 * @model default="5"
 	 * @generated
 	 */

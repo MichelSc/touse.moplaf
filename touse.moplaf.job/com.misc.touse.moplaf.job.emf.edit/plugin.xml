@@ -10,7 +10,7 @@
       <!-- @generated tousejob -->
       <factory
             uri="//www.misc.com/touse/moplaf/job/model/0.1"
-            class="com.misc.touse.moplaf.tousejob.provider.TousejobItemProviderAdapterFactory"
+            class="com.misc.touse.moplaf.tousejob.provider.ToUseJobItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

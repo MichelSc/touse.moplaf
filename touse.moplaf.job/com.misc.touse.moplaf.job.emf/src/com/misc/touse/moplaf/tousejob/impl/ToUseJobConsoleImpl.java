@@ -19,7 +19,7 @@ import com.misc.common.moplaf.job.Plugin;
 import com.misc.common.moplaf.job.RunContext;
 import com.misc.common.moplaf.job.impl.JobConsoleImpl;
 import com.misc.touse.moplaf.tousejob.ToUseJobConsole;
-import com.misc.touse.moplaf.tousejob.TousejobPackage;
+import com.misc.touse.moplaf.tousejob.ToUseJobPackage;
 
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
@@ -77,7 +77,7 @@ public class ToUseJobConsoleImpl extends JobConsoleImpl implements ToUseJobConso
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TousejobPackage.Literals.TO_USE_JOB_CONSOLE;
+		return ToUseJobPackage.Literals.TO_USE_JOB_CONSOLE;
 	}
 	
 	/**
@@ -98,7 +98,7 @@ public class ToUseJobConsoleImpl extends JobConsoleImpl implements ToUseJobConso
 		String oldCallerName = callerName;
 		callerName = newCallerName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousejobPackage.TO_USE_JOB_CONSOLE__CALLER_NAME, oldCallerName, callerName));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseJobPackage.TO_USE_JOB_CONSOLE__CALLER_NAME, oldCallerName, callerName));
 	}
 
 	/**
@@ -109,7 +109,7 @@ public class ToUseJobConsoleImpl extends JobConsoleImpl implements ToUseJobConso
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TousejobPackage.TO_USE_JOB_CONSOLE__CALLER_NAME:
+			case ToUseJobPackage.TO_USE_JOB_CONSOLE__CALLER_NAME:
 				return getCallerName();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -123,7 +123,7 @@ public class ToUseJobConsoleImpl extends JobConsoleImpl implements ToUseJobConso
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TousejobPackage.TO_USE_JOB_CONSOLE__CALLER_NAME:
+			case ToUseJobPackage.TO_USE_JOB_CONSOLE__CALLER_NAME:
 				setCallerName((String)newValue);
 				return;
 		}
@@ -138,7 +138,7 @@ public class ToUseJobConsoleImpl extends JobConsoleImpl implements ToUseJobConso
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TousejobPackage.TO_USE_JOB_CONSOLE__CALLER_NAME:
+			case ToUseJobPackage.TO_USE_JOB_CONSOLE__CALLER_NAME:
 				setCallerName(CALLER_NAME_EDEFAULT);
 				return;
 		}
@@ -153,7 +153,7 @@ public class ToUseJobConsoleImpl extends JobConsoleImpl implements ToUseJobConso
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TousejobPackage.TO_USE_JOB_CONSOLE__CALLER_NAME:
+			case ToUseJobPackage.TO_USE_JOB_CONSOLE__CALLER_NAME:
 				return CALLER_NAME_EDEFAULT == null ? callerName != null : !CALLER_NAME_EDEFAULT.equals(callerName);
 		}
 		return super.eIsSet(featureID);
@@ -182,7 +182,7 @@ public class ToUseJobConsoleImpl extends JobConsoleImpl implements ToUseJobConso
 	protected void refreshParametersImpl() {
 		this.addParameter("CallerName",    
 				           JobParameterType.JOB_PARAMETER_TYPE_STRING, 
-				           TousejobPackage.Literals.TO_USE_JOB_CONSOLE__CALLER_NAME,      
+				           ToUseJobPackage.Literals.TO_USE_JOB_CONSOLE__CALLER_NAME,      
 				           "Name of the Caller");
 	}
 	

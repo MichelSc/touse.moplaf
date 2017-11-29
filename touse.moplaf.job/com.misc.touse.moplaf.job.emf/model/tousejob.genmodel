@@ -6,12 +6,12 @@
     usedGenPackages="../../com.misc.common.moplaf.job.emf/model/job.genmodel#//job ../../com.misc.common.moplaf.job.client.emf/model/jobclient.genmodel#//jobclient ../../com.misc.common.moplaf.job.xmlrpc.emf/model/jobxmlrpc.genmodel#//jobxmlrpc"
     operationReflection="true" importOrganizing="true">
   <foreignModel>tousejob.ecore</foreignModel>
-  <genPackages prefix="Tousejob" basePackage="com.misc.touse.moplaf" disposableProviderFactory="true"
+  <genPackages prefix="ToUseJob" basePackage="com.misc.touse.moplaf" disposableProviderFactory="true"
       ecorePackage="tousejob.ecore#/">
     <genClasses ecoreClass="tousejob.ecore#//Domain">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousejob.ecore#//Domain/Engines"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousejob.ecore#//Domain/Jobs"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousejob.ecore#//Domain/Proxies"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousejob.ecore#//Domain/jobscheduler"/>
     </genClasses>
     <genClasses ecoreClass="tousejob.ecore#//ToUseJob">
       <genFeatures createChild="false" propertyCategory="20 ToUseJob" ecoreFeature="ecore:EAttribute tousejob.ecore#//ToUseJob/SecondsWaiting"/>
@@ -21,5 +21,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousejob.ecore#//ToUseJobResult/TicksWaited"/>
     </genClasses>
     <genClasses image="false" ecoreClass="tousejob.ecore#//DummyToHoldRefToModel"/>
+    <genClasses ecoreClass="tousejob.ecore#//ToUseJobConsole">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousejob.ecore#//ToUseJobConsole/CallerName"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

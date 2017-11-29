@@ -12,12 +12,12 @@
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="com.misc.touse.moplaf.tousejob.presentation.TousejobModelWizardID"
-            name="%_UI_TousejobModelWizard_label"
-            class="com.misc.touse.moplaf.tousejob.presentation.TousejobModelWizard"
+            id="com.misc.touse.moplaf.tousejob.presentation.ToUseJobModelWizardID"
+            name="%_UI_ToUseJobModelWizard_label"
+            class="com.misc.touse.moplaf.tousejob.presentation.ToUseJobModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/TousejobModelFile.gif">
-         <description>%_UI_TousejobModelWizard_description</description>
+            icon="icons/full/obj16/ToUseJobModelFile.gif">
+         <description>%_UI_ToUseJobModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
       </wizard>
    </extension>
@@ -25,13 +25,12 @@
    <extension point="org.eclipse.ui.editors">
       <!-- @generated tousejob -->
       <editor
-            id="com.misc.touse.moplaf.tousejob.presentation.TousejobEditorID"
-            name="%_UI_TousejobEditor_label"
-            icon="icons/full/obj16/TousejobModelFile.gif"
+            id="com.misc.touse.moplaf.tousejob.presentation.ToUseJobEditorID"
+            name="%_UI_ToUseJobEditor_label"
+            icon="icons/full/obj16/ToUseJobModelFile.gif"
             extensions="tousejob"
-            class="com.misc.touse.moplaf.tousejob.presentation.TousejobEditor"
-            contributorClass="com.misc.touse.moplaf.tousejob.presentation.TousejobActionBarContributor">
+            class="com.misc.touse.moplaf.tousejob.presentation.ToUseJobEditor"
+            contributorClass="com.misc.touse.moplaf.tousejob.presentation.ToUseJobActionBarContributor">
       </editor>
    </extension>
-
 </plugin>

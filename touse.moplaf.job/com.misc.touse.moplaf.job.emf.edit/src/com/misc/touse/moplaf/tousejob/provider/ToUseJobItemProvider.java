@@ -15,8 +15,7 @@ package com.misc.touse.moplaf.tousejob.provider;
 
 import com.misc.common.moplaf.job.provider.JobItemProvider;
 import com.misc.touse.moplaf.tousejob.ToUseJob;
-import com.misc.touse.moplaf.tousejob.TousejobPackage;
-
+import com.misc.touse.moplaf.tousejob.ToUseJobPackage;
 import java.util.Collection;
 import java.util.List;
 
@@ -77,7 +76,7 @@ public class ToUseJobItemProvider extends JobItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_ToUseJob_SecondsWaiting_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseJob_SecondsWaiting_feature", "_UI_ToUseJob_type"),
-				 TousejobPackage.Literals.TO_USE_JOB__SECONDS_WAITING,
+				 ToUseJobPackage.Literals.TO_USE_JOB__SECONDS_WAITING,
 				 true,
 				 false,
 				 false,
@@ -99,7 +98,7 @@ public class ToUseJobItemProvider extends JobItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_ToUseJob_Iteration_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseJob_Iteration_feature", "_UI_ToUseJob_type"),
-				 TousejobPackage.Literals.TO_USE_JOB__ITERATION,
+				 ToUseJobPackage.Literals.TO_USE_JOB__ITERATION,
 				 true,
 				 false,
 				 false,
@@ -146,8 +145,8 @@ public class ToUseJobItemProvider extends JobItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ToUseJob.class)) {
-			case TousejobPackage.TO_USE_JOB__SECONDS_WAITING:
-			case TousejobPackage.TO_USE_JOB__ITERATION:
+			case ToUseJobPackage.TO_USE_JOB__SECONDS_WAITING:
+			case ToUseJobPackage.TO_USE_JOB__ITERATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

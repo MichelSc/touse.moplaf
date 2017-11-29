@@ -15,9 +15,8 @@ package com.misc.touse.moplaf.tousejob.provider;
 
 import com.misc.common.moplaf.job.jobclient.provider.JobRemoteResultItemProvider;
 
+import com.misc.touse.moplaf.tousejob.ToUseJobPackage;
 import com.misc.touse.moplaf.tousejob.ToUseJobResult;
-import com.misc.touse.moplaf.tousejob.TousejobPackage;
-
 import java.util.Collection;
 import java.util.List;
 
@@ -77,7 +76,7 @@ public class ToUseJobResultItemProvider extends JobRemoteResultItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_ToUseJobResult_TicksWaited_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseJobResult_TicksWaited_feature", "_UI_ToUseJobResult_type"),
-				 TousejobPackage.Literals.TO_USE_JOB_RESULT__TICKS_WAITED,
+				 ToUseJobPackage.Literals.TO_USE_JOB_RESULT__TICKS_WAITED,
 				 true,
 				 false,
 				 false,
@@ -122,7 +121,7 @@ public class ToUseJobResultItemProvider extends JobRemoteResultItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ToUseJobResult.class)) {
-			case TousejobPackage.TO_USE_JOB_RESULT__TICKS_WAITED:
+			case ToUseJobPackage.TO_USE_JOB_RESULT__TICKS_WAITED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

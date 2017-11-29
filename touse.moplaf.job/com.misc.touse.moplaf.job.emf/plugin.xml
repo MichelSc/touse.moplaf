@@ -10,7 +10,7 @@
       <!-- @generated tousejob -->
       <package
             uri="//www.misc.com/touse/moplaf/job/model/0.1"
-            class="com.misc.touse.moplaf.tousejob.TousejobPackage"
+            class="com.misc.touse.moplaf.tousejob.ToUseJobPackage"
             genModel="model/tousejob.genmodel"/>
    </extension>
 

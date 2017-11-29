@@ -14,13 +14,11 @@ package com.misc.touse.moplaf.tousejob.provider;
 
 
 import com.misc.common.moplaf.job.JobFactory;
-import com.misc.common.moplaf.job.jobclient.JobclientFactory;
-
-import com.misc.common.moplaf.job.jobxmlrpc.JobxmlrpcFactory;
+import com.misc.common.moplaf.job.jobclient.JobClientFactory;
+import com.misc.common.moplaf.job.jobxmlrpc.JobXmlRpcFactory;
 import com.misc.touse.moplaf.tousejob.Domain;
-import com.misc.touse.moplaf.tousejob.TousejobFactory;
-import com.misc.touse.moplaf.tousejob.TousejobPackage;
-
+import com.misc.touse.moplaf.tousejob.ToUseJobFactory;
+import com.misc.touse.moplaf.tousejob.ToUseJobPackage;
 import java.util.Collection;
 import java.util.List;
 
@@ -91,10 +89,9 @@ public class DomainItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(TousejobPackage.Literals.DOMAIN__ENGINES);
-			childrenFeatures.add(TousejobPackage.Literals.DOMAIN__JOBS);
-			childrenFeatures.add(TousejobPackage.Literals.DOMAIN__PROXIES);
-			childrenFeatures.add(TousejobPackage.Literals.DOMAIN__JOBSCHEDULER);
+			childrenFeatures.add(ToUseJobPackage.Literals.DOMAIN__JOBS);
+			childrenFeatures.add(ToUseJobPackage.Literals.DOMAIN__PROXIES);
+			childrenFeatures.add(ToUseJobPackage.Literals.DOMAIN__JOBSCHEDULER);
 		}
 		return childrenFeatures;
 	}
@@ -147,10 +144,9 @@ public class DomainItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Domain.class)) {
-			case TousejobPackage.DOMAIN__ENGINES:
-			case TousejobPackage.DOMAIN__JOBS:
-			case TousejobPackage.DOMAIN__PROXIES:
-			case TousejobPackage.DOMAIN__JOBSCHEDULER:
+			case ToUseJobPackage.DOMAIN__JOBS:
+			case ToUseJobPackage.DOMAIN__PROXIES:
+			case ToUseJobPackage.DOMAIN__JOBSCHEDULER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -170,43 +166,33 @@ public class DomainItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TousejobPackage.Literals.DOMAIN__ENGINES,
-				 JobxmlrpcFactory.eINSTANCE.createJobEngineServer()));
+				(ToUseJobPackage.Literals.DOMAIN__JOBS,
+				 ToUseJobFactory.eINSTANCE.createToUseJob()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TousejobPackage.Literals.DOMAIN__JOBS,
-				 TousejobFactory.eINSTANCE.createToUseJob()));
+				(ToUseJobPackage.Literals.DOMAIN__JOBS,
+				 ToUseJobFactory.eINSTANCE.createToUseJobConsole()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TousejobPackage.Literals.DOMAIN__JOBS,
-				 TousejobFactory.eINSTANCE.createToUseJobConsole()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TousejobPackage.Literals.DOMAIN__JOBS,
+				(ToUseJobPackage.Literals.DOMAIN__JOBS,
 				 JobFactory.eINSTANCE.createJob()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TousejobPackage.Literals.DOMAIN__JOBS,
+				(ToUseJobPackage.Literals.DOMAIN__JOBS,
 				 JobFactory.eINSTANCE.createJobConsole()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TousejobPackage.Literals.DOMAIN__PROXIES,
-				 JobclientFactory.eINSTANCE.createJobEngineInProcess()));
+				(ToUseJobPackage.Literals.DOMAIN__PROXIES,
+				 JobXmlRpcFactory.eINSTANCE.createJobEngineClient()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TousejobPackage.Literals.DOMAIN__PROXIES,
-				 JobxmlrpcFactory.eINSTANCE.createJobEngineClient()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TousejobPackage.Literals.DOMAIN__JOBSCHEDULER,
-				 JobclientFactory.eINSTANCE.createJobScheduler()));
+				(ToUseJobPackage.Literals.DOMAIN__JOBSCHEDULER,
+				 JobClientFactory.eINSTANCE.createJobScheduler()));
 	}
 
 	/**

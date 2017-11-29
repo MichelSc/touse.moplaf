@@ -26,7 +26,7 @@ import com.misc.common.moplaf.job.jobclient.JobRemoteResult;
  *   <li>{@link com.misc.touse.moplaf.tousejob.ToUseJobResult#getTicksWaited <em>Ticks Waited</em>}</li>
  * </ul>
  *
- * @see com.misc.touse.moplaf.tousejob.TousejobPackage#getToUseJobResult()
+ * @see com.misc.touse.moplaf.tousejob.ToUseJobPackage#getToUseJobResult()
  * @model
  * @generated
  */
@@ -41,7 +41,7 @@ public interface ToUseJobResult extends JobRemoteResult {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ticks Waited</em>' attribute.
 	 * @see #setTicksWaited(long)
-	 * @see com.misc.touse.moplaf.tousejob.TousejobPackage#getToUseJobResult_TicksWaited()
+	 * @see com.misc.touse.moplaf.tousejob.ToUseJobPackage#getToUseJobResult_TicksWaited()
 	 * @model
 	 * @generated
 	 */

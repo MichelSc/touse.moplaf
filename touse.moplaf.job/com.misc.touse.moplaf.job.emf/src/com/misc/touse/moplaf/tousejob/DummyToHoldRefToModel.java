@@ -20,7 +20,7 @@ import com.misc.common.moplaf.job.jobxmlrpc.JobEngineServer;
  * <!-- end-user-doc -->
  *
  *
- * @see com.misc.touse.moplaf.tousejob.TousejobPackage#getDummyToHoldRefToModel()
+ * @see com.misc.touse.moplaf.tousejob.ToUseJobPackage#getDummyToHoldRefToModel()
  * @model interface="true" abstract="true"
  * @generated
  */

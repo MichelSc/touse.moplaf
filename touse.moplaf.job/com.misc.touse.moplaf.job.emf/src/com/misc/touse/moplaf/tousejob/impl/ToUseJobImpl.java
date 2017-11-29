@@ -19,10 +19,9 @@ import com.misc.common.moplaf.job.impl.JobImpl;
 import com.misc.common.moplaf.common.ReturnFeedback;
 
 import com.misc.touse.moplaf.tousejob.ToUseJob;
+import com.misc.touse.moplaf.tousejob.ToUseJobFactory;
+import com.misc.touse.moplaf.tousejob.ToUseJobPackage;
 import com.misc.touse.moplaf.tousejob.ToUseJobResult;
-import com.misc.touse.moplaf.tousejob.TousejobFactory;
-import com.misc.touse.moplaf.tousejob.TousejobPackage;
-
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
@@ -103,7 +102,7 @@ public class ToUseJobImpl extends JobImpl implements ToUseJob {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TousejobPackage.Literals.TO_USE_JOB;
+		return ToUseJobPackage.Literals.TO_USE_JOB;
 	}
 
 	/**
@@ -124,7 +123,7 @@ public class ToUseJobImpl extends JobImpl implements ToUseJob {
 		int oldSecondsWaiting = secondsWaiting;
 		secondsWaiting = newSecondsWaiting;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousejobPackage.TO_USE_JOB__SECONDS_WAITING, oldSecondsWaiting, secondsWaiting));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseJobPackage.TO_USE_JOB__SECONDS_WAITING, oldSecondsWaiting, secondsWaiting));
 	}
 
 	/**
@@ -145,7 +144,7 @@ public class ToUseJobImpl extends JobImpl implements ToUseJob {
 		int oldIteration = iteration;
 		iteration = newIteration;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TousejobPackage.TO_USE_JOB__ITERATION, oldIteration, iteration));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseJobPackage.TO_USE_JOB__ITERATION, oldIteration, iteration));
 	}
 
 	/**
@@ -156,9 +155,9 @@ public class ToUseJobImpl extends JobImpl implements ToUseJob {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TousejobPackage.TO_USE_JOB__SECONDS_WAITING:
+			case ToUseJobPackage.TO_USE_JOB__SECONDS_WAITING:
 				return getSecondsWaiting();
-			case TousejobPackage.TO_USE_JOB__ITERATION:
+			case ToUseJobPackage.TO_USE_JOB__ITERATION:
 				return getIteration();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -172,10 +171,10 @@ public class ToUseJobImpl extends JobImpl implements ToUseJob {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TousejobPackage.TO_USE_JOB__SECONDS_WAITING:
+			case ToUseJobPackage.TO_USE_JOB__SECONDS_WAITING:
 				setSecondsWaiting((Integer)newValue);
 				return;
-			case TousejobPackage.TO_USE_JOB__ITERATION:
+			case ToUseJobPackage.TO_USE_JOB__ITERATION:
 				setIteration((Integer)newValue);
 				return;
 		}
@@ -190,10 +189,10 @@ public class ToUseJobImpl extends JobImpl implements ToUseJob {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TousejobPackage.TO_USE_JOB__SECONDS_WAITING:
+			case ToUseJobPackage.TO_USE_JOB__SECONDS_WAITING:
 				setSecondsWaiting(SECONDS_WAITING_EDEFAULT);
 				return;
-			case TousejobPackage.TO_USE_JOB__ITERATION:
+			case ToUseJobPackage.TO_USE_JOB__ITERATION:
 				setIteration(ITERATION_EDEFAULT);
 				return;
 		}
@@ -208,9 +207,9 @@ public class ToUseJobImpl extends JobImpl implements ToUseJob {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TousejobPackage.TO_USE_JOB__SECONDS_WAITING:
+			case ToUseJobPackage.TO_USE_JOB__SECONDS_WAITING:
 				return secondsWaiting != SECONDS_WAITING_EDEFAULT;
-			case TousejobPackage.TO_USE_JOB__ITERATION:
+			case ToUseJobPackage.TO_USE_JOB__ITERATION:
 				return iteration != ITERATION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -241,18 +240,19 @@ public class ToUseJobImpl extends JobImpl implements ToUseJob {
 	protected ReturnFeedback jobRunImpl(RunContext runContext) {
 		Plugin.INSTANCE.logInfo("ToUseJob "+this.getName()+" started");
 		int seconds = this.getSecondsWaiting();
-		for (int i=0; i<this.getIteration(); i++){
+		boolean go_on = true;
+		for (int i=0; i<this.getIteration() && go_on; i++){
 			try {
 				TimeUnit.SECONDS.sleep(seconds);
 			} catch (InterruptedException e) {
 				Plugin.INSTANCE.logError("ToUseJob "+this.getName()+" interrupted");
 			}
 			Plugin.INSTANCE.logInfo("ToUseJob iteration "+i);
-			this.setProgress(new ProgressFeedback((float)i/(float)this.getIteration(), "iterating"));
+			go_on = this.setProgress(new ProgressFeedback((float)i/(float)this.getIteration(), "iterating"));
 		}
 		Date now = new Date();
 		long ticks = now.getTime()-this.getStartTime().getTime();
-		ToUseJobResult result = TousejobFactory.eINSTANCE.createToUseJobResult();
+		ToUseJobResult result = ToUseJobFactory.eINSTANCE.createToUseJobResult();
 		result.setTicksWaited(ticks);
 		//BART TODO this.setResult(result);
 		Plugin.INSTANCE.logInfo("ToUseJob "+this.getName()+" finished");
