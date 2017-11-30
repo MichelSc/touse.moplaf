@@ -523,7 +523,7 @@ public interface ToUseJobPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DUMMY_TO_HOLD_REF_TO_MODEL___EXECUTE_JOB__JOBSCHEDULED = JobXmlRpcPackage.JOB_ENGINE_SERVER___EXECUTE_JOB__JOBSCHEDULED;
+	int DUMMY_TO_HOLD_REF_TO_MODEL___EXECUTE_JOB__JOBSCHEDULED_1 = JobXmlRpcPackage.JOB_ENGINE_SERVER___EXECUTE_JOB__JOBSCHEDULED;
 
 	/**
 	 * The number of operations of the '<em>Dummy To Hold Ref To Model</em>' class.
