@@ -4,7 +4,9 @@ package com.misc.touse.moplaf.tousescheduler.impl;
 
 import com.misc.common.moplaf.scheduler.SchedulerFactory;
 import com.misc.common.moplaf.scheduler.Unschedule;
+import com.misc.touse.moplaf.tousescheduler.Shipment;
 import com.misc.touse.moplaf.tousescheduler.ToUseLoadShipment;
+import com.misc.touse.moplaf.tousescheduler.ToUseSchedule;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
 import com.misc.touse.moplaf.tousescheduler.ToUseUnloadShipment;
 import com.misc.touse.moplaf.tousescheduler.ToUseUnscheduleLoadUnload;
@@ -40,9 +42,9 @@ public class ToUseUnscheduleLoadUnloadImpl extends ToUseActionLoadUnloadImpl imp
 	
 	@Override
 	public String getDescription() {
-		ToUseLoadShipment task = this.getLoadTask();
+		Shipment shipment = this.getShipment();
 		String description = String.format("Unschedule(%s)", 
-				                           task==null ? "null" : task.getName());
+				                           shipment==null ? "null" : shipment.getName() );
 		return description;
 	}
 
@@ -50,7 +52,9 @@ public class ToUseUnscheduleLoadUnloadImpl extends ToUseActionLoadUnloadImpl imp
 	protected void createMovesImpl() {
 		assert this.isValid() : "Action is not valid";
 		
-		ToUseLoadShipment loadTask = this.getLoadTask();
+		ToUseSchedule schedule = (ToUseSchedule) this.getCurrentSolution();
+		Shipment shipment = this.getShipment();
+		ToUseLoadShipment loadTask = schedule.getTaskLoad(shipment);
 		ToUseUnloadShipment unloadTask = loadTask.getUnloadShipment();
 		
 		// unschedule unload
@@ -62,7 +66,7 @@ public class ToUseUnscheduleLoadUnloadImpl extends ToUseActionLoadUnloadImpl imp
 		// unschedule load
 		Unschedule unschedule_load= SchedulerFactory.eINSTANCE.createUnschedule();
 		unschedule_load.setTaskToSchedule(loadTask);
-		unschedule_load.setSolution(false);
+		unschedule_load.setSolution(true);
 		unschedule_unload.getNextMoves().add(unschedule_load);
 	} // crerateMovesImpl
 

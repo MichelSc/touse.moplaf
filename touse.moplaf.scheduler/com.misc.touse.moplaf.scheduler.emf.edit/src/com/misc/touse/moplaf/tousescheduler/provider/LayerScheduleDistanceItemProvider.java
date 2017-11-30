@@ -61,9 +61,9 @@ public class LayerScheduleDistanceItemProvider extends CalcScheduleItemProvider 
 				 getString("_UI_LayerScheduleDistance_ConcreteParent_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LayerScheduleDistance_ConcreteParent_feature", "_UI_LayerScheduleDistance_type"),
 				 ToUseSchedulerPackage.Literals.LAYER_SCHEDULE_DISTANCE__CONCRETE_PARENT,
-				 true,
 				 false,
-				 true,
+				 false,
+				 false,
 				 null,
 				 null,
 				 null));

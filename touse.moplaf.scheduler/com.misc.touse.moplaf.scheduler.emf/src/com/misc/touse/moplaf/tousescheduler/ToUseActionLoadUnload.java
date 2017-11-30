@@ -13,7 +13,7 @@ import com.misc.common.moplaf.localsearch.Action;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link com.misc.touse.moplaf.tousescheduler.ToUseActionLoadUnload#getLoadTask <em>Load Task</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.ToUseActionLoadUnload#getShipment <em>Shipment</em>}</li>
  * </ul>
  *
  * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getToUseActionLoadUnload()
@@ -22,29 +22,29 @@ import com.misc.common.moplaf.localsearch.Action;
  */
 public interface ToUseActionLoadUnload extends Action {
 	/**
-	 * Returns the value of the '<em><b>Load Task</b></em>' reference.
+	 * Returns the value of the '<em><b>Shipment</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Load Task</em>' reference isn't clear,
+	 * If the meaning of the '<em>Shipment</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Load Task</em>' reference.
-	 * @see #setLoadTask(ToUseLoadShipment)
-	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getToUseActionLoadUnload_LoadTask()
+	 * @return the value of the '<em>Shipment</em>' reference.
+	 * @see #setShipment(Shipment)
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getToUseActionLoadUnload_Shipment()
 	 * @model required="true"
 	 * @generated
 	 */
-	ToUseLoadShipment getLoadTask();
+	Shipment getShipment();
 
 	/**
-	 * Sets the value of the '{@link com.misc.touse.moplaf.tousescheduler.ToUseActionLoadUnload#getLoadTask <em>Load Task</em>}' reference.
+	 * Sets the value of the '{@link com.misc.touse.moplaf.tousescheduler.ToUseActionLoadUnload#getShipment <em>Shipment</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Load Task</em>' reference.
-	 * @see #getLoadTask()
+	 * @param value the new value of the '<em>Shipment</em>' reference.
+	 * @see #getShipment()
 	 * @generated
 	 */
-	void setLoadTask(ToUseLoadShipment value);
+	void setShipment(Shipment value);
 
 } // ToUseActionLoadUnload

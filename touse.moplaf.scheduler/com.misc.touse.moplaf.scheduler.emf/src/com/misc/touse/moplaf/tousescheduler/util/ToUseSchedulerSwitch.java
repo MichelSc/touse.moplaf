@@ -189,7 +189,6 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 				ToUsePhaseDestructConstruct toUsePhaseDestructConstruct = (ToUsePhaseDestructConstruct)theEObject;
 				T result = caseToUsePhaseDestructConstruct(toUsePhaseDestructConstruct);
 				if (result == null) result = casePhase(toUsePhaseDestructConstruct);
-				if (result == null) result = caseSolutionChange(toUsePhaseDestructConstruct);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

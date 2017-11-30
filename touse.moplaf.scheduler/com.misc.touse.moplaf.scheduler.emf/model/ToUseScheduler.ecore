@@ -33,6 +33,15 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ToUseSchedule" eSuperTypes="../../com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//Schedule">
     <eOperations name="enable"/>
+    <eOperations name="getTaskLoad" eType="#//ToUseLoadShipment">
+      <eParameters name="shipment" eType="#//Shipment"/>
+    </eOperations>
+    <eOperations name="getTaskUnload" eType="#//ToUseUnloadShipment">
+      <eParameters name="shipment" eType="#//Shipment"/>
+    </eOperations>
+    <eOperations name="getResourceVehicle" eType="#//ToUseScheduleResource">
+      <eParameters name="vehicle" eType="#//Vehicle"/>
+    </eOperations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ToUseScore" eSuperTypes="../../com.misc.common.moplaf.localsearch.emf/model/localsearch.ecore#//Score">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="TotalDistance" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
@@ -76,8 +85,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ToUseActionLoadUnload" abstract="true"
       eSuperTypes="../../com.misc.common.moplaf.localsearch.emf/model/localsearch.ecore#//Action">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="LoadTask" lowerBound="1"
-        eType="#//ToUseLoadShipment"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Shipment" lowerBound="1"
+        eType="#//Shipment"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ToUseScheduleLoadUnload" eSuperTypes="#//ToUseActionLoadUnload"/>
   <eClassifiers xsi:type="ecore:EClass" name="ToUseUnscheduleLoadUnload" eSuperTypes="#//ToUseActionLoadUnload"/>

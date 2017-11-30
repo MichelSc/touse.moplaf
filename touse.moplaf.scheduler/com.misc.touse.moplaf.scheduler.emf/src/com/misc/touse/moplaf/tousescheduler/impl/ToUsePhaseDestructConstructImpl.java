@@ -4,7 +4,6 @@ package com.misc.touse.moplaf.tousescheduler.impl;
 
 import com.misc.common.moplaf.localsearch.Step;
 import com.misc.common.moplaf.localsearch.impl.PhaseImpl;
-import com.misc.common.moplaf.scheduler.Task;
 import com.misc.touse.moplaf.tousescheduler.ToUseLoadShipment;
 import com.misc.touse.moplaf.tousescheduler.ToUsePhaseDestructConstruct;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedule;
@@ -231,43 +230,35 @@ public class ToUsePhaseDestructConstructImpl extends PhaseImpl implements ToUseP
 	 */
 	@Override
 	protected void doStepImpl(Step step) {
-		ToUseSchedule schedule = (ToUseSchedule)this.getCurrentSolution();
+		ToUseSchedule schedule = (ToUseSchedule)step.getCurrentSolution();
 		schedule.enable(); // activate propagator
 		
-		int action_nr = 0;
 		// destructions
-		for( Task task : schedule.getTasks()) {
-			if ( task.isScheduled() && task instanceof ToUseLoadShipment ){
-				if ( this.getDestructionChance()>=random.nextDouble()) {
-					ToUseUnscheduleLoadUnload new_action = ToUseSchedulerFactory.eINSTANCE.createToUseUnscheduleLoadUnload();
-					new_action.setLoadTask((ToUseLoadShipment) task);
-					new_action.setActionNr(action_nr++);
-					step.getActions().add(new_action); // owning
-					new_action.setCurrentSolution(schedule);
-					new_action.initialize();
-					new_action.run();
-					new_action.finalize();
-				}
-			}
-		}
-		
+		schedule.getTasks().stream()
+          .filter(t -> t.isScheduled())
+          .filter(t -> t instanceof ToUseLoadShipment)
+          .map(t-> (ToUseLoadShipment)t)
+          .map(t-> t.getShipment())
+          .filter(t -> this.getDestructionChance()>=random.nextDouble())
+          .forEach(s ->{
+			ToUseUnscheduleLoadUnload new_action = ToUseSchedulerFactory.eINSTANCE.createToUseUnscheduleLoadUnload();
+			new_action.setShipment(s);
+			this.doAction(step, new_action);
+		  });
+
 		// constructions
-		for( Task task : schedule.getTasks()) {
-			if ( !task.isScheduled() && task instanceof ToUseLoadShipment ){
-				if ( this.getConstructionChance()>=random.nextDouble()) {
-					ToUseScheduleLoadUnload new_action = ToUseSchedulerFactory.eINSTANCE.createToUseScheduleLoadUnload();
-					new_action.setActionNr(action_nr++);
-					new_action.setLoadTask((ToUseLoadShipment) task);
-					step.getActions().add(new_action); // owning
-					new_action.setCurrentSolution(schedule);
-					new_action.initialize();
-					new_action.run();
-					new_action.finalize();
-				}
-			}
-		}
-	}
-
-
+		schedule.getTasks().stream()
+          .filter(t -> !t.isScheduled())
+          .filter(t -> t instanceof ToUseLoadShipment)
+          .map(t-> (ToUseLoadShipment)t)
+          .map(t-> t.getShipment())
+          .filter(t ->  this.getConstructionChance()>=random.nextDouble())
+          .forEach(s ->{
+			ToUseScheduleLoadUnload new_action = ToUseSchedulerFactory.eINSTANCE.createToUseScheduleLoadUnload();
+			new_action.setShipment(s);
+			this.doAction(step, new_action);
+		  });
+		
+	} // doStepImpl
 } //ToUsePhaseDestructConstructImpl
 

@@ -27,7 +27,7 @@
       <genFeatures createChild="false" propertyCategory="20 ToUseScheduler" ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//Shipment/UnloadLocationX"/>
       <genFeatures createChild="false" propertyCategory="20 ToUseScheduler" ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//Shipment/UnloadLocationY"/>
       <genFeatures createChild="false" propertyCategory="20 ToUseScheduler" ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//Shipment/Volume"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//Shipment/PlannedBenefit"/>
+      <genFeatures createChild="false" propertyCategory="20 ToUseScheduler" ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//Shipment/PlannedBenefit"/>
     </genClasses>
     <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//ToUseScheduler">
       <genFeatures notify="false" createChild="false" propertyCategory="20 ToUseScheduler"
@@ -37,6 +37,15 @@
     </genClasses>
     <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//ToUseSchedule">
       <genOperations ecoreOperation="ToUseScheduler.ecore#//ToUseSchedule/enable"/>
+      <genOperations ecoreOperation="ToUseScheduler.ecore#//ToUseSchedule/getTaskLoad">
+        <genParameters ecoreParameter="ToUseScheduler.ecore#//ToUseSchedule/getTaskLoad/shipment"/>
+      </genOperations>
+      <genOperations ecoreOperation="ToUseScheduler.ecore#//ToUseSchedule/getTaskUnload">
+        <genParameters ecoreParameter="ToUseScheduler.ecore#//ToUseSchedule/getTaskUnload/shipment"/>
+      </genOperations>
+      <genOperations ecoreOperation="ToUseScheduler.ecore#//ToUseSchedule/getResourceVehicle">
+        <genParameters ecoreParameter="ToUseScheduler.ecore#//ToUseSchedule/getResourceVehicle/vehicle"/>
+      </genOperations>
     </genClasses>
     <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//ToUseScore" labelFeature="../../com.misc.common.moplaf.localsearch.emf/model/localsearch.genmodel#//localsearch/Score/Description">
       <genFeatures createChild="false" propertyCategory="20 ToUseScheduler" ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUseScore/TotalDistance"/>
@@ -87,15 +96,17 @@
       <genFeatures notify="false" createChild="false" propertyCategory="20 ToUseScheduler"
           propertySortChoices="true" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//ToUseUnloadShipment/LoadShipment"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//ToUseActionLoadUnload">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//ToUseActionLoadUnload/LoadTask"/>
+    <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//ToUseActionLoadUnload"
+        labelFeature="../../com.misc.common.moplaf.localsearch.emf/model/localsearch.genmodel#//localsearch/Action/Description">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//ToUseActionLoadUnload/Shipment"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//ToUseScheduleLoadUnload"/>
-    <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//ToUseUnscheduleLoadUnload"/>
-    <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//ToUseImprovementDestructConstruct">
-      <genFeatures createChild="false" propertyCategory="20 ToUseScheduler" ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUseImprovementDestructConstruct/DestructionChance"/>
-      <genFeatures createChild="false" propertyCategory="20 ToUseScheduler" propertyDescription=""
-          ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUseImprovementDestructConstruct/ConstructionChance"/>
+    <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//ToUseScheduleLoadUnload"
+        labelFeature="../../com.misc.common.moplaf.localsearch.emf/model/localsearch.genmodel#//localsearch/Action/Description"/>
+    <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//ToUseUnscheduleLoadUnload"
+        labelFeature="../../com.misc.common.moplaf.localsearch.emf/model/localsearch.genmodel#//localsearch/Action/Description"/>
+    <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//ToUsePhaseDestructConstruct">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUsePhaseDestructConstruct/DestructionChance"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUsePhaseDestructConstruct/ConstructionChance"/>
     </genClasses>
     <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//CalcScheduler"/>
     <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//CalcSchedule">
@@ -109,19 +120,19 @@
     </genClasses>
     <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//ScopeScheduleScore"/>
     <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//LayerScheduleDistance">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//LayerScheduleDistance/ConcreteParent"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//LayerScheduleDistance/ConcreteParent"/>
     </genClasses>
     <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//CalcTaskDistanceFromPrevious">
       <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//CalcTaskDistanceFromPrevious/ConcreteParent"/>
     </genClasses>
     <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//CalcTaskDistance">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//CalcTaskDistance/ConcreteParent"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//CalcTaskDistance/ConcreteParent"/>
     </genClasses>
     <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//CalcResourceDistanceFromLast">
       <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//CalcResourceDistanceFromLast/ConcreteParent"/>
     </genClasses>
     <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//CalcResourceDistance">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//CalcResourceDistance/ConcreteParent"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//CalcResourceDistance/ConcreteParent"/>
     </genClasses>
     <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//LayerScheduleVolumeLoaded">
       <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//LayerScheduleVolumeLoaded/ConcreteParent"/>

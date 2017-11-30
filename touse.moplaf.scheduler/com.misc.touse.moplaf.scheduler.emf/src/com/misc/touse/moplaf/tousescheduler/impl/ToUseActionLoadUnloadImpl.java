@@ -4,8 +4,8 @@ package com.misc.touse.moplaf.tousescheduler.impl;
 
 import com.misc.common.moplaf.localsearch.impl.ActionImpl;
 
+import com.misc.touse.moplaf.tousescheduler.Shipment;
 import com.misc.touse.moplaf.tousescheduler.ToUseActionLoadUnload;
-import com.misc.touse.moplaf.tousescheduler.ToUseLoadShipment;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -23,22 +23,21 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseActionLoadUnloadImpl#getLoadTask <em>Load Task</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseActionLoadUnloadImpl#getShipment <em>Shipment</em>}</li>
  * </ul>
  *
  * @generated
  */
 public abstract class ToUseActionLoadUnloadImpl extends ActionImpl implements ToUseActionLoadUnload {
 	/**
-	 * The cached value of the '{@link #getLoadTask() <em>Load Task</em>}' reference.
+	 * The cached value of the '{@link #getShipment() <em>Shipment</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLoadTask()
+	 * @see #getShipment()
 	 * @generated
 	 * @ordered
 	 */
-	protected ToUseLoadShipment loadTask;
-
+	protected Shipment shipment;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -63,16 +62,16 @@ public abstract class ToUseActionLoadUnloadImpl extends ActionImpl implements To
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ToUseLoadShipment getLoadTask() {
-		if (loadTask != null && loadTask.eIsProxy()) {
-			InternalEObject oldLoadTask = (InternalEObject)loadTask;
-			loadTask = (ToUseLoadShipment)eResolveProxy(oldLoadTask);
-			if (loadTask != oldLoadTask) {
+	public Shipment getShipment() {
+		if (shipment != null && shipment.eIsProxy()) {
+			InternalEObject oldShipment = (InternalEObject)shipment;
+			shipment = (Shipment)eResolveProxy(oldShipment);
+			if (shipment != oldShipment) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ToUseSchedulerPackage.TO_USE_ACTION_LOAD_UNLOAD__LOAD_TASK, oldLoadTask, loadTask));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ToUseSchedulerPackage.TO_USE_ACTION_LOAD_UNLOAD__SHIPMENT, oldShipment, shipment));
 			}
 		}
-		return loadTask;
+		return shipment;
 	}
 
 	/**
@@ -80,8 +79,8 @@ public abstract class ToUseActionLoadUnloadImpl extends ActionImpl implements To
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ToUseLoadShipment basicGetLoadTask() {
-		return loadTask;
+	public Shipment basicGetShipment() {
+		return shipment;
 	}
 
 	/**
@@ -89,11 +88,11 @@ public abstract class ToUseActionLoadUnloadImpl extends ActionImpl implements To
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLoadTask(ToUseLoadShipment newLoadTask) {
-		ToUseLoadShipment oldLoadTask = loadTask;
-		loadTask = newLoadTask;
+	public void setShipment(Shipment newShipment) {
+		Shipment oldShipment = shipment;
+		shipment = newShipment;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToUseSchedulerPackage.TO_USE_ACTION_LOAD_UNLOAD__LOAD_TASK, oldLoadTask, loadTask));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseSchedulerPackage.TO_USE_ACTION_LOAD_UNLOAD__SHIPMENT, oldShipment, shipment));
 	}
 
 	@Override
@@ -102,8 +101,8 @@ public abstract class ToUseActionLoadUnloadImpl extends ActionImpl implements To
 		if ( superFeedback!=null) {
 			return superFeedback;
 		}
-		if ( this.getLoadTask()==null) {
-			return "No load task";
+		if ( this.getShipment()==null) {
+			return "No Shipment";
 		}
 		return null;
 	}
@@ -116,9 +115,9 @@ public abstract class ToUseActionLoadUnloadImpl extends ActionImpl implements To
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ToUseSchedulerPackage.TO_USE_ACTION_LOAD_UNLOAD__LOAD_TASK:
-				if (resolve) return getLoadTask();
-				return basicGetLoadTask();
+			case ToUseSchedulerPackage.TO_USE_ACTION_LOAD_UNLOAD__SHIPMENT:
+				if (resolve) return getShipment();
+				return basicGetShipment();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -131,8 +130,8 @@ public abstract class ToUseActionLoadUnloadImpl extends ActionImpl implements To
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ToUseSchedulerPackage.TO_USE_ACTION_LOAD_UNLOAD__LOAD_TASK:
-				setLoadTask((ToUseLoadShipment)newValue);
+			case ToUseSchedulerPackage.TO_USE_ACTION_LOAD_UNLOAD__SHIPMENT:
+				setShipment((Shipment)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -146,8 +145,8 @@ public abstract class ToUseActionLoadUnloadImpl extends ActionImpl implements To
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ToUseSchedulerPackage.TO_USE_ACTION_LOAD_UNLOAD__LOAD_TASK:
-				setLoadTask((ToUseLoadShipment)null);
+			case ToUseSchedulerPackage.TO_USE_ACTION_LOAD_UNLOAD__SHIPMENT:
+				setShipment((Shipment)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -161,8 +160,8 @@ public abstract class ToUseActionLoadUnloadImpl extends ActionImpl implements To
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ToUseSchedulerPackage.TO_USE_ACTION_LOAD_UNLOAD__LOAD_TASK:
-				return loadTask != null;
+			case ToUseSchedulerPackage.TO_USE_ACTION_LOAD_UNLOAD__SHIPMENT:
+				return shipment != null;
 		}
 		return super.eIsSet(featureID);
 	}

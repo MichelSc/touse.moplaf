@@ -61,9 +61,9 @@ public class CalcResourceDistanceItemProvider extends CalcResourceItemProvider {
 				 getString("_UI_CalcResourceDistance_ConcreteParent_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CalcResourceDistance_ConcreteParent_feature", "_UI_CalcResourceDistance_type"),
 				 ToUseSchedulerPackage.Literals.CALC_RESOURCE_DISTANCE__CONCRETE_PARENT,
-				 true,
 				 false,
-				 true,
+				 false,
+				 false,
 				 null,
 				 null,
 				 null));
