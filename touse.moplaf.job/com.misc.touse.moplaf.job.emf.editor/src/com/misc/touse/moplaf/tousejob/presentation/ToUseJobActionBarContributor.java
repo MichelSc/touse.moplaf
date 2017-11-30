@@ -40,6 +40,7 @@ import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.PartInitException;
 
 import com.misc.common.moplaf.emf.editor.Util;
+import com.misc.common.moplaf.emf.editor.action.CancelAction;
 import com.misc.common.moplaf.emf.editor.action.RefreshAction;
 import com.misc.common.moplaf.emf.editor.action.ResetAction;
 import com.misc.common.moplaf.emf.editor.action.RunAction;
@@ -312,6 +313,7 @@ public class ToUseJobActionBarContributor
 		applicationPopUpMenuActions.add(new RunAction(activeEditorPart, selection));
 		applicationPopUpMenuActions.add(new RunBackgroundAction(activeEditorPart, selection));
 		applicationPopUpMenuActions.add(new ResetAction(activeEditorPart, selection));
+		applicationPopUpMenuActions.add(new CancelAction(activeEditorPart, selection));
 		applicationPopUpMenuActions.add(new StartAction(activeEditorPart, selection));
 		applicationPopUpMenuActions.add(new StopAction (activeEditorPart, selection));
 		applicationPopUpMenuActions.add(new RefreshAction (activeEditorPart, selection));
