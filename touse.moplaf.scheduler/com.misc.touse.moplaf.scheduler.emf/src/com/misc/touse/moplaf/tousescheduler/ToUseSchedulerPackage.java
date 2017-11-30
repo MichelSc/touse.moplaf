@@ -319,13 +319,13 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULER__RESET_FEEDBACK = SchedulerPackage.SCHEDULER__RESET_FEEDBACK;
 
 	/**
-	 * The feature id for the '<em><b>Canceled</b></em>' attribute.
+	 * The feature id for the '<em><b>Cancelled</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULER__CANCELED = SchedulerPackage.SCHEDULER__CANCELED;
+	int TO_USE_SCHEDULER__CANCELLED = SchedulerPackage.SCHEDULER__CANCELLED;
 
 	/**
 	 * The feature id for the '<em><b>Returned</b></em>' attribute.
