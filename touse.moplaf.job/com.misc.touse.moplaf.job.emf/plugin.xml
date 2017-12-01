@@ -13,5 +13,12 @@
             class="com.misc.touse.moplaf.tousejob.ToUseJobPackage"
             genModel="model/tousejob.genmodel"/>
    </extension>
+   <extension
+         point="com.misc.common.moplaf.job.emf.run_factory">
+      <factory
+            class="com.misc.touse.moplaf.tousejob.util.RunFactoryToUseJob"
+            id="factory_ToUseJob">
+      </factory>
+   </extension>
 
 </plugin>

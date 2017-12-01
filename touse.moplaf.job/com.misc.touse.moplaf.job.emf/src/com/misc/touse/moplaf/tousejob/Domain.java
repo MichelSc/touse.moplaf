@@ -12,7 +12,6 @@
  */
 package com.misc.touse.moplaf.tousejob;
 
-import com.misc.common.moplaf.job.Job;
 import com.misc.common.moplaf.job.jobclient.JobEngineProxy;
 import com.misc.common.moplaf.job.jobclient.JobScheduler;
 import org.eclipse.emf.common.util.EList;
@@ -28,7 +27,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link com.misc.touse.moplaf.tousejob.Domain#getJobs <em>Jobs</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousejob.Domain#getRuns <em>Runs</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousejob.Domain#getProxies <em>Proxies</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousejob.Domain#getJobscheduler <em>Jobscheduler</em>}</li>
  * </ul>
@@ -39,20 +38,20 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Domain extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Jobs</b></em>' containment reference list.
-	 * The list contents are of type {@link com.misc.common.moplaf.job.Job}.
+	 * Returns the value of the '<em><b>Runs</b></em>' containment reference list.
+	 * The list contents are of type {@link com.misc.touse.moplaf.tousejob.Runs}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Jobs</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Runs</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Jobs</em>' containment reference list.
-	 * @see com.misc.touse.moplaf.tousejob.ToUseJobPackage#getDomain_Jobs()
+	 * @return the value of the '<em>Runs</em>' containment reference list.
+	 * @see com.misc.touse.moplaf.tousejob.ToUseJobPackage#getDomain_Runs()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Job> getJobs();
+	EList<Runs> getRuns();
 
 	/**
 	 * Returns the value of the '<em><b>Proxies</b></em>' containment reference list.

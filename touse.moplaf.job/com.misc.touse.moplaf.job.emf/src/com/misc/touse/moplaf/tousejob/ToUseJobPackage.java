@@ -73,13 +73,13 @@ public interface ToUseJobPackage extends EPackage {
 	int DOMAIN = 0;
 
 	/**
-	 * The feature id for the '<em><b>Jobs</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Runs</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN__JOBS = 0;
+	int DOMAIN__RUNS = 0;
 
 	/**
 	 * The feature id for the '<em><b>Proxies</b></em>' containment reference list.
@@ -153,6 +153,15 @@ public interface ToUseJobPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_JOB__RESET_FEEDBACK = JobPackage.JOB__RESET_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB__LABEL = JobPackage.JOB__LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Cancelled</b></em>' attribute.
@@ -523,7 +532,7 @@ public interface ToUseJobPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DUMMY_TO_HOLD_REF_TO_MODEL___EXECUTE_JOB__JOBSCHEDULED_1 = JobXmlRpcPackage.JOB_ENGINE_SERVER___EXECUTE_JOB__JOBSCHEDULED;
+	int DUMMY_TO_HOLD_REF_TO_MODEL___EXECUTE_JOB__JOBSCHEDULED = JobXmlRpcPackage.JOB_ENGINE_SERVER___EXECUTE_JOB__JOBSCHEDULED;
 
 	/**
 	 * The number of operations of the '<em>Dummy To Hold Ref To Model</em>' class.
@@ -570,6 +579,15 @@ public interface ToUseJobPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_JOB_CONSOLE__RESET_FEEDBACK = JobPackage.JOB_CONSOLE__RESET_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB_CONSOLE__LABEL = JobPackage.JOB_CONSOLE__LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Cancelled</b></em>' attribute.
@@ -915,6 +933,53 @@ public interface ToUseJobPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousejob.impl.RunsImpl <em>Runs</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousejob.impl.RunsImpl
+	 * @see com.misc.touse.moplaf.tousejob.impl.ToUseJobPackageImpl#getRuns()
+	 * @generated
+	 */
+	int RUNS = 5;
+
+	/**
+	 * The feature id for the '<em><b>Runs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RUNS__RUNS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RUNS__NAME = 1;
+
+	/**
+	 * The number of structural features of the '<em>Runs</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RUNS_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Runs</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RUNS_OPERATION_COUNT = 0;
+
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousejob.Domain <em>Domain</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -925,15 +990,15 @@ public interface ToUseJobPackage extends EPackage {
 	EClass getDomain();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.tousejob.Domain#getJobs <em>Jobs</em>}'.
+	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.tousejob.Domain#getRuns <em>Runs</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Jobs</em>'.
-	 * @see com.misc.touse.moplaf.tousejob.Domain#getJobs()
+	 * @return the meta object for the containment reference list '<em>Runs</em>'.
+	 * @see com.misc.touse.moplaf.tousejob.Domain#getRuns()
 	 * @see #getDomain()
 	 * @generated
 	 */
-	EReference getDomain_Jobs();
+	EReference getDomain_Runs();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.tousejob.Domain#getProxies <em>Proxies</em>}'.
@@ -1042,6 +1107,38 @@ public interface ToUseJobPackage extends EPackage {
 	EAttribute getToUseJobConsole_CallerName();
 
 	/**
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousejob.Runs <em>Runs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Runs</em>'.
+	 * @see com.misc.touse.moplaf.tousejob.Runs
+	 * @generated
+	 */
+	EClass getRuns();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.tousejob.Runs#getRuns <em>Runs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Runs</em>'.
+	 * @see com.misc.touse.moplaf.tousejob.Runs#getRuns()
+	 * @see #getRuns()
+	 * @generated
+	 */
+	EReference getRuns_Runs();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.tousejob.Runs#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see com.misc.touse.moplaf.tousejob.Runs#getName()
+	 * @see #getRuns()
+	 * @generated
+	 */
+	EAttribute getRuns_Name();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1075,12 +1172,12 @@ public interface ToUseJobPackage extends EPackage {
 		EClass DOMAIN = eINSTANCE.getDomain();
 
 		/**
-		 * The meta object literal for the '<em><b>Jobs</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Runs</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DOMAIN__JOBS = eINSTANCE.getDomain_Jobs();
+		EReference DOMAIN__RUNS = eINSTANCE.getDomain_Runs();
 
 		/**
 		 * The meta object literal for the '<em><b>Proxies</b></em>' containment reference list feature.
@@ -1169,6 +1266,32 @@ public interface ToUseJobPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TO_USE_JOB_CONSOLE__CALLER_NAME = eINSTANCE.getToUseJobConsole_CallerName();
+
+		/**
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousejob.impl.RunsImpl <em>Runs</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.touse.moplaf.tousejob.impl.RunsImpl
+		 * @see com.misc.touse.moplaf.tousejob.impl.ToUseJobPackageImpl#getRuns()
+		 * @generated
+		 */
+		EClass RUNS = eINSTANCE.getRuns();
+
+		/**
+		 * The meta object literal for the '<em><b>Runs</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RUNS__RUNS = eINSTANCE.getRuns_Runs();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RUNS__NAME = eINSTANCE.getRuns_Name();
 
 	}
 

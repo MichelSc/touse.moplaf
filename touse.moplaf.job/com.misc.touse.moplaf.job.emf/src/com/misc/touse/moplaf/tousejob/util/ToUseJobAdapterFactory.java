@@ -98,6 +98,10 @@ public class ToUseJobAdapterFactory extends AdapterFactoryImpl {
 				return createToUseJobConsoleAdapter();
 			}
 			@Override
+			public Adapter caseRuns(Runs object) {
+				return createRunsAdapter();
+			}
+			@Override
 			public Adapter caseRunParams(RunParams object) {
 				return createRunParamsAdapter();
 			}
@@ -212,6 +216,20 @@ public class ToUseJobAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createToUseJobConsoleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.tousejob.Runs <em>Runs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.touse.moplaf.tousejob.Runs
+	 * @generated
+	 */
+	public Adapter createRunsAdapter() {
 		return null;
 	}
 

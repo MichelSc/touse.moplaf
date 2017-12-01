@@ -13,7 +13,6 @@
 package com.misc.touse.moplaf.tousejob.provider;
 
 
-import com.misc.common.moplaf.job.JobFactory;
 import com.misc.common.moplaf.job.jobclient.JobClientFactory;
 import com.misc.common.moplaf.job.jobxmlrpc.JobXmlRpcFactory;
 import com.misc.touse.moplaf.tousejob.Domain;
@@ -89,7 +88,7 @@ public class DomainItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ToUseJobPackage.Literals.DOMAIN__JOBS);
+			childrenFeatures.add(ToUseJobPackage.Literals.DOMAIN__RUNS);
 			childrenFeatures.add(ToUseJobPackage.Literals.DOMAIN__PROXIES);
 			childrenFeatures.add(ToUseJobPackage.Literals.DOMAIN__JOBSCHEDULER);
 		}
@@ -143,7 +142,7 @@ public class DomainItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Domain.class)) {
-			case ToUseJobPackage.DOMAIN__JOBS:
+			case ToUseJobPackage.DOMAIN__RUNS:
 			case ToUseJobPackage.DOMAIN__PROXIES:
 			case ToUseJobPackage.DOMAIN__JOBSCHEDULER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
@@ -165,23 +164,8 @@ public class DomainItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ToUseJobPackage.Literals.DOMAIN__JOBS,
-				 ToUseJobFactory.eINSTANCE.createToUseJob()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ToUseJobPackage.Literals.DOMAIN__JOBS,
-				 ToUseJobFactory.eINSTANCE.createToUseJobConsole()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ToUseJobPackage.Literals.DOMAIN__JOBS,
-				 JobFactory.eINSTANCE.createJob()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ToUseJobPackage.Literals.DOMAIN__JOBS,
-				 JobFactory.eINSTANCE.createJobConsole()));
+				(ToUseJobPackage.Literals.DOMAIN__RUNS,
+				 ToUseJobFactory.eINSTANCE.createRuns()));
 
 		newChildDescriptors.add
 			(createChildParameter

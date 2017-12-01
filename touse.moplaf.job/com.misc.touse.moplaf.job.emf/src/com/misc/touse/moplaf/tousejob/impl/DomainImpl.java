@@ -12,10 +12,10 @@
  */
 package com.misc.touse.moplaf.tousejob.impl;
 
-import com.misc.common.moplaf.job.Job;
 import com.misc.common.moplaf.job.jobclient.JobEngineProxy;
 import com.misc.common.moplaf.job.jobclient.JobScheduler;
 import com.misc.touse.moplaf.tousejob.Domain;
+import com.misc.touse.moplaf.tousejob.Runs;
 import com.misc.touse.moplaf.tousejob.ToUseJobPackage;
 import java.util.Collection;
 
@@ -41,7 +41,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link com.misc.touse.moplaf.tousejob.impl.DomainImpl#getJobs <em>Jobs</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousejob.impl.DomainImpl#getRuns <em>Runs</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousejob.impl.DomainImpl#getProxies <em>Proxies</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousejob.impl.DomainImpl#getJobscheduler <em>Jobscheduler</em>}</li>
  * </ul>
@@ -50,14 +50,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	/**
-	 * The cached value of the '{@link #getJobs() <em>Jobs</em>}' containment reference list.
+	 * The cached value of the '{@link #getRuns() <em>Runs</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getJobs()
+	 * @see #getRuns()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Job> jobs;
+	protected EList<Runs> runs;
 
 	/**
 	 * The cached value of the '{@link #getProxies() <em>Proxies</em>}' containment reference list.
@@ -103,11 +103,11 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Job> getJobs() {
-		if (jobs == null) {
-			jobs = new EObjectContainmentEList<Job>(Job.class, this, ToUseJobPackage.DOMAIN__JOBS);
+	public EList<Runs> getRuns() {
+		if (runs == null) {
+			runs = new EObjectContainmentEList<Runs>(Runs.class, this, ToUseJobPackage.DOMAIN__RUNS);
 		}
-		return jobs;
+		return runs;
 	}
 
 	/**
@@ -173,8 +173,8 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ToUseJobPackage.DOMAIN__JOBS:
-				return ((InternalEList<?>)getJobs()).basicRemove(otherEnd, msgs);
+			case ToUseJobPackage.DOMAIN__RUNS:
+				return ((InternalEList<?>)getRuns()).basicRemove(otherEnd, msgs);
 			case ToUseJobPackage.DOMAIN__PROXIES:
 				return ((InternalEList<?>)getProxies()).basicRemove(otherEnd, msgs);
 			case ToUseJobPackage.DOMAIN__JOBSCHEDULER:
@@ -191,8 +191,8 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ToUseJobPackage.DOMAIN__JOBS:
-				return getJobs();
+			case ToUseJobPackage.DOMAIN__RUNS:
+				return getRuns();
 			case ToUseJobPackage.DOMAIN__PROXIES:
 				return getProxies();
 			case ToUseJobPackage.DOMAIN__JOBSCHEDULER:
@@ -210,9 +210,9 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ToUseJobPackage.DOMAIN__JOBS:
-				getJobs().clear();
-				getJobs().addAll((Collection<? extends Job>)newValue);
+			case ToUseJobPackage.DOMAIN__RUNS:
+				getRuns().clear();
+				getRuns().addAll((Collection<? extends Runs>)newValue);
 				return;
 			case ToUseJobPackage.DOMAIN__PROXIES:
 				getProxies().clear();
@@ -233,8 +233,8 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ToUseJobPackage.DOMAIN__JOBS:
-				getJobs().clear();
+			case ToUseJobPackage.DOMAIN__RUNS:
+				getRuns().clear();
 				return;
 			case ToUseJobPackage.DOMAIN__PROXIES:
 				getProxies().clear();
@@ -254,8 +254,8 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ToUseJobPackage.DOMAIN__JOBS:
-				return jobs != null && !jobs.isEmpty();
+			case ToUseJobPackage.DOMAIN__RUNS:
+				return runs != null && !runs.isEmpty();
 			case ToUseJobPackage.DOMAIN__PROXIES:
 				return proxies != null && !proxies.isEmpty();
 			case ToUseJobPackage.DOMAIN__JOBSCHEDULER:
