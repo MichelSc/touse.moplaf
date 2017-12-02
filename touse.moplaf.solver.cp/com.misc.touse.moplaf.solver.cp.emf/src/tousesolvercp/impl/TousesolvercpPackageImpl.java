@@ -2,6 +2,7 @@
  */
 package tousesolvercp.impl;
 
+import com.misc.common.moplaf.job.JobPackage;
 import com.misc.common.moplaf.solver.SolverPackage;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -90,7 +91,9 @@ public class TousesolvercpPackageImpl extends EPackageImpl implements Tousesolve
 		isInited = true;
 
 		// Initialize simple dependencies
+		SolverPackage.eINSTANCE.eClass();
 		SolverjacopPackage.eINSTANCE.eClass();
+		JobPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theTousesolvercpPackage.createPackageContents();

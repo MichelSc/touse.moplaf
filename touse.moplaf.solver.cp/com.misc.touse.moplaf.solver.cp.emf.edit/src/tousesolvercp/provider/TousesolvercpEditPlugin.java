@@ -2,6 +2,7 @@
  */
 package tousesolvercp.provider;
 
+import com.misc.common.moplaf.job.provider.JobEditPlugin;
 import com.misc.common.moplaf.solver.provider.SolverEditPlugin;
 
 import org.eclipse.emf.common.EMFPlugin;
@@ -44,6 +45,7 @@ public final class TousesolvercpEditPlugin extends EMFPlugin {
 		  (new ResourceLocator [] {
 		     SolverEditPlugin.INSTANCE,
 		     SolverjacopEditPlugin.INSTANCE,
+		     JobEditPlugin.INSTANCE,
 		   });
 	}
 

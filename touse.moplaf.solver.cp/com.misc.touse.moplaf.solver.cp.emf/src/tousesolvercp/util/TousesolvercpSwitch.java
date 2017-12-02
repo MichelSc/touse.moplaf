@@ -2,6 +2,8 @@
  */
 package tousesolvercp.util;
 
+import com.misc.common.moplaf.job.Run;
+import com.misc.common.moplaf.job.RunParams;
 import com.misc.common.moplaf.solver.Generator;
 import com.misc.common.moplaf.solver.GeneratorElement;
 import com.misc.common.moplaf.solver.GeneratorTuple;
@@ -48,7 +50,7 @@ public class TousesolvercpSwitch<T> extends Switch<T> {
 	 * Checks whether this is a switch for the given package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @parameter ePackage the package in question.
+	 * @param ePackage the package in question.
 	 * @return whether this is a switch for the given package.
 	 * @generated
 	 */
@@ -77,6 +79,8 @@ public class TousesolvercpSwitch<T> extends Switch<T> {
 				ToUseSolverCpGenerator toUseSolverCpGenerator = (ToUseSolverCpGenerator)theEObject;
 				T result = caseToUseSolverCpGenerator(toUseSolverCpGenerator);
 				if (result == null) result = caseGenerator(toUseSolverCpGenerator);
+				if (result == null) result = caseRun(toUseSolverCpGenerator);
+				if (result == null) result = caseRunParams(toUseSolverCpGenerator);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -134,6 +138,36 @@ public class TousesolvercpSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseToUseSolverCpTuple(ToUseSolverCpTuple object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Run Params</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Run Params</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRunParams(RunParams object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Run</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Run</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRun(Run object) {
 		return null;
 	}
 

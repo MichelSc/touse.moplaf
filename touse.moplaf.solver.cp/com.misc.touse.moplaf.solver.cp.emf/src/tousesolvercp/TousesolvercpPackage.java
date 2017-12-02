@@ -39,7 +39,7 @@ public interface TousesolvercpPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://com.misc.touse.moplaf.solver.cp.emf";
+	String eNS_URI = "http://www.misc.com/touse.moplaf.solver.cp.emf";
 
 	/**
 	 * The package namespace name.
@@ -123,6 +123,87 @@ public interface TousesolvercpPackage extends EPackage {
 	int TO_USE_SOLVER_CP_GENERATOR = 1;
 
 	/**
+	 * The feature id for the '<em><b>Run Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLVER_CP_GENERATOR__RUN_FEEDBACK = SolverPackage.GENERATOR__RUN_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Cancel Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLVER_CP_GENERATOR__CANCEL_FEEDBACK = SolverPackage.GENERATOR__CANCEL_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Reset Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLVER_CP_GENERATOR__RESET_FEEDBACK = SolverPackage.GENERATOR__RESET_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLVER_CP_GENERATOR__LABEL = SolverPackage.GENERATOR__LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Cancelled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLVER_CP_GENERATOR__CANCELLED = SolverPackage.GENERATOR__CANCELLED;
+
+	/**
+	 * The feature id for the '<em><b>Returned</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLVER_CP_GENERATOR__RETURNED = SolverPackage.GENERATOR__RETURNED;
+
+	/**
+	 * The feature id for the '<em><b>Return Success</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLVER_CP_GENERATOR__RETURN_SUCCESS = SolverPackage.GENERATOR__RETURN_SUCCESS;
+
+	/**
+	 * The feature id for the '<em><b>Return Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLVER_CP_GENERATOR__RETURN_FEEDBACK = SolverPackage.GENERATOR__RETURN_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Return Information</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLVER_CP_GENERATOR__RETURN_INFORMATION = SolverPackage.GENERATOR__RETURN_INFORMATION;
+
+	/**
 	 * The feature id for the '<em><b>Tuple Root</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -132,22 +213,31 @@ public interface TousesolvercpPackage extends EPackage {
 	int TO_USE_SOLVER_CP_GENERATOR__TUPLE_ROOT = SolverPackage.GENERATOR__TUPLE_ROOT;
 
 	/**
-	 * The feature id for the '<em><b>Generator Feature Modes</b></em>' reference list.
+	 * The feature id for the '<em><b>Goals</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SOLVER_CP_GENERATOR__GENERATOR_FEATURE_MODES = SolverPackage.GENERATOR__GENERATOR_FEATURE_MODES;
+	int TO_USE_SOLVER_CP_GENERATOR__GOALS = SolverPackage.GENERATOR__GOALS;
 
 	/**
-	 * The feature id for the '<em><b>Objective Type</b></em>' attribute.
+	 * The feature id for the '<em><b>Var Binders</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SOLVER_CP_GENERATOR__OBJECTIVE_TYPE = SolverPackage.GENERATOR__OBJECTIVE_TYPE;
+	int TO_USE_SOLVER_CP_GENERATOR__VAR_BINDERS = SolverPackage.GENERATOR__VAR_BINDERS;
+
+	/**
+	 * The feature id for the '<em><b>Solution Provider</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLVER_CP_GENERATOR__SOLUTION_PROVIDER = SolverPackage.GENERATOR__SOLUTION_PROVIDER;
 
 	/**
 	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
@@ -186,42 +276,6 @@ public interface TousesolvercpPackage extends EPackage {
 	int TO_USE_SOLVER_CP_GENERATOR__FOOTPRINT_NOF_TERMS = SolverPackage.GENERATOR__FOOTPRINT_NOF_TERMS;
 
 	/**
-	 * The feature id for the '<em><b>Count Cons</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SOLVER_CP_GENERATOR__COUNT_CONS = SolverPackage.GENERATOR__COUNT_CONS;
-
-	/**
-	 * The feature id for the '<em><b>Count Vars</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SOLVER_CP_GENERATOR__COUNT_VARS = SolverPackage.GENERATOR__COUNT_VARS;
-
-	/**
-	 * The feature id for the '<em><b>ELp Var Count</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SOLVER_CP_GENERATOR__ELP_VAR_COUNT = SolverPackage.GENERATOR__ELP_VAR_COUNT;
-
-	/**
-	 * The feature id for the '<em><b>ELp Cons Count</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SOLVER_CP_GENERATOR__ELP_CONS_COUNT = SolverPackage.GENERATOR__ELP_CONS_COUNT;
-
-	/**
 	 * The feature id for the '<em><b>Code</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -229,15 +283,6 @@ public interface TousesolvercpPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_SOLVER_CP_GENERATOR__CODE = SolverPackage.GENERATOR__CODE;
-
-	/**
-	 * The feature id for the '<em><b>Solution Provider</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SOLVER_CP_GENERATOR__SOLUTION_PROVIDER = SolverPackage.GENERATOR__SOLUTION_PROVIDER;
 
 	/**
 	 * The feature id for the '<em><b>Selected</b></em>' reference.
@@ -276,6 +321,105 @@ public interface TousesolvercpPackage extends EPackage {
 	int TO_USE_SOLVER_CP_GENERATOR_FEATURE_COUNT = SolverPackage.GENERATOR_FEATURE_COUNT + 2;
 
 	/**
+	 * The operation id for the '<em>Copy Params</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLVER_CP_GENERATOR___COPY_PARAMS__RUNPARAMS = SolverPackage.GENERATOR___COPY_PARAMS__RUNPARAMS;
+
+	/**
+	 * The operation id for the '<em>Reset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLVER_CP_GENERATOR___RESET = SolverPackage.GENERATOR___RESET;
+
+	/**
+	 * The operation id for the '<em>Run</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLVER_CP_GENERATOR___RUN = SolverPackage.GENERATOR___RUN;
+
+	/**
+	 * The operation id for the '<em>Run</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLVER_CP_GENERATOR___RUN__RUNCONTEXT = SolverPackage.GENERATOR___RUN__RUNCONTEXT;
+
+	/**
+	 * The operation id for the '<em>Run Asynch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLVER_CP_GENERATOR___RUN_ASYNCH__RUNCONTEXT = SolverPackage.GENERATOR___RUN_ASYNCH__RUNCONTEXT;
+
+	/**
+	 * The operation id for the '<em>Cancel</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLVER_CP_GENERATOR___CANCEL = SolverPackage.GENERATOR___CANCEL;
+
+	/**
+	 * The operation id for the '<em>Set Progress</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLVER_CP_GENERATOR___SET_PROGRESS__STRING_FLOAT = SolverPackage.GENERATOR___SET_PROGRESS__STRING_FLOAT;
+
+	/**
+	 * The operation id for the '<em>Set Return</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLVER_CP_GENERATOR___SET_RETURN__RETURNFEEDBACK = SolverPackage.GENERATOR___SET_RETURN__RETURNFEEDBACK;
+
+	/**
+	 * The operation id for the '<em>Set Progress</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLVER_CP_GENERATOR___SET_PROGRESS__PROGRESSFEEDBACK = SolverPackage.GENERATOR___SET_PROGRESS__PROGRESSFEEDBACK;
+
+	/**
+	 * The operation id for the '<em>Get Return</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLVER_CP_GENERATOR___GET_RETURN = SolverPackage.GENERATOR___GET_RETURN;
+
+	/**
+	 * The operation id for the '<em>Construct Params</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLVER_CP_GENERATOR___CONSTRUCT_PARAMS = SolverPackage.GENERATOR___CONSTRUCT_PARAMS;
+
+	/**
 	 * The operation id for the '<em>Generate</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -303,6 +447,15 @@ public interface TousesolvercpPackage extends EPackage {
 	int TO_USE_SOLVER_CP_GENERATOR___GENERATE_TUPLES = SolverPackage.GENERATOR___GENERATE_TUPLES;
 
 	/**
+	 * The operation id for the '<em>Generate Tuple XReferences</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLVER_CP_GENERATOR___GENERATE_TUPLE_XREFERENCES = SolverPackage.GENERATOR___GENERATE_TUPLE_XREFERENCES;
+
+	/**
 	 * The operation id for the '<em>Generate Vars</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -321,6 +474,15 @@ public interface TousesolvercpPackage extends EPackage {
 	int TO_USE_SOLVER_CP_GENERATOR___GENERATE_CONS = SolverPackage.GENERATOR___GENERATE_CONS;
 
 	/**
+	 * The operation id for the '<em>Generate Goals</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLVER_CP_GENERATOR___GENERATE_GOALS = SolverPackage.GENERATOR___GENERATE_GOALS;
+
+	/**
 	 * The operation id for the '<em>Accept Solution</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -330,15 +492,6 @@ public interface TousesolvercpPackage extends EPackage {
 	int TO_USE_SOLVER_CP_GENERATOR___ACCEPT_SOLUTION__SOLUTION = SolverPackage.GENERATOR___ACCEPT_SOLUTION__SOLUTION;
 
 	/**
-	 * The operation id for the '<em>Select Feature Mode</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SOLVER_CP_GENERATOR___SELECT_FEATURE_MODE__GENERATORFEATUREMODE_GENERATORTUPLE = SolverPackage.GENERATOR___SELECT_FEATURE_MODE__GENERATORFEATUREMODE_GENERATORTUPLE;
-
-	/**
 	 * The operation id for the '<em>Visit Tuples</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -346,6 +499,15 @@ public interface TousesolvercpPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_SOLVER_CP_GENERATOR___VISIT_TUPLES__ITUPLEVISITOR = SolverPackage.GENERATOR___VISIT_TUPLES__ITUPLEVISITOR;
+
+	/**
+	 * The operation id for the '<em>Refresh Selected Solution</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLVER_CP_GENERATOR___REFRESH_SELECTED_SOLUTION = SolverPackage.GENERATOR___REFRESH_SELECTED_SOLUTION;
 
 	/**
 	 * The number of operations of the '<em>To Use Solver Cp Generator</em>' class.
@@ -365,6 +527,15 @@ public interface TousesolvercpPackage extends EPackage {
 	 * @generated
 	 */
 	int TO_USE_SOLVER_CP_TUPLE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Code</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLVER_CP_TUPLE__CODE = SolverPackage.GENERATOR_TUPLE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Generator As Root</b></em>' reference.
@@ -412,13 +583,22 @@ public interface TousesolvercpPackage extends EPackage {
 	int TO_USE_SOLVER_CP_TUPLE__CONS = SolverPackage.GENERATOR_TUPLE__CONS;
 
 	/**
-	 * The feature id for the '<em><b>Code</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SOLVER_CP_TUPLE__CODE = SolverPackage.GENERATOR_TUPLE__CODE;
+	int TO_USE_SOLVER_CP_TUPLE__NAME = SolverPackage.GENERATOR_TUPLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Members</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLVER_CP_TUPLE__MEMBERS = SolverPackage.GENERATOR_TUPLE__MEMBERS;
 
 	/**
 	 * The feature id for the '<em><b>To Use Linears</b></em>' containment reference list.
@@ -457,6 +637,24 @@ public interface TousesolvercpPackage extends EPackage {
 	int TO_USE_SOLVER_CP_TUPLE_FEATURE_COUNT = SolverPackage.GENERATOR_TUPLE_FEATURE_COUNT + 3;
 
 	/**
+	 * The operation id for the '<em>Get Generator</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLVER_CP_TUPLE___GET_GENERATOR = SolverPackage.GENERATOR_TUPLE___GET_GENERATOR;
+
+	/**
+	 * The operation id for the '<em>Refresh Selected Solution</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLVER_CP_TUPLE___REFRESH_SELECTED_SOLUTION = SolverPackage.GENERATOR_TUPLE___REFRESH_SELECTED_SOLUTION;
+
+	/**
 	 * The operation id for the '<em>Generate Vars</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -484,15 +682,6 @@ public interface TousesolvercpPackage extends EPackage {
 	int TO_USE_SOLVER_CP_TUPLE___GENERATE_TUPLES = SolverPackage.GENERATOR_TUPLE___GENERATE_TUPLES;
 
 	/**
-	 * The operation id for the '<em>Get Generator</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SOLVER_CP_TUPLE___GET_GENERATOR = SolverPackage.GENERATOR_TUPLE___GET_GENERATOR;
-
-	/**
 	 * The operation id for the '<em>Visit Tuples</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -500,6 +689,15 @@ public interface TousesolvercpPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_SOLVER_CP_TUPLE___VISIT_TUPLES__ITUPLEVISITOR = SolverPackage.GENERATOR_TUPLE___VISIT_TUPLES__ITUPLEVISITOR;
+
+	/**
+	 * The operation id for the '<em>Generate XReferences</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SOLVER_CP_TUPLE___GENERATE_XREFERENCES = SolverPackage.GENERATOR_TUPLE___GENERATE_XREFERENCES;
 
 	/**
 	 * The number of operations of the '<em>To Use Solver Cp Tuple</em>' class.

@@ -15,11 +15,11 @@ import solverjacop.SolverJacop;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link tousesolvercp.ToUseSolverCpGenerator#getSolver <em>Solver</em>}</li>
  *   <li>{@link tousesolvercp.ToUseSolverCpGenerator#getToUseTuples <em>To Use Tuples</em>}</li>
  * </ul>
- * </p>
  *
  * @see tousesolvercp.TousesolvercpPackage#getToUseSolverCpGenerator()
  * @model

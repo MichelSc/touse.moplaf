@@ -28,11 +28,11 @@ import tousesolvercp.TousesolvercpPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link tousesolvercp.impl.ToUseSolverCpGeneratorImpl#getSolver <em>Solver</em>}</li>
  *   <li>{@link tousesolvercp.impl.ToUseSolverCpGeneratorImpl#getToUseTuples <em>To Use Tuples</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

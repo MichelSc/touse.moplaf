@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated tousesolvercp -->
       <factory
-            uri="http://com.misc.touse.moplaf.solver.cp.emf"
+            uri="http://www.misc.com/touse.moplaf.solver.cp.emf"
             class="tousesolvercp.provider.TousesolvercpItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider

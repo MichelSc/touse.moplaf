@@ -15,12 +15,12 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link tousesolvercp.ToUseSolverCpTuple#getToUseLinears <em>To Use Linears</em>}</li>
  *   <li>{@link tousesolvercp.ToUseSolverCpTuple#getToUseVars <em>To Use Vars</em>}</li>
  *   <li>{@link tousesolvercp.ToUseSolverCpTuple#getToUseLogicals <em>To Use Logicals</em>}</li>
  * </ul>
- * </p>
  *
  * @see tousesolvercp.TousesolvercpPackage#getToUseSolverCpTuple()
  * @model

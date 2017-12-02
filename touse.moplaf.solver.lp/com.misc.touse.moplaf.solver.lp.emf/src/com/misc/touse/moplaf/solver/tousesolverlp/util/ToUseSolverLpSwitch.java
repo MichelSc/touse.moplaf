@@ -2,6 +2,8 @@
  */
 package com.misc.touse.moplaf.solver.tousesolverlp.util;
 
+import com.misc.common.moplaf.job.Run;
+import com.misc.common.moplaf.job.RunParams;
 import com.misc.common.moplaf.solver.Generator;
 import com.misc.common.moplaf.solver.GeneratorElement;
 import com.misc.common.moplaf.solver.GeneratorTuple;
@@ -80,6 +82,8 @@ public class ToUseSolverLpSwitch<T> extends Switch<T> {
 				ToUseGenerator toUseGenerator = (ToUseGenerator)theEObject;
 				T result = caseToUseGenerator(toUseGenerator);
 				if (result == null) result = caseGenerator(toUseGenerator);
+				if (result == null) result = caseRun(toUseGenerator);
+				if (result == null) result = caseRunParams(toUseGenerator);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -137,6 +141,36 @@ public class ToUseSolverLpSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseToUseTuple(ToUseTuple object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Run Params</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Run Params</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRunParams(RunParams object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Run</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Run</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRun(Run object) {
 		return null;
 	}
 

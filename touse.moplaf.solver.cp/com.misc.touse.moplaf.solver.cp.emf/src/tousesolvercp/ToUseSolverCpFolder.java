@@ -13,12 +13,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link tousesolvercp.ToUseSolverCpFolder#getSubFolders <em>Sub Folders</em>}</li>
  *   <li>{@link tousesolvercp.ToUseSolverCpFolder#getName <em>Name</em>}</li>
  *   <li>{@link tousesolvercp.ToUseSolverCpFolder#getToUseGenerators <em>To Use Generators</em>}</li>
  * </ul>
- * </p>
  *
  * @see tousesolvercp.TousesolvercpPackage#getToUseSolverCpFolder()
  * @model

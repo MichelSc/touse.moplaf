@@ -2,6 +2,8 @@
  */
 package tousesolvercp.presentation;
 
+import com.misc.common.moplaf.emf.editor.Util;
+import com.misc.common.moplaf.emf.editor.action.RunAction;
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -33,6 +35,7 @@ import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.PartInitException;
+
 
 
 /**
@@ -105,13 +108,6 @@ public class TousesolvercpActionBarContributor
 		};
 		
 	/**
-	 * This action runs the object
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 */
-	protected RunAction runAction = new RunAction();
-
-	/**
 	 * This will contain one {@link org.eclipse.emf.edit.ui.action.CreateChildAction} corresponding to each descriptor
 	 * generated for the current selection by the item provider.
 	 * <!-- begin-user-doc -->
@@ -146,6 +142,22 @@ public class TousesolvercpActionBarContributor
 	protected IMenuManager createSiblingMenuManager;
 
 	/**
+	 * This will contain one {@link org.eclipse.emf.edit.ui.action.ApplicationPopUpMenuAction} 
+	 * generated for the current selection by the item provider.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	protected Collection<IAction> applicationPopUpMenuActions;
+
+	/**
+	 * This is the menu manager into which menu contribution items should be added for G4SOptiPost actions.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	protected IMenuManager applicationPopUpMenuManager;
+
+	
+	/**
 	 * This creates an instance of the contributor.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -175,7 +187,6 @@ public class TousesolvercpActionBarContributor
 	 * as well as the sub-menus for object creation items.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	@Override
 	public void contributeToMenu(IMenuManager menuManager) {
@@ -198,6 +209,13 @@ public class TousesolvercpActionBarContributor
 		createSiblingMenuManager = new MenuManager(TousesolvercpEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
 		submenuManager.insertBefore("additions", createSiblingMenuManager);
 
+		// Prepare for SolverToUse item addition or removal.
+		//
+		applicationPopUpMenuManager = new MenuManager("ToUseSolverCp");
+		submenuManager.insertBefore("additions", applicationPopUpMenuManager);
+		
+		submenuManager.insertBefore("additions", new Separator("generic part"));
+		
 		// Force an update because Eclipse hides empty menus now.
 		//
 		submenuManager.addMenuListener
@@ -273,6 +291,9 @@ public class TousesolvercpActionBarContributor
 			newSiblingDescriptors = domain.getNewChildDescriptors(null, object);
 		}
 
+		applicationPopUpMenuActions = new ArrayList<IAction>();
+		applicationPopUpMenuActions.add(new RunAction   (activeEditorPart, selection));
+		
 		// Generate actions for selection; populate and redraw the menus.
 		//
 		createChildActions = generateCreateChildActions(newChildDescriptors, selection);
@@ -286,7 +307,7 @@ public class TousesolvercpActionBarContributor
 			populateManager(createSiblingMenuManager, createSiblingActions, null);
 			createSiblingMenuManager.update(true);
 		}
-		this.runAction  .selectionChanged(activeEditorPart, selection);
+
 	}
 
 	/**
@@ -393,9 +414,9 @@ public class TousesolvercpActionBarContributor
 		populateManager(submenuManager, createSiblingActions, null);
 		menuManager.insertBefore("edit", submenuManager);
 
-		submenuManager = new MenuManager("POC");
+		submenuManager = new MenuManager("ToUseSolverCp");
+		Util.populateManager(submenuManager, applicationPopUpMenuActions, null);
 		menuManager.insertBefore("edit", submenuManager);
-		submenuManager.add(this.runAction);
 	}
 
 	/**

@@ -12,6 +12,7 @@
  */
 package com.misc.touse.moplaf.solver.tousesolver.impl;
 
+import com.misc.common.moplaf.job.JobPackage;
 import com.misc.common.moplaf.solver.SolverPackage;
 import com.misc.touse.moplaf.solver.tousesolver.Domain;
 import com.misc.touse.moplaf.solver.tousesolver.DomainObject;
@@ -164,6 +165,7 @@ public class TousesolverPackageImpl extends EPackageImpl implements TousesolverP
 
 		// Initialize simple dependencies
 		SolverPackage.eINSTANCE.eClass();
+		JobPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theTousesolverPackage.createPackageContents();

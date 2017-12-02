@@ -3,7 +3,7 @@
 package com.misc.touse.moplaf.solver.tousesolverlp.provider;
 
 
-import com.misc.common.moplaf.solver.EnumObjectiveType;
+import com.misc.common.moplaf.common.EnabledFeedback;
 import com.misc.common.moplaf.solver.SolverPackage;
 import com.misc.common.moplaf.solver.provider.GeneratorItemProvider;
 
@@ -110,7 +110,7 @@ public class ToUseGeneratorItemProvider extends GeneratorItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		EnumObjectiveType labelValue = ((ToUseGenerator)object).getObjectiveType();
+		EnabledFeedback labelValue = ((ToUseGenerator)object).getRunFeedback();
 		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ?
 			getString("_UI_ToUseGenerator_type") :

@@ -28,12 +28,12 @@ import tousesolvercp.TousesolvercpPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link tousesolvercp.impl.ToUseSolverCpFolderImpl#getSubFolders <em>Sub Folders</em>}</li>
  *   <li>{@link tousesolvercp.impl.ToUseSolverCpFolderImpl#getName <em>Name</em>}</li>
  *   <li>{@link tousesolvercp.impl.ToUseSolverCpFolderImpl#getToUseGenerators <em>To Use Generators</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

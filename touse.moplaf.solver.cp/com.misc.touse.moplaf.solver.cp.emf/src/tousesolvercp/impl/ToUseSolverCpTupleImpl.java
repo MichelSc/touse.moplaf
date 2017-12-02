@@ -24,12 +24,12 @@ import tousesolvercp.TousesolvercpPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link tousesolvercp.impl.ToUseSolverCpTupleImpl#getToUseLinears <em>To Use Linears</em>}</li>
  *   <li>{@link tousesolvercp.impl.ToUseSolverCpTupleImpl#getToUseVars <em>To Use Vars</em>}</li>
  *   <li>{@link tousesolvercp.impl.ToUseSolverCpTupleImpl#getToUseLogicals <em>To Use Logicals</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

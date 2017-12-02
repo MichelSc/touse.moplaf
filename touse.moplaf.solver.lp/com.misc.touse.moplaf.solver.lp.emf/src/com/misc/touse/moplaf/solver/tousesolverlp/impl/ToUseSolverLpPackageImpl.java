@@ -2,6 +2,7 @@
  */
 package com.misc.touse.moplaf.solver.tousesolverlp.impl;
 
+import com.misc.common.moplaf.job.JobPackage;
 import com.misc.common.moplaf.solver.SolverPackage;
 
 import com.misc.touse.moplaf.solver.tousesolverlp.Folder;
@@ -10,6 +11,7 @@ import com.misc.touse.moplaf.solver.tousesolverlp.ToUseSolverLpFactory;
 import com.misc.touse.moplaf.solver.tousesolverlp.ToUseSolverLpPackage;
 import com.misc.touse.moplaf.solver.tousesolverlp.ToUseTuple;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -92,6 +94,7 @@ public class ToUseSolverLpPackageImpl extends EPackageImpl implements ToUseSolve
 
 		// Initialize simple dependencies
 		SolverPackage.eINSTANCE.eClass();
+		JobPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theToUseSolverLpPackage.createPackageContents();
@@ -133,6 +136,15 @@ public class ToUseSolverLpPackageImpl extends EPackageImpl implements ToUseSolve
 	 */
 	public EReference getFolder_Generators() {
 		return (EReference)folderEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFolder_Name() {
+		return (EAttribute)folderEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -229,6 +241,7 @@ public class ToUseSolverLpPackageImpl extends EPackageImpl implements ToUseSolve
 		folderEClass = createEClass(FOLDER);
 		createEReference(folderEClass, FOLDER__SUB_FOLDERS);
 		createEReference(folderEClass, FOLDER__GENERATORS);
+		createEAttribute(folderEClass, FOLDER__NAME);
 
 		toUseGeneratorEClass = createEClass(TO_USE_GENERATOR);
 		createEReference(toUseGeneratorEClass, TO_USE_GENERATOR__ROOT_TUPLES);
@@ -278,6 +291,7 @@ public class ToUseSolverLpPackageImpl extends EPackageImpl implements ToUseSolve
 		initEClass(folderEClass, Folder.class, "Folder", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getFolder_SubFolders(), this.getFolder(), null, "SubFolders", null, 0, -1, Folder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFolder_Generators(), this.getToUseGenerator(), null, "Generators", null, 0, -1, Folder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFolder_Name(), ecorePackage.getEString(), "Name", null, 0, 1, Folder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(toUseGeneratorEClass, ToUseGenerator.class, "ToUseGenerator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getToUseGenerator_RootTuples(), this.getToUseTuple(), null, "RootTuples", null, 0, -1, ToUseGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

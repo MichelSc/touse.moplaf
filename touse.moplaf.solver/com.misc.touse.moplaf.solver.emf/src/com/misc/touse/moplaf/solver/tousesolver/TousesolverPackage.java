@@ -535,13 +535,31 @@ public interface TousesolverPackage extends EPackage {
 	int KNAPSACK_LP__RESET_FEEDBACK = SolverPackage.GENERATOR__RESET_FEEDBACK;
 
 	/**
-	 * The feature id for the '<em><b>Canceled</b></em>' attribute.
+	 * The feature id for the '<em><b>Label</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int KNAPSACK_LP__CANCELED = SolverPackage.GENERATOR__CANCELED;
+	int KNAPSACK_LP__LABEL = SolverPackage.GENERATOR__LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Cancelled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNAPSACK_LP__CANCELLED = SolverPackage.GENERATOR__CANCELLED;
+
+	/**
+	 * The feature id for the '<em><b>Returned</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNAPSACK_LP__RETURNED = SolverPackage.GENERATOR__RETURNED;
 
 	/**
 	 * The feature id for the '<em><b>Return Success</b></em>' attribute.
@@ -589,13 +607,13 @@ public interface TousesolverPackage extends EPackage {
 	int KNAPSACK_LP__GOALS = SolverPackage.GENERATOR__GOALS;
 
 	/**
-	 * The feature id for the '<em><b>Generator Feature Modes</b></em>' reference list.
+	 * The feature id for the '<em><b>Var Binders</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int KNAPSACK_LP__GENERATOR_FEATURE_MODES = SolverPackage.GENERATOR__GENERATOR_FEATURE_MODES;
+	int KNAPSACK_LP__VAR_BINDERS = SolverPackage.GENERATOR__VAR_BINDERS;
 
 	/**
 	 * The feature id for the '<em><b>Solution Provider</b></em>' reference list.
@@ -641,42 +659,6 @@ public interface TousesolverPackage extends EPackage {
 	 * @ordered
 	 */
 	int KNAPSACK_LP__FOOTPRINT_NOF_TERMS = SolverPackage.GENERATOR__FOOTPRINT_NOF_TERMS;
-
-	/**
-	 * The feature id for the '<em><b>Count Cons</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KNAPSACK_LP__COUNT_CONS = SolverPackage.GENERATOR__COUNT_CONS;
-
-	/**
-	 * The feature id for the '<em><b>Count Vars</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KNAPSACK_LP__COUNT_VARS = SolverPackage.GENERATOR__COUNT_VARS;
-
-	/**
-	 * The feature id for the '<em><b>ELp Var Count</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KNAPSACK_LP__ELP_VAR_COUNT = SolverPackage.GENERATOR__ELP_VAR_COUNT;
-
-	/**
-	 * The feature id for the '<em><b>ELp Cons Count</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KNAPSACK_LP__ELP_CONS_COUNT = SolverPackage.GENERATOR__ELP_CONS_COUNT;
 
 	/**
 	 * The feature id for the '<em><b>Code</b></em>' attribute.
@@ -751,6 +733,15 @@ public interface TousesolverPackage extends EPackage {
 	int KNAPSACK_LP_FEATURE_COUNT = SolverPackage.GENERATOR_FEATURE_COUNT + 5;
 
 	/**
+	 * The operation id for the '<em>Copy Params</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNAPSACK_LP___COPY_PARAMS__RUNPARAMS = SolverPackage.GENERATOR___COPY_PARAMS__RUNPARAMS;
+
+	/**
 	 * The operation id for the '<em>Reset</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -776,6 +767,24 @@ public interface TousesolverPackage extends EPackage {
 	 * @ordered
 	 */
 	int KNAPSACK_LP___RUN__RUNCONTEXT = SolverPackage.GENERATOR___RUN__RUNCONTEXT;
+
+	/**
+	 * The operation id for the '<em>Run Asynch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNAPSACK_LP___RUN_ASYNCH__RUNCONTEXT = SolverPackage.GENERATOR___RUN_ASYNCH__RUNCONTEXT;
+
+	/**
+	 * The operation id for the '<em>Run Asynch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNAPSACK_LP___RUN_ASYNCH__RUNCONTEXT_BOOLEAN = SolverPackage.GENERATOR___RUN_ASYNCH__RUNCONTEXT_BOOLEAN;
 
 	/**
 	 * The operation id for the '<em>Cancel</em>' operation.
@@ -805,6 +814,15 @@ public interface TousesolverPackage extends EPackage {
 	int KNAPSACK_LP___SET_PROGRESS__PROGRESSFEEDBACK = SolverPackage.GENERATOR___SET_PROGRESS__PROGRESSFEEDBACK;
 
 	/**
+	 * The operation id for the '<em>Set Return</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNAPSACK_LP___SET_RETURN__RETURNFEEDBACK = SolverPackage.GENERATOR___SET_RETURN__RETURNFEEDBACK;
+
+	/**
 	 * The operation id for the '<em>Get Return</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -814,13 +832,13 @@ public interface TousesolverPackage extends EPackage {
 	int KNAPSACK_LP___GET_RETURN = SolverPackage.GENERATOR___GET_RETURN;
 
 	/**
-	 * The operation id for the '<em>Set Return</em>' operation.
+	 * The operation id for the '<em>Construct Params</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int KNAPSACK_LP___SET_RETURN__RETURNFEEDBACK = SolverPackage.GENERATOR___SET_RETURN__RETURNFEEDBACK;
+	int KNAPSACK_LP___CONSTRUCT_PARAMS = SolverPackage.GENERATOR___CONSTRUCT_PARAMS;
 
 	/**
 	 * The operation id for the '<em>Generate</em>' operation.
@@ -893,15 +911,6 @@ public interface TousesolverPackage extends EPackage {
 	 * @ordered
 	 */
 	int KNAPSACK_LP___ACCEPT_SOLUTION__SOLUTION = SolverPackage.GENERATOR___ACCEPT_SOLUTION__SOLUTION;
-
-	/**
-	 * The operation id for the '<em>Select Feature Mode</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KNAPSACK_LP___SELECT_FEATURE_MODE__GENERATORFEATUREMODE_GENERATORTUPLE = SolverPackage.GENERATOR___SELECT_FEATURE_MODE__GENERATORFEATUREMODE_GENERATORTUPLE;
 
 	/**
 	 * The operation id for the '<em>Visit Tuples</em>' operation.

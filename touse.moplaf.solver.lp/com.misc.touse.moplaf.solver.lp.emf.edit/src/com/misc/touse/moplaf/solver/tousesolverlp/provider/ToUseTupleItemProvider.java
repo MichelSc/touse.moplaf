@@ -106,7 +106,7 @@ public class ToUseTupleItemProvider extends GeneratorTupleItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ToUseTuple)object).getCode();
+		String label = ((ToUseTuple)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_ToUseTuple_type") :
 			getString("_UI_ToUseTuple_type") + " " + label;
