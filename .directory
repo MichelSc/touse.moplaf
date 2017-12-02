@@ -1,5 +1,8 @@
 [Dolphin]
 HeaderColumnWidths=344,76,131
-Timestamp=2015,8,4,21,44,14
+Timestamp=2017,12,2,15,30,14
 Version=3
 ViewMode=1
+
+[Settings]
+HiddenFilesShown=true
