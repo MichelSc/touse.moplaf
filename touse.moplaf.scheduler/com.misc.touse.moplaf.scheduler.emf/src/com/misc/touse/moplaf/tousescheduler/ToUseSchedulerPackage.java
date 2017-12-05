@@ -319,6 +319,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULER__RESET_FEEDBACK = SchedulerPackage.SCHEDULER__RESET_FEEDBACK;
 
 	/**
+	 * The feature id for the '<em><b>Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULER__LABEL = SchedulerPackage.SCHEDULER__LABEL;
+
+	/**
 	 * The feature id for the '<em><b>Cancelled</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -408,23 +417,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 */
 	int TO_USE_SCHEDULER__NAME = SchedulerPackage.SCHEDULER__NAME;
 
-	/**
-	 * The feature id for the '<em><b>Select Best Chance</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULER__SELECT_BEST_CHANCE = SchedulerPackage.SCHEDULER__SELECT_BEST_CHANCE;
-
-	/**
-	 * The feature id for the '<em><b>Select Worst Chance</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULER__SELECT_WORST_CHANCE = SchedulerPackage.SCHEDULER__SELECT_WORST_CHANCE;
 
 	/**
 	 * The feature id for the '<em><b>Schedules</b></em>' reference list.
@@ -508,6 +500,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULER___RUN_ASYNCH__RUNCONTEXT = SchedulerPackage.SCHEDULER___RUN_ASYNCH__RUNCONTEXT;
 
 	/**
+	 * The operation id for the '<em>Run Asynch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULER___RUN_ASYNCH__RUNCONTEXT_BOOLEAN = SchedulerPackage.SCHEDULER___RUN_ASYNCH__RUNCONTEXT_BOOLEAN;
+
+	/**
 	 * The operation id for the '<em>Cancel</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -526,15 +527,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULER___SET_PROGRESS__STRING_FLOAT = SchedulerPackage.SCHEDULER___SET_PROGRESS__STRING_FLOAT;
 
 	/**
-	 * The operation id for the '<em>Set Return</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULER___SET_RETURN__RETURNFEEDBACK = SchedulerPackage.SCHEDULER___SET_RETURN__RETURNFEEDBACK;
-
-	/**
 	 * The operation id for the '<em>Set Progress</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -542,6 +534,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_SCHEDULER___SET_PROGRESS__PROGRESSFEEDBACK = SchedulerPackage.SCHEDULER___SET_PROGRESS__PROGRESSFEEDBACK;
+
+	/**
+	 * The operation id for the '<em>Set Return</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULER___SET_RETURN__RETURNFEEDBACK = SchedulerPackage.SCHEDULER___SET_RETURN__RETURNFEEDBACK;
 
 	/**
 	 * The operation id for the '<em>Get Return</em>' operation.
@@ -568,7 +569,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULER___SELECT_GOOD_SOLUTION = SchedulerPackage.SCHEDULER___SELECT_GOOD_SOLUTION;
+	int TO_USE_SCHEDULER___SELECT_GOOD_SOLUTION__DOUBLE = SchedulerPackage.SCHEDULER___SELECT_GOOD_SOLUTION__DOUBLE;
 
 	/**
 	 * The operation id for the '<em>Select Bad Solution</em>' operation.
@@ -577,7 +578,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULER___SELECT_BAD_SOLUTION = SchedulerPackage.SCHEDULER___SELECT_BAD_SOLUTION;
+	int TO_USE_SCHEDULER___SELECT_BAD_SOLUTION__DOUBLE = SchedulerPackage.SCHEDULER___SELECT_BAD_SOLUTION__DOUBLE;
 
 	/**
 	 * The operation id for the '<em>Sort Solutions</em>' operation.
@@ -604,7 +605,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULER___PRUNE = SchedulerPackage.SCHEDULER___PRUNE;
+	int TO_USE_SCHEDULER___PRUNE__DOUBLE = SchedulerPackage.SCHEDULER___PRUNE__DOUBLE;
 
 	/**
 	 * The operation id for the '<em>Construct Score</em>' operation.
@@ -2722,6 +2723,24 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__STEPS = LocalSearchPackage.PHASE__STEPS;
+
+	/**
+	 * The feature id for the '<em><b>Select Best Chance</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__SELECT_BEST_CHANCE = LocalSearchPackage.PHASE__SELECT_BEST_CHANCE;
+
+	/**
+	 * The feature id for the '<em><b>Select Worst Chance</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__SELECT_WORST_CHANCE = LocalSearchPackage.PHASE__SELECT_WORST_CHANCE;
 
 	/**
 	 * The feature id for the '<em><b>Destruction Chance</b></em>' attribute.
