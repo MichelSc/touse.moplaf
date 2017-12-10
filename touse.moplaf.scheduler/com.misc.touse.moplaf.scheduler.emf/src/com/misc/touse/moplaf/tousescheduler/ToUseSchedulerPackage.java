@@ -2000,13 +2000,13 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_ACTION_LOAD_UNLOAD__SUPER_CHANGE = LocalSearchPackage.ACTION__SUPER_CHANGE;
 
 	/**
-	 * The feature id for the '<em><b>Root Moves</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Start Moves</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_ACTION_LOAD_UNLOAD__ROOT_MOVES = LocalSearchPackage.ACTION__ROOT_MOVES;
+	int TO_USE_ACTION_LOAD_UNLOAD__START_MOVES = LocalSearchPackage.ACTION__START_MOVES;
 
 	/**
 	 * The feature id for the '<em><b>Current Move</b></em>' reference.
@@ -2225,13 +2225,13 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE_LOAD_UNLOAD__SUPER_CHANGE = TO_USE_ACTION_LOAD_UNLOAD__SUPER_CHANGE;
 
 	/**
-	 * The feature id for the '<em><b>Root Moves</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Start Moves</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD__ROOT_MOVES = TO_USE_ACTION_LOAD_UNLOAD__ROOT_MOVES;
+	int TO_USE_SCHEDULE_LOAD_UNLOAD__START_MOVES = TO_USE_ACTION_LOAD_UNLOAD__START_MOVES;
 
 	/**
 	 * The feature id for the '<em><b>Current Move</b></em>' reference.
@@ -2490,13 +2490,13 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__SUPER_CHANGE = TO_USE_ACTION_LOAD_UNLOAD__SUPER_CHANGE;
 
 	/**
-	 * The feature id for the '<em><b>Root Moves</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Start Moves</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__ROOT_MOVES = TO_USE_ACTION_LOAD_UNLOAD__ROOT_MOVES;
+	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__START_MOVES = TO_USE_ACTION_LOAD_UNLOAD__START_MOVES;
 
 	/**
 	 * The feature id for the '<em><b>Current Move</b></em>' reference.

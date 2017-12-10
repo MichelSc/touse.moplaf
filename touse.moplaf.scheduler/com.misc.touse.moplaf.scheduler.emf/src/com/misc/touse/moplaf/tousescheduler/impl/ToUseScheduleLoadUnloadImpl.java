@@ -50,7 +50,7 @@ public class ToUseScheduleLoadUnloadImpl extends ToUseActionLoadUnloadImpl imple
 	}
 
 	@Override
-	protected void createMovesImpl() {
+	protected void initializeImpl() {
 		assert this.isValid() : "Action is not valid";
 		
 		ToUseSchedule schedule = (ToUseSchedule) this.getCurrentSolution();
@@ -67,7 +67,7 @@ public class ToUseScheduleLoadUnloadImpl extends ToUseActionLoadUnloadImpl imple
 				scheduleLoad.setResource(resource);
 				scheduleLoad.setTaskToSchedule(loadTask);
 				scheduleLoad.setSolution(false);
-				this.getRootMoves().add(scheduleLoad);
+				this.getStartMoves().add(scheduleLoad);
 				
 				// loop control over the load insertions points
 				loadInsertionPoint = loadInsertionPoint==null
@@ -90,7 +90,10 @@ public class ToUseScheduleLoadUnloadImpl extends ToUseActionLoadUnloadImpl imple
 				} while ( unloadInsertionPoint !=null );
 				
 			} while (loadInsertionPoint !=null);
-		}  // traverse the Resources 
+		}  // traverse the Resources
+		
+		// make the solution ready for calculating scores
+		schedule.enable();
 	} // crerateMovesImpl
 
 } //ToUseScheduleLoadUnloadImpl

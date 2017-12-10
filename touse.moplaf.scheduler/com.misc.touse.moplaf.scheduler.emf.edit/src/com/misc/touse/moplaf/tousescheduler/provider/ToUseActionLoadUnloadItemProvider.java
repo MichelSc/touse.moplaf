@@ -117,17 +117,17 @@ public class ToUseActionLoadUnloadItemProvider extends ActionItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(LocalSearchPackage.Literals.ACTION__ROOT_MOVES,
+				(LocalSearchPackage.Literals.ACTION__START_MOVES,
 				 SchedulerFactory.eINSTANCE.createScheduleAfter()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(LocalSearchPackage.Literals.ACTION__ROOT_MOVES,
+				(LocalSearchPackage.Literals.ACTION__START_MOVES,
 				 SchedulerFactory.eINSTANCE.createScheduleBefore()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(LocalSearchPackage.Literals.ACTION__ROOT_MOVES,
+				(LocalSearchPackage.Literals.ACTION__START_MOVES,
 				 SchedulerFactory.eINSTANCE.createUnschedule()));
 	}
 

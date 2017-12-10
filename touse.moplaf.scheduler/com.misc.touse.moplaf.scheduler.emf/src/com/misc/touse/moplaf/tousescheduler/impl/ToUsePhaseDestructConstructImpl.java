@@ -231,7 +231,6 @@ public class ToUsePhaseDestructConstructImpl extends PhaseImpl implements ToUseP
 	@Override
 	protected void doStepImpl(Step step) {
 		ToUseSchedule schedule = (ToUseSchedule)step.getCurrentSolution();
-		schedule.enable(); // activate propagator
 		
 		// destructions
 		schedule.getTasks().stream()
