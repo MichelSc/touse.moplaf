@@ -1901,7 +1901,16 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_ACTION_LOAD_UNLOAD = 10;
 
 	/**
-	 * The feature id for the '<em><b>Start Solution</b></em>' reference.
+	 * The feature id for the '<em><b>Current Solution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_ACTION_LOAD_UNLOAD__CURRENT_SOLUTION = LocalSearchPackage.ACTION__CURRENT_SOLUTION;
+
+	/**
+	 * The feature id for the '<em><b>Start Solution</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1910,22 +1919,13 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_ACTION_LOAD_UNLOAD__START_SOLUTION = LocalSearchPackage.ACTION__START_SOLUTION;
 
 	/**
-	 * The feature id for the '<em><b>End Solution</b></em>' reference.
+	 * The feature id for the '<em><b>End Solution</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int TO_USE_ACTION_LOAD_UNLOAD__END_SOLUTION = LocalSearchPackage.ACTION__END_SOLUTION;
-
-	/**
-	 * The feature id for the '<em><b>End Solution Owned</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_ACTION_LOAD_UNLOAD__END_SOLUTION_OWNED = LocalSearchPackage.ACTION__END_SOLUTION_OWNED;
 
 	/**
 	 * The feature id for the '<em><b>Previous Change</b></em>' reference.
@@ -1937,24 +1937,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_ACTION_LOAD_UNLOAD__PREVIOUS_CHANGE = LocalSearchPackage.ACTION__PREVIOUS_CHANGE;
 
 	/**
-	 * The feature id for the '<em><b>Level</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_ACTION_LOAD_UNLOAD__LEVEL = LocalSearchPackage.ACTION__LEVEL;
-
-	/**
-	 * The feature id for the '<em><b>Solutions</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_ACTION_LOAD_UNLOAD__SOLUTIONS = LocalSearchPackage.ACTION__SOLUTIONS;
-
-	/**
 	 * The feature id for the '<em><b>Sub Changes</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1964,13 +1946,22 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_ACTION_LOAD_UNLOAD__SUB_CHANGES = LocalSearchPackage.ACTION__SUB_CHANGES;
 
 	/**
-	 * The feature id for the '<em><b>Current Solution</b></em>' reference.
+	 * The feature id for the '<em><b>Super Change</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_ACTION_LOAD_UNLOAD__CURRENT_SOLUTION = LocalSearchPackage.ACTION__CURRENT_SOLUTION;
+	int TO_USE_ACTION_LOAD_UNLOAD__SUPER_CHANGE = LocalSearchPackage.ACTION__SUPER_CHANGE;
+
+	/**
+	 * The feature id for the '<em><b>Level</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_ACTION_LOAD_UNLOAD__LEVEL = LocalSearchPackage.ACTION__LEVEL;
 
 	/**
 	 * The feature id for the '<em><b>Keep Solutions</b></em>' attribute.
@@ -1989,15 +1980,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_ACTION_LOAD_UNLOAD__NEW_SOLUTION = LocalSearchPackage.ACTION__NEW_SOLUTION;
-
-	/**
-	 * The feature id for the '<em><b>Super Change</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_ACTION_LOAD_UNLOAD__SUPER_CHANGE = LocalSearchPackage.ACTION__SUPER_CHANGE;
 
 	/**
 	 * The feature id for the '<em><b>Start Moves</b></em>' containment reference list.
@@ -2126,7 +2108,16 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_ACTION_LOAD_UNLOAD_OPERATION_COUNT = LocalSearchPackage.ACTION_OPERATION_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Start Solution</b></em>' reference.
+	 * The feature id for the '<em><b>Current Solution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_LOAD_UNLOAD__CURRENT_SOLUTION = TO_USE_ACTION_LOAD_UNLOAD__CURRENT_SOLUTION;
+
+	/**
+	 * The feature id for the '<em><b>Start Solution</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2135,22 +2126,13 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE_LOAD_UNLOAD__START_SOLUTION = TO_USE_ACTION_LOAD_UNLOAD__START_SOLUTION;
 
 	/**
-	 * The feature id for the '<em><b>End Solution</b></em>' reference.
+	 * The feature id for the '<em><b>End Solution</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int TO_USE_SCHEDULE_LOAD_UNLOAD__END_SOLUTION = TO_USE_ACTION_LOAD_UNLOAD__END_SOLUTION;
-
-	/**
-	 * The feature id for the '<em><b>End Solution Owned</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD__END_SOLUTION_OWNED = TO_USE_ACTION_LOAD_UNLOAD__END_SOLUTION_OWNED;
 
 	/**
 	 * The feature id for the '<em><b>Previous Change</b></em>' reference.
@@ -2162,24 +2144,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE_LOAD_UNLOAD__PREVIOUS_CHANGE = TO_USE_ACTION_LOAD_UNLOAD__PREVIOUS_CHANGE;
 
 	/**
-	 * The feature id for the '<em><b>Level</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD__LEVEL = TO_USE_ACTION_LOAD_UNLOAD__LEVEL;
-
-	/**
-	 * The feature id for the '<em><b>Solutions</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD__SOLUTIONS = TO_USE_ACTION_LOAD_UNLOAD__SOLUTIONS;
-
-	/**
 	 * The feature id for the '<em><b>Sub Changes</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2189,13 +2153,22 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE_LOAD_UNLOAD__SUB_CHANGES = TO_USE_ACTION_LOAD_UNLOAD__SUB_CHANGES;
 
 	/**
-	 * The feature id for the '<em><b>Current Solution</b></em>' reference.
+	 * The feature id for the '<em><b>Super Change</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD__CURRENT_SOLUTION = TO_USE_ACTION_LOAD_UNLOAD__CURRENT_SOLUTION;
+	int TO_USE_SCHEDULE_LOAD_UNLOAD__SUPER_CHANGE = TO_USE_ACTION_LOAD_UNLOAD__SUPER_CHANGE;
+
+	/**
+	 * The feature id for the '<em><b>Level</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_LOAD_UNLOAD__LEVEL = TO_USE_ACTION_LOAD_UNLOAD__LEVEL;
 
 	/**
 	 * The feature id for the '<em><b>Keep Solutions</b></em>' attribute.
@@ -2214,15 +2187,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_SCHEDULE_LOAD_UNLOAD__NEW_SOLUTION = TO_USE_ACTION_LOAD_UNLOAD__NEW_SOLUTION;
-
-	/**
-	 * The feature id for the '<em><b>Super Change</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD__SUPER_CHANGE = TO_USE_ACTION_LOAD_UNLOAD__SUPER_CHANGE;
 
 	/**
 	 * The feature id for the '<em><b>Start Moves</b></em>' containment reference list.
@@ -2391,7 +2355,16 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_UNSCHEDULE_LOAD_UNLOAD = 12;
 
 	/**
-	 * The feature id for the '<em><b>Start Solution</b></em>' reference.
+	 * The feature id for the '<em><b>Current Solution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__CURRENT_SOLUTION = TO_USE_ACTION_LOAD_UNLOAD__CURRENT_SOLUTION;
+
+	/**
+	 * The feature id for the '<em><b>Start Solution</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2400,22 +2373,13 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__START_SOLUTION = TO_USE_ACTION_LOAD_UNLOAD__START_SOLUTION;
 
 	/**
-	 * The feature id for the '<em><b>End Solution</b></em>' reference.
+	 * The feature id for the '<em><b>End Solution</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
 	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__END_SOLUTION = TO_USE_ACTION_LOAD_UNLOAD__END_SOLUTION;
-
-	/**
-	 * The feature id for the '<em><b>End Solution Owned</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__END_SOLUTION_OWNED = TO_USE_ACTION_LOAD_UNLOAD__END_SOLUTION_OWNED;
 
 	/**
 	 * The feature id for the '<em><b>Previous Change</b></em>' reference.
@@ -2427,24 +2391,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__PREVIOUS_CHANGE = TO_USE_ACTION_LOAD_UNLOAD__PREVIOUS_CHANGE;
 
 	/**
-	 * The feature id for the '<em><b>Level</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__LEVEL = TO_USE_ACTION_LOAD_UNLOAD__LEVEL;
-
-	/**
-	 * The feature id for the '<em><b>Solutions</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__SOLUTIONS = TO_USE_ACTION_LOAD_UNLOAD__SOLUTIONS;
-
-	/**
 	 * The feature id for the '<em><b>Sub Changes</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2454,13 +2400,22 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__SUB_CHANGES = TO_USE_ACTION_LOAD_UNLOAD__SUB_CHANGES;
 
 	/**
-	 * The feature id for the '<em><b>Current Solution</b></em>' reference.
+	 * The feature id for the '<em><b>Super Change</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__CURRENT_SOLUTION = TO_USE_ACTION_LOAD_UNLOAD__CURRENT_SOLUTION;
+	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__SUPER_CHANGE = TO_USE_ACTION_LOAD_UNLOAD__SUPER_CHANGE;
+
+	/**
+	 * The feature id for the '<em><b>Level</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__LEVEL = TO_USE_ACTION_LOAD_UNLOAD__LEVEL;
 
 	/**
 	 * The feature id for the '<em><b>Keep Solutions</b></em>' attribute.
@@ -2479,15 +2434,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__NEW_SOLUTION = TO_USE_ACTION_LOAD_UNLOAD__NEW_SOLUTION;
-
-	/**
-	 * The feature id for the '<em><b>Super Change</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__SUPER_CHANGE = TO_USE_ACTION_LOAD_UNLOAD__SUPER_CHANGE;
 
 	/**
 	 * The feature id for the '<em><b>Start Moves</b></em>' containment reference list.
