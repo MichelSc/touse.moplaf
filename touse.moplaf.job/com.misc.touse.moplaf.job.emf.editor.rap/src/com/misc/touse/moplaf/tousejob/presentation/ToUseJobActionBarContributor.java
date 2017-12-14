@@ -44,6 +44,15 @@ import org.eclipse.jface.wizard.WizardDialog;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.PartInitException;
 
+import com.misc.common.moplaf.emf.editor.Util;
+import com.misc.common.moplaf.emf.editor.action.CancelAction;
+import com.misc.common.moplaf.emf.editor.action.RefreshAction;
+import com.misc.common.moplaf.emf.editor.action.ResetAction;
+import com.misc.common.moplaf.emf.editor.action.RunAction;
+import com.misc.common.moplaf.emf.editor.action.RunBackgroundAction;
+import com.misc.common.moplaf.emf.editor.action.StartAction;
+import com.misc.common.moplaf.emf.editor.action.StopAction;
+
 /**
  * This is the action bar contributor for the ToUseJob model editor.
  * <!-- begin-user-doc -->
@@ -169,6 +178,21 @@ public class ToUseJobActionBarContributor
 	protected IMenuManager createSiblingMenuManager;
 
 	/**
+	 * This will contain one {@link org.eclipse.emf.edit.ui.action.ApplicationPopUpMenuAction} 
+	 * generated for the current selection by the item provider.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	protected Collection<IAction> applicationPopUpMenuActions;
+
+	/**
+	 * This is the menu manager into which menu contribution items should be added for ToUseJob actions.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	protected IMenuManager applicationPopUpMenuManager;
+
+	/**
 	 * This creates an instance of the contributor.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -198,7 +222,6 @@ public class ToUseJobActionBarContributor
 	 * as well as the sub-menus for object creation items.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	@Override
 	public void contributeToMenu(IMenuManager menuManager) {
@@ -220,6 +243,14 @@ public class ToUseJobActionBarContributor
 		//
 		createSiblingMenuManager = new MenuManager(TousejobEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
 		submenuManager.insertBefore("additions", createSiblingMenuManager);
+
+		// Prepare for ToUseJob action addition or removal.
+		//
+		applicationPopUpMenuManager = new MenuManager("ToUseJobRap");
+		submenuManager.insertBefore("additions", applicationPopUpMenuManager);
+
+		submenuManager.insertBefore("additions", new Separator("generic part"));
+
 
 		// Force an update because Eclipse hides empty menus now.
 		//
@@ -270,7 +301,6 @@ public class ToUseJobActionBarContributor
 	 * that can be added to the selected object and updating the menus accordingly.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	public void selectionChanged(SelectionChangedEvent event) {
 		// Remove any menu items for old selection.
@@ -296,11 +326,23 @@ public class ToUseJobActionBarContributor
 			newChildDescriptors = domain.getNewChildDescriptors(object, null);
 			newSiblingDescriptors = domain.getNewChildDescriptors(null, object);
 		}
+		
+		
 
 		// Generate actions for selection; populate and redraw the menus.
 		//
 		createChildActions = generateCreateChildActions(newChildDescriptors, selection);
 		createSiblingActions = generateCreateSiblingActions(newSiblingDescriptors, selection);
+
+		// actions specific for this Editor
+		applicationPopUpMenuActions = new ArrayList<IAction>();
+		applicationPopUpMenuActions.add(new RunAction(activeEditorPart, selection));
+		applicationPopUpMenuActions.add(new RunBackgroundAction(activeEditorPart, selection));
+		applicationPopUpMenuActions.add(new ResetAction(activeEditorPart, selection));
+		applicationPopUpMenuActions.add(new CancelAction(activeEditorPart, selection));
+		applicationPopUpMenuActions.add(new StartAction(activeEditorPart, selection));
+		applicationPopUpMenuActions.add(new StopAction (activeEditorPart, selection));
+		applicationPopUpMenuActions.add(new RefreshAction (activeEditorPart, selection));
 
 		if (createChildMenuManager != null) {
 			populateManager(createChildMenuManager, createChildActions, null);
@@ -309,6 +351,10 @@ public class ToUseJobActionBarContributor
 		if (createSiblingMenuManager != null) {
 			populateManager(createSiblingMenuManager, createSiblingActions, null);
 			createSiblingMenuManager.update(true);
+		}
+		if (applicationPopUpMenuManager!= null) {
+			Util.populateManager(applicationPopUpMenuManager, applicationPopUpMenuActions, null);
+			applicationPopUpMenuManager.update(true);
 		}
 	}
 
@@ -402,7 +448,6 @@ public class ToUseJobActionBarContributor
 	 * This populates the pop-up menu before it appears.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	@Override
 	public void menuAboutToShow(IMenuManager menuManager) {
@@ -415,6 +460,10 @@ public class ToUseJobActionBarContributor
 
 		submenuManager = new MenuManager(TousejobEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
 		populateManager(submenuManager, createSiblingActions, null);
+		menuManager.insertBefore("edit", submenuManager);
+		
+		submenuManager = new MenuManager("ToUseJobRap");
+		Util.populateManager(submenuManager, applicationPopUpMenuActions, null);
 		menuManager.insertBefore("edit", submenuManager);
 	}
 
