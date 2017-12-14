@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension
+         point="org.eclipse.core.runtime.applications"
+         id="TousejobEditorAdvisorApplication">
+      <!-- @generated tousejob -->
+      <application>
+         <run class="com.misc.touse.moplaf.tousejob.presentation.TousejobEditorAdvisor$Application"/>
+      </application>
+   </extension>
+
+   <extension point="org.eclipse.ui.perspectives">
+      <!-- @generated tousejob -->
+      <perspective
+            name="%_UI_Perspective_label"
+            class="com.misc.touse.moplaf.tousejob.presentation.TousejobEditorAdvisor$Perspective"
+            id="com.misc.touse.moplaf.tousejob.presentation.TousejobEditorAdvisorPerspective">
+      </perspective>
+   </extension>
+
+   <extension point="org.eclipse.ui.commands">
+      <!-- @generated tousejob -->
+      <command
+            name="%_UI_Menu_OpenURI_label"
+            description="%_UI_Menu_OpenURI_description"
+            categoryId="org.eclipse.ui.category.file"
+            id="com.misc.touse.moplaf.tousejob.presentation.TousejobEditorAdvisorOpenURICommand"/>
+   </extension>
+
+
+   <extension point="org.eclipse.ui.actionSets">
+      <!-- @generated tousejob -->
+      <actionSet
+            label="%_UI_TousejobEditorAdvisor_ActionSet_label"
+            visible="true"
+            id="TousejobEditorAdvisorActionSet">
+         <action
+               label="%_UI_Menu_About_label"
+               class="com.misc.touse.moplaf.tousejob.presentation.TousejobEditorAdvisor$AboutAction"
+               menubarPath="help/additions"
+               id="com.misc.touse.moplaf.tousejob.presentation.TousejobEditorAdvisorAboutAction"/>
+         <action
+               label="%_UI_Menu_OpenURI_label"
+               definitionId="com.misc.touse.moplaf.tousejob.presentation.TousejobEditorAdvisorOpenURICommand"
+               class="com.misc.touse.moplaf.tousejob.presentation.TousejobEditorAdvisor$OpenURIAction"
+               menubarPath="file/additions"
+               id="com.misc.touse.moplaf.tousejob.presentation.TousejobEditorAdvisorOpenURIAction"/>
+      </actionSet>
+   </extension>
+
+   <extension point="org.eclipse.ui.actionSets">
+      <!-- @generated tousejob -->
+      <actionSet
+            label="%_UI_ToUseJobModelWizard_ActionSet_label"
+            visible="true"
+            id="com.misc.touse.moplaf.tousejob.presentation.ToUseJobActionBarContributorActionSet">
+         <action
+               label="%_UI_ToUseJobModelWizard_label"
+               class="com.misc.touse.moplaf.tousejob.presentation.ToUseJobActionBarContributor$NewAction"
+               menubarPath="file/new/additions"
+               id="com.misc.touse.moplaf.tousejob.presentation.ToUseJobActionBarContributorNewAction"/>
+      </actionSet>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated tousejob -->
+      <editor
+            id="com.misc.touse.moplaf.tousejob.presentation.ToUseJobEditorID"
+            name="%_UI_ToUseJobEditor_label"
+            icon="icons/full/obj16/ToUseJobModelFile.gif"
+            extensions="tousejob"
+            class="com.misc.touse.moplaf.tousejob.presentation.ToUseJobEditor"
+            contributorClass="com.misc.touse.moplaf.tousejob.presentation.ToUseJobActionBarContributor">
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.rap.ui.entrypoint">
+      <entrypoint
+            applicationId="com.misc.touse.moplaf.job.emf.editor.TousejobEditorAdvisorApplication"
+            id="com.misc.touse.moplaf.job.emf.editor.rap.entrypoint"
+            path="/path_jobscheduler">
+      </entrypoint>
+   </extension>
+
+</plugin>

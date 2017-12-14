@@ -14,7 +14,6 @@ package com.misc.touse.moplaf.tousejob.provider;
 
 
 import com.misc.common.moplaf.job.jobclient.JobClientFactory;
-import com.misc.common.moplaf.job.jobxmlrpc.JobXmlRpcFactory;
 import com.misc.touse.moplaf.tousejob.Domain;
 import com.misc.touse.moplaf.tousejob.ToUseJobFactory;
 import com.misc.touse.moplaf.tousejob.ToUseJobPackage;
@@ -166,11 +165,6 @@ public class DomainItemProvider
 			(createChildParameter
 				(ToUseJobPackage.Literals.DOMAIN__RUNS,
 				 ToUseJobFactory.eINSTANCE.createRuns()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ToUseJobPackage.Literals.DOMAIN__PROXIES,
-				 JobXmlRpcFactory.eINSTANCE.createJobEngineClient()));
 
 		newChildDescriptors.add
 			(createChildParameter

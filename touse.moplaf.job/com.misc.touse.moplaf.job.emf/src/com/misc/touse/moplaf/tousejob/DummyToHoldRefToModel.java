@@ -12,7 +12,7 @@
  */
 package com.misc.touse.moplaf.tousejob;
 
-import com.misc.common.moplaf.job.jobxmlrpc.JobEngineServer;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,5 +24,5 @@ import com.misc.common.moplaf.job.jobxmlrpc.JobEngineServer;
  * @model interface="true" abstract="true"
  * @generated
  */
-public interface DummyToHoldRefToModel extends JobEngineServer {
+public interface DummyToHoldRefToModel extends EObject {
 } // DummyToHoldRefToModel

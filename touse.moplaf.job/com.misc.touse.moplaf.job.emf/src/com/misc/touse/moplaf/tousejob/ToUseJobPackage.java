@@ -5,9 +5,6 @@ package com.misc.touse.moplaf.tousejob;
 import com.misc.common.moplaf.job.JobPackage;
 
 import com.misc.common.moplaf.job.jobclient.JobClientPackage;
-
-import com.misc.common.moplaf.job.jobxmlrpc.JobXmlRpcPackage;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -353,6 +350,15 @@ public interface ToUseJobPackage extends EPackage {
 	int TO_USE_JOB___RUN_ASYNCH__RUNCONTEXT = JobPackage.JOB___RUN_ASYNCH__RUNCONTEXT;
 
 	/**
+	 * The operation id for the '<em>Run Asynch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB___RUN_ASYNCH__RUNCONTEXT_BOOLEAN = JobPackage.JOB___RUN_ASYNCH__RUNCONTEXT_BOOLEAN;
+
+	/**
 	 * The operation id for the '<em>Cancel</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -371,15 +377,6 @@ public interface ToUseJobPackage extends EPackage {
 	int TO_USE_JOB___SET_PROGRESS__STRING_FLOAT = JobPackage.JOB___SET_PROGRESS__STRING_FLOAT;
 
 	/**
-	 * The operation id for the '<em>Set Return</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_JOB___SET_RETURN__RETURNFEEDBACK = JobPackage.JOB___SET_RETURN__RETURNFEEDBACK;
-
-	/**
 	 * The operation id for the '<em>Set Progress</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -387,6 +384,15 @@ public interface ToUseJobPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_JOB___SET_PROGRESS__PROGRESSFEEDBACK = JobPackage.JOB___SET_PROGRESS__PROGRESSFEEDBACK;
+
+	/**
+	 * The operation id for the '<em>Set Return</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB___SET_RETURN__RETURNFEEDBACK = JobPackage.JOB___SET_RETURN__RETURNFEEDBACK;
 
 	/**
 	 * The operation id for the '<em>Get Return</em>' operation.
@@ -463,76 +469,13 @@ public interface ToUseJobPackage extends EPackage {
 	int DUMMY_TO_HOLD_REF_TO_MODEL = 3;
 
 	/**
-	 * The feature id for the '<em><b>Job Scheduled</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DUMMY_TO_HOLD_REF_TO_MODEL__JOB_SCHEDULED = JobXmlRpcPackage.JOB_ENGINE_SERVER__JOB_SCHEDULED;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DUMMY_TO_HOLD_REF_TO_MODEL__NAME = JobXmlRpcPackage.JOB_ENGINE_SERVER__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Scheduler</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DUMMY_TO_HOLD_REF_TO_MODEL__SCHEDULER = JobXmlRpcPackage.JOB_ENGINE_SERVER__SCHEDULER;
-
-	/**
-	 * The feature id for the '<em><b>Execute Enabled Feedback</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DUMMY_TO_HOLD_REF_TO_MODEL__EXECUTE_ENABLED_FEEDBACK = JobXmlRpcPackage.JOB_ENGINE_SERVER__EXECUTE_ENABLED_FEEDBACK;
-
-	/**
-	 * The feature id for the '<em><b>Port</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DUMMY_TO_HOLD_REF_TO_MODEL__PORT = JobXmlRpcPackage.JOB_ENGINE_SERVER__PORT;
-
-	/**
-	 * The feature id for the '<em><b>Path</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DUMMY_TO_HOLD_REF_TO_MODEL__PATH = JobXmlRpcPackage.JOB_ENGINE_SERVER__PATH;
-
-	/**
 	 * The number of structural features of the '<em>Dummy To Hold Ref To Model</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DUMMY_TO_HOLD_REF_TO_MODEL_FEATURE_COUNT = JobXmlRpcPackage.JOB_ENGINE_SERVER_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Execute Job</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DUMMY_TO_HOLD_REF_TO_MODEL___EXECUTE_JOB__JOBSCHEDULED = JobXmlRpcPackage.JOB_ENGINE_SERVER___EXECUTE_JOB__JOBSCHEDULED;
+	int DUMMY_TO_HOLD_REF_TO_MODEL_FEATURE_COUNT = 0;
 
 	/**
 	 * The number of operations of the '<em>Dummy To Hold Ref To Model</em>' class.
@@ -541,7 +484,7 @@ public interface ToUseJobPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DUMMY_TO_HOLD_REF_TO_MODEL_OPERATION_COUNT = JobXmlRpcPackage.JOB_ENGINE_SERVER_OPERATION_COUNT + 0;
+	int DUMMY_TO_HOLD_REF_TO_MODEL_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.tousejob.impl.ToUseJobConsoleImpl <em>Console</em>}' class.
@@ -797,6 +740,15 @@ public interface ToUseJobPackage extends EPackage {
 	int TO_USE_JOB_CONSOLE___RUN_ASYNCH__RUNCONTEXT = JobPackage.JOB_CONSOLE___RUN_ASYNCH__RUNCONTEXT;
 
 	/**
+	 * The operation id for the '<em>Run Asynch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB_CONSOLE___RUN_ASYNCH__RUNCONTEXT_BOOLEAN = JobPackage.JOB_CONSOLE___RUN_ASYNCH__RUNCONTEXT_BOOLEAN;
+
+	/**
 	 * The operation id for the '<em>Cancel</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -815,15 +767,6 @@ public interface ToUseJobPackage extends EPackage {
 	int TO_USE_JOB_CONSOLE___SET_PROGRESS__STRING_FLOAT = JobPackage.JOB_CONSOLE___SET_PROGRESS__STRING_FLOAT;
 
 	/**
-	 * The operation id for the '<em>Set Return</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_JOB_CONSOLE___SET_RETURN__RETURNFEEDBACK = JobPackage.JOB_CONSOLE___SET_RETURN__RETURNFEEDBACK;
-
-	/**
 	 * The operation id for the '<em>Set Progress</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -831,6 +774,15 @@ public interface ToUseJobPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_JOB_CONSOLE___SET_PROGRESS__PROGRESSFEEDBACK = JobPackage.JOB_CONSOLE___SET_PROGRESS__PROGRESSFEEDBACK;
+
+	/**
+	 * The operation id for the '<em>Set Return</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_JOB_CONSOLE___SET_RETURN__RETURNFEEDBACK = JobPackage.JOB_CONSOLE___SET_RETURN__RETURNFEEDBACK;
 
 	/**
 	 * The operation id for the '<em>Get Return</em>' operation.

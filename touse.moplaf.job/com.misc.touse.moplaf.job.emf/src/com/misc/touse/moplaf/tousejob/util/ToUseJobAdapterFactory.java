@@ -6,12 +6,7 @@ import com.misc.common.moplaf.job.Job;
 import com.misc.common.moplaf.job.JobConsole;
 import com.misc.common.moplaf.job.Run;
 import com.misc.common.moplaf.job.RunParams;
-
-import com.misc.common.moplaf.job.jobclient.JobEngine;
 import com.misc.common.moplaf.job.jobclient.JobRemoteResult;
-
-import com.misc.common.moplaf.job.jobxmlrpc.JobEngineServer;
-
 import com.misc.touse.moplaf.tousejob.*;
 
 import org.eclipse.emf.common.notify.Adapter;
@@ -116,14 +111,6 @@ public class ToUseJobAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseJobRemoteResult(JobRemoteResult object) {
 				return createJobRemoteResultAdapter();
-			}
-			@Override
-			public Adapter caseJobEngine(JobEngine object) {
-				return createJobEngineAdapter();
-			}
-			@Override
-			public Adapter caseJobEngineServer(JobEngineServer object) {
-				return createJobEngineServerAdapter();
 			}
 			@Override
 			public Adapter caseJobConsole(JobConsole object) {
@@ -286,34 +273,6 @@ public class ToUseJobAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createJobRemoteResultAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.job.jobclient.JobEngine <em>Job Engine</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.job.jobclient.JobEngine
-	 * @generated
-	 */
-	public Adapter createJobEngineAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.job.jobxmlrpc.JobEngineServer <em>Job Engine Server</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.job.jobxmlrpc.JobEngineServer
-	 * @generated
-	 */
-	public Adapter createJobEngineServerAdapter() {
 		return null;
 	}
 

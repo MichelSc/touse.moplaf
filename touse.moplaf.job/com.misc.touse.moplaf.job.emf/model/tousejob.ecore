@@ -22,7 +22,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="TicksWaited" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DummyToHoldRefToModel" abstract="true"
-      interface="true" eSuperTypes="../../com.misc.common.moplaf.job.xmlrpc.emf/model/jobxmlrpc.ecore#//JobEngineServer"/>
+      interface="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="ToUseJobConsole" eSuperTypes="../../com.misc.common.moplaf.job.emf/model/job.ecore#//JobConsole">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="CallerName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>

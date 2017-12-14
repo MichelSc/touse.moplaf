@@ -5,9 +5,6 @@ package com.misc.touse.moplaf.tousejob.impl;
 import com.misc.common.moplaf.job.JobPackage;
 
 import com.misc.common.moplaf.job.jobclient.JobClientPackage;
-
-import com.misc.common.moplaf.job.jobxmlrpc.JobXmlRpcPackage;
-
 import com.misc.touse.moplaf.tousejob.Domain;
 import com.misc.touse.moplaf.tousejob.DummyToHoldRefToModel;
 import com.misc.touse.moplaf.tousejob.Runs;
@@ -122,7 +119,6 @@ public class ToUseJobPackageImpl extends EPackageImpl implements ToUseJobPackage
 		// Initialize simple dependencies
 		JobPackage.eINSTANCE.eClass();
 		JobClientPackage.eINSTANCE.eClass();
-		JobXmlRpcPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theToUseJobPackage.createPackageContents();
@@ -350,7 +346,6 @@ public class ToUseJobPackageImpl extends EPackageImpl implements ToUseJobPackage
 		// Obtain other dependent packages
 		JobClientPackage theJobClientPackage = (JobClientPackage)EPackage.Registry.INSTANCE.getEPackage(JobClientPackage.eNS_URI);
 		JobPackage theJobPackage = (JobPackage)EPackage.Registry.INSTANCE.getEPackage(JobPackage.eNS_URI);
-		JobXmlRpcPackage theJobXmlRpcPackage = (JobXmlRpcPackage)EPackage.Registry.INSTANCE.getEPackage(JobXmlRpcPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -359,7 +354,6 @@ public class ToUseJobPackageImpl extends EPackageImpl implements ToUseJobPackage
 		// Add supertypes to classes
 		toUseJobEClass.getESuperTypes().add(theJobPackage.getJob());
 		toUseJobResultEClass.getESuperTypes().add(theJobClientPackage.getJobRemoteResult());
-		dummyToHoldRefToModelEClass.getESuperTypes().add(theJobXmlRpcPackage.getJobEngineServer());
 		toUseJobConsoleEClass.getESuperTypes().add(theJobPackage.getJobConsole());
 
 		// Initialize classes, features, and operations; add parameters
