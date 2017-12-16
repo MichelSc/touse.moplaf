@@ -158,7 +158,6 @@ import com.misc.touse.moplaf.tousejob.provider.ToUseJobItemProviderAdapterFactor
 
 import com.misc.common.moplaf.job.jobclient.provider.JobClientItemProviderAdapterFactory;
 
-import com.misc.common.moplaf.job.jobxmlrpc.provider.JobXmlRpcItemProviderAdapterFactory;
 
 import com.misc.common.moplaf.job.provider.JobItemProviderAdapterFactory;
 
@@ -707,7 +706,6 @@ public class ToUseJobEditor
 		adapterFactory.addAdapterFactory(new ToUseJobItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new JobItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new JobClientItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new JobXmlRpcItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
 		// Create the command stack that will notify this editor as commands are executed.
