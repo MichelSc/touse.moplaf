@@ -8,7 +8,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="Proxies" upperBound="-1"
         eType="ecore:EClass ../../com.misc.common.moplaf.job.client.emf/model/jobclient.ecore#//JobEngineProxy"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="jobscheduler" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="jobscheduler" upperBound="-1"
         eType="ecore:EClass ../../com.misc.common.moplaf.job.client.emf/model/jobclient.ecore#//JobScheduler"
         containment="true"/>
   </eClassifiers>

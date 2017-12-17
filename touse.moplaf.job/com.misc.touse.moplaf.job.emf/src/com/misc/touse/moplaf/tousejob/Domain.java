@@ -70,29 +70,19 @@ public interface Domain extends EObject {
 	EList<JobEngineProxy> getProxies();
 
 	/**
-	 * Returns the value of the '<em><b>Jobscheduler</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Jobscheduler</b></em>' containment reference list.
+	 * The list contents are of type {@link com.misc.common.moplaf.job.jobclient.JobScheduler}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Jobscheduler</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Jobscheduler</em>' containment reference.
-	 * @see #setJobscheduler(JobScheduler)
+	 * @return the value of the '<em>Jobscheduler</em>' containment reference list.
 	 * @see com.misc.touse.moplaf.tousejob.ToUseJobPackage#getDomain_Jobscheduler()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 * @generated
 	 */
-	JobScheduler getJobscheduler();
-
-	/**
-	 * Sets the value of the '{@link com.misc.touse.moplaf.tousejob.Domain#getJobscheduler <em>Jobscheduler</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Jobscheduler</em>' containment reference.
-	 * @see #getJobscheduler()
-	 * @generated
-	 */
-	void setJobscheduler(JobScheduler value);
+	EList<JobScheduler> getJobscheduler();
 
 } // Domain

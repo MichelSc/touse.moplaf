@@ -88,7 +88,7 @@ public interface ToUseJobPackage extends EPackage {
 	int DOMAIN__PROXIES = 1;
 
 	/**
-	 * The feature id for the '<em><b>Jobscheduler</b></em>' containment reference.
+	 * The feature id for the '<em><b>Jobscheduler</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -964,10 +964,10 @@ public interface ToUseJobPackage extends EPackage {
 	EReference getDomain_Proxies();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link com.misc.touse.moplaf.tousejob.Domain#getJobscheduler <em>Jobscheduler</em>}'.
+	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.tousejob.Domain#getJobscheduler <em>Jobscheduler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Jobscheduler</em>'.
+	 * @return the meta object for the containment reference list '<em>Jobscheduler</em>'.
 	 * @see com.misc.touse.moplaf.tousejob.Domain#getJobscheduler()
 	 * @see #getDomain()
 	 * @generated
@@ -1140,7 +1140,7 @@ public interface ToUseJobPackage extends EPackage {
 		EReference DOMAIN__PROXIES = eINSTANCE.getDomain_Proxies();
 
 		/**
-		 * The meta object literal for the '<em><b>Jobscheduler</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Jobscheduler</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
