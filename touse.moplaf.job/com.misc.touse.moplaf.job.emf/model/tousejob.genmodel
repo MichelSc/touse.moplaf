@@ -3,24 +3,19 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.misc.touse.moplaf.job.emf/src" editorDirectory="/com.misc.touse.moplaf.job.emf.editor/src"
     modelPluginID="com.misc.touse.moplaf.job.emf" modelName="Tousejob" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
-    usedGenPackages="../../com.misc.common.moplaf.job.emf/model/job.genmodel#//job ../../com.misc.common.moplaf.job.client.emf/model/jobclient.genmodel#//jobclient"
+    usedGenPackages="../../com.misc.common.moplaf.job.emf/model/job.genmodel#//job ../../com.misc.common.moplaf.job.client.emf/model/jobclient.genmodel#//jobclient ../../com.misc.common.moplaf.job.xmlrpc.emf/model/jobxmlrpc.genmodel#//jobxmlrpc"
     operationReflection="true" importOrganizing="true">
   <foreignModel>tousejob.ecore</foreignModel>
   <genPackages prefix="ToUseJob" basePackage="com.misc.touse.moplaf" disposableProviderFactory="true"
       ecorePackage="tousejob.ecore#/">
     <genClasses ecoreClass="tousejob.ecore#//Domain">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousejob.ecore#//Domain/Runs"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousejob.ecore#//Domain/Proxies"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousejob.ecore#//Domain/jobscheduler"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousejob.ecore#//Domain/Schedulers"/>
     </genClasses>
     <genClasses image="false" ecoreClass="tousejob.ecore#//ToUseJob">
       <genFeatures createChild="false" propertyCategory="20 ToUseJob" ecoreFeature="ecore:EAttribute tousejob.ecore#//ToUseJob/SecondsWaiting"/>
       <genFeatures createChild="false" propertyCategory="20 ToUseJob" ecoreFeature="ecore:EAttribute tousejob.ecore#//ToUseJob/Iteration"/>
     </genClasses>
-    <genClasses ecoreClass="tousejob.ecore#//ToUseJobResult">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousejob.ecore#//ToUseJobResult/TicksWaited"/>
-    </genClasses>
-    <genClasses image="false" ecoreClass="tousejob.ecore#//DummyToHoldRefToModel"/>
     <genClasses ecoreClass="tousejob.ecore#//ToUseJobConsole">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousejob.ecore#//ToUseJobConsole/CallerName"/>
     </genClasses>
@@ -28,5 +23,6 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousejob.ecore#//Runs/Runs"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousejob.ecore#//Runs/Name"/>
     </genClasses>
+    <genClasses image="false" ecoreClass="tousejob.ecore#//DummyToHoldRefOnModel"/>
   </genPackages>
 </genmodel:GenModel>

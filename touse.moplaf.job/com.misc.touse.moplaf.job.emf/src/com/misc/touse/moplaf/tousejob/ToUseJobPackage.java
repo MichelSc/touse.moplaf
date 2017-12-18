@@ -3,6 +3,7 @@
 package com.misc.touse.moplaf.tousejob;
 
 import com.misc.common.moplaf.job.JobPackage;
+import com.misc.common.moplaf.job.jobxmlrpc.JobXmlRpcPackage;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -856,6 +857,179 @@ public interface ToUseJobPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousejob.impl.DummyToHoldRefOnModelImpl <em>Dummy To Hold Ref On Model</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousejob.impl.DummyToHoldRefOnModelImpl
+	 * @see com.misc.touse.moplaf.tousejob.impl.ToUseJobPackageImpl#getDummyToHoldRefOnModel()
+	 * @generated
+	 */
+	int DUMMY_TO_HOLD_REF_ON_MODEL = 4;
+
+	/**
+	 * The feature id for the '<em><b>Jobs Scheduled</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DUMMY_TO_HOLD_REF_ON_MODEL__JOBS_SCHEDULED = JobXmlRpcPackage.JOB_ENGINE_SERVER__JOBS_SCHEDULED;
+
+	/**
+	 * The feature id for the '<em><b>Scheduler</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DUMMY_TO_HOLD_REF_ON_MODEL__SCHEDULER = JobXmlRpcPackage.JOB_ENGINE_SERVER__SCHEDULER;
+
+	/**
+	 * The feature id for the '<em><b>Start Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DUMMY_TO_HOLD_REF_ON_MODEL__START_FEEDBACK = JobXmlRpcPackage.JOB_ENGINE_SERVER__START_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Stop Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DUMMY_TO_HOLD_REF_ON_MODEL__STOP_FEEDBACK = JobXmlRpcPackage.JOB_ENGINE_SERVER__STOP_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DUMMY_TO_HOLD_REF_ON_MODEL__NAME = JobXmlRpcPackage.JOB_ENGINE_SERVER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DUMMY_TO_HOLD_REF_ON_MODEL__DESCRIPTION = JobXmlRpcPackage.JOB_ENGINE_SERVER__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Status</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DUMMY_TO_HOLD_REF_ON_MODEL__STATUS = JobXmlRpcPackage.JOB_ENGINE_SERVER__STATUS;
+
+	/**
+	 * The feature id for the '<em><b>Auto Start Stop</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DUMMY_TO_HOLD_REF_ON_MODEL__AUTO_START_STOP = JobXmlRpcPackage.JOB_ENGINE_SERVER__AUTO_START_STOP;
+
+	/**
+	 * The feature id for the '<em><b>Running</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DUMMY_TO_HOLD_REF_ON_MODEL__RUNNING = JobXmlRpcPackage.JOB_ENGINE_SERVER__RUNNING;
+
+	/**
+	 * The feature id for the '<em><b>Port</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DUMMY_TO_HOLD_REF_ON_MODEL__PORT = JobXmlRpcPackage.JOB_ENGINE_SERVER__PORT;
+
+	/**
+	 * The feature id for the '<em><b>Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DUMMY_TO_HOLD_REF_ON_MODEL__PATH = JobXmlRpcPackage.JOB_ENGINE_SERVER__PATH;
+
+	/**
+	 * The number of structural features of the '<em>Dummy To Hold Ref On Model</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DUMMY_TO_HOLD_REF_ON_MODEL_FEATURE_COUNT = JobXmlRpcPackage.JOB_ENGINE_SERVER_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Start</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DUMMY_TO_HOLD_REF_ON_MODEL___START = JobXmlRpcPackage.JOB_ENGINE_SERVER___START;
+
+	/**
+	 * The operation id for the '<em>Stop</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DUMMY_TO_HOLD_REF_ON_MODEL___STOP = JobXmlRpcPackage.JOB_ENGINE_SERVER___STOP;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DUMMY_TO_HOLD_REF_ON_MODEL___REFRESH = JobXmlRpcPackage.JOB_ENGINE_SERVER___REFRESH;
+
+	/**
+	 * The operation id for the '<em>On Job Running</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DUMMY_TO_HOLD_REF_ON_MODEL___ON_JOB_RUNNING__JOBSCHEDULED = JobXmlRpcPackage.JOB_ENGINE_SERVER___ON_JOB_RUNNING__JOBSCHEDULED;
+
+	/**
+	 * The operation id for the '<em>On Job Returned</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DUMMY_TO_HOLD_REF_ON_MODEL___ON_JOB_RETURNED__JOBSCHEDULED_RETURNFEEDBACK = JobXmlRpcPackage.JOB_ENGINE_SERVER___ON_JOB_RETURNED__JOBSCHEDULED_RETURNFEEDBACK;
+
+	/**
+	 * The number of operations of the '<em>Dummy To Hold Ref On Model</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DUMMY_TO_HOLD_REF_ON_MODEL_OPERATION_COUNT = JobXmlRpcPackage.JOB_ENGINE_SERVER_OPERATION_COUNT + 0;
+
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousejob.Domain <em>Domain</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -971,6 +1145,16 @@ public interface ToUseJobPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getRuns_Name();
+
+	/**
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousejob.DummyToHoldRefOnModel <em>Dummy To Hold Ref On Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Dummy To Hold Ref On Model</em>'.
+	 * @see com.misc.touse.moplaf.tousejob.DummyToHoldRefOnModel
+	 * @generated
+	 */
+	EClass getDummyToHoldRefOnModel();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1090,6 +1274,16 @@ public interface ToUseJobPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute RUNS__NAME = eINSTANCE.getRuns_Name();
+
+		/**
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousejob.impl.DummyToHoldRefOnModelImpl <em>Dummy To Hold Ref On Model</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.touse.moplaf.tousejob.impl.DummyToHoldRefOnModelImpl
+		 * @see com.misc.touse.moplaf.tousejob.impl.ToUseJobPackageImpl#getDummyToHoldRefOnModel()
+		 * @generated
+		 */
+		EClass DUMMY_TO_HOLD_REF_ON_MODEL = eINSTANCE.getDummyToHoldRefOnModel();
 
 	}
 

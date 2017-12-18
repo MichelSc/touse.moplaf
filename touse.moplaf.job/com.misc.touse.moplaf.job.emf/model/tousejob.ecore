@@ -23,4 +23,6 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DummyToHoldRefOnModel" abstract="true"
+      eSuperTypes="../../com.misc.common.moplaf.job.xmlrpc.emf/model/jobxmlrpc.ecore#//JobEngineServer"/>
 </ecore:EPackage>

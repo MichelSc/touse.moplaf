@@ -6,6 +6,8 @@ import com.misc.common.moplaf.job.Job;
 import com.misc.common.moplaf.job.JobConsole;
 import com.misc.common.moplaf.job.Run;
 import com.misc.common.moplaf.job.RunParams;
+import com.misc.common.moplaf.job.jobclient.JobSource;
+import com.misc.common.moplaf.job.jobxmlrpc.JobEngineServer;
 import com.misc.touse.moplaf.tousejob.*;
 
 import org.eclipse.emf.common.notify.Adapter;
@@ -88,6 +90,10 @@ public class ToUseJobAdapterFactory extends AdapterFactoryImpl {
 				return createRunsAdapter();
 			}
 			@Override
+			public Adapter caseDummyToHoldRefOnModel(DummyToHoldRefOnModel object) {
+				return createDummyToHoldRefOnModelAdapter();
+			}
+			@Override
 			public Adapter caseRunParams(RunParams object) {
 				return createRunParamsAdapter();
 			}
@@ -102,6 +108,14 @@ public class ToUseJobAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseJobConsole(JobConsole object) {
 				return createJobConsoleAdapter();
+			}
+			@Override
+			public Adapter caseJobSource(JobSource object) {
+				return createJobSourceAdapter();
+			}
+			@Override
+			public Adapter caseJobEngineServer(JobEngineServer object) {
+				return createJobEngineServerAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -180,6 +194,20 @@ public class ToUseJobAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.tousejob.DummyToHoldRefOnModel <em>Dummy To Hold Ref On Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.touse.moplaf.tousejob.DummyToHoldRefOnModel
+	 * @generated
+	 */
+	public Adapter createDummyToHoldRefOnModelAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.job.RunParams <em>Run Params</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -232,6 +260,34 @@ public class ToUseJobAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createJobConsoleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.job.jobclient.JobSource <em>Job Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.job.jobclient.JobSource
+	 * @generated
+	 */
+	public Adapter createJobSourceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.job.jobxmlrpc.JobEngineServer <em>Job Engine Server</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.job.jobxmlrpc.JobEngineServer
+	 * @generated
+	 */
+	public Adapter createJobEngineServerAdapter() {
 		return null;
 	}
 
