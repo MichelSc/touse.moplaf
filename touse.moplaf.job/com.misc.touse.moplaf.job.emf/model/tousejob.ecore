@@ -5,10 +5,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Domain">
     <eStructuralFeatures xsi:type="ecore:EReference" name="Runs" upperBound="-1" eType="#//Runs"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Proxies" upperBound="-1"
-        eType="ecore:EClass ../../com.misc.common.moplaf.job.client.emf/model/jobclient.ecore#//JobEngineProxy"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="jobscheduler" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Schedulers" upperBound="-1"
         eType="ecore:EClass ../../com.misc.common.moplaf.job.client.emf/model/jobclient.ecore#//JobScheduler"
         containment="true"/>
   </eClassifiers>
@@ -18,11 +15,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Iteration" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         defaultValueLiteral="5"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ToUseJobResult" eSuperTypes="../../com.misc.common.moplaf.job.client.emf/model/jobclient.ecore#//JobRemoteResult">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="TicksWaited" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DummyToHoldRefToModel" abstract="true"
-      interface="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="ToUseJobConsole" eSuperTypes="../../com.misc.common.moplaf.job.emf/model/job.ecore#//JobConsole">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="CallerName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>

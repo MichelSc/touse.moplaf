@@ -118,29 +118,6 @@ public class ToUseJobItemProviderAdapterFactory extends ToUseJobAdapterFactory i
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousejob.ToUseJobResult} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ToUseJobResultItemProvider toUseJobResultItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousejob.ToUseJobResult}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createToUseJobResultAdapter() {
-		if (toUseJobResultItemProvider == null) {
-			toUseJobResultItemProvider = new ToUseJobResultItemProvider(this);
-		}
-
-		return toUseJobResultItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousejob.ToUseJobConsole} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -287,7 +264,6 @@ public class ToUseJobItemProviderAdapterFactory extends ToUseJobAdapterFactory i
 	public void dispose() {
 		if (domainItemProvider != null) domainItemProvider.dispose();
 		if (toUseJobItemProvider != null) toUseJobItemProvider.dispose();
-		if (toUseJobResultItemProvider != null) toUseJobResultItemProvider.dispose();
 		if (toUseJobConsoleItemProvider != null) toUseJobConsoleItemProvider.dispose();
 		if (runsItemProvider != null) runsItemProvider.dispose();
 	}

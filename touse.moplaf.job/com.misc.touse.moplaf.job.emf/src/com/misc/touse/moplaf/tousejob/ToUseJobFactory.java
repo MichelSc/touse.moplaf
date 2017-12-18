@@ -40,15 +40,6 @@ public interface ToUseJobFactory extends EFactory {
 	ToUseJob createToUseJob();
 
 	/**
-	 * Returns a new object of class '<em>Result</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Result</em>'.
-	 * @generated
-	 */
-	ToUseJobResult createToUseJobResult();
-
-	/**
 	 * Returns a new object of class '<em>Console</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

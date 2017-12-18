@@ -6,7 +6,6 @@ import com.misc.common.moplaf.job.Job;
 import com.misc.common.moplaf.job.JobConsole;
 import com.misc.common.moplaf.job.Run;
 import com.misc.common.moplaf.job.RunParams;
-import com.misc.common.moplaf.job.jobclient.JobRemoteResult;
 import com.misc.touse.moplaf.tousejob.*;
 
 import org.eclipse.emf.ecore.EObject;
@@ -86,19 +85,6 @@ public class ToUseJobSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ToUseJobPackage.TO_USE_JOB_RESULT: {
-				ToUseJobResult toUseJobResult = (ToUseJobResult)theEObject;
-				T result = caseToUseJobResult(toUseJobResult);
-				if (result == null) result = caseJobRemoteResult(toUseJobResult);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ToUseJobPackage.DUMMY_TO_HOLD_REF_TO_MODEL: {
-				DummyToHoldRefToModel dummyToHoldRefToModel = (DummyToHoldRefToModel)theEObject;
-				T result = caseDummyToHoldRefToModel(dummyToHoldRefToModel);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case ToUseJobPackage.TO_USE_JOB_CONSOLE: {
 				ToUseJobConsole toUseJobConsole = (ToUseJobConsole)theEObject;
 				T result = caseToUseJobConsole(toUseJobConsole);
@@ -146,36 +132,6 @@ public class ToUseJobSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseToUseJob(ToUseJob object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Result</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Result</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseToUseJobResult(ToUseJobResult object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Dummy To Hold Ref To Model</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Dummy To Hold Ref To Model</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseDummyToHoldRefToModel(DummyToHoldRefToModel object) {
 		return null;
 	}
 
@@ -251,21 +207,6 @@ public class ToUseJobSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseJob(Job object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Job Remote Result</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Job Remote Result</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseJobRemoteResult(JobRemoteResult object) {
 		return null;
 	}
 

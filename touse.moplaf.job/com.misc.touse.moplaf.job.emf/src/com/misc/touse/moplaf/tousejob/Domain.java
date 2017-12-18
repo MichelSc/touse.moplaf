@@ -12,7 +12,6 @@
  */
 package com.misc.touse.moplaf.tousejob;
 
-import com.misc.common.moplaf.job.jobclient.JobEngineProxy;
 import com.misc.common.moplaf.job.jobclient.JobScheduler;
 import org.eclipse.emf.common.util.EList;
 
@@ -28,8 +27,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.tousejob.Domain#getRuns <em>Runs</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.tousejob.Domain#getProxies <em>Proxies</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.tousejob.Domain#getJobscheduler <em>Jobscheduler</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousejob.Domain#getSchedulers <em>Schedulers</em>}</li>
  * </ul>
  *
  * @see com.misc.touse.moplaf.tousejob.ToUseJobPackage#getDomain()
@@ -54,35 +52,19 @@ public interface Domain extends EObject {
 	EList<Runs> getRuns();
 
 	/**
-	 * Returns the value of the '<em><b>Proxies</b></em>' containment reference list.
-	 * The list contents are of type {@link com.misc.common.moplaf.job.jobclient.JobEngineProxy}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Proxies</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Proxies</em>' containment reference list.
-	 * @see com.misc.touse.moplaf.tousejob.ToUseJobPackage#getDomain_Proxies()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<JobEngineProxy> getProxies();
-
-	/**
-	 * Returns the value of the '<em><b>Jobscheduler</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Schedulers</b></em>' containment reference list.
 	 * The list contents are of type {@link com.misc.common.moplaf.job.jobclient.JobScheduler}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Jobscheduler</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Schedulers</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Jobscheduler</em>' containment reference list.
-	 * @see com.misc.touse.moplaf.tousejob.ToUseJobPackage#getDomain_Jobscheduler()
+	 * @return the value of the '<em>Schedulers</em>' containment reference list.
+	 * @see com.misc.touse.moplaf.tousejob.ToUseJobPackage#getDomain_Schedulers()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<JobScheduler> getJobscheduler();
+	EList<JobScheduler> getSchedulers();
 
 } // Domain

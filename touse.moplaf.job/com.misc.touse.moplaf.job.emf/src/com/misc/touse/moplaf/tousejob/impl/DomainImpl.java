@@ -12,7 +12,6 @@
  */
 package com.misc.touse.moplaf.tousejob.impl;
 
-import com.misc.common.moplaf.job.jobclient.JobEngineProxy;
 import com.misc.common.moplaf.job.jobclient.JobScheduler;
 import com.misc.touse.moplaf.tousejob.Domain;
 import com.misc.touse.moplaf.tousejob.Runs;
@@ -38,8 +37,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.tousejob.impl.DomainImpl#getRuns <em>Runs</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.tousejob.impl.DomainImpl#getProxies <em>Proxies</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.tousejob.impl.DomainImpl#getJobscheduler <em>Jobscheduler</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousejob.impl.DomainImpl#getSchedulers <em>Schedulers</em>}</li>
  * </ul>
  *
  * @generated
@@ -56,24 +54,14 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	protected EList<Runs> runs;
 
 	/**
-	 * The cached value of the '{@link #getProxies() <em>Proxies</em>}' containment reference list.
+	 * The cached value of the '{@link #getSchedulers() <em>Schedulers</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getProxies()
+	 * @see #getSchedulers()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<JobEngineProxy> proxies;
-
-	/**
-	 * The cached value of the '{@link #getJobscheduler() <em>Jobscheduler</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getJobscheduler()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<JobScheduler> jobscheduler;
+	protected EList<JobScheduler> schedulers;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -111,23 +99,11 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<JobEngineProxy> getProxies() {
-		if (proxies == null) {
-			proxies = new EObjectContainmentEList<JobEngineProxy>(JobEngineProxy.class, this, ToUseJobPackage.DOMAIN__PROXIES);
+	public EList<JobScheduler> getSchedulers() {
+		if (schedulers == null) {
+			schedulers = new EObjectContainmentEList<JobScheduler>(JobScheduler.class, this, ToUseJobPackage.DOMAIN__SCHEDULERS);
 		}
-		return proxies;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<JobScheduler> getJobscheduler() {
-		if (jobscheduler == null) {
-			jobscheduler = new EObjectContainmentEList<JobScheduler>(JobScheduler.class, this, ToUseJobPackage.DOMAIN__JOBSCHEDULER);
-		}
-		return jobscheduler;
+		return schedulers;
 	}
 
 	/**
@@ -140,10 +116,8 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 		switch (featureID) {
 			case ToUseJobPackage.DOMAIN__RUNS:
 				return ((InternalEList<?>)getRuns()).basicRemove(otherEnd, msgs);
-			case ToUseJobPackage.DOMAIN__PROXIES:
-				return ((InternalEList<?>)getProxies()).basicRemove(otherEnd, msgs);
-			case ToUseJobPackage.DOMAIN__JOBSCHEDULER:
-				return ((InternalEList<?>)getJobscheduler()).basicRemove(otherEnd, msgs);
+			case ToUseJobPackage.DOMAIN__SCHEDULERS:
+				return ((InternalEList<?>)getSchedulers()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -158,10 +132,8 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 		switch (featureID) {
 			case ToUseJobPackage.DOMAIN__RUNS:
 				return getRuns();
-			case ToUseJobPackage.DOMAIN__PROXIES:
-				return getProxies();
-			case ToUseJobPackage.DOMAIN__JOBSCHEDULER:
-				return getJobscheduler();
+			case ToUseJobPackage.DOMAIN__SCHEDULERS:
+				return getSchedulers();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -179,13 +151,9 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 				getRuns().clear();
 				getRuns().addAll((Collection<? extends Runs>)newValue);
 				return;
-			case ToUseJobPackage.DOMAIN__PROXIES:
-				getProxies().clear();
-				getProxies().addAll((Collection<? extends JobEngineProxy>)newValue);
-				return;
-			case ToUseJobPackage.DOMAIN__JOBSCHEDULER:
-				getJobscheduler().clear();
-				getJobscheduler().addAll((Collection<? extends JobScheduler>)newValue);
+			case ToUseJobPackage.DOMAIN__SCHEDULERS:
+				getSchedulers().clear();
+				getSchedulers().addAll((Collection<? extends JobScheduler>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -202,11 +170,8 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 			case ToUseJobPackage.DOMAIN__RUNS:
 				getRuns().clear();
 				return;
-			case ToUseJobPackage.DOMAIN__PROXIES:
-				getProxies().clear();
-				return;
-			case ToUseJobPackage.DOMAIN__JOBSCHEDULER:
-				getJobscheduler().clear();
+			case ToUseJobPackage.DOMAIN__SCHEDULERS:
+				getSchedulers().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -222,10 +187,8 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 		switch (featureID) {
 			case ToUseJobPackage.DOMAIN__RUNS:
 				return runs != null && !runs.isEmpty();
-			case ToUseJobPackage.DOMAIN__PROXIES:
-				return proxies != null && !proxies.isEmpty();
-			case ToUseJobPackage.DOMAIN__JOBSCHEDULER:
-				return jobscheduler != null && !jobscheduler.isEmpty();
+			case ToUseJobPackage.DOMAIN__SCHEDULERS:
+				return schedulers != null && !schedulers.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

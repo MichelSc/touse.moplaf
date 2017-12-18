@@ -6,7 +6,6 @@ import com.misc.common.moplaf.job.Job;
 import com.misc.common.moplaf.job.JobConsole;
 import com.misc.common.moplaf.job.Run;
 import com.misc.common.moplaf.job.RunParams;
-import com.misc.common.moplaf.job.jobclient.JobRemoteResult;
 import com.misc.touse.moplaf.tousejob.*;
 
 import org.eclipse.emf.common.notify.Adapter;
@@ -81,14 +80,6 @@ public class ToUseJobAdapterFactory extends AdapterFactoryImpl {
 				return createToUseJobAdapter();
 			}
 			@Override
-			public Adapter caseToUseJobResult(ToUseJobResult object) {
-				return createToUseJobResultAdapter();
-			}
-			@Override
-			public Adapter caseDummyToHoldRefToModel(DummyToHoldRefToModel object) {
-				return createDummyToHoldRefToModelAdapter();
-			}
-			@Override
 			public Adapter caseToUseJobConsole(ToUseJobConsole object) {
 				return createToUseJobConsoleAdapter();
 			}
@@ -107,10 +98,6 @@ public class ToUseJobAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseJob(Job object) {
 				return createJobAdapter();
-			}
-			@Override
-			public Adapter caseJobRemoteResult(JobRemoteResult object) {
-				return createJobRemoteResultAdapter();
 			}
 			@Override
 			public Adapter caseJobConsole(JobConsole object) {
@@ -161,34 +148,6 @@ public class ToUseJobAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createToUseJobAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.tousejob.ToUseJobResult <em>Result</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.touse.moplaf.tousejob.ToUseJobResult
-	 * @generated
-	 */
-	public Adapter createToUseJobResultAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.tousejob.DummyToHoldRefToModel <em>Dummy To Hold Ref To Model</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.touse.moplaf.tousejob.DummyToHoldRefToModel
-	 * @generated
-	 */
-	public Adapter createDummyToHoldRefToModelAdapter() {
 		return null;
 	}
 
@@ -259,20 +218,6 @@ public class ToUseJobAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createJobAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.job.jobclient.JobRemoteResult <em>Job Remote Result</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.job.jobclient.JobRemoteResult
-	 * @generated
-	 */
-	public Adapter createJobRemoteResultAdapter() {
 		return null;
 	}
 

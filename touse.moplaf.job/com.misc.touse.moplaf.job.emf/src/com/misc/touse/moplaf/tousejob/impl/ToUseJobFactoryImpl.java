@@ -58,7 +58,6 @@ public class ToUseJobFactoryImpl extends EFactoryImpl implements ToUseJobFactory
 		switch (eClass.getClassifierID()) {
 			case ToUseJobPackage.DOMAIN: return createDomain();
 			case ToUseJobPackage.TO_USE_JOB: return createToUseJob();
-			case ToUseJobPackage.TO_USE_JOB_RESULT: return createToUseJobResult();
 			case ToUseJobPackage.TO_USE_JOB_CONSOLE: return createToUseJobConsole();
 			case ToUseJobPackage.RUNS: return createRuns();
 			default:
@@ -84,16 +83,6 @@ public class ToUseJobFactoryImpl extends EFactoryImpl implements ToUseJobFactory
 	public ToUseJob createToUseJob() {
 		ToUseJobImpl toUseJob = new ToUseJobImpl();
 		return toUseJob;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ToUseJobResult createToUseJobResult() {
-		ToUseJobResultImpl toUseJobResult = new ToUseJobResultImpl();
-		return toUseJobResult;
 	}
 
 	/**

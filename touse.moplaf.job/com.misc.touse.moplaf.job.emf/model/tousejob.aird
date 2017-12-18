@@ -1053,15 +1053,6 @@
             <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
           </endLabelStyleDescription>
         </computedStyleDescriptions>
-        <computedStyleDescriptions xmi:type="style:EdgeStyleDescription" xmi:id="_uF23sNaKEee5aulSlYwmIA" sourceArrow="InputArrow" targetArrow="FillDiamond" routingStyle="manhattan">
-          <strokeColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-          <beginLabelStyleDescription xmi:type="style:BeginLabelStyleDescription" xmi:id="_uF23sdaKEee5aulSlYwmIA" showIcon="false" labelExpression="service:renderEOpposite">
-            <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-          </beginLabelStyleDescription>
-          <endLabelStyleDescription xmi:type="style:EndLabelStyleDescription" xmi:id="_uF23staKEee5aulSlYwmIA" showIcon="false" labelExpression="service:render">
-            <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-          </endLabelStyleDescription>
-        </computedStyleDescriptions>
         <computedStyleDescriptions xmi:type="style:EdgeStyleDescription" xmi:id="_-CJ8UNaKEee5aulSlYwmIA" routingStyle="manhattan">
           <strokeColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           <centerLabelStyleDescription xmi:type="style:CenterLabelStyleDescription" xmi:id="_-CJ8UdaKEee5aulSlYwmIA" showIcon="false" labelExpression="service:render">
@@ -1070,6 +1061,17 @@
           </centerLabelStyleDescription>
           <endLabelStyleDescription xmi:type="style:EndLabelStyleDescription" xmi:id="_-CJ8UtaKEee5aulSlYwmIA" labelSize="6" showIcon="false" labelExpression="service:eKeysLabel">
             <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+          </endLabelStyleDescription>
+        </computedStyleDescriptions>
+        <computedStyleDescriptions xmi:type="style:EdgeStyleDescription" xmi:id="_oWPIMOMcEeeSiKMiinOgxw" sourceArrow="InputArrow" targetArrow="FillDiamond" routingStyle="manhattan">
+          <strokeColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <beginLabelStyleDescription xmi:type="style:BeginLabelStyleDescription" xmi:id="_oWPIMeMcEeeSiKMiinOgxw" showIcon="false" labelExpression="service:renderEOpposite">
+            <labelFormat>bold</labelFormat>
+            <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </beginLabelStyleDescription>
+          <endLabelStyleDescription xmi:type="style:EndLabelStyleDescription" xmi:id="_oWPIMuMcEeeSiKMiinOgxw" showIcon="false" labelExpression="service:render">
+            <labelFormat>bold</labelFormat>
+            <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </endLabelStyleDescription>
         </computedStyleDescriptions>
       </data>
@@ -1154,6 +1156,10 @@
             <children xmi:type="notation:Node" xmi:id="_jeXfENTeEeefv7aONqgY3g" type="3010" element="_jd6zINTeEeefv7aONqgY3g">
               <styles xmi:type="notation:FontStyle" xmi:id="_jeXfEdTeEeefv7aONqgY3g" fontName="Segoe UI" fontHeight="8"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_jeXfEtTeEeefv7aONqgY3g"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_IIWacOPXEeeSiKMiinOgxw" type="3010" element="_IHA9sOPXEeeSiKMiinOgxw">
+              <styles xmi:type="notation:FontStyle" xmi:id="_IIWacePXEeeSiKMiinOgxw" fontName="Oxygen-Sans" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_IIWacuPXEeeSiKMiinOgxw"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_C9mayM4IEeeaJMFZbqIQDQ"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_C9mayc4IEeeaJMFZbqIQDQ"/>
@@ -1251,6 +1257,10 @@
             <children xmi:type="notation:Node" xmi:id="_jeYGINTeEeefv7aONqgY3g" type="3010" element="_jd9PYNTeEeefv7aONqgY3g">
               <styles xmi:type="notation:FontStyle" xmi:id="_jeYGIdTeEeefv7aONqgY3g" fontName="Segoe UI" fontHeight="8"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_jeYGItTeEeefv7aONqgY3g"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_IIXBgOPXEeeSiKMiinOgxw" type="3010" element="_IHEBAOPXEeeSiKMiinOgxw">
+              <styles xmi:type="notation:FontStyle" xmi:id="_IIXBgePXEeeSiKMiinOgxw" fontName="Oxygen-Sans" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_IIXBguPXEeeSiKMiinOgxw"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_C9nB1c4IEeeaJMFZbqIQDQ"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_C9nB1s4IEeeaJMFZbqIQDQ"/>
@@ -1702,6 +1712,14 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']"/>
       </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_IHA9sOPXEeeSiKMiinOgxw" name=" Source : JobSource" tooltipText="">
+        <target xmi:type="ecore:EReference" href="platform:/resource/com.misc.common.moplaf.job.client.emf/model/jobclient.ecore#//JobScheduled/Source"/>
+        <semanticElements xmi:type="ecore:EReference" href="platform:/resource/com.misc.common.moplaf.job.client.emf/model/jobclient.ecore#//JobScheduled/Source"/>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_IHBkwOPXEeeSiKMiinOgxw" labelAlignment="LEFT" color="114,159,207">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']"/>
+      </ownedElements>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_C9SRs84IEeeaJMFZbqIQDQ" name="JobScheduler" tooltipText="" incomingEdges="_C9jXcM4IEeeaJMFZbqIQDQ _uF2QoNaKEee5aulSlYwmIA" width="12" height="10">
       <target xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.job.client.emf/model/jobclient.ecore#//JobScheduler"/>
@@ -1712,7 +1730,7 @@
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_C9S4wM4IEeeaJMFZbqIQDQ" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_YovqoOPXEeeSiKMiinOgxw" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
@@ -1842,7 +1860,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_jiqGANTaEeefv7aONqgY3g" name="submitRun(run Run)" tooltipText="submitRun(run)">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_jiqGANTaEeefv7aONqgY3g" name="submitRun(run Run) : JobScheduled" tooltipText="submitRun(run) : JobScheduled">
         <target xmi:type="ecore:EOperation" href="platform:/resource/com.misc.common.moplaf.job.client.emf/model/jobclient.ecore#//JobScheduler/submitRun"/>
         <semanticElements xmi:type="ecore:EOperation" href="platform:/resource/com.misc.common.moplaf.job.client.emf/model/jobclient.ecore#//JobScheduler/submitRun"/>
         <semanticElements xmi:type="ecore:EParameter" href="platform:/resource/com.misc.common.moplaf.job.client.emf/model/jobclient.ecore#//JobScheduler/submitRun/run"/>
@@ -1871,6 +1889,14 @@
         <target xmi:type="ecore:EReference" href="platform:/resource/com.misc.common.moplaf.job.client.emf/model/jobclient.ecore#//JobScheduler/Engines"/>
         <semanticElements xmi:type="ecore:EReference" href="platform:/resource/com.misc.common.moplaf.job.client.emf/model/jobclient.ecore#//JobScheduler/Engines"/>
         <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_jd9PYdTeEeefv7aONqgY3g" labelAlignment="LEFT" color="114,159,207">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_IHEBAOPXEeeSiKMiinOgxw" name=" Sources : JobSource" tooltipText="">
+        <target xmi:type="ecore:EReference" href="platform:/resource/com.misc.common.moplaf.job.client.emf/model/jobclient.ecore#//JobScheduler/Sources"/>
+        <semanticElements xmi:type="ecore:EReference" href="platform:/resource/com.misc.common.moplaf.job.client.emf/model/jobclient.ecore#//JobScheduler/Sources"/>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_IHKusOPXEeeSiKMiinOgxw" labelAlignment="LEFT" color="114,159,207">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']"/>
@@ -2034,14 +2060,18 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_uF2QoNaKEee5aulSlYwmIA" sourceNode="_C9SRsM4IEeeaJMFZbqIQDQ" targetNode="_C9SRs84IEeeaJMFZbqIQDQ" beginLabel="[0..*] Jobs" endLabel="[0..1] Scheduler">
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_uF2QoNaKEee5aulSlYwmIA" sourceNode="_C9SRsM4IEeeaJMFZbqIQDQ" targetNode="_C9SRs84IEeeaJMFZbqIQDQ" beginLabel="[0..*] Jobs" endLabel="[1..1] Scheduler">
       <target xmi:type="ecore:EReference" href="platform:/resource/com.misc.common.moplaf.job.client.emf/model/jobclient.ecore#//JobScheduled/Scheduler"/>
       <semanticElements xmi:type="ecore:EReference" href="platform:/resource/com.misc.common.moplaf.job.client.emf/model/jobclient.ecore#//JobScheduler/Jobs"/>
       <semanticElements xmi:type="ecore:EReference" href="platform:/resource/com.misc.common.moplaf.job.client.emf/model/jobclient.ecore#//JobScheduled/Scheduler"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_uF23s9aKEee5aulSlYwmIA" description="_uF23sNaKEee5aulSlYwmIA" sourceArrow="InputArrow" targetArrow="FillDiamond" strokeColor="0,0,0">
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_oWPIM-McEeeSiKMiinOgxw" description="_oWPIMOMcEeeSiKMiinOgxw" sourceArrow="InputArrow" targetArrow="FillDiamond" strokeColor="0,0,0">
         <customFeatures>routingStyle</customFeatures>
-        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" xmi:id="_uF23tNaKEee5aulSlYwmIA" showIcon="false"/>
-        <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_uF23tdaKEee5aulSlYwmIA" showIcon="false"/>
+        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" xmi:id="_oWPINOMcEeeSiKMiinOgxw" showIcon="false">
+          <labelFormat>bold</labelFormat>
+        </beginLabelStyle>
+        <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_oWPINeMcEeeSiKMiinOgxw" showIcon="false">
+          <labelFormat>bold</labelFormat>
+        </endLabelStyle>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='Bi-directional%20EC_EReference%20']"/>
     </ownedDiagramElements>

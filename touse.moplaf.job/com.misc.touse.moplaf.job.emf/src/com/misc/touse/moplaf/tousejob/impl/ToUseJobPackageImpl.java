@@ -6,14 +6,11 @@ import com.misc.common.moplaf.job.JobPackage;
 
 import com.misc.common.moplaf.job.jobclient.JobClientPackage;
 import com.misc.touse.moplaf.tousejob.Domain;
-import com.misc.touse.moplaf.tousejob.DummyToHoldRefToModel;
 import com.misc.touse.moplaf.tousejob.Runs;
 import com.misc.touse.moplaf.tousejob.ToUseJob;
 import com.misc.touse.moplaf.tousejob.ToUseJobConsole;
 import com.misc.touse.moplaf.tousejob.ToUseJobFactory;
 import com.misc.touse.moplaf.tousejob.ToUseJobPackage;
-import com.misc.touse.moplaf.tousejob.ToUseJobResult;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -41,20 +38,6 @@ public class ToUseJobPackageImpl extends EPackageImpl implements ToUseJobPackage
 	 * @generated
 	 */
 	private EClass toUseJobEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass toUseJobResultEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass dummyToHoldRefToModelEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -158,17 +141,8 @@ public class ToUseJobPackageImpl extends EPackageImpl implements ToUseJobPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDomain_Proxies() {
+	public EReference getDomain_Schedulers() {
 		return (EReference)domainEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getDomain_Jobscheduler() {
-		return (EReference)domainEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -196,33 +170,6 @@ public class ToUseJobPackageImpl extends EPackageImpl implements ToUseJobPackage
 	 */
 	public EAttribute getToUseJob_Iteration() {
 		return (EAttribute)toUseJobEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getToUseJobResult() {
-		return toUseJobResultEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getToUseJobResult_TicksWaited() {
-		return (EAttribute)toUseJobResultEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getDummyToHoldRefToModel() {
-		return dummyToHoldRefToModelEClass;
 	}
 
 	/**
@@ -300,17 +247,11 @@ public class ToUseJobPackageImpl extends EPackageImpl implements ToUseJobPackage
 		// Create classes and their features
 		domainEClass = createEClass(DOMAIN);
 		createEReference(domainEClass, DOMAIN__RUNS);
-		createEReference(domainEClass, DOMAIN__PROXIES);
-		createEReference(domainEClass, DOMAIN__JOBSCHEDULER);
+		createEReference(domainEClass, DOMAIN__SCHEDULERS);
 
 		toUseJobEClass = createEClass(TO_USE_JOB);
 		createEAttribute(toUseJobEClass, TO_USE_JOB__SECONDS_WAITING);
 		createEAttribute(toUseJobEClass, TO_USE_JOB__ITERATION);
-
-		toUseJobResultEClass = createEClass(TO_USE_JOB_RESULT);
-		createEAttribute(toUseJobResultEClass, TO_USE_JOB_RESULT__TICKS_WAITED);
-
-		dummyToHoldRefToModelEClass = createEClass(DUMMY_TO_HOLD_REF_TO_MODEL);
 
 		toUseJobConsoleEClass = createEClass(TO_USE_JOB_CONSOLE);
 		createEAttribute(toUseJobConsoleEClass, TO_USE_JOB_CONSOLE__CALLER_NAME);
@@ -353,23 +294,16 @@ public class ToUseJobPackageImpl extends EPackageImpl implements ToUseJobPackage
 
 		// Add supertypes to classes
 		toUseJobEClass.getESuperTypes().add(theJobPackage.getJob());
-		toUseJobResultEClass.getESuperTypes().add(theJobClientPackage.getJobRemoteResult());
 		toUseJobConsoleEClass.getESuperTypes().add(theJobPackage.getJobConsole());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDomain_Runs(), this.getRuns(), null, "Runs", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDomain_Proxies(), theJobClientPackage.getJobEngineProxy(), null, "Proxies", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDomain_Jobscheduler(), theJobClientPackage.getJobScheduler(), null, "jobscheduler", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDomain_Schedulers(), theJobClientPackage.getJobScheduler(), null, "Schedulers", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(toUseJobEClass, ToUseJob.class, "ToUseJob", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getToUseJob_SecondsWaiting(), ecorePackage.getEInt(), "SecondsWaiting", "2", 0, 1, ToUseJob.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getToUseJob_Iteration(), ecorePackage.getEInt(), "Iteration", "5", 0, 1, ToUseJob.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(toUseJobResultEClass, ToUseJobResult.class, "ToUseJobResult", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getToUseJobResult_TicksWaited(), ecorePackage.getELong(), "TicksWaited", null, 0, 1, ToUseJobResult.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(dummyToHoldRefToModelEClass, DummyToHoldRefToModel.class, "DummyToHoldRefToModel", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(toUseJobConsoleEClass, ToUseJobConsole.class, "ToUseJobConsole", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getToUseJobConsole_CallerName(), ecorePackage.getEString(), "CallerName", null, 0, 1, ToUseJobConsole.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

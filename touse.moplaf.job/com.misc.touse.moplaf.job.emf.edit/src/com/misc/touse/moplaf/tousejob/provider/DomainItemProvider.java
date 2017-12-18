@@ -88,8 +88,7 @@ public class DomainItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ToUseJobPackage.Literals.DOMAIN__RUNS);
-			childrenFeatures.add(ToUseJobPackage.Literals.DOMAIN__PROXIES);
-			childrenFeatures.add(ToUseJobPackage.Literals.DOMAIN__JOBSCHEDULER);
+			childrenFeatures.add(ToUseJobPackage.Literals.DOMAIN__SCHEDULERS);
 		}
 		return childrenFeatures;
 	}
@@ -142,8 +141,7 @@ public class DomainItemProvider
 
 		switch (notification.getFeatureID(Domain.class)) {
 			case ToUseJobPackage.DOMAIN__RUNS:
-			case ToUseJobPackage.DOMAIN__PROXIES:
-			case ToUseJobPackage.DOMAIN__JOBSCHEDULER:
+			case ToUseJobPackage.DOMAIN__SCHEDULERS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -168,7 +166,7 @@ public class DomainItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ToUseJobPackage.Literals.DOMAIN__JOBSCHEDULER,
+				(ToUseJobPackage.Literals.DOMAIN__SCHEDULERS,
 				 JobClientFactory.eINSTANCE.createJobScheduler()));
 	}
 

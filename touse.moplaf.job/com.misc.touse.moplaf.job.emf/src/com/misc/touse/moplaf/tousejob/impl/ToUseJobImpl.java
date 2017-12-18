@@ -19,10 +19,7 @@ import com.misc.common.moplaf.job.impl.JobImpl;
 import com.misc.common.moplaf.common.ReturnFeedback;
 
 import com.misc.touse.moplaf.tousejob.ToUseJob;
-import com.misc.touse.moplaf.tousejob.ToUseJobFactory;
 import com.misc.touse.moplaf.tousejob.ToUseJobPackage;
-import com.misc.touse.moplaf.tousejob.ToUseJobResult;
-import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -250,11 +247,6 @@ public class ToUseJobImpl extends JobImpl implements ToUseJob {
 			Plugin.INSTANCE.logInfo("ToUseJob iteration "+i);
 			go_on = this.setProgress(new ProgressFeedback((float)i/(float)this.getIteration(), "iterating"));
 		}
-		Date now = new Date();
-		long ticks = now.getTime()-this.getStartTime().getTime();
-		ToUseJobResult result = ToUseJobFactory.eINSTANCE.createToUseJobResult();
-		result.setTicksWaited(ticks);
-		//BART TODO this.setResult(result);
 		Plugin.INSTANCE.logInfo("ToUseJob "+this.getName()+" finished");
 		return ReturnFeedback.SUCCESS;
 	}

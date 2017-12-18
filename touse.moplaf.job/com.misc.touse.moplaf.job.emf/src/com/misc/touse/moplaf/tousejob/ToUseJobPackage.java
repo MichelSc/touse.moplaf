@@ -3,8 +3,6 @@
 package com.misc.touse.moplaf.tousejob;
 
 import com.misc.common.moplaf.job.JobPackage;
-
-import com.misc.common.moplaf.job.jobclient.JobClientPackage;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -79,22 +77,13 @@ public interface ToUseJobPackage extends EPackage {
 	int DOMAIN__RUNS = 0;
 
 	/**
-	 * The feature id for the '<em><b>Proxies</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Schedulers</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN__PROXIES = 1;
-
-	/**
-	 * The feature id for the '<em><b>Jobscheduler</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN__JOBSCHEDULER = 2;
+	int DOMAIN__SCHEDULERS = 1;
 
 	/**
 	 * The number of structural features of the '<em>Domain</em>' class.
@@ -103,7 +92,7 @@ public interface ToUseJobPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_FEATURE_COUNT = 3;
+	int DOMAIN_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Domain</em>' class.
@@ -422,71 +411,6 @@ public interface ToUseJobPackage extends EPackage {
 	int TO_USE_JOB_OPERATION_COUNT = JobPackage.JOB_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link com.misc.touse.moplaf.tousejob.impl.ToUseJobResultImpl <em>Result</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.misc.touse.moplaf.tousejob.impl.ToUseJobResultImpl
-	 * @see com.misc.touse.moplaf.tousejob.impl.ToUseJobPackageImpl#getToUseJobResult()
-	 * @generated
-	 */
-	int TO_USE_JOB_RESULT = 2;
-
-	/**
-	 * The feature id for the '<em><b>Ticks Waited</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_JOB_RESULT__TICKS_WAITED = JobClientPackage.JOB_REMOTE_RESULT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Result</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_JOB_RESULT_FEATURE_COUNT = JobClientPackage.JOB_REMOTE_RESULT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Result</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_JOB_RESULT_OPERATION_COUNT = JobClientPackage.JOB_REMOTE_RESULT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link com.misc.touse.moplaf.tousejob.DummyToHoldRefToModel <em>Dummy To Hold Ref To Model</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.misc.touse.moplaf.tousejob.DummyToHoldRefToModel
-	 * @see com.misc.touse.moplaf.tousejob.impl.ToUseJobPackageImpl#getDummyToHoldRefToModel()
-	 * @generated
-	 */
-	int DUMMY_TO_HOLD_REF_TO_MODEL = 3;
-
-	/**
-	 * The number of structural features of the '<em>Dummy To Hold Ref To Model</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DUMMY_TO_HOLD_REF_TO_MODEL_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Dummy To Hold Ref To Model</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DUMMY_TO_HOLD_REF_TO_MODEL_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.tousejob.impl.ToUseJobConsoleImpl <em>Console</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -494,7 +418,7 @@ public interface ToUseJobPackage extends EPackage {
 	 * @see com.misc.touse.moplaf.tousejob.impl.ToUseJobPackageImpl#getToUseJobConsole()
 	 * @generated
 	 */
-	int TO_USE_JOB_CONSOLE = 4;
+	int TO_USE_JOB_CONSOLE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Run Feedback</b></em>' attribute.
@@ -892,7 +816,7 @@ public interface ToUseJobPackage extends EPackage {
 	 * @see com.misc.touse.moplaf.tousejob.impl.ToUseJobPackageImpl#getRuns()
 	 * @generated
 	 */
-	int RUNS = 5;
+	int RUNS = 3;
 
 	/**
 	 * The feature id for the '<em><b>Runs</b></em>' containment reference list.
@@ -953,26 +877,15 @@ public interface ToUseJobPackage extends EPackage {
 	EReference getDomain_Runs();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.tousejob.Domain#getProxies <em>Proxies</em>}'.
+	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.tousejob.Domain#getSchedulers <em>Schedulers</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Proxies</em>'.
-	 * @see com.misc.touse.moplaf.tousejob.Domain#getProxies()
+	 * @return the meta object for the containment reference list '<em>Schedulers</em>'.
+	 * @see com.misc.touse.moplaf.tousejob.Domain#getSchedulers()
 	 * @see #getDomain()
 	 * @generated
 	 */
-	EReference getDomain_Proxies();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.tousejob.Domain#getJobscheduler <em>Jobscheduler</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Jobscheduler</em>'.
-	 * @see com.misc.touse.moplaf.tousejob.Domain#getJobscheduler()
-	 * @see #getDomain()
-	 * @generated
-	 */
-	EReference getDomain_Jobscheduler();
+	EReference getDomain_Schedulers();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousejob.ToUseJob <em>To Use Job</em>}'.
@@ -1005,37 +918,6 @@ public interface ToUseJobPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getToUseJob_Iteration();
-
-	/**
-	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousejob.ToUseJobResult <em>Result</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Result</em>'.
-	 * @see com.misc.touse.moplaf.tousejob.ToUseJobResult
-	 * @generated
-	 */
-	EClass getToUseJobResult();
-
-	/**
-	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.tousejob.ToUseJobResult#getTicksWaited <em>Ticks Waited</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Ticks Waited</em>'.
-	 * @see com.misc.touse.moplaf.tousejob.ToUseJobResult#getTicksWaited()
-	 * @see #getToUseJobResult()
-	 * @generated
-	 */
-	EAttribute getToUseJobResult_TicksWaited();
-
-	/**
-	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousejob.DummyToHoldRefToModel <em>Dummy To Hold Ref To Model</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Dummy To Hold Ref To Model</em>'.
-	 * @see com.misc.touse.moplaf.tousejob.DummyToHoldRefToModel
-	 * @generated
-	 */
-	EClass getDummyToHoldRefToModel();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousejob.ToUseJobConsole <em>Console</em>}'.
@@ -1132,20 +1014,12 @@ public interface ToUseJobPackage extends EPackage {
 		EReference DOMAIN__RUNS = eINSTANCE.getDomain_Runs();
 
 		/**
-		 * The meta object literal for the '<em><b>Proxies</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Schedulers</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DOMAIN__PROXIES = eINSTANCE.getDomain_Proxies();
-
-		/**
-		 * The meta object literal for the '<em><b>Jobscheduler</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DOMAIN__JOBSCHEDULER = eINSTANCE.getDomain_Jobscheduler();
+		EReference DOMAIN__SCHEDULERS = eINSTANCE.getDomain_Schedulers();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousejob.impl.ToUseJobImpl <em>To Use Job</em>}' class.
@@ -1172,34 +1046,6 @@ public interface ToUseJobPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TO_USE_JOB__ITERATION = eINSTANCE.getToUseJob_Iteration();
-
-		/**
-		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousejob.impl.ToUseJobResultImpl <em>Result</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see com.misc.touse.moplaf.tousejob.impl.ToUseJobResultImpl
-		 * @see com.misc.touse.moplaf.tousejob.impl.ToUseJobPackageImpl#getToUseJobResult()
-		 * @generated
-		 */
-		EClass TO_USE_JOB_RESULT = eINSTANCE.getToUseJobResult();
-
-		/**
-		 * The meta object literal for the '<em><b>Ticks Waited</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TO_USE_JOB_RESULT__TICKS_WAITED = eINSTANCE.getToUseJobResult_TicksWaited();
-
-		/**
-		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousejob.DummyToHoldRefToModel <em>Dummy To Hold Ref To Model</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see com.misc.touse.moplaf.tousejob.DummyToHoldRefToModel
-		 * @see com.misc.touse.moplaf.tousejob.impl.ToUseJobPackageImpl#getDummyToHoldRefToModel()
-		 * @generated
-		 */
-		EClass DUMMY_TO_HOLD_REF_TO_MODEL = eINSTANCE.getDummyToHoldRefToModel();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousejob.impl.ToUseJobConsoleImpl <em>Console</em>}' class.
