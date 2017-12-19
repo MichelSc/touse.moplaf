@@ -7,7 +7,6 @@ import com.misc.common.moplaf.job.JobPackage;
 import com.misc.common.moplaf.job.jobclient.JobClientPackage;
 import com.misc.common.moplaf.job.jobxmlrpc.JobXmlRpcPackage;
 import com.misc.touse.moplaf.tousejob.Domain;
-import com.misc.touse.moplaf.tousejob.DummyToHoldRefOnModel;
 import com.misc.touse.moplaf.tousejob.Runs;
 import com.misc.touse.moplaf.tousejob.ToUseJob;
 import com.misc.touse.moplaf.tousejob.ToUseJobConsole;
@@ -54,13 +53,6 @@ public class ToUseJobPackageImpl extends EPackageImpl implements ToUseJobPackage
 	 * @generated
 	 */
 	private EClass runsEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass dummyToHoldRefOnModelEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -232,15 +224,6 @@ public class ToUseJobPackageImpl extends EPackageImpl implements ToUseJobPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getDummyToHoldRefOnModel() {
-		return dummyToHoldRefOnModelEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public ToUseJobFactory getToUseJobFactory() {
 		return (ToUseJobFactory)getEFactoryInstance();
 	}
@@ -278,8 +261,6 @@ public class ToUseJobPackageImpl extends EPackageImpl implements ToUseJobPackage
 		runsEClass = createEClass(RUNS);
 		createEReference(runsEClass, RUNS__RUNS);
 		createEAttribute(runsEClass, RUNS__NAME);
-
-		dummyToHoldRefOnModelEClass = createEClass(DUMMY_TO_HOLD_REF_ON_MODEL);
 	}
 
 	/**
@@ -308,7 +289,6 @@ public class ToUseJobPackageImpl extends EPackageImpl implements ToUseJobPackage
 		// Obtain other dependent packages
 		JobClientPackage theJobClientPackage = (JobClientPackage)EPackage.Registry.INSTANCE.getEPackage(JobClientPackage.eNS_URI);
 		JobPackage theJobPackage = (JobPackage)EPackage.Registry.INSTANCE.getEPackage(JobPackage.eNS_URI);
-		JobXmlRpcPackage theJobXmlRpcPackage = (JobXmlRpcPackage)EPackage.Registry.INSTANCE.getEPackage(JobXmlRpcPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -317,7 +297,6 @@ public class ToUseJobPackageImpl extends EPackageImpl implements ToUseJobPackage
 		// Add supertypes to classes
 		toUseJobEClass.getESuperTypes().add(theJobPackage.getJob());
 		toUseJobConsoleEClass.getESuperTypes().add(theJobPackage.getJobConsole());
-		dummyToHoldRefOnModelEClass.getESuperTypes().add(theJobXmlRpcPackage.getJobEngineServer());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -334,8 +313,6 @@ public class ToUseJobPackageImpl extends EPackageImpl implements ToUseJobPackage
 		initEClass(runsEClass, Runs.class, "Runs", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRuns_Runs(), theJobPackage.getRun(), null, "Runs", null, 0, -1, Runs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRuns_Name(), ecorePackage.getEString(), "Name", null, 0, 1, Runs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(dummyToHoldRefOnModelEClass, DummyToHoldRefOnModel.class, "DummyToHoldRefOnModel", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);
