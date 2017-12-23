@@ -164,5 +164,17 @@ public class ToUseJobItemProvider extends JobItemProvider {
 	public ResourceLocator getResourceLocator() {
 		return TousejobEditPlugin.INSTANCE;
 	}
+	
+	/**
+	 * This returns Domain.gif.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	@Override
+	public Object getImage(Object object) {
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/notepad.png"));
+	}
+
+
 
 }

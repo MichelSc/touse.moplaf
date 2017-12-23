@@ -113,7 +113,7 @@ public class DomainItemProvider
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/folder265.png"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/folder.png"));
 	}
 
 	/**
