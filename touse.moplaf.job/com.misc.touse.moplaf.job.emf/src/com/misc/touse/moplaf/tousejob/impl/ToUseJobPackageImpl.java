@@ -5,7 +5,6 @@ package com.misc.touse.moplaf.tousejob.impl;
 import com.misc.common.moplaf.job.JobPackage;
 
 import com.misc.common.moplaf.job.jobclient.JobClientPackage;
-import com.misc.common.moplaf.job.jobxmlrpc.JobXmlRpcPackage;
 import com.misc.touse.moplaf.tousejob.Domain;
 import com.misc.touse.moplaf.tousejob.Runs;
 import com.misc.touse.moplaf.tousejob.ToUseJob;
@@ -103,7 +102,6 @@ public class ToUseJobPackageImpl extends EPackageImpl implements ToUseJobPackage
 		// Initialize simple dependencies
 		JobPackage.eINSTANCE.eClass();
 		JobClientPackage.eINSTANCE.eClass();
-		JobXmlRpcPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theToUseJobPackage.createPackageContents();
