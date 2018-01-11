@@ -3,14 +3,13 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.misc.touse.moplaf.spreadsheet.emf/src" modelPluginID="com.misc.touse.moplaf.spreadsheet.emf"
     modelName="Tousespreadsheet" editorPluginClass="com.misc.touse.moplaf.spreadsheet.tousespreadsheet.presentation.ToUseSpreadsheetEditorPlugin"
     rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
-    complianceLevel="8.0" copyrightFields="false" usedGenPackages="../../com.misc.common.moplaf.spreadsheet.emf/model/spreadsheet.genmodel#//spreadsheet ../../com.misc.common.moplaf.spreadsheet.csv.emf/model/spreadsheetcsv.genmodel#//spreadsheetcsv ../../com.misc.common.moplaf.spreadsheet.poi.emf/model/spreadsheetpoi.genmodel#//spreadsheetpoi"
+    complianceLevel="8.0" copyrightFields="false" usedGenPackages="../../com.misc.common.moplaf.spreadsheet.emf/model/spreadsheet.genmodel#//spreadsheet ../../com.misc.common.moplaf.spreadsheet.csv.emf/model/spreadsheetcsv.genmodel#//spreadsheetcsv ../../com.misc.common.moplaf.spreadsheet.poi.emf/model/spreadsheetpoi.genmodel#//spreadsheetpoi ../../com.misc.common.moplaf.file.emf/model/file.genmodel#//file"
     operationReflection="true" importOrganizing="true">
   <foreignModel>tousespreadsheet.ecore</foreignModel>
   <genPackages prefix="ToUseSpreadsheet" basePackage="com.misc.touse.moplaf.spreadsheet"
       disposableProviderFactory="true" ecorePackage="tousespreadsheet.ecore#/">
     <genClasses ecoreClass="tousespreadsheet.ecore#//Domain">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousespreadsheet.ecore#//Domain/SpreadsheetsPOI"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousespreadsheet.ecore#//Domain/SpreadsheetsCSV"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousespreadsheet.ecore#//Domain/Spreadsheets"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousespreadsheet.ecore#//Domain/Tables"/>
     </genClasses>
     <genClasses ecoreClass="tousespreadsheet.ecore#//ToUseTable">

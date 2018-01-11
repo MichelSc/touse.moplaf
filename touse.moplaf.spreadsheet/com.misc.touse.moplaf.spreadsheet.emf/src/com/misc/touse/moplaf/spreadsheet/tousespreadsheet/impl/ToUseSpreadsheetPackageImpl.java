@@ -2,6 +2,7 @@
  */
 package com.misc.touse.moplaf.spreadsheet.tousespreadsheet.impl;
 
+import com.misc.common.moplaf.file.FilePackage;
 import com.misc.common.moplaf.spreadsheet.SpreadsheetPackage;
 import com.misc.common.moplaf.spreadsheet.spreadsheetcsv.SpreadsheetCSVPackage;
 import com.misc.common.moplaf.spreadsheet.spreadsheetpoi.SpreadsheetPOIPackage;
@@ -96,6 +97,7 @@ public class ToUseSpreadsheetPackageImpl extends EPackageImpl implements ToUseSp
 		SpreadsheetPackage.eINSTANCE.eClass();
 		SpreadsheetCSVPackage.eINSTANCE.eClass();
 		SpreadsheetPOIPackage.eINSTANCE.eClass();
+		FilePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theToUseSpreadsheetPackage.createPackageContents();
@@ -126,7 +128,7 @@ public class ToUseSpreadsheetPackageImpl extends EPackageImpl implements ToUseSp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDomain_SpreadsheetsPOI() {
+	public EReference getDomain_Spreadsheets() {
 		return (EReference)domainEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -135,17 +137,8 @@ public class ToUseSpreadsheetPackageImpl extends EPackageImpl implements ToUseSp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDomain_SpreadsheetsCSV() {
-		return (EReference)domainEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getDomain_Tables() {
-		return (EReference)domainEClass.getEStructuralFeatures().get(2);
+		return (EReference)domainEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -249,8 +242,7 @@ public class ToUseSpreadsheetPackageImpl extends EPackageImpl implements ToUseSp
 
 		// Create classes and their features
 		domainEClass = createEClass(DOMAIN);
-		createEReference(domainEClass, DOMAIN__SPREADSHEETS_POI);
-		createEReference(domainEClass, DOMAIN__SPREADSHEETS_CSV);
+		createEReference(domainEClass, DOMAIN__SPREADSHEETS);
 		createEReference(domainEClass, DOMAIN__TABLES);
 
 		toUseTableEClass = createEClass(TO_USE_TABLE);
@@ -288,8 +280,7 @@ public class ToUseSpreadsheetPackageImpl extends EPackageImpl implements ToUseSp
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		SpreadsheetPOIPackage theSpreadsheetPOIPackage = (SpreadsheetPOIPackage)EPackage.Registry.INSTANCE.getEPackage(SpreadsheetPOIPackage.eNS_URI);
-		SpreadsheetCSVPackage theSpreadsheetCSVPackage = (SpreadsheetCSVPackage)EPackage.Registry.INSTANCE.getEPackage(SpreadsheetCSVPackage.eNS_URI);
+		SpreadsheetPackage theSpreadsheetPackage = (SpreadsheetPackage)EPackage.Registry.INSTANCE.getEPackage(SpreadsheetPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -299,8 +290,7 @@ public class ToUseSpreadsheetPackageImpl extends EPackageImpl implements ToUseSp
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDomain_SpreadsheetsPOI(), theSpreadsheetPOIPackage.getSpreadsheetPOI(), null, "SpreadsheetsPOI", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDomain_SpreadsheetsCSV(), theSpreadsheetCSVPackage.getSpreadsheetCSV(), null, "SpreadsheetsCSV", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDomain_Spreadsheets(), theSpreadsheetPackage.getSpreadsheet(), null, "Spreadsheets", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDomain_Tables(), this.getToUseTable(), null, "Tables", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(toUseTableEClass, ToUseTable.class, "ToUseTable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

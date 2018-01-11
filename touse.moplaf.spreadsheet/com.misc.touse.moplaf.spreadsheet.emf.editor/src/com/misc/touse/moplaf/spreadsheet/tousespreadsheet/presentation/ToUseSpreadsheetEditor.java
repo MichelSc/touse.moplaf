@@ -157,6 +157,8 @@ import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 import com.misc.touse.moplaf.spreadsheet.tousespreadsheet.ToUseSpreadsheetPackage;
 import com.misc.touse.moplaf.spreadsheet.tousespreadsheet.provider.ToUseSpreadsheetItemProviderAdapterFactory;
 import com.misc.common.moplaf.emf.editor.provider.AdapterFactoryContentProviderExtended;
+import com.misc.common.moplaf.file.FilePackage;
+import com.misc.common.moplaf.file.provider.FileItemProviderAdapterFactory;
 import com.misc.common.moplaf.spreadsheet.SpreadsheetPackage;
 import com.misc.common.moplaf.spreadsheet.provider.SpreadsheetItemProviderAdapterFactory;
 
@@ -411,6 +413,8 @@ public class ToUseSpreadsheetEditor
 	 */
 	protected EContentAdapter problemIndicationAdapter =
 		new EContentAdapter() {
+			protected boolean dispatching;
+
 			@Override
 			public void notifyChanged(Notification notification) {
 				if (notification.getNotifier() instanceof Resource) {
@@ -426,21 +430,26 @@ public class ToUseSpreadsheetEditor
 							else {
 								resourceToDiagnosticMap.remove(resource);
 							}
-
-							if (updateProblemIndication) {
-								getSite().getShell().getDisplay().asyncExec
-									(new Runnable() {
-										 public void run() {
-											 updateProblemIndication();
-										 }
-									 });
-							}
+							dispatchUpdateProblemIndication();
 							break;
 						}
 					}
 				}
 				else {
 					super.notifyChanged(notification);
+				}
+			}
+
+			protected void dispatchUpdateProblemIndication() {
+				if (updateProblemIndication && !dispatching) {
+					dispatching = true;
+					getSite().getShell().getDisplay().asyncExec
+						(new Runnable() {
+							 public void run() {
+								 dispatching = false;
+								 updateProblemIndication();
+							 }
+						 });
 				}
 			}
 
@@ -453,14 +462,7 @@ public class ToUseSpreadsheetEditor
 			protected void unsetTarget(Resource target) {
 				basicUnsetTarget(target);
 				resourceToDiagnosticMap.remove(target);
-				if (updateProblemIndication) {
-					getSite().getShell().getDisplay().asyncExec
-						(new Runnable() {
-							 public void run() {
-								 updateProblemIndication();
-							 }
-						 });
-				}
+				dispatchUpdateProblemIndication();
 			}
 		};
 
@@ -658,14 +660,11 @@ public class ToUseSpreadsheetEditor
 			}
 
 			if (markerHelper.hasMarkers(editingDomain.getResourceSet())) {
-				markerHelper.deleteMarkers(editingDomain.getResourceSet());
-				if (diagnostic.getSeverity() != Diagnostic.OK) {
-					try {
-						markerHelper.createMarkers(diagnostic);
-					}
-					catch (CoreException exception) {
-						ToUseSpreadsheetEditorPlugin.INSTANCE.log(exception);
-					}
+				try {
+					markerHelper.updateMarkers(diagnostic);
+				}
+				catch (CoreException exception) {
+					ToUseSpreadsheetEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 		}
@@ -712,6 +711,7 @@ public class ToUseSpreadsheetEditor
 		adapterFactory.addAdapterFactory(new SpreadsheetItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new SpreadsheetCSVItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new SpreadsheetPOIItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new FileItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
 		// Create the command stack that will notify this editor as commands are executed.
@@ -1049,6 +1049,7 @@ public class ToUseSpreadsheetEditor
 
 				selectionViewer = (TreeViewer)viewerPane.getViewer();
 				selectionViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory));
+				selectionViewer.setUseHashlookup(true);
 
 				selectionViewer.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory));
 				selectionViewer.setInput(editingDomain.getResourceSet());
@@ -1354,6 +1355,7 @@ public class ToUseSpreadsheetEditor
 
 					// Set up the tree viewer.
 					//
+					contentOutlineViewer.setUseHashlookup(true);
 					contentOutlineViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory));
 					contentOutlineViewer.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory));
 					contentOutlineViewer.setInput(editingDomain.getResourceSet());
@@ -1420,7 +1422,7 @@ public class ToUseSpreadsheetEditor
 				}
 			};
 		AdapterFactoryContentProviderExtended contentProvider =new AdapterFactoryContentProviderExtended(this.adapterFactory);	
-		contentProvider.editFilePaths.addSelector(SpreadsheetPackage.Literals.SPREADSHEET__FILE_PATH);
+		contentProvider.editFilePaths.addSelector(FilePackage.Literals.FILE_LOCAL__FILE_PATH);
 		contentProvider.editColors.addSelector(ToUseSpreadsheetPackage.Literals.TO_USE_TABLE_ITEM__LONG_ATTRIBUTE_COLOR);
 		contentProvider.editColors.addSelector(ToUseSpreadsheetPackage.Literals.TO_USE_TABLE_ITEM__LONG_ATTRIBUTE_TEXT_COLOR);
 		
@@ -1505,7 +1507,9 @@ public class ToUseSpreadsheetEditor
 					// Save the resources to the file system.
 					//
 					boolean first = true;
-					for (Resource resource : editingDomain.getResourceSet().getResources()) {
+					List<Resource> resources = editingDomain.getResourceSet().getResources();
+					for (int i = 0; i < resources.size(); ++i) {
+						Resource resource = resources.get(i);
 						if ((first || !resource.getContents().isEmpty() || isPersisted(resource)) && !editingDomain.isReadOnly(resource)) {
 							try {
 								long timeStamp = resource.getTimeStamp();

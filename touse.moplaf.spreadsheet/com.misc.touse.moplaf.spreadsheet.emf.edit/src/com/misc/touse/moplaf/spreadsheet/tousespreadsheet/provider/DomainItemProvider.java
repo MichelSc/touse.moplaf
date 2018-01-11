@@ -80,8 +80,7 @@ public class DomainItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ToUseSpreadsheetPackage.Literals.DOMAIN__SPREADSHEETS_POI);
-			childrenFeatures.add(ToUseSpreadsheetPackage.Literals.DOMAIN__SPREADSHEETS_CSV);
+			childrenFeatures.add(ToUseSpreadsheetPackage.Literals.DOMAIN__SPREADSHEETS);
 			childrenFeatures.add(ToUseSpreadsheetPackage.Literals.DOMAIN__TABLES);
 		}
 		return childrenFeatures;
@@ -135,8 +134,7 @@ public class DomainItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Domain.class)) {
-			case ToUseSpreadsheetPackage.DOMAIN__SPREADSHEETS_POI:
-			case ToUseSpreadsheetPackage.DOMAIN__SPREADSHEETS_CSV:
+			case ToUseSpreadsheetPackage.DOMAIN__SPREADSHEETS:
 			case ToUseSpreadsheetPackage.DOMAIN__TABLES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -157,13 +155,13 @@ public class DomainItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ToUseSpreadsheetPackage.Literals.DOMAIN__SPREADSHEETS_POI,
-				 SpreadsheetPOIFactory.eINSTANCE.createSpreadsheetPOI()));
+				(ToUseSpreadsheetPackage.Literals.DOMAIN__SPREADSHEETS,
+				 SpreadsheetCSVFactory.eINSTANCE.createSpreadsheetCSV()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ToUseSpreadsheetPackage.Literals.DOMAIN__SPREADSHEETS_CSV,
-				 SpreadsheetCSVFactory.eINSTANCE.createSpreadsheetCSV()));
+				(ToUseSpreadsheetPackage.Literals.DOMAIN__SPREADSHEETS,
+				 SpreadsheetPOIFactory.eINSTANCE.createSpreadsheetPOI()));
 
 		newChildDescriptors.add
 			(createChildParameter

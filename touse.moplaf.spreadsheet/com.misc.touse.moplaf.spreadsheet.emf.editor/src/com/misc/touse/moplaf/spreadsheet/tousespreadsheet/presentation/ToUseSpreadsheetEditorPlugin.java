@@ -2,6 +2,7 @@
  */
 package com.misc.touse.moplaf.spreadsheet.tousespreadsheet.presentation;
 
+import com.misc.common.moplaf.file.provider.FileEditPlugin;
 import com.misc.common.moplaf.spreadsheet.provider.SpreadsheetEditPlugin;
 
 import com.misc.common.moplaf.spreadsheet.spreadsheetcsv.provider.SpreadsheetCSVEditPlugin;
@@ -49,6 +50,7 @@ public final class ToUseSpreadsheetEditorPlugin extends EMFPlugin {
 				SpreadsheetEditPlugin.INSTANCE,
 				SpreadsheetCSVEditPlugin.INSTANCE,
 				SpreadsheetpoiEditPlugin.INSTANCE,
+				FileEditPlugin.INSTANCE,
 			});
 	}
 

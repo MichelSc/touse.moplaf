@@ -67,22 +67,13 @@ public interface ToUseSpreadsheetPackage extends EPackage {
 	int DOMAIN = 0;
 
 	/**
-	 * The feature id for the '<em><b>Spreadsheets POI</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Spreadsheets</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN__SPREADSHEETS_POI = 0;
-
-	/**
-	 * The feature id for the '<em><b>Spreadsheets CSV</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN__SPREADSHEETS_CSV = 1;
+	int DOMAIN__SPREADSHEETS = 0;
 
 	/**
 	 * The feature id for the '<em><b>Tables</b></em>' containment reference list.
@@ -91,7 +82,7 @@ public interface ToUseSpreadsheetPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN__TABLES = 2;
+	int DOMAIN__TABLES = 1;
 
 	/**
 	 * The number of structural features of the '<em>Domain</em>' class.
@@ -100,7 +91,7 @@ public interface ToUseSpreadsheetPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_FEATURE_COUNT = 3;
+	int DOMAIN_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Domain</em>' class.
@@ -234,26 +225,15 @@ public interface ToUseSpreadsheetPackage extends EPackage {
 	EClass getDomain();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.spreadsheet.tousespreadsheet.Domain#getSpreadsheetsPOI <em>Spreadsheets POI</em>}'.
+	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.spreadsheet.tousespreadsheet.Domain#getSpreadsheets <em>Spreadsheets</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Spreadsheets POI</em>'.
-	 * @see com.misc.touse.moplaf.spreadsheet.tousespreadsheet.Domain#getSpreadsheetsPOI()
+	 * @return the meta object for the containment reference list '<em>Spreadsheets</em>'.
+	 * @see com.misc.touse.moplaf.spreadsheet.tousespreadsheet.Domain#getSpreadsheets()
 	 * @see #getDomain()
 	 * @generated
 	 */
-	EReference getDomain_SpreadsheetsPOI();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.spreadsheet.tousespreadsheet.Domain#getSpreadsheetsCSV <em>Spreadsheets CSV</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Spreadsheets CSV</em>'.
-	 * @see com.misc.touse.moplaf.spreadsheet.tousespreadsheet.Domain#getSpreadsheetsCSV()
-	 * @see #getDomain()
-	 * @generated
-	 */
-	EReference getDomain_SpreadsheetsCSV();
+	EReference getDomain_Spreadsheets();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.spreadsheet.tousespreadsheet.Domain#getTables <em>Tables</em>}'.
@@ -386,20 +366,12 @@ public interface ToUseSpreadsheetPackage extends EPackage {
 		EClass DOMAIN = eINSTANCE.getDomain();
 
 		/**
-		 * The meta object literal for the '<em><b>Spreadsheets POI</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Spreadsheets</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DOMAIN__SPREADSHEETS_POI = eINSTANCE.getDomain_SpreadsheetsPOI();
-
-		/**
-		 * The meta object literal for the '<em><b>Spreadsheets CSV</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DOMAIN__SPREADSHEETS_CSV = eINSTANCE.getDomain_SpreadsheetsCSV();
+		EReference DOMAIN__SPREADSHEETS = eINSTANCE.getDomain_Spreadsheets();
 
 		/**
 		 * The meta object literal for the '<em><b>Tables</b></em>' containment reference list feature.

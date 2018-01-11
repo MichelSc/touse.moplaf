@@ -2,9 +2,7 @@
  */
 package com.misc.touse.moplaf.spreadsheet.tousespreadsheet.impl;
 
-import com.misc.common.moplaf.spreadsheet.spreadsheetcsv.SpreadsheetCSV;
-import com.misc.common.moplaf.spreadsheet.spreadsheetpoi.SpreadsheetPOI;
-
+import com.misc.common.moplaf.spreadsheet.Spreadsheet;
 import com.misc.touse.moplaf.spreadsheet.tousespreadsheet.Domain;
 import com.misc.touse.moplaf.spreadsheet.tousespreadsheet.ToUseSpreadsheetPackage;
 
@@ -27,8 +25,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link com.misc.touse.moplaf.spreadsheet.tousespreadsheet.impl.DomainImpl#getSpreadsheetsPOI <em>Spreadsheets POI</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.spreadsheet.tousespreadsheet.impl.DomainImpl#getSpreadsheetsCSV <em>Spreadsheets CSV</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.spreadsheet.tousespreadsheet.impl.DomainImpl#getSpreadsheets <em>Spreadsheets</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.spreadsheet.tousespreadsheet.impl.DomainImpl#getTables <em>Tables</em>}</li>
  * </ul>
  *
@@ -36,24 +33,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	/**
-	 * The cached value of the '{@link #getSpreadsheetsPOI() <em>Spreadsheets POI</em>}' containment reference list.
+	 * The cached value of the '{@link #getSpreadsheets() <em>Spreadsheets</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSpreadsheetsPOI()
+	 * @see #getSpreadsheets()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<SpreadsheetPOI> spreadsheetsPOI;
-
-	/**
-	 * The cached value of the '{@link #getSpreadsheetsCSV() <em>Spreadsheets CSV</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSpreadsheetsCSV()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<SpreadsheetCSV> spreadsheetsCSV;
+	protected EList<Spreadsheet> spreadsheets;
 
 	/**
 	 * The cached value of the '{@link #getTables() <em>Tables</em>}' containment reference list.
@@ -89,23 +76,11 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<SpreadsheetPOI> getSpreadsheetsPOI() {
-		if (spreadsheetsPOI == null) {
-			spreadsheetsPOI = new EObjectContainmentEList<SpreadsheetPOI>(SpreadsheetPOI.class, this, ToUseSpreadsheetPackage.DOMAIN__SPREADSHEETS_POI);
+	public EList<Spreadsheet> getSpreadsheets() {
+		if (spreadsheets == null) {
+			spreadsheets = new EObjectContainmentEList<Spreadsheet>(Spreadsheet.class, this, ToUseSpreadsheetPackage.DOMAIN__SPREADSHEETS);
 		}
-		return spreadsheetsPOI;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<SpreadsheetCSV> getSpreadsheetsCSV() {
-		if (spreadsheetsCSV == null) {
-			spreadsheetsCSV = new EObjectContainmentEList<SpreadsheetCSV>(SpreadsheetCSV.class, this, ToUseSpreadsheetPackage.DOMAIN__SPREADSHEETS_CSV);
-		}
-		return spreadsheetsCSV;
+		return spreadsheets;
 	}
 
 	/**
@@ -128,10 +103,8 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ToUseSpreadsheetPackage.DOMAIN__SPREADSHEETS_POI:
-				return ((InternalEList<?>)getSpreadsheetsPOI()).basicRemove(otherEnd, msgs);
-			case ToUseSpreadsheetPackage.DOMAIN__SPREADSHEETS_CSV:
-				return ((InternalEList<?>)getSpreadsheetsCSV()).basicRemove(otherEnd, msgs);
+			case ToUseSpreadsheetPackage.DOMAIN__SPREADSHEETS:
+				return ((InternalEList<?>)getSpreadsheets()).basicRemove(otherEnd, msgs);
 			case ToUseSpreadsheetPackage.DOMAIN__TABLES:
 				return ((InternalEList<?>)getTables()).basicRemove(otherEnd, msgs);
 		}
@@ -146,10 +119,8 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ToUseSpreadsheetPackage.DOMAIN__SPREADSHEETS_POI:
-				return getSpreadsheetsPOI();
-			case ToUseSpreadsheetPackage.DOMAIN__SPREADSHEETS_CSV:
-				return getSpreadsheetsCSV();
+			case ToUseSpreadsheetPackage.DOMAIN__SPREADSHEETS:
+				return getSpreadsheets();
 			case ToUseSpreadsheetPackage.DOMAIN__TABLES:
 				return getTables();
 		}
@@ -165,13 +136,9 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ToUseSpreadsheetPackage.DOMAIN__SPREADSHEETS_POI:
-				getSpreadsheetsPOI().clear();
-				getSpreadsheetsPOI().addAll((Collection<? extends SpreadsheetPOI>)newValue);
-				return;
-			case ToUseSpreadsheetPackage.DOMAIN__SPREADSHEETS_CSV:
-				getSpreadsheetsCSV().clear();
-				getSpreadsheetsCSV().addAll((Collection<? extends SpreadsheetCSV>)newValue);
+			case ToUseSpreadsheetPackage.DOMAIN__SPREADSHEETS:
+				getSpreadsheets().clear();
+				getSpreadsheets().addAll((Collection<? extends Spreadsheet>)newValue);
 				return;
 			case ToUseSpreadsheetPackage.DOMAIN__TABLES:
 				getTables().clear();
@@ -189,11 +156,8 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ToUseSpreadsheetPackage.DOMAIN__SPREADSHEETS_POI:
-				getSpreadsheetsPOI().clear();
-				return;
-			case ToUseSpreadsheetPackage.DOMAIN__SPREADSHEETS_CSV:
-				getSpreadsheetsCSV().clear();
+			case ToUseSpreadsheetPackage.DOMAIN__SPREADSHEETS:
+				getSpreadsheets().clear();
 				return;
 			case ToUseSpreadsheetPackage.DOMAIN__TABLES:
 				getTables().clear();
@@ -210,10 +174,8 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ToUseSpreadsheetPackage.DOMAIN__SPREADSHEETS_POI:
-				return spreadsheetsPOI != null && !spreadsheetsPOI.isEmpty();
-			case ToUseSpreadsheetPackage.DOMAIN__SPREADSHEETS_CSV:
-				return spreadsheetsCSV != null && !spreadsheetsCSV.isEmpty();
+			case ToUseSpreadsheetPackage.DOMAIN__SPREADSHEETS:
+				return spreadsheets != null && !spreadsheets.isEmpty();
 			case ToUseSpreadsheetPackage.DOMAIN__TABLES:
 				return tables != null && !tables.isEmpty();
 		}
