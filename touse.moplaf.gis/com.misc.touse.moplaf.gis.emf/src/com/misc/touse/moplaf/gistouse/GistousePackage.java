@@ -56,32 +56,14 @@ public interface GistousePackage extends EPackage {
 	GistousePackage eINSTANCE = com.misc.touse.moplaf.gistouse.impl.GistousePackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link com.misc.touse.moplaf.gistouse.impl.ToUseGisImpl <em>To Use Gis</em>}' class.
+	 * The meta object id for the '{@link com.misc.touse.moplaf.gistouse.impl.DomainImpl <em>Domain</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see com.misc.touse.moplaf.gistouse.impl.ToUseGisImpl
-	 * @see com.misc.touse.moplaf.gistouse.impl.GistousePackageImpl#getToUseGis()
+	 * @see com.misc.touse.moplaf.gistouse.impl.DomainImpl
+	 * @see com.misc.touse.moplaf.gistouse.impl.GistousePackageImpl#getDomain()
 	 * @generated
 	 */
-	int TO_USE_GIS = 0;
-
-	/**
-	 * The feature id for the '<em><b>Calculators</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_GIS__CALCULATORS = 0;
-
-	/**
-	 * The feature id for the '<em><b>Matrices</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_GIS__MATRICES = 1;
+	int DOMAIN = 0;
 
 	/**
 	 * The feature id for the '<em><b>Locations</b></em>' containment reference list.
@@ -90,109 +72,67 @@ public interface GistousePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_GIS__LOCATIONS = 2;
+	int DOMAIN__LOCATIONS = 0;
 
 	/**
-	 * The feature id for the '<em><b>Geocoders G</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Matrices</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_GIS__GEOCODERS_G = 3;
+	int DOMAIN__MATRICES = 1;
 
 	/**
-	 * The feature id for the '<em><b>Geocoders GG</b></em>' containment reference list.
+	 * The number of structural features of the '<em>Domain</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_GIS__GEOCODERS_GG = 4;
+	int DOMAIN_FEATURE_COUNT = 2;
 
 	/**
-	 * The number of structural features of the '<em>To Use Gis</em>' class.
+	 * The number of operations of the '<em>Domain</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_GIS_FEATURE_COUNT = 5;
+	int DOMAIN_OPERATION_COUNT = 0;
+
 
 	/**
-	 * The number of operations of the '<em>To Use Gis</em>' class.
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.gistouse.Domain <em>Domain</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_GIS_OPERATION_COUNT = 0;
-
-
-	/**
-	 * Returns the meta object for class '{@link com.misc.touse.moplaf.gistouse.ToUseGis <em>To Use Gis</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>To Use Gis</em>'.
-	 * @see com.misc.touse.moplaf.gistouse.ToUseGis
+	 * @return the meta object for class '<em>Domain</em>'.
+	 * @see com.misc.touse.moplaf.gistouse.Domain
 	 * @generated
 	 */
-	EClass getToUseGis();
+	EClass getDomain();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.gistouse.ToUseGis#getCalculators <em>Calculators</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Calculators</em>'.
-	 * @see com.misc.touse.moplaf.gistouse.ToUseGis#getCalculators()
-	 * @see #getToUseGis()
-	 * @generated
-	 */
-	EReference getToUseGis_Calculators();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.gistouse.ToUseGis#getLocations <em>Locations</em>}'.
+	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.gistouse.Domain#getLocations <em>Locations</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Locations</em>'.
-	 * @see com.misc.touse.moplaf.gistouse.ToUseGis#getLocations()
-	 * @see #getToUseGis()
+	 * @see com.misc.touse.moplaf.gistouse.Domain#getLocations()
+	 * @see #getDomain()
 	 * @generated
 	 */
-	EReference getToUseGis_Locations();
+	EReference getDomain_Locations();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.gistouse.ToUseGis#getGeocodersG <em>Geocoders G</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Geocoders G</em>'.
-	 * @see com.misc.touse.moplaf.gistouse.ToUseGis#getGeocodersG()
-	 * @see #getToUseGis()
-	 * @generated
-	 */
-	EReference getToUseGis_GeocodersG();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.gistouse.ToUseGis#getGeocodersGG <em>Geocoders GG</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Geocoders GG</em>'.
-	 * @see com.misc.touse.moplaf.gistouse.ToUseGis#getGeocodersGG()
-	 * @see #getToUseGis()
-	 * @generated
-	 */
-	EReference getToUseGis_GeocodersGG();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.gistouse.ToUseGis#getMatrices <em>Matrices</em>}'.
+	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.gistouse.Domain#getMatrices <em>Matrices</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Matrices</em>'.
-	 * @see com.misc.touse.moplaf.gistouse.ToUseGis#getMatrices()
-	 * @see #getToUseGis()
+	 * @see com.misc.touse.moplaf.gistouse.Domain#getMatrices()
+	 * @see #getDomain()
 	 * @generated
 	 */
-	EReference getToUseGis_Matrices();
+	EReference getDomain_Matrices();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -218,22 +158,14 @@ public interface GistousePackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link com.misc.touse.moplaf.gistouse.impl.ToUseGisImpl <em>To Use Gis</em>}' class.
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.gistouse.impl.DomainImpl <em>Domain</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see com.misc.touse.moplaf.gistouse.impl.ToUseGisImpl
-		 * @see com.misc.touse.moplaf.gistouse.impl.GistousePackageImpl#getToUseGis()
+		 * @see com.misc.touse.moplaf.gistouse.impl.DomainImpl
+		 * @see com.misc.touse.moplaf.gistouse.impl.GistousePackageImpl#getDomain()
 		 * @generated
 		 */
-		EClass TO_USE_GIS = eINSTANCE.getToUseGis();
-
-		/**
-		 * The meta object literal for the '<em><b>Calculators</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TO_USE_GIS__CALCULATORS = eINSTANCE.getToUseGis_Calculators();
+		EClass DOMAIN = eINSTANCE.getDomain();
 
 		/**
 		 * The meta object literal for the '<em><b>Locations</b></em>' containment reference list feature.
@@ -241,23 +173,7 @@ public interface GistousePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TO_USE_GIS__LOCATIONS = eINSTANCE.getToUseGis_Locations();
-
-		/**
-		 * The meta object literal for the '<em><b>Geocoders G</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TO_USE_GIS__GEOCODERS_G = eINSTANCE.getToUseGis_GeocodersG();
-
-		/**
-		 * The meta object literal for the '<em><b>Geocoders GG</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TO_USE_GIS__GEOCODERS_GG = eINSTANCE.getToUseGis_GeocodersGG();
+		EReference DOMAIN__LOCATIONS = eINSTANCE.getDomain_Locations();
 
 		/**
 		 * The meta object literal for the '<em><b>Matrices</b></em>' containment reference list feature.
@@ -265,7 +181,7 @@ public interface GistousePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TO_USE_GIS__MATRICES = eINSTANCE.getToUseGis_Matrices();
+		EReference DOMAIN__MATRICES = eINSTANCE.getDomain_Matrices();
 
 	}
 

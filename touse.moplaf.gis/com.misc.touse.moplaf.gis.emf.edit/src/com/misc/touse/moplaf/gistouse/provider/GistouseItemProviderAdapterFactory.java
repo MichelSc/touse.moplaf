@@ -72,26 +72,26 @@ public class GistouseItemProviderAdapterFactory extends GistouseAdapterFactory i
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.gistouse.ToUseGis} instances.
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.gistouse.Domain} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ToUseGisItemProvider toUseGisItemProvider;
+	protected DomainItemProvider domainItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link com.misc.touse.moplaf.gistouse.ToUseGis}.
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.gistouse.Domain}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createToUseGisAdapter() {
-		if (toUseGisItemProvider == null) {
-			toUseGisItemProvider = new ToUseGisItemProvider(this);
+	public Adapter createDomainAdapter() {
+		if (domainItemProvider == null) {
+			domainItemProvider = new DomainItemProvider(this);
 		}
 
-		return toUseGisItemProvider;
+		return domainItemProvider;
 	}
 
 	/**
@@ -193,7 +193,7 @@ public class GistouseItemProviderAdapterFactory extends GistouseAdapterFactory i
 	 * @generated
 	 */
 	public void dispose() {
-		if (toUseGisItemProvider != null) toUseGisItemProvider.dispose();
+		if (domainItemProvider != null) domainItemProvider.dispose();
 	}
 
 }

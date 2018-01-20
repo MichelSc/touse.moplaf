@@ -22,13 +22,13 @@ public interface GistouseFactory extends EFactory {
 	GistouseFactory eINSTANCE = com.misc.touse.moplaf.gistouse.impl.GistouseFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>To Use Gis</em>'.
+	 * Returns a new object of class '<em>Domain</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>To Use Gis</em>'.
+	 * @return a new object of class '<em>Domain</em>'.
 	 * @generated
 	 */
-	ToUseGis createToUseGis();
+	Domain createDomain();
 
 	/**
 	 * Returns the package supported by this factory.

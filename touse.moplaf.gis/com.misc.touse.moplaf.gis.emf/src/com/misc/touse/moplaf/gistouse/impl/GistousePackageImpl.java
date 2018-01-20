@@ -2,12 +2,11 @@
  */
 package com.misc.touse.moplaf.gistouse.impl;
 
-import com.misc.common.moplaf.gis.GisGoogle.GisGooglePackage;
 import com.misc.common.moplaf.gis.GisPackage;
-import com.misc.common.moplaf.gis.gisgisgraphy.GisgisgraphyPackage;
+import com.misc.common.moplaf.job.JobPackage;
+import com.misc.touse.moplaf.gistouse.Domain;
 import com.misc.touse.moplaf.gistouse.GistouseFactory;
 import com.misc.touse.moplaf.gistouse.GistousePackage;
-import com.misc.touse.moplaf.gistouse.ToUseGis;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -25,8 +24,7 @@ public class GistousePackageImpl extends EPackageImpl implements GistousePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass toUseGisEClass = null;
-
+	private EClass domainEClass = null;
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
@@ -74,7 +72,8 @@ public class GistousePackageImpl extends EPackageImpl implements GistousePackage
 		isInited = true;
 
 		// Initialize simple dependencies
-		GisgisgraphyPackage.eINSTANCE.eClass();
+		GisPackage.eINSTANCE.eClass();
+		JobPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theGistousePackage.createPackageContents();
@@ -96,8 +95,8 @@ public class GistousePackageImpl extends EPackageImpl implements GistousePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getToUseGis() {
-		return toUseGisEClass;
+	public EClass getDomain() {
+		return domainEClass;
 	}
 
 	/**
@@ -105,8 +104,8 @@ public class GistousePackageImpl extends EPackageImpl implements GistousePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getToUseGis_Calculators() {
-		return (EReference)toUseGisEClass.getEStructuralFeatures().get(0);
+	public EReference getDomain_Locations() {
+		return (EReference)domainEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -114,35 +113,8 @@ public class GistousePackageImpl extends EPackageImpl implements GistousePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getToUseGis_Locations() {
-		return (EReference)toUseGisEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getToUseGis_GeocodersG() {
-		return (EReference)toUseGisEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getToUseGis_GeocodersGG() {
-		return (EReference)toUseGisEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getToUseGis_Matrices() {
-		return (EReference)toUseGisEClass.getEStructuralFeatures().get(1);
+	public EReference getDomain_Matrices() {
+		return (EReference)domainEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -173,12 +145,9 @@ public class GistousePackageImpl extends EPackageImpl implements GistousePackage
 		isCreated = true;
 
 		// Create classes and their features
-		toUseGisEClass = createEClass(TO_USE_GIS);
-		createEReference(toUseGisEClass, TO_USE_GIS__CALCULATORS);
-		createEReference(toUseGisEClass, TO_USE_GIS__MATRICES);
-		createEReference(toUseGisEClass, TO_USE_GIS__LOCATIONS);
-		createEReference(toUseGisEClass, TO_USE_GIS__GEOCODERS_G);
-		createEReference(toUseGisEClass, TO_USE_GIS__GEOCODERS_GG);
+		domainEClass = createEClass(DOMAIN);
+		createEReference(domainEClass, DOMAIN__LOCATIONS);
+		createEReference(domainEClass, DOMAIN__MATRICES);
 	}
 
 	/**
@@ -205,9 +174,7 @@ public class GistousePackageImpl extends EPackageImpl implements GistousePackage
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		GisGooglePackage theGisGooglePackage = (GisGooglePackage)EPackage.Registry.INSTANCE.getEPackage(GisGooglePackage.eNS_URI);
 		GisPackage theGisPackage = (GisPackage)EPackage.Registry.INSTANCE.getEPackage(GisPackage.eNS_URI);
-		GisgisgraphyPackage theGisgisgraphyPackage = (GisgisgraphyPackage)EPackage.Registry.INSTANCE.getEPackage(GisgisgraphyPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -216,12 +183,9 @@ public class GistousePackageImpl extends EPackageImpl implements GistousePackage
 		// Add supertypes to classes
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(toUseGisEClass, ToUseGis.class, "ToUseGis", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getToUseGis_Calculators(), theGisGooglePackage.getGisDistanceMatrixCalculatorGoogleWS(), null, "calculators", null, 0, -1, ToUseGis.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getToUseGis_Matrices(), theGisPackage.getGisDistanceMatrix(), null, "matrices", null, 0, -1, ToUseGis.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getToUseGis_Locations(), theGisPackage.getGisLocation(), null, "locations", null, 0, -1, ToUseGis.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getToUseGis_GeocodersG(), theGisGooglePackage.getGisAddressGeocoderGoogleWS(), null, "geocodersG", null, 0, -1, ToUseGis.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getToUseGis_GeocodersGG(), theGisgisgraphyPackage.getGisAddressGeocoderGisgraphy(), null, "geocodersGG", null, 0, -1, ToUseGis.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDomain_Locations(), theGisPackage.getGisLocation(), null, "Locations", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDomain_Matrices(), theGisPackage.getGisRoutesHolder(), null, "Matrices", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

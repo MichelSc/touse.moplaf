@@ -2,21 +2,12 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="gistouse" nsURI="http://www.misc.com/touse.moplaf.solver.emf"
     nsPrefix="tgis">
-  <eClassifiers xsi:type="ecore:EClass" name="ToUseGis">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="calculators" upperBound="-1"
-        eType="ecore:EClass ../../com.misc.common.moplaf.gis.google.emf/model/gisgoogle.ecore#//GisDistanceMatrixCalculatorGoogleWS"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="matrices" upperBound="-1"
-        eType="ecore:EClass ../../com.misc.common.moplaf.gis.emf/model/gis.ecore#//GisDistanceMatrix"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="locations" upperBound="-1"
+  <eClassifiers xsi:type="ecore:EClass" name="Domain">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Locations" upperBound="-1"
         eType="ecore:EClass ../../com.misc.common.moplaf.gis.emf/model/gis.ecore#//GisLocation"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="geocodersG" upperBound="-1"
-        eType="ecore:EClass ../../com.misc.common.moplaf.gis.google.emf/model/gisgoogle.ecore#//GisAddressGeocoderGoogleWS"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="geocodersGG" upperBound="-1"
-        eType="ecore:EClass ../../com.misc.common.moplaf.gis.gisgraphy.emf/model/gisgisgraphy.ecore#//GisAddressGeocoderGisgraphy"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Matrices" upperBound="-1"
+        eType="ecore:EClass ../../com.misc.common.moplaf.gis.emf/model/gis.ecore#//GisRoutesHolder"
         containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

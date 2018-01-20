@@ -68,8 +68,8 @@ public class GistouseAdapterFactory extends AdapterFactoryImpl {
 	protected GistouseSwitch<Adapter> modelSwitch =
 		new GistouseSwitch<Adapter>() {
 			@Override
-			public Adapter caseToUseGis(ToUseGis object) {
-				return createToUseGisAdapter();
+			public Adapter caseDomain(Domain object) {
+				return createDomainAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -92,16 +92,16 @@ public class GistouseAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.gistouse.ToUseGis <em>To Use Gis</em>}'.
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.gistouse.Domain <em>Domain</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see com.misc.touse.moplaf.gistouse.ToUseGis
+	 * @see com.misc.touse.moplaf.gistouse.Domain
 	 * @generated
 	 */
-	public Adapter createToUseGisAdapter() {
+	public Adapter createDomainAdapter() {
 		return null;
 	}
 

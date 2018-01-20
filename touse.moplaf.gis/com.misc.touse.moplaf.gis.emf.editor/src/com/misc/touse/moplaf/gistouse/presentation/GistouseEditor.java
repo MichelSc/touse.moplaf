@@ -116,9 +116,8 @@ import org.eclipse.emf.edit.ui.util.EditUIMarkerHelper;
 import org.eclipse.emf.edit.ui.util.EditUIUtil;
 import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 import com.misc.touse.moplaf.gistouse.provider.GistouseItemProviderAdapterFactory;
-import com.misc.common.moplaf.gis.GisGoogle.provider.GisGoogleItemProviderAdapterFactory;
-import com.misc.common.moplaf.gis.gisgisgraphy.provider.GisgisgraphyItemProviderAdapterFactory;
 import com.misc.common.moplaf.gis.provider.GisItemProviderAdapterFactory;
+import com.misc.common.moplaf.job.provider.JobItemProviderAdapterFactory;
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 
 
@@ -367,6 +366,8 @@ public class GistouseEditor
 	 */
 	protected EContentAdapter problemIndicationAdapter =
 		new EContentAdapter() {
+			protected boolean dispatching;
+
 			@Override
 			public void notifyChanged(Notification notification) {
 				if (notification.getNotifier() instanceof Resource) {
@@ -382,21 +383,26 @@ public class GistouseEditor
 							else {
 								resourceToDiagnosticMap.remove(resource);
 							}
-
-							if (updateProblemIndication) {
-								getSite().getShell().getDisplay().asyncExec
-									(new Runnable() {
-										 public void run() {
-											 updateProblemIndication();
-										 }
-									 });
-							}
+							dispatchUpdateProblemIndication();
 							break;
 						}
 					}
 				}
 				else {
 					super.notifyChanged(notification);
+				}
+			}
+
+			protected void dispatchUpdateProblemIndication() {
+				if (updateProblemIndication && !dispatching) {
+					dispatching = true;
+					getSite().getShell().getDisplay().asyncExec
+						(new Runnable() {
+							 public void run() {
+								 dispatching = false;
+								 updateProblemIndication();
+							 }
+						 });
 				}
 			}
 
@@ -409,14 +415,7 @@ public class GistouseEditor
 			protected void unsetTarget(Resource target) {
 				basicUnsetTarget(target);
 				resourceToDiagnosticMap.remove(target);
-				if (updateProblemIndication) {
-					getSite().getShell().getDisplay().asyncExec
-						(new Runnable() {
-							 public void run() {
-								 updateProblemIndication();
-							 }
-						 });
-				}
+				dispatchUpdateProblemIndication();
 			}
 		};
 
@@ -614,14 +613,11 @@ public class GistouseEditor
 			}
 
 			if (markerHelper.hasMarkers(editingDomain.getResourceSet())) {
-				markerHelper.deleteMarkers(editingDomain.getResourceSet());
-				if (diagnostic.getSeverity() != Diagnostic.OK) {
-					try {
-						markerHelper.createMarkers(diagnostic);
-					}
-					catch (CoreException exception) {
-						TousegisEditorPlugin.INSTANCE.log(exception);
-					}
+				try {
+					markerHelper.updateMarkers(diagnostic);
+				}
+				catch (CoreException exception) {
+					TousegisEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 		}
@@ -666,8 +662,7 @@ public class GistouseEditor
 		adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new GistouseItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new GisItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new GisgisgraphyItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new GisGoogleItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new JobItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
 		// Create the command stack that will notify this editor as commands are executed.
@@ -915,7 +910,7 @@ public class GistouseEditor
 	 * @generated
 	 */
 	public void createModel() {
-		URI resourceURI = EditUIUtil.getURI(getEditorInput());
+		URI resourceURI = EditUIUtil.getURI(getEditorInput(), editingDomain.getResourceSet().getURIConverter());
 		Exception exception = null;
 		Resource resource = null;
 		try {
@@ -943,10 +938,11 @@ public class GistouseEditor
 	 * @generated
 	 */
 	public Diagnostic analyzeResourceProblems(Resource resource, Exception exception) {
-		if (!resource.getErrors().isEmpty() || !resource.getWarnings().isEmpty()) {
+		boolean hasErrors = !resource.getErrors().isEmpty();
+		if (hasErrors || !resource.getWarnings().isEmpty()) {
 			BasicDiagnostic basicDiagnostic =
 				new BasicDiagnostic
-					(Diagnostic.ERROR,
+					(hasErrors ? Diagnostic.ERROR : Diagnostic.WARNING,
 					 "com.misc.touse.moplaf.gis.emf.editor",
 					 0,
 					 getString("_UI_CreateModelError_message", resource.getURI()),
@@ -1004,6 +1000,7 @@ public class GistouseEditor
 
 				selectionViewer = (TreeViewer)viewerPane.getViewer();
 				selectionViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory));
+				selectionViewer.setUseHashlookup(true);
 
 				selectionViewer.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory));
 				selectionViewer.setInput(editingDomain.getResourceSet());
@@ -1309,6 +1306,7 @@ public class GistouseEditor
 
 					// Set up the tree viewer.
 					//
+					contentOutlineViewer.setUseHashlookup(true);
 					contentOutlineViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory));
 					contentOutlineViewer.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory));
 					contentOutlineViewer.setInput(editingDomain.getResourceSet());
@@ -1456,7 +1454,9 @@ public class GistouseEditor
 					// Save the resources to the file system.
 					//
 					boolean first = true;
-					for (Resource resource : editingDomain.getResourceSet().getResources()) {
+					List<Resource> resources = editingDomain.getResourceSet().getResources();
+					for (int i = 0; i < resources.size(); ++i) {
+						Resource resource = resources.get(i);
 						if ((first || !resource.getContents().isEmpty() || isPersisted(resource)) && !editingDomain.isReadOnly(resource)) {
 							try {
 								long timeStamp = resource.getTimeStamp();

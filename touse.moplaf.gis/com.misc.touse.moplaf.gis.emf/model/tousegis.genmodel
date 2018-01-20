@@ -3,17 +3,14 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.misc.touse.moplaf.gis.emf/src" modelPluginID="com.misc.touse.moplaf.gis.emf"
     modelName="Tousegis" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
-    usedGenPackages="../../com.misc.common.moplaf.gis.emf/model/gis.genmodel#//gis ../../com.misc.common.moplaf.gis.gisgraphy.emf/model/gisgisgraphy.genmodel#//gisgisgraphy ../../com.misc.common.moplaf.gis.google.emf/model/gisgoogle.genmodel#//GisGoogle"
+    usedGenPackages="../../com.misc.common.moplaf.gis.emf/model/gis.genmodel#//gis ../../com.misc.common.moplaf.job.emf/model/job.genmodel#//job"
     operationReflection="true" importOrganizing="true">
   <foreignModel>tousegis.ecore</foreignModel>
   <genPackages prefix="Gistouse" basePackage="com.misc.touse.moplaf" disposableProviderFactory="true"
       ecorePackage="tousegis.ecore#/">
-    <genClasses ecoreClass="tousegis.ecore#//ToUseGis">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousegis.ecore#//ToUseGis/calculators"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousegis.ecore#//ToUseGis/matrices"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousegis.ecore#//ToUseGis/locations"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousegis.ecore#//ToUseGis/geocodersG"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousegis.ecore#//ToUseGis/geocodersGG"/>
+    <genClasses ecoreClass="tousegis.ecore#//Domain">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousegis.ecore#//Domain/Locations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousegis.ecore#//Domain/Matrices"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -2,9 +2,8 @@
  */
 package com.misc.touse.moplaf.gistouse.presentation;
 
-import com.misc.common.moplaf.gis.GisGoogle.provider.GisgoogleEditPlugin;
-import com.misc.common.moplaf.gis.gisgisgraphy.provider.GisgisgraphyEditPlugin;
 import com.misc.common.moplaf.gis.provider.GisEditPlugin;
+import com.misc.common.moplaf.job.provider.JobEditPlugin;
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.ui.EclipseUIPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
@@ -42,8 +41,7 @@ public final class TousegisEditorPlugin extends EMFPlugin {
 		super
 			(new ResourceLocator [] {
 				GisEditPlugin.INSTANCE,
-				GisgisgraphyEditPlugin.INSTANCE,
-				GisgoogleEditPlugin.INSTANCE,
+				JobEditPlugin.INSTANCE,
 			});
 	}
 

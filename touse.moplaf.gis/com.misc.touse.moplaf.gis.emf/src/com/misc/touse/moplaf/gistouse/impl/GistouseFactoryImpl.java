@@ -56,7 +56,7 @@ public class GistouseFactoryImpl extends EFactoryImpl implements GistouseFactory
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case GistousePackage.TO_USE_GIS: return createToUseGis();
+			case GistousePackage.DOMAIN: return createDomain();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -67,9 +67,9 @@ public class GistouseFactoryImpl extends EFactoryImpl implements GistouseFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ToUseGis createToUseGis() {
-		ToUseGisImpl toUseGis = new ToUseGisImpl();
-		return toUseGis;
+	public Domain createDomain() {
+		DomainImpl domain = new DomainImpl();
+		return domain;
 	}
 
 	/**
