@@ -19,17 +19,17 @@ import org.eclipse.emf.ecore.util.Switch;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see com.misc.touse.moplaf.gistouse.GistousePackage
+ * @see com.misc.touse.moplaf.gistouse.ToUseGisPackage
  * @generated
  */
-public class GistouseSwitch<T> extends Switch<T> {
+public class ToUseGisSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static GistousePackage modelPackage;
+	protected static ToUseGisPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -37,9 +37,9 @@ public class GistouseSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GistouseSwitch() {
+	public ToUseGisSwitch() {
 		if (modelPackage == null) {
-			modelPackage = GistousePackage.eINSTANCE;
+			modelPackage = ToUseGisPackage.eINSTANCE;
 		}
 	}
 
@@ -66,7 +66,7 @@ public class GistouseSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case GistousePackage.DOMAIN: {
+			case ToUseGisPackage.DOMAIN: {
 				Domain domain = (Domain)theEObject;
 				T result = caseDomain(domain);
 				if (result == null) result = defaultCase(theEObject);
@@ -107,4 +107,4 @@ public class GistouseSwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //GistouseSwitch
+} //ToUseGisSwitch

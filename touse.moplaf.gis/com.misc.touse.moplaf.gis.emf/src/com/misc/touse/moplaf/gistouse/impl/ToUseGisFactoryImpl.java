@@ -18,24 +18,24 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
  * <!-- end-user-doc -->
  * @generated
  */
-public class GistouseFactoryImpl extends EFactoryImpl implements GistouseFactory {
+public class ToUseGisFactoryImpl extends EFactoryImpl implements ToUseGisFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static GistouseFactory init() {
+	public static ToUseGisFactory init() {
 		try {
-			GistouseFactory theGistouseFactory = (GistouseFactory)EPackage.Registry.INSTANCE.getEFactory(GistousePackage.eNS_URI);
-			if (theGistouseFactory != null) {
-				return theGistouseFactory;
+			ToUseGisFactory theToUseGisFactory = (ToUseGisFactory)EPackage.Registry.INSTANCE.getEFactory(ToUseGisPackage.eNS_URI);
+			if (theToUseGisFactory != null) {
+				return theToUseGisFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new GistouseFactoryImpl();
+		return new ToUseGisFactoryImpl();
 	}
 
 	/**
@@ -44,7 +44,7 @@ public class GistouseFactoryImpl extends EFactoryImpl implements GistouseFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GistouseFactoryImpl() {
+	public ToUseGisFactoryImpl() {
 		super();
 	}
 
@@ -56,7 +56,7 @@ public class GistouseFactoryImpl extends EFactoryImpl implements GistouseFactory
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case GistousePackage.DOMAIN: return createDomain();
+			case ToUseGisPackage.DOMAIN: return createDomain();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -77,8 +77,8 @@ public class GistouseFactoryImpl extends EFactoryImpl implements GistouseFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GistousePackage getGistousePackage() {
-		return (GistousePackage)getEPackage();
+	public ToUseGisPackage getToUseGisPackage() {
+		return (ToUseGisPackage)getEPackage();
 	}
 
 	/**
@@ -88,8 +88,8 @@ public class GistouseFactoryImpl extends EFactoryImpl implements GistouseFactory
 	 * @generated
 	 */
 	@Deprecated
-	public static GistousePackage getPackage() {
-		return GistousePackage.eINSTANCE;
+	public static ToUseGisPackage getPackage() {
+		return ToUseGisPackage.eINSTANCE;
 	}
 
-} //GistouseFactoryImpl
+} //ToUseGisFactoryImpl

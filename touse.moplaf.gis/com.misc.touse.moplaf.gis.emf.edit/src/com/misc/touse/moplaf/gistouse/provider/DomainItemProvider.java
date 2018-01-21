@@ -6,8 +6,7 @@ package com.misc.touse.moplaf.gistouse.provider;
 import com.misc.common.moplaf.gis.GisFactory;
 
 import com.misc.touse.moplaf.gistouse.Domain;
-import com.misc.touse.moplaf.gistouse.GistousePackage;
-
+import com.misc.touse.moplaf.gistouse.ToUseGisPackage;
 import java.util.Collection;
 import java.util.List;
 
@@ -78,8 +77,9 @@ public class DomainItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(GistousePackage.Literals.DOMAIN__LOCATIONS);
-			childrenFeatures.add(GistousePackage.Literals.DOMAIN__MATRICES);
+			childrenFeatures.add(ToUseGisPackage.Literals.DOMAIN__LOCATIONS);
+			childrenFeatures.add(ToUseGisPackage.Literals.DOMAIN__MATRICES);
+			childrenFeatures.add(ToUseGisPackage.Literals.DOMAIN__CALCULATORS);
 		}
 		return childrenFeatures;
 	}
@@ -132,8 +132,9 @@ public class DomainItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Domain.class)) {
-			case GistousePackage.DOMAIN__LOCATIONS:
-			case GistousePackage.DOMAIN__MATRICES:
+			case ToUseGisPackage.DOMAIN__LOCATIONS:
+			case ToUseGisPackage.DOMAIN__MATRICES:
+			case ToUseGisPackage.DOMAIN__CALCULATORS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -153,28 +154,33 @@ public class DomainItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(GistousePackage.Literals.DOMAIN__LOCATIONS,
-				 GisFactory.eINSTANCE.createGisCoordinates()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(GistousePackage.Literals.DOMAIN__LOCATIONS,
+				(ToUseGisPackage.Literals.DOMAIN__LOCATIONS,
 				 GisFactory.eINSTANCE.createGisAddressGeocoded()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(GistousePackage.Literals.DOMAIN__LOCATIONS,
+				(ToUseGisPackage.Literals.DOMAIN__LOCATIONS,
 				 GisFactory.eINSTANCE.createGisAddressStructured()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(GistousePackage.Literals.DOMAIN__LOCATIONS,
+				(ToUseGisPackage.Literals.DOMAIN__LOCATIONS,
 				 GisFactory.eINSTANCE.createGisAddressUnstructured()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(GistousePackage.Literals.DOMAIN__MATRICES,
+				(ToUseGisPackage.Literals.DOMAIN__LOCATIONS,
+				 GisFactory.eINSTANCE.createGisCoordinates()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ToUseGisPackage.Literals.DOMAIN__MATRICES,
 				 GisFactory.eINSTANCE.createGisRoutesHolder()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ToUseGisPackage.Literals.DOMAIN__CALCULATORS,
+				 GisFactory.eINSTANCE.createGisRouterGeodesic()));
 	}
 
 	/**
@@ -185,7 +191,7 @@ public class DomainItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return TousegisEditPlugin.INSTANCE;
+		return ToUseGisEditPlugin.INSTANCE;
 	}
 
 }

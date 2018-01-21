@@ -12,12 +12,12 @@
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="com.misc.touse.moplaf.gistouse.presentation.GistouseModelWizardID"
-            name="%_UI_GistouseModelWizard_label"
-            class="com.misc.touse.moplaf.gistouse.presentation.GistouseModelWizard"
+            id="com.misc.touse.moplaf.gistouse.presentation.ToUseGisModelWizardID"
+            name="%_UI_ToUseGisModelWizard_label"
+            class="com.misc.touse.moplaf.gistouse.presentation.ToUseGisModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/GistouseModelFile.gif">
-         <description>%_UI_GistouseModelWizard_description</description>
+            icon="icons/full/obj16/ToUseGisModelFile.gif">
+         <description>%_UI_ToUseGisModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
       </wizard>
    </extension>
@@ -25,13 +25,12 @@
    <extension point="org.eclipse.ui.editors">
       <!-- @generated tousegis -->
       <editor
-            id="com.misc.touse.moplaf.gistouse.presentation.GistouseEditorID"
-            name="%_UI_GistouseEditor_label"
-            icon="icons/full/obj16/GistouseModelFile.gif"
-            extensions="gistouse"
-            class="com.misc.touse.moplaf.gistouse.presentation.GistouseEditor"
-            contributorClass="com.misc.touse.moplaf.gistouse.presentation.GistouseActionBarContributor">
+            id="com.misc.touse.moplaf.gistouse.presentation.ToUseGisEditorID"
+            name="%_UI_ToUseGisEditor_label"
+            icon="icons/full/obj16/ToUseGisModelFile.gif"
+            extensions="tousegis"
+            class="com.misc.touse.moplaf.gistouse.presentation.ToUseGisEditor"
+            contributorClass="com.misc.touse.moplaf.gistouse.presentation.ToUseGisActionBarContributor">
       </editor>
    </extension>
-
 </plugin>

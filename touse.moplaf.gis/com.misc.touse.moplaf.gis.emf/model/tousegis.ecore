@@ -9,5 +9,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="Matrices" upperBound="-1"
         eType="ecore:EClass ../../com.misc.common.moplaf.gis.emf/model/gis.ecore#//GisRoutesHolder"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Calculators" upperBound="-1"
+        eType="ecore:EClass ../../com.misc.common.moplaf.gis.emf/model/gis.ecore#//GisRouteCalculator"
+        containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

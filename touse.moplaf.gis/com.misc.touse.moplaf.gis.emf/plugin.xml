@@ -10,7 +10,7 @@
       <!-- @generated tousegis -->
       <package
             uri="http://www.misc.com/touse.moplaf.solver.emf"
-            class="com.misc.touse.moplaf.gistouse.GistousePackage"
+            class="com.misc.touse.moplaf.gistouse.ToUseGisPackage"
             genModel="model/tousegis.genmodel"/>
    </extension>
 

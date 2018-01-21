@@ -16,17 +16,17 @@ import org.eclipse.emf.ecore.EObject;
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see com.misc.touse.moplaf.gistouse.GistousePackage
+ * @see com.misc.touse.moplaf.gistouse.ToUseGisPackage
  * @generated
  */
-public class GistouseAdapterFactory extends AdapterFactoryImpl {
+public class ToUseGisAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static GistousePackage modelPackage;
+	protected static ToUseGisPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -34,9 +34,9 @@ public class GistouseAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GistouseAdapterFactory() {
+	public ToUseGisAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = GistousePackage.eINSTANCE;
+			modelPackage = ToUseGisPackage.eINSTANCE;
 		}
 	}
 
@@ -65,8 +65,8 @@ public class GistouseAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected GistouseSwitch<Adapter> modelSwitch =
-		new GistouseSwitch<Adapter>() {
+	protected ToUseGisSwitch<Adapter> modelSwitch =
+		new ToUseGisSwitch<Adapter>() {
 			@Override
 			public Adapter caseDomain(Domain object) {
 				return createDomainAdapter();
@@ -117,4 +117,4 @@ public class GistouseAdapterFactory extends AdapterFactoryImpl {
 		return null;
 	}
 
-} //GistouseAdapterFactory
+} //ToUseGisAdapterFactory

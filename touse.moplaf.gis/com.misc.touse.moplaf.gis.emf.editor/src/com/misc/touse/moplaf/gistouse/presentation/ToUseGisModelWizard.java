@@ -69,9 +69,9 @@ import org.eclipse.ui.dialogs.WizardNewFileCreationPage;
 import org.eclipse.ui.part.FileEditorInput;
 import org.eclipse.ui.part.ISetSelectionTarget;
 
-import com.misc.touse.moplaf.gistouse.GistouseFactory;
-import com.misc.touse.moplaf.gistouse.GistousePackage;
-import com.misc.touse.moplaf.gistouse.provider.TousegisEditPlugin;
+import com.misc.touse.moplaf.gistouse.ToUseGisFactory;
+import com.misc.touse.moplaf.gistouse.ToUseGisPackage;
+import com.misc.touse.moplaf.gistouse.provider.ToUseGisEditPlugin;
 
 
 import org.eclipse.core.runtime.Path;
@@ -91,7 +91,7 @@ import org.eclipse.ui.PartInitException;
  * <!-- end-user-doc -->
  * @generated
  */
-public class GistouseModelWizard extends Wizard implements INewWizard {
+public class ToUseGisModelWizard extends Wizard implements INewWizard {
 	/**
 	 * The supported extensions for created files.
 	 * <!-- begin-user-doc -->
@@ -99,7 +99,7 @@ public class GistouseModelWizard extends Wizard implements INewWizard {
 	 * @generated
 	 */
 	public static final List<String> FILE_EXTENSIONS =
-		Collections.unmodifiableList(Arrays.asList(TousegisEditorPlugin.INSTANCE.getString("_UI_GistouseEditorFilenameExtensions").split("\\s*,\\s*")));
+		Collections.unmodifiableList(Arrays.asList(ToUseGisEditorPlugin.INSTANCE.getString("_UI_ToUseGisEditorFilenameExtensions").split("\\s*,\\s*")));
 
 	/**
 	 * A formatted list of supported file extensions, suitable for display.
@@ -108,7 +108,7 @@ public class GistouseModelWizard extends Wizard implements INewWizard {
 	 * @generated
 	 */
 	public static final String FORMATTED_FILE_EXTENSIONS =
-		TousegisEditorPlugin.INSTANCE.getString("_UI_GistouseEditorFilenameExtensions").replaceAll("\\s*,\\s*", ", ");
+		ToUseGisEditorPlugin.INSTANCE.getString("_UI_ToUseGisEditorFilenameExtensions").replaceAll("\\s*,\\s*", ", ");
 
 	/**
 	 * This caches an instance of the model package.
@@ -116,7 +116,7 @@ public class GistouseModelWizard extends Wizard implements INewWizard {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected GistousePackage gistousePackage = GistousePackage.eINSTANCE;
+	protected ToUseGisPackage toUseGisPackage = ToUseGisPackage.eINSTANCE;
 
 	/**
 	 * This caches an instance of the model factory.
@@ -124,7 +124,7 @@ public class GistouseModelWizard extends Wizard implements INewWizard {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected GistouseFactory gistouseFactory = gistousePackage.getGistouseFactory();
+	protected ToUseGisFactory toUseGisFactory = toUseGisPackage.getToUseGisFactory();
 
 	/**
 	 * This is the file creation page.
@@ -132,7 +132,7 @@ public class GistouseModelWizard extends Wizard implements INewWizard {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected GistouseModelWizardNewFileCreationPage newFileCreationPage;
+	protected ToUseGisModelWizardNewFileCreationPage newFileCreationPage;
 
 	/**
 	 * This is the initial object creation page.
@@ -140,7 +140,7 @@ public class GistouseModelWizard extends Wizard implements INewWizard {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected GistouseModelWizardInitialObjectCreationPage initialObjectCreationPage;
+	protected ToUseGisModelWizardInitialObjectCreationPage initialObjectCreationPage;
 
 	/**
 	 * Remember the selection during initialization for populating the default container.
@@ -175,8 +175,8 @@ public class GistouseModelWizard extends Wizard implements INewWizard {
 	public void init(IWorkbench workbench, IStructuredSelection selection) {
 		this.workbench = workbench;
 		this.selection = selection;
-		setWindowTitle(TousegisEditorPlugin.INSTANCE.getString("_UI_Wizard_label"));
-		setDefaultPageImageDescriptor(ExtendedImageRegistry.INSTANCE.getImageDescriptor(TousegisEditorPlugin.INSTANCE.getImage("full/wizban/NewGistouse")));
+		setWindowTitle(ToUseGisEditorPlugin.INSTANCE.getString("_UI_Wizard_label"));
+		setDefaultPageImageDescriptor(ExtendedImageRegistry.INSTANCE.getImageDescriptor(ToUseGisEditorPlugin.INSTANCE.getImage("full/wizban/NewToUseGis")));
 	}
 
 	/**
@@ -188,7 +188,7 @@ public class GistouseModelWizard extends Wizard implements INewWizard {
 	protected Collection<String> getInitialObjectNames() {
 		if (initialObjectNames == null) {
 			initialObjectNames = new ArrayList<String>();
-			for (EClassifier eClassifier : gistousePackage.getEClassifiers()) {
+			for (EClassifier eClassifier : toUseGisPackage.getEClassifiers()) {
 				if (eClassifier instanceof EClass) {
 					EClass eClass = (EClass)eClassifier;
 					if (!eClass.isAbstract()) {
@@ -208,8 +208,8 @@ public class GistouseModelWizard extends Wizard implements INewWizard {
 	 * @generated
 	 */
 	protected EObject createInitialModel() {
-		EClass eClass = (EClass)gistousePackage.getEClassifier(initialObjectCreationPage.getInitialObjectName());
-		EObject rootObject = gistouseFactory.create(eClass);
+		EClass eClass = (EClass)toUseGisPackage.getEClassifier(initialObjectCreationPage.getInitialObjectName());
+		EObject rootObject = toUseGisFactory.create(eClass);
 		return rootObject;
 	}
 
@@ -259,7 +259,7 @@ public class GistouseModelWizard extends Wizard implements INewWizard {
 							resource.save(options);
 						}
 						catch (Exception exception) {
-							TousegisEditorPlugin.INSTANCE.log(exception);
+							ToUseGisEditorPlugin.INSTANCE.log(exception);
 						}
 						finally {
 							progressMonitor.done();
@@ -292,14 +292,14 @@ public class GistouseModelWizard extends Wizard implements INewWizard {
 					 workbench.getEditorRegistry().getDefaultEditor(modelFile.getFullPath().toString()).getId());					 	 
 			}
 			catch (PartInitException exception) {
-				MessageDialog.openError(workbenchWindow.getShell(), TousegisEditorPlugin.INSTANCE.getString("_UI_OpenEditorError_label"), exception.getMessage());
+				MessageDialog.openError(workbenchWindow.getShell(), ToUseGisEditorPlugin.INSTANCE.getString("_UI_OpenEditorError_label"), exception.getMessage());
 				return false;
 			}
 
 			return true;
 		}
 		catch (Exception exception) {
-			TousegisEditorPlugin.INSTANCE.log(exception);
+			ToUseGisEditorPlugin.INSTANCE.log(exception);
 			return false;
 		}
 	}
@@ -310,14 +310,14 @@ public class GistouseModelWizard extends Wizard implements INewWizard {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public class GistouseModelWizardNewFileCreationPage extends WizardNewFileCreationPage {
+	public class ToUseGisModelWizardNewFileCreationPage extends WizardNewFileCreationPage {
 		/**
 		 * Pass in the selection.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		public GistouseModelWizardNewFileCreationPage(String pageId, IStructuredSelection selection) {
+		public ToUseGisModelWizardNewFileCreationPage(String pageId, IStructuredSelection selection) {
 			super(pageId, selection);
 		}
 
@@ -333,7 +333,7 @@ public class GistouseModelWizard extends Wizard implements INewWizard {
 				String extension = new Path(getFileName()).getFileExtension();
 				if (extension == null || !FILE_EXTENSIONS.contains(extension)) {
 					String key = FILE_EXTENSIONS.size() > 1 ? "_WARN_FilenameExtensions" : "_WARN_FilenameExtension";
-					setErrorMessage(TousegisEditorPlugin.INSTANCE.getString(key, new Object [] { FORMATTED_FILE_EXTENSIONS }));
+					setErrorMessage(ToUseGisEditorPlugin.INSTANCE.getString(key, new Object [] { FORMATTED_FILE_EXTENSIONS }));
 					return false;
 				}
 				return true;
@@ -357,7 +357,7 @@ public class GistouseModelWizard extends Wizard implements INewWizard {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public class GistouseModelWizardInitialObjectCreationPage extends WizardPage {
+	public class ToUseGisModelWizardInitialObjectCreationPage extends WizardPage {
 		/**
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -385,7 +385,7 @@ public class GistouseModelWizard extends Wizard implements INewWizard {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		public GistouseModelWizardInitialObjectCreationPage(String pageId) {
+		public ToUseGisModelWizardInitialObjectCreationPage(String pageId) {
 			super(pageId);
 		}
 
@@ -395,7 +395,8 @@ public class GistouseModelWizard extends Wizard implements INewWizard {
 		 * @generated
 		 */
 		public void createControl(Composite parent) {
-			Composite composite = new Composite(parent, SWT.NONE); {
+			Composite composite = new Composite(parent, SWT.NONE);
+			{
 				GridLayout layout = new GridLayout();
 				layout.numColumns = 1;
 				layout.verticalSpacing = 12;
@@ -410,7 +411,7 @@ public class GistouseModelWizard extends Wizard implements INewWizard {
 
 			Label containerLabel = new Label(composite, SWT.LEFT);
 			{
-				containerLabel.setText(TousegisEditorPlugin.INSTANCE.getString("_UI_ModelObject"));
+				containerLabel.setText(ToUseGisEditorPlugin.INSTANCE.getString("_UI_ModelObject"));
 
 				GridData data = new GridData();
 				data.horizontalAlignment = GridData.FILL;
@@ -436,7 +437,7 @@ public class GistouseModelWizard extends Wizard implements INewWizard {
 
 			Label encodingLabel = new Label(composite, SWT.LEFT);
 			{
-				encodingLabel.setText(TousegisEditorPlugin.INSTANCE.getString("_UI_XMLEncoding"));
+				encodingLabel.setText(ToUseGisEditorPlugin.INSTANCE.getString("_UI_XMLEncoding"));
 
 				GridData data = new GridData();
 				data.horizontalAlignment = GridData.FILL;
@@ -535,10 +536,10 @@ public class GistouseModelWizard extends Wizard implements INewWizard {
 		 */
 		protected String getLabel(String typeName) {
 			try {
-				return TousegisEditPlugin.INSTANCE.getString("_UI_" + typeName + "_type");
+				return ToUseGisEditPlugin.INSTANCE.getString("_UI_" + typeName + "_type");
 			}
 			catch(MissingResourceException mre) {
-				TousegisEditorPlugin.INSTANCE.log(mre);
+				ToUseGisEditorPlugin.INSTANCE.log(mre);
 			}
 			return typeName;
 		}
@@ -551,7 +552,7 @@ public class GistouseModelWizard extends Wizard implements INewWizard {
 		protected Collection<String> getEncodings() {
 			if (encodings == null) {
 				encodings = new ArrayList<String>();
-				for (StringTokenizer stringTokenizer = new StringTokenizer(TousegisEditorPlugin.INSTANCE.getString("_UI_XMLEncodingChoices")); stringTokenizer.hasMoreTokens(); ) {
+				for (StringTokenizer stringTokenizer = new StringTokenizer(ToUseGisEditorPlugin.INSTANCE.getString("_UI_XMLEncodingChoices")); stringTokenizer.hasMoreTokens(); ) {
 					encodings.add(stringTokenizer.nextToken());
 				}
 			}
@@ -569,10 +570,10 @@ public class GistouseModelWizard extends Wizard implements INewWizard {
 	public void addPages() {
 		// Create a page, set the title, and the initial model file name.
 		//
-		newFileCreationPage = new GistouseModelWizardNewFileCreationPage("Whatever", selection);
-		newFileCreationPage.setTitle(TousegisEditorPlugin.INSTANCE.getString("_UI_GistouseModelWizard_label"));
-		newFileCreationPage.setDescription(TousegisEditorPlugin.INSTANCE.getString("_UI_GistouseModelWizard_description"));
-		newFileCreationPage.setFileName(TousegisEditorPlugin.INSTANCE.getString("_UI_GistouseEditorFilenameDefaultBase") + "." + FILE_EXTENSIONS.get(0));
+		newFileCreationPage = new ToUseGisModelWizardNewFileCreationPage("Whatever", selection);
+		newFileCreationPage.setTitle(ToUseGisEditorPlugin.INSTANCE.getString("_UI_ToUseGisModelWizard_label"));
+		newFileCreationPage.setDescription(ToUseGisEditorPlugin.INSTANCE.getString("_UI_ToUseGisModelWizard_description"));
+		newFileCreationPage.setFileName(ToUseGisEditorPlugin.INSTANCE.getString("_UI_ToUseGisEditorFilenameDefaultBase") + "." + FILE_EXTENSIONS.get(0));
 		addPage(newFileCreationPage);
 
 		// Try and get the resource selection to determine a current directory for the file dialog.
@@ -598,7 +599,7 @@ public class GistouseModelWizard extends Wizard implements INewWizard {
 
 					// Make up a unique new name here.
 					//
-					String defaultModelBaseFilename = TousegisEditorPlugin.INSTANCE.getString("_UI_GistouseEditorFilenameDefaultBase");
+					String defaultModelBaseFilename = ToUseGisEditorPlugin.INSTANCE.getString("_UI_ToUseGisEditorFilenameDefaultBase");
 					String defaultModelFilenameExtension = FILE_EXTENSIONS.get(0);
 					String modelFilename = defaultModelBaseFilename + "." + defaultModelFilenameExtension;
 					for (int i = 1; ((IContainer)selectedResource).findMember(modelFilename) != null; ++i) {
@@ -608,9 +609,9 @@ public class GistouseModelWizard extends Wizard implements INewWizard {
 				}
 			}
 		}
-		initialObjectCreationPage = new GistouseModelWizardInitialObjectCreationPage("Whatever2");
-		initialObjectCreationPage.setTitle(TousegisEditorPlugin.INSTANCE.getString("_UI_GistouseModelWizard_label"));
-		initialObjectCreationPage.setDescription(TousegisEditorPlugin.INSTANCE.getString("_UI_Wizard_initial_object_description"));
+		initialObjectCreationPage = new ToUseGisModelWizardInitialObjectCreationPage("Whatever2");
+		initialObjectCreationPage.setTitle(ToUseGisEditorPlugin.INSTANCE.getString("_UI_ToUseGisModelWizard_label"));
+		initialObjectCreationPage.setDescription(ToUseGisEditorPlugin.INSTANCE.getString("_UI_Wizard_initial_object_description"));
 		addPage(initialObjectCreationPage);
 	}
 

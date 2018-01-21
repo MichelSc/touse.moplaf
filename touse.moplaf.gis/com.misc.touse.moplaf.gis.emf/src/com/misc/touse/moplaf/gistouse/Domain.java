@@ -3,6 +3,7 @@
 package com.misc.touse.moplaf.gistouse;
 
 import com.misc.common.moplaf.gis.GisLocation;
+import com.misc.common.moplaf.gis.GisRouteCalculator;
 import com.misc.common.moplaf.gis.GisRoutesHolder;
 
 import org.eclipse.emf.common.util.EList;
@@ -20,9 +21,10 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.gistouse.Domain#getLocations <em>Locations</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.gistouse.Domain#getMatrices <em>Matrices</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.gistouse.Domain#getCalculators <em>Calculators</em>}</li>
  * </ul>
  *
- * @see com.misc.touse.moplaf.gistouse.GistousePackage#getDomain()
+ * @see com.misc.touse.moplaf.gistouse.ToUseGisPackage#getDomain()
  * @model
  * @generated
  */
@@ -37,7 +39,7 @@ public interface Domain extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Locations</em>' containment reference list.
-	 * @see com.misc.touse.moplaf.gistouse.GistousePackage#getDomain_Locations()
+	 * @see com.misc.touse.moplaf.gistouse.ToUseGisPackage#getDomain_Locations()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -53,10 +55,26 @@ public interface Domain extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Matrices</em>' containment reference list.
-	 * @see com.misc.touse.moplaf.gistouse.GistousePackage#getDomain_Matrices()
+	 * @see com.misc.touse.moplaf.gistouse.ToUseGisPackage#getDomain_Matrices()
 	 * @model containment="true"
 	 * @generated
 	 */
 	EList<GisRoutesHolder> getMatrices();
+
+	/**
+	 * Returns the value of the '<em><b>Calculators</b></em>' containment reference list.
+	 * The list contents are of type {@link com.misc.common.moplaf.gis.GisRouteCalculator}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Calculators</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Calculators</em>' containment reference list.
+	 * @see com.misc.touse.moplaf.gistouse.ToUseGisPackage#getDomain_Calculators()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<GisRouteCalculator> getCalculators();
 
 } // Domain

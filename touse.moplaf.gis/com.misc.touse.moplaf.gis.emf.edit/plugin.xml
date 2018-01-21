@@ -10,7 +10,7 @@
       <!-- @generated tousegis -->
       <factory
             uri="http://www.misc.com/touse.moplaf.solver.emf"
-            class="com.misc.touse.moplaf.gistouse.provider.GistouseItemProviderAdapterFactory"
+            class="com.misc.touse.moplaf.gistouse.provider.ToUseGisItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

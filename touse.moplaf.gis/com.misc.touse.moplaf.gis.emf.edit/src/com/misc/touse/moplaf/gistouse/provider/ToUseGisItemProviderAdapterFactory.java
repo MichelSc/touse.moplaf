@@ -2,7 +2,7 @@
  */
 package com.misc.touse.moplaf.gistouse.provider;
 
-import com.misc.touse.moplaf.gistouse.util.GistouseAdapterFactory;
+import com.misc.touse.moplaf.gistouse.util.ToUseGisAdapterFactory;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -32,7 +32,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class GistouseItemProviderAdapterFactory extends GistouseAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable {
+public class ToUseGisItemProviderAdapterFactory extends ToUseGisAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -63,7 +63,7 @@ public class GistouseItemProviderAdapterFactory extends GistouseAdapterFactory i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GistouseItemProviderAdapterFactory() {
+	public ToUseGisItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);

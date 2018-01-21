@@ -39,15 +39,16 @@ import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.PartInitException;
 
+import com.misc.common.moplaf.emf.editor.Util;
 import com.misc.common.moplaf.emf.editor.action.RefreshAction;
 
 /**
- * This is the action bar contributor for the Gistouse model editor.
+ * This is the action bar contributor for the ToUseGis model editor.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class GistouseActionBarContributor
+public class ToUseGisActionBarContributor
 	extends EditingDomainActionBarContributor
 	implements ISelectionChangedListener {
 	/**
@@ -73,14 +74,14 @@ public class GistouseActionBarContributor
 	 * @generated
 	 */
 	protected IAction showPropertiesViewAction =
-		new Action(TousegisEditorPlugin.INSTANCE.getString("_UI_ShowPropertiesView_menu_item")) {
+		new Action(ToUseGisEditorPlugin.INSTANCE.getString("_UI_ShowPropertiesView_menu_item")) {
 			@Override
 			public void run() {
 				try {
 					getPage().showView("org.eclipse.ui.views.PropertySheet");
 				}
 				catch (PartInitException exception) {
-					TousegisEditorPlugin.INSTANCE.log(exception);
+					ToUseGisEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 		};
@@ -93,7 +94,7 @@ public class GistouseActionBarContributor
 	 * @generated
 	 */
 	protected IAction refreshViewerAction =
-		new Action(TousegisEditorPlugin.INSTANCE.getString("_UI_RefreshViewer_menu_item")) {
+		new Action(ToUseGisEditorPlugin.INSTANCE.getString("_UI_RefreshViewer_menu_item")) {
 			@Override
 			public boolean isEnabled() {
 				return activeEditorPart instanceof IViewerProvider;
@@ -118,7 +119,6 @@ public class GistouseActionBarContributor
 	 * @generated
 	 */
 	protected Collection<IAction> createChildActions;
-	
 
 	/**
 	 * This is the menu manager into which menu contribution items should be added for CreateChild actions.
@@ -146,12 +146,27 @@ public class GistouseActionBarContributor
 	protected IMenuManager createSiblingMenuManager;
 
 	/**
+	 * This will contain one {@link org.eclipse.emf.edit.ui.action.ApplicationPopUpMenuAction} 
+	 * generated for the current selection by the item provider.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	protected Collection<IAction> applicationPopUpMenuActions;
+
+	/**
+	 * This is the menu manager into which menu contribution items should be added for G4SOptiPost actions.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	protected IMenuManager applicationPopUpMenuManager;
+
+	/**
 	 * This creates an instance of the contributor.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GistouseActionBarContributor() {
+	public ToUseGisActionBarContributor() {
 		super(ADDITIONS_LAST_STYLE);
 		loadResourceAction = new LoadResourceAction();
 		validateAction = new ValidateAction();
@@ -166,8 +181,8 @@ public class GistouseActionBarContributor
 	 */
 	@Override
 	public void contributeToToolBar(IToolBarManager toolBarManager) {
-		toolBarManager.add(new Separator("gistouse-settings"));
-		toolBarManager.add(new Separator("gistouse-additions"));
+		toolBarManager.add(new Separator("tousegis-settings"));
+		toolBarManager.add(new Separator("tousegis-additions"));
 	}
 
 	/**
@@ -175,13 +190,12 @@ public class GistouseActionBarContributor
 	 * as well as the sub-menus for object creation items.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	@Override
 	public void contributeToMenu(IMenuManager menuManager) {
 		super.contributeToMenu(menuManager);
 
-		IMenuManager submenuManager = new MenuManager(TousegisEditorPlugin.INSTANCE.getString("_UI_GistouseEditor_menu"), "com.misc.touse.moplaf.gistouseMenuID");
+		IMenuManager submenuManager = new MenuManager(ToUseGisEditorPlugin.INSTANCE.getString("_UI_ToUseGisEditor_menu"), "com.misc.touse.moplaf.gistouseMenuID");
 		menuManager.insertAfter("additions", submenuManager);
 		submenuManager.add(new Separator("settings"));
 		submenuManager.add(new Separator("actions"));
@@ -190,13 +204,20 @@ public class GistouseActionBarContributor
 
 		// Prepare for CreateChild item addition or removal.
 		//
-		createChildMenuManager = new MenuManager(TousegisEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
+		createChildMenuManager = new MenuManager(ToUseGisEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
 		submenuManager.insertBefore("additions", createChildMenuManager);
 
 		// Prepare for CreateSibling item addition or removal.
 		//
-		createSiblingMenuManager = new MenuManager(TousegisEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
+		createSiblingMenuManager = new MenuManager(ToUseGisEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
 		submenuManager.insertBefore("additions", createSiblingMenuManager);
+
+		// Prepare for ToUseJob action addition or removal.
+		//
+		applicationPopUpMenuManager = new MenuManager("ToUseGis");
+		submenuManager.insertBefore("additions", applicationPopUpMenuManager);
+
+		submenuManager.insertBefore("additions", new Separator("generic part"));
 
 		// Force an update because Eclipse hides empty menus now.
 		//
@@ -258,6 +279,10 @@ public class GistouseActionBarContributor
 			depopulateManager(createSiblingMenuManager, createSiblingActions);
 		}
 
+		if (applicationPopUpMenuManager != null) {
+			depopulateManager(applicationPopUpMenuManager, applicationPopUpMenuActions);
+		}
+
 		// Query the new selection for appropriate new child/sibling descriptors
 		//
 		Collection<?> newChildDescriptors = null;
@@ -278,6 +303,9 @@ public class GistouseActionBarContributor
 		createChildActions = generateCreateChildActions(newChildDescriptors, selection);
 		createSiblingActions = generateCreateSiblingActions(newSiblingDescriptors, selection);
 
+		applicationPopUpMenuActions = new ArrayList<IAction>();
+		applicationPopUpMenuActions.add(new RefreshAction (activeEditorPart, selection));
+
 		if (createChildMenuManager != null) {
 			populateManager(createChildMenuManager, createChildActions, null);
 			createChildMenuManager.update(true);
@@ -286,7 +314,10 @@ public class GistouseActionBarContributor
 			populateManager(createSiblingMenuManager, createSiblingActions, null);
 			createSiblingMenuManager.update(true);
 		}
-		
+		if (applicationPopUpMenuManager!= null) {
+			Util.populateManager(applicationPopUpMenuManager, applicationPopUpMenuActions, null);
+			applicationPopUpMenuManager.update(true);
+		}
 	}
 
 	/**
@@ -385,17 +416,17 @@ public class GistouseActionBarContributor
 		super.menuAboutToShow(menuManager);
 		MenuManager submenuManager = null;
 
-		submenuManager = new MenuManager(TousegisEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
+		submenuManager = new MenuManager(ToUseGisEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
 		populateManager(submenuManager, createChildActions, null);
 		menuManager.insertBefore("edit", submenuManager);
 
-		submenuManager = new MenuManager(TousegisEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
+		submenuManager = new MenuManager(ToUseGisEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
 		populateManager(submenuManager, createSiblingActions, null);
 		menuManager.insertBefore("edit", submenuManager);
-
-		submenuManager = new MenuManager("ToUse");
-		menuManager.insertBefore("edit", submenuManager);
 		
+		submenuManager = new MenuManager("ToUseGis");
+		Util.populateManager(submenuManager, applicationPopUpMenuActions, null);
+		menuManager.insertBefore("edit", submenuManager);
 	}
 
 	/**

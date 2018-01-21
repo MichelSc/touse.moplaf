@@ -4,7 +4,7 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: com.misc.touse.moplaf.gis.emf.editor;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: com.misc.touse.moplaf.gistouse.presentation.TousegisEditorPlugin$Implementation
+Bundle-Activator: com.misc.touse.moplaf.gistouse.presentation.ToUseGisEditorPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7

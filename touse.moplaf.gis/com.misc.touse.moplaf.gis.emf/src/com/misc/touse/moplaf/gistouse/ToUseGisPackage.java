@@ -18,11 +18,11 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see com.misc.touse.moplaf.gistouse.GistouseFactory
+ * @see com.misc.touse.moplaf.gistouse.ToUseGisFactory
  * @model kind="package"
  * @generated
  */
-public interface GistousePackage extends EPackage {
+public interface ToUseGisPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -53,14 +53,14 @@ public interface GistousePackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	GistousePackage eINSTANCE = com.misc.touse.moplaf.gistouse.impl.GistousePackageImpl.init();
+	ToUseGisPackage eINSTANCE = com.misc.touse.moplaf.gistouse.impl.ToUseGisPackageImpl.init();
 
 	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.gistouse.impl.DomainImpl <em>Domain</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see com.misc.touse.moplaf.gistouse.impl.DomainImpl
-	 * @see com.misc.touse.moplaf.gistouse.impl.GistousePackageImpl#getDomain()
+	 * @see com.misc.touse.moplaf.gistouse.impl.ToUseGisPackageImpl#getDomain()
 	 * @generated
 	 */
 	int DOMAIN = 0;
@@ -84,13 +84,22 @@ public interface GistousePackage extends EPackage {
 	int DOMAIN__MATRICES = 1;
 
 	/**
+	 * The feature id for the '<em><b>Calculators</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN__CALCULATORS = 2;
+
+	/**
 	 * The number of structural features of the '<em>Domain</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_FEATURE_COUNT = 2;
+	int DOMAIN_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Domain</em>' class.
@@ -135,13 +144,24 @@ public interface GistousePackage extends EPackage {
 	EReference getDomain_Matrices();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.gistouse.Domain#getCalculators <em>Calculators</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Calculators</em>'.
+	 * @see com.misc.touse.moplaf.gistouse.Domain#getCalculators()
+	 * @see #getDomain()
+	 * @generated
+	 */
+	EReference getDomain_Calculators();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	GistouseFactory getGistouseFactory();
+	ToUseGisFactory getToUseGisFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -162,7 +182,7 @@ public interface GistousePackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see com.misc.touse.moplaf.gistouse.impl.DomainImpl
-		 * @see com.misc.touse.moplaf.gistouse.impl.GistousePackageImpl#getDomain()
+		 * @see com.misc.touse.moplaf.gistouse.impl.ToUseGisPackageImpl#getDomain()
 		 * @generated
 		 */
 		EClass DOMAIN = eINSTANCE.getDomain();
@@ -183,6 +203,14 @@ public interface GistousePackage extends EPackage {
 		 */
 		EReference DOMAIN__MATRICES = eINSTANCE.getDomain_Matrices();
 
+		/**
+		 * The meta object literal for the '<em><b>Calculators</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DOMAIN__CALCULATORS = eINSTANCE.getDomain_Calculators();
+
 	}
 
-} //GistousePackage
+} //ToUseGisPackage

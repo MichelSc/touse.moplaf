@@ -3,13 +3,17 @@
 package com.misc.touse.moplaf.gistouse.impl;
 
 import com.misc.common.moplaf.gis.GisPackage;
+
 import com.misc.common.moplaf.job.JobPackage;
+
 import com.misc.touse.moplaf.gistouse.Domain;
-import com.misc.touse.moplaf.gistouse.GistouseFactory;
-import com.misc.touse.moplaf.gistouse.GistousePackage;
+import com.misc.touse.moplaf.gistouse.ToUseGisFactory;
+import com.misc.touse.moplaf.gistouse.ToUseGisPackage;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 /**
@@ -18,13 +22,14 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
  * <!-- end-user-doc -->
  * @generated
  */
-public class GistousePackageImpl extends EPackageImpl implements GistousePackage {
+public class ToUseGisPackageImpl extends EPackageImpl implements ToUseGisPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass domainEClass = null;
+
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
@@ -36,12 +41,12 @@ public class GistousePackageImpl extends EPackageImpl implements GistousePackage
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see com.misc.touse.moplaf.gistouse.GistousePackage#eNS_URI
+	 * @see com.misc.touse.moplaf.gistouse.ToUseGisPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private GistousePackageImpl() {
-		super(eNS_URI, GistouseFactory.eINSTANCE);
+	private ToUseGisPackageImpl() {
+		super(eNS_URI, ToUseGisFactory.eINSTANCE);
 	}
 
 	/**
@@ -54,7 +59,7 @@ public class GistousePackageImpl extends EPackageImpl implements GistousePackage
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link GistousePackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ToUseGisPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -63,11 +68,11 @@ public class GistousePackageImpl extends EPackageImpl implements GistousePackage
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static GistousePackage init() {
-		if (isInited) return (GistousePackage)EPackage.Registry.INSTANCE.getEPackage(GistousePackage.eNS_URI);
+	public static ToUseGisPackage init() {
+		if (isInited) return (ToUseGisPackage)EPackage.Registry.INSTANCE.getEPackage(ToUseGisPackage.eNS_URI);
 
 		// Obtain or create and register package
-		GistousePackageImpl theGistousePackage = (GistousePackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof GistousePackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new GistousePackageImpl());
+		ToUseGisPackageImpl theToUseGisPackage = (ToUseGisPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ToUseGisPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ToUseGisPackageImpl());
 
 		isInited = true;
 
@@ -76,18 +81,18 @@ public class GistousePackageImpl extends EPackageImpl implements GistousePackage
 		JobPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theGistousePackage.createPackageContents();
+		theToUseGisPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theGistousePackage.initializePackageContents();
+		theToUseGisPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theGistousePackage.freeze();
+		theToUseGisPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(GistousePackage.eNS_URI, theGistousePackage);
-		return theGistousePackage;
+		EPackage.Registry.INSTANCE.put(ToUseGisPackage.eNS_URI, theToUseGisPackage);
+		return theToUseGisPackage;
 	}
 
 	/**
@@ -122,8 +127,17 @@ public class GistousePackageImpl extends EPackageImpl implements GistousePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GistouseFactory getGistouseFactory() {
-		return (GistouseFactory)getEFactoryInstance();
+	public EReference getDomain_Calculators() {
+		return (EReference)domainEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ToUseGisFactory getToUseGisFactory() {
+		return (ToUseGisFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -148,6 +162,7 @@ public class GistousePackageImpl extends EPackageImpl implements GistousePackage
 		domainEClass = createEClass(DOMAIN);
 		createEReference(domainEClass, DOMAIN__LOCATIONS);
 		createEReference(domainEClass, DOMAIN__MATRICES);
+		createEReference(domainEClass, DOMAIN__CALCULATORS);
 	}
 
 	/**
@@ -186,9 +201,10 @@ public class GistousePackageImpl extends EPackageImpl implements GistousePackage
 		initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDomain_Locations(), theGisPackage.getGisLocation(), null, "Locations", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDomain_Matrices(), theGisPackage.getGisRoutesHolder(), null, "Matrices", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDomain_Calculators(), theGisPackage.getGisRouteCalculator(), null, "Calculators", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
 	}
 
-} //GistousePackageImpl
+} //ToUseGisPackageImpl
