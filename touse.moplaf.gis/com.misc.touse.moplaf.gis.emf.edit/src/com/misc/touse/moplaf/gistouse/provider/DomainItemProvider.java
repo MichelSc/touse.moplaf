@@ -80,6 +80,7 @@ public class DomainItemProvider
 			childrenFeatures.add(ToUseGisPackage.Literals.DOMAIN__LOCATIONS);
 			childrenFeatures.add(ToUseGisPackage.Literals.DOMAIN__MATRICES);
 			childrenFeatures.add(ToUseGisPackage.Literals.DOMAIN__CALCULATORS);
+			childrenFeatures.add(ToUseGisPackage.Literals.DOMAIN__GEOCODERS);
 		}
 		return childrenFeatures;
 	}
@@ -135,6 +136,7 @@ public class DomainItemProvider
 			case ToUseGisPackage.DOMAIN__LOCATIONS:
 			case ToUseGisPackage.DOMAIN__MATRICES:
 			case ToUseGisPackage.DOMAIN__CALCULATORS:
+			case ToUseGisPackage.DOMAIN__GEOCODERS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}

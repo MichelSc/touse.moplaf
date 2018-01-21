@@ -12,5 +12,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="Calculators" upperBound="-1"
         eType="ecore:EClass ../../com.misc.common.moplaf.gis.emf/model/gis.ecore#//GisRouteCalculator"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Geocoders" upperBound="-1"
+        eType="ecore:EClass ../../com.misc.common.moplaf.gis.emf/model/gis.ecore#//GisAddressGeocoder"
+        containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -93,13 +93,22 @@ public interface ToUseGisPackage extends EPackage {
 	int DOMAIN__CALCULATORS = 2;
 
 	/**
+	 * The feature id for the '<em><b>Geocoders</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN__GEOCODERS = 3;
+
+	/**
 	 * The number of structural features of the '<em>Domain</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_FEATURE_COUNT = 3;
+	int DOMAIN_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Domain</em>' class.
@@ -153,6 +162,17 @@ public interface ToUseGisPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getDomain_Calculators();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.gistouse.Domain#getGeocoders <em>Geocoders</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Geocoders</em>'.
+	 * @see com.misc.touse.moplaf.gistouse.Domain#getGeocoders()
+	 * @see #getDomain()
+	 * @generated
+	 */
+	EReference getDomain_Geocoders();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -210,6 +230,14 @@ public interface ToUseGisPackage extends EPackage {
 		 * @generated
 		 */
 		EReference DOMAIN__CALCULATORS = eINSTANCE.getDomain_Calculators();
+
+		/**
+		 * The meta object literal for the '<em><b>Geocoders</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DOMAIN__GEOCODERS = eINSTANCE.getDomain_Geocoders();
 
 	}
 

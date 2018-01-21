@@ -2,6 +2,7 @@
  */
 package com.misc.touse.moplaf.gistouse.impl;
 
+import com.misc.common.moplaf.gis.GisAddressGeocoder;
 import com.misc.common.moplaf.gis.GisLocation;
 import com.misc.common.moplaf.gis.GisRouteCalculator;
 import com.misc.common.moplaf.gis.GisRoutesHolder;
@@ -33,6 +34,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.misc.touse.moplaf.gistouse.impl.DomainImpl#getLocations <em>Locations</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.gistouse.impl.DomainImpl#getMatrices <em>Matrices</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.gistouse.impl.DomainImpl#getCalculators <em>Calculators</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.gistouse.impl.DomainImpl#getGeocoders <em>Geocoders</em>}</li>
  * </ul>
  *
  * @generated
@@ -67,6 +69,16 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	 * @ordered
 	 */
 	protected EList<GisRouteCalculator> calculators;
+
+	/**
+	 * The cached value of the '{@link #getGeocoders() <em>Geocoders</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGeocoders()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<GisAddressGeocoder> geocoders;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -128,6 +140,18 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<GisAddressGeocoder> getGeocoders() {
+		if (geocoders == null) {
+			geocoders = new EObjectContainmentEList<GisAddressGeocoder>(GisAddressGeocoder.class, this, ToUseGisPackage.DOMAIN__GEOCODERS);
+		}
+		return geocoders;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -137,6 +161,8 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 				return ((InternalEList<?>)getMatrices()).basicRemove(otherEnd, msgs);
 			case ToUseGisPackage.DOMAIN__CALCULATORS:
 				return ((InternalEList<?>)getCalculators()).basicRemove(otherEnd, msgs);
+			case ToUseGisPackage.DOMAIN__GEOCODERS:
+				return ((InternalEList<?>)getGeocoders()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -155,6 +181,8 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 				return getMatrices();
 			case ToUseGisPackage.DOMAIN__CALCULATORS:
 				return getCalculators();
+			case ToUseGisPackage.DOMAIN__GEOCODERS:
+				return getGeocoders();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -180,6 +208,10 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 				getCalculators().clear();
 				getCalculators().addAll((Collection<? extends GisRouteCalculator>)newValue);
 				return;
+			case ToUseGisPackage.DOMAIN__GEOCODERS:
+				getGeocoders().clear();
+				getGeocoders().addAll((Collection<? extends GisAddressGeocoder>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -201,6 +233,9 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 			case ToUseGisPackage.DOMAIN__CALCULATORS:
 				getCalculators().clear();
 				return;
+			case ToUseGisPackage.DOMAIN__GEOCODERS:
+				getGeocoders().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -219,6 +254,8 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 				return matrices != null && !matrices.isEmpty();
 			case ToUseGisPackage.DOMAIN__CALCULATORS:
 				return calculators != null && !calculators.isEmpty();
+			case ToUseGisPackage.DOMAIN__GEOCODERS:
+				return geocoders != null && !geocoders.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

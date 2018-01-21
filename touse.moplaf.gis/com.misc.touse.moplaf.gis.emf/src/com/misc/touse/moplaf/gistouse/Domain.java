@@ -2,6 +2,7 @@
  */
 package com.misc.touse.moplaf.gistouse;
 
+import com.misc.common.moplaf.gis.GisAddressGeocoder;
 import com.misc.common.moplaf.gis.GisLocation;
 import com.misc.common.moplaf.gis.GisRouteCalculator;
 import com.misc.common.moplaf.gis.GisRoutesHolder;
@@ -22,6 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.misc.touse.moplaf.gistouse.Domain#getLocations <em>Locations</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.gistouse.Domain#getMatrices <em>Matrices</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.gistouse.Domain#getCalculators <em>Calculators</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.gistouse.Domain#getGeocoders <em>Geocoders</em>}</li>
  * </ul>
  *
  * @see com.misc.touse.moplaf.gistouse.ToUseGisPackage#getDomain()
@@ -76,5 +78,21 @@ public interface Domain extends EObject {
 	 * @generated
 	 */
 	EList<GisRouteCalculator> getCalculators();
+
+	/**
+	 * Returns the value of the '<em><b>Geocoders</b></em>' containment reference list.
+	 * The list contents are of type {@link com.misc.common.moplaf.gis.GisAddressGeocoder}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Geocoders</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Geocoders</em>' containment reference list.
+	 * @see com.misc.touse.moplaf.gistouse.ToUseGisPackage#getDomain_Geocoders()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<GisAddressGeocoder> getGeocoders();
 
 } // Domain
