@@ -12,6 +12,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousegis.ecore#//Domain/Locations"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousegis.ecore#//Domain/Matrices"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousegis.ecore#//Domain/Calculators"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousegis.ecore#//Domain/Geocoders"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

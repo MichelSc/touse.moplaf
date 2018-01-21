@@ -4,7 +4,7 @@ package com.misc.touse.moplaf.gistouse.provider;
 
 
 import com.misc.common.moplaf.gis.GisFactory;
-
+import com.misc.common.moplaf.gis.provider.Util;
 import com.misc.touse.moplaf.gistouse.Domain;
 import com.misc.touse.moplaf.gistouse.ToUseGisPackage;
 import java.util.Collection;
@@ -148,7 +148,6 @@ public class DomainItemProvider
 	 * that can be created under this object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
@@ -179,10 +178,12 @@ public class DomainItemProvider
 				(ToUseGisPackage.Literals.DOMAIN__MATRICES,
 				 GisFactory.eINSTANCE.createGisRoutesHolder()));
 
-		newChildDescriptors.add
-			(createChildParameter
-				(ToUseGisPackage.Literals.DOMAIN__CALCULATORS,
-				 GisFactory.eINSTANCE.createGisRouterGeodesic()));
+//		newChildDescriptors.add
+//			(createChildParameter
+//				(ToUseGisPackage.Literals.DOMAIN__CALCULATORS,
+//				 GisFactory.eINSTANCE.createGisRouterGeodesic()));
+		Util.collectNewChildRouterDescriptors2(newChildDescriptors, object, ToUseGisPackage.Literals.DOMAIN__CALCULATORS);
+		Util.collectNewChildGeocoderDescriptors2(newChildDescriptors, object, ToUseGisPackage.Literals.DOMAIN__GEOCODERS);
 	}
 
 	/**
