@@ -145,6 +145,15 @@ public class ToUseGisPackageImpl extends EPackageImpl implements ToUseGisPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getDomain_Pinpointers() {
+		return (EReference)domainEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ToUseGisFactory getToUseGisFactory() {
 		return (ToUseGisFactory)getEFactoryInstance();
 	}
@@ -173,6 +182,7 @@ public class ToUseGisPackageImpl extends EPackageImpl implements ToUseGisPackage
 		createEReference(domainEClass, DOMAIN__MATRICES);
 		createEReference(domainEClass, DOMAIN__CALCULATORS);
 		createEReference(domainEClass, DOMAIN__GEOCODERS);
+		createEReference(domainEClass, DOMAIN__PINPOINTERS);
 	}
 
 	/**
@@ -213,6 +223,7 @@ public class ToUseGisPackageImpl extends EPackageImpl implements ToUseGisPackage
 		initEReference(getDomain_Matrices(), theGisPackage.getGisRoutesHolder(), null, "Matrices", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDomain_Calculators(), theGisPackage.getGisRouteCalculator(), null, "Calculators", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDomain_Geocoders(), theGisPackage.getGisAddressGeocoder(), null, "Geocoders", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDomain_Pinpointers(), theGisPackage.getGisLocationPinpointer(), null, "Pinpointers", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

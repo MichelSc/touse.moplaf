@@ -81,6 +81,7 @@ public class DomainItemProvider
 			childrenFeatures.add(ToUseGisPackage.Literals.DOMAIN__MATRICES);
 			childrenFeatures.add(ToUseGisPackage.Literals.DOMAIN__CALCULATORS);
 			childrenFeatures.add(ToUseGisPackage.Literals.DOMAIN__GEOCODERS);
+			childrenFeatures.add(ToUseGisPackage.Literals.DOMAIN__PINPOINTERS);
 		}
 		return childrenFeatures;
 	}
@@ -136,6 +137,7 @@ public class DomainItemProvider
 			case ToUseGisPackage.DOMAIN__MATRICES:
 			case ToUseGisPackage.DOMAIN__CALCULATORS:
 			case ToUseGisPackage.DOMAIN__GEOCODERS:
+			case ToUseGisPackage.DOMAIN__PINPOINTERS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -181,8 +183,9 @@ public class DomainItemProvider
 //			(createChildParameter
 //				(ToUseGisPackage.Literals.DOMAIN__CALCULATORS,
 //				 GisFactory.eINSTANCE.createGisRouterGeodesic()));
-		Util.collectNewChildRouterDescriptors2(newChildDescriptors, object, ToUseGisPackage.Literals.DOMAIN__CALCULATORS);
-		Util.collectNewChildGeocoderDescriptors2(newChildDescriptors, object, ToUseGisPackage.Literals.DOMAIN__GEOCODERS);
+		Util.collectNewChildRouterDescriptors2    (newChildDescriptors, object, ToUseGisPackage.Literals.DOMAIN__CALCULATORS);
+		Util.collectNewChildGeocoderDescriptors2  (newChildDescriptors, object, ToUseGisPackage.Literals.DOMAIN__GEOCODERS);
+		Util.collectNewChildPinpointerDescriptors2(newChildDescriptors, object, ToUseGisPackage.Literals.DOMAIN__PINPOINTERS);
 	}
 
 	/**

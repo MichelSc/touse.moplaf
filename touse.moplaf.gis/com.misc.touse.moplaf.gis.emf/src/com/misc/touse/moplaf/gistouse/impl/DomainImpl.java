@@ -4,6 +4,7 @@ package com.misc.touse.moplaf.gistouse.impl;
 
 import com.misc.common.moplaf.gis.GisAddressGeocoder;
 import com.misc.common.moplaf.gis.GisLocation;
+import com.misc.common.moplaf.gis.GisLocationPinpointer;
 import com.misc.common.moplaf.gis.GisRouteCalculator;
 import com.misc.common.moplaf.gis.GisRoutesHolder;
 
@@ -35,6 +36,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.misc.touse.moplaf.gistouse.impl.DomainImpl#getMatrices <em>Matrices</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.gistouse.impl.DomainImpl#getCalculators <em>Calculators</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.gistouse.impl.DomainImpl#getGeocoders <em>Geocoders</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.gistouse.impl.DomainImpl#getPinpointers <em>Pinpointers</em>}</li>
  * </ul>
  *
  * @generated
@@ -79,6 +81,16 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	 * @ordered
 	 */
 	protected EList<GisAddressGeocoder> geocoders;
+
+	/**
+	 * The cached value of the '{@link #getPinpointers() <em>Pinpointers</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPinpointers()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<GisLocationPinpointer> pinpointers;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -152,6 +164,18 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<GisLocationPinpointer> getPinpointers() {
+		if (pinpointers == null) {
+			pinpointers = new EObjectContainmentEList<GisLocationPinpointer>(GisLocationPinpointer.class, this, ToUseGisPackage.DOMAIN__PINPOINTERS);
+		}
+		return pinpointers;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -163,6 +187,8 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 				return ((InternalEList<?>)getCalculators()).basicRemove(otherEnd, msgs);
 			case ToUseGisPackage.DOMAIN__GEOCODERS:
 				return ((InternalEList<?>)getGeocoders()).basicRemove(otherEnd, msgs);
+			case ToUseGisPackage.DOMAIN__PINPOINTERS:
+				return ((InternalEList<?>)getPinpointers()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -183,6 +209,8 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 				return getCalculators();
 			case ToUseGisPackage.DOMAIN__GEOCODERS:
 				return getGeocoders();
+			case ToUseGisPackage.DOMAIN__PINPOINTERS:
+				return getPinpointers();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -212,6 +240,10 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 				getGeocoders().clear();
 				getGeocoders().addAll((Collection<? extends GisAddressGeocoder>)newValue);
 				return;
+			case ToUseGisPackage.DOMAIN__PINPOINTERS:
+				getPinpointers().clear();
+				getPinpointers().addAll((Collection<? extends GisLocationPinpointer>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -236,6 +268,9 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 			case ToUseGisPackage.DOMAIN__GEOCODERS:
 				getGeocoders().clear();
 				return;
+			case ToUseGisPackage.DOMAIN__PINPOINTERS:
+				getPinpointers().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -256,6 +291,8 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 				return calculators != null && !calculators.isEmpty();
 			case ToUseGisPackage.DOMAIN__GEOCODERS:
 				return geocoders != null && !geocoders.isEmpty();
+			case ToUseGisPackage.DOMAIN__PINPOINTERS:
+				return pinpointers != null && !pinpointers.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
