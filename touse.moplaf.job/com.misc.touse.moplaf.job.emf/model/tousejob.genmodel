@@ -4,7 +4,7 @@
     modelPluginID="com.misc.touse.moplaf.job.emf" modelName="Tousejob" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
     usedGenPackages="../../com.misc.common.moplaf.job.emf/model/job.genmodel#//job ../../com.misc.common.moplaf.job.client.emf/model/jobclient.genmodel#//jobclient ../../com.misc.common.moplaf.job.xmlrpc.emf/model/jobxmlrpc.genmodel#//jobxmlrpc"
-    operationReflection="true" importOrganizing="true">
+    operationReflection="true" runtimePlatform="RCP" importOrganizing="true">
   <foreignModel>tousejob.ecore</foreignModel>
   <genPackages prefix="ToUseJob" basePackage="com.misc.touse.moplaf" disposableProviderFactory="true"
       ecorePackage="tousejob.ecore#/">
@@ -23,6 +23,5 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousejob.ecore#//Runs/Runs"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousejob.ecore#//Runs/Name"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="tousejob.ecore#//DummyToHoldRefOnModel"/>
   </genPackages>
 </genmodel:GenModel>

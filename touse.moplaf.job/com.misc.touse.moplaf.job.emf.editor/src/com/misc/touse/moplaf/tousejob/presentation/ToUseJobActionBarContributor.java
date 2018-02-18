@@ -5,6 +5,7 @@ package com.misc.touse.moplaf.tousejob.presentation;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import org.eclipse.emf.common.ui.action.WorkbenchWindowActionDelegate;
 import org.eclipse.emf.common.ui.viewer.IViewerProvider;
 
 import org.eclipse.emf.edit.domain.EditingDomain;
@@ -34,13 +35,16 @@ import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.ISelectionProvider;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
+import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.viewers.Viewer;
 
+import org.eclipse.jface.wizard.WizardDialog;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.PartInitException;
 
 import com.misc.common.moplaf.emf.editor.Util;
 import com.misc.common.moplaf.emf.editor.action.CancelAction;
+import com.misc.common.moplaf.emf.editor.action.FlushAction;
 import com.misc.common.moplaf.emf.editor.action.RefreshAction;
 import com.misc.common.moplaf.emf.editor.action.ResetAction;
 import com.misc.common.moplaf.emf.editor.action.RunAction;
@@ -57,6 +61,27 @@ import com.misc.common.moplaf.emf.editor.action.StopAction;
 public class ToUseJobActionBarContributor
 	extends EditingDomainActionBarContributor
 	implements ISelectionChangedListener {
+	/**
+	 * Action to create objects from the ToUseJob model.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static class NewAction extends WorkbenchWindowActionDelegate {
+		/**
+		 * @see org.eclipse.ui.IActionDelegate#run(org.eclipse.jface.action.IAction)
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public void run(IAction action) {
+			ToUseJobModelWizard wizard = new ToUseJobModelWizard();
+			wizard.init(getWindow().getWorkbench(), StructuredSelection.EMPTY);
+			WizardDialog wizardDialog = new WizardDialog(getWindow().getShell(), wizard);
+			wizardDialog.open();
+		}
+	}
+
 	/**
 	 * This keeps track of the active editor.
 	 * <!-- begin-user-doc -->
@@ -313,6 +338,7 @@ public class ToUseJobActionBarContributor
 		applicationPopUpMenuActions.add(new RunAction(activeEditorPart, selection));
 		applicationPopUpMenuActions.add(new RunBackgroundAction(activeEditorPart, selection));
 		applicationPopUpMenuActions.add(new ResetAction(activeEditorPart, selection));
+		applicationPopUpMenuActions.add(new FlushAction(activeEditorPart, selection));
 		applicationPopUpMenuActions.add(new CancelAction(activeEditorPart, selection));
 		applicationPopUpMenuActions.add(new StartAction(activeEditorPart, selection));
 		applicationPopUpMenuActions.add(new StopAction (activeEditorPart, selection));
