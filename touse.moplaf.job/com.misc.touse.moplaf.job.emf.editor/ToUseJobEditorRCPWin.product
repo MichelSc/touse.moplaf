@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="touseeditor_rcp_win" uid="ToUseJobEditor_RCP_Win" id="com.misc.touse.moplaf.job.emf.editor.product" application="com.misc.touse.moplaf.job.emf.editor.TousejobEditorAdvisorApplication" useFeatures="false" includeLaunchers="true">
+<product name="ToUseJobProduct" uid="ToUseJobEditorRCPWin" id="com.misc.touse.moplaf.job.emf.editor.product" application="com.misc.touse.moplaf.job.emf.editor.TousejobEditorAdvisorApplication" useFeatures="false" includeLaunchers="true">
 
    <configIni use="default">
    </configIni>
@@ -37,12 +37,15 @@
       <plugin id="com.misc.touse.moplaf.job.emf"/>
       <plugin id="com.misc.touse.moplaf.job.emf.edit"/>
       <plugin id="com.misc.touse.moplaf.job.emf.editor"/>
+      <plugin id="javax.activation"/>
       <plugin id="javax.annotation"/>
       <plugin id="javax.inject"/>
       <plugin id="javax.servlet"/>
       <plugin id="javax.xml"/>
-      <plugin id="org.apache.batik.css"/>
-      <plugin id="org.apache.batik.util"/>
+      <plugin id="javax.xml.bind"/>
+      <plugin id="javax.xml.stream"/>
+      <plugin id="org.apache.batik.css" version="1.8.0.v20170214-1941"/>
+      <plugin id="org.apache.batik.util" version="1.8.0.v20170214-1941"/>
       <plugin id="org.apache.commons.codec"/>
       <plugin id="org.apache.commons.httpclient"/>
       <plugin id="org.apache.commons.jxpath"/>
@@ -119,6 +122,7 @@
       <plugin id="org.eclipse.osgi.compatibility.state" fragment="true"/>
       <plugin id="org.eclipse.osgi.services"/>
       <plugin id="org.eclipse.osgi.util"/>
+      <plugin id="org.eclipse.pde.ds.lib"/>
       <plugin id="org.eclipse.swt"/>
       <plugin id="org.eclipse.swt.win32.win32.x86_64" fragment="true"/>
       <plugin id="org.eclipse.team.core"/>
