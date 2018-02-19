@@ -101,4 +101,16 @@
             contributorClass="com.misc.touse.moplaf.tousejob.presentation.ToUseJobActionBarContributor">
       </editor>
    </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="com.misc.touse.moplaf.job.emf.editor.TousejobEditorAdvisorApplication"
+            name="touseeditor_rcp_win">
+         <property
+               name="appName"
+               value="touseeditor_rcp_win">
+         </property>
+      </product>
+   </extension>
 </plugin>
