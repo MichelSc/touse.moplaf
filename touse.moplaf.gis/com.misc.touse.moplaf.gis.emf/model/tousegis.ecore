@@ -18,5 +18,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="Pinpointers" upperBound="-1"
         eType="ecore:EClass ../../com.misc.common.moplaf.gis.emf/model/gis.ecore#//GisLocationPinpointer"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Kmls" upperBound="-1" eType="ecore:EClass ../../com.misc.common.moplaf.gis.kml.emf/model/kml.ecore#//Kml"
+        containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -2,6 +2,8 @@
  */
 package com.misc.touse.moplaf.gistouse.provider;
 
+import com.misc.common.moplaf.file.provider.FileEditPlugin;
+import com.misc.common.moplaf.gis.kml.provider.KmlEditPlugin;
 import com.misc.common.moplaf.gis.provider.GisEditPlugin;
 
 import com.misc.common.moplaf.job.provider.JobEditPlugin;
@@ -42,8 +44,10 @@ public final class ToUseGisEditPlugin extends EMFPlugin {
 	public ToUseGisEditPlugin() {
 		super
 		  (new ResourceLocator [] {
+		     FileEditPlugin.INSTANCE,
 		     GisEditPlugin.INSTANCE,
 		     JobEditPlugin.INSTANCE,
+		     KmlEditPlugin.INSTANCE,
 		   });
 	}
 

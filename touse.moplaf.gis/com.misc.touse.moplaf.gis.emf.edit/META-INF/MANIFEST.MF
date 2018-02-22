@@ -12,8 +12,12 @@ Export-Package: com.misc.touse.moplaf.gistouse.provider
 Require-Bundle: org.eclipse.core.runtime,
  com.misc.touse.moplaf.gis.emf;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,
+ com.misc.common.moplaf.file.emf;visibility:=reexport,
+ com.misc.common.moplaf.file.emf.edit;visibility:=reexport,
  com.misc.common.moplaf.gis.emf;visibility:=reexport,
  com.misc.common.moplaf.gis.emf.edit;visibility:=reexport,
  com.misc.common.moplaf.job.emf;visibility:=reexport,
- com.misc.common.moplaf.job.emf.edit;visibility:=reexport
+ com.misc.common.moplaf.job.emf.edit;visibility:=reexport,
+ com.misc.common.moplaf.gis.kml.emf;visibility:=reexport,
+ com.misc.common.moplaf.gis.kml.emf.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

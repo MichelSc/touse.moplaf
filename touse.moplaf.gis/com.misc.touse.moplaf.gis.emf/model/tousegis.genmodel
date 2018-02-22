@@ -3,7 +3,7 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.misc.touse.moplaf.gis.emf/src" modelPluginID="com.misc.touse.moplaf.gis.emf"
     modelName="ToUseGis" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
-    usedGenPackages="../../com.misc.common.moplaf.gis.emf/model/gis.genmodel#//gis ../../com.misc.common.moplaf.job.emf/model/job.genmodel#//job"
+    usedGenPackages="../../com.misc.common.moplaf.file.emf/model/file.genmodel#//file ../../com.misc.common.moplaf.gis.emf/model/gis.genmodel#//gis ../../com.misc.common.moplaf.job.emf/model/job.genmodel#//job ../../com.misc.common.moplaf.gis.kml.emf/model/kml.genmodel#//kml"
     operationReflection="true" importOrganizing="true">
   <foreignModel>tousegis.ecore</foreignModel>
   <genPackages prefix="ToUseGis" basePackage="com.misc.touse.moplaf" disposableProviderFactory="true"
@@ -13,6 +13,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousegis.ecore#//Domain/Matrices"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousegis.ecore#//Domain/Calculators"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousegis.ecore#//Domain/Geocoders"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousegis.ecore#//Domain/Pinpointers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousegis.ecore#//Domain/Kmls"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

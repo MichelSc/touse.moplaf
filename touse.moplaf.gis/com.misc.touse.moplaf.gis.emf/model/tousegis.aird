@@ -7,6 +7,8 @@
     <semanticResources>platform:/resource/com.misc.common.moplaf.gis.google.emf/model/gisgoogle.ecore</semanticResources>
     <semanticResources>platform:/resource/com.misc.common.moplaf.gis.gisgraphy.emf/model/gisgisgraphy.ecore</semanticResources>
     <semanticResources>platform:/resource/com.misc.common.moplaf.job.emf/model/job.ecore</semanticResources>
+    <semanticResources>platform:/resource/com.misc.common.moplaf.gis.kml.emf/model/kml.ecore</semanticResources>
+    <semanticResources>platform:/resource/com.misc.common.moplaf.file.emf/model/file.ecore</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" xmi:id="_Z8e8oMshEeSap4wTGq4hPQ">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_8SS14P4WEee2Du4OeMxpLg" name="gistouse class diagram" repPath="#_b_hycMshEeSap4wTGq4hPQ">
@@ -30,6 +32,10 @@
         <children xmi:type="notation:Node" xmi:id="_fLO5cMshEeSap4wTGq4hPQ" type="2003" element="_fKwYUMshEeSap4wTGq4hPQ">
           <children xmi:type="notation:Node" xmi:id="_fLPggMshEeSap4wTGq4hPQ" type="5007"/>
           <children xmi:type="notation:Node" xmi:id="_fLQHkMshEeSap4wTGq4hPQ" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_o8x4wBfrEeiUGMBT3-0sFA" type="3010" element="_o8oHwBfrEeiUGMBT3-0sFA">
+              <styles xmi:type="notation:FontStyle" xmi:id="_o8x4wRfrEeiUGMBT3-0sFA" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_o8x4whfrEeiUGMBT3-0sFA"/>
+            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_fLQHkcshEeSap4wTGq4hPQ"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_fLQHksshEeSap4wTGq4hPQ"/>
           </children>
@@ -283,6 +289,14 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_o8oHwBfrEeiUGMBT3-0sFA" name=" Kmls : Kml" tooltipText="">
+        <target xmi:type="ecore:EReference" href="tousegis.ecore#//Domain/Kmls"/>
+        <semanticElements xmi:type="ecore:EReference" href="tousegis.ecore#//Domain/Kmls"/>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_o8oHwRfrEeiUGMBT3-0sFA" labelAlignment="LEFT" color="114,159,207">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']"/>
+      </ownedElements>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_G8R2MM_DEeSIAOYsbAIYOQ" name="GisLocation" tooltipText="" incomingEdges="_Jn7kIM_DEeSIAOYsbAIYOQ" width="12" height="10">
       <target xmi:type="ecore:EClass" href="platform:/resource/com.misc.common.moplaf.gis.emf/model/gis.ecore#//GisLocation"/>

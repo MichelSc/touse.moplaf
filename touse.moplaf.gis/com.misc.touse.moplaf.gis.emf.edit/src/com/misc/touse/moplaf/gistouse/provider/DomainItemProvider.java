@@ -4,6 +4,7 @@ package com.misc.touse.moplaf.gistouse.provider;
 
 
 import com.misc.common.moplaf.gis.GisFactory;
+import com.misc.common.moplaf.gis.kml.KmlFactory;
 import com.misc.common.moplaf.gis.provider.Util;
 import com.misc.touse.moplaf.gistouse.Domain;
 import com.misc.touse.moplaf.gistouse.ToUseGisPackage;
@@ -82,6 +83,7 @@ public class DomainItemProvider
 			childrenFeatures.add(ToUseGisPackage.Literals.DOMAIN__CALCULATORS);
 			childrenFeatures.add(ToUseGisPackage.Literals.DOMAIN__GEOCODERS);
 			childrenFeatures.add(ToUseGisPackage.Literals.DOMAIN__PINPOINTERS);
+			childrenFeatures.add(ToUseGisPackage.Literals.DOMAIN__KMLS);
 		}
 		return childrenFeatures;
 	}
@@ -138,6 +140,7 @@ public class DomainItemProvider
 			case ToUseGisPackage.DOMAIN__CALCULATORS:
 			case ToUseGisPackage.DOMAIN__GEOCODERS:
 			case ToUseGisPackage.DOMAIN__PINPOINTERS:
+			case ToUseGisPackage.DOMAIN__KMLS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -175,9 +178,14 @@ public class DomainItemProvider
 				 GisFactory.eINSTANCE.createGisCoordinates()));
 
 		newChildDescriptors.add
-			(createChildParameter
-				(ToUseGisPackage.Literals.DOMAIN__MATRICES,
-				 GisFactory.eINSTANCE.createGisRoutesHolder()));
+		(createChildParameter
+			(ToUseGisPackage.Literals.DOMAIN__MATRICES,
+			 GisFactory.eINSTANCE.createGisRoutesHolder()));
+
+		newChildDescriptors.add
+		(createChildParameter
+			(ToUseGisPackage.Literals.DOMAIN__KMLS,
+			 KmlFactory.eINSTANCE.createKml()));
 
 //		newChildDescriptors.add
 //			(createChildParameter
