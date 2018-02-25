@@ -157,6 +157,7 @@ import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 import com.misc.touse.moplaf.gistouse.provider.ToUseGisItemProviderAdapterFactory;
 import com.misc.common.moplaf.emf.editor.provider.AdapterFactoryContentProviderExtended;
 import com.misc.common.moplaf.file.FilePackage;
+import com.misc.common.moplaf.gis.kml.KmlPackage;
 import com.misc.common.moplaf.gis.provider.GisItemProviderAdapterFactory;
 
 import com.misc.common.moplaf.job.provider.JobItemProviderAdapterFactory;
@@ -1418,6 +1419,7 @@ public class ToUseGisEditor
 			
 		AdapterFactoryContentProviderExtended contentProvider = new AdapterFactoryContentProviderExtended(adapterFactory);
 		contentProvider.editFilePaths.addSelector(FilePackage.Literals.FILE_LOCAL__FILE_PATH);
+		contentProvider.editColors.addSelector(KmlPackage.Literals.GEOMETRY__COLOR);
 		propertySheetPage.setPropertySourceProvider(contentProvider);
 
 		propertySheetPages.add(propertySheetPage);
