@@ -2,10 +2,11 @@
  */
 package com.misc.touse.moplaf.tousejob.impl;
 
+import com.misc.common.moplaf.file.FilePackage;
 import com.misc.common.moplaf.job.JobPackage;
 
 import com.misc.common.moplaf.job.jobclient.JobClientPackage;
-import com.misc.common.moplaf.job.jobxmlrpc.JobXmlRpcPackage;
+import com.misc.common.moplaf.serialize.SerializePackage;
 import com.misc.touse.moplaf.tousejob.Domain;
 import com.misc.touse.moplaf.tousejob.Runs;
 import com.misc.touse.moplaf.tousejob.ToUseJob;
@@ -101,9 +102,10 @@ public class ToUseJobPackageImpl extends EPackageImpl implements ToUseJobPackage
 		isInited = true;
 
 		// Initialize simple dependencies
+		FilePackage.eINSTANCE.eClass();
 		JobPackage.eINSTANCE.eClass();
 		JobClientPackage.eINSTANCE.eClass();
-		JobXmlRpcPackage.eINSTANCE.eClass();
+		SerializePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theToUseJobPackage.createPackageContents();
@@ -145,6 +147,24 @@ public class ToUseJobPackageImpl extends EPackageImpl implements ToUseJobPackage
 	 */
 	public EReference getDomain_Schedulers() {
 		return (EReference)domainEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDomain_Deserializables() {
+		return (EReference)domainEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDomain_Serializables() {
+		return (EReference)domainEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -250,6 +270,8 @@ public class ToUseJobPackageImpl extends EPackageImpl implements ToUseJobPackage
 		domainEClass = createEClass(DOMAIN);
 		createEReference(domainEClass, DOMAIN__RUNS);
 		createEReference(domainEClass, DOMAIN__SCHEDULERS);
+		createEReference(domainEClass, DOMAIN__DESERIALIZABLES);
+		createEReference(domainEClass, DOMAIN__SERIALIZABLES);
 
 		toUseJobEClass = createEClass(TO_USE_JOB);
 		createEAttribute(toUseJobEClass, TO_USE_JOB__SECONDS_WAITING);
@@ -288,6 +310,7 @@ public class ToUseJobPackageImpl extends EPackageImpl implements ToUseJobPackage
 
 		// Obtain other dependent packages
 		JobClientPackage theJobClientPackage = (JobClientPackage)EPackage.Registry.INSTANCE.getEPackage(JobClientPackage.eNS_URI);
+		SerializePackage theSerializePackage = (SerializePackage)EPackage.Registry.INSTANCE.getEPackage(SerializePackage.eNS_URI);
 		JobPackage theJobPackage = (JobPackage)EPackage.Registry.INSTANCE.getEPackage(JobPackage.eNS_URI);
 
 		// Create type parameters
@@ -302,6 +325,8 @@ public class ToUseJobPackageImpl extends EPackageImpl implements ToUseJobPackage
 		initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDomain_Runs(), this.getRuns(), null, "Runs", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDomain_Schedulers(), theJobClientPackage.getJobScheduler(), null, "Schedulers", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDomain_Deserializables(), theSerializePackage.getDeserializable(), null, "Deserializables", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDomain_Serializables(), theSerializePackage.getSerializable(), null, "Serializables", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(toUseJobEClass, ToUseJob.class, "ToUseJob", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getToUseJob_SecondsWaiting(), ecorePackage.getEInt(), "SecondsWaiting", "2", 0, 1, ToUseJob.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

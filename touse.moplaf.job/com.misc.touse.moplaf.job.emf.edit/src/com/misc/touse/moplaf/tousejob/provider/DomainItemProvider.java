@@ -14,6 +14,7 @@ package com.misc.touse.moplaf.tousejob.provider;
 
 
 import com.misc.common.moplaf.job.jobclient.JobClientFactory;
+import com.misc.common.moplaf.serialize.SerializeFactory;
 import com.misc.touse.moplaf.tousejob.Domain;
 import com.misc.touse.moplaf.tousejob.ToUseJobFactory;
 import com.misc.touse.moplaf.tousejob.ToUseJobPackage;
@@ -89,6 +90,8 @@ public class DomainItemProvider
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ToUseJobPackage.Literals.DOMAIN__RUNS);
 			childrenFeatures.add(ToUseJobPackage.Literals.DOMAIN__SCHEDULERS);
+			childrenFeatures.add(ToUseJobPackage.Literals.DOMAIN__DESERIALIZABLES);
+			childrenFeatures.add(ToUseJobPackage.Literals.DOMAIN__SERIALIZABLES);
 		}
 		return childrenFeatures;
 	}
@@ -142,6 +145,8 @@ public class DomainItemProvider
 		switch (notification.getFeatureID(Domain.class)) {
 			case ToUseJobPackage.DOMAIN__RUNS:
 			case ToUseJobPackage.DOMAIN__SCHEDULERS:
+			case ToUseJobPackage.DOMAIN__DESERIALIZABLES:
+			case ToUseJobPackage.DOMAIN__SERIALIZABLES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -168,6 +173,16 @@ public class DomainItemProvider
 			(createChildParameter
 				(ToUseJobPackage.Literals.DOMAIN__SCHEDULERS,
 				 JobClientFactory.eINSTANCE.createJobScheduler()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ToUseJobPackage.Literals.DOMAIN__DESERIALIZABLES,
+				 SerializeFactory.eINSTANCE.createDeserializable()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ToUseJobPackage.Literals.DOMAIN__SERIALIZABLES,
+				 SerializeFactory.eINSTANCE.createSerializable()));
 	}
 
 	/**

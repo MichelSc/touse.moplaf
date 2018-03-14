@@ -13,6 +13,8 @@
 package com.misc.touse.moplaf.tousejob;
 
 import com.misc.common.moplaf.job.jobclient.JobScheduler;
+import com.misc.common.moplaf.serialize.Deserializable;
+import com.misc.common.moplaf.serialize.Serializable;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -28,6 +30,8 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.tousejob.Domain#getRuns <em>Runs</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousejob.Domain#getSchedulers <em>Schedulers</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousejob.Domain#getDeserializables <em>Deserializables</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousejob.Domain#getSerializables <em>Serializables</em>}</li>
  * </ul>
  *
  * @see com.misc.touse.moplaf.tousejob.ToUseJobPackage#getDomain()
@@ -66,5 +70,37 @@ public interface Domain extends EObject {
 	 * @generated
 	 */
 	EList<JobScheduler> getSchedulers();
+
+	/**
+	 * Returns the value of the '<em><b>Deserializables</b></em>' containment reference list.
+	 * The list contents are of type {@link com.misc.common.moplaf.serialize.Deserializable}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Deserializables</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Deserializables</em>' containment reference list.
+	 * @see com.misc.touse.moplaf.tousejob.ToUseJobPackage#getDomain_Deserializables()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Deserializable> getDeserializables();
+
+	/**
+	 * Returns the value of the '<em><b>Serializables</b></em>' containment reference list.
+	 * The list contents are of type {@link com.misc.common.moplaf.serialize.Serializable}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Serializables</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Serializables</em>' containment reference list.
+	 * @see com.misc.touse.moplaf.tousejob.ToUseJobPackage#getDomain_Serializables()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Serializable> getSerializables();
 
 } // Domain
