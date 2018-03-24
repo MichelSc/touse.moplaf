@@ -22,7 +22,7 @@ package com.misc.touse.moplaf.timeline.tousetimeline;
 public interface FunctionAverage extends FunctionInterval {
 	/**
 	 * Returns the value of the '<em><b>Average</b></em>' attribute.
-	 * The default value is <code>"0.0"</code>.
+	 * The default value is <code>"0.0d"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Average</em>' attribute isn't clear,
@@ -30,12 +30,12 @@ public interface FunctionAverage extends FunctionInterval {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Average</em>' attribute.
-	 * @see #setAverage(float)
+	 * @see #setAverage(double)
 	 * @see com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage#getFunctionAverage_Average()
-	 * @model default="0.0"
+	 * @model default="0.0d"
 	 * @generated
 	 */
-	float getAverage();
+	double getAverage();
 
 	/**
 	 * Sets the value of the '{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionAverage#getAverage <em>Average</em>}' attribute.
@@ -45,6 +45,6 @@ public interface FunctionAverage extends FunctionInterval {
 	 * @see #getAverage()
 	 * @generated
 	 */
-	void setAverage(float value);
+	void setAverage(double value);
 
 } // FunctionAverage

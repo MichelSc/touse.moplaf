@@ -33,7 +33,7 @@ public class FunctionAverageImpl extends FunctionIntervalImpl implements Functio
 	 * @generated
 	 * @ordered
 	 */
-	protected static final float AVERAGE_EDEFAULT = 0.0F;
+	protected static final double AVERAGE_EDEFAULT = 0.0;
 
 	/**
 	 * The cached value of the '{@link #getAverage() <em>Average</em>}' attribute.
@@ -43,7 +43,7 @@ public class FunctionAverageImpl extends FunctionIntervalImpl implements Functio
 	 * @generated
 	 * @ordered
 	 */
-	protected float average = AVERAGE_EDEFAULT;
+	protected double average = AVERAGE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -69,7 +69,7 @@ public class FunctionAverageImpl extends FunctionIntervalImpl implements Functio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getAverage() {
+	public double getAverage() {
 		return average;
 	}
 
@@ -78,13 +78,13 @@ public class FunctionAverageImpl extends FunctionIntervalImpl implements Functio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAverage(float newAverage) {
-		float oldAverage = average;
+	public void setAverage(double newAverage) {
+		double oldAverage = average;
 		average = newAverage;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ToUseTimeLinePackage.FUNCTION_AVERAGE__AVERAGE, oldAverage, average));
 	}
-	
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -92,7 +92,7 @@ public class FunctionAverageImpl extends FunctionIntervalImpl implements Functio
 	@Override
 	public void refresh() {
 		Distribution distribution = this.getDistribution();
-		float average = distribution.getAverageAmount(this.getFrom(), this.getTo());
+		double average = distribution.getAverageAmount(this.getFrom(), this.getTo());
 		this.setAverage(average);
 	}
 
@@ -119,7 +119,7 @@ public class FunctionAverageImpl extends FunctionIntervalImpl implements Functio
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case ToUseTimeLinePackage.FUNCTION_AVERAGE__AVERAGE:
-				setAverage((Float)newValue);
+				setAverage((Double)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

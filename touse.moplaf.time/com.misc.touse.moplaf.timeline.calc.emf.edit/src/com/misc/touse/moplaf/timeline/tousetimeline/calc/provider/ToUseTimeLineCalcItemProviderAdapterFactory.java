@@ -72,118 +72,118 @@ public class ToUseTimeLineCalcItemProviderAdapterFactory extends ToUseTimeLineCa
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.timeline.tousetimeline.calc.PropagatorScopeDomain} instances.
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.timeline.tousetimeline.calc.ScopeDomain} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PropagatorScopeDomainItemProvider propagatorScopeDomainItemProvider;
+	protected ScopeDomainItemProvider scopeDomainItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link com.misc.touse.moplaf.timeline.tousetimeline.calc.PropagatorScopeDomain}.
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.timeline.tousetimeline.calc.ScopeDomain}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createPropagatorScopeDomainAdapter() {
-		if (propagatorScopeDomainItemProvider == null) {
-			propagatorScopeDomainItemProvider = new PropagatorScopeDomainItemProvider(this);
+	public Adapter createScopeDomainAdapter() {
+		if (scopeDomainItemProvider == null) {
+			scopeDomainItemProvider = new ScopeDomainItemProvider(this);
 		}
 
-		return propagatorScopeDomainItemProvider;
+		return scopeDomainItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.timeline.tousetimeline.calc.PropagatorScopeDomainDistribution} instances.
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.timeline.tousetimeline.calc.ScopeDomainDistribution} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PropagatorScopeDomainDistributionItemProvider propagatorScopeDomainDistributionItemProvider;
+	protected ScopeDomainDistributionItemProvider scopeDomainDistributionItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link com.misc.touse.moplaf.timeline.tousetimeline.calc.PropagatorScopeDomainDistribution}.
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.timeline.tousetimeline.calc.ScopeDomainDistribution}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createPropagatorScopeDomainDistributionAdapter() {
-		if (propagatorScopeDomainDistributionItemProvider == null) {
-			propagatorScopeDomainDistributionItemProvider = new PropagatorScopeDomainDistributionItemProvider(this);
+	public Adapter createScopeDomainDistributionAdapter() {
+		if (scopeDomainDistributionItemProvider == null) {
+			scopeDomainDistributionItemProvider = new ScopeDomainDistributionItemProvider(this);
 		}
 
-		return propagatorScopeDomainDistributionItemProvider;
+		return scopeDomainDistributionItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.timeline.tousetimeline.calc.PropagatorLayerDomainDistributionFunctions} instances.
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.timeline.tousetimeline.calc.LayerDomainDistributionFunctions} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PropagatorLayerDomainDistributionFunctionsItemProvider propagatorLayerDomainDistributionFunctionsItemProvider;
+	protected LayerDomainDistributionFunctionsItemProvider layerDomainDistributionFunctionsItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link com.misc.touse.moplaf.timeline.tousetimeline.calc.PropagatorLayerDomainDistributionFunctions}.
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.timeline.tousetimeline.calc.LayerDomainDistributionFunctions}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createPropagatorLayerDomainDistributionFunctionsAdapter() {
-		if (propagatorLayerDomainDistributionFunctionsItemProvider == null) {
-			propagatorLayerDomainDistributionFunctionsItemProvider = new PropagatorLayerDomainDistributionFunctionsItemProvider(this);
+	public Adapter createLayerDomainDistributionFunctionsAdapter() {
+		if (layerDomainDistributionFunctionsItemProvider == null) {
+			layerDomainDistributionFunctionsItemProvider = new LayerDomainDistributionFunctionsItemProvider(this);
 		}
 
-		return propagatorLayerDomainDistributionFunctionsItemProvider;
+		return layerDomainDistributionFunctionsItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.timeline.tousetimeline.calc.PropagatorCalcDomainDistributionFunctionInterval} instances.
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.timeline.tousetimeline.calc.CalcDomainDistributionFunctionInterval} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PropagatorCalcDomainDistributionFunctionIntervalItemProvider propagatorCalcDomainDistributionFunctionIntervalItemProvider;
+	protected CalcDomainDistributionFunctionIntervalItemProvider calcDomainDistributionFunctionIntervalItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link com.misc.touse.moplaf.timeline.tousetimeline.calc.PropagatorCalcDomainDistributionFunctionInterval}.
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.timeline.tousetimeline.calc.CalcDomainDistributionFunctionInterval}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createPropagatorCalcDomainDistributionFunctionIntervalAdapter() {
-		if (propagatorCalcDomainDistributionFunctionIntervalItemProvider == null) {
-			propagatorCalcDomainDistributionFunctionIntervalItemProvider = new PropagatorCalcDomainDistributionFunctionIntervalItemProvider(this);
+	public Adapter createCalcDomainDistributionFunctionIntervalAdapter() {
+		if (calcDomainDistributionFunctionIntervalItemProvider == null) {
+			calcDomainDistributionFunctionIntervalItemProvider = new CalcDomainDistributionFunctionIntervalItemProvider(this);
 		}
 
-		return propagatorCalcDomainDistributionFunctionIntervalItemProvider;
+		return calcDomainDistributionFunctionIntervalItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.timeline.tousetimeline.calc.PropagatorCalcDomainDistributionFunctionPossible} instances.
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.timeline.tousetimeline.calc.CalcDomainDistributionFunctionPossible} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PropagatorCalcDomainDistributionFunctionPossibleItemProvider propagatorCalcDomainDistributionFunctionPossibleItemProvider;
+	protected CalcDomainDistributionFunctionPossibleItemProvider calcDomainDistributionFunctionPossibleItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link com.misc.touse.moplaf.timeline.tousetimeline.calc.PropagatorCalcDomainDistributionFunctionPossible}.
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.timeline.tousetimeline.calc.CalcDomainDistributionFunctionPossible}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createPropagatorCalcDomainDistributionFunctionPossibleAdapter() {
-		if (propagatorCalcDomainDistributionFunctionPossibleItemProvider == null) {
-			propagatorCalcDomainDistributionFunctionPossibleItemProvider = new PropagatorCalcDomainDistributionFunctionPossibleItemProvider(this);
+	public Adapter createCalcDomainDistributionFunctionPossibleAdapter() {
+		if (calcDomainDistributionFunctionPossibleItemProvider == null) {
+			calcDomainDistributionFunctionPossibleItemProvider = new CalcDomainDistributionFunctionPossibleItemProvider(this);
 		}
 
-		return propagatorCalcDomainDistributionFunctionPossibleItemProvider;
+		return calcDomainDistributionFunctionPossibleItemProvider;
 	}
 
 	/**
@@ -285,11 +285,11 @@ public class ToUseTimeLineCalcItemProviderAdapterFactory extends ToUseTimeLineCa
 	 * @generated
 	 */
 	public void dispose() {
-		if (propagatorScopeDomainItemProvider != null) propagatorScopeDomainItemProvider.dispose();
-		if (propagatorScopeDomainDistributionItemProvider != null) propagatorScopeDomainDistributionItemProvider.dispose();
-		if (propagatorLayerDomainDistributionFunctionsItemProvider != null) propagatorLayerDomainDistributionFunctionsItemProvider.dispose();
-		if (propagatorCalcDomainDistributionFunctionIntervalItemProvider != null) propagatorCalcDomainDistributionFunctionIntervalItemProvider.dispose();
-		if (propagatorCalcDomainDistributionFunctionPossibleItemProvider != null) propagatorCalcDomainDistributionFunctionPossibleItemProvider.dispose();
+		if (scopeDomainItemProvider != null) scopeDomainItemProvider.dispose();
+		if (scopeDomainDistributionItemProvider != null) scopeDomainDistributionItemProvider.dispose();
+		if (layerDomainDistributionFunctionsItemProvider != null) layerDomainDistributionFunctionsItemProvider.dispose();
+		if (calcDomainDistributionFunctionIntervalItemProvider != null) calcDomainDistributionFunctionIntervalItemProvider.dispose();
+		if (calcDomainDistributionFunctionPossibleItemProvider != null) calcDomainDistributionFunctionPossibleItemProvider.dispose();
 	}
 
 }

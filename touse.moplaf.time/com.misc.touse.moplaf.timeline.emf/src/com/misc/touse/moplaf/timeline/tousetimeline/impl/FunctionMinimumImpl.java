@@ -31,7 +31,7 @@ public class FunctionMinimumImpl extends FunctionIntervalImpl implements Functio
 	 * @generated
 	 * @ordered
 	 */
-	protected static final float MINIMUM_EDEFAULT = 0.0F;
+	protected static final double MINIMUM_EDEFAULT = 0.0;
 
 	/**
 	 * The cached value of the '{@link #getMinimum() <em>Minimum</em>}' attribute.
@@ -41,7 +41,7 @@ public class FunctionMinimumImpl extends FunctionIntervalImpl implements Functio
 	 * @generated
 	 * @ordered
 	 */
-	protected float minimum = MINIMUM_EDEFAULT;
+	protected double minimum = MINIMUM_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -67,7 +67,7 @@ public class FunctionMinimumImpl extends FunctionIntervalImpl implements Functio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getMinimum() {
+	public double getMinimum() {
 		return minimum;
 	}
 
@@ -76,8 +76,8 @@ public class FunctionMinimumImpl extends FunctionIntervalImpl implements Functio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMinimum(float newMinimum) {
-		float oldMinimum = minimum;
+	public void setMinimum(double newMinimum) {
+		double oldMinimum = minimum;
 		minimum = newMinimum;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ToUseTimeLinePackage.FUNCTION_MINIMUM__MINIMUM, oldMinimum, minimum));
@@ -90,7 +90,7 @@ public class FunctionMinimumImpl extends FunctionIntervalImpl implements Functio
 	@Override
 	public void refresh() {
 		Distribution distribution = this.getDistribution();
-		float minimum = distribution.getMinAmount(this.getFrom(), this.getTo());
+		double minimum = distribution.getMinAmount(this.getFrom(), this.getTo());
 		this.setMinimum(minimum);
 	}
 
@@ -117,7 +117,7 @@ public class FunctionMinimumImpl extends FunctionIntervalImpl implements Functio
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case ToUseTimeLinePackage.FUNCTION_MINIMUM__MINIMUM:
-				setMinimum((Float)newValue);
+				setMinimum((Double)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

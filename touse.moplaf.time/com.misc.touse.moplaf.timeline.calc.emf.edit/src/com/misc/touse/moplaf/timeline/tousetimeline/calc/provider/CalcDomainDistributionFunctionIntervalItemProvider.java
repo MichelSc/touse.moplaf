@@ -4,7 +4,9 @@ package com.misc.touse.moplaf.timeline.tousetimeline.calc.provider;
 
 
 import com.misc.common.moplaf.time.continuous.provider.PropagatorFunctionDistributionAbstractItemProvider;
-import com.misc.touse.moplaf.timeline.tousetimeline.calc.PropagatorScopeDomain;
+
+import com.misc.touse.moplaf.timeline.tousetimeline.calc.CalcDomainDistributionFunctionInterval;
+import com.misc.touse.moplaf.timeline.tousetimeline.calc.ToUseTimeLineCalcPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -14,22 +16,23 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
- * This is the item provider adapter for a {@link com.misc.touse.moplaf.timeline.tousetimeline.calc.PropagatorScopeDomain} object.
+ * This is the item provider adapter for a {@link com.misc.touse.moplaf.timeline.tousetimeline.calc.CalcDomainDistributionFunctionInterval} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class PropagatorScopeDomainItemProvider extends PropagatorFunctionDistributionAbstractItemProvider {
+public class CalcDomainDistributionFunctionIntervalItemProvider extends PropagatorFunctionDistributionAbstractItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PropagatorScopeDomainItemProvider(AdapterFactory adapterFactory) {
+	public CalcDomainDistributionFunctionIntervalItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -44,19 +47,42 @@ public class PropagatorScopeDomainItemProvider extends PropagatorFunctionDistrib
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addConcreteParentPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This returns PropagatorScopeDomain.gif.
+	 * This adds a property descriptor for the Concrete Parent feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addConcreteParentPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_CalcDomainDistributionFunctionInterval_ConcreteParent_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CalcDomainDistributionFunctionInterval_ConcreteParent_feature", "_UI_CalcDomainDistributionFunctionInterval_type"),
+				 ToUseTimeLineCalcPackage.Literals.CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL__CONCRETE_PARENT,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This returns CalcDomainDistributionFunctionInterval.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/PropagatorScopeDomain"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/CalcDomainDistributionFunctionInterval"));
 	}
 
 	/**
@@ -67,8 +93,8 @@ public class PropagatorScopeDomainItemProvider extends PropagatorFunctionDistrib
 	 */
 	@Override
 	public String getText(Object object) {
-		PropagatorScopeDomain propagatorScopeDomain = (PropagatorScopeDomain)object;
-		return getString("_UI_PropagatorScopeDomain_type") + " " + propagatorScopeDomain.isTouched();
+		CalcDomainDistributionFunctionInterval calcDomainDistributionFunctionInterval = (CalcDomainDistributionFunctionInterval)object;
+		return getString("_UI_CalcDomainDistributionFunctionInterval_type") + " " + calcDomainDistributionFunctionInterval.isTouched();
 	}
 	
 

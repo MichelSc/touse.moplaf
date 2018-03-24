@@ -376,7 +376,7 @@ public interface ToUseTimeLinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_MOMENT__DATE_FLOAT = TimeContinuousPackage.DISTRIBUTION___GET_MOMENT__DATE_FLOAT;
+	int DOMAIN_DISTRIBUTION___GET_MOMENT__DATE_DOUBLE = TimeContinuousPackage.DISTRIBUTION___GET_MOMENT__DATE_DOUBLE;
 
 	/**
 	 * The operation id for the '<em>Get Event Before</em>' operation.
@@ -502,7 +502,7 @@ public interface ToUseTimeLinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_EARLIEST_BELOW__DATE_FLOAT_FLOAT = TimeContinuousPackage.DISTRIBUTION___GET_EARLIEST_BELOW__DATE_FLOAT_FLOAT;
+	int DOMAIN_DISTRIBUTION___GET_EARLIEST_BELOW__DATE_DOUBLE_DOUBLE = TimeContinuousPackage.DISTRIBUTION___GET_EARLIEST_BELOW__DATE_DOUBLE_DOUBLE;
 
 	/**
 	 * The operation id for the '<em>Get Latest Below</em>' operation.
@@ -511,7 +511,7 @@ public interface ToUseTimeLinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_LATEST_BELOW__DATE_FLOAT_FLOAT = TimeContinuousPackage.DISTRIBUTION___GET_LATEST_BELOW__DATE_FLOAT_FLOAT;
+	int DOMAIN_DISTRIBUTION___GET_LATEST_BELOW__DATE_DOUBLE_DOUBLE = TimeContinuousPackage.DISTRIBUTION___GET_LATEST_BELOW__DATE_DOUBLE_DOUBLE;
 
 	/**
 	 * The operation id for the '<em>Get Earliest Above</em>' operation.
@@ -520,7 +520,7 @@ public interface ToUseTimeLinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_EARLIEST_ABOVE__DATE_FLOAT_FLOAT = TimeContinuousPackage.DISTRIBUTION___GET_EARLIEST_ABOVE__DATE_FLOAT_FLOAT;
+	int DOMAIN_DISTRIBUTION___GET_EARLIEST_ABOVE__DATE_DOUBLE_DOUBLE = TimeContinuousPackage.DISTRIBUTION___GET_EARLIEST_ABOVE__DATE_DOUBLE_DOUBLE;
 
 	/**
 	 * The operation id for the '<em>Get Latest Above</em>' operation.
@@ -529,7 +529,7 @@ public interface ToUseTimeLinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_LATEST_ABOVE__DATE_FLOAT_FLOAT = TimeContinuousPackage.DISTRIBUTION___GET_LATEST_ABOVE__DATE_FLOAT_FLOAT;
+	int DOMAIN_DISTRIBUTION___GET_LATEST_ABOVE__DATE_DOUBLE_DOUBLE = TimeContinuousPackage.DISTRIBUTION___GET_LATEST_ABOVE__DATE_DOUBLE_DOUBLE;
 
 	/**
 	 * The operation id for the '<em>Get Earliest Output Possible</em>' operation.
@@ -538,7 +538,7 @@ public interface ToUseTimeLinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_EARLIEST_OUTPUT_POSSIBLE__FLOAT_DATE_FLOAT_FLOAT = TimeContinuousPackage.DISTRIBUTION___GET_EARLIEST_OUTPUT_POSSIBLE__FLOAT_DATE_FLOAT_FLOAT;
+	int DOMAIN_DISTRIBUTION___GET_EARLIEST_OUTPUT_POSSIBLE__DOUBLE_DATE_DOUBLE_DOUBLE = TimeContinuousPackage.DISTRIBUTION___GET_EARLIEST_OUTPUT_POSSIBLE__DOUBLE_DATE_DOUBLE_DOUBLE;
 
 	/**
 	 * The operation id for the '<em>Refresh Init</em>' operation.
@@ -584,6 +584,15 @@ public interface ToUseTimeLinePackage extends EPackage {
 	 * @ordered
 	 */
 	int DOMAIN_DISTRIBUTION___ACCEPT__DATE_DATE_DISTRIBUTIONVISITOR = TimeContinuousPackage.DISTRIBUTION___ACCEPT__DATE_DATE_DISTRIBUTIONVISITOR;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_DISTRIBUTION___REFRESH = TimeContinuousPackage.DISTRIBUTION___REFRESH;
 
 	/**
 	 * The number of operations of the '<em>Domain Distribution</em>' class.

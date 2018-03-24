@@ -3,11 +3,11 @@
 package com.misc.touse.moplaf.timeline.tousetimeline.calc.provider;
 
 
-import com.misc.common.moplaf.time.continuous.calc.provider.PropagatorScopeDistributionItemProvider;
+import com.misc.common.moplaf.time.continuous.provider.PropagatorFunctionDistributionItemProvider;
 
-import com.misc.touse.moplaf.timeline.tousetimeline.calc.PropagatorScopeDomainDistribution;
-
+import com.misc.touse.moplaf.timeline.tousetimeline.calc.LayerDomainDistributionFunctions;
 import com.misc.touse.moplaf.timeline.tousetimeline.calc.ToUseTimeLineCalcPackage;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -20,19 +20,19 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
- * This is the item provider adapter for a {@link com.misc.touse.moplaf.timeline.tousetimeline.calc.PropagatorScopeDomainDistribution} object.
+ * This is the item provider adapter for a {@link com.misc.touse.moplaf.timeline.tousetimeline.calc.LayerDomainDistributionFunctions} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class PropagatorScopeDomainDistributionItemProvider extends PropagatorScopeDistributionItemProvider {
+public class LayerDomainDistributionFunctionsItemProvider extends PropagatorFunctionDistributionItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PropagatorScopeDomainDistributionItemProvider(AdapterFactory adapterFactory) {
+	public LayerDomainDistributionFunctionsItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -48,6 +48,7 @@ public class PropagatorScopeDomainDistributionItemProvider extends PropagatorSco
 			super.getPropertyDescriptors(object);
 
 			addConcreteParentPropertyDescriptor(object);
+			addAntecedentLayerDistributionAmountsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -63,9 +64,9 @@ public class PropagatorScopeDomainDistributionItemProvider extends PropagatorSco
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_PropagatorScopeDomainDistribution_ConcreteParent_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_PropagatorScopeDomainDistribution_ConcreteParent_feature", "_UI_PropagatorScopeDomainDistribution_type"),
-				 ToUseTimeLineCalcPackage.Literals.PROPAGATOR_SCOPE_DOMAIN_DISTRIBUTION__CONCRETE_PARENT,
+				 getString("_UI_LayerDomainDistributionFunctions_ConcreteParent_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_LayerDomainDistributionFunctions_ConcreteParent_feature", "_UI_LayerDomainDistributionFunctions_type"),
+				 ToUseTimeLineCalcPackage.Literals.LAYER_DOMAIN_DISTRIBUTION_FUNCTIONS__CONCRETE_PARENT,
 				 true,
 				 false,
 				 true,
@@ -75,14 +76,36 @@ public class PropagatorScopeDomainDistributionItemProvider extends PropagatorSco
 	}
 
 	/**
-	 * This returns PropagatorScopeDomainDistribution.gif.
+	 * This adds a property descriptor for the Antecedent Layer Distribution Amounts feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAntecedentLayerDistributionAmountsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_LayerDomainDistributionFunctions_AntecedentLayerDistributionAmounts_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_LayerDomainDistributionFunctions_AntecedentLayerDistributionAmounts_feature", "_UI_LayerDomainDistributionFunctions_type"),
+				 ToUseTimeLineCalcPackage.Literals.LAYER_DOMAIN_DISTRIBUTION_FUNCTIONS__ANTECEDENT_LAYER_DISTRIBUTION_AMOUNTS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This returns LayerDomainDistributionFunctions.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/PropagatorScopeDomainDistribution"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/LayerDomainDistributionFunctions"));
 	}
 
 	/**
@@ -93,8 +116,8 @@ public class PropagatorScopeDomainDistributionItemProvider extends PropagatorSco
 	 */
 	@Override
 	public String getText(Object object) {
-		PropagatorScopeDomainDistribution propagatorScopeDomainDistribution = (PropagatorScopeDomainDistribution)object;
-		return getString("_UI_PropagatorScopeDomainDistribution_type") + " " + propagatorScopeDomainDistribution.isTouched();
+		LayerDomainDistributionFunctions layerDomainDistributionFunctions = (LayerDomainDistributionFunctions)object;
+		return getString("_UI_LayerDomainDistributionFunctions_type") + " " + layerDomainDistributionFunctions.isTouched();
 	}
 	
 

@@ -60,12 +60,12 @@ public interface FunctionPossible extends ObjectWithPropagatorFunctions {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Limit Duration</em>' attribute.
-	 * @see #setLimitDuration(float)
+	 * @see #setLimitDuration(double)
 	 * @see com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage#getFunctionPossible_LimitDuration()
 	 * @model
 	 * @generated
 	 */
-	float getLimitDuration();
+	double getLimitDuration();
 
 	/**
 	 * Sets the value of the '{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionPossible#getLimitDuration <em>Limit Duration</em>}' attribute.
@@ -75,7 +75,7 @@ public interface FunctionPossible extends ObjectWithPropagatorFunctions {
 	 * @see #getLimitDuration()
 	 * @generated
 	 */
-	void setLimitDuration(float value);
+	void setLimitDuration(double value);
 
 	/**
 	 * Returns the value of the '<em><b>Limit Amount</b></em>' attribute.
@@ -86,12 +86,12 @@ public interface FunctionPossible extends ObjectWithPropagatorFunctions {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Limit Amount</em>' attribute.
-	 * @see #setLimitAmount(float)
+	 * @see #setLimitAmount(double)
 	 * @see com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage#getFunctionPossible_LimitAmount()
 	 * @model
 	 * @generated
 	 */
-	float getLimitAmount();
+	double getLimitAmount();
 
 	/**
 	 * Sets the value of the '{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionPossible#getLimitAmount <em>Limit Amount</em>}' attribute.
@@ -101,7 +101,7 @@ public interface FunctionPossible extends ObjectWithPropagatorFunctions {
 	 * @see #getLimitAmount()
 	 * @generated
 	 */
-	void setLimitAmount(float value);
+	void setLimitAmount(double value);
 
 	/**
 	 * Returns the value of the '<em><b>Distribution</b></em>' container reference.

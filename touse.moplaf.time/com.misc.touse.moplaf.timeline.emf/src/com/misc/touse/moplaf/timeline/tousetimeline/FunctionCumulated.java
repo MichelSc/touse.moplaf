@@ -22,7 +22,7 @@ package com.misc.touse.moplaf.timeline.tousetimeline;
 public interface FunctionCumulated extends FunctionInterval {
 	/**
 	 * Returns the value of the '<em><b>Cumulated</b></em>' attribute.
-	 * The default value is <code>"0.0"</code>.
+	 * The default value is <code>"0.0d"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Cumulated</em>' attribute isn't clear,
@@ -30,12 +30,12 @@ public interface FunctionCumulated extends FunctionInterval {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Cumulated</em>' attribute.
-	 * @see #setCumulated(float)
+	 * @see #setCumulated(double)
 	 * @see com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage#getFunctionCumulated_Cumulated()
-	 * @model default="0.0"
+	 * @model default="0.0d"
 	 * @generated
 	 */
-	float getCumulated();
+	double getCumulated();
 
 	/**
 	 * Sets the value of the '{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionCumulated#getCumulated <em>Cumulated</em>}' attribute.
@@ -45,6 +45,6 @@ public interface FunctionCumulated extends FunctionInterval {
 	 * @see #getCumulated()
 	 * @generated
 	 */
-	void setCumulated(float value);
+	void setCumulated(double value);
 
 } // FunctionCumulated

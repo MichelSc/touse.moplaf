@@ -8,19 +8,19 @@
   <foreignModel>ToUseTimeLineCalc.ecore</foreignModel>
   <genPackages prefix="ToUseTimeLineCalc" basePackage="com.misc.touse.moplaf.timeline.tousetimeline"
       disposableProviderFactory="true" ecorePackage="ToUseTimeLineCalc.ecore#/">
-    <genClasses ecoreClass="ToUseTimeLineCalc.ecore#//PropagatorScopeDomain"/>
-    <genClasses ecoreClass="ToUseTimeLineCalc.ecore#//PropagatorScopeDomainDistribution">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUseTimeLineCalc.ecore#//PropagatorScopeDomainDistribution/ConcreteParent"/>
+    <genClasses ecoreClass="ToUseTimeLineCalc.ecore#//ScopeDomain"/>
+    <genClasses ecoreClass="ToUseTimeLineCalc.ecore#//ScopeDomainDistribution">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUseTimeLineCalc.ecore#//ScopeDomainDistribution/ConcreteParent"/>
     </genClasses>
-    <genClasses ecoreClass="ToUseTimeLineCalc.ecore#//PropagatorLayerDomainDistributionFunctions">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUseTimeLineCalc.ecore#//PropagatorLayerDomainDistributionFunctions/ConcreteParent"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUseTimeLineCalc.ecore#//PropagatorLayerDomainDistributionFunctions/AntecedentLayerDistributionAmounts"/>
+    <genClasses ecoreClass="ToUseTimeLineCalc.ecore#//LayerDomainDistributionFunctions">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUseTimeLineCalc.ecore#//LayerDomainDistributionFunctions/ConcreteParent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUseTimeLineCalc.ecore#//LayerDomainDistributionFunctions/AntecedentLayerDistributionAmounts"/>
     </genClasses>
-    <genClasses ecoreClass="ToUseTimeLineCalc.ecore#//PropagatorCalcDomainDistributionFunctionInterval">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUseTimeLineCalc.ecore#//PropagatorCalcDomainDistributionFunctionInterval/ConcreteParent"/>
+    <genClasses ecoreClass="ToUseTimeLineCalc.ecore#//CalcDomainDistributionFunctionInterval">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUseTimeLineCalc.ecore#//CalcDomainDistributionFunctionInterval/ConcreteParent"/>
     </genClasses>
-    <genClasses ecoreClass="ToUseTimeLineCalc.ecore#//PropagatorCalcDomainDistributionFunctionPossible">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUseTimeLineCalc.ecore#//PropagatorCalcDomainDistributionFunctionPossible/ConcreteParent"/>
+    <genClasses ecoreClass="ToUseTimeLineCalc.ecore#//CalcDomainDistributionFunctionPossible">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUseTimeLineCalc.ecore#//CalcDomainDistributionFunctionPossible/ConcreteParent"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -28,12 +28,12 @@ public interface FunctionMinimum extends FunctionInterval {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Minimum</em>' attribute.
-	 * @see #setMinimum(float)
+	 * @see #setMinimum(double)
 	 * @see com.misc.touse.moplaf.timeline.tousetimeline.ToUseTimeLinePackage#getFunctionMinimum_Minimum()
 	 * @model
 	 * @generated
 	 */
-	float getMinimum();
+	double getMinimum();
 
 	/**
 	 * Sets the value of the '{@link com.misc.touse.moplaf.timeline.tousetimeline.FunctionMinimum#getMinimum <em>Minimum</em>}' attribute.
@@ -43,6 +43,6 @@ public interface FunctionMinimum extends FunctionInterval {
 	 * @see #getMinimum()
 	 * @generated
 	 */
-	void setMinimum(float value);
+	void setMinimum(double value);
 
 } // FunctionMinimum
