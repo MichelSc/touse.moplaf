@@ -50,17 +50,6 @@ public class ScopeDomainItemProvider extends PropagatorFunctionDistributionAbstr
 	}
 
 	/**
-	 * This returns ScopeDomain.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/ScopeDomain"));
-	}
-
-	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -68,8 +57,10 @@ public class ScopeDomainItemProvider extends PropagatorFunctionDistributionAbstr
 	 */
 	@Override
 	public String getText(Object object) {
-		ScopeDomain scopeDomain = (ScopeDomain)object;
-		return getString("_UI_ScopeDomain_type") + " " + scopeDomain.isTouched();
+		String label = ((ScopeDomain)object).getDescription();
+		return label == null || label.length() == 0 ?
+			getString("_UI_ScopeDomain_type") :
+			getString("_UI_ScopeDomain_type") + " " + label;
 	}
 	
 

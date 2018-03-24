@@ -75,17 +75,6 @@ public class CalcDomainDistributionFunctionPossibleItemProvider extends Propagat
 	}
 
 	/**
-	 * This returns CalcDomainDistributionFunctionPossible.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/CalcDomainDistributionFunctionPossible"));
-	}
-
-	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -93,8 +82,10 @@ public class CalcDomainDistributionFunctionPossibleItemProvider extends Propagat
 	 */
 	@Override
 	public String getText(Object object) {
-		CalcDomainDistributionFunctionPossible calcDomainDistributionFunctionPossible = (CalcDomainDistributionFunctionPossible)object;
-		return getString("_UI_CalcDomainDistributionFunctionPossible_type") + " " + calcDomainDistributionFunctionPossible.isTouched();
+		String label = ((CalcDomainDistributionFunctionPossible)object).getDescription();
+		return label == null || label.length() == 0 ?
+			getString("_UI_CalcDomainDistributionFunctionPossible_type") :
+			getString("_UI_CalcDomainDistributionFunctionPossible_type") + " " + label;
 	}
 	
 

@@ -75,17 +75,6 @@ public class ScopeDomainDistributionItemProvider extends ScopeDistributionItemPr
 	}
 
 	/**
-	 * This returns ScopeDomainDistribution.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/ScopeDomainDistribution"));
-	}
-
-	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -93,8 +82,10 @@ public class ScopeDomainDistributionItemProvider extends ScopeDistributionItemPr
 	 */
 	@Override
 	public String getText(Object object) {
-		ScopeDomainDistribution scopeDomainDistribution = (ScopeDomainDistribution)object;
-		return getString("_UI_ScopeDomainDistribution_type") + " " + scopeDomainDistribution.isTouched();
+		String label = ((ScopeDomainDistribution)object).getDescription();
+		return label == null || label.length() == 0 ?
+			getString("_UI_ScopeDomainDistribution_type") :
+			getString("_UI_ScopeDomainDistribution_type") + " " + label;
 	}
 	
 

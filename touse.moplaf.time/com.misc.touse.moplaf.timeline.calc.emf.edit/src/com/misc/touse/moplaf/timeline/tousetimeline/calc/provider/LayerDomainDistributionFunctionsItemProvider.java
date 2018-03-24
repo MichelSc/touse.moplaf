@@ -98,17 +98,6 @@ public class LayerDomainDistributionFunctionsItemProvider extends PropagatorFunc
 	}
 
 	/**
-	 * This returns LayerDomainDistributionFunctions.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/LayerDomainDistributionFunctions"));
-	}
-
-	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -116,8 +105,10 @@ public class LayerDomainDistributionFunctionsItemProvider extends PropagatorFunc
 	 */
 	@Override
 	public String getText(Object object) {
-		LayerDomainDistributionFunctions layerDomainDistributionFunctions = (LayerDomainDistributionFunctions)object;
-		return getString("_UI_LayerDomainDistributionFunctions_type") + " " + layerDomainDistributionFunctions.isTouched();
+		String label = ((LayerDomainDistributionFunctions)object).getDescription();
+		return label == null || label.length() == 0 ?
+			getString("_UI_LayerDomainDistributionFunctions_type") :
+			getString("_UI_LayerDomainDistributionFunctions_type") + " " + label;
 	}
 	
 

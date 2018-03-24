@@ -75,17 +75,6 @@ public class CalcDomainDistributionFunctionIntervalItemProvider extends Propagat
 	}
 
 	/**
-	 * This returns CalcDomainDistributionFunctionInterval.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/CalcDomainDistributionFunctionInterval"));
-	}
-
-	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -93,8 +82,10 @@ public class CalcDomainDistributionFunctionIntervalItemProvider extends Propagat
 	 */
 	@Override
 	public String getText(Object object) {
-		CalcDomainDistributionFunctionInterval calcDomainDistributionFunctionInterval = (CalcDomainDistributionFunctionInterval)object;
-		return getString("_UI_CalcDomainDistributionFunctionInterval_type") + " " + calcDomainDistributionFunctionInterval.isTouched();
+		String label = ((CalcDomainDistributionFunctionInterval)object).getDescription();
+		return label == null || label.length() == 0 ?
+			getString("_UI_CalcDomainDistributionFunctionInterval_type") :
+			getString("_UI_CalcDomainDistributionFunctionInterval_type") + " " + label;
 	}
 	
 
