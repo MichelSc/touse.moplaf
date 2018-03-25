@@ -26,7 +26,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainDistributionImpl#getName <em>Name</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainDistributionImpl#getColor <em>Color</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainDistributionImpl#getFunctions <em>Functions</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.timeline.tousetimeline.impl.DomainDistributionImpl#getPossibles <em>Possibles</em>}</li>
@@ -35,26 +34,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public class DomainDistributionImpl extends DistributionImpl implements DomainDistribution {
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-
 	/**
 	 * The default value of the '{@link #getColor() <em>Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -112,27 +91,6 @@ public class DomainDistributionImpl extends DistributionImpl implements DomainDi
 	@Override
 	protected EClass eStaticClass() {
 		return ToUseTimeLinePackage.Literals.DOMAIN_DISTRIBUTION;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToUseTimeLinePackage.DOMAIN_DISTRIBUTION__NAME, oldName, name));
 	}
 
 	/**
@@ -233,8 +191,6 @@ public class DomainDistributionImpl extends DistributionImpl implements DomainDi
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ToUseTimeLinePackage.DOMAIN_DISTRIBUTION__NAME:
-				return getName();
 			case ToUseTimeLinePackage.DOMAIN_DISTRIBUTION__COLOR:
 				return getColor();
 			case ToUseTimeLinePackage.DOMAIN_DISTRIBUTION__FUNCTIONS:
@@ -254,9 +210,6 @@ public class DomainDistributionImpl extends DistributionImpl implements DomainDi
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ToUseTimeLinePackage.DOMAIN_DISTRIBUTION__NAME:
-				setName((String)newValue);
-				return;
 			case ToUseTimeLinePackage.DOMAIN_DISTRIBUTION__COLOR:
 				setColor((Integer)newValue);
 				return;
@@ -280,9 +233,6 @@ public class DomainDistributionImpl extends DistributionImpl implements DomainDi
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ToUseTimeLinePackage.DOMAIN_DISTRIBUTION__NAME:
-				setName(NAME_EDEFAULT);
-				return;
 			case ToUseTimeLinePackage.DOMAIN_DISTRIBUTION__COLOR:
 				setColor(COLOR_EDEFAULT);
 				return;
@@ -304,8 +254,6 @@ public class DomainDistributionImpl extends DistributionImpl implements DomainDi
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ToUseTimeLinePackage.DOMAIN_DISTRIBUTION__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case ToUseTimeLinePackage.DOMAIN_DISTRIBUTION__COLOR:
 				return color != COLOR_EDEFAULT;
 			case ToUseTimeLinePackage.DOMAIN_DISTRIBUTION__FUNCTIONS:
@@ -326,9 +274,7 @@ public class DomainDistributionImpl extends DistributionImpl implements DomainDi
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (Name: ");
-		result.append(name);
-		result.append(", Color: ");
+		result.append(" (Color: ");
 		result.append(color);
 		result.append(')');
 		return result.toString();

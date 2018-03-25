@@ -64,32 +64,9 @@ public class DomainDistributionItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNamePropertyDescriptor(object);
 			addColorPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Name feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_DomainDistribution_Name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_DomainDistribution_Name_feature", "_UI_DomainDistribution_type"),
-				 ToUseTimeLinePackage.Literals.DOMAIN_DISTRIBUTION__NAME,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI__10ToUsePropertyCategory"),
-				 null));
 	}
 
 	/**
@@ -146,17 +123,6 @@ public class DomainDistributionItemProvider
 	}
 
 	/**
-	 * This returns DomainDistribution.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/DomainDistribution"));
-	}
-
-	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -182,7 +148,6 @@ public class DomainDistributionItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(DomainDistribution.class)) {
-			case ToUseTimeLinePackage.DOMAIN_DISTRIBUTION__NAME:
 			case ToUseTimeLinePackage.DOMAIN_DISTRIBUTION__COLOR:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

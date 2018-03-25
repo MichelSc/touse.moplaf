@@ -256,7 +256,7 @@ public class ToUseTimeLinePackageImpl extends EPackageImpl implements ToUseTimeL
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDomainDistribution_Name() {
+	public EAttribute getDomainDistribution_Color() {
 		return (EAttribute)domainDistributionEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -265,17 +265,8 @@ public class ToUseTimeLinePackageImpl extends EPackageImpl implements ToUseTimeL
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDomainDistribution_Color() {
-		return (EAttribute)domainDistributionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getDomainDistribution_Functions() {
-		return (EReference)domainDistributionEClass.getEStructuralFeatures().get(2);
+		return (EReference)domainDistributionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -284,7 +275,7 @@ public class ToUseTimeLinePackageImpl extends EPackageImpl implements ToUseTimeL
 	 * @generated
 	 */
 	public EReference getDomainDistribution_Possibles() {
-		return (EReference)domainDistributionEClass.getEStructuralFeatures().get(3);
+		return (EReference)domainDistributionEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -557,7 +548,6 @@ public class ToUseTimeLinePackageImpl extends EPackageImpl implements ToUseTimeL
 		createEReference(domainEClass, DOMAIN__OBJECTS_WITH_TIME_LINE);
 
 		domainDistributionEClass = createEClass(DOMAIN_DISTRIBUTION);
-		createEAttribute(domainDistributionEClass, DOMAIN_DISTRIBUTION__NAME);
 		createEAttribute(domainDistributionEClass, DOMAIN_DISTRIBUTION__COLOR);
 		createEReference(domainDistributionEClass, DOMAIN_DISTRIBUTION__FUNCTIONS);
 		createEReference(domainDistributionEClass, DOMAIN_DISTRIBUTION__POSSIBLES);
@@ -655,7 +645,6 @@ public class ToUseTimeLinePackageImpl extends EPackageImpl implements ToUseTimeL
 		initEReference(getDomain_ObjectsWithTimeLine(), this.getConcreteObjectWithTimeLine(), null, "ObjectsWithTimeLine", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(domainDistributionEClass, DomainDistribution.class, "DomainDistribution", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDomainDistribution_Name(), ecorePackage.getEString(), "Name", null, 0, 1, DomainDistribution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDomainDistribution_Color(), ecorePackage.getEInt(), "Color", null, 0, 1, DomainDistribution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDomainDistribution_Functions(), this.getFunctionInterval(), this.getFunctionInterval_Distribution(), "Functions", null, 0, -1, DomainDistribution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDomainDistribution_Possibles(), this.getFunctionPossible(), this.getFunctionPossible_Distribution(), "Possibles", null, 0, -1, DomainDistribution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
