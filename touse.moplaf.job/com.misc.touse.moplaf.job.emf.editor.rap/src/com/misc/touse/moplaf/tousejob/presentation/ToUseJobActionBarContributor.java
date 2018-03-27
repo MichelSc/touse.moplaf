@@ -139,15 +139,6 @@ public class ToUseJobActionBarContributor
 		public FileUploadAction(IWorkbenchPart workbenchPart, ISelection selection) {
 			super(workbenchPart, selection);
 			setId(ID);
-			if ( selection instanceof IStructuredSelection) {
-				IStructuredSelection structured_selection = (IStructuredSelection) selection;
-				if ( !structured_selection.isEmpty()) {
-					Object selected_object = structured_selection.getFirstElement();
-					if ( selected_object instanceof FileOwner  ) {
-						this.selected = (FileOwner)selected_object;
-					}
-				}
-			}
 		}
 		
 		/**
@@ -156,15 +147,29 @@ public class ToUseJobActionBarContributor
 		 */
 		@Override
 		protected void configureAction(){
-			setImageDescriptor(getDefaultImageDescriptor());
-			setText       ("File Upload");
-			setDescription("Upload files");
-			setToolTipText("Upload files");
-		}
-		
-		@Override
-		public boolean isEnabled() {
-			return this.selected!=null;
+			// retrieve the selection object
+			FileOwner file_owner = null;
+			if ( this.selection instanceof IStructuredSelection) {
+				IStructuredSelection structured_selection = (IStructuredSelection) this.selection;
+				if ( !structured_selection.isEmpty()) {
+					Object selected_object = structured_selection.getFirstElement();
+					if ( selected_object instanceof FileOwner  ) {
+						file_owner = (FileOwner)selected_object;
+					}
+				}
+			}
+			this.selected = file_owner;
+			
+			// set action properties
+			if ( file_owner==null ) {
+				this.disable();
+			} else {
+				this.setEnabled(true);
+				setImageDescriptor(getDefaultImageDescriptor());
+				setText       ("File Upload");
+				setDescription("Upload files");
+				setToolTipText("Upload files");
+			}
 		}
 		
 		@Override
@@ -182,7 +187,7 @@ public class ToUseJobActionBarContributor
 		      label = labelProvider.getText(selected);
 		    }
 			d.setText("Files upload to "+label);
-            d.open();  // open the dialog
+            d.open();  
 			Plugin.INSTANCE.logInfo("ToUseJob: file upload: returned");
 			
 			// add the uploaded files
