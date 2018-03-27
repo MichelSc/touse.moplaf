@@ -2,8 +2,6 @@
  */
 package com.misc.touse.moplaf.tousejob.presentation;
 
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -43,17 +41,13 @@ import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.viewers.Viewer;
 
 import org.eclipse.jface.wizard.WizardDialog;
-import org.eclipse.swt.SWT;
-import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.IEditorPart;
-import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.dialogs.PreferencesUtil;
 
 import com.misc.common.moplaf.emf.editor.Util;
-import com.misc.common.moplaf.emf.editor.action.BaseAction;
 import com.misc.common.moplaf.emf.editor.action.CancelAction;
 import com.misc.common.moplaf.emf.editor.action.RefreshAction;
 import com.misc.common.moplaf.emf.editor.action.ResetAction;
@@ -61,10 +55,7 @@ import com.misc.common.moplaf.emf.editor.action.RunAction;
 import com.misc.common.moplaf.emf.editor.action.RunBackgroundAction;
 import com.misc.common.moplaf.emf.editor.action.StartAction;
 import com.misc.common.moplaf.emf.editor.action.StopAction;
-import com.misc.common.moplaf.file.FileFactory;
-import com.misc.common.moplaf.file.FileLocal;
-import com.misc.common.moplaf.file.FileOwner;
-import com.misc.common.moplaf.job.Plugin;
+import com.misc.common.moplaf.file.presentation.FileUploadAction;
 
 /**
  * This is the action bar contributor for the ToUseJob model editor.
@@ -128,82 +119,6 @@ public class ToUseJobActionBarContributor
 		};
 
 
-	private class FileUploadAction extends BaseAction {
-		/**
-		 * 
-		 */
-		public final static String ID = "com.misc.touse.moplaf.job.emf.editor.action.FileUpload";
-		
-		private FileOwner selected = null;
-
-		public FileUploadAction(IWorkbenchPart workbenchPart, ISelection selection) {
-			super(workbenchPart, selection);
-			setId(ID);
-		}
-		
-		/**
-		 * This configures the action.
-		 * Should be overriden by the concrete class
-		 */
-		@Override
-		protected void configureAction(){
-			// retrieve the selection object
-			FileOwner file_owner = null;
-			if ( this.selection instanceof IStructuredSelection) {
-				IStructuredSelection structured_selection = (IStructuredSelection) this.selection;
-				if ( !structured_selection.isEmpty()) {
-					Object selected_object = structured_selection.getFirstElement();
-					if ( selected_object instanceof FileOwner  ) {
-						file_owner = (FileOwner)selected_object;
-					}
-				}
-			}
-			this.selected = file_owner;
-			
-			// set action properties
-			if ( file_owner==null ) {
-				this.disable();
-			} else {
-				this.setEnabled(true);
-				setImageDescriptor(getDefaultImageDescriptor());
-				setText       ("File Upload");
-				setDescription("Upload files");
-				setToolTipText("Upload files");
-			}
-		}
-		
-		@Override
-		public void run() {
-			Plugin.INSTANCE.logInfo("ToUseJob: file upload: called");
-			
-			// open the file dialog
-			Shell shell = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell();
-			FileDialog d = new FileDialog (shell, SWT.OPEN | SWT.MULTI);
-			String label = "";
-		    if (workbenchPart instanceof ToUseJobEditor )
-		    {
-		      AdapterFactory adapterFactory = ((ToUseJobEditor)workbenchPart).getAdapterFactory();
-		      AdapterFactoryLabelProvider labelProvider = new AdapterFactoryLabelProvider(adapterFactory);
-		      label = labelProvider.getText(selected);
-		    }
-			d.setText("Files upload to "+label);
-            d.open();  
-			Plugin.INSTANCE.logInfo("ToUseJob: file upload: returned");
-			
-			// add the uploaded files
-            for (String filepath : d.getFileNames()) {
-            	FileLocal new_file = FileFactory.eINSTANCE.createFileLocal();
-            	new_file.setFilePath(filepath);
-            	Path p = Paths.get(filepath);
-            	String name = p.getFileName().toString();
-            	new_file.setName(name);
-    			Plugin.INSTANCE.logInfo("ToUseJob: uploaded "+name);
-    			this.selected.getFiles().add(new_file);
-            }
-		}
-	};
-
-		
 	/**
 	 * This action opens the Properties view.
 	 * <!-- begin-user-doc -->
@@ -438,7 +353,9 @@ public class ToUseJobActionBarContributor
 			newSiblingDescriptors = domain.getNewChildDescriptors(null, object);
 		}
 		
-		
+		AdapterFactory adapterFactory = ((ToUseJobEditor)activeEditorPart).getAdapterFactory();
+	    AdapterFactoryLabelProvider labelProvider = new AdapterFactoryLabelProvider(adapterFactory);
+
 
 		// Generate actions for selection; populate and redraw the menus.
 		//
@@ -454,7 +371,7 @@ public class ToUseJobActionBarContributor
 		applicationPopUpMenuActions.add(new StartAction(activeEditorPart, selection));
 		applicationPopUpMenuActions.add(new StopAction (activeEditorPart, selection));
 		applicationPopUpMenuActions.add(new RefreshAction (activeEditorPart, selection));
-		applicationPopUpMenuActions.add(new FileUploadAction(activeEditorPart, selection));
+		applicationPopUpMenuActions.add(new FileUploadAction(activeEditorPart, selection, labelProvider));
 
 		if (createChildMenuManager != null) {
 			populateManager(createChildMenuManager, createChildActions, null);
