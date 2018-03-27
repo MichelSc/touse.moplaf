@@ -4,9 +4,11 @@ package com.misc.touse.moplaf.gistouse;
 
 import com.misc.common.moplaf.gis.GisAddressGeocoder;
 import com.misc.common.moplaf.gis.GisLocation;
+import com.misc.common.moplaf.gis.GisLocationPinpointer;
 import com.misc.common.moplaf.gis.GisRouteCalculator;
 import com.misc.common.moplaf.gis.GisRoutesHolder;
 
+import com.misc.common.moplaf.gis.kml.Kml;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -24,6 +26,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.misc.touse.moplaf.gistouse.Domain#getMatrices <em>Matrices</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.gistouse.Domain#getCalculators <em>Calculators</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.gistouse.Domain#getGeocoders <em>Geocoders</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.gistouse.Domain#getPinpointers <em>Pinpointers</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.gistouse.Domain#getKmls <em>Kmls</em>}</li>
  * </ul>
  *
  * @see com.misc.touse.moplaf.gistouse.ToUseGisPackage#getDomain()
@@ -94,5 +98,37 @@ public interface Domain extends EObject {
 	 * @generated
 	 */
 	EList<GisAddressGeocoder> getGeocoders();
+
+	/**
+	 * Returns the value of the '<em><b>Pinpointers</b></em>' containment reference list.
+	 * The list contents are of type {@link com.misc.common.moplaf.gis.GisLocationPinpointer}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Pinpointers</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Pinpointers</em>' containment reference list.
+	 * @see com.misc.touse.moplaf.gistouse.ToUseGisPackage#getDomain_Pinpointers()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<GisLocationPinpointer> getPinpointers();
+
+	/**
+	 * Returns the value of the '<em><b>Kmls</b></em>' containment reference list.
+	 * The list contents are of type {@link com.misc.common.moplaf.gis.kml.Kml}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Kmls</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Kmls</em>' containment reference list.
+	 * @see com.misc.touse.moplaf.gistouse.ToUseGisPackage#getDomain_Kmls()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Kml> getKmls();
 
 } // Domain

@@ -56,11 +56,11 @@ public class ToUseTimeLineCalcFactoryImpl extends EFactoryImpl implements ToUseT
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case ToUseTimeLineCalcPackage.PROPAGATOR_SCOPE_DOMAIN: return createPropagatorScopeDomain();
-			case ToUseTimeLineCalcPackage.PROPAGATOR_SCOPE_DOMAIN_DISTRIBUTION: return createPropagatorScopeDomainDistribution();
-			case ToUseTimeLineCalcPackage.PROPAGATOR_LAYER_DOMAIN_DISTRIBUTION_FUNCTIONS: return createPropagatorLayerDomainDistributionFunctions();
-			case ToUseTimeLineCalcPackage.PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL: return createPropagatorCalcDomainDistributionFunctionInterval();
-			case ToUseTimeLineCalcPackage.PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE: return createPropagatorCalcDomainDistributionFunctionPossible();
+			case ToUseTimeLineCalcPackage.SCOPE_DOMAIN: return createScopeDomain();
+			case ToUseTimeLineCalcPackage.SCOPE_DOMAIN_DISTRIBUTION: return createScopeDomainDistribution();
+			case ToUseTimeLineCalcPackage.LAYER_DOMAIN_DISTRIBUTION_FUNCTIONS: return createLayerDomainDistributionFunctions();
+			case ToUseTimeLineCalcPackage.CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL: return createCalcDomainDistributionFunctionInterval();
+			case ToUseTimeLineCalcPackage.CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE: return createCalcDomainDistributionFunctionPossible();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -71,9 +71,9 @@ public class ToUseTimeLineCalcFactoryImpl extends EFactoryImpl implements ToUseT
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PropagatorScopeDomain createPropagatorScopeDomain() {
-		PropagatorScopeDomainImpl propagatorScopeDomain = new PropagatorScopeDomainImpl();
-		return propagatorScopeDomain;
+	public ScopeDomain createScopeDomain() {
+		ScopeDomainImpl scopeDomain = new ScopeDomainImpl();
+		return scopeDomain;
 	}
 
 	/**
@@ -81,9 +81,9 @@ public class ToUseTimeLineCalcFactoryImpl extends EFactoryImpl implements ToUseT
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PropagatorScopeDomainDistribution createPropagatorScopeDomainDistribution() {
-		PropagatorScopeDomainDistributionImpl propagatorScopeDomainDistribution = new PropagatorScopeDomainDistributionImpl();
-		return propagatorScopeDomainDistribution;
+	public ScopeDomainDistribution createScopeDomainDistribution() {
+		ScopeDomainDistributionImpl scopeDomainDistribution = new ScopeDomainDistributionImpl();
+		return scopeDomainDistribution;
 	}
 
 	/**
@@ -91,9 +91,9 @@ public class ToUseTimeLineCalcFactoryImpl extends EFactoryImpl implements ToUseT
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PropagatorLayerDomainDistributionFunctions createPropagatorLayerDomainDistributionFunctions() {
-		PropagatorLayerDomainDistributionFunctionsImpl propagatorLayerDomainDistributionFunctions = new PropagatorLayerDomainDistributionFunctionsImpl();
-		return propagatorLayerDomainDistributionFunctions;
+	public LayerDomainDistributionFunctions createLayerDomainDistributionFunctions() {
+		LayerDomainDistributionFunctionsImpl layerDomainDistributionFunctions = new LayerDomainDistributionFunctionsImpl();
+		return layerDomainDistributionFunctions;
 	}
 
 	/**
@@ -101,9 +101,9 @@ public class ToUseTimeLineCalcFactoryImpl extends EFactoryImpl implements ToUseT
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PropagatorCalcDomainDistributionFunctionInterval createPropagatorCalcDomainDistributionFunctionInterval() {
-		PropagatorCalcDomainDistributionFunctionIntervalImpl propagatorCalcDomainDistributionFunctionInterval = new PropagatorCalcDomainDistributionFunctionIntervalImpl();
-		return propagatorCalcDomainDistributionFunctionInterval;
+	public CalcDomainDistributionFunctionInterval createCalcDomainDistributionFunctionInterval() {
+		CalcDomainDistributionFunctionIntervalImpl calcDomainDistributionFunctionInterval = new CalcDomainDistributionFunctionIntervalImpl();
+		return calcDomainDistributionFunctionInterval;
 	}
 
 	/**
@@ -111,9 +111,9 @@ public class ToUseTimeLineCalcFactoryImpl extends EFactoryImpl implements ToUseT
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PropagatorCalcDomainDistributionFunctionPossible createPropagatorCalcDomainDistributionFunctionPossible() {
-		PropagatorCalcDomainDistributionFunctionPossibleImpl propagatorCalcDomainDistributionFunctionPossible = new PropagatorCalcDomainDistributionFunctionPossibleImpl();
-		return propagatorCalcDomainDistributionFunctionPossible;
+	public CalcDomainDistributionFunctionPossible createCalcDomainDistributionFunctionPossible() {
+		CalcDomainDistributionFunctionPossibleImpl calcDomainDistributionFunctionPossible = new CalcDomainDistributionFunctionPossibleImpl();
+		return calcDomainDistributionFunctionPossible;
 	}
 
 	/**

@@ -22,49 +22,49 @@ public interface ToUseTimeLineCalcFactory extends EFactory {
 	ToUseTimeLineCalcFactory eINSTANCE = com.misc.touse.moplaf.timeline.tousetimeline.calc.impl.ToUseTimeLineCalcFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Propagator Scope Domain</em>'.
+	 * Returns a new object of class '<em>Scope Domain</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Propagator Scope Domain</em>'.
+	 * @return a new object of class '<em>Scope Domain</em>'.
 	 * @generated
 	 */
-	PropagatorScopeDomain createPropagatorScopeDomain();
+	ScopeDomain createScopeDomain();
 
 	/**
-	 * Returns a new object of class '<em>Propagator Scope Domain Distribution</em>'.
+	 * Returns a new object of class '<em>Scope Domain Distribution</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Propagator Scope Domain Distribution</em>'.
+	 * @return a new object of class '<em>Scope Domain Distribution</em>'.
 	 * @generated
 	 */
-	PropagatorScopeDomainDistribution createPropagatorScopeDomainDistribution();
+	ScopeDomainDistribution createScopeDomainDistribution();
 
 	/**
-	 * Returns a new object of class '<em>Propagator Layer Domain Distribution Functions</em>'.
+	 * Returns a new object of class '<em>Layer Domain Distribution Functions</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Propagator Layer Domain Distribution Functions</em>'.
+	 * @return a new object of class '<em>Layer Domain Distribution Functions</em>'.
 	 * @generated
 	 */
-	PropagatorLayerDomainDistributionFunctions createPropagatorLayerDomainDistributionFunctions();
+	LayerDomainDistributionFunctions createLayerDomainDistributionFunctions();
 
 	/**
-	 * Returns a new object of class '<em>Propagator Calc Domain Distribution Function Interval</em>'.
+	 * Returns a new object of class '<em>Calc Domain Distribution Function Interval</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Propagator Calc Domain Distribution Function Interval</em>'.
+	 * @return a new object of class '<em>Calc Domain Distribution Function Interval</em>'.
 	 * @generated
 	 */
-	PropagatorCalcDomainDistributionFunctionInterval createPropagatorCalcDomainDistributionFunctionInterval();
+	CalcDomainDistributionFunctionInterval createCalcDomainDistributionFunctionInterval();
 
 	/**
-	 * Returns a new object of class '<em>Propagator Calc Domain Distribution Function Possible</em>'.
+	 * Returns a new object of class '<em>Calc Domain Distribution Function Possible</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Propagator Calc Domain Distribution Function Possible</em>'.
+	 * @return a new object of class '<em>Calc Domain Distribution Function Possible</em>'.
 	 * @generated
 	 */
-	PropagatorCalcDomainDistributionFunctionPossible createPropagatorCalcDomainDistributionFunctionPossible();
+	CalcDomainDistributionFunctionPossible createCalcDomainDistributionFunctionPossible();
 
 	/**
 	 * Returns the package supported by this factory.

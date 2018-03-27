@@ -3,7 +3,7 @@
 package com.misc.touse.moplaf.timeline.tousetimeline.calc.impl;
 
 import com.misc.common.moplaf.time.continuous.impl.PropagatorFunctionDistributionAbstractImpl;
-import com.misc.touse.moplaf.timeline.tousetimeline.calc.PropagatorScopeDomain;
+import com.misc.touse.moplaf.timeline.tousetimeline.calc.ScopeDomain;
 import com.misc.touse.moplaf.timeline.tousetimeline.calc.ToUseTimeLineCalcPackage;
 
 import org.eclipse.emf.ecore.EClass;
@@ -15,13 +15,13 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class PropagatorScopeDomainImpl extends PropagatorFunctionDistributionAbstractImpl implements PropagatorScopeDomain {
+public class ScopeDomainImpl extends PropagatorFunctionDistributionAbstractImpl implements ScopeDomain {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PropagatorScopeDomainImpl() {
+	protected ScopeDomainImpl() {
 		super();
 	}
 
@@ -32,7 +32,7 @@ public class PropagatorScopeDomainImpl extends PropagatorFunctionDistributionAbs
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ToUseTimeLineCalcPackage.Literals.PROPAGATOR_SCOPE_DOMAIN;
+		return ToUseTimeLineCalcPackage.Literals.SCOPE_DOMAIN;
 	}
 
 } //PropagatorScopeDomainImpl

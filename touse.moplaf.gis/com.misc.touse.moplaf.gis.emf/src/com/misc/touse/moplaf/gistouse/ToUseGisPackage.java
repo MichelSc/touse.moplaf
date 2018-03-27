@@ -102,13 +102,31 @@ public interface ToUseGisPackage extends EPackage {
 	int DOMAIN__GEOCODERS = 3;
 
 	/**
+	 * The feature id for the '<em><b>Pinpointers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN__PINPOINTERS = 4;
+
+	/**
+	 * The feature id for the '<em><b>Kmls</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN__KMLS = 5;
+
+	/**
 	 * The number of structural features of the '<em>Domain</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_FEATURE_COUNT = 4;
+	int DOMAIN_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Domain</em>' class.
@@ -175,6 +193,28 @@ public interface ToUseGisPackage extends EPackage {
 	EReference getDomain_Geocoders();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.gistouse.Domain#getPinpointers <em>Pinpointers</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Pinpointers</em>'.
+	 * @see com.misc.touse.moplaf.gistouse.Domain#getPinpointers()
+	 * @see #getDomain()
+	 * @generated
+	 */
+	EReference getDomain_Pinpointers();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.gistouse.Domain#getKmls <em>Kmls</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Kmls</em>'.
+	 * @see com.misc.touse.moplaf.gistouse.Domain#getKmls()
+	 * @see #getDomain()
+	 * @generated
+	 */
+	EReference getDomain_Kmls();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -238,6 +278,22 @@ public interface ToUseGisPackage extends EPackage {
 		 * @generated
 		 */
 		EReference DOMAIN__GEOCODERS = eINSTANCE.getDomain_Geocoders();
+
+		/**
+		 * The meta object literal for the '<em><b>Pinpointers</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DOMAIN__PINPOINTERS = eINSTANCE.getDomain_Pinpointers();
+
+		/**
+		 * The meta object literal for the '<em><b>Kmls</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DOMAIN__KMLS = eINSTANCE.getDomain_Kmls();
 
 	}
 

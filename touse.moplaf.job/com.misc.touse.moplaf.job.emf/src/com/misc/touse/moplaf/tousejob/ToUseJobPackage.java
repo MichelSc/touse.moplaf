@@ -86,13 +86,31 @@ public interface ToUseJobPackage extends EPackage {
 	int DOMAIN__SCHEDULERS = 1;
 
 	/**
+	 * The feature id for the '<em><b>Deserializables</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN__DESERIALIZABLES = 2;
+
+	/**
+	 * The feature id for the '<em><b>Serializables</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN__SERIALIZABLES = 3;
+
+	/**
 	 * The number of structural features of the '<em>Domain</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_FEATURE_COUNT = 2;
+	int DOMAIN_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Domain</em>' class.
@@ -888,6 +906,28 @@ public interface ToUseJobPackage extends EPackage {
 	EReference getDomain_Schedulers();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.tousejob.Domain#getDeserializables <em>Deserializables</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Deserializables</em>'.
+	 * @see com.misc.touse.moplaf.tousejob.Domain#getDeserializables()
+	 * @see #getDomain()
+	 * @generated
+	 */
+	EReference getDomain_Deserializables();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.tousejob.Domain#getSerializables <em>Serializables</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Serializables</em>'.
+	 * @see com.misc.touse.moplaf.tousejob.Domain#getSerializables()
+	 * @see #getDomain()
+	 * @generated
+	 */
+	EReference getDomain_Serializables();
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousejob.ToUseJob <em>To Use Job</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1020,6 +1060,22 @@ public interface ToUseJobPackage extends EPackage {
 		 * @generated
 		 */
 		EReference DOMAIN__SCHEDULERS = eINSTANCE.getDomain_Schedulers();
+
+		/**
+		 * The meta object literal for the '<em><b>Deserializables</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DOMAIN__DESERIALIZABLES = eINSTANCE.getDomain_Deserializables();
+
+		/**
+		 * The meta object literal for the '<em><b>Serializables</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DOMAIN__SERIALIZABLES = eINSTANCE.getDomain_Serializables();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousejob.impl.ToUseJobImpl <em>To Use Job</em>}' class.

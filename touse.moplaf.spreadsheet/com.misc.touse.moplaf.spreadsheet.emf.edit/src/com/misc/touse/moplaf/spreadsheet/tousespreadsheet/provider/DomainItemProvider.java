@@ -3,9 +3,7 @@
 package com.misc.touse.moplaf.spreadsheet.tousespreadsheet.provider;
 
 
-import com.misc.common.moplaf.spreadsheet.spreadsheetcsv.SpreadsheetCSVFactory;
-import com.misc.common.moplaf.spreadsheet.spreadsheetpoi.SpreadsheetPOIFactory;
-
+import com.misc.common.moplaf.spreadsheet.SpreadsheetFactory;
 import com.misc.touse.moplaf.spreadsheet.tousespreadsheet.Domain;
 import com.misc.touse.moplaf.spreadsheet.tousespreadsheet.ToUseSpreadsheetFactory;
 import com.misc.touse.moplaf.spreadsheet.tousespreadsheet.ToUseSpreadsheetPackage;
@@ -156,12 +154,7 @@ public class DomainItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(ToUseSpreadsheetPackage.Literals.DOMAIN__SPREADSHEETS,
-				 SpreadsheetCSVFactory.eINSTANCE.createSpreadsheetCSV()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ToUseSpreadsheetPackage.Literals.DOMAIN__SPREADSHEETS,
-				 SpreadsheetPOIFactory.eINSTANCE.createSpreadsheetPOI()));
+				 SpreadsheetFactory.eINSTANCE.createSpreadsheet()));
 
 		newChildDescriptors.add
 			(createChildParameter

@@ -13,6 +13,8 @@
 package com.misc.touse.moplaf.tousejob.impl;
 
 import com.misc.common.moplaf.job.jobclient.JobScheduler;
+import com.misc.common.moplaf.serialize.Deserializable;
+import com.misc.common.moplaf.serialize.Serializable;
 import com.misc.touse.moplaf.tousejob.Domain;
 import com.misc.touse.moplaf.tousejob.Runs;
 import com.misc.touse.moplaf.tousejob.ToUseJobPackage;
@@ -38,6 +40,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.tousejob.impl.DomainImpl#getRuns <em>Runs</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousejob.impl.DomainImpl#getSchedulers <em>Schedulers</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousejob.impl.DomainImpl#getDeserializables <em>Deserializables</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousejob.impl.DomainImpl#getSerializables <em>Serializables</em>}</li>
  * </ul>
  *
  * @generated
@@ -62,6 +66,26 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	 * @ordered
 	 */
 	protected EList<JobScheduler> schedulers;
+
+	/**
+	 * The cached value of the '{@link #getDeserializables() <em>Deserializables</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDeserializables()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Deserializable> deserializables;
+
+	/**
+	 * The cached value of the '{@link #getSerializables() <em>Serializables</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSerializables()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Serializable> serializables;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -111,6 +135,30 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Deserializable> getDeserializables() {
+		if (deserializables == null) {
+			deserializables = new EObjectContainmentEList<Deserializable>(Deserializable.class, this, ToUseJobPackage.DOMAIN__DESERIALIZABLES);
+		}
+		return deserializables;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Serializable> getSerializables() {
+		if (serializables == null) {
+			serializables = new EObjectContainmentEList<Serializable>(Serializable.class, this, ToUseJobPackage.DOMAIN__SERIALIZABLES);
+		}
+		return serializables;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -118,6 +166,10 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 				return ((InternalEList<?>)getRuns()).basicRemove(otherEnd, msgs);
 			case ToUseJobPackage.DOMAIN__SCHEDULERS:
 				return ((InternalEList<?>)getSchedulers()).basicRemove(otherEnd, msgs);
+			case ToUseJobPackage.DOMAIN__DESERIALIZABLES:
+				return ((InternalEList<?>)getDeserializables()).basicRemove(otherEnd, msgs);
+			case ToUseJobPackage.DOMAIN__SERIALIZABLES:
+				return ((InternalEList<?>)getSerializables()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -134,6 +186,10 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 				return getRuns();
 			case ToUseJobPackage.DOMAIN__SCHEDULERS:
 				return getSchedulers();
+			case ToUseJobPackage.DOMAIN__DESERIALIZABLES:
+				return getDeserializables();
+			case ToUseJobPackage.DOMAIN__SERIALIZABLES:
+				return getSerializables();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -155,6 +211,14 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 				getSchedulers().clear();
 				getSchedulers().addAll((Collection<? extends JobScheduler>)newValue);
 				return;
+			case ToUseJobPackage.DOMAIN__DESERIALIZABLES:
+				getDeserializables().clear();
+				getDeserializables().addAll((Collection<? extends Deserializable>)newValue);
+				return;
+			case ToUseJobPackage.DOMAIN__SERIALIZABLES:
+				getSerializables().clear();
+				getSerializables().addAll((Collection<? extends Serializable>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -173,6 +237,12 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 			case ToUseJobPackage.DOMAIN__SCHEDULERS:
 				getSchedulers().clear();
 				return;
+			case ToUseJobPackage.DOMAIN__DESERIALIZABLES:
+				getDeserializables().clear();
+				return;
+			case ToUseJobPackage.DOMAIN__SERIALIZABLES:
+				getSerializables().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -189,6 +259,10 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 				return runs != null && !runs.isEmpty();
 			case ToUseJobPackage.DOMAIN__SCHEDULERS:
 				return schedulers != null && !schedulers.isEmpty();
+			case ToUseJobPackage.DOMAIN__DESERIALIZABLES:
+				return deserializables != null && !deserializables.isEmpty();
+			case ToUseJobPackage.DOMAIN__SERIALIZABLES:
+				return serializables != null && !serializables.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

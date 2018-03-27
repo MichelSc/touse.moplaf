@@ -190,6 +190,15 @@ public interface ToUseTimeLinePackage extends EPackage {
 	int DOMAIN_DISTRIBUTION__PROPAGATOR_FUNCTIONS = TimeContinuousPackage.DISTRIBUTION__PROPAGATOR_FUNCTIONS;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_DISTRIBUTION__NAME = TimeContinuousPackage.DISTRIBUTION__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Time Unit</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -289,22 +298,13 @@ public interface ToUseTimeLinePackage extends EPackage {
 	int DOMAIN_DISTRIBUTION__PROVIDED_EVENTS = TimeContinuousPackage.DISTRIBUTION__PROVIDED_EVENTS;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_DISTRIBUTION__NAME = TimeContinuousPackage.DISTRIBUTION_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION__COLOR = TimeContinuousPackage.DISTRIBUTION_FEATURE_COUNT + 1;
+	int DOMAIN_DISTRIBUTION__COLOR = TimeContinuousPackage.DISTRIBUTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Functions</b></em>' containment reference list.
@@ -313,7 +313,7 @@ public interface ToUseTimeLinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION__FUNCTIONS = TimeContinuousPackage.DISTRIBUTION_FEATURE_COUNT + 2;
+	int DOMAIN_DISTRIBUTION__FUNCTIONS = TimeContinuousPackage.DISTRIBUTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Possibles</b></em>' containment reference list.
@@ -322,7 +322,7 @@ public interface ToUseTimeLinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION__POSSIBLES = TimeContinuousPackage.DISTRIBUTION_FEATURE_COUNT + 3;
+	int DOMAIN_DISTRIBUTION__POSSIBLES = TimeContinuousPackage.DISTRIBUTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Domain Distribution</em>' class.
@@ -331,7 +331,7 @@ public interface ToUseTimeLinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION_FEATURE_COUNT = TimeContinuousPackage.DISTRIBUTION_FEATURE_COUNT + 4;
+	int DOMAIN_DISTRIBUTION_FEATURE_COUNT = TimeContinuousPackage.DISTRIBUTION_FEATURE_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Add Propagator Function</em>' operation.
@@ -376,7 +376,7 @@ public interface ToUseTimeLinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_MOMENT__DATE_FLOAT = TimeContinuousPackage.DISTRIBUTION___GET_MOMENT__DATE_FLOAT;
+	int DOMAIN_DISTRIBUTION___GET_MOMENT__DATE_DOUBLE = TimeContinuousPackage.DISTRIBUTION___GET_MOMENT__DATE_DOUBLE;
 
 	/**
 	 * The operation id for the '<em>Get Event Before</em>' operation.
@@ -502,7 +502,7 @@ public interface ToUseTimeLinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_EARLIEST_BELOW__DATE_FLOAT_FLOAT = TimeContinuousPackage.DISTRIBUTION___GET_EARLIEST_BELOW__DATE_FLOAT_FLOAT;
+	int DOMAIN_DISTRIBUTION___GET_EARLIEST_BELOW__DATE_DOUBLE_DOUBLE = TimeContinuousPackage.DISTRIBUTION___GET_EARLIEST_BELOW__DATE_DOUBLE_DOUBLE;
 
 	/**
 	 * The operation id for the '<em>Get Latest Below</em>' operation.
@@ -511,7 +511,7 @@ public interface ToUseTimeLinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_LATEST_BELOW__DATE_FLOAT_FLOAT = TimeContinuousPackage.DISTRIBUTION___GET_LATEST_BELOW__DATE_FLOAT_FLOAT;
+	int DOMAIN_DISTRIBUTION___GET_LATEST_BELOW__DATE_DOUBLE_DOUBLE = TimeContinuousPackage.DISTRIBUTION___GET_LATEST_BELOW__DATE_DOUBLE_DOUBLE;
 
 	/**
 	 * The operation id for the '<em>Get Earliest Above</em>' operation.
@@ -520,7 +520,7 @@ public interface ToUseTimeLinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_EARLIEST_ABOVE__DATE_FLOAT_FLOAT = TimeContinuousPackage.DISTRIBUTION___GET_EARLIEST_ABOVE__DATE_FLOAT_FLOAT;
+	int DOMAIN_DISTRIBUTION___GET_EARLIEST_ABOVE__DATE_DOUBLE_DOUBLE = TimeContinuousPackage.DISTRIBUTION___GET_EARLIEST_ABOVE__DATE_DOUBLE_DOUBLE;
 
 	/**
 	 * The operation id for the '<em>Get Latest Above</em>' operation.
@@ -529,7 +529,7 @@ public interface ToUseTimeLinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_LATEST_ABOVE__DATE_FLOAT_FLOAT = TimeContinuousPackage.DISTRIBUTION___GET_LATEST_ABOVE__DATE_FLOAT_FLOAT;
+	int DOMAIN_DISTRIBUTION___GET_LATEST_ABOVE__DATE_DOUBLE_DOUBLE = TimeContinuousPackage.DISTRIBUTION___GET_LATEST_ABOVE__DATE_DOUBLE_DOUBLE;
 
 	/**
 	 * The operation id for the '<em>Get Earliest Output Possible</em>' operation.
@@ -538,7 +538,7 @@ public interface ToUseTimeLinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_DISTRIBUTION___GET_EARLIEST_OUTPUT_POSSIBLE__FLOAT_DATE_FLOAT_FLOAT = TimeContinuousPackage.DISTRIBUTION___GET_EARLIEST_OUTPUT_POSSIBLE__FLOAT_DATE_FLOAT_FLOAT;
+	int DOMAIN_DISTRIBUTION___GET_EARLIEST_OUTPUT_POSSIBLE__DOUBLE_DATE_DOUBLE_DOUBLE = TimeContinuousPackage.DISTRIBUTION___GET_EARLIEST_OUTPUT_POSSIBLE__DOUBLE_DATE_DOUBLE_DOUBLE;
 
 	/**
 	 * The operation id for the '<em>Refresh Init</em>' operation.
@@ -584,6 +584,15 @@ public interface ToUseTimeLinePackage extends EPackage {
 	 * @ordered
 	 */
 	int DOMAIN_DISTRIBUTION___ACCEPT__DATE_DATE_DISTRIBUTIONVISITOR = TimeContinuousPackage.DISTRIBUTION___ACCEPT__DATE_DATE_DISTRIBUTIONVISITOR;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_DISTRIBUTION___REFRESH = TimeContinuousPackage.DISTRIBUTION___REFRESH;
 
 	/**
 	 * The number of operations of the '<em>Domain Distribution</em>' class.
@@ -1689,17 +1698,6 @@ public interface ToUseTimeLinePackage extends EPackage {
 	EClass getDomainDistribution();
 
 	/**
-	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution#getName()
-	 * @see #getDomainDistribution()
-	 * @generated
-	 */
-	EAttribute getDomainDistribution_Name();
-
-	/**
 	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.timeline.tousetimeline.DomainDistribution#getColor <em>Color</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2087,14 +2085,6 @@ public interface ToUseTimeLinePackage extends EPackage {
 		 * @generated
 		 */
 		EClass DOMAIN_DISTRIBUTION = eINSTANCE.getDomainDistribution();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DOMAIN_DISTRIBUTION__NAME = eINSTANCE.getDomainDistribution_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Color</b></em>' attribute feature.

@@ -2,8 +2,10 @@
  */
 package com.misc.touse.moplaf.gistouse.impl;
 
+import com.misc.common.moplaf.file.FilePackage;
 import com.misc.common.moplaf.gis.GisPackage;
 
+import com.misc.common.moplaf.gis.kml.KmlPackage;
 import com.misc.common.moplaf.job.JobPackage;
 
 import com.misc.touse.moplaf.gistouse.Domain;
@@ -77,8 +79,10 @@ public class ToUseGisPackageImpl extends EPackageImpl implements ToUseGisPackage
 		isInited = true;
 
 		// Initialize simple dependencies
+		FilePackage.eINSTANCE.eClass();
 		GisPackage.eINSTANCE.eClass();
 		JobPackage.eINSTANCE.eClass();
+		KmlPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theToUseGisPackage.createPackageContents();
@@ -145,6 +149,24 @@ public class ToUseGisPackageImpl extends EPackageImpl implements ToUseGisPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getDomain_Pinpointers() {
+		return (EReference)domainEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDomain_Kmls() {
+		return (EReference)domainEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ToUseGisFactory getToUseGisFactory() {
 		return (ToUseGisFactory)getEFactoryInstance();
 	}
@@ -173,6 +195,8 @@ public class ToUseGisPackageImpl extends EPackageImpl implements ToUseGisPackage
 		createEReference(domainEClass, DOMAIN__MATRICES);
 		createEReference(domainEClass, DOMAIN__CALCULATORS);
 		createEReference(domainEClass, DOMAIN__GEOCODERS);
+		createEReference(domainEClass, DOMAIN__PINPOINTERS);
+		createEReference(domainEClass, DOMAIN__KMLS);
 	}
 
 	/**
@@ -200,6 +224,7 @@ public class ToUseGisPackageImpl extends EPackageImpl implements ToUseGisPackage
 
 		// Obtain other dependent packages
 		GisPackage theGisPackage = (GisPackage)EPackage.Registry.INSTANCE.getEPackage(GisPackage.eNS_URI);
+		KmlPackage theKmlPackage = (KmlPackage)EPackage.Registry.INSTANCE.getEPackage(KmlPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -213,6 +238,8 @@ public class ToUseGisPackageImpl extends EPackageImpl implements ToUseGisPackage
 		initEReference(getDomain_Matrices(), theGisPackage.getGisRoutesHolder(), null, "Matrices", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDomain_Calculators(), theGisPackage.getGisRouteCalculator(), null, "Calculators", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDomain_Geocoders(), theGisPackage.getGisAddressGeocoder(), null, "Geocoders", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDomain_Pinpointers(), theGisPackage.getGisLocationPinpointer(), null, "Pinpointers", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDomain_Kmls(), theKmlPackage.getKml(), null, "Kmls", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

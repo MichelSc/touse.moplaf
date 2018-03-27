@@ -8,8 +8,7 @@ import com.misc.common.moplaf.propagator2.PropagatorFunctionBindings;
 import com.misc.common.moplaf.time.continuous.PropagatorFunctionDistribution;
 
 import com.misc.common.moplaf.time.continuous.PropagatorFunctionDistributionAbstract;
-import com.misc.common.moplaf.time.continuous.calc.PropagatorScopeDistribution;
-
+import com.misc.common.moplaf.time.continuous.calc.ScopeDistribution;
 import com.misc.touse.moplaf.timeline.tousetimeline.calc.*;
 
 import org.eclipse.emf.common.notify.Adapter;
@@ -76,24 +75,24 @@ public class ToUseTimeLineCalcAdapterFactory extends AdapterFactoryImpl {
 	protected ToUseTimeLineCalcSwitch<Adapter> modelSwitch =
 		new ToUseTimeLineCalcSwitch<Adapter>() {
 			@Override
-			public Adapter casePropagatorScopeDomain(PropagatorScopeDomain object) {
-				return createPropagatorScopeDomainAdapter();
+			public Adapter caseScopeDomain(ScopeDomain object) {
+				return createScopeDomainAdapter();
 			}
 			@Override
-			public Adapter casePropagatorScopeDomainDistribution(PropagatorScopeDomainDistribution object) {
-				return createPropagatorScopeDomainDistributionAdapter();
+			public Adapter caseScopeDomainDistribution(ScopeDomainDistribution object) {
+				return createScopeDomainDistributionAdapter();
 			}
 			@Override
-			public Adapter casePropagatorLayerDomainDistributionFunctions(PropagatorLayerDomainDistributionFunctions object) {
-				return createPropagatorLayerDomainDistributionFunctionsAdapter();
+			public Adapter caseLayerDomainDistributionFunctions(LayerDomainDistributionFunctions object) {
+				return createLayerDomainDistributionFunctionsAdapter();
 			}
 			@Override
-			public Adapter casePropagatorCalcDomainDistributionFunctionInterval(PropagatorCalcDomainDistributionFunctionInterval object) {
-				return createPropagatorCalcDomainDistributionFunctionIntervalAdapter();
+			public Adapter caseCalcDomainDistributionFunctionInterval(CalcDomainDistributionFunctionInterval object) {
+				return createCalcDomainDistributionFunctionIntervalAdapter();
 			}
 			@Override
-			public Adapter casePropagatorCalcDomainDistributionFunctionPossible(PropagatorCalcDomainDistributionFunctionPossible object) {
-				return createPropagatorCalcDomainDistributionFunctionPossibleAdapter();
+			public Adapter caseCalcDomainDistributionFunctionPossible(CalcDomainDistributionFunctionPossible object) {
+				return createCalcDomainDistributionFunctionPossibleAdapter();
 			}
 			@Override
 			public Adapter casePropagatorFunction(PropagatorFunction object) {
@@ -112,8 +111,8 @@ public class ToUseTimeLineCalcAdapterFactory extends AdapterFactoryImpl {
 				return createPropagatorFunctionDistributionAdapter();
 			}
 			@Override
-			public Adapter casePropagatorScopeDistribution(PropagatorScopeDistribution object) {
-				return createPropagatorScopeDistributionAdapter();
+			public Adapter caseScopeDistribution(ScopeDistribution object) {
+				return createScopeDistributionAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -136,72 +135,72 @@ public class ToUseTimeLineCalcAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.timeline.tousetimeline.calc.PropagatorScopeDomain <em>Propagator Scope Domain</em>}'.
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.timeline.tousetimeline.calc.ScopeDomain <em>Scope Domain</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.calc.PropagatorScopeDomain
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.calc.ScopeDomain
 	 * @generated
 	 */
-	public Adapter createPropagatorScopeDomainAdapter() {
+	public Adapter createScopeDomainAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.timeline.tousetimeline.calc.PropagatorScopeDomainDistribution <em>Propagator Scope Domain Distribution</em>}'.
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.timeline.tousetimeline.calc.ScopeDomainDistribution <em>Scope Domain Distribution</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.calc.PropagatorScopeDomainDistribution
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.calc.ScopeDomainDistribution
 	 * @generated
 	 */
-	public Adapter createPropagatorScopeDomainDistributionAdapter() {
+	public Adapter createScopeDomainDistributionAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.timeline.tousetimeline.calc.PropagatorLayerDomainDistributionFunctions <em>Propagator Layer Domain Distribution Functions</em>}'.
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.timeline.tousetimeline.calc.LayerDomainDistributionFunctions <em>Layer Domain Distribution Functions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.calc.PropagatorLayerDomainDistributionFunctions
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.calc.LayerDomainDistributionFunctions
 	 * @generated
 	 */
-	public Adapter createPropagatorLayerDomainDistributionFunctionsAdapter() {
+	public Adapter createLayerDomainDistributionFunctionsAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.timeline.tousetimeline.calc.PropagatorCalcDomainDistributionFunctionInterval <em>Propagator Calc Domain Distribution Function Interval</em>}'.
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.timeline.tousetimeline.calc.CalcDomainDistributionFunctionInterval <em>Calc Domain Distribution Function Interval</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.calc.PropagatorCalcDomainDistributionFunctionInterval
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.calc.CalcDomainDistributionFunctionInterval
 	 * @generated
 	 */
-	public Adapter createPropagatorCalcDomainDistributionFunctionIntervalAdapter() {
+	public Adapter createCalcDomainDistributionFunctionIntervalAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.timeline.tousetimeline.calc.PropagatorCalcDomainDistributionFunctionPossible <em>Propagator Calc Domain Distribution Function Possible</em>}'.
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.timeline.tousetimeline.calc.CalcDomainDistributionFunctionPossible <em>Calc Domain Distribution Function Possible</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see com.misc.touse.moplaf.timeline.tousetimeline.calc.PropagatorCalcDomainDistributionFunctionPossible
+	 * @see com.misc.touse.moplaf.timeline.tousetimeline.calc.CalcDomainDistributionFunctionPossible
 	 * @generated
 	 */
-	public Adapter createPropagatorCalcDomainDistributionFunctionPossibleAdapter() {
+	public Adapter createCalcDomainDistributionFunctionPossibleAdapter() {
 		return null;
 	}
 
@@ -262,16 +261,16 @@ public class ToUseTimeLineCalcAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.time.continuous.calc.PropagatorScopeDistribution <em>Propagator Scope Distribution</em>}'.
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.time.continuous.calc.ScopeDistribution <em>Scope Distribution</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.time.continuous.calc.PropagatorScopeDistribution
+	 * @see com.misc.common.moplaf.time.continuous.calc.ScopeDistribution
 	 * @generated
 	 */
-	public Adapter createPropagatorScopeDistributionAdapter() {
+	public Adapter createScopeDistributionAdapter() {
 		return null;
 	}
 

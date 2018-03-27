@@ -8,11 +8,11 @@ import com.misc.common.moplaf.time.continuous.TimeContinuousPackage;
 
 import com.misc.common.moplaf.time.continuous.calc.TimeContinuousCalcPackage;
 
-import com.misc.touse.moplaf.timeline.tousetimeline.calc.PropagatorCalcDomainDistributionFunctionInterval;
-import com.misc.touse.moplaf.timeline.tousetimeline.calc.PropagatorCalcDomainDistributionFunctionPossible;
-import com.misc.touse.moplaf.timeline.tousetimeline.calc.PropagatorLayerDomainDistributionFunctions;
-import com.misc.touse.moplaf.timeline.tousetimeline.calc.PropagatorScopeDomain;
-import com.misc.touse.moplaf.timeline.tousetimeline.calc.PropagatorScopeDomainDistribution;
+import com.misc.touse.moplaf.timeline.tousetimeline.calc.CalcDomainDistributionFunctionInterval;
+import com.misc.touse.moplaf.timeline.tousetimeline.calc.CalcDomainDistributionFunctionPossible;
+import com.misc.touse.moplaf.timeline.tousetimeline.calc.LayerDomainDistributionFunctions;
+import com.misc.touse.moplaf.timeline.tousetimeline.calc.ScopeDomain;
+import com.misc.touse.moplaf.timeline.tousetimeline.calc.ScopeDomainDistribution;
 import com.misc.touse.moplaf.timeline.tousetimeline.calc.ToUseTimeLineCalcFactory;
 import com.misc.touse.moplaf.timeline.tousetimeline.calc.ToUseTimeLineCalcPackage;
 
@@ -34,35 +34,35 @@ public class ToUseTimeLineCalcPackageImpl extends EPackageImpl implements ToUseT
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass propagatorScopeDomainEClass = null;
+	private EClass scopeDomainEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass propagatorScopeDomainDistributionEClass = null;
+	private EClass scopeDomainDistributionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass propagatorLayerDomainDistributionFunctionsEClass = null;
+	private EClass layerDomainDistributionFunctionsEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass propagatorCalcDomainDistributionFunctionIntervalEClass = null;
+	private EClass calcDomainDistributionFunctionIntervalEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass propagatorCalcDomainDistributionFunctionPossibleEClass = null;
+	private EClass calcDomainDistributionFunctionPossibleEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -135,8 +135,8 @@ public class ToUseTimeLineCalcPackageImpl extends EPackageImpl implements ToUseT
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getPropagatorScopeDomain() {
-		return propagatorScopeDomainEClass;
+	public EClass getScopeDomain() {
+		return scopeDomainEClass;
 	}
 
 	/**
@@ -144,8 +144,8 @@ public class ToUseTimeLineCalcPackageImpl extends EPackageImpl implements ToUseT
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getPropagatorScopeDomainDistribution() {
-		return propagatorScopeDomainDistributionEClass;
+	public EClass getScopeDomainDistribution() {
+		return scopeDomainDistributionEClass;
 	}
 
 	/**
@@ -153,8 +153,8 @@ public class ToUseTimeLineCalcPackageImpl extends EPackageImpl implements ToUseT
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPropagatorScopeDomainDistribution_ConcreteParent() {
-		return (EReference)propagatorScopeDomainDistributionEClass.getEStructuralFeatures().get(0);
+	public EReference getScopeDomainDistribution_ConcreteParent() {
+		return (EReference)scopeDomainDistributionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -162,8 +162,8 @@ public class ToUseTimeLineCalcPackageImpl extends EPackageImpl implements ToUseT
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getPropagatorLayerDomainDistributionFunctions() {
-		return propagatorLayerDomainDistributionFunctionsEClass;
+	public EClass getLayerDomainDistributionFunctions() {
+		return layerDomainDistributionFunctionsEClass;
 	}
 
 	/**
@@ -171,8 +171,8 @@ public class ToUseTimeLineCalcPackageImpl extends EPackageImpl implements ToUseT
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getPropagatorCalcDomainDistributionFunctionInterval() {
-		return propagatorCalcDomainDistributionFunctionIntervalEClass;
+	public EReference getLayerDomainDistributionFunctions_ConcreteParent() {
+		return (EReference)layerDomainDistributionFunctionsEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -180,8 +180,44 @@ public class ToUseTimeLineCalcPackageImpl extends EPackageImpl implements ToUseT
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getPropagatorCalcDomainDistributionFunctionPossible() {
-		return propagatorCalcDomainDistributionFunctionPossibleEClass;
+	public EReference getLayerDomainDistributionFunctions_AntecedentLayerDistributionAmounts() {
+		return (EReference)layerDomainDistributionFunctionsEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCalcDomainDistributionFunctionInterval() {
+		return calcDomainDistributionFunctionIntervalEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCalcDomainDistributionFunctionInterval_ConcreteParent() {
+		return (EReference)calcDomainDistributionFunctionIntervalEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCalcDomainDistributionFunctionPossible() {
+		return calcDomainDistributionFunctionPossibleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCalcDomainDistributionFunctionPossible_ConcreteParent() {
+		return (EReference)calcDomainDistributionFunctionPossibleEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -212,16 +248,20 @@ public class ToUseTimeLineCalcPackageImpl extends EPackageImpl implements ToUseT
 		isCreated = true;
 
 		// Create classes and their features
-		propagatorScopeDomainEClass = createEClass(PROPAGATOR_SCOPE_DOMAIN);
+		scopeDomainEClass = createEClass(SCOPE_DOMAIN);
 
-		propagatorScopeDomainDistributionEClass = createEClass(PROPAGATOR_SCOPE_DOMAIN_DISTRIBUTION);
-		createEReference(propagatorScopeDomainDistributionEClass, PROPAGATOR_SCOPE_DOMAIN_DISTRIBUTION__CONCRETE_PARENT);
+		scopeDomainDistributionEClass = createEClass(SCOPE_DOMAIN_DISTRIBUTION);
+		createEReference(scopeDomainDistributionEClass, SCOPE_DOMAIN_DISTRIBUTION__CONCRETE_PARENT);
 
-		propagatorLayerDomainDistributionFunctionsEClass = createEClass(PROPAGATOR_LAYER_DOMAIN_DISTRIBUTION_FUNCTIONS);
+		layerDomainDistributionFunctionsEClass = createEClass(LAYER_DOMAIN_DISTRIBUTION_FUNCTIONS);
+		createEReference(layerDomainDistributionFunctionsEClass, LAYER_DOMAIN_DISTRIBUTION_FUNCTIONS__CONCRETE_PARENT);
+		createEReference(layerDomainDistributionFunctionsEClass, LAYER_DOMAIN_DISTRIBUTION_FUNCTIONS__ANTECEDENT_LAYER_DISTRIBUTION_AMOUNTS);
 
-		propagatorCalcDomainDistributionFunctionIntervalEClass = createEClass(PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL);
+		calcDomainDistributionFunctionIntervalEClass = createEClass(CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL);
+		createEReference(calcDomainDistributionFunctionIntervalEClass, CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL__CONCRETE_PARENT);
 
-		propagatorCalcDomainDistributionFunctionPossibleEClass = createEClass(PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE);
+		calcDomainDistributionFunctionPossibleEClass = createEClass(CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE);
+		createEReference(calcDomainDistributionFunctionPossibleEClass, CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE__CONCRETE_PARENT);
 	}
 
 	/**
@@ -256,23 +296,27 @@ public class ToUseTimeLineCalcPackageImpl extends EPackageImpl implements ToUseT
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		propagatorScopeDomainEClass.getESuperTypes().add(theTimeContinuousPackage.getPropagatorFunctionDistributionAbstract());
-		propagatorScopeDomainDistributionEClass.getESuperTypes().add(theTimeContinuousCalcPackage.getPropagatorScopeDistribution());
-		propagatorLayerDomainDistributionFunctionsEClass.getESuperTypes().add(theTimeContinuousPackage.getPropagatorFunctionDistribution());
-		propagatorCalcDomainDistributionFunctionIntervalEClass.getESuperTypes().add(theTimeContinuousPackage.getPropagatorFunctionDistributionAbstract());
-		propagatorCalcDomainDistributionFunctionPossibleEClass.getESuperTypes().add(theTimeContinuousPackage.getPropagatorFunctionDistributionAbstract());
+		scopeDomainEClass.getESuperTypes().add(theTimeContinuousPackage.getPropagatorFunctionDistributionAbstract());
+		scopeDomainDistributionEClass.getESuperTypes().add(theTimeContinuousCalcPackage.getScopeDistribution());
+		layerDomainDistributionFunctionsEClass.getESuperTypes().add(theTimeContinuousPackage.getPropagatorFunctionDistribution());
+		calcDomainDistributionFunctionIntervalEClass.getESuperTypes().add(theTimeContinuousPackage.getPropagatorFunctionDistributionAbstract());
+		calcDomainDistributionFunctionPossibleEClass.getESuperTypes().add(theTimeContinuousPackage.getPropagatorFunctionDistributionAbstract());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(propagatorScopeDomainEClass, PropagatorScopeDomain.class, "PropagatorScopeDomain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(scopeDomainEClass, ScopeDomain.class, "ScopeDomain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(propagatorScopeDomainDistributionEClass, PropagatorScopeDomainDistribution.class, "PropagatorScopeDomainDistribution", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPropagatorScopeDomainDistribution_ConcreteParent(), this.getPropagatorScopeDomain(), null, "ConcreteParent", null, 1, 1, PropagatorScopeDomainDistribution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(scopeDomainDistributionEClass, ScopeDomainDistribution.class, "ScopeDomainDistribution", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getScopeDomainDistribution_ConcreteParent(), this.getScopeDomain(), null, "ConcreteParent", null, 0, 1, ScopeDomainDistribution.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
-		initEClass(propagatorLayerDomainDistributionFunctionsEClass, PropagatorLayerDomainDistributionFunctions.class, "PropagatorLayerDomainDistributionFunctions", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(layerDomainDistributionFunctionsEClass, LayerDomainDistributionFunctions.class, "LayerDomainDistributionFunctions", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getLayerDomainDistributionFunctions_ConcreteParent(), this.getScopeDomainDistribution(), null, "ConcreteParent", null, 1, 1, LayerDomainDistributionFunctions.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getLayerDomainDistributionFunctions_AntecedentLayerDistributionAmounts(), theTimeContinuousCalcPackage.getLayerDistributionAmounts(), null, "AntecedentLayerDistributionAmounts", null, 1, 1, LayerDomainDistributionFunctions.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
-		initEClass(propagatorCalcDomainDistributionFunctionIntervalEClass, PropagatorCalcDomainDistributionFunctionInterval.class, "PropagatorCalcDomainDistributionFunctionInterval", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(calcDomainDistributionFunctionIntervalEClass, CalcDomainDistributionFunctionInterval.class, "CalcDomainDistributionFunctionInterval", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCalcDomainDistributionFunctionInterval_ConcreteParent(), this.getLayerDomainDistributionFunctions(), null, "ConcreteParent", null, 1, 1, CalcDomainDistributionFunctionInterval.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
-		initEClass(propagatorCalcDomainDistributionFunctionPossibleEClass, PropagatorCalcDomainDistributionFunctionPossible.class, "PropagatorCalcDomainDistributionFunctionPossible", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(calcDomainDistributionFunctionPossibleEClass, CalcDomainDistributionFunctionPossible.class, "CalcDomainDistributionFunctionPossible", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCalcDomainDistributionFunctionPossible_ConcreteParent(), this.getLayerDomainDistributionFunctions(), null, "ConcreteParent", null, 1, 1, CalcDomainDistributionFunctionPossible.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

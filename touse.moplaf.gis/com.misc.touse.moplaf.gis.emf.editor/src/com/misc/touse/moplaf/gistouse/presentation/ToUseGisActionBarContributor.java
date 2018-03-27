@@ -41,7 +41,9 @@ import org.eclipse.ui.PartInitException;
 
 import com.misc.common.moplaf.emf.editor.Util;
 import com.misc.common.moplaf.emf.editor.action.ClearAction;
+import com.misc.common.moplaf.emf.editor.action.DoAction;
 import com.misc.common.moplaf.emf.editor.action.FlushAction;
+import com.misc.common.moplaf.emf.editor.action.ReadAction;
 import com.misc.common.moplaf.emf.editor.action.RefreshAction;
 
 /**
@@ -306,9 +308,11 @@ public class ToUseGisActionBarContributor
 		createSiblingActions = generateCreateSiblingActions(newSiblingDescriptors, selection);
 
 		applicationPopUpMenuActions = new ArrayList<IAction>();
+		applicationPopUpMenuActions.add(new DoAction      (activeEditorPart, selection));
+		applicationPopUpMenuActions.add(new ReadAction    (activeEditorPart, selection));
 		applicationPopUpMenuActions.add(new RefreshAction (activeEditorPart, selection));
-		applicationPopUpMenuActions.add(new ClearAction (activeEditorPart, selection));
-		applicationPopUpMenuActions.add(new FlushAction (activeEditorPart, selection));
+		applicationPopUpMenuActions.add(new ClearAction   (activeEditorPart, selection));
+		applicationPopUpMenuActions.add(new FlushAction   (activeEditorPart, selection));
 
 		if (createChildMenuManager != null) {
 			populateManager(createChildMenuManager, createChildActions, null);

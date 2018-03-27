@@ -8,8 +8,7 @@ import com.misc.common.moplaf.propagator2.PropagatorFunctionBindings;
 import com.misc.common.moplaf.time.continuous.PropagatorFunctionDistribution;
 
 import com.misc.common.moplaf.time.continuous.PropagatorFunctionDistributionAbstract;
-import com.misc.common.moplaf.time.continuous.calc.PropagatorScopeDistribution;
-
+import com.misc.common.moplaf.time.continuous.calc.ScopeDistribution;
 import com.misc.touse.moplaf.timeline.tousetimeline.calc.*;
 
 import org.eclipse.emf.ecore.EObject;
@@ -74,51 +73,51 @@ public class ToUseTimeLineCalcSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case ToUseTimeLineCalcPackage.PROPAGATOR_SCOPE_DOMAIN: {
-				PropagatorScopeDomain propagatorScopeDomain = (PropagatorScopeDomain)theEObject;
-				T result = casePropagatorScopeDomain(propagatorScopeDomain);
-				if (result == null) result = casePropagatorFunctionDistributionAbstract(propagatorScopeDomain);
-				if (result == null) result = casePropagatorFunctionBindings(propagatorScopeDomain);
-				if (result == null) result = casePropagatorFunction(propagatorScopeDomain);
+			case ToUseTimeLineCalcPackage.SCOPE_DOMAIN: {
+				ScopeDomain scopeDomain = (ScopeDomain)theEObject;
+				T result = caseScopeDomain(scopeDomain);
+				if (result == null) result = casePropagatorFunctionDistributionAbstract(scopeDomain);
+				if (result == null) result = casePropagatorFunctionBindings(scopeDomain);
+				if (result == null) result = casePropagatorFunction(scopeDomain);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ToUseTimeLineCalcPackage.PROPAGATOR_SCOPE_DOMAIN_DISTRIBUTION: {
-				PropagatorScopeDomainDistribution propagatorScopeDomainDistribution = (PropagatorScopeDomainDistribution)theEObject;
-				T result = casePropagatorScopeDomainDistribution(propagatorScopeDomainDistribution);
-				if (result == null) result = casePropagatorScopeDistribution(propagatorScopeDomainDistribution);
-				if (result == null) result = casePropagatorFunctionDistribution(propagatorScopeDomainDistribution);
-				if (result == null) result = casePropagatorFunctionDistributionAbstract(propagatorScopeDomainDistribution);
-				if (result == null) result = casePropagatorFunctionBindings(propagatorScopeDomainDistribution);
-				if (result == null) result = casePropagatorFunction(propagatorScopeDomainDistribution);
+			case ToUseTimeLineCalcPackage.SCOPE_DOMAIN_DISTRIBUTION: {
+				ScopeDomainDistribution scopeDomainDistribution = (ScopeDomainDistribution)theEObject;
+				T result = caseScopeDomainDistribution(scopeDomainDistribution);
+				if (result == null) result = caseScopeDistribution(scopeDomainDistribution);
+				if (result == null) result = casePropagatorFunctionDistribution(scopeDomainDistribution);
+				if (result == null) result = casePropagatorFunctionDistributionAbstract(scopeDomainDistribution);
+				if (result == null) result = casePropagatorFunctionBindings(scopeDomainDistribution);
+				if (result == null) result = casePropagatorFunction(scopeDomainDistribution);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ToUseTimeLineCalcPackage.PROPAGATOR_LAYER_DOMAIN_DISTRIBUTION_FUNCTIONS: {
-				PropagatorLayerDomainDistributionFunctions propagatorLayerDomainDistributionFunctions = (PropagatorLayerDomainDistributionFunctions)theEObject;
-				T result = casePropagatorLayerDomainDistributionFunctions(propagatorLayerDomainDistributionFunctions);
-				if (result == null) result = casePropagatorFunctionDistribution(propagatorLayerDomainDistributionFunctions);
-				if (result == null) result = casePropagatorFunctionDistributionAbstract(propagatorLayerDomainDistributionFunctions);
-				if (result == null) result = casePropagatorFunctionBindings(propagatorLayerDomainDistributionFunctions);
-				if (result == null) result = casePropagatorFunction(propagatorLayerDomainDistributionFunctions);
+			case ToUseTimeLineCalcPackage.LAYER_DOMAIN_DISTRIBUTION_FUNCTIONS: {
+				LayerDomainDistributionFunctions layerDomainDistributionFunctions = (LayerDomainDistributionFunctions)theEObject;
+				T result = caseLayerDomainDistributionFunctions(layerDomainDistributionFunctions);
+				if (result == null) result = casePropagatorFunctionDistribution(layerDomainDistributionFunctions);
+				if (result == null) result = casePropagatorFunctionDistributionAbstract(layerDomainDistributionFunctions);
+				if (result == null) result = casePropagatorFunctionBindings(layerDomainDistributionFunctions);
+				if (result == null) result = casePropagatorFunction(layerDomainDistributionFunctions);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ToUseTimeLineCalcPackage.PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL: {
-				PropagatorCalcDomainDistributionFunctionInterval propagatorCalcDomainDistributionFunctionInterval = (PropagatorCalcDomainDistributionFunctionInterval)theEObject;
-				T result = casePropagatorCalcDomainDistributionFunctionInterval(propagatorCalcDomainDistributionFunctionInterval);
-				if (result == null) result = casePropagatorFunctionDistributionAbstract(propagatorCalcDomainDistributionFunctionInterval);
-				if (result == null) result = casePropagatorFunctionBindings(propagatorCalcDomainDistributionFunctionInterval);
-				if (result == null) result = casePropagatorFunction(propagatorCalcDomainDistributionFunctionInterval);
+			case ToUseTimeLineCalcPackage.CALC_DOMAIN_DISTRIBUTION_FUNCTION_INTERVAL: {
+				CalcDomainDistributionFunctionInterval calcDomainDistributionFunctionInterval = (CalcDomainDistributionFunctionInterval)theEObject;
+				T result = caseCalcDomainDistributionFunctionInterval(calcDomainDistributionFunctionInterval);
+				if (result == null) result = casePropagatorFunctionDistributionAbstract(calcDomainDistributionFunctionInterval);
+				if (result == null) result = casePropagatorFunctionBindings(calcDomainDistributionFunctionInterval);
+				if (result == null) result = casePropagatorFunction(calcDomainDistributionFunctionInterval);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ToUseTimeLineCalcPackage.PROPAGATOR_CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE: {
-				PropagatorCalcDomainDistributionFunctionPossible propagatorCalcDomainDistributionFunctionPossible = (PropagatorCalcDomainDistributionFunctionPossible)theEObject;
-				T result = casePropagatorCalcDomainDistributionFunctionPossible(propagatorCalcDomainDistributionFunctionPossible);
-				if (result == null) result = casePropagatorFunctionDistributionAbstract(propagatorCalcDomainDistributionFunctionPossible);
-				if (result == null) result = casePropagatorFunctionBindings(propagatorCalcDomainDistributionFunctionPossible);
-				if (result == null) result = casePropagatorFunction(propagatorCalcDomainDistributionFunctionPossible);
+			case ToUseTimeLineCalcPackage.CALC_DOMAIN_DISTRIBUTION_FUNCTION_POSSIBLE: {
+				CalcDomainDistributionFunctionPossible calcDomainDistributionFunctionPossible = (CalcDomainDistributionFunctionPossible)theEObject;
+				T result = caseCalcDomainDistributionFunctionPossible(calcDomainDistributionFunctionPossible);
+				if (result == null) result = casePropagatorFunctionDistributionAbstract(calcDomainDistributionFunctionPossible);
+				if (result == null) result = casePropagatorFunctionBindings(calcDomainDistributionFunctionPossible);
+				if (result == null) result = casePropagatorFunction(calcDomainDistributionFunctionPossible);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -127,77 +126,77 @@ public class ToUseTimeLineCalcSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Propagator Scope Domain</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Scope Domain</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Propagator Scope Domain</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Scope Domain</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePropagatorScopeDomain(PropagatorScopeDomain object) {
+	public T caseScopeDomain(ScopeDomain object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Propagator Scope Domain Distribution</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Scope Domain Distribution</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Propagator Scope Domain Distribution</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Scope Domain Distribution</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePropagatorScopeDomainDistribution(PropagatorScopeDomainDistribution object) {
+	public T caseScopeDomainDistribution(ScopeDomainDistribution object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Propagator Layer Domain Distribution Functions</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Layer Domain Distribution Functions</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Propagator Layer Domain Distribution Functions</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Layer Domain Distribution Functions</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePropagatorLayerDomainDistributionFunctions(PropagatorLayerDomainDistributionFunctions object) {
+	public T caseLayerDomainDistributionFunctions(LayerDomainDistributionFunctions object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Propagator Calc Domain Distribution Function Interval</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Calc Domain Distribution Function Interval</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Propagator Calc Domain Distribution Function Interval</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Calc Domain Distribution Function Interval</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePropagatorCalcDomainDistributionFunctionInterval(PropagatorCalcDomainDistributionFunctionInterval object) {
+	public T caseCalcDomainDistributionFunctionInterval(CalcDomainDistributionFunctionInterval object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Propagator Calc Domain Distribution Function Possible</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Calc Domain Distribution Function Possible</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Propagator Calc Domain Distribution Function Possible</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Calc Domain Distribution Function Possible</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePropagatorCalcDomainDistributionFunctionPossible(PropagatorCalcDomainDistributionFunctionPossible object) {
+	public T caseCalcDomainDistributionFunctionPossible(CalcDomainDistributionFunctionPossible object) {
 		return null;
 	}
 
@@ -262,17 +261,17 @@ public class ToUseTimeLineCalcSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Propagator Scope Distribution</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Scope Distribution</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Propagator Scope Distribution</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Scope Distribution</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePropagatorScopeDistribution(PropagatorScopeDistribution object) {
+	public T caseScopeDistribution(ScopeDistribution object) {
 		return null;
 	}
 

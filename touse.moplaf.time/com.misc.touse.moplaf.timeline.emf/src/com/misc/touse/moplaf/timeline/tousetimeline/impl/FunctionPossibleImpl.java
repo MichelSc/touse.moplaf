@@ -64,7 +64,7 @@ public abstract class FunctionPossibleImpl extends ObjectWithPropagatorFunctions
 	 * @generated
 	 * @ordered
 	 */
-	protected static final float LIMIT_DURATION_EDEFAULT = 0.0F;
+	protected static final double LIMIT_DURATION_EDEFAULT = 0.0;
 
 	/**
 	 * The cached value of the '{@link #getLimitDuration() <em>Limit Duration</em>}' attribute.
@@ -74,7 +74,7 @@ public abstract class FunctionPossibleImpl extends ObjectWithPropagatorFunctions
 	 * @generated
 	 * @ordered
 	 */
-	protected float limitDuration = LIMIT_DURATION_EDEFAULT;
+	protected double limitDuration = LIMIT_DURATION_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getLimitAmount() <em>Limit Amount</em>}' attribute.
@@ -84,7 +84,7 @@ public abstract class FunctionPossibleImpl extends ObjectWithPropagatorFunctions
 	 * @generated
 	 * @ordered
 	 */
-	protected static final float LIMIT_AMOUNT_EDEFAULT = 0.0F;
+	protected static final double LIMIT_AMOUNT_EDEFAULT = 0.0;
 
 	/**
 	 * The cached value of the '{@link #getLimitAmount() <em>Limit Amount</em>}' attribute.
@@ -94,7 +94,7 @@ public abstract class FunctionPossibleImpl extends ObjectWithPropagatorFunctions
 	 * @generated
 	 * @ordered
 	 */
-	protected float limitAmount = LIMIT_AMOUNT_EDEFAULT;
+	protected double limitAmount = LIMIT_AMOUNT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -141,7 +141,7 @@ public abstract class FunctionPossibleImpl extends ObjectWithPropagatorFunctions
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getLimitDuration() {
+	public double getLimitDuration() {
 		return limitDuration;
 	}
 
@@ -150,8 +150,8 @@ public abstract class FunctionPossibleImpl extends ObjectWithPropagatorFunctions
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLimitDuration(float newLimitDuration) {
-		float oldLimitDuration = limitDuration;
+	public void setLimitDuration(double newLimitDuration) {
+		double oldLimitDuration = limitDuration;
 		limitDuration = newLimitDuration;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ToUseTimeLinePackage.FUNCTION_POSSIBLE__LIMIT_DURATION, oldLimitDuration, limitDuration));
@@ -162,7 +162,7 @@ public abstract class FunctionPossibleImpl extends ObjectWithPropagatorFunctions
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getLimitAmount() {
+	public double getLimitAmount() {
 		return limitAmount;
 	}
 
@@ -171,8 +171,8 @@ public abstract class FunctionPossibleImpl extends ObjectWithPropagatorFunctions
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLimitAmount(float newLimitAmount) {
-		float oldLimitAmount = limitAmount;
+	public void setLimitAmount(double newLimitAmount) {
+		double oldLimitAmount = limitAmount;
 		limitAmount = newLimitAmount;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ToUseTimeLinePackage.FUNCTION_POSSIBLE__LIMIT_AMOUNT, oldLimitAmount, limitAmount));
@@ -306,10 +306,10 @@ public abstract class FunctionPossibleImpl extends ObjectWithPropagatorFunctions
 				setLimitMoment((Date)newValue);
 				return;
 			case ToUseTimeLinePackage.FUNCTION_POSSIBLE__LIMIT_DURATION:
-				setLimitDuration((Float)newValue);
+				setLimitDuration((Double)newValue);
 				return;
 			case ToUseTimeLinePackage.FUNCTION_POSSIBLE__LIMIT_AMOUNT:
-				setLimitAmount((Float)newValue);
+				setLimitAmount((Double)newValue);
 				return;
 			case ToUseTimeLinePackage.FUNCTION_POSSIBLE__DISTRIBUTION:
 				setDistribution((DomainDistribution)newValue);

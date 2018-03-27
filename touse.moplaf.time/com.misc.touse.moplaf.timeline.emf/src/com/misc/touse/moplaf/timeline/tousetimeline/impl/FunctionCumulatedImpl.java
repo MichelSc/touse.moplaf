@@ -33,7 +33,7 @@ public class FunctionCumulatedImpl extends FunctionIntervalImpl implements Funct
 	 * @generated
 	 * @ordered
 	 */
-	protected static final float CUMULATED_EDEFAULT = 0.0F;
+	protected static final double CUMULATED_EDEFAULT = 0.0;
 
 	/**
 	 * The cached value of the '{@link #getCumulated() <em>Cumulated</em>}' attribute.
@@ -43,7 +43,7 @@ public class FunctionCumulatedImpl extends FunctionIntervalImpl implements Funct
 	 * @generated
 	 * @ordered
 	 */
-	protected float cumulated = CUMULATED_EDEFAULT;
+	protected double cumulated = CUMULATED_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -69,7 +69,7 @@ public class FunctionCumulatedImpl extends FunctionIntervalImpl implements Funct
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getCumulated() {
+	public double getCumulated() {
 		return cumulated;
 	}
 
@@ -78,8 +78,8 @@ public class FunctionCumulatedImpl extends FunctionIntervalImpl implements Funct
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCumulated(float newCumulated) {
-		float oldCumulated = cumulated;
+	public void setCumulated(double newCumulated) {
+		double oldCumulated = cumulated;
 		cumulated = newCumulated;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ToUseTimeLinePackage.FUNCTION_CUMULATED__CUMULATED, oldCumulated, cumulated));
@@ -92,7 +92,7 @@ public class FunctionCumulatedImpl extends FunctionIntervalImpl implements Funct
 	@Override
 	public void refresh() {
 		Distribution distribution = this.getDistribution();
-		float cumulated  = distribution.getCumulatedAmount(this.getFrom(), this.getTo());
+		double cumulated  = distribution.getCumulatedAmount(this.getFrom(), this.getTo());
 		this.setCumulated(cumulated);
 	}
 
@@ -120,7 +120,7 @@ public class FunctionCumulatedImpl extends FunctionIntervalImpl implements Funct
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case ToUseTimeLinePackage.FUNCTION_CUMULATED__CUMULATED:
-				setCumulated((Float)newValue);
+				setCumulated((Double)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

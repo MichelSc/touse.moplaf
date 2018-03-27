@@ -16,8 +16,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseTimeLine.ecore#//Domain/Timelines"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseTimeLine.ecore#//Domain/ObjectsWithTimeLine"/>
     </genClasses>
-    <genClasses provider="Stateful" ecoreClass="ToUseTimeLine.ecore#//DomainDistribution">
-      <genFeatures createChild="false" propertyCategory="10 ToUse" ecoreFeature="ecore:EAttribute ToUseTimeLine.ecore#//DomainDistribution/Name"/>
+    <genClasses provider="Stateful" image="false" ecoreClass="ToUseTimeLine.ecore#//DomainDistribution">
       <genFeatures createChild="false" propertyCategory="10 ToUse" propertyDescription="Color associated to the distribution"
           ecoreFeature="ecore:EAttribute ToUseTimeLine.ecore#//DomainDistribution/Color"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseTimeLine.ecore#//DomainDistribution/Functions"/>

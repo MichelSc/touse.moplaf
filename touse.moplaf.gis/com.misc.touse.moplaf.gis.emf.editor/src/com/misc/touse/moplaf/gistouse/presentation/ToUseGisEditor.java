@@ -155,7 +155,9 @@ import org.eclipse.emf.edit.ui.util.EditUIUtil;
 import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 
 import com.misc.touse.moplaf.gistouse.provider.ToUseGisItemProviderAdapterFactory;
-
+import com.misc.common.moplaf.emf.editor.provider.AdapterFactoryContentProviderExtended;
+import com.misc.common.moplaf.file.FilePackage;
+import com.misc.common.moplaf.gis.kml.KmlPackage;
 import com.misc.common.moplaf.gis.provider.GisItemProviderAdapterFactory;
 
 import com.misc.common.moplaf.job.provider.JobItemProviderAdapterFactory;
@@ -1398,7 +1400,6 @@ public class ToUseGisEditor
 	 * This accesses a cached version of the property sheet.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	public IPropertySheetPage getPropertySheetPage() {
 		PropertySheetPage propertySheetPage =
@@ -1415,7 +1416,12 @@ public class ToUseGisEditor
 					getActionBarContributor().shareGlobalActions(this, actionBars);
 				}
 			};
-		propertySheetPage.setPropertySourceProvider(new AdapterFactoryContentProvider(adapterFactory));
+			
+		AdapterFactoryContentProviderExtended contentProvider = new AdapterFactoryContentProviderExtended(adapterFactory);
+		contentProvider.editFilePaths.addSelector(FilePackage.Literals.FILE_LOCAL__FILE_PATH);
+		contentProvider.editColors.addSelector(KmlPackage.Literals.GEOMETRY__COLOR);
+		propertySheetPage.setPropertySourceProvider(contentProvider);
+
 		propertySheetPages.add(propertySheetPage);
 
 		return propertySheetPage;
