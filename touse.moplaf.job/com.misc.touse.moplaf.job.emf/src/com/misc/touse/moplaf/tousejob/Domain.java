@@ -12,6 +12,8 @@
  */
 package com.misc.touse.moplaf.tousejob;
 
+import com.misc.common.moplaf.file.Files;
+import com.misc.common.moplaf.job.Runs;
 import com.misc.common.moplaf.job.jobclient.JobScheduler;
 import com.misc.common.moplaf.serialize.Deserializable;
 import com.misc.common.moplaf.serialize.Serializable;
@@ -28,10 +30,11 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link com.misc.touse.moplaf.tousejob.Domain#getRuns <em>Runs</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousejob.Domain#getSchedulers <em>Schedulers</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousejob.Domain#getDeserializables <em>Deserializables</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousejob.Domain#getSerializables <em>Serializables</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousejob.Domain#getFiles <em>Files</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousejob.Domain#getRuns <em>Runs</em>}</li>
  * </ul>
  *
  * @see com.misc.touse.moplaf.tousejob.ToUseJobPackage#getDomain()
@@ -41,7 +44,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface Domain extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Runs</b></em>' containment reference list.
-	 * The list contents are of type {@link com.misc.touse.moplaf.tousejob.Runs}.
+	 * The list contents are of type {@link com.misc.common.moplaf.job.Runs}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Runs</em>' containment reference list isn't clear,
@@ -102,5 +105,21 @@ public interface Domain extends EObject {
 	 * @generated
 	 */
 	EList<Serializable> getSerializables();
+
+	/**
+	 * Returns the value of the '<em><b>Files</b></em>' containment reference list.
+	 * The list contents are of type {@link com.misc.common.moplaf.file.Files}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Files</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Files</em>' containment reference list.
+	 * @see com.misc.touse.moplaf.tousejob.ToUseJobPackage#getDomain_Files()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Files> getFiles();
 
 } // Domain

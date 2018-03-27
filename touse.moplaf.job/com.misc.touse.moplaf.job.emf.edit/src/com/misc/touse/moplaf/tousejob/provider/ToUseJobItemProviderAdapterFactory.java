@@ -141,29 +141,6 @@ public class ToUseJobItemProviderAdapterFactory extends ToUseJobAdapterFactory i
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousejob.Runs} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected RunsItemProvider runsItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousejob.Runs}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createRunsAdapter() {
-		if (runsItemProvider == null) {
-			runsItemProvider = new RunsItemProvider(this);
-		}
-
-		return runsItemProvider;
-	}
-
-	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -265,7 +242,6 @@ public class ToUseJobItemProviderAdapterFactory extends ToUseJobAdapterFactory i
 		if (domainItemProvider != null) domainItemProvider.dispose();
 		if (toUseJobItemProvider != null) toUseJobItemProvider.dispose();
 		if (toUseJobConsoleItemProvider != null) toUseJobConsoleItemProvider.dispose();
-		if (runsItemProvider != null) runsItemProvider.dispose();
 	}
 
 }

@@ -8,7 +8,6 @@ import com.misc.common.moplaf.job.JobPackage;
 import com.misc.common.moplaf.job.jobclient.JobClientPackage;
 import com.misc.common.moplaf.serialize.SerializePackage;
 import com.misc.touse.moplaf.tousejob.Domain;
-import com.misc.touse.moplaf.tousejob.Runs;
 import com.misc.touse.moplaf.tousejob.ToUseJob;
 import com.misc.touse.moplaf.tousejob.ToUseJobConsole;
 import com.misc.touse.moplaf.tousejob.ToUseJobFactory;
@@ -47,13 +46,6 @@ public class ToUseJobPackageImpl extends EPackageImpl implements ToUseJobPackage
 	 * @generated
 	 */
 	private EClass toUseJobConsoleEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass runsEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -137,7 +129,7 @@ public class ToUseJobPackageImpl extends EPackageImpl implements ToUseJobPackage
 	 * @generated
 	 */
 	public EReference getDomain_Runs() {
-		return (EReference)domainEClass.getEStructuralFeatures().get(0);
+		return (EReference)domainEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -146,7 +138,7 @@ public class ToUseJobPackageImpl extends EPackageImpl implements ToUseJobPackage
 	 * @generated
 	 */
 	public EReference getDomain_Schedulers() {
-		return (EReference)domainEClass.getEStructuralFeatures().get(1);
+		return (EReference)domainEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -155,7 +147,7 @@ public class ToUseJobPackageImpl extends EPackageImpl implements ToUseJobPackage
 	 * @generated
 	 */
 	public EReference getDomain_Deserializables() {
-		return (EReference)domainEClass.getEStructuralFeatures().get(2);
+		return (EReference)domainEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -164,6 +156,15 @@ public class ToUseJobPackageImpl extends EPackageImpl implements ToUseJobPackage
 	 * @generated
 	 */
 	public EReference getDomain_Serializables() {
+		return (EReference)domainEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDomain_Files() {
 		return (EReference)domainEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -217,33 +218,6 @@ public class ToUseJobPackageImpl extends EPackageImpl implements ToUseJobPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getRuns() {
-		return runsEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getRuns_Runs() {
-		return (EReference)runsEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getRuns_Name() {
-		return (EAttribute)runsEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public ToUseJobFactory getToUseJobFactory() {
 		return (ToUseJobFactory)getEFactoryInstance();
 	}
@@ -268,10 +242,11 @@ public class ToUseJobPackageImpl extends EPackageImpl implements ToUseJobPackage
 
 		// Create classes and their features
 		domainEClass = createEClass(DOMAIN);
-		createEReference(domainEClass, DOMAIN__RUNS);
 		createEReference(domainEClass, DOMAIN__SCHEDULERS);
 		createEReference(domainEClass, DOMAIN__DESERIALIZABLES);
 		createEReference(domainEClass, DOMAIN__SERIALIZABLES);
+		createEReference(domainEClass, DOMAIN__FILES);
+		createEReference(domainEClass, DOMAIN__RUNS);
 
 		toUseJobEClass = createEClass(TO_USE_JOB);
 		createEAttribute(toUseJobEClass, TO_USE_JOB__SECONDS_WAITING);
@@ -279,10 +254,6 @@ public class ToUseJobPackageImpl extends EPackageImpl implements ToUseJobPackage
 
 		toUseJobConsoleEClass = createEClass(TO_USE_JOB_CONSOLE);
 		createEAttribute(toUseJobConsoleEClass, TO_USE_JOB_CONSOLE__CALLER_NAME);
-
-		runsEClass = createEClass(RUNS);
-		createEReference(runsEClass, RUNS__RUNS);
-		createEAttribute(runsEClass, RUNS__NAME);
 	}
 
 	/**
@@ -311,6 +282,7 @@ public class ToUseJobPackageImpl extends EPackageImpl implements ToUseJobPackage
 		// Obtain other dependent packages
 		JobClientPackage theJobClientPackage = (JobClientPackage)EPackage.Registry.INSTANCE.getEPackage(JobClientPackage.eNS_URI);
 		SerializePackage theSerializePackage = (SerializePackage)EPackage.Registry.INSTANCE.getEPackage(SerializePackage.eNS_URI);
+		FilePackage theFilePackage = (FilePackage)EPackage.Registry.INSTANCE.getEPackage(FilePackage.eNS_URI);
 		JobPackage theJobPackage = (JobPackage)EPackage.Registry.INSTANCE.getEPackage(JobPackage.eNS_URI);
 
 		// Create type parameters
@@ -323,10 +295,11 @@ public class ToUseJobPackageImpl extends EPackageImpl implements ToUseJobPackage
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDomain_Runs(), this.getRuns(), null, "Runs", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDomain_Schedulers(), theJobClientPackage.getJobScheduler(), null, "Schedulers", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDomain_Deserializables(), theSerializePackage.getDeserializable(), null, "Deserializables", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDomain_Serializables(), theSerializePackage.getSerializable(), null, "Serializables", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDomain_Files(), theFilePackage.getFiles(), null, "Files", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDomain_Runs(), theJobPackage.getRuns(), null, "Runs", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(toUseJobEClass, ToUseJob.class, "ToUseJob", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getToUseJob_SecondsWaiting(), ecorePackage.getEInt(), "SecondsWaiting", "2", 0, 1, ToUseJob.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -334,10 +307,6 @@ public class ToUseJobPackageImpl extends EPackageImpl implements ToUseJobPackage
 
 		initEClass(toUseJobConsoleEClass, ToUseJobConsole.class, "ToUseJobConsole", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getToUseJobConsole_CallerName(), ecorePackage.getEString(), "CallerName", null, 0, 1, ToUseJobConsole.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(runsEClass, Runs.class, "Runs", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRuns_Runs(), theJobPackage.getRun(), null, "Runs", null, 0, -1, Runs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRuns_Name(), ecorePackage.getEString(), "Name", null, 0, 1, Runs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

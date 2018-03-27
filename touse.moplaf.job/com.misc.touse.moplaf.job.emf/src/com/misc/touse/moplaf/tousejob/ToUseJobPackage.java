@@ -68,22 +68,13 @@ public interface ToUseJobPackage extends EPackage {
 	int DOMAIN = 0;
 
 	/**
-	 * The feature id for the '<em><b>Runs</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN__RUNS = 0;
-
-	/**
 	 * The feature id for the '<em><b>Schedulers</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN__SCHEDULERS = 1;
+	int DOMAIN__SCHEDULERS = 0;
 
 	/**
 	 * The feature id for the '<em><b>Deserializables</b></em>' containment reference list.
@@ -92,7 +83,7 @@ public interface ToUseJobPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN__DESERIALIZABLES = 2;
+	int DOMAIN__DESERIALIZABLES = 1;
 
 	/**
 	 * The feature id for the '<em><b>Serializables</b></em>' containment reference list.
@@ -101,7 +92,25 @@ public interface ToUseJobPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN__SERIALIZABLES = 3;
+	int DOMAIN__SERIALIZABLES = 2;
+
+	/**
+	 * The feature id for the '<em><b>Files</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN__FILES = 3;
+
+	/**
+	 * The feature id for the '<em><b>Runs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN__RUNS = 4;
 
 	/**
 	 * The number of structural features of the '<em>Domain</em>' class.
@@ -110,7 +119,7 @@ public interface ToUseJobPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_FEATURE_COUNT = 4;
+	int DOMAIN_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Domain</em>' class.
@@ -827,53 +836,6 @@ public interface ToUseJobPackage extends EPackage {
 
 
 	/**
-	 * The meta object id for the '{@link com.misc.touse.moplaf.tousejob.impl.RunsImpl <em>Runs</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.misc.touse.moplaf.tousejob.impl.RunsImpl
-	 * @see com.misc.touse.moplaf.tousejob.impl.ToUseJobPackageImpl#getRuns()
-	 * @generated
-	 */
-	int RUNS = 3;
-
-	/**
-	 * The feature id for the '<em><b>Runs</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RUNS__RUNS = 0;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RUNS__NAME = 1;
-
-	/**
-	 * The number of structural features of the '<em>Runs</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RUNS_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Runs</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RUNS_OPERATION_COUNT = 0;
-
-
-	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousejob.Domain <em>Domain</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -928,6 +890,17 @@ public interface ToUseJobPackage extends EPackage {
 	EReference getDomain_Serializables();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.tousejob.Domain#getFiles <em>Files</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Files</em>'.
+	 * @see com.misc.touse.moplaf.tousejob.Domain#getFiles()
+	 * @see #getDomain()
+	 * @generated
+	 */
+	EReference getDomain_Files();
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousejob.ToUseJob <em>To Use Job</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -979,38 +952,6 @@ public interface ToUseJobPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getToUseJobConsole_CallerName();
-
-	/**
-	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousejob.Runs <em>Runs</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Runs</em>'.
-	 * @see com.misc.touse.moplaf.tousejob.Runs
-	 * @generated
-	 */
-	EClass getRuns();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.tousejob.Runs#getRuns <em>Runs</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Runs</em>'.
-	 * @see com.misc.touse.moplaf.tousejob.Runs#getRuns()
-	 * @see #getRuns()
-	 * @generated
-	 */
-	EReference getRuns_Runs();
-
-	/**
-	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.tousejob.Runs#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see com.misc.touse.moplaf.tousejob.Runs#getName()
-	 * @see #getRuns()
-	 * @generated
-	 */
-	EAttribute getRuns_Name();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1078,6 +1019,14 @@ public interface ToUseJobPackage extends EPackage {
 		EReference DOMAIN__SERIALIZABLES = eINSTANCE.getDomain_Serializables();
 
 		/**
+		 * The meta object literal for the '<em><b>Files</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DOMAIN__FILES = eINSTANCE.getDomain_Files();
+
+		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousejob.impl.ToUseJobImpl <em>To Use Job</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1120,32 +1069,6 @@ public interface ToUseJobPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TO_USE_JOB_CONSOLE__CALLER_NAME = eINSTANCE.getToUseJobConsole_CallerName();
-
-		/**
-		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousejob.impl.RunsImpl <em>Runs</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see com.misc.touse.moplaf.tousejob.impl.RunsImpl
-		 * @see com.misc.touse.moplaf.tousejob.impl.ToUseJobPackageImpl#getRuns()
-		 * @generated
-		 */
-		EClass RUNS = eINSTANCE.getRuns();
-
-		/**
-		 * The meta object literal for the '<em><b>Runs</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference RUNS__RUNS = eINSTANCE.getRuns_Runs();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute RUNS__NAME = eINSTANCE.getRuns_Name();
 
 	}
 

@@ -13,10 +13,11 @@
 package com.misc.touse.moplaf.tousejob.provider;
 
 
+import com.misc.common.moplaf.file.FileFactory;
+import com.misc.common.moplaf.job.JobFactory;
 import com.misc.common.moplaf.job.jobclient.JobClientFactory;
 import com.misc.common.moplaf.serialize.SerializeFactory;
 import com.misc.touse.moplaf.tousejob.Domain;
-import com.misc.touse.moplaf.tousejob.ToUseJobFactory;
 import com.misc.touse.moplaf.tousejob.ToUseJobPackage;
 import java.util.Collection;
 import java.util.List;
@@ -88,10 +89,11 @@ public class DomainItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ToUseJobPackage.Literals.DOMAIN__RUNS);
 			childrenFeatures.add(ToUseJobPackage.Literals.DOMAIN__SCHEDULERS);
 			childrenFeatures.add(ToUseJobPackage.Literals.DOMAIN__DESERIALIZABLES);
 			childrenFeatures.add(ToUseJobPackage.Literals.DOMAIN__SERIALIZABLES);
+			childrenFeatures.add(ToUseJobPackage.Literals.DOMAIN__FILES);
+			childrenFeatures.add(ToUseJobPackage.Literals.DOMAIN__RUNS);
 		}
 		return childrenFeatures;
 	}
@@ -143,10 +145,11 @@ public class DomainItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Domain.class)) {
-			case ToUseJobPackage.DOMAIN__RUNS:
 			case ToUseJobPackage.DOMAIN__SCHEDULERS:
 			case ToUseJobPackage.DOMAIN__DESERIALIZABLES:
 			case ToUseJobPackage.DOMAIN__SERIALIZABLES:
+			case ToUseJobPackage.DOMAIN__FILES:
+			case ToUseJobPackage.DOMAIN__RUNS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -166,11 +169,6 @@ public class DomainItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ToUseJobPackage.Literals.DOMAIN__RUNS,
-				 ToUseJobFactory.eINSTANCE.createRuns()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(ToUseJobPackage.Literals.DOMAIN__SCHEDULERS,
 				 JobClientFactory.eINSTANCE.createJobScheduler()));
 
@@ -183,6 +181,16 @@ public class DomainItemProvider
 			(createChildParameter
 				(ToUseJobPackage.Literals.DOMAIN__SERIALIZABLES,
 				 SerializeFactory.eINSTANCE.createSerializable()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ToUseJobPackage.Literals.DOMAIN__FILES,
+				 FileFactory.eINSTANCE.createFiles()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ToUseJobPackage.Literals.DOMAIN__RUNS,
+				 JobFactory.eINSTANCE.createRuns()));
 	}
 
 	/**

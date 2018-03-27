@@ -59,7 +59,6 @@ public class ToUseJobFactoryImpl extends EFactoryImpl implements ToUseJobFactory
 			case ToUseJobPackage.DOMAIN: return createDomain();
 			case ToUseJobPackage.TO_USE_JOB: return createToUseJob();
 			case ToUseJobPackage.TO_USE_JOB_CONSOLE: return createToUseJobConsole();
-			case ToUseJobPackage.RUNS: return createRuns();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -93,16 +92,6 @@ public class ToUseJobFactoryImpl extends EFactoryImpl implements ToUseJobFactory
 	public ToUseJobConsole createToUseJobConsole() {
 		ToUseJobConsoleImpl toUseJobConsole = new ToUseJobConsoleImpl();
 		return toUseJobConsole;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Runs createRuns() {
-		RunsImpl runs = new RunsImpl();
-		return runs;
 	}
 
 	/**

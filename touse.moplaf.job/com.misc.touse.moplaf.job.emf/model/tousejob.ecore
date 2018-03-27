@@ -3,8 +3,6 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="tousejob" nsURI="//www.misc.com/touse/moplaf/job/model/0.1"
     nsPrefix="tuj">
   <eClassifiers xsi:type="ecore:EClass" name="Domain">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Runs" upperBound="-1" eType="#//Runs"
-        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Schedulers" upperBound="-1"
         eType="ecore:EClass ../../com.misc.common.moplaf.job.client.emf/model/jobclient.ecore#//JobScheduler"
         containment="true"/>
@@ -13,6 +11,11 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Serializables" upperBound="-1"
         eType="ecore:EClass ../../com.misc.common.moplaf.emf.serialize/model/serialize.ecore#//Serializable"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Files" upperBound="-1"
+        eType="ecore:EClass ../../com.misc.common.moplaf.file.emf/model/file.ecore#//Files"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Runs" upperBound="-1" eType="ecore:EClass ../../com.misc.common.moplaf.job.emf/model/job.ecore#//Runs"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ToUseJob" eSuperTypes="../../com.misc.common.moplaf.job.emf/model/job.ecore#//Job">
@@ -23,10 +26,5 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ToUseJobConsole" eSuperTypes="../../com.misc.common.moplaf.job.emf/model/job.ecore#//JobConsole">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="CallerName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Runs">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Runs" upperBound="-1" eType="ecore:EClass ../../com.misc.common.moplaf.job.emf/model/job.ecore#//Run"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>
