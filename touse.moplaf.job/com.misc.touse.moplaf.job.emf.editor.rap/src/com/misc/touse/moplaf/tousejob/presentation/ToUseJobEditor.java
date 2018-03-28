@@ -32,6 +32,7 @@ import org.eclipse.jface.dialogs.ProgressMonitorDialog;
 import org.eclipse.jface.util.LocalSelectionTransfer;
 
 import org.eclipse.jface.viewers.ColumnWeightData;
+import org.eclipse.jface.viewers.ILabelProvider;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.ISelectionProvider;
@@ -44,7 +45,7 @@ import org.eclipse.jface.viewers.TableLayout;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.viewers.Viewer;
-
+import org.eclipse.rap.rwt.RWT;
 import org.eclipse.swt.SWT;
 
 import org.eclipse.swt.custom.CTabFolder;
@@ -135,7 +136,8 @@ import org.eclipse.emf.edit.ui.util.EditUIUtil;
 import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 
 import com.misc.touse.moplaf.tousejob.provider.ToUseJobItemProviderAdapterFactory;
-
+import com.misc.common.moplaf.common.HttpServiceProvider;
+import com.misc.common.moplaf.common.Plugin;
 import com.misc.common.moplaf.job.jobclient.provider.JobClientItemProviderAdapterFactory;
 import com.misc.common.moplaf.job.provider.JobItemProviderAdapterFactory;
 
@@ -918,7 +920,6 @@ public class ToUseJobEditor
 	 * This is the method used by the framework to install your own controls.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	@Override
 	public void createPages() {
@@ -937,6 +938,7 @@ public class ToUseJobEditor
 						@Override
 						public Viewer createViewer(Composite composite) {
 							Tree tree = new Tree(composite, SWT.MULTI);
+							tree.setData(RWT.MARKUP_ENABLED, Boolean.TRUE );
 							TreeViewer newTreeViewer = new TreeViewer(tree);
 							return newTreeViewer;
 						}
@@ -952,7 +954,30 @@ public class ToUseJobEditor
 				selectionViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory));
 				selectionViewer.setUseHashlookup(true);
 
-				selectionViewer.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory));
+				ILabelProvider new_label_provider = new AdapterFactoryLabelProvider(adapterFactory) {
+
+					@Override
+					public String getText(Object object) {
+						String original_text = super.getText(object); 
+						if ( object instanceof HttpServiceProvider ) {
+							HttpServiceProvider provider = (HttpServiceProvider)object;
+							if ( provider.getEnabledFeedback().isEnabled()) {
+								String new_text = String.format("<a href='/images/%s?object=%s'> %s </a>",
+										provider.getServiceID(),
+										provider.getObjectID(),
+										original_text);
+								
+								Plugin.INSTANCE.logInfo("link is: "+new_text);
+								return new_text;
+							}
+						}
+						return original_text;
+					}
+					
+				};
+				selectionViewer.setLabelProvider(new_label_provider );
+				
+				
 				selectionViewer.setInput(editingDomain.getResourceSet());
 				selectionViewer.setSelection(new StructuredSelection(editingDomain.getResourceSet().getResources().get(0)), true);
 				viewerPane.setTitle(editingDomain.getResourceSet());
