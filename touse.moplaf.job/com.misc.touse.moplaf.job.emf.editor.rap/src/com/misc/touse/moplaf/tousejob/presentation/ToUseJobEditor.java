@@ -15,7 +15,6 @@ import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import org.apache.commons.lang.StringEscapeUtils;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.NullProgressMonitor;
 
@@ -962,15 +961,12 @@ public class ToUseJobEditor
 						if ( object instanceof HttpServiceProvider ) {
 							HttpServiceProvider provider = (HttpServiceProvider)object;
 							if ( provider.getEnabledFeedback().isEnabled()) {
-								String url = String.format("%s&filename=%s",
-										RWT.getServiceManager().getServiceHandlerUrl(provider.getServiceID()),
-										provider.getObjectID());
-								String url_escaped = StringEscapeUtils.escapeHtml(url);
-								String new_text = String.format("<a href=\"%s\" > %s </a>",
-										url_escaped,
-										original_text);
-								
-								Plugin.INSTANCE.logInfo("link is: "+new_text);
+								String base_url = RWT.getServiceManager().getServiceHandlerUrl(provider.getServiceID());
+								String data = provider.getServiceData(); 
+								String url = HttpServiceProvider.HelperConstructUrl(base_url, data);
+								String new_text = HttpServiceProvider.HelperConstructHtmlTag(url, original_text);
+								Plugin.INSTANCE.logInfo("ToUseJobEditor: url "+url);
+								Plugin.INSTANCE.logInfo("ToUseJobEditor: text "+new_text);
 								return new_text;
 							}
 						}

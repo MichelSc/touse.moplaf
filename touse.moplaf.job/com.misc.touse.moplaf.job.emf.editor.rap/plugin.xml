@@ -87,12 +87,5 @@
             path="/path_jobscheduler">
       </entrypoint>
    </extension>
-   <extension
-         point="org.eclipse.rap.ui.serviceHandler">
-      <serviceHandler
-            class="com.misc.touse.moplaf.tousejob.handler.DownloadServiceHandler"
-            id="download">
-      </serviceHandler>
-   </extension>
 
 </plugin>
