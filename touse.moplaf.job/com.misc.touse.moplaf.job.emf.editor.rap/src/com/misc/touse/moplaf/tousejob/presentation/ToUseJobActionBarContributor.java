@@ -49,6 +49,7 @@ import org.eclipse.ui.dialogs.PreferencesUtil;
 
 import com.misc.common.moplaf.emf.editor.Util;
 import com.misc.common.moplaf.emf.editor.action.CancelAction;
+import com.misc.common.moplaf.emf.editor.action.FlushAction;
 import com.misc.common.moplaf.emf.editor.action.RefreshAction;
 import com.misc.common.moplaf.emf.editor.action.ResetAction;
 import com.misc.common.moplaf.emf.editor.action.RunAction;
@@ -364,14 +365,15 @@ public class ToUseJobActionBarContributor
 
 		// actions specific for this Editor
 		applicationPopUpMenuActions = new ArrayList<IAction>();
-		applicationPopUpMenuActions.add(new RunAction(activeEditorPart, selection));
+		applicationPopUpMenuActions.add(new RunAction          (activeEditorPart, selection));
 		applicationPopUpMenuActions.add(new RunBackgroundAction(activeEditorPart, selection));
-		applicationPopUpMenuActions.add(new ResetAction(activeEditorPart, selection));
-		applicationPopUpMenuActions.add(new CancelAction(activeEditorPart, selection));
-		applicationPopUpMenuActions.add(new StartAction(activeEditorPart, selection));
-		applicationPopUpMenuActions.add(new StopAction (activeEditorPart, selection));
-		applicationPopUpMenuActions.add(new RefreshAction (activeEditorPart, selection));
-		applicationPopUpMenuActions.add(new FileUploadAction(activeEditorPart, selection, labelProvider));
+		applicationPopUpMenuActions.add(new ResetAction        (activeEditorPart, selection));
+		applicationPopUpMenuActions.add(new CancelAction       (activeEditorPart, selection));
+		applicationPopUpMenuActions.add(new FlushAction        (activeEditorPart, selection));
+		applicationPopUpMenuActions.add(new StartAction        (activeEditorPart, selection));
+		applicationPopUpMenuActions.add(new StopAction         (activeEditorPart, selection));
+		applicationPopUpMenuActions.add(new RefreshAction      (activeEditorPart, selection));
+		applicationPopUpMenuActions.add(new FileUploadAction   (activeEditorPart, selection, labelProvider));
 
 		if (createChildMenuManager != null) {
 			populateManager(createChildMenuManager, createChildActions, null);
