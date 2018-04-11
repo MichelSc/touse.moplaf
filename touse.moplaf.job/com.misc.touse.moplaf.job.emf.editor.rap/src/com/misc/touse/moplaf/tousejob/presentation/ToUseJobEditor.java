@@ -960,7 +960,7 @@ public class ToUseJobEditor
 						String original_text = super.getText(object); 
 						if ( object instanceof HttpServiceProvider ) {
 							HttpServiceProvider provider = (HttpServiceProvider)object;
-							if ( provider.getEnabledFeedback().isEnabled()) {
+							if ( provider.getServiceEnabledFeedback().isEnabled()) {
 								String base_url = RWT.getServiceManager().getServiceHandlerUrl(provider.getServiceID());
 								String data = provider.getServiceData(); 
 								String url = HttpServiceProvider.HelperConstructUrl(base_url, data);
