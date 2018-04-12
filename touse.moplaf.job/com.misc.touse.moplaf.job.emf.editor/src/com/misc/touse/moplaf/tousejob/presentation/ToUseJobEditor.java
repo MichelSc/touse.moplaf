@@ -133,7 +133,8 @@ import org.eclipse.emf.edit.ui.util.EditUIUtil;
 import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 
 import com.misc.touse.moplaf.tousejob.provider.ToUseJobItemProviderAdapterFactory;
-
+import com.misc.common.moplaf.emf.editor.provider.AdapterFactoryContentProviderExtended;
+import com.misc.common.moplaf.file.FilePackage;
 import com.misc.common.moplaf.job.jobclient.provider.JobClientItemProviderAdapterFactory;
 
 
@@ -1299,7 +1300,6 @@ public class ToUseJobEditor
 	 * This accesses a cached version of the property sheet.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	public IPropertySheetPage getPropertySheetPage() {
 		PropertySheetPage propertySheetPage =
@@ -1316,7 +1316,11 @@ public class ToUseJobEditor
 					getActionBarContributor().shareGlobalActions(this, actionBars);
 				}
 			};
-		propertySheetPage.setPropertySourceProvider(new AdapterFactoryContentProvider(adapterFactory));
+			
+		AdapterFactoryContentProviderExtended contentProvider =new AdapterFactoryContentProviderExtended(this.adapterFactory);	
+		contentProvider.editFilePaths.addSelector(FilePackage.Literals.FILE_LOCAL__FILE_PATH);
+		
+		propertySheetPage.setPropertySourceProvider(contentProvider);
 		propertySheetPages.add(propertySheetPage);
 
 		return propertySheetPage;
