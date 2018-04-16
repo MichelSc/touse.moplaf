@@ -9,10 +9,11 @@
   <genPackages prefix="ToUseJob" basePackage="com.misc.touse.moplaf" disposableProviderFactory="true"
       ecorePackage="tousejob.ecore#/">
     <genClasses ecoreClass="tousejob.ecore#//Domain">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousejob.ecore#//Domain/Runs"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousejob.ecore#//Domain/Schedulers"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousejob.ecore#//Domain/Deserializables"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousejob.ecore#//Domain/Serializables"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousejob.ecore#//Domain/Files"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousejob.ecore#//Domain/Runs"/>
     </genClasses>
     <genClasses image="false" ecoreClass="tousejob.ecore#//ToUseJob">
       <genFeatures createChild="false" propertyCategory="20 ToUseJob" ecoreFeature="ecore:EAttribute tousejob.ecore#//ToUseJob/SecondsWaiting"/>
@@ -20,10 +21,6 @@
     </genClasses>
     <genClasses ecoreClass="tousejob.ecore#//ToUseJobConsole">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousejob.ecore#//ToUseJobConsole/CallerName"/>
-    </genClasses>
-    <genClasses ecoreClass="tousejob.ecore#//Runs">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tousejob.ecore#//Runs/Runs"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tousejob.ecore#//Runs/Name"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

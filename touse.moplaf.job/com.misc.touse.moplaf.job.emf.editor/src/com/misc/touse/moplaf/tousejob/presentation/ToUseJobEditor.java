@@ -135,11 +135,12 @@ import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 import com.misc.touse.moplaf.tousejob.provider.ToUseJobItemProviderAdapterFactory;
 import com.misc.common.moplaf.emf.editor.provider.AdapterFactoryContentProviderExtended;
 import com.misc.common.moplaf.file.FilePackage;
+import com.misc.common.moplaf.file.provider.FileItemProviderAdapterFactory;
 import com.misc.common.moplaf.job.jobclient.provider.JobClientItemProviderAdapterFactory;
 
 
-import com.misc.common.moplaf.job.jobxmlrpc.provider.JobXmlRpcItemProviderAdapterFactory;
 import com.misc.common.moplaf.job.provider.JobItemProviderAdapterFactory;
+import com.misc.common.moplaf.serialize.provider.SerializeItemProviderAdapterFactory;
 
 
 /**
@@ -607,9 +608,10 @@ public class ToUseJobEditor
 
 		adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ToUseJobItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new FileItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new JobItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new JobClientItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new JobXmlRpcItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new SerializeItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
 		// Create the command stack that will notify this editor as commands are executed.

@@ -19,7 +19,5 @@ Require-Bundle: org.eclipse.core.runtime,
  com.misc.common.moplaf.job.client.emf;visibility:=reexport,
  com.misc.common.moplaf.job.client.emf.edit;visibility:=reexport,
  com.misc.common.moplaf.emf.serialize;visibility:=reexport,
- com.misc.common.moplaf.emf.serialize.edit;visibility:=reexport,
- com.misc.common.moplaf.job.xmlrpc.emf;visibility:=reexport,
- com.misc.common.moplaf.job.xmlrpc.emf.edit;visibility:=reexport
+ com.misc.common.moplaf.emf.serialize.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

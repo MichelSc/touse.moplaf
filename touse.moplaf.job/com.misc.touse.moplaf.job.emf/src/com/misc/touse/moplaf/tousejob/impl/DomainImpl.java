@@ -13,6 +13,7 @@
 package com.misc.touse.moplaf.tousejob.impl;
 
 import com.misc.common.moplaf.file.Files;
+import com.misc.common.moplaf.job.Runs;
 import com.misc.common.moplaf.job.jobclient.JobScheduler;
 import com.misc.common.moplaf.serialize.Deserializable;
 import com.misc.common.moplaf.serialize.Serializable;
@@ -96,7 +97,7 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<com.misc.common.moplaf.job.Runs> runs;
+	protected EList<Runs> runs;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -122,9 +123,9 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<com.misc.common.moplaf.job.Runs> getRuns() {
+	public EList<Runs> getRuns() {
 		if (runs == null) {
-			runs = new EObjectContainmentEList<com.misc.common.moplaf.job.Runs>(com.misc.common.moplaf.job.Runs.class, this, ToUseJobPackage.DOMAIN__RUNS);
+			runs = new EObjectContainmentEList<Runs>(Runs.class, this, ToUseJobPackage.DOMAIN__RUNS);
 		}
 		return runs;
 	}
@@ -248,7 +249,7 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 				return;
 			case ToUseJobPackage.DOMAIN__RUNS:
 				getRuns().clear();
-				getRuns().addAll((Collection<? extends com.misc.common.moplaf.job.Runs>)newValue);
+				getRuns().addAll((Collection<? extends Runs>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
