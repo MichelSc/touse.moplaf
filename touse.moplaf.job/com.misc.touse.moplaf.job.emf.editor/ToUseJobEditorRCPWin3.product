@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="ToUseJobProduct" uid="ToUseJobEditorRCPWin" id="com.misc.touse.moplaf.job.emf.editor.product" application="com.misc.touse.moplaf.job.emf.editor.TousejobEditorAdvisorApplication" useFeatures="false" includeLaunchers="true">
+<product name="product3" uid="ToUseJobEditorRCPWin3" id="com.misc.touse.moplaf.job.emf.editor.product3" application="com.misc.touse.moplaf.job.emf.editor.TousejobEditorAdvisorApplication" useFeatures="false" includeLaunchers="true">
 
    <configIni use="default">
    </configIni>
@@ -18,21 +18,52 @@
    </vm>
 
    <plugins>
+      <plugin id="be.ordina.sco.demos.shiftcoverop.emf"/>
+      <plugin id="be.ordina.sco.demos.shiftcoverop.emf.edit"/>
       <plugin id="com.ibm.icu"/>
       <plugin id="com.misc.common.moplaf.emf"/>
       <plugin id="com.misc.common.moplaf.emf.edit"/>
       <plugin id="com.misc.common.moplaf.emf.editor"/>
+      <plugin id="com.misc.common.moplaf.emf.serialize"/>
+      <plugin id="com.misc.common.moplaf.emf.serialize.edit"/>
+      <plugin id="com.misc.common.moplaf.emf.serialize.xmi"/>
       <plugin id="com.misc.common.moplaf.emf.ui"/>
+      <plugin id="com.misc.common.moplaf.file.emf"/>
+      <plugin id="com.misc.common.moplaf.file.emf.edit"/>
+      <plugin id="com.misc.common.moplaf.file.preference"/>
       <plugin id="com.misc.common.moplaf.gridview.emf.edit"/>
       <plugin id="com.misc.common.moplaf.gridview.emf.editor"/>
       <plugin id="com.misc.common.moplaf.job.client.emf"/>
       <plugin id="com.misc.common.moplaf.job.client.emf.edit"/>
       <plugin id="com.misc.common.moplaf.job.emf"/>
       <plugin id="com.misc.common.moplaf.job.emf.edit"/>
+      <plugin id="com.misc.common.moplaf.job.http.emf"/>
+      <plugin id="com.misc.common.moplaf.job.http.emf.edit"/>
       <plugin id="com.misc.common.moplaf.job.preference"/>
-      <plugin id="com.misc.common.moplaf.job.xmlrpc.emf"/>
-      <plugin id="com.misc.common.moplaf.job.xmlrpc.emf.edit"/>
+      <plugin id="com.misc.common.moplaf.kpiview.emf.edit"/>
       <plugin id="com.misc.common.moplaf.preference"/>
+      <plugin id="com.misc.common.moplaf.propagator2"/>
+      <plugin id="com.misc.common.moplaf.propagator2.edit"/>
+      <plugin id="com.misc.common.moplaf.solver.emf"/>
+      <plugin id="com.misc.common.moplaf.solver.emf.edit"/>
+      <plugin id="com.misc.common.moplaf.solver.glpk.emf"/>
+      <plugin id="com.misc.common.moplaf.solver.glpk.emf.edit"/>
+      <plugin id="com.misc.common.moplaf.solver.preference"/>
+      <plugin id="com.misc.common.moplaf.spreadsheet.emf"/>
+      <plugin id="com.misc.common.moplaf.spreadsheet.emf.edit"/>
+      <plugin id="com.misc.common.moplaf.spreadsheet.poi.emf"/>
+      <plugin id="com.misc.common.moplaf.spreadsheet.poi.emf.edit"/>
+      <plugin id="com.misc.common.moplaf.time"/>
+      <plugin id="com.misc.common.moplaf.time.continuous.emf"/>
+      <plugin id="com.misc.common.moplaf.time.continuous.emf.edit"/>
+      <plugin id="com.misc.common.moplaf.time.discrete.emf"/>
+      <plugin id="com.misc.common.moplaf.time.discrete.emf.edit"/>
+      <plugin id="com.misc.common.moplaf.time.emf"/>
+      <plugin id="com.misc.common.moplaf.time.emf.edit"/>
+      <plugin id="com.misc.common.moplaf.timeview"/>
+      <plugin id="com.misc.common.moplaf.timeview.emf.edit"/>
+      <plugin id="com.misc.common.moplaf.timeview.emf.editor"/>
+      <plugin id="com.misc.common.moplaf.timeview.preference"/>
       <plugin id="com.misc.common.moplaf.view"/>
       <plugin id="com.misc.touse.moplaf.job.emf"/>
       <plugin id="com.misc.touse.moplaf.job.emf.edit"/>
@@ -48,11 +79,14 @@
       <plugin id="org.apache.batik.util" version="1.8.0.v20170214-1941"/>
       <plugin id="org.apache.commons.codec"/>
       <plugin id="org.apache.commons.httpclient"/>
+      <plugin id="org.apache.commons.io"/>
       <plugin id="org.apache.commons.jxpath"/>
+      <plugin id="org.apache.commons.lang"/>
       <plugin id="org.apache.commons.logging"/>
       <plugin id="org.apache.felix.gogo.command"/>
       <plugin id="org.apache.felix.gogo.runtime"/>
       <plugin id="org.apache.felix.scr"/>
+      <plugin id="org.apache.log4j"/>
       <plugin id="org.apache.ws.commons.util"/>
       <plugin id="org.apache.xmlrpc"/>
       <plugin id="org.eclipse.ant.core"/>
@@ -113,8 +147,13 @@
       <plugin id="org.eclipse.equinox.registry"/>
       <plugin id="org.eclipse.equinox.security"/>
       <plugin id="org.eclipse.equinox.security.win32.x86_64" fragment="true"/>
-      <plugin id="org.eclipse.fx.osgi" fragment="true"/>
       <plugin id="org.eclipse.help"/>
+      <plugin id="org.eclipse.jetty.http"/>
+      <plugin id="org.eclipse.jetty.io"/>
+      <plugin id="org.eclipse.jetty.security"/>
+      <plugin id="org.eclipse.jetty.server"/>
+      <plugin id="org.eclipse.jetty.servlet"/>
+      <plugin id="org.eclipse.jetty.util"/>
       <plugin id="org.eclipse.jface"/>
       <plugin id="org.eclipse.jface.databinding"/>
       <plugin id="org.eclipse.jface.text"/>
@@ -134,6 +173,9 @@
       <plugin id="org.eclipse.ui.views"/>
       <plugin id="org.eclipse.ui.win32" fragment="true"/>
       <plugin id="org.eclipse.ui.workbench"/>
+      <plugin id="org.eclipse.xtext.logging" fragment="true"/>
+      <plugin id="org.slf4j.api"/>
+      <plugin id="org.slf4j.impl.log4j12" fragment="true"/>
       <plugin id="org.tukaani.xz"/>
       <plugin id="org.w3c.css.sac"/>
       <plugin id="org.w3c.dom.events"/>

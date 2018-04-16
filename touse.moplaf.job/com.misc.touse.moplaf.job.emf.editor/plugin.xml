@@ -101,14 +101,14 @@
       </editor>
    </extension>
    <extension
-         id="product"
+         id="product3"
          point="org.eclipse.core.runtime.products">
       <product
             application="com.misc.touse.moplaf.job.emf.editor.TousejobEditorAdvisorApplication"
-            name="JobServerApplication">
+            name="product3">
          <property
                name="appName"
-               value="JobServerApplication">
+               value="product3">
          </property>
       </product>
    </extension>
