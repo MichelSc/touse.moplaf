@@ -1901,6 +1901,24 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_ACTION_LOAD_UNLOAD = 10;
 
 	/**
+	 * The feature id for the '<em><b>Start Solution Owned</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_ACTION_LOAD_UNLOAD__START_SOLUTION_OWNED = LocalSearchPackage.ACTION__START_SOLUTION_OWNED;
+
+	/**
+	 * The feature id for the '<em><b>End Solution Owned</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_ACTION_LOAD_UNLOAD__END_SOLUTION_OWNED = LocalSearchPackage.ACTION__END_SOLUTION_OWNED;
+
+	/**
 	 * The feature id for the '<em><b>Current Solution</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1910,7 +1928,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_ACTION_LOAD_UNLOAD__CURRENT_SOLUTION = LocalSearchPackage.ACTION__CURRENT_SOLUTION;
 
 	/**
-	 * The feature id for the '<em><b>Start Solution</b></em>' containment reference.
+	 * The feature id for the '<em><b>Start Solution</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1919,7 +1937,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_ACTION_LOAD_UNLOAD__START_SOLUTION = LocalSearchPackage.ACTION__START_SOLUTION;
 
 	/**
-	 * The feature id for the '<em><b>End Solution</b></em>' containment reference.
+	 * The feature id for the '<em><b>End Solution</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1982,22 +2000,22 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_ACTION_LOAD_UNLOAD__NEW_SOLUTION = LocalSearchPackage.ACTION__NEW_SOLUTION;
 
 	/**
-	 * The feature id for the '<em><b>Start Moves</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Start Deltas</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_ACTION_LOAD_UNLOAD__START_MOVES = LocalSearchPackage.ACTION__START_MOVES;
+	int TO_USE_ACTION_LOAD_UNLOAD__START_DELTAS = LocalSearchPackage.ACTION__START_DELTAS;
 
 	/**
-	 * The feature id for the '<em><b>Current Move</b></em>' reference.
+	 * The feature id for the '<em><b>Current Delta</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_ACTION_LOAD_UNLOAD__CURRENT_MOVE = LocalSearchPackage.ACTION__CURRENT_MOVE;
+	int TO_USE_ACTION_LOAD_UNLOAD__CURRENT_DELTA = LocalSearchPackage.ACTION__CURRENT_DELTA;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -2096,7 +2114,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_ACTION_LOAD_UNLOAD___SELECT__MOVE = LocalSearchPackage.ACTION___SELECT__MOVE;
+	int TO_USE_ACTION_LOAD_UNLOAD___SELECT__DELTA = LocalSearchPackage.ACTION___SELECT__DELTA;
 
 	/**
 	 * The number of operations of the '<em>To Use Action Load Unload</em>' class.
@@ -2108,6 +2126,24 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_ACTION_LOAD_UNLOAD_OPERATION_COUNT = LocalSearchPackage.ACTION_OPERATION_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Start Solution Owned</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_LOAD_UNLOAD__START_SOLUTION_OWNED = TO_USE_ACTION_LOAD_UNLOAD__START_SOLUTION_OWNED;
+
+	/**
+	 * The feature id for the '<em><b>End Solution Owned</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_LOAD_UNLOAD__END_SOLUTION_OWNED = TO_USE_ACTION_LOAD_UNLOAD__END_SOLUTION_OWNED;
+
+	/**
 	 * The feature id for the '<em><b>Current Solution</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2117,7 +2153,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE_LOAD_UNLOAD__CURRENT_SOLUTION = TO_USE_ACTION_LOAD_UNLOAD__CURRENT_SOLUTION;
 
 	/**
-	 * The feature id for the '<em><b>Start Solution</b></em>' containment reference.
+	 * The feature id for the '<em><b>Start Solution</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2126,7 +2162,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE_LOAD_UNLOAD__START_SOLUTION = TO_USE_ACTION_LOAD_UNLOAD__START_SOLUTION;
 
 	/**
-	 * The feature id for the '<em><b>End Solution</b></em>' containment reference.
+	 * The feature id for the '<em><b>End Solution</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2189,22 +2225,22 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE_LOAD_UNLOAD__NEW_SOLUTION = TO_USE_ACTION_LOAD_UNLOAD__NEW_SOLUTION;
 
 	/**
-	 * The feature id for the '<em><b>Start Moves</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Start Deltas</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD__START_MOVES = TO_USE_ACTION_LOAD_UNLOAD__START_MOVES;
+	int TO_USE_SCHEDULE_LOAD_UNLOAD__START_DELTAS = TO_USE_ACTION_LOAD_UNLOAD__START_DELTAS;
 
 	/**
-	 * The feature id for the '<em><b>Current Move</b></em>' reference.
+	 * The feature id for the '<em><b>Current Delta</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD__CURRENT_MOVE = TO_USE_ACTION_LOAD_UNLOAD__CURRENT_MOVE;
+	int TO_USE_SCHEDULE_LOAD_UNLOAD__CURRENT_DELTA = TO_USE_ACTION_LOAD_UNLOAD__CURRENT_DELTA;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -2303,7 +2339,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD___SELECT__MOVE = TO_USE_ACTION_LOAD_UNLOAD___SELECT__MOVE;
+	int TO_USE_SCHEDULE_LOAD_UNLOAD___SELECT__DELTA = TO_USE_ACTION_LOAD_UNLOAD___SELECT__DELTA;
 
 	/**
 	 * The number of operations of the '<em>To Use Schedule Load Unload</em>' class.
@@ -2355,6 +2391,24 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_UNSCHEDULE_LOAD_UNLOAD = 12;
 
 	/**
+	 * The feature id for the '<em><b>Start Solution Owned</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__START_SOLUTION_OWNED = TO_USE_ACTION_LOAD_UNLOAD__START_SOLUTION_OWNED;
+
+	/**
+	 * The feature id for the '<em><b>End Solution Owned</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__END_SOLUTION_OWNED = TO_USE_ACTION_LOAD_UNLOAD__END_SOLUTION_OWNED;
+
+	/**
 	 * The feature id for the '<em><b>Current Solution</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2364,7 +2418,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__CURRENT_SOLUTION = TO_USE_ACTION_LOAD_UNLOAD__CURRENT_SOLUTION;
 
 	/**
-	 * The feature id for the '<em><b>Start Solution</b></em>' containment reference.
+	 * The feature id for the '<em><b>Start Solution</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2373,7 +2427,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__START_SOLUTION = TO_USE_ACTION_LOAD_UNLOAD__START_SOLUTION;
 
 	/**
-	 * The feature id for the '<em><b>End Solution</b></em>' containment reference.
+	 * The feature id for the '<em><b>End Solution</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2436,22 +2490,22 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__NEW_SOLUTION = TO_USE_ACTION_LOAD_UNLOAD__NEW_SOLUTION;
 
 	/**
-	 * The feature id for the '<em><b>Start Moves</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Start Deltas</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__START_MOVES = TO_USE_ACTION_LOAD_UNLOAD__START_MOVES;
+	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__START_DELTAS = TO_USE_ACTION_LOAD_UNLOAD__START_DELTAS;
 
 	/**
-	 * The feature id for the '<em><b>Current Move</b></em>' reference.
+	 * The feature id for the '<em><b>Current Delta</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__CURRENT_MOVE = TO_USE_ACTION_LOAD_UNLOAD__CURRENT_MOVE;
+	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__CURRENT_DELTA = TO_USE_ACTION_LOAD_UNLOAD__CURRENT_DELTA;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -2550,7 +2604,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_UNSCHEDULE_LOAD_UNLOAD___SELECT__MOVE = TO_USE_ACTION_LOAD_UNLOAD___SELECT__MOVE;
+	int TO_USE_UNSCHEDULE_LOAD_UNLOAD___SELECT__DELTA = TO_USE_ACTION_LOAD_UNLOAD___SELECT__DELTA;
 
 	/**
 	 * The number of operations of the '<em>To Use Unschedule Load Unload</em>' class.

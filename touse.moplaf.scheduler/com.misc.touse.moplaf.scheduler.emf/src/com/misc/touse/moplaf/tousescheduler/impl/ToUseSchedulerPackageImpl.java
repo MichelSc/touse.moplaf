@@ -2,6 +2,7 @@
  */
 package com.misc.touse.moplaf.tousescheduler.impl;
 
+import com.misc.common.moplaf.file.FilePackage;
 import com.misc.common.moplaf.job.JobPackage;
 import com.misc.common.moplaf.localsearch.LocalSearchPackage;
 import com.misc.common.moplaf.propagator2.PropagatorPackage;
@@ -314,6 +315,7 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		SchedulerPackage.eINSTANCE.eClass();
 		LocalSearchPackage.eINSTANCE.eClass();
 		JobPackage.eINSTANCE.eClass();
+		FilePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theToUseSchedulerPackage.createPackageContents();

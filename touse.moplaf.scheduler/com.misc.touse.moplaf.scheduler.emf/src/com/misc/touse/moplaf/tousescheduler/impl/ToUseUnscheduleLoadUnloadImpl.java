@@ -61,13 +61,13 @@ public class ToUseUnscheduleLoadUnloadImpl extends ToUseActionLoadUnloadImpl imp
 		Unschedule unschedule_unload = SchedulerFactory.eINSTANCE.createUnschedule();
 		unschedule_unload.setTaskToSchedule(unloadTask);
 		unschedule_unload.setSolution(false);
-		this.getStartMoves().add(unschedule_unload);
+		this.getStartDeltas().add(unschedule_unload);
 
 		// unschedule load
 		Unschedule unschedule_load= SchedulerFactory.eINSTANCE.createUnschedule();
 		unschedule_load.setTaskToSchedule(loadTask);
 		unschedule_load.setSolution(true);
-		unschedule_unload.getNextMoves().add(unschedule_load);
+		unschedule_unload.getNextDeltas().add(unschedule_load);
 		
 		// make the solution ready for calculating scores
 		schedule.enable();
