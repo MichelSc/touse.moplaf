@@ -101,8 +101,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUsePhaseDestructConstruct/ConstructionChance"/>
     </genClasses>
     <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//ToUseStepDestructConstruct">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUseStepDestructConstruct/DestructionChance"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUseStepDestructConstruct/ConstructionChance"/>
+      <genFeatures createChild="false" propertyCategory="20 Step" ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUseStepDestructConstruct/DestructionChance"/>
+      <genFeatures createChild="false" propertyCategory="20 Step" ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUseStepDestructConstruct/ConstructionChance"/>
     </genClasses>
     <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//ToUseActionLoadUnload"
         labelFeature="../../com.misc.common.moplaf.localsearch.emf/model/localsearch.genmodel#//localsearch/Action/Description">

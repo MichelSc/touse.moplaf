@@ -77,7 +77,7 @@ public class ToUseStepDestructConstructItemProvider extends StepItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI__20StepPropertyCategory"),
 				 null));
 	}
 
@@ -99,7 +99,7 @@ public class ToUseStepDestructConstructItemProvider extends StepItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI__20StepPropertyCategory"),
 				 null));
 	}
 

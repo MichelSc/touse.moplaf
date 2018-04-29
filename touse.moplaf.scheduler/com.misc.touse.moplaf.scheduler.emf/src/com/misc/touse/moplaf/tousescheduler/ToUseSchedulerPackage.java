@@ -2299,6 +2299,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_STEP_DESTRUCT_CONSTRUCT__STEP = LocalSearchPackage.STEP__STEP;
 
 	/**
+	 * The feature id for the '<em><b>Valid Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_STEP_DESTRUCT_CONSTRUCT__VALID_FEEDBACK = LocalSearchPackage.STEP__VALID_FEEDBACK;
+
+	/**
 	 * The feature id for the '<em><b>Destruction Chance</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2468,15 +2477,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_ACTION_LOAD_UNLOAD__DESCRIPTION = LocalSearchPackage.ACTION__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Valid</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_ACTION_LOAD_UNLOAD__VALID = LocalSearchPackage.ACTION__VALID;
 
 	/**
 	 * The feature id for the '<em><b>Valid Feedback</b></em>' attribute.
@@ -2704,15 +2704,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE_LOAD_UNLOAD__DESCRIPTION = TO_USE_ACTION_LOAD_UNLOAD__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Valid</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD__VALID = TO_USE_ACTION_LOAD_UNLOAD__VALID;
-
-	/**
 	 * The feature id for the '<em><b>Valid Feedback</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2936,15 +2927,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__DESCRIPTION = TO_USE_ACTION_LOAD_UNLOAD__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Valid</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__VALID = TO_USE_ACTION_LOAD_UNLOAD__VALID;
 
 	/**
 	 * The feature id for the '<em><b>Valid Feedback</b></em>' attribute.

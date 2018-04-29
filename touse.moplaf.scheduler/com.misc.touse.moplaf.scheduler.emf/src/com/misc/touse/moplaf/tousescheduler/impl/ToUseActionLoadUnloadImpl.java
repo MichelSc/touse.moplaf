@@ -2,6 +2,7 @@
  */
 package com.misc.touse.moplaf.tousescheduler.impl;
 
+import com.misc.common.moplaf.common.EnabledFeedback;
 import com.misc.common.moplaf.localsearch.impl.ActionImpl;
 
 import com.misc.touse.moplaf.tousescheduler.Shipment;
@@ -96,15 +97,15 @@ public abstract class ToUseActionLoadUnloadImpl extends ActionImpl implements To
 	}
 
 	@Override
-	public String getValidFeedback() {
-		String superFeedback = super.getValidFeedback();
-		if ( superFeedback!=null) {
+	public EnabledFeedback getValidFeedback() {
+		EnabledFeedback superFeedback = super.getValidFeedback();
+		if ( !superFeedback.isEnabled() ) {
 			return superFeedback;
 		}
 		if ( this.getShipment()==null) {
-			return "No Shipment";
+			return new EnabledFeedback(false, "No Shipment");
 		}
-		return null;
+		return EnabledFeedback.NOFEEDBACK;
 	}
 
 	/**
