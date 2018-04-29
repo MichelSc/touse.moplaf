@@ -175,6 +175,15 @@ public interface ToUseSchedulerFactory extends EFactory {
 	CalcResourcePlannedBenefit createCalcResourcePlannedBenefit();
 
 	/**
+	 * Returns a new object of class '<em>To Use Step Destruct Construct</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>To Use Step Destruct Construct</em>'.
+	 * @generated
+	 */
+	ToUseStepDestructConstruct createToUseStepDestructConstruct();
+
+	/**
 	 * Returns a new object of class '<em>Calc Task Start Volume Loaded</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -9,6 +9,7 @@ import com.misc.common.moplaf.localsearch.Phase;
 import com.misc.common.moplaf.localsearch.Score;
 import com.misc.common.moplaf.localsearch.Solution;
 import com.misc.common.moplaf.localsearch.SolutionChange;
+import com.misc.common.moplaf.localsearch.Step;
 import com.misc.common.moplaf.localsearch.Strategy;
 import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
 import com.misc.common.moplaf.propagator2.PropagatorFunction;
@@ -159,6 +160,21 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ToUseSchedulerPackage.TO_USE_PHASE_DESTRUCT_CONSTRUCT: {
+				ToUsePhaseDestructConstruct toUsePhaseDestructConstruct = (ToUsePhaseDestructConstruct)theEObject;
+				T result = caseToUsePhaseDestructConstruct(toUsePhaseDestructConstruct);
+				if (result == null) result = casePhase(toUsePhaseDestructConstruct);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ToUseSchedulerPackage.TO_USE_STEP_DESTRUCT_CONSTRUCT: {
+				ToUseStepDestructConstruct toUseStepDestructConstruct = (ToUseStepDestructConstruct)theEObject;
+				T result = caseToUseStepDestructConstruct(toUseStepDestructConstruct);
+				if (result == null) result = caseStep(toUseStepDestructConstruct);
+				if (result == null) result = caseSolutionChange(toUseStepDestructConstruct);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ToUseSchedulerPackage.TO_USE_ACTION_LOAD_UNLOAD: {
 				ToUseActionLoadUnload toUseActionLoadUnload = (ToUseActionLoadUnload)theEObject;
 				T result = caseToUseActionLoadUnload(toUseActionLoadUnload);
@@ -182,13 +198,6 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 				if (result == null) result = caseToUseActionLoadUnload(toUseUnscheduleLoadUnload);
 				if (result == null) result = caseAction(toUseUnscheduleLoadUnload);
 				if (result == null) result = caseSolutionChange(toUseUnscheduleLoadUnload);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ToUseSchedulerPackage.TO_USE_PHASE_DESTRUCT_CONSTRUCT: {
-				ToUsePhaseDestructConstruct toUsePhaseDestructConstruct = (ToUsePhaseDestructConstruct)theEObject;
-				T result = caseToUsePhaseDestructConstruct(toUsePhaseDestructConstruct);
-				if (result == null) result = casePhase(toUsePhaseDestructConstruct);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -667,6 +676,21 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>To Use Step Destruct Construct</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>To Use Step Destruct Construct</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseToUseStepDestructConstruct(ToUseStepDestructConstruct object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Run Params</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -963,6 +987,21 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePropagatorFunctionBindings(PropagatorFunctionBindings object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Step</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Step</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStep(Step object) {
 		return null;
 	}
 

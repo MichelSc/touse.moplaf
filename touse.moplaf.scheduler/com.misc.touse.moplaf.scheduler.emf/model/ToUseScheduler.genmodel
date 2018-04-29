@@ -3,7 +3,7 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.misc.touse.moplaf.scheduler.emf/src" modelPluginID="com.misc.touse.moplaf.scheduler.emf"
     modelName="ToUseScheduler" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
-    providerRootExtendsClass="" language="" usedGenPackages="../../com.misc.common.moplaf.propagator2/model/propagator.genmodel#//propagator2 ../../com.misc.common.moplaf.scheduler.emf/model/scheduler.genmodel#//scheduler ../../com.misc.common.moplaf.localsearch.emf/model/localsearch.genmodel#//localsearch ../../com.misc.common.moplaf.job.emf/model/job.genmodel#//job"
+    providerRootExtendsClass="" language="" usedGenPackages="../../com.misc.common.moplaf.propagator2/model/propagator.genmodel#//propagator2 ../../com.misc.common.moplaf.scheduler.emf/model/scheduler.genmodel#//scheduler ../../com.misc.common.moplaf.localsearch.emf/model/localsearch.genmodel#//localsearch ../../com.misc.common.moplaf.job.emf/model/job.genmodel#//job ../../com.misc.common.moplaf.file.emf/model/file.genmodel#//file"
     operationReflection="true" importOrganizing="true">
   <foreignModel>ToUseScheduler.ecore</foreignModel>
   <genPackages prefix="ToUseScheduler" basePackage="com.misc.touse.moplaf" disposableProviderFactory="true"
@@ -96,6 +96,14 @@
       <genFeatures notify="false" createChild="false" propertyCategory="20 ToUseScheduler"
           propertySortChoices="true" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//ToUseUnloadShipment/LoadShipment"/>
     </genClasses>
+    <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//ToUsePhaseDestructConstruct">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUsePhaseDestructConstruct/DestructionChance"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUsePhaseDestructConstruct/ConstructionChance"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//ToUseStepDestructConstruct">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUseStepDestructConstruct/DestructionChance"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUseStepDestructConstruct/ConstructionChance"/>
+    </genClasses>
     <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//ToUseActionLoadUnload"
         labelFeature="../../com.misc.common.moplaf.localsearch.emf/model/localsearch.genmodel#//localsearch/Action/Description">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//ToUseActionLoadUnload/Shipment"/>
@@ -104,10 +112,6 @@
         labelFeature="../../com.misc.common.moplaf.localsearch.emf/model/localsearch.genmodel#//localsearch/Action/Description"/>
     <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//ToUseUnscheduleLoadUnload"
         labelFeature="../../com.misc.common.moplaf.localsearch.emf/model/localsearch.genmodel#//localsearch/Action/Description"/>
-    <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//ToUsePhaseDestructConstruct">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUsePhaseDestructConstruct/DestructionChance"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUsePhaseDestructConstruct/ConstructionChance"/>
-    </genClasses>
     <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//CalcScheduler"/>
     <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//CalcSchedule">
       <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//CalcSchedule/Schedule"/>

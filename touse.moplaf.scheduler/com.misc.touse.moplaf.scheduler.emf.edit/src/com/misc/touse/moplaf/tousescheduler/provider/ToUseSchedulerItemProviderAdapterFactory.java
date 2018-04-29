@@ -509,6 +509,29 @@ public class ToUseSchedulerItemProviderAdapterFactory extends ToUseSchedulerAdap
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.ToUseStepDestructConstruct} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ToUseStepDestructConstructItemProvider toUseStepDestructConstructItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousescheduler.ToUseStepDestructConstruct}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createToUseStepDestructConstructAdapter() {
+		if (toUseStepDestructConstructItemProvider == null) {
+			toUseStepDestructConstructItemProvider = new ToUseStepDestructConstructItemProvider(this);
+		}
+
+		return toUseStepDestructConstructItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.ToUseUnscheduleLoadUnload} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -755,9 +778,10 @@ public class ToUseSchedulerItemProviderAdapterFactory extends ToUseSchedulerAdap
 		if (toUseScheduleTaskItemProvider != null) toUseScheduleTaskItemProvider.dispose();
 		if (toUseLoadShipmentItemProvider != null) toUseLoadShipmentItemProvider.dispose();
 		if (toUseUnloadShipmentItemProvider != null) toUseUnloadShipmentItemProvider.dispose();
+		if (toUsePhaseDestructConstructItemProvider != null) toUsePhaseDestructConstructItemProvider.dispose();
+		if (toUseStepDestructConstructItemProvider != null) toUseStepDestructConstructItemProvider.dispose();
 		if (toUseScheduleLoadUnloadItemProvider != null) toUseScheduleLoadUnloadItemProvider.dispose();
 		if (toUseUnscheduleLoadUnloadItemProvider != null) toUseUnscheduleLoadUnloadItemProvider.dispose();
-		if (toUsePhaseDestructConstructItemProvider != null) toUsePhaseDestructConstructItemProvider.dispose();
 		if (scopeScheduleScoreItemProvider != null) scopeScheduleScoreItemProvider.dispose();
 		if (layerScheduleDistanceItemProvider != null) layerScheduleDistanceItemProvider.dispose();
 		if (calcTaskDistanceFromPreviousItemProvider != null) calcTaskDistanceFromPreviousItemProvider.dispose();

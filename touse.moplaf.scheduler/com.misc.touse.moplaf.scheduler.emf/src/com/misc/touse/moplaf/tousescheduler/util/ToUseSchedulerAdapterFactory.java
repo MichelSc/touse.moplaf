@@ -9,6 +9,7 @@ import com.misc.common.moplaf.localsearch.Phase;
 import com.misc.common.moplaf.localsearch.Score;
 import com.misc.common.moplaf.localsearch.Solution;
 import com.misc.common.moplaf.localsearch.SolutionChange;
+import com.misc.common.moplaf.localsearch.Step;
 import com.misc.common.moplaf.localsearch.Strategy;
 import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
 import com.misc.common.moplaf.propagator2.PropagatorFunction;
@@ -123,6 +124,14 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 				return createToUseUnloadShipmentAdapter();
 			}
 			@Override
+			public Adapter caseToUsePhaseDestructConstruct(ToUsePhaseDestructConstruct object) {
+				return createToUsePhaseDestructConstructAdapter();
+			}
+			@Override
+			public Adapter caseToUseStepDestructConstruct(ToUseStepDestructConstruct object) {
+				return createToUseStepDestructConstructAdapter();
+			}
+			@Override
 			public Adapter caseToUseActionLoadUnload(ToUseActionLoadUnload object) {
 				return createToUseActionLoadUnloadAdapter();
 			}
@@ -133,10 +142,6 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseToUseUnscheduleLoadUnload(ToUseUnscheduleLoadUnload object) {
 				return createToUseUnscheduleLoadUnloadAdapter();
-			}
-			@Override
-			public Adapter caseToUsePhaseDestructConstruct(ToUsePhaseDestructConstruct object) {
-				return createToUsePhaseDestructConstructAdapter();
 			}
 			@Override
 			public Adapter caseCalcScheduler(CalcScheduler object) {
@@ -243,16 +248,20 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 				return createTaskAdapter();
 			}
 			@Override
+			public Adapter casePhase(Phase object) {
+				return createPhaseAdapter();
+			}
+			@Override
 			public Adapter caseSolutionChange(SolutionChange object) {
 				return createSolutionChangeAdapter();
 			}
 			@Override
-			public Adapter caseAction(Action object) {
-				return createActionAdapter();
+			public Adapter caseStep(Step object) {
+				return createStepAdapter();
 			}
 			@Override
-			public Adapter casePhase(Phase object) {
-				return createPhaseAdapter();
+			public Adapter caseAction(Action object) {
+				return createActionAdapter();
 			}
 			@Override
 			public Adapter casePropagatorFunction(PropagatorFunction object) {
@@ -577,6 +586,20 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.tousescheduler.ToUseStepDestructConstruct <em>To Use Step Destruct Construct</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseStepDestructConstruct
+	 * @generated
+	 */
+	public Adapter createToUseStepDestructConstructAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.job.RunParams <em>Run Params</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -853,6 +876,20 @@ public class ToUseSchedulerAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPropagatorFunctionBindingsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.localsearch.Step <em>Step</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.localsearch.Step
+	 * @generated
+	 */
+	public Adapter createStepAdapter() {
 		return null;
 	}
 

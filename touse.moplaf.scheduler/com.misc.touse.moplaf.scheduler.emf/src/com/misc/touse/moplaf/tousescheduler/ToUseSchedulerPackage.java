@@ -634,7 +634,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getCalcScheduler()
 	 * @generated
 	 */
-	int CALC_SCHEDULER = 14;
+	int CALC_SCHEDULER = 15;
 
 	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.CalcScheduleImpl <em>Calc Schedule</em>}' class.
@@ -644,7 +644,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getCalcSchedule()
 	 * @generated
 	 */
-	int CALC_SCHEDULE = 15;
+	int CALC_SCHEDULE = 16;
 
 	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.CalcResourceImpl <em>Calc Resource</em>}' class.
@@ -654,7 +654,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getCalcResource()
 	 * @generated
 	 */
-	int CALC_RESOURCE = 16;
+	int CALC_RESOURCE = 17;
 
 	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.CalcTaskImpl <em>Calc Task</em>}' class.
@@ -664,7 +664,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getCalcTask()
 	 * @generated
 	 */
-	int CALC_TASK = 17;
+	int CALC_TASK = 18;
 
 	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleResourceImpl <em>To Use Schedule Resource</em>}' class.
@@ -684,7 +684,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getScopeScheduleScore()
 	 * @generated
 	 */
-	int SCOPE_SCHEDULE_SCORE = 18;
+	int SCOPE_SCHEDULE_SCORE = 19;
 
 	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.LayerScheduleDistanceImpl <em>Layer Schedule Distance</em>}' class.
@@ -694,7 +694,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getLayerScheduleDistance()
 	 * @generated
 	 */
-	int LAYER_SCHEDULE_DISTANCE = 19;
+	int LAYER_SCHEDULE_DISTANCE = 20;
 
 	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.CalcTaskDistanceImpl <em>Calc Task Distance</em>}' class.
@@ -704,7 +704,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getCalcTaskDistance()
 	 * @generated
 	 */
-	int CALC_TASK_DISTANCE = 21;
+	int CALC_TASK_DISTANCE = 22;
 
 	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.CalcResourceDistanceImpl <em>Calc Resource Distance</em>}' class.
@@ -714,7 +714,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getCalcResourceDistance()
 	 * @generated
 	 */
-	int CALC_RESOURCE_DISTANCE = 23;
+	int CALC_RESOURCE_DISTANCE = 24;
 
 	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleImpl <em>To Use Schedule</em>}' class.
@@ -1391,7 +1391,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseScheduleLoadUnload()
 	 * @generated
 	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD = 11;
+	int TO_USE_SCHEDULE_LOAD_UNLOAD = 13;
 
 	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseLoadShipmentImpl <em>To Use Load Shipment</em>}' class.
@@ -1889,7 +1889,459 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseActionLoadUnload()
 	 * @generated
 	 */
-	int TO_USE_ACTION_LOAD_UNLOAD = 10;
+	int TO_USE_ACTION_LOAD_UNLOAD = 12;
+
+	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.LayerScheduleVolumeLoadedImpl <em>Layer Schedule Volume Loaded</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.LayerScheduleVolumeLoadedImpl
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getLayerScheduleVolumeLoaded()
+	 * @generated
+	 */
+	int LAYER_SCHEDULE_VOLUME_LOADED = 25;
+
+	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.CalcTaskStartVolumeLoadedImpl <em>Calc Task Start Volume Loaded</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.CalcTaskStartVolumeLoadedImpl
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getCalcTaskStartVolumeLoaded()
+	 * @generated
+	 */
+	int CALC_TASK_START_VOLUME_LOADED = 26;
+
+	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.CalcTaskEndVolumeLoadedImpl <em>Calc Task End Volume Loaded</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.CalcTaskEndVolumeLoadedImpl
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getCalcTaskEndVolumeLoaded()
+	 * @generated
+	 */
+	int CALC_TASK_END_VOLUME_LOADED = 27;
+
+	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseUnscheduleLoadUnloadImpl <em>To Use Unschedule Load Unload</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseUnscheduleLoadUnloadImpl
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseUnscheduleLoadUnload()
+	 * @generated
+	 */
+	int TO_USE_UNSCHEDULE_LOAD_UNLOAD = 14;
+
+	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUsePhaseDestructConstructImpl <em>To Use Phase Destruct Construct</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUsePhaseDestructConstructImpl
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUsePhaseDestructConstruct()
+	 * @generated
+	 */
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT = 10;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__NAME = LocalSearchPackage.PHASE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Keep Level</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__KEEP_LEVEL = LocalSearchPackage.PHASE__KEEP_LEVEL;
+
+	/**
+	 * The feature id for the '<em><b>Max Steps</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__MAX_STEPS = LocalSearchPackage.PHASE__MAX_STEPS;
+
+	/**
+	 * The feature id for the '<em><b>Max Seconds</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__MAX_SECONDS = LocalSearchPackage.PHASE__MAX_SECONDS;
+
+	/**
+	 * The feature id for the '<em><b>Phase Start</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__PHASE_START = LocalSearchPackage.PHASE__PHASE_START;
+
+	/**
+	 * The feature id for the '<em><b>Phase End</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__PHASE_END = LocalSearchPackage.PHASE__PHASE_END;
+
+	/**
+	 * The feature id for the '<em><b>Nr Steps</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__NR_STEPS = LocalSearchPackage.PHASE__NR_STEPS;
+
+	/**
+	 * The feature id for the '<em><b>Duration Total</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__DURATION_TOTAL = LocalSearchPackage.PHASE__DURATION_TOTAL;
+
+	/**
+	 * The feature id for the '<em><b>Duration Average</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__DURATION_AVERAGE = LocalSearchPackage.PHASE__DURATION_AVERAGE;
+
+	/**
+	 * The feature id for the '<em><b>Strategy</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__STRATEGY = LocalSearchPackage.PHASE__STRATEGY;
+
+	/**
+	 * The feature id for the '<em><b>Steps</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__STEPS = LocalSearchPackage.PHASE__STEPS;
+
+	/**
+	 * The feature id for the '<em><b>Select Best Chance</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__SELECT_BEST_CHANCE = LocalSearchPackage.PHASE__SELECT_BEST_CHANCE;
+
+	/**
+	 * The feature id for the '<em><b>Select Worst Chance</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__SELECT_WORST_CHANCE = LocalSearchPackage.PHASE__SELECT_WORST_CHANCE;
+
+	/**
+	 * The feature id for the '<em><b>Destruction Chance</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__DESTRUCTION_CHANCE = LocalSearchPackage.PHASE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Construction Chance</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__CONSTRUCTION_CHANCE = LocalSearchPackage.PHASE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>To Use Phase Destruct Construct</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT_FEATURE_COUNT = LocalSearchPackage.PHASE_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Do Phase</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT___DO_PHASE = LocalSearchPackage.PHASE___DO_PHASE;
+
+	/**
+	 * The number of operations of the '<em>To Use Phase Destruct Construct</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_PHASE_DESTRUCT_CONSTRUCT_OPERATION_COUNT = LocalSearchPackage.PHASE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.CalcTaskDistanceFromPreviousImpl <em>Calc Task Distance From Previous</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.CalcTaskDistanceFromPreviousImpl
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getCalcTaskDistanceFromPrevious()
+	 * @generated
+	 */
+	int CALC_TASK_DISTANCE_FROM_PREVIOUS = 21;
+
+	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.CalcResourceDistanceFromLastImpl <em>Calc Resource Distance From Last</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.CalcResourceDistanceFromLastImpl
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getCalcResourceDistanceFromLast()
+	 * @generated
+	 */
+	int CALC_RESOURCE_DISTANCE_FROM_LAST = 23;
+
+	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.CalcResourceVolumeOverloadImpl <em>Calc Resource Volume Overload</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.CalcResourceVolumeOverloadImpl
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getCalcResourceVolumeOverload()
+	 * @generated
+	 */
+	int CALC_RESOURCE_VOLUME_OVERLOAD = 28;
+
+	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.LayerSchedulePlannedBenefitImpl <em>Layer Schedule Planned Benefit</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.LayerSchedulePlannedBenefitImpl
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getLayerSchedulePlannedBenefit()
+	 * @generated
+	 */
+	int LAYER_SCHEDULE_PLANNED_BENEFIT = 29;
+
+	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.CalcResourcePlannedBenefitImpl <em>Calc Resource Planned Benefit</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.CalcResourcePlannedBenefitImpl
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getCalcResourcePlannedBenefit()
+	 * @generated
+	 */
+	int CALC_RESOURCE_PLANNED_BENEFIT = 30;
+
+	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseStepDestructConstructImpl <em>To Use Step Destruct Construct</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseStepDestructConstructImpl
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseStepDestructConstruct()
+	 * @generated
+	 */
+	int TO_USE_STEP_DESTRUCT_CONSTRUCT = 11;
+
+	/**
+	 * The feature id for the '<em><b>Start Solution Owned</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_STEP_DESTRUCT_CONSTRUCT__START_SOLUTION_OWNED = LocalSearchPackage.STEP__START_SOLUTION_OWNED;
+
+	/**
+	 * The feature id for the '<em><b>End Solution Owned</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_STEP_DESTRUCT_CONSTRUCT__END_SOLUTION_OWNED = LocalSearchPackage.STEP__END_SOLUTION_OWNED;
+
+	/**
+	 * The feature id for the '<em><b>Current Solution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_STEP_DESTRUCT_CONSTRUCT__CURRENT_SOLUTION = LocalSearchPackage.STEP__CURRENT_SOLUTION;
+
+	/**
+	 * The feature id for the '<em><b>Start Solution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_STEP_DESTRUCT_CONSTRUCT__START_SOLUTION = LocalSearchPackage.STEP__START_SOLUTION;
+
+	/**
+	 * The feature id for the '<em><b>End Solution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_STEP_DESTRUCT_CONSTRUCT__END_SOLUTION = LocalSearchPackage.STEP__END_SOLUTION;
+
+	/**
+	 * The feature id for the '<em><b>Previous Change</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_STEP_DESTRUCT_CONSTRUCT__PREVIOUS_CHANGE = LocalSearchPackage.STEP__PREVIOUS_CHANGE;
+
+	/**
+	 * The feature id for the '<em><b>Sub Changes</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_STEP_DESTRUCT_CONSTRUCT__SUB_CHANGES = LocalSearchPackage.STEP__SUB_CHANGES;
+
+	/**
+	 * The feature id for the '<em><b>Super Change</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_STEP_DESTRUCT_CONSTRUCT__SUPER_CHANGE = LocalSearchPackage.STEP__SUPER_CHANGE;
+
+	/**
+	 * The feature id for the '<em><b>Level</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_STEP_DESTRUCT_CONSTRUCT__LEVEL = LocalSearchPackage.STEP__LEVEL;
+
+	/**
+	 * The feature id for the '<em><b>Keep Solutions</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_STEP_DESTRUCT_CONSTRUCT__KEEP_SOLUTIONS = LocalSearchPackage.STEP__KEEP_SOLUTIONS;
+
+	/**
+	 * The feature id for the '<em><b>New Solution</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_STEP_DESTRUCT_CONSTRUCT__NEW_SOLUTION = LocalSearchPackage.STEP__NEW_SOLUTION;
+
+	/**
+	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_STEP_DESTRUCT_CONSTRUCT__ACTIONS = LocalSearchPackage.STEP__ACTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Step Nr</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_STEP_DESTRUCT_CONSTRUCT__STEP_NR = LocalSearchPackage.STEP__STEP_NR;
+
+	/**
+	 * The feature id for the '<em><b>Phase</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_STEP_DESTRUCT_CONSTRUCT__PHASE = LocalSearchPackage.STEP__PHASE;
+
+	/**
+	 * The feature id for the '<em><b>Step</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_STEP_DESTRUCT_CONSTRUCT__STEP = LocalSearchPackage.STEP__STEP;
+
+	/**
+	 * The feature id for the '<em><b>Destruction Chance</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_STEP_DESTRUCT_CONSTRUCT__DESTRUCTION_CHANCE = LocalSearchPackage.STEP_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Construction Chance</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_STEP_DESTRUCT_CONSTRUCT__CONSTRUCTION_CHANCE = LocalSearchPackage.STEP_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>To Use Step Destruct Construct</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_STEP_DESTRUCT_CONSTRUCT_FEATURE_COUNT = LocalSearchPackage.STEP_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Do Step</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_STEP_DESTRUCT_CONSTRUCT___DO_STEP__PHASE = LocalSearchPackage.STEP___DO_STEP__PHASE;
+
+	/**
+	 * The number of operations of the '<em>To Use Step Destruct Construct</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_STEP_DESTRUCT_CONSTRUCT_OPERATION_COUNT = LocalSearchPackage.STEP_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Start Solution Owned</b></em>' containment reference.
@@ -2106,6 +2558,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_ACTION_LOAD_UNLOAD___SELECT__DELTA = LocalSearchPackage.ACTION___SELECT__DELTA;
+
+	/**
+	 * The operation id for the '<em>Do Action</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_ACTION_LOAD_UNLOAD___DO_ACTION__PHASE_STEP = LocalSearchPackage.ACTION___DO_ACTION__PHASE_STEP;
 
 	/**
 	 * The number of operations of the '<em>To Use Action Load Unload</em>' class.
@@ -2333,6 +2794,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE_LOAD_UNLOAD___SELECT__DELTA = TO_USE_ACTION_LOAD_UNLOAD___SELECT__DELTA;
 
 	/**
+	 * The operation id for the '<em>Do Action</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_LOAD_UNLOAD___DO_ACTION__PHASE_STEP = TO_USE_ACTION_LOAD_UNLOAD___DO_ACTION__PHASE_STEP;
+
+	/**
 	 * The number of operations of the '<em>To Use Schedule Load Unload</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2340,46 +2810,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_SCHEDULE_LOAD_UNLOAD_OPERATION_COUNT = TO_USE_ACTION_LOAD_UNLOAD_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.LayerScheduleVolumeLoadedImpl <em>Layer Schedule Volume Loaded</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.misc.touse.moplaf.tousescheduler.impl.LayerScheduleVolumeLoadedImpl
-	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getLayerScheduleVolumeLoaded()
-	 * @generated
-	 */
-	int LAYER_SCHEDULE_VOLUME_LOADED = 24;
-
-	/**
-	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.CalcTaskStartVolumeLoadedImpl <em>Calc Task Start Volume Loaded</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.misc.touse.moplaf.tousescheduler.impl.CalcTaskStartVolumeLoadedImpl
-	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getCalcTaskStartVolumeLoaded()
-	 * @generated
-	 */
-	int CALC_TASK_START_VOLUME_LOADED = 25;
-
-	/**
-	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.CalcTaskEndVolumeLoadedImpl <em>Calc Task End Volume Loaded</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.misc.touse.moplaf.tousescheduler.impl.CalcTaskEndVolumeLoadedImpl
-	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getCalcTaskEndVolumeLoaded()
-	 * @generated
-	 */
-	int CALC_TASK_END_VOLUME_LOADED = 26;
-
-	/**
-	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseUnscheduleLoadUnloadImpl <em>To Use Unschedule Load Unload</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseUnscheduleLoadUnloadImpl
-	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseUnscheduleLoadUnload()
-	 * @generated
-	 */
-	int TO_USE_UNSCHEDULE_LOAD_UNLOAD = 12;
 
 	/**
 	 * The feature id for the '<em><b>Start Solution Owned</b></em>' containment reference.
@@ -2598,6 +3028,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_UNSCHEDULE_LOAD_UNLOAD___SELECT__DELTA = TO_USE_ACTION_LOAD_UNLOAD___SELECT__DELTA;
 
 	/**
+	 * The operation id for the '<em>Do Action</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNSCHEDULE_LOAD_UNLOAD___DO_ACTION__PHASE_STEP = TO_USE_ACTION_LOAD_UNLOAD___DO_ACTION__PHASE_STEP;
+
+	/**
 	 * The number of operations of the '<em>To Use Unschedule Load Unload</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2605,246 +3044,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_UNSCHEDULE_LOAD_UNLOAD_OPERATION_COUNT = TO_USE_ACTION_LOAD_UNLOAD_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUsePhaseDestructConstructImpl <em>To Use Phase Destruct Construct</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUsePhaseDestructConstructImpl
-	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUsePhaseDestructConstruct()
-	 * @generated
-	 */
-	int TO_USE_PHASE_DESTRUCT_CONSTRUCT = 13;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__NAME = LocalSearchPackage.PHASE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Keep Level</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__KEEP_LEVEL = LocalSearchPackage.PHASE__KEEP_LEVEL;
-
-	/**
-	 * The feature id for the '<em><b>Max Steps</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__MAX_STEPS = LocalSearchPackage.PHASE__MAX_STEPS;
-
-	/**
-	 * The feature id for the '<em><b>Max Seconds</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__MAX_SECONDS = LocalSearchPackage.PHASE__MAX_SECONDS;
-
-	/**
-	 * The feature id for the '<em><b>Phase Start</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__PHASE_START = LocalSearchPackage.PHASE__PHASE_START;
-
-	/**
-	 * The feature id for the '<em><b>Phase End</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__PHASE_END = LocalSearchPackage.PHASE__PHASE_END;
-
-	/**
-	 * The feature id for the '<em><b>Nr Steps</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__NR_STEPS = LocalSearchPackage.PHASE__NR_STEPS;
-
-	/**
-	 * The feature id for the '<em><b>Duration Total</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__DURATION_TOTAL = LocalSearchPackage.PHASE__DURATION_TOTAL;
-
-	/**
-	 * The feature id for the '<em><b>Duration Average</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__DURATION_AVERAGE = LocalSearchPackage.PHASE__DURATION_AVERAGE;
-
-	/**
-	 * The feature id for the '<em><b>Strategy</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__STRATEGY = LocalSearchPackage.PHASE__STRATEGY;
-
-	/**
-	 * The feature id for the '<em><b>Steps</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__STEPS = LocalSearchPackage.PHASE__STEPS;
-
-	/**
-	 * The feature id for the '<em><b>Select Best Chance</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__SELECT_BEST_CHANCE = LocalSearchPackage.PHASE__SELECT_BEST_CHANCE;
-
-	/**
-	 * The feature id for the '<em><b>Select Worst Chance</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__SELECT_WORST_CHANCE = LocalSearchPackage.PHASE__SELECT_WORST_CHANCE;
-
-	/**
-	 * The feature id for the '<em><b>Destruction Chance</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__DESTRUCTION_CHANCE = LocalSearchPackage.PHASE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Construction Chance</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_PHASE_DESTRUCT_CONSTRUCT__CONSTRUCTION_CHANCE = LocalSearchPackage.PHASE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>To Use Phase Destruct Construct</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_PHASE_DESTRUCT_CONSTRUCT_FEATURE_COUNT = LocalSearchPackage.PHASE_FEATURE_COUNT + 2;
-
-	/**
-	 * The operation id for the '<em>Do Phase</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_PHASE_DESTRUCT_CONSTRUCT___DO_PHASE = LocalSearchPackage.PHASE___DO_PHASE;
-
-	/**
-	 * The operation id for the '<em>Do Step</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_PHASE_DESTRUCT_CONSTRUCT___DO_STEP__STEP = LocalSearchPackage.PHASE___DO_STEP__STEP;
-
-	/**
-	 * The operation id for the '<em>Do Action</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_PHASE_DESTRUCT_CONSTRUCT___DO_ACTION__STEP_ACTION = LocalSearchPackage.PHASE___DO_ACTION__STEP_ACTION;
-
-	/**
-	 * The number of operations of the '<em>To Use Phase Destruct Construct</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_PHASE_DESTRUCT_CONSTRUCT_OPERATION_COUNT = LocalSearchPackage.PHASE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.CalcTaskDistanceFromPreviousImpl <em>Calc Task Distance From Previous</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.misc.touse.moplaf.tousescheduler.impl.CalcTaskDistanceFromPreviousImpl
-	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getCalcTaskDistanceFromPrevious()
-	 * @generated
-	 */
-	int CALC_TASK_DISTANCE_FROM_PREVIOUS = 20;
-
-	/**
-	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.CalcResourceDistanceFromLastImpl <em>Calc Resource Distance From Last</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.misc.touse.moplaf.tousescheduler.impl.CalcResourceDistanceFromLastImpl
-	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getCalcResourceDistanceFromLast()
-	 * @generated
-	 */
-	int CALC_RESOURCE_DISTANCE_FROM_LAST = 22;
-
-	/**
-	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.CalcResourceVolumeOverloadImpl <em>Calc Resource Volume Overload</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.misc.touse.moplaf.tousescheduler.impl.CalcResourceVolumeOverloadImpl
-	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getCalcResourceVolumeOverload()
-	 * @generated
-	 */
-	int CALC_RESOURCE_VOLUME_OVERLOAD = 27;
-
-	/**
-	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.LayerSchedulePlannedBenefitImpl <em>Layer Schedule Planned Benefit</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.misc.touse.moplaf.tousescheduler.impl.LayerSchedulePlannedBenefitImpl
-	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getLayerSchedulePlannedBenefit()
-	 * @generated
-	 */
-	int LAYER_SCHEDULE_PLANNED_BENEFIT = 28;
-
-	/**
-	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.CalcResourcePlannedBenefitImpl <em>Calc Resource Planned Benefit</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.misc.touse.moplaf.tousescheduler.impl.CalcResourcePlannedBenefitImpl
-	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getCalcResourcePlannedBenefit()
-	 * @generated
-	 */
-	int CALC_RESOURCE_PLANNED_BENEFIT = 29;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -8682,6 +8881,38 @@ public interface ToUseSchedulerPackage extends EPackage {
 	EReference getCalcResourcePlannedBenefit_ConcreteParent();
 
 	/**
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.ToUseStepDestructConstruct <em>To Use Step Destruct Construct</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>To Use Step Destruct Construct</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseStepDestructConstruct
+	 * @generated
+	 */
+	EClass getToUseStepDestructConstruct();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.tousescheduler.ToUseStepDestructConstruct#getDestructionChance <em>Destruction Chance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Destruction Chance</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseStepDestructConstruct#getDestructionChance()
+	 * @see #getToUseStepDestructConstruct()
+	 * @generated
+	 */
+	EAttribute getToUseStepDestructConstruct_DestructionChance();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.tousescheduler.ToUseStepDestructConstruct#getConstructionChance <em>Construction Chance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Construction Chance</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseStepDestructConstruct#getConstructionChance()
+	 * @see #getToUseStepDestructConstruct()
+	 * @generated
+	 */
+	EAttribute getToUseStepDestructConstruct_ConstructionChance();
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.CalcTaskStartVolumeLoaded <em>Calc Task Start Volume Loaded</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9502,6 +9733,32 @@ public interface ToUseSchedulerPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CALC_RESOURCE_PLANNED_BENEFIT__CONCRETE_PARENT = eINSTANCE.getCalcResourcePlannedBenefit_ConcreteParent();
+
+		/**
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseStepDestructConstructImpl <em>To Use Step Destruct Construct</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseStepDestructConstructImpl
+		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseStepDestructConstruct()
+		 * @generated
+		 */
+		EClass TO_USE_STEP_DESTRUCT_CONSTRUCT = eINSTANCE.getToUseStepDestructConstruct();
+
+		/**
+		 * The meta object literal for the '<em><b>Destruction Chance</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TO_USE_STEP_DESTRUCT_CONSTRUCT__DESTRUCTION_CHANCE = eINSTANCE.getToUseStepDestructConstruct_DestructionChance();
+
+		/**
+		 * The meta object literal for the '<em><b>Construction Chance</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TO_USE_STEP_DESTRUCT_CONSTRUCT__CONSTRUCTION_CHANCE = eINSTANCE.getToUseStepDestructConstruct_ConstructionChance();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.CalcTaskStartVolumeLoadedImpl <em>Calc Task Start Volume Loaded</em>}' class.

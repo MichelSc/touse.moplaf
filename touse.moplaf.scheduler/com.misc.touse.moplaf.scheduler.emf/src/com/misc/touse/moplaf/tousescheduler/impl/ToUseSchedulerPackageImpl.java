@@ -37,6 +37,7 @@ import com.misc.touse.moplaf.tousescheduler.ToUseScheduler;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerFactory;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
 import com.misc.touse.moplaf.tousescheduler.ToUseScore;
+import com.misc.touse.moplaf.tousescheduler.ToUseStepDestructConstruct;
 import com.misc.touse.moplaf.tousescheduler.ToUseUnloadShipment;
 import com.misc.touse.moplaf.tousescheduler.ToUseUnscheduleLoadUnload;
 import com.misc.touse.moplaf.tousescheduler.Vehicle;
@@ -200,6 +201,13 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 * @generated
 	 */
 	private EClass calcResourcePlannedBenefitEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass toUseStepDestructConstructEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -931,6 +939,33 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getToUseStepDestructConstruct() {
+		return toUseStepDestructConstructEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getToUseStepDestructConstruct_DestructionChance() {
+		return (EAttribute)toUseStepDestructConstructEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getToUseStepDestructConstruct_ConstructionChance() {
+		return (EAttribute)toUseStepDestructConstructEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getCalcTaskStartVolumeLoaded() {
 		return calcTaskStartVolumeLoadedEClass;
 	}
@@ -1213,16 +1248,20 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		createEReference(toUseUnloadShipmentEClass, TO_USE_UNLOAD_SHIPMENT__SHIPMENT_UNLOADED);
 		createEReference(toUseUnloadShipmentEClass, TO_USE_UNLOAD_SHIPMENT__LOAD_SHIPMENT);
 
+		toUsePhaseDestructConstructEClass = createEClass(TO_USE_PHASE_DESTRUCT_CONSTRUCT);
+		createEAttribute(toUsePhaseDestructConstructEClass, TO_USE_PHASE_DESTRUCT_CONSTRUCT__DESTRUCTION_CHANCE);
+		createEAttribute(toUsePhaseDestructConstructEClass, TO_USE_PHASE_DESTRUCT_CONSTRUCT__CONSTRUCTION_CHANCE);
+
+		toUseStepDestructConstructEClass = createEClass(TO_USE_STEP_DESTRUCT_CONSTRUCT);
+		createEAttribute(toUseStepDestructConstructEClass, TO_USE_STEP_DESTRUCT_CONSTRUCT__DESTRUCTION_CHANCE);
+		createEAttribute(toUseStepDestructConstructEClass, TO_USE_STEP_DESTRUCT_CONSTRUCT__CONSTRUCTION_CHANCE);
+
 		toUseActionLoadUnloadEClass = createEClass(TO_USE_ACTION_LOAD_UNLOAD);
 		createEReference(toUseActionLoadUnloadEClass, TO_USE_ACTION_LOAD_UNLOAD__SHIPMENT);
 
 		toUseScheduleLoadUnloadEClass = createEClass(TO_USE_SCHEDULE_LOAD_UNLOAD);
 
 		toUseUnscheduleLoadUnloadEClass = createEClass(TO_USE_UNSCHEDULE_LOAD_UNLOAD);
-
-		toUsePhaseDestructConstructEClass = createEClass(TO_USE_PHASE_DESTRUCT_CONSTRUCT);
-		createEAttribute(toUsePhaseDestructConstructEClass, TO_USE_PHASE_DESTRUCT_CONSTRUCT__DESTRUCTION_CHANCE);
-		createEAttribute(toUsePhaseDestructConstructEClass, TO_USE_PHASE_DESTRUCT_CONSTRUCT__CONSTRUCTION_CHANCE);
 
 		calcSchedulerEClass = createEClass(CALC_SCHEDULER);
 
@@ -1311,10 +1350,11 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		toUseScheduleTaskEClass.getESuperTypes().add(theSchedulerPackage.getTask());
 		toUseLoadShipmentEClass.getESuperTypes().add(this.getToUseScheduleTask());
 		toUseUnloadShipmentEClass.getESuperTypes().add(this.getToUseScheduleTask());
+		toUsePhaseDestructConstructEClass.getESuperTypes().add(theLocalSearchPackage.getPhase());
+		toUseStepDestructConstructEClass.getESuperTypes().add(theLocalSearchPackage.getStep());
 		toUseActionLoadUnloadEClass.getESuperTypes().add(theLocalSearchPackage.getAction());
 		toUseScheduleLoadUnloadEClass.getESuperTypes().add(this.getToUseActionLoadUnload());
 		toUseUnscheduleLoadUnloadEClass.getESuperTypes().add(this.getToUseActionLoadUnload());
-		toUsePhaseDestructConstructEClass.getESuperTypes().add(theLocalSearchPackage.getPhase());
 		calcSchedulerEClass.getESuperTypes().add(thePropagatorPackage.getPropagatorFunctionBindings());
 		calcScheduleEClass.getESuperTypes().add(this.getCalcScheduler());
 		calcResourceEClass.getESuperTypes().add(this.getCalcScheduler());
@@ -1401,16 +1441,20 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		initEReference(getToUseUnloadShipment_ShipmentUnloaded(), this.getShipment(), null, "ShipmentUnloaded", null, 1, 1, ToUseUnloadShipment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getToUseUnloadShipment_LoadShipment(), this.getToUseLoadShipment(), this.getToUseLoadShipment_UnloadShipment(), "LoadShipment", null, 1, 1, ToUseUnloadShipment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(toUsePhaseDestructConstructEClass, ToUsePhaseDestructConstruct.class, "ToUsePhaseDestructConstruct", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getToUsePhaseDestructConstruct_DestructionChance(), ecorePackage.getEFloat(), "DestructionChance", "0.05", 0, 1, ToUsePhaseDestructConstruct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getToUsePhaseDestructConstruct_ConstructionChance(), ecorePackage.getEFloat(), "ConstructionChance", "1.0", 0, 1, ToUsePhaseDestructConstruct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(toUseStepDestructConstructEClass, ToUseStepDestructConstruct.class, "ToUseStepDestructConstruct", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getToUseStepDestructConstruct_DestructionChance(), ecorePackage.getEFloat(), "DestructionChance", "0.05", 0, 1, ToUseStepDestructConstruct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getToUseStepDestructConstruct_ConstructionChance(), ecorePackage.getEFloat(), "ConstructionChance", "1.0", 0, 1, ToUseStepDestructConstruct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(toUseActionLoadUnloadEClass, ToUseActionLoadUnload.class, "ToUseActionLoadUnload", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getToUseActionLoadUnload_Shipment(), this.getShipment(), null, "Shipment", null, 1, 1, ToUseActionLoadUnload.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(toUseScheduleLoadUnloadEClass, ToUseScheduleLoadUnload.class, "ToUseScheduleLoadUnload", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(toUseUnscheduleLoadUnloadEClass, ToUseUnscheduleLoadUnload.class, "ToUseUnscheduleLoadUnload", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(toUsePhaseDestructConstructEClass, ToUsePhaseDestructConstruct.class, "ToUsePhaseDestructConstruct", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getToUsePhaseDestructConstruct_DestructionChance(), ecorePackage.getEFloat(), "DestructionChance", "0.05", 0, 1, ToUsePhaseDestructConstruct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getToUsePhaseDestructConstruct_ConstructionChance(), ecorePackage.getEFloat(), "ConstructionChance", "1.0", 0, 1, ToUsePhaseDestructConstruct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(calcSchedulerEClass, CalcScheduler.class, "CalcScheduler", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
