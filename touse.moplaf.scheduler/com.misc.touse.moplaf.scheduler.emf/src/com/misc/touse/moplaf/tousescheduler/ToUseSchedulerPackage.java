@@ -419,15 +419,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 
 
 	/**
-	 * The feature id for the '<em><b>Schedules</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULER__SCHEDULES = SchedulerPackage.SCHEDULER__SCHEDULES;
-
-	/**
 	 * The feature id for the '<em><b>Selected Vehicles</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
