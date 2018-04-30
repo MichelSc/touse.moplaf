@@ -50,7 +50,7 @@ public class ToUseUnscheduleLoadUnloadImpl extends ToUseActionLoadUnloadImpl imp
 
 	@Override
 	protected void initializeImpl() {
-		assert this.isValid() : "Action is not valid";
+		assert this.getValidFeedback().isEnabled() : "Action is not valid";
 		
 		ToUseSchedule schedule = (ToUseSchedule) this.getCurrentSolution();
 		Shipment shipment = this.getShipment();

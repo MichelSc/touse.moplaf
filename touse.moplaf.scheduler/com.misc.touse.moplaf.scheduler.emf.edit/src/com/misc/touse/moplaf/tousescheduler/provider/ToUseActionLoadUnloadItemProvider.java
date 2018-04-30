@@ -71,7 +71,7 @@ public class ToUseActionLoadUnloadItemProvider extends ActionItemProvider {
 				 false,
 				 true,
 				 null,
-				 null,
+				 getString("_UI__20ActionPropertyCategory"),
 				 null));
 	}
 
