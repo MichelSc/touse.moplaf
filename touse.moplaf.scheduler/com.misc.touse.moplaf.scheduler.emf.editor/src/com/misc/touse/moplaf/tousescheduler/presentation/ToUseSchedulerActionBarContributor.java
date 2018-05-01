@@ -45,6 +45,7 @@ import com.misc.common.moplaf.emf.editor.action.CloneAction;
 import com.misc.common.moplaf.emf.editor.action.DoAction;
 import com.misc.common.moplaf.emf.editor.action.EnableAction;
 import com.misc.common.moplaf.emf.editor.action.FinalizeAction;
+import com.misc.common.moplaf.emf.editor.action.GarbageCollectAction;
 import com.misc.common.moplaf.emf.editor.action.InitializeAction;
 import com.misc.common.moplaf.emf.editor.action.ResetAction;
 import com.misc.common.moplaf.emf.editor.action.RunAction;
@@ -314,6 +315,7 @@ public class ToUseSchedulerActionBarContributor
 		createSiblingActions = generateCreateSiblingActions(newSiblingDescriptors, selection);
 
 		applicationPopUpMenuActions = new ArrayList<IAction>();
+		applicationPopUpMenuActions.add(new GarbageCollectAction(activeEditorPart, selection));
 		applicationPopUpMenuActions.add(new InitializeAction(activeEditorPart, selection));
 		applicationPopUpMenuActions.add(new FinalizeAction  (activeEditorPart, selection));
 		applicationPopUpMenuActions.add(new EnableAction    (activeEditorPart, selection));

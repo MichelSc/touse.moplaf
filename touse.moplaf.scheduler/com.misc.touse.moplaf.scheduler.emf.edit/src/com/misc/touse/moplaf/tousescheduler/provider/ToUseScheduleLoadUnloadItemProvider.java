@@ -4,6 +4,7 @@ package com.misc.touse.moplaf.tousescheduler.provider;
 
 
 
+import com.misc.common.moplaf.localsearch.LocalSearchPackage;
 import com.misc.touse.moplaf.tousescheduler.ToUseScheduleLoadUnload;
 
 import java.util.Collection;
@@ -84,6 +85,30 @@ public class ToUseScheduleLoadUnloadItemProvider extends ToUseActionLoadUnloadIt
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify =
+			childFeature == LocalSearchPackage.Literals.SOLUTION_CHANGE__START_SOLUTION ||
+			childFeature == LocalSearchPackage.Literals.SOLUTION_CHANGE__END_SOLUTION ||
+			childFeature == LocalSearchPackage.Literals.SOLUTION_CHANGE__CURRENT_SOLUTION;
+
+		if (qualify) {
+			return getString
+				("_UI_CreateChild_text2",
+				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 }

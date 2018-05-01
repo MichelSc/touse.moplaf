@@ -53,7 +53,7 @@ public class ToUseScheduleLoadUnloadImpl extends ToUseActionLoadUnloadImpl imple
 	protected void initializeImpl() {
 		assert this.getValidFeedback().isEnabled() : "Action is not valid";
 		
-		ToUseSchedule schedule = (ToUseSchedule) this.getCurrentSolution();
+		ToUseSchedule schedule = (ToUseSchedule) this.getCurrentSolution().getSolution();
 		Shipment shipment = this.getShipment();
 		ToUseLoadShipment loadTask = schedule.getTaskLoad(shipment);
 		ToUseUnloadShipment unloadTask = loadTask.getUnloadShipment();

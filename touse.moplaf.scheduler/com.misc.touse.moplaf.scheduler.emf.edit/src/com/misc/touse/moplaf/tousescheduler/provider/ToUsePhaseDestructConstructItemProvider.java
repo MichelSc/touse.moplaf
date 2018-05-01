@@ -75,7 +75,7 @@ public class ToUsePhaseDestructConstructItemProvider extends PhaseItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI__22SearchParamsPropertyCategory"),
 				 null));
 	}
 
@@ -97,7 +97,7 @@ public class ToUsePhaseDestructConstructItemProvider extends PhaseItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI__22SearchParamsPropertyCategory"),
 				 null));
 	}
 

@@ -225,7 +225,7 @@ public class ToUseStepDestructConstructImpl extends StepImpl implements ToUseSte
 	@Override
 	protected void doStepImpl(Phase phase) {
 		Step step = this;
-		ToUseSchedule schedule = (ToUseSchedule)step.getCurrentSolution();
+		ToUseSchedule schedule = (ToUseSchedule)step.getCurrentSolution().getSolution();
 		
 		// destructions
 		schedule.getTasks().stream()
