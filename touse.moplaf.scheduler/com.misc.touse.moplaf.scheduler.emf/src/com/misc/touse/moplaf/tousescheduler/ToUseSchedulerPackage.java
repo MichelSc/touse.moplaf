@@ -617,6 +617,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULER___GARBAGE_COLLECT = SchedulerPackage.SCHEDULER___GARBAGE_COLLECT;
 
 	/**
+	 * The operation id for the '<em>Add Pool Solution</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULER___ADD_POOL_SOLUTION__SOLUTION_BOOLEAN = SchedulerPackage.SCHEDULER___ADD_POOL_SOLUTION__SOLUTION_BOOLEAN;
+
+	/**
 	 * The operation id for the '<em>Construct Score</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -887,15 +896,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_SCHEDULE___REFRESH = SchedulerPackage.SCHEDULE___REFRESH;
-
-	/**
-	 * The operation id for the '<em>Construct Solution Ref</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULE___CONSTRUCT_SOLUTION_REF = SchedulerPackage.SCHEDULE___CONSTRUCT_SOLUTION_REF;
 
 	/**
 	 * The operation id for the '<em>Initialize</em>' operation.
@@ -2359,7 +2359,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_STEP_DESTRUCT_CONSTRUCT___SET_CURRENT_SOLUTION = LocalSearchPackage.STEP___SET_CURRENT_SOLUTION;
+	int TO_USE_STEP_DESTRUCT_CONSTRUCT___SET_CURRENT_SOLUTION__SOLUTION = LocalSearchPackage.STEP___SET_CURRENT_SOLUTION__SOLUTION;
 
 	/**
 	 * The operation id for the '<em>Set Start Solution</em>' operation.
@@ -2557,7 +2557,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_ACTION_LOAD_UNLOAD___SET_CURRENT_SOLUTION = LocalSearchPackage.ACTION___SET_CURRENT_SOLUTION;
+	int TO_USE_ACTION_LOAD_UNLOAD___SET_CURRENT_SOLUTION__SOLUTION = LocalSearchPackage.ACTION___SET_CURRENT_SOLUTION__SOLUTION;
 
 	/**
 	 * The operation id for the '<em>Set Start Solution</em>' operation.
@@ -2800,7 +2800,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD___SET_CURRENT_SOLUTION = TO_USE_ACTION_LOAD_UNLOAD___SET_CURRENT_SOLUTION;
+	int TO_USE_SCHEDULE_LOAD_UNLOAD___SET_CURRENT_SOLUTION__SOLUTION = TO_USE_ACTION_LOAD_UNLOAD___SET_CURRENT_SOLUTION__SOLUTION;
 
 	/**
 	 * The operation id for the '<em>Set Start Solution</em>' operation.
@@ -3043,7 +3043,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_UNSCHEDULE_LOAD_UNLOAD___SET_CURRENT_SOLUTION = TO_USE_ACTION_LOAD_UNLOAD___SET_CURRENT_SOLUTION;
+	int TO_USE_UNSCHEDULE_LOAD_UNLOAD___SET_CURRENT_SOLUTION__SOLUTION = TO_USE_ACTION_LOAD_UNLOAD___SET_CURRENT_SOLUTION__SOLUTION;
 
 	/**
 	 * The operation id for the '<em>Set Start Solution</em>' operation.
