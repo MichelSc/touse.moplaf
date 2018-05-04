@@ -2359,7 +2359,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_STEP_DESTRUCT_CONSTRUCT___SET_CURRENT_SOLUTION__SOLUTION = LocalSearchPackage.STEP___SET_CURRENT_SOLUTION__SOLUTION;
+	int TO_USE_STEP_DESTRUCT_CONSTRUCT___SET_CURRENT_SOLUTION__SOLUTION_BOOLEAN = LocalSearchPackage.STEP___SET_CURRENT_SOLUTION__SOLUTION_BOOLEAN;
 
 	/**
 	 * The operation id for the '<em>Set Start Solution</em>' operation.
@@ -2557,7 +2557,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_ACTION_LOAD_UNLOAD___SET_CURRENT_SOLUTION__SOLUTION = LocalSearchPackage.ACTION___SET_CURRENT_SOLUTION__SOLUTION;
+	int TO_USE_ACTION_LOAD_UNLOAD___SET_CURRENT_SOLUTION__SOLUTION_BOOLEAN = LocalSearchPackage.ACTION___SET_CURRENT_SOLUTION__SOLUTION_BOOLEAN;
 
 	/**
 	 * The operation id for the '<em>Set Start Solution</em>' operation.
@@ -2800,7 +2800,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_LOAD_UNLOAD___SET_CURRENT_SOLUTION__SOLUTION = TO_USE_ACTION_LOAD_UNLOAD___SET_CURRENT_SOLUTION__SOLUTION;
+	int TO_USE_SCHEDULE_LOAD_UNLOAD___SET_CURRENT_SOLUTION__SOLUTION_BOOLEAN = TO_USE_ACTION_LOAD_UNLOAD___SET_CURRENT_SOLUTION__SOLUTION_BOOLEAN;
 
 	/**
 	 * The operation id for the '<em>Set Start Solution</em>' operation.
@@ -3043,7 +3043,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_UNSCHEDULE_LOAD_UNLOAD___SET_CURRENT_SOLUTION__SOLUTION = TO_USE_ACTION_LOAD_UNLOAD___SET_CURRENT_SOLUTION__SOLUTION;
+	int TO_USE_UNSCHEDULE_LOAD_UNLOAD___SET_CURRENT_SOLUTION__SOLUTION_BOOLEAN = TO_USE_ACTION_LOAD_UNLOAD___SET_CURRENT_SOLUTION__SOLUTION_BOOLEAN;
 
 	/**
 	 * The operation id for the '<em>Set Start Solution</em>' operation.

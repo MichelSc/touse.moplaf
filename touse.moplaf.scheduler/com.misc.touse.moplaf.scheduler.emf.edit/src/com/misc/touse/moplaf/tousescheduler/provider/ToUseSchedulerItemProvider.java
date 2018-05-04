@@ -71,7 +71,7 @@ public class ToUseSchedulerItemProvider extends SchedulerItemProvider {
 				 false,
 				 true,
 				 null,
-				 getString("_UI__20ToUseSchedulerPropertyCategory"),
+				 getString("_UI__20StrategyPropertyCategory"),
 				 null));
 	}
 
@@ -93,7 +93,7 @@ public class ToUseSchedulerItemProvider extends SchedulerItemProvider {
 				 false,
 				 true,
 				 null,
-				 getString("_UI__20ToUseSchedulerPropertyCategory"),
+				 getString("_UI__20StrategyPropertyCategory"),
 				 null));
 	}
 
