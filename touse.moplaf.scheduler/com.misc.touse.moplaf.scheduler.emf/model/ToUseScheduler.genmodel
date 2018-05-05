@@ -100,7 +100,8 @@
       <genFeatures createChild="false" propertyCategory="22 Search Params" ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUsePhaseDestructConstruct/DestructionChance"/>
       <genFeatures createChild="false" propertyCategory="22 Search Params" ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUsePhaseDestructConstruct/ConstructionChance"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//ToUseStepDestructConstruct">
+    <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//ToUseStepDestructConstruct"
+        labelFeature="../../com.misc.common.moplaf.localsearch.emf/model/localsearch.genmodel#//localsearch/Step/Description">
       <genFeatures createChild="false" propertyCategory="22 Search Params" ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUseStepDestructConstruct/DestructionChance"/>
       <genFeatures createChild="false" propertyCategory="22 Search Params" ecoreFeature="ecore:EAttribute ToUseScheduler.ecore#//ToUseStepDestructConstruct/ConstructionChance"/>
     </genClasses>

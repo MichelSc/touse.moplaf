@@ -4,8 +4,6 @@ package com.misc.touse.moplaf.tousescheduler.provider;
 
 
 import com.misc.common.moplaf.localsearch.LocalSearchPackage;
-import com.misc.common.moplaf.localsearch.StrategyLevel;
-
 import com.misc.common.moplaf.localsearch.provider.StepItemProvider;
 
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerFactory;
@@ -111,8 +109,7 @@ public class ToUseStepDestructConstructItemProvider extends StepItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		StrategyLevel labelValue = ((ToUseStepDestructConstruct)object).getLevel();
-		String label = labelValue == null ? null : labelValue.toString();
+		String label = ((ToUseStepDestructConstruct)object).getDescription();
 		return label == null || label.length() == 0 ?
 			getString("_UI_ToUseStepDestructConstruct_type") :
 			getString("_UI_ToUseStepDestructConstruct_type") + " " + label;
