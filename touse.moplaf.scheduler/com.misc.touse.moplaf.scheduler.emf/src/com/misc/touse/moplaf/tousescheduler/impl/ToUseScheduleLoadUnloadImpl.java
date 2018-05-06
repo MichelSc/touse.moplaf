@@ -91,9 +91,6 @@ public class ToUseScheduleLoadUnloadImpl extends ToUseActionLoadUnloadImpl imple
 				
 			} while (loadInsertionPoint !=null);
 		}  // traverse the Resources
-		
-		// make the solution ready for calculating scores
-		schedule.enable();
-	} // crerateMovesImpl
+	} // crerateDeltasImpl
 
 } //ToUseScheduleLoadUnloadImpl

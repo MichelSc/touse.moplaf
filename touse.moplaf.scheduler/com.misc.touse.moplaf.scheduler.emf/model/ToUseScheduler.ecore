@@ -32,7 +32,6 @@
         eType="#//Shipment"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ToUseSchedule" eSuperTypes="../../com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//Schedule">
-    <eOperations name="enable"/>
     <eOperations name="getTaskLoad" eType="#//ToUseLoadShipment">
       <eParameters name="shipment" eType="#//Shipment"/>
     </eOperations>

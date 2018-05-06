@@ -69,9 +69,7 @@ public class ToUseUnscheduleLoadUnloadImpl extends ToUseActionLoadUnloadImpl imp
 		unschedule_load.setSolution(true);
 		unschedule_unload.getNextDeltas().add(unschedule_load);
 		
-		// make the solution ready for calculating scores
-		schedule.enable();
-	} // crerateMovesImpl
+	} // crerateDeltasImpl
 
 
 } //ToUseUnscheduleLoadUnloadImpl

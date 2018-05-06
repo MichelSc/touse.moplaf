@@ -2,11 +2,9 @@
  */
 package com.misc.touse.moplaf.tousescheduler.impl;
 
-import com.misc.common.moplaf.localsearch.Score;
 import com.misc.common.moplaf.scheduler.impl.SchedulerImpl;
 import com.misc.touse.moplaf.tousescheduler.Shipment;
 import com.misc.touse.moplaf.tousescheduler.ToUseScheduler;
-import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerFactory;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
 import com.misc.touse.moplaf.tousescheduler.Vehicle;
 import java.util.Collection;
@@ -160,14 +158,5 @@ public class ToUseSchedulerImpl extends SchedulerImpl implements ToUseScheduler 
 		}
 		return super.eIsSet(featureID);
 	}
-
-	@Override
-	public Score constructScore() {
-		Score new_score = ToUseSchedulerFactory.eINSTANCE.createToUseScore();
-		return new_score;
-	}
-	
-	
-	
 
 } //ToUseSchedulerImpl

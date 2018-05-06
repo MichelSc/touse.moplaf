@@ -3,6 +3,7 @@
 package com.misc.touse.moplaf.tousescheduler.impl;
 
 import com.misc.common.moplaf.common.util.Util;
+import com.misc.common.moplaf.localsearch.Score;
 import com.misc.common.moplaf.scheduler.impl.ScheduleImpl;
 import com.misc.touse.moplaf.tousescheduler.ScopeScheduleScore;
 import com.misc.touse.moplaf.tousescheduler.Shipment;
@@ -51,6 +52,7 @@ public class ToUseScheduleImpl extends ScheduleImpl implements ToUseSchedule {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 */
+	@Override
 	public void enable() {
 		Util.adapt(this, ToUseSchedulerPropagatorFunctionManager.class, true ); // true = create
 	}
@@ -105,8 +107,6 @@ public class ToUseScheduleImpl extends ScheduleImpl implements ToUseSchedule {
 			scope.refresh();
 		}
 	}
-	
-	
 
 	@Override
 	public void initialize() {
@@ -145,9 +145,6 @@ public class ToUseScheduleImpl extends ScheduleImpl implements ToUseSchedule {
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case ToUseSchedulerPackage.TO_USE_SCHEDULE___ENABLE:
-				enable();
-				return null;
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE___GET_TASK_LOAD__SHIPMENT:
 				return getTaskLoad((Shipment)arguments.get(0));
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE___GET_TASK_UNLOAD__SHIPMENT:
@@ -158,6 +155,10 @@ public class ToUseScheduleImpl extends ScheduleImpl implements ToUseSchedule {
 		return super.eInvoke(operationID, arguments);
 	}
 	
-	
+	@Override
+	public Score constructScore() {
+		Score new_score = ToUseSchedulerFactory.eINSTANCE.createToUseScore();
+		return new_score;
+	}
 
 } //ToUseScheduleImpl

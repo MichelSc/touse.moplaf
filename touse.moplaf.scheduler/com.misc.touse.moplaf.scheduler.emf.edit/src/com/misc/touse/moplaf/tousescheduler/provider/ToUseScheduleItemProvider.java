@@ -3,7 +3,6 @@
 package com.misc.touse.moplaf.tousescheduler.provider;
 
 
-import com.misc.common.moplaf.emf.edit.command.EnableCommand;
 import com.misc.common.moplaf.localsearch.LocalSearchPackage;
 import com.misc.common.moplaf.scheduler.provider.ScheduleItemProvider;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedule;
@@ -11,13 +10,10 @@ import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerFactory;
 import java.util.Collection;
 import java.util.List;
 
-import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
-import org.eclipse.emf.edit.command.CommandParameter;
-import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
@@ -106,27 +102,4 @@ public class ToUseScheduleItemProvider extends ScheduleItemProvider {
 		return ToUseSchedulerEditPlugin.INSTANCE;
 	}
 
-	public  class ToUseScheduleEnableCommand extends EnableCommand{
-		private ToUseSchedule schedule;
-
-		public ToUseScheduleEnableCommand(ToUseSchedule schedule) {
-			this.schedule = schedule;
-		}
-
-		@Override
-		public void execute() {
-			this.schedule.enable();
-		}
-	};
-		
-	@Override
-	public Command createCommand(Object object, EditingDomain domain,
-			Class<? extends Command> commandClass,
-			CommandParameter commandParameter) {
-		if ( commandClass == EnableCommand.class){
-			return new ToUseScheduleEnableCommand((ToUseSchedule) object); 
-		} 
-
-		return super.createCommand(object, domain, commandClass, commandParameter);
-	} //method createCommand
 }

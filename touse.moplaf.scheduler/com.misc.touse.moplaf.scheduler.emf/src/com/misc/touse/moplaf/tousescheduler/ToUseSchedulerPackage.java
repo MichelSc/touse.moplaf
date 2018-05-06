@@ -626,15 +626,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULER___ADD_POOL_SOLUTION__SOLUTION_BOOLEAN = SchedulerPackage.SCHEDULER___ADD_POOL_SOLUTION__SOLUTION_BOOLEAN;
 
 	/**
-	 * The operation id for the '<em>Construct Score</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULER___CONSTRUCT_SCORE = SchedulerPackage.SCHEDULER___CONSTRUCT_SCORE;
-
-	/**
 	 * The number of operations of the '<em>To Use Scheduler</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -880,6 +871,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE___ADD_PROPAGATOR_FUNCTIONS__STRING = SchedulerPackage.SCHEDULE___ADD_PROPAGATOR_FUNCTIONS__STRING;
 
 	/**
+	 * The operation id for the '<em>Construct Score</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE___CONSTRUCT_SCORE = SchedulerPackage.SCHEDULE___CONSTRUCT_SCORE;
+
+	/**
 	 * The operation id for the '<em>Clone</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -887,15 +887,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_SCHEDULE___CLONE = SchedulerPackage.SCHEDULE___CLONE;
-
-	/**
-	 * The operation id for the '<em>Refresh</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULE___REFRESH = SchedulerPackage.SCHEDULE___REFRESH;
 
 	/**
 	 * The operation id for the '<em>Initialize</em>' operation.
@@ -913,7 +904,16 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE___ENABLE = SchedulerPackage.SCHEDULE_OPERATION_COUNT + 0;
+	int TO_USE_SCHEDULE___ENABLE = SchedulerPackage.SCHEDULE___ENABLE;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE___REFRESH = SchedulerPackage.SCHEDULE___REFRESH;
 
 	/**
 	 * The operation id for the '<em>Get Task Load</em>' operation.
@@ -922,7 +922,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE___GET_TASK_LOAD__SHIPMENT = SchedulerPackage.SCHEDULE_OPERATION_COUNT + 1;
+	int TO_USE_SCHEDULE___GET_TASK_LOAD__SHIPMENT = SchedulerPackage.SCHEDULE_OPERATION_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Get Task Unload</em>' operation.
@@ -931,7 +931,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE___GET_TASK_UNLOAD__SHIPMENT = SchedulerPackage.SCHEDULE_OPERATION_COUNT + 2;
+	int TO_USE_SCHEDULE___GET_TASK_UNLOAD__SHIPMENT = SchedulerPackage.SCHEDULE_OPERATION_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Get Resource Vehicle</em>' operation.
@@ -940,7 +940,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE___GET_RESOURCE_VEHICLE__VEHICLE = SchedulerPackage.SCHEDULE_OPERATION_COUNT + 3;
+	int TO_USE_SCHEDULE___GET_RESOURCE_VEHICLE__VEHICLE = SchedulerPackage.SCHEDULE_OPERATION_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>To Use Schedule</em>' class.
@@ -949,7 +949,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_OPERATION_COUNT = SchedulerPackage.SCHEDULE_OPERATION_COUNT + 4;
+	int TO_USE_SCHEDULE_OPERATION_COUNT = SchedulerPackage.SCHEDULE_OPERATION_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Feasible</b></em>' attribute.
@@ -2324,6 +2324,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_STEP_DESTRUCT_CONSTRUCT__VALID_FEEDBACK = LocalSearchPackage.STEP__VALID_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_STEP_DESTRUCT_CONSTRUCT__DESCRIPTION = LocalSearchPackage.STEP__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Destruction Chance</b></em>' attribute.
@@ -9183,16 +9192,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	EClass getToUseSchedule();
 
 	/**
-	 * Returns the meta object for the '{@link com.misc.touse.moplaf.tousescheduler.ToUseSchedule#enable() <em>Enable</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Enable</em>' operation.
-	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedule#enable()
-	 * @generated
-	 */
-	EOperation getToUseSchedule__Enable();
-
-	/**
 	 * Returns the meta object for the '{@link com.misc.touse.moplaf.tousescheduler.ToUseSchedule#getTaskLoad(com.misc.touse.moplaf.tousescheduler.Shipment) <em>Get Task Load</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10002,14 +10001,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TO_USE_SCHEDULE = eINSTANCE.getToUseSchedule();
-
-		/**
-		 * The meta object literal for the '<em><b>Enable</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation TO_USE_SCHEDULE___ENABLE = eINSTANCE.getToUseSchedule__Enable();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Task Load</b></em>' operation.
