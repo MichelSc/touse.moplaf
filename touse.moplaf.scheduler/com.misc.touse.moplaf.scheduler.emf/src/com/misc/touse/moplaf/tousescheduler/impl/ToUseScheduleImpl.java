@@ -109,9 +109,14 @@ public class ToUseScheduleImpl extends ScheduleImpl implements ToUseSchedule {
 	}
 
 	@Override
-	public void initialize() {
-		super.initialize();
+	public void initializeImpl() {
+		
 		ToUseScheduler scheduler = (ToUseScheduler) this.getScheduler();
+
+		// remove everything
+		this.flush();
+		
+		// add the Resources
 		for ( Vehicle vehicle : scheduler.getSelectedVehicles()) {
 			String name = vehicle.getName();
 			ToUseScheduleResource resource = ToUseSchedulerFactory.eINSTANCE.createToUseScheduleResource();
@@ -119,19 +124,21 @@ public class ToUseScheduleImpl extends ScheduleImpl implements ToUseSchedule {
 			resource.setName(name);
 			this.getResources().add(resource); // owning
 		}
+		
+		// add the tasks
 		for ( Shipment shipment: scheduler.getSelectedShipments()) {
 			// load
 			String load_name = String.format("load(%s)", shipment.getName());
 			ToUseLoadShipment load= ToUseSchedulerFactory.eINSTANCE.createToUseLoadShipment();
 			load.setShipmentLoaded(shipment);
 			load.setName(load_name);
-			this.getTasks().add(load); // owning
+			this.getTasks().add(load);
 			// unload
 			String unload_name = String.format("unload(%s)", shipment.getName());
 			ToUseUnloadShipment unload= ToUseSchedulerFactory.eINSTANCE.createToUseUnloadShipment();
 			unload.setShipmentUnloaded(shipment);
 			unload.setName(unload_name);
-			this.getTasks().add(unload); // owning
+			this.getTasks().add(unload);
 			// loadunload
 			load.setUnloadShipment(unload);
 		}

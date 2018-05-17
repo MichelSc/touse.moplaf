@@ -350,6 +350,10 @@
               <styles xmi:type="notation:FontStyle" xmi:id="_ZnxFh7ZiEeeXt9W_jO-5DQ" fontColor="7490599" fontName="Oxygen-Sans" fontHeight="8" bold="true"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_ZnxFiLZiEeeXt9W_jO-5DQ"/>
             </children>
+            <children xmi:type="notation:Node" xmi:id="_3TST4FjcEeiJH4IGfBqJRg" visible="false" type="3010" element="_3Sd0gFjcEeiJH4IGfBqJRg">
+              <styles xmi:type="notation:FontStyle" xmi:id="_3TST4VjcEeiJH4IGfBqJRg" fontColor="8224125" fontName="Segoe UI" fontHeight="8" italic="true"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_3TST4ljcEeiJH4IGfBqJRg"/>
+            </children>
             <children xmi:type="notation:Node" xmi:id="_QTB2wM03Eee-Qf41Ns3FMg" type="3010" element="_QSr4gM03Eee-Qf41Ns3FMg">
               <styles xmi:type="notation:FontStyle" xmi:id="_QTB2wc03Eee-Qf41Ns3FMg" fontName="Oxygen-Sans" fontHeight="8"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_QTB2ws03Eee-Qf41Ns3FMg"/>
@@ -1481,6 +1485,18 @@
         </graphicalFilters>
         <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_ZnicA7ZiEeeXt9W_jO-5DQ" labelColor="39,76,114" labelAlignment="LEFT" description="_ZnicArZiEeeXt9W_jO-5DQ">
           <labelFormat>bold</labelFormat>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_3Sd0gFjcEeiJH4IGfBqJRg" name=" NotScheduledTasks : Task" visible="false" tooltipText="">
+        <target xmi:type="ecore:EReference" href="platform:/resource/com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//Schedule/NotScheduledTasks"/>
+        <semanticElements xmi:type="ecore:EReference" href="platform:/resource/com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//Schedule/NotScheduledTasks"/>
+        <graphicalFilters xmi:type="diagram:AppliedCompositeFilters" xmi:id="_3Tg9YFjcEeiJH4IGfBqJRg">
+          <compositeFilterDescriptions xmi:type="filter:CompositeFilterDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@filters[name='Hide%20inherited%20references%20(nodes)']"/>
+        </graphicalFilters>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_3SfpsFjcEeiJH4IGfBqJRg" labelColor="125,125,125" labelAlignment="LEFT">
+          <labelFormat>italic</labelFormat>
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']/@conditionnalStyles.0/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']"/>
       </ownedElements>

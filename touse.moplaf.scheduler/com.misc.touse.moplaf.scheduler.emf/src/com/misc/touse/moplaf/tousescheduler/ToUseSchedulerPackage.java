@@ -835,6 +835,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE__SCHEDULER = SchedulerPackage.SCHEDULE__SCHEDULER;
 
 	/**
+	 * The feature id for the '<em><b>Not Scheduled Tasks</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE__NOT_SCHEDULED_TASKS = SchedulerPackage.SCHEDULE__NOT_SCHEDULED_TASKS;
+
+	/**
 	 * The number of structural features of the '<em>To Use Schedule</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -914,6 +923,33 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_SCHEDULE___REFRESH = SchedulerPackage.SCHEDULE___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Schedule</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE___SCHEDULE__TASK_TASK_RESOURCE_TASK_TASK = SchedulerPackage.SCHEDULE___SCHEDULE__TASK_TASK_RESOURCE_TASK_TASK;
+
+	/**
+	 * The operation id for the '<em>Schedule Feedback</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE___SCHEDULE_FEEDBACK__TASK_TASK_RESOURCE_TASK_TASK = SchedulerPackage.SCHEDULE___SCHEDULE_FEEDBACK__TASK_TASK_RESOURCE_TASK_TASK;
+
+	/**
+	 * The operation id for the '<em>Flush</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE___FLUSH = SchedulerPackage.SCHEDULE___FLUSH;
 
 	/**
 	 * The operation id for the '<em>Get Task Load</em>' operation.
@@ -1393,24 +1429,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE_TASK___ADD_PROPAGATOR_FUNCTIONS__STRING = SchedulerPackage.TASK___ADD_PROPAGATOR_FUNCTIONS__STRING;
 
 	/**
-	 * The operation id for the '<em>Schedule</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULE_TASK___SCHEDULE__RESOURCE_TASK_TASK = SchedulerPackage.TASK___SCHEDULE__RESOURCE_TASK_TASK;
-
-	/**
-	 * The operation id for the '<em>Unschedule</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_SCHEDULE_TASK___UNSCHEDULE = SchedulerPackage.TASK___UNSCHEDULE;
-
-	/**
 	 * The number of operations of the '<em>To Use Schedule Task</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1647,24 +1665,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_LOAD_SHIPMENT___ADD_PROPAGATOR_FUNCTIONS__STRING = TO_USE_SCHEDULE_TASK___ADD_PROPAGATOR_FUNCTIONS__STRING;
 
 	/**
-	 * The operation id for the '<em>Schedule</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_LOAD_SHIPMENT___SCHEDULE__RESOURCE_TASK_TASK = TO_USE_SCHEDULE_TASK___SCHEDULE__RESOURCE_TASK_TASK;
-
-	/**
-	 * The operation id for the '<em>Unschedule</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_LOAD_SHIPMENT___UNSCHEDULE = TO_USE_SCHEDULE_TASK___UNSCHEDULE;
-
-	/**
 	 * The number of operations of the '<em>To Use Load Shipment</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1889,24 +1889,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_UNLOAD_SHIPMENT___ADD_PROPAGATOR_FUNCTIONS__STRING = TO_USE_SCHEDULE_TASK___ADD_PROPAGATOR_FUNCTIONS__STRING;
-
-	/**
-	 * The operation id for the '<em>Schedule</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_UNLOAD_SHIPMENT___SCHEDULE__RESOURCE_TASK_TASK = TO_USE_SCHEDULE_TASK___SCHEDULE__RESOURCE_TASK_TASK;
-
-	/**
-	 * The operation id for the '<em>Unschedule</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_UNLOAD_SHIPMENT___UNSCHEDULE = TO_USE_SCHEDULE_TASK___UNSCHEDULE;
 
 	/**
 	 * The number of operations of the '<em>To Use Unload Shipment</em>' class.
