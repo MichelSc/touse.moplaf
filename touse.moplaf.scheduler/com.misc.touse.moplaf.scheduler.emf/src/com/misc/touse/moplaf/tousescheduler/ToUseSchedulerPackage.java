@@ -817,13 +817,13 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE__RESOURCES = SchedulerPackage.SCHEDULE__RESOURCES;
 
 	/**
-	 * The feature id for the '<em><b>Nr Scheduled Tasks</b></em>' attribute.
+	 * The feature id for the '<em><b>Nr Not Scheduled Tasks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE__NR_SCHEDULED_TASKS = SchedulerPackage.SCHEDULE__NR_SCHEDULED_TASKS;
+	int TO_USE_SCHEDULE__NR_NOT_SCHEDULED_TASKS = SchedulerPackage.SCHEDULE__NR_NOT_SCHEDULED_TASKS;
 
 	/**
 	 * The feature id for the '<em><b>Scheduler</b></em>' reference.

@@ -76,7 +76,7 @@ public class ToUseScheduleResourceItemProvider extends ResourceItemProvider {
 				 false,
 				 true,
 				 null,
-				 null,
+				 getString("_UI__20SchedulePropertyCategory"),
 				 null));
 	}
 
