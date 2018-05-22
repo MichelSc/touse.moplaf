@@ -35,7 +35,7 @@
       <genFeatures notify="false" createChild="false" propertyCategory="20 Strategy"
           propertySortChoices="true" ecoreFeature="ecore:EReference ToUseScheduler.ecore#//ToUseScheduler/SelectedShipments"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="ToUseScheduler.ecore#//ToUseSchedule">
+    <genClasses provider="Stateful" image="false" ecoreClass="ToUseScheduler.ecore#//ToUseSchedule">
       <genOperations ecoreOperation="ToUseScheduler.ecore#//ToUseSchedule/getTaskLoad">
         <genParameters ecoreParameter="ToUseScheduler.ecore#//ToUseSchedule/getTaskLoad/shipment"/>
       </genOperations>

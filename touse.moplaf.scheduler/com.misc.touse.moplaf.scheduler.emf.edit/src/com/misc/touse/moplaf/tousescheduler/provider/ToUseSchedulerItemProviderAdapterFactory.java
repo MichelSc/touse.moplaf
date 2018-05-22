@@ -14,6 +14,7 @@ import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.edit.provider.ChangeNotifier;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
+import org.eclipse.emf.edit.provider.Disposable;
 import org.eclipse.emf.edit.provider.IChangeNotifier;
 import org.eclipse.emf.edit.provider.IDisposable;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
@@ -48,6 +49,14 @@ public class ToUseSchedulerItemProviderAdapterFactory extends ToUseSchedulerAdap
 	 * @generated
 	 */
 	protected IChangeNotifier changeNotifier = new ChangeNotifier();
+
+	/**
+	 * This keeps track of all the item providers created, so that they can be {@link #dispose disposed}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Disposable disposable = new Disposable();
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -647,14 +656,6 @@ public class ToUseSchedulerItemProviderAdapterFactory extends ToUseSchedulerAdap
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.ToUseSchedule} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ToUseScheduleItemProvider toUseScheduleItemProvider;
-
-	/**
 	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousescheduler.ToUseSchedule}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -662,11 +663,7 @@ public class ToUseSchedulerItemProviderAdapterFactory extends ToUseSchedulerAdap
 	 */
 	@Override
 	public Adapter createToUseScheduleAdapter() {
-		if (toUseScheduleItemProvider == null) {
-			toUseScheduleItemProvider = new ToUseScheduleItemProvider(this);
-		}
-
-		return toUseScheduleItemProvider;
+		return new ToUseScheduleItemProvider(this);
 	}
 
 	/**
@@ -728,6 +725,20 @@ public class ToUseSchedulerItemProviderAdapterFactory extends ToUseSchedulerAdap
 	}
 
 	/**
+	 * Associates an adapter with a notifier via the base implementation, then records it to ensure it will be disposed.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected void associate(Adapter adapter, Notifier target) {
+		super.associate(adapter, target);
+		if (adapter != null) {
+			disposable.add(adapter);
+		}
+	}
+
+	/**
 	 * This adds a listener.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -768,32 +779,7 @@ public class ToUseSchedulerItemProviderAdapterFactory extends ToUseSchedulerAdap
 	 * @generated
 	 */
 	public void dispose() {
-		if (domainItemProvider != null) domainItemProvider.dispose();
-		if (vehicleItemProvider != null) vehicleItemProvider.dispose();
-		if (shipmentItemProvider != null) shipmentItemProvider.dispose();
-		if (toUseSchedulerItemProvider != null) toUseSchedulerItemProvider.dispose();
-		if (toUseScheduleItemProvider != null) toUseScheduleItemProvider.dispose();
-		if (toUseScoreItemProvider != null) toUseScoreItemProvider.dispose();
-		if (toUseScheduleResourceItemProvider != null) toUseScheduleResourceItemProvider.dispose();
-		if (toUseScheduleTaskItemProvider != null) toUseScheduleTaskItemProvider.dispose();
-		if (toUseLoadShipmentItemProvider != null) toUseLoadShipmentItemProvider.dispose();
-		if (toUseUnloadShipmentItemProvider != null) toUseUnloadShipmentItemProvider.dispose();
-		if (toUsePhaseDestructConstructItemProvider != null) toUsePhaseDestructConstructItemProvider.dispose();
-		if (toUseStepDestructConstructItemProvider != null) toUseStepDestructConstructItemProvider.dispose();
-		if (toUseScheduleLoadUnloadItemProvider != null) toUseScheduleLoadUnloadItemProvider.dispose();
-		if (toUseUnscheduleLoadUnloadItemProvider != null) toUseUnscheduleLoadUnloadItemProvider.dispose();
-		if (scopeScheduleScoreItemProvider != null) scopeScheduleScoreItemProvider.dispose();
-		if (layerScheduleDistanceItemProvider != null) layerScheduleDistanceItemProvider.dispose();
-		if (calcTaskDistanceFromPreviousItemProvider != null) calcTaskDistanceFromPreviousItemProvider.dispose();
-		if (calcTaskDistanceItemProvider != null) calcTaskDistanceItemProvider.dispose();
-		if (calcResourceDistanceFromLastItemProvider != null) calcResourceDistanceFromLastItemProvider.dispose();
-		if (calcResourceDistanceItemProvider != null) calcResourceDistanceItemProvider.dispose();
-		if (layerScheduleVolumeLoadedItemProvider != null) layerScheduleVolumeLoadedItemProvider.dispose();
-		if (calcTaskStartVolumeLoadedItemProvider != null) calcTaskStartVolumeLoadedItemProvider.dispose();
-		if (calcTaskEndVolumeLoadedItemProvider != null) calcTaskEndVolumeLoadedItemProvider.dispose();
-		if (calcResourceVolumeOverloadItemProvider != null) calcResourceVolumeOverloadItemProvider.dispose();
-		if (layerSchedulePlannedBenefitItemProvider != null) layerSchedulePlannedBenefitItemProvider.dispose();
-		if (calcResourcePlannedBenefitItemProvider != null) calcResourcePlannedBenefitItemProvider.dispose();
+		disposable.dispose();
 	}
 
 }
