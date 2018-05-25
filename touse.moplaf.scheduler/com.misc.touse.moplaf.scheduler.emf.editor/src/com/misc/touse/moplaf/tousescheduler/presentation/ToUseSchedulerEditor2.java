@@ -14,6 +14,7 @@ import org.eclipse.emfforms.spi.swt.treemasterdetail.actions.ActionCollector;
 import org.eclipse.emfforms.spi.swt.treemasterdetail.actions.MasterDetailAction;
 import org.eclipse.emfforms.spi.swt.treemasterdetail.util.CreateElementCallback;
 import org.eclipse.jface.action.Action;
+import org.eclipse.jface.action.IAction;
 import org.eclipse.jface.action.IMenuManager;
 import org.eclipse.jface.action.MenuManager;
 import org.eclipse.jface.viewers.ISelection;
@@ -23,7 +24,21 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.ui.IWorkbenchPart;
 
+import com.misc.common.moplaf.emf.editor.Util;
+import com.misc.common.moplaf.emf.editor.action.AcceptAction;
+import com.misc.common.moplaf.emf.editor.action.CloneAction;
+import com.misc.common.moplaf.emf.editor.action.DoAction;
+import com.misc.common.moplaf.emf.editor.action.EnableAction;
+import com.misc.common.moplaf.emf.editor.action.FinalizeAction;
+import com.misc.common.moplaf.emf.editor.action.GarbageCollectAction;
 import com.misc.common.moplaf.emf.editor.action.InitializeAction;
+import com.misc.common.moplaf.emf.editor.action.RefreshAction;
+import com.misc.common.moplaf.emf.editor.action.ResetAction;
+import com.misc.common.moplaf.emf.editor.action.RunAction;
+import com.misc.common.moplaf.emf.editor.action.RunBackgroundAction;
+import com.misc.common.moplaf.emf.editor.action.SelectAction;
+import com.misc.common.moplaf.emf.editor.action.SortAction;
+import com.misc.common.moplaf.emf.editor.action.UndoAction;
 
 public class ToUseSchedulerEditor2 extends GenericEditor {
 
@@ -57,8 +72,8 @@ public class ToUseSchedulerEditor2 extends GenericEditor {
 												super.menuAboutToShow(manager);
 												ISelection currentSelection = treeViewer.getSelection();
 												IWorkbenchPart part = ToUseSchedulerEditor2.this;
-												Action action = new InitializeAction(part, currentSelection);
-												manager.add(action);
+												
+												ToUseSchedulerEditor2.populateActions(manager, part, currentSelection);
 											}
 									
 								});
@@ -70,5 +85,30 @@ public class ToUseSchedulerEditor2 extends GenericEditor {
 				.create();
 			return treeMasterDetail;
 		}
+	
+	static void populateActions(IMenuManager manager, IWorkbenchPart part, ISelection currentSelection) {
+		MenuManager submenuManager = new MenuManager("ToUseScheduler");
+		manager.add(submenuManager);
+		
+		ToUseSchedulerEditor2.populateAction(submenuManager, new InitializeAction(part, currentSelection));
+		ToUseSchedulerEditor2.populateAction(submenuManager, new GarbageCollectAction(part, currentSelection));
+		ToUseSchedulerEditor2.populateAction(submenuManager, new FinalizeAction(part, currentSelection));
+		ToUseSchedulerEditor2.populateAction(submenuManager, new EnableAction(part, currentSelection));
+		ToUseSchedulerEditor2.populateAction(submenuManager, new CloneAction(part, currentSelection));
+		ToUseSchedulerEditor2.populateAction(submenuManager, new RefreshAction(part, currentSelection));
+		ToUseSchedulerEditor2.populateAction(submenuManager, new ResetAction(part, currentSelection));
+		ToUseSchedulerEditor2.populateAction(submenuManager, new AcceptAction(part, currentSelection));
+		ToUseSchedulerEditor2.populateAction(submenuManager, new SelectAction(part, currentSelection));
+		ToUseSchedulerEditor2.populateAction(submenuManager, new RunAction(part, currentSelection));
+		ToUseSchedulerEditor2.populateAction(submenuManager, new RunBackgroundAction(part, currentSelection));
+		ToUseSchedulerEditor2.populateAction(submenuManager, new DoAction(part, currentSelection));
+		ToUseSchedulerEditor2.populateAction(submenuManager, new UndoAction(part, currentSelection));
+		ToUseSchedulerEditor2.populateAction(submenuManager, new SortAction(part, currentSelection));
+	}
+	static void populateAction(IMenuManager manager,  IAction action) {
+		if ( action.getText()!=null && action.getText().length()>0 ) {
+			manager.add(action);
+		}
+	}
 
 }
