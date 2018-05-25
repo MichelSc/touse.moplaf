@@ -13,11 +13,17 @@ import org.eclipse.emfforms.spi.swt.treemasterdetail.TreeMasterDetailSWTFactory;
 import org.eclipse.emfforms.spi.swt.treemasterdetail.actions.ActionCollector;
 import org.eclipse.emfforms.spi.swt.treemasterdetail.actions.MasterDetailAction;
 import org.eclipse.emfforms.spi.swt.treemasterdetail.util.CreateElementCallback;
+import org.eclipse.jface.action.Action;
+import org.eclipse.jface.action.IMenuManager;
 import org.eclipse.jface.action.MenuManager;
+import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Menu;
+import org.eclipse.ui.IWorkbenchPart;
+
+import com.misc.common.moplaf.emf.editor.action.InitializeAction;
 
 public class ToUseSchedulerEditor2 extends GenericEditor {
 
@@ -36,9 +42,26 @@ public class ToUseSchedulerEditor2 extends GenericEditor {
 						final List<MasterDetailAction> masterDetailActions = ActionCollector.newList()
 							.addCutAction(editingDomain).addCopyAction(editingDomain).addPasteAction(editingDomain)
 							.getList();
-						menuMgr.addMenuListener(new TreeMasterDetailMenuListener(new ChildrenDescriptorCollector(), menuMgr,
-							treeViewer, editingDomain, masterDetailActions, createElementCallback,
-							new DefaultDeleteActionBuilder()));
+						menuMgr.addMenuListener(
+								new TreeMasterDetailMenuListener(
+										new ChildrenDescriptorCollector(), 
+										menuMgr,
+										treeViewer, 
+										editingDomain, 
+										masterDetailActions, 
+										createElementCallback,
+										new DefaultDeleteActionBuilder()) {
+
+											@Override
+											public void menuAboutToShow(IMenuManager manager) {
+												super.menuAboutToShow(manager);
+												ISelection currentSelection = treeViewer.getSelection();
+												IWorkbenchPart part = ToUseSchedulerEditor2.this;
+												Action action = new InitializeAction(part, currentSelection);
+												manager.add(action);
+											}
+									
+								});
 						final Menu menu = menuMgr.createContextMenu(treeViewer.getControl());
 						return menu;
 
