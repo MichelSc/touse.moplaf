@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.eclipse.emf.ecp.view.model:View xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.emf.ecp.view.group.model="http://org/eclipse/emf/ecp/view/group/model" xmlns:org.eclipse.emf.ecp.view.model="http://org/eclipse/emf/ecp/view/model/170" xmi:id="_qEfJkGAqEeikprvXqsKvkw" name="ToUseScheduler" ecorePath="/com.misc.touse.moplaf.scheduler.emf/model/ToUseScheduler.ecore">
+  <rootEClass href="http://www.misc.com/touse/moplaf/scheduler/model/0.1#//ToUseScheduler"/>
+  <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" xmi:id="_xhqs0GAqEeikprvXqsKvkw" name="Enabled">
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_qEmeUGAqEeikprvXqsKvkw" name="Control RunFeedback"/>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_qEmeUmAqEeikprvXqsKvkw" name="Control CancelFeedback">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_qEmeU2AqEeikprvXqsKvkw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/job/model/0.1#//Run/CancelFeedback"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_qEmeVGAqEeikprvXqsKvkw" name="Control ResetFeedback">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_qEmeVWAqEeikprvXqsKvkw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/job/model/0.1#//Run/ResetFeedback"/>
+      </domainModelReference>
+    </children>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" xmi:id="_39A_oGAqEeikprvXqsKvkw" name="Status">
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_qEmeWGAqEeikprvXqsKvkw" name="Control Cancelled">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_qEmeWWAqEeikprvXqsKvkw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/job/model/0.1#//Run/Cancelled"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_qEmeWmAqEeikprvXqsKvkw" name="Control Returned">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_qEmeW2AqEeikprvXqsKvkw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/job/model/0.1#//Run/Returned"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_qEmeXGAqEeikprvXqsKvkw" name="Control ReturnSuccess">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_qEmeXWAqEeikprvXqsKvkw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/job/model/0.1#//Run/ReturnSuccess"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_qEmeYGAqEeikprvXqsKvkw" name="Control ReturnInformation">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_qEmeYWAqEeikprvXqsKvkw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/job/model/0.1#//Run/ReturnInformation"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_qEmeXmAqEeikprvXqsKvkw" name="Control ReturnFeedback">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_qEmeX2AqEeikprvXqsKvkw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/job/model/0.1#//Run/ReturnFeedback"/>
+      </domainModelReference>
+    </children>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" xmi:id="_D50I0GArEeikprvXqsKvkw" name="Strategy">
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_qEmeamAqEeikprvXqsKvkw" name="Control Name">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_qEmea2AqEeikprvXqsKvkw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/localsearch/model/0.1#//Strategy/Name"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_qEmeaGAqEeikprvXqsKvkw" name="Control MaxNrSolutions">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_qEmeaWAqEeikprvXqsKvkw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/localsearch/model/0.1#//Strategy/MaxNrSolutions"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" xmi:id="_D50I02ArEeikprvXqsKvkw" name="Selected Shipments" groupType="Collapsible">
+      <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_qEmecGAqEeikprvXqsKvkw" name="Control SelectedShipments">
+        <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_qEmecWAqEeikprvXqsKvkw">
+          <domainModelEFeature xsi:type="ecore:EReference" href="http://www.misc.com/touse/moplaf/scheduler/model/0.1#//ToUseScheduler/SelectedShipments"/>
+        </domainModelReference>
+      </children>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" xmi:id="_C0DaoGArEeikprvXqsKvkw" name="Selected Vehicles" groupType="Collapsible">
+      <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_qEmebmAqEeikprvXqsKvkw" name="Control SelectedVehicles">
+        <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_qEmeb2AqEeikprvXqsKvkw">
+          <domainModelEFeature xsi:type="ecore:EReference" href="http://www.misc.com/touse/moplaf/scheduler/model/0.1#//ToUseScheduler/SelectedVehicles"/>
+        </domainModelReference>
+      </children>
+    </children>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_qEmeZGAqEeikprvXqsKvkw" name="Control PoolSolutions">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_qEmeZWAqEeikprvXqsKvkw">
+      <domainModelEFeature xsi:type="ecore:EReference" href="http://www.misc.com/common/moplaf/localsearch/model/0.1#//Strategy/PoolSolutions"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" xmi:id="_XZE94GArEeikprvXqsKvkw" name="All Solutions" groupType="Collapsible">
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_qEmebGAqEeikprvXqsKvkw" name="Control Solutions">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_qEmebWAqEeikprvXqsKvkw">
+        <domainModelEFeature xsi:type="ecore:EReference" href="http://www.misc.com/common/moplaf/localsearch/model/0.1#//Strategy/Solutions"/>
+      </domainModelReference>
+    </children>
+  </children>
+</org.eclipse.emf.ecp.view.model:View>

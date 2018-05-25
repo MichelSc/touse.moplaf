@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.eclipse.emf.ecp.view.model:View xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.emf.ecp.view.model="http://org/eclipse/emf/ecp/view/model/170" xmi:id="_wV2PYGApEeikprvXqsKvkw" name="Domain" ecorePath="/com.misc.touse.moplaf.scheduler.emf/model/ToUseScheduler.ecore">
+  <rootEClass href="http://www.misc.com/touse/moplaf/scheduler/model/0.1#//Domain"/>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_wV7u8GApEeikprvXqsKvkw" name="Control Schedulers">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_wV7u8WApEeikprvXqsKvkw">
+      <domainModelEFeature xsi:type="ecore:EReference" href="http://www.misc.com/touse/moplaf/scheduler/model/0.1#//Domain/Schedulers"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_wV7u8mApEeikprvXqsKvkw" name="Control Vehicles">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_wV7u82ApEeikprvXqsKvkw">
+      <domainModelEFeature xsi:type="ecore:EReference" href="http://www.misc.com/touse/moplaf/scheduler/model/0.1#//Domain/Vehicles"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_wV7u9GApEeikprvXqsKvkw" name="Control Shipments">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_wV7u9WApEeikprvXqsKvkw">
+      <domainModelEFeature xsi:type="ecore:EReference" href="http://www.misc.com/touse/moplaf/scheduler/model/0.1#//Domain/Shipments"/>
+    </domainModelReference>
+  </children>
+</org.eclipse.emf.ecp.view.model:View>

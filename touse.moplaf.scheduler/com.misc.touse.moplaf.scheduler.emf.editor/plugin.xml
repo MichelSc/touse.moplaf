@@ -24,7 +24,6 @@
 
    <extension point="org.eclipse.ui.editors">
       <!-- @generated ToUseScheduler -->
-      <!--
       <editor
             id="com.misc.touse.moplaf.tousescheduler.presentation.ToUseSchedulerEditorID"
             name="%_UI_ToUseSchedulerEditor_label"
@@ -33,10 +32,10 @@
             class="com.misc.touse.moplaf.tousescheduler.presentation.ToUseSchedulerEditor"
             contributorClass="com.misc.touse.moplaf.tousescheduler.presentation.ToUseSchedulerActionBarContributor">
       </editor>
-      -->
-      <editor class="com.misc.touse.moplaf.tousescheduler.presentation.ToUseSchedulerEditor2" 
-            id="com.misc.touse.moplaf.tousescheduler.presentation.ToUseSchedulerEditorID"
-            name="Your Editor Name" 
+      <editor 
+            id="com.misc.touse.moplaf.tousescheduler.presentation.ToUseSchedulerEditorID2"
+            class="com.misc.touse.moplaf.tousescheduler.presentation.ToUseSchedulerEditor2" 
+            name="%_UI_ToUseSchedulerEditor_label2"
             icon="icons/full/obj16/ToUseSchedulerModelFile.gif"
             extensions="tousescheduler"
             default="true"
@@ -44,4 +43,14 @@
       </editor>
    </extension>
 
+
+<extension  point="org.eclipse.emf.ecp.view.model.provider.xmi.file">
+<file filePath="views/Scheduler.view"/>
+
+<file filePath="views/Vehicle.view"/>
+
+<file filePath="views/Domain.view"/>
+
+<file filePath="views/Shipment.view"/>
+</extension>
 </plugin>

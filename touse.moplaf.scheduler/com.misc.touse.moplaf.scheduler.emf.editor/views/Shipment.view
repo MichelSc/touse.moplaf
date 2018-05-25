@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.eclipse.emf.ecp.view.model:View xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.emf.ecp.view.group.model="http://org/eclipse/emf/ecp/view/group/model" xmlns:org.eclipse.emf.ecp.view.model="http://org/eclipse/emf/ecp/view/model/170" xmi:id="_kSBGkGAoEeikprvXqsKvkw" name="Shipment" ecorePath="/com.misc.touse.moplaf.scheduler.emf/model/ToUseScheduler.ecore">
+  <rootEClass href="http://www.misc.com/touse/moplaf/scheduler/model/0.1#//Shipment"/>
+  <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" xmi:id="_pQvqYGAoEeikprvXqsKvkw" name="Shipment">
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_kS-v4GAoEeikprvXqsKvkw" name="Control Name">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_kS_W8GAoEeikprvXqsKvkw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/touse/moplaf/scheduler/model/0.1#//Shipment/Name"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_kS_W-WAoEeikprvXqsKvkw" name="Control Volume">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_kS_W-mAoEeikprvXqsKvkw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/touse/moplaf/scheduler/model/0.1#//Shipment/Volume"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_kS_W-2AoEeikprvXqsKvkw" name="Control PlannedBenefit">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_kS_W_GAoEeikprvXqsKvkw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/touse/moplaf/scheduler/model/0.1#//Shipment/PlannedBenefit"/>
+      </domainModelReference>
+    </children>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" xmi:id="_p6-TIGAoEeikprvXqsKvkw" name="Load">
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_kS_W8WAoEeikprvXqsKvkw" name="Control LoadLocationX">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_kS_W8mAoEeikprvXqsKvkw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/touse/moplaf/scheduler/model/0.1#//Shipment/LoadLocationX"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_kS_W82AoEeikprvXqsKvkw" name="Control LoadLocationY">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_kS_W9GAoEeikprvXqsKvkw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/touse/moplaf/scheduler/model/0.1#//Shipment/LoadLocationY"/>
+      </domainModelReference>
+    </children>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" xmi:id="_w6hfMGAoEeikprvXqsKvkw" name="Unload">
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_kS_W9WAoEeikprvXqsKvkw" name="Control UnloadLocationX">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_kS_W9mAoEeikprvXqsKvkw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/touse/moplaf/scheduler/model/0.1#//Shipment/UnloadLocationX"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_kS_W92AoEeikprvXqsKvkw" name="Control UnloadLocationY">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_kS_W-GAoEeikprvXqsKvkw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/touse/moplaf/scheduler/model/0.1#//Shipment/UnloadLocationY"/>
+      </domainModelReference>
+    </children>
+  </children>
+</org.eclipse.emf.ecp.view.model:View>

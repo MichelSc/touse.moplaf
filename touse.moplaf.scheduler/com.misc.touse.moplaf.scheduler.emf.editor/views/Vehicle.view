@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.eclipse.emf.ecp.view.model:View xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.emf.ecp.view.group.model="http://org/eclipse/emf/ecp/view/group/model" xmlns:org.eclipse.emf.ecp.view.model="http://org/eclipse/emf/ecp/view/model/170" xmi:id="_wmX-sGApEeikprvXqsKvkw" name="Vehicle" ecorePath="/com.misc.touse.moplaf.scheduler.emf/model/ToUseScheduler.ecore">
+  <rootEClass href="http://www.misc.com/touse/moplaf/scheduler/model/0.1#//Vehicle"/>
+  <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" xmi:id="_GaYdkGAqEeikprvXqsKvkw" name="Vehicle">
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_wmdeQGApEeikprvXqsKvkw" name="Control Name">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_wmdeQWApEeikprvXqsKvkw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/touse/moplaf/scheduler/model/0.1#//Vehicle/Name"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_wmdeRmApEeikprvXqsKvkw" name="Control MaxVolumeLoaded">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_wmdeR2ApEeikprvXqsKvkw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/touse/moplaf/scheduler/model/0.1#//Vehicle/MaxVolumeLoaded"/>
+      </domainModelReference>
+    </children>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" xmi:id="_GzgIMGAqEeikprvXqsKvkw" name="Home">
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_wmdeQmApEeikprvXqsKvkw" name="Control HomeLocationX">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_wmdeQ2ApEeikprvXqsKvkw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/touse/moplaf/scheduler/model/0.1#//Vehicle/HomeLocationX"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_wmdeRGApEeikprvXqsKvkw" name="Control HomeLocationY">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_wmdeRWApEeikprvXqsKvkw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/touse/moplaf/scheduler/model/0.1#//Vehicle/HomeLocationY"/>
+      </domainModelReference>
+    </children>
+  </children>
+</org.eclipse.emf.ecp.view.model:View>
