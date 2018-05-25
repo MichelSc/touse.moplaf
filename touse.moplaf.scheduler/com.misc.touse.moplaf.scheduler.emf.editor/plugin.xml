@@ -24,6 +24,7 @@
 
    <extension point="org.eclipse.ui.editors">
       <!-- @generated ToUseScheduler -->
+      <!--
       <editor
             id="com.misc.touse.moplaf.tousescheduler.presentation.ToUseSchedulerEditorID"
             name="%_UI_ToUseSchedulerEditor_label"
@@ -31,6 +32,15 @@
             extensions="tousescheduler"
             class="com.misc.touse.moplaf.tousescheduler.presentation.ToUseSchedulerEditor"
             contributorClass="com.misc.touse.moplaf.tousescheduler.presentation.ToUseSchedulerActionBarContributor">
+      </editor>
+      -->
+      <editor class="com.misc.touse.moplaf.tousescheduler.presentation.ToUseSchedulerEditor2" 
+            id="com.misc.touse.moplaf.tousescheduler.presentation.ToUseSchedulerEditorID"
+            name="Your Editor Name" 
+            icon="icons/full/obj16/ToUseSchedulerModelFile.gif"
+            extensions="tousescheduler"
+            default="true"
+            >
       </editor>
    </extension>
 
