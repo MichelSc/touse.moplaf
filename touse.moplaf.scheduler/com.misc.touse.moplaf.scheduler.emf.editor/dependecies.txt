@@ -1,0 +1,12 @@
+those dependecies proved to be somehow useful sometimes
+
+bundles:
+org.eclipse.emfforms.editor;bundle-version="1.16.0",
+org.eclipse.emf.ecp.view.treemasterdetail.ui.swt;bundle-version="1.16.0",
+org.eclipse.emf.ecp.common;bundle-version="1.16.0",
+org.eclipse.emfforms.swt.treemasterdetail
+
+Import-Package: 
+org.eclipse.emfforms.spi.swt.treemasterdetail;version="1.16.0",
+org.eclipse.emfforms.spi.swt.treemasterdetail.actions;version="1.16.0",
+org.eclipse.emfforms.spi.swt.treemasterdetail.util;version="1.16.0"
