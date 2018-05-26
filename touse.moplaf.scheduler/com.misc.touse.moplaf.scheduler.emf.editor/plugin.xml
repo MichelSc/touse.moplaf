@@ -45,9 +45,7 @@
 
 
 <extension  point="org.eclipse.emf.ecp.view.model.provider.xmi.file">
-<file filePath="views/My.view"/>
 
-<file filePath="views/ToUseLoadShipment.view"/>
 
 <file filePath="views/Schedule.view"/>
 
