@@ -20,7 +20,6 @@ Require-Bundle: org.eclipse.core.runtime,
  com.misc.common.moplaf.localsearch.emf.edit;visibility:=reexport,
  com.misc.common.moplaf.emf.editor,
  org.eclipse.emf.ecp.common;bundle-version="1.16.0",
- org.eclipse.emf.ecp.view.treemasterdetail.ui.swt;bundle-version="1.16.0",
  org.eclipse.emfforms.editor;bundle-version="1.16.0",
  org.eclipse.emfforms.swt.treemasterdetail
 Bundle-ActivationPolicy: lazy
