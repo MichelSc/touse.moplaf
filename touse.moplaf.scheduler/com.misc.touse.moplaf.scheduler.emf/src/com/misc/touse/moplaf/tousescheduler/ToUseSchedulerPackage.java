@@ -2506,6 +2506,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_ACTION_LOAD_UNLOAD__VALID_FEEDBACK = LocalSearchPackage.ACTION__VALID_FEEDBACK;
 
 	/**
+	 * The feature id for the '<em><b>Reset Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_ACTION_LOAD_UNLOAD__RESET_FEEDBACK = LocalSearchPackage.ACTION__RESET_FEEDBACK;
+
+	/**
 	 * The feature id for the '<em><b>Action Nr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2749,6 +2758,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE_LOAD_UNLOAD__VALID_FEEDBACK = TO_USE_ACTION_LOAD_UNLOAD__VALID_FEEDBACK;
 
 	/**
+	 * The feature id for the '<em><b>Reset Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_LOAD_UNLOAD__RESET_FEEDBACK = TO_USE_ACTION_LOAD_UNLOAD__RESET_FEEDBACK;
+
+	/**
 	 * The feature id for the '<em><b>Action Nr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2990,6 +3008,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__VALID_FEEDBACK = TO_USE_ACTION_LOAD_UNLOAD__VALID_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Reset Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNSCHEDULE_LOAD_UNLOAD__RESET_FEEDBACK = TO_USE_ACTION_LOAD_UNLOAD__RESET_FEEDBACK;
 
 	/**
 	 * The feature id for the '<em><b>Action Nr</b></em>' attribute.

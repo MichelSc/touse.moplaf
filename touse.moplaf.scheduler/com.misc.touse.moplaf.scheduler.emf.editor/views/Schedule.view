@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.eclipse.emf.ecp.view.model:View xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.emf.ecp.view.group.model="http://org/eclipse/emf/ecp/view/group/model" xmlns:org.eclipse.emf.ecp.view.label.model="http://org/eclipse/emf/ecp/view/label/model" xmlns:org.eclipse.emf.ecp.view.model="http://org/eclipse/emf/ecp/view/model/170" xmlns:org.eclipse.emf.ecp.view.table.model="http://org/eclipse/emf/ecp/view/table/model/150" xmi:id="_vFGC0GDREeiYCvAOz-GWOA" name="ToUseSchedule" ecorePath="/com.misc.touse.moplaf.scheduler.emf/model/ToUseScheduler.ecore">
+  <rootEClass href="http://www.misc.com/touse/moplaf/scheduler/model/0.1#//ToUseSchedule"/>
+  <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" xmi:id="_ZVIhAGDSEeiYCvAOz-GWOA" name="Solution">
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_vFTeNGDREeiYCvAOz-GWOA" name="Control SolutionNr">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_vFTeNWDREeiYCvAOz-GWOA">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/localsearch/model/0.1#//Solution/SolutionNr"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_vFTeNmDREeiYCvAOz-GWOA" name="Control Step">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_vFTeN2DREeiYCvAOz-GWOA">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/localsearch/model/0.1#//Solution/Step"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_vFTeQGDREeiYCvAOz-GWOA" name="Control NrNotScheduledTasks" readonly="true">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_vFTeQWDREeiYCvAOz-GWOA">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/scheduler/model/0.1#//Schedule/NrNotScheduledTasks"/>
+      </domainModelReference>
+    </children>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" xmi:id="_85D3EGDTEeiYCvAOz-GWOA" name="Score">
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_mJ9dYGDdEeiYCvAOz-GWOA" name="Score" readonly="true">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_crk9wGDlEeis0fY5Yql_Dg">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/scheduler/model/0.1#//Score/Description"/>
+        <domainModelEReferencePath href="http://www.misc.com/common/moplaf/scheduler/model/0.1#//Solution/Score"/>
+      </domainModelReference>
+    </children>
+    </domainModelReference>
+    <children xsi:type="org.eclipse.emf.ecp.view.label.model:Label" xmi:id="_4DOIgGDeEeiYCvAOz-GWOA"/>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.table.model:TableControl" xmi:id="_vZwOwGDSEeiYCvAOz-GWOA" name="All Resources" readonly="true" addRemoveDisabled="true">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.table.model:TableDomainModelReference" xmi:id="_8sJR4GDSEeiYCvAOz-GWOA">
+      <columnDomainModelReferences xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_BaB9UGDTEeiYCvAOz-GWOA">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/scheduler/model/0.1#//Resource/Name"/>
+      </columnDomainModelReferences>
+      <columnDomainModelReferences xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_D0SZQGDTEeiYCvAOz-GWOA">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/scheduler/model/0.1#//Resource/NrScheduledTasks"/>
+      </columnDomainModelReferences>
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_8sJR4WDSEeiYCvAOz-GWOA">
+        <domainModelEFeature xsi:type="ecore:EReference" href="http://www.misc.com/common/moplaf/scheduler/model/0.1#//Schedule/Resources"/>
+      </domainModelReference>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.table.model:TableControl" xmi:id="_FokaUGDTEeiYCvAOz-GWOA" name="All Tasks" readonly="true" addRemoveDisabled="true">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.table.model:TableDomainModelReference" xmi:id="_NfJVAGDTEeiYCvAOz-GWOA">
+      <columnDomainModelReferences xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_PXwccGDTEeiYCvAOz-GWOA">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/scheduler/model/0.1#//Task/Name"/>
+      </columnDomainModelReferences>
+      <columnDomainModelReferences xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_QfdrYGDTEeiYCvAOz-GWOA">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/scheduler/model/0.1#//Task/Scheduled"/>
+      </columnDomainModelReferences>
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_NfJVAWDTEeiYCvAOz-GWOA">
+        <domainModelEFeature xsi:type="ecore:EReference" href="http://www.misc.com/common/moplaf/scheduler/model/0.1#//Schedule/Tasks"/>
+      </domainModelReference>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" xmi:id="_U-RZAGDTEeiYCvAOz-GWOA" name="References" groupType="Collapsible">
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_vFTeOGDREeiYCvAOz-GWOA" name="Control References">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_vFTeOWDREeiYCvAOz-GWOA">
+        <domainModelEFeature xsi:type="ecore:EReference" href="http://www.misc.com/common/moplaf/localsearch/model/0.1#//Solution/References"/>
+      </domainModelReference>
+    </children>
+  </children>
+</org.eclipse.emf.ecp.view.model:View>

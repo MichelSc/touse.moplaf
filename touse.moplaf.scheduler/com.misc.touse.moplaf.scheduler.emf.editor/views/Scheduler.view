@@ -2,17 +2,17 @@
 <org.eclipse.emf.ecp.view.model:View xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.emf.ecp.view.group.model="http://org/eclipse/emf/ecp/view/group/model" xmlns:org.eclipse.emf.ecp.view.model="http://org/eclipse/emf/ecp/view/model/170" xmi:id="_qEfJkGAqEeikprvXqsKvkw" name="ToUseScheduler" ecorePath="/com.misc.touse.moplaf.scheduler.emf/model/ToUseScheduler.ecore">
   <rootEClass href="http://www.misc.com/touse/moplaf/scheduler/model/0.1#//ToUseScheduler"/>
   <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" xmi:id="_xhqs0GAqEeikprvXqsKvkw" name="Enabled">
-    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_qEmeUGAqEeikprvXqsKvkw" name="Control RunFeedback">
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_qEmeUGAqEeikprvXqsKvkw" name="Control RunFeedback" readonly="true">
       <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_uDnNkGBWEeiYCvAOz-GWOA">
         <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/job/model/0.1#//Run/RunFeedback"/>
       </domainModelReference>
     </children>
-    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_qEmeUmAqEeikprvXqsKvkw" name="Control CancelFeedback">
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_qEmeUmAqEeikprvXqsKvkw" name="Control CancelFeedback" readonly="true">
       <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_QHNyMGDNEeiYCvAOz-GWOA">
         <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/job/model/0.1#//Run/ResetFeedback"/>
       </domainModelReference>
     </children>
-    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_qEmeVGAqEeikprvXqsKvkw" name="Control ResetFeedback">
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_qEmeVGAqEeikprvXqsKvkw" name="Control ResetFeedback" readonly="true">
       <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_qEmeVWAqEeikprvXqsKvkw">
         <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/job/model/0.1#//Run/ResetFeedback"/>
       </domainModelReference>
@@ -24,22 +24,22 @@
         <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/job/model/0.1#//Run/Cancelled"/>
       </domainModelReference>
     </children>
-    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_qEmeWmAqEeikprvXqsKvkw" name="Control Returned">
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_qEmeWmAqEeikprvXqsKvkw" name="Control Returned" readonly="true">
       <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_qEmeW2AqEeikprvXqsKvkw">
         <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/job/model/0.1#//Run/Returned"/>
       </domainModelReference>
     </children>
-    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_qEmeXGAqEeikprvXqsKvkw" name="Control ReturnSuccess">
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_qEmeXGAqEeikprvXqsKvkw" name="Control ReturnSuccess" readonly="true">
       <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_qEmeXWAqEeikprvXqsKvkw">
         <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/job/model/0.1#//Run/ReturnSuccess"/>
       </domainModelReference>
     </children>
-    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_qEmeYGAqEeikprvXqsKvkw" name="Control ReturnInformation">
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_qEmeYGAqEeikprvXqsKvkw" name="Control ReturnInformation" readonly="true">
       <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_qEmeYWAqEeikprvXqsKvkw">
         <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/job/model/0.1#//Run/ReturnInformation"/>
       </domainModelReference>
     </children>
-    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_qEmeXmAqEeikprvXqsKvkw" name="Control ReturnFeedback">
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_qEmeXmAqEeikprvXqsKvkw" name="Control ReturnFeedback" readonly="true">
       <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_qEmeX2AqEeikprvXqsKvkw">
         <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/job/model/0.1#//Run/ReturnFeedback"/>
       </domainModelReference>
