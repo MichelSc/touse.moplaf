@@ -24,7 +24,6 @@
         <domainModelEFeature xsi:type="ecore:EReference" href="http://www.misc.com/common/moplaf/localsearch/model/0.1#//Solution/Score"/>
       </domainModelReference>
     </children>
-    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_d-oRUGD2Eeis0fY5Yql_Dg"/>
   </children>
   <children xsi:type="org.eclipse.emf.ecp.view.table.model:TableControl" xmi:id="_vZwOwGDSEeiYCvAOz-GWOA" name="All Resources" readonly="true" addRemoveDisabled="true">
     <domainModelReference xsi:type="org.eclipse.emf.ecp.view.table.model:TableDomainModelReference" xmi:id="_8sJR4GDSEeiYCvAOz-GWOA">
