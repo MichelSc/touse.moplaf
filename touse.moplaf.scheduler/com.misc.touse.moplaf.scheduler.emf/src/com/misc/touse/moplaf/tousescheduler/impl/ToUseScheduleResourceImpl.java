@@ -2,14 +2,18 @@
  */
 package com.misc.touse.moplaf.tousescheduler.impl;
 
+import com.misc.common.moplaf.common.util.EObjectListDerived;
+import com.misc.common.moplaf.scheduler.Task;
 import com.misc.common.moplaf.scheduler.impl.ResourceImpl;
 
 import com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource;
+import com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
 
 import com.misc.touse.moplaf.tousescheduler.Vehicle;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -28,6 +32,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleResourceImpl#getTotalDistance <em>Total Distance</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleResourceImpl#isVolumeOverload <em>Volume Overload</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleResourceImpl#getPlannedBenefit <em>Planned Benefit</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleResourceImpl#getToUseScheduledTasks <em>To Use Scheduled Tasks</em>}</li>
  * </ul>
  *
  * @generated
@@ -267,6 +272,26 @@ public class ToUseScheduleResourceImpl extends ResourceImpl implements ToUseSche
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 */
+	public EList<ToUseScheduleTask> getToUseScheduledTasks() {
+		// implement this method to return the 'To Use Scheduled Tasks' reference list
+		// Ensure that you remove @generated or mark it @generated NOT
+		// The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
+		// so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
+		EList<Task> scheduled_tasks = this.getScheduledTasks();
+		EList<? extends Task> cast_list = scheduled_tasks;
+//		EObjectListDerived<ToUseScheduleTask> new_list = new EObjectListDerived<ToUseScheduleTask>(
+//				ToUseScheduleTask.class,
+//				this.eContainer,
+//				ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__TO_USE_SCHEDULED_TASKS, 
+//				true);
+//		new_list.addAll(scheduled_tasks);
+		return (EList<ToUseScheduleTask>)cast_list;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -283,6 +308,8 @@ public class ToUseScheduleResourceImpl extends ResourceImpl implements ToUseSche
 				return isVolumeOverload();
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__PLANNED_BENEFIT:
 				return getPlannedBenefit();
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__TO_USE_SCHEDULED_TASKS:
+				return getToUseScheduledTasks();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -292,6 +319,7 @@ public class ToUseScheduleResourceImpl extends ResourceImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -359,6 +387,8 @@ public class ToUseScheduleResourceImpl extends ResourceImpl implements ToUseSche
 				return volumeOverload != VOLUME_OVERLOAD_EDEFAULT;
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__PLANNED_BENEFIT:
 				return plannedBenefit != PLANNED_BENEFIT_EDEFAULT;
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_RESOURCE__TO_USE_SCHEDULED_TASKS:
+				return !getToUseScheduledTasks().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

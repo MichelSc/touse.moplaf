@@ -768,6 +768,15 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getToUseScheduleResource_ToUseScheduledTasks() {
+		return (EReference)toUseScheduleResourceEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getScopeScheduleScore() {
 		return scopeScheduleScoreEClass;
 	}
@@ -1128,6 +1137,15 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getToUseSchedule_ToUseScore() {
+		return (EReference)toUseScheduleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EOperation getToUseSchedule__GetTaskLoad__Shipment() {
 		return toUseScheduleEClass.getEOperations().get(0);
 	}
@@ -1203,6 +1221,7 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		createEReference(toUseSchedulerEClass, TO_USE_SCHEDULER__SELECTED_SHIPMENTS);
 
 		toUseScheduleEClass = createEClass(TO_USE_SCHEDULE);
+		createEReference(toUseScheduleEClass, TO_USE_SCHEDULE__TO_USE_SCORE);
 		createEOperation(toUseScheduleEClass, TO_USE_SCHEDULE___GET_TASK_LOAD__SHIPMENT);
 		createEOperation(toUseScheduleEClass, TO_USE_SCHEDULE___GET_TASK_UNLOAD__SHIPMENT);
 		createEOperation(toUseScheduleEClass, TO_USE_SCHEDULE___GET_RESOURCE_VEHICLE__VEHICLE);
@@ -1218,6 +1237,7 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		createEAttribute(toUseScheduleResourceEClass, TO_USE_SCHEDULE_RESOURCE__TOTAL_DISTANCE);
 		createEAttribute(toUseScheduleResourceEClass, TO_USE_SCHEDULE_RESOURCE__VOLUME_OVERLOAD);
 		createEAttribute(toUseScheduleResourceEClass, TO_USE_SCHEDULE_RESOURCE__PLANNED_BENEFIT);
+		createEReference(toUseScheduleResourceEClass, TO_USE_SCHEDULE_RESOURCE__TO_USE_SCHEDULED_TASKS);
 
 		toUseScheduleTaskEClass = createEClass(TO_USE_SCHEDULE_TASK);
 		createEReference(toUseScheduleTaskEClass, TO_USE_SCHEDULE_TASK__SHIPMENT);
@@ -1388,6 +1408,7 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		initEReference(getToUseScheduler_SelectedShipments(), this.getShipment(), null, "SelectedShipments", null, 0, -1, ToUseScheduler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(toUseScheduleEClass, ToUseSchedule.class, "ToUseSchedule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getToUseSchedule_ToUseScore(), this.getToUseScore(), null, "ToUseScore", null, 0, 1, ToUseSchedule.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		EOperation op = initEOperation(getToUseSchedule__GetTaskLoad__Shipment(), this.getToUseLoadShipment(), "getTaskLoad", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getShipment(), "shipment", 0, 1, IS_UNIQUE, IS_ORDERED);
@@ -1409,6 +1430,7 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		initEAttribute(getToUseScheduleResource_TotalDistance(), ecorePackage.getEFloat(), "TotalDistance", null, 0, 1, ToUseScheduleResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getToUseScheduleResource_VolumeOverload(), ecorePackage.getEBoolean(), "VolumeOverload", null, 0, 1, ToUseScheduleResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getToUseScheduleResource_PlannedBenefit(), ecorePackage.getEFloat(), "PlannedBenefit", null, 0, 1, ToUseScheduleResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getToUseScheduleResource_ToUseScheduledTasks(), this.getToUseScheduleTask(), null, "ToUseScheduledTasks", null, 0, -1, ToUseScheduleResource.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(toUseScheduleTaskEClass, ToUseScheduleTask.class, "ToUseScheduleTask", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getToUseScheduleTask_Shipment(), this.getShipment(), null, "Shipment", null, 1, 1, ToUseScheduleTask.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);

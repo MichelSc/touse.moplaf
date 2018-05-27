@@ -1,30 +1,42 @@
 <?xml version="1.0" encoding="ASCII"?>
-<org.eclipse.emf.ecp.view.model:View xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.emf.ecp.view.group.model="http://org/eclipse/emf/ecp/view/group/model" xmlns:org.eclipse.emf.ecp.view.model="http://org/eclipse/emf/ecp/view/model/170" xmlns:org.eclipse.emf.ecp.view.table.model="http://org/eclipse/emf/ecp/view/table/model/150" xmi:id="_AhDgkGEYEeis0fY5Yql_Dg" name="Resource" ecorePath="/com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore">
-  <rootEClass href="http://www.misc.com/common/moplaf/scheduler/model/0.1#//Resource"/>
-  <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" xmi:id="_XNvT4GEYEeis0fY5Yql_Dg" name="Resource" readonly="true">
-    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_AhFVzmEYEeis0fY5Yql_Dg" name="Control Name">
-      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_AhFVz2EYEeis0fY5Yql_Dg">
+<org.eclipse.emf.ecp.view.model:View xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.emf.ecp.view.group.model="http://org/eclipse/emf/ecp/view/group/model" xmlns:org.eclipse.emf.ecp.view.model="http://org/eclipse/emf/ecp/view/model/170" xmlns:org.eclipse.emf.ecp.view.table.model="http://org/eclipse/emf/ecp/view/table/model/150" xmi:id="_QM2CwGHCEeiKZvjITzXk2Q" name="ToUseScheduleResource" ecorePath="/com.misc.touse.moplaf.scheduler.emf/model/ToUseScheduler.ecore">
+  <rootEClass href="http://www.misc.com/touse/moplaf/scheduler/model/0.1#//ToUseScheduleResource"/>
+  <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" xmi:id="_X8768GHCEeiKZvjITzXk2Q" name="Resource" readonly="true">
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_X8768WHCEeiKZvjITzXk2Q" name="Control Name">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_X8768mHCEeiKZvjITzXk2Q">
         <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/scheduler/model/0.1#//Resource/Name"/>
       </domainModelReference>
     </children>
-    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_AhFVxGEYEeis0fY5Yql_Dg" name="Control Description">
-      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_AhFVxWEYEeis0fY5Yql_Dg">
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_X87682HCEeiKZvjITzXk2Q" name="Control Description">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_X8769GHCEeiKZvjITzXk2Q">
         <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/scheduler/model/0.1#//Resource/Description"/>
       </domainModelReference>
     </children>
-    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_AhFVzGEYEeis0fY5Yql_Dg" name="Control NrScheduledTasks">
-      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_AhFVzWEYEeis0fY5Yql_Dg">
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_X8769WHCEeiKZvjITzXk2Q" name="Control NrScheduledTasks">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_X8769mHCEeiKZvjITzXk2Q">
         <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/scheduler/model/0.1#//Resource/NrScheduledTasks"/>
       </domainModelReference>
     </children>
   </children>
-  <children xsi:type="org.eclipse.emf.ecp.view.table.model:TableControl" xmi:id="_JqxeIGEYEeis0fY5Yql_Dg" name="Scheduled Tasks">
-    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.table.model:TableDomainModelReference" xmi:id="_ObjFgGEYEeis0fY5Yql_Dg">
-      <columnDomainModelReferences xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_vLP14GEYEeis0fY5Yql_Dg">
-        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/scheduler/model/0.1#//Task/Description"/>
+  <children xsi:type="org.eclipse.emf.ecp.view.table.model:TableControl" xmi:id="_Zc21kGHCEeiKZvjITzXk2Q" name="Scheduled Tasks" readonly="true" addRemoveDisabled="true">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.table.model:TableDomainModelReference" xmi:id="_eaZGkGHCEeiKZvjITzXk2Q">
+      <columnDomainModelReferences xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_sGbYwGHCEeiKZvjITzXk2Q">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/touse/moplaf/scheduler/model/0.1#//ToUseScheduleTask/VolumeOverload"/>
       </columnDomainModelReferences>
-      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_ObjFgWEYEeis0fY5Yql_Dg">
-        <domainModelEFeature xsi:type="ecore:EReference" href="http://www.misc.com/common/moplaf/scheduler/model/0.1#//Resource/ScheduledTasks"/>
+      <columnDomainModelReferences xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_iArQwGHCEeiKZvjITzXk2Q">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/scheduler/model/0.1#//Task/Name"/>
+      </columnDomainModelReferences>
+      <columnDomainModelReferences xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_mHk0sGHCEeiKZvjITzXk2Q">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/touse/moplaf/scheduler/model/0.1#//ToUseScheduleTask/Distance"/>
+      </columnDomainModelReferences>
+      <columnDomainModelReferences xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_ocEm4GHCEeiKZvjITzXk2Q">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/touse/moplaf/scheduler/model/0.1#//ToUseScheduleTask/StartVolumeLoaded"/>
+      </columnDomainModelReferences>
+      <columnDomainModelReferences xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_p8sFEGHCEeiKZvjITzXk2Q">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/touse/moplaf/scheduler/model/0.1#//ToUseScheduleTask/EndVolumeLoaded"/>
+      </columnDomainModelReferences>
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_eaZGkWHCEeiKZvjITzXk2Q">
+        <domainModelEFeature xsi:type="ecore:EReference" href="http://www.misc.com/touse/moplaf/scheduler/model/0.1#//ToUseScheduleResource/ToUseScheduledTasks"/>
       </domainModelReference>
     </domainModelReference>
   </children>

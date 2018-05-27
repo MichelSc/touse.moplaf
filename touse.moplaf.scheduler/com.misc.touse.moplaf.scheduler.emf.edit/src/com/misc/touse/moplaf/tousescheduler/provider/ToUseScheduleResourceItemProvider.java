@@ -54,6 +54,7 @@ public class ToUseScheduleResourceItemProvider extends ResourceItemProvider {
 			addTotalDistancePropertyDescriptor(object);
 			addVolumeOverloadPropertyDescriptor(object);
 			addPlannedBenefitPropertyDescriptor(object);
+			addToUseScheduledTasksPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -165,6 +166,28 @@ public class ToUseScheduleResourceItemProvider extends ResourceItemProvider {
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
 				 getString("_UI__20SchedulePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the To Use Scheduled Tasks feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addToUseScheduledTasksPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ToUseScheduleResource_ToUseScheduledTasks_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseScheduleResource_ToUseScheduledTasks_feature", "_UI_ToUseScheduleResource_type"),
+				 ToUseSchedulerPackage.Literals.TO_USE_SCHEDULE_RESOURCE__TO_USE_SCHEDULED_TASKS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
 				 null));
 	}
 

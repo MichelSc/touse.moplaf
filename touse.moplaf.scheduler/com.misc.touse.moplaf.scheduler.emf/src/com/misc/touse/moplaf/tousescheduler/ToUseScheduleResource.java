@@ -3,6 +3,7 @@
 package com.misc.touse.moplaf.tousescheduler;
 
 import com.misc.common.moplaf.scheduler.Resource;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,6 +19,7 @@ import com.misc.common.moplaf.scheduler.Resource;
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource#getTotalDistance <em>Total Distance</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource#isVolumeOverload <em>Volume Overload</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource#getPlannedBenefit <em>Planned Benefit</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource#getToUseScheduledTasks <em>To Use Scheduled Tasks</em>}</li>
  * </ul>
  *
  * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getToUseScheduleResource()
@@ -154,5 +156,21 @@ public interface ToUseScheduleResource extends Resource {
 	 * @generated
 	 */
 	void setPlannedBenefit(float value);
+
+	/**
+	 * Returns the value of the '<em><b>To Use Scheduled Tasks</b></em>' reference list.
+	 * The list contents are of type {@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>To Use Scheduled Tasks</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>To Use Scheduled Tasks</em>' reference list.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getToUseScheduleResource_ToUseScheduledTasks()
+	 * @model transient="true" changeable="false" volatile="true" derived="true"
+	 * @generated
+	 */
+	EList<ToUseScheduleTask> getToUseScheduledTasks();
 
 } // ToUseScheduleResource

@@ -19,9 +19,33 @@
     </children>
   </children>
   <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" xmi:id="_85D3EGDTEeiYCvAOz-GWOA" name="Score">
-    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_mJ9dYGDdEeiYCvAOz-GWOA" name="Score" readonly="true">
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_mJ9dYGDdEeiYCvAOz-GWOA" name="Control Score" readonly="true">
       <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_IthLgGDzEeis0fY5Yql_Dg">
         <domainModelEFeature xsi:type="ecore:EReference" href="http://www.misc.com/common/moplaf/localsearch/model/0.1#//Solution/Score"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_3PQWEGG8EeiKZvjITzXk2Q" name="Control Feasible" readonly="true">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_7PGPwGG8EeiKZvjITzXk2Q">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/localsearch/model/0.1#//Score/Feasible"/>
+        <domainModelEReferencePath href="http://www.misc.com/touse/moplaf/scheduler/model/0.1#//ToUseSchedule/ToUseScore"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_AKtOIGG9EeiKZvjITzXk2Q" name="Control Volume Overload" readonly="true">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_DE8KoGG9EeiKZvjITzXk2Q">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/touse/moplaf/scheduler/model/0.1#//ToUseScore/VolumeOverload"/>
+        <domainModelEReferencePath href="http://www.misc.com/touse/moplaf/scheduler/model/0.1#//ToUseSchedule/ToUseScore"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_FomaMGG9EeiKZvjITzXk2Q" name="Control PlannedBenefit" readonly="true">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_IaprEGG9EeiKZvjITzXk2Q">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/touse/moplaf/scheduler/model/0.1#//ToUseScore/PlannedBenefit"/>
+        <domainModelEReferencePath href="http://www.misc.com/touse/moplaf/scheduler/model/0.1#//ToUseSchedule/ToUseScore"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GWFLQGG9EeiKZvjITzXk2Q" name="Control Total Distance" readonly="true">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_NdeEsGG9EeiKZvjITzXk2Q">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/touse/moplaf/scheduler/model/0.1#//ToUseScore/TotalDistance"/>
+        <domainModelEReferencePath href="http://www.misc.com/touse/moplaf/scheduler/model/0.1#//ToUseSchedule/ToUseScore"/>
       </domainModelReference>
     </children>
   </children>

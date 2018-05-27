@@ -41,6 +41,8 @@
     <eOperations name="getResourceVehicle" eType="#//ToUseScheduleResource">
       <eParameters name="vehicle" eType="#//Vehicle"/>
     </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ToUseScore" eType="#//ToUseScore"
+        changeable="false" volatile="true" transient="true" derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ToUseScore" eSuperTypes="../../com.misc.common.moplaf.localsearch.emf/model/localsearch.ecore#//Score">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="TotalDistance" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
@@ -54,6 +56,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="TotalDistance" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="VolumeOverload" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="PlannedBenefit" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ToUseScheduledTasks" upperBound="-1"
+        eType="#//ToUseScheduleTask" changeable="false" volatile="true" transient="true"
+        derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ToUseScheduleTask" eSuperTypes="../../com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//Task">
     <eStructuralFeatures xsi:type="ecore:EReference" name="Shipment" lowerBound="1"

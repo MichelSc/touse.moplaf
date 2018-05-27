@@ -13,6 +13,7 @@ import com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource;
 import com.misc.touse.moplaf.tousescheduler.ToUseScheduler;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerFactory;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
+import com.misc.touse.moplaf.tousescheduler.ToUseScore;
 import com.misc.touse.moplaf.tousescheduler.ToUseUnloadShipment;
 import com.misc.touse.moplaf.tousescheduler.Vehicle;
 import com.misc.touse.moplaf.tousescheduler.util.ToUseSchedulerPropagatorFunctionManager;
@@ -20,11 +21,18 @@ import com.misc.touse.moplaf.tousescheduler.util.ToUseSchedulerPropagatorFunctio
 import java.lang.reflect.InvocationTargetException;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>To Use Schedule</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleImpl#getToUseScore <em>To Use Score</em>}</li>
+ * </ul>
  *
  * @generated
  */
@@ -46,6 +54,24 @@ public class ToUseScheduleImpl extends ScheduleImpl implements ToUseSchedule {
 	@Override
 	protected EClass eStaticClass() {
 		return ToUseSchedulerPackage.Literals.TO_USE_SCHEDULE;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ToUseScore getToUseScore() {
+		ToUseScore toUseScore = basicGetToUseScore();
+		return toUseScore != null && toUseScore.eIsProxy() ? (ToUseScore)eResolveProxy((InternalEObject)toUseScore) : toUseScore;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	public ToUseScore basicGetToUseScore() {
+		return (ToUseScore) this.getScore();
 	}
 
 	/**
@@ -98,6 +124,35 @@ public class ToUseScheduleImpl extends ScheduleImpl implements ToUseSchedule {
                 .findFirst()
                 .orElse(null);
 		return resource;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE__TO_USE_SCORE:
+				if (resolve) return getToUseScore();
+				return basicGetToUseScore();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE__TO_USE_SCORE:
+				return basicGetToUseScore() != null;
+		}
+		return super.eIsSet(featureID);
 	}
 
 	@Override

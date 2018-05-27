@@ -844,13 +844,22 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE__NOT_SCHEDULED_TASKS = SchedulerPackage.SCHEDULE__NOT_SCHEDULED_TASKS;
 
 	/**
+	 * The feature id for the '<em><b>To Use Score</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE__TO_USE_SCORE = SchedulerPackage.SCHEDULE_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>To Use Schedule</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_FEATURE_COUNT = SchedulerPackage.SCHEDULE_FEATURE_COUNT + 0;
+	int TO_USE_SCHEDULE_FEATURE_COUNT = SchedulerPackage.SCHEDULE_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Add Propagator Function</em>' operation.
@@ -1195,13 +1204,22 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE_RESOURCE__PLANNED_BENEFIT = SchedulerPackage.RESOURCE_FEATURE_COUNT + 4;
 
 	/**
+	 * The feature id for the '<em><b>To Use Scheduled Tasks</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_RESOURCE__TO_USE_SCHEDULED_TASKS = SchedulerPackage.RESOURCE_FEATURE_COUNT + 5;
+
+	/**
 	 * The number of structural features of the '<em>To Use Schedule Resource</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_RESOURCE_FEATURE_COUNT = SchedulerPackage.RESOURCE_FEATURE_COUNT + 5;
+	int TO_USE_SCHEDULE_RESOURCE_FEATURE_COUNT = SchedulerPackage.RESOURCE_FEATURE_COUNT + 6;
 
 	/**
 	 * The operation id for the '<em>Add Propagator Function</em>' operation.
@@ -8781,6 +8799,17 @@ public interface ToUseSchedulerPackage extends EPackage {
 	EAttribute getToUseScheduleResource_PlannedBenefit();
 
 	/**
+	 * Returns the meta object for the reference list '{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource#getToUseScheduledTasks <em>To Use Scheduled Tasks</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>To Use Scheduled Tasks</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseScheduleResource#getToUseScheduledTasks()
+	 * @see #getToUseScheduleResource()
+	 * @generated
+	 */
+	EReference getToUseScheduleResource_ToUseScheduledTasks();
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.ScopeScheduleScore <em>Scope Schedule Score</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9199,6 +9228,17 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getToUseSchedule();
+
+	/**
+	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.tousescheduler.ToUseSchedule#getToUseScore <em>To Use Score</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>To Use Score</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedule#getToUseScore()
+	 * @see #getToUseSchedule()
+	 * @generated
+	 */
+	EReference getToUseSchedule_ToUseScore();
 
 	/**
 	 * Returns the meta object for the '{@link com.misc.touse.moplaf.tousescheduler.ToUseSchedule#getTaskLoad(com.misc.touse.moplaf.tousescheduler.Shipment) <em>Get Task Load</em>}' operation.
@@ -9652,6 +9692,14 @@ public interface ToUseSchedulerPackage extends EPackage {
 		EAttribute TO_USE_SCHEDULE_RESOURCE__PLANNED_BENEFIT = eINSTANCE.getToUseScheduleResource_PlannedBenefit();
 
 		/**
+		 * The meta object literal for the '<em><b>To Use Scheduled Tasks</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TO_USE_SCHEDULE_RESOURCE__TO_USE_SCHEDULED_TASKS = eINSTANCE.getToUseScheduleResource_ToUseScheduledTasks();
+
+		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ScopeScheduleScoreImpl <em>Scope Schedule Score</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -10010,6 +10058,14 @@ public interface ToUseSchedulerPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TO_USE_SCHEDULE = eINSTANCE.getToUseSchedule();
+
+		/**
+		 * The meta object literal for the '<em><b>To Use Score</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TO_USE_SCHEDULE__TO_USE_SCORE = eINSTANCE.getToUseSchedule_ToUseScore();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Task Load</b></em>' operation.
