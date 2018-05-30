@@ -17,6 +17,7 @@ import org.eclipse.jface.action.Action;
 import org.eclipse.jface.action.IAction;
 import org.eclipse.jface.action.IMenuManager;
 import org.eclipse.jface.action.MenuManager;
+import org.eclipse.jface.action.Separator;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.swt.SWT;
@@ -88,22 +89,29 @@ public class ToUseSchedulerEditor2 extends GenericEditor {
 	
 	static void populateActions(IMenuManager manager, IWorkbenchPart part, ISelection currentSelection) {
 		MenuManager submenuManager = new MenuManager("ToUseScheduler");
+
+		manager.add(new Separator("tousescheduler"));
 		manager.add(submenuManager);
-		
-		ToUseSchedulerEditor2.populateAction(submenuManager, new InitializeAction(part, currentSelection));
-		ToUseSchedulerEditor2.populateAction(submenuManager, new GarbageCollectAction(part, currentSelection));
-		ToUseSchedulerEditor2.populateAction(submenuManager, new FinalizeAction(part, currentSelection));
+				
 		ToUseSchedulerEditor2.populateAction(submenuManager, new EnableAction(part, currentSelection));
-		ToUseSchedulerEditor2.populateAction(submenuManager, new CloneAction(part, currentSelection));
-		ToUseSchedulerEditor2.populateAction(submenuManager, new RefreshAction(part, currentSelection));
-		ToUseSchedulerEditor2.populateAction(submenuManager, new ResetAction(part, currentSelection));
-		ToUseSchedulerEditor2.populateAction(submenuManager, new AcceptAction(part, currentSelection));
-		ToUseSchedulerEditor2.populateAction(submenuManager, new SelectAction(part, currentSelection));
+
+		ToUseSchedulerEditor2.populateAction(submenuManager, new InitializeAction(part, currentSelection));
 		ToUseSchedulerEditor2.populateAction(submenuManager, new RunAction(part, currentSelection));
 		ToUseSchedulerEditor2.populateAction(submenuManager, new RunBackgroundAction(part, currentSelection));
+		ToUseSchedulerEditor2.populateAction(submenuManager, new FinalizeAction(part, currentSelection));
 		ToUseSchedulerEditor2.populateAction(submenuManager, new DoAction(part, currentSelection));
 		ToUseSchedulerEditor2.populateAction(submenuManager, new UndoAction(part, currentSelection));
+		ToUseSchedulerEditor2.populateAction(submenuManager, new ResetAction(part, currentSelection));
+		
+		ToUseSchedulerEditor2.populateAction(submenuManager, new RefreshAction(part, currentSelection));
+		
+		ToUseSchedulerEditor2.populateAction(submenuManager, new AcceptAction(part, currentSelection));
+		ToUseSchedulerEditor2.populateAction(submenuManager, new SelectAction(part, currentSelection));
+		
+		ToUseSchedulerEditor2.populateAction(submenuManager, new CloneAction(part, currentSelection));
 		ToUseSchedulerEditor2.populateAction(submenuManager, new SortAction(part, currentSelection));
+		
+		ToUseSchedulerEditor2.populateAction(submenuManager, new GarbageCollectAction(part, currentSelection));
 	}
 	static void populateAction(IMenuManager manager,  IAction action) {
 		if ( action.getText()!=null && action.getText().length()>0 ) {

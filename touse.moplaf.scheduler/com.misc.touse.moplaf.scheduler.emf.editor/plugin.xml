@@ -37,7 +37,7 @@
             class="com.misc.touse.moplaf.tousescheduler.presentation.ToUseSchedulerEditor2" 
             name="%_UI_ToUseSchedulerEditor_label2"
             icon="icons/full/obj16/ToUseSchedulerModelFile.gif"
-            extensions="task2"
+            extensions="tousescheduler"
             default="true"
             >
       </editor>
