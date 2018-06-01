@@ -20,11 +20,11 @@
   </children>
   <children xsi:type="org.eclipse.emf.ecp.view.table.model:TableControl" xmi:id="_Zc21kGHCEeiKZvjITzXk2Q" name="Scheduled Tasks" readonly="true" addRemoveDisabled="true">
     <domainModelReference xsi:type="org.eclipse.emf.ecp.view.table.model:TableDomainModelReference" xmi:id="_eaZGkGHCEeiKZvjITzXk2Q">
-      <columnDomainModelReferences xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_sGbYwGHCEeiKZvjITzXk2Q">
-        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/touse/moplaf/scheduler/model/0.1#//ToUseScheduleTask/VolumeOverload"/>
-      </columnDomainModelReferences>
       <columnDomainModelReferences xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_iArQwGHCEeiKZvjITzXk2Q">
         <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/scheduler/model/0.1#//Task/Name"/>
+      </columnDomainModelReferences>
+      <columnDomainModelReferences xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_sGbYwGHCEeiKZvjITzXk2Q">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/touse/moplaf/scheduler/model/0.1#//ToUseScheduleTask/VolumeOverload"/>
       </columnDomainModelReferences>
       <columnDomainModelReferences xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_mHk0sGHCEeiKZvjITzXk2Q">
         <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/touse/moplaf/scheduler/model/0.1#//ToUseScheduleTask/Distance"/>

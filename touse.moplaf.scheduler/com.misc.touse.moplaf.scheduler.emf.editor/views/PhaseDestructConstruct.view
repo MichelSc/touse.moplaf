@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.eclipse.emf.ecp.view.model:View xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.emf.ecp.view.group.model="http://org/eclipse/emf/ecp/view/group/model" xmlns:org.eclipse.emf.ecp.view.model="http://org/eclipse/emf/ecp/view/model/170" xmi:id="_S9E18GW4EeiPlaGuIYvJEA" name="ToUsePhaseDestructConstruct" ecorePath="/com.misc.touse.moplaf.scheduler.emf/model/ToUseScheduler.ecore">
+  <rootEClass href="http://www.misc.com/touse/moplaf/scheduler/model/0.1#//ToUsePhaseDestructConstruct"/>
+  <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" xmi:id="_hvEDkGW4EeiPlaGuIYvJEA" name="Phase">
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_S9lzUGW4EeiPlaGuIYvJEA" name="Control Name">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_S9lzUWW4EeiPlaGuIYvJEA">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/localsearch/model/0.1#//Phase/Name"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_S9lzbGW4EeiPlaGuIYvJEA" name="Control ConstructionChance">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_S9lzbWW4EeiPlaGuIYvJEA">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/touse/moplaf/scheduler/model/0.1#//ToUsePhaseDestructConstruct/ConstructionChance"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_S9lzamW4EeiPlaGuIYvJEA" name="Control DestructionChance">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_S9lza2W4EeiPlaGuIYvJEA">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/touse/moplaf/scheduler/model/0.1#//ToUsePhaseDestructConstruct/DestructionChance"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_S9lzZmW4EeiPlaGuIYvJEA" name="Control SelectBestChance">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_S9lzZ2W4EeiPlaGuIYvJEA">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/localsearch/model/0.1#//Phase/SelectBestChance"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_S9lzaGW4EeiPlaGuIYvJEA" name="Control SelectWorstChance">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_S9lzaWW4EeiPlaGuIYvJEA">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/localsearch/model/0.1#//Phase/SelectWorstChance"/>
+      </domainModelReference>
+    </children>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" xmi:id="_rE2HMGW4EeiPlaGuIYvJEA" name="Run Params">
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_S9lzUmW4EeiPlaGuIYvJEA" name="Control KeepLevel">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_S9lzU2W4EeiPlaGuIYvJEA">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/localsearch/model/0.1#//Phase/KeepLevel"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_S9lzVGW4EeiPlaGuIYvJEA" name="Control MaxSteps">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_S9lzVWW4EeiPlaGuIYvJEA">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/localsearch/model/0.1#//Phase/MaxSteps"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_S9lzVmW4EeiPlaGuIYvJEA" name="Control MaxSeconds">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_S9lzV2W4EeiPlaGuIYvJEA">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/localsearch/model/0.1#//Phase/MaxSeconds"/>
+      </domainModelReference>
+    </children>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" xmi:id="_xKFAEGW4EeiPlaGuIYvJEA" name="Execution">
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_S9lzWGW4EeiPlaGuIYvJEA" name="Control PhaseStart" readonly="true">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_S9lzWWW4EeiPlaGuIYvJEA">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/localsearch/model/0.1#//Phase/PhaseStart"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_S9lzWmW4EeiPlaGuIYvJEA" name="Control PhaseEnd" readonly="true">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_S9lzW2W4EeiPlaGuIYvJEA">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/localsearch/model/0.1#//Phase/PhaseEnd"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_S9lzXGW4EeiPlaGuIYvJEA" name="Control NrSteps" readonly="true">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_S9lzXWW4EeiPlaGuIYvJEA">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/localsearch/model/0.1#//Phase/NrSteps"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_S9lzYGW4EeiPlaGuIYvJEA" name="Control DurationAverage" readonly="true">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_S9lzYWW4EeiPlaGuIYvJEA">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/localsearch/model/0.1#//Phase/DurationAverage"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_S9lzXmW4EeiPlaGuIYvJEA" name="Control DurationTotal" readonly="true">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_S9lzX2W4EeiPlaGuIYvJEA">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/localsearch/model/0.1#//Phase/DurationTotal"/>
+      </domainModelReference>
+    </children>
+  </children>
+</org.eclipse.emf.ecp.view.model:View>

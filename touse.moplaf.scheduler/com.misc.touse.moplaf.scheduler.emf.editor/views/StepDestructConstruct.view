@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.eclipse.emf.ecp.view.model:View xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.emf.ecp.view.group.model="http://org/eclipse/emf/ecp/view/group/model" xmlns:org.eclipse.emf.ecp.view.model="http://org/eclipse/emf/ecp/view/model/170" xmi:id="_H3M4QGW5EeiPlaGuIYvJEA" name="Search Params" ecorePath="/com.misc.touse.moplaf.scheduler.emf/model/ToUseScheduler.ecore">
+  <rootEClass href="http://www.misc.com/touse/moplaf/scheduler/model/0.1#//ToUseStepDestructConstruct"/>
+  <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" xmi:id="_QPoi0GW5EeiPlaGuIYvJEA" name="Enabled">
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_H3PUjmW5EeiPlaGuIYvJEA" name="Control ValidFeedback" readonly="true">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_H3PUj2W5EeiPlaGuIYvJEA">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/localsearch/model/0.1#//Step/ValidFeedback"/>
+      </domainModelReference>
+    </children>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" xmi:id="_szmSkGW5EeiPlaGuIYvJEA" name="Step">
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_H3PUjGW5EeiPlaGuIYvJEA" name="Control Step">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_H3PUjWW5EeiPlaGuIYvJEA">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/localsearch/model/0.1#//Step/Step"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_H3PUkGW5EeiPlaGuIYvJEA" name="Control Description" readonly="true">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_H3PUkWW5EeiPlaGuIYvJEA">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/localsearch/model/0.1#//Step/Description"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_H3PUiGW5EeiPlaGuIYvJEA" name="Control StepNr">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_H3PUiWW5EeiPlaGuIYvJEA">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/localsearch/model/0.1#//Step/StepNr"/>
+      </domainModelReference>
+    </children>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" xmi:id="_nT690GW5EeiPlaGuIYvJEA" name="Search Params">
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_H3PUlGW5EeiPlaGuIYvJEA" name="Control ConstructionChance">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_H3PUlWW5EeiPlaGuIYvJEA">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/touse/moplaf/scheduler/model/0.1#//ToUseStepDestructConstruct/ConstructionChance"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_H3PUkmW5EeiPlaGuIYvJEA" name="Control DestructionChance">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_H3PUk2W5EeiPlaGuIYvJEA">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/touse/moplaf/scheduler/model/0.1#//ToUseStepDestructConstruct/DestructionChance"/>
+      </domainModelReference>
+    </children>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" xmi:id="_3nujgGW5EeiPlaGuIYvJEA" name="Solution Change">
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_3nujgWW5EeiPlaGuIYvJEA" name="Control KeepSolutions" readonly="true">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_3nujgmW5EeiPlaGuIYvJEA">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/localsearch/model/0.1#//SolutionChange/KeepSolutions"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_3nujg2W5EeiPlaGuIYvJEA" name="Control Level" readonly="true">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_3nujhGW5EeiPlaGuIYvJEA">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/localsearch/model/0.1#//SolutionChange/Level"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_3nujhWW5EeiPlaGuIYvJEA" name="Control NewSolution" readonly="true">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_3nujhmW5EeiPlaGuIYvJEA">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.misc.com/common/moplaf/localsearch/model/0.1#//SolutionChange/NewSolution"/>
+      </domainModelReference>
+    </children>
+  </children>
+</org.eclipse.emf.ecp.view.model:View>
