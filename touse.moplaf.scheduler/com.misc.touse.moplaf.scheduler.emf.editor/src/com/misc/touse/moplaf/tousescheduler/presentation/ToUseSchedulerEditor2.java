@@ -88,10 +88,11 @@ public class ToUseSchedulerEditor2 extends GenericEditor {
 		}
 	
 	static void populateActions(IMenuManager manager, IWorkbenchPart part, ISelection currentSelection) {
-		MenuManager submenuManager = new MenuManager("ToUseScheduler");
+		//MenuManager submenuManager = new MenuManager("ToUseScheduler");
+		IMenuManager submenuManager = manager;
 
 		manager.add(new Separator("tousescheduler"));
-		manager.add(submenuManager);
+		//manager.add(submenuManager);
 				
 		ToUseSchedulerEditor2.populateAction(submenuManager, new EnableAction(part, currentSelection));
 
