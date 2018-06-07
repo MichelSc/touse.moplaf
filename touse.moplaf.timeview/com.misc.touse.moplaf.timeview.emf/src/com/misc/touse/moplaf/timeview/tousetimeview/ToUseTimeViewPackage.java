@@ -4,6 +4,7 @@ package com.misc.touse.moplaf.timeview.tousetimeview;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -287,13 +288,40 @@ public interface ToUseTimeViewPackage extends EPackage {
 	int NODE_FEATURE_COUNT = 5;
 
 	/**
+	 * The operation id for the '<em>Do Test</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE___DO_TEST = 0;
+
+	/**
+	 * The operation id for the '<em>Do Drag And Drop</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE___DO_DRAG_AND_DROP__NODE = 1;
+
+	/**
+	 * The operation id for the '<em>Do Drag And Drop</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE___DO_DRAG_AND_DROP__ELIST = 2;
+
+	/**
 	 * The number of operations of the '<em>Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_OPERATION_COUNT = 0;
+	int NODE_OPERATION_COUNT = 3;
 
 	/**
 	 * The feature id for the '<em><b>Sub Objects</b></em>' containment reference list.
@@ -568,6 +596,36 @@ public interface ToUseTimeViewPackage extends EPackage {
 	EAttribute getNode_End();
 
 	/**
+	 * Returns the meta object for the '{@link com.misc.touse.moplaf.timeview.tousetimeview.Node#doTest() <em>Do Test</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Do Test</em>' operation.
+	 * @see com.misc.touse.moplaf.timeview.tousetimeview.Node#doTest()
+	 * @generated
+	 */
+	EOperation getNode__DoTest();
+
+	/**
+	 * Returns the meta object for the '{@link com.misc.touse.moplaf.timeview.tousetimeview.Node#doDragAndDrop(com.misc.touse.moplaf.timeview.tousetimeview.Node) <em>Do Drag And Drop</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Do Drag And Drop</em>' operation.
+	 * @see com.misc.touse.moplaf.timeview.tousetimeview.Node#doDragAndDrop(com.misc.touse.moplaf.timeview.tousetimeview.Node)
+	 * @generated
+	 */
+	EOperation getNode__DoDragAndDrop__Node();
+
+	/**
+	 * Returns the meta object for the '{@link com.misc.touse.moplaf.timeview.tousetimeview.Node#doDragAndDrop(org.eclipse.emf.common.util.EList) <em>Do Drag And Drop</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Do Drag And Drop</em>' operation.
+	 * @see com.misc.touse.moplaf.timeview.tousetimeview.Node#doDragAndDrop(org.eclipse.emf.common.util.EList)
+	 * @generated
+	 */
+	EOperation getNode__DoDragAndDrop__EList();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -767,6 +825,30 @@ public interface ToUseTimeViewPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute NODE__END = eINSTANCE.getNode_End();
+
+		/**
+		 * The meta object literal for the '<em><b>Do Test</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation NODE___DO_TEST = eINSTANCE.getNode__DoTest();
+
+		/**
+		 * The meta object literal for the '<em><b>Do Drag And Drop</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation NODE___DO_DRAG_AND_DROP__NODE = eINSTANCE.getNode__DoDragAndDrop__Node();
+
+		/**
+		 * The meta object literal for the '<em><b>Do Drag And Drop</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation NODE___DO_DRAG_AND_DROP__ELIST = eINSTANCE.getNode__DoDragAndDrop__EList();
 
 	}
 

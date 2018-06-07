@@ -4,6 +4,7 @@ package com.misc.touse.moplaf.timeview.tousetimeview;
 
 import java.util.Date;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -156,5 +157,29 @@ public interface Node extends EObject {
 	 * @generated
 	 */
 	void setEnd(Date value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void doTest();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void doDragAndDrop(Node droppedObject);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model droppedObjectsMany="true"
+	 * @generated
+	 */
+	void doDragAndDrop(EList<Node> droppedObjects);
 
 } // Node

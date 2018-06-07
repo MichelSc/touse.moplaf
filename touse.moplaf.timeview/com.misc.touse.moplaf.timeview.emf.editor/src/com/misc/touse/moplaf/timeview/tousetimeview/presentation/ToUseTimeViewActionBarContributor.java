@@ -45,6 +45,9 @@ import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.dialogs.PreferencesUtil;
 
+import com.misc.common.moplaf.emf.editor.Util;
+import com.misc.common.moplaf.emf.editor.action.TestAction;
+
 /**
  * This is the action bar contributor for the ToUseTimeView model editor.
  * <!-- begin-user-doc -->
@@ -204,6 +207,21 @@ public class ToUseTimeViewActionBarContributor
 	protected IMenuManager createSiblingMenuManager;
 
 	/**
+	 * This will contain one {@link org.eclipse.emf.edit.ui.action.ApplicationPopUpMenuAction} 
+	 * generated for the current selection by the item provider.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	protected Collection<IAction> applicationPopUpMenuActions;
+
+	/**
+	 * This is the menu manager into which menu contribution items should be added for G4SOptiPost actions.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	protected IMenuManager applicationPopUpMenuManager;
+
+	/**
 	 * This creates an instance of the contributor.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -233,7 +251,6 @@ public class ToUseTimeViewActionBarContributor
 	 * as well as the sub-menus for object creation items.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	@Override
 	public void contributeToMenu(IMenuManager menuManager) {
@@ -260,6 +277,13 @@ public class ToUseTimeViewActionBarContributor
 		//
 		createSiblingMenuManager = new MenuManager(ToUseTimeViewEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
 		submenuManager.insertBefore("additions", createSiblingMenuManager);
+
+		// Prepare for ToUseSpreadsheet item addition or removal.
+		//
+		applicationPopUpMenuManager = new MenuManager("ToUseTimeView");
+		submenuManager.insertBefore("additions", applicationPopUpMenuManager);
+		
+		submenuManager.insertBefore("additions", new Separator("generic part"));
 
 		// Force an update because Eclipse hides empty menus now.
 		//
@@ -310,7 +334,6 @@ public class ToUseTimeViewActionBarContributor
 	 * that can be added to the selected object and updating the menus accordingly.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	public void selectionChanged(SelectionChangedEvent event) {
 		// Remove any menu items for old selection.
@@ -320,6 +343,9 @@ public class ToUseTimeViewActionBarContributor
 		}
 		if (createSiblingMenuManager != null) {
 			depopulateManager(createSiblingMenuManager, createSiblingActions);
+		}
+		if (applicationPopUpMenuManager != null) {
+			depopulateManager(applicationPopUpMenuManager, applicationPopUpMenuActions);
 		}
 
 		// Query the new selection for appropriate new child/sibling descriptors
@@ -342,6 +368,9 @@ public class ToUseTimeViewActionBarContributor
 		createChildActions = generateCreateChildActions(newChildDescriptors, selection);
 		createSiblingActions = generateCreateSiblingActions(newSiblingDescriptors, selection);
 
+		applicationPopUpMenuActions = new ArrayList<IAction>();
+		applicationPopUpMenuActions.add(new TestAction         (activeEditorPart, selection));
+
 		if (createChildMenuManager != null) {
 			populateManager(createChildMenuManager, createChildActions, null);
 			createChildMenuManager.update(true);
@@ -349,6 +378,10 @@ public class ToUseTimeViewActionBarContributor
 		if (createSiblingMenuManager != null) {
 			populateManager(createSiblingMenuManager, createSiblingActions, null);
 			createSiblingMenuManager.update(true);
+		}
+		if (applicationPopUpMenuManager!= null) {
+			Util.populateManager(applicationPopUpMenuManager, applicationPopUpMenuActions, null);
+			applicationPopUpMenuManager.update(true);
 		}
 	}
 
@@ -442,7 +475,6 @@ public class ToUseTimeViewActionBarContributor
 	 * This populates the pop-up menu before it appears.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	@Override
 	public void menuAboutToShow(IMenuManager menuManager) {
@@ -456,7 +488,11 @@ public class ToUseTimeViewActionBarContributor
 		submenuManager = new MenuManager(ToUseTimeViewEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
 		populateManager(submenuManager, createSiblingActions, null);
 		menuManager.insertBefore("edit", submenuManager);
-	}
+
+		submenuManager = new MenuManager("ToUseTimeView");
+		Util.populateManager(submenuManager, applicationPopUpMenuActions, null);
+		menuManager.insertBefore("edit", submenuManager);
+}
 
 	/**
 	 * This inserts global actions before the "additions-end" separator.

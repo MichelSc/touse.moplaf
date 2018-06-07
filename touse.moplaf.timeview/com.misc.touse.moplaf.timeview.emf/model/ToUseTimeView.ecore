@@ -21,6 +21,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Background" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Node">
+    <eOperations name="doTest"/>
+    <eOperations name="doDragAndDrop">
+      <eParameters name="droppedObjects" upperBound="-1" eType="#//Node"/>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Foreground" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Background" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>

@@ -4,16 +4,22 @@ package com.misc.touse.moplaf.timeview.tousetimeview.provider;
 
 
 
+import com.misc.common.moplaf.emf.edit.command.BaseCommand;
+import com.misc.common.moplaf.emf.edit.command.TestCommand;
 import com.misc.touse.moplaf.timeview.tousetimeview.Node;
 import com.misc.touse.moplaf.timeview.tousetimeview.ToUseTimeViewPackage;
 import java.util.Collection;
 import java.util.List;
 
+import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
+import org.eclipse.emf.common.util.BasicEList;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.ResourceLocator;
-
+import org.eclipse.emf.edit.command.CommandParameter;
+import org.eclipse.emf.edit.command.DragAndDropCommand;
+import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -245,6 +251,108 @@ public class NodeItemProvider
 	@Override
 	public ResourceLocator getResourceLocator() {
 		return ToUseTimeViewEditPlugin.INSTANCE;
+	}
+
+	/*
+	 * NodeDragAndDropCommandMulti
+	 */
+	public class NodeDragAndDropCommandMulti extends BaseCommand{
+		private Node target;
+		private EList<Node> source;
+		
+		// constructor
+		public NodeDragAndDropCommandMulti(Node aTarget, EList<Node> aSource)	{
+			super("doDragAndDrop", "doDragAndDrop");
+			this.target = aTarget;
+			this.source = aSource;
+		}
+
+		@Override
+		protected boolean prepare(){
+			boolean isExecutable = true;
+			return isExecutable;
+		}
+
+		@Override
+		public void execute() {
+			this.target.doDragAndDrop(this.source);
+		}
+	} // class NodeDragAndDropCommandMulti
+	
+	/*
+	 * NodeTestCommand
+	 */
+	public class NodeTestCommand extends TestCommand{
+		private Node node;
+		
+		// constructor
+		public NodeTestCommand(Node aNode)	{
+			this.node = aNode;
+		}
+
+		@Override
+		protected boolean prepare(){
+			boolean isExecutable = true;
+			return isExecutable;
+		}
+
+		@Override
+		public void execute() {
+			this.node.doTest();
+		}
+	} // class NodeTestCommand
+	
+	/**
+	 * 
+	 */
+	@Override
+	public Command createCommand(Object object, EditingDomain domain,
+			Class<? extends Command> commandClass,
+			CommandParameter commandParameter) {
+		if ( commandClass == TestCommand.class){
+			return new NodeTestCommand((Node) object); 
+		}
+		return super.createCommand(object, domain, commandClass, commandParameter);
+	} //method createCommand
+
+	
+	/**
+	 * Create a drag and drop command for this Run
+	 */
+	private class NodeDragAndDropCommand extends DragAndDropCommand {
+
+		public NodeDragAndDropCommand(EditingDomain domain, Object owner, float location, int operations,
+				int operation, Collection<?> collection) {
+			super(domain, owner, location, operations, operation, collection);
+		}
+	   	
+	    /**
+	     * This implementation of prepare is called again to implement {@link #validate validate}.
+	     * The method {@link #reset} will have been called before doing so.
+	     */
+	    @Override
+	    protected boolean prepare(){
+	    	Node target = (Node) owner;
+	    	BasicEList<Node> droppedNodes = new BasicEList<Node>();
+			for (Object element : collection){
+				if ( element instanceof Node ) {
+					droppedNodes.add((Node)element);
+				}
+			}
+	    	this.dragCommand = null;
+			this.dropCommand = new NodeDragAndDropCommandMulti(target, droppedNodes);
+	    	return true;
+	    } // prepare
+	};
+	
+
+	/**
+	 * Create a command for a drag and drop on this Node
+	 */
+	@Override
+	protected Command createDragAndDropCommand(EditingDomain domain, Object owner, float location, int operations,
+			int operation, Collection<?> collection) {
+		return new NodeDragAndDropCommand(domain, owner, location, operations, operation, collection);
 	}
 
 }

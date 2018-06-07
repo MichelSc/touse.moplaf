@@ -2,12 +2,16 @@
  */
 package com.misc.touse.moplaf.timeview.tousetimeview.impl;
 
+import com.misc.common.moplaf.common.Plugin;
 import com.misc.touse.moplaf.timeview.tousetimeview.Node;
 import com.misc.touse.moplaf.timeview.tousetimeview.ToUseTimeViewPackage;
+import java.lang.reflect.InvocationTargetException;
 import java.util.Date;
+import java.util.stream.Collectors;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -258,6 +262,31 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 */
+	public void doTest() {
+		Plugin.INSTANCE.logInfo(String.format("Node.doTest called, target=%s", this.getText()));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	public void doDragAndDrop(Node droppedObject) {
+		Plugin.INSTANCE.logInfo(String.format("Node.doDragAndDrop called, target=%s, source=%s", this.getText(), droppedObject.getText()));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	public void doDragAndDrop(EList<Node> droppedObjects) {
+		String source = droppedObjects.stream().map(o -> o.getText()).collect(Collectors.joining(", "));
+		Plugin.INSTANCE.logInfo(String.format("Node.doDragAndDrop called, target=%s, source=%s", this.getText(), source));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -351,6 +380,28 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 				return END_EDEFAULT == null ? end != null : !END_EDEFAULT.equals(end);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	@SuppressWarnings("unchecked")
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case ToUseTimeViewPackage.NODE___DO_TEST:
+				doTest();
+				return null;
+			case ToUseTimeViewPackage.NODE___DO_DRAG_AND_DROP__NODE:
+				doDragAndDrop((Node)arguments.get(0));
+				return null;
+			case ToUseTimeViewPackage.NODE___DO_DRAG_AND_DROP__ELIST:
+				doDragAndDrop((EList<Node>)arguments.get(0));
+				return null;
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

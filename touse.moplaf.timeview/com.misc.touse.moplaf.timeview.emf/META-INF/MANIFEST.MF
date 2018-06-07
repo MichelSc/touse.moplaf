@@ -11,5 +11,6 @@ Export-Package: com.misc.touse.moplaf.timeview.tousetimeview,
  com.misc.touse.moplaf.timeview.tousetimeview.impl,
  com.misc.touse.moplaf.timeview.tousetimeview.util
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.emf.ecore;visibility:=reexport
+ org.eclipse.emf.ecore;visibility:=reexport,
+ com.misc.common.moplaf.emf;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy

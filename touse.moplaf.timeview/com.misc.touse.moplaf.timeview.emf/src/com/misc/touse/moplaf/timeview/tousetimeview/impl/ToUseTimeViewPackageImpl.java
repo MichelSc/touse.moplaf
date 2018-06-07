@@ -11,6 +11,7 @@ import com.misc.touse.moplaf.timeview.tousetimeview.ToUseTimeViewPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -313,6 +314,33 @@ public class ToUseTimeViewPackageImpl extends EPackageImpl implements ToUseTimeV
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getNode__DoTest() {
+		return nodeEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getNode__DoDragAndDrop__Node() {
+		return nodeEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getNode__DoDragAndDrop__EList() {
+		return nodeEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ToUseTimeViewFactory getToUseTimeViewFactory() {
 		return (ToUseTimeViewFactory)getEFactoryInstance();
 	}
@@ -356,6 +384,9 @@ public class ToUseTimeViewPackageImpl extends EPackageImpl implements ToUseTimeV
 		createEAttribute(nodeEClass, NODE__BACKGROUND);
 		createEAttribute(nodeEClass, NODE__START);
 		createEAttribute(nodeEClass, NODE__END);
+		createEOperation(nodeEClass, NODE___DO_TEST);
+		createEOperation(nodeEClass, NODE___DO_DRAG_AND_DROP__NODE);
+		createEOperation(nodeEClass, NODE___DO_DRAG_AND_DROP__ELIST);
 
 		objectEClass = createEClass(OBJECT);
 		createEReference(objectEClass, OBJECT__SUB_OBJECTS);
@@ -413,6 +444,14 @@ public class ToUseTimeViewPackageImpl extends EPackageImpl implements ToUseTimeV
 		initEAttribute(getNode_Background(), ecorePackage.getEInt(), "Background", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNode_Start(), ecorePackage.getEDate(), "Start", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNode_End(), ecorePackage.getEDate(), "End", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getNode__DoTest(), null, "doTest", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		EOperation op = initEOperation(getNode__DoDragAndDrop__Node(), null, "doDragAndDrop", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getNode(), "droppedObject", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getNode__DoDragAndDrop__EList(), null, "doDragAndDrop", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getNode(), "droppedObjects", 0, -1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(objectEClass, com.misc.touse.moplaf.timeview.tousetimeview.Object.class, "Object", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getObject_SubObjects(), this.getObject(), null, "SubObjects", null, 0, -1, com.misc.touse.moplaf.timeview.tousetimeview.Object.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
