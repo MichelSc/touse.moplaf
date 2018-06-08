@@ -358,7 +358,7 @@ public final class TousejobEditorAdvisor extends WorkbenchAdvisor {
 		 */
 		public void run(IAction action) {
 			String aboutTitle = "Moplaf ToUse Job Application";
-			String aboutText = "Version 0.4, 20180606, Ordina 2018, https://www.ordina.be/ \n\n"
+			String aboutText = "Version 0.5, 20180608, Ordina 2018, https://www.ordina.be/ \n\n"
 			         + "Built on Moplaf version 1.1, https://rawgit.com/MichelSc/common.moplaf/master/moplaf/moplaf.html \n\n"
 			         + "Using eclipse Oxygen version 4.7.3, https://eclipse.org \n\n"
                      ;
