@@ -271,14 +271,6 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 */
-	public void doDragAndDrop(Node droppedObject) {
-		Plugin.INSTANCE.logInfo(String.format("Node.doDragAndDrop called, target=%s, source=%s", this.getText(), droppedObject.getText()));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 */
 	public void doDragAndDrop(EList<Node> droppedObjects) {
 		String source = droppedObjects.stream().map(o -> o.getText()).collect(Collectors.joining(", "));
 		Plugin.INSTANCE.logInfo(String.format("Node.doDragAndDrop called, target=%s, source=%s", this.getText(), source));
@@ -393,9 +385,6 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 		switch (operationID) {
 			case ToUseTimeViewPackage.NODE___DO_TEST:
 				doTest();
-				return null;
-			case ToUseTimeViewPackage.NODE___DO_DRAG_AND_DROP__NODE:
-				doDragAndDrop((Node)arguments.get(0));
 				return null;
 			case ToUseTimeViewPackage.NODE___DO_DRAG_AND_DROP__ELIST:
 				doDragAndDrop((EList<Node>)arguments.get(0));

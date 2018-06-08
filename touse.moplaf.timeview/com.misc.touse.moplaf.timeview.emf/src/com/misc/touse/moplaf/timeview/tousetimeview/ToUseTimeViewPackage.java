@@ -303,16 +303,7 @@ public interface ToUseTimeViewPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE___DO_DRAG_AND_DROP__NODE = 1;
-
-	/**
-	 * The operation id for the '<em>Do Drag And Drop</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE___DO_DRAG_AND_DROP__ELIST = 2;
+	int NODE___DO_DRAG_AND_DROP__ELIST = 1;
 
 	/**
 	 * The number of operations of the '<em>Node</em>' class.
@@ -321,7 +312,7 @@ public interface ToUseTimeViewPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_OPERATION_COUNT = 3;
+	int NODE_OPERATION_COUNT = 2;
 
 	/**
 	 * The feature id for the '<em><b>Sub Objects</b></em>' containment reference list.
@@ -606,16 +597,6 @@ public interface ToUseTimeViewPackage extends EPackage {
 	EOperation getNode__DoTest();
 
 	/**
-	 * Returns the meta object for the '{@link com.misc.touse.moplaf.timeview.tousetimeview.Node#doDragAndDrop(com.misc.touse.moplaf.timeview.tousetimeview.Node) <em>Do Drag And Drop</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Do Drag And Drop</em>' operation.
-	 * @see com.misc.touse.moplaf.timeview.tousetimeview.Node#doDragAndDrop(com.misc.touse.moplaf.timeview.tousetimeview.Node)
-	 * @generated
-	 */
-	EOperation getNode__DoDragAndDrop__Node();
-
-	/**
 	 * Returns the meta object for the '{@link com.misc.touse.moplaf.timeview.tousetimeview.Node#doDragAndDrop(org.eclipse.emf.common.util.EList) <em>Do Drag And Drop</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -833,14 +814,6 @@ public interface ToUseTimeViewPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation NODE___DO_TEST = eINSTANCE.getNode__DoTest();
-
-		/**
-		 * The meta object literal for the '<em><b>Do Drag And Drop</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation NODE___DO_DRAG_AND_DROP__NODE = eINSTANCE.getNode__DoDragAndDrop__Node();
 
 		/**
 		 * The meta object literal for the '<em><b>Do Drag And Drop</b></em>' operation.

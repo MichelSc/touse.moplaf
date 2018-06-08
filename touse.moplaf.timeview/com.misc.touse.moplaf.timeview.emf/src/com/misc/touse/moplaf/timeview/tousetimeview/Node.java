@@ -169,14 +169,6 @@ public interface Node extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void doDragAndDrop(Node droppedObject);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @model droppedObjectsMany="true"
 	 * @generated
 	 */
