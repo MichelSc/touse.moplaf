@@ -844,6 +844,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE__NOT_SCHEDULED_TASKS = SchedulerPackage.SCHEDULE__NOT_SCHEDULED_TASKS;
 
 	/**
+	 * The feature id for the '<em><b>Flocks</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE__FLOCKS = SchedulerPackage.SCHEDULE__FLOCKS;
+
+	/**
 	 * The feature id for the '<em><b>To Use Score</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1264,7 +1273,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_TASK__PROPAGATOR_FUNCTIONS = SchedulerPackage.TASK__PROPAGATOR_FUNCTIONS;
+	int TO_USE_SCHEDULE_TASK__PROPAGATOR_FUNCTIONS = SchedulerPackage.FLOCK_TASK__PROPAGATOR_FUNCTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Schedule</b></em>' container reference.
@@ -1273,7 +1282,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_TASK__SCHEDULE = SchedulerPackage.TASK__SCHEDULE;
+	int TO_USE_SCHEDULE_TASK__SCHEDULE = SchedulerPackage.FLOCK_TASK__SCHEDULE;
 
 	/**
 	 * The feature id for the '<em><b>Next Task</b></em>' reference.
@@ -1282,7 +1291,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_TASK__NEXT_TASK = SchedulerPackage.TASK__NEXT_TASK;
+	int TO_USE_SCHEDULE_TASK__NEXT_TASK = SchedulerPackage.FLOCK_TASK__NEXT_TASK;
 
 	/**
 	 * The feature id for the '<em><b>Previous Task</b></em>' reference.
@@ -1291,7 +1300,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_TASK__PREVIOUS_TASK = SchedulerPackage.TASK__PREVIOUS_TASK;
+	int TO_USE_SCHEDULE_TASK__PREVIOUS_TASK = SchedulerPackage.FLOCK_TASK__PREVIOUS_TASK;
 
 	/**
 	 * The feature id for the '<em><b>Scheduled Resource</b></em>' reference.
@@ -1300,7 +1309,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_TASK__SCHEDULED_RESOURCE = SchedulerPackage.TASK__SCHEDULED_RESOURCE;
+	int TO_USE_SCHEDULE_TASK__SCHEDULED_RESOURCE = SchedulerPackage.FLOCK_TASK__SCHEDULED_RESOURCE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1309,7 +1318,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_TASK__NAME = SchedulerPackage.TASK__NAME;
+	int TO_USE_SCHEDULE_TASK__NAME = SchedulerPackage.FLOCK_TASK__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1318,7 +1327,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_TASK__DESCRIPTION = SchedulerPackage.TASK__DESCRIPTION;
+	int TO_USE_SCHEDULE_TASK__DESCRIPTION = SchedulerPackage.FLOCK_TASK__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Scheduled</b></em>' attribute.
@@ -1327,7 +1336,34 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_TASK__SCHEDULED = SchedulerPackage.TASK__SCHEDULED;
+	int TO_USE_SCHEDULE_TASK__SCHEDULED = SchedulerPackage.FLOCK_TASK__SCHEDULED;
+
+	/**
+	 * The feature id for the '<em><b>Predecessors</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_TASK__PREDECESSORS = SchedulerPackage.FLOCK_TASK__PREDECESSORS;
+
+	/**
+	 * The feature id for the '<em><b>Successors</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_TASK__SUCCESSORS = SchedulerPackage.FLOCK_TASK__SUCCESSORS;
+
+	/**
+	 * The feature id for the '<em><b>Resource</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_TASK__RESOURCE = SchedulerPackage.FLOCK_TASK__RESOURCE;
 
 	/**
 	 * The feature id for the '<em><b>Shipment</b></em>' reference.
@@ -1336,7 +1372,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_TASK__SHIPMENT = SchedulerPackage.TASK_FEATURE_COUNT + 0;
+	int TO_USE_SCHEDULE_TASK__SHIPMENT = SchedulerPackage.FLOCK_TASK_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Location X</b></em>' attribute.
@@ -1345,7 +1381,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_TASK__LOCATION_X = SchedulerPackage.TASK_FEATURE_COUNT + 1;
+	int TO_USE_SCHEDULE_TASK__LOCATION_X = SchedulerPackage.FLOCK_TASK_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Location Y</b></em>' attribute.
@@ -1354,7 +1390,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_TASK__LOCATION_Y = SchedulerPackage.TASK_FEATURE_COUNT + 2;
+	int TO_USE_SCHEDULE_TASK__LOCATION_Y = SchedulerPackage.FLOCK_TASK_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Load Factor</b></em>' attribute.
@@ -1363,7 +1399,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_TASK__LOAD_FACTOR = SchedulerPackage.TASK_FEATURE_COUNT + 3;
+	int TO_USE_SCHEDULE_TASK__LOAD_FACTOR = SchedulerPackage.FLOCK_TASK_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Distance</b></em>' attribute.
@@ -1372,7 +1408,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_TASK__DISTANCE = SchedulerPackage.TASK_FEATURE_COUNT + 4;
+	int TO_USE_SCHEDULE_TASK__DISTANCE = SchedulerPackage.FLOCK_TASK_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Distance From Previous</b></em>' attribute.
@@ -1381,7 +1417,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_TASK__DISTANCE_FROM_PREVIOUS = SchedulerPackage.TASK_FEATURE_COUNT + 5;
+	int TO_USE_SCHEDULE_TASK__DISTANCE_FROM_PREVIOUS = SchedulerPackage.FLOCK_TASK_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Start Volume Loaded</b></em>' attribute.
@@ -1390,7 +1426,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_TASK__START_VOLUME_LOADED = SchedulerPackage.TASK_FEATURE_COUNT + 6;
+	int TO_USE_SCHEDULE_TASK__START_VOLUME_LOADED = SchedulerPackage.FLOCK_TASK_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>End Volume Loaded</b></em>' attribute.
@@ -1399,7 +1435,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_TASK__END_VOLUME_LOADED = SchedulerPackage.TASK_FEATURE_COUNT + 7;
+	int TO_USE_SCHEDULE_TASK__END_VOLUME_LOADED = SchedulerPackage.FLOCK_TASK_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Volume Overload</b></em>' attribute.
@@ -1408,7 +1444,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_TASK__VOLUME_OVERLOAD = SchedulerPackage.TASK_FEATURE_COUNT + 8;
+	int TO_USE_SCHEDULE_TASK__VOLUME_OVERLOAD = SchedulerPackage.FLOCK_TASK_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of structural features of the '<em>To Use Schedule Task</em>' class.
@@ -1417,7 +1453,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_TASK_FEATURE_COUNT = SchedulerPackage.TASK_FEATURE_COUNT + 9;
+	int TO_USE_SCHEDULE_TASK_FEATURE_COUNT = SchedulerPackage.FLOCK_TASK_FEATURE_COUNT + 9;
 
 	/**
 	 * The operation id for the '<em>Add Propagator Function</em>' operation.
@@ -1426,7 +1462,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_TASK___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION = SchedulerPackage.TASK___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION;
+	int TO_USE_SCHEDULE_TASK___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION = SchedulerPackage.FLOCK_TASK___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION;
 
 	/**
 	 * The operation id for the '<em>Get Propagator Function</em>' operation.
@@ -1435,7 +1471,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_TASK___GET_PROPAGATOR_FUNCTION__ECLASS = SchedulerPackage.TASK___GET_PROPAGATOR_FUNCTION__ECLASS;
+	int TO_USE_SCHEDULE_TASK___GET_PROPAGATOR_FUNCTION__ECLASS = SchedulerPackage.FLOCK_TASK___GET_PROPAGATOR_FUNCTION__ECLASS;
 
 	/**
 	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
@@ -1444,7 +1480,16 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_TASK___ADD_PROPAGATOR_FUNCTIONS__STRING = SchedulerPackage.TASK___ADD_PROPAGATOR_FUNCTIONS__STRING;
+	int TO_USE_SCHEDULE_TASK___ADD_PROPAGATOR_FUNCTIONS__STRING = SchedulerPackage.FLOCK_TASK___ADD_PROPAGATOR_FUNCTIONS__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Congruent Tasks</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE_TASK___GET_CONGRUENT_TASKS = SchedulerPackage.FLOCK_TASK___GET_CONGRUENT_TASKS;
 
 	/**
 	 * The number of operations of the '<em>To Use Schedule Task</em>' class.
@@ -1453,7 +1498,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SCHEDULE_TASK_OPERATION_COUNT = SchedulerPackage.TASK_OPERATION_COUNT + 0;
+	int TO_USE_SCHEDULE_TASK_OPERATION_COUNT = SchedulerPackage.FLOCK_TASK_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseScheduleLoadUnloadImpl <em>To Use Schedule Load Unload</em>}' class.
@@ -1548,6 +1593,33 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_LOAD_SHIPMENT__SCHEDULED = TO_USE_SCHEDULE_TASK__SCHEDULED;
 
 	/**
+	 * The feature id for the '<em><b>Predecessors</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT__PREDECESSORS = TO_USE_SCHEDULE_TASK__PREDECESSORS;
+
+	/**
+	 * The feature id for the '<em><b>Successors</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT__SUCCESSORS = TO_USE_SCHEDULE_TASK__SUCCESSORS;
+
+	/**
+	 * The feature id for the '<em><b>Resource</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT__RESOURCE = TO_USE_SCHEDULE_TASK__RESOURCE;
+
+	/**
 	 * The feature id for the '<em><b>Shipment</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1629,22 +1701,13 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_LOAD_SHIPMENT__VOLUME_OVERLOAD = TO_USE_SCHEDULE_TASK__VOLUME_OVERLOAD;
 
 	/**
-	 * The feature id for the '<em><b>Shipment Loaded</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_LOAD_SHIPMENT__SHIPMENT_LOADED = TO_USE_SCHEDULE_TASK_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Unload Shipment</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_LOAD_SHIPMENT__UNLOAD_SHIPMENT = TO_USE_SCHEDULE_TASK_FEATURE_COUNT + 1;
+	int TO_USE_LOAD_SHIPMENT__UNLOAD_SHIPMENT = TO_USE_SCHEDULE_TASK_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>To Use Load Shipment</em>' class.
@@ -1653,7 +1716,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_LOAD_SHIPMENT_FEATURE_COUNT = TO_USE_SCHEDULE_TASK_FEATURE_COUNT + 2;
+	int TO_USE_LOAD_SHIPMENT_FEATURE_COUNT = TO_USE_SCHEDULE_TASK_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Add Propagator Function</em>' operation.
@@ -1681,6 +1744,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_LOAD_SHIPMENT___ADD_PROPAGATOR_FUNCTIONS__STRING = TO_USE_SCHEDULE_TASK___ADD_PROPAGATOR_FUNCTIONS__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Congruent Tasks</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_LOAD_SHIPMENT___GET_CONGRUENT_TASKS = TO_USE_SCHEDULE_TASK___GET_CONGRUENT_TASKS;
 
 	/**
 	 * The number of operations of the '<em>To Use Load Shipment</em>' class.
@@ -1774,6 +1846,33 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_UNLOAD_SHIPMENT__SCHEDULED = TO_USE_SCHEDULE_TASK__SCHEDULED;
 
 	/**
+	 * The feature id for the '<em><b>Predecessors</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT__PREDECESSORS = TO_USE_SCHEDULE_TASK__PREDECESSORS;
+
+	/**
+	 * The feature id for the '<em><b>Successors</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT__SUCCESSORS = TO_USE_SCHEDULE_TASK__SUCCESSORS;
+
+	/**
+	 * The feature id for the '<em><b>Resource</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT__RESOURCE = TO_USE_SCHEDULE_TASK__RESOURCE;
+
+	/**
 	 * The feature id for the '<em><b>Shipment</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1855,22 +1954,13 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_UNLOAD_SHIPMENT__VOLUME_OVERLOAD = TO_USE_SCHEDULE_TASK__VOLUME_OVERLOAD;
 
 	/**
-	 * The feature id for the '<em><b>Shipment Unloaded</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TO_USE_UNLOAD_SHIPMENT__SHIPMENT_UNLOADED = TO_USE_SCHEDULE_TASK_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Load Shipment</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_UNLOAD_SHIPMENT__LOAD_SHIPMENT = TO_USE_SCHEDULE_TASK_FEATURE_COUNT + 1;
+	int TO_USE_UNLOAD_SHIPMENT__LOAD_SHIPMENT = TO_USE_SCHEDULE_TASK_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>To Use Unload Shipment</em>' class.
@@ -1879,7 +1969,7 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_UNLOAD_SHIPMENT_FEATURE_COUNT = TO_USE_SCHEDULE_TASK_FEATURE_COUNT + 2;
+	int TO_USE_UNLOAD_SHIPMENT_FEATURE_COUNT = TO_USE_SCHEDULE_TASK_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Add Propagator Function</em>' operation.
@@ -1907,6 +1997,15 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TO_USE_UNLOAD_SHIPMENT___ADD_PROPAGATOR_FUNCTIONS__STRING = TO_USE_SCHEDULE_TASK___ADD_PROPAGATOR_FUNCTIONS__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Congruent Tasks</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_UNLOAD_SHIPMENT___GET_CONGRUENT_TASKS = TO_USE_SCHEDULE_TASK___GET_CONGRUENT_TASKS;
 
 	/**
 	 * The number of operations of the '<em>To Use Unload Shipment</em>' class.
@@ -8293,6 +8392,88 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int CALC_RESOURCE_PLANNED_BENEFIT_OPERATION_COUNT = CALC_RESOURCE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseShipmentImpl <em>To Use Shipment</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseShipmentImpl
+	 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseShipment()
+	 * @generated
+	 */
+	int TO_USE_SHIPMENT = 31;
+
+	/**
+	 * The feature id for the '<em><b>Planned Resource</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SHIPMENT__PLANNED_RESOURCE = SchedulerPackage.FLOCK_RESOURCE__PLANNED_RESOURCE;
+
+	/**
+	 * The feature id for the '<em><b>Keep Together</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SHIPMENT__KEEP_TOGETHER = SchedulerPackage.FLOCK_RESOURCE__KEEP_TOGETHER;
+
+	/**
+	 * The feature id for the '<em><b>Is Fully Planned</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SHIPMENT__IS_FULLY_PLANNED = SchedulerPackage.FLOCK_RESOURCE__IS_FULLY_PLANNED;
+
+	/**
+	 * The feature id for the '<em><b>Is Resource Invalid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SHIPMENT__IS_RESOURCE_INVALID = SchedulerPackage.FLOCK_RESOURCE__IS_RESOURCE_INVALID;
+
+	/**
+	 * The feature id for the '<em><b>Tasks</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SHIPMENT__TASKS = SchedulerPackage.FLOCK_RESOURCE__TASKS;
+
+	/**
+	 * The feature id for the '<em><b>Shipment</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SHIPMENT__SHIPMENT = SchedulerPackage.FLOCK_RESOURCE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>To Use Shipment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SHIPMENT_FEATURE_COUNT = SchedulerPackage.FLOCK_RESOURCE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>To Use Shipment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SHIPMENT_OPERATION_COUNT = SchedulerPackage.FLOCK_RESOURCE_OPERATION_COUNT + 0;
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.Domain <em>Domain</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9009,6 +9190,27 @@ public interface ToUseSchedulerPackage extends EPackage {
 	EReference getCalcResourcePlannedBenefit_ConcreteParent();
 
 	/**
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.ToUseShipment <em>To Use Shipment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>To Use Shipment</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseShipment
+	 * @generated
+	 */
+	EClass getToUseShipment();
+
+	/**
+	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.tousescheduler.ToUseShipment#getShipment <em>Shipment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Shipment</em>'.
+	 * @see com.misc.touse.moplaf.tousescheduler.ToUseShipment#getShipment()
+	 * @see #getToUseShipment()
+	 * @generated
+	 */
+	EReference getToUseShipment_Shipment();
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.tousescheduler.ToUseStepDestructConstruct <em>To Use Step Destruct Construct</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9145,17 +9347,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	EClass getToUseLoadShipment();
 
 	/**
-	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.tousescheduler.ToUseLoadShipment#getShipmentLoaded <em>Shipment Loaded</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Shipment Loaded</em>'.
-	 * @see com.misc.touse.moplaf.tousescheduler.ToUseLoadShipment#getShipmentLoaded()
-	 * @see #getToUseLoadShipment()
-	 * @generated
-	 */
-	EReference getToUseLoadShipment_ShipmentLoaded();
-
-	/**
 	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.tousescheduler.ToUseLoadShipment#getUnloadShipment <em>Unload Shipment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9175,17 +9366,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getToUseUnloadShipment();
-
-	/**
-	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.tousescheduler.ToUseUnloadShipment#getShipmentUnloaded <em>Shipment Unloaded</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Shipment Unloaded</em>'.
-	 * @see com.misc.touse.moplaf.tousescheduler.ToUseUnloadShipment#getShipmentUnloaded()
-	 * @see #getToUseUnloadShipment()
-	 * @generated
-	 */
-	EReference getToUseUnloadShipment_ShipmentUnloaded();
 
 	/**
 	 * Returns the meta object for the reference '{@link com.misc.touse.moplaf.tousescheduler.ToUseUnloadShipment#getLoadShipment <em>Load Shipment</em>}'.
@@ -9872,6 +10052,24 @@ public interface ToUseSchedulerPackage extends EPackage {
 		EReference CALC_RESOURCE_PLANNED_BENEFIT__CONCRETE_PARENT = eINSTANCE.getCalcResourcePlannedBenefit_ConcreteParent();
 
 		/**
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseShipmentImpl <em>To Use Shipment</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseShipmentImpl
+		 * @see com.misc.touse.moplaf.tousescheduler.impl.ToUseSchedulerPackageImpl#getToUseShipment()
+		 * @generated
+		 */
+		EClass TO_USE_SHIPMENT = eINSTANCE.getToUseShipment();
+
+		/**
+		 * The meta object literal for the '<em><b>Shipment</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TO_USE_SHIPMENT__SHIPMENT = eINSTANCE.getToUseShipment_Shipment();
+
+		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseStepDestructConstructImpl <em>To Use Step Destruct Construct</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -9990,14 +10188,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 		EClass TO_USE_LOAD_SHIPMENT = eINSTANCE.getToUseLoadShipment();
 
 		/**
-		 * The meta object literal for the '<em><b>Shipment Loaded</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TO_USE_LOAD_SHIPMENT__SHIPMENT_LOADED = eINSTANCE.getToUseLoadShipment_ShipmentLoaded();
-
-		/**
 		 * The meta object literal for the '<em><b>Unload Shipment</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -10014,14 +10204,6 @@ public interface ToUseSchedulerPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TO_USE_UNLOAD_SHIPMENT = eINSTANCE.getToUseUnloadShipment();
-
-		/**
-		 * The meta object literal for the '<em><b>Shipment Unloaded</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TO_USE_UNLOAD_SHIPMENT__SHIPMENT_UNLOADED = eINSTANCE.getToUseUnloadShipment_ShipmentUnloaded();
 
 		/**
 		 * The meta object literal for the '<em><b>Load Shipment</b></em>' reference feature.

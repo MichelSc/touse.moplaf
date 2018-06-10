@@ -122,7 +122,7 @@ public class CalcResourcePlannedBenefitImpl extends CalcResourceImpl implements 
 		for ( Task t : resource.getScheduledTasks()) {
 			if ( t instanceof ToUseUnloadShipmentImpl) {
 				ToUseUnloadShipment task = (ToUseUnloadShipment)t;
-				benefit += task.getShipment().getPlannedBenefit();
+				benefit += task.getShipment().getShipment().getPlannedBenefit();
 			}
 		}
 		resource.setPlannedBenefit(benefit);

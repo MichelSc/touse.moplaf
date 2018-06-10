@@ -183,9 +183,9 @@ public class ToUseScheduleResourceItemProvider extends ResourceItemProvider {
 				 getString("_UI_ToUseScheduleResource_ToUseScheduledTasks_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseScheduleResource_ToUseScheduledTasks_feature", "_UI_ToUseScheduleResource_type"),
 				 ToUseSchedulerPackage.Literals.TO_USE_SCHEDULE_RESOURCE__TO_USE_SCHEDULED_TASKS,
-				 true,
 				 false,
-				 true,
+				 false,
+				 false,
 				 null,
 				 null,
 				 null));

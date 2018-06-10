@@ -124,7 +124,7 @@ public class CalcTaskEndVolumeLoadedImpl extends CalcTaskImpl implements CalcTas
 		
 		// end volume loaded
 		float loadFactor = task.getLoadFactor();
-		Shipment shipment = task.getShipment();
+		Shipment shipment = task.getShipment().getShipment();
 		float volume = loadFactor*shipment.getVolume();
 		float endVolume = task.getStartVolumeLoaded()+volume;
 		task.setEndVolumeLoaded(endVolume);

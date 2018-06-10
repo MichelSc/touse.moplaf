@@ -14,6 +14,7 @@ import com.misc.touse.moplaf.tousescheduler.ToUseScheduler;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerFactory;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
 import com.misc.touse.moplaf.tousescheduler.ToUseScore;
+import com.misc.touse.moplaf.tousescheduler.ToUseShipment;
 import com.misc.touse.moplaf.tousescheduler.ToUseUnloadShipment;
 import com.misc.touse.moplaf.tousescheduler.Vehicle;
 import com.misc.touse.moplaf.tousescheduler.util.ToUseSchedulerPropagatorFunctionManager;
@@ -180,22 +181,31 @@ public class ToUseScheduleImpl extends ScheduleImpl implements ToUseSchedule {
 			this.getResources().add(resource); // owning
 		}
 		
-		// add the tasks
+		// add the tasks 
 		for ( Shipment shipment: scheduler.getSelectedShipments()) {
+			// flock
+			ToUseShipment flock = ToUseSchedulerFactory.eINSTANCE.createToUseShipment();
+			flock.setKeepTogether(true);
+			flock.setShipment(shipment);
+			this.getFlocks().add(flock);
 			// load
 			String load_name = String.format("load(%s)", shipment.getName());
 			ToUseLoadShipment load= ToUseSchedulerFactory.eINSTANCE.createToUseLoadShipment();
-			load.setShipmentLoaded(shipment);
+			load.setShipment(flock);
 			load.setName(load_name);
+			load.setResource(flock);
 			this.getTasks().add(load);
+			
 			// unload
 			String unload_name = String.format("unload(%s)", shipment.getName());
 			ToUseUnloadShipment unload= ToUseSchedulerFactory.eINSTANCE.createToUseUnloadShipment();
-			unload.setShipmentUnloaded(shipment);
+			unload.setShipment(flock);
 			unload.setName(unload_name);
+			unload.setResource(flock);
 			this.getTasks().add(unload);
 			// loadunload
 			load.setUnloadShipment(unload);
+			load.getSuccessors().add(unload);
 		}
 	}
 

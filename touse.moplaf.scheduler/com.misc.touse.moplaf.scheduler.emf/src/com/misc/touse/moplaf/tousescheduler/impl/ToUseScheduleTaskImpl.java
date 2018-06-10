@@ -2,11 +2,11 @@
  */
 package com.misc.touse.moplaf.tousescheduler.impl;
 
-import com.misc.common.moplaf.scheduler.impl.TaskImpl;
-import com.misc.touse.moplaf.tousescheduler.Shipment;
+import com.misc.common.moplaf.scheduler.impl.FlockTaskImpl;
 import com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
 
+import com.misc.touse.moplaf.tousescheduler.ToUseShipment;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -35,7 +35,17 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class ToUseScheduleTaskImpl extends TaskImpl implements ToUseScheduleTask {
+public class ToUseScheduleTaskImpl extends FlockTaskImpl implements ToUseScheduleTask {
+	/**
+	 * The cached value of the '{@link #getShipment() <em>Shipment</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getShipment()
+	 * @generated
+	 * @ordered
+	 */
+	protected ToUseShipment shipment;
+
 	/**
 	 * The default value of the '{@link #getLocationX() <em>Location X</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -190,9 +200,24 @@ public class ToUseScheduleTaskImpl extends TaskImpl implements ToUseScheduleTask
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Shipment getShipment() {
-		Shipment shipment = basicGetShipment();
-		return shipment != null && shipment.eIsProxy() ? (Shipment)eResolveProxy((InternalEObject)shipment) : shipment;
+	public ToUseShipment getShipment() {
+		if (shipment != null && shipment.eIsProxy()) {
+			InternalEObject oldShipment = (InternalEObject)shipment;
+			shipment = (ToUseShipment)eResolveProxy(oldShipment);
+			if (shipment != oldShipment) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__SHIPMENT, oldShipment, shipment));
+			}
+		}
+		return shipment;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	public ToUseShipment basicGetShipment() {
+		return (ToUseShipment) this.getResource();
 	}
 
 	/**
@@ -200,11 +225,11 @@ public class ToUseScheduleTaskImpl extends TaskImpl implements ToUseScheduleTask
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Shipment basicGetShipment() {
-		// TODO: implement this method to return the 'Shipment' reference
-		// -> do not perform proxy resolution
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void setShipment(ToUseShipment newShipment) {
+		ToUseShipment oldShipment = shipment;
+		shipment = newShipment;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__SHIPMENT, oldShipment, shipment));
 	}
 
 	/**
@@ -384,6 +409,9 @@ public class ToUseScheduleTaskImpl extends TaskImpl implements ToUseScheduleTask
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__SHIPMENT:
+				setShipment((ToUseShipment)newValue);
+				return;
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__DISTANCE:
 				setDistance((Float)newValue);
 				return;
@@ -411,6 +439,9 @@ public class ToUseScheduleTaskImpl extends TaskImpl implements ToUseScheduleTask
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__SHIPMENT:
+				setShipment((ToUseShipment)null);
+				return;
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__DISTANCE:
 				setDistance(DISTANCE_EDEFAULT);
 				return;
@@ -439,7 +470,7 @@ public class ToUseScheduleTaskImpl extends TaskImpl implements ToUseScheduleTask
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__SHIPMENT:
-				return basicGetShipment() != null;
+				return shipment != null;
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__LOCATION_X:
 				return getLocationX() != LOCATION_X_EDEFAULT;
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK__LOCATION_Y:

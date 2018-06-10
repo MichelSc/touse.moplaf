@@ -42,32 +42,9 @@ public class ToUseLoadShipmentItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addShipmentLoadedPropertyDescriptor(object);
 			addUnloadShipmentPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Shipment Loaded feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addShipmentLoadedPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ToUseLoadShipment_ShipmentLoaded_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseLoadShipment_ShipmentLoaded_feature", "_UI_ToUseLoadShipment_type"),
-				 ToUseSchedulerPackage.Literals.TO_USE_LOAD_SHIPMENT__SHIPMENT_LOADED,
-				 true,
-				 false,
-				 true,
-				 null,
-				 getString("_UI__20ToUseSchedulerPropertyCategory"),
-				 null));
 	}
 
 	/**

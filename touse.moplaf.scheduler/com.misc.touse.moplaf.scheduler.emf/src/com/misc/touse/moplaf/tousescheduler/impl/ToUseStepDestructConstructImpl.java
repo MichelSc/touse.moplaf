@@ -232,7 +232,7 @@ public class ToUseStepDestructConstructImpl extends StepImpl implements ToUseSte
           .filter(t -> t.isScheduled())
           .filter(t -> t instanceof ToUseLoadShipment)
           .map(t-> (ToUseLoadShipment)t)
-          .map(t-> t.getShipment())
+          .map(t-> t.getShipment().getShipment())
           .filter(t -> this.getDestructionChance()>=random.nextDouble())
           .forEach(s ->{
 			ToUseUnscheduleLoadUnload new_action = ToUseSchedulerFactory.eINSTANCE.createToUseUnscheduleLoadUnload();
@@ -245,7 +245,7 @@ public class ToUseStepDestructConstructImpl extends StepImpl implements ToUseSte
           .filter(t -> !t.isScheduled())
           .filter(t -> t instanceof ToUseLoadShipment)
           .map(t-> (ToUseLoadShipment)t)
-          .map(t-> t.getShipment())
+          .map(t-> t.getShipment().getShipment())
           .filter(t ->  this.getConstructionChance()>=random.nextDouble())
           .forEach(s ->{
 			ToUseScheduleLoadUnload new_action = ToUseSchedulerFactory.eINSTANCE.createToUseScheduleLoadUnload();

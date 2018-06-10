@@ -14,6 +14,8 @@ import com.misc.common.moplaf.localsearch.Strategy;
 import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
 import com.misc.common.moplaf.propagator2.PropagatorFunction;
 import com.misc.common.moplaf.propagator2.PropagatorFunctionBindings;
+import com.misc.common.moplaf.scheduler.FlockResource;
+import com.misc.common.moplaf.scheduler.FlockTask;
 import com.misc.common.moplaf.scheduler.Resource;
 import com.misc.common.moplaf.scheduler.Schedule;
 import com.misc.common.moplaf.scheduler.Scheduler;
@@ -137,6 +139,7 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 			case ToUseSchedulerPackage.TO_USE_SCHEDULE_TASK: {
 				ToUseScheduleTask toUseScheduleTask = (ToUseScheduleTask)theEObject;
 				T result = caseToUseScheduleTask(toUseScheduleTask);
+				if (result == null) result = caseFlockTask(toUseScheduleTask);
 				if (result == null) result = caseTask(toUseScheduleTask);
 				if (result == null) result = caseObjectWithPropagatorFunctions(toUseScheduleTask);
 				if (result == null) result = defaultCase(theEObject);
@@ -146,6 +149,7 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 				ToUseLoadShipment toUseLoadShipment = (ToUseLoadShipment)theEObject;
 				T result = caseToUseLoadShipment(toUseLoadShipment);
 				if (result == null) result = caseToUseScheduleTask(toUseLoadShipment);
+				if (result == null) result = caseFlockTask(toUseLoadShipment);
 				if (result == null) result = caseTask(toUseLoadShipment);
 				if (result == null) result = caseObjectWithPropagatorFunctions(toUseLoadShipment);
 				if (result == null) result = defaultCase(theEObject);
@@ -155,6 +159,7 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 				ToUseUnloadShipment toUseUnloadShipment = (ToUseUnloadShipment)theEObject;
 				T result = caseToUseUnloadShipment(toUseUnloadShipment);
 				if (result == null) result = caseToUseScheduleTask(toUseUnloadShipment);
+				if (result == null) result = caseFlockTask(toUseUnloadShipment);
 				if (result == null) result = caseTask(toUseUnloadShipment);
 				if (result == null) result = caseObjectWithPropagatorFunctions(toUseUnloadShipment);
 				if (result == null) result = defaultCase(theEObject);
@@ -353,6 +358,13 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 				if (result == null) result = caseCalcScheduler(calcResourcePlannedBenefit);
 				if (result == null) result = casePropagatorFunctionBindings(calcResourcePlannedBenefit);
 				if (result == null) result = casePropagatorFunction(calcResourcePlannedBenefit);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ToUseSchedulerPackage.TO_USE_SHIPMENT: {
+				ToUseShipment toUseShipment = (ToUseShipment)theEObject;
+				T result = caseToUseShipment(toUseShipment);
+				if (result == null) result = caseFlockResource(toUseShipment);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -676,6 +688,21 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>To Use Shipment</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>To Use Shipment</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseToUseShipment(ToUseShipment object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>To Use Step Destruct Construct</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -931,6 +958,21 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Flock Task</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Flock Task</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFlockTask(FlockTask object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Solution Change</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -987,6 +1029,21 @@ public class ToUseSchedulerSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePropagatorFunctionBindings(PropagatorFunctionBindings object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Flock Resource</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Flock Resource</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFlockResource(FlockResource object) {
 		return null;
 	}
 
