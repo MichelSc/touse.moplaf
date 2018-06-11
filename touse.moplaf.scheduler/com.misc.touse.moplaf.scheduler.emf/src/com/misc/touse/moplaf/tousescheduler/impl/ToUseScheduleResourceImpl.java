@@ -2,7 +2,6 @@
  */
 package com.misc.touse.moplaf.tousescheduler.impl;
 
-import com.misc.common.moplaf.common.util.EObjectListDerived;
 import com.misc.common.moplaf.scheduler.Task;
 import com.misc.common.moplaf.scheduler.impl.ResourceImpl;
 

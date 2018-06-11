@@ -2,7 +2,7 @@
  */
 package com.misc.touse.moplaf.tousescheduler;
 
-import com.misc.common.moplaf.scheduler.Task;
+import com.misc.common.moplaf.scheduler.FlockTask;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,7 +28,7 @@ import com.misc.common.moplaf.scheduler.Task;
  * @model
  * @generated
  */
-public interface ToUseScheduleTask extends Task {
+public interface ToUseScheduleTask extends FlockTask {
 	/**
 	 * Returns the value of the '<em><b>Shipment</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -38,11 +38,22 @@ public interface ToUseScheduleTask extends Task {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Shipment</em>' reference.
+	 * @see #setShipment(ToUseShipment)
 	 * @see com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage#getToUseScheduleTask_Shipment()
-	 * @model required="true" transient="true" changeable="false" volatile="true" derived="true"
+	 * @model required="true"
 	 * @generated
 	 */
-	Shipment getShipment();
+	ToUseShipment getShipment();
+
+	/**
+	 * Sets the value of the '{@link com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask#getShipment <em>Shipment</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Shipment</em>' reference.
+	 * @see #getShipment()
+	 * @generated
+	 */
+	void setShipment(ToUseShipment value);
 
 	/**
 	 * Returns the value of the '<em><b>Distance</b></em>' attribute.

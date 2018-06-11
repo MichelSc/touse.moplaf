@@ -37,6 +37,7 @@ import com.misc.touse.moplaf.tousescheduler.ToUseScheduler;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerFactory;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
 import com.misc.touse.moplaf.tousescheduler.ToUseScore;
+import com.misc.touse.moplaf.tousescheduler.ToUseShipment;
 import com.misc.touse.moplaf.tousescheduler.ToUseStepDestructConstruct;
 import com.misc.touse.moplaf.tousescheduler.ToUseUnloadShipment;
 import com.misc.touse.moplaf.tousescheduler.ToUseUnscheduleLoadUnload;
@@ -201,6 +202,13 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 * @generated
 	 */
 	private EClass calcResourcePlannedBenefitEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass toUseShipmentEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -948,6 +956,24 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getToUseShipment() {
+		return toUseShipmentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getToUseShipment_Shipment() {
+		return (EReference)toUseShipmentEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getToUseStepDestructConstruct() {
 		return toUseStepDestructConstructEClass;
 	}
@@ -1065,17 +1091,8 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getToUseLoadShipment_ShipmentLoaded() {
-		return (EReference)toUseLoadShipmentEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getToUseLoadShipment_UnloadShipment() {
-		return (EReference)toUseLoadShipmentEClass.getEStructuralFeatures().get(1);
+		return (EReference)toUseLoadShipmentEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1092,17 +1109,8 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getToUseUnloadShipment_ShipmentUnloaded() {
-		return (EReference)toUseUnloadShipmentEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getToUseUnloadShipment_LoadShipment() {
-		return (EReference)toUseUnloadShipmentEClass.getEStructuralFeatures().get(1);
+		return (EReference)toUseUnloadShipmentEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1251,11 +1259,9 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		createEAttribute(toUseScheduleTaskEClass, TO_USE_SCHEDULE_TASK__VOLUME_OVERLOAD);
 
 		toUseLoadShipmentEClass = createEClass(TO_USE_LOAD_SHIPMENT);
-		createEReference(toUseLoadShipmentEClass, TO_USE_LOAD_SHIPMENT__SHIPMENT_LOADED);
 		createEReference(toUseLoadShipmentEClass, TO_USE_LOAD_SHIPMENT__UNLOAD_SHIPMENT);
 
 		toUseUnloadShipmentEClass = createEClass(TO_USE_UNLOAD_SHIPMENT);
-		createEReference(toUseUnloadShipmentEClass, TO_USE_UNLOAD_SHIPMENT__SHIPMENT_UNLOADED);
 		createEReference(toUseUnloadShipmentEClass, TO_USE_UNLOAD_SHIPMENT__LOAD_SHIPMENT);
 
 		toUsePhaseDestructConstructEClass = createEClass(TO_USE_PHASE_DESTRUCT_CONSTRUCT);
@@ -1318,6 +1324,9 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 
 		calcResourcePlannedBenefitEClass = createEClass(CALC_RESOURCE_PLANNED_BENEFIT);
 		createEReference(calcResourcePlannedBenefitEClass, CALC_RESOURCE_PLANNED_BENEFIT__CONCRETE_PARENT);
+
+		toUseShipmentEClass = createEClass(TO_USE_SHIPMENT);
+		createEReference(toUseShipmentEClass, TO_USE_SHIPMENT__SHIPMENT);
 	}
 
 	/**
@@ -1357,7 +1366,7 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		toUseScheduleEClass.getESuperTypes().add(theSchedulerPackage.getSchedule());
 		toUseScoreEClass.getESuperTypes().add(theLocalSearchPackage.getScore());
 		toUseScheduleResourceEClass.getESuperTypes().add(theSchedulerPackage.getResource());
-		toUseScheduleTaskEClass.getESuperTypes().add(theSchedulerPackage.getTask());
+		toUseScheduleTaskEClass.getESuperTypes().add(theSchedulerPackage.getFlockTask());
 		toUseLoadShipmentEClass.getESuperTypes().add(this.getToUseScheduleTask());
 		toUseUnloadShipmentEClass.getESuperTypes().add(this.getToUseScheduleTask());
 		toUsePhaseDestructConstructEClass.getESuperTypes().add(theLocalSearchPackage.getPhase());
@@ -1381,6 +1390,7 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		calcResourceVolumeOverloadEClass.getESuperTypes().add(this.getCalcResource());
 		layerSchedulePlannedBenefitEClass.getESuperTypes().add(this.getCalcSchedule());
 		calcResourcePlannedBenefitEClass.getESuperTypes().add(this.getCalcResource());
+		toUseShipmentEClass.getESuperTypes().add(theSchedulerPackage.getFlockResource());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1433,7 +1443,7 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		initEReference(getToUseScheduleResource_ToUseScheduledTasks(), this.getToUseScheduleTask(), null, "ToUseScheduledTasks", null, 0, -1, ToUseScheduleResource.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(toUseScheduleTaskEClass, ToUseScheduleTask.class, "ToUseScheduleTask", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getToUseScheduleTask_Shipment(), this.getShipment(), null, "Shipment", null, 1, 1, ToUseScheduleTask.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getToUseScheduleTask_Shipment(), this.getToUseShipment(), null, "Shipment", null, 1, 1, ToUseScheduleTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getToUseScheduleTask_LocationX(), ecorePackage.getEFloat(), "locationX", null, 0, 1, ToUseScheduleTask.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getToUseScheduleTask_LocationY(), ecorePackage.getEFloat(), "locationY", null, 0, 1, ToUseScheduleTask.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getToUseScheduleTask_LoadFactor(), ecorePackage.getEFloat(), "LoadFactor", null, 0, 1, ToUseScheduleTask.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
@@ -1444,11 +1454,9 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 		initEAttribute(getToUseScheduleTask_VolumeOverload(), ecorePackage.getEBoolean(), "VolumeOverload", null, 0, 1, ToUseScheduleTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(toUseLoadShipmentEClass, ToUseLoadShipment.class, "ToUseLoadShipment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getToUseLoadShipment_ShipmentLoaded(), this.getShipment(), null, "ShipmentLoaded", null, 1, 1, ToUseLoadShipment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getToUseLoadShipment_UnloadShipment(), this.getToUseUnloadShipment(), this.getToUseUnloadShipment_LoadShipment(), "UnloadShipment", null, 1, 1, ToUseLoadShipment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(toUseUnloadShipmentEClass, ToUseUnloadShipment.class, "ToUseUnloadShipment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getToUseUnloadShipment_ShipmentUnloaded(), this.getShipment(), null, "ShipmentUnloaded", null, 1, 1, ToUseUnloadShipment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getToUseUnloadShipment_LoadShipment(), this.getToUseLoadShipment(), this.getToUseLoadShipment_UnloadShipment(), "LoadShipment", null, 1, 1, ToUseUnloadShipment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(toUsePhaseDestructConstructEClass, ToUsePhaseDestructConstruct.class, "ToUsePhaseDestructConstruct", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1511,6 +1519,9 @@ public class ToUseSchedulerPackageImpl extends EPackageImpl implements ToUseSche
 
 		initEClass(calcResourcePlannedBenefitEClass, CalcResourcePlannedBenefit.class, "CalcResourcePlannedBenefit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCalcResourcePlannedBenefit_ConcreteParent(), this.getLayerSchedulePlannedBenefit(), null, "ConcreteParent", null, 1, 1, CalcResourcePlannedBenefit.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+
+		initEClass(toUseShipmentEClass, ToUseShipment.class, "ToUseShipment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getToUseShipment_Shipment(), this.getShipment(), null, "Shipment", null, 1, 1, ToUseShipment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

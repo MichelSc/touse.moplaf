@@ -518,6 +518,29 @@ public class ToUseSchedulerItemProviderAdapterFactory extends ToUseSchedulerAdap
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.ToUseShipment} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ToUseShipmentItemProvider toUseShipmentItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.tousescheduler.ToUseShipment}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createToUseShipmentAdapter() {
+		if (toUseShipmentItemProvider == null) {
+			toUseShipmentItemProvider = new ToUseShipmentItemProvider(this);
+		}
+
+		return toUseShipmentItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.tousescheduler.ToUseStepDestructConstruct} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

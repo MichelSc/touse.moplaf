@@ -2,7 +2,6 @@
  */
 package com.misc.touse.moplaf.tousescheduler.impl;
 
-import com.misc.touse.moplaf.tousescheduler.Shipment;
 import com.misc.touse.moplaf.tousescheduler.ToUseLoadShipment;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
 
@@ -22,22 +21,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseLoadShipmentImpl#getShipmentLoaded <em>Shipment Loaded</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.tousescheduler.impl.ToUseLoadShipmentImpl#getUnloadShipment <em>Unload Shipment</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ToUseLoadShipmentImpl extends ToUseScheduleTaskImpl implements ToUseLoadShipment {
-	/**
-	 * The cached value of the '{@link #getShipmentLoaded() <em>Shipment Loaded</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getShipmentLoaded()
-	 * @generated
-	 * @ordered
-	 */
-	protected Shipment shipmentLoaded;
 	/**
 	 * The cached value of the '{@link #getUnloadShipment() <em>Unload Shipment</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -64,44 +53,6 @@ public class ToUseLoadShipmentImpl extends ToUseScheduleTaskImpl implements ToUs
 	@Override
 	protected EClass eStaticClass() {
 		return ToUseSchedulerPackage.Literals.TO_USE_LOAD_SHIPMENT;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Shipment getShipmentLoaded() {
-		if (shipmentLoaded != null && shipmentLoaded.eIsProxy()) {
-			InternalEObject oldShipmentLoaded = (InternalEObject)shipmentLoaded;
-			shipmentLoaded = (Shipment)eResolveProxy(oldShipmentLoaded);
-			if (shipmentLoaded != oldShipmentLoaded) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ToUseSchedulerPackage.TO_USE_LOAD_SHIPMENT__SHIPMENT_LOADED, oldShipmentLoaded, shipmentLoaded));
-			}
-		}
-		return shipmentLoaded;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Shipment basicGetShipmentLoaded() {
-		return shipmentLoaded;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setShipmentLoaded(Shipment newShipmentLoaded) {
-		Shipment oldShipmentLoaded = shipmentLoaded;
-		shipmentLoaded = newShipmentLoaded;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToUseSchedulerPackage.TO_USE_LOAD_SHIPMENT__SHIPMENT_LOADED, oldShipmentLoaded, shipmentLoaded));
 	}
 
 	/**
@@ -202,9 +153,6 @@ public class ToUseLoadShipmentImpl extends ToUseScheduleTaskImpl implements ToUs
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ToUseSchedulerPackage.TO_USE_LOAD_SHIPMENT__SHIPMENT_LOADED:
-				if (resolve) return getShipmentLoaded();
-				return basicGetShipmentLoaded();
 			case ToUseSchedulerPackage.TO_USE_LOAD_SHIPMENT__UNLOAD_SHIPMENT:
 				if (resolve) return getUnloadShipment();
 				return basicGetUnloadShipment();
@@ -220,9 +168,6 @@ public class ToUseLoadShipmentImpl extends ToUseScheduleTaskImpl implements ToUs
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ToUseSchedulerPackage.TO_USE_LOAD_SHIPMENT__SHIPMENT_LOADED:
-				setShipmentLoaded((Shipment)newValue);
-				return;
 			case ToUseSchedulerPackage.TO_USE_LOAD_SHIPMENT__UNLOAD_SHIPMENT:
 				setUnloadShipment((ToUseUnloadShipment)newValue);
 				return;
@@ -238,9 +183,6 @@ public class ToUseLoadShipmentImpl extends ToUseScheduleTaskImpl implements ToUs
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ToUseSchedulerPackage.TO_USE_LOAD_SHIPMENT__SHIPMENT_LOADED:
-				setShipmentLoaded((Shipment)null);
-				return;
 			case ToUseSchedulerPackage.TO_USE_LOAD_SHIPMENT__UNLOAD_SHIPMENT:
 				setUnloadShipment((ToUseUnloadShipment)null);
 				return;
@@ -256,30 +198,20 @@ public class ToUseLoadShipmentImpl extends ToUseScheduleTaskImpl implements ToUs
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ToUseSchedulerPackage.TO_USE_LOAD_SHIPMENT__SHIPMENT_LOADED:
-				return shipmentLoaded != null;
 			case ToUseSchedulerPackage.TO_USE_LOAD_SHIPMENT__UNLOAD_SHIPMENT:
 				return unloadShipment != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 */
-	public Shipment basicGetShipment() {
-		return this.getShipmentLoaded();
-	}
-
 	@Override
 	public float getLocationX() {
-		return this.getShipmentLoaded().getLoadLocationX();
+		return this.getShipment().getShipment().getLoadLocationX();
 	}
 
 	@Override
 	public float getLocationY() {
-		return this.getShipmentLoaded().getLoadLocationY();
+		return this.getShipment().getShipment().getLoadLocationY();
 	}
 
 	@Override

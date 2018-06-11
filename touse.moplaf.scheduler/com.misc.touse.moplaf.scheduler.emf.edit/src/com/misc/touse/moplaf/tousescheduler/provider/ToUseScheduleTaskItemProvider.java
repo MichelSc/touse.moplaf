@@ -3,8 +3,7 @@
 package com.misc.touse.moplaf.tousescheduler.provider;
 
 
-import com.misc.common.moplaf.scheduler.provider.TaskItemProvider;
-
+import com.misc.common.moplaf.scheduler.provider.FlockTaskItemProvider;
 import com.misc.touse.moplaf.tousescheduler.ToUseScheduleTask;
 import com.misc.touse.moplaf.tousescheduler.ToUseSchedulerPackage;
 
@@ -27,7 +26,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ToUseScheduleTaskItemProvider extends TaskItemProvider {
+public class ToUseScheduleTaskItemProvider extends FlockTaskItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
