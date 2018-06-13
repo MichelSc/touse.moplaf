@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:filter="http://www.eclipse.org/sirius/diagram/description/filter/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/filter/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/filter http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
-  <viewpoint:DAnalysis xmi:id="__h1RgAPzEeezM4xsHYQ6TA" selectedViews="__jfeYAPzEeezM4xsHYQ6TA __jpPYAPzEeezM4xsHYQ6TA __juH4APzEeezM4xsHYQ6TA __j4f8APzEeezM4xsHYQ6TA" version="12.0.0.201704271200">
+  <viewpoint:DAnalysis xmi:id="__h1RgAPzEeezM4xsHYQ6TA" selectedViews="__jfeYAPzEeezM4xsHYQ6TA __jpPYAPzEeezM4xsHYQ6TA __juH4APzEeezM4xsHYQ6TA __j4f8APzEeezM4xsHYQ6TA" version="12.1.0.201708031200">
     <semanticResources>ToUseMacroPlanner.ecore</semanticResources>
     <semanticResources>platform:/resource/com.misc.common.moplaf.macroplanner.emf/model/MacroPlanner.ecore</semanticResources>
     <semanticResources>http://www.eclipse.org/emf/2002/Ecore</semanticResources>
@@ -9,9 +9,10 @@
     <semanticResources>platform:/resource/com.misc.common.moplaf.time.discrete.emf/model/timediscrete.ecore</semanticResources>
     <semanticResources>platform:/resource/com.misc.common.moplaf.job.emf/model/job.ecore</semanticResources>
     <semanticResources>platform:/resource/com.misc.common.moplaf.time.emf/model/Time.ecore</semanticResources>
+    <semanticResources>platform:/resource/com.misc.common.moplaf.file.emf/model/file.ecore</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" xmi:id="__jfeYAPzEeezM4xsHYQ6TA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_a2ZbwBYEEeeBIuZ5Tcjouw" name="macroplanner class diagram" repPath="#_AY-78AP0EeezM4xsHYQ6TA">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_a2ZbwBYEEeeBIuZ5Tcjouw" name="macroplanner class diagram" repPath="#_HGEYwG4pEeiJ-LaKdCl0bg">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="ToUseMacroPlanner.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -26,7 +27,7 @@
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']"/>
     </ownedViews>
   </viewpoint:DAnalysis>
-  <diagram:DSemanticDiagram xmi:id="_AY-78AP0EeezM4xsHYQ6TA" name="macroplanner class diagram">
+  <diagram:DSemanticDiagram xmi:id="_AY-78AP0EeezM4xsHYQ6TA" name="macroplanner class diagram" uid="_HGEYwG4pEeiJ-LaKdCl0bg">
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_AY-78QP0EeezM4xsHYQ6TA" source="DANNOTATION_CUSTOMIZATION_KEY">
       <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_AY-78gP0EeezM4xsHYQ6TA">
         <computedStyleDescriptions xmi:type="style:EdgeStyleDescription" xmi:id="_MrrcpAP0EeezM4xsHYQ6TA" sourceArrow="FillDiamond" routingStyle="manhattan">
@@ -840,7 +841,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_rBDOwgWYEeeC3_vxf7tA6g" name="RunDurationInitialization : EFloat = 0.0" visible="false" tooltipText="">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_rBDOwgWYEeeC3_vxf7tA6g" name="RunDurationInitialization : EDouble = 0.0" visible="false" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="platform:/resource/com.misc.common.moplaf.solver.emf/model/solver.ecore#//Solver/RunDurationInitialization"/>
         <semanticElements xmi:type="ecore:EAttribute" href="platform:/resource/com.misc.common.moplaf.solver.emf/model/solver.ecore#//Solver/RunDurationInitialization"/>
         <graphicalFilters xmi:type="diagram:HideFilter" xmi:id="_yyJMmQWYEeeC3_vxf7tA6g"/>
@@ -849,7 +850,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_rBD10AWYEeeC3_vxf7tA6g" name="RunDurationFinalization : EFloat = 0.0" visible="false" tooltipText="">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_rBD10AWYEeeC3_vxf7tA6g" name="RunDurationFinalization : EDouble = 0.0" visible="false" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="platform:/resource/com.misc.common.moplaf.solver.emf/model/solver.ecore#//Solver/RunDurationFinalization"/>
         <semanticElements xmi:type="ecore:EAttribute" href="platform:/resource/com.misc.common.moplaf.solver.emf/model/solver.ecore#//Solver/RunDurationFinalization"/>
         <graphicalFilters xmi:type="diagram:HideFilter" xmi:id="_yyJMmwWYEeeC3_vxf7tA6g"/>
@@ -858,7 +859,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_rBD10gWYEeeC3_vxf7tA6g" name="RunDurationSolving : EFloat = 0.0" visible="false" tooltipText="">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_rBD10gWYEeeC3_vxf7tA6g" name="RunDurationSolving : EDouble = 0.0" visible="false" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="platform:/resource/com.misc.common.moplaf.solver.emf/model/solver.ecore#//Solver/RunDurationSolving"/>
         <semanticElements xmi:type="ecore:EAttribute" href="platform:/resource/com.misc.common.moplaf.solver.emf/model/solver.ecore#//Solver/RunDurationSolving"/>
         <graphicalFilters xmi:type="diagram:HideFilter" xmi:id="_yyJMpwWYEeeC3_vxf7tA6g"/>
@@ -912,7 +913,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_rBFrAQWYEeeC3_vxf7tA6g" name="SolValue : EFloat = 0.0" visible="false" tooltipText="">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_rBFrAQWYEeeC3_vxf7tA6g" name="SolValue : EDouble = 0.0" visible="false" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="platform:/resource/com.misc.common.moplaf.solver.emf/model/solver.ecore#//Solver/SolValue"/>
         <semanticElements xmi:type="ecore:EAttribute" href="platform:/resource/com.misc.common.moplaf.solver.emf/model/solver.ecore#//Solver/SolValue"/>
         <graphicalFilters xmi:type="diagram:HideFilter" xmi:id="_yyJMmAWYEeeC3_vxf7tA6g"/>
@@ -994,7 +995,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_rBHgNQWYEeeC3_vxf7tA6g" name="buildLpVar(var GeneratorLpVar, lowerBound EFloat, upperBound EFloat, type EnumLpVarType)" visible="false" tooltipText="buildLpVar(var, lowerBound, upperBound, type)">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_rBHgNQWYEeeC3_vxf7tA6g" name="buildLpVar(var GeneratorLpVar, lowerBound EDouble, upperBound EDouble, type EnumLpVarType)" visible="false" tooltipText="buildLpVar(var, lowerBound, upperBound, type)">
         <target xmi:type="ecore:EOperation" href="platform:/resource/com.misc.common.moplaf.solver.emf/model/solver.ecore#//Solver/buildLpVar"/>
         <semanticElements xmi:type="ecore:EOperation" href="platform:/resource/com.misc.common.moplaf.solver.emf/model/solver.ecore#//Solver/buildLpVar"/>
         <semanticElements xmi:type="ecore:EParameter" href="platform:/resource/com.misc.common.moplaf.solver.emf/model/solver.ecore#//Solver/buildLpVar/lowerBound"/>
@@ -1036,7 +1037,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_rBIuUAWYEeeC3_vxf7tA6g" name="buildLpCons(element GeneratorElement, linear GeneratorLpLinear, rhs EFloat, type EnumLpConsType)" visible="false" tooltipText="buildLpCons(element, linear, rhs, type)">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_rBIuUAWYEeeC3_vxf7tA6g" name="buildLpCons(element GeneratorElement, linear GeneratorLpLinear, rhs EDouble, type EnumLpConsType)" visible="false" tooltipText="buildLpCons(element, linear, rhs, type)">
         <target xmi:type="ecore:EOperation" href="platform:/resource/com.misc.common.moplaf.solver.emf/model/solver.ecore#//Solver/buildLpCons.1"/>
         <semanticElements xmi:type="ecore:EOperation" href="platform:/resource/com.misc.common.moplaf.solver.emf/model/solver.ecore#//Solver/buildLpCons.1"/>
         <semanticElements xmi:type="ecore:EParameter" href="platform:/resource/com.misc.common.moplaf.solver.emf/model/solver.ecore#//Solver/buildLpCons.1/element"/>
@@ -1049,7 +1050,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_EgTJsGVnEeeOgOis7Jjwfw" name="constructVarBinder(binder GeneratorVarBinder)" tooltipText="constructVarBinder(binder)">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_EgTJsGVnEeeOgOis7Jjwfw" name="constructVarBinder(binder GeneratorVarBinder) : SolverVarBinder" tooltipText="constructVarBinder(binder) : SolverVarBinder">
         <target xmi:type="ecore:EOperation" href="platform:/resource/com.misc.common.moplaf.solver.emf/model/solver.ecore#//Solver/constructVarBinder"/>
         <semanticElements xmi:type="ecore:EOperation" href="platform:/resource/com.misc.common.moplaf.solver.emf/model/solver.ecore#//Solver/constructVarBinder"/>
         <semanticElements xmi:type="ecore:EParameter" href="platform:/resource/com.misc.common.moplaf.solver.emf/model/solver.ecore#//Solver/constructVarBinder/binder"/>
@@ -1067,7 +1068,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_rBLKkQWYEeeC3_vxf7tA6g" name="buildLpGoal(goal GeneratorLpGoal, weight EFloat)" visible="false" tooltipText="buildLpGoal(goal, weight)">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_rBLKkQWYEeeC3_vxf7tA6g" name="buildLpGoal(goal GeneratorLpGoal, weight EDouble)" visible="false" tooltipText="buildLpGoal(goal, weight)">
         <target xmi:type="ecore:EOperation" href="platform:/resource/com.misc.common.moplaf.solver.emf/model/solver.ecore#//Solver/buildLpGoal"/>
         <semanticElements xmi:type="ecore:EOperation" href="platform:/resource/com.misc.common.moplaf.solver.emf/model/solver.ecore#//Solver/buildLpGoal"/>
         <semanticElements xmi:type="ecore:EParameter" href="platform:/resource/com.misc.common.moplaf.solver.emf/model/solver.ecore#//Solver/buildLpGoal/goal"/>
@@ -1088,7 +1089,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_rBLxogWYEeeC3_vxf7tA6g" name="constructSolverGoal(previousSolution Solution) : SolverGoalPreviousSolver" visible="false" tooltipText="constructSolverGoal(previousSolution) : SolverGoalPreviousSolver">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_rBLxogWYEeeC3_vxf7tA6g" name="constructSolverGoal(previousSolution Solution)" visible="false" tooltipText="constructSolverGoal(previousSolution)">
         <target xmi:type="ecore:EOperation" href="platform:/resource/com.misc.common.moplaf.solver.emf/model/solver.ecore#//Solver/constructSolverGoal.1"/>
         <semanticElements xmi:type="ecore:EOperation" href="platform:/resource/com.misc.common.moplaf.solver.emf/model/solver.ecore#//Solver/constructSolverGoal.1"/>
         <semanticElements xmi:type="ecore:EParameter" href="platform:/resource/com.misc.common.moplaf.solver.emf/model/solver.ecore#//Solver/constructSolverGoal.1/previousSolution"/>
@@ -1098,7 +1099,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_rBMYsAWYEeeC3_vxf7tA6g" name="constructSolverGoal(previousSolver Solver) : SolverGoalPreviousSolver" visible="false" tooltipText="constructSolverGoal(previousSolver) : SolverGoalPreviousSolver">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_rBMYsAWYEeeC3_vxf7tA6g" name="constructSolverGoal(previousSolver Solver)" visible="false" tooltipText="constructSolverGoal(previousSolver)">
         <target xmi:type="ecore:EOperation" href="platform:/resource/com.misc.common.moplaf.solver.emf/model/solver.ecore#//Solver/constructSolverGoal.2"/>
         <semanticElements xmi:type="ecore:EOperation" href="platform:/resource/com.misc.common.moplaf.solver.emf/model/solver.ecore#//Solver/constructSolverGoal.2"/>
         <semanticElements xmi:type="ecore:EParameter" href="platform:/resource/com.misc.common.moplaf.solver.emf/model/solver.ecore#//Solver/constructSolverGoal.2/previousSolver"/>
