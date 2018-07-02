@@ -952,6 +952,24 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SCHEDULE___SCHEDULE__TASK_TASK_RESOURCE_TASK_TASK = SchedulerPackage.SCHEDULE___SCHEDULE__TASK_TASK_RESOURCE_TASK_TASK;
 
 	/**
+	 * The operation id for the '<em>Schedule</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE___SCHEDULE__ELIST_RESOURCE_TASK_TASK = SchedulerPackage.SCHEDULE___SCHEDULE__ELIST_RESOURCE_TASK_TASK;
+
+	/**
+	 * The operation id for the '<em>Schedule</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TO_USE_SCHEDULE___SCHEDULE__TASK_RESOURCE_TASK_TASK = SchedulerPackage.SCHEDULE___SCHEDULE__TASK_RESOURCE_TASK_TASK;
+
+	/**
 	 * The operation id for the '<em>Schedule Feedback</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8420,22 +8438,22 @@ public interface ToUseSchedulerPackage extends EPackage {
 	int TO_USE_SHIPMENT__KEEP_TOGETHER = SchedulerPackage.FLOCK_RESOURCE__KEEP_TOGETHER;
 
 	/**
-	 * The feature id for the '<em><b>Is Fully Planned</b></em>' attribute.
+	 * The feature id for the '<em><b>Fully Planned</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SHIPMENT__IS_FULLY_PLANNED = SchedulerPackage.FLOCK_RESOURCE__IS_FULLY_PLANNED;
+	int TO_USE_SHIPMENT__FULLY_PLANNED = SchedulerPackage.FLOCK_RESOURCE__FULLY_PLANNED;
 
 	/**
-	 * The feature id for the '<em><b>Is Resource Invalid</b></em>' attribute.
+	 * The feature id for the '<em><b>Resource Invalid</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TO_USE_SHIPMENT__IS_RESOURCE_INVALID = SchedulerPackage.FLOCK_RESOURCE__IS_RESOURCE_INVALID;
+	int TO_USE_SHIPMENT__RESOURCE_INVALID = SchedulerPackage.FLOCK_RESOURCE__RESOURCE_INVALID;
 
 	/**
 	 * The feature id for the '<em><b>Tasks</b></em>' reference list.

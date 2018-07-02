@@ -66,9 +66,9 @@ public class ToUseShipmentItemProvider extends FlockResourceItemProvider {
 				 getString("_UI_ToUseShipment_Shipment_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ToUseShipment_Shipment_feature", "_UI_ToUseShipment_type"),
 				 ToUseSchedulerPackage.Literals.TO_USE_SHIPMENT__SHIPMENT,
+				 true,
 				 false,
-				 false,
-				 false,
+				 true,
 				 null,
 				 null,
 				 null));
