@@ -58,6 +58,10 @@ public class ToUseGridViewFactoryImpl extends EFactoryImpl implements ToUseGridV
 		switch (eClass.getClassifierID()) {
 			case ToUseGridViewPackage.DOMAIN: return createDomain();
 			case ToUseGridViewPackage.DOCUMENT: return createDocument();
+			case ToUseGridViewPackage.SHEET: return createSheet();
+			case ToUseGridViewPackage.COLUMN: return createColumn();
+			case ToUseGridViewPackage.ROW: return createRow();
+			case ToUseGridViewPackage.CELL: return createCell();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -81,6 +85,46 @@ public class ToUseGridViewFactoryImpl extends EFactoryImpl implements ToUseGridV
 	public Document createDocument() {
 		DocumentImpl document = new DocumentImpl();
 		return document;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Sheet createSheet() {
+		SheetImpl sheet = new SheetImpl();
+		return sheet;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Column createColumn() {
+		ColumnImpl column = new ColumnImpl();
+		return column;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Row createRow() {
+		RowImpl row = new RowImpl();
+		return row;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Cell createCell() {
+		CellImpl cell = new CellImpl();
+		return cell;
 	}
 
 	/**

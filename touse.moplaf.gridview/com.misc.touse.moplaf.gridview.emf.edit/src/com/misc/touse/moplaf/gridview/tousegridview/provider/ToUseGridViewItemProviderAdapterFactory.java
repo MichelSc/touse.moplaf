@@ -118,6 +118,98 @@ public class ToUseGridViewItemProviderAdapterFactory extends ToUseGridViewAdapte
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.gridview.tousegridview.Sheet} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SheetItemProvider sheetItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.gridview.tousegridview.Sheet}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSheetAdapter() {
+		if (sheetItemProvider == null) {
+			sheetItemProvider = new SheetItemProvider(this);
+		}
+
+		return sheetItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.gridview.tousegridview.Column} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ColumnItemProvider columnItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.gridview.tousegridview.Column}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createColumnAdapter() {
+		if (columnItemProvider == null) {
+			columnItemProvider = new ColumnItemProvider(this);
+		}
+
+		return columnItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.gridview.tousegridview.Row} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RowItemProvider rowItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.gridview.tousegridview.Row}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRowAdapter() {
+		if (rowItemProvider == null) {
+			rowItemProvider = new RowItemProvider(this);
+		}
+
+		return rowItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.gridview.tousegridview.Cell} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CellItemProvider cellItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.gridview.tousegridview.Cell}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCellAdapter() {
+		if (cellItemProvider == null) {
+			cellItemProvider = new CellItemProvider(this);
+		}
+
+		return cellItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -218,6 +310,10 @@ public class ToUseGridViewItemProviderAdapterFactory extends ToUseGridViewAdapte
 	public void dispose() {
 		if (domainItemProvider != null) domainItemProvider.dispose();
 		if (documentItemProvider != null) documentItemProvider.dispose();
+		if (sheetItemProvider != null) sheetItemProvider.dispose();
+		if (columnItemProvider != null) columnItemProvider.dispose();
+		if (rowItemProvider != null) rowItemProvider.dispose();
+		if (cellItemProvider != null) cellItemProvider.dispose();
 	}
 
 }

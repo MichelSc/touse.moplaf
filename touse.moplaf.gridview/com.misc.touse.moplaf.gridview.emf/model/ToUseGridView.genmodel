@@ -10,6 +10,26 @@
     <genClasses ecoreClass="ToUseGridView.ecore#//Domain">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseGridView.ecore#//Domain/Documents"/>
     </genClasses>
-    <genClasses ecoreClass="ToUseGridView.ecore#//Document"/>
+    <genClasses ecoreClass="ToUseGridView.ecore#//Document">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseGridView.ecore#//Document/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseGridView.ecore#//Document/Author"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseGridView.ecore#//Document/Sheets"/>
+    </genClasses>
+    <genClasses ecoreClass="ToUseGridView.ecore#//Sheet">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseGridView.ecore#//Sheet/Name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseGridView.ecore#//Sheet/Columns"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseGridView.ecore#//Sheet/Rows"/>
+    </genClasses>
+    <genClasses ecoreClass="ToUseGridView.ecore#//Column">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseGridView.ecore#//Column/Index"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseGridView.ecore#//Column/Cells"/>
+    </genClasses>
+    <genClasses ecoreClass="ToUseGridView.ecore#//Row">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseGridView.ecore#//Row/Index"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseGridView.ecore#//Row/Cells"/>
+    </genClasses>
+    <genClasses ecoreClass="ToUseGridView.ecore#//Cell">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseGridView.ecore#//Cell/Value"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>
