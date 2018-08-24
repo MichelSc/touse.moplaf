@@ -7,7 +7,6 @@
 <plugin>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated ToUseGridView -->
       <factory
             uri="http://www.misc.com/touse/moplaf/gridview/model/0.1"
             class="com.misc.touse.moplaf.gridview.tousegridview.provider.ToUseGridViewItemProviderAdapterFactory"
@@ -16,7 +15,8 @@
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
                org.eclipse.emf.edit.provider.ITreeItemContentProvider
                org.eclipse.emf.edit.provider.IItemLabelProvider
-               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+               org.eclipse.emf.edit.provider.IItemPropertySource
+               com.misc.common.moplaf.gridview.emf.edit.IItemGridsProvider"/>
    </extension>
 
 </plugin>

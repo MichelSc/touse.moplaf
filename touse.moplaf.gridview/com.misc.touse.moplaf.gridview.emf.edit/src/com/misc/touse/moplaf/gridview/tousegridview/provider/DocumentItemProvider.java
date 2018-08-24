@@ -3,7 +3,12 @@
 package com.misc.touse.moplaf.gridview.tousegridview.provider;
 
 
+import com.misc.common.moplaf.gridview.emf.edit.IItemGridsProvider;
+import com.misc.touse.moplaf.gridview.tousegridview.Cell;
+import com.misc.touse.moplaf.gridview.tousegridview.Column;
 import com.misc.touse.moplaf.gridview.tousegridview.Document;
+import com.misc.touse.moplaf.gridview.tousegridview.Row;
+import com.misc.touse.moplaf.gridview.tousegridview.Sheet;
 import com.misc.touse.moplaf.gridview.tousegridview.ToUseGridViewFactory;
 import com.misc.touse.moplaf.gridview.tousegridview.ToUseGridViewPackage;
 import java.util.Collection;
@@ -11,7 +16,7 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -29,17 +34,14 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 /**
  * This is the item provider adapter for a {@link com.misc.touse.moplaf.gridview.tousegridview.Document} object.
  * <!-- begin-user-doc -->
+ * @implements IItemGridsProvider
  * <!-- end-user-doc -->
  * @generated
  */
 public class DocumentItemProvider 
 	extends ItemProviderAdapter
 	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+		IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource, IItemGridsProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -216,6 +218,142 @@ public class DocumentItemProvider
 	@Override
 	public ResourceLocator getResourceLocator() {
 		return ToUseGridViewEditPlugin.INSTANCE;
+	}
+
+	@Override
+	public Object getGrids(Object element) {
+		Document document = (Document)element;
+		return document.getSheets();
+	}
+
+	@Override
+	public String getGridText(Object element, Object grid) {
+		Sheet sheet = (Sheet)grid;
+		return sheet.getName();
+	}
+
+	@Override
+	public int getGridTraits(Object element, Object grid) {
+		return IItemGridsProvider.SHEET_TRAITS_BARCHART;
+	}
+
+	@Override
+	public Collection<?> getRows(Object element, Object grid) {
+		Sheet sheet = (Sheet)grid;
+		return sheet.getRows();
+	}
+
+	@Override
+	public int getNrRows(Object element, Object grid) {
+		int result = 0;
+		Sheet sheet = (Sheet)grid;
+		if( !(sheet.getRows() == null)) {
+			result = sheet.getRows().size();
+		}
+		return result;
+	}
+
+	@Override
+	public String getRowText(Object element, Object grid, Object row) {
+		Row my_row = (Row)row;
+		return String.valueOf(my_row.getIndex());
+	}
+
+	@Override
+	public int getRowHeight(Object element, Object grid, Object row) {
+		// TODO Auto-generated method stub
+		return IItemGridsProvider.super.getRowHeight(element, grid, row);
+	}
+
+	@Override
+	public int compareRow(Object element, Object grid, Object row1, Object row2, Object column, boolean ascending) {
+		// TODO Auto-generated method stub
+		return IItemGridsProvider.super.compareRow(element, grid, row1, row2, column, ascending);
+	}
+
+	@Override
+	public Collection<?> getColumns(Object element, Object grid) {
+		Sheet sheet = (Sheet)grid;
+		return sheet.getColumns();
+	}
+
+	@Override
+	public int getNrColumns(Object element, Object grid) {
+		int result = 0;
+		Sheet sheet = (Sheet)grid;
+		if( !(sheet.getColumns() == null)) {
+			result = sheet.getColumns().size();
+		}
+		return result;
+	}
+
+	@Override
+	public String getColumnText(Object element, Object grid, Object column) {
+		Column my_column = (Column)column;
+		return String.valueOf(my_column.getIndex());
+	}
+
+	@Override
+	public int getColumnWidth(Object element, Object grid, Object column) {
+		// TODO Auto-generated method stub
+		return IItemGridsProvider.super.getColumnWidth(element, grid, column);
+	}
+
+	@Override
+	public int compareColumn(Object element, Object grid, Object column1, Object column2, Object row,
+			boolean ascending) {
+		// TODO Auto-generated method stub
+		return IItemGridsProvider.super.compareColumn(element, grid, column1, column2, row, ascending);
+	}
+
+	@Override
+	public Object getCellValue(Object element, Object grid, Object row, Object column) {
+		String result = "";
+		Row my_row = (Row)row;
+		Column my_column = (Column)column;
+		EList<Cell> cells = my_row.getCells();
+		for( Cell cell : cells ) {
+			if( my_column.getCells().contains(cell) ) {
+				result = cell.getValue();
+			}
+		}
+		return result;
+	}
+
+	@Override
+	public int getCellType(Object element, Object grid, Object row, Object column) {
+		// TODO Auto-generated method stub
+		return IItemGridsProvider.super.getCellType(element, grid, row, column);
+	}
+
+	@Override
+	public Object getCellForeground(Object element, Object grid, Object row, Object column) {
+		// TODO Auto-generated method stub
+		return IItemGridsProvider.super.getCellForeground(element, grid, row, column);
+	}
+
+	@Override
+	public Object getCellBackground(Object element, Object grid, Object row, Object column) {
+		// TODO Auto-generated method stub
+		return IItemGridsProvider.super.getCellBackground(element, grid, row, column);
+	}
+
+	@Override
+	public Object getCellImage(Object element, Object grid, Object row, Object column) {
+		// TODO Auto-generated method stub
+		return IItemGridsProvider.super.getCellImage(element, grid, row, column);
+	}
+
+	@Override
+	public int getCellALignment(Object element, Object grid, Object row, Object column) {
+		// TODO Auto-generated method stub
+		return IItemGridsProvider.super.getCellALignment(element, grid, row, column);
+	}
+
+	@Override
+	public String getCellFormat(Object element, Object grid, Object row, Object column) {
+		// TODO Auto-generated method stub
+		return IItemGridsProvider.super.getCellFormat(element, grid, row, column);
 	}
 
 }

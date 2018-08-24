@@ -224,7 +224,7 @@ public interface ToUseGridViewPackage extends EPackage {
 	int COLUMN__INDEX = 0;
 
 	/**
-	 * The feature id for the '<em><b>Cells</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Cells</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -463,10 +463,10 @@ public interface ToUseGridViewPackage extends EPackage {
 	EAttribute getColumn_Index();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link com.misc.touse.moplaf.gridview.tousegridview.Column#getCells <em>Cells</em>}'.
+	 * Returns the meta object for the reference list '{@link com.misc.touse.moplaf.gridview.tousegridview.Column#getCells <em>Cells</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Cells</em>'.
+	 * @return the meta object for the reference list '<em>Cells</em>'.
 	 * @see com.misc.touse.moplaf.gridview.tousegridview.Column#getCells()
 	 * @see #getColumn()
 	 * @generated
@@ -654,7 +654,7 @@ public interface ToUseGridViewPackage extends EPackage {
 		EAttribute COLUMN__INDEX = eINSTANCE.getColumn_Index();
 
 		/**
-		 * The meta object literal for the '<em><b>Cells</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Cells</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

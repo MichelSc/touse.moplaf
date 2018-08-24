@@ -39,6 +39,9 @@ import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.PartInitException;
 
+//import com.misc.common.moplaf.common.Plugin;
+import com.misc.common.moplaf.emf.editor.Util;
+
 /**
  * This is the action bar contributor for the ToUseGridView model editor.
  * <!-- begin-user-doc -->
@@ -401,11 +404,14 @@ public class ToUseGridViewActionBarContributor
 	 */
 	@Override
 	protected void addGlobalActions(IMenuManager menuManager) {
+		menuManager.insertAfter("additions-end", new Separator("ui-actions2"));
 		menuManager.insertAfter("additions-end", new Separator("ui-actions"));
 		menuManager.insertAfter("ui-actions", showPropertiesViewAction);
 
 		refreshViewerAction.setEnabled(refreshViewerAction.isEnabled());		
 		menuManager.insertAfter("ui-actions", refreshViewerAction);
+		
+		menuManager.insertAfter("ui-actions2", this.showMoplafGridViewAction);
 
 		super.addGlobalActions(menuManager);
 	}
@@ -420,5 +426,23 @@ public class ToUseGridViewActionBarContributor
 	protected boolean removeAllReferencesOnDelete() {
 		return true;
 	}
+	
+	/**
+	 * This action opens the Moplaf Grid view.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	protected IAction showMoplafGridViewAction =
+			new Action("Show Grid View") {
+		@Override
+		public void run() {
+			try {
+				Util.showView(getPage(), "com.misc.common.moplaf.gridview.views.GridView");
+			}
+			catch (PartInitException exception) {
+				//Plugin.INSTANCE.logError("shiftcoverop.editor.showGridViewAction: exception"+ exception.getMessage());
+			}
+		}
+	};
 
 }

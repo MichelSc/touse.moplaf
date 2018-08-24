@@ -2,6 +2,7 @@
  */
 package com.misc.touse.moplaf.gridview.tousegridview.provider;
 
+import com.misc.common.moplaf.gridview.emf.edit.IItemGridsProvider;
 import com.misc.touse.moplaf.gridview.tousegridview.util.ToUseGridViewAdapterFactory;
 
 import java.util.ArrayList;
@@ -61,7 +62,7 @@ public class ToUseGridViewItemProviderAdapterFactory extends ToUseGridViewAdapte
 	 * This constructs an instance.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
 	public ToUseGridViewItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
@@ -69,6 +70,7 @@ public class ToUseGridViewItemProviderAdapterFactory extends ToUseGridViewAdapte
 		supportedTypes.add(ITreeItemContentProvider.class);
 		supportedTypes.add(IItemLabelProvider.class);
 		supportedTypes.add(IItemPropertySource.class);
+		supportedTypes.add(IItemGridsProvider.class); // moplaf interface 		
 	}
 
 	/**

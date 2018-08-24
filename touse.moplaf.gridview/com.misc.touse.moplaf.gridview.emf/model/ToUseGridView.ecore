@@ -24,7 +24,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Column">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Index" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Cells" upperBound="-1"
-        eType="#//Cell" containment="true"/>
+        eType="#//Cell"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Row">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Index" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>

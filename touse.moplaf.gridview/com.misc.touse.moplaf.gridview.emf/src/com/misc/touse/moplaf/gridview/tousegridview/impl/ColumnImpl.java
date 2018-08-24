@@ -9,18 +9,12 @@ import com.misc.touse.moplaf.gridview.tousegridview.ToUseGridViewPackage;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -58,7 +52,7 @@ public class ColumnImpl extends MinimalEObjectImpl.Container implements Column {
 	protected long index = INDEX_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getCells() <em>Cells</em>}' containment reference list.
+	 * The cached value of the '{@link #getCells() <em>Cells</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getCells()
@@ -114,23 +108,9 @@ public class ColumnImpl extends MinimalEObjectImpl.Container implements Column {
 	 */
 	public EList<Cell> getCells() {
 		if (cells == null) {
-			cells = new EObjectContainmentEList<Cell>(Cell.class, this, ToUseGridViewPackage.COLUMN__CELLS);
+			cells = new EObjectResolvingEList<Cell>(Cell.class, this, ToUseGridViewPackage.COLUMN__CELLS);
 		}
 		return cells;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case ToUseGridViewPackage.COLUMN__CELLS:
-				return ((InternalEList<?>)getCells()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

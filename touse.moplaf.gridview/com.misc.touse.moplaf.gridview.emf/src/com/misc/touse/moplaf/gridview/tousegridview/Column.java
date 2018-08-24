@@ -51,7 +51,7 @@ public interface Column extends EObject {
 	void setIndex(long value);
 
 	/**
-	 * Returns the value of the '<em><b>Cells</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Cells</b></em>' reference list.
 	 * The list contents are of type {@link com.misc.touse.moplaf.gridview.tousegridview.Cell}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -59,9 +59,9 @@ public interface Column extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Cells</em>' containment reference list.
+	 * @return the value of the '<em>Cells</em>' reference list.
 	 * @see com.misc.touse.moplaf.gridview.tousegridview.ToUseGridViewPackage#getColumn_Cells()
-	 * @model containment="true"
+	 * @model
 	 * @generated
 	 */
 	EList<Cell> getCells();
