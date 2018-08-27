@@ -82,7 +82,7 @@ public class CellItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -106,10 +106,8 @@ public class CellItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Cell)object).getValue();
-		return label == null || label.length() == 0 ?
-			getString("_UI_Cell_type") :
-			getString("_UI_Cell_type") + " " + label;
+		Cell cell = (Cell)object;
+		return getString("_UI_Cell_type") + " " + cell.getValue();
 	}
 
 

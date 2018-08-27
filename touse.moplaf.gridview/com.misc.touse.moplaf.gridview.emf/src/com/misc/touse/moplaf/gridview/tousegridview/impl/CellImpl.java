@@ -34,7 +34,7 @@ public class CellImpl extends MinimalEObjectImpl.Container implements Cell {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String VALUE_EDEFAULT = null;
+	protected static final float VALUE_EDEFAULT = 0.0F;
 
 	/**
 	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -44,7 +44,7 @@ public class CellImpl extends MinimalEObjectImpl.Container implements Cell {
 	 * @generated
 	 * @ordered
 	 */
-	protected String value = VALUE_EDEFAULT;
+	protected float value = VALUE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -70,7 +70,7 @@ public class CellImpl extends MinimalEObjectImpl.Container implements Cell {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getValue() {
+	public float getValue() {
 		return value;
 	}
 
@@ -79,8 +79,8 @@ public class CellImpl extends MinimalEObjectImpl.Container implements Cell {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue(String newValue) {
-		String oldValue = value;
+	public void setValue(float newValue) {
+		float oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ToUseGridViewPackage.CELL__VALUE, oldValue, value));
@@ -109,7 +109,7 @@ public class CellImpl extends MinimalEObjectImpl.Container implements Cell {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case ToUseGridViewPackage.CELL__VALUE:
-				setValue((String)newValue);
+				setValue((Float)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -139,7 +139,7 @@ public class CellImpl extends MinimalEObjectImpl.Container implements Cell {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case ToUseGridViewPackage.CELL__VALUE:
-				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
+				return value != VALUE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}

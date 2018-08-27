@@ -64,6 +64,7 @@ public class ColumnItemProvider
 			super.getPropertyDescriptors(object);
 
 			addIndexPropertyDescriptor(object);
+			addColorPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -82,6 +83,28 @@ public class ColumnItemProvider
 				 getString("_UI_Column_Index_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Column_Index_feature", "_UI_Column_type"),
 				 ToUseGridViewPackage.Literals.COLUMN__INDEX,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Color feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addColorPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Column_color_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Column_color_feature", "_UI_Column_type"),
+				 ToUseGridViewPackage.Literals.COLUMN__COLOR,
 				 true,
 				 false,
 				 false,
@@ -157,6 +180,7 @@ public class ColumnItemProvider
 
 		switch (notification.getFeatureID(Column.class)) {
 			case ToUseGridViewPackage.COLUMN__INDEX:
+			case ToUseGridViewPackage.COLUMN__COLOR:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case ToUseGridViewPackage.COLUMN__CELLS:

@@ -187,6 +187,15 @@ public class ToUseGridViewPackageImpl extends EPackageImpl implements ToUseGridV
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getDocument_Trait() {
+		return (EAttribute)documentEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getSheet() {
 		return sheetEClass;
 	}
@@ -243,6 +252,15 @@ public class ToUseGridViewPackageImpl extends EPackageImpl implements ToUseGridV
 	 */
 	public EReference getColumn_Cells() {
 		return (EReference)columnEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getColumn_Color() {
+		return (EAttribute)columnEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -325,6 +343,7 @@ public class ToUseGridViewPackageImpl extends EPackageImpl implements ToUseGridV
 		createEAttribute(documentEClass, DOCUMENT__NAME);
 		createEAttribute(documentEClass, DOCUMENT__AUTHOR);
 		createEReference(documentEClass, DOCUMENT__SHEETS);
+		createEAttribute(documentEClass, DOCUMENT__TRAIT);
 
 		sheetEClass = createEClass(SHEET);
 		createEAttribute(sheetEClass, SHEET__NAME);
@@ -334,6 +353,7 @@ public class ToUseGridViewPackageImpl extends EPackageImpl implements ToUseGridV
 		columnEClass = createEClass(COLUMN);
 		createEAttribute(columnEClass, COLUMN__INDEX);
 		createEReference(columnEClass, COLUMN__CELLS);
+		createEAttribute(columnEClass, COLUMN__COLOR);
 
 		rowEClass = createEClass(ROW);
 		createEAttribute(rowEClass, ROW__INDEX);
@@ -380,6 +400,7 @@ public class ToUseGridViewPackageImpl extends EPackageImpl implements ToUseGridV
 		initEAttribute(getDocument_Name(), ecorePackage.getEString(), "Name", "", 0, 1, Document.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDocument_Author(), ecorePackage.getEString(), "Author", "", 0, 1, Document.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDocument_Sheets(), this.getSheet(), null, "Sheets", null, 0, -1, Document.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDocument_Trait(), ecorePackage.getEEnumerator(), "Trait", null, 0, 1, Document.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(sheetEClass, Sheet.class, "Sheet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSheet_Name(), ecorePackage.getEString(), "Name", null, 0, 1, Sheet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -389,13 +410,14 @@ public class ToUseGridViewPackageImpl extends EPackageImpl implements ToUseGridV
 		initEClass(columnEClass, Column.class, "Column", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getColumn_Index(), ecorePackage.getELong(), "Index", null, 0, 1, Column.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getColumn_Cells(), this.getCell(), null, "Cells", null, 0, -1, Column.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getColumn_Color(), ecorePackage.getEInt(), "color", null, 0, 1, Column.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(rowEClass, Row.class, "Row", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRow_Index(), ecorePackage.getELong(), "Index", null, 0, 1, Row.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRow_Cells(), this.getCell(), null, "Cells", null, 0, -1, Row.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(cellEClass, Cell.class, "Cell", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCell_Value(), ecorePackage.getEString(), "Value", null, 0, 1, Cell.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCell_Value(), ecorePackage.getEFloat(), "Value", null, 0, 1, Cell.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

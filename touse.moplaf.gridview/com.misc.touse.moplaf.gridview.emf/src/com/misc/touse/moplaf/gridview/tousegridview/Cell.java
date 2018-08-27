@@ -30,12 +30,12 @@ public interface Cell extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
-	 * @see #setValue(String)
+	 * @see #setValue(float)
 	 * @see com.misc.touse.moplaf.gridview.tousegridview.ToUseGridViewPackage#getCell_Value()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
-	String getValue();
+	float getValue();
 
 	/**
 	 * Sets the value of the '{@link com.misc.touse.moplaf.gridview.tousegridview.Cell#getValue <em>Value</em>}' attribute.
@@ -45,6 +45,6 @@ public interface Cell extends EObject {
 	 * @see #getValue()
 	 * @generated
 	 */
-	void setValue(String value);
+	void setValue(float value);
 
 } // Cell

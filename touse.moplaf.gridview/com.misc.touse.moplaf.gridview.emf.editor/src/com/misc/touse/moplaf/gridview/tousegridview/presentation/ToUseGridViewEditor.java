@@ -155,6 +155,8 @@ import org.eclipse.emf.edit.ui.util.EditUIUtil;
 
 import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 
+import com.misc.common.moplaf.emf.editor.provider.AdapterFactoryContentProviderExtended;
+import com.misc.touse.moplaf.gridview.tousegridview.ToUseGridViewPackage;
 import com.misc.touse.moplaf.gridview.tousegridview.provider.ToUseGridViewItemProviderAdapterFactory;
 
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
@@ -1395,7 +1397,6 @@ public class ToUseGridViewEditor
 	 * This accesses a cached version of the property sheet.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	public IPropertySheetPage getPropertySheetPage() {
 		PropertySheetPage propertySheetPage =
@@ -1412,7 +1413,11 @@ public class ToUseGridViewEditor
 					getActionBarContributor().shareGlobalActions(this, actionBars);
 				}
 			};
-		propertySheetPage.setPropertySourceProvider(new AdapterFactoryContentProvider(adapterFactory));
+			
+	    AdapterFactoryContentProviderExtended contentProvider =new AdapterFactoryContentProviderExtended(this.adapterFactory);	
+	    contentProvider.editColors.addSelector(ToUseGridViewPackage.Literals.COLUMN__COLOR);
+
+		propertySheetPage.setPropertySourceProvider(contentProvider);
 		propertySheetPages.add(propertySheetPage);
 
 		return propertySheetPage;

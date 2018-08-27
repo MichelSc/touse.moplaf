@@ -400,7 +400,6 @@ public class ToUseGridViewActionBarContributor
 	 * This inserts global actions before the "additions-end" separator.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	@Override
 	protected void addGlobalActions(IMenuManager menuManager) {
@@ -410,8 +409,9 @@ public class ToUseGridViewActionBarContributor
 
 		refreshViewerAction.setEnabled(refreshViewerAction.isEnabled());		
 		menuManager.insertAfter("ui-actions", refreshViewerAction);
-		
+
 		menuManager.insertAfter("ui-actions2", this.showMoplafGridViewAction);
+		menuManager.insertAfter("ui-actions2", this.showMoplafChartViewAction);
 
 		super.addGlobalActions(menuManager);
 	}
@@ -445,4 +445,22 @@ public class ToUseGridViewActionBarContributor
 		}
 	};
 
+	/**
+	 * This action opens the Moplaf Chart view.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	protected IAction showMoplafChartViewAction =
+			new Action("Show Chart View") {
+		@Override
+		public void run() {
+			try {
+				String id = "com.misc.common.moplaf.chart.swtchart.views.ChartView";
+				Util.showView(getPage(), id);
+			}
+			catch (PartInitException exception) {
+				//Plugin.INSTANCE.logError("shiftcoverop.editor.showChartViewAction: exception"+ exception.getMessage());
+			}
+		}
+	};
 }

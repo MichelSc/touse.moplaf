@@ -131,13 +131,22 @@ public interface ToUseGridViewPackage extends EPackage {
 	int DOCUMENT__SHEETS = 2;
 
 	/**
+	 * The feature id for the '<em><b>Trait</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT__TRAIT = 3;
+
+	/**
 	 * The number of structural features of the '<em>Document</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOCUMENT_FEATURE_COUNT = 3;
+	int DOCUMENT_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Document</em>' class.
@@ -233,13 +242,22 @@ public interface ToUseGridViewPackage extends EPackage {
 	int COLUMN__CELLS = 1;
 
 	/**
+	 * The feature id for the '<em><b>Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLUMN__COLOR = 2;
+
+	/**
 	 * The number of structural features of the '<em>Column</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COLUMN_FEATURE_COUNT = 2;
+	int COLUMN_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Column</em>' class.
@@ -399,6 +417,17 @@ public interface ToUseGridViewPackage extends EPackage {
 	EReference getDocument_Sheets();
 
 	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.gridview.tousegridview.Document#getTrait <em>Trait</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Trait</em>'.
+	 * @see com.misc.touse.moplaf.gridview.tousegridview.Document#getTrait()
+	 * @see #getDocument()
+	 * @generated
+	 */
+	EAttribute getDocument_Trait();
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.gridview.tousegridview.Sheet <em>Sheet</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -472,6 +501,17 @@ public interface ToUseGridViewPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getColumn_Cells();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.gridview.tousegridview.Column#getColor <em>Color</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Color</em>'.
+	 * @see com.misc.touse.moplaf.gridview.tousegridview.Column#getColor()
+	 * @see #getColumn()
+	 * @generated
+	 */
+	EAttribute getColumn_Color();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.gridview.tousegridview.Row <em>Row</em>}'.
@@ -602,6 +642,14 @@ public interface ToUseGridViewPackage extends EPackage {
 		EReference DOCUMENT__SHEETS = eINSTANCE.getDocument_Sheets();
 
 		/**
+		 * The meta object literal for the '<em><b>Trait</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DOCUMENT__TRAIT = eINSTANCE.getDocument_Trait();
+
+		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.gridview.tousegridview.impl.SheetImpl <em>Sheet</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -660,6 +708,14 @@ public interface ToUseGridViewPackage extends EPackage {
 		 * @generated
 		 */
 		EReference COLUMN__CELLS = eINSTANCE.getColumn_Cells();
+
+		/**
+		 * The meta object literal for the '<em><b>Color</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COLUMN__COLOR = eINSTANCE.getColumn_Color();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.gridview.tousegridview.impl.RowImpl <em>Row</em>}' class.

@@ -14,6 +14,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseGridView.ecore#//Document/Name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseGridView.ecore#//Document/Author"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseGridView.ecore#//Document/Sheets"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseGridView.ecore#//Document/Trait"/>
     </genClasses>
     <genClasses ecoreClass="ToUseGridView.ecore#//Sheet">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseGridView.ecore#//Sheet/Name"/>
@@ -23,6 +24,7 @@
     <genClasses ecoreClass="ToUseGridView.ecore#//Column">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseGridView.ecore#//Column/Index"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseGridView.ecore#//Column/Cells"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseGridView.ecore#//Column/color"/>
     </genClasses>
     <genClasses ecoreClass="ToUseGridView.ecore#//Row">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseGridView.ecore#//Row/Index"/>

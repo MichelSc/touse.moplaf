@@ -10,6 +10,7 @@ import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.Enumerator;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.InternalEObject;
@@ -29,6 +30,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.misc.touse.moplaf.gridview.tousegridview.impl.DocumentImpl#getName <em>Name</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.gridview.tousegridview.impl.DocumentImpl#getAuthor <em>Author</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.gridview.tousegridview.impl.DocumentImpl#getSheets <em>Sheets</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.gridview.tousegridview.impl.DocumentImpl#getTrait <em>Trait</em>}</li>
  * </ul>
  *
  * @generated
@@ -79,6 +81,25 @@ public class DocumentImpl extends MinimalEObjectImpl.Container implements Docume
 	 * @ordered
 	 */
 	protected EList<Sheet> sheets;
+
+	/**
+	 * The default value of the '{@link #getTrait() <em>Trait</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTrait()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Enumerator TRAIT_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getTrait() <em>Trait</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTrait()
+	 * @generated
+	 * @ordered
+	 */
+	protected Enumerator trait = TRAIT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -158,6 +179,27 @@ public class DocumentImpl extends MinimalEObjectImpl.Container implements Docume
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Enumerator getTrait() {
+		return trait;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTrait(Enumerator newTrait) {
+		Enumerator oldTrait = trait;
+		trait = newTrait;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseGridViewPackage.DOCUMENT__TRAIT, oldTrait, trait));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -181,6 +223,8 @@ public class DocumentImpl extends MinimalEObjectImpl.Container implements Docume
 				return getAuthor();
 			case ToUseGridViewPackage.DOCUMENT__SHEETS:
 				return getSheets();
+			case ToUseGridViewPackage.DOCUMENT__TRAIT:
+				return getTrait();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -204,6 +248,9 @@ public class DocumentImpl extends MinimalEObjectImpl.Container implements Docume
 				getSheets().clear();
 				getSheets().addAll((Collection<? extends Sheet>)newValue);
 				return;
+			case ToUseGridViewPackage.DOCUMENT__TRAIT:
+				setTrait((Enumerator)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -225,6 +272,9 @@ public class DocumentImpl extends MinimalEObjectImpl.Container implements Docume
 			case ToUseGridViewPackage.DOCUMENT__SHEETS:
 				getSheets().clear();
 				return;
+			case ToUseGridViewPackage.DOCUMENT__TRAIT:
+				setTrait(TRAIT_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -243,6 +293,8 @@ public class DocumentImpl extends MinimalEObjectImpl.Container implements Docume
 				return AUTHOR_EDEFAULT == null ? author != null : !AUTHOR_EDEFAULT.equals(author);
 			case ToUseGridViewPackage.DOCUMENT__SHEETS:
 				return sheets != null && !sheets.isEmpty();
+			case ToUseGridViewPackage.DOCUMENT__TRAIT:
+				return TRAIT_EDEFAULT == null ? trait != null : !TRAIT_EDEFAULT.equals(trait);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -261,6 +313,8 @@ public class DocumentImpl extends MinimalEObjectImpl.Container implements Docume
 		result.append(name);
 		result.append(", Author: ");
 		result.append(author);
+		result.append(", Trait: ");
+		result.append(trait);
 		result.append(')');
 		return result.toString();
 	}

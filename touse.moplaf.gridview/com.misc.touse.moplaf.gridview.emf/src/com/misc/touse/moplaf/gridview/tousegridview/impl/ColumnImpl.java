@@ -26,6 +26,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.gridview.tousegridview.impl.ColumnImpl#getIndex <em>Index</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.gridview.tousegridview.impl.ColumnImpl#getCells <em>Cells</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.gridview.tousegridview.impl.ColumnImpl#getColor <em>Color</em>}</li>
  * </ul>
  *
  * @generated
@@ -60,6 +61,26 @@ public class ColumnImpl extends MinimalEObjectImpl.Container implements Column {
 	 * @ordered
 	 */
 	protected EList<Cell> cells;
+
+	/**
+	 * The default value of the '{@link #getColor() <em>Color</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getColor()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int COLOR_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getColor() <em>Color</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getColor()
+	 * @generated
+	 * @ordered
+	 */
+	protected int color = COLOR_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -118,6 +139,27 @@ public class ColumnImpl extends MinimalEObjectImpl.Container implements Column {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getColor() {
+		return color;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setColor(int newColor) {
+		int oldColor = color;
+		color = newColor;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseGridViewPackage.COLUMN__COLOR, oldColor, color));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -125,6 +167,8 @@ public class ColumnImpl extends MinimalEObjectImpl.Container implements Column {
 				return getIndex();
 			case ToUseGridViewPackage.COLUMN__CELLS:
 				return getCells();
+			case ToUseGridViewPackage.COLUMN__COLOR:
+				return getColor();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -145,6 +189,9 @@ public class ColumnImpl extends MinimalEObjectImpl.Container implements Column {
 				getCells().clear();
 				getCells().addAll((Collection<? extends Cell>)newValue);
 				return;
+			case ToUseGridViewPackage.COLUMN__COLOR:
+				setColor((Integer)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -163,6 +210,9 @@ public class ColumnImpl extends MinimalEObjectImpl.Container implements Column {
 			case ToUseGridViewPackage.COLUMN__CELLS:
 				getCells().clear();
 				return;
+			case ToUseGridViewPackage.COLUMN__COLOR:
+				setColor(COLOR_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -179,6 +229,8 @@ public class ColumnImpl extends MinimalEObjectImpl.Container implements Column {
 				return index != INDEX_EDEFAULT;
 			case ToUseGridViewPackage.COLUMN__CELLS:
 				return cells != null && !cells.isEmpty();
+			case ToUseGridViewPackage.COLUMN__COLOR:
+				return color != COLOR_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -195,6 +247,8 @@ public class ColumnImpl extends MinimalEObjectImpl.Container implements Column {
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (Index: ");
 		result.append(index);
+		result.append(", color: ");
+		result.append(color);
 		result.append(')');
 		return result.toString();
 	}
