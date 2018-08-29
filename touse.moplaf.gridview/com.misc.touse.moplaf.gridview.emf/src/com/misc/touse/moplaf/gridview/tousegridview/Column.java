@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.misc.touse.moplaf.gridview.tousegridview.Column#getIndex <em>Index</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.gridview.tousegridview.Column#getCells <em>Cells</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.gridview.tousegridview.Column#getColor <em>Color</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.gridview.tousegridview.Column#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see com.misc.touse.moplaf.gridview.tousegridview.ToUseGridViewPackage#getColumn()
@@ -92,5 +93,31 @@ public interface Column extends EObject {
 	 * @generated
 	 */
 	void setColor(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see com.misc.touse.moplaf.gridview.tousegridview.ToUseGridViewPackage#getColumn_Name()
+	 * @model
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link com.misc.touse.moplaf.gridview.tousegridview.Column#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
 
 } // Column

@@ -92,6 +92,18 @@ public class ToUseGridViewAdapterFactory extends AdapterFactoryImpl {
 				return createCellAdapter();
 			}
 			@Override
+			public Adapter caseCellInt(CellInt object) {
+				return createCellIntAdapter();
+			}
+			@Override
+			public Adapter caseCellFloat(CellFloat object) {
+				return createCellFloatAdapter();
+			}
+			@Override
+			public Adapter caseCellString(CellString object) {
+				return createCellStringAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -192,6 +204,48 @@ public class ToUseGridViewAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCellAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.gridview.tousegridview.CellInt <em>Cell Int</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.touse.moplaf.gridview.tousegridview.CellInt
+	 * @generated
+	 */
+	public Adapter createCellIntAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.gridview.tousegridview.CellFloat <em>Cell Float</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.touse.moplaf.gridview.tousegridview.CellFloat
+	 * @generated
+	 */
+	public Adapter createCellFloatAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.touse.moplaf.gridview.tousegridview.CellString <em>Cell String</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.touse.moplaf.gridview.tousegridview.CellString
+	 * @generated
+	 */
+	public Adapter createCellStringAdapter() {
 		return null;
 	}
 

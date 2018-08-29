@@ -5,6 +5,7 @@ package com.misc.touse.moplaf.gridview.tousegridview.impl;
 import com.misc.touse.moplaf.gridview.tousegridview.Column;
 import com.misc.touse.moplaf.gridview.tousegridview.Row;
 import com.misc.touse.moplaf.gridview.tousegridview.Sheet;
+import com.misc.touse.moplaf.gridview.tousegridview.SheetTraitEnum;
 import com.misc.touse.moplaf.gridview.tousegridview.ToUseGridViewPackage;
 
 import java.util.Collection;
@@ -34,6 +35,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.misc.touse.moplaf.gridview.tousegridview.impl.SheetImpl#getName <em>Name</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.gridview.tousegridview.impl.SheetImpl#getColumns <em>Columns</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.gridview.tousegridview.impl.SheetImpl#getRows <em>Rows</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.gridview.tousegridview.impl.SheetImpl#getTrait <em>Trait</em>}</li>
  * </ul>
  *
  * @generated
@@ -78,6 +80,26 @@ public class SheetImpl extends MinimalEObjectImpl.Container implements Sheet {
 	 * @ordered
 	 */
 	protected EList<Row> rows;
+
+	/**
+	 * The default value of the '{@link #getTrait() <em>Trait</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTrait()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final SheetTraitEnum TRAIT_EDEFAULT = SheetTraitEnum.SHEET_TRAITS_NONE;
+
+	/**
+	 * The cached value of the '{@link #getTrait() <em>Trait</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTrait()
+	 * @generated
+	 * @ordered
+	 */
+	protected SheetTraitEnum trait = TRAIT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -148,6 +170,27 @@ public class SheetImpl extends MinimalEObjectImpl.Container implements Sheet {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public SheetTraitEnum getTrait() {
+		return trait;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTrait(SheetTraitEnum newTrait) {
+		SheetTraitEnum oldTrait = trait;
+		trait = newTrait == null ? TRAIT_EDEFAULT : newTrait;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseGridViewPackage.SHEET__TRAIT, oldTrait, trait));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -173,6 +216,8 @@ public class SheetImpl extends MinimalEObjectImpl.Container implements Sheet {
 				return getColumns();
 			case ToUseGridViewPackage.SHEET__ROWS:
 				return getRows();
+			case ToUseGridViewPackage.SHEET__TRAIT:
+				return getTrait();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -197,6 +242,9 @@ public class SheetImpl extends MinimalEObjectImpl.Container implements Sheet {
 				getRows().clear();
 				getRows().addAll((Collection<? extends Row>)newValue);
 				return;
+			case ToUseGridViewPackage.SHEET__TRAIT:
+				setTrait((SheetTraitEnum)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -218,6 +266,9 @@ public class SheetImpl extends MinimalEObjectImpl.Container implements Sheet {
 			case ToUseGridViewPackage.SHEET__ROWS:
 				getRows().clear();
 				return;
+			case ToUseGridViewPackage.SHEET__TRAIT:
+				setTrait(TRAIT_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -236,6 +287,8 @@ public class SheetImpl extends MinimalEObjectImpl.Container implements Sheet {
 				return columns != null && !columns.isEmpty();
 			case ToUseGridViewPackage.SHEET__ROWS:
 				return rows != null && !rows.isEmpty();
+			case ToUseGridViewPackage.SHEET__TRAIT:
+				return trait != TRAIT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -252,6 +305,8 @@ public class SheetImpl extends MinimalEObjectImpl.Container implements Sheet {
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (Name: ");
 		result.append(name);
+		result.append(", Trait: ");
+		result.append(trait);
 		result.append(')');
 		return result.toString();
 	}

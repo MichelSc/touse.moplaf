@@ -67,13 +67,31 @@ public interface ToUseGridViewFactory extends EFactory {
 	Row createRow();
 
 	/**
-	 * Returns a new object of class '<em>Cell</em>'.
+	 * Returns a new object of class '<em>Cell Int</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Cell</em>'.
+	 * @return a new object of class '<em>Cell Int</em>'.
 	 * @generated
 	 */
-	Cell createCell();
+	CellInt createCellInt();
+
+	/**
+	 * Returns a new object of class '<em>Cell Float</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Cell Float</em>'.
+	 * @generated
+	 */
+	CellFloat createCellFloat();
+
+	/**
+	 * Returns a new object of class '<em>Cell String</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Cell String</em>'.
+	 * @generated
+	 */
+	CellString createCellString();
 
 	/**
 	 * Returns the package supported by this factory.

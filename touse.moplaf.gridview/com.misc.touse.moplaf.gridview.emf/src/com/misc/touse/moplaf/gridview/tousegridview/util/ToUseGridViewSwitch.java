@@ -102,6 +102,27 @@ public class ToUseGridViewSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ToUseGridViewPackage.CELL_INT: {
+				CellInt cellInt = (CellInt)theEObject;
+				T result = caseCellInt(cellInt);
+				if (result == null) result = caseCell(cellInt);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ToUseGridViewPackage.CELL_FLOAT: {
+				CellFloat cellFloat = (CellFloat)theEObject;
+				T result = caseCellFloat(cellFloat);
+				if (result == null) result = caseCell(cellFloat);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ToUseGridViewPackage.CELL_STRING: {
+				CellString cellString = (CellString)theEObject;
+				T result = caseCellString(cellString);
+				if (result == null) result = caseCell(cellString);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -193,6 +214,51 @@ public class ToUseGridViewSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseCell(Cell object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Cell Int</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Cell Int</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCellInt(CellInt object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Cell Float</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Cell Float</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCellFloat(CellFloat object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Cell String</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Cell String</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCellString(CellString object) {
 		return null;
 	}
 

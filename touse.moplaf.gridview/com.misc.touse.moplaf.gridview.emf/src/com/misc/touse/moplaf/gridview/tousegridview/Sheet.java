@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.misc.touse.moplaf.gridview.tousegridview.Sheet#getName <em>Name</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.gridview.tousegridview.Sheet#getColumns <em>Columns</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.gridview.tousegridview.Sheet#getRows <em>Rows</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.gridview.tousegridview.Sheet#getTrait <em>Trait</em>}</li>
  * </ul>
  *
  * @see com.misc.touse.moplaf.gridview.tousegridview.ToUseGridViewPackage#getSheet()
@@ -82,5 +83,34 @@ public interface Sheet extends EObject {
 	 * @generated
 	 */
 	EList<Row> getRows();
+
+	/**
+	 * Returns the value of the '<em><b>Trait</b></em>' attribute.
+	 * The literals are from the enumeration {@link com.misc.touse.moplaf.gridview.tousegridview.SheetTraitEnum}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Trait</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Trait</em>' attribute.
+	 * @see com.misc.touse.moplaf.gridview.tousegridview.SheetTraitEnum
+	 * @see #setTrait(SheetTraitEnum)
+	 * @see com.misc.touse.moplaf.gridview.tousegridview.ToUseGridViewPackage#getSheet_Trait()
+	 * @model transient="true"
+	 * @generated
+	 */
+	SheetTraitEnum getTrait();
+
+	/**
+	 * Sets the value of the '{@link com.misc.touse.moplaf.gridview.tousegridview.Sheet#getTrait <em>Trait</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Trait</em>' attribute.
+	 * @see com.misc.touse.moplaf.gridview.tousegridview.SheetTraitEnum
+	 * @see #getTrait()
+	 * @generated
+	 */
+	void setTrait(SheetTraitEnum value);
 
 } // Sheet

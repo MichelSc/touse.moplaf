@@ -6,6 +6,9 @@ package com.misc.touse.moplaf.gridview.tousegridview.provider;
 import com.misc.common.moplaf.common.Color;
 import com.misc.common.moplaf.gridview.emf.edit.IItemGridsProvider;
 import com.misc.touse.moplaf.gridview.tousegridview.Cell;
+import com.misc.touse.moplaf.gridview.tousegridview.CellFloat;
+import com.misc.touse.moplaf.gridview.tousegridview.CellInt;
+import com.misc.touse.moplaf.gridview.tousegridview.CellString;
 import com.misc.touse.moplaf.gridview.tousegridview.Column;
 import com.misc.touse.moplaf.gridview.tousegridview.Document;
 import com.misc.touse.moplaf.gridview.tousegridview.Row;
@@ -66,7 +69,6 @@ public class DocumentItemProvider
 
 			addNamePropertyDescriptor(object);
 			addAuthorPropertyDescriptor(object);
-			addTraitPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -107,28 +109,6 @@ public class DocumentItemProvider
 				 getString("_UI_Document_Author_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Document_Author_feature", "_UI_Document_type"),
 				 ToUseGridViewPackage.Literals.DOCUMENT__AUTHOR,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Trait feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTraitPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Document_Trait_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Document_Trait_feature", "_UI_Document_type"),
-				 ToUseGridViewPackage.Literals.DOCUMENT__TRAIT,
 				 true,
 				 false,
 				 false,
@@ -207,7 +187,6 @@ public class DocumentItemProvider
 		switch (notification.getFeatureID(Document.class)) {
 			case ToUseGridViewPackage.DOCUMENT__NAME:
 			case ToUseGridViewPackage.DOCUMENT__AUTHOR:
-			case ToUseGridViewPackage.DOCUMENT__TRAIT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case ToUseGridViewPackage.DOCUMENT__SHEETS:
@@ -259,7 +238,9 @@ public class DocumentItemProvider
 
 	@Override
 	public int getGridTraits(Object element, Object grid) {
-		return IItemGridsProvider.SHEET_TRAITS_BARCHART;
+		Sheet sheet = (Sheet)grid;
+		//return IItemGridsProvider.SHEET_TRAITS_BARCHART;
+		return sheet.getTrait().getValue();
 	}
 
 	@Override
@@ -270,18 +251,13 @@ public class DocumentItemProvider
 
 	@Override
 	public int getNrRows(Object element, Object grid) {
-		int result = 0;
-		Sheet sheet = (Sheet)grid;
-		if( !(sheet.getRows() == null)) {
-			result = sheet.getRows().size();
-		}
-		return result;
+		return IItemGridsProvider.super.getNrRows(element, grid);
 	}
 
 	@Override
 	public String getRowText(Object element, Object grid, Object row) {
 		Row my_row = (Row)row;
-		return String.valueOf(my_row.getIndex());
+		return my_row.getName();
 	}
 
 	@Override
@@ -304,18 +280,13 @@ public class DocumentItemProvider
 
 	@Override
 	public int getNrColumns(Object element, Object grid) {
-		int result = 0;
-		Sheet sheet = (Sheet)grid;
-		if( !(sheet.getColumns() == null)) {
-			result = sheet.getColumns().size();
-		}
-		return result;
+		return IItemGridsProvider.super.getNrColumns(element, grid);
 	}
 
 	@Override
 	public String getColumnText(Object element, Object grid, Object column) {
 		Column my_column = (Column)column;
-		return String.valueOf(my_column.getIndex());
+		return my_column.getName();
 	}
 
 	@Override
@@ -333,22 +304,30 @@ public class DocumentItemProvider
 
 	@Override
 	public Object getCellValue(Object element, Object grid, Object row, Object column) {
-		//String result = "";
 		Object result = null;
-		Row my_row = (Row)row;
-		Column my_column = (Column)column;
-		EList<Cell> cells = my_row.getCells();
-		for( Cell cell : cells ) {
-			if( my_column.getCells().contains(cell) ) {
-				result = cell.getValue();
-			}
+		Cell cell = getCell(column, row);
+		if( cell != null ) {
+			result = cell.getValue();
 		}
 		return result;
 	}
 
 	@Override
 	public int getCellType(Object element, Object grid, Object row, Object column) {
-		return IItemGridsProvider.CELL_TYPE_FLOAT;
+		int result = IItemGridsProvider.CELL_TYPE_UNKOWN;
+		Cell cell = getCell(column, row);
+		if( cell != null ) {
+			if( cell instanceof CellFloat ) {
+				result = IItemGridsProvider.CELL_TYPE_FLOAT;
+			}
+			else if ( cell instanceof CellInt ) {
+				result = IItemGridsProvider.CELL_TYPE_INT;
+			}
+			else if ( cell instanceof CellString ) {
+				result = IItemGridsProvider.CELL_TYPE_STRING;
+			}
+		}
+		return result;
 	}
 
 	@Override
@@ -386,4 +365,16 @@ public class DocumentItemProvider
 		return IItemGridsProvider.super.getCellFormat(element, grid, row, column);
 	}
 
+	private Cell getCell(Object column, Object row) {
+		Cell result = null;
+		Row my_row = (Row)row;
+		Column my_column = (Column)column;
+		EList<Cell> cells = my_row.getCells();
+		for( Cell cell : cells ) {
+			if( my_column.getCells().contains(cell) ) {
+				result = cell;
+			}
+		}		
+		return result;
+	}
 }

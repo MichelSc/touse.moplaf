@@ -3,7 +3,6 @@
 package com.misc.touse.moplaf.gridview.tousegridview;
 
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.common.util.Enumerator;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -18,7 +17,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.misc.touse.moplaf.gridview.tousegridview.Document#getName <em>Name</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.gridview.tousegridview.Document#getAuthor <em>Author</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.gridview.tousegridview.Document#getSheets <em>Sheets</em>}</li>
- *   <li>{@link com.misc.touse.moplaf.gridview.tousegridview.Document#getTrait <em>Trait</em>}</li>
  * </ul>
  *
  * @see com.misc.touse.moplaf.gridview.tousegridview.ToUseGridViewPackage#getDocument()
@@ -96,30 +94,4 @@ public interface Document extends EObject {
 	 * @generated
 	 */
 	EList<Sheet> getSheets();
-
-	/**
-	 * Returns the value of the '<em><b>Trait</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Trait</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Trait</em>' attribute.
-	 * @see #setTrait(Enumerator)
-	 * @see com.misc.touse.moplaf.gridview.tousegridview.ToUseGridViewPackage#getDocument_Trait()
-	 * @model transient="true"
-	 * @generated
-	 */
-	Enumerator getTrait();
-
-	/**
-	 * Sets the value of the '{@link com.misc.touse.moplaf.gridview.tousegridview.Document#getTrait <em>Trait</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Trait</em>' attribute.
-	 * @see #getTrait()
-	 * @generated
-	 */
-	void setTrait(Enumerator value);
 } // Document

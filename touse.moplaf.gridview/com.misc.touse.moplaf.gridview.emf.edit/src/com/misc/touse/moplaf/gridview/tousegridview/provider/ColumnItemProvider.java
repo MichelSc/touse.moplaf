@@ -65,6 +65,7 @@ public class ColumnItemProvider
 
 			addIndexPropertyDescriptor(object);
 			addColorPropertyDescriptor(object);
+			addNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -109,6 +110,28 @@ public class ColumnItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Column_Name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Column_Name_feature", "_UI_Column_type"),
+				 ToUseGridViewPackage.Literals.COLUMN__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -162,8 +185,10 @@ public class ColumnItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		Column column = (Column)object;
-		return getString("_UI_Column_type") + " " + column.getIndex();
+		String label = ((Column)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Column_type") :
+			getString("_UI_Column_type") + " " + label;
 	}
 
 
@@ -181,6 +206,7 @@ public class ColumnItemProvider
 		switch (notification.getFeatureID(Column.class)) {
 			case ToUseGridViewPackage.COLUMN__INDEX:
 			case ToUseGridViewPackage.COLUMN__COLOR:
+			case ToUseGridViewPackage.COLUMN__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case ToUseGridViewPackage.COLUMN__CELLS:
@@ -204,7 +230,17 @@ public class ColumnItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(ToUseGridViewPackage.Literals.COLUMN__CELLS,
-				 ToUseGridViewFactory.eINSTANCE.createCell()));
+				 ToUseGridViewFactory.eINSTANCE.createCellInt()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ToUseGridViewPackage.Literals.COLUMN__CELLS,
+				 ToUseGridViewFactory.eINSTANCE.createCellFloat()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ToUseGridViewPackage.Literals.COLUMN__CELLS,
+				 ToUseGridViewFactory.eINSTANCE.createCellString()));
 	}
 
 	/**

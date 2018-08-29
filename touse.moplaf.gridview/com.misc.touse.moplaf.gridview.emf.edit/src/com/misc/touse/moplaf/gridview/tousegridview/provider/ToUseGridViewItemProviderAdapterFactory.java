@@ -189,26 +189,72 @@ public class ToUseGridViewItemProviderAdapterFactory extends ToUseGridViewAdapte
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.gridview.tousegridview.Cell} instances.
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.gridview.tousegridview.CellInt} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected CellItemProvider cellItemProvider;
+	protected CellIntItemProvider cellIntItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link com.misc.touse.moplaf.gridview.tousegridview.Cell}.
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.gridview.tousegridview.CellInt}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createCellAdapter() {
-		if (cellItemProvider == null) {
-			cellItemProvider = new CellItemProvider(this);
+	public Adapter createCellIntAdapter() {
+		if (cellIntItemProvider == null) {
+			cellIntItemProvider = new CellIntItemProvider(this);
 		}
 
-		return cellItemProvider;
+		return cellIntItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.gridview.tousegridview.CellFloat} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CellFloatItemProvider cellFloatItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.gridview.tousegridview.CellFloat}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCellFloatAdapter() {
+		if (cellFloatItemProvider == null) {
+			cellFloatItemProvider = new CellFloatItemProvider(this);
+		}
+
+		return cellFloatItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.touse.moplaf.gridview.tousegridview.CellString} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CellStringItemProvider cellStringItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.touse.moplaf.gridview.tousegridview.CellString}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCellStringAdapter() {
+		if (cellStringItemProvider == null) {
+			cellStringItemProvider = new CellStringItemProvider(this);
+		}
+
+		return cellStringItemProvider;
 	}
 
 	/**
@@ -315,7 +361,9 @@ public class ToUseGridViewItemProviderAdapterFactory extends ToUseGridViewAdapte
 		if (sheetItemProvider != null) sheetItemProvider.dispose();
 		if (columnItemProvider != null) columnItemProvider.dispose();
 		if (rowItemProvider != null) rowItemProvider.dispose();
-		if (cellItemProvider != null) cellItemProvider.dispose();
+		if (cellIntItemProvider != null) cellIntItemProvider.dispose();
+		if (cellFloatItemProvider != null) cellFloatItemProvider.dispose();
+		if (cellStringItemProvider != null) cellStringItemProvider.dispose();
 	}
 
 }

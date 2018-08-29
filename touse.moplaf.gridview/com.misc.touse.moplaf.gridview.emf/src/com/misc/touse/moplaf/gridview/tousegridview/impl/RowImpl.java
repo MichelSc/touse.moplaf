@@ -32,6 +32,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link com.misc.touse.moplaf.gridview.tousegridview.impl.RowImpl#getIndex <em>Index</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.gridview.tousegridview.impl.RowImpl#getCells <em>Cells</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.gridview.tousegridview.impl.RowImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,6 +67,26 @@ public class RowImpl extends MinimalEObjectImpl.Container implements Row {
 	 * @ordered
 	 */
 	protected EList<Cell> cells;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -124,6 +145,27 @@ public class RowImpl extends MinimalEObjectImpl.Container implements Row {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ToUseGridViewPackage.ROW__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -145,6 +187,8 @@ public class RowImpl extends MinimalEObjectImpl.Container implements Row {
 				return getIndex();
 			case ToUseGridViewPackage.ROW__CELLS:
 				return getCells();
+			case ToUseGridViewPackage.ROW__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -165,6 +209,9 @@ public class RowImpl extends MinimalEObjectImpl.Container implements Row {
 				getCells().clear();
 				getCells().addAll((Collection<? extends Cell>)newValue);
 				return;
+			case ToUseGridViewPackage.ROW__NAME:
+				setName((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -183,6 +230,9 @@ public class RowImpl extends MinimalEObjectImpl.Container implements Row {
 			case ToUseGridViewPackage.ROW__CELLS:
 				getCells().clear();
 				return;
+			case ToUseGridViewPackage.ROW__NAME:
+				setName(NAME_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -199,6 +249,8 @@ public class RowImpl extends MinimalEObjectImpl.Container implements Row {
 				return index != INDEX_EDEFAULT;
 			case ToUseGridViewPackage.ROW__CELLS:
 				return cells != null && !cells.isEmpty();
+			case ToUseGridViewPackage.ROW__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -215,6 +267,8 @@ public class RowImpl extends MinimalEObjectImpl.Container implements Row {
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (Index: ");
 		result.append(index);
+		result.append(", Name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

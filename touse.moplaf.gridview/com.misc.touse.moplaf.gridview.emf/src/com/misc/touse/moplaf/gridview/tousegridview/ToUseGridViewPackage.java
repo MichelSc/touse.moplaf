@@ -4,6 +4,8 @@ package com.misc.touse.moplaf.gridview.tousegridview;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -131,22 +133,13 @@ public interface ToUseGridViewPackage extends EPackage {
 	int DOCUMENT__SHEETS = 2;
 
 	/**
-	 * The feature id for the '<em><b>Trait</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOCUMENT__TRAIT = 3;
-
-	/**
 	 * The number of structural features of the '<em>Document</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOCUMENT_FEATURE_COUNT = 4;
+	int DOCUMENT_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Document</em>' class.
@@ -196,13 +189,22 @@ public interface ToUseGridViewPackage extends EPackage {
 	int SHEET__ROWS = 2;
 
 	/**
+	 * The feature id for the '<em><b>Trait</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SHEET__TRAIT = 3;
+
+	/**
 	 * The number of structural features of the '<em>Sheet</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SHEET_FEATURE_COUNT = 3;
+	int SHEET_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Sheet</em>' class.
@@ -251,13 +253,22 @@ public interface ToUseGridViewPackage extends EPackage {
 	int COLUMN__COLOR = 2;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLUMN__NAME = 3;
+
+	/**
 	 * The number of structural features of the '<em>Column</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COLUMN_FEATURE_COUNT = 3;
+	int COLUMN_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Column</em>' class.
@@ -297,13 +308,22 @@ public interface ToUseGridViewPackage extends EPackage {
 	int ROW__CELLS = 1;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROW__NAME = 2;
+
+	/**
 	 * The number of structural features of the '<em>Row</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROW_FEATURE_COUNT = 2;
+	int ROW_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Row</em>' class.
@@ -325,22 +345,22 @@ public interface ToUseGridViewPackage extends EPackage {
 	int CELL = 5;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CELL__VALUE = 0;
-
-	/**
 	 * The number of structural features of the '<em>Cell</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CELL_FEATURE_COUNT = 1;
+	int CELL_FEATURE_COUNT = 0;
+
+	/**
+	 * The operation id for the '<em>Get Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CELL___GET_VALUE = 0;
 
 	/**
 	 * The number of operations of the '<em>Cell</em>' class.
@@ -349,7 +369,156 @@ public interface ToUseGridViewPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CELL_OPERATION_COUNT = 0;
+	int CELL_OPERATION_COUNT = 1;
+
+
+	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.gridview.tousegridview.impl.CellIntImpl <em>Cell Int</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.gridview.tousegridview.impl.CellIntImpl
+	 * @see com.misc.touse.moplaf.gridview.tousegridview.impl.ToUseGridViewPackageImpl#getCellInt()
+	 * @generated
+	 */
+	int CELL_INT = 6;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CELL_INT__VALUE = CELL_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Cell Int</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CELL_INT_FEATURE_COUNT = CELL_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Get Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CELL_INT___GET_VALUE = CELL___GET_VALUE;
+
+	/**
+	 * The number of operations of the '<em>Cell Int</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CELL_INT_OPERATION_COUNT = CELL_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.gridview.tousegridview.impl.CellFloatImpl <em>Cell Float</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.gridview.tousegridview.impl.CellFloatImpl
+	 * @see com.misc.touse.moplaf.gridview.tousegridview.impl.ToUseGridViewPackageImpl#getCellFloat()
+	 * @generated
+	 */
+	int CELL_FLOAT = 7;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CELL_FLOAT__VALUE = CELL_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Cell Float</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CELL_FLOAT_FEATURE_COUNT = CELL_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Get Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CELL_FLOAT___GET_VALUE = CELL___GET_VALUE;
+
+	/**
+	 * The number of operations of the '<em>Cell Float</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CELL_FLOAT_OPERATION_COUNT = CELL_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.gridview.tousegridview.impl.CellStringImpl <em>Cell String</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.gridview.tousegridview.impl.CellStringImpl
+	 * @see com.misc.touse.moplaf.gridview.tousegridview.impl.ToUseGridViewPackageImpl#getCellString()
+	 * @generated
+	 */
+	int CELL_STRING = 8;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CELL_STRING__VALUE = CELL_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Cell String</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CELL_STRING_FEATURE_COUNT = CELL_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Get Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CELL_STRING___GET_VALUE = CELL___GET_VALUE;
+
+	/**
+	 * The number of operations of the '<em>Cell String</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CELL_STRING_OPERATION_COUNT = CELL_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link com.misc.touse.moplaf.gridview.tousegridview.SheetTraitEnum <em>Sheet Trait Enum</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.touse.moplaf.gridview.tousegridview.SheetTraitEnum
+	 * @see com.misc.touse.moplaf.gridview.tousegridview.impl.ToUseGridViewPackageImpl#getSheetTraitEnum()
+	 * @generated
+	 */
+	int SHEET_TRAIT_ENUM = 9;
 
 
 	/**
@@ -417,17 +586,6 @@ public interface ToUseGridViewPackage extends EPackage {
 	EReference getDocument_Sheets();
 
 	/**
-	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.gridview.tousegridview.Document#getTrait <em>Trait</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Trait</em>'.
-	 * @see com.misc.touse.moplaf.gridview.tousegridview.Document#getTrait()
-	 * @see #getDocument()
-	 * @generated
-	 */
-	EAttribute getDocument_Trait();
-
-	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.gridview.tousegridview.Sheet <em>Sheet</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -469,6 +627,17 @@ public interface ToUseGridViewPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getSheet_Rows();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.gridview.tousegridview.Sheet#getTrait <em>Trait</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Trait</em>'.
+	 * @see com.misc.touse.moplaf.gridview.tousegridview.Sheet#getTrait()
+	 * @see #getSheet()
+	 * @generated
+	 */
+	EAttribute getSheet_Trait();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.gridview.tousegridview.Column <em>Column</em>}'.
@@ -514,6 +683,17 @@ public interface ToUseGridViewPackage extends EPackage {
 	EAttribute getColumn_Color();
 
 	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.gridview.tousegridview.Column#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see com.misc.touse.moplaf.gridview.tousegridview.Column#getName()
+	 * @see #getColumn()
+	 * @generated
+	 */
+	EAttribute getColumn_Name();
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.gridview.tousegridview.Row <em>Row</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -546,6 +726,17 @@ public interface ToUseGridViewPackage extends EPackage {
 	EReference getRow_Cells();
 
 	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.gridview.tousegridview.Row#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see com.misc.touse.moplaf.gridview.tousegridview.Row#getName()
+	 * @see #getRow()
+	 * @generated
+	 */
+	EAttribute getRow_Name();
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.gridview.tousegridview.Cell <em>Cell</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -556,15 +747,87 @@ public interface ToUseGridViewPackage extends EPackage {
 	EClass getCell();
 
 	/**
-	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.gridview.tousegridview.Cell#getValue <em>Value</em>}'.
+	 * Returns the meta object for the '{@link com.misc.touse.moplaf.gridview.tousegridview.Cell#getValue() <em>Get Value</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Value</em>' operation.
+	 * @see com.misc.touse.moplaf.gridview.tousegridview.Cell#getValue()
+	 * @generated
+	 */
+	EOperation getCell__GetValue();
+
+	/**
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.gridview.tousegridview.CellInt <em>Cell Int</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Cell Int</em>'.
+	 * @see com.misc.touse.moplaf.gridview.tousegridview.CellInt
+	 * @generated
+	 */
+	EClass getCellInt();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.gridview.tousegridview.CellInt#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see com.misc.touse.moplaf.gridview.tousegridview.Cell#getValue()
-	 * @see #getCell()
+	 * @see com.misc.touse.moplaf.gridview.tousegridview.CellInt#getValue()
+	 * @see #getCellInt()
 	 * @generated
 	 */
-	EAttribute getCell_Value();
+	EAttribute getCellInt_Value();
+
+	/**
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.gridview.tousegridview.CellFloat <em>Cell Float</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Cell Float</em>'.
+	 * @see com.misc.touse.moplaf.gridview.tousegridview.CellFloat
+	 * @generated
+	 */
+	EClass getCellFloat();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.gridview.tousegridview.CellFloat#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see com.misc.touse.moplaf.gridview.tousegridview.CellFloat#getValue()
+	 * @see #getCellFloat()
+	 * @generated
+	 */
+	EAttribute getCellFloat_Value();
+
+	/**
+	 * Returns the meta object for class '{@link com.misc.touse.moplaf.gridview.tousegridview.CellString <em>Cell String</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Cell String</em>'.
+	 * @see com.misc.touse.moplaf.gridview.tousegridview.CellString
+	 * @generated
+	 */
+	EClass getCellString();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.touse.moplaf.gridview.tousegridview.CellString#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see com.misc.touse.moplaf.gridview.tousegridview.CellString#getValue()
+	 * @see #getCellString()
+	 * @generated
+	 */
+	EAttribute getCellString_Value();
+
+	/**
+	 * Returns the meta object for enum '{@link com.misc.touse.moplaf.gridview.tousegridview.SheetTraitEnum <em>Sheet Trait Enum</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Sheet Trait Enum</em>'.
+	 * @see com.misc.touse.moplaf.gridview.tousegridview.SheetTraitEnum
+	 * @generated
+	 */
+	EEnum getSheetTraitEnum();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -642,14 +905,6 @@ public interface ToUseGridViewPackage extends EPackage {
 		EReference DOCUMENT__SHEETS = eINSTANCE.getDocument_Sheets();
 
 		/**
-		 * The meta object literal for the '<em><b>Trait</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DOCUMENT__TRAIT = eINSTANCE.getDocument_Trait();
-
-		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.gridview.tousegridview.impl.SheetImpl <em>Sheet</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -682,6 +937,14 @@ public interface ToUseGridViewPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SHEET__ROWS = eINSTANCE.getSheet_Rows();
+
+		/**
+		 * The meta object literal for the '<em><b>Trait</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SHEET__TRAIT = eINSTANCE.getSheet_Trait();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.gridview.tousegridview.impl.ColumnImpl <em>Column</em>}' class.
@@ -718,6 +981,14 @@ public interface ToUseGridViewPackage extends EPackage {
 		EAttribute COLUMN__COLOR = eINSTANCE.getColumn_Color();
 
 		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COLUMN__NAME = eINSTANCE.getColumn_Name();
+
+		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.gridview.tousegridview.impl.RowImpl <em>Row</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -744,6 +1015,14 @@ public interface ToUseGridViewPackage extends EPackage {
 		EReference ROW__CELLS = eINSTANCE.getRow_Cells();
 
 		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ROW__NAME = eINSTANCE.getRow_Name();
+
+		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.gridview.tousegridview.impl.CellImpl <em>Cell</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -754,12 +1033,76 @@ public interface ToUseGridViewPackage extends EPackage {
 		EClass CELL = eINSTANCE.getCell();
 
 		/**
+		 * The meta object literal for the '<em><b>Get Value</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CELL___GET_VALUE = eINSTANCE.getCell__GetValue();
+
+		/**
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.gridview.tousegridview.impl.CellIntImpl <em>Cell Int</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.touse.moplaf.gridview.tousegridview.impl.CellIntImpl
+		 * @see com.misc.touse.moplaf.gridview.tousegridview.impl.ToUseGridViewPackageImpl#getCellInt()
+		 * @generated
+		 */
+		EClass CELL_INT = eINSTANCE.getCellInt();
+
+		/**
 		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CELL__VALUE = eINSTANCE.getCell_Value();
+		EAttribute CELL_INT__VALUE = eINSTANCE.getCellInt_Value();
+
+		/**
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.gridview.tousegridview.impl.CellFloatImpl <em>Cell Float</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.touse.moplaf.gridview.tousegridview.impl.CellFloatImpl
+		 * @see com.misc.touse.moplaf.gridview.tousegridview.impl.ToUseGridViewPackageImpl#getCellFloat()
+		 * @generated
+		 */
+		EClass CELL_FLOAT = eINSTANCE.getCellFloat();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CELL_FLOAT__VALUE = eINSTANCE.getCellFloat_Value();
+
+		/**
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.gridview.tousegridview.impl.CellStringImpl <em>Cell String</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.touse.moplaf.gridview.tousegridview.impl.CellStringImpl
+		 * @see com.misc.touse.moplaf.gridview.tousegridview.impl.ToUseGridViewPackageImpl#getCellString()
+		 * @generated
+		 */
+		EClass CELL_STRING = eINSTANCE.getCellString();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CELL_STRING__VALUE = eINSTANCE.getCellString_Value();
+
+		/**
+		 * The meta object literal for the '{@link com.misc.touse.moplaf.gridview.tousegridview.SheetTraitEnum <em>Sheet Trait Enum</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.touse.moplaf.gridview.tousegridview.SheetTraitEnum
+		 * @see com.misc.touse.moplaf.gridview.tousegridview.impl.ToUseGridViewPackageImpl#getSheetTraitEnum()
+		 * @generated
+		 */
+		EEnum SHEET_TRAIT_ENUM = eINSTANCE.getSheetTraitEnum();
 
 	}
 

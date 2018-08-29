@@ -64,6 +64,7 @@ public class SheetItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
+			addTraitPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -82,6 +83,28 @@ public class SheetItemProvider
 				 getString("_UI_Sheet_Name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Sheet_Name_feature", "_UI_Sheet_type"),
 				 ToUseGridViewPackage.Literals.SHEET__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Trait feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTraitPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Sheet_Trait_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Sheet_Trait_feature", "_UI_Sheet_type"),
+				 ToUseGridViewPackage.Literals.SHEET__TRAIT,
 				 true,
 				 false,
 				 false,
@@ -160,6 +183,7 @@ public class SheetItemProvider
 
 		switch (notification.getFeatureID(Sheet.class)) {
 			case ToUseGridViewPackage.SHEET__NAME:
+			case ToUseGridViewPackage.SHEET__TRAIT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case ToUseGridViewPackage.SHEET__COLUMNS:

@@ -5,6 +5,7 @@ package com.misc.touse.moplaf.gridview.tousegridview.impl;
 import com.misc.touse.moplaf.gridview.tousegridview.*;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -61,9 +62,41 @@ public class ToUseGridViewFactoryImpl extends EFactoryImpl implements ToUseGridV
 			case ToUseGridViewPackage.SHEET: return createSheet();
 			case ToUseGridViewPackage.COLUMN: return createColumn();
 			case ToUseGridViewPackage.ROW: return createRow();
-			case ToUseGridViewPackage.CELL: return createCell();
+			case ToUseGridViewPackage.CELL_INT: return createCellInt();
+			case ToUseGridViewPackage.CELL_FLOAT: return createCellFloat();
+			case ToUseGridViewPackage.CELL_STRING: return createCellString();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object createFromString(EDataType eDataType, String initialValue) {
+		switch (eDataType.getClassifierID()) {
+			case ToUseGridViewPackage.SHEET_TRAIT_ENUM:
+				return createSheetTraitEnumFromString(eDataType, initialValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String convertToString(EDataType eDataType, Object instanceValue) {
+		switch (eDataType.getClassifierID()) {
+			case ToUseGridViewPackage.SHEET_TRAIT_ENUM:
+				return convertSheetTraitEnumToString(eDataType, instanceValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -122,9 +155,49 @@ public class ToUseGridViewFactoryImpl extends EFactoryImpl implements ToUseGridV
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Cell createCell() {
-		CellImpl cell = new CellImpl();
-		return cell;
+	public CellInt createCellInt() {
+		CellIntImpl cellInt = new CellIntImpl();
+		return cellInt;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CellFloat createCellFloat() {
+		CellFloatImpl cellFloat = new CellFloatImpl();
+		return cellFloat;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CellString createCellString() {
+		CellStringImpl cellString = new CellStringImpl();
+		return cellString;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SheetTraitEnum createSheetTraitEnumFromString(EDataType eDataType, String initialValue) {
+		SheetTraitEnum result = SheetTraitEnum.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertSheetTraitEnumToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**

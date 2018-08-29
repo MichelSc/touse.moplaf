@@ -3,16 +3,22 @@
 package com.misc.touse.moplaf.gridview.tousegridview.impl;
 
 import com.misc.touse.moplaf.gridview.tousegridview.Cell;
+import com.misc.touse.moplaf.gridview.tousegridview.CellFloat;
+import com.misc.touse.moplaf.gridview.tousegridview.CellInt;
+import com.misc.touse.moplaf.gridview.tousegridview.CellString;
 import com.misc.touse.moplaf.gridview.tousegridview.Column;
 import com.misc.touse.moplaf.gridview.tousegridview.Document;
 import com.misc.touse.moplaf.gridview.tousegridview.Domain;
 import com.misc.touse.moplaf.gridview.tousegridview.Row;
 import com.misc.touse.moplaf.gridview.tousegridview.Sheet;
+import com.misc.touse.moplaf.gridview.tousegridview.SheetTraitEnum;
 import com.misc.touse.moplaf.gridview.tousegridview.ToUseGridViewFactory;
 import com.misc.touse.moplaf.gridview.tousegridview.ToUseGridViewPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -66,6 +72,34 @@ public class ToUseGridViewPackageImpl extends EPackageImpl implements ToUseGridV
 	 * @generated
 	 */
 	private EClass cellEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass cellIntEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass cellFloatEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass cellStringEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum sheetTraitEnumEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -187,15 +221,6 @@ public class ToUseGridViewPackageImpl extends EPackageImpl implements ToUseGridV
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDocument_Trait() {
-		return (EAttribute)documentEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getSheet() {
 		return sheetEClass;
 	}
@@ -225,6 +250,15 @@ public class ToUseGridViewPackageImpl extends EPackageImpl implements ToUseGridV
 	 */
 	public EReference getSheet_Rows() {
 		return (EReference)sheetEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSheet_Trait() {
+		return (EAttribute)sheetEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -268,6 +302,15 @@ public class ToUseGridViewPackageImpl extends EPackageImpl implements ToUseGridV
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getColumn_Name() {
+		return (EAttribute)columnEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getRow() {
 		return rowEClass;
 	}
@@ -295,6 +338,15 @@ public class ToUseGridViewPackageImpl extends EPackageImpl implements ToUseGridV
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getRow_Name() {
+		return (EAttribute)rowEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getCell() {
 		return cellEClass;
 	}
@@ -304,8 +356,71 @@ public class ToUseGridViewPackageImpl extends EPackageImpl implements ToUseGridV
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCell_Value() {
-		return (EAttribute)cellEClass.getEStructuralFeatures().get(0);
+	public EOperation getCell__GetValue() {
+		return cellEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCellInt() {
+		return cellIntEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCellInt_Value() {
+		return (EAttribute)cellIntEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCellFloat() {
+		return cellFloatEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCellFloat_Value() {
+		return (EAttribute)cellFloatEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCellString() {
+		return cellStringEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCellString_Value() {
+		return (EAttribute)cellStringEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getSheetTraitEnum() {
+		return sheetTraitEnumEEnum;
 	}
 
 	/**
@@ -343,24 +458,38 @@ public class ToUseGridViewPackageImpl extends EPackageImpl implements ToUseGridV
 		createEAttribute(documentEClass, DOCUMENT__NAME);
 		createEAttribute(documentEClass, DOCUMENT__AUTHOR);
 		createEReference(documentEClass, DOCUMENT__SHEETS);
-		createEAttribute(documentEClass, DOCUMENT__TRAIT);
 
 		sheetEClass = createEClass(SHEET);
 		createEAttribute(sheetEClass, SHEET__NAME);
 		createEReference(sheetEClass, SHEET__COLUMNS);
 		createEReference(sheetEClass, SHEET__ROWS);
+		createEAttribute(sheetEClass, SHEET__TRAIT);
 
 		columnEClass = createEClass(COLUMN);
 		createEAttribute(columnEClass, COLUMN__INDEX);
 		createEReference(columnEClass, COLUMN__CELLS);
 		createEAttribute(columnEClass, COLUMN__COLOR);
+		createEAttribute(columnEClass, COLUMN__NAME);
 
 		rowEClass = createEClass(ROW);
 		createEAttribute(rowEClass, ROW__INDEX);
 		createEReference(rowEClass, ROW__CELLS);
+		createEAttribute(rowEClass, ROW__NAME);
 
 		cellEClass = createEClass(CELL);
-		createEAttribute(cellEClass, CELL__VALUE);
+		createEOperation(cellEClass, CELL___GET_VALUE);
+
+		cellIntEClass = createEClass(CELL_INT);
+		createEAttribute(cellIntEClass, CELL_INT__VALUE);
+
+		cellFloatEClass = createEClass(CELL_FLOAT);
+		createEAttribute(cellFloatEClass, CELL_FLOAT__VALUE);
+
+		cellStringEClass = createEClass(CELL_STRING);
+		createEAttribute(cellStringEClass, CELL_STRING__VALUE);
+
+		// Create enums
+		sheetTraitEnumEEnum = createEEnum(SHEET_TRAIT_ENUM);
 	}
 
 	/**
@@ -391,6 +520,9 @@ public class ToUseGridViewPackageImpl extends EPackageImpl implements ToUseGridV
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		cellIntEClass.getESuperTypes().add(this.getCell());
+		cellFloatEClass.getESuperTypes().add(this.getCell());
+		cellStringEClass.getESuperTypes().add(this.getCell());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -400,24 +532,44 @@ public class ToUseGridViewPackageImpl extends EPackageImpl implements ToUseGridV
 		initEAttribute(getDocument_Name(), ecorePackage.getEString(), "Name", "", 0, 1, Document.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDocument_Author(), ecorePackage.getEString(), "Author", "", 0, 1, Document.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDocument_Sheets(), this.getSheet(), null, "Sheets", null, 0, -1, Document.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDocument_Trait(), ecorePackage.getEEnumerator(), "Trait", null, 0, 1, Document.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(sheetEClass, Sheet.class, "Sheet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSheet_Name(), ecorePackage.getEString(), "Name", null, 0, 1, Sheet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSheet_Columns(), this.getColumn(), null, "Columns", null, 0, -1, Sheet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSheet_Rows(), this.getRow(), null, "Rows", null, 0, -1, Sheet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSheet_Trait(), this.getSheetTraitEnum(), "Trait", null, 0, 1, Sheet.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(columnEClass, Column.class, "Column", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getColumn_Index(), ecorePackage.getELong(), "Index", null, 0, 1, Column.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getColumn_Cells(), this.getCell(), null, "Cells", null, 0, -1, Column.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getColumn_Color(), ecorePackage.getEInt(), "color", null, 0, 1, Column.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getColumn_Name(), ecorePackage.getEString(), "Name", null, 0, 1, Column.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(rowEClass, Row.class, "Row", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRow_Index(), ecorePackage.getELong(), "Index", null, 0, 1, Row.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRow_Cells(), this.getCell(), null, "Cells", null, 0, -1, Row.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRow_Name(), ecorePackage.getEString(), "Name", null, 0, 1, Row.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(cellEClass, Cell.class, "Cell", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCell_Value(), ecorePackage.getEFloat(), "Value", null, 0, 1, Cell.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(cellEClass, Cell.class, "Cell", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEOperation(getCell__GetValue(), ecorePackage.getEJavaObject(), "getValue", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(cellIntEClass, CellInt.class, "CellInt", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCellInt_Value(), ecorePackage.getEInt(), "Value", null, 0, 1, CellInt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(cellFloatEClass, CellFloat.class, "CellFloat", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCellFloat_Value(), ecorePackage.getEFloat(), "Value", null, 0, 1, CellFloat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(cellStringEClass, CellString.class, "CellString", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCellString_Value(), ecorePackage.getEString(), "Value", null, 0, 1, CellString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		// Initialize enums and add enum literals
+		initEEnum(sheetTraitEnumEEnum, SheetTraitEnum.class, "SheetTraitEnum");
+		addEEnumLiteral(sheetTraitEnumEEnum, SheetTraitEnum.SHEET_TRAITS_NONE);
+		addEEnumLiteral(sheetTraitEnumEEnum, SheetTraitEnum.SHEET_TRAITS_ROWS);
+		addEEnumLiteral(sheetTraitEnumEEnum, SheetTraitEnum.SHEET_TRAITS_COLUMNS);
+		addEEnumLiteral(sheetTraitEnumEEnum, SheetTraitEnum.SHEET_TRAITS_GRID);
+		addEEnumLiteral(sheetTraitEnumEEnum, SheetTraitEnum.SHEET_TRAITS_BARCHART);
 
 		// Create resource
 		createResource(eNS_URI);
