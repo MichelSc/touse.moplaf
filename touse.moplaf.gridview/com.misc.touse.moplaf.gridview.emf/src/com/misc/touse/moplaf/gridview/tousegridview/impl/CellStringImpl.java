@@ -25,6 +25,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * @generated
  */
 public class CellStringImpl extends CellImpl implements CellString {
+	
+	@Override
+	public Object getCellValue() {
+		return this.getValue();
+	}
+
 	/**
 	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -67,8 +73,8 @@ public class CellStringImpl extends CellImpl implements CellString {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
 	 */
-	@Override
 	public String getValue() {
 		return value;
 	}

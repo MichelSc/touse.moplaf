@@ -354,13 +354,13 @@ public interface ToUseGridViewPackage extends EPackage {
 	int CELL_FEATURE_COUNT = 0;
 
 	/**
-	 * The operation id for the '<em>Get Value</em>' operation.
+	 * The operation id for the '<em>Get Cell Value</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CELL___GET_VALUE = 0;
+	int CELL___GET_CELL_VALUE = 0;
 
 	/**
 	 * The number of operations of the '<em>Cell</em>' class.
@@ -401,13 +401,13 @@ public interface ToUseGridViewPackage extends EPackage {
 	int CELL_INT_FEATURE_COUNT = CELL_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Get Value</em>' operation.
+	 * The operation id for the '<em>Get Cell Value</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CELL_INT___GET_VALUE = CELL___GET_VALUE;
+	int CELL_INT___GET_CELL_VALUE = CELL___GET_CELL_VALUE;
 
 	/**
 	 * The number of operations of the '<em>Cell Int</em>' class.
@@ -447,13 +447,13 @@ public interface ToUseGridViewPackage extends EPackage {
 	int CELL_FLOAT_FEATURE_COUNT = CELL_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Get Value</em>' operation.
+	 * The operation id for the '<em>Get Cell Value</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CELL_FLOAT___GET_VALUE = CELL___GET_VALUE;
+	int CELL_FLOAT___GET_CELL_VALUE = CELL___GET_CELL_VALUE;
 
 	/**
 	 * The number of operations of the '<em>Cell Float</em>' class.
@@ -493,13 +493,13 @@ public interface ToUseGridViewPackage extends EPackage {
 	int CELL_STRING_FEATURE_COUNT = CELL_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Get Value</em>' operation.
+	 * The operation id for the '<em>Get Cell Value</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CELL_STRING___GET_VALUE = CELL___GET_VALUE;
+	int CELL_STRING___GET_CELL_VALUE = CELL___GET_CELL_VALUE;
 
 	/**
 	 * The number of operations of the '<em>Cell String</em>' class.
@@ -747,14 +747,14 @@ public interface ToUseGridViewPackage extends EPackage {
 	EClass getCell();
 
 	/**
-	 * Returns the meta object for the '{@link com.misc.touse.moplaf.gridview.tousegridview.Cell#getValue() <em>Get Value</em>}' operation.
+	 * Returns the meta object for the '{@link com.misc.touse.moplaf.gridview.tousegridview.Cell#getCellValue() <em>Get Cell Value</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Value</em>' operation.
-	 * @see com.misc.touse.moplaf.gridview.tousegridview.Cell#getValue()
+	 * @return the meta object for the '<em>Get Cell Value</em>' operation.
+	 * @see com.misc.touse.moplaf.gridview.tousegridview.Cell#getCellValue()
 	 * @generated
 	 */
-	EOperation getCell__GetValue();
+	EOperation getCell__GetCellValue();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.gridview.tousegridview.CellInt <em>Cell Int</em>}'.
@@ -1033,12 +1033,12 @@ public interface ToUseGridViewPackage extends EPackage {
 		EClass CELL = eINSTANCE.getCell();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Value</b></em>' operation.
+		 * The meta object literal for the '<em><b>Get Cell Value</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CELL___GET_VALUE = eINSTANCE.getCell__GetValue();
+		EOperation CELL___GET_CELL_VALUE = eINSTANCE.getCell__GetCellValue();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.gridview.tousegridview.impl.CellIntImpl <em>Cell Int</em>}' class.

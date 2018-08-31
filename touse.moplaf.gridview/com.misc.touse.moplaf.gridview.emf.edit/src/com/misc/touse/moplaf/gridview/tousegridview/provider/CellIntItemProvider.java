@@ -92,7 +92,7 @@ public class CellIntItemProvider extends CellItemProvider {
 	@Override
 	public String getText(Object object) {
 		CellInt cellInt = (CellInt)object;
-		return getString("_UI_CellInt_type") + " " + cellInt.getValue();
+		return getString("_UI_CellInt_type") + " " + cellInt.getCellValue();
 	}
 
 

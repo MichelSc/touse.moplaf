@@ -40,8 +40,13 @@ public abstract class CellImpl extends MinimalEObjectImpl.Container implements C
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
 	 */
-	public abstract Object getValue();
+	public Object getCellValue() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -51,8 +56,8 @@ public abstract class CellImpl extends MinimalEObjectImpl.Container implements C
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case ToUseGridViewPackage.CELL___GET_VALUE:
-				return getValue();
+			case ToUseGridViewPackage.CELL___GET_CELL_VALUE:
+				return getCellValue();
 		}
 		return super.eInvoke(operationID, arguments);
 	}

@@ -17,14 +17,10 @@ import org.eclipse.emf.ecore.EObject;
 public interface Cell extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Value</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @model kind="operation"
 	 * @generated
 	 */
-	Object getValue();
+	Object getCellValue();
 
 } // Cell

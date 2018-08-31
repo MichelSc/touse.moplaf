@@ -67,10 +67,15 @@ public class CellFloatImpl extends CellImpl implements CellFloat {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
 	 */
-	@Override
 	public Object getValue() {
 		return value;
+	}
+
+	@Override
+	public Object getCellValue() {
+		return this.getValue();
 	}
 
 	/**

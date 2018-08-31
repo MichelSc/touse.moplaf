@@ -307,7 +307,7 @@ public class DocumentItemProvider
 		Object result = null;
 		Cell cell = getCell(column, row);
 		if( cell != null ) {
-			result = cell.getValue();
+			result = cell.getCellValue();
 		}
 		return result;
 	}

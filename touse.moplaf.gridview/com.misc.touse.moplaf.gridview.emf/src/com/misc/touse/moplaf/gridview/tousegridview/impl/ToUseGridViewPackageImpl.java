@@ -356,7 +356,7 @@ public class ToUseGridViewPackageImpl extends EPackageImpl implements ToUseGridV
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getCell__GetValue() {
+	public EOperation getCell__GetCellValue() {
 		return cellEClass.getEOperations().get(0);
 	}
 
@@ -477,7 +477,7 @@ public class ToUseGridViewPackageImpl extends EPackageImpl implements ToUseGridV
 		createEAttribute(rowEClass, ROW__NAME);
 
 		cellEClass = createEClass(CELL);
-		createEOperation(cellEClass, CELL___GET_VALUE);
+		createEOperation(cellEClass, CELL___GET_CELL_VALUE);
 
 		cellIntEClass = createEClass(CELL_INT);
 		createEAttribute(cellIntEClass, CELL_INT__VALUE);
@@ -552,7 +552,7 @@ public class ToUseGridViewPackageImpl extends EPackageImpl implements ToUseGridV
 
 		initEClass(cellEClass, Cell.class, "Cell", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEOperation(getCell__GetValue(), ecorePackage.getEJavaObject(), "getValue", 0, 1, IS_UNIQUE, IS_ORDERED);
+		initEOperation(getCell__GetCellValue(), ecorePackage.getEJavaObject(), "getCellValue", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(cellIntEClass, CellInt.class, "CellInt", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCellInt_Value(), ecorePackage.getEInt(), "Value", null, 0, 1, CellInt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

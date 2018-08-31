@@ -534,9 +534,9 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@conditionnalStyles.1/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_PIG_IKuLEeizDf8ZrpCplg" name="getValue() : EJavaObject" tooltipText="getValue() : EJavaObject">
-        <target xmi:type="ecore:EOperation" href="ToUseGridView.ecore#//Cell/getValue"/>
-        <semanticElements xmi:type="ecore:EOperation" href="ToUseGridView.ecore#//Cell/getValue"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_PIG_IKuLEeizDf8ZrpCplg" name="getCellValue() : EJavaObject" tooltipText="getCellValue() : EJavaObject">
+        <target xmi:type="ecore:EOperation" href="ToUseGridView.ecore#//Cell/getCellValue"/>
+        <semanticElements xmi:type="ecore:EOperation" href="ToUseGridView.ecore#//Cell/getCellValue"/>
         <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_PII0UKuLEeizDf8ZrpCplg" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']/@style"/>
         </ownedStyle>

@@ -40,7 +40,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseGridView.ecore#//Row/Name"/>
     </genClasses>
     <genClasses ecoreClass="ToUseGridView.ecore#//Cell">
-      <genOperations ecoreOperation="ToUseGridView.ecore#//Cell/getValue"/>
+      <genOperations ecoreOperation="ToUseGridView.ecore#//Cell/getCellValue"/>
     </genClasses>
     <genClasses ecoreClass="ToUseGridView.ecore#//CellInt">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseGridView.ecore#//CellInt/Value"/>

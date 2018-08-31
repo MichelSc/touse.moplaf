@@ -20,8 +20,6 @@ package com.misc.touse.moplaf.gridview.tousegridview;
  * @generated
  */
 public interface CellInt extends Cell {
-	@Override
-	Object getValue();
 
 	/**
 	 * Sets the value of the '{@link com.misc.touse.moplaf.gridview.tousegridview.CellInt#getValue <em>Value</em>}' attribute.
