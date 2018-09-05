@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.misc.touse.moplaf.gridview.tousegridview.Row#getIndex <em>Index</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.gridview.tousegridview.Row#getCells <em>Cells</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.gridview.tousegridview.Row#getName <em>Name</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.gridview.tousegridview.Row#getSheet <em>Sheet</em>}</li>
  * </ul>
  *
  * @see com.misc.touse.moplaf.gridview.tousegridview.ToUseGridViewPackage#getRow()
@@ -34,22 +35,11 @@ public interface Row extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Index</em>' attribute.
-	 * @see #setIndex(long)
 	 * @see com.misc.touse.moplaf.gridview.tousegridview.ToUseGridViewPackage#getRow_Index()
-	 * @model
+	 * @model transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
 	long getIndex();
-
-	/**
-	 * Sets the value of the '{@link com.misc.touse.moplaf.gridview.tousegridview.Row#getIndex <em>Index</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Index</em>' attribute.
-	 * @see #getIndex()
-	 * @generated
-	 */
-	void setIndex(long value);
 
 	/**
 	 * Returns the value of the '<em><b>Cells</b></em>' containment reference list.
@@ -92,5 +82,41 @@ public interface Row extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Sheet</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link com.misc.touse.moplaf.gridview.tousegridview.Sheet#getRows <em>Rows</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Sheet</em>' container reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Sheet</em>' container reference.
+	 * @see #setSheet(Sheet)
+	 * @see com.misc.touse.moplaf.gridview.tousegridview.ToUseGridViewPackage#getRow_Sheet()
+	 * @see com.misc.touse.moplaf.gridview.tousegridview.Sheet#getRows
+	 * @model opposite="Rows" required="true" transient="false"
+	 * @generated
+	 */
+	Sheet getSheet();
+
+	/**
+	 * Sets the value of the '{@link com.misc.touse.moplaf.gridview.tousegridview.Row#getSheet <em>Sheet</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Sheet</em>' container reference.
+	 * @see #getSheet()
+	 * @generated
+	 */
+	void setSheet(Sheet value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	Cell getCell(Column column);
 
 } // Row

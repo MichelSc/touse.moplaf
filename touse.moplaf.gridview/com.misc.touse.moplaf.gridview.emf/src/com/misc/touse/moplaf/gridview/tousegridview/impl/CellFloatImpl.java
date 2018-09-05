@@ -69,7 +69,7 @@ public class CellFloatImpl extends CellImpl implements CellFloat {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getValue() {
+	public float getValue() {
 		return value;
 	}
 

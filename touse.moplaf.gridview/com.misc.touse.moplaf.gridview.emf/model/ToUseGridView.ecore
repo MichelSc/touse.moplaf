@@ -17,24 +17,36 @@
   <eClassifiers xsi:type="ecore:EClass" name="Sheet">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Columns" upperBound="-1"
-        eType="#//Column" containment="true"/>
+        eType="#//Column" containment="true" eOpposite="#//Column/Sheet"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Rows" upperBound="-1" eType="#//Row"
-        containment="true"/>
+        containment="true" eOpposite="#//Row/Sheet"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Trait" eType="#//SheetTraitEnum"
         transient="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Column">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Index" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+    <eOperations name="getCell" eType="#//Cell">
+      <eParameters name="row" eType="#//Row"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Index" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"
+        changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Cells" upperBound="-1"
         eType="#//Cell"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Sheet" lowerBound="1" eType="#//Sheet"
+        eOpposite="#//Sheet/Columns"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Row">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Index" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+    <eOperations name="getCell" eType="#//Cell">
+      <eParameters name="column" eType="#//Column"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Index" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"
+        changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Cells" upperBound="-1"
         eType="#//Cell" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Sheet" lowerBound="1" eType="#//Sheet"
+        eOpposite="#//Sheet/Rows"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Cell" abstract="true">
     <eOperations name="getCellValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>

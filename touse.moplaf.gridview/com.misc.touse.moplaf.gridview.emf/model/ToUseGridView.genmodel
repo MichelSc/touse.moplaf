@@ -30,14 +30,22 @@
     </genClasses>
     <genClasses ecoreClass="ToUseGridView.ecore#//Column">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseGridView.ecore#//Column/Index"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseGridView.ecore#//Column/Cells"/>
+      <genFeatures property="None" children="true" createChild="false" ecoreFeature="ecore:EReference ToUseGridView.ecore#//Column/Cells"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseGridView.ecore#//Column/color"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseGridView.ecore#//Column/Name"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ToUseGridView.ecore#//Column/Sheet"/>
+      <genOperations ecoreOperation="ToUseGridView.ecore#//Column/getCell">
+        <genParameters ecoreParameter="ToUseGridView.ecore#//Column/getCell/row"/>
+      </genOperations>
     </genClasses>
     <genClasses ecoreClass="ToUseGridView.ecore#//Row">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseGridView.ecore#//Row/Index"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ToUseGridView.ecore#//Row/Cells"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ToUseGridView.ecore#//Row/Name"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ToUseGridView.ecore#//Row/Sheet"/>
+      <genOperations ecoreOperation="ToUseGridView.ecore#//Row/getCell">
+        <genParameters ecoreParameter="ToUseGridView.ecore#//Row/getCell/column"/>
+      </genOperations>
     </genClasses>
     <genClasses ecoreClass="ToUseGridView.ecore#//Cell">
       <genOperations ecoreOperation="ToUseGridView.ecore#//Cell/getCellValue"/>

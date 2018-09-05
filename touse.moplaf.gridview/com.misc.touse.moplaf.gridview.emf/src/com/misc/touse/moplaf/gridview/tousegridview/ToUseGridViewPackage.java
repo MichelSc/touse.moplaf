@@ -262,13 +262,31 @@ public interface ToUseGridViewPackage extends EPackage {
 	int COLUMN__NAME = 3;
 
 	/**
+	 * The feature id for the '<em><b>Sheet</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLUMN__SHEET = 4;
+
+	/**
 	 * The number of structural features of the '<em>Column</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COLUMN_FEATURE_COUNT = 4;
+	int COLUMN_FEATURE_COUNT = 5;
+
+	/**
+	 * The operation id for the '<em>Get Cell</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLUMN___GET_CELL__ROW = 0;
 
 	/**
 	 * The number of operations of the '<em>Column</em>' class.
@@ -277,7 +295,7 @@ public interface ToUseGridViewPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLUMN_OPERATION_COUNT = 0;
+	int COLUMN_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.gridview.tousegridview.impl.RowImpl <em>Row</em>}' class.
@@ -317,13 +335,31 @@ public interface ToUseGridViewPackage extends EPackage {
 	int ROW__NAME = 2;
 
 	/**
+	 * The feature id for the '<em><b>Sheet</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROW__SHEET = 3;
+
+	/**
 	 * The number of structural features of the '<em>Row</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROW_FEATURE_COUNT = 3;
+	int ROW_FEATURE_COUNT = 4;
+
+	/**
+	 * The operation id for the '<em>Get Cell</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROW___GET_CELL__COLUMN = 0;
 
 	/**
 	 * The number of operations of the '<em>Row</em>' class.
@@ -332,7 +368,7 @@ public interface ToUseGridViewPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROW_OPERATION_COUNT = 0;
+	int ROW_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link com.misc.touse.moplaf.gridview.tousegridview.impl.CellImpl <em>Cell</em>}' class.
@@ -694,6 +730,27 @@ public interface ToUseGridViewPackage extends EPackage {
 	EAttribute getColumn_Name();
 
 	/**
+	 * Returns the meta object for the container reference '{@link com.misc.touse.moplaf.gridview.tousegridview.Column#getSheet <em>Sheet</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Sheet</em>'.
+	 * @see com.misc.touse.moplaf.gridview.tousegridview.Column#getSheet()
+	 * @see #getColumn()
+	 * @generated
+	 */
+	EReference getColumn_Sheet();
+
+	/**
+	 * Returns the meta object for the '{@link com.misc.touse.moplaf.gridview.tousegridview.Column#getCell(com.misc.touse.moplaf.gridview.tousegridview.Row) <em>Get Cell</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Cell</em>' operation.
+	 * @see com.misc.touse.moplaf.gridview.tousegridview.Column#getCell(com.misc.touse.moplaf.gridview.tousegridview.Row)
+	 * @generated
+	 */
+	EOperation getColumn__GetCell__Row();
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.gridview.tousegridview.Row <em>Row</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -735,6 +792,27 @@ public interface ToUseGridViewPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getRow_Name();
+
+	/**
+	 * Returns the meta object for the container reference '{@link com.misc.touse.moplaf.gridview.tousegridview.Row#getSheet <em>Sheet</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Sheet</em>'.
+	 * @see com.misc.touse.moplaf.gridview.tousegridview.Row#getSheet()
+	 * @see #getRow()
+	 * @generated
+	 */
+	EReference getRow_Sheet();
+
+	/**
+	 * Returns the meta object for the '{@link com.misc.touse.moplaf.gridview.tousegridview.Row#getCell(com.misc.touse.moplaf.gridview.tousegridview.Column) <em>Get Cell</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Cell</em>' operation.
+	 * @see com.misc.touse.moplaf.gridview.tousegridview.Row#getCell(com.misc.touse.moplaf.gridview.tousegridview.Column)
+	 * @generated
+	 */
+	EOperation getRow__GetCell__Column();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.touse.moplaf.gridview.tousegridview.Cell <em>Cell</em>}'.
@@ -989,6 +1067,22 @@ public interface ToUseGridViewPackage extends EPackage {
 		EAttribute COLUMN__NAME = eINSTANCE.getColumn_Name();
 
 		/**
+		 * The meta object literal for the '<em><b>Sheet</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COLUMN__SHEET = eINSTANCE.getColumn_Sheet();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Cell</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation COLUMN___GET_CELL__ROW = eINSTANCE.getColumn__GetCell__Row();
+
+		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.gridview.tousegridview.impl.RowImpl <em>Row</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1021,6 +1115,22 @@ public interface ToUseGridViewPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ROW__NAME = eINSTANCE.getRow_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Sheet</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ROW__SHEET = eINSTANCE.getRow_Sheet();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Cell</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ROW___GET_CELL__COLUMN = eINSTANCE.getRow__GetCell__Column();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.touse.moplaf.gridview.tousegridview.impl.CellImpl <em>Cell</em>}' class.

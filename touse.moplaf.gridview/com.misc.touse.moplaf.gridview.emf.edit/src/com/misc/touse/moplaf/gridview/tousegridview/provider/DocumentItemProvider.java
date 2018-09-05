@@ -20,7 +20,6 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -366,15 +365,8 @@ public class DocumentItemProvider
 	}
 
 	private Cell getCell(Object column, Object row) {
-		Cell result = null;
 		Row my_row = (Row)row;
 		Column my_column = (Column)column;
-		EList<Cell> cells = my_row.getCells();
-		for( Cell cell : cells ) {
-			if( my_column.getCells().contains(cell) ) {
-				result = cell;
-			}
-		}		
-		return result;
+		return my_row.getCell(my_column);
 	}
 }

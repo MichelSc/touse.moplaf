@@ -20,8 +20,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -148,7 +147,7 @@ public class SheetImpl extends MinimalEObjectImpl.Container implements Sheet {
 	 */
 	public EList<Column> getColumns() {
 		if (columns == null) {
-			columns = new EObjectContainmentEList<Column>(Column.class, this, ToUseGridViewPackage.SHEET__COLUMNS);
+			columns = new EObjectContainmentWithInverseEList<Column>(Column.class, this, ToUseGridViewPackage.SHEET__COLUMNS, ToUseGridViewPackage.COLUMN__SHEET);
 		}
 		return columns;
 	}
@@ -160,7 +159,7 @@ public class SheetImpl extends MinimalEObjectImpl.Container implements Sheet {
 	 */
 	public EList<Row> getRows() {
 		if (rows == null) {
-			rows = new EObjectContainmentEList<Row>(Row.class, this, ToUseGridViewPackage.SHEET__ROWS);
+			rows = new EObjectContainmentWithInverseEList<Row>(Row.class, this, ToUseGridViewPackage.SHEET__ROWS, ToUseGridViewPackage.ROW__SHEET);
 		}
 		return rows;
 	}
@@ -184,6 +183,23 @@ public class SheetImpl extends MinimalEObjectImpl.Container implements Sheet {
 		trait = newTrait == null ? TRAIT_EDEFAULT : newTrait;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ToUseGridViewPackage.SHEET__TRAIT, oldTrait, trait));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ToUseGridViewPackage.SHEET__COLUMNS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getColumns()).basicAdd(otherEnd, msgs);
+			case ToUseGridViewPackage.SHEET__ROWS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getRows()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
 	/**

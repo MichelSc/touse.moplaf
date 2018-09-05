@@ -75,7 +75,7 @@ public class CellIntImpl extends CellImpl implements CellInt {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getValue() {
+	public int getValue() {
 		return value;
 	}
 

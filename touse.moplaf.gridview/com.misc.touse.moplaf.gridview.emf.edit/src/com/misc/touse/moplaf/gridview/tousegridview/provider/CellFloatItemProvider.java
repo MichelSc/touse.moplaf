@@ -92,7 +92,7 @@ public class CellFloatItemProvider extends CellItemProvider {
 	@Override
 	public String getText(Object object) {
 		CellFloat cellFloat = (CellFloat)object;
-		return getString("_UI_CellFloat_type") + " " + cellFloat.getCellValue();
+		return getString("_UI_CellFloat_type") + " " + cellFloat.getValue();
 	}
 
 

@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.misc.touse.moplaf.gridview.tousegridview.Column#getCells <em>Cells</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.gridview.tousegridview.Column#getColor <em>Color</em>}</li>
  *   <li>{@link com.misc.touse.moplaf.gridview.tousegridview.Column#getName <em>Name</em>}</li>
+ *   <li>{@link com.misc.touse.moplaf.gridview.tousegridview.Column#getSheet <em>Sheet</em>}</li>
  * </ul>
  *
  * @see com.misc.touse.moplaf.gridview.tousegridview.ToUseGridViewPackage#getColumn()
@@ -35,22 +36,11 @@ public interface Column extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Index</em>' attribute.
-	 * @see #setIndex(long)
 	 * @see com.misc.touse.moplaf.gridview.tousegridview.ToUseGridViewPackage#getColumn_Index()
-	 * @model
+	 * @model transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
 	long getIndex();
-
-	/**
-	 * Sets the value of the '{@link com.misc.touse.moplaf.gridview.tousegridview.Column#getIndex <em>Index</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Index</em>' attribute.
-	 * @see #getIndex()
-	 * @generated
-	 */
-	void setIndex(long value);
 
 	/**
 	 * Returns the value of the '<em><b>Cells</b></em>' reference list.
@@ -119,5 +109,41 @@ public interface Column extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Sheet</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link com.misc.touse.moplaf.gridview.tousegridview.Sheet#getColumns <em>Columns</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Sheet</em>' container reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Sheet</em>' container reference.
+	 * @see #setSheet(Sheet)
+	 * @see com.misc.touse.moplaf.gridview.tousegridview.ToUseGridViewPackage#getColumn_Sheet()
+	 * @see com.misc.touse.moplaf.gridview.tousegridview.Sheet#getColumns
+	 * @model opposite="Columns" required="true" transient="false"
+	 * @generated
+	 */
+	Sheet getSheet();
+
+	/**
+	 * Sets the value of the '{@link com.misc.touse.moplaf.gridview.tousegridview.Column#getSheet <em>Sheet</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Sheet</em>' container reference.
+	 * @see #getSheet()
+	 * @generated
+	 */
+	void setSheet(Sheet value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	Cell getCell(Row row);
 
 } // Column

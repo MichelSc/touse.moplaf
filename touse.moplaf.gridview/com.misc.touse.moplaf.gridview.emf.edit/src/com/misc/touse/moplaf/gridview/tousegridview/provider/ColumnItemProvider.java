@@ -4,7 +4,6 @@ package com.misc.touse.moplaf.gridview.tousegridview.provider;
 
 
 import com.misc.touse.moplaf.gridview.tousegridview.Column;
-import com.misc.touse.moplaf.gridview.tousegridview.ToUseGridViewFactory;
 import com.misc.touse.moplaf.gridview.tousegridview.ToUseGridViewPackage;
 
 import java.util.Collection;
@@ -226,21 +225,6 @@ public class ColumnItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ToUseGridViewPackage.Literals.COLUMN__CELLS,
-				 ToUseGridViewFactory.eINSTANCE.createCellInt()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ToUseGridViewPackage.Literals.COLUMN__CELLS,
-				 ToUseGridViewFactory.eINSTANCE.createCellFloat()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ToUseGridViewPackage.Literals.COLUMN__CELLS,
-				 ToUseGridViewFactory.eINSTANCE.createCellString()));
 	}
 
 	/**

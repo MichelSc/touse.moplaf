@@ -55,6 +55,7 @@ public interface Sheet extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Columns</b></em>' containment reference list.
 	 * The list contents are of type {@link com.misc.touse.moplaf.gridview.tousegridview.Column}.
+	 * It is bidirectional and its opposite is '{@link com.misc.touse.moplaf.gridview.tousegridview.Column#getSheet <em>Sheet</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Columns</em>' containment reference list isn't clear,
@@ -63,7 +64,8 @@ public interface Sheet extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Columns</em>' containment reference list.
 	 * @see com.misc.touse.moplaf.gridview.tousegridview.ToUseGridViewPackage#getSheet_Columns()
-	 * @model containment="true"
+	 * @see com.misc.touse.moplaf.gridview.tousegridview.Column#getSheet
+	 * @model opposite="Sheet" containment="true"
 	 * @generated
 	 */
 	EList<Column> getColumns();
@@ -71,6 +73,7 @@ public interface Sheet extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Rows</b></em>' containment reference list.
 	 * The list contents are of type {@link com.misc.touse.moplaf.gridview.tousegridview.Row}.
+	 * It is bidirectional and its opposite is '{@link com.misc.touse.moplaf.gridview.tousegridview.Row#getSheet <em>Sheet</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Rows</em>' containment reference list isn't clear,
@@ -79,7 +82,8 @@ public interface Sheet extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Rows</em>' containment reference list.
 	 * @see com.misc.touse.moplaf.gridview.tousegridview.ToUseGridViewPackage#getSheet_Rows()
-	 * @model containment="true"
+	 * @see com.misc.touse.moplaf.gridview.tousegridview.Row#getSheet
+	 * @model opposite="Sheet" containment="true"
 	 * @generated
 	 */
 	EList<Row> getRows();
