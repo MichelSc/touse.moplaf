@@ -125,16 +125,8 @@ public class ColumnImpl extends MinimalEObjectImpl.Container implements Column {
 	 */
 	public long getIndex() {
 		Sheet sheet = this.getSheet();
-		int result = 0;
-		for( Column c : sheet.getColumns() ) {
-			if( this == c ) {
-				return result;
-			}
-			else {
-				result++;
-			}
-		}
-		return -1;
+		int result = sheet.getColumns().indexOf(this);
+		return result;
 	}
 
 	/**

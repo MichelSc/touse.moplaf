@@ -83,7 +83,7 @@ public class ColumnItemProvider
 				 getString("_UI_Column_Index_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Column_Index_feature", "_UI_Column_type"),
 				 ToUseGridViewPackage.Literals.COLUMN__INDEX,
-				 true,
+				 false,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,

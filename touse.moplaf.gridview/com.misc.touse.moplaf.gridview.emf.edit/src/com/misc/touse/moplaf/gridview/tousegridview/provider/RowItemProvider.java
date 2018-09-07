@@ -83,7 +83,7 @@ public class RowItemProvider
 				 getString("_UI_Row_Index_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Row_Index_feature", "_UI_Row_type"),
 				 ToUseGridViewPackage.Literals.ROW__INDEX,
-				 true,
+				 false,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,

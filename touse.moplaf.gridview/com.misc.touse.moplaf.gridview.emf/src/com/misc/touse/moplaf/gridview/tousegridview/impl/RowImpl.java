@@ -108,16 +108,8 @@ public class RowImpl extends MinimalEObjectImpl.Container implements Row {
 	 */
 	public long getIndex() {
 		Sheet sheet = this.getSheet();
-		int result = 0;
-		for( Row r : sheet.getRows() ) {
-			if( this == r ) {
-				return result;
-			}
-			else {
-				result++;
-			}
-		}
-		return -1;
+		int result = sheet.getRows().indexOf(this);
+		return result;
 	}
 
 	/**
