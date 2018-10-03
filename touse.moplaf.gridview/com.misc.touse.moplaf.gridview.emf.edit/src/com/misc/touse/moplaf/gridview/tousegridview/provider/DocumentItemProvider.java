@@ -313,17 +313,17 @@ public class DocumentItemProvider
 
 	@Override
 	public int getCellType(Object element, Object grid, Object row, Object column) {
-		int result = IItemGridsProvider.CELL_TYPE_UNKOWN;
+		int result = IItemGridsProvider.DATA_TYPE_UNKOWN;
 		Cell cell = getCell(column, row);
 		if( cell != null ) {
 			if( cell instanceof CellFloat ) {
-				result = IItemGridsProvider.CELL_TYPE_FLOAT;
+				result = IItemGridsProvider.DATA_TYPE_FLOAT;
 			}
 			else if ( cell instanceof CellInt ) {
-				result = IItemGridsProvider.CELL_TYPE_INT;
+				result = IItemGridsProvider.DATA_TYPE_INT;
 			}
 			else if ( cell instanceof CellString ) {
-				result = IItemGridsProvider.CELL_TYPE_STRING;
+				result = IItemGridsProvider.DATA_TYPE_STRING;
 			}
 		}
 		return result;
