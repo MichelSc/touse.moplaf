@@ -31,6 +31,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -486,7 +487,7 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 	 * @see com.misc.common.moplaf.solver.impl.GeneratorImpl#acceptSolution(com.misc.common.moplaf.solver.SolutionProvider)
 	 */
 	@Override
-	public void acceptSolution(Solution solution) {
+	public EObject acceptSolution(Solution solution) {
 		Scenario scenario = this.getScenario();
 		KnapsackSol sol = TousesolverFactory.eINSTANCE.createKnapsackSol();
 		scenario.getSol().add(sol);
@@ -505,6 +506,8 @@ public class KnapsackLpImpl extends GeneratorImpl implements KnapsackLp {
 		}
 		sol.setTotalValue(totalvalue);
 		sol.setTotalWeight(totalweight);
+		
+		return sol;
 	}
 
 
