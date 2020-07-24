@@ -15,7 +15,7 @@ IDE installation
 eclipse: eclipse modeling 2020-03  
 java: open jdk 1.8
 
-configure eclipse ide workspace
+Configure eclipse ide workspace
 ===============================
 Import the following plugin projects from the moplaf repository https://github.com/MichelSc/touse.moplaf
 * com.misc.touse.moplaf.solver.emf
