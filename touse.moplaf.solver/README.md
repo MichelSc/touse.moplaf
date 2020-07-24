@@ -6,22 +6,23 @@ Demo project showing how to use the solver project.
 - managing solver runs
 - showing solution
 
-release notes
+Release notes
 ===================
+<empty>
 
-ide installation
+IDE installation
 ===================
 eclipse: eclipse modeling 2020-03  
 java: open jdk 1.8
 
 configure eclipse ide workspace
 ===============================
-import the following plugin projects from the moplaf repository https://github.com/MichelSc/touse.moplaf
+Import the following plugin projects from the moplaf repository https://github.com/MichelSc/touse.moplaf
 * com.misc.touse.moplaf.solver.emf
 * com.misc.touse.moplaf.solver.emf.edit
 * com.misc.touse.moplaf.solver.emf.editor
 
-import the following plugin projects from the moplaf repository https://github.com/MichelSc/common.moplaf
+Import the following plugin projects from the moplaf repository https://github.com/MichelSc/common.moplaf
 * com.misc.common.moplaf.emf
 * com.misc.common.moplaf.emf.edit
 * com.misc.common.moplaf.emf.editor
@@ -44,13 +45,13 @@ import the following plugin projects from the moplaf repository https://github.c
 * com.misc.common.moplaf.solver.glpk.emf.edit
 * com.misc.common.moplaf.solver.preference
 
-maintain the launch configuration
+Maintain the launch configuration
 =================================
 There are 2 test launch configurations StartToUseSolverIDEWin and StartToUseSolverIDELin.
 Make sure the PATH environment variables contains the path where GLPK is installed
-(one version is shipped in moplaf in ommon.moplaf.solver.glpk\com.misc.common.moplaf.solver.glpk.emf\lib\)
+(one version is shipped in moplaf in common.moplaf.solver.glpk\com.misc.common.moplaf.solver.glpk.emf\lib\)
 
-run the application
+Run the application
 =================================
 * Create a .tousesolver file
 * Create a Domain object
